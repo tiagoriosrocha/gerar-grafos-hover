@@ -1,0 +1,354 @@
+{
+  "dataset": "hover",
+  "id": "39e4f689-37a7-4ddb-aaae-95c45ea50dbb",
+  "split": "train",
+  "claim": "The Dukes of Hazzard was directed by the 1975 film director James Mitchum.",
+  "evidencia": "Page: The Dukes of Hazzard. Sentence: The series was inspired by the 1975 film \"Moonrunners\", which was also created by Gy Waldron and had many identical or similar character names and concepts.\nPage: Moonrunners. Sentence: Moonrunners is a 1975 film, starring James Mitchum, about a Southern family that runs bootleg liquor.",
+  "evidence_text": "Page: The Dukes of Hazzard. Sentence: The series was inspired by the 1975 film \"Moonrunners\", which was also created by Gy Waldron and had many identical or similar character names and concepts.\nPage: Moonrunners. Sentence: Moonrunners is a 1975 film, starring James Mitchum, about a Southern family that runs bootleg liquor.",
+  "label": "NOT_SUPPORTED",
+  "num_hops": 2,
+  "hover_metadata": {
+    "supporting_facts": [
+      [
+        "The Dukes of Hazzard",
+        2
+      ],
+      [
+        "Moonrunners",
+        0
+      ]
+    ],
+    "num_hops": 2,
+    "evidence_annotation_id": [
+      0
+    ],
+    "evidence_id": [
+      "The Dukes of Hazzard::sentence::2",
+      "Moonrunners::sentence::0"
+    ],
+    "evidence_wiki_url": [
+      "https://en.wikipedia.org/wiki/The_Dukes_of_Hazzard",
+      "https://en.wikipedia.org/wiki/Moonrunners"
+    ],
+    "evidence_sentence_id": [
+      "The Dukes of Hazzard::sentence::2",
+      "Moonrunners::sentence::0"
+    ]
+  },
+  "grafo_claim": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "bb782332-d1c1-5f33-87d4-8d4120c964cb",
+        "text": "This chunk is about:\n- People: James Mitchum\n- Works: The Dukes of Hazzard, a 1975 film\n\nFacts:\n- James Mitchum directed a 1975 film.\n- James Mitchum directed The Dukes of Hazzard.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "28a812b5-8161-5874-804e-a065f8f52233",
+        "text": "The Dukes of Hazzard was directed by the 1975 film director James Mitchum.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "2d1b6cc1-adc1-5a16-a80e-49736cf527ab",
+        "text": "text_ffec4371e9e36d0ad3912e1222cbcc13",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "5c7ff7c2-da76-5618-955e-fd2cbb6f86c5",
+        "text": "the dukes of hazzard",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "5263a535-1b4b-5925-be3e-310d03cd303b",
+        "text": "work",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "8b055141-3767-5906-be58-3da2e5439d3c",
+        "text": "james mitchum",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "99a82eec-bb35-5bb5-9ed2-e73fc7a756de",
+        "text": "person",
+        "type": "EntityType"
+      },
+      {
+        "id": 7,
+        "original_id": "a4195203-3de0-526e-9b3c-29c2a929ad16",
+        "text": "1975",
+        "type": "Entity"
+      },
+      {
+        "id": 8,
+        "original_id": "b19433ae-558c-5aaf-95ac-6231f2a4be0e",
+        "text": "date",
+        "type": "EntityType"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 3,
+        "type": "directed"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 5,
+        "target": 7,
+        "type": "associated_with_date"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      },
+      {
+        "source": 7,
+        "target": 8,
+        "type": "is_a"
+      }
+    ]
+  },
+  "grafo_evidencia": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "644f0519-a15d-5d6f-8fbc-08c6f10fe6d4",
+        "text": "This chunk is about:\n- Works: The Dukes of Hazzard, Moonrunners\n- People: Gy Waldron, James Mitchum\n- Topics: inspiration, character and concept similarities, bootlegging\n\nFacts:\n- Moonrunners is a 1975 film about a Southern family that runs bootleg liquor.\n- James Mitchum starred in the 1975 film Moonrunners.\n- Gy Waldron created the 1975 film Moonrunners.\n- The series The Dukes of Hazzard was inspired by Moonrunners.\n- The Dukes of Hazzard and Moonrunners had many identical or similar character names and concepts.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "10794be5-ffec-523d-a1d2-b887d1093fff",
+        "text": "Page: The Dukes of Hazzard. Sentence: The series was inspired by the 1975 film \"Moonrunners\", which was also created by Gy Waldron and had many identical or similar character names and concepts.\nPage: Moonrunners. Sentence: Moonrunners is a 1975 film, starring James Mitchum, about a Southern family that runs bootleg liquor.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "9d60f3a3-8afb-5032-a4ed-05b150a68bea",
+        "text": "text_dcfe27712ed30d616b228053546d7386",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "5c7ff7c2-da76-5618-955e-fd2cbb6f86c5",
+        "text": "the dukes of hazzard",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "5263a535-1b4b-5925-be3e-310d03cd303b",
+        "text": "work",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "7ce8ce41-9601-501c-96b8-7838aeb8cd0c",
+        "text": "moonrunners",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "a4195203-3de0-526e-9b3c-29c2a929ad16",
+        "text": "1975",
+        "type": "Entity"
+      },
+      {
+        "id": 7,
+        "original_id": "b19433ae-558c-5aaf-95ac-6231f2a4be0e",
+        "text": "date",
+        "type": "EntityType"
+      },
+      {
+        "id": 8,
+        "original_id": "51a92d98-8f21-5957-a29b-0934c60e9970",
+        "text": "gy waldron",
+        "type": "Entity"
+      },
+      {
+        "id": 9,
+        "original_id": "99a82eec-bb35-5bb5-9ed2-e73fc7a756de",
+        "text": "person",
+        "type": "EntityType"
+      },
+      {
+        "id": 10,
+        "original_id": "8b055141-3767-5906-be58-3da2e5439d3c",
+        "text": "james mitchum",
+        "type": "Entity"
+      },
+      {
+        "id": 11,
+        "original_id": "370a8061-f369-57df-8f5f-d117de24eede",
+        "text": "southern family",
+        "type": "Entity"
+      },
+      {
+        "id": 12,
+        "original_id": "98ed3a15-eaa2-57c6-8de5-e1dabaf57f77",
+        "text": "group",
+        "type": "EntityType"
+      },
+      {
+        "id": 13,
+        "original_id": "97095739-fdae-5438-b057-1636bade9e13",
+        "text": "bootleg liquor",
+        "type": "Entity"
+      },
+      {
+        "id": 14,
+        "original_id": "d2a381fa-3658-5ca6-ada9-2109cfc9331d",
+        "text": "concept",
+        "type": "EntityType"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 5,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "inspired_by"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "released_in"
+      },
+      {
+        "source": 1,
+        "target": 6,
+        "type": "contains"
+      },
+      {
+        "source": 6,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 5,
+        "target": 8,
+        "type": "created_by"
+      },
+      {
+        "source": 1,
+        "target": 8,
+        "type": "contains"
+      },
+      {
+        "source": 8,
+        "target": 9,
+        "type": "is_a"
+      },
+      {
+        "source": 10,
+        "target": 9,
+        "type": "is_a"
+      },
+      {
+        "source": 5,
+        "target": 10,
+        "type": "stars"
+      },
+      {
+        "source": 1,
+        "target": 10,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 11,
+        "type": "about"
+      },
+      {
+        "source": 1,
+        "target": 11,
+        "type": "contains"
+      },
+      {
+        "source": 11,
+        "target": 12,
+        "type": "is_a"
+      },
+      {
+        "source": 11,
+        "target": 13,
+        "type": "runs"
+      },
+      {
+        "source": 1,
+        "target": 13,
+        "type": "contains"
+      },
+      {
+        "source": 13,
+        "target": 14,
+        "type": "is_a"
+      }
+    ]
+  }
+}

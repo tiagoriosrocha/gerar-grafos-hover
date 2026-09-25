@@ -1,0 +1,213 @@
+{
+  "dataset": "hover",
+  "id": "05b095b4-e090-403e-bcca-f6002b8f250e",
+  "split": "train",
+  "claim": "The jet airliner with which Boeing 777X was intended to compete has 280 to 366 seats.",
+  "evidencia": "Page: Boeing 777X. Sentence: It is intended to compete with the Airbus A350.\nPage: Airbus A350 XWB. Sentence: Its variants seat 280 to 366 passengers in typical three-class seating layouts.",
+  "evidence_text": "Page: Boeing 777X. Sentence: It is intended to compete with the Airbus A350.\nPage: Airbus A350 XWB. Sentence: Its variants seat 280 to 366 passengers in typical three-class seating layouts.",
+  "label": "SUPPORTED",
+  "num_hops": 2,
+  "hover_metadata": {
+    "supporting_facts": [
+      [
+        "Boeing 777X",
+        3
+      ],
+      [
+        "Airbus A350 XWB",
+        2
+      ]
+    ],
+    "num_hops": 2,
+    "evidence_annotation_id": [
+      0
+    ],
+    "evidence_id": [
+      "Boeing 777X::sentence::3",
+      "Airbus A350 XWB::sentence::2"
+    ],
+    "evidence_wiki_url": [
+      "https://en.wikipedia.org/wiki/Boeing_777X",
+      "https://en.wikipedia.org/wiki/Airbus_A350_XWB"
+    ],
+    "evidence_sentence_id": [
+      "Boeing 777X::sentence::3",
+      "Airbus A350 XWB::sentence::2"
+    ]
+  },
+  "grafo_claim": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "4070aa27-a846-5ac9-b4f4-be9e9cb3f57d",
+        "text": "This chunk is about:\n- Products: Boeing 777X\n- Products: competing jet airliner\n- Concepts: seating capacity\n\nFacts:\n- Boeing intended the Boeing 777X to compete with a jet airliner.\n- The competing jet airliner has a seating capacity of 280 to 366 seats.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "ce9746d9-38be-52de-a559-c79a85117975",
+        "text": "The jet airliner with which Boeing 777X was intended to compete has 280 to 366 seats.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "fb11289f-15ba-551b-ad4e-c60ae76c7a8d",
+        "text": "text_1b55f742fda2147870edb8e407b90456",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "70274b4d-8338-5b37-a955-bf59d8cb6976",
+        "text": "boeing 777x",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "af142064-cbc4-5e95-aa37-45d89b3f243c",
+        "text": "competing jet airliner",
+        "type": "Entity"
+      },
+      {
+        "id": 5,
+        "original_id": "f76d57aa-4740-5218-9539-0e0978cbf183",
+        "text": "product",
+        "type": "EntityType"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "intended_to_compete_with"
+      },
+      {
+        "source": 1,
+        "target": 4,
+        "type": "contains"
+      },
+      {
+        "source": 4,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "is_a"
+      }
+    ]
+  },
+  "grafo_evidencia": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "d95c7587-9099-58c1-8ab9-b3342b5705d9",
+        "text": "This chunk is about:\n- Products: Boeing 777X, Airbus A350 XWB\n- Companies: Boeing, Airbus\n- Topics: Aircraft competition, Passenger seating capacity\n\nFacts:\n- Boeing's 777X is intended to compete with Airbus's A350.\n- Airbus's A350 XWB variants seat 280 to 366 passengers in typical three-class seating layouts.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "5d3ddfdc-53cf-5475-8aa5-9cc28df60830",
+        "text": "Page: Boeing 777X. Sentence: It is intended to compete with the Airbus A350.\nPage: Airbus A350 XWB. Sentence: Its variants seat 280 to 366 passengers in typical three-class seating layouts.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "38ec1b73-a18b-5e5c-9622-348208af386b",
+        "text": "text_ae62eb3d2fb857e063a9f1bbf720d9fd",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "70274b4d-8338-5b37-a955-bf59d8cb6976",
+        "text": "boeing 777x",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "1b9a5fac-ad0a-5a94-aa38-dad3acf21e69",
+        "text": "airbus a350",
+        "type": "Entity"
+      },
+      {
+        "id": 5,
+        "original_id": "f76d57aa-4740-5218-9539-0e0978cbf183",
+        "text": "product",
+        "type": "EntityType"
+      },
+      {
+        "id": 6,
+        "original_id": "ea6aa53a-1e42-5021-ae33-2a1e6c9bd288",
+        "text": "airbus a350 xwb",
+        "type": "Entity"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "intended_to_compete_with"
+      },
+      {
+        "source": 1,
+        "target": 4,
+        "type": "contains"
+      },
+      {
+        "source": 4,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 6,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 6,
+        "type": "contains"
+      },
+      {
+        "source": 6,
+        "target": 6,
+        "type": "has_variant_seating_capacity"
+      }
+    ]
+  }
+}

@@ -1,0 +1,469 @@
+{
+  "dataset": "hover",
+  "id": "d2bcb665-bb56-468d-b261-3d49967c5bae",
+  "split": "train",
+  "claim": "The genus which includes \"Little Pickles\" has more species in it than Stangeria.",
+  "evidencia": "Page: Othonna. Sentence: Othonna is a genus of African plants in the sunflower family.\nPage: Stangeria. Sentence: Stangeria eriopus is a cycad endemic to southern Africa It is the sole species in the genus Stangeria, most closely related to the Australian genus \"Bowenia\", with which it forms the family Stangeriaceae.\nPage: Othonna capensis. Sentence: Othonna capensis also known as Little Pickles, is a species of the genus \"Othonna\" and family Asteraceae and is a native of South Africa.",
+  "evidence_text": "Page: Othonna. Sentence: Othonna is a genus of African plants in the sunflower family.\nPage: Stangeria. Sentence: Stangeria eriopus is a cycad endemic to southern Africa It is the sole species in the genus Stangeria, most closely related to the Australian genus \"Bowenia\", with which it forms the family Stangeriaceae.\nPage: Othonna capensis. Sentence: Othonna capensis also known as Little Pickles, is a species of the genus \"Othonna\" and family Asteraceae and is a native of South Africa.",
+  "label": "SUPPORTED",
+  "num_hops": 3,
+  "hover_metadata": {
+    "supporting_facts": [
+      [
+        "Othonna",
+        0
+      ],
+      [
+        "Stangeria",
+        0
+      ],
+      [
+        "Othonna capensis",
+        0
+      ]
+    ],
+    "num_hops": 3,
+    "evidence_annotation_id": [
+      0
+    ],
+    "evidence_id": [
+      "Othonna::sentence::0",
+      "Stangeria::sentence::0",
+      "Othonna capensis::sentence::0"
+    ],
+    "evidence_wiki_url": [
+      "https://en.wikipedia.org/wiki/Othonna",
+      "https://en.wikipedia.org/wiki/Stangeria",
+      "https://en.wikipedia.org/wiki/Othonna_capensis"
+    ],
+    "evidence_sentence_id": [
+      "Othonna::sentence::0",
+      "Stangeria::sentence::0",
+      "Othonna capensis::sentence::0"
+    ]
+  },
+  "grafo_claim": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "471b99a2-1e4a-5c8b-9344-3d49d5e8ca01",
+        "text": "This chunk is about:\n- Concepts: comparative species richness\n- Plants: Little Pickles, Stangeria, the genus containing Little Pickles\n\nFacts:\n- \"Little Pickles\" belongs to a genus that has more species than the genus Stangeria.\n- Stangeria is the comparison genus in the statement about species counts.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "39bc0661-bdff-5177-9987-a310bdafc7bd",
+        "text": "The genus which includes \"Little Pickles\" has more species in it than Stangeria.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "49e3e3ae-8db5-5d10-8bb3-ad2ab98aaea6",
+        "text": "text_3d2ef8244680074fc04079670c9b2c82",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "314ad033-2d64-5d00-8a73-a16365a68924",
+        "text": "little pickles",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "56e01b70-2343-58a5-ac8e-e5098de76d30",
+        "text": "entity",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "a361b34d-0f90-5da6-8688-f79cb00511b0",
+        "text": "genus including little pickles",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "58ce8914-8a9e-5302-9b2d-0d97006e12d3",
+        "text": "genus",
+        "type": "EntityType"
+      },
+      {
+        "id": 7,
+        "original_id": "5698dfc6-ea88-5147-aed4-fdbd4911431f",
+        "text": "stangeria",
+        "type": "Entity"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "is_included_in"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 7,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 5,
+        "target": 7,
+        "type": "has_more_species_than"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      }
+    ]
+  },
+  "grafo_evidencia": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "4c343bf2-a00b-5f22-86a4-47ada4b9112b",
+        "text": "This chunk is about:\n- Plants: Othonna, Stangeria eriopus, Othonna capensis\n- Places: Africa, southern Africa, South Africa, Australia\n- Taxa: Asteraceae, sunflower family, cycad, Bowenia, Stangeriaceae\n\nFacts:\n- Othonna is a genus of African plants in the sunflower family.\n- Stangeria eriopus is a cycad endemic to southern Africa.\n- Stangeria eriopus is the only species in the genus Stangeria.\n- Stangeria eriopus is most closely related to the Australian genus Bowenia.\n- Stangeria and Bowenia form the family Stangeriaceae.\n- Othonna capensis, also known as Little Pickles, is a species in the genus Othonna and the family Asteraceae.\n- Othonna capensis is native to South Africa.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "903b916c-4e3d-569b-914c-d3416de4afff",
+        "text": "Page: Othonna. Sentence: Othonna is a genus of African plants in the sunflower family.\nPage: Stangeria. Sentence: Stangeria eriopus is a cycad endemic to southern Africa It is the sole species in the genus Stangeria, most closely related to the Australian genus \"Bowenia\", with which it forms the family Stangeriaceae.\nPage: Othonna capensis. Sentence: Othonna capensis also known as Little Pickles, is a species of the genus \"Othonna\" and family Asteraceae and is a native of South Africa.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "7a247ca0-d413-5fc8-b61e-7c39c67f50ba",
+        "text": "text_715dbb605b030abd1730fdb2163522ba",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "ca9c4807-6f75-57f1-8fb7-8591292cb236",
+        "text": "othonna",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "f7b4540f-d32c-51b3-8970-f282fffab519",
+        "text": "taxon",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "7d1e549d-73ae-5049-8eac-cda15179fc48",
+        "text": "africa",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "5f394058-b2a0-5ba8-8466-ba2a18cfcf4e",
+        "text": "place",
+        "type": "EntityType"
+      },
+      {
+        "id": 7,
+        "original_id": "5aa4cff8-9faf-53ed-a45e-0793a298983c",
+        "text": "sunflower family",
+        "type": "Entity"
+      },
+      {
+        "id": 8,
+        "original_id": "938de902-0159-50e3-a986-09db1fb69ece",
+        "text": "stangeria eriopus",
+        "type": "Entity"
+      },
+      {
+        "id": 9,
+        "original_id": "3f88c8c2-9447-56c5-9950-c413b639f2f7",
+        "text": "southern africa",
+        "type": "Entity"
+      },
+      {
+        "id": 10,
+        "original_id": "5698dfc6-ea88-5147-aed4-fdbd4911431f",
+        "text": "stangeria",
+        "type": "Entity"
+      },
+      {
+        "id": 11,
+        "original_id": "d9e4e038-8c8e-5745-8ae9-f551098ff9c5",
+        "text": "bowenia",
+        "type": "Entity"
+      },
+      {
+        "id": 12,
+        "original_id": "02448d73-884d-50c7-a919-b94177f1cf43",
+        "text": "australia",
+        "type": "Entity"
+      },
+      {
+        "id": 13,
+        "original_id": "3ebd2c04-b258-523a-9dd1-34efd4c8e047",
+        "text": "stangeriaceae",
+        "type": "Entity"
+      },
+      {
+        "id": 14,
+        "original_id": "f1d6e2e3-1ba4-5aa6-b58f-3a43aec2fb7f",
+        "text": "othonna capensis",
+        "type": "Entity"
+      },
+      {
+        "id": 15,
+        "original_id": "314ad033-2d64-5d00-8a73-a16365a68924",
+        "text": "little pickles",
+        "type": "Entity"
+      },
+      {
+        "id": 16,
+        "original_id": "39575085-0710-527d-bd54-019de7b00429",
+        "text": "name",
+        "type": "EntityType"
+      },
+      {
+        "id": 17,
+        "original_id": "4fe42319-5e66-5637-90ae-d1f515fccb4b",
+        "text": "asteraceae",
+        "type": "Entity"
+      },
+      {
+        "id": 18,
+        "original_id": "c0e3c705-bfd9-53eb-a62c-38a7737b4e93",
+        "text": "south africa",
+        "type": "Entity"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 14,
+        "target": 3,
+        "type": "species_of"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 7,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 8,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 10,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 11,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 13,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 14,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 17,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "located_in"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 9,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 12,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 18,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 7,
+        "type": "belongs_to"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      },
+      {
+        "source": 1,
+        "target": 8,
+        "type": "contains"
+      },
+      {
+        "source": 8,
+        "target": 9,
+        "type": "endemic_to"
+      },
+      {
+        "source": 1,
+        "target": 9,
+        "type": "contains"
+      },
+      {
+        "source": 8,
+        "target": 10,
+        "type": "sole_species_of"
+      },
+      {
+        "source": 1,
+        "target": 10,
+        "type": "contains"
+      },
+      {
+        "source": 10,
+        "target": 11,
+        "type": "most_closely_related_to"
+      },
+      {
+        "source": 1,
+        "target": 11,
+        "type": "contains"
+      },
+      {
+        "source": 11,
+        "target": 12,
+        "type": "located_in"
+      },
+      {
+        "source": 1,
+        "target": 12,
+        "type": "contains"
+      },
+      {
+        "source": 11,
+        "target": 13,
+        "type": "forms_family"
+      },
+      {
+        "source": 10,
+        "target": 13,
+        "type": "forms_family"
+      },
+      {
+        "source": 1,
+        "target": 13,
+        "type": "contains"
+      },
+      {
+        "source": 1,
+        "target": 14,
+        "type": "contains"
+      },
+      {
+        "source": 14,
+        "target": 15,
+        "type": "also_known_as"
+      },
+      {
+        "source": 1,
+        "target": 15,
+        "type": "contains"
+      },
+      {
+        "source": 15,
+        "target": 16,
+        "type": "is_a"
+      },
+      {
+        "source": 14,
+        "target": 17,
+        "type": "belongs_to"
+      },
+      {
+        "source": 1,
+        "target": 17,
+        "type": "contains"
+      },
+      {
+        "source": 14,
+        "target": 18,
+        "type": "native_to"
+      },
+      {
+        "source": 1,
+        "target": 18,
+        "type": "contains"
+      }
+    ]
+  }
+}

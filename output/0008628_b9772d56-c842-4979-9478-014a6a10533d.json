@@ -1,0 +1,357 @@
+{
+  "dataset": "hover",
+  "id": "b9772d56-c842-4979-9478-014a6a10533d",
+  "split": "train",
+  "claim": "Woodland is a census-designated place in a town that had a population of 1,521 as of the 2010 census.",
+  "evidencia": "Page: Woodland, Washington County, Maine. Sentence: Woodland is a census-designated place (CDP) in the town of Baileyville, Washington County, Maine, United States.\nPage: Baileyville, Maine. Sentence: Baileyville is a town in Washington County, Maine, United States.\nPage: Baileyville, Maine. Sentence: The population was 1,521 at the 2010 census.",
+  "evidence_text": "Page: Woodland, Washington County, Maine. Sentence: Woodland is a census-designated place (CDP) in the town of Baileyville, Washington County, Maine, United States.\nPage: Baileyville, Maine. Sentence: Baileyville is a town in Washington County, Maine, United States.\nPage: Baileyville, Maine. Sentence: The population was 1,521 at the 2010 census.",
+  "label": "SUPPORTED",
+  "num_hops": 2,
+  "hover_metadata": {
+    "supporting_facts": [
+      [
+        "Woodland, Washington County, Maine",
+        0
+      ],
+      [
+        "Baileyville, Maine",
+        0
+      ],
+      [
+        "Baileyville, Maine",
+        1
+      ]
+    ],
+    "num_hops": 2,
+    "evidence_annotation_id": [
+      0
+    ],
+    "evidence_id": [
+      "Woodland, Washington County, Maine::sentence::0",
+      "Baileyville, Maine::sentence::0",
+      "Baileyville, Maine::sentence::1"
+    ],
+    "evidence_wiki_url": [
+      "https://en.wikipedia.org/wiki/Woodland%2C_Washington_County%2C_Maine",
+      "https://en.wikipedia.org/wiki/Baileyville%2C_Maine"
+    ],
+    "evidence_sentence_id": [
+      "Woodland, Washington County, Maine::sentence::0",
+      "Baileyville, Maine::sentence::0",
+      "Baileyville, Maine::sentence::1"
+    ]
+  },
+  "grafo_claim": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "ff615e50-1a68-57ff-b79d-9ab1bf28d5c9",
+        "text": "This chunk is about:\n- Places: Woodland, census-designated place, town\n- Events: 2010 census\n\nFacts:\n- As of the 2010 census, the town that contains Woodland had a population of 1,521.\n- Woodland is a census-designated place located within a town.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "0d35d3fb-9c38-534c-9409-8b73a13762f8",
+        "text": "Woodland is a census-designated place in a town that had a population of 1,521 as of the 2010 census.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "6191b5b9-0420-5236-8773-c64c7e321ba3",
+        "text": "text_0d4224bb63248a11a709be282ff6dbf4",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "ca211773-7920-5af1-ac55-97744f2fd559",
+        "text": "woodland",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "5f394058-b2a0-5ba8-8466-ba2a18cfcf4e",
+        "text": "place",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "da404d41-fe2c-5286-919b-084bf5a743d2",
+        "text": "town",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "64f4375a-59bc-5ba6-a18d-99041e512b67",
+        "text": "1,521",
+        "type": "Entity"
+      },
+      {
+        "id": 7,
+        "original_id": "5c1097ca-fab8-54d5-b57f-5dca4b0e2507",
+        "text": "number",
+        "type": "EntityType"
+      },
+      {
+        "id": 8,
+        "original_id": "4cb6ada6-82d5-5a31-83fe-5bd97fc4f3b0",
+        "text": "2010 census",
+        "type": "Entity"
+      },
+      {
+        "id": 9,
+        "original_id": "214abcd9-9adf-5c8a-bb35-1e729f2d68c3",
+        "text": "event",
+        "type": "EntityType"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 5,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "located_in"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "has_population"
+      },
+      {
+        "source": 1,
+        "target": 6,
+        "type": "contains"
+      },
+      {
+        "source": 6,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 6,
+        "target": 8,
+        "type": "reported_as_of"
+      },
+      {
+        "source": 1,
+        "target": 8,
+        "type": "contains"
+      },
+      {
+        "source": 8,
+        "target": 9,
+        "type": "is_a"
+      }
+    ]
+  },
+  "grafo_evidencia": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "e68a3e28-5e7e-59ee-b1cd-5f55243c58ad",
+        "text": "This chunk is about:\n- Places: Woodland, Baileyville, Washington County, Maine, United States\n- Topics: census-designated places, towns, population\n\nFacts:\n- Baileyville is a town in Washington County, Maine, United States.\n- In 2010, Baileyville had a population of 1,521.\n- Woodland is a census-designated place in the town of Baileyville, Washington County, Maine, United States.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "749df7a2-30e7-563a-8df5-c0e651caadae",
+        "text": "Page: Woodland, Washington County, Maine. Sentence: Woodland is a census-designated place (CDP) in the town of Baileyville, Washington County, Maine, United States.\nPage: Baileyville, Maine. Sentence: Baileyville is a town in Washington County, Maine, United States.\nPage: Baileyville, Maine. Sentence: The population was 1,521 at the 2010 census.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "a416aae5-c0d9-56d3-a7a2-8ef61d32ff93",
+        "text": "text_a0981da7d44187f11e24d6c3116a9b67",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "ca211773-7920-5af1-ac55-97744f2fd559",
+        "text": "woodland",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "5f394058-b2a0-5ba8-8466-ba2a18cfcf4e",
+        "text": "place",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "19cd2707-9bb1-5436-b20c-c63bf8438f15",
+        "text": "baileyville",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "c760dd02-d8bc-58a2-b377-368593b7c209",
+        "text": "washington county",
+        "type": "Entity"
+      },
+      {
+        "id": 7,
+        "original_id": "639fdde7-7841-5347-96e3-67ffadb56002",
+        "text": "maine",
+        "type": "Entity"
+      },
+      {
+        "id": 8,
+        "original_id": "874a51da-34ea-5037-be47-d87785d43c37",
+        "text": "united states",
+        "type": "Entity"
+      },
+      {
+        "id": 9,
+        "original_id": "4cb6ada6-82d5-5a31-83fe-5bd97fc4f3b0",
+        "text": "2010 census",
+        "type": "Entity"
+      },
+      {
+        "id": 10,
+        "original_id": "214abcd9-9adf-5c8a-bb35-1e729f2d68c3",
+        "text": "event",
+        "type": "EntityType"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 5,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 6,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 7,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 8,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "located_in"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "located_in"
+      },
+      {
+        "source": 3,
+        "target": 6,
+        "type": "located_in"
+      },
+      {
+        "source": 1,
+        "target": 6,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 7,
+        "type": "located_in"
+      },
+      {
+        "source": 3,
+        "target": 7,
+        "type": "located_in"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 8,
+        "type": "located_in"
+      },
+      {
+        "source": 3,
+        "target": 8,
+        "type": "located_in"
+      },
+      {
+        "source": 1,
+        "target": 8,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 9,
+        "type": "had_population_at"
+      },
+      {
+        "source": 1,
+        "target": 9,
+        "type": "contains"
+      },
+      {
+        "source": 9,
+        "target": 10,
+        "type": "is_a"
+      }
+    ]
+  }
+}

@@ -1,0 +1,468 @@
+{
+  "dataset": "hover",
+  "id": "e492facf-5571-4761-902e-ba72009ba510",
+  "split": "train",
+  "claim": "200,000 people go through the airport where the airline that acquired Baboo Airlines are located.",
+  "evidencia": "Page: Lugano Airport. Sentence: Around 200,000 passengers use the airport each year, using some 2,400 flights.\nPage: Lugano Airport. Sentence: The headquarters of Darwin Airline are located at the airport.\nPage: Darwin Airline. Sentence: Darwin Airline SA is a Swiss regional airline with its head office in Bioggio, Lugano flying under the brand name Adria Airways Switzerland.\nPage: Baboo (airline). Sentence: In November 2010, the company was saved from bankruptcy and acquired by Darwin Airline Group from Lugano.",
+  "evidence_text": "Page: Lugano Airport. Sentence: Around 200,000 passengers use the airport each year, using some 2,400 flights.\nPage: Lugano Airport. Sentence: The headquarters of Darwin Airline are located at the airport.\nPage: Darwin Airline. Sentence: Darwin Airline SA is a Swiss regional airline with its head office in Bioggio, Lugano flying under the brand name Adria Airways Switzerland.\nPage: Baboo (airline). Sentence: In November 2010, the company was saved from bankruptcy and acquired by Darwin Airline Group from Lugano.",
+  "label": "SUPPORTED",
+  "num_hops": 3,
+  "hover_metadata": {
+    "supporting_facts": [
+      [
+        "Lugano Airport",
+        2
+      ],
+      [
+        "Lugano Airport",
+        4
+      ],
+      [
+        "Darwin Airline",
+        0
+      ],
+      [
+        "Baboo (airline)",
+        1
+      ]
+    ],
+    "num_hops": 3,
+    "evidence_annotation_id": [
+      0
+    ],
+    "evidence_id": [
+      "Lugano Airport::sentence::2",
+      "Lugano Airport::sentence::4",
+      "Darwin Airline::sentence::0",
+      "Baboo (airline)::sentence::1"
+    ],
+    "evidence_wiki_url": [
+      "https://en.wikipedia.org/wiki/Lugano_Airport",
+      "https://en.wikipedia.org/wiki/Darwin_Airline",
+      "https://en.wikipedia.org/wiki/Baboo_%28airline%29"
+    ],
+    "evidence_sentence_id": [
+      "Lugano Airport::sentence::2",
+      "Lugano Airport::sentence::4",
+      "Darwin Airline::sentence::0",
+      "Baboo (airline)::sentence::1"
+    ]
+  },
+  "grafo_claim": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "84109261-eae4-562f-a7ed-54c29fbebfad",
+        "text": "This chunk is about:\n- Companies: Baboo Airlines, airline that acquired Baboo Airlines\n- Places: airport where the acquiring airline is located\n- Topics: airport passenger traffic\n\nFacts:\n- Baboo Airlines was acquired by another airline.\n- The airport where the airline that acquired Baboo Airlines is located handles 200,000 people.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "724283eb-9754-55d4-b8f5-62ed559f16b6",
+        "text": "200,000 people go through the airport where the airline that acquired Baboo Airlines are located.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "5d07237f-6cdc-564a-9e4f-d00843660369",
+        "text": "text_dea70b556a4e046bb314d91eb2e1c208",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "d92eae1d-4165-5486-ad98-9962419e603b",
+        "text": "baboo airlines",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "388f60fb-220d-55e8-ae9c-3ac93cead308",
+        "text": "organization",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "aea6a340-e7cd-5bc9-bfb0-e5c9d1be92ca",
+        "text": "darwin airline",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "4f934275-9ea6-5dda-bc40-2e92cf38a1bb",
+        "text": "airport",
+        "type": "Entity"
+      },
+      {
+        "id": 7,
+        "original_id": "5f394058-b2a0-5ba8-8466-ba2a18cfcf4e",
+        "text": "place",
+        "type": "EntityType"
+      },
+      {
+        "id": 8,
+        "original_id": "21d330cc-4285-5e4c-a5ea-bf96bea20848",
+        "text": "200,000 people",
+        "type": "Entity"
+      },
+      {
+        "id": 9,
+        "original_id": "7a7a0687-e490-5167-ad5a-0e39d9055dee",
+        "text": "quantity",
+        "type": "EntityType"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 3,
+        "type": "acquired"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 5,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "located_at"
+      },
+      {
+        "source": 1,
+        "target": 6,
+        "type": "contains"
+      },
+      {
+        "source": 8,
+        "target": 6,
+        "type": "go_through"
+      },
+      {
+        "source": 6,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 8,
+        "type": "contains"
+      },
+      {
+        "source": 8,
+        "target": 9,
+        "type": "is_a"
+      }
+    ]
+  },
+  "grafo_evidencia": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "3514bf00-dcde-5999-8e6d-8f501f6be219",
+        "text": "This chunk is about:\n- Places: Lugano Airport, Bioggio, Lugano\n- Companies: Darwin Airline, Darwin Airline Group, Baboo, Adria Airways Switzerland\n- Topics: passenger traffic, headquarters, acquisition, branding\n\nFacts:\n- Lugano Airport handles around 200,000 passengers each year and about 2,400 flights.\n- The headquarters of Darwin Airline are located at Lugano Airport.\n- In November 2010, Darwin Airline Group from Lugano acquired Baboo and saved the company from bankruptcy.\n- Darwin Airline SA is a Swiss regional airline with its head office in Bioggio, Lugano, and it flies under the brand name Adria Airways Switzerland.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "a080d693-d779-591c-98fd-995cdefbb213",
+        "text": "Page: Lugano Airport. Sentence: Around 200,000 passengers use the airport each year, using some 2,400 flights.\nPage: Lugano Airport. Sentence: The headquarters of Darwin Airline are located at the airport.\nPage: Darwin Airline. Sentence: Darwin Airline SA is a Swiss regional airline with its head office in Bioggio, Lugano flying under the brand name Adria Airways Switzerland.\nPage: Baboo (airline). Sentence: In November 2010, the company was saved from bankruptcy and acquired by Darwin Airline Group from Lugano.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "28b4e2da-4c9c-50ad-8072-4ef55d92c52a",
+        "text": "text_43518be28c28265043c1006bda85cf64",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "b260f444-b713-5449-8644-d251e263972e",
+        "text": "lugano airport",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "50596f1a-2d8a-5de7-96b5-ba7068791784",
+        "text": "airport",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "863429aa-c394-5c31-ba5b-80cab3d64670",
+        "text": "200000 passengers per year",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "3f5494be-bba9-590a-9bc1-a9fceb3869ef",
+        "text": "statistic",
+        "type": "EntityType"
+      },
+      {
+        "id": 7,
+        "original_id": "5d9bc0ac-9a65-5d2f-b685-73165e8b4003",
+        "text": "2400 flights per year",
+        "type": "Entity"
+      },
+      {
+        "id": 8,
+        "original_id": "aea6a340-e7cd-5bc9-bfb0-e5c9d1be92ca",
+        "text": "darwin airline",
+        "type": "Entity"
+      },
+      {
+        "id": 9,
+        "original_id": "388f60fb-220d-55e8-ae9c-3ac93cead308",
+        "text": "organization",
+        "type": "EntityType"
+      },
+      {
+        "id": 10,
+        "original_id": "06936440-b0f8-5c07-8b48-d524100b6c04",
+        "text": "darwin airline sa",
+        "type": "Entity"
+      },
+      {
+        "id": 11,
+        "original_id": "d6bdc411-db45-5c8f-818a-5e44e3dcc7af",
+        "text": "bioggio, lugano",
+        "type": "Entity"
+      },
+      {
+        "id": 12,
+        "original_id": "5f394058-b2a0-5ba8-8466-ba2a18cfcf4e",
+        "text": "place",
+        "type": "EntityType"
+      },
+      {
+        "id": 13,
+        "original_id": "160aeece-54ce-5708-8096-e2ffc89b36e6",
+        "text": "adria airways switzerland",
+        "type": "Entity"
+      },
+      {
+        "id": 14,
+        "original_id": "31d368fa-7630-5642-a1c1-e579050f9ac3",
+        "text": "brand",
+        "type": "EntityType"
+      },
+      {
+        "id": 15,
+        "original_id": "c8832bc4-3924-5763-9718-67d2b1183f19",
+        "text": "baboo",
+        "type": "Entity"
+      },
+      {
+        "id": 16,
+        "original_id": "8b7c7b07-7900-5e70-a2ef-f05c367d3993",
+        "text": "darwin airline group",
+        "type": "Entity"
+      },
+      {
+        "id": 17,
+        "original_id": "ca860994-670b-5c5d-bc90-fc331533723d",
+        "text": "lugano",
+        "type": "Entity"
+      },
+      {
+        "id": 18,
+        "original_id": "ff5f2c08-aff5-52d5-acbb-65544a612cb8",
+        "text": "2010-11",
+        "type": "Entity"
+      },
+      {
+        "id": 19,
+        "original_id": "b19433ae-558c-5aaf-95ac-6231f2a4be0e",
+        "text": "date",
+        "type": "EntityType"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 8,
+        "target": 3,
+        "type": "has_headquarters_at"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "has_annual_passenger_traffic"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 7,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 7,
+        "type": "has_annual_flights"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      },
+      {
+        "source": 1,
+        "target": 8,
+        "type": "contains"
+      },
+      {
+        "source": 8,
+        "target": 9,
+        "type": "is_a"
+      },
+      {
+        "source": 10,
+        "target": 9,
+        "type": "is_a"
+      },
+      {
+        "source": 15,
+        "target": 9,
+        "type": "is_a"
+      },
+      {
+        "source": 16,
+        "target": 9,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 10,
+        "type": "contains"
+      },
+      {
+        "source": 10,
+        "target": 11,
+        "type": "has_head_office_in"
+      },
+      {
+        "source": 1,
+        "target": 11,
+        "type": "contains"
+      },
+      {
+        "source": 11,
+        "target": 12,
+        "type": "is_a"
+      },
+      {
+        "source": 17,
+        "target": 12,
+        "type": "is_a"
+      },
+      {
+        "source": 10,
+        "target": 13,
+        "type": "flies_under_brand_name"
+      },
+      {
+        "source": 1,
+        "target": 13,
+        "type": "contains"
+      },
+      {
+        "source": 13,
+        "target": 14,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 15,
+        "type": "contains"
+      },
+      {
+        "source": 15,
+        "target": 16,
+        "type": "was_acquired_by"
+      },
+      {
+        "source": 1,
+        "target": 16,
+        "type": "contains"
+      },
+      {
+        "source": 16,
+        "target": 17,
+        "type": "is_from"
+      },
+      {
+        "source": 1,
+        "target": 17,
+        "type": "contains"
+      },
+      {
+        "source": 15,
+        "target": 18,
+        "type": "was_saved_from_bankruptcy_in"
+      },
+      {
+        "source": 1,
+        "target": 18,
+        "type": "contains"
+      },
+      {
+        "source": 18,
+        "target": 19,
+        "type": "is_a"
+      }
+    ]
+  }
+}

@@ -1,0 +1,440 @@
+{
+  "dataset": "hover",
+  "id": "e5880b29-b610-49b7-89ef-11f241a4f0d8",
+  "split": "train",
+  "claim": "Mary Ramsey is young. She's younger than the musician who released the album Between the Times and the Tides.",
+  "evidencia": "Page: Lee Ranaldo. Sentence: Lee Mark Ranaldo (born February 3, 1956) is an American musician, singer-songwriter, guitarist, writer, visual artist and record producer, best known as a co-founder of the alternative rock band Sonic Youth.\nPage: Mary Ramsey. Sentence: Mary Ramsey (born 24 December 1963), a resident of Buffalo, New York, is a member of folk rock duo John & Mary and lead singer and violinist for the American alternative rock band 10,000 Maniacs.\nPage: Between the Times and the Tides. Sentence: Between the Times and the Tides is the ninth studio album by the American alternative rock musician Lee Ranaldo, released on March 20, 2012 on Matador Records.",
+  "evidence_text": "Page: Lee Ranaldo. Sentence: Lee Mark Ranaldo (born February 3, 1956) is an American musician, singer-songwriter, guitarist, writer, visual artist and record producer, best known as a co-founder of the alternative rock band Sonic Youth.\nPage: Mary Ramsey. Sentence: Mary Ramsey (born 24 December 1963), a resident of Buffalo, New York, is a member of folk rock duo John & Mary and lead singer and violinist for the American alternative rock band 10,000 Maniacs.\nPage: Between the Times and the Tides. Sentence: Between the Times and the Tides is the ninth studio album by the American alternative rock musician Lee Ranaldo, released on March 20, 2012 on Matador Records.",
+  "label": "SUPPORTED",
+  "num_hops": 3,
+  "hover_metadata": {
+    "supporting_facts": [
+      [
+        "Lee Ranaldo",
+        0
+      ],
+      [
+        "Mary Ramsey",
+        0
+      ],
+      [
+        "Between the Times and the Tides",
+        0
+      ]
+    ],
+    "num_hops": 3,
+    "evidence_annotation_id": [
+      0
+    ],
+    "evidence_id": [
+      "Lee Ranaldo::sentence::0",
+      "Mary Ramsey::sentence::0",
+      "Between the Times and the Tides::sentence::0"
+    ],
+    "evidence_wiki_url": [
+      "https://en.wikipedia.org/wiki/Lee_Ranaldo",
+      "https://en.wikipedia.org/wiki/Mary_Ramsey",
+      "https://en.wikipedia.org/wiki/Between_the_Times_and_the_Tides"
+    ],
+    "evidence_sentence_id": [
+      "Lee Ranaldo::sentence::0",
+      "Mary Ramsey::sentence::0",
+      "Between the Times and the Tides::sentence::0"
+    ]
+  },
+  "grafo_claim": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "cc55fb50-ac65-576c-967c-1feb395b811f",
+        "text": "This chunk is about:\n- People: Mary Ramsey\n- People: the musician who released the album Between the Times and the Tides\n- Products: Between the Times and the Tides\n\nFacts:\n- Mary Ramsey is young.\n- Mary Ramsey is younger than the musician who released the album Between the Times and the Tides.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "d074a29a-b887-5342-91d0-23aaec3c9c9c",
+        "text": "Mary Ramsey is young. She's younger than the musician who released the album Between the Times and the Tides.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "ba7ced96-ced9-5f87-99ca-a3a7baf1c95b",
+        "text": "text_d214665d58a749f1ddce8a168daa2591",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "491987d1-b6ca-5933-ac20-fe3b994098ff",
+        "text": "mary ramsey",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "99a82eec-bb35-5bb5-9ed2-e73fc7a756de",
+        "text": "person",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "fffa4c39-be37-5736-8dcd-17436a79849e",
+        "text": "the musician who released between the times and the tides",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "fcfcf934-ee13-53cf-9828-69cbfb9b2b18",
+        "text": "between the times and the tides",
+        "type": "Entity"
+      },
+      {
+        "id": 7,
+        "original_id": "213321b1-cf32-59df-847a-8b293b41cf9c",
+        "text": "album",
+        "type": "EntityType"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 5,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "younger_than"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "released"
+      },
+      {
+        "source": 1,
+        "target": 6,
+        "type": "contains"
+      },
+      {
+        "source": 6,
+        "target": 7,
+        "type": "is_a"
+      }
+    ]
+  },
+  "grafo_evidencia": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "b5409aa0-255e-5a1e-9ad6-80eb735137dc",
+        "text": "This chunk is about:\n- People: Lee Ranaldo, Mary Ramsey\n- Bands and Music Projects: Sonic Youth, John & Mary, 10,000 Maniacs\n- Albums: Between the Times and the Tides\n- Companies: Matador Records\n- Places: Buffalo, New York\n- Roles: musician, singer-songwriter, guitarist, writer, visual artist, record producer, lead singer, violinist\n\nFacts:\n- Lee Ranaldo was born on February 3, 1956, and he is an American musician, singer-songwriter, guitarist, writer, visual artist, and record producer.\n- Mary Ramsey was born on December 24, 1963, and she is a resident of Buffalo, New York.\n- Lee Ranaldo is best known as a co-founder of the alternative rock band Sonic Youth.\n- Mary Ramsey is a member of the folk rock duo John & Mary and the lead singer and violinist for the American alternative rock band 10,000 Maniacs.\n- Between the Times and the Tides is the ninth studio album by Lee Ranaldo.\n- Between the Times and the Tides was released on March 20, 2012, on Matador Records.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "5a6bfa7b-a3d7-563c-9061-b55ce2cd038c",
+        "text": "Page: Lee Ranaldo. Sentence: Lee Mark Ranaldo (born February 3, 1956) is an American musician, singer-songwriter, guitarist, writer, visual artist and record producer, best known as a co-founder of the alternative rock band Sonic Youth.\nPage: Mary Ramsey. Sentence: Mary Ramsey (born 24 December 1963), a resident of Buffalo, New York, is a member of folk rock duo John & Mary and lead singer and violinist for the American alternative rock band 10,000 Maniacs.\nPage: Between the Times and the Tides. Sentence: Between the Times and the Tides is the ninth studio album by the American alternative rock musician Lee Ranaldo, released on March 20, 2012 on Matador Records.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "1069f703-c201-52f2-8152-1edea9c5e150",
+        "text": "text_cb85046f814d7957926eca0f0d4b0d66",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "abe9b813-699d-5441-b289-27e344363600",
+        "text": "lee ranaldo",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "99a82eec-bb35-5bb5-9ed2-e73fc7a756de",
+        "text": "person",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "e6109932-24bc-5d5c-afb6-b580cbafd6dd",
+        "text": "1956-02-03",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "b19433ae-558c-5aaf-95ac-6231f2a4be0e",
+        "text": "date",
+        "type": "EntityType"
+      },
+      {
+        "id": 7,
+        "original_id": "edf52ca7-db86-5f95-bbee-862edfc0540c",
+        "text": "sonic youth",
+        "type": "Entity"
+      },
+      {
+        "id": 8,
+        "original_id": "a69bcce0-8153-57d6-96fd-6d36e286fb20",
+        "text": "band",
+        "type": "EntityType"
+      },
+      {
+        "id": 9,
+        "original_id": "491987d1-b6ca-5933-ac20-fe3b994098ff",
+        "text": "mary ramsey",
+        "type": "Entity"
+      },
+      {
+        "id": 10,
+        "original_id": "e21fa540-6fe8-58b9-8286-7488730cf41c",
+        "text": "1963-12-24",
+        "type": "Entity"
+      },
+      {
+        "id": 11,
+        "original_id": "8eeb4aa6-5450-5d87-b3db-8a325f237137",
+        "text": "buffalo, new york",
+        "type": "Entity"
+      },
+      {
+        "id": 12,
+        "original_id": "5f394058-b2a0-5ba8-8466-ba2a18cfcf4e",
+        "text": "place",
+        "type": "EntityType"
+      },
+      {
+        "id": 13,
+        "original_id": "cbadf5f6-061f-5742-980c-85c9b36ebda1",
+        "text": "john & mary",
+        "type": "Entity"
+      },
+      {
+        "id": 14,
+        "original_id": "39dc5068-acb9-5327-9a6a-e6f51c9e9663",
+        "text": "10,000 maniacs",
+        "type": "Entity"
+      },
+      {
+        "id": 15,
+        "original_id": "fcfcf934-ee13-53cf-9828-69cbfb9b2b18",
+        "text": "between the times and the tides",
+        "type": "Entity"
+      },
+      {
+        "id": 16,
+        "original_id": "213321b1-cf32-59df-847a-8b293b41cf9c",
+        "text": "album",
+        "type": "EntityType"
+      },
+      {
+        "id": 17,
+        "original_id": "9aa842d4-44ff-5d73-9d42-528b701e73c3",
+        "text": "2012-03-20",
+        "type": "Entity"
+      },
+      {
+        "id": 18,
+        "original_id": "0e16bfea-cdf0-5aca-9b57-5f194eddd325",
+        "text": "matador records",
+        "type": "Entity"
+      },
+      {
+        "id": 19,
+        "original_id": "388f60fb-220d-55e8-ae9c-3ac93cead308",
+        "text": "organization",
+        "type": "EntityType"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 15,
+        "target": 3,
+        "type": "created_by"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 9,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "born_on"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 10,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 17,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 7,
+        "type": "co_founded"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      },
+      {
+        "source": 7,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 13,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 14,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 9,
+        "type": "contains"
+      },
+      {
+        "source": 9,
+        "target": 10,
+        "type": "born_on"
+      },
+      {
+        "source": 1,
+        "target": 10,
+        "type": "contains"
+      },
+      {
+        "source": 9,
+        "target": 11,
+        "type": "resides_in"
+      },
+      {
+        "source": 1,
+        "target": 11,
+        "type": "contains"
+      },
+      {
+        "source": 11,
+        "target": 12,
+        "type": "is_a"
+      },
+      {
+        "source": 9,
+        "target": 13,
+        "type": "member_of"
+      },
+      {
+        "source": 1,
+        "target": 13,
+        "type": "contains"
+      },
+      {
+        "source": 9,
+        "target": 14,
+        "type": "lead_singer_for"
+      },
+      {
+        "source": 1,
+        "target": 14,
+        "type": "contains"
+      },
+      {
+        "source": 1,
+        "target": 15,
+        "type": "contains"
+      },
+      {
+        "source": 15,
+        "target": 16,
+        "type": "is_a"
+      },
+      {
+        "source": 15,
+        "target": 17,
+        "type": "released_on"
+      },
+      {
+        "source": 1,
+        "target": 17,
+        "type": "contains"
+      },
+      {
+        "source": 15,
+        "target": 18,
+        "type": "released_on_label"
+      },
+      {
+        "source": 1,
+        "target": 18,
+        "type": "contains"
+      },
+      {
+        "source": 18,
+        "target": 19,
+        "type": "is_a"
+      }
+    ]
+  }
+}

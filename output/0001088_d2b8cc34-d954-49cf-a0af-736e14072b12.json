@@ -1,0 +1,353 @@
+{
+  "dataset": "hover",
+  "id": "d2b8cc34-d954-49cf-a0af-736e14072b12",
+  "split": "train",
+  "claim": "The focus city for United States's third largest airline is located in Tel Aviv.",
+  "evidencia": "Page: Sde Dov Airport. Sentence: The airport is a focus city for Arkia Israel Airlines and Israir Airlines.\nPage: Israir Airlines. Sentence: Israir Airlines Ltd. (Hebrew: ישראייר‎ ‎ ), usually referred to as Israir, is an Israeli airline headquartered in Tel Aviv.\nPage: Israir Airlines. Sentence: It also operates VIP flights, and is Israel's third-largest airline after El Al and Arkia Israel Airlines, employing some 350 staff.",
+  "evidence_text": "Page: Sde Dov Airport. Sentence: The airport is a focus city for Arkia Israel Airlines and Israir Airlines.\nPage: Israir Airlines. Sentence: Israir Airlines Ltd. (Hebrew: ישראייר‎ ‎ ), usually referred to as Israir, is an Israeli airline headquartered in Tel Aviv.\nPage: Israir Airlines. Sentence: It also operates VIP flights, and is Israel's third-largest airline after El Al and Arkia Israel Airlines, employing some 350 staff.",
+  "label": "NOT_SUPPORTED",
+  "num_hops": 2,
+  "hover_metadata": {
+    "supporting_facts": [
+      [
+        "Sde Dov Airport",
+        6
+      ],
+      [
+        "Israir Airlines",
+        0
+      ],
+      [
+        "Israir Airlines",
+        2
+      ]
+    ],
+    "num_hops": 2,
+    "evidence_annotation_id": [
+      0
+    ],
+    "evidence_id": [
+      "Sde Dov Airport::sentence::6",
+      "Israir Airlines::sentence::0",
+      "Israir Airlines::sentence::2"
+    ],
+    "evidence_wiki_url": [
+      "https://en.wikipedia.org/wiki/Sde_Dov_Airport",
+      "https://en.wikipedia.org/wiki/Israir_Airlines"
+    ],
+    "evidence_sentence_id": [
+      "Sde Dov Airport::sentence::6",
+      "Israir Airlines::sentence::0",
+      "Israir Airlines::sentence::2"
+    ]
+  },
+  "grafo_claim": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "5fa4aa5f-1870-57a2-92d6-12710ba97d15",
+        "text": "This chunk is about:\n- Companies: United States's third largest airline\n- Places: Tel Aviv\n\nFacts:\n- Tel Aviv is the location of a focus city for United States's third largest airline.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "3a51def1-371b-5e90-8aab-f59c2a3b8eb1",
+        "text": "The focus city for United States's third largest airline is located in Tel Aviv.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "ed50a508-13ba-5824-a8b2-0260ca469783",
+        "text": "text_91cc98c00997d3740dc2b211d8dcf3c9",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "874a51da-34ea-5037-be47-d87785d43c37",
+        "text": "united states",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "35e29ad1-17b7-507a-a205-d7851a5e7102",
+        "text": "country",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "f6571b2c-b1a1-59ed-a1ea-9ef7fd6273f9",
+        "text": "third largest airline in the united states",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "586453f0-9a52-54a4-b0c2-929dc5295536",
+        "text": "tel aviv",
+        "type": "Entity"
+      },
+      {
+        "id": 7,
+        "original_id": "4f155b46-e814-58f6-97cf-55d2ac3a572d",
+        "text": "city",
+        "type": "EntityType"
+      },
+      {
+        "id": 8,
+        "original_id": "388f60fb-220d-55e8-ae9c-3ac93cead308",
+        "text": "organization",
+        "type": "EntityType"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 3,
+        "type": "ranked_in"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "has_focus_city_in"
+      },
+      {
+        "source": 1,
+        "target": 6,
+        "type": "contains"
+      },
+      {
+        "source": 6,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 5,
+        "target": 8,
+        "type": "is_a"
+      }
+    ]
+  },
+  "grafo_evidencia": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "e50e6647-8021-5ea7-9f25-7b18383aa831",
+        "text": "This chunk is about:\n- Places: Sde Dov Airport, Tel Aviv\n- Companies: Arkia Israel Airlines, Israir Airlines, El Al\n- Topics: Israeli airlines, focus cities, VIP flights, airline size, employment\n\nFacts:\n- Sde Dov Airport is a focus city for Arkia Israel Airlines and Israir Airlines.\n- Israir Airlines Ltd., usually called Israir, is an Israeli airline headquartered in Tel Aviv.\n- Israir Airlines also operates VIP flights.\n- Israir Airlines is Israel's third-largest airline after El Al and Arkia Israel Airlines.\n- Israir Airlines employs about 350 staff.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "ece12ce0-85c4-580f-aeac-9f4d3e427581",
+        "text": "Page: Sde Dov Airport. Sentence: The airport is a focus city for Arkia Israel Airlines and Israir Airlines.\nPage: Israir Airlines. Sentence: Israir Airlines Ltd. (Hebrew: ישראייר‎ ‎ ), usually referred to as Israir, is an Israeli airline headquartered in Tel Aviv.\nPage: Israir Airlines. Sentence: It also operates VIP flights, and is Israel's third-largest airline after El Al and Arkia Israel Airlines, employing some 350 staff.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "fc3eab07-2c19-58ce-a6a0-96b6f1d1ade3",
+        "text": "text_c6596f6e4a467eca139deaa86eab7428",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "97ece70c-4ee4-5c43-a28e-bbba02dfda15",
+        "text": "sde dov airport",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "65d4c95c-0bfd-5d6e-a92f-53744b5937a0",
+        "text": "arkia israel airlines",
+        "type": "Entity"
+      },
+      {
+        "id": 5,
+        "original_id": "388f60fb-220d-55e8-ae9c-3ac93cead308",
+        "text": "organization",
+        "type": "EntityType"
+      },
+      {
+        "id": 6,
+        "original_id": "bcb30fa9-073b-556e-af4f-04851b268e13",
+        "text": "israir airlines",
+        "type": "Entity"
+      },
+      {
+        "id": 7,
+        "original_id": "586453f0-9a52-54a4-b0c2-929dc5295536",
+        "text": "tel aviv",
+        "type": "Entity"
+      },
+      {
+        "id": 8,
+        "original_id": "5f394058-b2a0-5ba8-8466-ba2a18cfcf4e",
+        "text": "place",
+        "type": "EntityType"
+      },
+      {
+        "id": 9,
+        "original_id": "bf8f268f-850d-5fbe-aa15-eb64305146f4",
+        "text": "vip flights",
+        "type": "Entity"
+      },
+      {
+        "id": 10,
+        "original_id": "d2a381fa-3658-5ca6-ada9-2109cfc9331d",
+        "text": "concept",
+        "type": "EntityType"
+      },
+      {
+        "id": 11,
+        "original_id": "787553fa-15f8-58c1-97eb-75eeb59517e8",
+        "text": "israel",
+        "type": "Entity"
+      },
+      {
+        "id": 12,
+        "original_id": "d25eda17-eddc-5cfb-8dfb-b648d12a5379",
+        "text": "el al",
+        "type": "Entity"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_focus_city_for"
+      },
+      {
+        "source": 6,
+        "target": 4,
+        "type": "is_smaller_than"
+      },
+      {
+        "source": 1,
+        "target": 4,
+        "type": "contains"
+      },
+      {
+        "source": 4,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 12,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 6,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 6,
+        "type": "is_focus_city_for"
+      },
+      {
+        "source": 1,
+        "target": 6,
+        "type": "contains"
+      },
+      {
+        "source": 6,
+        "target": 7,
+        "type": "is_headquartered_in"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      },
+      {
+        "source": 7,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 11,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 6,
+        "target": 9,
+        "type": "operates"
+      },
+      {
+        "source": 1,
+        "target": 9,
+        "type": "contains"
+      },
+      {
+        "source": 9,
+        "target": 10,
+        "type": "is_a"
+      },
+      {
+        "source": 6,
+        "target": 11,
+        "type": "is_third_largest_airline_in"
+      },
+      {
+        "source": 1,
+        "target": 11,
+        "type": "contains"
+      },
+      {
+        "source": 6,
+        "target": 12,
+        "type": "is_smaller_than"
+      },
+      {
+        "source": 1,
+        "target": 12,
+        "type": "contains"
+      }
+    ]
+  }
+}

@@ -1,0 +1,386 @@
+{
+  "dataset": "hover",
+  "id": "1e930400-3b92-48e5-bd4f-3b0a4e8e1373",
+  "split": "train",
+  "claim": "A college football game was sponsored by a company based in Memphis Tennessee. The 2015 Kansas State Wildcats football team was invited to this bowl.",
+  "evidencia": "Page: 2016 Liberty Bowl (January). Sentence: Sponsored by automobile parts and accessories store AutoZone, it is officially known as the AutoZone Liberty Bowl.\nPage: AutoZone. Sentence: The company is based in Memphis, Tennessee.\nPage: 2015 Kansas State Wildcats football team. Sentence: They were invited to the Liberty Bowl where they lost to Arkansas.",
+  "evidence_text": "Page: 2016 Liberty Bowl (January). Sentence: Sponsored by automobile parts and accessories store AutoZone, it is officially known as the AutoZone Liberty Bowl.\nPage: AutoZone. Sentence: The company is based in Memphis, Tennessee.\nPage: 2015 Kansas State Wildcats football team. Sentence: They were invited to the Liberty Bowl where they lost to Arkansas.",
+  "label": "SUPPORTED",
+  "num_hops": 3,
+  "hover_metadata": {
+    "supporting_facts": [
+      [
+        "2016 Liberty Bowl (January)",
+        4
+      ],
+      [
+        "AutoZone",
+        2
+      ],
+      [
+        "2015 Kansas State Wildcats football team",
+        6
+      ]
+    ],
+    "num_hops": 3,
+    "evidence_annotation_id": [
+      0
+    ],
+    "evidence_id": [
+      "2016 Liberty Bowl (January)::sentence::4",
+      "AutoZone::sentence::2",
+      "2015 Kansas State Wildcats football team::sentence::6"
+    ],
+    "evidence_wiki_url": [
+      "https://en.wikipedia.org/wiki/2016_Liberty_Bowl_%28January%29",
+      "https://en.wikipedia.org/wiki/AutoZone",
+      "https://en.wikipedia.org/wiki/2015_Kansas_State_Wildcats_football_team"
+    ],
+    "evidence_sentence_id": [
+      "2016 Liberty Bowl (January)::sentence::4",
+      "AutoZone::sentence::2",
+      "2015 Kansas State Wildcats football team::sentence::6"
+    ]
+  },
+  "grafo_claim": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "6c9a0635-7009-5b72-8651-88d3522517d7",
+        "text": "This chunk is about:\n- Events: college football bowl game\n- Companies: Memphis, Tennessee-based sponsor\n- Organizations: 2015 Kansas State Wildcats football team\n\nFacts:\n- A college football bowl game was sponsored by a company based in Memphis, Tennessee.\n- The 2015 Kansas State Wildcats football team was invited to that bowl game.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "925f3d1b-5fc3-50d1-9053-a4374f398aaf",
+        "text": "A college football game was sponsored by a company based in Memphis Tennessee. The 2015 Kansas State Wildcats football team was invited to this bowl.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "662a93a4-fe69-504f-9bd8-aebe0b844f97",
+        "text": "text_8a488a3fc24d54d8beba80cbf1601628",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "847e6a3b-5f23-5029-b4bf-3d73d41e1938",
+        "text": "college football game",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "5d442446-1ff4-5407-a878-974ecd9cbab4",
+        "text": "company",
+        "type": "Entity"
+      },
+      {
+        "id": 5,
+        "original_id": "92427c9d-3114-54ec-9820-62081ec67f60",
+        "text": "memphis, tennessee",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "5f394058-b2a0-5ba8-8466-ba2a18cfcf4e",
+        "text": "place",
+        "type": "EntityType"
+      },
+      {
+        "id": 7,
+        "original_id": "388f60fb-220d-55e8-ae9c-3ac93cead308",
+        "text": "organization",
+        "type": "EntityType"
+      },
+      {
+        "id": 8,
+        "original_id": "865408c7-3ab9-5438-b5d6-f5b63208055f",
+        "text": "bowl",
+        "type": "Entity"
+      },
+      {
+        "id": 9,
+        "original_id": "214abcd9-9adf-5c8a-bb35-1e729f2d68c3",
+        "text": "event",
+        "type": "EntityType"
+      },
+      {
+        "id": 10,
+        "original_id": "6c26bca7-53f6-52ee-b41e-19b95d411e8b",
+        "text": "2015 kansas state wildcats football team",
+        "type": "Entity"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "sponsored_by"
+      },
+      {
+        "source": 1,
+        "target": 4,
+        "type": "contains"
+      },
+      {
+        "source": 4,
+        "target": 5,
+        "type": "based_in"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 4,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 10,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 8,
+        "type": "instance_of"
+      },
+      {
+        "source": 10,
+        "target": 8,
+        "type": "invited_to"
+      },
+      {
+        "source": 1,
+        "target": 8,
+        "type": "contains"
+      },
+      {
+        "source": 8,
+        "target": 9,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 9,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 10,
+        "type": "contains"
+      }
+    ]
+  },
+  "grafo_evidencia": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "3044c83a-1def-5e0b-8681-cec6e7c4b4a3",
+        "text": "This chunk is about:\n- Events: 2016 Liberty Bowl (January)\n- Companies: AutoZone\n- Places: Memphis, Tennessee\n- Sports Teams: 2015 Kansas State Wildcats football team, Arkansas\n\nFacts:\n- AutoZone is the official sponsor of the 2016 Liberty Bowl (January), which is officially known as the AutoZone Liberty Bowl.\n- AutoZone is based in Memphis, Tennessee.\n- The 2015 Kansas State Wildcats football team was invited to the Liberty Bowl, where Kansas State lost to Arkansas.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "6265c769-f491-5c33-903e-92aca0ba4f70",
+        "text": "Page: 2016 Liberty Bowl (January). Sentence: Sponsored by automobile parts and accessories store AutoZone, it is officially known as the AutoZone Liberty Bowl.\nPage: AutoZone. Sentence: The company is based in Memphis, Tennessee.\nPage: 2015 Kansas State Wildcats football team. Sentence: They were invited to the Liberty Bowl where they lost to Arkansas.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "406ee794-8103-51ab-bbfd-02d7c7dcaba1",
+        "text": "text_f9bb5782731b2a9b86fac653b139168f",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "10a89fc2-89c1-5c27-8027-8e00675e9105",
+        "text": "2016 liberty bowl (january)",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "2de3e3c3-4d62-5224-8e91-35511e70cb7f",
+        "text": "autozone liberty bowl",
+        "type": "Entity"
+      },
+      {
+        "id": 5,
+        "original_id": "214abcd9-9adf-5c8a-bb35-1e729f2d68c3",
+        "text": "event",
+        "type": "EntityType"
+      },
+      {
+        "id": 6,
+        "original_id": "2909b079-c971-5adf-8be5-513ee80432d3",
+        "text": "autozone",
+        "type": "Entity"
+      },
+      {
+        "id": 7,
+        "original_id": "92427c9d-3114-54ec-9820-62081ec67f60",
+        "text": "memphis, tennessee",
+        "type": "Entity"
+      },
+      {
+        "id": 8,
+        "original_id": "5f394058-b2a0-5ba8-8466-ba2a18cfcf4e",
+        "text": "place",
+        "type": "EntityType"
+      },
+      {
+        "id": 9,
+        "original_id": "388f60fb-220d-55e8-ae9c-3ac93cead308",
+        "text": "organization",
+        "type": "EntityType"
+      },
+      {
+        "id": 10,
+        "original_id": "6c26bca7-53f6-52ee-b41e-19b95d411e8b",
+        "text": "2015 kansas state wildcats football team",
+        "type": "Entity"
+      },
+      {
+        "id": 11,
+        "original_id": "765aada8-cac3-568c-b2da-2d0fb7004c12",
+        "text": "liberty bowl",
+        "type": "Entity"
+      },
+      {
+        "id": 12,
+        "original_id": "267802e3-6901-56a4-b68a-439c426a19a5",
+        "text": "arkansas",
+        "type": "Entity"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 6,
+        "target": 3,
+        "type": "sponsored"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "officially_known_as"
+      },
+      {
+        "source": 1,
+        "target": 4,
+        "type": "contains"
+      },
+      {
+        "source": 4,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 11,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 6,
+        "type": "contains"
+      },
+      {
+        "source": 6,
+        "target": 7,
+        "type": "based_in"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      },
+      {
+        "source": 7,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 6,
+        "target": 9,
+        "type": "is_a"
+      },
+      {
+        "source": 12,
+        "target": 9,
+        "type": "is_a"
+      },
+      {
+        "source": 10,
+        "target": 9,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 10,
+        "type": "contains"
+      },
+      {
+        "source": 10,
+        "target": 11,
+        "type": "invited_to"
+      },
+      {
+        "source": 1,
+        "target": 11,
+        "type": "contains"
+      },
+      {
+        "source": 10,
+        "target": 12,
+        "type": "lost_to"
+      },
+      {
+        "source": 1,
+        "target": 12,
+        "type": "contains"
+      }
+    ]
+  }
+}

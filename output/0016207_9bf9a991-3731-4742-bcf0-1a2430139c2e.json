@@ -1,0 +1,563 @@
+{
+  "dataset": "hover",
+  "id": "9bf9a991-3731-4742-bcf0-1a2430139c2e",
+  "split": "train",
+  "claim": "The gross leasable area of the shopping mall served by the Merrick Boulevard buses is 1800000 sqft.",
+  "evidencia": "Page: Merrick Boulevard buses. Sentence: The Q5 and Q85 bus routes constitute a public transit corridor running along Merrick Boulevard in Southeastern Queens, New York City, United States.\nPage: Merrick Boulevard buses. Sentence: The routes run from the Jamaica Center transit hub and business district to Rosedale, with continued service to the Green Acres Mall shopping center in Nassau County.\nPage: Green Acres Mall. Sentence: Green Acres Mall is an indoor shopping mall located in South Valley Stream, New York, off Sunrise Highway in Nassau County right off the border of New York City and the Incorporated Village of Valley Stream (part of the parking lot and stores on the north side of the property are in the Village, while the mall itself is in an unincorporated hamlet of the Town of Hempstead).\nPage: Green Acres Mall. Sentence: The mall has a gross leasable area (GLA) of 1800000 sqft .",
+  "evidence_text": "Page: Merrick Boulevard buses. Sentence: The Q5 and Q85 bus routes constitute a public transit corridor running along Merrick Boulevard in Southeastern Queens, New York City, United States.\nPage: Merrick Boulevard buses. Sentence: The routes run from the Jamaica Center transit hub and business district to Rosedale, with continued service to the Green Acres Mall shopping center in Nassau County.\nPage: Green Acres Mall. Sentence: Green Acres Mall is an indoor shopping mall located in South Valley Stream, New York, off Sunrise Highway in Nassau County right off the border of New York City and the Incorporated Village of Valley Stream (part of the parking lot and stores on the north side of the property are in the Village, while the mall itself is in an unincorporated hamlet of the Town of Hempstead).\nPage: Green Acres Mall. Sentence: The mall has a gross leasable area (GLA) of 1800000 sqft .",
+  "label": "SUPPORTED",
+  "num_hops": 2,
+  "hover_metadata": {
+    "supporting_facts": [
+      [
+        "Merrick Boulevard buses",
+        0
+      ],
+      [
+        "Merrick Boulevard buses",
+        1
+      ],
+      [
+        "Green Acres Mall",
+        0
+      ],
+      [
+        "Green Acres Mall",
+        1
+      ]
+    ],
+    "num_hops": 2,
+    "evidence_annotation_id": [
+      0
+    ],
+    "evidence_id": [
+      "Merrick Boulevard buses::sentence::0",
+      "Merrick Boulevard buses::sentence::1",
+      "Green Acres Mall::sentence::0",
+      "Green Acres Mall::sentence::1"
+    ],
+    "evidence_wiki_url": [
+      "https://en.wikipedia.org/wiki/Merrick_Boulevard_buses",
+      "https://en.wikipedia.org/wiki/Green_Acres_Mall"
+    ],
+    "evidence_sentence_id": [
+      "Merrick Boulevard buses::sentence::0",
+      "Merrick Boulevard buses::sentence::1",
+      "Green Acres Mall::sentence::0",
+      "Green Acres Mall::sentence::1"
+    ]
+  },
+  "grafo_claim": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "cec39406-9f07-567f-8d2e-ee2d1af12b09",
+        "text": "This chunk is about:\n- Places: Merrick Boulevard, shopping mall\n- Transportation: Merrick Boulevard buses\n- Properties: gross leasable area\n\nFacts:\n- The shopping mall served by the Merrick Boulevard buses has a gross leasable area of 1,800,000 square feet.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "ddf9a7e8-366f-59ca-9681-5b4a159cb4d9",
+        "text": "The gross leasable area of the shopping mall served by the Merrick Boulevard buses is 1800000 sqft.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "44e8265a-5826-5bde-876a-5b064f4428ef",
+        "text": "text_b3f55474879ab7a2f5eee67aa6d0104e",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "282ff9c6-af0c-5c9d-8587-df3488ffe3ae",
+        "text": "merrick boulevard buses",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "074c7e1f-d6b3-5f9a-8ba6-e418c8a42de3",
+        "text": "transit service",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "2f063cf0-e9ca-5597-aebc-5338a60c125e",
+        "text": "shopping mall",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "5f394058-b2a0-5ba8-8466-ba2a18cfcf4e",
+        "text": "place",
+        "type": "EntityType"
+      },
+      {
+        "id": 7,
+        "original_id": "97e92e5d-1289-5756-9566-f351c1d5a5f2",
+        "text": "1800000 sqft",
+        "type": "Entity"
+      },
+      {
+        "id": 8,
+        "original_id": "12d5521e-a878-542e-bebc-84ff79179d8e",
+        "text": "measurement",
+        "type": "EntityType"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "serves"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 5,
+        "target": 7,
+        "type": "has_gross_leasable_area"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      },
+      {
+        "source": 7,
+        "target": 8,
+        "type": "is_a"
+      }
+    ]
+  },
+  "grafo_evidencia": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "8af5bbe8-d19b-57ad-a7a4-d6a427107cc9",
+        "text": "This chunk is about:\n- Products: Q5 bus route, Q85 bus route\n- Places: Merrick Boulevard, Southeastern Queens, New York City, Jamaica Center, Rosedale, Green Acres Mall, Nassau County, South Valley Stream, Sunrise Highway, Valley Stream, Town of Hempstead\n- Concepts: public transit corridor, shopping mall\n\nFacts:\n- The Q5 and Q85 bus routes form a public transit corridor along Merrick Boulevard in Southeastern Queens, New York City, United States.\n- The Q5 and Q85 bus routes run from the Jamaica Center transit hub and business district to Rosedale, and continue to Green Acres Mall in Nassau County.\n- Green Acres Mall is an indoor shopping mall in South Valley Stream, New York, off Sunrise Highway in Nassau County near the border of New York City and the Incorporated Village of Valley Stream.\n- Green Acres Mall itself is in an unincorporated hamlet of the Town of Hempstead, while part of its parking lot and some stores on the north side are in the Village of Valley Stream.\n- Green Acres Mall has 1,800,000 square feet of gross leasable area.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "32489300-304f-55bb-94d9-42cd4f8b4ffb",
+        "text": "Page: Merrick Boulevard buses. Sentence: The Q5 and Q85 bus routes constitute a public transit corridor running along Merrick Boulevard in Southeastern Queens, New York City, United States.\nPage: Merrick Boulevard buses. Sentence: The routes run from the Jamaica Center transit hub and business district to Rosedale, with continued service to the Green Acres Mall shopping center in Nassau County.\nPage: Green Acres Mall. Sentence: Green Acres Mall is an indoor shopping mall located in South Valley Stream, New York, off Sunrise Highway in Nassau County right off the border of New York City and the Incorporated Village of Valley Stream (part of the parking lot and stores on the north side of the property are in the Village, while the mall itself is in an unincorporated hamlet of the Town of Hempstead).\nPage: Green Acres Mall. Sentence: The mall has a gross leasable area (GLA) of 1800000 sqft .",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "3357ce75-eac1-589b-b5be-17ddbbf8b131",
+        "text": "text_f06189be567f9af4f936ea6b98d33438",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "44b57041-5f45-5637-bfbb-39ade810d687",
+        "text": "q5 bus route",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "5d81e84e-94d7-53a4-95a1-d535deac0f0d",
+        "text": "transitroute",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "f5828642-313b-549b-af23-bf52ff2aaaaf",
+        "text": "merrick boulevard",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "5f394058-b2a0-5ba8-8466-ba2a18cfcf4e",
+        "text": "place",
+        "type": "EntityType"
+      },
+      {
+        "id": 7,
+        "original_id": "4396ff36-4159-54cf-a48d-79be4c810f85",
+        "text": "southeastern queens",
+        "type": "Entity"
+      },
+      {
+        "id": 8,
+        "original_id": "62912d92-4218-52f7-a1a6-776a04889442",
+        "text": "new york city",
+        "type": "Entity"
+      },
+      {
+        "id": 9,
+        "original_id": "874a51da-34ea-5037-be47-d87785d43c37",
+        "text": "united states",
+        "type": "Entity"
+      },
+      {
+        "id": 10,
+        "original_id": "1eb952ab-97f5-5301-a0bb-e94cdac4d34c",
+        "text": "jamaica center transit hub and business district",
+        "type": "Entity"
+      },
+      {
+        "id": 11,
+        "original_id": "984e4b9d-5c89-51e2-8530-1ea1fc698663",
+        "text": "rosedale",
+        "type": "Entity"
+      },
+      {
+        "id": 12,
+        "original_id": "2b4211e7-eb96-51f4-95a0-61d14e823c54",
+        "text": "green acres mall",
+        "type": "Entity"
+      },
+      {
+        "id": 13,
+        "original_id": "0833c253-c1b8-5ed9-aed2-04e68e209cf9",
+        "text": "south valley stream",
+        "type": "Entity"
+      },
+      {
+        "id": 14,
+        "original_id": "a7852d00-db75-55e2-bd9a-468ada762d39",
+        "text": "new york",
+        "type": "Entity"
+      },
+      {
+        "id": 15,
+        "original_id": "8dc894f4-5d59-5241-9605-4caabdc2a85a",
+        "text": "sunrise highway",
+        "type": "Entity"
+      },
+      {
+        "id": 16,
+        "original_id": "1c886082-59cc-5ac3-a711-c0a2ce085f94",
+        "text": "nassau county",
+        "type": "Entity"
+      },
+      {
+        "id": 17,
+        "original_id": "c519758a-41c3-5db6-9fcb-ede5e29316b8",
+        "text": "incorporated village of valley stream",
+        "type": "Entity"
+      },
+      {
+        "id": 18,
+        "original_id": "b05a7c43-6a73-5be5-b3c8-6373c893f52e",
+        "text": "town of hempstead",
+        "type": "Entity"
+      },
+      {
+        "id": 19,
+        "original_id": "97e92e5d-1289-5756-9566-f351c1d5a5f2",
+        "text": "1800000 sqft",
+        "type": "Entity"
+      },
+      {
+        "id": 20,
+        "original_id": "7a7a0687-e490-5167-ad5a-0e39d9055dee",
+        "text": "quantity",
+        "type": "EntityType"
+      },
+      {
+        "id": 21,
+        "original_id": "b58b658f-7b32-5329-8c54-1971d53c7f74",
+        "text": "q85 bus route",
+        "type": "Entity"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 21,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "runs_along"
+      },
+      {
+        "source": 21,
+        "target": 5,
+        "type": "runs_along"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 7,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 8,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 9,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 10,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 11,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 12,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 13,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 14,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 15,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 16,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 17,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 18,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 5,
+        "target": 7,
+        "type": "located_in"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      },
+      {
+        "source": 7,
+        "target": 8,
+        "type": "located_in"
+      },
+      {
+        "source": 12,
+        "target": 8,
+        "type": "near_border_of"
+      },
+      {
+        "source": 1,
+        "target": 8,
+        "type": "contains"
+      },
+      {
+        "source": 8,
+        "target": 9,
+        "type": "located_in"
+      },
+      {
+        "source": 1,
+        "target": 9,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 10,
+        "type": "starts_from"
+      },
+      {
+        "source": 21,
+        "target": 10,
+        "type": "starts_from"
+      },
+      {
+        "source": 1,
+        "target": 10,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 11,
+        "type": "runs_to"
+      },
+      {
+        "source": 21,
+        "target": 11,
+        "type": "runs_to"
+      },
+      {
+        "source": 1,
+        "target": 11,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 12,
+        "type": "continues_to"
+      },
+      {
+        "source": 21,
+        "target": 12,
+        "type": "continues_to"
+      },
+      {
+        "source": 1,
+        "target": 12,
+        "type": "contains"
+      },
+      {
+        "source": 12,
+        "target": 13,
+        "type": "located_in"
+      },
+      {
+        "source": 1,
+        "target": 13,
+        "type": "contains"
+      },
+      {
+        "source": 13,
+        "target": 14,
+        "type": "located_in"
+      },
+      {
+        "source": 1,
+        "target": 14,
+        "type": "contains"
+      },
+      {
+        "source": 12,
+        "target": 15,
+        "type": "located_off"
+      },
+      {
+        "source": 1,
+        "target": 15,
+        "type": "contains"
+      },
+      {
+        "source": 12,
+        "target": 16,
+        "type": "located_in"
+      },
+      {
+        "source": 1,
+        "target": 16,
+        "type": "contains"
+      },
+      {
+        "source": 12,
+        "target": 17,
+        "type": "near_border_of"
+      },
+      {
+        "source": 1,
+        "target": 17,
+        "type": "contains"
+      },
+      {
+        "source": 12,
+        "target": 18,
+        "type": "located_in"
+      },
+      {
+        "source": 1,
+        "target": 18,
+        "type": "contains"
+      },
+      {
+        "source": 12,
+        "target": 19,
+        "type": "has_gross_leasable_area"
+      },
+      {
+        "source": 1,
+        "target": 19,
+        "type": "contains"
+      },
+      {
+        "source": 19,
+        "target": 20,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 21,
+        "type": "contains"
+      }
+    ]
+  }
+}

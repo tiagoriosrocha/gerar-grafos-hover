@@ -1,0 +1,459 @@
+{
+  "dataset": "hover",
+  "id": "557ec321-ae22-48da-89c3-7c20ec0bee7b",
+  "split": "train",
+  "claim": "The composer William Turner Walton was born later than the creator of Parisina.",
+  "evidencia": "Page: Gaetano Donizetti. Sentence: Domenico Gaetano Maria Donizetti (] ; 29 November 1797 – 8 April 1848) was an Italian composer.\nPage: William Walton. Sentence: Sir William Turner Walton, OM (29 March 19028 March 1983) was an English composer.\nPage: Parisina (opera). Sentence: Parisina (also known as Parisina d'Este) is an opera (\"tragedia lirica\"), in three acts by Gaetano Donizetti.",
+  "evidence_text": "Page: Gaetano Donizetti. Sentence: Domenico Gaetano Maria Donizetti (] ; 29 November 1797 – 8 April 1848) was an Italian composer.\nPage: William Walton. Sentence: Sir William Turner Walton, OM (29 March 19028 March 1983) was an English composer.\nPage: Parisina (opera). Sentence: Parisina (also known as Parisina d'Este) is an opera (\"tragedia lirica\"), in three acts by Gaetano Donizetti.",
+  "label": "SUPPORTED",
+  "num_hops": 3,
+  "hover_metadata": {
+    "supporting_facts": [
+      [
+        "Gaetano Donizetti",
+        0
+      ],
+      [
+        "William Walton",
+        0
+      ],
+      [
+        "Parisina (opera)",
+        0
+      ]
+    ],
+    "num_hops": 3,
+    "evidence_annotation_id": [
+      0
+    ],
+    "evidence_id": [
+      "Gaetano Donizetti::sentence::0",
+      "William Walton::sentence::0",
+      "Parisina (opera)::sentence::0"
+    ],
+    "evidence_wiki_url": [
+      "https://en.wikipedia.org/wiki/Gaetano_Donizetti",
+      "https://en.wikipedia.org/wiki/William_Walton",
+      "https://en.wikipedia.org/wiki/Parisina_%28opera%29"
+    ],
+    "evidence_sentence_id": [
+      "Gaetano Donizetti::sentence::0",
+      "William Walton::sentence::0",
+      "Parisina (opera)::sentence::0"
+    ]
+  },
+  "grafo_claim": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "45378609-de82-5894-b2a4-f9f0e9879ddf",
+        "text": "This chunk is about:\n- People: William Turner Walton, creator of Parisina\n- Works: Parisina\n\nFacts:\n- William Turner Walton was a composer.\n- William Turner Walton was born later than the creator of Parisina.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "a601c30e-ea5b-5a6d-9407-6cf46f402f67",
+        "text": "The composer William Turner Walton was born later than the creator of Parisina.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "9258721a-fbd5-536b-bdeb-3334e2d4e913",
+        "text": "text_2ffe25f627bb6f565578edf9e55538da",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "20a26e0e-dd0a-53ef-a5c9-c8937728f91e",
+        "text": "william turner walton",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "99a82eec-bb35-5bb5-9ed2-e73fc7a756de",
+        "text": "person",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "c266eb7c-c3a6-54b6-b76c-0523553113bc",
+        "text": "creator of parisina",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "cd079572-de8b-5439-841c-4623d23111f8",
+        "text": "parisina",
+        "type": "Entity"
+      },
+      {
+        "id": 7,
+        "original_id": "5263a535-1b4b-5925-be3e-310d03cd303b",
+        "text": "work",
+        "type": "EntityType"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 5,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "born_later_than"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "created"
+      },
+      {
+        "source": 1,
+        "target": 6,
+        "type": "contains"
+      },
+      {
+        "source": 6,
+        "target": 7,
+        "type": "is_a"
+      }
+    ]
+  },
+  "grafo_evidencia": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "caa5ed0d-48a2-50fa-af1f-89cb60b655a0",
+        "text": "This chunk is about:\n- People: Gaetano Donizetti, William Walton\n- Products: Parisina\n- Topics: Opera, composers\n\nFacts:\n- Gaetano Donizetti was born on 29 November 1797 and died on 8 April 1848.\n- Gaetano Donizetti was an Italian composer.\n- William Turner Walton was born on 29 March 1902 and died on 8 March 1983.\n- William Turner Walton was an English composer.\n- Parisina, also known as Parisina d'Este, is an opera in three acts by Gaetano Donizetti.\n- Parisina is described as a tragedia lirica.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "1c43b6bb-8927-5bd5-ad09-c3d970b47687",
+        "text": "Page: Gaetano Donizetti. Sentence: Domenico Gaetano Maria Donizetti (] ; 29 November 1797 – 8 April 1848) was an Italian composer.\nPage: William Walton. Sentence: Sir William Turner Walton, OM (29 March 19028 March 1983) was an English composer.\nPage: Parisina (opera). Sentence: Parisina (also known as Parisina d'Este) is an opera (\"tragedia lirica\"), in three acts by Gaetano Donizetti.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "98e492cd-e29d-54d5-a12c-35435e3f7653",
+        "text": "text_6c55bbe4b623f9ea0ad67b1103e138ec",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "c5941caf-2573-5435-895f-80003aa64953",
+        "text": "gaetano donizetti",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "99a82eec-bb35-5bb5-9ed2-e73fc7a756de",
+        "text": "person",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "927668a3-a0aa-5d39-96e4-4f1e28dcd4b9",
+        "text": "domenico gaetano maria donizetti",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "1a1b9622-0cdb-5191-89f9-d70ac1a48951",
+        "text": "1797-11-29",
+        "type": "Entity"
+      },
+      {
+        "id": 7,
+        "original_id": "b19433ae-558c-5aaf-95ac-6231f2a4be0e",
+        "text": "date",
+        "type": "EntityType"
+      },
+      {
+        "id": 8,
+        "original_id": "c3177e2e-1adc-50c7-960d-a2c6ad33f320",
+        "text": "1848-04-08",
+        "type": "Entity"
+      },
+      {
+        "id": 9,
+        "original_id": "eb9507d1-116c-5d73-8e96-9e5b4ef6eb69",
+        "text": "opera",
+        "type": "Entity"
+      },
+      {
+        "id": 10,
+        "original_id": "d2a381fa-3658-5ca6-ada9-2109cfc9331d",
+        "text": "concept",
+        "type": "EntityType"
+      },
+      {
+        "id": 11,
+        "original_id": "04dd1496-baff-5b3a-9969-f098358baa05",
+        "text": "william walton",
+        "type": "Entity"
+      },
+      {
+        "id": 12,
+        "original_id": "661c3a79-0ad0-5803-bd20-e9ab1e30ed55",
+        "text": "sir william turner walton",
+        "type": "Entity"
+      },
+      {
+        "id": 13,
+        "original_id": "2677a8f6-71e0-517c-ba5a-307b8c47b73c",
+        "text": "1902-03-29",
+        "type": "Entity"
+      },
+      {
+        "id": 14,
+        "original_id": "2ada2e6e-2768-5d28-a4ee-195e12a62e44",
+        "text": "1983-03-08",
+        "type": "Entity"
+      },
+      {
+        "id": 15,
+        "original_id": "cd079572-de8b-5439-841c-4623d23111f8",
+        "text": "parisina",
+        "type": "Entity"
+      },
+      {
+        "id": 16,
+        "original_id": "5263a535-1b4b-5925-be3e-310d03cd303b",
+        "text": "work",
+        "type": "EntityType"
+      },
+      {
+        "id": 17,
+        "original_id": "d9a0ee2b-94c8-5294-a190-9d61a7e99a27",
+        "text": "parisina deste",
+        "type": "Entity"
+      },
+      {
+        "id": 18,
+        "original_id": "956ce0bb-1fc0-585c-ad52-c35700863483",
+        "text": "tragedia lirica",
+        "type": "Entity"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 3,
+        "type": "also_known_as"
+      },
+      {
+        "source": 15,
+        "target": 3,
+        "type": "created_by"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 5,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 11,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 12,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "born_on"
+      },
+      {
+        "source": 1,
+        "target": 6,
+        "type": "contains"
+      },
+      {
+        "source": 6,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 8,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 13,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 14,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 5,
+        "target": 8,
+        "type": "died_on"
+      },
+      {
+        "source": 1,
+        "target": 8,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 9,
+        "type": "has_profession"
+      },
+      {
+        "source": 12,
+        "target": 9,
+        "type": "has_profession"
+      },
+      {
+        "source": 15,
+        "target": 9,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 9,
+        "type": "contains"
+      },
+      {
+        "source": 9,
+        "target": 10,
+        "type": "is_a"
+      },
+      {
+        "source": 18,
+        "target": 10,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 11,
+        "type": "contains"
+      },
+      {
+        "source": 12,
+        "target": 11,
+        "type": "also_known_as"
+      },
+      {
+        "source": 1,
+        "target": 12,
+        "type": "contains"
+      },
+      {
+        "source": 12,
+        "target": 13,
+        "type": "born_on"
+      },
+      {
+        "source": 1,
+        "target": 13,
+        "type": "contains"
+      },
+      {
+        "source": 12,
+        "target": 14,
+        "type": "died_on"
+      },
+      {
+        "source": 1,
+        "target": 14,
+        "type": "contains"
+      },
+      {
+        "source": 1,
+        "target": 15,
+        "type": "contains"
+      },
+      {
+        "source": 15,
+        "target": 16,
+        "type": "is_a"
+      },
+      {
+        "source": 17,
+        "target": 16,
+        "type": "is_a"
+      },
+      {
+        "source": 15,
+        "target": 17,
+        "type": "also_known_as"
+      },
+      {
+        "source": 1,
+        "target": 17,
+        "type": "contains"
+      },
+      {
+        "source": 15,
+        "target": 18,
+        "type": "has_genre"
+      },
+      {
+        "source": 1,
+        "target": 18,
+        "type": "contains"
+      }
+    ]
+  }
+}

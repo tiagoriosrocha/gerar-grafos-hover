@@ -1,0 +1,439 @@
+{
+  "dataset": "hover",
+  "id": "5ae50669-4659-4a07-95ff-033fd7c4aaf8",
+  "split": "train",
+  "claim": "The Miss Universe 2015 was held at a venue inside a casino in Las Vegas. This venue is located in a casino that is owned and operated by Dubuque Greyhound Park & Casino.",
+  "evidencia": "Page: The AXIS. Sentence: The AXIS (known as The AXIS powered by Monster for sponsorship purposes, also referred to as the AXIS Theater) is a mid-sized auditorium located at Planet Hollywood Las Vegas on the Las Vegas Strip.\nPage: Planet Hollywood Las Vegas. Sentence: It is owned and operated by Caesars Entertainment Corporation.\nPage: Miss Universe 2015. Sentence: Miss Universe 2015, the 64th Miss Universe pageant, was held on 20 December 2015 at The AXIS in Las Vegas, Nevada, United States.",
+  "evidence_text": "Page: The AXIS. Sentence: The AXIS (known as The AXIS powered by Monster for sponsorship purposes, also referred to as the AXIS Theater) is a mid-sized auditorium located at Planet Hollywood Las Vegas on the Las Vegas Strip.\nPage: Planet Hollywood Las Vegas. Sentence: It is owned and operated by Caesars Entertainment Corporation.\nPage: Miss Universe 2015. Sentence: Miss Universe 2015, the 64th Miss Universe pageant, was held on 20 December 2015 at The AXIS in Las Vegas, Nevada, United States.",
+  "label": "NOT_SUPPORTED",
+  "num_hops": 3,
+  "hover_metadata": {
+    "supporting_facts": [
+      [
+        "The AXIS",
+        0
+      ],
+      [
+        "Planet Hollywood Las Vegas",
+        1
+      ],
+      [
+        "Miss Universe 2015",
+        0
+      ]
+    ],
+    "num_hops": 3,
+    "evidence_annotation_id": [
+      0
+    ],
+    "evidence_id": [
+      "The AXIS::sentence::0",
+      "Planet Hollywood Las Vegas::sentence::1",
+      "Miss Universe 2015::sentence::0"
+    ],
+    "evidence_wiki_url": [
+      "https://en.wikipedia.org/wiki/The_AXIS",
+      "https://en.wikipedia.org/wiki/Planet_Hollywood_Las_Vegas",
+      "https://en.wikipedia.org/wiki/Miss_Universe_2015"
+    ],
+    "evidence_sentence_id": [
+      "The AXIS::sentence::0",
+      "Planet Hollywood Las Vegas::sentence::1",
+      "Miss Universe 2015::sentence::0"
+    ]
+  },
+  "grafo_claim": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "a4ebdf32-599d-5e1e-9013-7a23de9f0441",
+        "text": "This chunk is about:\n- Events: Miss Universe 2015\n- Places: Las Vegas, casino venue\n- Companies: Dubuque Greyhound Park & Casino\n\nFacts:\n- Miss Universe 2015 was held at a venue inside a casino in Las Vegas.\n- The Las Vegas casino containing the venue was stated to be owned and operated by Dubuque Greyhound Park & Casino.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "e8c75780-7293-508d-bb63-d965462de1bb",
+        "text": "The Miss Universe 2015 was held at a venue inside a casino in Las Vegas. This venue is located in a casino that is owned and operated by Dubuque Greyhound Park & Casino.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "8d43e61d-8d79-5ff0-a382-625fd6033861",
+        "text": "text_532ac6ff9144e89f478375f86faee72d",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "002b29e3-f620-5b36-8ae7-4305d82ec436",
+        "text": "miss universe 2015",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "34ff387e-2275-5527-b818-ae933978fc84",
+        "text": "venue",
+        "type": "Entity"
+      },
+      {
+        "id": 5,
+        "original_id": "8c34324b-4454-5115-a64e-9f4c9e1c6199",
+        "text": "casino",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "2768ffee-4734-5551-9369-d2097b287276",
+        "text": "las vegas",
+        "type": "Entity"
+      },
+      {
+        "id": 7,
+        "original_id": "5f394058-b2a0-5ba8-8466-ba2a18cfcf4e",
+        "text": "place",
+        "type": "EntityType"
+      },
+      {
+        "id": 8,
+        "original_id": "4de34ccd-3a9c-5337-9ff0-10b6aa255569",
+        "text": "dubuque greyhound park & casino",
+        "type": "Entity"
+      },
+      {
+        "id": 9,
+        "original_id": "388f60fb-220d-55e8-ae9c-3ac93cead308",
+        "text": "organization",
+        "type": "EntityType"
+      },
+      {
+        "id": 10,
+        "original_id": "214abcd9-9adf-5c8a-bb35-1e729f2d68c3",
+        "text": "event",
+        "type": "EntityType"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "held_at"
+      },
+      {
+        "source": 1,
+        "target": 4,
+        "type": "contains"
+      },
+      {
+        "source": 4,
+        "target": 5,
+        "type": "located_inside"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "located_in"
+      },
+      {
+        "source": 1,
+        "target": 6,
+        "type": "contains"
+      },
+      {
+        "source": 6,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 5,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 4,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 5,
+        "target": 8,
+        "type": "owned_and_operated_by"
+      },
+      {
+        "source": 1,
+        "target": 8,
+        "type": "contains"
+      },
+      {
+        "source": 8,
+        "target": 9,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 10,
+        "type": "is_a"
+      }
+    ]
+  },
+  "grafo_evidencia": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "acde072d-73ab-5b78-acc9-4f9634507108",
+        "text": "This chunk is about:\n- Places: The AXIS, Planet Hollywood Las Vegas, Las Vegas Strip, Las Vegas, Nevada, United States\n- Organizations: Caesars Entertainment Corporation\n- Events: Miss Universe 2015\n- Concepts: sponsorship names\n\nFacts:\n- The AXIS is a mid-sized auditorium located at Planet Hollywood Las Vegas on the Las Vegas Strip in Las Vegas, Nevada, United States.\n- The AXIS is known as The AXIS powered by Monster for sponsorship purposes and is also referred to as the AXIS Theater.\n- Planet Hollywood Las Vegas is owned and operated by Caesars Entertainment Corporation.\n- Miss Universe 2015 was the 64th Miss Universe pageant and was held on 20 December 2015 at The AXIS in Las Vegas, Nevada, United States.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "7b33749f-bda5-5603-89bb-2057b94e0838",
+        "text": "Page: The AXIS. Sentence: The AXIS (known as The AXIS powered by Monster for sponsorship purposes, also referred to as the AXIS Theater) is a mid-sized auditorium located at Planet Hollywood Las Vegas on the Las Vegas Strip.\nPage: Planet Hollywood Las Vegas. Sentence: It is owned and operated by Caesars Entertainment Corporation.\nPage: Miss Universe 2015. Sentence: Miss Universe 2015, the 64th Miss Universe pageant, was held on 20 December 2015 at The AXIS in Las Vegas, Nevada, United States.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "c419eec8-244b-558d-95bb-61fc2960c222",
+        "text": "text_2d64326ad0733eae35c5490521661c42",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "637c83e2-3890-5922-91f0-216ac5b19306",
+        "text": "the axis",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "96b41adc-b30a-5d48-87c7-2c16d939c7c4",
+        "text": "planet hollywood las vegas",
+        "type": "Entity"
+      },
+      {
+        "id": 5,
+        "original_id": "60152a3c-19f4-5b80-8305-51c3a57f8052",
+        "text": "las vegas strip",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "5f394058-b2a0-5ba8-8466-ba2a18cfcf4e",
+        "text": "place",
+        "type": "EntityType"
+      },
+      {
+        "id": 7,
+        "original_id": "8ffef65a-8520-5368-ba09-e5e5d021f98e",
+        "text": "the axis powered by monster",
+        "type": "Entity"
+      },
+      {
+        "id": 8,
+        "original_id": "388f60fb-220d-55e8-ae9c-3ac93cead308",
+        "text": "organization",
+        "type": "EntityType"
+      },
+      {
+        "id": 9,
+        "original_id": "2fe483d0-73b7-5106-8f9c-c696a630ac88",
+        "text": "axis theater",
+        "type": "Entity"
+      },
+      {
+        "id": 10,
+        "original_id": "dacea73c-3c76-5b65-abe7-70037f4329a8",
+        "text": "caesars entertainment corporation",
+        "type": "Entity"
+      },
+      {
+        "id": 11,
+        "original_id": "002b29e3-f620-5b36-8ae7-4305d82ec436",
+        "text": "miss universe 2015",
+        "type": "Entity"
+      },
+      {
+        "id": 12,
+        "original_id": "3175d210-3eaf-5093-aa0f-72e23f6682a9",
+        "text": "2015-12-20",
+        "type": "Entity"
+      },
+      {
+        "id": 13,
+        "original_id": "b19433ae-558c-5aaf-95ac-6231f2a4be0e",
+        "text": "date",
+        "type": "EntityType"
+      },
+      {
+        "id": 14,
+        "original_id": "218572fb-f172-5bcc-8083-0f43b0281897",
+        "text": "las vegas, nevada, united states",
+        "type": "Entity"
+      },
+      {
+        "id": 15,
+        "original_id": "214abcd9-9adf-5c8a-bb35-1e729f2d68c3",
+        "text": "event",
+        "type": "EntityType"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 7,
+        "target": 3,
+        "type": "sponsorship_name_for"
+      },
+      {
+        "source": 9,
+        "target": 3,
+        "type": "alternate_name_for"
+      },
+      {
+        "source": 11,
+        "target": 3,
+        "type": "held_at"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "located_at"
+      },
+      {
+        "source": 1,
+        "target": 4,
+        "type": "contains"
+      },
+      {
+        "source": 10,
+        "target": 4,
+        "type": "owns"
+      },
+      {
+        "source": 4,
+        "target": 5,
+        "type": "located_on"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 4,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 9,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 14,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      },
+      {
+        "source": 7,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 10,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 9,
+        "type": "contains"
+      },
+      {
+        "source": 1,
+        "target": 10,
+        "type": "contains"
+      },
+      {
+        "source": 1,
+        "target": 11,
+        "type": "contains"
+      },
+      {
+        "source": 11,
+        "target": 12,
+        "type": "held_on"
+      },
+      {
+        "source": 1,
+        "target": 12,
+        "type": "contains"
+      },
+      {
+        "source": 12,
+        "target": 13,
+        "type": "is_a"
+      },
+      {
+        "source": 11,
+        "target": 14,
+        "type": "held_in"
+      },
+      {
+        "source": 1,
+        "target": 14,
+        "type": "contains"
+      },
+      {
+        "source": 11,
+        "target": 15,
+        "type": "is_a"
+      }
+    ]
+  }
+}

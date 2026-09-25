@@ -1,0 +1,475 @@
+{
+  "dataset": "hover",
+  "id": "3e627c65-5cc4-49b4-9061-c3557a98580d",
+  "split": "train",
+  "claim": "Daviesia's native growing land is more south than Beech.",
+  "evidencia": "Page: Beech. Sentence: Beech (\"Fagus\") is a genus of deciduous trees in the family Fagaceae, native to temperate Europe, Asia and North America.\nPage: Daviesia. Sentence: Daviesia, commonly known as Bitter-peas, is a large genus of flowering plants in the legume family.\nPage: Daviesia. Sentence: They are native to Australia, with a center of diversity in western Australia.",
+  "evidence_text": "Page: Beech. Sentence: Beech (\"Fagus\") is a genus of deciduous trees in the family Fagaceae, native to temperate Europe, Asia and North America.\nPage: Daviesia. Sentence: Daviesia, commonly known as Bitter-peas, is a large genus of flowering plants in the legume family.\nPage: Daviesia. Sentence: They are native to Australia, with a center of diversity in western Australia.",
+  "label": "SUPPORTED",
+  "num_hops": 2,
+  "hover_metadata": {
+    "supporting_facts": [
+      [
+        "Beech",
+        0
+      ],
+      [
+        "Daviesia",
+        0
+      ],
+      [
+        "Daviesia",
+        1
+      ]
+    ],
+    "num_hops": 2,
+    "evidence_annotation_id": [
+      0
+    ],
+    "evidence_id": [
+      "Beech::sentence::0",
+      "Daviesia::sentence::0",
+      "Daviesia::sentence::1"
+    ],
+    "evidence_wiki_url": [
+      "https://en.wikipedia.org/wiki/Beech",
+      "https://en.wikipedia.org/wiki/Daviesia"
+    ],
+    "evidence_sentence_id": [
+      "Beech::sentence::0",
+      "Daviesia::sentence::0",
+      "Daviesia::sentence::1"
+    ]
+  },
+  "grafo_claim": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "7c610e6b-fd01-5646-8562-dadbd265d2b8",
+        "text": "This chunk is about:\n- Plants: Daviesia, Beech\n- Topics: Native growing range, Relative latitude\n\nFacts:\n- Daviesia's native growing land is farther south than Beech's native growing land.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "d37e797a-be8f-5c59-9be9-fb2d79d64c27",
+        "text": "Daviesia's native growing land is more south than Beech.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "87227dd9-67d5-5018-b994-8650080e91b6",
+        "text": "text_cd8fdfec0da5193f8174111661e4885c",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "c366f928-263c-5c3b-910b-91f3e4a24b37",
+        "text": "daviesia",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "2df43048-b175-54c2-b72b-0ff24f41e4f1",
+        "text": "plant",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "d4d262ec-349f-50f4-bd4e-43a980c88fb7",
+        "text": "native growing land of daviesia",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "5f394058-b2a0-5ba8-8466-ba2a18cfcf4e",
+        "text": "place",
+        "type": "EntityType"
+      },
+      {
+        "id": 7,
+        "original_id": "e5003a63-abf2-5393-aa24-dd31fc864448",
+        "text": "native growing land of beech",
+        "type": "Entity"
+      },
+      {
+        "id": 8,
+        "original_id": "7e741009-ad80-56c7-b178-2fbeede8d026",
+        "text": "beech",
+        "type": "Entity"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 8,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "has_native_growing_land"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 7,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 5,
+        "target": 7,
+        "type": "is_more_south_than"
+      },
+      {
+        "source": 8,
+        "target": 7,
+        "type": "has_native_growing_land"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      },
+      {
+        "source": 1,
+        "target": 8,
+        "type": "contains"
+      }
+    ]
+  },
+  "grafo_evidencia": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "41a936fb-2f84-524f-9f44-fe8f09e8b35d",
+        "text": "This chunk is about:\n- Plants: Beech, Daviesia, Bitter-peas\n- Taxonomy: Fagus, Fagaceae, legume family\n- Places: Europe, Asia, North America, Australia, Western Australia\n\nFacts:\n- Beech, or Fagus, is a genus of deciduous trees in the family Fagaceae.\n- Beech is native to temperate Europe, Asia, and North America.\n- Daviesia, commonly known as Bitter-peas, is a large genus of flowering plants in the legume family.\n- Daviesia is native to Australia.\n- Daviesia has a center of diversity in Western Australia.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "382bc158-7685-5c7a-a62c-7530f5ce9e5d",
+        "text": "Page: Beech. Sentence: Beech (\"Fagus\") is a genus of deciduous trees in the family Fagaceae, native to temperate Europe, Asia and North America.\nPage: Daviesia. Sentence: Daviesia, commonly known as Bitter-peas, is a large genus of flowering plants in the legume family.\nPage: Daviesia. Sentence: They are native to Australia, with a center of diversity in western Australia.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "bc44bf14-2871-55cd-bb9f-9fd8664e34f7",
+        "text": "text_df4c9ae1759698c16646619608bb1652",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "7e741009-ad80-56c7-b178-2fbeede8d026",
+        "text": "beech",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "2df43048-b175-54c2-b72b-0ff24f41e4f1",
+        "text": "plant",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "81b11c15-bcb8-5d34-a80f-1492ceb99711",
+        "text": "fagus",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "58ce8914-8a9e-5302-9b2d-0d97006e12d3",
+        "text": "genus",
+        "type": "EntityType"
+      },
+      {
+        "id": 7,
+        "original_id": "d0853d46-810e-5361-a537-d2032113438a",
+        "text": "fagaceae",
+        "type": "Entity"
+      },
+      {
+        "id": 8,
+        "original_id": "030da7f2-9df8-5253-8cfc-609957d4e333",
+        "text": "family",
+        "type": "EntityType"
+      },
+      {
+        "id": 9,
+        "original_id": "d62d98fd-7636-5918-880e-390a00283ca8",
+        "text": "europe",
+        "type": "Entity"
+      },
+      {
+        "id": 10,
+        "original_id": "5f394058-b2a0-5ba8-8466-ba2a18cfcf4e",
+        "text": "place",
+        "type": "EntityType"
+      },
+      {
+        "id": 11,
+        "original_id": "21d096f4-373a-585b-85d5-3b4b9dfc4785",
+        "text": "asia",
+        "type": "Entity"
+      },
+      {
+        "id": 12,
+        "original_id": "7bfd7320-7015-5d33-be1e-fbdc9c0b5b79",
+        "text": "north america",
+        "type": "Entity"
+      },
+      {
+        "id": 13,
+        "original_id": "c366f928-263c-5c3b-910b-91f3e4a24b37",
+        "text": "daviesia",
+        "type": "Entity"
+      },
+      {
+        "id": 14,
+        "original_id": "0811d878-1c23-5316-bae7-dde7aa0dcbe0",
+        "text": "bitter-peas",
+        "type": "Entity"
+      },
+      {
+        "id": 15,
+        "original_id": "39575085-0710-527d-bd54-019de7b00429",
+        "text": "name",
+        "type": "EntityType"
+      },
+      {
+        "id": 16,
+        "original_id": "b3d963be-f53b-5653-978a-a5e5bd2dd7c4",
+        "text": "flowering plants",
+        "type": "Entity"
+      },
+      {
+        "id": 17,
+        "original_id": "1ab1ede2-911b-5622-a680-f326aeed4d0c",
+        "text": "legume family",
+        "type": "Entity"
+      },
+      {
+        "id": 18,
+        "original_id": "02448d73-884d-50c7-a919-b94177f1cf43",
+        "text": "australia",
+        "type": "Entity"
+      },
+      {
+        "id": 19,
+        "original_id": "03a2a8e7-5812-5d6f-ad36-4a84b1405687",
+        "text": "western australia",
+        "type": "Entity"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 16,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "is_called"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 13,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 5,
+        "target": 7,
+        "type": "belongs_to_family"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      },
+      {
+        "source": 7,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 17,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 5,
+        "target": 9,
+        "type": "is_native_to"
+      },
+      {
+        "source": 1,
+        "target": 9,
+        "type": "contains"
+      },
+      {
+        "source": 9,
+        "target": 10,
+        "type": "is_a"
+      },
+      {
+        "source": 11,
+        "target": 10,
+        "type": "is_a"
+      },
+      {
+        "source": 12,
+        "target": 10,
+        "type": "is_a"
+      },
+      {
+        "source": 18,
+        "target": 10,
+        "type": "is_a"
+      },
+      {
+        "source": 19,
+        "target": 10,
+        "type": "is_a"
+      },
+      {
+        "source": 5,
+        "target": 11,
+        "type": "is_native_to"
+      },
+      {
+        "source": 1,
+        "target": 11,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 12,
+        "type": "is_native_to"
+      },
+      {
+        "source": 1,
+        "target": 12,
+        "type": "contains"
+      },
+      {
+        "source": 1,
+        "target": 13,
+        "type": "contains"
+      },
+      {
+        "source": 13,
+        "target": 14,
+        "type": "is_commonly_known_as"
+      },
+      {
+        "source": 1,
+        "target": 14,
+        "type": "contains"
+      },
+      {
+        "source": 14,
+        "target": 15,
+        "type": "is_a"
+      },
+      {
+        "source": 13,
+        "target": 16,
+        "type": "is_genus_of"
+      },
+      {
+        "source": 1,
+        "target": 16,
+        "type": "contains"
+      },
+      {
+        "source": 13,
+        "target": 17,
+        "type": "belongs_to_family"
+      },
+      {
+        "source": 1,
+        "target": 17,
+        "type": "contains"
+      },
+      {
+        "source": 13,
+        "target": 18,
+        "type": "is_native_to"
+      },
+      {
+        "source": 1,
+        "target": 18,
+        "type": "contains"
+      },
+      {
+        "source": 13,
+        "target": 19,
+        "type": "has_center_of_diversity_in"
+      },
+      {
+        "source": 1,
+        "target": 19,
+        "type": "contains"
+      }
+    ]
+  }
+}

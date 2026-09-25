@@ -1,0 +1,383 @@
+{
+  "dataset": "hover",
+  "id": "76c6480e-0864-40ca-b4f6-c2243fce7d3a",
+  "split": "train",
+  "claim": "Maine State Route 111 connects Alfred, which is in York County, to Biddenford.",
+  "evidencia": "Page: Maine State Route 111. Sentence: State Route 111, also known as the Carl Broggi Highway, is a 13.7 mi long state highway in southern Maine.\nPage: Maine State Route 111. Sentence: It runs east–west, connecting the towns of Alfred and Biddeford.\nPage: Alfred, Maine. Sentence: Alfred is a town in York County, Maine, in the United States.",
+  "evidence_text": "Page: Maine State Route 111. Sentence: State Route 111, also known as the Carl Broggi Highway, is a 13.7 mi long state highway in southern Maine.\nPage: Maine State Route 111. Sentence: It runs east–west, connecting the towns of Alfred and Biddeford.\nPage: Alfred, Maine. Sentence: Alfred is a town in York County, Maine, in the United States.",
+  "label": "SUPPORTED",
+  "num_hops": 2,
+  "hover_metadata": {
+    "supporting_facts": [
+      [
+        "Maine State Route 111",
+        0
+      ],
+      [
+        "Maine State Route 111",
+        1
+      ],
+      [
+        "Alfred, Maine",
+        0
+      ]
+    ],
+    "num_hops": 2,
+    "evidence_annotation_id": [
+      0
+    ],
+    "evidence_id": [
+      "Maine State Route 111::sentence::0",
+      "Maine State Route 111::sentence::1",
+      "Alfred, Maine::sentence::0"
+    ],
+    "evidence_wiki_url": [
+      "https://en.wikipedia.org/wiki/Maine_State_Route_111",
+      "https://en.wikipedia.org/wiki/Alfred%2C_Maine"
+    ],
+    "evidence_sentence_id": [
+      "Maine State Route 111::sentence::0",
+      "Maine State Route 111::sentence::1",
+      "Alfred, Maine::sentence::0"
+    ]
+  },
+  "grafo_claim": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "3d482093-df04-5ea7-b623-c3617b98a99b",
+        "text": "This chunk is about:\n- Places: Alfred, York County, Biddeford\n- Roads: Maine State Route 111\n\nFacts:\n- Alfred is in York County.\n- Maine State Route 111 connects Alfred to Biddeford.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "49ad5146-ff48-5c62-b1a9-dea691bd98b8",
+        "text": "Maine State Route 111 connects Alfred, which is in York County, to Biddenford.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "e2394bfd-47ba-5e9a-a631-27f1a9d3e43a",
+        "text": "text_cdc9513cbb829ff9417789c86ddd0157",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "dca1e735-59aa-505b-8dde-42eb50ad33ce",
+        "text": "maine state route 111",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "55bc97cd-2a48-5257-a0de-efa34ac2b80f",
+        "text": "alfred",
+        "type": "Entity"
+      },
+      {
+        "id": 5,
+        "original_id": "79312086-e78e-5273-8e95-135392c7d2ac",
+        "text": "york county",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "5f394058-b2a0-5ba8-8466-ba2a18cfcf4e",
+        "text": "place",
+        "type": "EntityType"
+      },
+      {
+        "id": 7,
+        "original_id": "111c44b7-cdb7-584f-9ca7-7a9d0a3420af",
+        "text": "biddenford",
+        "type": "Entity"
+      },
+      {
+        "id": 8,
+        "original_id": "5e52d312-a248-534f-a58b-25c5426a89ad",
+        "text": "road",
+        "type": "EntityType"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "connects_to"
+      },
+      {
+        "source": 1,
+        "target": 4,
+        "type": "contains"
+      },
+      {
+        "source": 4,
+        "target": 5,
+        "type": "located_in"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 4,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 7,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 7,
+        "type": "connects_to"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 8,
+        "type": "is_a"
+      }
+    ]
+  },
+  "grafo_evidencia": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "7a419b45-86fc-5c28-a989-fb3d0160baa3",
+        "text": "This chunk is about:\n- Places: Maine, Alfred, Biddeford, York County\n- Roads: Maine State Route 111, Carl Broggi Highway\n\nFacts:\n- Maine State Route 111, also known as the Carl Broggi Highway, is a 13.7-mile state highway in southern Maine.\n- Maine State Route 111 runs east–west and connects the towns of Alfred and Biddeford.\n- Alfred is a town in York County, Maine, in the United States.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "5ce5cb73-fe48-5973-9017-cdfcaf242dea",
+        "text": "Page: Maine State Route 111. Sentence: State Route 111, also known as the Carl Broggi Highway, is a 13.7 mi long state highway in southern Maine.\nPage: Maine State Route 111. Sentence: It runs east–west, connecting the towns of Alfred and Biddeford.\nPage: Alfred, Maine. Sentence: Alfred is a town in York County, Maine, in the United States.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "b5bd680b-2992-5a40-9fc7-6fd665bb3cdb",
+        "text": "text_37d3eeb8f4bbad03eb6ec37bf043de67",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "dca1e735-59aa-505b-8dde-42eb50ad33ce",
+        "text": "maine state route 111",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "f481e312-c32a-59b3-8bf0-ce7189df606d",
+        "text": "carl broggi highway",
+        "type": "Entity"
+      },
+      {
+        "id": 5,
+        "original_id": "5e52d312-a248-534f-a58b-25c5426a89ad",
+        "text": "road",
+        "type": "EntityType"
+      },
+      {
+        "id": 6,
+        "original_id": "7c6d254f-abe0-5f26-98ce-57fe8d39991a",
+        "text": "southern maine",
+        "type": "Entity"
+      },
+      {
+        "id": 7,
+        "original_id": "5f394058-b2a0-5ba8-8466-ba2a18cfcf4e",
+        "text": "place",
+        "type": "EntityType"
+      },
+      {
+        "id": 8,
+        "original_id": "55bc97cd-2a48-5257-a0de-efa34ac2b80f",
+        "text": "alfred",
+        "type": "Entity"
+      },
+      {
+        "id": 9,
+        "original_id": "79312086-e78e-5273-8e95-135392c7d2ac",
+        "text": "york county",
+        "type": "Entity"
+      },
+      {
+        "id": 10,
+        "original_id": "639fdde7-7841-5347-96e3-67ffadb56002",
+        "text": "maine",
+        "type": "Entity"
+      },
+      {
+        "id": 11,
+        "original_id": "874a51da-34ea-5037-be47-d87785d43c37",
+        "text": "united states",
+        "type": "Entity"
+      },
+      {
+        "id": 12,
+        "original_id": "96baaaa2-0b1e-5252-8f2a-3188f2188fb3",
+        "text": "biddeford",
+        "type": "Entity"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "also_known_as"
+      },
+      {
+        "source": 1,
+        "target": 4,
+        "type": "contains"
+      },
+      {
+        "source": 4,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 6,
+        "type": "located_in"
+      },
+      {
+        "source": 1,
+        "target": 6,
+        "type": "contains"
+      },
+      {
+        "source": 6,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 11,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 10,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 9,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 8,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 12,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 8,
+        "type": "connects_to"
+      },
+      {
+        "source": 1,
+        "target": 8,
+        "type": "contains"
+      },
+      {
+        "source": 8,
+        "target": 9,
+        "type": "located_in"
+      },
+      {
+        "source": 1,
+        "target": 9,
+        "type": "contains"
+      },
+      {
+        "source": 9,
+        "target": 10,
+        "type": "located_in"
+      },
+      {
+        "source": 8,
+        "target": 10,
+        "type": "located_in"
+      },
+      {
+        "source": 1,
+        "target": 10,
+        "type": "contains"
+      },
+      {
+        "source": 10,
+        "target": 11,
+        "type": "located_in"
+      },
+      {
+        "source": 1,
+        "target": 11,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 12,
+        "type": "connects_to"
+      },
+      {
+        "source": 1,
+        "target": 12,
+        "type": "contains"
+      }
+    ]
+  }
+}

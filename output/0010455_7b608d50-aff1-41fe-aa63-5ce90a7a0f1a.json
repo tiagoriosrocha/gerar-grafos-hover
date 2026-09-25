@@ -1,0 +1,406 @@
+{
+  "dataset": "hover",
+  "id": "7b608d50-aff1-41fe-aa63-5ce90a7a0f1a",
+  "split": "train",
+  "claim": "Travel Channel had a show set at a location adjacent to Silverado Ranch.",
+  "evidencia": "Page: Nick Groff. Sentence: Groff was an executive producer for a show on the Travel Channel called \"Vegas Stripped\", a behind-the-scenes look at the operations of the South Point Hotel, Casino & Spa in Las Vegas, Nevada.\nPage: South Point Hotel, Casino &amp; Spa. Sentence: The South Point Hotel and Casino consists of a 25-story hotel tower and 90000 sqft convention center located on a 60 acre site along Las Vegas Boulevard in Enterprise, Nevada and adjacent to Silverado Ranch.",
+  "evidence_text": "Page: Nick Groff. Sentence: Groff was an executive producer for a show on the Travel Channel called \"Vegas Stripped\", a behind-the-scenes look at the operations of the South Point Hotel, Casino & Spa in Las Vegas, Nevada.\nPage: South Point Hotel, Casino &amp; Spa. Sentence: The South Point Hotel and Casino consists of a 25-story hotel tower and 90000 sqft convention center located on a 60 acre site along Las Vegas Boulevard in Enterprise, Nevada and adjacent to Silverado Ranch.",
+  "label": "SUPPORTED",
+  "num_hops": 2,
+  "hover_metadata": {
+    "supporting_facts": [
+      [
+        "Nick Groff",
+        3
+      ],
+      [
+        "South Point Hotel, Casino &amp; Spa",
+        0
+      ]
+    ],
+    "num_hops": 2,
+    "evidence_annotation_id": [
+      0
+    ],
+    "evidence_id": [
+      "Nick Groff::sentence::3",
+      "South Point Hotel, Casino &amp; Spa::sentence::0"
+    ],
+    "evidence_wiki_url": [
+      "https://en.wikipedia.org/wiki/Nick_Groff",
+      "https://en.wikipedia.org/wiki/South_Point_Hotel%2C_Casino_%26amp%3B_Spa"
+    ],
+    "evidence_sentence_id": [
+      "Nick Groff::sentence::3",
+      "South Point Hotel, Casino &amp; Spa::sentence::0"
+    ]
+  },
+  "grafo_claim": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "9a348eea-c9ae-5dd1-96f9-a21fc4a59f76",
+        "text": "This chunk is about:\n- Companies: Travel Channel\n- Places: Silverado Ranch\n- Products: television show\n\nFacts:\n- Travel Channel had a television show set at a location adjacent to Silverado Ranch.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "be88c6cf-f3e0-5eab-8ebb-8130cbcca72e",
+        "text": "Travel Channel had a show set at a location adjacent to Silverado Ranch.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "51f47193-2144-5ead-922f-731422c9a1a6",
+        "text": "text_e2287300d70a7e14ce50bba9ba7d4b08",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "962d8ba8-400c-57ac-a64f-b33a72f58a10",
+        "text": "travel channel",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "388f60fb-220d-55e8-ae9c-3ac93cead308",
+        "text": "organization",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "695cc466-ad40-59b3-bb44-0ec77ebe24e3",
+        "text": "show",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "5263a535-1b4b-5925-be3e-310d03cd303b",
+        "text": "work",
+        "type": "EntityType"
+      },
+      {
+        "id": 7,
+        "original_id": "c4a30a24-11e7-5ea6-bd86-f48e7547e934",
+        "text": "adjacent location",
+        "type": "Entity"
+      },
+      {
+        "id": 8,
+        "original_id": "5f394058-b2a0-5ba8-8466-ba2a18cfcf4e",
+        "text": "place",
+        "type": "EntityType"
+      },
+      {
+        "id": 9,
+        "original_id": "2b663864-5494-5118-8399-0eba769c7efe",
+        "text": "silverado ranch",
+        "type": "Entity"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "had_show"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 5,
+        "target": 7,
+        "type": "set_at"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      },
+      {
+        "source": 7,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 9,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 7,
+        "target": 9,
+        "type": "adjacent_to"
+      },
+      {
+        "source": 1,
+        "target": 9,
+        "type": "contains"
+      }
+    ]
+  },
+  "grafo_evidencia": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "f0656fa3-efde-5e90-8dcb-9abd849ae498",
+        "text": "This chunk is about:\n- People: Nick Groff\n- Companies: Travel Channel\n- Products: \"Vegas Stripped\"\n- Places: South Point Hotel, Casino & Spa; Las Vegas, Nevada; Enterprise, Nevada; Silverado Ranch; Las Vegas Boulevard\n- Topics: hotel and casino operations\n\nFacts:\n- Nick Groff was an executive producer for the Travel Channel show \"Vegas Stripped.\"\n- \"Vegas Stripped\" was a behind-the-scenes look at the operations of the South Point Hotel, Casino & Spa in Las Vegas, Nevada.\n- The South Point Hotel and Casino is located on a 60-acre site along Las Vegas Boulevard in Enterprise, Nevada, adjacent to Silverado Ranch.\n- The South Point Hotel and Casino includes a 25-story hotel tower and a 90,000-square-foot convention center.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "705ee5f7-6f7f-5b65-94ab-13912541331a",
+        "text": "Page: Nick Groff. Sentence: Groff was an executive producer for a show on the Travel Channel called \"Vegas Stripped\", a behind-the-scenes look at the operations of the South Point Hotel, Casino & Spa in Las Vegas, Nevada.\nPage: South Point Hotel, Casino &amp; Spa. Sentence: The South Point Hotel and Casino consists of a 25-story hotel tower and 90000 sqft convention center located on a 60 acre site along Las Vegas Boulevard in Enterprise, Nevada and adjacent to Silverado Ranch.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "3a83cdd5-a3b6-5b5d-8d37-f86153253225",
+        "text": "text_f1c6e42992dbab97efbb143cb7bb91ba",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "11c0c06f-2fca-54c7-a8a0-0f02db21e52a",
+        "text": "nick groff",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "99a82eec-bb35-5bb5-9ed2-e73fc7a756de",
+        "text": "person",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "01931290-6d8f-5141-a50d-ed93628cdb64",
+        "text": "vegas stripped",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "5263a535-1b4b-5925-be3e-310d03cd303b",
+        "text": "work",
+        "type": "EntityType"
+      },
+      {
+        "id": 7,
+        "original_id": "962d8ba8-400c-57ac-a64f-b33a72f58a10",
+        "text": "travel channel",
+        "type": "Entity"
+      },
+      {
+        "id": 8,
+        "original_id": "388f60fb-220d-55e8-ae9c-3ac93cead308",
+        "text": "organization",
+        "type": "EntityType"
+      },
+      {
+        "id": 9,
+        "original_id": "508e8920-8118-59ef-a794-8fcfb5d0a23f",
+        "text": "south point hotel, casino & spa",
+        "type": "Entity"
+      },
+      {
+        "id": 10,
+        "original_id": "5f394058-b2a0-5ba8-8466-ba2a18cfcf4e",
+        "text": "place",
+        "type": "EntityType"
+      },
+      {
+        "id": 11,
+        "original_id": "f67b6945-dbe1-5f90-bec2-cd0a28aacacb",
+        "text": "las vegas, nevada",
+        "type": "Entity"
+      },
+      {
+        "id": 12,
+        "original_id": "8d5b68dd-b5fc-5137-9f18-7285e17fe71b",
+        "text": "south point hotel and casino",
+        "type": "Entity"
+      },
+      {
+        "id": 13,
+        "original_id": "b3277042-4b55-5d99-8ff1-89fb17d3bf27",
+        "text": "enterprise, nevada",
+        "type": "Entity"
+      },
+      {
+        "id": 14,
+        "original_id": "2b663864-5494-5118-8399-0eba769c7efe",
+        "text": "silverado ranch",
+        "type": "Entity"
+      },
+      {
+        "id": 15,
+        "original_id": "f671db9e-87bd-599d-9609-38e6287874db",
+        "text": "las vegas boulevard",
+        "type": "Entity"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "executive_produced"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 5,
+        "target": 7,
+        "type": "aired_on"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      },
+      {
+        "source": 7,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 5,
+        "target": 9,
+        "type": "depicts_operations_of"
+      },
+      {
+        "source": 1,
+        "target": 9,
+        "type": "contains"
+      },
+      {
+        "source": 9,
+        "target": 10,
+        "type": "is_a"
+      },
+      {
+        "source": 11,
+        "target": 10,
+        "type": "is_a"
+      },
+      {
+        "source": 12,
+        "target": 10,
+        "type": "is_a"
+      },
+      {
+        "source": 13,
+        "target": 10,
+        "type": "is_a"
+      },
+      {
+        "source": 14,
+        "target": 10,
+        "type": "is_a"
+      },
+      {
+        "source": 15,
+        "target": 10,
+        "type": "is_a"
+      },
+      {
+        "source": 9,
+        "target": 11,
+        "type": "located_in"
+      },
+      {
+        "source": 1,
+        "target": 11,
+        "type": "contains"
+      },
+      {
+        "source": 1,
+        "target": 12,
+        "type": "contains"
+      },
+      {
+        "source": 12,
+        "target": 13,
+        "type": "located_in"
+      },
+      {
+        "source": 1,
+        "target": 13,
+        "type": "contains"
+      },
+      {
+        "source": 12,
+        "target": 14,
+        "type": "adjacent_to"
+      },
+      {
+        "source": 1,
+        "target": 14,
+        "type": "contains"
+      },
+      {
+        "source": 12,
+        "target": 15,
+        "type": "located_along"
+      },
+      {
+        "source": 1,
+        "target": 15,
+        "type": "contains"
+      }
+    ]
+  }
+}

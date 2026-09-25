@@ -1,0 +1,497 @@
+{
+  "dataset": "hover",
+  "id": "48df6e86-4df4-446a-85b2-84fb662528db",
+  "split": "train",
+  "claim": "Northland Mall was the first directionally-named shopping center in Columbus, 5 years before which Westland Mall at the intersection of US-40 and I-270.",
+  "evidencia": "Page: Northland Mall. Sentence: It opened in 1964 as an open-air shopping center and the first shopping mall in Columbus.\nPage: Northland Mall. Sentence: Northland was the first of the four directionally-named shopping hubs in Columbus, along with Eastland (1967), Westland (1969) and Southland (1975) [a small strip center, now closed].\nPage: Westland Mall (Columbus). Sentence: Westland Mall was an 860000 sqft shopping center located on the west side of Columbus, Ohio, at the western intersection of U.S. Route 40 and Interstate 270.",
+  "evidence_text": "Page: Northland Mall. Sentence: It opened in 1964 as an open-air shopping center and the first shopping mall in Columbus.\nPage: Northland Mall. Sentence: Northland was the first of the four directionally-named shopping hubs in Columbus, along with Eastland (1967), Westland (1969) and Southland (1975) [a small strip center, now closed].\nPage: Westland Mall (Columbus). Sentence: Westland Mall was an 860000 sqft shopping center located on the west side of Columbus, Ohio, at the western intersection of U.S. Route 40 and Interstate 270.",
+  "label": "SUPPORTED",
+  "num_hops": 2,
+  "hover_metadata": {
+    "supporting_facts": [
+      [
+        "Northland Mall",
+        1
+      ],
+      [
+        "Northland Mall",
+        2
+      ],
+      [
+        "Westland Mall (Columbus)",
+        0
+      ]
+    ],
+    "num_hops": 2,
+    "evidence_annotation_id": [
+      0
+    ],
+    "evidence_id": [
+      "Northland Mall::sentence::1",
+      "Northland Mall::sentence::2",
+      "Westland Mall (Columbus)::sentence::0"
+    ],
+    "evidence_wiki_url": [
+      "https://en.wikipedia.org/wiki/Northland_Mall",
+      "https://en.wikipedia.org/wiki/Westland_Mall_%28Columbus%29"
+    ],
+    "evidence_sentence_id": [
+      "Northland Mall::sentence::1",
+      "Northland Mall::sentence::2",
+      "Westland Mall (Columbus)::sentence::0"
+    ]
+  },
+  "grafo_claim": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "ef5cdadb-05a7-55b6-a565-ac520cab276d",
+        "text": "This chunk is about:\n- Places: Northland Mall, Westland Mall, Columbus\n- Topics: shopping centers, directional naming\n\nFacts:\n- Northland Mall was the first directionally named shopping center in Columbus.\n- Westland Mall was located at the intersection of US-40 and I-270.\n- Westland Mall opened five years after Northland Mall.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "fbba8af8-ce6a-54bd-ac85-fc2afb90d72c",
+        "text": "Northland Mall was the first directionally-named shopping center in Columbus, 5 years before which Westland Mall at the intersection of US-40 and I-270.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "e1beb3d6-3aaa-5ac7-92d7-5e4be5e78551",
+        "text": "text_bb2d50d7941e9d84fdbca6bc1ec3bb40",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "0c436c70-5d2c-50b1-acc6-506149b16633",
+        "text": "northland mall",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "7122bf27-a8db-5342-a6c7-73c297be5e62",
+        "text": "columbus",
+        "type": "Entity"
+      },
+      {
+        "id": 5,
+        "original_id": "5f394058-b2a0-5ba8-8466-ba2a18cfcf4e",
+        "text": "place",
+        "type": "EntityType"
+      },
+      {
+        "id": 6,
+        "original_id": "61474c4e-7bf1-5a4f-b9b7-2ff2efcf1d4b",
+        "text": "westland mall",
+        "type": "Entity"
+      },
+      {
+        "id": 7,
+        "original_id": "e07d2f59-5df4-5e91-ad5d-10c92a3d63dd",
+        "text": "us-40",
+        "type": "Entity"
+      },
+      {
+        "id": 8,
+        "original_id": "599ff3c2-9ba4-5218-8f01-a73078dff37f",
+        "text": "i-270",
+        "type": "Entity"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "located_in"
+      },
+      {
+        "source": 1,
+        "target": 4,
+        "type": "contains"
+      },
+      {
+        "source": 4,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 7,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 8,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 6,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 6,
+        "type": "predates_by"
+      },
+      {
+        "source": 1,
+        "target": 6,
+        "type": "contains"
+      },
+      {
+        "source": 6,
+        "target": 7,
+        "type": "located_at_intersection_with"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      },
+      {
+        "source": 6,
+        "target": 8,
+        "type": "located_at_intersection_with"
+      },
+      {
+        "source": 1,
+        "target": 8,
+        "type": "contains"
+      }
+    ]
+  },
+  "grafo_evidencia": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "9ffa89ce-b4c9-555a-8eb9-45b5b4734d7e",
+        "text": "This chunk is about:\n- Places: Columbus, Ohio\n- Products: Northland Mall, Eastland, Westland Mall, Southland\n- Concepts: Directionally-named shopping hubs, shopping malls\n\nFacts:\n- Northland Mall opened in Columbus in 1964 as an open-air shopping center and the city’s first shopping mall.\n- Eastland became one of Columbus’s directionally named shopping hubs in 1967.\n- Westland became one of Columbus’s directionally named shopping hubs in 1969.\n- Southland became one of Columbus’s directionally named shopping hubs in 1975 as a small strip center that is now closed.\n- Northland Mall was the first of Columbus’s four directionally named shopping hubs.\n- Westland Mall was an 860,000-square-foot shopping center on the west side of Columbus, Ohio, at the western intersection of U.S. Route 40 and Interstate 270.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "ebc2174a-9568-5538-aa4c-7623600200da",
+        "text": "Page: Northland Mall. Sentence: It opened in 1964 as an open-air shopping center and the first shopping mall in Columbus.\nPage: Northland Mall. Sentence: Northland was the first of the four directionally-named shopping hubs in Columbus, along with Eastland (1967), Westland (1969) and Southland (1975) [a small strip center, now closed].\nPage: Westland Mall (Columbus). Sentence: Westland Mall was an 860000 sqft shopping center located on the west side of Columbus, Ohio, at the western intersection of U.S. Route 40 and Interstate 270.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "933f43cd-10f6-57bb-a990-a5f5e259b4a8",
+        "text": "text_541d403299284c7e4d723b91d6482ec4",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "0c436c70-5d2c-50b1-acc6-506149b16633",
+        "text": "northland mall",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "f84b53f0-d68a-5f9c-b437-b5b836eed4d3",
+        "text": "1964",
+        "type": "Entity"
+      },
+      {
+        "id": 5,
+        "original_id": "b19433ae-558c-5aaf-95ac-6231f2a4be0e",
+        "text": "date",
+        "type": "EntityType"
+      },
+      {
+        "id": 6,
+        "original_id": "7122bf27-a8db-5342-a6c7-73c297be5e62",
+        "text": "columbus",
+        "type": "Entity"
+      },
+      {
+        "id": 7,
+        "original_id": "81af0218-5b85-5efc-9990-492a78a7e0fc",
+        "text": "ohio",
+        "type": "Entity"
+      },
+      {
+        "id": 8,
+        "original_id": "5f394058-b2a0-5ba8-8466-ba2a18cfcf4e",
+        "text": "place",
+        "type": "EntityType"
+      },
+      {
+        "id": 9,
+        "original_id": "c0f122f8-81e1-5f99-b512-e9a01ac05b3e",
+        "text": "eastland",
+        "type": "Entity"
+      },
+      {
+        "id": 10,
+        "original_id": "f9e4a9ec-682c-5341-862a-1783ba768a49",
+        "text": "1967",
+        "type": "Entity"
+      },
+      {
+        "id": 11,
+        "original_id": "61474c4e-7bf1-5a4f-b9b7-2ff2efcf1d4b",
+        "text": "westland mall",
+        "type": "Entity"
+      },
+      {
+        "id": 12,
+        "original_id": "5debc034-fa71-585e-97a1-ef8f6cf6fa47",
+        "text": "1969",
+        "type": "Entity"
+      },
+      {
+        "id": 13,
+        "original_id": "ca4cd188-7296-516d-bc9e-f8a7f87f2c3f",
+        "text": "u.s. route 40",
+        "type": "Entity"
+      },
+      {
+        "id": 14,
+        "original_id": "c831437b-4997-5000-b8e2-ec153c8171e4",
+        "text": "interstate 270",
+        "type": "Entity"
+      },
+      {
+        "id": 15,
+        "original_id": "914a50cf-485a-509d-a80c-c950c0cbc69f",
+        "text": "southland",
+        "type": "Entity"
+      },
+      {
+        "id": 16,
+        "original_id": "a4195203-3de0-526e-9b3c-29c2a929ad16",
+        "text": "1975",
+        "type": "Entity"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "opened_in"
+      },
+      {
+        "source": 1,
+        "target": 4,
+        "type": "contains"
+      },
+      {
+        "source": 4,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 10,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 12,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 16,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 6,
+        "type": "located_in"
+      },
+      {
+        "source": 9,
+        "target": 6,
+        "type": "located_in"
+      },
+      {
+        "source": 11,
+        "target": 6,
+        "type": "located_in"
+      },
+      {
+        "source": 15,
+        "target": 6,
+        "type": "located_in"
+      },
+      {
+        "source": 1,
+        "target": 6,
+        "type": "contains"
+      },
+      {
+        "source": 6,
+        "target": 7,
+        "type": "located_in"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      },
+      {
+        "source": 7,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 6,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 9,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 13,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 14,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 11,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 15,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 9,
+        "type": "first_of_directionally_named_hubs_with"
+      },
+      {
+        "source": 1,
+        "target": 9,
+        "type": "contains"
+      },
+      {
+        "source": 9,
+        "target": 10,
+        "type": "associated_with_year"
+      },
+      {
+        "source": 1,
+        "target": 10,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 11,
+        "type": "first_of_directionally_named_hubs_with"
+      },
+      {
+        "source": 1,
+        "target": 11,
+        "type": "contains"
+      },
+      {
+        "source": 11,
+        "target": 12,
+        "type": "associated_with_year"
+      },
+      {
+        "source": 1,
+        "target": 12,
+        "type": "contains"
+      },
+      {
+        "source": 11,
+        "target": 13,
+        "type": "located_at_intersection_with"
+      },
+      {
+        "source": 1,
+        "target": 13,
+        "type": "contains"
+      },
+      {
+        "source": 11,
+        "target": 14,
+        "type": "located_at_intersection_with"
+      },
+      {
+        "source": 1,
+        "target": 14,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 15,
+        "type": "first_of_directionally_named_hubs_with"
+      },
+      {
+        "source": 15,
+        "target": 15,
+        "type": "now_closed"
+      },
+      {
+        "source": 1,
+        "target": 15,
+        "type": "contains"
+      },
+      {
+        "source": 15,
+        "target": 16,
+        "type": "associated_with_year"
+      },
+      {
+        "source": 1,
+        "target": 16,
+        "type": "contains"
+      }
+    ]
+  }
+}

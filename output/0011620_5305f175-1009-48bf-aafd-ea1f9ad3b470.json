@@ -1,0 +1,373 @@
+{
+  "dataset": "hover",
+  "id": "5305f175-1009-48bf-aafd-ea1f9ad3b470",
+  "split": "train",
+  "claim": "Ada Lovelace, the first computer programmer, was Lord Byron's daughter in Childe Byron.",
+  "evidencia": "Page: Childe Byron. Sentence: Childe Byron is a 1977 play by Romulus Linney about the strained relationship between the poet, Lord Byron, and his daughter, Ada Lovelace.\nPage: Ada Lovelace. Sentence: As a result, she is often regarded as the first to recognise the full potential of a \"computing machine\" and the first computer programmer.",
+  "evidence_text": "Page: Childe Byron. Sentence: Childe Byron is a 1977 play by Romulus Linney about the strained relationship between the poet, Lord Byron, and his daughter, Ada Lovelace.\nPage: Ada Lovelace. Sentence: As a result, she is often regarded as the first to recognise the full potential of a \"computing machine\" and the first computer programmer.",
+  "label": "SUPPORTED",
+  "num_hops": 2,
+  "hover_metadata": {
+    "supporting_facts": [
+      [
+        "Childe Byron",
+        0
+      ],
+      [
+        "Ada Lovelace",
+        2
+      ]
+    ],
+    "num_hops": 2,
+    "evidence_annotation_id": [
+      0
+    ],
+    "evidence_id": [
+      "Childe Byron::sentence::0",
+      "Ada Lovelace::sentence::2"
+    ],
+    "evidence_wiki_url": [
+      "https://en.wikipedia.org/wiki/Childe_Byron",
+      "https://en.wikipedia.org/wiki/Ada_Lovelace"
+    ],
+    "evidence_sentence_id": [
+      "Childe Byron::sentence::0",
+      "Ada Lovelace::sentence::2"
+    ]
+  },
+  "grafo_claim": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "1a46de9e-98ff-5498-976c-27296cb22516",
+        "text": "This chunk is about:\n- People: Ada Lovelace, Lord Byron\n- Topics: computing history, family relationships\n\nFacts:\n- Ada Lovelace is described as the first computer programmer.\n- Ada Lovelace was Lord Byron's daughter.\n- The chunk associates Lord Byron with \"Childe Byron.\"",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "2333327d-86d0-5f46-9135-c0dea560ced6",
+        "text": "Ada Lovelace, the first computer programmer, was Lord Byron's daughter in Childe Byron.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "6937be79-c4bb-5c32-9469-981855769f9e",
+        "text": "text_fb5abdc66041bf1b14fb4bd59860b407",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "03b5e41f-c006-5ff6-b32a-1be930aeb475",
+        "text": "ada lovelace",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "99a82eec-bb35-5bb5-9ed2-e73fc7a756de",
+        "text": "person",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "da04311a-f551-527a-8cdc-54914b3862a8",
+        "text": "lord byron",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "df730075-ca32-5999-8d8f-c6b97438239a",
+        "text": "childe byron",
+        "type": "Entity"
+      },
+      {
+        "id": 7,
+        "original_id": "5263a535-1b4b-5925-be3e-310d03cd303b",
+        "text": "work",
+        "type": "EntityType"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 5,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "child_of"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "mentioned_in"
+      },
+      {
+        "source": 3,
+        "target": 6,
+        "type": "mentioned_in"
+      },
+      {
+        "source": 1,
+        "target": 6,
+        "type": "contains"
+      },
+      {
+        "source": 6,
+        "target": 7,
+        "type": "is_a"
+      }
+    ]
+  },
+  "grafo_evidencia": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "05b5f6b3-90cb-53a1-9523-203fcc3c54cd",
+        "text": "This chunk is about:\n- Works: Childe Byron\n- People: Romulus Linney, Lord Byron, Ada Lovelace\n- Topics: computing machines, computer programming\n\nFacts:\n- Childe Byron is a 1977 play by Romulus Linney.\n- Childe Byron is about the strained relationship between Lord Byron and his daughter Ada Lovelace.\n- Ada Lovelace is often regarded as the first person to recognize the full potential of a computing machine.\n- Ada Lovelace is often regarded as the first computer programmer.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "ed3716cc-a490-55ab-8bf6-6e396d8a68b0",
+        "text": "Page: Childe Byron. Sentence: Childe Byron is a 1977 play by Romulus Linney about the strained relationship between the poet, Lord Byron, and his daughter, Ada Lovelace.\nPage: Ada Lovelace. Sentence: As a result, she is often regarded as the first to recognise the full potential of a \"computing machine\" and the first computer programmer.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "7dbd8c16-bf40-55d3-8807-7344a129187c",
+        "text": "text_8e1170a0b2257f0b2756cc08607b97ef",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "df730075-ca32-5999-8d8f-c6b97438239a",
+        "text": "childe byron",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "6fbba65d-138d-5c65-9bfd-ed11e37320ea",
+        "text": "play",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "8770aa76-d776-510e-a21c-4a9c1d2af56d",
+        "text": "1977",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "b19433ae-558c-5aaf-95ac-6231f2a4be0e",
+        "text": "date",
+        "type": "EntityType"
+      },
+      {
+        "id": 7,
+        "original_id": "da04311a-f551-527a-8cdc-54914b3862a8",
+        "text": "lord byron",
+        "type": "Entity"
+      },
+      {
+        "id": 8,
+        "original_id": "99a82eec-bb35-5bb5-9ed2-e73fc7a756de",
+        "text": "person",
+        "type": "EntityType"
+      },
+      {
+        "id": 9,
+        "original_id": "03b5e41f-c006-5ff6-b32a-1be930aeb475",
+        "text": "ada lovelace",
+        "type": "Entity"
+      },
+      {
+        "id": 10,
+        "original_id": "eaa9f2e8-12bc-53d5-85a5-2aefff7114d2",
+        "text": "computing machine",
+        "type": "Entity"
+      },
+      {
+        "id": 11,
+        "original_id": "d2a381fa-3658-5ca6-ada9-2109cfc9331d",
+        "text": "concept",
+        "type": "EntityType"
+      },
+      {
+        "id": 12,
+        "original_id": "4725d0e8-c9fc-5377-850a-78e4314ecb40",
+        "text": "first computer programmer",
+        "type": "Entity"
+      },
+      {
+        "id": 13,
+        "original_id": "6cc6ea23-b942-55f4-a67e-b1911275e80d",
+        "text": "poet",
+        "type": "Entity"
+      },
+      {
+        "id": 14,
+        "original_id": "5cb080fc-896c-5313-83a7-3f72a25c0746",
+        "text": "romulus linney",
+        "type": "Entity"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 14,
+        "target": 3,
+        "type": "wrote"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "released_in"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 7,
+        "type": "about"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      },
+      {
+        "source": 7,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 9,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 14,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 7,
+        "target": 9,
+        "type": "parent_of"
+      },
+      {
+        "source": 3,
+        "target": 9,
+        "type": "about"
+      },
+      {
+        "source": 1,
+        "target": 9,
+        "type": "contains"
+      },
+      {
+        "source": 9,
+        "target": 10,
+        "type": "recognised_full_potential_of"
+      },
+      {
+        "source": 1,
+        "target": 10,
+        "type": "contains"
+      },
+      {
+        "source": 10,
+        "target": 11,
+        "type": "is_a"
+      },
+      {
+        "source": 12,
+        "target": 11,
+        "type": "is_a"
+      },
+      {
+        "source": 13,
+        "target": 11,
+        "type": "is_a"
+      },
+      {
+        "source": 9,
+        "target": 12,
+        "type": "is_often_regarded_as"
+      },
+      {
+        "source": 1,
+        "target": 12,
+        "type": "contains"
+      },
+      {
+        "source": 7,
+        "target": 13,
+        "type": "has_profession"
+      },
+      {
+        "source": 1,
+        "target": 13,
+        "type": "contains"
+      },
+      {
+        "source": 1,
+        "target": 14,
+        "type": "contains"
+      }
+    ]
+  }
+}

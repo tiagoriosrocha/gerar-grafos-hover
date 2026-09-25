@@ -1,0 +1,545 @@
+{
+  "dataset": "hover",
+  "id": "6944299d-f7e3-430f-b1d1-796a96042096",
+  "split": "train",
+  "claim": "This band released  \"We Will Become Silhouettes\" on February 8, 2005. That band has more members than Missio.",
+  "evidencia": "Page: The Postal Service. Sentence: The Postal Service were an American indie rock band from Seattle, Washington, consisted of vocalist Ben Gibbard (of Death Cab for Cutie), producer Jimmy Tamborello (of Dntel and Headset), with Jenny Lewis (of Rilo Kiley) on background vocals.\nPage: Missio (duo). Sentence: It currently consists of founding member Matthew Brue (vocals, producer), and David Butler (producer, instrumentalist).\nPage: We Will Become Silhouettes. Sentence: \"We Will Become Silhouettes\" is a single by US indie band The Postal Service, released February 8, 2005 under the Sub Pop Records label.",
+  "evidence_text": "Page: The Postal Service. Sentence: The Postal Service were an American indie rock band from Seattle, Washington, consisted of vocalist Ben Gibbard (of Death Cab for Cutie), producer Jimmy Tamborello (of Dntel and Headset), with Jenny Lewis (of Rilo Kiley) on background vocals.\nPage: Missio (duo). Sentence: It currently consists of founding member Matthew Brue (vocals, producer), and David Butler (producer, instrumentalist).\nPage: We Will Become Silhouettes. Sentence: \"We Will Become Silhouettes\" is a single by US indie band The Postal Service, released February 8, 2005 under the Sub Pop Records label.",
+  "label": "SUPPORTED",
+  "num_hops": 3,
+  "hover_metadata": {
+    "supporting_facts": [
+      [
+        "The Postal Service",
+        0
+      ],
+      [
+        "Missio (duo)",
+        1
+      ],
+      [
+        "We Will Become Silhouettes",
+        0
+      ]
+    ],
+    "num_hops": 3,
+    "evidence_annotation_id": [
+      0
+    ],
+    "evidence_id": [
+      "The Postal Service::sentence::0",
+      "Missio (duo)::sentence::1",
+      "We Will Become Silhouettes::sentence::0"
+    ],
+    "evidence_wiki_url": [
+      "https://en.wikipedia.org/wiki/The_Postal_Service",
+      "https://en.wikipedia.org/wiki/Missio_%28duo%29",
+      "https://en.wikipedia.org/wiki/We_Will_Become_Silhouettes"
+    ],
+    "evidence_sentence_id": [
+      "The Postal Service::sentence::0",
+      "Missio (duo)::sentence::1",
+      "We Will Become Silhouettes::sentence::0"
+    ]
+  },
+  "grafo_claim": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "44038a52-f3d9-5031-9942-88900bdac9be",
+        "text": "This chunk is about:\n- Organizations: The Postal Service, Missio\n- Products: “We Will Become Silhouettes”\n- Topics: release dates, band membership comparison\n\nFacts:\n- The Postal Service released “We Will Become Silhouettes” on February 8, 2005.\n- The Postal Service has more members than Missio.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "01c39b41-481f-57b6-b7d3-3ec14719d00a",
+        "text": "This band released  \"We Will Become Silhouettes\" on February 8, 2005. That band has more members than Missio.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "aa51b272-f1a2-5071-a33a-b427e80e5ff1",
+        "text": "text_93ea0036c2ac3bd91568d9734e3d13a9",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "2ac223f6-b290-5d5d-9782-055560541001",
+        "text": "the postal service",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "d1dd6a33-66e8-50e6-abf0-307e4d4b192c",
+        "text": "we will become silhouettes",
+        "type": "Entity"
+      },
+      {
+        "id": 5,
+        "original_id": "b4c5198b-3910-59ce-ad2b-d1a3e62cf387",
+        "text": "2005-02-08",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "b19433ae-558c-5aaf-95ac-6231f2a4be0e",
+        "text": "date",
+        "type": "EntityType"
+      },
+      {
+        "id": 7,
+        "original_id": "6056b392-f12e-5150-8c0b-ac7545dc2fdf",
+        "text": "song",
+        "type": "EntityType"
+      },
+      {
+        "id": 8,
+        "original_id": "f2eb942d-21ab-5308-9684-53c0671ead8b",
+        "text": "missio",
+        "type": "Entity"
+      },
+      {
+        "id": 9,
+        "original_id": "a69bcce0-8153-57d6-96fd-6d36e286fb20",
+        "text": "band",
+        "type": "EntityType"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "released"
+      },
+      {
+        "source": 1,
+        "target": 4,
+        "type": "contains"
+      },
+      {
+        "source": 4,
+        "target": 5,
+        "type": "released_on"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 4,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 8,
+        "type": "has_more_members_than"
+      },
+      {
+        "source": 1,
+        "target": 8,
+        "type": "contains"
+      },
+      {
+        "source": 8,
+        "target": 9,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 9,
+        "type": "is_a"
+      }
+    ]
+  },
+  "grafo_evidencia": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "35bc8369-de3d-59ba-8065-52062a204119",
+        "text": "This chunk is about:\n- People: Ben Gibbard, Jimmy Tamborello, Jenny Lewis, Matthew Brue, David Butler\n- Bands: The Postal Service, Death Cab for Cutie, Dntel, Headset, Rilo Kiley, Missio\n- Songs: We Will Become Silhouettes\n- Companies: Sub Pop Records\n- Places: Seattle, Washington\n\nFacts:\n- The Postal Service were an American indie rock band from Seattle, Washington.\n- The Postal Service consisted of vocalist Ben Gibbard, who was of Death Cab for Cutie, and producer Jimmy Tamborello, who was of Dntel and Headset, with Jenny Lewis of Rilo Kiley on background vocals.\n- \"We Will Become Silhouettes\" is a single by the American indie band The Postal Service.\n- \"We Will Become Silhouettes\" was released on February 8, 2005, under the Sub Pop Records label.\n- Missio currently consists of founding member Matthew Brue, who is a vocalist and producer, and David Butler, who is a producer and instrumentalist.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "44f2093e-4aff-50b3-85da-046328c70a13",
+        "text": "Page: The Postal Service. Sentence: The Postal Service were an American indie rock band from Seattle, Washington, consisted of vocalist Ben Gibbard (of Death Cab for Cutie), producer Jimmy Tamborello (of Dntel and Headset), with Jenny Lewis (of Rilo Kiley) on background vocals.\nPage: Missio (duo). Sentence: It currently consists of founding member Matthew Brue (vocals, producer), and David Butler (producer, instrumentalist).\nPage: We Will Become Silhouettes. Sentence: \"We Will Become Silhouettes\" is a single by US indie band The Postal Service, released February 8, 2005 under the Sub Pop Records label.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "a88e3853-6167-5fcc-bd76-a9513d00ce7d",
+        "text": "text_d40235e4526c1e59f99d446cacc3efdb",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "2ac223f6-b290-5d5d-9782-055560541001",
+        "text": "the postal service",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "38cab2b2-1d17-546a-bab2-58e6580e7f95",
+        "text": "seattle, washington",
+        "type": "Entity"
+      },
+      {
+        "id": 5,
+        "original_id": "5f394058-b2a0-5ba8-8466-ba2a18cfcf4e",
+        "text": "place",
+        "type": "EntityType"
+      },
+      {
+        "id": 6,
+        "original_id": "513f6603-def7-5e7b-a97f-e015f173b48f",
+        "text": "ben gibbard",
+        "type": "Entity"
+      },
+      {
+        "id": 7,
+        "original_id": "629556d5-c644-5840-b776-1e73544870a1",
+        "text": "death cab for cutie",
+        "type": "Entity"
+      },
+      {
+        "id": 8,
+        "original_id": "388f60fb-220d-55e8-ae9c-3ac93cead308",
+        "text": "organization",
+        "type": "EntityType"
+      },
+      {
+        "id": 9,
+        "original_id": "99a82eec-bb35-5bb5-9ed2-e73fc7a756de",
+        "text": "person",
+        "type": "EntityType"
+      },
+      {
+        "id": 10,
+        "original_id": "45c8c442-aa3e-5412-9223-71f54bc13cd7",
+        "text": "jimmy tamborello",
+        "type": "Entity"
+      },
+      {
+        "id": 11,
+        "original_id": "c84baa81-1ad4-56f3-959e-54510f21fdae",
+        "text": "dntel",
+        "type": "Entity"
+      },
+      {
+        "id": 12,
+        "original_id": "1d8702ac-b1a5-5a2d-a709-8e6508ed7e19",
+        "text": "headset",
+        "type": "Entity"
+      },
+      {
+        "id": 13,
+        "original_id": "50ba1db8-da23-593e-8871-c15711d384ea",
+        "text": "jenny lewis",
+        "type": "Entity"
+      },
+      {
+        "id": 14,
+        "original_id": "85c0955a-0ae4-51ff-bf6f-b5692ad2bfdd",
+        "text": "rilo kiley",
+        "type": "Entity"
+      },
+      {
+        "id": 15,
+        "original_id": "f2eb942d-21ab-5308-9684-53c0671ead8b",
+        "text": "missio",
+        "type": "Entity"
+      },
+      {
+        "id": 16,
+        "original_id": "bc389013-78b9-5040-9bf8-28fd77f40c5a",
+        "text": "matthew brue",
+        "type": "Entity"
+      },
+      {
+        "id": 17,
+        "original_id": "036b60ce-fbed-572b-b0e8-9851ace98901",
+        "text": "david butler",
+        "type": "Entity"
+      },
+      {
+        "id": 18,
+        "original_id": "d1dd6a33-66e8-50e6-abf0-307e4d4b192c",
+        "text": "we will become silhouettes",
+        "type": "Entity"
+      },
+      {
+        "id": 19,
+        "original_id": "b4c5198b-3910-59ce-ad2b-d1a3e62cf387",
+        "text": "2005-02-08",
+        "type": "Entity"
+      },
+      {
+        "id": 20,
+        "original_id": "b19433ae-558c-5aaf-95ac-6231f2a4be0e",
+        "text": "date",
+        "type": "EntityType"
+      },
+      {
+        "id": 21,
+        "original_id": "2eee1fdd-52cc-5c3b-8c5d-7d0b9eb76d40",
+        "text": "sub pop records",
+        "type": "Entity"
+      },
+      {
+        "id": 22,
+        "original_id": "5263a535-1b4b-5925-be3e-310d03cd303b",
+        "text": "work",
+        "type": "EntityType"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 18,
+        "target": 3,
+        "type": "performed_by"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "originated_in"
+      },
+      {
+        "source": 1,
+        "target": 4,
+        "type": "contains"
+      },
+      {
+        "source": 4,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 6,
+        "type": "has_member"
+      },
+      {
+        "source": 1,
+        "target": 6,
+        "type": "contains"
+      },
+      {
+        "source": 6,
+        "target": 7,
+        "type": "associated_with"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      },
+      {
+        "source": 7,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 11,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 12,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 14,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 15,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 21,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 6,
+        "target": 9,
+        "type": "is_a"
+      },
+      {
+        "source": 10,
+        "target": 9,
+        "type": "is_a"
+      },
+      {
+        "source": 13,
+        "target": 9,
+        "type": "is_a"
+      },
+      {
+        "source": 16,
+        "target": 9,
+        "type": "is_a"
+      },
+      {
+        "source": 17,
+        "target": 9,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 10,
+        "type": "has_member"
+      },
+      {
+        "source": 1,
+        "target": 10,
+        "type": "contains"
+      },
+      {
+        "source": 10,
+        "target": 11,
+        "type": "associated_with"
+      },
+      {
+        "source": 1,
+        "target": 11,
+        "type": "contains"
+      },
+      {
+        "source": 10,
+        "target": 12,
+        "type": "associated_with"
+      },
+      {
+        "source": 1,
+        "target": 12,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 13,
+        "type": "has_member"
+      },
+      {
+        "source": 1,
+        "target": 13,
+        "type": "contains"
+      },
+      {
+        "source": 13,
+        "target": 14,
+        "type": "associated_with"
+      },
+      {
+        "source": 1,
+        "target": 14,
+        "type": "contains"
+      },
+      {
+        "source": 1,
+        "target": 15,
+        "type": "contains"
+      },
+      {
+        "source": 15,
+        "target": 16,
+        "type": "has_member"
+      },
+      {
+        "source": 1,
+        "target": 16,
+        "type": "contains"
+      },
+      {
+        "source": 15,
+        "target": 17,
+        "type": "has_member"
+      },
+      {
+        "source": 1,
+        "target": 17,
+        "type": "contains"
+      },
+      {
+        "source": 1,
+        "target": 18,
+        "type": "contains"
+      },
+      {
+        "source": 18,
+        "target": 19,
+        "type": "released_on"
+      },
+      {
+        "source": 1,
+        "target": 19,
+        "type": "contains"
+      },
+      {
+        "source": 19,
+        "target": 20,
+        "type": "is_a"
+      },
+      {
+        "source": 18,
+        "target": 21,
+        "type": "released_under"
+      },
+      {
+        "source": 1,
+        "target": 21,
+        "type": "contains"
+      },
+      {
+        "source": 18,
+        "target": 22,
+        "type": "is_a"
+      }
+    ]
+  }
+}

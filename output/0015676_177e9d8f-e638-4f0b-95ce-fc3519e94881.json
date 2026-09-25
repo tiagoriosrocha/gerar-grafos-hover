@@ -1,0 +1,428 @@
+{
+  "dataset": "hover",
+  "id": "177e9d8f-e638-4f0b-95ce-fc3519e94881",
+  "split": "train",
+  "claim": "The flowering-genus, which California macrophylla was formerly placed in, includes more species than Cymbidium.",
+  "evidencia": "Page: Erodium. Sentence: Erodium is a genus of flowering plants in the botanical family Geraniaceae.\nPage: Erodium. Sentence: The genus includes about 60 species, native to North Africa, Indomalaya, The Middle East, and Australia.\nPage: Cymbidium. Sentence: Cymbidium , or boat orchid, is a genus of 52 evergreen species in the orchid family Orchidaceae.\nPage: California macrophylla. Sentence: It was formerly placed in the genus \"Erodium\", but was later placed in a monotypic genus of its own named California.",
+  "evidence_text": "Page: Erodium. Sentence: Erodium is a genus of flowering plants in the botanical family Geraniaceae.\nPage: Erodium. Sentence: The genus includes about 60 species, native to North Africa, Indomalaya, The Middle East, and Australia.\nPage: Cymbidium. Sentence: Cymbidium , or boat orchid, is a genus of 52 evergreen species in the orchid family Orchidaceae.\nPage: California macrophylla. Sentence: It was formerly placed in the genus \"Erodium\", but was later placed in a monotypic genus of its own named California.",
+  "label": "NOT_SUPPORTED",
+  "num_hops": 3,
+  "hover_metadata": {
+    "supporting_facts": [
+      [
+        "Erodium",
+        0
+      ],
+      [
+        "Erodium",
+        1
+      ],
+      [
+        "Cymbidium",
+        0
+      ],
+      [
+        "California macrophylla",
+        1
+      ]
+    ],
+    "num_hops": 3,
+    "evidence_annotation_id": [
+      0
+    ],
+    "evidence_id": [
+      "Erodium::sentence::0",
+      "Erodium::sentence::1",
+      "Cymbidium::sentence::0",
+      "California macrophylla::sentence::1"
+    ],
+    "evidence_wiki_url": [
+      "https://en.wikipedia.org/wiki/Erodium",
+      "https://en.wikipedia.org/wiki/Cymbidium",
+      "https://en.wikipedia.org/wiki/California_macrophylla"
+    ],
+    "evidence_sentence_id": [
+      "Erodium::sentence::0",
+      "Erodium::sentence::1",
+      "Cymbidium::sentence::0",
+      "California macrophylla::sentence::1"
+    ]
+  },
+  "grafo_claim": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "4a140148-20c7-55c8-9418-9b42e245ff80",
+        "text": "This chunk is about:\n- Plants: California macrophylla, Cymbidium\n- Taxonomy: flowering genera\n\nFacts:\n- California macrophylla was formerly placed in a flowering genus.\n- The flowering genus that formerly included California macrophylla contains more species than Cymbidium.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "c9a9225b-6142-56c1-8817-72cb3a8dc252",
+        "text": "The flowering-genus, which California macrophylla was formerly placed in, includes more species than Cymbidium.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "6ba1c357-b456-58ae-95f4-8db1ffe4fb43",
+        "text": "text_4031684bfddb4e354e253e29cb5b116c",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "74a87947-4332-5d26-8d3f-c1c3095ce59a",
+        "text": "california macrophylla",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "2df43048-b175-54c2-b72b-0ff24f41e4f1",
+        "text": "plant",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "a8a9701a-6641-59a2-8cc9-501b74608266",
+        "text": "flowering-genus formerly containing california macrophylla",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "58ce8914-8a9e-5302-9b2d-0d97006e12d3",
+        "text": "genus",
+        "type": "EntityType"
+      },
+      {
+        "id": 7,
+        "original_id": "481baa10-65e7-5793-88d7-046558a9283f",
+        "text": "cymbidium",
+        "type": "Entity"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "formerly_placed_in"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 7,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 5,
+        "target": 7,
+        "type": "includes_more_species_than"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      }
+    ]
+  },
+  "grafo_evidencia": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "fa245838-b21a-541f-9bb1-41d8f89831e4",
+        "text": "This chunk is about:\n- Plants: Erodium, Cymbidium, California macrophylla\n- Plant Families: Geraniaceae, Orchidaceae\n- Places: North Africa, Indomalaya, the Middle East, Australia\n\nFacts:\n- Erodium is a genus of flowering plants in the family Geraniaceae.\n- Erodium includes about 60 species native to North Africa, Indomalaya, the Middle East, and Australia.\n- Cymbidium, also called boat orchid, is a genus of 52 evergreen species in the family Orchidaceae.\n- California macrophylla was formerly placed in the genus Erodium and was later moved to its own monotypic genus, California.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "13e20b6d-d2cd-5aa5-81b0-4b0f43143c46",
+        "text": "Page: Erodium. Sentence: Erodium is a genus of flowering plants in the botanical family Geraniaceae.\nPage: Erodium. Sentence: The genus includes about 60 species, native to North Africa, Indomalaya, The Middle East, and Australia.\nPage: Cymbidium. Sentence: Cymbidium , or boat orchid, is a genus of 52 evergreen species in the orchid family Orchidaceae.\nPage: California macrophylla. Sentence: It was formerly placed in the genus \"Erodium\", but was later placed in a monotypic genus of its own named California.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "2e122e42-f5bf-50fb-ac1d-7685afde04fc",
+        "text": "text_aa983a58689858f1500700e4ba4b47de",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "de85ed57-50df-5a88-8dc3-407a39d6f914",
+        "text": "erodium",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "f7b4540f-d32c-51b3-8970-f282fffab519",
+        "text": "taxon",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "094d9bfb-422e-55de-b848-9f040bd2fbec",
+        "text": "geraniaceae",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "39f2d070-e8e8-50b2-8072-49ab5b842726",
+        "text": "north africa",
+        "type": "Entity"
+      },
+      {
+        "id": 7,
+        "original_id": "5f394058-b2a0-5ba8-8466-ba2a18cfcf4e",
+        "text": "place",
+        "type": "EntityType"
+      },
+      {
+        "id": 8,
+        "original_id": "928475ed-32bf-51e9-a962-47984e8c6ee2",
+        "text": "indomalaya",
+        "type": "Entity"
+      },
+      {
+        "id": 9,
+        "original_id": "f20d5b0e-8398-56d9-9c78-503ac3d769d3",
+        "text": "the middle east",
+        "type": "Entity"
+      },
+      {
+        "id": 10,
+        "original_id": "02448d73-884d-50c7-a919-b94177f1cf43",
+        "text": "australia",
+        "type": "Entity"
+      },
+      {
+        "id": 11,
+        "original_id": "481baa10-65e7-5793-88d7-046558a9283f",
+        "text": "cymbidium",
+        "type": "Entity"
+      },
+      {
+        "id": 12,
+        "original_id": "96b14f83-4bf4-55e2-a94f-395a2bc253ee",
+        "text": "boat orchid",
+        "type": "Entity"
+      },
+      {
+        "id": 13,
+        "original_id": "39575085-0710-527d-bd54-019de7b00429",
+        "text": "name",
+        "type": "EntityType"
+      },
+      {
+        "id": 14,
+        "original_id": "1da460e4-7f8f-58c8-ac3a-09d1f863b90c",
+        "text": "orchidaceae",
+        "type": "Entity"
+      },
+      {
+        "id": 15,
+        "original_id": "74a87947-4332-5d26-8d3f-c1c3095ce59a",
+        "text": "california macrophylla",
+        "type": "Entity"
+      },
+      {
+        "id": 16,
+        "original_id": "8294cd6a-6968-5d3a-b0c8-57e08c745c8d",
+        "text": "california",
+        "type": "Entity"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 15,
+        "target": 3,
+        "type": "formerly_placed_in"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 5,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 11,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 14,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 15,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 16,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "in_family"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 6,
+        "type": "native_to"
+      },
+      {
+        "source": 1,
+        "target": 6,
+        "type": "contains"
+      },
+      {
+        "source": 6,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 8,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 9,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 10,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 8,
+        "type": "native_to"
+      },
+      {
+        "source": 1,
+        "target": 8,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 9,
+        "type": "native_to"
+      },
+      {
+        "source": 1,
+        "target": 9,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 10,
+        "type": "native_to"
+      },
+      {
+        "source": 1,
+        "target": 10,
+        "type": "contains"
+      },
+      {
+        "source": 1,
+        "target": 11,
+        "type": "contains"
+      },
+      {
+        "source": 11,
+        "target": 12,
+        "type": "also_known_as"
+      },
+      {
+        "source": 1,
+        "target": 12,
+        "type": "contains"
+      },
+      {
+        "source": 12,
+        "target": 13,
+        "type": "is_a"
+      },
+      {
+        "source": 11,
+        "target": 14,
+        "type": "in_family"
+      },
+      {
+        "source": 1,
+        "target": 14,
+        "type": "contains"
+      },
+      {
+        "source": 1,
+        "target": 15,
+        "type": "contains"
+      },
+      {
+        "source": 15,
+        "target": 16,
+        "type": "placed_in"
+      },
+      {
+        "source": 1,
+        "target": 16,
+        "type": "contains"
+      }
+    ]
+  }
+}

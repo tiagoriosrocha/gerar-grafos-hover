@@ -1,0 +1,345 @@
+{
+  "dataset": "hover",
+  "id": "a7637a8b-45ef-4a0d-997a-2e487193fe63",
+  "split": "train",
+  "claim": "Marion is approximately 50 miles  north of a city that is the third-most populous state capital in the U.S.",
+  "evidencia": "Page: Marion, Ohio. Sentence: Marion is a city in and the county seat of Marion County, Ohio, United States.\nPage: Columbus, Ohio. Sentence: Columbus ( ) is the capital and largest city of the U.S. state of Ohio.\nPage: Columbus, Ohio. Sentence: This makes Columbus the third-most populous state capital in the United States, and the second-largest city in the Midwestern United States, after Chicago.",
+  "evidence_text": "Page: Marion, Ohio. Sentence: Marion is a city in and the county seat of Marion County, Ohio, United States.\nPage: Columbus, Ohio. Sentence: Columbus ( ) is the capital and largest city of the U.S. state of Ohio.\nPage: Columbus, Ohio. Sentence: This makes Columbus the third-most populous state capital in the United States, and the second-largest city in the Midwestern United States, after Chicago.",
+  "label": "SUPPORTED",
+  "num_hops": 2,
+  "hover_metadata": {
+    "supporting_facts": [
+      [
+        "Marion, Ohio",
+        0
+      ],
+      [
+        "Columbus, Ohio",
+        0
+      ],
+      [
+        "Columbus, Ohio",
+        2
+      ]
+    ],
+    "num_hops": 2,
+    "evidence_annotation_id": [
+      0
+    ],
+    "evidence_id": [
+      "Marion, Ohio::sentence::0",
+      "Columbus, Ohio::sentence::0",
+      "Columbus, Ohio::sentence::2"
+    ],
+    "evidence_wiki_url": [
+      "https://en.wikipedia.org/wiki/Marion%2C_Ohio",
+      "https://en.wikipedia.org/wiki/Columbus%2C_Ohio"
+    ],
+    "evidence_sentence_id": [
+      "Marion, Ohio::sentence::0",
+      "Columbus, Ohio::sentence::0",
+      "Columbus, Ohio::sentence::2"
+    ]
+  },
+  "grafo_claim": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "b4a0352b-b923-592f-bf08-c73e21ab6593",
+        "text": "This chunk is about:\n- Places: Marion\n- Places: a U.S. state capital\n- Topics: geographic relation, population ranking\n\nFacts:\n- Marion is approximately 50 miles north of a U.S. state capital.\n- The U.S. state capital is the third-most populous state capital in the United States.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "a12471ec-f1d7-5d6c-98de-98c6b61f93c3",
+        "text": "Marion is approximately 50 miles  north of a city that is the third-most populous state capital in the U.S.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "283b976e-72c6-5ace-9fd4-a32ce2bc8645",
+        "text": "text_0fd37b5d05650f556db14e6d65a3c026",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "140b14ef-9063-5f8a-b72e-8c969aa5bc3d",
+        "text": "marion",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "407f79b4-d594-5bb1-8825-9d961bc703c8",
+        "text": "third-most populous state capital in the u.s.",
+        "type": "Entity"
+      },
+      {
+        "id": 5,
+        "original_id": "5f394058-b2a0-5ba8-8466-ba2a18cfcf4e",
+        "text": "place",
+        "type": "EntityType"
+      },
+      {
+        "id": 6,
+        "original_id": "459693e3-84c7-537d-b8b0-90d341e5c902",
+        "text": "50 miles",
+        "type": "Entity"
+      },
+      {
+        "id": 7,
+        "original_id": "7a7a0687-e490-5167-ad5a-0e39d9055dee",
+        "text": "quantity",
+        "type": "EntityType"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_north_of"
+      },
+      {
+        "source": 1,
+        "target": 4,
+        "type": "contains"
+      },
+      {
+        "source": 4,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 6,
+        "type": "is_approximately_distance_from"
+      },
+      {
+        "source": 1,
+        "target": 6,
+        "type": "contains"
+      },
+      {
+        "source": 6,
+        "target": 7,
+        "type": "is_a"
+      }
+    ]
+  },
+  "grafo_evidencia": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "21a5f30d-1796-54d4-994f-60ab97931253",
+        "text": "This chunk is about:\n- Places: Marion, Columbus, Marion County, Ohio, United States, Midwestern United States, Chicago\n- Topics: city status, county seats, state capitals, population rank\n\nFacts:\n- Marion is a city in Marion County, Ohio, in the United States.\n- Marion is the county seat of Marion County, Ohio.\n- Columbus is the capital of the U.S. state of Ohio.\n- Columbus is the largest city in Ohio.\n- Columbus is the third-most populous state capital in the United States.\n- Columbus is the second-largest city in the Midwestern United States after Chicago.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "5cab7d5e-5674-590c-934a-218cb3a08cd9",
+        "text": "Page: Marion, Ohio. Sentence: Marion is a city in and the county seat of Marion County, Ohio, United States.\nPage: Columbus, Ohio. Sentence: Columbus ( ) is the capital and largest city of the U.S. state of Ohio.\nPage: Columbus, Ohio. Sentence: This makes Columbus the third-most populous state capital in the United States, and the second-largest city in the Midwestern United States, after Chicago.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "ad6b8b99-cb79-52dd-9d01-e8f41d4241d1",
+        "text": "text_e4be68bd3dd66597f0aba4faaf51d4e8",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "140b14ef-9063-5f8a-b72e-8c969aa5bc3d",
+        "text": "marion",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "5bb74576-a311-5e6c-b8d4-973c8971678f",
+        "text": "marion county",
+        "type": "Entity"
+      },
+      {
+        "id": 5,
+        "original_id": "81af0218-5b85-5efc-9990-492a78a7e0fc",
+        "text": "ohio",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "874a51da-34ea-5037-be47-d87785d43c37",
+        "text": "united states",
+        "type": "Entity"
+      },
+      {
+        "id": 7,
+        "original_id": "5f394058-b2a0-5ba8-8466-ba2a18cfcf4e",
+        "text": "place",
+        "type": "EntityType"
+      },
+      {
+        "id": 8,
+        "original_id": "7122bf27-a8db-5342-a6c7-73c297be5e62",
+        "text": "columbus",
+        "type": "Entity"
+      },
+      {
+        "id": 9,
+        "original_id": "852888ed-5680-51dd-8b02-45f5ad5e230a",
+        "text": "midwestern united states",
+        "type": "Entity"
+      },
+      {
+        "id": 10,
+        "original_id": "ec047af9-0db4-5349-a274-c803926fd58c",
+        "text": "chicago",
+        "type": "Entity"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_county_seat_of"
+      },
+      {
+        "source": 1,
+        "target": 4,
+        "type": "contains"
+      },
+      {
+        "source": 4,
+        "target": 5,
+        "type": "is_in"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "is_in"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 8,
+        "target": 5,
+        "type": "is_capital_of"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "is_in"
+      },
+      {
+        "source": 1,
+        "target": 6,
+        "type": "contains"
+      },
+      {
+        "source": 8,
+        "target": 6,
+        "type": "is_third_most_populous_state_capital_in"
+      },
+      {
+        "source": 6,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 5,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 4,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 9,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 10,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 8,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 8,
+        "type": "contains"
+      },
+      {
+        "source": 8,
+        "target": 9,
+        "type": "is_second_largest_city_in"
+      },
+      {
+        "source": 10,
+        "target": 9,
+        "type": "is_in"
+      },
+      {
+        "source": 1,
+        "target": 9,
+        "type": "contains"
+      },
+      {
+        "source": 8,
+        "target": 10,
+        "type": "is_smaller_than"
+      },
+      {
+        "source": 1,
+        "target": 10,
+        "type": "contains"
+      }
+    ]
+  }
+}

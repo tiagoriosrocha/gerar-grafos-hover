@@ -1,0 +1,472 @@
+{
+  "dataset": "hover",
+  "id": "999964b9-1b48-4d1f-863d-c5f2b63ed516",
+  "split": "train",
+  "claim": "The Beatles released their 1974 album that featured the song \"Simply Shady\" during the American tour.",
+  "evidencia": "Page: Dark Horse (George Harrison album). Sentence: Although keenly anticipated on release, \"Dark Horse\" is associated with the controversial North American tour that Harrison staged with co-headliner Ravi Shankar in November and December that year.\nPage: The Beatles' 1966 US tour. Sentence: The Beatles staged their third concert tour of America in August 1966, and it was the last commercial tour they would ever undertake.\nPage: Simply Shady. Sentence: \"Simply Shady\" is a song by English musician George Harrison that was released on his 1974 album \"Dark Horse\".",
+  "evidence_text": "Page: Dark Horse (George Harrison album). Sentence: Although keenly anticipated on release, \"Dark Horse\" is associated with the controversial North American tour that Harrison staged with co-headliner Ravi Shankar in November and December that year.\nPage: The Beatles' 1966 US tour. Sentence: The Beatles staged their third concert tour of America in August 1966, and it was the last commercial tour they would ever undertake.\nPage: Simply Shady. Sentence: \"Simply Shady\" is a song by English musician George Harrison that was released on his 1974 album \"Dark Horse\".",
+  "label": "SUPPORTED",
+  "num_hops": 3,
+  "hover_metadata": {
+    "supporting_facts": [
+      [
+        "Dark Horse (George Harrison album)",
+        1
+      ],
+      [
+        "The Beatles' 1966 US tour",
+        0
+      ],
+      [
+        "Simply Shady",
+        0
+      ]
+    ],
+    "num_hops": 3,
+    "evidence_annotation_id": [
+      0
+    ],
+    "evidence_id": [
+      "Dark Horse (George Harrison album)::sentence::1",
+      "The Beatles' 1966 US tour::sentence::0",
+      "Simply Shady::sentence::0"
+    ],
+    "evidence_wiki_url": [
+      "https://en.wikipedia.org/wiki/Dark_Horse_%28George_Harrison_album%29",
+      "https://en.wikipedia.org/wiki/The_Beatles%27_1966_US_tour",
+      "https://en.wikipedia.org/wiki/Simply_Shady"
+    ],
+    "evidence_sentence_id": [
+      "Dark Horse (George Harrison album)::sentence::1",
+      "The Beatles' 1966 US tour::sentence::0",
+      "Simply Shady::sentence::0"
+    ]
+  },
+  "grafo_claim": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "752bc1d0-0a6a-5a4b-a60d-ae699ac1b5ca",
+        "text": "This chunk is about:\n- People: The Beatles\n- Products: 1974 album, \"Simply Shady\"\n- Events: American tour\n\nFacts:\n- The Beatles released a 1974 album.\n- The 1974 album featured the song \"Simply Shady.\"\n- The release happened during an American tour.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "1e8d7f5a-cd6b-5923-abae-92433b6e5bd8",
+        "text": "The Beatles released their 1974 album that featured the song \"Simply Shady\" during the American tour.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "918c8165-1c8f-5f53-9aa4-d5bed7f19351",
+        "text": "text_eb27c2d6f5df53328d8bb898b8680c2a",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "6c315338-5c08-562f-ac19-b8e74790ea4e",
+        "text": "the beatles",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "681376de-d401-54ac-8198-569c27eed3e6",
+        "text": "1974",
+        "type": "Entity"
+      },
+      {
+        "id": 5,
+        "original_id": "b19433ae-558c-5aaf-95ac-6231f2a4be0e",
+        "text": "date",
+        "type": "EntityType"
+      },
+      {
+        "id": 6,
+        "original_id": "f7afd043-737d-5ed0-8cfd-5f2db3a1e135",
+        "text": "simply shady",
+        "type": "Entity"
+      },
+      {
+        "id": 7,
+        "original_id": "2df15c74-3459-571b-9733-caa90584d856",
+        "text": "american tour",
+        "type": "Entity"
+      },
+      {
+        "id": 8,
+        "original_id": "214abcd9-9adf-5c8a-bb35-1e729f2d68c3",
+        "text": "event",
+        "type": "EntityType"
+      },
+      {
+        "id": 9,
+        "original_id": "6056b392-f12e-5150-8c0b-ac7545dc2fdf",
+        "text": "song",
+        "type": "EntityType"
+      },
+      {
+        "id": 10,
+        "original_id": "388f60fb-220d-55e8-ae9c-3ac93cead308",
+        "text": "organization",
+        "type": "EntityType"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "released_in"
+      },
+      {
+        "source": 1,
+        "target": 4,
+        "type": "contains"
+      },
+      {
+        "source": 4,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 6,
+        "type": "released_album_featuring_song"
+      },
+      {
+        "source": 1,
+        "target": 6,
+        "type": "contains"
+      },
+      {
+        "source": 6,
+        "target": 7,
+        "type": "featured_during"
+      },
+      {
+        "source": 3,
+        "target": 7,
+        "type": "released_during"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      },
+      {
+        "source": 7,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 6,
+        "target": 9,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 10,
+        "type": "is_a"
+      }
+    ]
+  },
+  "grafo_evidencia": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "69b0e17f-8c4d-5a1c-974d-4a0ed3c84959",
+        "text": "This chunk is about:\n- People: George Harrison, Ravi Shankar, the Beatles\n- Works: Dark Horse, \"Simply Shady\"\n- Events: North American tour, The Beatles' 1966 US tour\n- Places: North America, America\n\nFacts:\n- In August 1966, the Beatles staged their third concert tour of America, and it was the last commercial tour they ever undertook.\n- In November and December 1974, George Harrison staged a controversial North American tour with co-headliner Ravi Shankar.\n- In 1974, George Harrison released the album Dark Horse, which was keenly anticipated on release and became associated with the controversial North American tour.\n- In 1974, George Harrison released the song \"Simply Shady\" on his album Dark Horse.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "c7068fdc-2526-5494-8bcc-d38b5a28312b",
+        "text": "Page: Dark Horse (George Harrison album). Sentence: Although keenly anticipated on release, \"Dark Horse\" is associated with the controversial North American tour that Harrison staged with co-headliner Ravi Shankar in November and December that year.\nPage: The Beatles' 1966 US tour. Sentence: The Beatles staged their third concert tour of America in August 1966, and it was the last commercial tour they would ever undertake.\nPage: Simply Shady. Sentence: \"Simply Shady\" is a song by English musician George Harrison that was released on his 1974 album \"Dark Horse\".",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "5444b722-d236-56bd-9b56-6227e225e57e",
+        "text": "text_1d3f68043991470521300253df73cebe",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "17b55fa8-e051-516d-9565-1c351b0e02cb",
+        "text": "dark horse",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "ba8eb252-2928-5098-b0a9-7380b5946f31",
+        "text": "north american tour",
+        "type": "Entity"
+      },
+      {
+        "id": 5,
+        "original_id": "26f38d70-232d-5785-ba26-2f0383202103",
+        "text": "1974-11",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "b19433ae-558c-5aaf-95ac-6231f2a4be0e",
+        "text": "date",
+        "type": "EntityType"
+      },
+      {
+        "id": 7,
+        "original_id": "1b4982b2-c0da-5ab9-9f6b-4a9b0e0721aa",
+        "text": "1974-12",
+        "type": "Entity"
+      },
+      {
+        "id": 8,
+        "original_id": "214abcd9-9adf-5c8a-bb35-1e729f2d68c3",
+        "text": "event",
+        "type": "EntityType"
+      },
+      {
+        "id": 9,
+        "original_id": "d6e28f43-1d05-5119-8336-e2a7456efb43",
+        "text": "george harrison",
+        "type": "Entity"
+      },
+      {
+        "id": 10,
+        "original_id": "99a82eec-bb35-5bb5-9ed2-e73fc7a756de",
+        "text": "person",
+        "type": "EntityType"
+      },
+      {
+        "id": 11,
+        "original_id": "213321b1-cf32-59df-847a-8b293b41cf9c",
+        "text": "album",
+        "type": "EntityType"
+      },
+      {
+        "id": 12,
+        "original_id": "bd04389e-876e-5ef4-bab0-5316367ce10c",
+        "text": "ravi shankar",
+        "type": "Entity"
+      },
+      {
+        "id": 13,
+        "original_id": "5fe60a50-b4f3-5c6c-a042-fb0ae24ceea1",
+        "text": "the beatles 1966 us tour",
+        "type": "Entity"
+      },
+      {
+        "id": 14,
+        "original_id": "b2715223-9dd9-576c-8453-b21aed69c3fd",
+        "text": "1966-08",
+        "type": "Entity"
+      },
+      {
+        "id": 15,
+        "original_id": "6c315338-5c08-562f-ac19-b8e74790ea4e",
+        "text": "the beatles",
+        "type": "Entity"
+      },
+      {
+        "id": 16,
+        "original_id": "388f60fb-220d-55e8-ae9c-3ac93cead308",
+        "text": "organization",
+        "type": "EntityType"
+      },
+      {
+        "id": 17,
+        "original_id": "f7afd043-737d-5ed0-8cfd-5f2db3a1e135",
+        "text": "simply shady",
+        "type": "Entity"
+      },
+      {
+        "id": 18,
+        "original_id": "6056b392-f12e-5150-8c0b-ac7545dc2fdf",
+        "text": "song",
+        "type": "EntityType"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 17,
+        "target": 3,
+        "type": "released_on"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_associated_with"
+      },
+      {
+        "source": 9,
+        "target": 4,
+        "type": "staged"
+      },
+      {
+        "source": 1,
+        "target": 4,
+        "type": "contains"
+      },
+      {
+        "source": 12,
+        "target": 4,
+        "type": "co_headlined"
+      },
+      {
+        "source": 4,
+        "target": 5,
+        "type": "occurred_in"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 7,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 14,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 4,
+        "target": 7,
+        "type": "occurred_in"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      },
+      {
+        "source": 4,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 13,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 9,
+        "type": "is_album_by"
+      },
+      {
+        "source": 1,
+        "target": 9,
+        "type": "contains"
+      },
+      {
+        "source": 17,
+        "target": 9,
+        "type": "is_song_by"
+      },
+      {
+        "source": 9,
+        "target": 10,
+        "type": "is_a"
+      },
+      {
+        "source": 12,
+        "target": 10,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 11,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 12,
+        "type": "contains"
+      },
+      {
+        "source": 1,
+        "target": 13,
+        "type": "contains"
+      },
+      {
+        "source": 15,
+        "target": 13,
+        "type": "staged"
+      },
+      {
+        "source": 13,
+        "target": 14,
+        "type": "occurred_in"
+      },
+      {
+        "source": 1,
+        "target": 14,
+        "type": "contains"
+      },
+      {
+        "source": 13,
+        "target": 15,
+        "type": "was_last_commercial_tour_of"
+      },
+      {
+        "source": 1,
+        "target": 15,
+        "type": "contains"
+      },
+      {
+        "source": 15,
+        "target": 16,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 17,
+        "type": "contains"
+      },
+      {
+        "source": 17,
+        "target": 18,
+        "type": "is_a"
+      }
+    ]
+  }
+}

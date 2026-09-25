@@ -1,0 +1,454 @@
+{
+  "dataset": "hover",
+  "id": "58c86265-1719-403d-9f66-f06481b98660",
+  "split": "train",
+  "claim": "Stephen Pearcy is older than another singer. This other singer was once a member of the group Wonder Girls.",
+  "evidencia": "Page: Sunye. Sentence: Min Sun-ye (Korean: 민선예, born August 12, 1989), also known as Sunye or Sun (stylized as SunYe), is a South Korean missionary and former singer and actress (on hiatus).\nPage: Stephen Pearcy. Sentence: Stephen Eric Pearcy (born July 3, 1956), known as Stephen Pearcy, is an American musician.\nPage: Wonder Girls. Sentence: Members Sunye and Sohee officially left the group in 2015, while Hyuna left in late 2007.",
+  "evidence_text": "Page: Sunye. Sentence: Min Sun-ye (Korean: 민선예, born August 12, 1989), also known as Sunye or Sun (stylized as SunYe), is a South Korean missionary and former singer and actress (on hiatus).\nPage: Stephen Pearcy. Sentence: Stephen Eric Pearcy (born July 3, 1956), known as Stephen Pearcy, is an American musician.\nPage: Wonder Girls. Sentence: Members Sunye and Sohee officially left the group in 2015, while Hyuna left in late 2007.",
+  "label": "SUPPORTED",
+  "num_hops": 3,
+  "hover_metadata": {
+    "supporting_facts": [
+      [
+        "Sunye",
+        0
+      ],
+      [
+        "Stephen Pearcy",
+        0
+      ],
+      [
+        "Wonder Girls",
+        2
+      ]
+    ],
+    "num_hops": 3,
+    "evidence_annotation_id": [
+      0
+    ],
+    "evidence_id": [
+      "Sunye::sentence::0",
+      "Stephen Pearcy::sentence::0",
+      "Wonder Girls::sentence::2"
+    ],
+    "evidence_wiki_url": [
+      "https://en.wikipedia.org/wiki/Sunye",
+      "https://en.wikipedia.org/wiki/Stephen_Pearcy",
+      "https://en.wikipedia.org/wiki/Wonder_Girls"
+    ],
+    "evidence_sentence_id": [
+      "Sunye::sentence::0",
+      "Stephen Pearcy::sentence::0",
+      "Wonder Girls::sentence::2"
+    ]
+  },
+  "grafo_claim": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "fcfda96a-511e-557c-8be4-315c3f0ca8ae",
+        "text": "This chunk is about:\n- People: Stephen Pearcy, unnamed singer\n- Organizations: Wonder Girls\n- Roles: singer\n\nFacts:\n- Stephen Pearcy is older than another singer.\n- The other singer was once a member of Wonder Girls.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "89e6164a-a896-55bd-af17-72b3609c1d9a",
+        "text": "Stephen Pearcy is older than another singer. This other singer was once a member of the group Wonder Girls.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "393ee244-05d1-55fe-8e2e-f18a23f91450",
+        "text": "text_2cba67b2a17290539fbe57c8a719b8c8",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "0c1b5ecc-83ef-56e6-a05a-9ad1f11113d8",
+        "text": "stephen pearcy",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "bbb0932a-a0b5-5905-94b4-20238125e24b",
+        "text": "other singer",
+        "type": "Entity"
+      },
+      {
+        "id": 5,
+        "original_id": "fe2ef0ac-5937-59b9-a47c-725f0ed9c440",
+        "text": "wonder girls",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "388f60fb-220d-55e8-ae9c-3ac93cead308",
+        "text": "organization",
+        "type": "EntityType"
+      },
+      {
+        "id": 7,
+        "original_id": "99a82eec-bb35-5bb5-9ed2-e73fc7a756de",
+        "text": "person",
+        "type": "EntityType"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "older_than"
+      },
+      {
+        "source": 1,
+        "target": 4,
+        "type": "contains"
+      },
+      {
+        "source": 4,
+        "target": 5,
+        "type": "former_member_of"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 4,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 7,
+        "type": "is_a"
+      }
+    ]
+  },
+  "grafo_evidencia": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "a884f5bb-93a6-5a42-ab2a-ff9a75c4f5b2",
+        "text": "This chunk is about:\n- People: Sunye, Min Sun-ye, Stephen Pearcy, Sohee, Hyuna\n- Groups: Wonder Girls\n- Roles: missionary, singer, actress, musician\n\nFacts:\n- Stephen Pearcy was born on July 3, 1956, and he is an American musician.\n- Sunye, whose birth name is Min Sun-ye, was born on August 12, 1989, and she is a South Korean missionary and a former singer and actress on hiatus.\n- Sunye is also known as Sunye or Sun, with SunYe used as a stylized form of her name.\n- Hyuna left Wonder Girls in late 2007.\n- Sunye and Sohee officially left Wonder Girls in 2015.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "c87fe463-f64d-5902-ae55-2b180779ece8",
+        "text": "Page: Sunye. Sentence: Min Sun-ye (Korean: 민선예, born August 12, 1989), also known as Sunye or Sun (stylized as SunYe), is a South Korean missionary and former singer and actress (on hiatus).\nPage: Stephen Pearcy. Sentence: Stephen Eric Pearcy (born July 3, 1956), known as Stephen Pearcy, is an American musician.\nPage: Wonder Girls. Sentence: Members Sunye and Sohee officially left the group in 2015, while Hyuna left in late 2007.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "0511f872-305e-5b71-b352-0214032a90a7",
+        "text": "text_fe6aae005d29f29492aa0ea197d648d2",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "065e0748-e6ac-5b08-b9b9-e507dd21b948",
+        "text": "min sun-ye",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "bdf69979-b8e4-5659-bede-0067a005da88",
+        "text": "1989-08-12",
+        "type": "Entity"
+      },
+      {
+        "id": 5,
+        "original_id": "b19433ae-558c-5aaf-95ac-6231f2a4be0e",
+        "text": "date",
+        "type": "EntityType"
+      },
+      {
+        "id": 6,
+        "original_id": "8239eed1-dc07-5554-bf00-1ecb37f51492",
+        "text": "south korea",
+        "type": "Entity"
+      },
+      {
+        "id": 7,
+        "original_id": "5f394058-b2a0-5ba8-8466-ba2a18cfcf4e",
+        "text": "place",
+        "type": "EntityType"
+      },
+      {
+        "id": 8,
+        "original_id": "fe2ef0ac-5937-59b9-a47c-725f0ed9c440",
+        "text": "wonder girls",
+        "type": "Entity"
+      },
+      {
+        "id": 9,
+        "original_id": "388f60fb-220d-55e8-ae9c-3ac93cead308",
+        "text": "organization",
+        "type": "EntityType"
+      },
+      {
+        "id": 10,
+        "original_id": "e462afa3-e20a-57e9-b578-82bcd93b548e",
+        "text": "2015",
+        "type": "Entity"
+      },
+      {
+        "id": 11,
+        "original_id": "99a82eec-bb35-5bb5-9ed2-e73fc7a756de",
+        "text": "person",
+        "type": "EntityType"
+      },
+      {
+        "id": 12,
+        "original_id": "1be118a0-7e08-53fc-a152-e2c738dbaf3b",
+        "text": "stephen eric pearcy",
+        "type": "Entity"
+      },
+      {
+        "id": 13,
+        "original_id": "1cf5321c-0461-5934-bb1f-ae3cc5f81a1e",
+        "text": "1956-07-03",
+        "type": "Entity"
+      },
+      {
+        "id": 14,
+        "original_id": "874a51da-34ea-5037-be47-d87785d43c37",
+        "text": "united states",
+        "type": "Entity"
+      },
+      {
+        "id": 15,
+        "original_id": "0c1b5ecc-83ef-56e6-a05a-9ad1f11113d8",
+        "text": "stephen pearcy",
+        "type": "Entity"
+      },
+      {
+        "id": 16,
+        "original_id": "ab35c75f-e38f-52fa-bd13-7c3381846c4f",
+        "text": "sohee",
+        "type": "Entity"
+      },
+      {
+        "id": 17,
+        "original_id": "3ec66293-0745-5b2f-b1db-6818d9c45fe4",
+        "text": "hyuna",
+        "type": "Entity"
+      },
+      {
+        "id": 18,
+        "original_id": "c22ffe02-635b-5be0-94d3-f307bea262e3",
+        "text": "2007",
+        "type": "Entity"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "born_on"
+      },
+      {
+        "source": 1,
+        "target": 4,
+        "type": "contains"
+      },
+      {
+        "source": 4,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 10,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 13,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 18,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 6,
+        "type": "has_nationality"
+      },
+      {
+        "source": 1,
+        "target": 6,
+        "type": "contains"
+      },
+      {
+        "source": 6,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 14,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 8,
+        "type": "left"
+      },
+      {
+        "source": 1,
+        "target": 8,
+        "type": "contains"
+      },
+      {
+        "source": 16,
+        "target": 8,
+        "type": "left"
+      },
+      {
+        "source": 17,
+        "target": 8,
+        "type": "left"
+      },
+      {
+        "source": 8,
+        "target": 9,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 10,
+        "type": "left_in"
+      },
+      {
+        "source": 16,
+        "target": 10,
+        "type": "left_in"
+      },
+      {
+        "source": 1,
+        "target": 10,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 11,
+        "type": "is_a"
+      },
+      {
+        "source": 15,
+        "target": 11,
+        "type": "is_a"
+      },
+      {
+        "source": 12,
+        "target": 11,
+        "type": "is_a"
+      },
+      {
+        "source": 16,
+        "target": 11,
+        "type": "is_a"
+      },
+      {
+        "source": 17,
+        "target": 11,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 12,
+        "type": "contains"
+      },
+      {
+        "source": 12,
+        "target": 13,
+        "type": "born_on"
+      },
+      {
+        "source": 1,
+        "target": 13,
+        "type": "contains"
+      },
+      {
+        "source": 12,
+        "target": 14,
+        "type": "has_nationality"
+      },
+      {
+        "source": 1,
+        "target": 14,
+        "type": "contains"
+      },
+      {
+        "source": 12,
+        "target": 15,
+        "type": "also_known_as"
+      },
+      {
+        "source": 1,
+        "target": 15,
+        "type": "contains"
+      },
+      {
+        "source": 1,
+        "target": 16,
+        "type": "contains"
+      },
+      {
+        "source": 1,
+        "target": 17,
+        "type": "contains"
+      },
+      {
+        "source": 17,
+        "target": 18,
+        "type": "left_in"
+      },
+      {
+        "source": 1,
+        "target": 18,
+        "type": "contains"
+      }
+    ]
+  }
+}

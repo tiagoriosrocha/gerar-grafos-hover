@@ -1,0 +1,600 @@
+{
+  "dataset": "hover",
+  "id": "8a7d8b67-ca0c-41b4-a513-44bf973349fd",
+  "split": "train",
+  "claim": "Beethoven regarded Luigi Cherubini as the father of his brothers, but not Franz Schreker.",
+  "evidencia": "Page: Franz Schreker. Sentence: Franz Schreker (originally \"Schrecker\"; 23 March 1878, Monaco – 21 March 1934, Berlin) was an Austrian composer, conductor, teacher and administrator.\nPage: Luigi Cherubini. Sentence: Luigi Cherubini (] ; 8 or 14 September 1760 – 15 March 1842) was an Italian composer who spent most of his working life in France.\nPage: Luigi Cherubini. Sentence: Beethoven regarded Cherubini as the greatest of his contemporaries.",
+  "evidence_text": "Page: Franz Schreker. Sentence: Franz Schreker (originally \"Schrecker\"; 23 March 1878, Monaco – 21 March 1934, Berlin) was an Austrian composer, conductor, teacher and administrator.\nPage: Luigi Cherubini. Sentence: Luigi Cherubini (] ; 8 or 14 September 1760 – 15 March 1842) was an Italian composer who spent most of his working life in France.\nPage: Luigi Cherubini. Sentence: Beethoven regarded Cherubini as the greatest of his contemporaries.",
+  "label": "NOT_SUPPORTED",
+  "num_hops": 2,
+  "hover_metadata": {
+    "supporting_facts": [
+      [
+        "Franz Schreker",
+        0
+      ],
+      [
+        "Luigi Cherubini",
+        0
+      ],
+      [
+        "Luigi Cherubini",
+        2
+      ]
+    ],
+    "num_hops": 2,
+    "evidence_annotation_id": [
+      0
+    ],
+    "evidence_id": [
+      "Franz Schreker::sentence::0",
+      "Luigi Cherubini::sentence::0",
+      "Luigi Cherubini::sentence::2"
+    ],
+    "evidence_wiki_url": [
+      "https://en.wikipedia.org/wiki/Franz_Schreker",
+      "https://en.wikipedia.org/wiki/Luigi_Cherubini"
+    ],
+    "evidence_sentence_id": [
+      "Franz Schreker::sentence::0",
+      "Luigi Cherubini::sentence::0",
+      "Luigi Cherubini::sentence::2"
+    ]
+  },
+  "grafo_claim": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "b77b9ec4-d222-5172-9227-8ed4697657ac",
+        "text": "This chunk is about:\n- People: Ludwig van Beethoven, Luigi Cherubini, Franz Schreker\n- Concepts: artistic regard, comparison\n\nFacts:\n- Ludwig van Beethoven regarded Luigi Cherubini as the father of his brothers.\n- Ludwig van Beethoven did not regard Franz Schreker as the father of his brothers.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "ac7aa588-a085-55a2-b853-961d932ee022",
+        "text": "Beethoven regarded Luigi Cherubini as the father of his brothers, but not Franz Schreker.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "1d9f0a51-31ca-547a-b101-ae5a19a2713b",
+        "text": "text_fa3402491cff5e31bb61d2eb108f2bb6",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "c380d97d-c6aa-599c-9927-dec9faa176aa",
+        "text": "ludwig van beethoven",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "99a82eec-bb35-5bb5-9ed2-e73fc7a756de",
+        "text": "person",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "aa997489-592d-5523-bf09-5132e626aa4e",
+        "text": "luigi cherubini",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "8a0c6601-f24f-504c-9cd8-10893a2eedad",
+        "text": "beethovens brothers",
+        "type": "Entity"
+      },
+      {
+        "id": 7,
+        "original_id": "3ba5d20e-3e78-5009-a920-a9db4ac5b00a",
+        "text": "franz schreker",
+        "type": "Entity"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 5,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 6,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 7,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "regarded_as_father_of_brothers"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "father_of"
+      },
+      {
+        "source": 1,
+        "target": 6,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 7,
+        "type": "did_not_regard_as_father_of_brothers"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      }
+    ]
+  },
+  "grafo_evidencia": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "22d9b0fe-f48d-5dc9-aa18-b1c160e357fa",
+        "text": "This chunk is about:\n- People: Franz Schreker, Luigi Cherubini, Ludwig van Beethoven\n- Roles: composer, conductor, teacher, administrator\n- Places: Monaco, Berlin, France\n\nFacts:\n- Luigi Cherubini was born on 8 or 14 September 1760 and died on 15 March 1842.\n- Luigi Cherubini was an Italian composer who spent most of his working life in France.\n- Ludwig van Beethoven regarded Luigi Cherubini as the greatest of his contemporaries.\n- Franz Schreker, originally named Schrecker, was born on 23 March 1878 in Monaco and died on 21 March 1934 in Berlin.\n- Franz Schreker was an Austrian composer, conductor, teacher, and administrator.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "b3c34898-76c3-56d8-a8dd-dedd1b38d088",
+        "text": "Page: Franz Schreker. Sentence: Franz Schreker (originally \"Schrecker\"; 23 March 1878, Monaco – 21 March 1934, Berlin) was an Austrian composer, conductor, teacher and administrator.\nPage: Luigi Cherubini. Sentence: Luigi Cherubini (] ; 8 or 14 September 1760 – 15 March 1842) was an Italian composer who spent most of his working life in France.\nPage: Luigi Cherubini. Sentence: Beethoven regarded Cherubini as the greatest of his contemporaries.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "c24b91e8-4ddc-5c74-9d4c-7ff91f20775e",
+        "text": "text_5663924771deb93dc1310c1fa74f200f",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "3ba5d20e-3e78-5009-a920-a9db4ac5b00a",
+        "text": "franz schreker",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "99a82eec-bb35-5bb5-9ed2-e73fc7a756de",
+        "text": "person",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "835578dc-eca8-52eb-ae2f-6df59e36a3d3",
+        "text": "schrecker",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "39575085-0710-527d-bd54-019de7b00429",
+        "text": "name",
+        "type": "EntityType"
+      },
+      {
+        "id": 7,
+        "original_id": "d7173f5d-5f5f-5733-affd-49754530cf4f",
+        "text": "1878-03-23",
+        "type": "Entity"
+      },
+      {
+        "id": 8,
+        "original_id": "b19433ae-558c-5aaf-95ac-6231f2a4be0e",
+        "text": "date",
+        "type": "EntityType"
+      },
+      {
+        "id": 9,
+        "original_id": "92efbb77-5741-5b2c-96fe-53d09d6402e5",
+        "text": "1934-03-21",
+        "type": "Entity"
+      },
+      {
+        "id": 10,
+        "original_id": "65bf35cc-00b0-5acd-a7d6-e8b2f465b868",
+        "text": "monaco",
+        "type": "Entity"
+      },
+      {
+        "id": 11,
+        "original_id": "5f394058-b2a0-5ba8-8466-ba2a18cfcf4e",
+        "text": "place",
+        "type": "EntityType"
+      },
+      {
+        "id": 12,
+        "original_id": "0aa5a634-829a-5222-8568-d7631357800d",
+        "text": "berlin",
+        "type": "Entity"
+      },
+      {
+        "id": 13,
+        "original_id": "0c13cdaa-3617-51ab-aee9-e72623265f8f",
+        "text": "austria",
+        "type": "Entity"
+      },
+      {
+        "id": 14,
+        "original_id": "01148e41-b28b-5b7b-8db5-0784ff5a61d1",
+        "text": "composer",
+        "type": "Entity"
+      },
+      {
+        "id": 15,
+        "original_id": "d2a381fa-3658-5ca6-ada9-2109cfc9331d",
+        "text": "concept",
+        "type": "EntityType"
+      },
+      {
+        "id": 16,
+        "original_id": "87de7aa6-5da5-56f5-8afa-b6098e580678",
+        "text": "conductor",
+        "type": "Entity"
+      },
+      {
+        "id": 17,
+        "original_id": "90e7674b-e259-50b8-b2bf-c091d46abfa7",
+        "text": "teacher",
+        "type": "Entity"
+      },
+      {
+        "id": 18,
+        "original_id": "6a55714d-8078-5e68-bc39-c427a02e5217",
+        "text": "administrator",
+        "type": "Entity"
+      },
+      {
+        "id": 19,
+        "original_id": "aa997489-592d-5523-bf09-5132e626aa4e",
+        "text": "luigi cherubini",
+        "type": "Entity"
+      },
+      {
+        "id": 20,
+        "original_id": "94515442-4eea-5dbf-b2e5-1c2236e97145",
+        "text": "1760-09-08",
+        "type": "Entity"
+      },
+      {
+        "id": 21,
+        "original_id": "6c4c72fb-d659-57a7-87b5-f5919cc49640",
+        "text": "1760-09-14",
+        "type": "Entity"
+      },
+      {
+        "id": 22,
+        "original_id": "2ffa8ebf-19ad-50ec-bf38-dd9d83bdf3f4",
+        "text": "1842-03-15",
+        "type": "Entity"
+      },
+      {
+        "id": 23,
+        "original_id": "72368fd8-1be4-54f1-a9ee-3368fdbd9d40",
+        "text": "italy",
+        "type": "Entity"
+      },
+      {
+        "id": 24,
+        "original_id": "c529785c-647b-5d0f-88d0-151b1fff337c",
+        "text": "france",
+        "type": "Entity"
+      },
+      {
+        "id": 25,
+        "original_id": "c380d97d-c6aa-599c-9927-dec9faa176aa",
+        "text": "ludwig van beethoven",
+        "type": "Entity"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 19,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 25,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "originally_named"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 7,
+        "type": "born_on"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      },
+      {
+        "source": 7,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 9,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 20,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 21,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 22,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 9,
+        "type": "died_on"
+      },
+      {
+        "source": 1,
+        "target": 9,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 10,
+        "type": "born_in"
+      },
+      {
+        "source": 1,
+        "target": 10,
+        "type": "contains"
+      },
+      {
+        "source": 10,
+        "target": 11,
+        "type": "is_a"
+      },
+      {
+        "source": 12,
+        "target": 11,
+        "type": "is_a"
+      },
+      {
+        "source": 13,
+        "target": 11,
+        "type": "is_a"
+      },
+      {
+        "source": 23,
+        "target": 11,
+        "type": "is_a"
+      },
+      {
+        "source": 24,
+        "target": 11,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 12,
+        "type": "died_in"
+      },
+      {
+        "source": 1,
+        "target": 12,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 13,
+        "type": "has_nationality"
+      },
+      {
+        "source": 1,
+        "target": 13,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 14,
+        "type": "has_profession"
+      },
+      {
+        "source": 1,
+        "target": 14,
+        "type": "contains"
+      },
+      {
+        "source": 19,
+        "target": 14,
+        "type": "has_profession"
+      },
+      {
+        "source": 14,
+        "target": 15,
+        "type": "is_a"
+      },
+      {
+        "source": 16,
+        "target": 15,
+        "type": "is_a"
+      },
+      {
+        "source": 17,
+        "target": 15,
+        "type": "is_a"
+      },
+      {
+        "source": 18,
+        "target": 15,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 16,
+        "type": "has_profession"
+      },
+      {
+        "source": 1,
+        "target": 16,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 17,
+        "type": "has_profession"
+      },
+      {
+        "source": 1,
+        "target": 17,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 18,
+        "type": "has_profession"
+      },
+      {
+        "source": 1,
+        "target": 18,
+        "type": "contains"
+      },
+      {
+        "source": 1,
+        "target": 19,
+        "type": "contains"
+      },
+      {
+        "source": 25,
+        "target": 19,
+        "type": "regarded_as_greatest_of_contemporaries"
+      },
+      {
+        "source": 19,
+        "target": 20,
+        "type": "possibly_born_on"
+      },
+      {
+        "source": 1,
+        "target": 20,
+        "type": "contains"
+      },
+      {
+        "source": 19,
+        "target": 21,
+        "type": "possibly_born_on"
+      },
+      {
+        "source": 1,
+        "target": 21,
+        "type": "contains"
+      },
+      {
+        "source": 19,
+        "target": 22,
+        "type": "died_on"
+      },
+      {
+        "source": 1,
+        "target": 22,
+        "type": "contains"
+      },
+      {
+        "source": 19,
+        "target": 23,
+        "type": "has_nationality"
+      },
+      {
+        "source": 1,
+        "target": 23,
+        "type": "contains"
+      },
+      {
+        "source": 19,
+        "target": 24,
+        "type": "worked_mostly_in"
+      },
+      {
+        "source": 1,
+        "target": 24,
+        "type": "contains"
+      },
+      {
+        "source": 1,
+        "target": 25,
+        "type": "contains"
+      }
+    ]
+  }
+}

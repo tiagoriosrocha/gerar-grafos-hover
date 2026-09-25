@@ -1,0 +1,330 @@
+{
+  "dataset": "hover",
+  "id": "da70772a-eb61-4b45-80d2-57bcf3f1e65f",
+  "split": "train",
+  "claim": "MedStar Georgetown University Hospital and Howard University Hospital are both located in Washington, D.C.",
+  "evidencia": "Page: MedStar Georgetown University Hospital. Sentence: It is a not-for-profit, acute care teaching and research facility located in the Georgetown neighborhood of the Northwest Quadrant of Washington, D.C.\nPage: Howard University Hospital. Sentence: Howard University Hospital, previously known as Freedmen's Hospital, is a major hospital lcated in Washington, D.C., built on the site of the previous Griffith Stadium.",
+  "evidence_text": "Page: MedStar Georgetown University Hospital. Sentence: It is a not-for-profit, acute care teaching and research facility located in the Georgetown neighborhood of the Northwest Quadrant of Washington, D.C.\nPage: Howard University Hospital. Sentence: Howard University Hospital, previously known as Freedmen's Hospital, is a major hospital lcated in Washington, D.C., built on the site of the previous Griffith Stadium.",
+  "label": "SUPPORTED",
+  "num_hops": 2,
+  "hover_metadata": {
+    "supporting_facts": [
+      [
+        "MedStar Georgetown University Hospital",
+        1
+      ],
+      [
+        "Howard University Hospital",
+        0
+      ]
+    ],
+    "num_hops": 2,
+    "evidence_annotation_id": [
+      0
+    ],
+    "evidence_id": [
+      "MedStar Georgetown University Hospital::sentence::1",
+      "Howard University Hospital::sentence::0"
+    ],
+    "evidence_wiki_url": [
+      "https://en.wikipedia.org/wiki/MedStar_Georgetown_University_Hospital",
+      "https://en.wikipedia.org/wiki/Howard_University_Hospital"
+    ],
+    "evidence_sentence_id": [
+      "MedStar Georgetown University Hospital::sentence::1",
+      "Howard University Hospital::sentence::0"
+    ]
+  },
+  "grafo_claim": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "ad550fd5-1471-5774-ab60-6af69893b380",
+        "text": "This chunk is about:\n- Organizations: MedStar Georgetown University Hospital, Howard University Hospital\n- Places: Washington, D.C.\n\nFacts:\n- MedStar Georgetown University Hospital is located in Washington, D.C.\n- Howard University Hospital is located in Washington, D.C.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "90bec5e3-f75e-5703-bea1-5d2392348edb",
+        "text": "MedStar Georgetown University Hospital and Howard University Hospital are both located in Washington, D.C.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "780e044b-61e5-5f3f-be67-0efbac652b31",
+        "text": "text_658fd6b227ae55356b0a4b0bb0299067",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "837a30f5-706c-5eb1-ac04-7fefb5d16657",
+        "text": "medstar georgetown university hospital",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "193a9885-0f59-521c-a4b2-e6d5a15561ed",
+        "text": "washington, d.c.",
+        "type": "Entity"
+      },
+      {
+        "id": 5,
+        "original_id": "5f394058-b2a0-5ba8-8466-ba2a18cfcf4e",
+        "text": "place",
+        "type": "EntityType"
+      },
+      {
+        "id": 6,
+        "original_id": "388f60fb-220d-55e8-ae9c-3ac93cead308",
+        "text": "organization",
+        "type": "EntityType"
+      },
+      {
+        "id": 7,
+        "original_id": "18bcd623-4088-596c-88c4-af15d0aa1d07",
+        "text": "howard university hospital",
+        "type": "Entity"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "located_in"
+      },
+      {
+        "source": 7,
+        "target": 4,
+        "type": "located_in"
+      },
+      {
+        "source": 1,
+        "target": 4,
+        "type": "contains"
+      },
+      {
+        "source": 4,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 7,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      }
+    ]
+  },
+  "grafo_evidencia": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "b38afbfd-622b-5d33-919b-1ae63ceed9b0",
+        "text": "This chunk is about:\n- Organizations: MedStar Georgetown University Hospital, Howard University Hospital\n- Places: Georgetown neighborhood, Northwest Quadrant of Washington, D.C., Washington, D.C., Griffith Stadium\n- Concepts: teaching hospital, research facility, not-for-profit, acute care\n\nFacts:\n- MedStar Georgetown University Hospital is a not-for-profit acute care teaching and research facility in the Georgetown neighborhood of the Northwest Quadrant of Washington, D.C.\n- Howard University Hospital was previously known as Freedmen's Hospital.\n- Howard University Hospital is a major hospital in Washington, D.C., built on the site of the former Griffith Stadium.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "1f8c7149-0bce-5820-a6e7-e9195865018f",
+        "text": "Page: MedStar Georgetown University Hospital. Sentence: It is a not-for-profit, acute care teaching and research facility located in the Georgetown neighborhood of the Northwest Quadrant of Washington, D.C.\nPage: Howard University Hospital. Sentence: Howard University Hospital, previously known as Freedmen's Hospital, is a major hospital lcated in Washington, D.C., built on the site of the previous Griffith Stadium.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "cc08c179-88fb-5ffb-b374-a46fc63cf567",
+        "text": "text_9e952cb3762924800f3fe896798ffd78",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "837a30f5-706c-5eb1-ac04-7fefb5d16657",
+        "text": "medstar georgetown university hospital",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "539c4b4a-df3f-5a93-abb4-5e252ec3ce31",
+        "text": "georgetown",
+        "type": "Entity"
+      },
+      {
+        "id": 5,
+        "original_id": "8e5f95f1-a6d0-5677-8c61-e7822c4c75ba",
+        "text": "northwest quadrant",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "193a9885-0f59-521c-a4b2-e6d5a15561ed",
+        "text": "washington, d.c.",
+        "type": "Entity"
+      },
+      {
+        "id": 7,
+        "original_id": "5f394058-b2a0-5ba8-8466-ba2a18cfcf4e",
+        "text": "place",
+        "type": "EntityType"
+      },
+      {
+        "id": 8,
+        "original_id": "89a063c0-ce6a-51af-91f5-b6e960b80bb3",
+        "text": "hospital",
+        "type": "EntityType"
+      },
+      {
+        "id": 9,
+        "original_id": "18bcd623-4088-596c-88c4-af15d0aa1d07",
+        "text": "howard university hospital",
+        "type": "Entity"
+      },
+      {
+        "id": 10,
+        "original_id": "1599daf9-bdf3-51bf-bc9d-3aa77a51b7ad",
+        "text": "freedmens hospital",
+        "type": "Entity"
+      },
+      {
+        "id": 11,
+        "original_id": "c8f0b43b-2f57-5466-ac5b-bacaeabc1b17",
+        "text": "griffith stadium",
+        "type": "Entity"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "located_in"
+      },
+      {
+        "source": 1,
+        "target": 4,
+        "type": "contains"
+      },
+      {
+        "source": 4,
+        "target": 5,
+        "type": "located_in"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "located_in"
+      },
+      {
+        "source": 1,
+        "target": 6,
+        "type": "contains"
+      },
+      {
+        "source": 9,
+        "target": 6,
+        "type": "located_in"
+      },
+      {
+        "source": 6,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 5,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 4,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 11,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 10,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 9,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 9,
+        "type": "contains"
+      },
+      {
+        "source": 9,
+        "target": 10,
+        "type": "previously_known_as"
+      },
+      {
+        "source": 1,
+        "target": 10,
+        "type": "contains"
+      },
+      {
+        "source": 9,
+        "target": 11,
+        "type": "built_on_site_of"
+      },
+      {
+        "source": 1,
+        "target": 11,
+        "type": "contains"
+      }
+    ]
+  }
+}

@@ -1,0 +1,393 @@
+{
+  "dataset": "hover",
+  "id": "8627ff4e-e6e0-4e60-bf29-7ef036232d1a",
+  "split": "train",
+  "claim": "The University of Florida and University of Texas System combine to have both a 2000 acre campus and over 216,000 students.",
+  "evidencia": "Page: University of Florida. Sentence: The University of Florida (commonly referred to as Florida or UF) is an American public land-grant, sea-grant, and space-grant research university on a 2000 acre campus in Gainesville, Florida.\nPage: University of Texas System. Sentence: The UT System is headquartered in Austin, and has a total enrollment of over 216,000 students (largest university system in Texas) and employs more than 87,000 faculty and staff.",
+  "evidence_text": "Page: University of Florida. Sentence: The University of Florida (commonly referred to as Florida or UF) is an American public land-grant, sea-grant, and space-grant research university on a 2000 acre campus in Gainesville, Florida.\nPage: University of Texas System. Sentence: The UT System is headquartered in Austin, and has a total enrollment of over 216,000 students (largest university system in Texas) and employs more than 87,000 faculty and staff.",
+  "label": "SUPPORTED",
+  "num_hops": 2,
+  "hover_metadata": {
+    "supporting_facts": [
+      [
+        "University of Florida",
+        0
+      ],
+      [
+        "University of Texas System",
+        1
+      ]
+    ],
+    "num_hops": 2,
+    "evidence_annotation_id": [
+      0
+    ],
+    "evidence_id": [
+      "University of Florida::sentence::0",
+      "University of Texas System::sentence::1"
+    ],
+    "evidence_wiki_url": [
+      "https://en.wikipedia.org/wiki/University_of_Florida",
+      "https://en.wikipedia.org/wiki/University_of_Texas_System"
+    ],
+    "evidence_sentence_id": [
+      "University of Florida::sentence::0",
+      "University of Texas System::sentence::1"
+    ]
+  },
+  "grafo_claim": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "40c5f3e9-57b5-544f-b671-007f4081bee2",
+        "text": "This chunk is about:\n- Organizations: University of Florida, University of Texas System\n- Places: campus\n- Topics: enrollment, campus size\n\nFacts:\n- The University of Florida and the University of Texas System together have over 216,000 students.\n- The University of Florida and the University of Texas System together have a 2,000-acre campus.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "3441f26c-16ca-555e-b5b5-4b23d5823fa9",
+        "text": "The University of Florida and University of Texas System combine to have both a 2000 acre campus and over 216,000 students.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "52e3cd57-72a2-5da0-98ee-bd9032443767",
+        "text": "text_28e86d70cb1ea6929dca34725771bd6a",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "8800f69a-cad2-5778-8af5-ed57662f4dd4",
+        "text": "university of florida",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "388f60fb-220d-55e8-ae9c-3ac93cead308",
+        "text": "organization",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "652e70a2-e0dd-545d-8bf5-3ee7f430b25c",
+        "text": "2000 acres",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "12d5521e-a878-542e-bebc-84ff79179d8e",
+        "text": "measurement",
+        "type": "EntityType"
+      },
+      {
+        "id": 7,
+        "original_id": "8363d0e5-688b-5a27-bf27-5d860c0a8e81",
+        "text": "over 216,000 students",
+        "type": "Entity"
+      },
+      {
+        "id": 8,
+        "original_id": "fce1b0ae-3f99-5559-b4dc-f0d334b2c61b",
+        "text": "university of texas system",
+        "type": "Entity"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 8,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "included_in_combined_campus_size"
+      },
+      {
+        "source": 8,
+        "target": 5,
+        "type": "included_in_combined_campus_size"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 7,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 7,
+        "type": "included_in_combined_student_count"
+      },
+      {
+        "source": 8,
+        "target": 7,
+        "type": "included_in_combined_student_count"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      },
+      {
+        "source": 1,
+        "target": 8,
+        "type": "contains"
+      }
+    ]
+  },
+  "grafo_evidencia": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "c99297d3-1036-566f-a3e0-39cf375d447f",
+        "text": "This chunk is about:\n- Organizations: University of Florida, University of Texas System\n- Places: Gainesville, Florida, Austin, Texas\n- Concepts: public land-grant universities, sea-grant universities, space-grant universities, research universities, university systems\n\nFacts:\n- The University of Florida is an American public land-grant, sea-grant, and space-grant research university.\n- The University of Florida is commonly referred to as Florida or UF.\n- The University of Florida is located on a 2,000-acre campus in Gainesville, Florida.\n- The University of Texas System is headquartered in Austin, Texas.\n- The University of Texas System has a total enrollment of more than 216,000 students.\n- The University of Texas System is the largest university system in Texas.\n- The University of Texas System employs more than 87,000 faculty and staff.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "508847e8-4f97-5e94-8424-6f2453c5742c",
+        "text": "Page: University of Florida. Sentence: The University of Florida (commonly referred to as Florida or UF) is an American public land-grant, sea-grant, and space-grant research university on a 2000 acre campus in Gainesville, Florida.\nPage: University of Texas System. Sentence: The UT System is headquartered in Austin, and has a total enrollment of over 216,000 students (largest university system in Texas) and employs more than 87,000 faculty and staff.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "5dd5d433-990f-572f-a5bd-360cf2ccd1eb",
+        "text": "text_07ab2064aa347ed19434cd001be608d5",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "8800f69a-cad2-5778-8af5-ed57662f4dd4",
+        "text": "university of florida",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "388f60fb-220d-55e8-ae9c-3ac93cead308",
+        "text": "organization",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "5dfb9eff-86c5-5d3f-b061-fd62dfbacfa1",
+        "text": "2000 acre campus",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "5f394058-b2a0-5ba8-8466-ba2a18cfcf4e",
+        "text": "place",
+        "type": "EntityType"
+      },
+      {
+        "id": 7,
+        "original_id": "62092d7c-e6a7-5b11-adcd-d96bbecf4b39",
+        "text": "gainesville, florida",
+        "type": "Entity"
+      },
+      {
+        "id": 8,
+        "original_id": "cc742fd7-ba65-509e-bb61-ba57c283d7d0",
+        "text": "florida",
+        "type": "Entity"
+      },
+      {
+        "id": 9,
+        "original_id": "650198b3-e659-5dcc-8ff0-4043a5bff1d7",
+        "text": "uf",
+        "type": "Entity"
+      },
+      {
+        "id": 10,
+        "original_id": "fce1b0ae-3f99-5559-b4dc-f0d334b2c61b",
+        "text": "university of texas system",
+        "type": "Entity"
+      },
+      {
+        "id": 11,
+        "original_id": "e33edc8e-495b-5522-a45d-57b5e8404a2c",
+        "text": "ut system",
+        "type": "Entity"
+      },
+      {
+        "id": 12,
+        "original_id": "d78733a3-fe7f-5c01-b33b-6cd538f8de16",
+        "text": "austin",
+        "type": "Entity"
+      },
+      {
+        "id": 13,
+        "original_id": "5b5c9733-5661-5cc8-814f-2796b46669fa",
+        "text": "texas",
+        "type": "Entity"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 8,
+        "target": 3,
+        "type": "refers_to"
+      },
+      {
+        "source": 9,
+        "target": 3,
+        "type": "refers_to"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 9,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 10,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 11,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "has_campus"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 7,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 8,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 12,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 13,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 5,
+        "target": 7,
+        "type": "located_in"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      },
+      {
+        "source": 1,
+        "target": 8,
+        "type": "contains"
+      },
+      {
+        "source": 1,
+        "target": 9,
+        "type": "contains"
+      },
+      {
+        "source": 1,
+        "target": 10,
+        "type": "contains"
+      },
+      {
+        "source": 10,
+        "target": 11,
+        "type": "also_known_as"
+      },
+      {
+        "source": 1,
+        "target": 11,
+        "type": "contains"
+      },
+      {
+        "source": 10,
+        "target": 12,
+        "type": "headquartered_in"
+      },
+      {
+        "source": 1,
+        "target": 12,
+        "type": "contains"
+      },
+      {
+        "source": 10,
+        "target": 13,
+        "type": "largest_university_system_in"
+      },
+      {
+        "source": 1,
+        "target": 13,
+        "type": "contains"
+      }
+    ]
+  }
+}

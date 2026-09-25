@@ -1,0 +1,597 @@
+{
+  "dataset": "hover",
+  "id": "6e6ee321-2a40-4e2e-89af-cfe6d2b1e6f7",
+  "split": "train",
+  "claim": "Isabella Kelly was born at a ruined castle characterized as one of the most isolated fortifications in Britain by The Changing Scottish Landscape.",
+  "evidencia": "Page: Isabella Kelly. Sentence: Isabella Kelly, née Fordyce, also Isabella Hedgeland (born at Cairnburgh Castle in the Scottish Highlands and baptised on 4 May 1759 – died on 25 June 1857 in London) was a Scottish novelist and poet.\nPage: Cairnburgh Castle. Sentence: Cairnburgh Castle is a ruined castle that is located on the islands of Cairn na Burgh Mòr and Cairn na Burgh Beag, Argyll and Bute, Scotland.\nPage: Cairnburgh Castle. Sentence: 1991's \"The Changing Scottish Landscape\" characterizes it as \"one of the most isolated fortifications in Britain...[and] also one of the strangest.\"",
+  "evidence_text": "Page: Isabella Kelly. Sentence: Isabella Kelly, née Fordyce, also Isabella Hedgeland (born at Cairnburgh Castle in the Scottish Highlands and baptised on 4 May 1759 – died on 25 June 1857 in London) was a Scottish novelist and poet.\nPage: Cairnburgh Castle. Sentence: Cairnburgh Castle is a ruined castle that is located on the islands of Cairn na Burgh Mòr and Cairn na Burgh Beag, Argyll and Bute, Scotland.\nPage: Cairnburgh Castle. Sentence: 1991's \"The Changing Scottish Landscape\" characterizes it as \"one of the most isolated fortifications in Britain...[and] also one of the strangest.\"",
+  "label": "SUPPORTED",
+  "num_hops": 2,
+  "hover_metadata": {
+    "supporting_facts": [
+      [
+        "Isabella Kelly",
+        0
+      ],
+      [
+        "Cairnburgh Castle",
+        0
+      ],
+      [
+        "Cairnburgh Castle",
+        2
+      ]
+    ],
+    "num_hops": 2,
+    "evidence_annotation_id": [
+      0
+    ],
+    "evidence_id": [
+      "Isabella Kelly::sentence::0",
+      "Cairnburgh Castle::sentence::0",
+      "Cairnburgh Castle::sentence::2"
+    ],
+    "evidence_wiki_url": [
+      "https://en.wikipedia.org/wiki/Isabella_Kelly",
+      "https://en.wikipedia.org/wiki/Cairnburgh_Castle"
+    ],
+    "evidence_sentence_id": [
+      "Isabella Kelly::sentence::0",
+      "Cairnburgh Castle::sentence::0",
+      "Cairnburgh Castle::sentence::2"
+    ]
+  },
+  "grafo_claim": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "79273c2b-f052-5ece-86cd-c56044c1ef51",
+        "text": "This chunk is about:\n- People: Isabella Kelly\n- Places: ruined castle, Britain\n- Organizations: The Changing Scottish Landscape\n\nFacts:\n- Isabella Kelly was born at a ruined castle.\n- The Changing Scottish Landscape characterized the ruined castle as one of the most isolated fortifications in Britain.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "4ed09126-8c38-51db-82a8-36db669d26c9",
+        "text": "Isabella Kelly was born at a ruined castle characterized as one of the most isolated fortifications in Britain by The Changing Scottish Landscape.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "8f0bf48c-12ab-5e85-839b-e0319c07f55f",
+        "text": "text_e461531ca37bbcd8ba1287bcbd1a318d",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "2df6b602-e469-5d2c-9f7c-77e6a035f835",
+        "text": "isabella kelly",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "161013ba-21c6-5bfb-95de-e51072f92250",
+        "text": "ruined castle",
+        "type": "Entity"
+      },
+      {
+        "id": 5,
+        "original_id": "c1f1063a-b763-5d9d-b556-5f34e1669812",
+        "text": "britain",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "5f394058-b2a0-5ba8-8466-ba2a18cfcf4e",
+        "text": "place",
+        "type": "EntityType"
+      },
+      {
+        "id": 7,
+        "original_id": "99a82eec-bb35-5bb5-9ed2-e73fc7a756de",
+        "text": "person",
+        "type": "EntityType"
+      },
+      {
+        "id": 8,
+        "original_id": "9a1b3e4a-9c51-5e6a-8a4f-834bc9926d6d",
+        "text": "the changing scottish landscape",
+        "type": "Entity"
+      },
+      {
+        "id": 9,
+        "original_id": "5263a535-1b4b-5925-be3e-310d03cd303b",
+        "text": "work",
+        "type": "EntityType"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "born_at"
+      },
+      {
+        "source": 1,
+        "target": 4,
+        "type": "contains"
+      },
+      {
+        "source": 8,
+        "target": 4,
+        "type": "characterized_as"
+      },
+      {
+        "source": 4,
+        "target": 5,
+        "type": "located_in"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 4,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 8,
+        "type": "contains"
+      },
+      {
+        "source": 8,
+        "target": 9,
+        "type": "is_a"
+      }
+    ]
+  },
+  "grafo_evidencia": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "e733dd37-c2a5-5d6b-aeed-3c880d0cbeb2",
+        "text": "This chunk is about:\n- People: Isabella Kelly\n- Places: Cairnburgh Castle, Cairn na Burgh Mòr, Cairn na Burgh Beag, Argyll and Bute, Scotland, London, Scottish Highlands\n- Roles: novelist, poet\n- Works: The Changing Scottish Landscape\n\nFacts:\n- Isabella Kelly, née Fordyce and also known as Isabella Hedgeland, was born at Cairnburgh Castle in the Scottish Highlands and was baptised on 4 May 1759.\n- Isabella Kelly was a Scottish novelist and poet.\n- Isabella Kelly died in London on 25 June 1857.\n- Cairnburgh Castle is a ruined castle located on the islands of Cairn na Burgh Mòr and Cairn na Burgh Beag in Argyll and Bute, Scotland.\n- The 1991 work The Changing Scottish Landscape described Cairnburgh Castle as one of the most isolated fortifications in Britain and one of the strangest.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "00137a03-645e-5962-bafa-bf0f73af31ed",
+        "text": "Page: Isabella Kelly. Sentence: Isabella Kelly, née Fordyce, also Isabella Hedgeland (born at Cairnburgh Castle in the Scottish Highlands and baptised on 4 May 1759 – died on 25 June 1857 in London) was a Scottish novelist and poet.\nPage: Cairnburgh Castle. Sentence: Cairnburgh Castle is a ruined castle that is located on the islands of Cairn na Burgh Mòr and Cairn na Burgh Beag, Argyll and Bute, Scotland.\nPage: Cairnburgh Castle. Sentence: 1991's \"The Changing Scottish Landscape\" characterizes it as \"one of the most isolated fortifications in Britain...[and] also one of the strangest.\"",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "8ec5e22e-acc5-51cd-9f67-0c45a4c1a76d",
+        "text": "text_16d479a00f45e017674fa4c5222efa95",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "2df6b602-e469-5d2c-9f7c-77e6a035f835",
+        "text": "isabella kelly",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "8887faf9-cf3b-59d3-bd86-96167984733d",
+        "text": "fordyce",
+        "type": "Entity"
+      },
+      {
+        "id": 5,
+        "original_id": "39575085-0710-527d-bd54-019de7b00429",
+        "text": "name",
+        "type": "EntityType"
+      },
+      {
+        "id": 6,
+        "original_id": "c3cbb66d-98ea-57aa-a1a7-16ada6664f43",
+        "text": "isabella hedgeland",
+        "type": "Entity"
+      },
+      {
+        "id": 7,
+        "original_id": "107e0234-ac61-51ae-b203-8d41a28cc6ee",
+        "text": "1759-05-04",
+        "type": "Entity"
+      },
+      {
+        "id": 8,
+        "original_id": "b19433ae-558c-5aaf-95ac-6231f2a4be0e",
+        "text": "date",
+        "type": "EntityType"
+      },
+      {
+        "id": 9,
+        "original_id": "1aa40c3d-9769-588c-959f-bfecc9e63f35",
+        "text": "1857-06-25",
+        "type": "Entity"
+      },
+      {
+        "id": 10,
+        "original_id": "0ee23f04-b385-58cf-bd5e-ec7e04a565ff",
+        "text": "cairnburgh castle",
+        "type": "Entity"
+      },
+      {
+        "id": 11,
+        "original_id": "87dff920-c78e-5a22-b9dc-2c3d72a99a06",
+        "text": "scottish highlands",
+        "type": "Entity"
+      },
+      {
+        "id": 12,
+        "original_id": "5f394058-b2a0-5ba8-8466-ba2a18cfcf4e",
+        "text": "place",
+        "type": "EntityType"
+      },
+      {
+        "id": 13,
+        "original_id": "4043cea9-dd59-5a00-8d15-2d8b53233b9e",
+        "text": "cairn na burgh mòr",
+        "type": "Entity"
+      },
+      {
+        "id": 14,
+        "original_id": "fc9aec07-4031-5164-9c20-579ba70ab822",
+        "text": "cairn na burgh beag",
+        "type": "Entity"
+      },
+      {
+        "id": 15,
+        "original_id": "55ec15fe-0031-5c11-8fdc-e6e30efcb134",
+        "text": "argyll and bute",
+        "type": "Entity"
+      },
+      {
+        "id": 16,
+        "original_id": "8869a452-9a66-57bd-aa73-093c45fb3b7a",
+        "text": "scotland",
+        "type": "Entity"
+      },
+      {
+        "id": 17,
+        "original_id": "c1f1063a-b763-5d9d-b556-5f34e1669812",
+        "text": "britain",
+        "type": "Entity"
+      },
+      {
+        "id": 18,
+        "original_id": "29402dc0-a0ae-5d8e-8034-e62d821db121",
+        "text": "london",
+        "type": "Entity"
+      },
+      {
+        "id": 19,
+        "original_id": "f6a38acc-1804-5cf8-a9ba-4f4792b7859f",
+        "text": "scottish novelist",
+        "type": "Entity"
+      },
+      {
+        "id": 20,
+        "original_id": "fc799947-c021-5516-88f1-636b1bfc88c5",
+        "text": "occupation",
+        "type": "EntityType"
+      },
+      {
+        "id": 21,
+        "original_id": "6cc6ea23-b942-55f4-a67e-b1911275e80d",
+        "text": "poet",
+        "type": "Entity"
+      },
+      {
+        "id": 22,
+        "original_id": "99a82eec-bb35-5bb5-9ed2-e73fc7a756de",
+        "text": "person",
+        "type": "EntityType"
+      },
+      {
+        "id": 23,
+        "original_id": "9a1b3e4a-9c51-5e6a-8a4f-834bc9926d6d",
+        "text": "the changing scottish landscape",
+        "type": "Entity"
+      },
+      {
+        "id": 24,
+        "original_id": "720e3f07-c737-5d52-9990-eb6ce06a3479",
+        "text": "1991",
+        "type": "Entity"
+      },
+      {
+        "id": 25,
+        "original_id": "5263a535-1b4b-5925-be3e-310d03cd303b",
+        "text": "work",
+        "type": "EntityType"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "has_birth_name"
+      },
+      {
+        "source": 1,
+        "target": 4,
+        "type": "contains"
+      },
+      {
+        "source": 4,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 6,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 6,
+        "type": "also_known_as"
+      },
+      {
+        "source": 1,
+        "target": 6,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 7,
+        "type": "baptised_on"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      },
+      {
+        "source": 7,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 9,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 24,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 9,
+        "type": "died_on"
+      },
+      {
+        "source": 1,
+        "target": 9,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 10,
+        "type": "born_at"
+      },
+      {
+        "source": 1,
+        "target": 10,
+        "type": "contains"
+      },
+      {
+        "source": 23,
+        "target": 10,
+        "type": "characterizes"
+      },
+      {
+        "source": 10,
+        "target": 11,
+        "type": "located_in"
+      },
+      {
+        "source": 1,
+        "target": 11,
+        "type": "contains"
+      },
+      {
+        "source": 11,
+        "target": 12,
+        "type": "is_a"
+      },
+      {
+        "source": 13,
+        "target": 12,
+        "type": "is_a"
+      },
+      {
+        "source": 14,
+        "target": 12,
+        "type": "is_a"
+      },
+      {
+        "source": 16,
+        "target": 12,
+        "type": "is_a"
+      },
+      {
+        "source": 15,
+        "target": 12,
+        "type": "is_a"
+      },
+      {
+        "source": 17,
+        "target": 12,
+        "type": "is_a"
+      },
+      {
+        "source": 10,
+        "target": 12,
+        "type": "is_a"
+      },
+      {
+        "source": 18,
+        "target": 12,
+        "type": "is_a"
+      },
+      {
+        "source": 10,
+        "target": 13,
+        "type": "located_on"
+      },
+      {
+        "source": 1,
+        "target": 13,
+        "type": "contains"
+      },
+      {
+        "source": 10,
+        "target": 14,
+        "type": "located_on"
+      },
+      {
+        "source": 1,
+        "target": 14,
+        "type": "contains"
+      },
+      {
+        "source": 10,
+        "target": 15,
+        "type": "located_in"
+      },
+      {
+        "source": 1,
+        "target": 15,
+        "type": "contains"
+      },
+      {
+        "source": 15,
+        "target": 16,
+        "type": "located_in"
+      },
+      {
+        "source": 1,
+        "target": 16,
+        "type": "contains"
+      },
+      {
+        "source": 10,
+        "target": 17,
+        "type": "characterized_relative_to"
+      },
+      {
+        "source": 1,
+        "target": 17,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 18,
+        "type": "died_in"
+      },
+      {
+        "source": 1,
+        "target": 18,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 19,
+        "type": "has_occupation"
+      },
+      {
+        "source": 1,
+        "target": 19,
+        "type": "contains"
+      },
+      {
+        "source": 19,
+        "target": 20,
+        "type": "is_a"
+      },
+      {
+        "source": 21,
+        "target": 20,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 21,
+        "type": "has_occupation"
+      },
+      {
+        "source": 1,
+        "target": 21,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 22,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 23,
+        "type": "contains"
+      },
+      {
+        "source": 23,
+        "target": 24,
+        "type": "published_in"
+      },
+      {
+        "source": 1,
+        "target": 24,
+        "type": "contains"
+      },
+      {
+        "source": 23,
+        "target": 25,
+        "type": "is_a"
+      }
+    ]
+  }
+}

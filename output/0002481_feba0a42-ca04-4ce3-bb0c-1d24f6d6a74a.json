@@ -1,0 +1,306 @@
+{
+  "dataset": "hover",
+  "id": "feba0a42-ca04-4ce3-bb0c-1d24f6d6a74a",
+  "split": "train",
+  "claim": "The TV channel that hosted \"Yo,Guillermo\" is located in the country of Argentina.",
+  "evidencia": "Page: Guillermo Coppola. Sentence: He is the TV host of \"Yo, Guillermo\" in Canal 5 Noticias.\nPage: Canal 5 Noticias. Sentence: Canal 5 Noticias (\"Channel 5 News\", also known as C5N) is a 24-hours cable news channel in Argentina.",
+  "evidence_text": "Page: Guillermo Coppola. Sentence: He is the TV host of \"Yo, Guillermo\" in Canal 5 Noticias.\nPage: Canal 5 Noticias. Sentence: Canal 5 Noticias (\"Channel 5 News\", also known as C5N) is a 24-hours cable news channel in Argentina.",
+  "label": "SUPPORTED",
+  "num_hops": 2,
+  "hover_metadata": {
+    "supporting_facts": [
+      [
+        "Guillermo Coppola",
+        4
+      ],
+      [
+        "Canal 5 Noticias",
+        0
+      ]
+    ],
+    "num_hops": 2,
+    "evidence_annotation_id": [
+      0
+    ],
+    "evidence_id": [
+      "Guillermo Coppola::sentence::4",
+      "Canal 5 Noticias::sentence::0"
+    ],
+    "evidence_wiki_url": [
+      "https://en.wikipedia.org/wiki/Guillermo_Coppola",
+      "https://en.wikipedia.org/wiki/Canal_5_Noticias"
+    ],
+    "evidence_sentence_id": [
+      "Guillermo Coppola::sentence::4",
+      "Canal 5 Noticias::sentence::0"
+    ]
+  },
+  "grafo_claim": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "0c94dc7b-29eb-5281-8c32-898c7e186b6f",
+        "text": "This chunk is about:\n- Products: Yo, Guillermo\n- Organizations: TV channel\n- Places: Argentina\n\nFacts:\n- The TV channel that hosted \"Yo, Guillermo\" is located in Argentina.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "cfc0218d-3444-5238-b1ff-d0d99a23d520",
+        "text": "The TV channel that hosted \"Yo,Guillermo\" is located in the country of Argentina.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "5b537caf-48b7-5ba8-9c78-4d1bdb9402fe",
+        "text": "text_2be66414a458cf71df3d95f22485891e",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "bae86de6-e166-5e9d-b541-d780e9dc67a7",
+        "text": "yo,guillermo",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "5263a535-1b4b-5925-be3e-310d03cd303b",
+        "text": "work",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "c5904983-3991-597b-b6ba-8c414f61ba2b",
+        "text": "tv channel",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "694de660-ea6a-5818-b8c7-989cd1882530",
+        "text": "argentina",
+        "type": "Entity"
+      },
+      {
+        "id": 7,
+        "original_id": "5f394058-b2a0-5ba8-8466-ba2a18cfcf4e",
+        "text": "place",
+        "type": "EntityType"
+      },
+      {
+        "id": 8,
+        "original_id": "388f60fb-220d-55e8-ae9c-3ac93cead308",
+        "text": "organization",
+        "type": "EntityType"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 3,
+        "type": "hosted"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "located_in"
+      },
+      {
+        "source": 1,
+        "target": 6,
+        "type": "contains"
+      },
+      {
+        "source": 6,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 5,
+        "target": 8,
+        "type": "is_a"
+      }
+    ]
+  },
+  "grafo_evidencia": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "fdb3c18e-04ed-5423-a459-3c2a15c723ee",
+        "text": "This chunk is about:\n- People: Guillermo Coppola\n- Organizations: Canal 5 Noticias, C5N\n- Products: \"Yo, Guillermo\"\n- Places: Argentina\n\nFacts:\n- Canal 5 Noticias, also known as C5N, is a 24-hour cable news channel in Argentina.\n- Guillermo Coppola is the TV host of \"Yo, Guillermo\" on Canal 5 Noticias.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "d13f6c80-c4c5-5f18-88a7-6e4d78f11c9d",
+        "text": "Page: Guillermo Coppola. Sentence: He is the TV host of \"Yo, Guillermo\" in Canal 5 Noticias.\nPage: Canal 5 Noticias. Sentence: Canal 5 Noticias (\"Channel 5 News\", also known as C5N) is a 24-hours cable news channel in Argentina.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "a0c46dee-fe24-5e14-ba29-9e09d69cfb00",
+        "text": "text_26c1564e4b7e787a4f82350967de23cd",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "9dcb3d83-6b7b-5a5d-8dc6-691c65e0f45c",
+        "text": "guillermo coppola",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "44bdb55e-319a-558c-b03e-aba022b0ac9d",
+        "text": "yo, guillermo",
+        "type": "Entity"
+      },
+      {
+        "id": 5,
+        "original_id": "177626c3-ccf9-5d76-b0d2-6ee457b4470a",
+        "text": "canal 5 noticias",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "8c7ca18d-01d1-527b-8bbb-d94296f4cc89",
+        "text": "c5n",
+        "type": "Entity"
+      },
+      {
+        "id": 7,
+        "original_id": "388f60fb-220d-55e8-ae9c-3ac93cead308",
+        "text": "organization",
+        "type": "EntityType"
+      },
+      {
+        "id": 8,
+        "original_id": "694de660-ea6a-5818-b8c7-989cd1882530",
+        "text": "argentina",
+        "type": "Entity"
+      },
+      {
+        "id": 9,
+        "original_id": "5f394058-b2a0-5ba8-8466-ba2a18cfcf4e",
+        "text": "place",
+        "type": "EntityType"
+      },
+      {
+        "id": 10,
+        "original_id": "5263a535-1b4b-5925-be3e-310d03cd303b",
+        "text": "work",
+        "type": "EntityType"
+      },
+      {
+        "id": 11,
+        "original_id": "99a82eec-bb35-5bb5-9ed2-e73fc7a756de",
+        "text": "person",
+        "type": "EntityType"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "hosts"
+      },
+      {
+        "source": 1,
+        "target": 4,
+        "type": "contains"
+      },
+      {
+        "source": 4,
+        "target": 5,
+        "type": "broadcast_on"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "also_known_as"
+      },
+      {
+        "source": 1,
+        "target": 6,
+        "type": "contains"
+      },
+      {
+        "source": 6,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 5,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 5,
+        "target": 8,
+        "type": "located_in"
+      },
+      {
+        "source": 1,
+        "target": 8,
+        "type": "contains"
+      },
+      {
+        "source": 8,
+        "target": 9,
+        "type": "is_a"
+      },
+      {
+        "source": 4,
+        "target": 10,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 11,
+        "type": "is_a"
+      }
+    ]
+  }
+}

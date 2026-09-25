@@ -1,0 +1,384 @@
+{
+  "dataset": "hover",
+  "id": "35071d01-4682-4ff2-969d-d63d76bc0cbd",
+  "split": "train",
+  "claim": "Ohio native William Gladstone Steel helped create Crater Lake National Park, where the lake is most famous for its deep blue color.",
+  "evidencia": "Page: William Gladstone Steel. Sentence: William Gladstone Steel (September 7, 1854 – October 21, 1934), called the \"father of Crater Lake\", referring to the creation of Crater Lake National Park in Oregon, United States.\nPage: Crater Lake. Sentence: It is the main feature of Crater Lake National Park and is famous for its deep blue color and water clarity.",
+  "evidence_text": "Page: William Gladstone Steel. Sentence: William Gladstone Steel (September 7, 1854 – October 21, 1934), called the \"father of Crater Lake\", referring to the creation of Crater Lake National Park in Oregon, United States.\nPage: Crater Lake. Sentence: It is the main feature of Crater Lake National Park and is famous for its deep blue color and water clarity.",
+  "label": "SUPPORTED",
+  "num_hops": 2,
+  "hover_metadata": {
+    "supporting_facts": [
+      [
+        "William Gladstone Steel",
+        0
+      ],
+      [
+        "Crater Lake",
+        1
+      ]
+    ],
+    "num_hops": 2,
+    "evidence_annotation_id": [
+      0
+    ],
+    "evidence_id": [
+      "William Gladstone Steel::sentence::0",
+      "Crater Lake::sentence::1"
+    ],
+    "evidence_wiki_url": [
+      "https://en.wikipedia.org/wiki/William_Gladstone_Steel",
+      "https://en.wikipedia.org/wiki/Crater_Lake"
+    ],
+    "evidence_sentence_id": [
+      "William Gladstone Steel::sentence::0",
+      "Crater Lake::sentence::1"
+    ]
+  },
+  "grafo_claim": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "58ebcf16-fd02-5952-bd63-12b6de18c713",
+        "text": "This chunk is about:\n- People: William Gladstone Steel\n- Places: Ohio, Crater Lake National Park\n- Topics: Crater Lake\n\nFacts:\n- William Gladstone Steel was a native of Ohio.\n- William Gladstone Steel helped create Crater Lake National Park.\n- Crater Lake is most famous for its deep blue color.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "c7825839-e7d3-5d04-a4dc-92bb80fa2ec4",
+        "text": "Ohio native William Gladstone Steel helped create Crater Lake National Park, where the lake is most famous for its deep blue color.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "8d6fed00-c663-5c91-bed1-ce4b6eec3f2a",
+        "text": "text_1b1d506f98729d63685761ef33cdfb38",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "cdb385b3-3c97-5a0e-8a36-d73aa9335b5b",
+        "text": "william gladstone steel",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "81af0218-5b85-5efc-9990-492a78a7e0fc",
+        "text": "ohio",
+        "type": "Entity"
+      },
+      {
+        "id": 5,
+        "original_id": "5f394058-b2a0-5ba8-8466-ba2a18cfcf4e",
+        "text": "place",
+        "type": "EntityType"
+      },
+      {
+        "id": 6,
+        "original_id": "bc547bdc-da76-5793-ad59-95c50058410e",
+        "text": "crater lake national park",
+        "type": "Entity"
+      },
+      {
+        "id": 7,
+        "original_id": "8301e1b2-c00c-5f93-b6d4-f579e300f05f",
+        "text": "crater lake",
+        "type": "Entity"
+      },
+      {
+        "id": 8,
+        "original_id": "897e3c54-c1d5-522c-8418-e8b2d4e85343",
+        "text": "deep blue color",
+        "type": "Entity"
+      },
+      {
+        "id": 9,
+        "original_id": "d2a381fa-3658-5ca6-ada9-2109cfc9331d",
+        "text": "concept",
+        "type": "EntityType"
+      },
+      {
+        "id": 10,
+        "original_id": "99a82eec-bb35-5bb5-9ed2-e73fc7a756de",
+        "text": "person",
+        "type": "EntityType"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_native_of"
+      },
+      {
+        "source": 1,
+        "target": 4,
+        "type": "contains"
+      },
+      {
+        "source": 4,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 7,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 6,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 6,
+        "type": "helped_create"
+      },
+      {
+        "source": 1,
+        "target": 6,
+        "type": "contains"
+      },
+      {
+        "source": 6,
+        "target": 7,
+        "type": "contains"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      },
+      {
+        "source": 7,
+        "target": 8,
+        "type": "is_famous_for"
+      },
+      {
+        "source": 1,
+        "target": 8,
+        "type": "contains"
+      },
+      {
+        "source": 8,
+        "target": 9,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 10,
+        "type": "is_a"
+      }
+    ]
+  },
+  "grafo_evidencia": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "701a9884-a4b1-514a-a8af-7a144c0f841e",
+        "text": "This chunk is about:\n- People: William Gladstone Steel\n- Places: Crater Lake, Crater Lake National Park, Oregon, United States\n- Roles: \"father of Crater Lake\"\n- Topics: creation of Crater Lake National Park, lake features\n\nFacts:\n- William Gladstone Steel was born on September 7, 1854, and died on October 21, 1934.\n- William Gladstone Steel was called the \"father of Crater Lake\" for his role in the creation of Crater Lake National Park in Oregon, United States.\n- Crater Lake is the main feature of Crater Lake National Park.\n- Crater Lake is famous for its deep blue color and water clarity.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "c0c2ba83-9a7a-5b4a-81f9-0d5dff433831",
+        "text": "Page: William Gladstone Steel. Sentence: William Gladstone Steel (September 7, 1854 – October 21, 1934), called the \"father of Crater Lake\", referring to the creation of Crater Lake National Park in Oregon, United States.\nPage: Crater Lake. Sentence: It is the main feature of Crater Lake National Park and is famous for its deep blue color and water clarity.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "ee0d0905-24ea-5172-a3e1-17304097c36e",
+        "text": "text_e5239a4ffb6abf4b79a3f8b508ffe646",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "cdb385b3-3c97-5a0e-8a36-d73aa9335b5b",
+        "text": "william gladstone steel",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "b7f36d0e-1e09-556e-aea7-bf4bab284428",
+        "text": "1854-09-07",
+        "type": "Entity"
+      },
+      {
+        "id": 5,
+        "original_id": "b19433ae-558c-5aaf-95ac-6231f2a4be0e",
+        "text": "date",
+        "type": "EntityType"
+      },
+      {
+        "id": 6,
+        "original_id": "21791faa-c9ac-5270-b9a5-1a2a746167aa",
+        "text": "1934-10-21",
+        "type": "Entity"
+      },
+      {
+        "id": 7,
+        "original_id": "bc547bdc-da76-5793-ad59-95c50058410e",
+        "text": "crater lake national park",
+        "type": "Entity"
+      },
+      {
+        "id": 8,
+        "original_id": "f7515f39-0536-54e2-904a-b2063b9c5007",
+        "text": "oregon",
+        "type": "Entity"
+      },
+      {
+        "id": 9,
+        "original_id": "874a51da-34ea-5037-be47-d87785d43c37",
+        "text": "united states",
+        "type": "Entity"
+      },
+      {
+        "id": 10,
+        "original_id": "5f394058-b2a0-5ba8-8466-ba2a18cfcf4e",
+        "text": "place",
+        "type": "EntityType"
+      },
+      {
+        "id": 11,
+        "original_id": "99a82eec-bb35-5bb5-9ed2-e73fc7a756de",
+        "text": "person",
+        "type": "EntityType"
+      },
+      {
+        "id": 12,
+        "original_id": "8301e1b2-c00c-5f93-b6d4-f579e300f05f",
+        "text": "crater lake",
+        "type": "Entity"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "born_on"
+      },
+      {
+        "source": 1,
+        "target": 4,
+        "type": "contains"
+      },
+      {
+        "source": 4,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 6,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 6,
+        "type": "died_on"
+      },
+      {
+        "source": 1,
+        "target": 6,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 7,
+        "type": "associated_with_creation_of"
+      },
+      {
+        "source": 12,
+        "target": 7,
+        "type": "main_feature_of"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      },
+      {
+        "source": 7,
+        "target": 8,
+        "type": "located_in"
+      },
+      {
+        "source": 1,
+        "target": 8,
+        "type": "contains"
+      },
+      {
+        "source": 8,
+        "target": 9,
+        "type": "located_in"
+      },
+      {
+        "source": 1,
+        "target": 9,
+        "type": "contains"
+      },
+      {
+        "source": 9,
+        "target": 10,
+        "type": "is_a"
+      },
+      {
+        "source": 8,
+        "target": 10,
+        "type": "is_a"
+      },
+      {
+        "source": 7,
+        "target": 10,
+        "type": "is_a"
+      },
+      {
+        "source": 12,
+        "target": 10,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 11,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 12,
+        "type": "contains"
+      }
+    ]
+  }
+}

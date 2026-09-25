@@ -1,0 +1,457 @@
+{
+  "dataset": "hover",
+  "id": "dd308952-287d-4e03-861c-79c03ac19af9",
+  "split": "train",
+  "claim": "Frank Pepe Pizzeria Napoletana and Sarpino's Pizzeria both sell pizza.",
+  "evidencia": "Page: Frank Pepe Pizzeria Napoletana. Sentence: Frank Pepe Pizzeria Napoletana, known locally as Pepe's, is a popular pizza restaurant in the Wooster Square neighborhood of New Haven, Connecticut, at 163 Wooster Street.\nPage: Sarpino's Pizzeria. Sentence: Sarpino's Pizzeria is a fast food restaurant chain specializing in pizza, with international operations headquartered in Singapore and U.S. operations headquartered in the Chicago suburb of Lincolnshire, Illinois.",
+  "evidence_text": "Page: Frank Pepe Pizzeria Napoletana. Sentence: Frank Pepe Pizzeria Napoletana, known locally as Pepe's, is a popular pizza restaurant in the Wooster Square neighborhood of New Haven, Connecticut, at 163 Wooster Street.\nPage: Sarpino's Pizzeria. Sentence: Sarpino's Pizzeria is a fast food restaurant chain specializing in pizza, with international operations headquartered in Singapore and U.S. operations headquartered in the Chicago suburb of Lincolnshire, Illinois.",
+  "label": "SUPPORTED",
+  "num_hops": 2,
+  "hover_metadata": {
+    "supporting_facts": [
+      [
+        "Frank Pepe Pizzeria Napoletana",
+        0
+      ],
+      [
+        "Sarpino's Pizzeria",
+        0
+      ]
+    ],
+    "num_hops": 2,
+    "evidence_annotation_id": [
+      0
+    ],
+    "evidence_id": [
+      "Frank Pepe Pizzeria Napoletana::sentence::0",
+      "Sarpino's Pizzeria::sentence::0"
+    ],
+    "evidence_wiki_url": [
+      "https://en.wikipedia.org/wiki/Frank_Pepe_Pizzeria_Napoletana",
+      "https://en.wikipedia.org/wiki/Sarpino%27s_Pizzeria"
+    ],
+    "evidence_sentence_id": [
+      "Frank Pepe Pizzeria Napoletana::sentence::0",
+      "Sarpino's Pizzeria::sentence::0"
+    ]
+  },
+  "grafo_claim": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "16aecefa-61e1-51bf-95a8-64b8ba4f9106",
+        "text": "This chunk is about:\n- Companies: Frank Pepe Pizzeria Napoletana, Sarpino's Pizzeria\n- Products: pizza\n\nFacts:\n- Frank Pepe Pizzeria Napoletana sells pizza.\n- Sarpino's Pizzeria sells pizza.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "c4eb1dde-a5c8-50ca-93b1-45c696f9d9ba",
+        "text": "Frank Pepe Pizzeria Napoletana and Sarpino's Pizzeria both sell pizza.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "08760ed9-b13b-55ab-b25e-8673106060bd",
+        "text": "text_1aaa86e89621189f7376f685c54731f0",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "814010d0-ef38-5147-998b-492466722b27",
+        "text": "frank pepe pizzeria napoletana",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "301d8bd8-7d9f-550c-8c58-86d5763441a0",
+        "text": "pizza",
+        "type": "Entity"
+      },
+      {
+        "id": 5,
+        "original_id": "f76d57aa-4740-5218-9539-0e0978cbf183",
+        "text": "product",
+        "type": "EntityType"
+      },
+      {
+        "id": 6,
+        "original_id": "388f60fb-220d-55e8-ae9c-3ac93cead308",
+        "text": "organization",
+        "type": "EntityType"
+      },
+      {
+        "id": 7,
+        "original_id": "ea00a6e7-ca11-5088-b9b4-1cf2a5292196",
+        "text": "sarpinos pizzeria",
+        "type": "Entity"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "sells"
+      },
+      {
+        "source": 7,
+        "target": 4,
+        "type": "sells"
+      },
+      {
+        "source": 1,
+        "target": 4,
+        "type": "contains"
+      },
+      {
+        "source": 4,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 7,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      }
+    ]
+  },
+  "grafo_evidencia": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "dc498bd0-76ea-5d42-b800-f49f9870778f",
+        "text": "This chunk is about:\n- Companies: Frank Pepe Pizzeria Napoletana, Sarpino's Pizzeria\n- Places: Wooster Square, New Haven, Connecticut, 163 Wooster Street, Singapore, Lincolnshire, Illinois\n- Topics: Pizza restaurants, fast food restaurant chains\n\nFacts:\n- Frank Pepe Pizzeria Napoletana is a popular pizza restaurant in the Wooster Square neighborhood of New Haven, Connecticut, at 163 Wooster Street.\n- Frank Pepe Pizzeria Napoletana is known locally as Pepe's.\n- Sarpino's Pizzeria is a fast food restaurant chain specializing in pizza.\n- Sarpino's Pizzeria has international operations headquartered in Singapore.\n- Sarpino's Pizzeria has U.S. operations headquartered in Lincolnshire, Illinois, a suburb of Chicago.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "5fba1019-5103-5005-829e-bd8f8d6cf38f",
+        "text": "Page: Frank Pepe Pizzeria Napoletana. Sentence: Frank Pepe Pizzeria Napoletana, known locally as Pepe's, is a popular pizza restaurant in the Wooster Square neighborhood of New Haven, Connecticut, at 163 Wooster Street.\nPage: Sarpino's Pizzeria. Sentence: Sarpino's Pizzeria is a fast food restaurant chain specializing in pizza, with international operations headquartered in Singapore and U.S. operations headquartered in the Chicago suburb of Lincolnshire, Illinois.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "f97e4fd2-69fa-5411-93a9-1c64a3cfb4a6",
+        "text": "text_8f72c9646b5f269083f00144e435aeff",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "814010d0-ef38-5147-998b-492466722b27",
+        "text": "frank pepe pizzeria napoletana",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "90b025a8-5ee9-5164-af13-f9b0df1d00b2",
+        "text": "pepes",
+        "type": "Entity"
+      },
+      {
+        "id": 5,
+        "original_id": "39575085-0710-527d-bd54-019de7b00429",
+        "text": "name",
+        "type": "EntityType"
+      },
+      {
+        "id": 6,
+        "original_id": "eba57af3-de1c-55e8-96f5-79ff4c0ebaf7",
+        "text": "wooster square",
+        "type": "Entity"
+      },
+      {
+        "id": 7,
+        "original_id": "9a03e84a-010c-5f83-8423-106ebaecc018",
+        "text": "new haven",
+        "type": "Entity"
+      },
+      {
+        "id": 8,
+        "original_id": "41d83147-79b6-55d6-8298-0b7031edadde",
+        "text": "connecticut",
+        "type": "Entity"
+      },
+      {
+        "id": 9,
+        "original_id": "5f394058-b2a0-5ba8-8466-ba2a18cfcf4e",
+        "text": "place",
+        "type": "EntityType"
+      },
+      {
+        "id": 10,
+        "original_id": "7b1dfe03-fcf8-5a9f-bb90-1fa64cbb2870",
+        "text": "163 wooster street",
+        "type": "Entity"
+      },
+      {
+        "id": 11,
+        "original_id": "301d8bd8-7d9f-550c-8c58-86d5763441a0",
+        "text": "pizza",
+        "type": "Entity"
+      },
+      {
+        "id": 12,
+        "original_id": "d2a381fa-3658-5ca6-ada9-2109cfc9331d",
+        "text": "concept",
+        "type": "EntityType"
+      },
+      {
+        "id": 13,
+        "original_id": "388f60fb-220d-55e8-ae9c-3ac93cead308",
+        "text": "organization",
+        "type": "EntityType"
+      },
+      {
+        "id": 14,
+        "original_id": "ea00a6e7-ca11-5088-b9b4-1cf2a5292196",
+        "text": "sarpinos pizzeria",
+        "type": "Entity"
+      },
+      {
+        "id": 15,
+        "original_id": "7b8ef6cf-3d8c-5f1f-a8b6-0a53e2108f82",
+        "text": "singapore",
+        "type": "Entity"
+      },
+      {
+        "id": 16,
+        "original_id": "8a5f4fdc-2869-5d91-8e42-c0fd9b61ab9e",
+        "text": "lincolnshire, illinois",
+        "type": "Entity"
+      },
+      {
+        "id": 17,
+        "original_id": "ec047af9-0db4-5349-a274-c803926fd58c",
+        "text": "chicago",
+        "type": "Entity"
+      },
+      {
+        "id": 18,
+        "original_id": "02e5e923-e975-5c9f-b0e7-3e3b4b37c531",
+        "text": "illinois",
+        "type": "Entity"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "known_as"
+      },
+      {
+        "source": 1,
+        "target": 4,
+        "type": "contains"
+      },
+      {
+        "source": 4,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 6,
+        "type": "located_in"
+      },
+      {
+        "source": 1,
+        "target": 6,
+        "type": "contains"
+      },
+      {
+        "source": 6,
+        "target": 7,
+        "type": "located_in"
+      },
+      {
+        "source": 10,
+        "target": 7,
+        "type": "located_in"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      },
+      {
+        "source": 7,
+        "target": 8,
+        "type": "located_in"
+      },
+      {
+        "source": 10,
+        "target": 8,
+        "type": "located_in"
+      },
+      {
+        "source": 1,
+        "target": 8,
+        "type": "contains"
+      },
+      {
+        "source": 8,
+        "target": 9,
+        "type": "is_a"
+      },
+      {
+        "source": 7,
+        "target": 9,
+        "type": "is_a"
+      },
+      {
+        "source": 6,
+        "target": 9,
+        "type": "is_a"
+      },
+      {
+        "source": 10,
+        "target": 9,
+        "type": "is_a"
+      },
+      {
+        "source": 15,
+        "target": 9,
+        "type": "is_a"
+      },
+      {
+        "source": 17,
+        "target": 9,
+        "type": "is_a"
+      },
+      {
+        "source": 18,
+        "target": 9,
+        "type": "is_a"
+      },
+      {
+        "source": 16,
+        "target": 9,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 10,
+        "type": "located_at"
+      },
+      {
+        "source": 1,
+        "target": 10,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 11,
+        "type": "restaurant_type"
+      },
+      {
+        "source": 14,
+        "target": 11,
+        "type": "specializes_in"
+      },
+      {
+        "source": 1,
+        "target": 11,
+        "type": "contains"
+      },
+      {
+        "source": 11,
+        "target": 12,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 13,
+        "type": "is_a"
+      },
+      {
+        "source": 14,
+        "target": 13,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 14,
+        "type": "contains"
+      },
+      {
+        "source": 14,
+        "target": 15,
+        "type": "has_international_operations_headquartered_in"
+      },
+      {
+        "source": 1,
+        "target": 15,
+        "type": "contains"
+      },
+      {
+        "source": 14,
+        "target": 16,
+        "type": "has_us_operations_headquartered_in"
+      },
+      {
+        "source": 1,
+        "target": 16,
+        "type": "contains"
+      },
+      {
+        "source": 16,
+        "target": 17,
+        "type": "suburb_of"
+      },
+      {
+        "source": 1,
+        "target": 17,
+        "type": "contains"
+      },
+      {
+        "source": 16,
+        "target": 18,
+        "type": "located_in"
+      },
+      {
+        "source": 1,
+        "target": 18,
+        "type": "contains"
+      }
+    ]
+  }
+}

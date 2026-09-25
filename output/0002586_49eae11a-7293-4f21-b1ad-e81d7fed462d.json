@@ -1,0 +1,544 @@
+{
+  "dataset": "hover",
+  "id": "49eae11a-7293-4f21-b1ad-e81d7fed462d",
+  "split": "train",
+  "claim": "The player that is featured on the cover of the German version of this video game is 6 ft tall. This game is the predecessor to NBA 2K17.",
+  "evidencia": "Page: NBA 2K16. Sentence: Additionally, the French version of \"NBA 2K16\" features Tony Parker of the San Antonio Spurs as the cover athlete, the German version, Dennis Schröder of the Atlanta Hawks, and the Spanish version, Marc and Pau Gasol of the Memphis Grizzlies and Chicago Bulls respectively.\nPage: Dennis Schröder. Sentence: Standing at 6 ft , he plays at the point guard position.\nPage: NBA 2K17. Sentence: It is the 18th installment in the \"NBA 2K\" franchise and the successor to \"NBA 2K16\".",
+  "evidence_text": "Page: NBA 2K16. Sentence: Additionally, the French version of \"NBA 2K16\" features Tony Parker of the San Antonio Spurs as the cover athlete, the German version, Dennis Schröder of the Atlanta Hawks, and the Spanish version, Marc and Pau Gasol of the Memphis Grizzlies and Chicago Bulls respectively.\nPage: Dennis Schröder. Sentence: Standing at 6 ft , he plays at the point guard position.\nPage: NBA 2K17. Sentence: It is the 18th installment in the \"NBA 2K\" franchise and the successor to \"NBA 2K16\".",
+  "label": "SUPPORTED",
+  "num_hops": 3,
+  "hover_metadata": {
+    "supporting_facts": [
+      [
+        "NBA 2K16",
+        6
+      ],
+      [
+        "Dennis Schröder",
+        1
+      ],
+      [
+        "NBA 2K17",
+        1
+      ]
+    ],
+    "num_hops": 3,
+    "evidence_annotation_id": [
+      0
+    ],
+    "evidence_id": [
+      "NBA 2K16::sentence::6",
+      "Dennis Schröder::sentence::1",
+      "NBA 2K17::sentence::1"
+    ],
+    "evidence_wiki_url": [
+      "https://en.wikipedia.org/wiki/NBA_2K16",
+      "https://en.wikipedia.org/wiki/Dennis_Schr%C3%B6der",
+      "https://en.wikipedia.org/wiki/NBA_2K17"
+    ],
+    "evidence_sentence_id": [
+      "NBA 2K16::sentence::6",
+      "Dennis Schröder::sentence::1",
+      "NBA 2K17::sentence::1"
+    ]
+  },
+  "grafo_claim": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "6350b460-a731-5625-bfc1-13f4ee95884f",
+        "text": "This chunk is about:\n- Products: NBA 2K16, NBA 2K17\n- People: Dennis Schröder\n- Places: Germany\n- Topics: video game cover athletes, player height\n\nFacts:\n- NBA 2K16 is the predecessor to NBA 2K17.\n- The German version of NBA 2K16 features Dennis Schröder on its cover.\n- Dennis Schröder is 6 feet tall.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "0ff08735-edd3-572c-b1bc-67fa1b8466ff",
+        "text": "The player that is featured on the cover of the German version of this video game is 6 ft tall. This game is the predecessor to NBA 2K17.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "2375ab62-2125-5a42-af3c-f1f3aee90034",
+        "text": "text_cb86f664200e52f25a2afd5208c3aa88",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "06df521e-a948-5529-be09-9fed2ff5b9f6",
+        "text": "nba 2k16",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "a9c12196-b358-52db-ac80-eaa2c0b803d1",
+        "text": "nba 2k17",
+        "type": "Entity"
+      },
+      {
+        "id": 5,
+        "original_id": "57cfa528-89d4-5bd6-9e28-19c996964389",
+        "text": "video game",
+        "type": "EntityType"
+      },
+      {
+        "id": 6,
+        "original_id": "a2e32ce9-b4fd-5423-956b-7b1cfd130e1e",
+        "text": "german version cover player of nba 2k16",
+        "type": "Entity"
+      },
+      {
+        "id": 7,
+        "original_id": "4f2efba0-94cf-53e5-ba27-d6251bf66d40",
+        "text": "6 ft",
+        "type": "Entity"
+      },
+      {
+        "id": 8,
+        "original_id": "12d5521e-a878-542e-bebc-84ff79179d8e",
+        "text": "measurement",
+        "type": "EntityType"
+      },
+      {
+        "id": 9,
+        "original_id": "99a82eec-bb35-5bb5-9ed2-e73fc7a756de",
+        "text": "person",
+        "type": "EntityType"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 6,
+        "target": 3,
+        "type": "featured_on_cover_of"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_predecessor_to"
+      },
+      {
+        "source": 1,
+        "target": 4,
+        "type": "contains"
+      },
+      {
+        "source": 4,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 6,
+        "type": "contains"
+      },
+      {
+        "source": 6,
+        "target": 7,
+        "type": "has_height"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      },
+      {
+        "source": 7,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 6,
+        "target": 9,
+        "type": "is_a"
+      }
+    ]
+  },
+  "grafo_evidencia": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "f161e03c-7714-5e8f-9993-c1d40a69c4c5",
+        "text": "This chunk is about:\n- Products: NBA 2K16, NBA 2K17\n- People: Tony Parker, Dennis Schröder, Marc Gasol, Pau Gasol\n- Organizations: San Antonio Spurs, Atlanta Hawks, Memphis Grizzlies, Chicago Bulls\n- Roles: cover athlete, point guard\n- Concepts: NBA 2K franchise\n\nFacts:\n- NBA 2K16 has regional cover athletes: Tony Parker for the French version, Dennis Schröder for the German version, and Marc Gasol and Pau Gasol for the Spanish version.\n- Tony Parker was with the San Antonio Spurs when he was featured as the French cover athlete for NBA 2K16.\n- Dennis Schröder was with the Atlanta Hawks when he was featured as the German cover athlete for NBA 2K16.\n- Marc Gasol was with the Memphis Grizzlies and Pau Gasol was with the Chicago Bulls when they were featured as the Spanish cover athletes for NBA 2K16.\n- Dennis Schröder plays the point guard position.\n- NBA 2K17 is the 18th installment in the NBA 2K franchise and the successor to NBA 2K16.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "20e9787f-d0ec-5348-98c4-da3faa5de79d",
+        "text": "Page: NBA 2K16. Sentence: Additionally, the French version of \"NBA 2K16\" features Tony Parker of the San Antonio Spurs as the cover athlete, the German version, Dennis Schröder of the Atlanta Hawks, and the Spanish version, Marc and Pau Gasol of the Memphis Grizzlies and Chicago Bulls respectively.\nPage: Dennis Schröder. Sentence: Standing at 6 ft , he plays at the point guard position.\nPage: NBA 2K17. Sentence: It is the 18th installment in the \"NBA 2K\" franchise and the successor to \"NBA 2K16\".",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "15417669-52a7-55ad-b336-9a82ae3e3292",
+        "text": "text_00fdae67527c9ac24cbefe6b7247abec",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "06df521e-a948-5529-be09-9fed2ff5b9f6",
+        "text": "nba 2k16",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "5263a535-1b4b-5925-be3e-310d03cd303b",
+        "text": "work",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "b2448cd5-c20d-59f7-ba72-a8cc2154fd69",
+        "text": "french version of nba 2k16",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "dd34618e-a922-5a85-bdc9-7c2ada49e20e",
+        "text": "tony parker",
+        "type": "Entity"
+      },
+      {
+        "id": 7,
+        "original_id": "7de294c3-dd1d-5832-91c6-6b2a5c619987",
+        "text": "san antonio spurs",
+        "type": "Entity"
+      },
+      {
+        "id": 8,
+        "original_id": "388f60fb-220d-55e8-ae9c-3ac93cead308",
+        "text": "organization",
+        "type": "EntityType"
+      },
+      {
+        "id": 9,
+        "original_id": "99a82eec-bb35-5bb5-9ed2-e73fc7a756de",
+        "text": "person",
+        "type": "EntityType"
+      },
+      {
+        "id": 10,
+        "original_id": "e2b533e3-65ec-513f-9bcb-1e37d45cabba",
+        "text": "german version of nba 2k16",
+        "type": "Entity"
+      },
+      {
+        "id": 11,
+        "original_id": "03494339-fb90-52fb-a3ed-55bb35d5b204",
+        "text": "dennis schröder",
+        "type": "Entity"
+      },
+      {
+        "id": 12,
+        "original_id": "cca1852d-95a0-5592-91cd-a2189d57618b",
+        "text": "atlanta hawks",
+        "type": "Entity"
+      },
+      {
+        "id": 13,
+        "original_id": "5662cdb8-569f-5d05-abc0-5953970a80b5",
+        "text": "point guard",
+        "type": "Entity"
+      },
+      {
+        "id": 14,
+        "original_id": "8789768e-777e-505f-9788-4d23e6b11ee4",
+        "text": "position",
+        "type": "EntityType"
+      },
+      {
+        "id": 15,
+        "original_id": "97d1ed64-f193-5dc6-90d0-fe5486fadd75",
+        "text": "spanish version of nba 2k16",
+        "type": "Entity"
+      },
+      {
+        "id": 16,
+        "original_id": "1eabfd4b-9233-5011-9250-b35311a53aaa",
+        "text": "marc gasol",
+        "type": "Entity"
+      },
+      {
+        "id": 17,
+        "original_id": "ffacac46-5340-5381-869c-3087f5cca011",
+        "text": "memphis grizzlies",
+        "type": "Entity"
+      },
+      {
+        "id": 18,
+        "original_id": "f94444f4-0e19-5efd-8fd9-72bbb68edc19",
+        "text": "pau gasol",
+        "type": "Entity"
+      },
+      {
+        "id": 19,
+        "original_id": "ed8aadbf-f23a-57c3-a54f-fed5b8bc939c",
+        "text": "chicago bulls",
+        "type": "Entity"
+      },
+      {
+        "id": 20,
+        "original_id": "a9c12196-b358-52db-ac80-eaa2c0b803d1",
+        "text": "nba 2k17",
+        "type": "Entity"
+      },
+      {
+        "id": 21,
+        "original_id": "d074bc6d-f4b4-5667-930b-e1460e19c554",
+        "text": "nba 2k franchise",
+        "type": "Entity"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 3,
+        "type": "version_of"
+      },
+      {
+        "source": 10,
+        "target": 3,
+        "type": "version_of"
+      },
+      {
+        "source": 15,
+        "target": 3,
+        "type": "version_of"
+      },
+      {
+        "source": 20,
+        "target": 3,
+        "type": "successor_to"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 5,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 10,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 15,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 21,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 20,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "has_cover_athlete"
+      },
+      {
+        "source": 1,
+        "target": 6,
+        "type": "contains"
+      },
+      {
+        "source": 6,
+        "target": 7,
+        "type": "plays_for"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      },
+      {
+        "source": 7,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 12,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 17,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 19,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 6,
+        "target": 9,
+        "type": "is_a"
+      },
+      {
+        "source": 11,
+        "target": 9,
+        "type": "is_a"
+      },
+      {
+        "source": 16,
+        "target": 9,
+        "type": "is_a"
+      },
+      {
+        "source": 18,
+        "target": 9,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 10,
+        "type": "contains"
+      },
+      {
+        "source": 10,
+        "target": 11,
+        "type": "has_cover_athlete"
+      },
+      {
+        "source": 1,
+        "target": 11,
+        "type": "contains"
+      },
+      {
+        "source": 11,
+        "target": 12,
+        "type": "plays_for"
+      },
+      {
+        "source": 1,
+        "target": 12,
+        "type": "contains"
+      },
+      {
+        "source": 11,
+        "target": 13,
+        "type": "plays_position"
+      },
+      {
+        "source": 1,
+        "target": 13,
+        "type": "contains"
+      },
+      {
+        "source": 13,
+        "target": 14,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 15,
+        "type": "contains"
+      },
+      {
+        "source": 15,
+        "target": 16,
+        "type": "has_cover_athlete"
+      },
+      {
+        "source": 1,
+        "target": 16,
+        "type": "contains"
+      },
+      {
+        "source": 16,
+        "target": 17,
+        "type": "plays_for"
+      },
+      {
+        "source": 1,
+        "target": 17,
+        "type": "contains"
+      },
+      {
+        "source": 15,
+        "target": 18,
+        "type": "has_cover_athlete"
+      },
+      {
+        "source": 1,
+        "target": 18,
+        "type": "contains"
+      },
+      {
+        "source": 18,
+        "target": 19,
+        "type": "plays_for"
+      },
+      {
+        "source": 1,
+        "target": 19,
+        "type": "contains"
+      },
+      {
+        "source": 1,
+        "target": 20,
+        "type": "contains"
+      },
+      {
+        "source": 20,
+        "target": 21,
+        "type": "installment_in"
+      },
+      {
+        "source": 1,
+        "target": 21,
+        "type": "contains"
+      }
+    ]
+  }
+}

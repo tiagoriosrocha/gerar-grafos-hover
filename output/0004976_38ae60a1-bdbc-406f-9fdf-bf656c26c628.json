@@ -1,0 +1,389 @@
+{
+  "dataset": "hover",
+  "id": "38ae60a1-bdbc-406f-9fdf-bf656c26c628",
+  "split": "train",
+  "claim": "Lost Lemon Mine and another mine are not both places that can be located on a map. Lupin Airport was located at this other mine.",
+  "evidencia": "Page: Lupin Mine. Sentence: Lupin Mine was a gold mine in Nunavut Territory, Canada.\nPage: Lost Lemon Mine. Sentence: The Lost Lemon Mine is a legendary lost mine said to be located in the Canadian Province of Alberta.\nPage: Lupin Airport. Sentence: Lupin Airport (IATA: YWO, ICAO: CYWO) was an airport located at Lupin Mine, Nunavut, Canada that was operated by Echo Bay Mines Limited.",
+  "evidence_text": "Page: Lupin Mine. Sentence: Lupin Mine was a gold mine in Nunavut Territory, Canada.\nPage: Lost Lemon Mine. Sentence: The Lost Lemon Mine is a legendary lost mine said to be located in the Canadian Province of Alberta.\nPage: Lupin Airport. Sentence: Lupin Airport (IATA: YWO, ICAO: CYWO) was an airport located at Lupin Mine, Nunavut, Canada that was operated by Echo Bay Mines Limited.",
+  "label": "SUPPORTED",
+  "num_hops": 3,
+  "hover_metadata": {
+    "supporting_facts": [
+      [
+        "Lupin Mine",
+        0
+      ],
+      [
+        "Lost Lemon Mine",
+        0
+      ],
+      [
+        "Lupin Airport",
+        0
+      ]
+    ],
+    "num_hops": 3,
+    "evidence_annotation_id": [
+      0
+    ],
+    "evidence_id": [
+      "Lupin Mine::sentence::0",
+      "Lost Lemon Mine::sentence::0",
+      "Lupin Airport::sentence::0"
+    ],
+    "evidence_wiki_url": [
+      "https://en.wikipedia.org/wiki/Lupin_Mine",
+      "https://en.wikipedia.org/wiki/Lost_Lemon_Mine",
+      "https://en.wikipedia.org/wiki/Lupin_Airport"
+    ],
+    "evidence_sentence_id": [
+      "Lupin Mine::sentence::0",
+      "Lost Lemon Mine::sentence::0",
+      "Lupin Airport::sentence::0"
+    ]
+  },
+  "grafo_claim": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "6df8118f-8583-5014-bf43-49164891a356",
+        "text": "This chunk is about:\n- Places: Lost Lemon Mine, Lupin Mine, Lupin Airport\n- Topics: locatable places, mine identification\n\nFacts:\n- Lost Lemon Mine and Lupin Mine are not both places that can be located on a map.\n- Lupin Airport was located at Lupin Mine.\n- The mine associated with Lupin Airport is Lupin Mine, not Lost Lemon Mine.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "f52ff3ee-cafe-5e9d-96e6-84ba374b77f0",
+        "text": "Lost Lemon Mine and another mine are not both places that can be located on a map. Lupin Airport was located at this other mine.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "62ef60a9-a5fc-5c55-9b2f-56b323a3e44e",
+        "text": "text_7bfe2b15ecd7193d65c331e75e51e794",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "10a1b44d-c497-559d-9a02-3d6d6606060a",
+        "text": "lost lemon mine",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "092ab706-4bf0-5f5d-94a7-df95c19b3695",
+        "text": "other mine",
+        "type": "Entity"
+      },
+      {
+        "id": 5,
+        "original_id": "5f394058-b2a0-5ba8-8466-ba2a18cfcf4e",
+        "text": "place",
+        "type": "EntityType"
+      },
+      {
+        "id": 6,
+        "original_id": "9a692be4-b8b6-5a20-b591-2b9d0489cd50",
+        "text": "lupin airport",
+        "type": "Entity"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "not_both_mappable_places"
+      },
+      {
+        "source": 1,
+        "target": 4,
+        "type": "contains"
+      },
+      {
+        "source": 6,
+        "target": 4,
+        "type": "located_at"
+      },
+      {
+        "source": 4,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 6,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 6,
+        "type": "contains"
+      }
+    ]
+  },
+  "grafo_evidencia": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "8a2d04f1-2b26-59cb-95cc-7c81a8de7677",
+        "text": "This chunk is about:\n- Places: Lupin Mine, Lost Lemon Mine, Lupin Airport, Nunavut, Alberta, Canada\n- Companies: Echo Bay Mines Limited\n- Topics: gold mines, legendary lost mines, airports\n\nFacts:\n- Lupin Mine was a gold mine in Nunavut Territory, Canada.\n- The Lost Lemon Mine is a legendary lost mine said to be located in Alberta, Canada.\n- Lupin Airport was an airport at Lupin Mine in Nunavut, Canada.\n- Echo Bay Mines Limited operated Lupin Airport.\n- Lupin Airport had the codes IATA YWO and ICAO CYWO.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "5d379de5-8880-56ae-b84a-946a226da503",
+        "text": "Page: Lupin Mine. Sentence: Lupin Mine was a gold mine in Nunavut Territory, Canada.\nPage: Lost Lemon Mine. Sentence: The Lost Lemon Mine is a legendary lost mine said to be located in the Canadian Province of Alberta.\nPage: Lupin Airport. Sentence: Lupin Airport (IATA: YWO, ICAO: CYWO) was an airport located at Lupin Mine, Nunavut, Canada that was operated by Echo Bay Mines Limited.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "d3d6853c-d599-5dd6-bcc0-5eb864c00af4",
+        "text": "text_c46979e76850a2b78073fd5b2f08098d",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "95c46432-f3b4-5114-b5aa-ebe8c76dfa24",
+        "text": "lupin mine",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "52657fc2-820a-5700-91ce-177a9fb660e3",
+        "text": "nunavut territory",
+        "type": "Entity"
+      },
+      {
+        "id": 5,
+        "original_id": "bbedb15c-e733-5a11-9f07-ae16faad96f0",
+        "text": "canada",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "5f394058-b2a0-5ba8-8466-ba2a18cfcf4e",
+        "text": "place",
+        "type": "EntityType"
+      },
+      {
+        "id": 7,
+        "original_id": "10a1b44d-c497-559d-9a02-3d6d6606060a",
+        "text": "lost lemon mine",
+        "type": "Entity"
+      },
+      {
+        "id": 8,
+        "original_id": "eed4f39d-5e82-55c8-9fe6-dfe7d059e077",
+        "text": "alberta",
+        "type": "Entity"
+      },
+      {
+        "id": 9,
+        "original_id": "9a692be4-b8b6-5a20-b591-2b9d0489cd50",
+        "text": "lupin airport",
+        "type": "Entity"
+      },
+      {
+        "id": 10,
+        "original_id": "5fe85fcc-bf6b-5c70-b18a-9e20b4ac6437",
+        "text": "ywo",
+        "type": "Entity"
+      },
+      {
+        "id": 11,
+        "original_id": "2c23f4f7-2223-5c53-a5f6-1bd0114fcd6a",
+        "text": "code",
+        "type": "EntityType"
+      },
+      {
+        "id": 12,
+        "original_id": "ab9d74c7-b825-50e4-b543-cdfc7242b0fc",
+        "text": "cywo",
+        "type": "Entity"
+      },
+      {
+        "id": 13,
+        "original_id": "11dc5bd7-8485-5bdf-9e2c-e34567338cd6",
+        "text": "echo bay mines limited",
+        "type": "Entity"
+      },
+      {
+        "id": 14,
+        "original_id": "388f60fb-220d-55e8-ae9c-3ac93cead308",
+        "text": "organization",
+        "type": "EntityType"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 9,
+        "target": 3,
+        "type": "located_at"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "located_in"
+      },
+      {
+        "source": 1,
+        "target": 4,
+        "type": "contains"
+      },
+      {
+        "source": 9,
+        "target": 4,
+        "type": "located_in"
+      },
+      {
+        "source": 4,
+        "target": 5,
+        "type": "located_in"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 8,
+        "target": 5,
+        "type": "located_in"
+      },
+      {
+        "source": 9,
+        "target": 5,
+        "type": "located_in"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 4,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 8,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 7,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 9,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      },
+      {
+        "source": 7,
+        "target": 8,
+        "type": "located_in"
+      },
+      {
+        "source": 1,
+        "target": 8,
+        "type": "contains"
+      },
+      {
+        "source": 1,
+        "target": 9,
+        "type": "contains"
+      },
+      {
+        "source": 13,
+        "target": 9,
+        "type": "operates"
+      },
+      {
+        "source": 9,
+        "target": 10,
+        "type": "has_iata_code"
+      },
+      {
+        "source": 1,
+        "target": 10,
+        "type": "contains"
+      },
+      {
+        "source": 10,
+        "target": 11,
+        "type": "is_a"
+      },
+      {
+        "source": 12,
+        "target": 11,
+        "type": "is_a"
+      },
+      {
+        "source": 9,
+        "target": 12,
+        "type": "has_icao_code"
+      },
+      {
+        "source": 1,
+        "target": 12,
+        "type": "contains"
+      },
+      {
+        "source": 1,
+        "target": 13,
+        "type": "contains"
+      },
+      {
+        "source": 13,
+        "target": 14,
+        "type": "is_a"
+      }
+    ]
+  }
+}

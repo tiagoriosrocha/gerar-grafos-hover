@@ -1,0 +1,581 @@
+{
+  "dataset": "hover",
+  "id": "6d84cf70-2eb8-4254-a9d1-d38593ed0b9f",
+  "split": "train",
+  "claim": "Non-Stop starred the English actress best known for playing Lady Mary Crawley in Downton Abbey.",
+  "evidencia": "Page: Non-Stop (film). Sentence: Non-Stop is a 2014 American mystery action thriller film directed by Jaume Collet-Serra and starring Liam Neeson, Julianne Moore, Michelle Dockery, Lupita Nyong'o, and Scoot McNairy.\nPage: Michelle Dockery. Sentence: She is most widely known for her performance as Lady Mary Crawley in the ITV (UK) and PBS (U.S.) television period drama series \"Downton Abbey\" (2010–15), for which she was nominated for three consecutive Emmy Awards in the category for Outstanding Lead Actress In Drama Series, and a Golden Globe Award nomination.",
+  "evidence_text": "Page: Non-Stop (film). Sentence: Non-Stop is a 2014 American mystery action thriller film directed by Jaume Collet-Serra and starring Liam Neeson, Julianne Moore, Michelle Dockery, Lupita Nyong'o, and Scoot McNairy.\nPage: Michelle Dockery. Sentence: She is most widely known for her performance as Lady Mary Crawley in the ITV (UK) and PBS (U.S.) television period drama series \"Downton Abbey\" (2010–15), for which she was nominated for three consecutive Emmy Awards in the category for Outstanding Lead Actress In Drama Series, and a Golden Globe Award nomination.",
+  "label": "SUPPORTED",
+  "num_hops": 2,
+  "hover_metadata": {
+    "supporting_facts": [
+      [
+        "Non-Stop (film)",
+        0
+      ],
+      [
+        "Michelle Dockery",
+        1
+      ]
+    ],
+    "num_hops": 2,
+    "evidence_annotation_id": [
+      0
+    ],
+    "evidence_id": [
+      "Non-Stop (film)::sentence::0",
+      "Michelle Dockery::sentence::1"
+    ],
+    "evidence_wiki_url": [
+      "https://en.wikipedia.org/wiki/Non-Stop_%28film%29",
+      "https://en.wikipedia.org/wiki/Michelle_Dockery"
+    ],
+    "evidence_sentence_id": [
+      "Non-Stop (film)::sentence::0",
+      "Michelle Dockery::sentence::1"
+    ]
+  },
+  "grafo_claim": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "d0713e81-cc16-5597-b41c-1cc91daa355e",
+        "text": "This chunk is about:\n- People: English actress, Lady Mary Crawley\n- Works: Non-Stop, Downton Abbey\n\nFacts:\n- Non-Stop starred an English actress.\n- The English actress was best known for playing Lady Mary Crawley in Downton Abbey.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "2bc5a6b7-bb57-5599-b151-36c3b49e20df",
+        "text": "Non-Stop starred the English actress best known for playing Lady Mary Crawley in Downton Abbey.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "232cec4d-03d7-5780-9d77-1e204da7950b",
+        "text": "text_9b4a2e53ce75afc10f7e05254a7a8a2c",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "71a82e1e-71fa-5b50-8d4f-60e1f1f3cb2e",
+        "text": "non-stop",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "5263a535-1b4b-5925-be3e-310d03cd303b",
+        "text": "work",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "b45312f8-2a06-51e9-a857-e248a2dba4b7",
+        "text": "michelle dockery",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "99a82eec-bb35-5bb5-9ed2-e73fc7a756de",
+        "text": "person",
+        "type": "EntityType"
+      },
+      {
+        "id": 7,
+        "original_id": "63472ff7-a197-5fe6-8747-a68eac0fa672",
+        "text": "lady mary crawley",
+        "type": "Entity"
+      },
+      {
+        "id": 8,
+        "original_id": "d3db161f-3fd9-5366-919b-ad9f9a1ba392",
+        "text": "character",
+        "type": "EntityType"
+      },
+      {
+        "id": 9,
+        "original_id": "698872cf-b766-5e49-b5a0-0990dc270363",
+        "text": "downton abbey",
+        "type": "Entity"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 9,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "starred"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 5,
+        "target": 7,
+        "type": "played"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      },
+      {
+        "source": 7,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 7,
+        "target": 9,
+        "type": "appears_in"
+      },
+      {
+        "source": 5,
+        "target": 9,
+        "type": "appeared_in"
+      },
+      {
+        "source": 1,
+        "target": 9,
+        "type": "contains"
+      }
+    ]
+  },
+  "grafo_evidencia": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "30718257-72b8-5c39-9164-44cebfbf6d28",
+        "text": "This chunk is about:\n- People: Michelle Dockery, Jaume Collet-Serra, Liam Neeson, Julianne Moore, Lupita Nyong'o, Scoot McNairy\n- Works: Non-Stop, Downton Abbey\n- Organizations: ITV, PBS, Emmy Awards, Golden Globe Awards\n- Topics: film, television, acting awards\n\nFacts:\n- Downton Abbey aired from 2010 to 2015 as a television period drama series on ITV in the UK and PBS in the U.S.\n- Michelle Dockery is most widely known for playing Lady Mary Crawley in Downton Abbey.\n- Michelle Dockery received three consecutive Emmy Award nominations for Outstanding Lead Actress in a Drama Series and one Golden Globe Award nomination for Downton Abbey.\n- Non-Stop is a 2014 American mystery action thriller film directed by Jaume Collet-Serra.\n- Non-Stop stars Liam Neeson, Julianne Moore, Michelle Dockery, Lupita Nyong'o, and Scoot McNairy.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "b4aef30d-11da-5cd6-9378-11b1c5facd9d",
+        "text": "Page: Non-Stop (film). Sentence: Non-Stop is a 2014 American mystery action thriller film directed by Jaume Collet-Serra and starring Liam Neeson, Julianne Moore, Michelle Dockery, Lupita Nyong'o, and Scoot McNairy.\nPage: Michelle Dockery. Sentence: She is most widely known for her performance as Lady Mary Crawley in the ITV (UK) and PBS (U.S.) television period drama series \"Downton Abbey\" (2010–15), for which she was nominated for three consecutive Emmy Awards in the category for Outstanding Lead Actress In Drama Series, and a Golden Globe Award nomination.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "a7117c23-2e35-571d-aa7d-fd79d4470ef0",
+        "text": "text_1616c8570a78d12e8428b3057d864cb2",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "71a82e1e-71fa-5b50-8d4f-60e1f1f3cb2e",
+        "text": "non-stop",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "d320c8df-fd51-56e6-b577-e01a688fe6fc",
+        "text": "film",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "8b81e666-937e-557b-9b2d-fbabf5175591",
+        "text": "2014",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "b19433ae-558c-5aaf-95ac-6231f2a4be0e",
+        "text": "date",
+        "type": "EntityType"
+      },
+      {
+        "id": 7,
+        "original_id": "da7df7dd-1b24-58e1-9406-0465e07a828c",
+        "text": "jaume collet-serra",
+        "type": "Entity"
+      },
+      {
+        "id": 8,
+        "original_id": "99a82eec-bb35-5bb5-9ed2-e73fc7a756de",
+        "text": "person",
+        "type": "EntityType"
+      },
+      {
+        "id": 9,
+        "original_id": "79f6b849-8213-532d-8bb5-85bfd9c0042f",
+        "text": "liam neeson",
+        "type": "Entity"
+      },
+      {
+        "id": 10,
+        "original_id": "22746137-0fe9-5b27-97d6-ffcecec120cc",
+        "text": "julianne moore",
+        "type": "Entity"
+      },
+      {
+        "id": 11,
+        "original_id": "b45312f8-2a06-51e9-a857-e248a2dba4b7",
+        "text": "michelle dockery",
+        "type": "Entity"
+      },
+      {
+        "id": 12,
+        "original_id": "63472ff7-a197-5fe6-8747-a68eac0fa672",
+        "text": "lady mary crawley",
+        "type": "Entity"
+      },
+      {
+        "id": 13,
+        "original_id": "d3db161f-3fd9-5366-919b-ad9f9a1ba392",
+        "text": "character",
+        "type": "EntityType"
+      },
+      {
+        "id": 14,
+        "original_id": "698872cf-b766-5e49-b5a0-0990dc270363",
+        "text": "downton abbey",
+        "type": "Entity"
+      },
+      {
+        "id": 15,
+        "original_id": "ce2f0c86-331f-510d-8c16-2c9f70a95e72",
+        "text": "television series",
+        "type": "EntityType"
+      },
+      {
+        "id": 16,
+        "original_id": "cb1dc1af-5253-5fa4-877e-246a7629f489",
+        "text": "2010",
+        "type": "Entity"
+      },
+      {
+        "id": 17,
+        "original_id": "e462afa3-e20a-57e9-b578-82bcd93b548e",
+        "text": "2015",
+        "type": "Entity"
+      },
+      {
+        "id": 18,
+        "original_id": "ebb787d4-c576-5254-884e-a4dc2e0b74b4",
+        "text": "itv",
+        "type": "Entity"
+      },
+      {
+        "id": 19,
+        "original_id": "388f60fb-220d-55e8-ae9c-3ac93cead308",
+        "text": "organization",
+        "type": "EntityType"
+      },
+      {
+        "id": 20,
+        "original_id": "c7325d05-9933-56fe-ab6e-0819e95b8504",
+        "text": "pbs",
+        "type": "Entity"
+      },
+      {
+        "id": 21,
+        "original_id": "f2c43c14-092d-5d2a-bcba-af17faf88aba",
+        "text": "primetime emmy award for outstanding lead actress in a drama series",
+        "type": "Entity"
+      },
+      {
+        "id": 22,
+        "original_id": "38e42125-31f4-5cd6-993c-dbbc06a88910",
+        "text": "award",
+        "type": "EntityType"
+      },
+      {
+        "id": 23,
+        "original_id": "b70a0c87-3f1f-58e1-92e6-9e849f4838a0",
+        "text": "golden globe award",
+        "type": "Entity"
+      },
+      {
+        "id": 24,
+        "original_id": "e2ebe95a-2841-5766-bbe0-060c3a04d173",
+        "text": "lupita nyongo",
+        "type": "Entity"
+      },
+      {
+        "id": 25,
+        "original_id": "6cee4535-c064-5876-b90a-2622c27f3ef2",
+        "text": "scoot mcnairy",
+        "type": "Entity"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 7,
+        "target": 3,
+        "type": "directed"
+      },
+      {
+        "source": 9,
+        "target": 3,
+        "type": "starred_in"
+      },
+      {
+        "source": 10,
+        "target": 3,
+        "type": "starred_in"
+      },
+      {
+        "source": 11,
+        "target": 3,
+        "type": "starred_in"
+      },
+      {
+        "source": 24,
+        "target": 3,
+        "type": "starred_in"
+      },
+      {
+        "source": 25,
+        "target": 3,
+        "type": "starred_in"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "released_in"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 16,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 17,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      },
+      {
+        "source": 7,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 9,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 10,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 11,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 24,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 25,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 9,
+        "type": "contains"
+      },
+      {
+        "source": 1,
+        "target": 10,
+        "type": "contains"
+      },
+      {
+        "source": 1,
+        "target": 11,
+        "type": "contains"
+      },
+      {
+        "source": 11,
+        "target": 12,
+        "type": "performed_as"
+      },
+      {
+        "source": 1,
+        "target": 12,
+        "type": "contains"
+      },
+      {
+        "source": 12,
+        "target": 13,
+        "type": "is_a"
+      },
+      {
+        "source": 12,
+        "target": 14,
+        "type": "appears_in"
+      },
+      {
+        "source": 1,
+        "target": 14,
+        "type": "contains"
+      },
+      {
+        "source": 14,
+        "target": 15,
+        "type": "is_a"
+      },
+      {
+        "source": 14,
+        "target": 16,
+        "type": "started_in"
+      },
+      {
+        "source": 1,
+        "target": 16,
+        "type": "contains"
+      },
+      {
+        "source": 14,
+        "target": 17,
+        "type": "ended_in"
+      },
+      {
+        "source": 1,
+        "target": 17,
+        "type": "contains"
+      },
+      {
+        "source": 14,
+        "target": 18,
+        "type": "aired_on"
+      },
+      {
+        "source": 1,
+        "target": 18,
+        "type": "contains"
+      },
+      {
+        "source": 18,
+        "target": 19,
+        "type": "is_a"
+      },
+      {
+        "source": 20,
+        "target": 19,
+        "type": "is_a"
+      },
+      {
+        "source": 14,
+        "target": 20,
+        "type": "aired_on"
+      },
+      {
+        "source": 1,
+        "target": 20,
+        "type": "contains"
+      },
+      {
+        "source": 11,
+        "target": 21,
+        "type": "nominated_for"
+      },
+      {
+        "source": 1,
+        "target": 21,
+        "type": "contains"
+      },
+      {
+        "source": 21,
+        "target": 22,
+        "type": "is_a"
+      },
+      {
+        "source": 23,
+        "target": 22,
+        "type": "is_a"
+      },
+      {
+        "source": 11,
+        "target": 23,
+        "type": "nominated_for"
+      },
+      {
+        "source": 1,
+        "target": 23,
+        "type": "contains"
+      },
+      {
+        "source": 1,
+        "target": 24,
+        "type": "contains"
+      },
+      {
+        "source": 1,
+        "target": 25,
+        "type": "contains"
+      }
+    ]
+  }
+}

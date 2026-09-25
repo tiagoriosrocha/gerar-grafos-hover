@@ -1,0 +1,533 @@
+{
+  "dataset": "hover",
+  "id": "50640a7f-634e-450a-ab16-3f092d82c4c3",
+  "split": "train",
+  "claim": "Rocket Rods was a high-speed thrill attraction opened in 1998 on the existing infrastructure of a transport attraction that operated until August 21, 1995.",
+  "evidencia": "Page: Rocket Rods. Sentence: Rocket Rods was a high-speed thrill attraction in Tomorrowland at Disneyland in Anaheim, California.\nPage: Rocket Rods. Sentence: The ride, meant to evoke a futuristic rapid transit system, opened in 1998 on the existing PeopleMover infrastructure as part of the New Tomorrowland project.\nPage: PeopleMover. Sentence: The PeopleMover, sometimes referred to as the Goodyear PeopleMover and WEDWay PeopleMover, was a transport attraction that operated from July 2, 1967 to August 21, 1995 in Tomorrowland at Disneyland in Anaheim, California.",
+  "evidence_text": "Page: Rocket Rods. Sentence: Rocket Rods was a high-speed thrill attraction in Tomorrowland at Disneyland in Anaheim, California.\nPage: Rocket Rods. Sentence: The ride, meant to evoke a futuristic rapid transit system, opened in 1998 on the existing PeopleMover infrastructure as part of the New Tomorrowland project.\nPage: PeopleMover. Sentence: The PeopleMover, sometimes referred to as the Goodyear PeopleMover and WEDWay PeopleMover, was a transport attraction that operated from July 2, 1967 to August 21, 1995 in Tomorrowland at Disneyland in Anaheim, California.",
+  "label": "SUPPORTED",
+  "num_hops": 2,
+  "hover_metadata": {
+    "supporting_facts": [
+      [
+        "Rocket Rods",
+        0
+      ],
+      [
+        "Rocket Rods",
+        1
+      ],
+      [
+        "PeopleMover",
+        0
+      ]
+    ],
+    "num_hops": 2,
+    "evidence_annotation_id": [
+      0
+    ],
+    "evidence_id": [
+      "Rocket Rods::sentence::0",
+      "Rocket Rods::sentence::1",
+      "PeopleMover::sentence::0"
+    ],
+    "evidence_wiki_url": [
+      "https://en.wikipedia.org/wiki/Rocket_Rods",
+      "https://en.wikipedia.org/wiki/PeopleMover"
+    ],
+    "evidence_sentence_id": [
+      "Rocket Rods::sentence::0",
+      "Rocket Rods::sentence::1",
+      "PeopleMover::sentence::0"
+    ]
+  },
+  "grafo_claim": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "5f45212c-b480-56fd-97fe-0279634cc970",
+        "text": "This chunk is about:\n- Attractions: Rocket Rods, a transport attraction\n- Places: Existing attraction infrastructure\n\nFacts:\n- The transport attraction operated until August 21, 1995.\n- Rocket Rods opened in 1998 as a high-speed thrill attraction.\n- Rocket Rods used the existing infrastructure of the earlier transport attraction.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "8b2ebd43-9b75-5352-b644-3e948699bf50",
+        "text": "Rocket Rods was a high-speed thrill attraction opened in 1998 on the existing infrastructure of a transport attraction that operated until August 21, 1995.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "5f21ebae-bef5-5636-8aad-2c2d7e286af5",
+        "text": "text_6bc00e94860f5b672b1189dde1693100",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "e7a7b51a-de2a-518e-a77d-134add25da55",
+        "text": "rocket rods",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "a1130802-4cef-5c6e-ac7b-73dd6c91d070",
+        "text": "attraction",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "111f07f3-2527-5bbf-827f-7a18bb37f150",
+        "text": "1998",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "b19433ae-558c-5aaf-95ac-6231f2a4be0e",
+        "text": "date",
+        "type": "EntityType"
+      },
+      {
+        "id": 7,
+        "original_id": "c3d1eb2b-f6a8-5701-bcb9-8c9ae95faefc",
+        "text": "transport attraction",
+        "type": "Entity"
+      },
+      {
+        "id": 8,
+        "original_id": "79b1c9c3-9d40-5071-b04b-da6751f102ab",
+        "text": "1995-08-21",
+        "type": "Entity"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 7,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "opened_in"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 8,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 7,
+        "type": "used_existing_infrastructure_of"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      },
+      {
+        "source": 7,
+        "target": 8,
+        "type": "operated_until"
+      },
+      {
+        "source": 1,
+        "target": 8,
+        "type": "contains"
+      }
+    ]
+  },
+  "grafo_evidencia": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "23b258cf-f3a7-5cee-99ec-8dcb3dd909b2",
+        "text": "This chunk is about:\n- Attractions: Rocket Rods, PeopleMover\n- Places: Tomorrowland, Disneyland, Anaheim, California\n- Projects: New Tomorrowland\n- Concepts: rapid transit system, PeopleMover infrastructure\n\nFacts:\n- The PeopleMover, also called the Goodyear PeopleMover and WEDWay PeopleMover, operated in Tomorrowland at Disneyland in Anaheim, California, from July 2, 1967 to August 21, 1995.\n- Rocket Rods was a high-speed thrill attraction in Tomorrowland at Disneyland in Anaheim, California.\n- Rocket Rods opened in 1998 on the existing PeopleMover infrastructure as part of the New Tomorrowland project.\n- Rocket Rods was intended to evoke a futuristic rapid transit system.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "e83f561b-f621-54dd-b3ff-ba9103da05f6",
+        "text": "Page: Rocket Rods. Sentence: Rocket Rods was a high-speed thrill attraction in Tomorrowland at Disneyland in Anaheim, California.\nPage: Rocket Rods. Sentence: The ride, meant to evoke a futuristic rapid transit system, opened in 1998 on the existing PeopleMover infrastructure as part of the New Tomorrowland project.\nPage: PeopleMover. Sentence: The PeopleMover, sometimes referred to as the Goodyear PeopleMover and WEDWay PeopleMover, was a transport attraction that operated from July 2, 1967 to August 21, 1995 in Tomorrowland at Disneyland in Anaheim, California.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "7dd5baab-e761-5f28-b13f-8e209139c33c",
+        "text": "text_4acc41c23b3db712baaf1e4cdb95d77d",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "e7a7b51a-de2a-518e-a77d-134add25da55",
+        "text": "rocket rods",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "a1130802-4cef-5c6e-ac7b-73dd6c91d070",
+        "text": "attraction",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "0440f716-dac1-572f-a5e2-ddfde3a2bf9e",
+        "text": "tomorrowland",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "5f394058-b2a0-5ba8-8466-ba2a18cfcf4e",
+        "text": "place",
+        "type": "EntityType"
+      },
+      {
+        "id": 7,
+        "original_id": "d59a6b3f-b04b-5209-8d95-83f1c0eb7859",
+        "text": "disneyland",
+        "type": "Entity"
+      },
+      {
+        "id": 8,
+        "original_id": "7367a6df-b95b-5ae4-843d-651e5e86a275",
+        "text": "anaheim",
+        "type": "Entity"
+      },
+      {
+        "id": 9,
+        "original_id": "8294cd6a-6968-5d3a-b0c8-57e08c745c8d",
+        "text": "california",
+        "type": "Entity"
+      },
+      {
+        "id": 10,
+        "original_id": "111f07f3-2527-5bbf-827f-7a18bb37f150",
+        "text": "1998",
+        "type": "Entity"
+      },
+      {
+        "id": 11,
+        "original_id": "b19433ae-558c-5aaf-95ac-6231f2a4be0e",
+        "text": "date",
+        "type": "EntityType"
+      },
+      {
+        "id": 12,
+        "original_id": "05fc6536-761c-5c31-b5ad-73212029edd2",
+        "text": "futuristic rapid transit system",
+        "type": "Entity"
+      },
+      {
+        "id": 13,
+        "original_id": "d2a381fa-3658-5ca6-ada9-2109cfc9331d",
+        "text": "concept",
+        "type": "EntityType"
+      },
+      {
+        "id": 14,
+        "original_id": "0ecd7cd4-61cc-5942-8132-af4c5663a4b7",
+        "text": "existing peoplemover infrastructure",
+        "type": "Entity"
+      },
+      {
+        "id": 15,
+        "original_id": "b0fd9df7-d231-56c6-b6de-b38c3191fef6",
+        "text": "infrastructure",
+        "type": "EntityType"
+      },
+      {
+        "id": 16,
+        "original_id": "f5f8aeb6-6a4c-5d32-a986-419208aa50b1",
+        "text": "new tomorrowland project",
+        "type": "Entity"
+      },
+      {
+        "id": 17,
+        "original_id": "ed098e70-7598-5ee9-a836-d175d95aae72",
+        "text": "project",
+        "type": "EntityType"
+      },
+      {
+        "id": 18,
+        "original_id": "eece538e-ca51-5a33-96f5-89df1379dcaa",
+        "text": "peoplemover",
+        "type": "Entity"
+      },
+      {
+        "id": 19,
+        "original_id": "7d843606-9787-5b83-900b-849583c80db5",
+        "text": "1967-07-02",
+        "type": "Entity"
+      },
+      {
+        "id": 20,
+        "original_id": "79b1c9c3-9d40-5071-b04b-da6751f102ab",
+        "text": "1995-08-21",
+        "type": "Entity"
+      },
+      {
+        "id": 21,
+        "original_id": "21727958-1158-5daf-a86f-68e9771d7b5e",
+        "text": "goodyear peoplemover",
+        "type": "Entity"
+      },
+      {
+        "id": 22,
+        "original_id": "e9e72018-5aa6-53da-a80f-215bfdd24270",
+        "text": "wedway peoplemover",
+        "type": "Entity"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 18,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 21,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 22,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "located_in"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 18,
+        "target": 5,
+        "type": "located_in"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 7,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 8,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 9,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 7,
+        "type": "located_in"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      },
+      {
+        "source": 18,
+        "target": 7,
+        "type": "located_in"
+      },
+      {
+        "source": 7,
+        "target": 8,
+        "type": "located_in"
+      },
+      {
+        "source": 1,
+        "target": 8,
+        "type": "contains"
+      },
+      {
+        "source": 8,
+        "target": 9,
+        "type": "located_in"
+      },
+      {
+        "source": 1,
+        "target": 9,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 10,
+        "type": "opened_in"
+      },
+      {
+        "source": 1,
+        "target": 10,
+        "type": "contains"
+      },
+      {
+        "source": 10,
+        "target": 11,
+        "type": "is_a"
+      },
+      {
+        "source": 19,
+        "target": 11,
+        "type": "is_a"
+      },
+      {
+        "source": 20,
+        "target": 11,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 12,
+        "type": "meant_to_evoke"
+      },
+      {
+        "source": 1,
+        "target": 12,
+        "type": "contains"
+      },
+      {
+        "source": 12,
+        "target": 13,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 14,
+        "type": "opened_on"
+      },
+      {
+        "source": 1,
+        "target": 14,
+        "type": "contains"
+      },
+      {
+        "source": 14,
+        "target": 15,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 16,
+        "type": "part_of"
+      },
+      {
+        "source": 1,
+        "target": 16,
+        "type": "contains"
+      },
+      {
+        "source": 16,
+        "target": 17,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 18,
+        "type": "contains"
+      },
+      {
+        "source": 18,
+        "target": 19,
+        "type": "operated_from"
+      },
+      {
+        "source": 1,
+        "target": 19,
+        "type": "contains"
+      },
+      {
+        "source": 18,
+        "target": 20,
+        "type": "operated_until"
+      },
+      {
+        "source": 1,
+        "target": 20,
+        "type": "contains"
+      },
+      {
+        "source": 18,
+        "target": 21,
+        "type": "also_referred_to_as"
+      },
+      {
+        "source": 1,
+        "target": 21,
+        "type": "contains"
+      },
+      {
+        "source": 18,
+        "target": 22,
+        "type": "also_referred_to_as"
+      },
+      {
+        "source": 1,
+        "target": 22,
+        "type": "contains"
+      }
+    ]
+  }
+}

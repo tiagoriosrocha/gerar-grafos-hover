@@ -1,0 +1,447 @@
+{
+  "dataset": "hover",
+  "id": "20617d75-ddf4-4978-a75a-ca8d6ac54a2d",
+  "split": "train",
+  "claim": "Jaffrey, a town in New Hampshire with a population of 5,457 in 2010 is located by Mount Monadnock.",
+  "evidencia": "Page: Monadnock-Sunapee Greenway. Sentence: The Monadnock-Sunapee Greenway (MSG) is a 50 mi hiking trail that traverses the highlands of southern New Hampshire from Mount Monadnock in Jaffrey to Mount Sunapee in Newbury.\nPage: Jaffrey, New Hampshire. Sentence: Jaffrey is a town in Cheshire County, New Hampshire, United States.\nPage: Jaffrey, New Hampshire. Sentence: The population was 5,457 at the 2010 census.",
+  "evidence_text": "Page: Monadnock-Sunapee Greenway. Sentence: The Monadnock-Sunapee Greenway (MSG) is a 50 mi hiking trail that traverses the highlands of southern New Hampshire from Mount Monadnock in Jaffrey to Mount Sunapee in Newbury.\nPage: Jaffrey, New Hampshire. Sentence: Jaffrey is a town in Cheshire County, New Hampshire, United States.\nPage: Jaffrey, New Hampshire. Sentence: The population was 5,457 at the 2010 census.",
+  "label": "SUPPORTED",
+  "num_hops": 2,
+  "hover_metadata": {
+    "supporting_facts": [
+      [
+        "Monadnock-Sunapee Greenway",
+        0
+      ],
+      [
+        "Jaffrey, New Hampshire",
+        0
+      ],
+      [
+        "Jaffrey, New Hampshire",
+        1
+      ]
+    ],
+    "num_hops": 2,
+    "evidence_annotation_id": [
+      0
+    ],
+    "evidence_id": [
+      "Monadnock-Sunapee Greenway::sentence::0",
+      "Jaffrey, New Hampshire::sentence::0",
+      "Jaffrey, New Hampshire::sentence::1"
+    ],
+    "evidence_wiki_url": [
+      "https://en.wikipedia.org/wiki/Monadnock-Sunapee_Greenway",
+      "https://en.wikipedia.org/wiki/Jaffrey%2C_New_Hampshire"
+    ],
+    "evidence_sentence_id": [
+      "Monadnock-Sunapee Greenway::sentence::0",
+      "Jaffrey, New Hampshire::sentence::0",
+      "Jaffrey, New Hampshire::sentence::1"
+    ]
+  },
+  "grafo_claim": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "cb7f6d27-22ce-54c7-9fe8-c8c062255098",
+        "text": "This chunk is about:\n- Places: Jaffrey, New Hampshire, Mount Monadnock\n- Topics: population\n\nFacts:\n- In 2010, Jaffrey had a population of 5,457.\n- Jaffrey is a town in New Hampshire.\n- Jaffrey is located by Mount Monadnock.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "5b8b2956-c9ee-5797-808f-f4e0bdeb700d",
+        "text": "Jaffrey, a town in New Hampshire with a population of 5,457 in 2010 is located by Mount Monadnock.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "df6362f6-d46d-50a4-bfb4-e61ca0249122",
+        "text": "text_831229e0aa80fdfedc1b5bcc470295af",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "7827003a-815d-5e4b-bfff-ec1822b38a7a",
+        "text": "jaffrey",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "959ee710-8c33-5f11-8edd-11df04c0edba",
+        "text": "new hampshire",
+        "type": "Entity"
+      },
+      {
+        "id": 5,
+        "original_id": "5f394058-b2a0-5ba8-8466-ba2a18cfcf4e",
+        "text": "place",
+        "type": "EntityType"
+      },
+      {
+        "id": 6,
+        "original_id": "cb1dc1af-5253-5fa4-877e-246a7629f489",
+        "text": "2010",
+        "type": "Entity"
+      },
+      {
+        "id": 7,
+        "original_id": "b19433ae-558c-5aaf-95ac-6231f2a4be0e",
+        "text": "date",
+        "type": "EntityType"
+      },
+      {
+        "id": 8,
+        "original_id": "f6e4d6c0-6854-5a10-9858-c3c12cd82d97",
+        "text": "mount monadnock",
+        "type": "Entity"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "located_in"
+      },
+      {
+        "source": 1,
+        "target": 4,
+        "type": "contains"
+      },
+      {
+        "source": 4,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 8,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 6,
+        "type": "population_in"
+      },
+      {
+        "source": 1,
+        "target": 6,
+        "type": "contains"
+      },
+      {
+        "source": 6,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 8,
+        "type": "located_by"
+      },
+      {
+        "source": 1,
+        "target": 8,
+        "type": "contains"
+      }
+    ]
+  },
+  "grafo_evidencia": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "df9a4eca-55d8-5533-adcc-cbb8a4e93274",
+        "text": "This chunk is about:\n- Places: Jaffrey, Cheshire County, New Hampshire, United States, Mount Monadnock, Mount Sunapee, Newbury\n- Projects: Monadnock-Sunapee Greenway\n- Topics: hiking trails, population\n\nFacts:\n- The Monadnock-Sunapee Greenway is a 50-mile hiking trail in the highlands of southern New Hampshire.\n- The Monadnock-Sunapee Greenway runs from Mount Monadnock in Jaffrey to Mount Sunapee in Newbury.\n- Jaffrey is a town in Cheshire County, New Hampshire, United States.\n- Jaffrey had a population of 5,457 at the 2010 census.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "165ae9ff-68bc-5720-b471-43b90a784082",
+        "text": "Page: Monadnock-Sunapee Greenway. Sentence: The Monadnock-Sunapee Greenway (MSG) is a 50 mi hiking trail that traverses the highlands of southern New Hampshire from Mount Monadnock in Jaffrey to Mount Sunapee in Newbury.\nPage: Jaffrey, New Hampshire. Sentence: Jaffrey is a town in Cheshire County, New Hampshire, United States.\nPage: Jaffrey, New Hampshire. Sentence: The population was 5,457 at the 2010 census.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "17102f4b-193d-5612-9f91-1c660b68a4a0",
+        "text": "text_d897331817b236bd7c38158bc44fc7c1",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "97dece6a-f09e-534d-84ad-9b9f8ddb9254",
+        "text": "monadnock-sunapee greenway",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "36c73f53-5388-5b24-86f5-2a1039af4cb7",
+        "text": "southern new hampshire",
+        "type": "Entity"
+      },
+      {
+        "id": 5,
+        "original_id": "5f394058-b2a0-5ba8-8466-ba2a18cfcf4e",
+        "text": "place",
+        "type": "EntityType"
+      },
+      {
+        "id": 6,
+        "original_id": "f6e4d6c0-6854-5a10-9858-c3c12cd82d97",
+        "text": "mount monadnock",
+        "type": "Entity"
+      },
+      {
+        "id": 7,
+        "original_id": "7827003a-815d-5e4b-bfff-ec1822b38a7a",
+        "text": "jaffrey",
+        "type": "Entity"
+      },
+      {
+        "id": 8,
+        "original_id": "6602504e-03e8-5596-be5d-f6978443241f",
+        "text": "cheshire county",
+        "type": "Entity"
+      },
+      {
+        "id": 9,
+        "original_id": "959ee710-8c33-5f11-8edd-11df04c0edba",
+        "text": "new hampshire",
+        "type": "Entity"
+      },
+      {
+        "id": 10,
+        "original_id": "874a51da-34ea-5037-be47-d87785d43c37",
+        "text": "united states",
+        "type": "Entity"
+      },
+      {
+        "id": 11,
+        "original_id": "4cb6ada6-82d5-5a31-83fe-5bd97fc4f3b0",
+        "text": "2010 census",
+        "type": "Entity"
+      },
+      {
+        "id": 12,
+        "original_id": "b19433ae-558c-5aaf-95ac-6231f2a4be0e",
+        "text": "date",
+        "type": "EntityType"
+      },
+      {
+        "id": 13,
+        "original_id": "7a663a39-9629-5500-afd1-fbadf809906f",
+        "text": "mount sunapee",
+        "type": "Entity"
+      },
+      {
+        "id": 14,
+        "original_id": "490ad1ba-0818-5bf8-9ca0-d6e1125eb10a",
+        "text": "newbury",
+        "type": "Entity"
+      },
+      {
+        "id": 15,
+        "original_id": "3110edd3-a3f1-5cd8-a0b0-f730444e7fd4",
+        "text": "msg",
+        "type": "Entity"
+      },
+      {
+        "id": 16,
+        "original_id": "d2a381fa-3658-5ca6-ada9-2109cfc9331d",
+        "text": "concept",
+        "type": "EntityType"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 15,
+        "target": 3,
+        "type": "abbreviation_for"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "traverses"
+      },
+      {
+        "source": 1,
+        "target": 4,
+        "type": "contains"
+      },
+      {
+        "source": 4,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 10,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 9,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 8,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 7,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 6,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 14,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 13,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 6,
+        "type": "starts_at"
+      },
+      {
+        "source": 1,
+        "target": 6,
+        "type": "contains"
+      },
+      {
+        "source": 6,
+        "target": 7,
+        "type": "located_in"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      },
+      {
+        "source": 7,
+        "target": 8,
+        "type": "located_in"
+      },
+      {
+        "source": 1,
+        "target": 8,
+        "type": "contains"
+      },
+      {
+        "source": 8,
+        "target": 9,
+        "type": "located_in"
+      },
+      {
+        "source": 1,
+        "target": 9,
+        "type": "contains"
+      },
+      {
+        "source": 9,
+        "target": 10,
+        "type": "located_in"
+      },
+      {
+        "source": 1,
+        "target": 10,
+        "type": "contains"
+      },
+      {
+        "source": 7,
+        "target": 11,
+        "type": "population_at"
+      },
+      {
+        "source": 1,
+        "target": 11,
+        "type": "contains"
+      },
+      {
+        "source": 11,
+        "target": 12,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 13,
+        "type": "ends_at"
+      },
+      {
+        "source": 1,
+        "target": 13,
+        "type": "contains"
+      },
+      {
+        "source": 13,
+        "target": 14,
+        "type": "located_in"
+      },
+      {
+        "source": 1,
+        "target": 14,
+        "type": "contains"
+      },
+      {
+        "source": 1,
+        "target": 15,
+        "type": "contains"
+      },
+      {
+        "source": 15,
+        "target": 16,
+        "type": "is_a"
+      }
+    ]
+  }
+}

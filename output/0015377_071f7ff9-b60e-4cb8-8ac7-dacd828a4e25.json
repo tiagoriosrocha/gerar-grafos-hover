@@ -1,0 +1,463 @@
+{
+  "dataset": "hover",
+  "id": "071f7ff9-b60e-4cb8-8ac7-dacd828a4e25",
+  "split": "train",
+  "claim": "Garajonay National Park belongs to Caldera de Tabouriente. The park that Roque Cinchado lies within also belongs to Caldera de Tabouriente.",
+  "evidencia": "Page: Teide National Park. Sentence: Teide National Park (Spanish: \"Parque nacional del Teide\" , ] ) is a national park located in Tenerife (Canary Islands, Spain).\nPage: Garajonay National Park. Sentence: Garajonay National Park (Spanish: \"Parque nacional de Garajonay\" , ] ) is located in the center and north of the island of La Gomera, one of the Canary Islands (Spain).\nPage: Roque Cinchado. Sentence: It lies within the Teide National Park (a World Heritage Site) in the municipality of La Orotava, near the volcano of the same name, in the heart of the island.",
+  "evidence_text": "Page: Teide National Park. Sentence: Teide National Park (Spanish: \"Parque nacional del Teide\" , ] ) is a national park located in Tenerife (Canary Islands, Spain).\nPage: Garajonay National Park. Sentence: Garajonay National Park (Spanish: \"Parque nacional de Garajonay\" , ] ) is located in the center and north of the island of La Gomera, one of the Canary Islands (Spain).\nPage: Roque Cinchado. Sentence: It lies within the Teide National Park (a World Heritage Site) in the municipality of La Orotava, near the volcano of the same name, in the heart of the island.",
+  "label": "NOT_SUPPORTED",
+  "num_hops": 3,
+  "hover_metadata": {
+    "supporting_facts": [
+      [
+        "Teide National Park",
+        0
+      ],
+      [
+        "Garajonay National Park",
+        0
+      ],
+      [
+        "Roque Cinchado",
+        1
+      ]
+    ],
+    "num_hops": 3,
+    "evidence_annotation_id": [
+      0
+    ],
+    "evidence_id": [
+      "Teide National Park::sentence::0",
+      "Garajonay National Park::sentence::0",
+      "Roque Cinchado::sentence::1"
+    ],
+    "evidence_wiki_url": [
+      "https://en.wikipedia.org/wiki/Teide_National_Park",
+      "https://en.wikipedia.org/wiki/Garajonay_National_Park",
+      "https://en.wikipedia.org/wiki/Roque_Cinchado"
+    ],
+    "evidence_sentence_id": [
+      "Teide National Park::sentence::0",
+      "Garajonay National Park::sentence::0",
+      "Roque Cinchado::sentence::1"
+    ]
+  },
+  "grafo_claim": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "3da8b988-f10e-5df8-9775-b33c8bda5403",
+        "text": "This chunk is about:\n- Places: Garajonay National Park, Caldera de Tabouriente, Roque Cinchado\n- Topics: park membership\n\nFacts:\n- Garajonay National Park belongs to Caldera de Tabouriente.\n- The park that contains Roque Cinchado belongs to Caldera de Tabouriente.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "a8dbbcfa-00eb-5413-88e2-01fb9ef6092d",
+        "text": "Garajonay National Park belongs to Caldera de Tabouriente. The park that Roque Cinchado lies within also belongs to Caldera de Tabouriente.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "1abd432f-ab59-588f-b062-ae10723fe51a",
+        "text": "text_bc15679d61fe334949e0beef053e31e3",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "3ab1685f-ca3a-5f1c-a764-c558d305871d",
+        "text": "garajonay national park",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "5f394058-b2a0-5ba8-8466-ba2a18cfcf4e",
+        "text": "place",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "bc222115-9d29-57a1-a7d8-0aa0989a23ad",
+        "text": "caldera de tabouriente",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "c2ed8ed8-64fb-57ca-ae4a-a199d2269561",
+        "text": "roque cinchado",
+        "type": "Entity"
+      },
+      {
+        "id": 7,
+        "original_id": "22c8c28d-6f8b-57fc-80ac-e1ac2e275f56",
+        "text": "the park that roque cinchado lies within",
+        "type": "Entity"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 5,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 6,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 7,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "belongs_to"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 7,
+        "target": 5,
+        "type": "belongs_to"
+      },
+      {
+        "source": 1,
+        "target": 6,
+        "type": "contains"
+      },
+      {
+        "source": 6,
+        "target": 7,
+        "type": "lies_within"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      }
+    ]
+  },
+  "grafo_evidencia": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "3b2c3fe7-2e90-5331-9b5d-a43ac77d4e4a",
+        "text": "This chunk is about:\n- Places: Teide National Park, Garajonay National Park, Roque Cinchado, Tenerife, La Gomera, La Orotava, Canary Islands, Spain\n- Concepts: World Heritage Site\n\nFacts:\n- Teide National Park is a national park located in Tenerife in the Canary Islands of Spain.\n- Garajonay National Park is located in the center and north of La Gomera, one of the Canary Islands of Spain.\n- Roque Cinchado lies within Teide National Park, which is a World Heritage Site, in the municipality of La Orotava near the Teide volcano in Tenerife.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "fb0879a1-771d-5e5b-8c83-a4897e76cd29",
+        "text": "Page: Teide National Park. Sentence: Teide National Park (Spanish: \"Parque nacional del Teide\" , ] ) is a national park located in Tenerife (Canary Islands, Spain).\nPage: Garajonay National Park. Sentence: Garajonay National Park (Spanish: \"Parque nacional de Garajonay\" , ] ) is located in the center and north of the island of La Gomera, one of the Canary Islands (Spain).\nPage: Roque Cinchado. Sentence: It lies within the Teide National Park (a World Heritage Site) in the municipality of La Orotava, near the volcano of the same name, in the heart of the island.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "4e4cbdf2-179f-5962-a033-5b82942d7beb",
+        "text": "text_1659709e1ba95d6a07c3f0398de0026c",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "db9f1193-f29f-5abc-af56-dc7d6f1680cb",
+        "text": "teide national park",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "5f394058-b2a0-5ba8-8466-ba2a18cfcf4e",
+        "text": "place",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "f98f609f-ce17-5d57-b788-a411f96f41ef",
+        "text": "parque nacional del teide",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "39575085-0710-527d-bd54-019de7b00429",
+        "text": "name",
+        "type": "EntityType"
+      },
+      {
+        "id": 7,
+        "original_id": "af309061-b421-5f9a-87cb-6acc2c89e8d0",
+        "text": "tenerife",
+        "type": "Entity"
+      },
+      {
+        "id": 8,
+        "original_id": "5a965bf2-1a4d-5fe6-9a8a-cc8d6a628287",
+        "text": "canary islands",
+        "type": "Entity"
+      },
+      {
+        "id": 9,
+        "original_id": "f2ae3fab-b1f6-5e66-b573-047fb78e1603",
+        "text": "spain",
+        "type": "Entity"
+      },
+      {
+        "id": 10,
+        "original_id": "3f0f128f-4f9b-5cb3-a3a5-efa7e4c7399e",
+        "text": "world heritage site",
+        "type": "Entity"
+      },
+      {
+        "id": 11,
+        "original_id": "d2a381fa-3658-5ca6-ada9-2109cfc9331d",
+        "text": "concept",
+        "type": "EntityType"
+      },
+      {
+        "id": 12,
+        "original_id": "3ab1685f-ca3a-5f1c-a764-c558d305871d",
+        "text": "garajonay national park",
+        "type": "Entity"
+      },
+      {
+        "id": 13,
+        "original_id": "f787df28-c384-59cd-bafb-895c850521ce",
+        "text": "parque nacional de garajonay",
+        "type": "Entity"
+      },
+      {
+        "id": 14,
+        "original_id": "0de7821c-acc8-53c0-81aa-1b594eb5d24e",
+        "text": "la gomera",
+        "type": "Entity"
+      },
+      {
+        "id": 15,
+        "original_id": "c2ed8ed8-64fb-57ca-ae4a-a199d2269561",
+        "text": "roque cinchado",
+        "type": "Entity"
+      },
+      {
+        "id": 16,
+        "original_id": "755fe58c-4a4f-539f-a7e0-30db5526c79e",
+        "text": "la orotava",
+        "type": "Entity"
+      },
+      {
+        "id": 17,
+        "original_id": "17ee8c9c-aaf4-5a94-affa-9b064267910e",
+        "text": "teide volcano",
+        "type": "Entity"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 15,
+        "target": 3,
+        "type": "located_in"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 7,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 8,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 9,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 12,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 14,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 15,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 16,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 17,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "has_spanish_name"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 13,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 7,
+        "type": "located_in"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      },
+      {
+        "source": 7,
+        "target": 8,
+        "type": "located_in"
+      },
+      {
+        "source": 1,
+        "target": 8,
+        "type": "contains"
+      },
+      {
+        "source": 14,
+        "target": 8,
+        "type": "located_in"
+      },
+      {
+        "source": 8,
+        "target": 9,
+        "type": "located_in"
+      },
+      {
+        "source": 1,
+        "target": 9,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 10,
+        "type": "has_designation"
+      },
+      {
+        "source": 1,
+        "target": 10,
+        "type": "contains"
+      },
+      {
+        "source": 10,
+        "target": 11,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 12,
+        "type": "contains"
+      },
+      {
+        "source": 12,
+        "target": 13,
+        "type": "has_spanish_name"
+      },
+      {
+        "source": 1,
+        "target": 13,
+        "type": "contains"
+      },
+      {
+        "source": 12,
+        "target": 14,
+        "type": "located_in"
+      },
+      {
+        "source": 1,
+        "target": 14,
+        "type": "contains"
+      },
+      {
+        "source": 1,
+        "target": 15,
+        "type": "contains"
+      },
+      {
+        "source": 15,
+        "target": 16,
+        "type": "located_in"
+      },
+      {
+        "source": 1,
+        "target": 16,
+        "type": "contains"
+      },
+      {
+        "source": 15,
+        "target": 17,
+        "type": "near"
+      },
+      {
+        "source": 1,
+        "target": 17,
+        "type": "contains"
+      }
+    ]
+  }
+}

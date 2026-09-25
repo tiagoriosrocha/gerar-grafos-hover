@@ -1,0 +1,392 @@
+{
+  "dataset": "hover",
+  "id": "e9a1bdd1-ce52-4da9-9d02-d6688405c4b5",
+  "split": "train",
+  "claim": "The director of Fallo! and Baltasar Kormákur are not both from the same continent.",
+  "evidencia": "Page: Tinto Brass. Sentence: Giovanni \"Tinto\" Brass (born 26 March 1933) is an Italian filmmaker.\nPage: Baltasar Kormákur. Sentence: Baltasar Kormákur Samper (born 27 February 1966) is an Icelandic actor, theater and film director, and film producer.\nPage: Fallo!. Sentence: is a 2003 Italian film co-written and directed by Tinto Brass.",
+  "evidence_text": "Page: Tinto Brass. Sentence: Giovanni \"Tinto\" Brass (born 26 March 1933) is an Italian filmmaker.\nPage: Baltasar Kormákur. Sentence: Baltasar Kormákur Samper (born 27 February 1966) is an Icelandic actor, theater and film director, and film producer.\nPage: Fallo!. Sentence: is a 2003 Italian film co-written and directed by Tinto Brass.",
+  "label": "SUPPORTED",
+  "num_hops": 3,
+  "hover_metadata": {
+    "supporting_facts": [
+      [
+        "Tinto Brass",
+        0
+      ],
+      [
+        "Baltasar Kormákur",
+        0
+      ],
+      [
+        "Fallo!",
+        1
+      ]
+    ],
+    "num_hops": 3,
+    "evidence_annotation_id": [
+      0
+    ],
+    "evidence_id": [
+      "Tinto Brass::sentence::0",
+      "Baltasar Kormákur::sentence::0",
+      "Fallo!::sentence::1"
+    ],
+    "evidence_wiki_url": [
+      "https://en.wikipedia.org/wiki/Tinto_Brass",
+      "https://en.wikipedia.org/wiki/Baltasar_Korm%C3%A1kur",
+      "https://en.wikipedia.org/wiki/Fallo%21"
+    ],
+    "evidence_sentence_id": [
+      "Tinto Brass::sentence::0",
+      "Baltasar Kormákur::sentence::0",
+      "Fallo!::sentence::1"
+    ]
+  },
+  "grafo_claim": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "dcf9fdaa-4e8b-5ad6-b0f9-e6a3dd747b40",
+        "text": "This chunk is about:\n- People: Baltasar Kormákur, director of Fallo!\n- Works: Fallo!\n- Places: continents\n\nFacts:\n- The director of Fallo! is from a different continent than Baltasar Kormákur.\n- Baltasar Kormákur and the director of Fallo! are not both from the same continent.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "ca69dbb1-6b47-5547-bdb0-bbc572f1ecb7",
+        "text": "The director of Fallo! and Baltasar Kormákur are not both from the same continent.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "bef04a00-4eed-55c1-a949-fc4478339207",
+        "text": "text_764311a8aa7a5734d873f0c557e7adb7",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "e2f147d9-e64f-595f-9591-b75b66c527c1",
+        "text": "fallo!",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "5263a535-1b4b-5925-be3e-310d03cd303b",
+        "text": "work",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "d8108df0-6a66-5529-a64f-830a8e3d0641",
+        "text": "baltasar kormákur",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "99a82eec-bb35-5bb5-9ed2-e73fc7a756de",
+        "text": "person",
+        "type": "EntityType"
+      },
+      {
+        "id": 7,
+        "original_id": "4dd886a8-9af8-5ee1-a0d7-998c57f8bc41",
+        "text": "director of fallo!",
+        "type": "Entity"
+      },
+      {
+        "id": 8,
+        "original_id": "06ef0045-8b0c-5359-bc61-138e43fa618b",
+        "text": "same continent",
+        "type": "Entity"
+      },
+      {
+        "id": 9,
+        "original_id": "d2a381fa-3658-5ca6-ada9-2109cfc9331d",
+        "text": "concept",
+        "type": "EntityType"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 7,
+        "target": 3,
+        "type": "directed"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 7,
+        "target": 5,
+        "type": "not_from_same_continent_as"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 7,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      },
+      {
+        "source": 1,
+        "target": 8,
+        "type": "contains"
+      },
+      {
+        "source": 8,
+        "target": 9,
+        "type": "is_a"
+      }
+    ]
+  },
+  "grafo_evidencia": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "b817d1df-b3d0-572e-aa3d-eba9ee16d23c",
+        "text": "This chunk is about:\n- People: Tinto Brass, Baltasar Kormákur\n- Works: Fallo!\n- Roles: filmmaker, actor, theater director, film director, film producer\n- Topics: Italian film, Icelandic cinema\n\nFacts:\n- Tinto Brass was born on 26 March 1933.\n- Tinto Brass is an Italian filmmaker.\n- Baltasar Kormákur Samper was born on 27 February 1966.\n- Baltasar Kormákur Samper is an Icelandic actor, theater director, film director, and film producer.\n- Fallo! is a 2003 Italian film.\n- Fallo! was co-written and directed by Tinto Brass.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "e09d875a-f8c2-540d-9d9b-627e48395037",
+        "text": "Page: Tinto Brass. Sentence: Giovanni \"Tinto\" Brass (born 26 March 1933) is an Italian filmmaker.\nPage: Baltasar Kormákur. Sentence: Baltasar Kormákur Samper (born 27 February 1966) is an Icelandic actor, theater and film director, and film producer.\nPage: Fallo!. Sentence: is a 2003 Italian film co-written and directed by Tinto Brass.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "d51e459c-dd70-55c7-90f2-6d544840fda9",
+        "text": "text_cbbe59dafb4f6b0f4025795b923efbee",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "2d2b4842-ca5d-5ff2-9134-43e184467b0b",
+        "text": "giovanni tinto brass",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "99a82eec-bb35-5bb5-9ed2-e73fc7a756de",
+        "text": "person",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "64a54262-45be-5b16-a2e2-affa41acf127",
+        "text": "1933-03-26",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "b19433ae-558c-5aaf-95ac-6231f2a4be0e",
+        "text": "date",
+        "type": "EntityType"
+      },
+      {
+        "id": 7,
+        "original_id": "72368fd8-1be4-54f1-a9ee-3368fdbd9d40",
+        "text": "italy",
+        "type": "Entity"
+      },
+      {
+        "id": 8,
+        "original_id": "5f394058-b2a0-5ba8-8466-ba2a18cfcf4e",
+        "text": "place",
+        "type": "EntityType"
+      },
+      {
+        "id": 9,
+        "original_id": "e2f147d9-e64f-595f-9591-b75b66c527c1",
+        "text": "fallo!",
+        "type": "Entity"
+      },
+      {
+        "id": 10,
+        "original_id": "5263a535-1b4b-5925-be3e-310d03cd303b",
+        "text": "work",
+        "type": "EntityType"
+      },
+      {
+        "id": 11,
+        "original_id": "e243b5c4-48fe-5f0b-9d10-673d4ca025e7",
+        "text": "2003",
+        "type": "Entity"
+      },
+      {
+        "id": 12,
+        "original_id": "534f15fd-e815-542e-9b0b-24ce00ae6849",
+        "text": "baltasar kormákur samper",
+        "type": "Entity"
+      },
+      {
+        "id": 13,
+        "original_id": "25a0131d-2ec0-5431-b50b-c3281d0c4dad",
+        "text": "1966-02-27",
+        "type": "Entity"
+      },
+      {
+        "id": 14,
+        "original_id": "792d9c4a-c4ea-548b-99db-e6a97010dd16",
+        "text": "iceland",
+        "type": "Entity"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 12,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "born_on"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 11,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 13,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 7,
+        "type": "has_nationality"
+      },
+      {
+        "source": 9,
+        "target": 7,
+        "type": "has_country"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      },
+      {
+        "source": 7,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 14,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 9,
+        "type": "co_wrote"
+      },
+      {
+        "source": 1,
+        "target": 9,
+        "type": "contains"
+      },
+      {
+        "source": 9,
+        "target": 10,
+        "type": "is_a"
+      },
+      {
+        "source": 9,
+        "target": 11,
+        "type": "released_in"
+      },
+      {
+        "source": 1,
+        "target": 11,
+        "type": "contains"
+      },
+      {
+        "source": 1,
+        "target": 12,
+        "type": "contains"
+      },
+      {
+        "source": 12,
+        "target": 13,
+        "type": "born_on"
+      },
+      {
+        "source": 1,
+        "target": 13,
+        "type": "contains"
+      },
+      {
+        "source": 12,
+        "target": 14,
+        "type": "has_nationality"
+      },
+      {
+        "source": 1,
+        "target": 14,
+        "type": "contains"
+      }
+    ]
+  }
+}

@@ -1,0 +1,393 @@
+{
+  "dataset": "hover",
+  "id": "bf80e04a-df29-4c58-86d1-05a5989e805b",
+  "split": "train",
+  "claim": "The author of \"The Way the Crow Flies\" had a shorter lifespan by over a decade than another author. This other author wrote the text for \"Votre Faust\".",
+  "evidencia": "Page: Ann-Marie MacDonald. Sentence: Ann-Marie MacDonald (born October 29, 1958) is a Canadian playwright, novelist, actress and broadcast host who lives in Toronto, Ontario, Canada.\nPage: Michel Butor. Sentence: Michel Butor (] ; 14 September 1926 – 24 August 2016) was a French writer.\nPage: The Way the Crow Flies. Sentence: The Way the Crow Flies is a novel by Canadian writer Ann-Marie MacDonald.\nPage: Votre Faust. Sentence: The text is by the French author Michel Butor.",
+  "evidence_text": "Page: Ann-Marie MacDonald. Sentence: Ann-Marie MacDonald (born October 29, 1958) is a Canadian playwright, novelist, actress and broadcast host who lives in Toronto, Ontario, Canada.\nPage: Michel Butor. Sentence: Michel Butor (] ; 14 September 1926 – 24 August 2016) was a French writer.\nPage: The Way the Crow Flies. Sentence: The Way the Crow Flies is a novel by Canadian writer Ann-Marie MacDonald.\nPage: Votre Faust. Sentence: The text is by the French author Michel Butor.",
+  "label": "NOT_SUPPORTED",
+  "num_hops": 4,
+  "hover_metadata": {
+    "supporting_facts": [
+      [
+        "Ann-Marie MacDonald",
+        0
+      ],
+      [
+        "Michel Butor",
+        0
+      ],
+      [
+        "The Way the Crow Flies",
+        0
+      ],
+      [
+        "Votre Faust",
+        1
+      ]
+    ],
+    "num_hops": 4,
+    "evidence_annotation_id": [
+      0
+    ],
+    "evidence_id": [
+      "Ann-Marie MacDonald::sentence::0",
+      "Michel Butor::sentence::0",
+      "The Way the Crow Flies::sentence::0",
+      "Votre Faust::sentence::1"
+    ],
+    "evidence_wiki_url": [
+      "https://en.wikipedia.org/wiki/Ann-Marie_MacDonald",
+      "https://en.wikipedia.org/wiki/Michel_Butor",
+      "https://en.wikipedia.org/wiki/The_Way_the_Crow_Flies",
+      "https://en.wikipedia.org/wiki/Votre_Faust"
+    ],
+    "evidence_sentence_id": [
+      "Ann-Marie MacDonald::sentence::0",
+      "Michel Butor::sentence::0",
+      "The Way the Crow Flies::sentence::0",
+      "Votre Faust::sentence::1"
+    ]
+  },
+  "grafo_claim": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "a3a351d0-23e8-5ff3-b708-0c2b3e8e0051",
+        "text": "This chunk is about:\n- People: Ann-Marie MacDonald, Michel Butor\n- Works: The Way the Crow Flies, Votre Faust\n- Topics: author lifespan comparison\n\nFacts:\n- Ann-Marie MacDonald is the author of \"The Way the Crow Flies.\"\n- Michel Butor wrote the text for \"Votre Faust.\"\n- Michel Butor lived more than a decade longer than Ann-Marie MacDonald.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "f7afac78-2623-53d0-9948-93183507b71f",
+        "text": "The author of \"The Way the Crow Flies\" had a shorter lifespan by over a decade than another author. This other author wrote the text for \"Votre Faust\".",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "6d5b8a60-6027-539f-8c13-4bb0f6ed225f",
+        "text": "text_d1177e4ab59025b9a4784427c98072c7",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "a676ca08-85bf-5362-b0ee-5e7c3b5e6ab6",
+        "text": "ann-marie macdonald",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "6fe2b00e-6caf-573f-bfa4-f3ed8db71329",
+        "text": "the way the crow flies",
+        "type": "Entity"
+      },
+      {
+        "id": 5,
+        "original_id": "5263a535-1b4b-5925-be3e-310d03cd303b",
+        "text": "work",
+        "type": "EntityType"
+      },
+      {
+        "id": 6,
+        "original_id": "63e71e6e-c597-58e7-ae6e-df0cc60ae8ff",
+        "text": "michel butor",
+        "type": "Entity"
+      },
+      {
+        "id": 7,
+        "original_id": "a69e9244-2554-528a-83eb-00779965fca3",
+        "text": "votre faust",
+        "type": "Entity"
+      },
+      {
+        "id": 8,
+        "original_id": "99a82eec-bb35-5bb5-9ed2-e73fc7a756de",
+        "text": "person",
+        "type": "EntityType"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "authored"
+      },
+      {
+        "source": 1,
+        "target": 4,
+        "type": "contains"
+      },
+      {
+        "source": 4,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 7,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 6,
+        "type": "had_shorter_lifespan_than"
+      },
+      {
+        "source": 1,
+        "target": 6,
+        "type": "contains"
+      },
+      {
+        "source": 6,
+        "target": 7,
+        "type": "wrote_text_for"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      },
+      {
+        "source": 6,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 8,
+        "type": "is_a"
+      }
+    ]
+  },
+  "grafo_evidencia": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "9613a90b-882f-5d82-9918-5ecb4dce1b7f",
+        "text": "This chunk is about:\n- People: Ann-Marie MacDonald, Michel Butor\n- Works: The Way the Crow Flies, Votre Faust\n- Places: Toronto, Ontario, Canada\n- Roles: playwright, novelist, actress, broadcast host, writer, author\n\nFacts:\n- Michel Butor was born on 14 September 1926 and died on 24 August 2016.\n- Ann-Marie MacDonald was born on October 29, 1958.\n- Ann-Marie MacDonald is a Canadian playwright, novelist, actress, and broadcast host.\n- Ann-Marie MacDonald lives in Toronto, Ontario, Canada.\n- Michel Butor was a French writer.\n- The Way the Crow Flies is a novel by Canadian writer Ann-Marie MacDonald.\n- The text of Votre Faust is by French author Michel Butor.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "58b1af71-c9a7-5374-ae56-03027158e2d2",
+        "text": "Page: Ann-Marie MacDonald. Sentence: Ann-Marie MacDonald (born October 29, 1958) is a Canadian playwright, novelist, actress and broadcast host who lives in Toronto, Ontario, Canada.\nPage: Michel Butor. Sentence: Michel Butor (] ; 14 September 1926 – 24 August 2016) was a French writer.\nPage: The Way the Crow Flies. Sentence: The Way the Crow Flies is a novel by Canadian writer Ann-Marie MacDonald.\nPage: Votre Faust. Sentence: The text is by the French author Michel Butor.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "e36e4151-4a8b-5992-a320-8b3cf2e38019",
+        "text": "text_cf4a6a3c707fe1a7d1a3c4def71da9a4",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "a676ca08-85bf-5362-b0ee-5e7c3b5e6ab6",
+        "text": "ann-marie macdonald",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "7cfdb907-f4ee-523c-bf60-6acc4bc88054",
+        "text": "1958-10-29",
+        "type": "Entity"
+      },
+      {
+        "id": 5,
+        "original_id": "b19433ae-558c-5aaf-95ac-6231f2a4be0e",
+        "text": "date",
+        "type": "EntityType"
+      },
+      {
+        "id": 6,
+        "original_id": "3fdacab8-94ce-5e11-8343-8e77216781a3",
+        "text": "toronto, ontario, canada",
+        "type": "Entity"
+      },
+      {
+        "id": 7,
+        "original_id": "5f394058-b2a0-5ba8-8466-ba2a18cfcf4e",
+        "text": "place",
+        "type": "EntityType"
+      },
+      {
+        "id": 8,
+        "original_id": "99a82eec-bb35-5bb5-9ed2-e73fc7a756de",
+        "text": "person",
+        "type": "EntityType"
+      },
+      {
+        "id": 9,
+        "original_id": "63e71e6e-c597-58e7-ae6e-df0cc60ae8ff",
+        "text": "michel butor",
+        "type": "Entity"
+      },
+      {
+        "id": 10,
+        "original_id": "02d82009-8c09-530f-92fb-90a03b277203",
+        "text": "1926-09-14",
+        "type": "Entity"
+      },
+      {
+        "id": 11,
+        "original_id": "146be523-91a9-5e18-8dde-f9d74041b443",
+        "text": "2016-08-24",
+        "type": "Entity"
+      },
+      {
+        "id": 12,
+        "original_id": "6fe2b00e-6caf-573f-bfa4-f3ed8db71329",
+        "text": "the way the crow flies",
+        "type": "Entity"
+      },
+      {
+        "id": 13,
+        "original_id": "5263a535-1b4b-5925-be3e-310d03cd303b",
+        "text": "work",
+        "type": "EntityType"
+      },
+      {
+        "id": 14,
+        "original_id": "a69e9244-2554-528a-83eb-00779965fca3",
+        "text": "votre faust",
+        "type": "Entity"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 12,
+        "target": 3,
+        "type": "written_by"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "born_on"
+      },
+      {
+        "source": 1,
+        "target": 4,
+        "type": "contains"
+      },
+      {
+        "source": 4,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 10,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 11,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 6,
+        "type": "lives_in"
+      },
+      {
+        "source": 1,
+        "target": 6,
+        "type": "contains"
+      },
+      {
+        "source": 6,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 9,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 9,
+        "type": "contains"
+      },
+      {
+        "source": 14,
+        "target": 9,
+        "type": "text_by"
+      },
+      {
+        "source": 9,
+        "target": 10,
+        "type": "born_on"
+      },
+      {
+        "source": 1,
+        "target": 10,
+        "type": "contains"
+      },
+      {
+        "source": 9,
+        "target": 11,
+        "type": "died_on"
+      },
+      {
+        "source": 1,
+        "target": 11,
+        "type": "contains"
+      },
+      {
+        "source": 1,
+        "target": 12,
+        "type": "contains"
+      },
+      {
+        "source": 12,
+        "target": 13,
+        "type": "is_a"
+      },
+      {
+        "source": 14,
+        "target": 13,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 14,
+        "type": "contains"
+      }
+    ]
+  }
+}

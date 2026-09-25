@@ -1,0 +1,331 @@
+{
+  "dataset": "hover",
+  "id": "1b234185-2195-481e-af89-978050871eac",
+  "split": "train",
+  "claim": "MedStar Washington Hospital Center is the largest private hospital in Washington, D.C. not Children's National Medical Center.",
+  "evidencia": "Page: Children's National Medical Center. Sentence: Children’s National Medical Center (formerly DC Children’s Hospital) is ranked among the top 10 children’s hospitals in the country by \"U.S. News & World Report.\"\nPage: MedStar Washington Hospital Center. Sentence: MedStar Washington Hospital Center is the largest private hospital in Washington, D.C. A member of MedStar Health, the not-for-profit Hospital Center is licensed for 926 beds.",
+  "evidence_text": "Page: Children's National Medical Center. Sentence: Children’s National Medical Center (formerly DC Children’s Hospital) is ranked among the top 10 children’s hospitals in the country by \"U.S. News & World Report.\"\nPage: MedStar Washington Hospital Center. Sentence: MedStar Washington Hospital Center is the largest private hospital in Washington, D.C. A member of MedStar Health, the not-for-profit Hospital Center is licensed for 926 beds.",
+  "label": "SUPPORTED",
+  "num_hops": 2,
+  "hover_metadata": {
+    "supporting_facts": [
+      [
+        "Children's National Medical Center",
+        0
+      ],
+      [
+        "MedStar Washington Hospital Center",
+        0
+      ]
+    ],
+    "num_hops": 2,
+    "evidence_annotation_id": [
+      0
+    ],
+    "evidence_id": [
+      "Children's National Medical Center::sentence::0",
+      "MedStar Washington Hospital Center::sentence::0"
+    ],
+    "evidence_wiki_url": [
+      "https://en.wikipedia.org/wiki/Children%27s_National_Medical_Center",
+      "https://en.wikipedia.org/wiki/MedStar_Washington_Hospital_Center"
+    ],
+    "evidence_sentence_id": [
+      "Children's National Medical Center::sentence::0",
+      "MedStar Washington Hospital Center::sentence::0"
+    ]
+  },
+  "grafo_claim": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "9301a6e9-291e-5a7c-a3ff-1f3018eb5d06",
+        "text": "This chunk is about:\n- Organizations: MedStar Washington Hospital Center, Children's National Medical Center\n- Places: Washington, D.C.\n\nFacts:\n- MedStar Washington Hospital Center is the largest private hospital in Washington, D.C.\n- Children's National Medical Center is not the largest private hospital in Washington, D.C.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "a7fd1000-e00d-501e-b3c3-be3598520b0f",
+        "text": "MedStar Washington Hospital Center is the largest private hospital in Washington, D.C. not Children's National Medical Center.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "291d4709-f8b5-56a3-90c0-fa0fe67f5fd5",
+        "text": "text_323ad49957573d52f453a67a7de37b29",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "40cd9cb3-8a91-58ca-b3e1-37a3f1ff2426",
+        "text": "medstar washington hospital center",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "193a9885-0f59-521c-a4b2-e6d5a15561ed",
+        "text": "washington, d.c.",
+        "type": "Entity"
+      },
+      {
+        "id": 5,
+        "original_id": "5f394058-b2a0-5ba8-8466-ba2a18cfcf4e",
+        "text": "place",
+        "type": "EntityType"
+      },
+      {
+        "id": 6,
+        "original_id": "388f60fb-220d-55e8-ae9c-3ac93cead308",
+        "text": "organization",
+        "type": "EntityType"
+      },
+      {
+        "id": 7,
+        "original_id": "08e3cf34-670c-54cb-85bc-fbc83e6d4c99",
+        "text": "childrens national medical center",
+        "type": "Entity"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "located_in"
+      },
+      {
+        "source": 1,
+        "target": 4,
+        "type": "contains"
+      },
+      {
+        "source": 7,
+        "target": 4,
+        "type": "not_largest_private_hospital_in"
+      },
+      {
+        "source": 4,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 7,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      }
+    ]
+  },
+  "grafo_evidencia": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "67af26c2-50f4-5d40-ba9e-f280fd409b43",
+        "text": "This chunk is about:\n- Organizations: Children’s National Medical Center, MedStar Washington Hospital Center, MedStar Health, U.S. News & World Report\n- Places: Washington, D.C.\n- Topics: Hospital rankings, Hospital size, Bed capacity\n\nFacts:\n- Children’s National Medical Center was formerly named DC Children’s Hospital.\n- U.S. News & World Report ranked Children’s National Medical Center among the top 10 children’s hospitals in the United States.\n- MedStar Washington Hospital Center is a member of MedStar Health.\n- MedStar Washington Hospital Center is the largest private hospital in Washington, D.C.\n- MedStar Washington Hospital Center is a not-for-profit hospital licensed for 926 beds.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "38861fe6-362b-5115-8c65-3aadea84476f",
+        "text": "Page: Children's National Medical Center. Sentence: Children’s National Medical Center (formerly DC Children’s Hospital) is ranked among the top 10 children’s hospitals in the country by \"U.S. News & World Report.\"\nPage: MedStar Washington Hospital Center. Sentence: MedStar Washington Hospital Center is the largest private hospital in Washington, D.C. A member of MedStar Health, the not-for-profit Hospital Center is licensed for 926 beds.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "bf2cb593-4e93-59ed-bbac-63951311f911",
+        "text": "text_7ff9ff45bf957cc2751baa3406409e14",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "08e3cf34-670c-54cb-85bc-fbc83e6d4c99",
+        "text": "childrens national medical center",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "388f60fb-220d-55e8-ae9c-3ac93cead308",
+        "text": "organization",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "01dd2bfa-685c-5fa1-bb2a-45565b8da81c",
+        "text": "dc childrens hospital",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "00ad9a39-ef94-5542-a91e-197653349007",
+        "text": "u.s. news & world report",
+        "type": "Entity"
+      },
+      {
+        "id": 7,
+        "original_id": "40cd9cb3-8a91-58ca-b3e1-37a3f1ff2426",
+        "text": "medstar washington hospital center",
+        "type": "Entity"
+      },
+      {
+        "id": 8,
+        "original_id": "193a9885-0f59-521c-a4b2-e6d5a15561ed",
+        "text": "washington, d.c.",
+        "type": "Entity"
+      },
+      {
+        "id": 9,
+        "original_id": "5023586d-88a2-53f9-ad15-7e2ebd75eb4c",
+        "text": "location",
+        "type": "EntityType"
+      },
+      {
+        "id": 10,
+        "original_id": "95467b66-20c4-5773-bf96-2b16ff4db0ce",
+        "text": "medstar health",
+        "type": "Entity"
+      },
+      {
+        "id": 11,
+        "original_id": "6e5144bc-acca-5a82-81d5-e8dc7ef505c6",
+        "text": "926 beds",
+        "type": "Entity"
+      },
+      {
+        "id": 12,
+        "original_id": "7a7a0687-e490-5167-ad5a-0e39d9055dee",
+        "text": "quantity",
+        "type": "EntityType"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 3,
+        "type": "former_name_of"
+      },
+      {
+        "source": 6,
+        "target": 3,
+        "type": "ranked"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 5,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 6,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 10,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 7,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 1,
+        "target": 6,
+        "type": "contains"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      },
+      {
+        "source": 7,
+        "target": 8,
+        "type": "located_in"
+      },
+      {
+        "source": 1,
+        "target": 8,
+        "type": "contains"
+      },
+      {
+        "source": 8,
+        "target": 9,
+        "type": "is_a"
+      },
+      {
+        "source": 7,
+        "target": 10,
+        "type": "member_of"
+      },
+      {
+        "source": 1,
+        "target": 10,
+        "type": "contains"
+      },
+      {
+        "source": 7,
+        "target": 11,
+        "type": "licensed_for"
+      },
+      {
+        "source": 1,
+        "target": 11,
+        "type": "contains"
+      },
+      {
+        "source": 11,
+        "target": 12,
+        "type": "is_a"
+      }
+    ]
+  }
+}

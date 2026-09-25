@@ -1,0 +1,795 @@
+{
+  "dataset": "hover",
+  "id": "f1d29d11-38e3-4704-a722-4771459c8012",
+  "split": "train",
+  "claim": "Don Quichotte has more acts than another  Spanish opera. That opera was staged by Bodo Igesz.",
+  "evidencia": "Page: The Bassarids. Sentence: The Bassarids (in German: \"Die Bassariden \") is an opera in one act and an intermezzo, with music by Hans Werner Henze to an English libretto by W. H. Auden and Chester Kallman, after Euripides's \"The Bacchae\".\nPage: Don Quichotte. Sentence: Don Quichotte (\"Don Quixote\") is an opera in five acts by Jules Massenet to a French libretto by Henri Caïn.\nPage: Bodo Igesz. Sentence: He also staged operas for the Salzburg Festival, and staged numerous operas for the Santa Fe Opera; including the United States premieres of Hindemith's \"Cardillac\" (1967), Schoenberg's \"Die Jakobsleiter\" (1968), Henze's \"The Bassarids\" (1968) and Aribert Reimann's \"Melusine\" (1972).",
+  "evidence_text": "Page: The Bassarids. Sentence: The Bassarids (in German: \"Die Bassariden \") is an opera in one act and an intermezzo, with music by Hans Werner Henze to an English libretto by W. H. Auden and Chester Kallman, after Euripides's \"The Bacchae\".\nPage: Don Quichotte. Sentence: Don Quichotte (\"Don Quixote\") is an opera in five acts by Jules Massenet to a French libretto by Henri Caïn.\nPage: Bodo Igesz. Sentence: He also staged operas for the Salzburg Festival, and staged numerous operas for the Santa Fe Opera; including the United States premieres of Hindemith's \"Cardillac\" (1967), Schoenberg's \"Die Jakobsleiter\" (1968), Henze's \"The Bassarids\" (1968) and Aribert Reimann's \"Melusine\" (1972).",
+  "label": "NOT_SUPPORTED",
+  "num_hops": 3,
+  "hover_metadata": {
+    "supporting_facts": [
+      [
+        "The Bassarids",
+        0
+      ],
+      [
+        "Don Quichotte",
+        0
+      ],
+      [
+        "Bodo Igesz",
+        2
+      ]
+    ],
+    "num_hops": 3,
+    "evidence_annotation_id": [
+      0
+    ],
+    "evidence_id": [
+      "The Bassarids::sentence::0",
+      "Don Quichotte::sentence::0",
+      "Bodo Igesz::sentence::2"
+    ],
+    "evidence_wiki_url": [
+      "https://en.wikipedia.org/wiki/The_Bassarids",
+      "https://en.wikipedia.org/wiki/Don_Quichotte",
+      "https://en.wikipedia.org/wiki/Bodo_Igesz"
+    ],
+    "evidence_sentence_id": [
+      "The Bassarids::sentence::0",
+      "Don Quichotte::sentence::0",
+      "Bodo Igesz::sentence::2"
+    ]
+  },
+  "grafo_claim": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "873633c5-b8af-5dec-852e-ae45b891c357",
+        "text": "This chunk is about:\n- Works: Don Quichotte, another Spanish opera\n- People: Bodo Igesz\n- Topics: act counts, staging\n\nFacts:\n- Don Quichotte has more acts than another Spanish opera.\n- Bodo Igesz staged the other Spanish opera.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "d929f341-ef76-53b3-9c82-b7b7cedefa6b",
+        "text": "Don Quichotte has more acts than another  Spanish opera. That opera was staged by Bodo Igesz.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "afbda174-d66f-597a-8501-0969ad7e7e0c",
+        "text": "text_3bc642a3e0f8e439e87cb6442cd209bd",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "8a8d4cab-e157-5d63-9bae-1bd1381df823",
+        "text": "don quichotte",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "4eb9afeb-98f0-51bd-8563-a75a23e8d4f0",
+        "text": "opera",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "099f7193-c963-5e0f-94e5-0a6aaa067ebd",
+        "text": "spanish opera",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "ce4b35d4-4bfb-598c-bb13-c4b349c139eb",
+        "text": "bodo igesz",
+        "type": "Entity"
+      },
+      {
+        "id": 7,
+        "original_id": "99a82eec-bb35-5bb5-9ed2-e73fc7a756de",
+        "text": "person",
+        "type": "EntityType"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 5,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "has_more_acts_than"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 6,
+        "target": 5,
+        "type": "staged"
+      },
+      {
+        "source": 1,
+        "target": 6,
+        "type": "contains"
+      },
+      {
+        "source": 6,
+        "target": 7,
+        "type": "is_a"
+      }
+    ]
+  },
+  "grafo_evidencia": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "c1f15438-87a3-5913-9751-4c5c0292df93",
+        "text": "This chunk is about:\n- People: Hans Werner Henze, W. H. Auden, Chester Kallman, Euripides, Jules Massenet, Henri Caïn, Bodo Igesz, Paul Hindemith, Arnold Schoenberg, Aribert Reimann\n- Works: The Bassarids, The Bacchae, Don Quichotte, Cardillac, Die Jakobsleiter, Melusine\n- Organizations: Salzburg Festival, Santa Fe Opera\n\nFacts:\n- The Bassarids is an opera in one act and an intermezzo with music by Hans Werner Henze.\n- The Bassarids has an English libretto by W. H. Auden and Chester Kallman, based on Euripides's The Bacchae.\n- Don Quichotte is an opera in five acts by Jules Massenet with a French libretto by Henri Caïn.\n- Bodo Igesz staged operas for the Salzburg Festival and numerous operas for the Santa Fe Opera.\n- In 1967, Bodo Igesz staged the United States premiere of Paul Hindemith's Cardillac for the Santa Fe Opera.\n- In 1968, Bodo Igesz staged the United States premieres of Arnold Schoenberg's Die Jakobsleiter and Hans Werner Henze's The Bassarids for the Santa Fe Opera.\n- In 1972, Bodo Igesz staged the United States premiere of Aribert Reimann's Melusine for the Santa Fe Opera.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "e7bbf9ce-340c-5037-92a9-61905be478cb",
+        "text": "Page: The Bassarids. Sentence: The Bassarids (in German: \"Die Bassariden \") is an opera in one act and an intermezzo, with music by Hans Werner Henze to an English libretto by W. H. Auden and Chester Kallman, after Euripides's \"The Bacchae\".\nPage: Don Quichotte. Sentence: Don Quichotte (\"Don Quixote\") is an opera in five acts by Jules Massenet to a French libretto by Henri Caïn.\nPage: Bodo Igesz. Sentence: He also staged operas for the Salzburg Festival, and staged numerous operas for the Santa Fe Opera; including the United States premieres of Hindemith's \"Cardillac\" (1967), Schoenberg's \"Die Jakobsleiter\" (1968), Henze's \"The Bassarids\" (1968) and Aribert Reimann's \"Melusine\" (1972).",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "73e2f5ea-a323-5958-a9fd-9ff71f11ea68",
+        "text": "text_df3b07b88ecd218a3e30a14e024a9ae9",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "07010d90-f5aa-5571-99b2-843fa0219452",
+        "text": "the bassarids",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "5263a535-1b4b-5925-be3e-310d03cd303b",
+        "text": "work",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "a424cc88-0fdc-5761-ac0e-96f50ef8f761",
+        "text": "die bassariden",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "990e69c5-2bd4-5113-864c-21871433c086",
+        "text": "hans werner henze",
+        "type": "Entity"
+      },
+      {
+        "id": 7,
+        "original_id": "99a82eec-bb35-5bb5-9ed2-e73fc7a756de",
+        "text": "person",
+        "type": "EntityType"
+      },
+      {
+        "id": 8,
+        "original_id": "9e7254cd-7b4f-5d96-bbb9-541b35c7e585",
+        "text": "w. h. auden",
+        "type": "Entity"
+      },
+      {
+        "id": 9,
+        "original_id": "3425d953-6ac1-5778-ada3-9a4449a28e58",
+        "text": "chester kallman",
+        "type": "Entity"
+      },
+      {
+        "id": 10,
+        "original_id": "08733c15-69c1-5674-b3dc-e526953a483d",
+        "text": "the bacchae",
+        "type": "Entity"
+      },
+      {
+        "id": 11,
+        "original_id": "6085f2c6-38a4-535c-afc2-da310bdb22a7",
+        "text": "euripides",
+        "type": "Entity"
+      },
+      {
+        "id": 12,
+        "original_id": "8a8d4cab-e157-5d63-9bae-1bd1381df823",
+        "text": "don quichotte",
+        "type": "Entity"
+      },
+      {
+        "id": 13,
+        "original_id": "eea6af6c-399f-5929-95c5-f769b0742b6c",
+        "text": "don quixote",
+        "type": "Entity"
+      },
+      {
+        "id": 14,
+        "original_id": "1fd51028-460b-5a21-be9a-a406f18d8bf9",
+        "text": "jules massenet",
+        "type": "Entity"
+      },
+      {
+        "id": 15,
+        "original_id": "152bb9d6-5ecd-5443-8b9c-251d406c100c",
+        "text": "henri caïn",
+        "type": "Entity"
+      },
+      {
+        "id": 16,
+        "original_id": "ce4b35d4-4bfb-598c-bb13-c4b349c139eb",
+        "text": "bodo igesz",
+        "type": "Entity"
+      },
+      {
+        "id": 17,
+        "original_id": "fb8a809f-9189-512a-802f-dc927792785c",
+        "text": "salzburg festival",
+        "type": "Entity"
+      },
+      {
+        "id": 18,
+        "original_id": "388f60fb-220d-55e8-ae9c-3ac93cead308",
+        "text": "organization",
+        "type": "EntityType"
+      },
+      {
+        "id": 19,
+        "original_id": "86540aba-b10f-52ed-9c3b-68b3597f00d2",
+        "text": "santa fe opera",
+        "type": "Entity"
+      },
+      {
+        "id": 20,
+        "original_id": "0bd76a98-bf38-5391-b530-689b4a03a540",
+        "text": "cardillac",
+        "type": "Entity"
+      },
+      {
+        "id": 21,
+        "original_id": "10bb4706-f202-5b5c-a14d-6192ce25affd",
+        "text": "hindemith",
+        "type": "Entity"
+      },
+      {
+        "id": 22,
+        "original_id": "f9e4a9ec-682c-5341-862a-1783ba768a49",
+        "text": "1967",
+        "type": "Entity"
+      },
+      {
+        "id": 23,
+        "original_id": "b19433ae-558c-5aaf-95ac-6231f2a4be0e",
+        "text": "date",
+        "type": "EntityType"
+      },
+      {
+        "id": 24,
+        "original_id": "065db24a-9cec-52b7-8671-f05bd9f6822f",
+        "text": "die jakobsleiter",
+        "type": "Entity"
+      },
+      {
+        "id": 25,
+        "original_id": "25f1408f-e336-5dc1-b095-3ade60574612",
+        "text": "schoenberg",
+        "type": "Entity"
+      },
+      {
+        "id": 26,
+        "original_id": "909831ea-3dcb-5f8b-b7f8-ae1ea716f0fa",
+        "text": "1968",
+        "type": "Entity"
+      },
+      {
+        "id": 27,
+        "original_id": "8c89540f-4e9f-54bb-8bae-eec81cbc65e4",
+        "text": "melusine",
+        "type": "Entity"
+      },
+      {
+        "id": 28,
+        "original_id": "92cc72e4-95a8-59cf-9bbd-b664508de3ec",
+        "text": "aribert reimann",
+        "type": "Entity"
+      },
+      {
+        "id": 29,
+        "original_id": "ddb05ee8-3e27-5624-bb88-f007ae8f6c80",
+        "text": "1972",
+        "type": "Entity"
+      },
+      {
+        "id": 30,
+        "original_id": "6cdc3d36-44bc-54b0-adc8-47926771b01c",
+        "text": "united states premiere of cardillac",
+        "type": "Entity"
+      },
+      {
+        "id": 31,
+        "original_id": "214abcd9-9adf-5c8a-bb35-1e729f2d68c3",
+        "text": "event",
+        "type": "EntityType"
+      },
+      {
+        "id": 32,
+        "original_id": "a48f2260-33ec-5373-b638-d20b31b74f53",
+        "text": "united states premiere of die jakobsleiter",
+        "type": "Entity"
+      },
+      {
+        "id": 33,
+        "original_id": "f75e240c-658f-5fe3-8cc4-66ff5cda77e7",
+        "text": "united states premiere of the bassarids",
+        "type": "Entity"
+      },
+      {
+        "id": 34,
+        "original_id": "7da15dca-cd92-5e81-8ecf-802edc8f4bfa",
+        "text": "united states premiere of melusine",
+        "type": "Entity"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 33,
+        "target": 3,
+        "type": "premiere_of"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 5,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 10,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 12,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 13,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 20,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 24,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 27,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "has_german_title"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 6,
+        "type": "has_music_by"
+      },
+      {
+        "source": 1,
+        "target": 6,
+        "type": "contains"
+      },
+      {
+        "source": 6,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 8,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 9,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 11,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 14,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 15,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 16,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 21,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 25,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 28,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 8,
+        "type": "has_libretto_by"
+      },
+      {
+        "source": 1,
+        "target": 8,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 9,
+        "type": "has_libretto_by"
+      },
+      {
+        "source": 1,
+        "target": 9,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 10,
+        "type": "based_on"
+      },
+      {
+        "source": 1,
+        "target": 10,
+        "type": "contains"
+      },
+      {
+        "source": 10,
+        "target": 11,
+        "type": "written_by"
+      },
+      {
+        "source": 1,
+        "target": 11,
+        "type": "contains"
+      },
+      {
+        "source": 1,
+        "target": 12,
+        "type": "contains"
+      },
+      {
+        "source": 12,
+        "target": 13,
+        "type": "has_translated_title"
+      },
+      {
+        "source": 1,
+        "target": 13,
+        "type": "contains"
+      },
+      {
+        "source": 12,
+        "target": 14,
+        "type": "composed_by"
+      },
+      {
+        "source": 1,
+        "target": 14,
+        "type": "contains"
+      },
+      {
+        "source": 12,
+        "target": 15,
+        "type": "has_libretto_by"
+      },
+      {
+        "source": 1,
+        "target": 15,
+        "type": "contains"
+      },
+      {
+        "source": 1,
+        "target": 16,
+        "type": "contains"
+      },
+      {
+        "source": 30,
+        "target": 16,
+        "type": "staged_by"
+      },
+      {
+        "source": 32,
+        "target": 16,
+        "type": "staged_by"
+      },
+      {
+        "source": 33,
+        "target": 16,
+        "type": "staged_by"
+      },
+      {
+        "source": 34,
+        "target": 16,
+        "type": "staged_by"
+      },
+      {
+        "source": 16,
+        "target": 17,
+        "type": "staged_operas_for"
+      },
+      {
+        "source": 1,
+        "target": 17,
+        "type": "contains"
+      },
+      {
+        "source": 17,
+        "target": 18,
+        "type": "is_a"
+      },
+      {
+        "source": 19,
+        "target": 18,
+        "type": "is_a"
+      },
+      {
+        "source": 16,
+        "target": 19,
+        "type": "staged_operas_for"
+      },
+      {
+        "source": 1,
+        "target": 19,
+        "type": "contains"
+      },
+      {
+        "source": 30,
+        "target": 19,
+        "type": "presented_by"
+      },
+      {
+        "source": 32,
+        "target": 19,
+        "type": "presented_by"
+      },
+      {
+        "source": 33,
+        "target": 19,
+        "type": "presented_by"
+      },
+      {
+        "source": 34,
+        "target": 19,
+        "type": "presented_by"
+      },
+      {
+        "source": 1,
+        "target": 20,
+        "type": "contains"
+      },
+      {
+        "source": 30,
+        "target": 20,
+        "type": "premiere_of"
+      },
+      {
+        "source": 20,
+        "target": 21,
+        "type": "composed_by"
+      },
+      {
+        "source": 1,
+        "target": 21,
+        "type": "contains"
+      },
+      {
+        "source": 1,
+        "target": 22,
+        "type": "contains"
+      },
+      {
+        "source": 30,
+        "target": 22,
+        "type": "occurred_in"
+      },
+      {
+        "source": 22,
+        "target": 23,
+        "type": "is_a"
+      },
+      {
+        "source": 26,
+        "target": 23,
+        "type": "is_a"
+      },
+      {
+        "source": 29,
+        "target": 23,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 24,
+        "type": "contains"
+      },
+      {
+        "source": 32,
+        "target": 24,
+        "type": "premiere_of"
+      },
+      {
+        "source": 24,
+        "target": 25,
+        "type": "composed_by"
+      },
+      {
+        "source": 1,
+        "target": 25,
+        "type": "contains"
+      },
+      {
+        "source": 1,
+        "target": 26,
+        "type": "contains"
+      },
+      {
+        "source": 32,
+        "target": 26,
+        "type": "occurred_in"
+      },
+      {
+        "source": 33,
+        "target": 26,
+        "type": "occurred_in"
+      },
+      {
+        "source": 1,
+        "target": 27,
+        "type": "contains"
+      },
+      {
+        "source": 34,
+        "target": 27,
+        "type": "premiere_of"
+      },
+      {
+        "source": 27,
+        "target": 28,
+        "type": "composed_by"
+      },
+      {
+        "source": 1,
+        "target": 28,
+        "type": "contains"
+      },
+      {
+        "source": 1,
+        "target": 29,
+        "type": "contains"
+      },
+      {
+        "source": 34,
+        "target": 29,
+        "type": "occurred_in"
+      },
+      {
+        "source": 1,
+        "target": 30,
+        "type": "contains"
+      },
+      {
+        "source": 30,
+        "target": 31,
+        "type": "is_a"
+      },
+      {
+        "source": 32,
+        "target": 31,
+        "type": "is_a"
+      },
+      {
+        "source": 33,
+        "target": 31,
+        "type": "is_a"
+      },
+      {
+        "source": 34,
+        "target": 31,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 32,
+        "type": "contains"
+      },
+      {
+        "source": 1,
+        "target": 33,
+        "type": "contains"
+      },
+      {
+        "source": 1,
+        "target": 34,
+        "type": "contains"
+      }
+    ]
+  }
+}

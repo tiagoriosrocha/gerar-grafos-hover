@@ -1,0 +1,436 @@
+{
+  "dataset": "hover",
+  "id": "47b08175-f371-4163-a2fc-5175515eaaff",
+  "split": "train",
+  "claim": "San Antonio International Airport and Yakutat Airport are in the same country.",
+  "evidencia": "Page: San Antonio International Airport. Sentence: San Antonio International Airport (IATA: SAT, ICAO: KSAT, FAA LID: SAT) is an international airport located in San Antonio, Texas and serving the Greater San Antonio metropolitan area.\nPage: Yakutat Airport. Sentence: Yakutat Airport (IATA: YAK, ICAO: PAYA, FAA LID: YAK) is a state owned, public use airport located three nautical miles (6 km) southeast of the central business district of Yakutat, a city and borough in the U.S. state of Alaska which has no road access to the outside world.",
+  "evidence_text": "Page: San Antonio International Airport. Sentence: San Antonio International Airport (IATA: SAT, ICAO: KSAT, FAA LID: SAT) is an international airport located in San Antonio, Texas and serving the Greater San Antonio metropolitan area.\nPage: Yakutat Airport. Sentence: Yakutat Airport (IATA: YAK, ICAO: PAYA, FAA LID: YAK) is a state owned, public use airport located three nautical miles (6 km) southeast of the central business district of Yakutat, a city and borough in the U.S. state of Alaska which has no road access to the outside world.",
+  "label": "SUPPORTED",
+  "num_hops": 2,
+  "hover_metadata": {
+    "supporting_facts": [
+      [
+        "San Antonio International Airport",
+        0
+      ],
+      [
+        "Yakutat Airport",
+        0
+      ]
+    ],
+    "num_hops": 2,
+    "evidence_annotation_id": [
+      0
+    ],
+    "evidence_id": [
+      "San Antonio International Airport::sentence::0",
+      "Yakutat Airport::sentence::0"
+    ],
+    "evidence_wiki_url": [
+      "https://en.wikipedia.org/wiki/San_Antonio_International_Airport",
+      "https://en.wikipedia.org/wiki/Yakutat_Airport"
+    ],
+    "evidence_sentence_id": [
+      "San Antonio International Airport::sentence::0",
+      "Yakutat Airport::sentence::0"
+    ]
+  },
+  "grafo_claim": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "49ce337b-f7fb-5972-a23c-b6d237ab1178",
+        "text": "This chunk is about:\n- Places: San Antonio International Airport, Yakutat Airport\n- Topics: country location\n\nFacts:\n- San Antonio International Airport and Yakutat Airport are in the same country.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "11119cdb-7eae-5e79-86a3-fa7877e80504",
+        "text": "San Antonio International Airport and Yakutat Airport are in the same country.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "a29af759-b0e4-5a36-a19e-e12d9c154993",
+        "text": "text_d75327797fde0beaccde44b45a54971e",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "18141697-ef7d-55cf-8c8f-80fd6067612d",
+        "text": "san antonio international airport",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "760b58fa-16ae-56c8-95ec-b3f0045d990f",
+        "text": "same country",
+        "type": "Entity"
+      },
+      {
+        "id": 5,
+        "original_id": "d2a381fa-3658-5ca6-ada9-2109cfc9331d",
+        "text": "concept",
+        "type": "EntityType"
+      },
+      {
+        "id": 6,
+        "original_id": "50596f1a-2d8a-5de7-96b5-ba7068791784",
+        "text": "airport",
+        "type": "EntityType"
+      },
+      {
+        "id": 7,
+        "original_id": "f30f735b-a253-5e3e-b346-d17d1e899890",
+        "text": "yakutat airport",
+        "type": "Entity"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "shares_country_with"
+      },
+      {
+        "source": 7,
+        "target": 4,
+        "type": "shares_country_with"
+      },
+      {
+        "source": 1,
+        "target": 4,
+        "type": "contains"
+      },
+      {
+        "source": 4,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 7,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      }
+    ]
+  },
+  "grafo_evidencia": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "b8c50fe0-1f72-5570-89c8-dec477eff15c",
+        "text": "This chunk is about:\n- Places: San Antonio, Texas; Greater San Antonio metropolitan area; Yakutat, Alaska\n- Organizations: San Antonio International Airport; Yakutat Airport\n- Codes: IATA SAT, ICAO KSAT, FAA LID SAT; IATA YAK, ICAO PAYA, FAA LID YAK\n\nFacts:\n- San Antonio International Airport is an international airport in San Antonio, Texas, and it serves the Greater San Antonio metropolitan area.\n- San Antonio International Airport has the codes IATA SAT, ICAO KSAT, and FAA LID SAT.\n- Yakutat Airport is a state-owned public-use airport located three nautical miles southeast of the central business district of Yakutat, Alaska.\n- Yakutat Airport has the codes IATA YAK, ICAO PAYA, and FAA LID YAK.\n- Yakutat is a city and borough in Alaska that has no road access to the outside world.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "7a771bed-1315-5a63-87f9-884ce275097c",
+        "text": "Page: San Antonio International Airport. Sentence: San Antonio International Airport (IATA: SAT, ICAO: KSAT, FAA LID: SAT) is an international airport located in San Antonio, Texas and serving the Greater San Antonio metropolitan area.\nPage: Yakutat Airport. Sentence: Yakutat Airport (IATA: YAK, ICAO: PAYA, FAA LID: YAK) is a state owned, public use airport located three nautical miles (6 km) southeast of the central business district of Yakutat, a city and borough in the U.S. state of Alaska which has no road access to the outside world.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "ae6ea502-2520-53a7-8f48-948f64eaa6e4",
+        "text": "text_b3a4fe476cb479b38d59af6c573c3653",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "18141697-ef7d-55cf-8c8f-80fd6067612d",
+        "text": "san antonio international airport",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "24880e42-3b2e-523d-b61d-52874ac8eca9",
+        "text": "sat",
+        "type": "Entity"
+      },
+      {
+        "id": 5,
+        "original_id": "2c23f4f7-2223-5c53-a5f6-1bd0114fcd6a",
+        "text": "code",
+        "type": "EntityType"
+      },
+      {
+        "id": 6,
+        "original_id": "9fc5c29b-728b-55cb-9d61-a16cf0c19097",
+        "text": "ksat",
+        "type": "Entity"
+      },
+      {
+        "id": 7,
+        "original_id": "a08bca9b-819d-5565-8088-6d7210f31ef1",
+        "text": "san antonio",
+        "type": "Entity"
+      },
+      {
+        "id": 8,
+        "original_id": "5b5c9733-5661-5cc8-814f-2796b46669fa",
+        "text": "texas",
+        "type": "Entity"
+      },
+      {
+        "id": 9,
+        "original_id": "5f394058-b2a0-5ba8-8466-ba2a18cfcf4e",
+        "text": "place",
+        "type": "EntityType"
+      },
+      {
+        "id": 10,
+        "original_id": "e990d7e8-607e-5494-9f6d-3ec651b661a4",
+        "text": "greater san antonio metropolitan area",
+        "type": "Entity"
+      },
+      {
+        "id": 11,
+        "original_id": "50596f1a-2d8a-5de7-96b5-ba7068791784",
+        "text": "airport",
+        "type": "EntityType"
+      },
+      {
+        "id": 12,
+        "original_id": "f30f735b-a253-5e3e-b346-d17d1e899890",
+        "text": "yakutat airport",
+        "type": "Entity"
+      },
+      {
+        "id": 13,
+        "original_id": "bdb474ff-517d-550c-b3a6-a9662df99c6d",
+        "text": "yak",
+        "type": "Entity"
+      },
+      {
+        "id": 14,
+        "original_id": "3e023340-a39a-5cd9-ac2d-b7ae2c566376",
+        "text": "paya",
+        "type": "Entity"
+      },
+      {
+        "id": 15,
+        "original_id": "458ef358-1c45-5a00-b86c-3f5b35643188",
+        "text": "yakutat",
+        "type": "Entity"
+      },
+      {
+        "id": 16,
+        "original_id": "d7402577-c43b-5ad1-a134-b926ae71ce41",
+        "text": "alaska",
+        "type": "Entity"
+      },
+      {
+        "id": 17,
+        "original_id": "6e254358-f56d-5e52-8403-ef927ebf6947",
+        "text": "central business district of yakutat",
+        "type": "Entity"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "has_iata_code"
+      },
+      {
+        "source": 1,
+        "target": 4,
+        "type": "contains"
+      },
+      {
+        "source": 4,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 6,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 13,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 14,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 6,
+        "type": "has_icao_code"
+      },
+      {
+        "source": 1,
+        "target": 6,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 7,
+        "type": "located_in"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      },
+      {
+        "source": 7,
+        "target": 8,
+        "type": "located_in"
+      },
+      {
+        "source": 1,
+        "target": 8,
+        "type": "contains"
+      },
+      {
+        "source": 8,
+        "target": 9,
+        "type": "is_a"
+      },
+      {
+        "source": 7,
+        "target": 9,
+        "type": "is_a"
+      },
+      {
+        "source": 10,
+        "target": 9,
+        "type": "is_a"
+      },
+      {
+        "source": 16,
+        "target": 9,
+        "type": "is_a"
+      },
+      {
+        "source": 15,
+        "target": 9,
+        "type": "is_a"
+      },
+      {
+        "source": 17,
+        "target": 9,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 10,
+        "type": "serves"
+      },
+      {
+        "source": 1,
+        "target": 10,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 11,
+        "type": "is_a"
+      },
+      {
+        "source": 12,
+        "target": 11,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 12,
+        "type": "contains"
+      },
+      {
+        "source": 12,
+        "target": 13,
+        "type": "has_iata_code"
+      },
+      {
+        "source": 1,
+        "target": 13,
+        "type": "contains"
+      },
+      {
+        "source": 12,
+        "target": 14,
+        "type": "has_icao_code"
+      },
+      {
+        "source": 1,
+        "target": 14,
+        "type": "contains"
+      },
+      {
+        "source": 12,
+        "target": 15,
+        "type": "located_near"
+      },
+      {
+        "source": 1,
+        "target": 15,
+        "type": "contains"
+      },
+      {
+        "source": 15,
+        "target": 16,
+        "type": "located_in"
+      },
+      {
+        "source": 1,
+        "target": 16,
+        "type": "contains"
+      },
+      {
+        "source": 12,
+        "target": 17,
+        "type": "located_southeast_of"
+      },
+      {
+        "source": 1,
+        "target": 17,
+        "type": "contains"
+      }
+    ]
+  }
+}

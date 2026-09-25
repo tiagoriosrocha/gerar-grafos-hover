@@ -1,0 +1,369 @@
+{
+  "dataset": "hover",
+  "id": "d4339e71-ba84-41c6-babe-364a0d312d9b",
+  "split": "train",
+  "claim": "Queen Elizabeth II is the mother of Prince Charles, who had allegations made against him related to the lawsuit \"Two Jane Does v US\".",
+  "evidencia": "Page: Two Jane Does v US. Sentence: Jane Doe #1 and Jane Doe #2 vs United States of America is a civil action in the US District Court in Florida, which has led to allegations of inappropriate behavior being made against Alan Dershowitz and Prince Andrew, Duke of York.\nPage: Prince Andrew, Duke of York. Sentence: Prince Andrew, Duke of York, {'1': \", '2': \", '3': \", '4': \"} (Andrew Albert Christian Edward, born 19 February 1960), is the second son and third child of Queen Elizabeth II and Prince Philip, Duke of Edinburgh.",
+  "evidence_text": "Page: Two Jane Does v US. Sentence: Jane Doe #1 and Jane Doe #2 vs United States of America is a civil action in the US District Court in Florida, which has led to allegations of inappropriate behavior being made against Alan Dershowitz and Prince Andrew, Duke of York.\nPage: Prince Andrew, Duke of York. Sentence: Prince Andrew, Duke of York, {'1': \", '2': \", '3': \", '4': \"} (Andrew Albert Christian Edward, born 19 February 1960), is the second son and third child of Queen Elizabeth II and Prince Philip, Duke of Edinburgh.",
+  "label": "NOT_SUPPORTED",
+  "num_hops": 2,
+  "hover_metadata": {
+    "supporting_facts": [
+      [
+        "Two Jane Does v US",
+        0
+      ],
+      [
+        "Prince Andrew, Duke of York",
+        0
+      ]
+    ],
+    "num_hops": 2,
+    "evidence_annotation_id": [
+      0
+    ],
+    "evidence_id": [
+      "Two Jane Does v US::sentence::0",
+      "Prince Andrew, Duke of York::sentence::0"
+    ],
+    "evidence_wiki_url": [
+      "https://en.wikipedia.org/wiki/Two_Jane_Does_v_US",
+      "https://en.wikipedia.org/wiki/Prince_Andrew%2C_Duke_of_York"
+    ],
+    "evidence_sentence_id": [
+      "Two Jane Does v US::sentence::0",
+      "Prince Andrew, Duke of York::sentence::0"
+    ]
+  },
+  "grafo_claim": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "5ae72b3d-9bdc-5c19-ad7f-1406d1fc6391",
+        "text": "This chunk is about:\n- People: Queen Elizabeth II, Prince Charles\n- Events: Two Jane Does v US lawsuit\n\nFacts:\n- Queen Elizabeth II is the mother of Prince Charles.\n- Allegations were made against Prince Charles related to the lawsuit \"Two Jane Does v US\".",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "f9bf6c29-25a0-53cd-b35e-8660bd11ca62",
+        "text": "Queen Elizabeth II is the mother of Prince Charles, who had allegations made against him related to the lawsuit \"Two Jane Does v US\".",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "1df5a2d9-a5c8-5e7f-9bcb-aa9f249f29ad",
+        "text": "text_cb28f23686bcd2acebed7227e72ebabb",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "dbb0ef12-30db-583a-b090-ba80ef8a8fb0",
+        "text": "queen elizabeth ii",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "99a82eec-bb35-5bb5-9ed2-e73fc7a756de",
+        "text": "person",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "76521fa0-29b0-52c6-9ff0-11e76ab9b721",
+        "text": "prince charles",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "92133ce3-0fc2-5b2a-b82b-4396e4fceeec",
+        "text": "two jane does v us",
+        "type": "Entity"
+      },
+      {
+        "id": 7,
+        "original_id": "88d82a78-0fe4-56ef-9e27-20224baa5196",
+        "text": "legal case",
+        "type": "EntityType"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 5,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "mother_of"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "allegations_related_to"
+      },
+      {
+        "source": 1,
+        "target": 6,
+        "type": "contains"
+      },
+      {
+        "source": 6,
+        "target": 7,
+        "type": "is_a"
+      }
+    ]
+  },
+  "grafo_evidencia": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "dcb79406-ece0-5de9-9dda-ba65e43671bb",
+        "text": "This chunk is about:\n- People: Jane Doe #1, Jane Doe #2, Alan Dershowitz, Prince Andrew, Duke of York, Queen Elizabeth II, Prince Philip, Duke of Edinburgh\n- Organizations: United States of America, US District Court in Florida\n- Events: Two Jane Does v US\n\nFacts:\n- Two Jane Does v US is a civil action in the US District Court in Florida.\n- Two Jane Does v US led to allegations of inappropriate behavior against Alan Dershowitz and Prince Andrew, Duke of York.\n- Prince Andrew, Duke of York, was born as Andrew Albert Christian Edward on 19 February 1960.\n- Prince Andrew, Duke of York, is the second son and third child of Queen Elizabeth II and Prince Philip, Duke of Edinburgh.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "b0f318fb-0960-50b4-8c62-3a3332b9bc88",
+        "text": "Page: Two Jane Does v US. Sentence: Jane Doe #1 and Jane Doe #2 vs United States of America is a civil action in the US District Court in Florida, which has led to allegations of inappropriate behavior being made against Alan Dershowitz and Prince Andrew, Duke of York.\nPage: Prince Andrew, Duke of York. Sentence: Prince Andrew, Duke of York, {'1': \", '2': \", '3': \", '4': \"} (Andrew Albert Christian Edward, born 19 February 1960), is the second son and third child of Queen Elizabeth II and Prince Philip, Duke of Edinburgh.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "9073cfd8-e4c9-56fa-9252-874258c43142",
+        "text": "text_23af2f9bf44d041711d9eab1a330d968",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "92133ce3-0fc2-5b2a-b82b-4396e4fceeec",
+        "text": "two jane does v us",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "bb732458-ede6-58aa-ba1d-23fab463d9e6",
+        "text": "case",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "fbed7738-be1a-5f20-8d72-9427b0a1e736",
+        "text": "united states of america",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "35e29ad1-17b7-507a-a205-d7851a5e7102",
+        "text": "country",
+        "type": "EntityType"
+      },
+      {
+        "id": 7,
+        "original_id": "3e6ca864-3a99-5244-a57b-fe7652aded64",
+        "text": "us district court in florida",
+        "type": "Entity"
+      },
+      {
+        "id": 8,
+        "original_id": "39ad2819-c227-58bf-a62b-21559aa361dd",
+        "text": "court",
+        "type": "EntityType"
+      },
+      {
+        "id": 9,
+        "original_id": "a67ebf57-41c3-5497-8919-b4dd46c367c6",
+        "text": "alan dershowitz",
+        "type": "Entity"
+      },
+      {
+        "id": 10,
+        "original_id": "99a82eec-bb35-5bb5-9ed2-e73fc7a756de",
+        "text": "person",
+        "type": "EntityType"
+      },
+      {
+        "id": 11,
+        "original_id": "17d3fca8-c188-57b7-a2bf-8f30acea82ba",
+        "text": "prince andrew, duke of york",
+        "type": "Entity"
+      },
+      {
+        "id": 12,
+        "original_id": "dbb0ef12-30db-583a-b090-ba80ef8a8fb0",
+        "text": "queen elizabeth ii",
+        "type": "Entity"
+      },
+      {
+        "id": 13,
+        "original_id": "6c23e92b-7d14-5974-803d-9aa39cdd3966",
+        "text": "prince philip, duke of edinburgh",
+        "type": "Entity"
+      },
+      {
+        "id": 14,
+        "original_id": "bad14278-e300-5e41-b1f5-b1f9ae337408",
+        "text": "1960-02-19",
+        "type": "Entity"
+      },
+      {
+        "id": 15,
+        "original_id": "b19433ae-558c-5aaf-95ac-6231f2a4be0e",
+        "text": "date",
+        "type": "EntityType"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "vs"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 7,
+        "type": "filed_in"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      },
+      {
+        "source": 7,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 9,
+        "type": "led_to_allegations_against"
+      },
+      {
+        "source": 1,
+        "target": 9,
+        "type": "contains"
+      },
+      {
+        "source": 9,
+        "target": 10,
+        "type": "is_a"
+      },
+      {
+        "source": 11,
+        "target": 10,
+        "type": "is_a"
+      },
+      {
+        "source": 12,
+        "target": 10,
+        "type": "is_a"
+      },
+      {
+        "source": 13,
+        "target": 10,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 11,
+        "type": "led_to_allegations_against"
+      },
+      {
+        "source": 1,
+        "target": 11,
+        "type": "contains"
+      },
+      {
+        "source": 11,
+        "target": 12,
+        "type": "child_of"
+      },
+      {
+        "source": 1,
+        "target": 12,
+        "type": "contains"
+      },
+      {
+        "source": 11,
+        "target": 13,
+        "type": "child_of"
+      },
+      {
+        "source": 1,
+        "target": 13,
+        "type": "contains"
+      },
+      {
+        "source": 11,
+        "target": 14,
+        "type": "born_on"
+      },
+      {
+        "source": 1,
+        "target": 14,
+        "type": "contains"
+      },
+      {
+        "source": 14,
+        "target": 15,
+        "type": "is_a"
+      }
+    ]
+  }
+}

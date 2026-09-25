@@ -1,0 +1,452 @@
+{
+  "dataset": "hover",
+  "id": "84af85b4-df40-49c8-9b67-f3cbe7bef97e",
+  "split": "train",
+  "claim": "10,445 is the 2016 population of the city where the eatery The Old Bar was sited.",
+  "evidencia": "Page: The Old Bar. Sentence: The Old Bar (2001) is a bar and live music venue on the premises of 74–76 Johnston St, between Brunswick and Nicholson streets, in Fitzroy, an inner city suburb of Melbourne, Victoria, Australia.\nPage: Fitzroy, Victoria. Sentence: At the 2016 Census, Fitzroy had a population of 10,445.",
+  "evidence_text": "Page: The Old Bar. Sentence: The Old Bar (2001) is a bar and live music venue on the premises of 74–76 Johnston St, between Brunswick and Nicholson streets, in Fitzroy, an inner city suburb of Melbourne, Victoria, Australia.\nPage: Fitzroy, Victoria. Sentence: At the 2016 Census, Fitzroy had a population of 10,445.",
+  "label": "NOT_SUPPORTED",
+  "num_hops": 2,
+  "hover_metadata": {
+    "supporting_facts": [
+      [
+        "The Old Bar",
+        0
+      ],
+      [
+        "Fitzroy, Victoria",
+        1
+      ]
+    ],
+    "num_hops": 2,
+    "evidence_annotation_id": [
+      0
+    ],
+    "evidence_id": [
+      "The Old Bar::sentence::0",
+      "Fitzroy, Victoria::sentence::1"
+    ],
+    "evidence_wiki_url": [
+      "https://en.wikipedia.org/wiki/The_Old_Bar",
+      "https://en.wikipedia.org/wiki/Fitzroy%2C_Victoria"
+    ],
+    "evidence_sentence_id": [
+      "The Old Bar::sentence::0",
+      "Fitzroy, Victoria::sentence::1"
+    ]
+  },
+  "grafo_claim": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "9b6fb856-c1d4-50db-ae0f-d6dc0e616497",
+        "text": "This chunk is about:\n- Places: the city where The Old Bar was located\n- Organizations: The Old Bar\n- Topics: population statistics\n\nFacts:\n- The city where The Old Bar was sited had a population of 10,445 in 2016.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "f896a4c8-3f2e-5c4a-af27-6895672612e9",
+        "text": "10,445 is the 2016 population of the city where the eatery The Old Bar was sited.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "c45ba80c-c877-5938-9f62-c8b62f4e51ed",
+        "text": "text_f18c74200cc7bef89a2a90a652fccccc",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "c042caa1-899b-574a-a5e0-4c31b66f7c6b",
+        "text": "the old bar",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "8683c8a6-edf5-543b-b6d6-3e4499f2cc23",
+        "text": "the city where the old bar was sited",
+        "type": "Entity"
+      },
+      {
+        "id": 5,
+        "original_id": "5f394058-b2a0-5ba8-8466-ba2a18cfcf4e",
+        "text": "place",
+        "type": "EntityType"
+      },
+      {
+        "id": 6,
+        "original_id": "e4b4371b-a3be-58ef-8db1-07e189dc56ac",
+        "text": "2016",
+        "type": "Entity"
+      },
+      {
+        "id": 7,
+        "original_id": "b19433ae-558c-5aaf-95ac-6231f2a4be0e",
+        "text": "date",
+        "type": "EntityType"
+      },
+      {
+        "id": 8,
+        "original_id": "07f087fe-9f85-5c4b-b8aa-6e77bc39d57c",
+        "text": "10,445",
+        "type": "Entity"
+      },
+      {
+        "id": 9,
+        "original_id": "5c1097ca-fab8-54d5-b57f-5dca4b0e2507",
+        "text": "number",
+        "type": "EntityType"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "located_in"
+      },
+      {
+        "source": 8,
+        "target": 4,
+        "type": "population_of"
+      },
+      {
+        "source": 1,
+        "target": 4,
+        "type": "contains"
+      },
+      {
+        "source": 4,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 6,
+        "type": "contains"
+      },
+      {
+        "source": 8,
+        "target": 6,
+        "type": "population_as_of"
+      },
+      {
+        "source": 6,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 8,
+        "type": "contains"
+      },
+      {
+        "source": 8,
+        "target": 9,
+        "type": "is_a"
+      }
+    ]
+  },
+  "grafo_evidencia": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "4465d685-9ec3-52f5-896e-e95e4f403a31",
+        "text": "This chunk is about:\n- Places: The Old Bar, Fitzroy, Melbourne, Victoria, Australia, Johnston Street, Brunswick Street, Nicholson Street\n- Topics: live music venues, population\n\nFacts:\n- The Old Bar is a bar and live music venue at 74–76 Johnston Street between Brunswick Street and Nicholson Street in Fitzroy, an inner-city suburb of Melbourne, Victoria, Australia.\n- In 2001, The Old Bar was identified as a bar and live music venue.\n- At the 2016 Census, Fitzroy had a population of 10,445.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "97373d3e-8889-5c2c-ac91-2eedba7eed28",
+        "text": "Page: The Old Bar. Sentence: The Old Bar (2001) is a bar and live music venue on the premises of 74–76 Johnston St, between Brunswick and Nicholson streets, in Fitzroy, an inner city suburb of Melbourne, Victoria, Australia.\nPage: Fitzroy, Victoria. Sentence: At the 2016 Census, Fitzroy had a population of 10,445.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "17a933ac-d9ec-5c99-9546-bd57e8b8ce50",
+        "text": "text_c8c7fa0330429c819589203a9e6ced54",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "c042caa1-899b-574a-a5e0-4c31b66f7c6b",
+        "text": "the old bar",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "7bd3af1d-2fce-5267-8017-1300d5a6e9f4",
+        "text": "2001",
+        "type": "Entity"
+      },
+      {
+        "id": 5,
+        "original_id": "b19433ae-558c-5aaf-95ac-6231f2a4be0e",
+        "text": "date",
+        "type": "EntityType"
+      },
+      {
+        "id": 6,
+        "original_id": "96560819-9f2e-57a9-a2dc-dece8dba1083",
+        "text": "74–76 johnston st",
+        "type": "Entity"
+      },
+      {
+        "id": 7,
+        "original_id": "614c3367-176d-50c5-b7f9-fd46267d5bb0",
+        "text": "brunswick street",
+        "type": "Entity"
+      },
+      {
+        "id": 8,
+        "original_id": "5f394058-b2a0-5ba8-8466-ba2a18cfcf4e",
+        "text": "place",
+        "type": "EntityType"
+      },
+      {
+        "id": 9,
+        "original_id": "c6938b22-1c5f-52f6-a3bd-1894b7f741e5",
+        "text": "nicholson street",
+        "type": "Entity"
+      },
+      {
+        "id": 10,
+        "original_id": "47ced34a-571d-5b07-9dbb-6c678e17f34a",
+        "text": "fitzroy",
+        "type": "Entity"
+      },
+      {
+        "id": 11,
+        "original_id": "5e7f74bc-7b4b-5739-bce3-2bd85089399c",
+        "text": "melbourne",
+        "type": "Entity"
+      },
+      {
+        "id": 12,
+        "original_id": "2598e04b-0aae-5c06-bb19-8c1fde00a84e",
+        "text": "victoria",
+        "type": "Entity"
+      },
+      {
+        "id": 13,
+        "original_id": "02448d73-884d-50c7-a919-b94177f1cf43",
+        "text": "australia",
+        "type": "Entity"
+      },
+      {
+        "id": 14,
+        "original_id": "e4b4371b-a3be-58ef-8db1-07e189dc56ac",
+        "text": "2016",
+        "type": "Entity"
+      },
+      {
+        "id": 15,
+        "original_id": "07f087fe-9f85-5c4b-b8aa-6e77bc39d57c",
+        "text": "10,445",
+        "type": "Entity"
+      },
+      {
+        "id": 16,
+        "original_id": "5c1097ca-fab8-54d5-b57f-5dca4b0e2507",
+        "text": "number",
+        "type": "EntityType"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "identified_with_year"
+      },
+      {
+        "source": 1,
+        "target": 4,
+        "type": "contains"
+      },
+      {
+        "source": 4,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 14,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 6,
+        "type": "located_at"
+      },
+      {
+        "source": 1,
+        "target": 6,
+        "type": "contains"
+      },
+      {
+        "source": 6,
+        "target": 7,
+        "type": "between"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      },
+      {
+        "source": 7,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 9,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 13,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 12,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 11,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 10,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 6,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 6,
+        "target": 9,
+        "type": "between"
+      },
+      {
+        "source": 1,
+        "target": 9,
+        "type": "contains"
+      },
+      {
+        "source": 6,
+        "target": 10,
+        "type": "located_in"
+      },
+      {
+        "source": 1,
+        "target": 10,
+        "type": "contains"
+      },
+      {
+        "source": 10,
+        "target": 11,
+        "type": "suburb_of"
+      },
+      {
+        "source": 1,
+        "target": 11,
+        "type": "contains"
+      },
+      {
+        "source": 11,
+        "target": 12,
+        "type": "located_in"
+      },
+      {
+        "source": 1,
+        "target": 12,
+        "type": "contains"
+      },
+      {
+        "source": 12,
+        "target": 13,
+        "type": "located_in"
+      },
+      {
+        "source": 1,
+        "target": 13,
+        "type": "contains"
+      },
+      {
+        "source": 10,
+        "target": 14,
+        "type": "population_as_of"
+      },
+      {
+        "source": 15,
+        "target": 14,
+        "type": "as_of"
+      },
+      {
+        "source": 1,
+        "target": 14,
+        "type": "contains"
+      },
+      {
+        "source": 10,
+        "target": 15,
+        "type": "has_population"
+      },
+      {
+        "source": 1,
+        "target": 15,
+        "type": "contains"
+      },
+      {
+        "source": 15,
+        "target": 16,
+        "type": "is_a"
+      }
+    ]
+  }
+}

@@ -1,0 +1,560 @@
+{
+  "dataset": "hover",
+  "id": "e7bc65aa-0af7-4398-81d6-7c488b11d08e",
+  "split": "train",
+  "claim": "The closely related plant that the name Stylophorum diphyllum is derived from is a perennial plant. Duranta is not a perennial plant.",
+  "evidencia": "Page: Chelidonium. Sentence: Chelidonium majus, commonly known as greater celandine or tetterwort,(although tetterwort also refers to \"Sanguinaria canadensis\"), nipplewort, or swallowwort, is a herbaceous perennial plant, the only species in the genus Chelidonium.\nPage: Duranta. Sentence: Duranta is a genus of flowering plants in the verbena family, Verbenaceae.\nPage: Stylophorum diphyllum. Sentence: The common name is derived from greater celandine (\"Chelidonium majus\"), a closely related European plant with similarly shaped leaves and similarly coloured and shaped flowers.",
+  "evidence_text": "Page: Chelidonium. Sentence: Chelidonium majus, commonly known as greater celandine or tetterwort,(although tetterwort also refers to \"Sanguinaria canadensis\"), nipplewort, or swallowwort, is a herbaceous perennial plant, the only species in the genus Chelidonium.\nPage: Duranta. Sentence: Duranta is a genus of flowering plants in the verbena family, Verbenaceae.\nPage: Stylophorum diphyllum. Sentence: The common name is derived from greater celandine (\"Chelidonium majus\"), a closely related European plant with similarly shaped leaves and similarly coloured and shaped flowers.",
+  "label": "SUPPORTED",
+  "num_hops": 3,
+  "hover_metadata": {
+    "supporting_facts": [
+      [
+        "Chelidonium",
+        0
+      ],
+      [
+        "Duranta",
+        0
+      ],
+      [
+        "Stylophorum diphyllum",
+        1
+      ]
+    ],
+    "num_hops": 3,
+    "evidence_annotation_id": [
+      0
+    ],
+    "evidence_id": [
+      "Chelidonium::sentence::0",
+      "Duranta::sentence::0",
+      "Stylophorum diphyllum::sentence::1"
+    ],
+    "evidence_wiki_url": [
+      "https://en.wikipedia.org/wiki/Chelidonium",
+      "https://en.wikipedia.org/wiki/Duranta",
+      "https://en.wikipedia.org/wiki/Stylophorum_diphyllum"
+    ],
+    "evidence_sentence_id": [
+      "Chelidonium::sentence::0",
+      "Duranta::sentence::0",
+      "Stylophorum diphyllum::sentence::1"
+    ]
+  },
+  "grafo_claim": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "81c439bc-27a4-5ad0-ac3c-05503c5915f4",
+        "text": "This chunk is about:\n- Plants: Stylophorum diphyllum, Duranta\n- Concepts: perennial plants, name derivation\n\nFacts:\n- Stylophorum diphyllum is a plant whose name is derived from a closely related plant.\n- The closely related plant that Stylophorum diphyllum is named after is a perennial plant.\n- Duranta is not a perennial plant.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "011ab161-e517-5f56-9c0c-0d7eb5929e17",
+        "text": "The closely related plant that the name Stylophorum diphyllum is derived from is a perennial plant. Duranta is not a perennial plant.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "b5e22b0b-ff69-5e95-8e67-20fe9827ad93",
+        "text": "text_e9fc76cc9f2a7e3ad12c14f3f1545c0d",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "00179eb0-b34b-530d-a621-9faeb6dd3536",
+        "text": "stylophorum diphyllum",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "37e9c1b3-0a18-56c0-8862-afcdaccdb02a",
+        "text": "closely related plant",
+        "type": "Entity"
+      },
+      {
+        "id": 5,
+        "original_id": "7a6dbeb3-6452-594a-a688-0f760c9b5af3",
+        "text": "perennial plant",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "d2a381fa-3658-5ca6-ada9-2109cfc9331d",
+        "text": "concept",
+        "type": "EntityType"
+      },
+      {
+        "id": 7,
+        "original_id": "2df43048-b175-54c2-b72b-0ff24f41e4f1",
+        "text": "plant",
+        "type": "EntityType"
+      },
+      {
+        "id": 8,
+        "original_id": "e708d989-b4cd-51b5-a27d-0d80476fd60a",
+        "text": "duranta",
+        "type": "Entity"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "name_derived_from"
+      },
+      {
+        "source": 1,
+        "target": 4,
+        "type": "contains"
+      },
+      {
+        "source": 4,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 8,
+        "target": 5,
+        "type": "is_not_a"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 4,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 8,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 8,
+        "type": "contains"
+      }
+    ]
+  },
+  "grafo_evidencia": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "af8c14cf-6339-576c-b3bf-cb0cc981be21",
+        "text": "This chunk is about:\n- Plants: Chelidonium majus, Duranta, Stylophorum diphyllum\n- Taxonomy: Chelidonium, Verbenaceae\n- Topics: common names, genus relationships\n\nFacts:\n- Chelidonium majus is commonly known as greater celandine, tetterwort, nipplewort, or swallowwort.\n- The name tetterwort can also refer to Sanguinaria canadensis.\n- Chelidonium majus is a herbaceous perennial plant and the only species in the genus Chelidonium.\n- Duranta is a genus of flowering plants in the verbena family, Verbenaceae.\n- The common name of Stylophorum diphyllum is derived from greater celandine, Chelidonium majus.\n- Chelidonium majus is a closely related European plant with similarly shaped leaves and similarly coloured and shaped flowers to Stylophorum diphyllum.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "4a38f6ae-c78b-5da3-b26f-9f9b9a1919a5",
+        "text": "Page: Chelidonium. Sentence: Chelidonium majus, commonly known as greater celandine or tetterwort,(although tetterwort also refers to \"Sanguinaria canadensis\"), nipplewort, or swallowwort, is a herbaceous perennial plant, the only species in the genus Chelidonium.\nPage: Duranta. Sentence: Duranta is a genus of flowering plants in the verbena family, Verbenaceae.\nPage: Stylophorum diphyllum. Sentence: The common name is derived from greater celandine (\"Chelidonium majus\"), a closely related European plant with similarly shaped leaves and similarly coloured and shaped flowers.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "67942099-b19f-56e3-9a45-0dc45a65f2bc",
+        "text": "text_e9b3c03b44210da5ff2cc2e25173d1c0",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "7464ece6-84e0-5d6a-b3c2-ab0c79cc0e8d",
+        "text": "chelidonium majus",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "259f0a11-0466-5997-9daf-5e78ceafe558",
+        "text": "greater celandine",
+        "type": "Entity"
+      },
+      {
+        "id": 5,
+        "original_id": "39575085-0710-527d-bd54-019de7b00429",
+        "text": "name",
+        "type": "EntityType"
+      },
+      {
+        "id": 6,
+        "original_id": "f99ee6d5-4ef6-5ac8-87c4-418adac22016",
+        "text": "tetterwort",
+        "type": "Entity"
+      },
+      {
+        "id": 7,
+        "original_id": "79709df4-8a5b-5d7f-8281-0b905a7f262d",
+        "text": "nipplewort",
+        "type": "Entity"
+      },
+      {
+        "id": 8,
+        "original_id": "0cce5668-f34b-580b-8fb4-31738d5d71e5",
+        "text": "swallowwort",
+        "type": "Entity"
+      },
+      {
+        "id": 9,
+        "original_id": "b9f8c555-ddca-5de9-abbd-b883b9e0da39",
+        "text": "chelidonium",
+        "type": "Entity"
+      },
+      {
+        "id": 10,
+        "original_id": "58ce8914-8a9e-5302-9b2d-0d97006e12d3",
+        "text": "genus",
+        "type": "EntityType"
+      },
+      {
+        "id": 11,
+        "original_id": "90a9b5c9-3e26-5873-80a8-882a9780b761",
+        "text": "european plant",
+        "type": "Entity"
+      },
+      {
+        "id": 12,
+        "original_id": "d2a381fa-3658-5ca6-ada9-2109cfc9331d",
+        "text": "concept",
+        "type": "EntityType"
+      },
+      {
+        "id": 13,
+        "original_id": "e54124c2-42b5-5d9f-a3cf-1111cc162d41",
+        "text": "similarly shaped leaves",
+        "type": "Entity"
+      },
+      {
+        "id": 14,
+        "original_id": "5c3a292b-2d13-5246-9044-de2b759146ef",
+        "text": "similarly coloured and shaped flowers",
+        "type": "Entity"
+      },
+      {
+        "id": 15,
+        "original_id": "2df43048-b175-54c2-b72b-0ff24f41e4f1",
+        "text": "plant",
+        "type": "EntityType"
+      },
+      {
+        "id": 16,
+        "original_id": "38fa9e5a-1f90-5657-81ee-0e6a01bdd373",
+        "text": "sanguinaria canadensis",
+        "type": "Entity"
+      },
+      {
+        "id": 17,
+        "original_id": "e708d989-b4cd-51b5-a27d-0d80476fd60a",
+        "text": "duranta",
+        "type": "Entity"
+      },
+      {
+        "id": 18,
+        "original_id": "b3d963be-f53b-5653-978a-a5e5bd2dd7c4",
+        "text": "flowering plants",
+        "type": "Entity"
+      },
+      {
+        "id": 19,
+        "original_id": "667d097a-b7b9-5a66-a896-3efc9fe171e2",
+        "text": "plant group",
+        "type": "EntityType"
+      },
+      {
+        "id": 20,
+        "original_id": "b9d3dba9-158d-5d15-b9be-2e4690f3b8c6",
+        "text": "verbenaceae",
+        "type": "Entity"
+      },
+      {
+        "id": 21,
+        "original_id": "030da7f2-9df8-5253-8cfc-609957d4e333",
+        "text": "family",
+        "type": "EntityType"
+      },
+      {
+        "id": 22,
+        "original_id": "ec33f6ed-a1c8-5150-a9cf-a89a97aecab9",
+        "text": "verbena family",
+        "type": "Entity"
+      },
+      {
+        "id": 23,
+        "original_id": "00179eb0-b34b-530d-a621-9faeb6dd3536",
+        "text": "stylophorum diphyllum",
+        "type": "Entity"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 23,
+        "target": 3,
+        "type": "closely_related_to"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "has_common_name"
+      },
+      {
+        "source": 1,
+        "target": 4,
+        "type": "contains"
+      },
+      {
+        "source": 23,
+        "target": 4,
+        "type": "common_name_derived_from"
+      },
+      {
+        "source": 4,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 6,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 7,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 8,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 6,
+        "type": "has_common_name"
+      },
+      {
+        "source": 1,
+        "target": 6,
+        "type": "contains"
+      },
+      {
+        "source": 16,
+        "target": 6,
+        "type": "has_common_name"
+      },
+      {
+        "source": 3,
+        "target": 7,
+        "type": "has_common_name"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 8,
+        "type": "has_common_name"
+      },
+      {
+        "source": 1,
+        "target": 8,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 9,
+        "type": "only_species_in"
+      },
+      {
+        "source": 1,
+        "target": 9,
+        "type": "contains"
+      },
+      {
+        "source": 9,
+        "target": 10,
+        "type": "is_a"
+      },
+      {
+        "source": 17,
+        "target": 10,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 11,
+        "type": "described_as"
+      },
+      {
+        "source": 1,
+        "target": 11,
+        "type": "contains"
+      },
+      {
+        "source": 11,
+        "target": 12,
+        "type": "is_a"
+      },
+      {
+        "source": 13,
+        "target": 12,
+        "type": "is_a"
+      },
+      {
+        "source": 14,
+        "target": 12,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 13,
+        "type": "has_similarity_feature"
+      },
+      {
+        "source": 23,
+        "target": 13,
+        "type": "has_similarity_feature"
+      },
+      {
+        "source": 1,
+        "target": 13,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 14,
+        "type": "has_similarity_feature"
+      },
+      {
+        "source": 23,
+        "target": 14,
+        "type": "has_similarity_feature"
+      },
+      {
+        "source": 1,
+        "target": 14,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 15,
+        "type": "is_a"
+      },
+      {
+        "source": 16,
+        "target": 15,
+        "type": "is_a"
+      },
+      {
+        "source": 23,
+        "target": 15,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 16,
+        "type": "contains"
+      },
+      {
+        "source": 1,
+        "target": 17,
+        "type": "contains"
+      },
+      {
+        "source": 17,
+        "target": 18,
+        "type": "is_a_genus_of"
+      },
+      {
+        "source": 1,
+        "target": 18,
+        "type": "contains"
+      },
+      {
+        "source": 18,
+        "target": 19,
+        "type": "is_a"
+      },
+      {
+        "source": 17,
+        "target": 20,
+        "type": "in_family"
+      },
+      {
+        "source": 1,
+        "target": 20,
+        "type": "contains"
+      },
+      {
+        "source": 22,
+        "target": 20,
+        "type": "is_same_as"
+      },
+      {
+        "source": 20,
+        "target": 21,
+        "type": "is_a"
+      },
+      {
+        "source": 22,
+        "target": 21,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 22,
+        "type": "contains"
+      },
+      {
+        "source": 1,
+        "target": 23,
+        "type": "contains"
+      }
+    ]
+  }
+}

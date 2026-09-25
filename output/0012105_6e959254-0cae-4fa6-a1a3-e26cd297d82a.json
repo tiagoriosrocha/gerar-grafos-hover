@@ -1,0 +1,381 @@
+{
+  "dataset": "hover",
+  "id": "6e959254-0cae-4fa6-a1a3-e26cd297d82a",
+  "split": "train",
+  "claim": "The Allison J71's name was changed to J35 after it was modified to a thrust of 7400 lbf.",
+  "evidencia": "Page: Allison J71. Sentence: The Allison J71 was a single spool turbojet engine, designed and built in the United States.\nPage: Allison J71. Sentence: It began development in 1948 as a much modified J35, originally designated J35-A-23.\nPage: Allison J35. Sentence: With the afterburner, which most models carried, it produced a thrust of 7400 lbf .",
+  "evidence_text": "Page: Allison J71. Sentence: The Allison J71 was a single spool turbojet engine, designed and built in the United States.\nPage: Allison J71. Sentence: It began development in 1948 as a much modified J35, originally designated J35-A-23.\nPage: Allison J35. Sentence: With the afterburner, which most models carried, it produced a thrust of 7400 lbf .",
+  "label": "SUPPORTED",
+  "num_hops": 2,
+  "hover_metadata": {
+    "supporting_facts": [
+      [
+        "Allison J71",
+        0
+      ],
+      [
+        "Allison J71",
+        1
+      ],
+      [
+        "Allison J35",
+        2
+      ]
+    ],
+    "num_hops": 2,
+    "evidence_annotation_id": [
+      0
+    ],
+    "evidence_id": [
+      "Allison J71::sentence::0",
+      "Allison J71::sentence::1",
+      "Allison J35::sentence::2"
+    ],
+    "evidence_wiki_url": [
+      "https://en.wikipedia.org/wiki/Allison_J71",
+      "https://en.wikipedia.org/wiki/Allison_J35"
+    ],
+    "evidence_sentence_id": [
+      "Allison J71::sentence::0",
+      "Allison J71::sentence::1",
+      "Allison J35::sentence::2"
+    ]
+  },
+  "grafo_claim": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "89bbedd2-638c-5fe5-b06b-2f4247e574e9",
+        "text": "This chunk is about:\n- Products: Allison J71, J35\n- Concepts: engine designation changes, thrust ratings\n\nFacts:\n- The Allison J71 was modified to produce 7,400 lbf of thrust.\n- After that modification, the Allison J71 was renamed the J35.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "5267b648-b7c7-5019-aa9b-f8d6ecbc458a",
+        "text": "The Allison J71's name was changed to J35 after it was modified to a thrust of 7400 lbf.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "c31f4694-3f0a-5303-ac8a-664a6bede35f",
+        "text": "text_0b5e43a3348a3f550fda1be2e27aaeba",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "0d4d3367-8e19-5726-b3ab-00bf1464b0ce",
+        "text": "allison j71",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "ddfba1b8-d2b6-511d-8769-8047c69498b5",
+        "text": "engine",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "39767e27-ec40-5fe4-90af-dc23415e0c90",
+        "text": "7400 lbf",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "12d5521e-a878-542e-bebc-84ff79179d8e",
+        "text": "measurement",
+        "type": "EntityType"
+      },
+      {
+        "id": 7,
+        "original_id": "c6de7203-71a5-5d34-b870-410768db8313",
+        "text": "j35",
+        "type": "Entity"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 7,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "modified_to_thrust"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 7,
+        "type": "renamed_to"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      }
+    ]
+  },
+  "grafo_evidencia": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "ffbe9434-313d-56dc-b795-9c19914c208f",
+        "text": "This chunk is about:\n- Products: Allison J71, Allison J35\n- Concepts: single-spool turbojet engines, afterburners, thrust\n- Places: United States\n\nFacts:\n- In 1948, development of the Allison J71 began as a heavily modified Allison J35 and it was originally designated J35-A-23.\n- The Allison J71 was a single-spool turbojet engine designed and built in the United States.\n- Most Allison J35 models carried an afterburner.\n- With the afterburner, the Allison J35 produced 7,400 lbf of thrust.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "05d417dc-44ff-593f-aecb-dbddbb155baa",
+        "text": "Page: Allison J71. Sentence: The Allison J71 was a single spool turbojet engine, designed and built in the United States.\nPage: Allison J71. Sentence: It began development in 1948 as a much modified J35, originally designated J35-A-23.\nPage: Allison J35. Sentence: With the afterburner, which most models carried, it produced a thrust of 7400 lbf .",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "6b6b396f-c046-5fdd-9f41-61a4b3e01c02",
+        "text": "text_afa4a9bef27b7e2663eaacccb3fbcd1b",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "0d4d3367-8e19-5726-b3ab-00bf1464b0ce",
+        "text": "allison j71",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "ddfba1b8-d2b6-511d-8769-8047c69498b5",
+        "text": "engine",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "0160a56f-bb9e-5157-b256-fb7f98cb4f0c",
+        "text": "single spool turbojet engine",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "a87bbc8f-b781-5057-872f-0447a7b1170f",
+        "text": "engine type",
+        "type": "EntityType"
+      },
+      {
+        "id": 7,
+        "original_id": "874a51da-34ea-5037-be47-d87785d43c37",
+        "text": "united states",
+        "type": "Entity"
+      },
+      {
+        "id": 8,
+        "original_id": "35e29ad1-17b7-507a-a205-d7851a5e7102",
+        "text": "country",
+        "type": "EntityType"
+      },
+      {
+        "id": 9,
+        "original_id": "26ece520-b6ee-5181-987a-9ec239367a39",
+        "text": "1948",
+        "type": "Entity"
+      },
+      {
+        "id": 10,
+        "original_id": "b19433ae-558c-5aaf-95ac-6231f2a4be0e",
+        "text": "date",
+        "type": "EntityType"
+      },
+      {
+        "id": 11,
+        "original_id": "16e6022d-ca67-568a-a2aa-eabb2924662f",
+        "text": "allison j35",
+        "type": "Entity"
+      },
+      {
+        "id": 12,
+        "original_id": "e8ec1f91-068f-5496-a815-77db5ae32f00",
+        "text": "afterburner",
+        "type": "Entity"
+      },
+      {
+        "id": 13,
+        "original_id": "4c092ca6-50b2-5e1e-8f5f-20b77ca1cde0",
+        "text": "component",
+        "type": "EntityType"
+      },
+      {
+        "id": 14,
+        "original_id": "39767e27-ec40-5fe4-90af-dc23415e0c90",
+        "text": "7400 lbf",
+        "type": "Entity"
+      },
+      {
+        "id": 15,
+        "original_id": "12d5521e-a878-542e-bebc-84ff79179d8e",
+        "text": "measurement",
+        "type": "EntityType"
+      },
+      {
+        "id": 16,
+        "original_id": "117f8b76-1039-5d71-b1ff-156c59864b2e",
+        "text": "j35-a-23",
+        "type": "Entity"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 11,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 16,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 7,
+        "type": "designed_and_built_in"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      },
+      {
+        "source": 7,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 9,
+        "type": "began_development_in"
+      },
+      {
+        "source": 1,
+        "target": 9,
+        "type": "contains"
+      },
+      {
+        "source": 9,
+        "target": 10,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 11,
+        "type": "modified_from"
+      },
+      {
+        "source": 1,
+        "target": 11,
+        "type": "contains"
+      },
+      {
+        "source": 11,
+        "target": 12,
+        "type": "carried_component"
+      },
+      {
+        "source": 1,
+        "target": 12,
+        "type": "contains"
+      },
+      {
+        "source": 12,
+        "target": 13,
+        "type": "is_a"
+      },
+      {
+        "source": 11,
+        "target": 14,
+        "type": "produced_thrust_with"
+      },
+      {
+        "source": 1,
+        "target": 14,
+        "type": "contains"
+      },
+      {
+        "source": 14,
+        "target": 15,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 16,
+        "type": "originally_designated_as"
+      },
+      {
+        "source": 1,
+        "target": 16,
+        "type": "contains"
+      }
+    ]
+  }
+}

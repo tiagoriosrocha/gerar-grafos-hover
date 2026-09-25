@@ -1,0 +1,405 @@
+{
+  "dataset": "hover",
+  "id": "c9511a04-0ee4-4e87-b495-f872b8133942",
+  "split": "train",
+  "claim": "North Blenheim, New York was destroyed by flooding caused by the Hurricane that landed in August 2011.",
+  "evidencia": "Page: North Blenheim, New York. Sentence: It was built in 1855 and existed until 2011, when it was destroyed by flooding caused by Hurricane Irene.\nPage: Hurricane Irene. Sentence: Hurricane Irene was a large and destructive tropical cyclone, which affected much of the Caribbean and East Coast of the United States during late August 2011.",
+  "evidence_text": "Page: North Blenheim, New York. Sentence: It was built in 1855 and existed until 2011, when it was destroyed by flooding caused by Hurricane Irene.\nPage: Hurricane Irene. Sentence: Hurricane Irene was a large and destructive tropical cyclone, which affected much of the Caribbean and East Coast of the United States during late August 2011.",
+  "label": "SUPPORTED",
+  "num_hops": 2,
+  "hover_metadata": {
+    "supporting_facts": [
+      [
+        "North Blenheim, New York",
+        2
+      ],
+      [
+        "Hurricane Irene",
+        0
+      ]
+    ],
+    "num_hops": 2,
+    "evidence_annotation_id": [
+      0
+    ],
+    "evidence_id": [
+      "North Blenheim, New York::sentence::2",
+      "Hurricane Irene::sentence::0"
+    ],
+    "evidence_wiki_url": [
+      "https://en.wikipedia.org/wiki/North_Blenheim%2C_New_York",
+      "https://en.wikipedia.org/wiki/Hurricane_Irene"
+    ],
+    "evidence_sentence_id": [
+      "North Blenheim, New York::sentence::2",
+      "Hurricane Irene::sentence::0"
+    ]
+  },
+  "grafo_claim": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "4bd2083b-c3f8-5030-a4ea-6153d1f4d5f3",
+        "text": "This chunk is about:\n- Places: North Blenheim, New York\n- Events: Hurricane flooding in August 2011\n\nFacts:\n- In August 2011, a hurricane caused flooding.\n- The flooding from the August 2011 hurricane destroyed North Blenheim, New York.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "361e1afa-59e3-5cc1-b024-9e5513d9e417",
+        "text": "North Blenheim, New York was destroyed by flooding caused by the Hurricane that landed in August 2011.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "cc703261-0406-5347-91e4-7b1298d69b00",
+        "text": "text_2fdd2e98a54e72c9b6386067399718cc",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "f925ebc9-a76f-5197-9bd1-ec01ec98c705",
+        "text": "north blenheim",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "a7852d00-db75-55e2-bd9a-468ada762d39",
+        "text": "new york",
+        "type": "Entity"
+      },
+      {
+        "id": 5,
+        "original_id": "5f394058-b2a0-5ba8-8466-ba2a18cfcf4e",
+        "text": "place",
+        "type": "EntityType"
+      },
+      {
+        "id": 6,
+        "original_id": "58c980c8-1a97-59ca-b07b-e42ab701c6d2",
+        "text": "flooding",
+        "type": "Entity"
+      },
+      {
+        "id": 7,
+        "original_id": "214abcd9-9adf-5c8a-bb35-1e729f2d68c3",
+        "text": "event",
+        "type": "EntityType"
+      },
+      {
+        "id": 8,
+        "original_id": "1fcab35b-28ca-5759-af81-3af8b546bd55",
+        "text": "hurricane",
+        "type": "Entity"
+      },
+      {
+        "id": 9,
+        "original_id": "2ef43f92-8569-5cd4-b1ed-0788008f6a7d",
+        "text": "2011-08",
+        "type": "Entity"
+      },
+      {
+        "id": 10,
+        "original_id": "b19433ae-558c-5aaf-95ac-6231f2a4be0e",
+        "text": "date",
+        "type": "EntityType"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 6,
+        "target": 3,
+        "type": "destroyed"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "located_in"
+      },
+      {
+        "source": 1,
+        "target": 4,
+        "type": "contains"
+      },
+      {
+        "source": 4,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 6,
+        "type": "contains"
+      },
+      {
+        "source": 8,
+        "target": 6,
+        "type": "caused"
+      },
+      {
+        "source": 6,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 8,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 8,
+        "type": "contains"
+      },
+      {
+        "source": 8,
+        "target": 9,
+        "type": "landed_in"
+      },
+      {
+        "source": 1,
+        "target": 9,
+        "type": "contains"
+      },
+      {
+        "source": 9,
+        "target": 10,
+        "type": "is_a"
+      }
+    ]
+  },
+  "grafo_evidencia": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "0780b3c4-f2a5-59e6-84c4-84c97989e02e",
+        "text": "This chunk is about:\n- Places: North Blenheim, New York\n- Events: Hurricane Irene\n- Topics: flooding, destruction\n\nFacts:\n- North Blenheim, New York had a structure that was built in 1855.\n- In late August 2011, Hurricane Irene was a large and destructive tropical cyclone that affected much of the Caribbean and the East Coast of the United States.\n- In 2011, flooding caused by Hurricane Irene destroyed the 1855 structure in North Blenheim, New York.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "fdf06d3f-3968-567a-8cce-e8c8a51fff42",
+        "text": "Page: North Blenheim, New York. Sentence: It was built in 1855 and existed until 2011, when it was destroyed by flooding caused by Hurricane Irene.\nPage: Hurricane Irene. Sentence: Hurricane Irene was a large and destructive tropical cyclone, which affected much of the Caribbean and East Coast of the United States during late August 2011.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "3dd61859-cddf-5a9b-b7d4-4271d671fe17",
+        "text": "text_0d0c6def9d025e541f64a13a03e44090",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "b2df7f6b-2033-5624-a15a-0f49bad63193",
+        "text": "north blenheim, new york",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "baf435bc-9bba-54b1-a681-68ab294a2fa8",
+        "text": "1855",
+        "type": "Entity"
+      },
+      {
+        "id": 5,
+        "original_id": "b19433ae-558c-5aaf-95ac-6231f2a4be0e",
+        "text": "date",
+        "type": "EntityType"
+      },
+      {
+        "id": 6,
+        "original_id": "f54e52eb-db61-5cc3-aa32-5c78e42891d1",
+        "text": "2011",
+        "type": "Entity"
+      },
+      {
+        "id": 7,
+        "original_id": "5f394058-b2a0-5ba8-8466-ba2a18cfcf4e",
+        "text": "place",
+        "type": "EntityType"
+      },
+      {
+        "id": 8,
+        "original_id": "0613db7f-90a9-51fc-9511-12788d080542",
+        "text": "hurricane irene",
+        "type": "Entity"
+      },
+      {
+        "id": 9,
+        "original_id": "7b826d2a-3f10-51b0-9182-ac0737b79465",
+        "text": "late august 2011",
+        "type": "Entity"
+      },
+      {
+        "id": 10,
+        "original_id": "6efaa622-9eff-52ed-b6fc-400780403501",
+        "text": "caribbean",
+        "type": "Entity"
+      },
+      {
+        "id": 11,
+        "original_id": "86f54624-c0ac-5879-97fe-5a31e5b22f9b",
+        "text": "east coast of the united states",
+        "type": "Entity"
+      },
+      {
+        "id": 12,
+        "original_id": "58c980c8-1a97-59ca-b07b-e42ab701c6d2",
+        "text": "flooding",
+        "type": "Entity"
+      },
+      {
+        "id": 13,
+        "original_id": "214abcd9-9adf-5c8a-bb35-1e729f2d68c3",
+        "text": "event",
+        "type": "EntityType"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 12,
+        "target": 3,
+        "type": "destroyed_associated_structure_in"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "associated_structure_built_in"
+      },
+      {
+        "source": 1,
+        "target": 4,
+        "type": "contains"
+      },
+      {
+        "source": 4,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 6,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 9,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 6,
+        "type": "associated_structure_existed_until"
+      },
+      {
+        "source": 1,
+        "target": 6,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 10,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 11,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 8,
+        "type": "contains"
+      },
+      {
+        "source": 8,
+        "target": 9,
+        "type": "occurred_during"
+      },
+      {
+        "source": 1,
+        "target": 9,
+        "type": "contains"
+      },
+      {
+        "source": 8,
+        "target": 10,
+        "type": "affected"
+      },
+      {
+        "source": 1,
+        "target": 10,
+        "type": "contains"
+      },
+      {
+        "source": 8,
+        "target": 11,
+        "type": "affected"
+      },
+      {
+        "source": 1,
+        "target": 11,
+        "type": "contains"
+      },
+      {
+        "source": 8,
+        "target": 12,
+        "type": "caused"
+      },
+      {
+        "source": 1,
+        "target": 12,
+        "type": "contains"
+      },
+      {
+        "source": 12,
+        "target": 13,
+        "type": "is_a"
+      },
+      {
+        "source": 8,
+        "target": 13,
+        "type": "is_a"
+      }
+    ]
+  }
+}

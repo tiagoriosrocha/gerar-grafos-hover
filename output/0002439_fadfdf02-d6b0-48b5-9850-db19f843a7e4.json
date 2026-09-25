@@ -1,0 +1,490 @@
+{
+  "dataset": "hover",
+  "id": "fadfdf02-d6b0-48b5-9850-db19f843a7e4",
+  "split": "train",
+  "claim": "Waco Regional Airport and Idaho Falls Regional Airport are both city owned airports.",
+  "evidencia": "Page: Waco Regional Airport. Sentence: Waco Regional Airport (IATA: ACT, ICAO: KACT, FAA LID: ACT) is five miles northwest of Waco, in McLennan County, Texas.\nPage: Waco Regional Airport. Sentence: It is owned by the City of Waco.\nPage: Idaho Falls Regional Airport. Sentence: Idaho Falls Regional Airport (IATA: KIDA, ICAO: IDA) is a city owned, public use airport located two nautical miles (4 km) northwest of the central business district of Idaho Falls, a city in Bonneville County, Idaho, United States.",
+  "evidence_text": "Page: Waco Regional Airport. Sentence: Waco Regional Airport (IATA: ACT, ICAO: KACT, FAA LID: ACT) is five miles northwest of Waco, in McLennan County, Texas.\nPage: Waco Regional Airport. Sentence: It is owned by the City of Waco.\nPage: Idaho Falls Regional Airport. Sentence: Idaho Falls Regional Airport (IATA: KIDA, ICAO: IDA) is a city owned, public use airport located two nautical miles (4 km) northwest of the central business district of Idaho Falls, a city in Bonneville County, Idaho, United States.",
+  "label": "SUPPORTED",
+  "num_hops": 2,
+  "hover_metadata": {
+    "supporting_facts": [
+      [
+        "Waco Regional Airport",
+        0
+      ],
+      [
+        "Waco Regional Airport",
+        1
+      ],
+      [
+        "Idaho Falls Regional Airport",
+        0
+      ]
+    ],
+    "num_hops": 2,
+    "evidence_annotation_id": [
+      0
+    ],
+    "evidence_id": [
+      "Waco Regional Airport::sentence::0",
+      "Waco Regional Airport::sentence::1",
+      "Idaho Falls Regional Airport::sentence::0"
+    ],
+    "evidence_wiki_url": [
+      "https://en.wikipedia.org/wiki/Waco_Regional_Airport",
+      "https://en.wikipedia.org/wiki/Idaho_Falls_Regional_Airport"
+    ],
+    "evidence_sentence_id": [
+      "Waco Regional Airport::sentence::0",
+      "Waco Regional Airport::sentence::1",
+      "Idaho Falls Regional Airport::sentence::0"
+    ]
+  },
+  "grafo_claim": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "9548e05d-4a4a-5e5e-bd6d-6f80374fbc7d",
+        "text": "This chunk is about:\n- Places: Waco Regional Airport, Idaho Falls Regional Airport\n- Organizations: city governments\n\nFacts:\n- Waco Regional Airport is a city-owned airport.\n- Idaho Falls Regional Airport is a city-owned airport.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "ace78961-32b4-5442-b4b0-ebe7bdcf9a64",
+        "text": "Waco Regional Airport and Idaho Falls Regional Airport are both city owned airports.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "7a70b1c3-1ad9-5cc6-94ca-a1c0b1f06be1",
+        "text": "text_a8a65b21cec66a67261e884b3a0408d4",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "18b161cd-d8c8-5e40-9832-f1fdb7a408d1",
+        "text": "waco regional airport",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "3884b14b-0525-54da-8188-14e02feab4ed",
+        "text": "city owned",
+        "type": "Entity"
+      },
+      {
+        "id": 5,
+        "original_id": "d2a381fa-3658-5ca6-ada9-2109cfc9331d",
+        "text": "concept",
+        "type": "EntityType"
+      },
+      {
+        "id": 6,
+        "original_id": "50596f1a-2d8a-5de7-96b5-ba7068791784",
+        "text": "airport",
+        "type": "EntityType"
+      },
+      {
+        "id": 7,
+        "original_id": "e6057ddd-0eec-550e-bff3-b3bac84e4958",
+        "text": "idaho falls regional airport",
+        "type": "Entity"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "has_ownership_status"
+      },
+      {
+        "source": 7,
+        "target": 4,
+        "type": "has_ownership_status"
+      },
+      {
+        "source": 1,
+        "target": 4,
+        "type": "contains"
+      },
+      {
+        "source": 4,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 7,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      }
+    ]
+  },
+  "grafo_evidencia": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "859c02bc-dddb-5ade-953d-db9dbc87e6f3",
+        "text": "This chunk is about:\n- Places: Waco, McLennan County, Texas, Idaho Falls, Bonneville County, Idaho, United States\n- Organizations: City of Waco\n- Products: Waco Regional Airport, Idaho Falls Regional Airport\n- Codes: ACT, KACT, KIDA, IDA\n\nFacts:\n- Waco Regional Airport has the IATA code ACT, the ICAO code KACT, and the FAA LID ACT.\n- Waco Regional Airport is located five miles northwest of Waco in McLennan County, Texas.\n- Waco Regional Airport is owned by the City of Waco.\n- Idaho Falls Regional Airport has the IATA code KIDA and the ICAO code IDA.\n- Idaho Falls Regional Airport is a city-owned public-use airport.\n- Idaho Falls Regional Airport is located two nautical miles northwest of the central business district of Idaho Falls in Bonneville County, Idaho, United States.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "77f12a09-b69d-51c3-9b9d-e54b0412d4f9",
+        "text": "Page: Waco Regional Airport. Sentence: Waco Regional Airport (IATA: ACT, ICAO: KACT, FAA LID: ACT) is five miles northwest of Waco, in McLennan County, Texas.\nPage: Waco Regional Airport. Sentence: It is owned by the City of Waco.\nPage: Idaho Falls Regional Airport. Sentence: Idaho Falls Regional Airport (IATA: KIDA, ICAO: IDA) is a city owned, public use airport located two nautical miles (4 km) northwest of the central business district of Idaho Falls, a city in Bonneville County, Idaho, United States.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "7477c836-7e1f-5b7e-8bb0-49ce1d3c7859",
+        "text": "text_e8a64548845c731e697281db1d204a20",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "18b161cd-d8c8-5e40-9832-f1fdb7a408d1",
+        "text": "waco regional airport",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "1964e082-d216-5f98-9617-ce47f3ee2dde",
+        "text": "act",
+        "type": "Entity"
+      },
+      {
+        "id": 5,
+        "original_id": "2c23f4f7-2223-5c53-a5f6-1bd0114fcd6a",
+        "text": "code",
+        "type": "EntityType"
+      },
+      {
+        "id": 6,
+        "original_id": "c1b229de-030c-5928-ac3b-484db61ecc3a",
+        "text": "kact",
+        "type": "Entity"
+      },
+      {
+        "id": 7,
+        "original_id": "2cd1d4ab-51af-54a6-ab90-35438387eb86",
+        "text": "waco",
+        "type": "Entity"
+      },
+      {
+        "id": 8,
+        "original_id": "8360d764-f723-582b-bd2c-e312108babf9",
+        "text": "mclennan county",
+        "type": "Entity"
+      },
+      {
+        "id": 9,
+        "original_id": "5b5c9733-5661-5cc8-814f-2796b46669fa",
+        "text": "texas",
+        "type": "Entity"
+      },
+      {
+        "id": 10,
+        "original_id": "5f394058-b2a0-5ba8-8466-ba2a18cfcf4e",
+        "text": "place",
+        "type": "EntityType"
+      },
+      {
+        "id": 11,
+        "original_id": "486406a8-8ac9-5b25-866d-9ac32575d22a",
+        "text": "city of waco",
+        "type": "Entity"
+      },
+      {
+        "id": 12,
+        "original_id": "388f60fb-220d-55e8-ae9c-3ac93cead308",
+        "text": "organization",
+        "type": "EntityType"
+      },
+      {
+        "id": 13,
+        "original_id": "50596f1a-2d8a-5de7-96b5-ba7068791784",
+        "text": "airport",
+        "type": "EntityType"
+      },
+      {
+        "id": 14,
+        "original_id": "e6057ddd-0eec-550e-bff3-b3bac84e4958",
+        "text": "idaho falls regional airport",
+        "type": "Entity"
+      },
+      {
+        "id": 15,
+        "original_id": "48ffaea9-dd8d-5de5-873e-386b51c0a4c5",
+        "text": "kida",
+        "type": "Entity"
+      },
+      {
+        "id": 16,
+        "original_id": "0acf7c4d-c96e-578f-83f6-e027ae98c867",
+        "text": "ida",
+        "type": "Entity"
+      },
+      {
+        "id": 17,
+        "original_id": "a83f6ae6-7b58-5c0e-bac8-4c831b51cbfd",
+        "text": "idaho falls",
+        "type": "Entity"
+      },
+      {
+        "id": 18,
+        "original_id": "8fa9c674-fee7-5325-94a4-48079ecc25c3",
+        "text": "bonneville county",
+        "type": "Entity"
+      },
+      {
+        "id": 19,
+        "original_id": "589f1f62-72a5-5a4d-a22c-f702590378a5",
+        "text": "idaho",
+        "type": "Entity"
+      },
+      {
+        "id": 20,
+        "original_id": "874a51da-34ea-5037-be47-d87785d43c37",
+        "text": "united states",
+        "type": "Entity"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "has_iata_code"
+      },
+      {
+        "source": 1,
+        "target": 4,
+        "type": "contains"
+      },
+      {
+        "source": 4,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 6,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 15,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 16,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 6,
+        "type": "has_icao_code"
+      },
+      {
+        "source": 1,
+        "target": 6,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 7,
+        "type": "located_northwest_of"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      },
+      {
+        "source": 7,
+        "target": 8,
+        "type": "located_in"
+      },
+      {
+        "source": 1,
+        "target": 8,
+        "type": "contains"
+      },
+      {
+        "source": 8,
+        "target": 9,
+        "type": "located_in"
+      },
+      {
+        "source": 1,
+        "target": 9,
+        "type": "contains"
+      },
+      {
+        "source": 9,
+        "target": 10,
+        "type": "is_a"
+      },
+      {
+        "source": 8,
+        "target": 10,
+        "type": "is_a"
+      },
+      {
+        "source": 7,
+        "target": 10,
+        "type": "is_a"
+      },
+      {
+        "source": 20,
+        "target": 10,
+        "type": "is_a"
+      },
+      {
+        "source": 19,
+        "target": 10,
+        "type": "is_a"
+      },
+      {
+        "source": 18,
+        "target": 10,
+        "type": "is_a"
+      },
+      {
+        "source": 17,
+        "target": 10,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 11,
+        "type": "owned_by"
+      },
+      {
+        "source": 1,
+        "target": 11,
+        "type": "contains"
+      },
+      {
+        "source": 11,
+        "target": 12,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 13,
+        "type": "is_a"
+      },
+      {
+        "source": 14,
+        "target": 13,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 14,
+        "type": "contains"
+      },
+      {
+        "source": 14,
+        "target": 15,
+        "type": "has_iata_code"
+      },
+      {
+        "source": 1,
+        "target": 15,
+        "type": "contains"
+      },
+      {
+        "source": 14,
+        "target": 16,
+        "type": "has_icao_code"
+      },
+      {
+        "source": 1,
+        "target": 16,
+        "type": "contains"
+      },
+      {
+        "source": 14,
+        "target": 17,
+        "type": "located_northwest_of"
+      },
+      {
+        "source": 1,
+        "target": 17,
+        "type": "contains"
+      },
+      {
+        "source": 17,
+        "target": 18,
+        "type": "located_in"
+      },
+      {
+        "source": 1,
+        "target": 18,
+        "type": "contains"
+      },
+      {
+        "source": 18,
+        "target": 19,
+        "type": "located_in"
+      },
+      {
+        "source": 1,
+        "target": 19,
+        "type": "contains"
+      },
+      {
+        "source": 19,
+        "target": 20,
+        "type": "located_in"
+      },
+      {
+        "source": 1,
+        "target": 20,
+        "type": "contains"
+      }
+    ]
+  }
+}

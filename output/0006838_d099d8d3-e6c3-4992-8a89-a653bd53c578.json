@@ -1,0 +1,472 @@
+{
+  "dataset": "hover",
+  "id": "d099d8d3-e6c3-4992-8a89-a653bd53c578",
+  "split": "train",
+  "claim": "A gun range was first constructed for an event where 74 records were broken. Tughlaqabad Fort is close to this range.",
+  "evidencia": "Page: Dr. Karni Singh Shooting Range. Sentence: Dr. Karni Singh Shooting Range is a shooting range in New Delhi.\nPage: Dr. Karni Singh Shooting Range. Sentence: It was first constructed for the 1982 Asian Games in New Delhi, and later rebuild altogether for the 2010 Commonwealth Games.\nPage: 1982 Asian Games. Sentence: The 9th Asian Games were held from November 19, 1982, to December 4, 1982, in Delhi, India.\nPage: 1982 Asian Games. Sentence: 74 Asian and Asian Games records were broken at the event.\nPage: Tughlaqabad Fort. Sentence: Also nearby is the Asola Bhatti Wildlife Sanctuary, Dr. Karni Singh Shooting Range and Okhla Industrial Area.",
+  "evidence_text": "Page: Dr. Karni Singh Shooting Range. Sentence: Dr. Karni Singh Shooting Range is a shooting range in New Delhi.\nPage: Dr. Karni Singh Shooting Range. Sentence: It was first constructed for the 1982 Asian Games in New Delhi, and later rebuild altogether for the 2010 Commonwealth Games.\nPage: 1982 Asian Games. Sentence: The 9th Asian Games were held from November 19, 1982, to December 4, 1982, in Delhi, India.\nPage: 1982 Asian Games. Sentence: 74 Asian and Asian Games records were broken at the event.\nPage: Tughlaqabad Fort. Sentence: Also nearby is the Asola Bhatti Wildlife Sanctuary, Dr. Karni Singh Shooting Range and Okhla Industrial Area.",
+  "label": "SUPPORTED",
+  "num_hops": 3,
+  "hover_metadata": {
+    "supporting_facts": [
+      [
+        "Dr. Karni Singh Shooting Range",
+        0
+      ],
+      [
+        "Dr. Karni Singh Shooting Range",
+        2
+      ],
+      [
+        "1982 Asian Games",
+        0
+      ],
+      [
+        "1982 Asian Games",
+        1
+      ],
+      [
+        "Tughlaqabad Fort",
+        4
+      ]
+    ],
+    "num_hops": 3,
+    "evidence_annotation_id": [
+      0
+    ],
+    "evidence_id": [
+      "Dr. Karni Singh Shooting Range::sentence::0",
+      "Dr. Karni Singh Shooting Range::sentence::2",
+      "1982 Asian Games::sentence::0",
+      "1982 Asian Games::sentence::1",
+      "Tughlaqabad Fort::sentence::4"
+    ],
+    "evidence_wiki_url": [
+      "https://en.wikipedia.org/wiki/Dr._Karni_Singh_Shooting_Range",
+      "https://en.wikipedia.org/wiki/1982_Asian_Games",
+      "https://en.wikipedia.org/wiki/Tughlaqabad_Fort"
+    ],
+    "evidence_sentence_id": [
+      "Dr. Karni Singh Shooting Range::sentence::0",
+      "Dr. Karni Singh Shooting Range::sentence::2",
+      "1982 Asian Games::sentence::0",
+      "1982 Asian Games::sentence::1",
+      "Tughlaqabad Fort::sentence::4"
+    ]
+  },
+  "grafo_claim": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "eb41f5a3-0b03-58a1-869a-b1cbe7c53b8f",
+        "text": "This chunk is about:\n- Places: Tughlaqabad Fort\n- Facilities: a gun range\n- Events: an event where 74 records were broken\n\nFacts:\n- A gun range was first constructed for an event where 74 records were broken.\n- Tughlaqabad Fort is close to the gun range.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "ce698b1f-7018-5e4d-b298-fb8a645f39a5",
+        "text": "A gun range was first constructed for an event where 74 records were broken. Tughlaqabad Fort is close to this range.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "1ce26c76-9bf2-52f8-bddf-6d561c60bd38",
+        "text": "text_2c78c4b824b89ebf74742529ffd3b0bc",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "07923ee5-737d-540d-810d-63384d8179f1",
+        "text": "dr. karni singh shooting range",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "89426e70-d2c9-5c18-9c30-b12e3c1f06be",
+        "text": "1982 asian games",
+        "type": "Entity"
+      },
+      {
+        "id": 5,
+        "original_id": "7183169e-5072-5156-92ff-34816891cff1",
+        "text": "74 records",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "d2a381fa-3658-5ca6-ada9-2109cfc9331d",
+        "text": "concept",
+        "type": "EntityType"
+      },
+      {
+        "id": 7,
+        "original_id": "214abcd9-9adf-5c8a-bb35-1e729f2d68c3",
+        "text": "event",
+        "type": "EntityType"
+      },
+      {
+        "id": 8,
+        "original_id": "5f394058-b2a0-5ba8-8466-ba2a18cfcf4e",
+        "text": "place",
+        "type": "EntityType"
+      },
+      {
+        "id": 9,
+        "original_id": "892f1889-d468-5bc2-b3cc-d1ff1f70d07a",
+        "text": "tughlaqabad fort",
+        "type": "Entity"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 9,
+        "target": 3,
+        "type": "is_close_to"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "first_constructed_for"
+      },
+      {
+        "source": 1,
+        "target": 4,
+        "type": "contains"
+      },
+      {
+        "source": 4,
+        "target": 5,
+        "type": "had_records_broken"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 4,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 9,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 9,
+        "type": "contains"
+      }
+    ]
+  },
+  "grafo_evidencia": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "6459fa8b-32c4-5f85-9262-e9002e2fce50",
+        "text": "This chunk is about:\n- Places: Dr. Karni Singh Shooting Range, New Delhi, Delhi, India, Tughlaqabad Fort, Asola Bhatti Wildlife Sanctuary, Okhla Industrial Area\n- Events: 1982 Asian Games, 2010 Commonwealth Games\n\nFacts:\n- The 9th Asian Games were held in Delhi, India, from November 19, 1982, to December 4, 1982.\n- The 1982 Asian Games saw 74 Asian and Asian Games records broken.\n- Dr. Karni Singh Shooting Range is a shooting range in New Delhi.\n- Dr. Karni Singh Shooting Range was first constructed for the 1982 Asian Games in New Delhi.\n- Dr. Karni Singh Shooting Range was later rebuilt altogether for the 2010 Commonwealth Games.\n- Tughlaqabad Fort is near Asola Bhatti Wildlife Sanctuary, Dr. Karni Singh Shooting Range, and Okhla Industrial Area.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "c0a97de2-532d-56cd-b767-76082f898693",
+        "text": "Page: Dr. Karni Singh Shooting Range. Sentence: Dr. Karni Singh Shooting Range is a shooting range in New Delhi.\nPage: Dr. Karni Singh Shooting Range. Sentence: It was first constructed for the 1982 Asian Games in New Delhi, and later rebuild altogether for the 2010 Commonwealth Games.\nPage: 1982 Asian Games. Sentence: The 9th Asian Games were held from November 19, 1982, to December 4, 1982, in Delhi, India.\nPage: 1982 Asian Games. Sentence: 74 Asian and Asian Games records were broken at the event.\nPage: Tughlaqabad Fort. Sentence: Also nearby is the Asola Bhatti Wildlife Sanctuary, Dr. Karni Singh Shooting Range and Okhla Industrial Area.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "17e34e6e-2661-5253-b57d-8ba7ed4c3da9",
+        "text": "text_4ecd3c4dabe4ff70cc16490f4b5cc9d9",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "07923ee5-737d-540d-810d-63384d8179f1",
+        "text": "dr. karni singh shooting range",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "890545ca-37fb-5838-b33b-a20791577181",
+        "text": "new delhi",
+        "type": "Entity"
+      },
+      {
+        "id": 5,
+        "original_id": "5f394058-b2a0-5ba8-8466-ba2a18cfcf4e",
+        "text": "place",
+        "type": "EntityType"
+      },
+      {
+        "id": 6,
+        "original_id": "89426e70-d2c9-5c18-9c30-b12e3c1f06be",
+        "text": "1982 asian games",
+        "type": "Entity"
+      },
+      {
+        "id": 7,
+        "original_id": "242b1d36-b966-5dfb-95ac-fc0f04386bce",
+        "text": "1982-11-19",
+        "type": "Entity"
+      },
+      {
+        "id": 8,
+        "original_id": "b19433ae-558c-5aaf-95ac-6231f2a4be0e",
+        "text": "date",
+        "type": "EntityType"
+      },
+      {
+        "id": 9,
+        "original_id": "dd836308-88a0-5821-a826-883ed1ecfbf2",
+        "text": "1982-12-04",
+        "type": "Entity"
+      },
+      {
+        "id": 10,
+        "original_id": "fb793b91-e6d0-5e28-a617-1e2d646777c4",
+        "text": "delhi, india",
+        "type": "Entity"
+      },
+      {
+        "id": 11,
+        "original_id": "6ab931c8-c2f1-5632-acff-6239d528f1dd",
+        "text": "asian and asian games records",
+        "type": "Entity"
+      },
+      {
+        "id": 12,
+        "original_id": "d2a381fa-3658-5ca6-ada9-2109cfc9331d",
+        "text": "concept",
+        "type": "EntityType"
+      },
+      {
+        "id": 13,
+        "original_id": "214abcd9-9adf-5c8a-bb35-1e729f2d68c3",
+        "text": "event",
+        "type": "EntityType"
+      },
+      {
+        "id": 14,
+        "original_id": "ca3c5cf6-12c2-5bd4-a627-a903845a98db",
+        "text": "2010 commonwealth games",
+        "type": "Entity"
+      },
+      {
+        "id": 15,
+        "original_id": "892f1889-d468-5bc2-b3cc-d1ff1f70d07a",
+        "text": "tughlaqabad fort",
+        "type": "Entity"
+      },
+      {
+        "id": 16,
+        "original_id": "28b35406-76a4-5c7f-b2bc-b7718731df55",
+        "text": "asola bhatti wildlife sanctuary",
+        "type": "Entity"
+      },
+      {
+        "id": 17,
+        "original_id": "0c390994-a874-55fb-af17-77cf641b9f23",
+        "text": "okhla industrial area",
+        "type": "Entity"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 15,
+        "target": 3,
+        "type": "nearby"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "located_in"
+      },
+      {
+        "source": 1,
+        "target": 4,
+        "type": "contains"
+      },
+      {
+        "source": 4,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 10,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 16,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 17,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 15,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 6,
+        "type": "constructed_for"
+      },
+      {
+        "source": 1,
+        "target": 6,
+        "type": "contains"
+      },
+      {
+        "source": 6,
+        "target": 7,
+        "type": "started_on"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      },
+      {
+        "source": 7,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 9,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 6,
+        "target": 9,
+        "type": "ended_on"
+      },
+      {
+        "source": 1,
+        "target": 9,
+        "type": "contains"
+      },
+      {
+        "source": 6,
+        "target": 10,
+        "type": "held_in"
+      },
+      {
+        "source": 1,
+        "target": 10,
+        "type": "contains"
+      },
+      {
+        "source": 6,
+        "target": 11,
+        "type": "broke"
+      },
+      {
+        "source": 1,
+        "target": 11,
+        "type": "contains"
+      },
+      {
+        "source": 11,
+        "target": 12,
+        "type": "is_a"
+      },
+      {
+        "source": 6,
+        "target": 13,
+        "type": "is_a"
+      },
+      {
+        "source": 14,
+        "target": 13,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 14,
+        "type": "rebuilt_for"
+      },
+      {
+        "source": 1,
+        "target": 14,
+        "type": "contains"
+      },
+      {
+        "source": 1,
+        "target": 15,
+        "type": "contains"
+      },
+      {
+        "source": 15,
+        "target": 16,
+        "type": "nearby"
+      },
+      {
+        "source": 1,
+        "target": 16,
+        "type": "contains"
+      },
+      {
+        "source": 15,
+        "target": 17,
+        "type": "nearby"
+      },
+      {
+        "source": 1,
+        "target": 17,
+        "type": "contains"
+      }
+    ]
+  }
+}

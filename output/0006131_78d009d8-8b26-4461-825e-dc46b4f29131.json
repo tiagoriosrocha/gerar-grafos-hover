@@ -1,0 +1,431 @@
+{
+  "dataset": "hover",
+  "id": "78d009d8-8b26-4461-825e-dc46b4f29131",
+  "split": "train",
+  "claim": "Pari Lake flows down to this gigantic circular lake. Sniardwy is farther north than that gigantic lake.",
+  "evidencia": "Page: Kundol Lake. Sentence: Kundol Lake also known as \"Kundol Dand\", is a lake in Swat Valley, Khyber Pakhtunkhwa, Pakistan, which is located in the north of Utror valley at a distance of 19 km away from kalam.\nPage: Śniardwy. Sentence: Śniardwy (German:    ) is a lake in the Masurian Lake District of the Warmian-Masurian Voivodeship, Poland.\nPage: Pari Lake. Sentence: The western face of the lake is open and its water flows down to the gigantic Kundol Lake which is situated in the foothills.",
+  "evidence_text": "Page: Kundol Lake. Sentence: Kundol Lake also known as \"Kundol Dand\", is a lake in Swat Valley, Khyber Pakhtunkhwa, Pakistan, which is located in the north of Utror valley at a distance of 19 km away from kalam.\nPage: Śniardwy. Sentence: Śniardwy (German:    ) is a lake in the Masurian Lake District of the Warmian-Masurian Voivodeship, Poland.\nPage: Pari Lake. Sentence: The western face of the lake is open and its water flows down to the gigantic Kundol Lake which is situated in the foothills.",
+  "label": "NOT_SUPPORTED",
+  "num_hops": 3,
+  "hover_metadata": {
+    "supporting_facts": [
+      [
+        "Kundol Lake",
+        0
+      ],
+      [
+        "Śniardwy",
+        0
+      ],
+      [
+        "Pari Lake",
+        2
+      ]
+    ],
+    "num_hops": 3,
+    "evidence_annotation_id": [
+      0
+    ],
+    "evidence_id": [
+      "Kundol Lake::sentence::0",
+      "Śniardwy::sentence::0",
+      "Pari Lake::sentence::2"
+    ],
+    "evidence_wiki_url": [
+      "https://en.wikipedia.org/wiki/Kundol_Lake",
+      "https://en.wikipedia.org/wiki/%C5%9Aniardwy",
+      "https://en.wikipedia.org/wiki/Pari_Lake"
+    ],
+    "evidence_sentence_id": [
+      "Kundol Lake::sentence::0",
+      "Śniardwy::sentence::0",
+      "Pari Lake::sentence::2"
+    ]
+  },
+  "grafo_claim": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "afede73e-8aec-5227-b9bc-a595c6bf10a5",
+        "text": "This chunk is about:\n- Places: Pari Lake, Sniardwy\n- Concepts: Relative location, lake connections\n\nFacts:\n- Pari Lake flows down to a gigantic circular lake.\n- Sniardwy is farther north than the gigantic circular lake connected to Pari Lake.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "426a6264-ecad-5aa3-9895-f28b4249bc8f",
+        "text": "Pari Lake flows down to this gigantic circular lake. Sniardwy is farther north than that gigantic lake.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "6e51b954-63ef-5368-9038-e2012eb695f9",
+        "text": "text_8f324920c858fc3956ea3ed5f79b0090",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "cf9dcf06-7355-5b05-a626-51fa3c48e539",
+        "text": "pari lake",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "3d233ac8-f2a8-50a1-b053-6ebb37f0f541",
+        "text": "gigantic circular lake",
+        "type": "Entity"
+      },
+      {
+        "id": 5,
+        "original_id": "33219a57-2295-52f5-8e3b-219a1adeea45",
+        "text": "lake",
+        "type": "EntityType"
+      },
+      {
+        "id": 6,
+        "original_id": "1440a3e2-f1f5-5e3a-812f-451ac5a5f49f",
+        "text": "sniardwy",
+        "type": "Entity"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "flows_to"
+      },
+      {
+        "source": 1,
+        "target": 4,
+        "type": "contains"
+      },
+      {
+        "source": 6,
+        "target": 4,
+        "type": "farther_north_than"
+      },
+      {
+        "source": 4,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 6,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 6,
+        "type": "contains"
+      }
+    ]
+  },
+  "grafo_evidencia": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "a822501d-b011-5bcb-bf9a-fe47590ad9fd",
+        "text": "This chunk is about:\n- Places: Swat Valley, Khyber Pakhtunkhwa, Pakistan, Utror Valley, Kalam, Masurian Lake District, Warmian-Masurian Voivodeship, Poland\n- Products: Kundol Lake, Kundol Dand, Śniardwy, Pari Lake\n\nFacts:\n- Kundol Lake, also known as Kundol Dand, is a lake in Swat Valley, Khyber Pakhtunkhwa, Pakistan.\n- Kundol Lake is located north of Utror Valley and 19 km from Kalam.\n- Śniardwy is a lake in the Masurian Lake District of the Warmian-Masurian Voivodeship, Poland.\n- The western face of Pari Lake is open.\n- Water from Pari Lake flows down to Kundol Lake, which is situated in the foothills.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "84b60fc9-4076-5349-9dcf-1db6bf584356",
+        "text": "Page: Kundol Lake. Sentence: Kundol Lake also known as \"Kundol Dand\", is a lake in Swat Valley, Khyber Pakhtunkhwa, Pakistan, which is located in the north of Utror valley at a distance of 19 km away from kalam.\nPage: Śniardwy. Sentence: Śniardwy (German:    ) is a lake in the Masurian Lake District of the Warmian-Masurian Voivodeship, Poland.\nPage: Pari Lake. Sentence: The western face of the lake is open and its water flows down to the gigantic Kundol Lake which is situated in the foothills.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "734e52a6-16f1-50ec-a8a9-3809addaed6f",
+        "text": "text_046689cde3db2e223443af3c6923839a",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "238a5073-89fb-58c0-8a57-2dfa0fa88a39",
+        "text": "kundol lake",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "07a94a1f-0550-5527-a82d-db826484f26d",
+        "text": "kundol dand",
+        "type": "Entity"
+      },
+      {
+        "id": 5,
+        "original_id": "33219a57-2295-52f5-8e3b-219a1adeea45",
+        "text": "lake",
+        "type": "EntityType"
+      },
+      {
+        "id": 6,
+        "original_id": "31fb0405-6e3b-5039-8fc3-7b6247b81468",
+        "text": "swat valley",
+        "type": "Entity"
+      },
+      {
+        "id": 7,
+        "original_id": "245d7da0-76ae-5e48-8f28-a1330e0579c2",
+        "text": "khyber pakhtunkhwa",
+        "type": "Entity"
+      },
+      {
+        "id": 8,
+        "original_id": "65fa9fde-2412-585e-bf23-357eeb6baa8c",
+        "text": "pakistan",
+        "type": "Entity"
+      },
+      {
+        "id": 9,
+        "original_id": "5f394058-b2a0-5ba8-8466-ba2a18cfcf4e",
+        "text": "place",
+        "type": "EntityType"
+      },
+      {
+        "id": 10,
+        "original_id": "7ae319e9-97a9-5e86-933f-0257b52ed42a",
+        "text": "utror valley",
+        "type": "Entity"
+      },
+      {
+        "id": 11,
+        "original_id": "db674bad-4b37-52e5-ba64-84951c6c1188",
+        "text": "kalam",
+        "type": "Entity"
+      },
+      {
+        "id": 12,
+        "original_id": "f96553cb-1877-50bf-9b56-0b110425a4b9",
+        "text": "śniardwy",
+        "type": "Entity"
+      },
+      {
+        "id": 13,
+        "original_id": "96f2ba7e-d3a5-5ef8-8db9-acf62ea0ede3",
+        "text": "masurian lake district",
+        "type": "Entity"
+      },
+      {
+        "id": 14,
+        "original_id": "e59518d0-846b-52eb-9c0a-4a20f7e4fad7",
+        "text": "warmian-masurian voivodeship",
+        "type": "Entity"
+      },
+      {
+        "id": 15,
+        "original_id": "2bb002ee-445d-5345-90f9-c389faf0a6d4",
+        "text": "poland",
+        "type": "Entity"
+      },
+      {
+        "id": 16,
+        "original_id": "cf9dcf06-7355-5b05-a626-51fa3c48e539",
+        "text": "pari lake",
+        "type": "Entity"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 16,
+        "target": 3,
+        "type": "flows_to"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "also_known_as"
+      },
+      {
+        "source": 1,
+        "target": 4,
+        "type": "contains"
+      },
+      {
+        "source": 4,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 12,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 16,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 6,
+        "type": "located_in"
+      },
+      {
+        "source": 1,
+        "target": 6,
+        "type": "contains"
+      },
+      {
+        "source": 6,
+        "target": 7,
+        "type": "located_in"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      },
+      {
+        "source": 7,
+        "target": 8,
+        "type": "located_in"
+      },
+      {
+        "source": 1,
+        "target": 8,
+        "type": "contains"
+      },
+      {
+        "source": 8,
+        "target": 9,
+        "type": "is_a"
+      },
+      {
+        "source": 7,
+        "target": 9,
+        "type": "is_a"
+      },
+      {
+        "source": 6,
+        "target": 9,
+        "type": "is_a"
+      },
+      {
+        "source": 10,
+        "target": 9,
+        "type": "is_a"
+      },
+      {
+        "source": 11,
+        "target": 9,
+        "type": "is_a"
+      },
+      {
+        "source": 15,
+        "target": 9,
+        "type": "is_a"
+      },
+      {
+        "source": 14,
+        "target": 9,
+        "type": "is_a"
+      },
+      {
+        "source": 13,
+        "target": 9,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 10,
+        "type": "located_north_of"
+      },
+      {
+        "source": 1,
+        "target": 10,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 11,
+        "type": "distance_from"
+      },
+      {
+        "source": 1,
+        "target": 11,
+        "type": "contains"
+      },
+      {
+        "source": 1,
+        "target": 12,
+        "type": "contains"
+      },
+      {
+        "source": 12,
+        "target": 13,
+        "type": "located_in"
+      },
+      {
+        "source": 1,
+        "target": 13,
+        "type": "contains"
+      },
+      {
+        "source": 13,
+        "target": 14,
+        "type": "located_in"
+      },
+      {
+        "source": 1,
+        "target": 14,
+        "type": "contains"
+      },
+      {
+        "source": 14,
+        "target": 15,
+        "type": "located_in"
+      },
+      {
+        "source": 1,
+        "target": 15,
+        "type": "contains"
+      },
+      {
+        "source": 1,
+        "target": 16,
+        "type": "contains"
+      }
+    ]
+  }
+}

@@ -1,0 +1,496 @@
+{
+  "dataset": "hover",
+  "id": "b0f25111-c86e-4660-b311-a6eecfd55c79",
+  "split": "train",
+  "claim": "Bank street is sandwiched between the headquarters of the Hong Kong and Shanghai Banking Corporation and the Bank of China Building.",
+  "evidencia": "Page: Bank Street (Hong Kong). Sentence: Bank Street () is a short street in Central, Hong Kong.\nPage: Bank Street (Hong Kong). Sentence: It links Des Voeux Road Central to Queen's Road Central.\nPage: Bank Street (Hong Kong). Sentence: It is named after its location between HSBC Building and the Bank of China Building, the former headquarters of HSBC and Bank of China (Hong Kong) respectively.\nPage: HSBC Building (Hong Kong). Sentence: HSBC Main Building () is a headquarters building of The Hongkong and Shanghai Banking Corporation, which is today a wholly owned subsidiary of London-based HSBC Holdings.",
+  "evidence_text": "Page: Bank Street (Hong Kong). Sentence: Bank Street () is a short street in Central, Hong Kong.\nPage: Bank Street (Hong Kong). Sentence: It links Des Voeux Road Central to Queen's Road Central.\nPage: Bank Street (Hong Kong). Sentence: It is named after its location between HSBC Building and the Bank of China Building, the former headquarters of HSBC and Bank of China (Hong Kong) respectively.\nPage: HSBC Building (Hong Kong). Sentence: HSBC Main Building () is a headquarters building of The Hongkong and Shanghai Banking Corporation, which is today a wholly owned subsidiary of London-based HSBC Holdings.",
+  "label": "SUPPORTED",
+  "num_hops": 2,
+  "hover_metadata": {
+    "supporting_facts": [
+      [
+        "Bank Street (Hong Kong)",
+        0
+      ],
+      [
+        "Bank Street (Hong Kong)",
+        1
+      ],
+      [
+        "Bank Street (Hong Kong)",
+        2
+      ],
+      [
+        "HSBC Building (Hong Kong)",
+        0
+      ]
+    ],
+    "num_hops": 2,
+    "evidence_annotation_id": [
+      0
+    ],
+    "evidence_id": [
+      "Bank Street (Hong Kong)::sentence::0",
+      "Bank Street (Hong Kong)::sentence::1",
+      "Bank Street (Hong Kong)::sentence::2",
+      "HSBC Building (Hong Kong)::sentence::0"
+    ],
+    "evidence_wiki_url": [
+      "https://en.wikipedia.org/wiki/Bank_Street_%28Hong_Kong%29",
+      "https://en.wikipedia.org/wiki/HSBC_Building_%28Hong_Kong%29"
+    ],
+    "evidence_sentence_id": [
+      "Bank Street (Hong Kong)::sentence::0",
+      "Bank Street (Hong Kong)::sentence::1",
+      "Bank Street (Hong Kong)::sentence::2",
+      "HSBC Building (Hong Kong)::sentence::0"
+    ]
+  },
+  "grafo_claim": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "79a49a6d-60d2-591c-ac98-0a09188bc4c8",
+        "text": "This chunk is about:\n- Places: Bank Street\n- Organizations: Hong Kong and Shanghai Banking Corporation\n- Buildings: Bank of China Building\n\nFacts:\n- Bank Street is located between the headquarters of the Hong Kong and Shanghai Banking Corporation and the Bank of China Building.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "4abfbb6f-fa5e-5b91-8e89-046c3d343d96",
+        "text": "Bank street is sandwiched between the headquarters of the Hong Kong and Shanghai Banking Corporation and the Bank of China Building.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "b378854b-b2d7-577a-a41d-f14beda2d2b0",
+        "text": "text_3b11c0da211e35971acd709f4b370b0d",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "395b1bfb-2643-5746-a710-14eead4a66b1",
+        "text": "bank street",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "5f394058-b2a0-5ba8-8466-ba2a18cfcf4e",
+        "text": "place",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "9d724630-1779-5827-b33e-a687c3a81f94",
+        "text": "headquarters of the hong kong and shanghai banking corporation",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "b011d686-ca3a-5398-b03c-f44518808ad9",
+        "text": "building",
+        "type": "EntityType"
+      },
+      {
+        "id": 7,
+        "original_id": "bba7f77c-fe84-5165-859f-ac42bf6d9d22",
+        "text": "hong kong and shanghai banking corporation",
+        "type": "Entity"
+      },
+      {
+        "id": 8,
+        "original_id": "388f60fb-220d-55e8-ae9c-3ac93cead308",
+        "text": "organization",
+        "type": "EntityType"
+      },
+      {
+        "id": 9,
+        "original_id": "73f1378d-11ef-5a1e-bcba-9e47b234fc4a",
+        "text": "bank of china building",
+        "type": "Entity"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "between"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 9,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 5,
+        "target": 7,
+        "type": "headquarters_of"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      },
+      {
+        "source": 7,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 9,
+        "type": "between"
+      },
+      {
+        "source": 1,
+        "target": 9,
+        "type": "contains"
+      }
+    ]
+  },
+  "grafo_evidencia": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "229300ad-8425-57ec-89bd-d9559704d4cb",
+        "text": "This chunk is about:\n- Places: Bank Street, Central, Hong Kong\n- Buildings: HSBC Main Building, Bank of China Building\n- Companies: The Hongkong and Shanghai Banking Corporation, HSBC Holdings, Bank of China (Hong Kong)\n- Roads: Des Voeux Road Central, Queen's Road Central\n\nFacts:\n- Bank Street is a short street in Central, Hong Kong.\n- Bank Street links Des Voeux Road Central to Queen's Road Central.\n- Bank Street is named for its location between the HSBC Building and the Bank of China Building.\n- The HSBC Building and the Bank of China Building were the former headquarters of The Hongkong and Shanghai Banking Corporation and Bank of China (Hong Kong), respectively.\n- HSBC Main Building is a headquarters building of The Hongkong and Shanghai Banking Corporation.\n- The Hongkong and Shanghai Banking Corporation is now a wholly owned subsidiary of London-based HSBC Holdings.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "e0bb557a-3de1-5dab-a171-b687e0476390",
+        "text": "Page: Bank Street (Hong Kong). Sentence: Bank Street () is a short street in Central, Hong Kong.\nPage: Bank Street (Hong Kong). Sentence: It links Des Voeux Road Central to Queen's Road Central.\nPage: Bank Street (Hong Kong). Sentence: It is named after its location between HSBC Building and the Bank of China Building, the former headquarters of HSBC and Bank of China (Hong Kong) respectively.\nPage: HSBC Building (Hong Kong). Sentence: HSBC Main Building () is a headquarters building of The Hongkong and Shanghai Banking Corporation, which is today a wholly owned subsidiary of London-based HSBC Holdings.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "0ed9a6f7-9894-5213-9cf9-332c7a5127aa",
+        "text": "text_77b2db1a8aa45d90b229b8af7b224658",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "395b1bfb-2643-5746-a710-14eead4a66b1",
+        "text": "bank street",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "5f394058-b2a0-5ba8-8466-ba2a18cfcf4e",
+        "text": "place",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "019afe17-fec6-5dd0-a60d-15adce20a89b",
+        "text": "central, hong kong",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "2f1ebd4c-24ba-5453-92b3-7c21bf3f65a8",
+        "text": "hong kong",
+        "type": "Entity"
+      },
+      {
+        "id": 7,
+        "original_id": "12d2676d-2a07-5188-bba6-5e8209b32e71",
+        "text": "des voeux road central",
+        "type": "Entity"
+      },
+      {
+        "id": 8,
+        "original_id": "c9a3a0ed-0316-54ac-a386-5cddd6a48fcc",
+        "text": "queens road central",
+        "type": "Entity"
+      },
+      {
+        "id": 9,
+        "original_id": "785af83a-2fd9-555e-9023-2e9433bf84c2",
+        "text": "hsbc building",
+        "type": "Entity"
+      },
+      {
+        "id": 10,
+        "original_id": "b011d686-ca3a-5398-b03c-f44518808ad9",
+        "text": "building",
+        "type": "EntityType"
+      },
+      {
+        "id": 11,
+        "original_id": "a781d526-325e-5a6e-87b3-79c86c323bb0",
+        "text": "hsbc",
+        "type": "Entity"
+      },
+      {
+        "id": 12,
+        "original_id": "388f60fb-220d-55e8-ae9c-3ac93cead308",
+        "text": "organization",
+        "type": "EntityType"
+      },
+      {
+        "id": 13,
+        "original_id": "73f1378d-11ef-5a1e-bcba-9e47b234fc4a",
+        "text": "bank of china building",
+        "type": "Entity"
+      },
+      {
+        "id": 14,
+        "original_id": "5f9cc8f6-99aa-5575-857f-9ad728d5331b",
+        "text": "bank of china (hong kong)",
+        "type": "Entity"
+      },
+      {
+        "id": 15,
+        "original_id": "db7212a4-4ffd-5bea-b1d8-51ddc441edae",
+        "text": "hsbc main building",
+        "type": "Entity"
+      },
+      {
+        "id": 16,
+        "original_id": "2f4c534b-027b-5334-a65d-7b707570b12d",
+        "text": "the hongkong and shanghai banking corporation",
+        "type": "Entity"
+      },
+      {
+        "id": 17,
+        "original_id": "64ca518c-aab0-5032-8f1b-32efc8872bbe",
+        "text": "hsbc holdings",
+        "type": "Entity"
+      },
+      {
+        "id": 18,
+        "original_id": "29402dc0-a0ae-5d8e-8034-e62d821db121",
+        "text": "london",
+        "type": "Entity"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 5,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 6,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 7,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 8,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 18,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "located_in"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "located_in"
+      },
+      {
+        "source": 1,
+        "target": 6,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 7,
+        "type": "links_to"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 8,
+        "type": "links_to"
+      },
+      {
+        "source": 1,
+        "target": 8,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 9,
+        "type": "named_after_location_between"
+      },
+      {
+        "source": 1,
+        "target": 9,
+        "type": "contains"
+      },
+      {
+        "source": 9,
+        "target": 10,
+        "type": "is_a"
+      },
+      {
+        "source": 13,
+        "target": 10,
+        "type": "is_a"
+      },
+      {
+        "source": 15,
+        "target": 10,
+        "type": "is_a"
+      },
+      {
+        "source": 9,
+        "target": 11,
+        "type": "former_headquarters_of"
+      },
+      {
+        "source": 1,
+        "target": 11,
+        "type": "contains"
+      },
+      {
+        "source": 11,
+        "target": 12,
+        "type": "is_a"
+      },
+      {
+        "source": 14,
+        "target": 12,
+        "type": "is_a"
+      },
+      {
+        "source": 16,
+        "target": 12,
+        "type": "is_a"
+      },
+      {
+        "source": 17,
+        "target": 12,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 13,
+        "type": "named_after_location_between"
+      },
+      {
+        "source": 1,
+        "target": 13,
+        "type": "contains"
+      },
+      {
+        "source": 13,
+        "target": 14,
+        "type": "former_headquarters_of"
+      },
+      {
+        "source": 1,
+        "target": 14,
+        "type": "contains"
+      },
+      {
+        "source": 1,
+        "target": 15,
+        "type": "contains"
+      },
+      {
+        "source": 15,
+        "target": 16,
+        "type": "headquarters_of"
+      },
+      {
+        "source": 1,
+        "target": 16,
+        "type": "contains"
+      },
+      {
+        "source": 16,
+        "target": 17,
+        "type": "wholly_owned_subsidiary_of"
+      },
+      {
+        "source": 1,
+        "target": 17,
+        "type": "contains"
+      },
+      {
+        "source": 17,
+        "target": 18,
+        "type": "based_in"
+      },
+      {
+        "source": 1,
+        "target": 18,
+        "type": "contains"
+      }
+    ]
+  }
+}

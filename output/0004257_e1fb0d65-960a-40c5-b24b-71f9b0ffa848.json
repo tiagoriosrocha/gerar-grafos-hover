@@ -1,0 +1,331 @@
+{
+  "dataset": "hover",
+  "id": "e1fb0d65-960a-40c5-b24b-71f9b0ffa848",
+  "split": "train",
+  "claim": "The birthday of the oldest among Vicente García and Ximena Sariñana is March 30, 1983.",
+  "evidencia": "Page: Vicente García (musician). Sentence: Vicente García (born March 30, 1983) is a Dominican singer, songwriter and composer.\nPage: Ximena Sariñana. Sentence: Ximena Sariñana Rivera (] ; born October 29, 1985) is a Mexican singer-songwriter and actress.",
+  "evidence_text": "Page: Vicente García (musician). Sentence: Vicente García (born March 30, 1983) is a Dominican singer, songwriter and composer.\nPage: Ximena Sariñana. Sentence: Ximena Sariñana Rivera (] ; born October 29, 1985) is a Mexican singer-songwriter and actress.",
+  "label": "SUPPORTED",
+  "num_hops": 2,
+  "hover_metadata": {
+    "supporting_facts": [
+      [
+        "Vicente García (musician)",
+        0
+      ],
+      [
+        "Ximena Sariñana",
+        0
+      ]
+    ],
+    "num_hops": 2,
+    "evidence_annotation_id": [
+      0
+    ],
+    "evidence_id": [
+      "Vicente García (musician)::sentence::0",
+      "Ximena Sariñana::sentence::0"
+    ],
+    "evidence_wiki_url": [
+      "https://en.wikipedia.org/wiki/Vicente_Garc%C3%ADa_%28musician%29",
+      "https://en.wikipedia.org/wiki/Ximena_Sari%C3%B1ana"
+    ],
+    "evidence_sentence_id": [
+      "Vicente García (musician)::sentence::0",
+      "Ximena Sariñana::sentence::0"
+    ]
+  },
+  "grafo_claim": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "3f064ac9-05a2-518c-addf-0177f1bcda99",
+        "text": "This chunk is about:\n- People: Vicente García, Ximena Sariñana\n- Topics: birth dates, age comparison\n\nFacts:\n- Ximena Sariñana was born on October 29, 1985.\n- The oldest among Vicente García and Ximena Sariñana was born on March 30, 1983.\n- Vicente García was born on March 30, 1983.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "2dbb9b4f-e5dd-54d4-a869-2d2c7ff96eca",
+        "text": "The birthday of the oldest among Vicente García and Ximena Sariñana is March 30, 1983.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "0391c784-df91-5794-a04e-355810855ded",
+        "text": "text_1a5a6acb1a2d6df74300b9539c1b336c",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "5aa44485-4ded-5f35-8f20-becda2aa87cf",
+        "text": "vicente garcía",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "99a82eec-bb35-5bb5-9ed2-e73fc7a756de",
+        "text": "person",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "2d16488b-5fb5-5c21-9fd1-210000e3da27",
+        "text": "ximena sariñana",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "7f1f1411-9263-5c7f-bb8b-a4801e6468a4",
+        "text": "1983-03-30",
+        "type": "Entity"
+      },
+      {
+        "id": 7,
+        "original_id": "b19433ae-558c-5aaf-95ac-6231f2a4be0e",
+        "text": "date",
+        "type": "EntityType"
+      },
+      {
+        "id": 8,
+        "original_id": "bfad710c-a8d5-5942-9409-c3ddcb5b562f",
+        "text": "oldest among vicente garcía and ximena sariñana",
+        "type": "Entity"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 8,
+        "target": 3,
+        "type": "is_among"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 5,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 8,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 8,
+        "target": 5,
+        "type": "is_among"
+      },
+      {
+        "source": 1,
+        "target": 6,
+        "type": "contains"
+      },
+      {
+        "source": 8,
+        "target": 6,
+        "type": "has_birthday"
+      },
+      {
+        "source": 6,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 8,
+        "type": "contains"
+      }
+    ]
+  },
+  "grafo_evidencia": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "3bed2330-cfd1-5c67-93fd-9ca38a8058b4",
+        "text": "This chunk is about:\n- People: Vicente García, Ximena Sariñana\n- Roles: singer, songwriter, composer, actress\n- Places: Dominican Republic, Mexico\n\nFacts:\n- Vicente García was born on March 30, 1983.\n- Ximena Sariñana Rivera was born on October 29, 1985.\n- Vicente García is a Dominican singer, songwriter, and composer.\n- Ximena Sariñana Rivera is a Mexican singer-songwriter and actress.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "526b3019-41e5-519a-b8bb-1618ff31ffe3",
+        "text": "Page: Vicente García (musician). Sentence: Vicente García (born March 30, 1983) is a Dominican singer, songwriter and composer.\nPage: Ximena Sariñana. Sentence: Ximena Sariñana Rivera (] ; born October 29, 1985) is a Mexican singer-songwriter and actress.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "e926183c-5a00-53f5-9531-092ca93ed238",
+        "text": "text_598273bf42f3319d974538c328fa584e",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "5aa44485-4ded-5f35-8f20-becda2aa87cf",
+        "text": "vicente garcía",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "7f1f1411-9263-5c7f-bb8b-a4801e6468a4",
+        "text": "1983-03-30",
+        "type": "Entity"
+      },
+      {
+        "id": 5,
+        "original_id": "b19433ae-558c-5aaf-95ac-6231f2a4be0e",
+        "text": "date",
+        "type": "EntityType"
+      },
+      {
+        "id": 6,
+        "original_id": "b0d0b4f7-a40c-5762-92b1-eb8c61f23569",
+        "text": "dominican republic",
+        "type": "Entity"
+      },
+      {
+        "id": 7,
+        "original_id": "5f394058-b2a0-5ba8-8466-ba2a18cfcf4e",
+        "text": "place",
+        "type": "EntityType"
+      },
+      {
+        "id": 8,
+        "original_id": "99a82eec-bb35-5bb5-9ed2-e73fc7a756de",
+        "text": "person",
+        "type": "EntityType"
+      },
+      {
+        "id": 9,
+        "original_id": "83925f87-43d2-5807-a98b-b0774a30ce5b",
+        "text": "ximena sariñana rivera",
+        "type": "Entity"
+      },
+      {
+        "id": 10,
+        "original_id": "15b41237-710e-5aec-bea8-b6f423216211",
+        "text": "1985-10-29",
+        "type": "Entity"
+      },
+      {
+        "id": 11,
+        "original_id": "cf7d42b5-76f2-568d-9972-0d0264af1b93",
+        "text": "mexico",
+        "type": "Entity"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "born_on"
+      },
+      {
+        "source": 1,
+        "target": 4,
+        "type": "contains"
+      },
+      {
+        "source": 4,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 10,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 6,
+        "type": "has_nationality"
+      },
+      {
+        "source": 1,
+        "target": 6,
+        "type": "contains"
+      },
+      {
+        "source": 6,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 11,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 9,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 9,
+        "type": "contains"
+      },
+      {
+        "source": 9,
+        "target": 10,
+        "type": "born_on"
+      },
+      {
+        "source": 1,
+        "target": 10,
+        "type": "contains"
+      },
+      {
+        "source": 9,
+        "target": 11,
+        "type": "has_nationality"
+      },
+      {
+        "source": 1,
+        "target": 11,
+        "type": "contains"
+      }
+    ]
+  }
+}

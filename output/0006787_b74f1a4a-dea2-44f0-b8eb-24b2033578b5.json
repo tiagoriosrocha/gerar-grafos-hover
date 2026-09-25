@@ -1,0 +1,478 @@
+{
+  "dataset": "hover",
+  "id": "b74f1a4a-dea2-44f0-b8eb-24b2033578b5",
+  "split": "train",
+  "claim": "The genus that Clianthus maximus belongs in, has more flower species than Callicoma.",
+  "evidencia": "Page: Clianthus. Sentence: Clianthus, commonly known as kakabeak (\"Kōwhai ngutukākā\" in Māori), is a genus of flowering plants in the legume family Fabaceae, comprising two species of shrubs native to New Zealand.\nPage: Callicoma. Sentence: Callicoma, is a plant genus that contains just one species, Callicoma serratifolia, a tall shrub or small tree which is native to Australia.\nPage: Clianthus maximus. Sentence: It is one of two species of \"Clianthus\" (kaka beak) and both have striking clusters of red flowers which resemble the beak of the kākā, a New Zealand parrot.",
+  "evidence_text": "Page: Clianthus. Sentence: Clianthus, commonly known as kakabeak (\"Kōwhai ngutukākā\" in Māori), is a genus of flowering plants in the legume family Fabaceae, comprising two species of shrubs native to New Zealand.\nPage: Callicoma. Sentence: Callicoma, is a plant genus that contains just one species, Callicoma serratifolia, a tall shrub or small tree which is native to Australia.\nPage: Clianthus maximus. Sentence: It is one of two species of \"Clianthus\" (kaka beak) and both have striking clusters of red flowers which resemble the beak of the kākā, a New Zealand parrot.",
+  "label": "NOT_SUPPORTED",
+  "num_hops": 3,
+  "hover_metadata": {
+    "supporting_facts": [
+      [
+        "Clianthus",
+        0
+      ],
+      [
+        "Callicoma",
+        0
+      ],
+      [
+        "Clianthus maximus",
+        1
+      ]
+    ],
+    "num_hops": 3,
+    "evidence_annotation_id": [
+      0
+    ],
+    "evidence_id": [
+      "Clianthus::sentence::0",
+      "Callicoma::sentence::0",
+      "Clianthus maximus::sentence::1"
+    ],
+    "evidence_wiki_url": [
+      "https://en.wikipedia.org/wiki/Clianthus",
+      "https://en.wikipedia.org/wiki/Callicoma",
+      "https://en.wikipedia.org/wiki/Clianthus_maximus"
+    ],
+    "evidence_sentence_id": [
+      "Clianthus::sentence::0",
+      "Callicoma::sentence::0",
+      "Clianthus maximus::sentence::1"
+    ]
+  },
+  "grafo_claim": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "9e8ff515-6a20-55c5-a608-3dd3fccdb7d6",
+        "text": "This chunk is about:\n- Plants: Clianthus maximus, Callicoma\n- Taxa: Clianthus, genus, flower species\n\nFacts:\n- Clianthus maximus belongs to the genus Clianthus.\n- The genus Clianthus has more flower species than Callicoma.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "ee812f91-ed22-5896-86d1-027cc4bde581",
+        "text": "The genus that Clianthus maximus belongs in, has more flower species than Callicoma.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "7ccdcb49-72c3-5365-863c-07b39585cee6",
+        "text": "text_3c576854028f9d372029086154d530eb",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "b34e1be4-7b86-556e-8b93-2fe56944cb2c",
+        "text": "clianthus maximus",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "68e014c7-48ae-5b76-b69e-1bd4fa4c00d4",
+        "text": "clianthus",
+        "type": "Entity"
+      },
+      {
+        "id": 5,
+        "original_id": "5a161657-6eb3-5be6-8435-15d2ca4746b4",
+        "text": "callicoma",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "58ce8914-8a9e-5302-9b2d-0d97006e12d3",
+        "text": "genus",
+        "type": "EntityType"
+      },
+      {
+        "id": 7,
+        "original_id": "2df43048-b175-54c2-b72b-0ff24f41e4f1",
+        "text": "plant",
+        "type": "EntityType"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "belongs_to_genus"
+      },
+      {
+        "source": 1,
+        "target": 4,
+        "type": "contains"
+      },
+      {
+        "source": 4,
+        "target": 5,
+        "type": "has_more_flower_species_than"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 4,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 7,
+        "type": "is_a"
+      }
+    ]
+  },
+  "grafo_evidencia": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "45aea772-ef73-5373-9023-0b33da9ad646",
+        "text": "This chunk is about:\n- Plants: Clianthus, Clianthus maximus, Callicoma serratifolia\n- Taxa: genera, species, Fabaceae\n- Places: New Zealand, Australia\n\nFacts:\n- Clianthus is a genus of flowering plants in the legume family Fabaceae.\n- Clianthus comprises two species of shrubs native to New Zealand.\n- Clianthus is commonly known as kakabeak and is called “Kōwhai ngutukākā” in Māori.\n- Clianthus maximus is one of the two species in the genus Clianthus.\n- The two Clianthus species have striking clusters of red flowers that resemble the beak of the New Zealand parrot kākā.\n- Callicoma is a plant genus with a single species, Callicoma serratifolia.\n- Callicoma serratifolia is a tall shrub or small tree native to Australia.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "d033680f-550a-574c-9d57-61eaebb41e1e",
+        "text": "Page: Clianthus. Sentence: Clianthus, commonly known as kakabeak (\"Kōwhai ngutukākā\" in Māori), is a genus of flowering plants in the legume family Fabaceae, comprising two species of shrubs native to New Zealand.\nPage: Callicoma. Sentence: Callicoma, is a plant genus that contains just one species, Callicoma serratifolia, a tall shrub or small tree which is native to Australia.\nPage: Clianthus maximus. Sentence: It is one of two species of \"Clianthus\" (kaka beak) and both have striking clusters of red flowers which resemble the beak of the kākā, a New Zealand parrot.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "65d23eb7-1998-5d7f-9b9e-e04f05806ba6",
+        "text": "text_0aaac56c7b80ab407f365d5b417ab71e",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "68e014c7-48ae-5b76-b69e-1bd4fa4c00d4",
+        "text": "clianthus",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "2539306e-7824-5fa5-b182-95b83ea5ff21",
+        "text": "kakabeak",
+        "type": "Entity"
+      },
+      {
+        "id": 5,
+        "original_id": "39575085-0710-527d-bd54-019de7b00429",
+        "text": "name",
+        "type": "EntityType"
+      },
+      {
+        "id": 6,
+        "original_id": "d7779799-20b8-50aa-ae9c-575565380c0f",
+        "text": "kōwhai ngutukākā",
+        "type": "Entity"
+      },
+      {
+        "id": 7,
+        "original_id": "2d070a21-aa4a-5489-8609-cc8b32359405",
+        "text": "fabaceae",
+        "type": "Entity"
+      },
+      {
+        "id": 8,
+        "original_id": "030da7f2-9df8-5253-8cfc-609957d4e333",
+        "text": "family",
+        "type": "EntityType"
+      },
+      {
+        "id": 9,
+        "original_id": "b9e6f04b-3af0-5fd3-8eac-4b641d227752",
+        "text": "new zealand",
+        "type": "Entity"
+      },
+      {
+        "id": 10,
+        "original_id": "5f394058-b2a0-5ba8-8466-ba2a18cfcf4e",
+        "text": "place",
+        "type": "EntityType"
+      },
+      {
+        "id": 11,
+        "original_id": "f9fd3c6b-2e5f-575a-b331-37cbcaf9708c",
+        "text": "red flowers",
+        "type": "Entity"
+      },
+      {
+        "id": 12,
+        "original_id": "a255d9e8-aff2-577a-bd6c-3099c832531a",
+        "text": "beak of the kākā",
+        "type": "Entity"
+      },
+      {
+        "id": 13,
+        "original_id": "80830bdb-451d-596b-9f38-3bfcd8b56527",
+        "text": "kākā",
+        "type": "Entity"
+      },
+      {
+        "id": 14,
+        "original_id": "5d76eb72-04ef-5580-b2ea-161f8429437a",
+        "text": "animal",
+        "type": "EntityType"
+      },
+      {
+        "id": 15,
+        "original_id": "579d6b43-08c1-5e0e-82ff-31971e02d0ed",
+        "text": "animal feature",
+        "type": "EntityType"
+      },
+      {
+        "id": 16,
+        "original_id": "6bdbd6ad-b145-5510-a7a8-284d56b0e8b6",
+        "text": "plant feature",
+        "type": "EntityType"
+      },
+      {
+        "id": 17,
+        "original_id": "58ce8914-8a9e-5302-9b2d-0d97006e12d3",
+        "text": "genus",
+        "type": "EntityType"
+      },
+      {
+        "id": 18,
+        "original_id": "5a161657-6eb3-5be6-8435-15d2ca4746b4",
+        "text": "callicoma",
+        "type": "Entity"
+      },
+      {
+        "id": 19,
+        "original_id": "5d3ed8d0-38e3-530c-97be-2cba73660cd8",
+        "text": "callicoma serratifolia",
+        "type": "Entity"
+      },
+      {
+        "id": 20,
+        "original_id": "02448d73-884d-50c7-a919-b94177f1cf43",
+        "text": "australia",
+        "type": "Entity"
+      },
+      {
+        "id": 21,
+        "original_id": "f23a15ce-c0de-5c57-9205-8c9d01026b05",
+        "text": "species",
+        "type": "EntityType"
+      },
+      {
+        "id": 22,
+        "original_id": "b34e1be4-7b86-556e-8b93-2fe56944cb2c",
+        "text": "clianthus maximus",
+        "type": "Entity"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 22,
+        "target": 3,
+        "type": "member_of_genus"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "commonly_known_as"
+      },
+      {
+        "source": 1,
+        "target": 4,
+        "type": "contains"
+      },
+      {
+        "source": 4,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 6,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 6,
+        "type": "known_in_māori_as"
+      },
+      {
+        "source": 1,
+        "target": 6,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 7,
+        "type": "in_family"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      },
+      {
+        "source": 7,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 9,
+        "type": "native_to"
+      },
+      {
+        "source": 13,
+        "target": 9,
+        "type": "described_as"
+      },
+      {
+        "source": 1,
+        "target": 9,
+        "type": "contains"
+      },
+      {
+        "source": 9,
+        "target": 10,
+        "type": "is_a"
+      },
+      {
+        "source": 20,
+        "target": 10,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 11,
+        "type": "has_feature"
+      },
+      {
+        "source": 1,
+        "target": 11,
+        "type": "contains"
+      },
+      {
+        "source": 11,
+        "target": 12,
+        "type": "resemble"
+      },
+      {
+        "source": 1,
+        "target": 12,
+        "type": "contains"
+      },
+      {
+        "source": 12,
+        "target": 13,
+        "type": "feature_of"
+      },
+      {
+        "source": 1,
+        "target": 13,
+        "type": "contains"
+      },
+      {
+        "source": 13,
+        "target": 14,
+        "type": "is_a"
+      },
+      {
+        "source": 12,
+        "target": 15,
+        "type": "is_a"
+      },
+      {
+        "source": 11,
+        "target": 16,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 17,
+        "type": "is_a"
+      },
+      {
+        "source": 18,
+        "target": 17,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 18,
+        "type": "contains"
+      },
+      {
+        "source": 18,
+        "target": 19,
+        "type": "contains_species"
+      },
+      {
+        "source": 1,
+        "target": 19,
+        "type": "contains"
+      },
+      {
+        "source": 19,
+        "target": 20,
+        "type": "native_to"
+      },
+      {
+        "source": 1,
+        "target": 20,
+        "type": "contains"
+      },
+      {
+        "source": 19,
+        "target": 21,
+        "type": "is_a"
+      },
+      {
+        "source": 22,
+        "target": 21,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 22,
+        "type": "contains"
+      }
+    ]
+  }
+}

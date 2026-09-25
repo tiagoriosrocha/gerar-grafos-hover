@@ -1,0 +1,907 @@
+{
+  "dataset": "hover",
+  "id": "bc9cc9a9-14f8-4ef3-838c-a8bc525f86a5",
+  "split": "train",
+  "claim": "Both the director of Mulholland Falls and Robert Redford work as a director.",
+  "evidencia": "Page: Lee Tamahori. Sentence: Lee Tamahori (born 17 June 1950) is a New Zealand filmmaker best known for directing 1994 film \"Once Were Warriors\" and 2002 James Bond film \"Die Another Day\".\nPage: Robert Redford. Sentence: Charles Robert Redford Jr. (born August 18, 1936) is an American actor, director, producer, businessman, environmentalist, and philanthropist.\nPage: Mulholland Falls. Sentence: Mulholland Falls is a 1996 American neo-noir crime thriller film directed by Lee Tamahori, written by Pete Dexter, and starring an ensemble cast featuring Nick Nolte, Jennifer Connelly, Chazz Palminteri, Michael Madsen, Chris Penn, Melanie Griffith, Andrew McCarthy, Treat Williams, and John Malkovich.",
+  "evidence_text": "Page: Lee Tamahori. Sentence: Lee Tamahori (born 17 June 1950) is a New Zealand filmmaker best known for directing 1994 film \"Once Were Warriors\" and 2002 James Bond film \"Die Another Day\".\nPage: Robert Redford. Sentence: Charles Robert Redford Jr. (born August 18, 1936) is an American actor, director, producer, businessman, environmentalist, and philanthropist.\nPage: Mulholland Falls. Sentence: Mulholland Falls is a 1996 American neo-noir crime thriller film directed by Lee Tamahori, written by Pete Dexter, and starring an ensemble cast featuring Nick Nolte, Jennifer Connelly, Chazz Palminteri, Michael Madsen, Chris Penn, Melanie Griffith, Andrew McCarthy, Treat Williams, and John Malkovich.",
+  "label": "SUPPORTED",
+  "num_hops": 3,
+  "hover_metadata": {
+    "supporting_facts": [
+      [
+        "Lee Tamahori",
+        0
+      ],
+      [
+        "Robert Redford",
+        0
+      ],
+      [
+        "Mulholland Falls",
+        0
+      ]
+    ],
+    "num_hops": 3,
+    "evidence_annotation_id": [
+      0
+    ],
+    "evidence_id": [
+      "Lee Tamahori::sentence::0",
+      "Robert Redford::sentence::0",
+      "Mulholland Falls::sentence::0"
+    ],
+    "evidence_wiki_url": [
+      "https://en.wikipedia.org/wiki/Lee_Tamahori",
+      "https://en.wikipedia.org/wiki/Robert_Redford",
+      "https://en.wikipedia.org/wiki/Mulholland_Falls"
+    ],
+    "evidence_sentence_id": [
+      "Lee Tamahori::sentence::0",
+      "Robert Redford::sentence::0",
+      "Mulholland Falls::sentence::0"
+    ]
+  },
+  "grafo_claim": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "7ce6271a-87f2-5934-8438-671eddcfa777",
+        "text": "This chunk is about:\n- People: Lee Tamahori, Robert Redford\n- Roles: director\n\nFacts:\n- Lee Tamahori, the director of Mulholland Falls, works as a director.\n- Robert Redford works as a director.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "7d8a552d-0329-59f5-97b8-4904cea20c87",
+        "text": "Both the director of Mulholland Falls and Robert Redford work as a director.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "1b2b5247-5c91-5994-947b-a455d6050157",
+        "text": "text_21f4d18196c1039a82b5c4ce9516281b",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "eead78ef-008e-5de5-9ab9-32d255bf9fe2",
+        "text": "mulholland falls",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "5263a535-1b4b-5925-be3e-310d03cd303b",
+        "text": "work",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "4b033a16-0387-5d87-ae50-5d61bd466b94",
+        "text": "director of mulholland falls",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "99a82eec-bb35-5bb5-9ed2-e73fc7a756de",
+        "text": "person",
+        "type": "EntityType"
+      },
+      {
+        "id": 7,
+        "original_id": "4f624050-eb80-540a-b5c3-4ad67482ebad",
+        "text": "director",
+        "type": "Entity"
+      },
+      {
+        "id": 8,
+        "original_id": "9d80eb43-32fa-561c-9371-91f180ebcb6c",
+        "text": "profession",
+        "type": "EntityType"
+      },
+      {
+        "id": 9,
+        "original_id": "89420e6f-ceab-5193-a8a1-24c3101fd26e",
+        "text": "robert redford",
+        "type": "Entity"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 3,
+        "type": "directed"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 9,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 5,
+        "target": 7,
+        "type": "has_profession"
+      },
+      {
+        "source": 9,
+        "target": 7,
+        "type": "has_profession"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      },
+      {
+        "source": 7,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 9,
+        "type": "contains"
+      }
+    ]
+  },
+  "grafo_evidencia": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "bd45e2e6-651c-5add-8b53-470945fda7b6",
+        "text": "This chunk is about:\n- People: Lee Tamahori, Robert Redford, Pete Dexter, Nick Nolte, Jennifer Connelly, Chazz Palminteri, Michael Madsen, Chris Penn, Melanie Griffith, Andrew McCarthy, Treat Williams, John Malkovich\n- Films: Once Were Warriors, Die Another Day, Mulholland Falls\n- Topics: filmmaking, acting, directing, producing, environmentalism, philanthropy\n\nFacts:\n- Lee Tamahori was born on 17 June 1950 and is a New Zealand filmmaker.\n- Robert Redford, born Charles Robert Redford Jr. on August 18, 1936, is an American actor, director, producer, businessman, environmentalist, and philanthropist.\n- Lee Tamahori is best known for directing the 1994 film Once Were Warriors.\n- Mulholland Falls is a 1996 American neo-noir crime thriller film directed by Lee Tamahori and written by Pete Dexter.\n- Mulholland Falls stars Nick Nolte, Jennifer Connelly, Chazz Palminteri, Michael Madsen, Chris Penn, Melanie Griffith, Andrew McCarthy, Treat Williams, and John Malkovich.\n- Lee Tamahori is also known for directing the 2002 James Bond film Die Another Day.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "f049b6f9-a0c9-5ff9-a2bb-3d5b1a058b7a",
+        "text": "Page: Lee Tamahori. Sentence: Lee Tamahori (born 17 June 1950) is a New Zealand filmmaker best known for directing 1994 film \"Once Were Warriors\" and 2002 James Bond film \"Die Another Day\".\nPage: Robert Redford. Sentence: Charles Robert Redford Jr. (born August 18, 1936) is an American actor, director, producer, businessman, environmentalist, and philanthropist.\nPage: Mulholland Falls. Sentence: Mulholland Falls is a 1996 American neo-noir crime thriller film directed by Lee Tamahori, written by Pete Dexter, and starring an ensemble cast featuring Nick Nolte, Jennifer Connelly, Chazz Palminteri, Michael Madsen, Chris Penn, Melanie Griffith, Andrew McCarthy, Treat Williams, and John Malkovich.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "837fc5d7-094a-5a08-ab68-af07434f5196",
+        "text": "text_179828535d0ae1150a46075cf588cb4f",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "80379f18-dd27-5fd8-88fd-f22264c7ca1c",
+        "text": "lee tamahori",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "99a82eec-bb35-5bb5-9ed2-e73fc7a756de",
+        "text": "person",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "5e2150b6-9d2f-51af-ad42-e55cafe70690",
+        "text": "1950-06-17",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "b19433ae-558c-5aaf-95ac-6231f2a4be0e",
+        "text": "date",
+        "type": "EntityType"
+      },
+      {
+        "id": 7,
+        "original_id": "b9e6f04b-3af0-5fd3-8eac-4b641d227752",
+        "text": "new zealand",
+        "type": "Entity"
+      },
+      {
+        "id": 8,
+        "original_id": "5f394058-b2a0-5ba8-8466-ba2a18cfcf4e",
+        "text": "place",
+        "type": "EntityType"
+      },
+      {
+        "id": 9,
+        "original_id": "8fc0afd4-d257-5381-9f94-be3a2bb20a25",
+        "text": "filmmaker",
+        "type": "Entity"
+      },
+      {
+        "id": 10,
+        "original_id": "d2a381fa-3658-5ca6-ada9-2109cfc9331d",
+        "text": "concept",
+        "type": "EntityType"
+      },
+      {
+        "id": 11,
+        "original_id": "21e1a3d3-cc51-5906-842a-857a6b96b00d",
+        "text": "once were warriors",
+        "type": "Entity"
+      },
+      {
+        "id": 12,
+        "original_id": "5263a535-1b4b-5925-be3e-310d03cd303b",
+        "text": "work",
+        "type": "EntityType"
+      },
+      {
+        "id": 13,
+        "original_id": "47298c7b-06d6-557a-9b42-14bc432a9f43",
+        "text": "1994",
+        "type": "Entity"
+      },
+      {
+        "id": 14,
+        "original_id": "46dc0d09-4aac-5bbc-bac3-fb53ce0d6b74",
+        "text": "die another day",
+        "type": "Entity"
+      },
+      {
+        "id": 15,
+        "original_id": "d4028376-9599-5def-be60-886e367316ac",
+        "text": "2002",
+        "type": "Entity"
+      },
+      {
+        "id": 16,
+        "original_id": "c688bd61-8b4a-5123-963e-458d8d4ff6ad",
+        "text": "james bond",
+        "type": "Entity"
+      },
+      {
+        "id": 17,
+        "original_id": "89420e6f-ceab-5193-a8a1-24c3101fd26e",
+        "text": "robert redford",
+        "type": "Entity"
+      },
+      {
+        "id": 18,
+        "original_id": "662f5f7d-1e72-5c5a-ac44-5adcfaeabe8b",
+        "text": "charles robert redford jr.",
+        "type": "Entity"
+      },
+      {
+        "id": 19,
+        "original_id": "55b60a76-006b-57da-b235-8366a74319b4",
+        "text": "1936-08-18",
+        "type": "Entity"
+      },
+      {
+        "id": 20,
+        "original_id": "32e5ea46-cca9-5920-8b2d-77357f10ce8d",
+        "text": "american",
+        "type": "Entity"
+      },
+      {
+        "id": 21,
+        "original_id": "a8ff7c3e-ce8b-5fbb-b5ba-24a49cbc08a9",
+        "text": "actor",
+        "type": "Entity"
+      },
+      {
+        "id": 22,
+        "original_id": "4f624050-eb80-540a-b5c3-4ad67482ebad",
+        "text": "director",
+        "type": "Entity"
+      },
+      {
+        "id": 23,
+        "original_id": "fc2230d6-898d-5221-b1ca-833b27ae6866",
+        "text": "producer",
+        "type": "Entity"
+      },
+      {
+        "id": 24,
+        "original_id": "cc854d35-8e3a-5965-b00b-b4899cb347f5",
+        "text": "businessman",
+        "type": "Entity"
+      },
+      {
+        "id": 25,
+        "original_id": "0029cde9-7123-54bb-9fcf-3e22d5ab1b69",
+        "text": "environmentalist",
+        "type": "Entity"
+      },
+      {
+        "id": 26,
+        "original_id": "0f919fc0-f204-5b36-8b8d-8147ea4c6513",
+        "text": "philanthropist",
+        "type": "Entity"
+      },
+      {
+        "id": 27,
+        "original_id": "eead78ef-008e-5de5-9ab9-32d255bf9fe2",
+        "text": "mulholland falls",
+        "type": "Entity"
+      },
+      {
+        "id": 28,
+        "original_id": "03508744-888e-5e4b-9a29-9ff87ae8d3b3",
+        "text": "1996",
+        "type": "Entity"
+      },
+      {
+        "id": 29,
+        "original_id": "7a90df01-c8ab-5872-ae43-5ad6d2d4f6b3",
+        "text": "neo-noir crime thriller film",
+        "type": "Entity"
+      },
+      {
+        "id": 30,
+        "original_id": "fcab0efd-d82f-5481-ad12-3fd2e754b691",
+        "text": "pete dexter",
+        "type": "Entity"
+      },
+      {
+        "id": 31,
+        "original_id": "e055e2b7-242e-5996-86f4-d9284866b69a",
+        "text": "nick nolte",
+        "type": "Entity"
+      },
+      {
+        "id": 32,
+        "original_id": "4c2e442e-825c-58d7-b5de-556d294b74cc",
+        "text": "jennifer connelly",
+        "type": "Entity"
+      },
+      {
+        "id": 33,
+        "original_id": "990b5ef0-e5d7-5423-9268-ba11c5843153",
+        "text": "chazz palminteri",
+        "type": "Entity"
+      },
+      {
+        "id": 34,
+        "original_id": "9818dd29-ec53-5b44-98fd-da2b9fd802f0",
+        "text": "michael madsen",
+        "type": "Entity"
+      },
+      {
+        "id": 35,
+        "original_id": "8337d161-69f2-5845-9c75-4594e7e53c28",
+        "text": "chris penn",
+        "type": "Entity"
+      },
+      {
+        "id": 36,
+        "original_id": "2f1b2761-2619-5bae-bcb8-a633c636a62d",
+        "text": "melanie griffith",
+        "type": "Entity"
+      },
+      {
+        "id": 37,
+        "original_id": "f3721eaf-3018-5a2c-8be0-bf2e112b2a28",
+        "text": "andrew mccarthy",
+        "type": "Entity"
+      },
+      {
+        "id": 38,
+        "original_id": "b05243fb-e2c2-546c-8da1-5b9ff28d405d",
+        "text": "treat williams",
+        "type": "Entity"
+      },
+      {
+        "id": 39,
+        "original_id": "2f5d8eee-4b47-5c8d-8a6a-a0f587231e84",
+        "text": "john malkovich",
+        "type": "Entity"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 27,
+        "target": 3,
+        "type": "directed_by"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 17,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 18,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 30,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 31,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 32,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 33,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 34,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 35,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 36,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 37,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 38,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 39,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "born_on"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 13,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 15,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 19,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 28,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 7,
+        "type": "associated_with_place"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      },
+      {
+        "source": 7,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 9,
+        "type": "has_profession"
+      },
+      {
+        "source": 1,
+        "target": 9,
+        "type": "contains"
+      },
+      {
+        "source": 9,
+        "target": 10,
+        "type": "is_a"
+      },
+      {
+        "source": 16,
+        "target": 10,
+        "type": "is_a"
+      },
+      {
+        "source": 20,
+        "target": 10,
+        "type": "is_a"
+      },
+      {
+        "source": 21,
+        "target": 10,
+        "type": "is_a"
+      },
+      {
+        "source": 22,
+        "target": 10,
+        "type": "is_a"
+      },
+      {
+        "source": 23,
+        "target": 10,
+        "type": "is_a"
+      },
+      {
+        "source": 24,
+        "target": 10,
+        "type": "is_a"
+      },
+      {
+        "source": 25,
+        "target": 10,
+        "type": "is_a"
+      },
+      {
+        "source": 26,
+        "target": 10,
+        "type": "is_a"
+      },
+      {
+        "source": 29,
+        "target": 10,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 11,
+        "type": "directed"
+      },
+      {
+        "source": 1,
+        "target": 11,
+        "type": "contains"
+      },
+      {
+        "source": 11,
+        "target": 12,
+        "type": "is_a"
+      },
+      {
+        "source": 14,
+        "target": 12,
+        "type": "is_a"
+      },
+      {
+        "source": 27,
+        "target": 12,
+        "type": "is_a"
+      },
+      {
+        "source": 11,
+        "target": 13,
+        "type": "released_in"
+      },
+      {
+        "source": 1,
+        "target": 13,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 14,
+        "type": "directed"
+      },
+      {
+        "source": 1,
+        "target": 14,
+        "type": "contains"
+      },
+      {
+        "source": 14,
+        "target": 15,
+        "type": "released_in"
+      },
+      {
+        "source": 1,
+        "target": 15,
+        "type": "contains"
+      },
+      {
+        "source": 14,
+        "target": 16,
+        "type": "described_as"
+      },
+      {
+        "source": 1,
+        "target": 16,
+        "type": "contains"
+      },
+      {
+        "source": 1,
+        "target": 17,
+        "type": "contains"
+      },
+      {
+        "source": 17,
+        "target": 18,
+        "type": "has_birth_name"
+      },
+      {
+        "source": 1,
+        "target": 18,
+        "type": "contains"
+      },
+      {
+        "source": 17,
+        "target": 19,
+        "type": "born_on"
+      },
+      {
+        "source": 1,
+        "target": 19,
+        "type": "contains"
+      },
+      {
+        "source": 17,
+        "target": 20,
+        "type": "has_nationality"
+      },
+      {
+        "source": 1,
+        "target": 20,
+        "type": "contains"
+      },
+      {
+        "source": 27,
+        "target": 20,
+        "type": "associated_with_nationality"
+      },
+      {
+        "source": 17,
+        "target": 21,
+        "type": "has_profession"
+      },
+      {
+        "source": 1,
+        "target": 21,
+        "type": "contains"
+      },
+      {
+        "source": 17,
+        "target": 22,
+        "type": "has_profession"
+      },
+      {
+        "source": 1,
+        "target": 22,
+        "type": "contains"
+      },
+      {
+        "source": 17,
+        "target": 23,
+        "type": "has_profession"
+      },
+      {
+        "source": 1,
+        "target": 23,
+        "type": "contains"
+      },
+      {
+        "source": 17,
+        "target": 24,
+        "type": "has_profession"
+      },
+      {
+        "source": 1,
+        "target": 24,
+        "type": "contains"
+      },
+      {
+        "source": 17,
+        "target": 25,
+        "type": "has_role"
+      },
+      {
+        "source": 1,
+        "target": 25,
+        "type": "contains"
+      },
+      {
+        "source": 17,
+        "target": 26,
+        "type": "has_role"
+      },
+      {
+        "source": 1,
+        "target": 26,
+        "type": "contains"
+      },
+      {
+        "source": 1,
+        "target": 27,
+        "type": "contains"
+      },
+      {
+        "source": 27,
+        "target": 28,
+        "type": "released_in"
+      },
+      {
+        "source": 1,
+        "target": 28,
+        "type": "contains"
+      },
+      {
+        "source": 27,
+        "target": 29,
+        "type": "has_genre"
+      },
+      {
+        "source": 1,
+        "target": 29,
+        "type": "contains"
+      },
+      {
+        "source": 27,
+        "target": 30,
+        "type": "written_by"
+      },
+      {
+        "source": 1,
+        "target": 30,
+        "type": "contains"
+      },
+      {
+        "source": 27,
+        "target": 31,
+        "type": "starred_actor"
+      },
+      {
+        "source": 1,
+        "target": 31,
+        "type": "contains"
+      },
+      {
+        "source": 27,
+        "target": 32,
+        "type": "starred_actor"
+      },
+      {
+        "source": 1,
+        "target": 32,
+        "type": "contains"
+      },
+      {
+        "source": 27,
+        "target": 33,
+        "type": "starred_actor"
+      },
+      {
+        "source": 1,
+        "target": 33,
+        "type": "contains"
+      },
+      {
+        "source": 27,
+        "target": 34,
+        "type": "starred_actor"
+      },
+      {
+        "source": 1,
+        "target": 34,
+        "type": "contains"
+      },
+      {
+        "source": 27,
+        "target": 35,
+        "type": "starred_actor"
+      },
+      {
+        "source": 1,
+        "target": 35,
+        "type": "contains"
+      },
+      {
+        "source": 27,
+        "target": 36,
+        "type": "starred_actor"
+      },
+      {
+        "source": 1,
+        "target": 36,
+        "type": "contains"
+      },
+      {
+        "source": 27,
+        "target": 37,
+        "type": "starred_actor"
+      },
+      {
+        "source": 1,
+        "target": 37,
+        "type": "contains"
+      },
+      {
+        "source": 27,
+        "target": 38,
+        "type": "starred_actor"
+      },
+      {
+        "source": 1,
+        "target": 38,
+        "type": "contains"
+      },
+      {
+        "source": 27,
+        "target": 39,
+        "type": "starred_actor"
+      },
+      {
+        "source": 1,
+        "target": 39,
+        "type": "contains"
+      }
+    ]
+  }
+}

@@ -1,0 +1,371 @@
+{
+  "dataset": "hover",
+  "id": "5f458fe9-2aac-4f3e-9edd-adfb789bb79a",
+  "split": "train",
+  "claim": "The Highland Park and Lake Burien Railway runs from Everett to a city in Pierce County.",
+  "evidencia": "Page: Highland Park and Lake Burien Railway. Sentence: The Highland Park and Lake Burien Railway was a branch of the Interurban System that went from Everett to Tacoma in Washington state.\nPage: Tacoma, Washington. Sentence: Tacoma ( ) is a mid-sized urban port city in and the county seat of Pierce County, Washington, United States.",
+  "evidence_text": "Page: Highland Park and Lake Burien Railway. Sentence: The Highland Park and Lake Burien Railway was a branch of the Interurban System that went from Everett to Tacoma in Washington state.\nPage: Tacoma, Washington. Sentence: Tacoma ( ) is a mid-sized urban port city in and the county seat of Pierce County, Washington, United States.",
+  "label": "SUPPORTED",
+  "num_hops": 2,
+  "hover_metadata": {
+    "supporting_facts": [
+      [
+        "Highland Park and Lake Burien Railway",
+        0
+      ],
+      [
+        "Tacoma, Washington",
+        0
+      ]
+    ],
+    "num_hops": 2,
+    "evidence_annotation_id": [
+      0
+    ],
+    "evidence_id": [
+      "Highland Park and Lake Burien Railway::sentence::0",
+      "Tacoma, Washington::sentence::0"
+    ],
+    "evidence_wiki_url": [
+      "https://en.wikipedia.org/wiki/Highland_Park_and_Lake_Burien_Railway",
+      "https://en.wikipedia.org/wiki/Tacoma%2C_Washington"
+    ],
+    "evidence_sentence_id": [
+      "Highland Park and Lake Burien Railway::sentence::0",
+      "Tacoma, Washington::sentence::0"
+    ]
+  },
+  "grafo_claim": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "2129034f-3efe-559e-bb48-4372dbedf5c6",
+        "text": "This chunk is about:\n- Organizations: Highland Park and Lake Burien Railway\n- Places: Everett, Pierce County\n\nFacts:\n- The Highland Park and Lake Burien Railway runs from Everett to a city in Pierce County.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "6fedbe2f-e9f8-55ee-ad43-8fee7a000737",
+        "text": "The Highland Park and Lake Burien Railway runs from Everett to a city in Pierce County.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "de6d91a8-fc35-5642-99e4-2097145a2e92",
+        "text": "text_b3cd856831ce3c93d4341a9fa761c7f9",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "6ada5f65-d91f-590c-a45f-37f5453d85e0",
+        "text": "highland park and lake burien railway",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "388f60fb-220d-55e8-ae9c-3ac93cead308",
+        "text": "organization",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "cb42e1d1-7914-5c8b-b739-8dc5dde2eb58",
+        "text": "everett",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "5f394058-b2a0-5ba8-8466-ba2a18cfcf4e",
+        "text": "place",
+        "type": "EntityType"
+      },
+      {
+        "id": 7,
+        "original_id": "0dc524d1-d29a-5dbf-b4ba-fb51d91128b3",
+        "text": "a city in pierce county",
+        "type": "Entity"
+      },
+      {
+        "id": 8,
+        "original_id": "630e5c25-b802-5515-a12a-b3558196114b",
+        "text": "pierce county",
+        "type": "Entity"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "runs_from"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 7,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 8,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 7,
+        "type": "runs_to"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      },
+      {
+        "source": 7,
+        "target": 8,
+        "type": "located_in"
+      },
+      {
+        "source": 1,
+        "target": 8,
+        "type": "contains"
+      }
+    ]
+  },
+  "grafo_evidencia": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "1e66c003-ade5-5f98-9a35-7f6b03c0e427",
+        "text": "This chunk is about:\n- Systems: Highland Park and Lake Burien Railway, Interurban System\n- Places: Everett, Tacoma, Washington state, Pierce County, United States\n- Topics: branch rail lines, cities\n\nFacts:\n- The Highland Park and Lake Burien Railway was a branch of the Interurban System in Washington state.\n- The Interurban System ran from Everett to Tacoma in Washington state.\n- Tacoma is a mid-sized urban port city in Washington, United States.\n- Tacoma is the county seat of Pierce County, Washington.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "07de60d7-5ffb-5af5-baa3-5861d7319353",
+        "text": "Page: Highland Park and Lake Burien Railway. Sentence: The Highland Park and Lake Burien Railway was a branch of the Interurban System that went from Everett to Tacoma in Washington state.\nPage: Tacoma, Washington. Sentence: Tacoma ( ) is a mid-sized urban port city in and the county seat of Pierce County, Washington, United States.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "f434f69d-77bd-50f2-8f21-86a723f2141c",
+        "text": "text_b18aee6b881d25421db8ee35246ce17d",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "6ada5f65-d91f-590c-a45f-37f5453d85e0",
+        "text": "highland park and lake burien railway",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "388f60fb-220d-55e8-ae9c-3ac93cead308",
+        "text": "organization",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "5af85af7-620e-55bb-8427-db1684d77c63",
+        "text": "interurban system",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "cb42e1d1-7914-5c8b-b739-8dc5dde2eb58",
+        "text": "everett",
+        "type": "Entity"
+      },
+      {
+        "id": 7,
+        "original_id": "5f394058-b2a0-5ba8-8466-ba2a18cfcf4e",
+        "text": "place",
+        "type": "EntityType"
+      },
+      {
+        "id": 8,
+        "original_id": "fcc77e67-14d5-5ebb-bfb0-1f024950fcd9",
+        "text": "tacoma",
+        "type": "Entity"
+      },
+      {
+        "id": 9,
+        "original_id": "630e5c25-b802-5515-a12a-b3558196114b",
+        "text": "pierce county",
+        "type": "Entity"
+      },
+      {
+        "id": 10,
+        "original_id": "95142d38-e261-5f7d-8c2e-e06e59777e93",
+        "text": "washington",
+        "type": "Entity"
+      },
+      {
+        "id": 11,
+        "original_id": "874a51da-34ea-5037-be47-d87785d43c37",
+        "text": "united states",
+        "type": "Entity"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 5,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "branch_of"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "went_from"
+      },
+      {
+        "source": 1,
+        "target": 6,
+        "type": "contains"
+      },
+      {
+        "source": 6,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 8,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 9,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 10,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 11,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 5,
+        "target": 8,
+        "type": "went_to"
+      },
+      {
+        "source": 1,
+        "target": 8,
+        "type": "contains"
+      },
+      {
+        "source": 8,
+        "target": 9,
+        "type": "county_seat_of"
+      },
+      {
+        "source": 1,
+        "target": 9,
+        "type": "contains"
+      },
+      {
+        "source": 9,
+        "target": 10,
+        "type": "located_in"
+      },
+      {
+        "source": 8,
+        "target": 10,
+        "type": "located_in"
+      },
+      {
+        "source": 5,
+        "target": 10,
+        "type": "in_state"
+      },
+      {
+        "source": 1,
+        "target": 10,
+        "type": "contains"
+      },
+      {
+        "source": 10,
+        "target": 11,
+        "type": "located_in"
+      },
+      {
+        "source": 9,
+        "target": 11,
+        "type": "located_in"
+      },
+      {
+        "source": 8,
+        "target": 11,
+        "type": "located_in"
+      },
+      {
+        "source": 1,
+        "target": 11,
+        "type": "contains"
+      }
+    ]
+  }
+}

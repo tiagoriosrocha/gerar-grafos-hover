@@ -1,0 +1,601 @@
+{
+  "dataset": "hover",
+  "id": "dbf3c693-8c32-4942-b6b9-00634d9b7982",
+  "split": "train",
+  "claim": "An airport is a 30-minute drive from the place where Amberley Wild Brooks is near. The airport is the busiest airport in the United Kingdom outside of Haldia.",
+  "evidencia": "Page: Gatwick Airport. Sentence: Gatwick Airport (also known as London Gatwick) (IATA: LGW, ICAO: EGKK) is a major international airport in south-east England, 29.5 mi south of Central London and 2.7 NM north of Crawley.\nPage: Gatwick Airport. Sentence: It is the second-busiest airport by total passenger traffic in the United Kingdom, after London Heathrow.\nPage: Heathrow Airport. Sentence: Heathrow Airport (also known as London Heathrow) (IATA: LHR, ICAO: EGLL) is a major international airport in London, United Kingdom.\nPage: Coldwaltham. Sentence: It is around a 30-minute drive from Gatwick Airport.\nPage: Amberley Wild Brooks. Sentence: There is a path, which forms part of the Wey South Path, leading through the Wild Brooks from Amberley to Greatham Bridge near Coldwaltham.",
+  "evidence_text": "Page: Gatwick Airport. Sentence: Gatwick Airport (also known as London Gatwick) (IATA: LGW, ICAO: EGKK) is a major international airport in south-east England, 29.5 mi south of Central London and 2.7 NM north of Crawley.\nPage: Gatwick Airport. Sentence: It is the second-busiest airport by total passenger traffic in the United Kingdom, after London Heathrow.\nPage: Heathrow Airport. Sentence: Heathrow Airport (also known as London Heathrow) (IATA: LHR, ICAO: EGLL) is a major international airport in London, United Kingdom.\nPage: Coldwaltham. Sentence: It is around a 30-minute drive from Gatwick Airport.\nPage: Amberley Wild Brooks. Sentence: There is a path, which forms part of the Wey South Path, leading through the Wild Brooks from Amberley to Greatham Bridge near Coldwaltham.",
+  "label": "NOT_SUPPORTED",
+  "num_hops": 4,
+  "hover_metadata": {
+    "supporting_facts": [
+      [
+        "Gatwick Airport",
+        0
+      ],
+      [
+        "Gatwick Airport",
+        1
+      ],
+      [
+        "Heathrow Airport",
+        0
+      ],
+      [
+        "Coldwaltham",
+        2
+      ],
+      [
+        "Amberley Wild Brooks",
+        1
+      ]
+    ],
+    "num_hops": 4,
+    "evidence_annotation_id": [
+      0
+    ],
+    "evidence_id": [
+      "Gatwick Airport::sentence::0",
+      "Gatwick Airport::sentence::1",
+      "Heathrow Airport::sentence::0",
+      "Coldwaltham::sentence::2",
+      "Amberley Wild Brooks::sentence::1"
+    ],
+    "evidence_wiki_url": [
+      "https://en.wikipedia.org/wiki/Gatwick_Airport",
+      "https://en.wikipedia.org/wiki/Heathrow_Airport",
+      "https://en.wikipedia.org/wiki/Coldwaltham",
+      "https://en.wikipedia.org/wiki/Amberley_Wild_Brooks"
+    ],
+    "evidence_sentence_id": [
+      "Gatwick Airport::sentence::0",
+      "Gatwick Airport::sentence::1",
+      "Heathrow Airport::sentence::0",
+      "Coldwaltham::sentence::2",
+      "Amberley Wild Brooks::sentence::1"
+    ]
+  },
+  "grafo_claim": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "be35ce6e-b769-5417-bc45-00a61aa98938",
+        "text": "This chunk is about:\n- Places: Amberley Wild Brooks, Haldia\n- Transportation: an airport\n\nFacts:\n- Amberley Wild Brooks is near a place that is a 30-minute drive from an airport.\n- The airport is the busiest airport in the United Kingdom outside of Haldia.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "d09e8a08-0570-52b3-8b6e-3ce57e9ab511",
+        "text": "An airport is a 30-minute drive from the place where Amberley Wild Brooks is near. The airport is the busiest airport in the United Kingdom outside of Haldia.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "5415f3cf-4c01-5874-9c9e-8e29ba210c9b",
+        "text": "text_b5c83e4fa89dd129c677836e2ec5ce8b",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "0333d139-7912-5082-b407-6e7a972bae48",
+        "text": "amberley wild brooks",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "5f394058-b2a0-5ba8-8466-ba2a18cfcf4e",
+        "text": "place",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "4f934275-9ea6-5dda-bc40-2e92cf38a1bb",
+        "text": "airport",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "1941be33-5fbb-50eb-a9b1-fa2fc297d7dd",
+        "text": "united kingdom",
+        "type": "Entity"
+      },
+      {
+        "id": 7,
+        "original_id": "67d0beb8-e19b-5f62-a887-a372640b7bd3",
+        "text": "haldia",
+        "type": "Entity"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 3,
+        "type": "is_30_minute_drive_from"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 6,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 7,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 5,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "is_busiest_airport_outside_of"
+      },
+      {
+        "source": 1,
+        "target": 6,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 7,
+        "type": "is_busiest_airport_outside_of"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      }
+    ]
+  },
+  "grafo_evidencia": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "1fd78fa1-a5d8-5dd3-89b2-962d74849eff",
+        "text": "This chunk is about:\n- Places: Gatwick Airport, Heathrow Airport, Coldwaltham, Amberley Wild Brooks, Central London, Crawley, Amberley, Greatham Bridge\n- Products/Systems: IATA codes, ICAO codes, Wey South Path\n\nFacts:\n- Gatwick Airport, also known as London Gatwick, has the IATA code LGW and the ICAO code EGKK.\n- Gatwick Airport is a major international airport in south-east England, 29.5 miles south of Central London and 2.7 nautical miles north of Crawley.\n- Gatwick Airport is the second-busiest airport in the United Kingdom by total passenger traffic, after London Heathrow.\n- Heathrow Airport, also known as London Heathrow, has the IATA code LHR and the ICAO code EGLL.\n- Heathrow Airport is a major international airport in London, United Kingdom.\n- Coldwaltham is around a 30-minute drive from Gatwick Airport.\n- A path that forms part of the Wey South Path leads through Amberley Wild Brooks from Amberley to Greatham Bridge near Coldwaltham.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "b120646f-7578-5ee9-8eae-56a0e366bb06",
+        "text": "Page: Gatwick Airport. Sentence: Gatwick Airport (also known as London Gatwick) (IATA: LGW, ICAO: EGKK) is a major international airport in south-east England, 29.5 mi south of Central London and 2.7 NM north of Crawley.\nPage: Gatwick Airport. Sentence: It is the second-busiest airport by total passenger traffic in the United Kingdom, after London Heathrow.\nPage: Heathrow Airport. Sentence: Heathrow Airport (also known as London Heathrow) (IATA: LHR, ICAO: EGLL) is a major international airport in London, United Kingdom.\nPage: Coldwaltham. Sentence: It is around a 30-minute drive from Gatwick Airport.\nPage: Amberley Wild Brooks. Sentence: There is a path, which forms part of the Wey South Path, leading through the Wild Brooks from Amberley to Greatham Bridge near Coldwaltham.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "003602c1-bb55-5895-b1a0-770a5ae543e9",
+        "text": "text_e1725094e5f7620c6d21171fc1c9baac",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "03afde1c-5462-5f57-88ee-8e8223c9ee6f",
+        "text": "gatwick airport",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "d0aff54a-dd70-5b8d-b754-291bccd222b6",
+        "text": "london gatwick",
+        "type": "Entity"
+      },
+      {
+        "id": 5,
+        "original_id": "5f394058-b2a0-5ba8-8466-ba2a18cfcf4e",
+        "text": "place",
+        "type": "EntityType"
+      },
+      {
+        "id": 6,
+        "original_id": "9e70b997-97ce-5132-9293-fde797bd972d",
+        "text": "lgw",
+        "type": "Entity"
+      },
+      {
+        "id": 7,
+        "original_id": "2c23f4f7-2223-5c53-a5f6-1bd0114fcd6a",
+        "text": "code",
+        "type": "EntityType"
+      },
+      {
+        "id": 8,
+        "original_id": "abb0dd86-bcaf-59bd-9cdd-0e2f0023fc31",
+        "text": "egkk",
+        "type": "Entity"
+      },
+      {
+        "id": 9,
+        "original_id": "b2a50543-a843-5676-b88d-006da73b164b",
+        "text": "south-east england",
+        "type": "Entity"
+      },
+      {
+        "id": 10,
+        "original_id": "670d1a9e-83b3-587d-849c-698b387e0f9b",
+        "text": "central london",
+        "type": "Entity"
+      },
+      {
+        "id": 11,
+        "original_id": "7dbf4515-c7b3-5f97-a22f-595106093c54",
+        "text": "crawley",
+        "type": "Entity"
+      },
+      {
+        "id": 12,
+        "original_id": "1941be33-5fbb-50eb-a9b1-fa2fc297d7dd",
+        "text": "united kingdom",
+        "type": "Entity"
+      },
+      {
+        "id": 13,
+        "original_id": "0c914b4c-fc6e-598e-bd04-66175cfd9864",
+        "text": "heathrow airport",
+        "type": "Entity"
+      },
+      {
+        "id": 14,
+        "original_id": "36cb4a2a-3c68-5777-81b4-d1570f5060ae",
+        "text": "london heathrow",
+        "type": "Entity"
+      },
+      {
+        "id": 15,
+        "original_id": "98270e53-af9f-5a6d-a175-6e2bc1ee63f7",
+        "text": "lhr",
+        "type": "Entity"
+      },
+      {
+        "id": 16,
+        "original_id": "10ed64f8-ddb8-52c0-add7-e9d1ac86e655",
+        "text": "egll",
+        "type": "Entity"
+      },
+      {
+        "id": 17,
+        "original_id": "29402dc0-a0ae-5d8e-8034-e62d821db121",
+        "text": "london",
+        "type": "Entity"
+      },
+      {
+        "id": 18,
+        "original_id": "b15c0d30-228b-53a1-8c10-5720c6a092ff",
+        "text": "coldwaltham",
+        "type": "Entity"
+      },
+      {
+        "id": 19,
+        "original_id": "0333d139-7912-5082-b407-6e7a972bae48",
+        "text": "amberley wild brooks",
+        "type": "Entity"
+      },
+      {
+        "id": 20,
+        "original_id": "da5e4c86-426e-5c65-b9d4-c7df996d3221",
+        "text": "wey south path",
+        "type": "Entity"
+      },
+      {
+        "id": 21,
+        "original_id": "71d5c450-32c3-502e-ac7b-a8871872e494",
+        "text": "greatham bridge",
+        "type": "Entity"
+      },
+      {
+        "id": 22,
+        "original_id": "b3cde377-8777-5e09-b930-77c8307babdc",
+        "text": "amberley",
+        "type": "Entity"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 18,
+        "target": 3,
+        "type": "drive_time_from"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "also_known_as"
+      },
+      {
+        "source": 1,
+        "target": 4,
+        "type": "contains"
+      },
+      {
+        "source": 4,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 9,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 10,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 11,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 12,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 14,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 17,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 13,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 18,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 20,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 21,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 19,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 22,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 6,
+        "type": "has_iata_code"
+      },
+      {
+        "source": 1,
+        "target": 6,
+        "type": "contains"
+      },
+      {
+        "source": 6,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 8,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 15,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 16,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 8,
+        "type": "has_icao_code"
+      },
+      {
+        "source": 1,
+        "target": 8,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 9,
+        "type": "located_in"
+      },
+      {
+        "source": 1,
+        "target": 9,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 10,
+        "type": "south_of"
+      },
+      {
+        "source": 1,
+        "target": 10,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 11,
+        "type": "north_of"
+      },
+      {
+        "source": 1,
+        "target": 11,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 12,
+        "type": "located_in"
+      },
+      {
+        "source": 13,
+        "target": 12,
+        "type": "located_in"
+      },
+      {
+        "source": 1,
+        "target": 12,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 13,
+        "type": "busier_than"
+      },
+      {
+        "source": 1,
+        "target": 13,
+        "type": "contains"
+      },
+      {
+        "source": 13,
+        "target": 14,
+        "type": "also_known_as"
+      },
+      {
+        "source": 1,
+        "target": 14,
+        "type": "contains"
+      },
+      {
+        "source": 13,
+        "target": 15,
+        "type": "has_iata_code"
+      },
+      {
+        "source": 1,
+        "target": 15,
+        "type": "contains"
+      },
+      {
+        "source": 13,
+        "target": 16,
+        "type": "has_icao_code"
+      },
+      {
+        "source": 1,
+        "target": 16,
+        "type": "contains"
+      },
+      {
+        "source": 13,
+        "target": 17,
+        "type": "located_in"
+      },
+      {
+        "source": 1,
+        "target": 17,
+        "type": "contains"
+      },
+      {
+        "source": 1,
+        "target": 18,
+        "type": "contains"
+      },
+      {
+        "source": 21,
+        "target": 18,
+        "type": "near"
+      },
+      {
+        "source": 1,
+        "target": 19,
+        "type": "contains"
+      },
+      {
+        "source": 22,
+        "target": 19,
+        "type": "connected_by_path_through"
+      },
+      {
+        "source": 19,
+        "target": 20,
+        "type": "has_path_as_part_of"
+      },
+      {
+        "source": 1,
+        "target": 20,
+        "type": "contains"
+      },
+      {
+        "source": 19,
+        "target": 21,
+        "type": "path_leads_to"
+      },
+      {
+        "source": 1,
+        "target": 21,
+        "type": "contains"
+      },
+      {
+        "source": 1,
+        "target": 22,
+        "type": "contains"
+      }
+    ]
+  }
+}

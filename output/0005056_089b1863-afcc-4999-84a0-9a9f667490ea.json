@@ -1,0 +1,434 @@
+{
+  "dataset": "hover",
+  "id": "089b1863-afcc-4999-84a0-9a9f667490ea",
+  "split": "train",
+  "claim": "Howard University Hospital and another medical center are both located in Washington, D.C. Michael Zasloff worked as a Scientific Director at the other medical center.",
+  "evidencia": "Page: MedStar Georgetown University Hospital. Sentence: It is a not-for-profit, acute care teaching and research facility located in the Georgetown neighborhood of the Northwest Quadrant of Washington, D.C.\nPage: Howard University Hospital. Sentence: Howard University Hospital, previously known as Freedmen's Hospital, is a major hospital lcated in Washington, D.C., built on the site of the previous Griffith Stadium.\nPage: Michael Zasloff. Sentence: He is currently Scientific Director, MedStar-Georgetown Transplant Institute, Georgetown University Hospital.",
+  "evidence_text": "Page: MedStar Georgetown University Hospital. Sentence: It is a not-for-profit, acute care teaching and research facility located in the Georgetown neighborhood of the Northwest Quadrant of Washington, D.C.\nPage: Howard University Hospital. Sentence: Howard University Hospital, previously known as Freedmen's Hospital, is a major hospital lcated in Washington, D.C., built on the site of the previous Griffith Stadium.\nPage: Michael Zasloff. Sentence: He is currently Scientific Director, MedStar-Georgetown Transplant Institute, Georgetown University Hospital.",
+  "label": "SUPPORTED",
+  "num_hops": 3,
+  "hover_metadata": {
+    "supporting_facts": [
+      [
+        "MedStar Georgetown University Hospital",
+        1
+      ],
+      [
+        "Howard University Hospital",
+        0
+      ],
+      [
+        "Michael Zasloff",
+        1
+      ]
+    ],
+    "num_hops": 3,
+    "evidence_annotation_id": [
+      0
+    ],
+    "evidence_id": [
+      "MedStar Georgetown University Hospital::sentence::1",
+      "Howard University Hospital::sentence::0",
+      "Michael Zasloff::sentence::1"
+    ],
+    "evidence_wiki_url": [
+      "https://en.wikipedia.org/wiki/MedStar_Georgetown_University_Hospital",
+      "https://en.wikipedia.org/wiki/Howard_University_Hospital",
+      "https://en.wikipedia.org/wiki/Michael_Zasloff"
+    ],
+    "evidence_sentence_id": [
+      "MedStar Georgetown University Hospital::sentence::1",
+      "Howard University Hospital::sentence::0",
+      "Michael Zasloff::sentence::1"
+    ]
+  },
+  "grafo_claim": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "b46fb7a0-0fdf-5db4-8ebc-3d83ec5845da",
+        "text": "This chunk is about:\n- Organizations: Howard University Hospital; NIH Clinical Center\n- Places: Washington, D.C.\n- People: Michael Zasloff\n- Roles: Scientific Director\n\nFacts:\n- Howard University Hospital is located in Washington, D.C.\n- The NIH Clinical Center is located in Washington, D.C.\n- Michael Zasloff worked as a Scientific Director at the NIH Clinical Center.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "ff972983-d71f-5588-a916-bab5071475f7",
+        "text": "Howard University Hospital and another medical center are both located in Washington, D.C. Michael Zasloff worked as a Scientific Director at the other medical center.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "9d12066d-b4c0-5ab1-b20d-7f58f01a2892",
+        "text": "text_2191ca7fe02144844b4da348e755c4d2",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "18bcd623-4088-596c-88c4-af15d0aa1d07",
+        "text": "howard university hospital",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "193a9885-0f59-521c-a4b2-e6d5a15561ed",
+        "text": "washington, d.c.",
+        "type": "Entity"
+      },
+      {
+        "id": 5,
+        "original_id": "5f394058-b2a0-5ba8-8466-ba2a18cfcf4e",
+        "text": "place",
+        "type": "EntityType"
+      },
+      {
+        "id": 6,
+        "original_id": "388f60fb-220d-55e8-ae9c-3ac93cead308",
+        "text": "organization",
+        "type": "EntityType"
+      },
+      {
+        "id": 7,
+        "original_id": "e4335317-ae35-5d41-9c9e-8afd2cc6c648",
+        "text": "another medical center",
+        "type": "Entity"
+      },
+      {
+        "id": 8,
+        "original_id": "2e796514-856f-5927-95b2-f7d2e81cc5dd",
+        "text": "michael zasloff",
+        "type": "Entity"
+      },
+      {
+        "id": 9,
+        "original_id": "99a82eec-bb35-5bb5-9ed2-e73fc7a756de",
+        "text": "person",
+        "type": "EntityType"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "located_in"
+      },
+      {
+        "source": 1,
+        "target": 4,
+        "type": "contains"
+      },
+      {
+        "source": 7,
+        "target": 4,
+        "type": "located_in"
+      },
+      {
+        "source": 4,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 7,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      },
+      {
+        "source": 8,
+        "target": 7,
+        "type": "worked_at"
+      },
+      {
+        "source": 1,
+        "target": 8,
+        "type": "contains"
+      },
+      {
+        "source": 8,
+        "target": 9,
+        "type": "is_a"
+      }
+    ]
+  },
+  "grafo_evidencia": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "adafc435-21fa-54ae-b083-a42f3f0fe32f",
+        "text": "This chunk is about:\n- Organizations: MedStar Georgetown University Hospital, Howard University Hospital, MedStar-Georgetown Transplant Institute, Georgetown University Hospital\n- People: Michael Zasloff\n- Places: Georgetown neighborhood, Northwest Quadrant of Washington, D.C., Washington, D.C., Griffith Stadium\n- Concepts: not-for-profit, acute care, teaching hospital, research facility\n\nFacts:\n- Howard University Hospital was previously known as Freedmen's Hospital.\n- Howard University Hospital is a major hospital in Washington, D.C., built on the site of the previous Griffith Stadium.\n- MedStar Georgetown University Hospital is a not-for-profit acute care teaching and research facility in the Georgetown neighborhood of the Northwest Quadrant of Washington, D.C.\n- Michael Zasloff is the Scientific Director of the MedStar-Georgetown Transplant Institute at Georgetown University Hospital.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "fbd5d1e7-0775-535b-87ec-f98524c0f10c",
+        "text": "Page: MedStar Georgetown University Hospital. Sentence: It is a not-for-profit, acute care teaching and research facility located in the Georgetown neighborhood of the Northwest Quadrant of Washington, D.C.\nPage: Howard University Hospital. Sentence: Howard University Hospital, previously known as Freedmen's Hospital, is a major hospital lcated in Washington, D.C., built on the site of the previous Griffith Stadium.\nPage: Michael Zasloff. Sentence: He is currently Scientific Director, MedStar-Georgetown Transplant Institute, Georgetown University Hospital.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "0745a365-d157-5318-9b84-abe613209627",
+        "text": "text_a9a7502acb459d7cb8a95de290a5b959",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "837a30f5-706c-5eb1-ac04-7fefb5d16657",
+        "text": "medstar georgetown university hospital",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "5a93a996-ff32-5b3d-990b-0ad0373c314b",
+        "text": "georgetown neighborhood",
+        "type": "Entity"
+      },
+      {
+        "id": 5,
+        "original_id": "8e5f95f1-a6d0-5677-8c61-e7822c4c75ba",
+        "text": "northwest quadrant",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "193a9885-0f59-521c-a4b2-e6d5a15561ed",
+        "text": "washington, d.c.",
+        "type": "Entity"
+      },
+      {
+        "id": 7,
+        "original_id": "5f394058-b2a0-5ba8-8466-ba2a18cfcf4e",
+        "text": "place",
+        "type": "EntityType"
+      },
+      {
+        "id": 8,
+        "original_id": "89a063c0-ce6a-51af-91f5-b6e960b80bb3",
+        "text": "hospital",
+        "type": "EntityType"
+      },
+      {
+        "id": 9,
+        "original_id": "18bcd623-4088-596c-88c4-af15d0aa1d07",
+        "text": "howard university hospital",
+        "type": "Entity"
+      },
+      {
+        "id": 10,
+        "original_id": "1599daf9-bdf3-51bf-bc9d-3aa77a51b7ad",
+        "text": "freedmens hospital",
+        "type": "Entity"
+      },
+      {
+        "id": 11,
+        "original_id": "c8f0b43b-2f57-5466-ac5b-bacaeabc1b17",
+        "text": "griffith stadium",
+        "type": "Entity"
+      },
+      {
+        "id": 12,
+        "original_id": "2e796514-856f-5927-95b2-f7d2e81cc5dd",
+        "text": "michael zasloff",
+        "type": "Entity"
+      },
+      {
+        "id": 13,
+        "original_id": "38a3c35d-618f-5256-aba9-28058572ffa7",
+        "text": "medstar-georgetown transplant institute",
+        "type": "Entity"
+      },
+      {
+        "id": 14,
+        "original_id": "ecd218f1-7728-5236-a420-b6e307be82a6",
+        "text": "georgetown university hospital",
+        "type": "Entity"
+      },
+      {
+        "id": 15,
+        "original_id": "388f60fb-220d-55e8-ae9c-3ac93cead308",
+        "text": "organization",
+        "type": "EntityType"
+      },
+      {
+        "id": 16,
+        "original_id": "99a82eec-bb35-5bb5-9ed2-e73fc7a756de",
+        "text": "person",
+        "type": "EntityType"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "located_in"
+      },
+      {
+        "source": 1,
+        "target": 4,
+        "type": "contains"
+      },
+      {
+        "source": 4,
+        "target": 5,
+        "type": "located_in"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "located_in"
+      },
+      {
+        "source": 1,
+        "target": 6,
+        "type": "contains"
+      },
+      {
+        "source": 9,
+        "target": 6,
+        "type": "located_in"
+      },
+      {
+        "source": 6,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 5,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 4,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 11,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 10,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 9,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 14,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 9,
+        "type": "contains"
+      },
+      {
+        "source": 9,
+        "target": 10,
+        "type": "previously_known_as"
+      },
+      {
+        "source": 1,
+        "target": 10,
+        "type": "contains"
+      },
+      {
+        "source": 9,
+        "target": 11,
+        "type": "built_on_site_of"
+      },
+      {
+        "source": 1,
+        "target": 11,
+        "type": "contains"
+      },
+      {
+        "source": 1,
+        "target": 12,
+        "type": "contains"
+      },
+      {
+        "source": 12,
+        "target": 13,
+        "type": "scientific_director_of"
+      },
+      {
+        "source": 1,
+        "target": 13,
+        "type": "contains"
+      },
+      {
+        "source": 13,
+        "target": 14,
+        "type": "located_at"
+      },
+      {
+        "source": 1,
+        "target": 14,
+        "type": "contains"
+      },
+      {
+        "source": 13,
+        "target": 15,
+        "type": "is_a"
+      },
+      {
+        "source": 12,
+        "target": 16,
+        "type": "is_a"
+      }
+    ]
+  }
+}

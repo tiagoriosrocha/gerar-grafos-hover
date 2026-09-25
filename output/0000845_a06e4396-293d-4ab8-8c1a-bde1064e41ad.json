@@ -1,0 +1,527 @@
+{
+  "dataset": "hover",
+  "id": "a06e4396-293d-4ab8-8c1a-bde1064e41ad",
+  "split": "train",
+  "claim": "Zhongyang County is under the administration of this city. That city has a larger population than Fuxin.",
+  "evidencia": "Page: Lüliang. Sentence: Lüliang or Lyuliang () is a prefecture-level city in the west of Shanxi province, People's Republic of China, bordering Shaanxi province across the Yellow River to the west, Jinzhong and the provincial capital of Taiyuan to the east, Linfen to the south, and Xinzhou to the north.\nPage: Lüliang. Sentence: It has a total area of 21143 km2 and total population of 3,727,057.\nPage: Lüliang. Sentence: The metro area of Lüliang has a population of 320,142 at the 2010 census.\nPage: Fuxin. Sentence: The total population of the prefecture at the 2010 census is 1,819,339, of whom 669,317 are resident in the built up area, which comprises four urban districts, collectively known as 'Fuxin City'.\nPage: Zhongyang County. Sentence: It is under the administration of Lüliang city.",
+  "evidence_text": "Page: Lüliang. Sentence: Lüliang or Lyuliang () is a prefecture-level city in the west of Shanxi province, People's Republic of China, bordering Shaanxi province across the Yellow River to the west, Jinzhong and the provincial capital of Taiyuan to the east, Linfen to the south, and Xinzhou to the north.\nPage: Lüliang. Sentence: It has a total area of 21143 km2 and total population of 3,727,057.\nPage: Lüliang. Sentence: The metro area of Lüliang has a population of 320,142 at the 2010 census.\nPage: Fuxin. Sentence: The total population of the prefecture at the 2010 census is 1,819,339, of whom 669,317 are resident in the built up area, which comprises four urban districts, collectively known as 'Fuxin City'.\nPage: Zhongyang County. Sentence: It is under the administration of Lüliang city.",
+  "label": "SUPPORTED",
+  "num_hops": 3,
+  "hover_metadata": {
+    "supporting_facts": [
+      [
+        "Lüliang",
+        0
+      ],
+      [
+        "Lüliang",
+        1
+      ],
+      [
+        "Lüliang",
+        2
+      ],
+      [
+        "Fuxin",
+        1
+      ],
+      [
+        "Zhongyang County",
+        1
+      ]
+    ],
+    "num_hops": 3,
+    "evidence_annotation_id": [
+      0
+    ],
+    "evidence_id": [
+      "Lüliang::sentence::0",
+      "Lüliang::sentence::1",
+      "Lüliang::sentence::2",
+      "Fuxin::sentence::1",
+      "Zhongyang County::sentence::1"
+    ],
+    "evidence_wiki_url": [
+      "https://en.wikipedia.org/wiki/L%C3%BCliang",
+      "https://en.wikipedia.org/wiki/Fuxin",
+      "https://en.wikipedia.org/wiki/Zhongyang_County"
+    ],
+    "evidence_sentence_id": [
+      "Lüliang::sentence::0",
+      "Lüliang::sentence::1",
+      "Lüliang::sentence::2",
+      "Fuxin::sentence::1",
+      "Zhongyang County::sentence::1"
+    ]
+  },
+  "grafo_claim": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "de126955-e6f2-5b01-97e0-a25dd4653989",
+        "text": "This chunk is about:\n- Places: Zhongyang County, Fuxin\n- Topics: administrative relationship, population comparison\n\nFacts:\n- Zhongyang County is under the administration of an unspecified city.\n- The city that administers Zhongyang County has a larger population than Fuxin.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "3b3b60f2-3ecb-5c50-a1c2-495a884ffb16",
+        "text": "Zhongyang County is under the administration of this city. That city has a larger population than Fuxin.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "cc113b03-d975-5da5-9e2f-b78b8be0ae6e",
+        "text": "text_7062e2f5eb5f43aa4092a752a8da5d1b",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "08b6f562-7aaf-58fd-b315-0140a8856071",
+        "text": "zhongyang county",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "5f394058-b2a0-5ba8-8466-ba2a18cfcf4e",
+        "text": "place",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "1c004d6d-1c82-5fe6-af25-9455abd6abfd",
+        "text": "this city",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "517f4d53-443f-5f31-91c0-5ff9a220584f",
+        "text": "fuxin",
+        "type": "Entity"
+      },
+      {
+        "id": 7,
+        "original_id": "4f155b46-e814-58f6-97cf-55d2ac3a572d",
+        "text": "city",
+        "type": "EntityType"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 3,
+        "type": "administers"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "has_larger_population_than"
+      },
+      {
+        "source": 1,
+        "target": 6,
+        "type": "contains"
+      },
+      {
+        "source": 6,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 5,
+        "target": 7,
+        "type": "is_a"
+      }
+    ]
+  },
+  "grafo_evidencia": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "5064d154-8a54-5973-a186-db57d71afc89",
+        "text": "This chunk is about:\n- Places: Lüliang, Shanxi, Shaanxi, Yellow River, Jinzhong, Taiyuan, Linfen, Xinzhou, Fuxin, Zhongyang County\n- Topics: geography, population, administrative divisions, census\n\nFacts:\n- Lüliang is a prefecture-level city in western Shanxi province, China.\n- Lüliang borders Shaanxi across the Yellow River to the west, Jinzhong and Taiyuan to the east, Linfen to the south, and Xinzhou to the north.\n- Lüliang has a total area of 21,143 km2 and a total population of 3,727,057.\n- At the 2010 census, the Lüliang metro area had a population of 320,142.\n- At the 2010 census, the prefecture of Fuxin had a total population of 1,819,339.\n- At the 2010 census, 669,317 people in Fuxin lived in the built-up area comprising four urban districts collectively known as Fuxin City.\n- Zhongyang County is under the administration of Lüliang city.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "fa6b99c1-f19d-5257-a38d-8fb37422f9e6",
+        "text": "Page: Lüliang. Sentence: Lüliang or Lyuliang () is a prefecture-level city in the west of Shanxi province, People's Republic of China, bordering Shaanxi province across the Yellow River to the west, Jinzhong and the provincial capital of Taiyuan to the east, Linfen to the south, and Xinzhou to the north.\nPage: Lüliang. Sentence: It has a total area of 21143 km2 and total population of 3,727,057.\nPage: Lüliang. Sentence: The metro area of Lüliang has a population of 320,142 at the 2010 census.\nPage: Fuxin. Sentence: The total population of the prefecture at the 2010 census is 1,819,339, of whom 669,317 are resident in the built up area, which comprises four urban districts, collectively known as 'Fuxin City'.\nPage: Zhongyang County. Sentence: It is under the administration of Lüliang city.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "110a2256-9ba8-5771-b573-71068a628190",
+        "text": "text_395c1c0527d9755869627c91cb73d533",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "b81bfb60-2dec-593b-bba7-3eeaeb534df5",
+        "text": "lüliang",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "538f3521-e753-5b20-b66a-1763e0bf6aa1",
+        "text": "shanxi province",
+        "type": "Entity"
+      },
+      {
+        "id": 5,
+        "original_id": "cc237b73-b957-56f0-9cff-82357be15d0b",
+        "text": "peoples republic of china",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "5f394058-b2a0-5ba8-8466-ba2a18cfcf4e",
+        "text": "place",
+        "type": "EntityType"
+      },
+      {
+        "id": 7,
+        "original_id": "4ec05f8d-8a53-5daf-b364-47cbf6c193ce",
+        "text": "shaanxi province",
+        "type": "Entity"
+      },
+      {
+        "id": 8,
+        "original_id": "1007e3be-87c0-58dc-8cfc-defc6a63b28f",
+        "text": "yellow river",
+        "type": "Entity"
+      },
+      {
+        "id": 9,
+        "original_id": "10b9a256-9f67-56dd-98a2-79ab23d3f687",
+        "text": "jinzhong",
+        "type": "Entity"
+      },
+      {
+        "id": 10,
+        "original_id": "33151728-6781-57e4-b336-f104ad5e8343",
+        "text": "taiyuan",
+        "type": "Entity"
+      },
+      {
+        "id": 11,
+        "original_id": "2f0bc19a-7e29-50cf-87b5-6b89130ec5ad",
+        "text": "linfen",
+        "type": "Entity"
+      },
+      {
+        "id": 12,
+        "original_id": "775559d9-80e2-5989-9026-9edeb4d4067a",
+        "text": "xinzhou",
+        "type": "Entity"
+      },
+      {
+        "id": 13,
+        "original_id": "38224794-fda3-5b3b-a9e9-b505e15c123c",
+        "text": "lyuliang",
+        "type": "Entity"
+      },
+      {
+        "id": 14,
+        "original_id": "276b2015-4ee4-54d1-8200-38b18edcd776",
+        "text": "lüliang metro area",
+        "type": "Entity"
+      },
+      {
+        "id": 15,
+        "original_id": "cb1dc1af-5253-5fa4-877e-246a7629f489",
+        "text": "2010",
+        "type": "Entity"
+      },
+      {
+        "id": 16,
+        "original_id": "b19433ae-558c-5aaf-95ac-6231f2a4be0e",
+        "text": "date",
+        "type": "EntityType"
+      },
+      {
+        "id": 17,
+        "original_id": "517f4d53-443f-5f31-91c0-5ff9a220584f",
+        "text": "fuxin",
+        "type": "Entity"
+      },
+      {
+        "id": 18,
+        "original_id": "77778a52-bbf9-56db-8c5d-b70648ca30c4",
+        "text": "fuxin city",
+        "type": "Entity"
+      },
+      {
+        "id": 19,
+        "original_id": "08b6f562-7aaf-58fd-b315-0140a8856071",
+        "text": "zhongyang county",
+        "type": "Entity"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 13,
+        "target": 3,
+        "type": "alternative_name_for"
+      },
+      {
+        "source": 14,
+        "target": 3,
+        "type": "metro_area_of"
+      },
+      {
+        "source": 19,
+        "target": 3,
+        "type": "administered_by"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "located_in"
+      },
+      {
+        "source": 10,
+        "target": 4,
+        "type": "provincial_capital_of"
+      },
+      {
+        "source": 1,
+        "target": 4,
+        "type": "contains"
+      },
+      {
+        "source": 4,
+        "target": 5,
+        "type": "located_in"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "located_in"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 4,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 7,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 8,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 9,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 10,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 11,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 12,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 13,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 14,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 17,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 18,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 19,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 7,
+        "type": "borders"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 8,
+        "type": "separated_by"
+      },
+      {
+        "source": 1,
+        "target": 8,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 9,
+        "type": "borders"
+      },
+      {
+        "source": 1,
+        "target": 9,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 10,
+        "type": "borders"
+      },
+      {
+        "source": 1,
+        "target": 10,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 11,
+        "type": "borders"
+      },
+      {
+        "source": 1,
+        "target": 11,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 12,
+        "type": "borders"
+      },
+      {
+        "source": 1,
+        "target": 12,
+        "type": "contains"
+      },
+      {
+        "source": 1,
+        "target": 13,
+        "type": "contains"
+      },
+      {
+        "source": 1,
+        "target": 14,
+        "type": "contains"
+      },
+      {
+        "source": 14,
+        "target": 15,
+        "type": "population_measured_at"
+      },
+      {
+        "source": 1,
+        "target": 15,
+        "type": "contains"
+      },
+      {
+        "source": 17,
+        "target": 15,
+        "type": "population_measured_at"
+      },
+      {
+        "source": 15,
+        "target": 16,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 17,
+        "type": "contains"
+      },
+      {
+        "source": 18,
+        "target": 17,
+        "type": "built_up_area_of"
+      },
+      {
+        "source": 1,
+        "target": 18,
+        "type": "contains"
+      },
+      {
+        "source": 1,
+        "target": 19,
+        "type": "contains"
+      }
+    ]
+  }
+}

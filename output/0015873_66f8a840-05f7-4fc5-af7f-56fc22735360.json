@@ -1,0 +1,457 @@
+{
+  "dataset": "hover",
+  "id": "66f8a840-05f7-4fc5-af7f-56fc22735360",
+  "split": "train",
+  "claim": "The American based company that made the documentary film Welcome to Macintosh has a headquarters in a city. Vertex Pharmaceuticals is not headquartered in the same city.",
+  "evidencia": "Page: Apple Inc.. Sentence: Apple Inc. is an American multinational technology company headquartered in Cupertino, California that designs, develops, and sells consumer electronics, computer software, and online services.\nPage: Vertex Pharmaceuticals. Sentence: Vertex Pharmaceuticals is an American Pharmaceutical company based in Boston, Massachusetts.\nPage: Welcome to Macintosh (film). Sentence: Welcome to Macintosh is a 2008 documentary film focusing on computer company Apple Inc. and its Macintosh line of computers.",
+  "evidence_text": "Page: Apple Inc.. Sentence: Apple Inc. is an American multinational technology company headquartered in Cupertino, California that designs, develops, and sells consumer electronics, computer software, and online services.\nPage: Vertex Pharmaceuticals. Sentence: Vertex Pharmaceuticals is an American Pharmaceutical company based in Boston, Massachusetts.\nPage: Welcome to Macintosh (film). Sentence: Welcome to Macintosh is a 2008 documentary film focusing on computer company Apple Inc. and its Macintosh line of computers.",
+  "label": "SUPPORTED",
+  "num_hops": 3,
+  "hover_metadata": {
+    "supporting_facts": [
+      [
+        "Apple Inc.",
+        0
+      ],
+      [
+        "Vertex Pharmaceuticals",
+        0
+      ],
+      [
+        "Welcome to Macintosh (film)",
+        0
+      ]
+    ],
+    "num_hops": 3,
+    "evidence_annotation_id": [
+      0
+    ],
+    "evidence_id": [
+      "Apple Inc.::sentence::0",
+      "Vertex Pharmaceuticals::sentence::0",
+      "Welcome to Macintosh (film)::sentence::0"
+    ],
+    "evidence_wiki_url": [
+      "https://en.wikipedia.org/wiki/Apple_Inc.",
+      "https://en.wikipedia.org/wiki/Vertex_Pharmaceuticals",
+      "https://en.wikipedia.org/wiki/Welcome_to_Macintosh_%28film%29"
+    ],
+    "evidence_sentence_id": [
+      "Apple Inc.::sentence::0",
+      "Vertex Pharmaceuticals::sentence::0",
+      "Welcome to Macintosh (film)::sentence::0"
+    ]
+  },
+  "grafo_claim": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "69e4ad47-e724-5636-8c08-623c669bb5c5",
+        "text": "This chunk is about:\n- Companies: Welcome to Macintosh producer, Vertex Pharmaceuticals\n- Products: Welcome to Macintosh\n- Places: company headquarters cities\n\nFacts:\n- Welcome to Macintosh was made by an American-based company.\n- The American-based company that made Welcome to Macintosh has its headquarters in a city.\n- Vertex Pharmaceuticals is not headquartered in the same city as the company that made Welcome to Macintosh.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "9a86794f-0d96-5de8-a113-c4e88426a565",
+        "text": "The American based company that made the documentary film Welcome to Macintosh has a headquarters in a city. Vertex Pharmaceuticals is not headquartered in the same city.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "d9b9c84d-22b0-55bd-87d4-58e85c662fca",
+        "text": "text_35fc158de408a1532eca26637f63bbf8",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "6f1a5b0d-364a-5cd8-9814-884a7e0cebd2",
+        "text": "welcome to macintosh",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "d320c8df-fd51-56e6-b577-e01a688fe6fc",
+        "text": "film",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "f8fb8ef4-181a-5d71-8ee4-d56b2fd2cd07",
+        "text": "american company that made welcome to macintosh",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "82bfc922-4fcd-56b0-b353-7b550b51389d",
+        "text": "company",
+        "type": "EntityType"
+      },
+      {
+        "id": 7,
+        "original_id": "7e41c82e-fa6a-50ef-805d-a83f3b98a7e9",
+        "text": "headquarters city of the american company that made welcome to macintosh",
+        "type": "Entity"
+      },
+      {
+        "id": 8,
+        "original_id": "4f155b46-e814-58f6-97cf-55d2ac3a572d",
+        "text": "city",
+        "type": "EntityType"
+      },
+      {
+        "id": 9,
+        "original_id": "777cc0f0-70fe-5931-a7e2-a15bdfb2f5c2",
+        "text": "vertex pharmaceuticals",
+        "type": "Entity"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 3,
+        "type": "made"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 9,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 5,
+        "target": 7,
+        "type": "headquartered_in"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      },
+      {
+        "source": 9,
+        "target": 7,
+        "type": "not_headquartered_in"
+      },
+      {
+        "source": 7,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 9,
+        "type": "contains"
+      }
+    ]
+  },
+  "grafo_evidencia": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "21e32bbd-e719-5b42-9598-a566f7b8e125",
+        "text": "This chunk is about:\n- Companies: Apple Inc., Vertex Pharmaceuticals\n- Film: Welcome to Macintosh\n- Places: Cupertino, California; Boston, Massachusetts\n- Products: Macintosh\n\nFacts:\n- Apple Inc. is an American multinational technology company headquartered in Cupertino, California.\n- Apple Inc. designs, develops, and sells consumer electronics, computer software, and online services.\n- Vertex Pharmaceuticals is an American pharmaceutical company based in Boston, Massachusetts.\n- Welcome to Macintosh is a 2008 documentary film about Apple Inc. and its Macintosh line of computers.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "a73d7ecd-90f1-5e3a-9a9c-12218ee508f7",
+        "text": "Page: Apple Inc.. Sentence: Apple Inc. is an American multinational technology company headquartered in Cupertino, California that designs, develops, and sells consumer electronics, computer software, and online services.\nPage: Vertex Pharmaceuticals. Sentence: Vertex Pharmaceuticals is an American Pharmaceutical company based in Boston, Massachusetts.\nPage: Welcome to Macintosh (film). Sentence: Welcome to Macintosh is a 2008 documentary film focusing on computer company Apple Inc. and its Macintosh line of computers.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "372ea8d0-f9be-5063-8778-533d3e4102a9",
+        "text": "text_1f28faa68b3e36e4daf019936c627973",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "fe20489e-9e6a-5011-ae94-e8ad07ccbe63",
+        "text": "apple inc.",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "82bfc922-4fcd-56b0-b353-7b550b51389d",
+        "text": "company",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "1e4e9c2a-c764-5af3-99ed-60923fa216cf",
+        "text": "cupertino, california",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "5f394058-b2a0-5ba8-8466-ba2a18cfcf4e",
+        "text": "place",
+        "type": "EntityType"
+      },
+      {
+        "id": 7,
+        "original_id": "49e89f65-3490-5788-9a72-319cc127b3b9",
+        "text": "consumer electronics",
+        "type": "Entity"
+      },
+      {
+        "id": 8,
+        "original_id": "8610cd2b-8491-5176-a84a-de3b590db5ae",
+        "text": "product category",
+        "type": "EntityType"
+      },
+      {
+        "id": 9,
+        "original_id": "acb8be38-7b56-562a-a940-db2aa19b27c2",
+        "text": "computer software",
+        "type": "Entity"
+      },
+      {
+        "id": 10,
+        "original_id": "57c280a6-b26b-588a-99d1-e89d3c8ca420",
+        "text": "online services",
+        "type": "Entity"
+      },
+      {
+        "id": 11,
+        "original_id": "50fd3f82-f3c9-5379-8190-3584179dd319",
+        "text": "service category",
+        "type": "EntityType"
+      },
+      {
+        "id": 12,
+        "original_id": "d446d498-9d84-51fc-b6a4-458e5321d965",
+        "text": "macintosh",
+        "type": "Entity"
+      },
+      {
+        "id": 13,
+        "original_id": "5f6912b5-8881-573c-844a-358a3fa8f447",
+        "text": "product line",
+        "type": "EntityType"
+      },
+      {
+        "id": 14,
+        "original_id": "777cc0f0-70fe-5931-a7e2-a15bdfb2f5c2",
+        "text": "vertex pharmaceuticals",
+        "type": "Entity"
+      },
+      {
+        "id": 15,
+        "original_id": "35bdb90c-61fb-5886-be3e-59f33005951d",
+        "text": "boston, massachusetts",
+        "type": "Entity"
+      },
+      {
+        "id": 16,
+        "original_id": "6f1a5b0d-364a-5cd8-9814-884a7e0cebd2",
+        "text": "welcome to macintosh",
+        "type": "Entity"
+      },
+      {
+        "id": 17,
+        "original_id": "d320c8df-fd51-56e6-b577-e01a688fe6fc",
+        "text": "film",
+        "type": "EntityType"
+      },
+      {
+        "id": 18,
+        "original_id": "bb91a3b7-7918-5ca7-973e-342dc472e263",
+        "text": "2008",
+        "type": "Entity"
+      },
+      {
+        "id": 19,
+        "original_id": "b19433ae-558c-5aaf-95ac-6231f2a4be0e",
+        "text": "date",
+        "type": "EntityType"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 16,
+        "target": 3,
+        "type": "focuses_on"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 14,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "headquartered_in"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 15,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 7,
+        "type": "designs_develops_and_sells"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      },
+      {
+        "source": 7,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 9,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 9,
+        "type": "designs_develops_and_sells"
+      },
+      {
+        "source": 1,
+        "target": 9,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 10,
+        "type": "designs_develops_and_sells"
+      },
+      {
+        "source": 1,
+        "target": 10,
+        "type": "contains"
+      },
+      {
+        "source": 10,
+        "target": 11,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 12,
+        "type": "has_product_line"
+      },
+      {
+        "source": 16,
+        "target": 12,
+        "type": "focuses_on"
+      },
+      {
+        "source": 1,
+        "target": 12,
+        "type": "contains"
+      },
+      {
+        "source": 12,
+        "target": 13,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 14,
+        "type": "contains"
+      },
+      {
+        "source": 14,
+        "target": 15,
+        "type": "based_in"
+      },
+      {
+        "source": 1,
+        "target": 15,
+        "type": "contains"
+      },
+      {
+        "source": 1,
+        "target": 16,
+        "type": "contains"
+      },
+      {
+        "source": 16,
+        "target": 17,
+        "type": "is_a"
+      },
+      {
+        "source": 16,
+        "target": 18,
+        "type": "released_in"
+      },
+      {
+        "source": 1,
+        "target": 18,
+        "type": "contains"
+      },
+      {
+        "source": 18,
+        "target": 19,
+        "type": "is_a"
+      }
+    ]
+  }
+}

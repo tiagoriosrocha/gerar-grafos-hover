@@ -1,0 +1,638 @@
+{
+  "dataset": "hover",
+  "id": "2adde91f-6083-4b84-a360-a80cc69050d7",
+  "split": "train",
+  "claim": "Robert Patrick Mulligan was born before the director of the June 1987 film Who's That Girl.",
+  "evidencia": "Page: Robert Mulligan. Sentence: Robert Patrick Mulligan (August 23, 1925 – December 20, 2008) was an American film and television director best known as the director of humanistic American dramas, including \"To Kill a Mockingbird\" (1962), \"Summer of '42\" (1971), \"The Other\" (1972), \"Same Time, Next Year\" (1978) and \"The Man in the Moon\" (1991).\nPage: James Foley (director). Sentence: James Foley (born December 28, 1953) is an American film director.\nPage: Who's That Girl (1987 film). Sentence: Who's That Girl is a 1987 American screwball comedy film written by Andrew Smith and Ken Finkleman, and directed by James Foley.",
+  "evidence_text": "Page: Robert Mulligan. Sentence: Robert Patrick Mulligan (August 23, 1925 – December 20, 2008) was an American film and television director best known as the director of humanistic American dramas, including \"To Kill a Mockingbird\" (1962), \"Summer of '42\" (1971), \"The Other\" (1972), \"Same Time, Next Year\" (1978) and \"The Man in the Moon\" (1991).\nPage: James Foley (director). Sentence: James Foley (born December 28, 1953) is an American film director.\nPage: Who's That Girl (1987 film). Sentence: Who's That Girl is a 1987 American screwball comedy film written by Andrew Smith and Ken Finkleman, and directed by James Foley.",
+  "label": "NOT_SUPPORTED",
+  "num_hops": 3,
+  "hover_metadata": {
+    "supporting_facts": [
+      [
+        "Robert Mulligan",
+        0
+      ],
+      [
+        "James Foley (director)",
+        0
+      ],
+      [
+        "Who's That Girl (1987 film)",
+        0
+      ]
+    ],
+    "num_hops": 3,
+    "evidence_annotation_id": [
+      0
+    ],
+    "evidence_id": [
+      "Robert Mulligan::sentence::0",
+      "James Foley (director)::sentence::0",
+      "Who's That Girl (1987 film)::sentence::0"
+    ],
+    "evidence_wiki_url": [
+      "https://en.wikipedia.org/wiki/Robert_Mulligan",
+      "https://en.wikipedia.org/wiki/James_Foley_%28director%29",
+      "https://en.wikipedia.org/wiki/Who%27s_That_Girl_%281987_film%29"
+    ],
+    "evidence_sentence_id": [
+      "Robert Mulligan::sentence::0",
+      "James Foley (director)::sentence::0",
+      "Who's That Girl (1987 film)::sentence::0"
+    ]
+  },
+  "grafo_claim": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "2e1c1166-7b96-594a-8c78-d2b2dcacd42c",
+        "text": "This chunk is about:\n- People: Robert Patrick Mulligan, James Foley\n- Films: Who's That Girl\n- Dates: June 1987\n\nFacts:\n- Robert Patrick Mulligan was born before James Foley.\n- James Foley directed the film Who's That Girl.\n- Who's That Girl was released in June 1987.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "7f32eb90-11ed-570e-bbc7-a15a271a05e2",
+        "text": "Robert Patrick Mulligan was born before the director of the June 1987 film Who's That Girl.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "2e449dd8-89a0-5b92-816e-a95ba436d43f",
+        "text": "text_a0f4cc3f3f7504e24b5bb9b373b67989",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "409ec97b-4b19-5330-a4c3-8f475600e882",
+        "text": "robert patrick mulligan",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "1d3a2690-4135-56c4-b812-c909db34bcec",
+        "text": "director of whos that girl",
+        "type": "Entity"
+      },
+      {
+        "id": 5,
+        "original_id": "574159be-33f7-57b3-8594-15023fcaa016",
+        "text": "whos that girl",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "2db1d89b-2666-5af5-93f1-6aa8b427bc6c",
+        "text": "june 1987",
+        "type": "Entity"
+      },
+      {
+        "id": 7,
+        "original_id": "b19433ae-558c-5aaf-95ac-6231f2a4be0e",
+        "text": "date",
+        "type": "EntityType"
+      },
+      {
+        "id": 8,
+        "original_id": "5263a535-1b4b-5925-be3e-310d03cd303b",
+        "text": "work",
+        "type": "EntityType"
+      },
+      {
+        "id": 9,
+        "original_id": "99a82eec-bb35-5bb5-9ed2-e73fc7a756de",
+        "text": "person",
+        "type": "EntityType"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "born_before"
+      },
+      {
+        "source": 1,
+        "target": 4,
+        "type": "contains"
+      },
+      {
+        "source": 4,
+        "target": 5,
+        "type": "directed"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "associated_with_date"
+      },
+      {
+        "source": 1,
+        "target": 6,
+        "type": "contains"
+      },
+      {
+        "source": 6,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 5,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 4,
+        "target": 9,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 9,
+        "type": "is_a"
+      }
+    ]
+  },
+  "grafo_evidencia": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "79f62d60-fe81-59c8-8423-c9bd0a0954ed",
+        "text": "This chunk is about:\n- People: Robert Mulligan, James Foley, Andrew Smith, Ken Finkleman\n- Works: Who's That Girl, To Kill a Mockingbird, Summer of '42, The Other, Same Time, Next Year, The Man in the Moon\n- Roles: film director, television director, writer\n- Topics: American film, screwball comedy\n\nFacts:\n- Robert Patrick Mulligan was born on August 23, 1925, and he was an American film and television director.\n- Robert Mulligan was best known for directing humanistic American dramas including To Kill a Mockingbird (1962), Summer of '42 (1971), The Other (1972), Same Time, Next Year (1978), and The Man in the Moon (1991).\n- James Foley was born on December 28, 1953, and he is an American film director.\n- Who's That Girl is a 1987 American screwball comedy film.\n- Who's That Girl was written by Andrew Smith and Ken Finkleman.\n- Who's That Girl was directed by James Foley.\n- Robert Mulligan died on December 20, 2008.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "a8bef450-2ae0-53ec-aba1-aa3be6bad382",
+        "text": "Page: Robert Mulligan. Sentence: Robert Patrick Mulligan (August 23, 1925 – December 20, 2008) was an American film and television director best known as the director of humanistic American dramas, including \"To Kill a Mockingbird\" (1962), \"Summer of '42\" (1971), \"The Other\" (1972), \"Same Time, Next Year\" (1978) and \"The Man in the Moon\" (1991).\nPage: James Foley (director). Sentence: James Foley (born December 28, 1953) is an American film director.\nPage: Who's That Girl (1987 film). Sentence: Who's That Girl is a 1987 American screwball comedy film written by Andrew Smith and Ken Finkleman, and directed by James Foley.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "2960be70-6527-5c9a-b93d-b4ace90ec9b5",
+        "text": "text_b7644603340c1c1044eb163b74891bb2",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "b44afbcf-b459-547b-9b56-a70ad1004130",
+        "text": "robert mulligan",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "409ec97b-4b19-5330-a4c3-8f475600e882",
+        "text": "robert patrick mulligan",
+        "type": "Entity"
+      },
+      {
+        "id": 5,
+        "original_id": "956a4775-0fed-57b8-961d-5816e03917a7",
+        "text": "1925-08-23",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "b19433ae-558c-5aaf-95ac-6231f2a4be0e",
+        "text": "date",
+        "type": "EntityType"
+      },
+      {
+        "id": 7,
+        "original_id": "70ef617d-789b-54fb-90f0-368d1f4b9f04",
+        "text": "2008-12-20",
+        "type": "Entity"
+      },
+      {
+        "id": 8,
+        "original_id": "015ef4ac-4e15-5f51-aaa2-94144d8fdbd0",
+        "text": "to kill a mockingbird",
+        "type": "Entity"
+      },
+      {
+        "id": 9,
+        "original_id": "94692c27-23bd-5633-bc89-5a2497524b36",
+        "text": "1962",
+        "type": "Entity"
+      },
+      {
+        "id": 10,
+        "original_id": "5263a535-1b4b-5925-be3e-310d03cd303b",
+        "text": "work",
+        "type": "EntityType"
+      },
+      {
+        "id": 11,
+        "original_id": "11943857-f880-5f89-8182-310008e2baac",
+        "text": "summer of 42",
+        "type": "Entity"
+      },
+      {
+        "id": 12,
+        "original_id": "c6610c11-9e72-5400-83dc-1941717f474d",
+        "text": "1971",
+        "type": "Entity"
+      },
+      {
+        "id": 13,
+        "original_id": "375bc350-f38b-5ce0-9a9a-112debba4ad4",
+        "text": "the other",
+        "type": "Entity"
+      },
+      {
+        "id": 14,
+        "original_id": "ddb05ee8-3e27-5624-bb88-f007ae8f6c80",
+        "text": "1972",
+        "type": "Entity"
+      },
+      {
+        "id": 15,
+        "original_id": "4d9a9b24-efc5-50f1-8914-4de23fa7be5f",
+        "text": "same time, next year",
+        "type": "Entity"
+      },
+      {
+        "id": 16,
+        "original_id": "db836446-b1a1-5bb5-a369-3acd180a8df3",
+        "text": "1978",
+        "type": "Entity"
+      },
+      {
+        "id": 17,
+        "original_id": "d8e9c016-16dd-50bc-b207-dc53507ad0c4",
+        "text": "the man in the moon",
+        "type": "Entity"
+      },
+      {
+        "id": 18,
+        "original_id": "720e3f07-c737-5d52-9990-eb6ce06a3479",
+        "text": "1991",
+        "type": "Entity"
+      },
+      {
+        "id": 19,
+        "original_id": "99a82eec-bb35-5bb5-9ed2-e73fc7a756de",
+        "text": "person",
+        "type": "EntityType"
+      },
+      {
+        "id": 20,
+        "original_id": "37e22d64-f5fd-5245-ba90-b8e940b03712",
+        "text": "james foley",
+        "type": "Entity"
+      },
+      {
+        "id": 21,
+        "original_id": "95d4ae6c-4fe6-57bd-a03c-198c5a0c3d4f",
+        "text": "1953-12-28",
+        "type": "Entity"
+      },
+      {
+        "id": 22,
+        "original_id": "574159be-33f7-57b3-8594-15023fcaa016",
+        "text": "whos that girl",
+        "type": "Entity"
+      },
+      {
+        "id": 23,
+        "original_id": "19e766a6-2146-5019-b62d-75b94a79d2b8",
+        "text": "1987",
+        "type": "Entity"
+      },
+      {
+        "id": 24,
+        "original_id": "abf7a7dc-48ad-5b8e-9562-555b8a833e2b",
+        "text": "andrew smith",
+        "type": "Entity"
+      },
+      {
+        "id": 25,
+        "original_id": "fbffb70c-9393-5450-8d06-f4d1b982c6ab",
+        "text": "ken finkleman",
+        "type": "Entity"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "same_as"
+      },
+      {
+        "source": 1,
+        "target": 4,
+        "type": "contains"
+      },
+      {
+        "source": 4,
+        "target": 5,
+        "type": "born_on"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 7,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 9,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 12,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 14,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 16,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 18,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 21,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 23,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 4,
+        "target": 7,
+        "type": "died_on"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      },
+      {
+        "source": 4,
+        "target": 8,
+        "type": "directed"
+      },
+      {
+        "source": 1,
+        "target": 8,
+        "type": "contains"
+      },
+      {
+        "source": 8,
+        "target": 9,
+        "type": "released_in"
+      },
+      {
+        "source": 1,
+        "target": 9,
+        "type": "contains"
+      },
+      {
+        "source": 8,
+        "target": 10,
+        "type": "is_a"
+      },
+      {
+        "source": 11,
+        "target": 10,
+        "type": "is_a"
+      },
+      {
+        "source": 13,
+        "target": 10,
+        "type": "is_a"
+      },
+      {
+        "source": 15,
+        "target": 10,
+        "type": "is_a"
+      },
+      {
+        "source": 17,
+        "target": 10,
+        "type": "is_a"
+      },
+      {
+        "source": 22,
+        "target": 10,
+        "type": "is_a"
+      },
+      {
+        "source": 4,
+        "target": 11,
+        "type": "directed"
+      },
+      {
+        "source": 1,
+        "target": 11,
+        "type": "contains"
+      },
+      {
+        "source": 11,
+        "target": 12,
+        "type": "released_in"
+      },
+      {
+        "source": 1,
+        "target": 12,
+        "type": "contains"
+      },
+      {
+        "source": 4,
+        "target": 13,
+        "type": "directed"
+      },
+      {
+        "source": 1,
+        "target": 13,
+        "type": "contains"
+      },
+      {
+        "source": 13,
+        "target": 14,
+        "type": "released_in"
+      },
+      {
+        "source": 1,
+        "target": 14,
+        "type": "contains"
+      },
+      {
+        "source": 4,
+        "target": 15,
+        "type": "directed"
+      },
+      {
+        "source": 1,
+        "target": 15,
+        "type": "contains"
+      },
+      {
+        "source": 15,
+        "target": 16,
+        "type": "released_in"
+      },
+      {
+        "source": 1,
+        "target": 16,
+        "type": "contains"
+      },
+      {
+        "source": 4,
+        "target": 17,
+        "type": "directed"
+      },
+      {
+        "source": 1,
+        "target": 17,
+        "type": "contains"
+      },
+      {
+        "source": 17,
+        "target": 18,
+        "type": "released_in"
+      },
+      {
+        "source": 1,
+        "target": 18,
+        "type": "contains"
+      },
+      {
+        "source": 4,
+        "target": 19,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 19,
+        "type": "is_a"
+      },
+      {
+        "source": 20,
+        "target": 19,
+        "type": "is_a"
+      },
+      {
+        "source": 24,
+        "target": 19,
+        "type": "is_a"
+      },
+      {
+        "source": 25,
+        "target": 19,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 20,
+        "type": "contains"
+      },
+      {
+        "source": 20,
+        "target": 21,
+        "type": "born_on"
+      },
+      {
+        "source": 1,
+        "target": 21,
+        "type": "contains"
+      },
+      {
+        "source": 20,
+        "target": 22,
+        "type": "directed"
+      },
+      {
+        "source": 1,
+        "target": 22,
+        "type": "contains"
+      },
+      {
+        "source": 24,
+        "target": 22,
+        "type": "wrote"
+      },
+      {
+        "source": 25,
+        "target": 22,
+        "type": "wrote"
+      },
+      {
+        "source": 22,
+        "target": 23,
+        "type": "released_in"
+      },
+      {
+        "source": 1,
+        "target": 23,
+        "type": "contains"
+      },
+      {
+        "source": 1,
+        "target": 24,
+        "type": "contains"
+      },
+      {
+        "source": 1,
+        "target": 25,
+        "type": "contains"
+      }
+    ]
+  }
+}

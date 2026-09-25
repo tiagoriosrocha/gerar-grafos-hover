@@ -1,0 +1,478 @@
+{
+  "dataset": "hover",
+  "id": "b9425a31-9da5-4e12-b04e-b94a08ac4354",
+  "split": "train",
+  "claim": "The company owning and running Quaker Ridge (NYW&B station) has a terminus at the New York city in the county of Westchester.",
+  "evidencia": "Page: New York, Westchester and Boston Railway. Sentence: It ran from the southernmost part of the South Bronx, near the Harlem River, to Mount Vernon with branches north to White Plains and east to Port Chester.\nPage: Mount Vernon, New York. Sentence: Mount Vernon is a city in Westchester County, New York, United States.\nPage: Quaker Ridge (NYW&amp;B station). Sentence: Quaker Ridge is a former railroad station on the White Plains branch of the New York, Westchester and Boston Railway in the city of New Rochelle in Westchester County, New York.",
+  "evidence_text": "Page: New York, Westchester and Boston Railway. Sentence: It ran from the southernmost part of the South Bronx, near the Harlem River, to Mount Vernon with branches north to White Plains and east to Port Chester.\nPage: Mount Vernon, New York. Sentence: Mount Vernon is a city in Westchester County, New York, United States.\nPage: Quaker Ridge (NYW&amp;B station). Sentence: Quaker Ridge is a former railroad station on the White Plains branch of the New York, Westchester and Boston Railway in the city of New Rochelle in Westchester County, New York.",
+  "label": "SUPPORTED",
+  "num_hops": 3,
+  "hover_metadata": {
+    "supporting_facts": [
+      [
+        "New York, Westchester and Boston Railway",
+        1
+      ],
+      [
+        "Mount Vernon, New York",
+        0
+      ],
+      [
+        "Quaker Ridge (NYW&amp;B station)",
+        0
+      ]
+    ],
+    "num_hops": 3,
+    "evidence_annotation_id": [
+      0
+    ],
+    "evidence_id": [
+      "New York, Westchester and Boston Railway::sentence::1",
+      "Mount Vernon, New York::sentence::0",
+      "Quaker Ridge (NYW&amp;B station)::sentence::0"
+    ],
+    "evidence_wiki_url": [
+      "https://en.wikipedia.org/wiki/New_York%2C_Westchester_and_Boston_Railway",
+      "https://en.wikipedia.org/wiki/Mount_Vernon%2C_New_York",
+      "https://en.wikipedia.org/wiki/Quaker_Ridge_%28NYW%26amp%3BB_station%29"
+    ],
+    "evidence_sentence_id": [
+      "New York, Westchester and Boston Railway::sentence::1",
+      "Mount Vernon, New York::sentence::0",
+      "Quaker Ridge (NYW&amp;B station)::sentence::0"
+    ]
+  },
+  "grafo_claim": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "d08b39e1-d06c-5862-af83-1636f80f1130",
+        "text": "This chunk is about:\n- Companies: New York, Westchester and Boston Railway\n- Places: Quaker Ridge station, New York City, Westchester County\n- Topics: rail ownership, rail operations, termini\n\nFacts:\n- The New York, Westchester and Boston Railway owned and operated Quaker Ridge station.\n- The New York, Westchester and Boston Railway had a terminus in New York City.\n- Quaker Ridge station was in Westchester County.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "fa83a850-0c6c-52a3-a1a1-46f288819ce7",
+        "text": "The company owning and running Quaker Ridge (NYW&B station) has a terminus at the New York city in the county of Westchester.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "d54e1cc5-1278-5512-a079-77cbe6ef857e",
+        "text": "text_0d8d6df94aa324911624297476f12f08",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "85a12214-e50f-5e5e-9b9f-b057a8fb148f",
+        "text": "quaker ridge (nyw&b station)",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "5f394058-b2a0-5ba8-8466-ba2a18cfcf4e",
+        "text": "place",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "aa8c2497-a9b3-5954-83ae-a9fe429ddf42",
+        "text": "new york, westchester and boston railway",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "62912d92-4218-52f7-a1a6-776a04889442",
+        "text": "new york city",
+        "type": "Entity"
+      },
+      {
+        "id": 7,
+        "original_id": "6927cf8b-978f-5674-a1b8-3b3eba07f9cd",
+        "text": "westchester county",
+        "type": "Entity"
+      },
+      {
+        "id": 8,
+        "original_id": "388f60fb-220d-55e8-ae9c-3ac93cead308",
+        "text": "organization",
+        "type": "EntityType"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 3,
+        "type": "owned_and_ran"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 7,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 6,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "has_terminus_at"
+      },
+      {
+        "source": 1,
+        "target": 6,
+        "type": "contains"
+      },
+      {
+        "source": 6,
+        "target": 7,
+        "type": "in_county"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 8,
+        "type": "is_a"
+      }
+    ]
+  },
+  "grafo_evidencia": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "d906e35a-601b-55c2-a183-88ba76ae0b66",
+        "text": "This chunk is about:\n- Systems: New York, Westchester and Boston Railway\n- Places: South Bronx, Harlem River, Mount Vernon, White Plains, Port Chester, Westchester County, New York, New Rochelle\n- Products: Quaker Ridge station\n\nFacts:\n- The New York, Westchester and Boston Railway ran from the southernmost part of the South Bronx near the Harlem River to Mount Vernon.\n- The New York, Westchester and Boston Railway had branches north to White Plains and east to Port Chester.\n- Mount Vernon is a city in Westchester County, New York, United States.\n- Quaker Ridge is a former railroad station on the White Plains branch of the New York, Westchester and Boston Railway in New Rochelle, Westchester County, New York.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "7be8cebf-8e0a-5336-88c9-e5e954ff2d5e",
+        "text": "Page: New York, Westchester and Boston Railway. Sentence: It ran from the southernmost part of the South Bronx, near the Harlem River, to Mount Vernon with branches north to White Plains and east to Port Chester.\nPage: Mount Vernon, New York. Sentence: Mount Vernon is a city in Westchester County, New York, United States.\nPage: Quaker Ridge (NYW&amp;B station). Sentence: Quaker Ridge is a former railroad station on the White Plains branch of the New York, Westchester and Boston Railway in the city of New Rochelle in Westchester County, New York.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "a342c760-8dae-5d19-808f-4a7a12c02ebb",
+        "text": "text_c88085f06d423eb3fdcf41f756022d5c",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "aa8c2497-a9b3-5954-83ae-a9fe429ddf42",
+        "text": "new york, westchester and boston railway",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "b19672d3-3140-58c8-b6f5-776cfdd34808",
+        "text": "south bronx",
+        "type": "Entity"
+      },
+      {
+        "id": 5,
+        "original_id": "0c9ea186-f59a-50af-b91c-5d58df2ef2ef",
+        "text": "harlem river",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "5f394058-b2a0-5ba8-8466-ba2a18cfcf4e",
+        "text": "place",
+        "type": "EntityType"
+      },
+      {
+        "id": 7,
+        "original_id": "665d84d8-ebb9-58d4-88b5-edf1d8c41918",
+        "text": "mount vernon",
+        "type": "Entity"
+      },
+      {
+        "id": 8,
+        "original_id": "6927cf8b-978f-5674-a1b8-3b3eba07f9cd",
+        "text": "westchester county",
+        "type": "Entity"
+      },
+      {
+        "id": 9,
+        "original_id": "a7852d00-db75-55e2-bd9a-468ada762d39",
+        "text": "new york",
+        "type": "Entity"
+      },
+      {
+        "id": 10,
+        "original_id": "874a51da-34ea-5037-be47-d87785d43c37",
+        "text": "united states",
+        "type": "Entity"
+      },
+      {
+        "id": 11,
+        "original_id": "b66b2ee3-8e98-5ae7-9e63-a985a07c2238",
+        "text": "white plains",
+        "type": "Entity"
+      },
+      {
+        "id": 12,
+        "original_id": "f11c2d5b-e330-592e-a279-77d7cbfdfe9a",
+        "text": "port chester",
+        "type": "Entity"
+      },
+      {
+        "id": 13,
+        "original_id": "388f60fb-220d-55e8-ae9c-3ac93cead308",
+        "text": "organization",
+        "type": "EntityType"
+      },
+      {
+        "id": 14,
+        "original_id": "d815497f-e10a-58fc-8d78-bfd4d0646937",
+        "text": "quaker ridge",
+        "type": "Entity"
+      },
+      {
+        "id": 15,
+        "original_id": "7e249d73-9476-5665-be05-7570aab3eda6",
+        "text": "white plains branch",
+        "type": "Entity"
+      },
+      {
+        "id": 16,
+        "original_id": "9db7632f-a3f5-5f0a-a57a-1e09cc9fdc7a",
+        "text": "new rochelle",
+        "type": "Entity"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 15,
+        "target": 3,
+        "type": "branch_of"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "ran_from"
+      },
+      {
+        "source": 1,
+        "target": 4,
+        "type": "contains"
+      },
+      {
+        "source": 4,
+        "target": 5,
+        "type": "near"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 4,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 10,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 9,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 8,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 7,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 11,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 12,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 15,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 16,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 14,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 7,
+        "type": "ran_to"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      },
+      {
+        "source": 7,
+        "target": 8,
+        "type": "located_in"
+      },
+      {
+        "source": 1,
+        "target": 8,
+        "type": "contains"
+      },
+      {
+        "source": 16,
+        "target": 8,
+        "type": "located_in"
+      },
+      {
+        "source": 14,
+        "target": 8,
+        "type": "located_in"
+      },
+      {
+        "source": 8,
+        "target": 9,
+        "type": "located_in"
+      },
+      {
+        "source": 1,
+        "target": 9,
+        "type": "contains"
+      },
+      {
+        "source": 14,
+        "target": 9,
+        "type": "located_in"
+      },
+      {
+        "source": 9,
+        "target": 10,
+        "type": "located_in"
+      },
+      {
+        "source": 1,
+        "target": 10,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 11,
+        "type": "has_branch_to"
+      },
+      {
+        "source": 1,
+        "target": 11,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 12,
+        "type": "has_branch_to"
+      },
+      {
+        "source": 1,
+        "target": 12,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 13,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 14,
+        "type": "contains"
+      },
+      {
+        "source": 14,
+        "target": 15,
+        "type": "located_on"
+      },
+      {
+        "source": 1,
+        "target": 15,
+        "type": "contains"
+      },
+      {
+        "source": 14,
+        "target": 16,
+        "type": "located_in"
+      },
+      {
+        "source": 1,
+        "target": 16,
+        "type": "contains"
+      }
+    ]
+  }
+}

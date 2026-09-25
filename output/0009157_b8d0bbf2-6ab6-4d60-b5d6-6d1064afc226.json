@@ -1,0 +1,520 @@
+{
+  "dataset": "hover",
+  "id": "b8d0bbf2-6ab6-4d60-b5d6-6d1064afc226",
+  "split": "train",
+  "claim": "Bouvier des Ardennes is a breed of dog. The dog Maremma Sheepdog is similar to is also a breed.",
+  "evidencia": "Page: Kuvasz. Sentence: The Kuvasz (] ), is an ancient breed of a livestock dog of Hungarian origin.\nPage: Bouvier des Ardennes. Sentence: Bouvier des Ardennes is a rare dog breed from Belgium.\nPage: Maremma Sheepdog. Sentence: Similar breeds include the Pyrenean Mountain Dog, the Kuvasz of Hungary, the Tatra of Poland, the Cuvac of Slovakia and the Šarplaninac (although not white), with all of which it may share a common ancestor; and the Akbash Dog of Turkey.",
+  "evidence_text": "Page: Kuvasz. Sentence: The Kuvasz (] ), is an ancient breed of a livestock dog of Hungarian origin.\nPage: Bouvier des Ardennes. Sentence: Bouvier des Ardennes is a rare dog breed from Belgium.\nPage: Maremma Sheepdog. Sentence: Similar breeds include the Pyrenean Mountain Dog, the Kuvasz of Hungary, the Tatra of Poland, the Cuvac of Slovakia and the Šarplaninac (although not white), with all of which it may share a common ancestor; and the Akbash Dog of Turkey.",
+  "label": "SUPPORTED",
+  "num_hops": 3,
+  "hover_metadata": {
+    "supporting_facts": [
+      [
+        "Kuvasz",
+        0
+      ],
+      [
+        "Bouvier des Ardennes",
+        0
+      ],
+      [
+        "Maremma Sheepdog",
+        5
+      ]
+    ],
+    "num_hops": 3,
+    "evidence_annotation_id": [
+      0
+    ],
+    "evidence_id": [
+      "Kuvasz::sentence::0",
+      "Bouvier des Ardennes::sentence::0",
+      "Maremma Sheepdog::sentence::5"
+    ],
+    "evidence_wiki_url": [
+      "https://en.wikipedia.org/wiki/Kuvasz",
+      "https://en.wikipedia.org/wiki/Bouvier_des_Ardennes",
+      "https://en.wikipedia.org/wiki/Maremma_Sheepdog"
+    ],
+    "evidence_sentence_id": [
+      "Kuvasz::sentence::0",
+      "Bouvier des Ardennes::sentence::0",
+      "Maremma Sheepdog::sentence::5"
+    ]
+  },
+  "grafo_claim": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "a2eae167-5447-559f-8699-c3db7f89dc25",
+        "text": "This chunk is about:\n- Products: Bouvier des Ardennes, Maremma Sheepdog\n- Topics: dog breeds\n\nFacts:\n- Bouvier des Ardennes is a breed of dog.\n- Maremma Sheepdog is also a breed of dog.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "3d792622-769f-5a2f-abfa-bb8162b3d26b",
+        "text": "Bouvier des Ardennes is a breed of dog. The dog Maremma Sheepdog is similar to is also a breed.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "69b835b3-93f5-5a92-a4e0-e0ee59e22d37",
+        "text": "text_f15bee3eeb737c7d84d236c568f23f4d",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "25577b19-c784-5860-9a15-876eacca7984",
+        "text": "bouvier des ardennes",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "67a184b0-2450-5b72-9617-e9811ef6244d",
+        "text": "animal breed",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "74492b45-99c5-5836-a75a-c912b8f91afb",
+        "text": "dog",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "5d76eb72-04ef-5580-b2ea-161f8429437a",
+        "text": "animal",
+        "type": "EntityType"
+      },
+      {
+        "id": 7,
+        "original_id": "9cdc23b8-ba64-59b3-88ed-a477492739ed",
+        "text": "maremma sheepdog",
+        "type": "Entity"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 7,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 7,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 7,
+        "type": "similar_to"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      }
+    ]
+  },
+  "grafo_evidencia": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "e5ad2f70-b7b6-5d67-9b17-e928cf875f8d",
+        "text": "This chunk is about:\n- Products: Kuvasz, Bouvier des Ardennes, Maremma Sheepdog, Pyrenean Mountain Dog, Tatra, Cuvac, Šarplaninac, Akbash Dog\n- Places: Hungary, Belgium, Poland, Slovakia, Turkey\n- Concepts: dog breeds, livestock dogs, common ancestry\n\nFacts:\n- The Kuvasz is an ancient breed of livestock dog of Hungarian origin.\n- The Bouvier des Ardennes is a rare dog breed from Belgium.\n- The Maremma Sheepdog is described as similar to the Pyrenean Mountain Dog, the Kuvasz of Hungary, the Tatra of Poland, the Cuvac of Slovakia, the Šarplaninac, and the Akbash Dog of Turkey.\n- The Maremma Sheepdog and the Pyrenean Mountain Dog, Kuvasz, Tatra, Cuvac, and Šarplaninac may share a common ancestor.\n- The Šarplaninac is noted as not white in the comparison of breeds similar to the Maremma Sheepdog.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "d1c038e8-55fa-5497-9012-bb2799e5f360",
+        "text": "Page: Kuvasz. Sentence: The Kuvasz (] ), is an ancient breed of a livestock dog of Hungarian origin.\nPage: Bouvier des Ardennes. Sentence: Bouvier des Ardennes is a rare dog breed from Belgium.\nPage: Maremma Sheepdog. Sentence: Similar breeds include the Pyrenean Mountain Dog, the Kuvasz of Hungary, the Tatra of Poland, the Cuvac of Slovakia and the Šarplaninac (although not white), with all of which it may share a common ancestor; and the Akbash Dog of Turkey.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "8f76c254-42dc-5c90-bb55-b9e942553c77",
+        "text": "text_f0308519b836de3f54b9d9b80115c537",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "b6fc9eab-3fc4-5217-89ff-931a8d8b3df8",
+        "text": "kuvasz",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "29eda40d-66d5-59be-b17c-7c4969f51367",
+        "text": "dog breed",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "7fd0df8e-45f5-5924-aa5d-5dab33725801",
+        "text": "hungary",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "35e29ad1-17b7-507a-a205-d7851a5e7102",
+        "text": "country",
+        "type": "EntityType"
+      },
+      {
+        "id": 7,
+        "original_id": "33a0911e-5a3e-5f34-ab83-9c6b15f31168",
+        "text": "common ancestor",
+        "type": "Entity"
+      },
+      {
+        "id": 8,
+        "original_id": "d2a381fa-3658-5ca6-ada9-2109cfc9331d",
+        "text": "concept",
+        "type": "EntityType"
+      },
+      {
+        "id": 9,
+        "original_id": "25577b19-c784-5860-9a15-876eacca7984",
+        "text": "bouvier des ardennes",
+        "type": "Entity"
+      },
+      {
+        "id": 10,
+        "original_id": "a90c6645-c993-58aa-850e-bfd55897a969",
+        "text": "belgium",
+        "type": "Entity"
+      },
+      {
+        "id": 11,
+        "original_id": "9cdc23b8-ba64-59b3-88ed-a477492739ed",
+        "text": "maremma sheepdog",
+        "type": "Entity"
+      },
+      {
+        "id": 12,
+        "original_id": "2b267b1d-c4b3-5660-a2ff-eef19891dbd0",
+        "text": "pyrenean mountain dog",
+        "type": "Entity"
+      },
+      {
+        "id": 13,
+        "original_id": "0dfcf321-f152-51f1-be5a-eafbac53f479",
+        "text": "tatra",
+        "type": "Entity"
+      },
+      {
+        "id": 14,
+        "original_id": "2bb002ee-445d-5345-90f9-c389faf0a6d4",
+        "text": "poland",
+        "type": "Entity"
+      },
+      {
+        "id": 15,
+        "original_id": "1959b826-7122-56c8-8fc7-463d468bfac1",
+        "text": "cuvac",
+        "type": "Entity"
+      },
+      {
+        "id": 16,
+        "original_id": "5c266db6-cf0b-58f2-833e-30e6e81a81a9",
+        "text": "slovakia",
+        "type": "Entity"
+      },
+      {
+        "id": 17,
+        "original_id": "d6e6ef99-2061-5a2e-b5b2-b7937076ce42",
+        "text": "šarplaninac",
+        "type": "Entity"
+      },
+      {
+        "id": 18,
+        "original_id": "b88776f9-5391-5cc5-a22e-f1e55feb096c",
+        "text": "akbash dog",
+        "type": "Entity"
+      },
+      {
+        "id": 19,
+        "original_id": "2c0ffd2a-86d3-5381-a223-4c5644d1c17b",
+        "text": "turkey",
+        "type": "Entity"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 11,
+        "target": 3,
+        "type": "similar_to"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 9,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 11,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 12,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 13,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 15,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 17,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 18,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "originated_in"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 10,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 14,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 16,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 19,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 7,
+        "type": "may_descend_from"
+      },
+      {
+        "source": 12,
+        "target": 7,
+        "type": "may_descend_from"
+      },
+      {
+        "source": 13,
+        "target": 7,
+        "type": "may_descend_from"
+      },
+      {
+        "source": 15,
+        "target": 7,
+        "type": "may_descend_from"
+      },
+      {
+        "source": 17,
+        "target": 7,
+        "type": "may_descend_from"
+      },
+      {
+        "source": 11,
+        "target": 7,
+        "type": "may_share_ancestor_with"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      },
+      {
+        "source": 7,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 9,
+        "type": "contains"
+      },
+      {
+        "source": 9,
+        "target": 10,
+        "type": "originated_in"
+      },
+      {
+        "source": 1,
+        "target": 10,
+        "type": "contains"
+      },
+      {
+        "source": 1,
+        "target": 11,
+        "type": "contains"
+      },
+      {
+        "source": 17,
+        "target": 11,
+        "type": "contrasted_with"
+      },
+      {
+        "source": 11,
+        "target": 12,
+        "type": "similar_to"
+      },
+      {
+        "source": 1,
+        "target": 12,
+        "type": "contains"
+      },
+      {
+        "source": 11,
+        "target": 13,
+        "type": "similar_to"
+      },
+      {
+        "source": 1,
+        "target": 13,
+        "type": "contains"
+      },
+      {
+        "source": 13,
+        "target": 14,
+        "type": "associated_with"
+      },
+      {
+        "source": 1,
+        "target": 14,
+        "type": "contains"
+      },
+      {
+        "source": 11,
+        "target": 15,
+        "type": "similar_to"
+      },
+      {
+        "source": 1,
+        "target": 15,
+        "type": "contains"
+      },
+      {
+        "source": 15,
+        "target": 16,
+        "type": "associated_with"
+      },
+      {
+        "source": 1,
+        "target": 16,
+        "type": "contains"
+      },
+      {
+        "source": 11,
+        "target": 17,
+        "type": "similar_to"
+      },
+      {
+        "source": 1,
+        "target": 17,
+        "type": "contains"
+      },
+      {
+        "source": 11,
+        "target": 18,
+        "type": "similar_to"
+      },
+      {
+        "source": 1,
+        "target": 18,
+        "type": "contains"
+      },
+      {
+        "source": 18,
+        "target": 19,
+        "type": "associated_with"
+      },
+      {
+        "source": 1,
+        "target": 19,
+        "type": "contains"
+      }
+    ]
+  }
+}

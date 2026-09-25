@@ -1,0 +1,432 @@
+{
+  "dataset": "hover",
+  "id": "e453d379-4bcb-42e4-b5e1-e3c9f7531ed8",
+  "split": "train",
+  "claim": "Stephen Colbert was a member of the IO theater and the host of a CBS talk program.",
+  "evidencia": "Page: IO Theater. Sentence: The theater has many notable alumni, including Amy Poehler and Stephen Colbert.\nPage: Stephen Colbert. Sentence: He is best known for hosting the satirical Comedy Central program \"The Colbert Report\" from 2005 to 2014, and hosting the CBS talk program \"The Late Show with Stephen Colbert\" beginning in September 2015.",
+  "evidence_text": "Page: IO Theater. Sentence: The theater has many notable alumni, including Amy Poehler and Stephen Colbert.\nPage: Stephen Colbert. Sentence: He is best known for hosting the satirical Comedy Central program \"The Colbert Report\" from 2005 to 2014, and hosting the CBS talk program \"The Late Show with Stephen Colbert\" beginning in September 2015.",
+  "label": "SUPPORTED",
+  "num_hops": 2,
+  "hover_metadata": {
+    "supporting_facts": [
+      [
+        "IO Theater",
+        3
+      ],
+      [
+        "Stephen Colbert",
+        1
+      ]
+    ],
+    "num_hops": 2,
+    "evidence_annotation_id": [
+      0
+    ],
+    "evidence_id": [
+      "IO Theater::sentence::3",
+      "Stephen Colbert::sentence::1"
+    ],
+    "evidence_wiki_url": [
+      "https://en.wikipedia.org/wiki/IO_Theater",
+      "https://en.wikipedia.org/wiki/Stephen_Colbert"
+    ],
+    "evidence_sentence_id": [
+      "IO Theater::sentence::3",
+      "Stephen Colbert::sentence::1"
+    ]
+  },
+  "grafo_claim": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "d624d7ad-88e4-5586-abb6-04763f247ed4",
+        "text": "This chunk is about:\n- People: Stephen Colbert\n- Organizations: iO Theater, CBS\n- Roles: Member, Host\n- Products: CBS talk program\n\nFacts:\n- Stephen Colbert was a member of iO Theater.\n- Stephen Colbert was the host of a CBS talk program.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "25c9fd19-d0d2-573c-9b17-e8b69f6e97b5",
+        "text": "Stephen Colbert was a member of the IO theater and the host of a CBS talk program.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "17df3ce1-3314-546b-9e89-bcb3933ed59b",
+        "text": "text_bad98395a9b95b9c60f13d58ed4cfcc7",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "b6bc006f-4bfb-5bc8-a8e8-46ee5d99543c",
+        "text": "stephen colbert",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "66ec244d-02f6-585a-8a3b-0dd16948af7c",
+        "text": "io theater",
+        "type": "Entity"
+      },
+      {
+        "id": 5,
+        "original_id": "388f60fb-220d-55e8-ae9c-3ac93cead308",
+        "text": "organization",
+        "type": "EntityType"
+      },
+      {
+        "id": 6,
+        "original_id": "013a32f5-2454-5848-a86b-48ba39a5e189",
+        "text": "cbs talk program",
+        "type": "Entity"
+      },
+      {
+        "id": 7,
+        "original_id": "1f0c3132-0bae-58f9-9f00-fc3f2e574b25",
+        "text": "cbs",
+        "type": "Entity"
+      },
+      {
+        "id": 8,
+        "original_id": "5263a535-1b4b-5925-be3e-310d03cd303b",
+        "text": "work",
+        "type": "EntityType"
+      },
+      {
+        "id": 9,
+        "original_id": "99a82eec-bb35-5bb5-9ed2-e73fc7a756de",
+        "text": "person",
+        "type": "EntityType"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "member_of"
+      },
+      {
+        "source": 1,
+        "target": 4,
+        "type": "contains"
+      },
+      {
+        "source": 4,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 7,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 6,
+        "type": "host_of"
+      },
+      {
+        "source": 1,
+        "target": 6,
+        "type": "contains"
+      },
+      {
+        "source": 6,
+        "target": 7,
+        "type": "associated_with"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      },
+      {
+        "source": 6,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 9,
+        "type": "is_a"
+      }
+    ]
+  },
+  "grafo_evidencia": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "2857abef-74b9-5586-8848-b55c9d12d7dc",
+        "text": "This chunk is about:\n- Organizations: IO Theater, Comedy Central, CBS\n- People: Stephen Colbert, Amy Poehler\n- Products: The Colbert Report, The Late Show with Stephen Colbert\n\nFacts:\n- IO Theater has many notable alumni, including Amy Poehler and Stephen Colbert.\n- Stephen Colbert hosted the satirical Comedy Central program \"The Colbert Report\" from 2005 to 2014.\n- Stephen Colbert began hosting the CBS talk program \"The Late Show with Stephen Colbert\" in September 2015.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "df3c608b-9f83-5e82-a573-c5738ae93cb1",
+        "text": "Page: IO Theater. Sentence: The theater has many notable alumni, including Amy Poehler and Stephen Colbert.\nPage: Stephen Colbert. Sentence: He is best known for hosting the satirical Comedy Central program \"The Colbert Report\" from 2005 to 2014, and hosting the CBS talk program \"The Late Show with Stephen Colbert\" beginning in September 2015.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "f16a78bf-9602-56d5-aa9d-d6b23f8bda52",
+        "text": "text_c9e8b79b3726dbfb4123a4af9076c7cc",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "66ec244d-02f6-585a-8a3b-0dd16948af7c",
+        "text": "io theater",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "388f60fb-220d-55e8-ae9c-3ac93cead308",
+        "text": "organization",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "62acc955-8d1b-56e3-8727-f1e2ba85c6df",
+        "text": "amy poehler",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "99a82eec-bb35-5bb5-9ed2-e73fc7a756de",
+        "text": "person",
+        "type": "EntityType"
+      },
+      {
+        "id": 7,
+        "original_id": "b6bc006f-4bfb-5bc8-a8e8-46ee5d99543c",
+        "text": "stephen colbert",
+        "type": "Entity"
+      },
+      {
+        "id": 8,
+        "original_id": "64ed854b-a58f-566f-b78b-9ab4fa4c4266",
+        "text": "the colbert report",
+        "type": "Entity"
+      },
+      {
+        "id": 9,
+        "original_id": "f819ff9a-69db-5987-9c7c-0f35a0fcd1d2",
+        "text": "comedy central",
+        "type": "Entity"
+      },
+      {
+        "id": 10,
+        "original_id": "b9de479d-3b6c-5c24-bceb-12f43e184239",
+        "text": "program",
+        "type": "EntityType"
+      },
+      {
+        "id": 11,
+        "original_id": "c134b9c3-6b55-5a5a-b8ca-c2f1a633a648",
+        "text": "2005",
+        "type": "Entity"
+      },
+      {
+        "id": 12,
+        "original_id": "b19433ae-558c-5aaf-95ac-6231f2a4be0e",
+        "text": "date",
+        "type": "EntityType"
+      },
+      {
+        "id": 13,
+        "original_id": "8b81e666-937e-557b-9b2d-fbabf5175591",
+        "text": "2014",
+        "type": "Entity"
+      },
+      {
+        "id": 14,
+        "original_id": "50f54c76-9dd7-5971-a98c-a7d7245ebc64",
+        "text": "the late show with stephen colbert",
+        "type": "Entity"
+      },
+      {
+        "id": 15,
+        "original_id": "1f0c3132-0bae-58f9-9f00-fc3f2e574b25",
+        "text": "cbs",
+        "type": "Entity"
+      },
+      {
+        "id": 16,
+        "original_id": "1d5bc88a-f5ae-57e4-9cf5-875a5fff245f",
+        "text": "2015-09",
+        "type": "Entity"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 3,
+        "type": "alumnus_of"
+      },
+      {
+        "source": 7,
+        "target": 3,
+        "type": "alumnus_of"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 9,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 15,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 7,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      },
+      {
+        "source": 7,
+        "target": 8,
+        "type": "hosted"
+      },
+      {
+        "source": 1,
+        "target": 8,
+        "type": "contains"
+      },
+      {
+        "source": 8,
+        "target": 9,
+        "type": "aired_on"
+      },
+      {
+        "source": 1,
+        "target": 9,
+        "type": "contains"
+      },
+      {
+        "source": 8,
+        "target": 10,
+        "type": "is_a"
+      },
+      {
+        "source": 14,
+        "target": 10,
+        "type": "is_a"
+      },
+      {
+        "source": 7,
+        "target": 11,
+        "type": "began_hosting"
+      },
+      {
+        "source": 1,
+        "target": 11,
+        "type": "contains"
+      },
+      {
+        "source": 11,
+        "target": 12,
+        "type": "is_a"
+      },
+      {
+        "source": 13,
+        "target": 12,
+        "type": "is_a"
+      },
+      {
+        "source": 16,
+        "target": 12,
+        "type": "is_a"
+      },
+      {
+        "source": 7,
+        "target": 13,
+        "type": "ended_hosting"
+      },
+      {
+        "source": 1,
+        "target": 13,
+        "type": "contains"
+      },
+      {
+        "source": 7,
+        "target": 14,
+        "type": "hosted"
+      },
+      {
+        "source": 1,
+        "target": 14,
+        "type": "contains"
+      },
+      {
+        "source": 14,
+        "target": 15,
+        "type": "aired_on"
+      },
+      {
+        "source": 1,
+        "target": 15,
+        "type": "contains"
+      },
+      {
+        "source": 7,
+        "target": 16,
+        "type": "began_hosting"
+      },
+      {
+        "source": 1,
+        "target": 16,
+        "type": "contains"
+      }
+    ]
+  }
+}

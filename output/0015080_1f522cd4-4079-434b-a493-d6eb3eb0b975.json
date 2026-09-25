@@ -1,0 +1,421 @@
+{
+  "dataset": "hover",
+  "id": "1f522cd4-4079-434b-a493-d6eb3eb0b975",
+  "split": "train",
+  "claim": "The dog breed that is a cousin of the German longhaired pointer was developed in Pescara and not the Bracco Italiano.",
+  "evidencia": "Page: Large Münsterländer. Sentence: The Large Münsterländer (or Großer Münsterländer) is a breed of gun dog originally from the Münster region in Germany.\nPage: Bracco Italiano. Sentence: The Bracco Italiano ] is a breed of dog developed in Italy as a versatile gun dog.\nPage: German Longhaired Pointer. Sentence: It is closely related to its cousins, the German Shorthaired Pointer (GSP), the German Wirehaired Pointer (GWP) and the Large Münsterländer, which was previously part of the breed.",
+  "evidence_text": "Page: Large Münsterländer. Sentence: The Large Münsterländer (or Großer Münsterländer) is a breed of gun dog originally from the Münster region in Germany.\nPage: Bracco Italiano. Sentence: The Bracco Italiano ] is a breed of dog developed in Italy as a versatile gun dog.\nPage: German Longhaired Pointer. Sentence: It is closely related to its cousins, the German Shorthaired Pointer (GSP), the German Wirehaired Pointer (GWP) and the Large Münsterländer, which was previously part of the breed.",
+  "label": "NOT_SUPPORTED",
+  "num_hops": 3,
+  "hover_metadata": {
+    "supporting_facts": [
+      [
+        "Large Münsterländer",
+        0
+      ],
+      [
+        "Bracco Italiano",
+        0
+      ],
+      [
+        "German Longhaired Pointer",
+        2
+      ]
+    ],
+    "num_hops": 3,
+    "evidence_annotation_id": [
+      0
+    ],
+    "evidence_id": [
+      "Large Münsterländer::sentence::0",
+      "Bracco Italiano::sentence::0",
+      "German Longhaired Pointer::sentence::2"
+    ],
+    "evidence_wiki_url": [
+      "https://en.wikipedia.org/wiki/Large_M%C3%BCnsterl%C3%A4nder",
+      "https://en.wikipedia.org/wiki/Bracco_Italiano",
+      "https://en.wikipedia.org/wiki/German_Longhaired_Pointer"
+    ],
+    "evidence_sentence_id": [
+      "Large Münsterländer::sentence::0",
+      "Bracco Italiano::sentence::0",
+      "German Longhaired Pointer::sentence::2"
+    ]
+  },
+  "grafo_claim": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "354cd147-8a1a-5617-9b6d-dcdcfaacf780",
+        "text": "This chunk is about:\n- Dog breeds: German Longhaired Pointer, Bracco Italiano\n- Places: Pescara\n- Concepts: breed relation, breed origin\n\nFacts:\n- The German Longhaired Pointer has a cousin dog breed referenced in the chunk.\n- That cousin breed was developed in Pescara.\n- The dog breed developed in Pescara was not the Bracco Italiano.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "3f8da697-529c-5fe1-8d71-e51b1a85399f",
+        "text": "The dog breed that is a cousin of the German longhaired pointer was developed in Pescara and not the Bracco Italiano.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "a284db55-690d-584d-81f1-3c1a717ec5af",
+        "text": "text_80467f8e2551af48ccea2da79b8d4484",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "6f05a642-39a0-52b9-8181-19b0e04b1bf1",
+        "text": "german longhaired pointer",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "29eda40d-66d5-59be-b17c-7c4969f51367",
+        "text": "dog breed",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "b62f3734-0925-51ef-afdf-8d7d0bf39468",
+        "text": "pescara",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "5f394058-b2a0-5ba8-8466-ba2a18cfcf4e",
+        "text": "place",
+        "type": "EntityType"
+      },
+      {
+        "id": 7,
+        "original_id": "d82b67e5-e5d2-5c19-aa30-c5a109f8e9fc",
+        "text": "bracco italiano",
+        "type": "Entity"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 7,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "has_cousin_developed_in"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 7,
+        "target": 5,
+        "type": "not_developed_in"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      }
+    ]
+  },
+  "grafo_evidencia": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "48aafdb4-290a-567e-98ff-6438131dcf6c",
+        "text": "This chunk is about:\n- Breeds: Large Münsterländer, Bracco Italiano, German Longhaired Pointer\n- Places: Münster region, Germany, Italy\n- Dog types: gun dog, versatile gun dog\n- Related breeds: German Shorthaired Pointer, German Wirehaired Pointer\n\nFacts:\n- The Large Münsterländer, also called the Großer Münsterländer, is a breed of gun dog originally from the Münster region in Germany.\n- The Bracco Italiano is a breed of dog developed in Italy as a versatile gun dog.\n- The German Longhaired Pointer is closely related to the German Shorthaired Pointer, the German Wirehaired Pointer, and the Large Münsterländer.\n- The Large Münsterländer was previously part of the German Longhaired Pointer breed.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "2ad23136-2c32-580c-8dbd-f41655853e4a",
+        "text": "Page: Large Münsterländer. Sentence: The Large Münsterländer (or Großer Münsterländer) is a breed of gun dog originally from the Münster region in Germany.\nPage: Bracco Italiano. Sentence: The Bracco Italiano ] is a breed of dog developed in Italy as a versatile gun dog.\nPage: German Longhaired Pointer. Sentence: It is closely related to its cousins, the German Shorthaired Pointer (GSP), the German Wirehaired Pointer (GWP) and the Large Münsterländer, which was previously part of the breed.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "b002bb18-7ea5-5ebb-a1e7-933415d8cfae",
+        "text": "text_f8505c650299d0a92a61ffc8290bada3",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "b811ad81-78f6-597c-8d7c-7c3d92bf0a6e",
+        "text": "large münsterländer",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "29eda40d-66d5-59be-b17c-7c4969f51367",
+        "text": "dog breed",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "d86105f8-c885-5fab-b0dc-91cfb7ebc0a0",
+        "text": "münster region",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "5f394058-b2a0-5ba8-8466-ba2a18cfcf4e",
+        "text": "place",
+        "type": "EntityType"
+      },
+      {
+        "id": 7,
+        "original_id": "f30f124b-1bc0-595d-b0c0-aa20029c2bb4",
+        "text": "germany",
+        "type": "Entity"
+      },
+      {
+        "id": 8,
+        "original_id": "6f05a642-39a0-52b9-8181-19b0e04b1bf1",
+        "text": "german longhaired pointer",
+        "type": "Entity"
+      },
+      {
+        "id": 9,
+        "original_id": "852da762-12c6-593c-b703-5479f7ca5e36",
+        "text": "german shorthaired pointer",
+        "type": "Entity"
+      },
+      {
+        "id": 10,
+        "original_id": "ad5a269f-95f8-5201-9ef3-5fdc101489b7",
+        "text": "gsp",
+        "type": "Entity"
+      },
+      {
+        "id": 11,
+        "original_id": "c34f2c4e-3bdc-525b-a7d1-6a9f35f291f4",
+        "text": "german wirehaired pointer",
+        "type": "Entity"
+      },
+      {
+        "id": 12,
+        "original_id": "a3dd18aa-f0c6-5d66-a666-d52fe522f8c4",
+        "text": "gwp",
+        "type": "Entity"
+      },
+      {
+        "id": 13,
+        "original_id": "50479c3f-5a4b-5a44-9005-049c7a567da8",
+        "text": "großer münsterländer",
+        "type": "Entity"
+      },
+      {
+        "id": 14,
+        "original_id": "d82b67e5-e5d2-5c19-aa30-c5a109f8e9fc",
+        "text": "bracco italiano",
+        "type": "Entity"
+      },
+      {
+        "id": 15,
+        "original_id": "72368fd8-1be4-54f1-a9ee-3368fdbd9d40",
+        "text": "italy",
+        "type": "Entity"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 8,
+        "target": 3,
+        "type": "closely_related_to"
+      },
+      {
+        "source": 13,
+        "target": 3,
+        "type": "alternate_name_of"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 8,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 9,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 10,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 11,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 12,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 13,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 14,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "originated_from"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 7,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 15,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 5,
+        "target": 7,
+        "type": "located_in"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 8,
+        "type": "previously_part_of_breed"
+      },
+      {
+        "source": 1,
+        "target": 8,
+        "type": "contains"
+      },
+      {
+        "source": 8,
+        "target": 9,
+        "type": "closely_related_to"
+      },
+      {
+        "source": 1,
+        "target": 9,
+        "type": "contains"
+      },
+      {
+        "source": 9,
+        "target": 10,
+        "type": "abbreviated_as"
+      },
+      {
+        "source": 1,
+        "target": 10,
+        "type": "contains"
+      },
+      {
+        "source": 8,
+        "target": 11,
+        "type": "closely_related_to"
+      },
+      {
+        "source": 1,
+        "target": 11,
+        "type": "contains"
+      },
+      {
+        "source": 11,
+        "target": 12,
+        "type": "abbreviated_as"
+      },
+      {
+        "source": 1,
+        "target": 12,
+        "type": "contains"
+      },
+      {
+        "source": 1,
+        "target": 13,
+        "type": "contains"
+      },
+      {
+        "source": 1,
+        "target": 14,
+        "type": "contains"
+      },
+      {
+        "source": 14,
+        "target": 15,
+        "type": "developed_in"
+      },
+      {
+        "source": 1,
+        "target": 15,
+        "type": "contains"
+      }
+    ]
+  }
+}

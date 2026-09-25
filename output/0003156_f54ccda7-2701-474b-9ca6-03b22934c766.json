@@ -1,0 +1,504 @@
+{
+  "dataset": "hover",
+  "id": "f54ccda7-2701-474b-9ca6-03b22934c766",
+  "split": "train",
+  "claim": "Nikolaschka and White Russian are not made of beer.",
+  "evidencia": "Page: Nikolaschka. Sentence: Pour cognac brandy snifter and place the lemon disk on top of the glass.\nPage: Nikolaschka. Sentence: Next cover half of the disk with coffee powder and the other half with a powdered sugar and serve.\nPage: White Russian (cocktail). Sentence: A White Russian is a cocktail made with vodka, coffee liqueur (e.g., Kahlúa or Tia Maria), and cream served with ice in an Old Fashioned glass.\nPage: White Russian (cocktail). Sentence: Often milk will be used as an alternative to cream.",
+  "evidence_text": "Page: Nikolaschka. Sentence: Pour cognac brandy snifter and place the lemon disk on top of the glass.\nPage: Nikolaschka. Sentence: Next cover half of the disk with coffee powder and the other half with a powdered sugar and serve.\nPage: White Russian (cocktail). Sentence: A White Russian is a cocktail made with vodka, coffee liqueur (e.g., Kahlúa or Tia Maria), and cream served with ice in an Old Fashioned glass.\nPage: White Russian (cocktail). Sentence: Often milk will be used as an alternative to cream.",
+  "label": "SUPPORTED",
+  "num_hops": 2,
+  "hover_metadata": {
+    "supporting_facts": [
+      [
+        "Nikolaschka",
+        0
+      ],
+      [
+        "Nikolaschka",
+        1
+      ],
+      [
+        "White Russian (cocktail)",
+        0
+      ],
+      [
+        "White Russian (cocktail)",
+        1
+      ]
+    ],
+    "num_hops": 2,
+    "evidence_annotation_id": [
+      0
+    ],
+    "evidence_id": [
+      "Nikolaschka::sentence::0",
+      "Nikolaschka::sentence::1",
+      "White Russian (cocktail)::sentence::0",
+      "White Russian (cocktail)::sentence::1"
+    ],
+    "evidence_wiki_url": [
+      "https://en.wikipedia.org/wiki/Nikolaschka",
+      "https://en.wikipedia.org/wiki/White_Russian_%28cocktail%29"
+    ],
+    "evidence_sentence_id": [
+      "Nikolaschka::sentence::0",
+      "Nikolaschka::sentence::1",
+      "White Russian (cocktail)::sentence::0",
+      "White Russian (cocktail)::sentence::1"
+    ]
+  },
+  "grafo_claim": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "4f7e0de7-f0e5-54a7-8047-2c2d034db6f9",
+        "text": "This chunk is about:\n- Products: Nikolaschka, White Russian\n- Concepts: Beer\n\nFacts:\n- Nikolaschka is not made of beer.\n- White Russian is not made of beer.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "26a48103-2f5c-5af2-970b-d58b51ee3b4e",
+        "text": "Nikolaschka and White Russian are not made of beer.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "8773c1b7-8813-5987-bd17-4021dcef8123",
+        "text": "text_f3336796151edca24e73d6f277b04807",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "01494835-691d-5339-aa88-e8515cac5eac",
+        "text": "nikolaschka",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "9a14f0a1-3653-5864-83eb-533dd237e618",
+        "text": "beer",
+        "type": "Entity"
+      },
+      {
+        "id": 5,
+        "original_id": "58c5636a-bd83-593e-87d0-53a002ba21de",
+        "text": "drink",
+        "type": "EntityType"
+      },
+      {
+        "id": 6,
+        "original_id": "c1fe5852-4701-58f4-8370-1fd0f453f9f7",
+        "text": "white russian",
+        "type": "Entity"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "not_made_of"
+      },
+      {
+        "source": 6,
+        "target": 4,
+        "type": "not_made_of"
+      },
+      {
+        "source": 1,
+        "target": 4,
+        "type": "contains"
+      },
+      {
+        "source": 4,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 6,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 6,
+        "type": "contains"
+      }
+    ]
+  },
+  "grafo_evidencia": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "699be91e-0245-5562-8dba-44390aa2d349",
+        "text": "This chunk is about:\n- Products: Nikolaschka, White Russian\n- Ingredients: cognac brandy, lemon disk, coffee powder, powdered sugar, vodka, coffee liqueur, Kahlúa, Tia Maria, cream, milk, ice\n- Glassware: brandy snifter, Old Fashioned glass\n\nFacts:\n- The Nikolaschka is prepared by pouring cognac brandy into a brandy snifter and placing a lemon disk on top of the glass.\n- The Nikolaschka is then finished by covering half of the lemon disk with coffee powder and the other half with powdered sugar before serving.\n- A White Russian is a cocktail made with vodka, coffee liqueur such as Kahlúa or Tia Maria, and cream, and it is served with ice in an Old Fashioned glass.\n- A White Russian is often made with milk as an alternative to cream.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "4c87d518-3abc-5eba-85bc-0ea987cab356",
+        "text": "Page: Nikolaschka. Sentence: Pour cognac brandy snifter and place the lemon disk on top of the glass.\nPage: Nikolaschka. Sentence: Next cover half of the disk with coffee powder and the other half with a powdered sugar and serve.\nPage: White Russian (cocktail). Sentence: A White Russian is a cocktail made with vodka, coffee liqueur (e.g., Kahlúa or Tia Maria), and cream served with ice in an Old Fashioned glass.\nPage: White Russian (cocktail). Sentence: Often milk will be used as an alternative to cream.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "a0034647-5d4e-5537-a9cc-8ee7fd782227",
+        "text": "text_ca6bcbbd01df928607dceaef1b14b1b0",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "01494835-691d-5339-aa88-e8515cac5eac",
+        "text": "nikolaschka",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "2b5e7743-a9e7-5c69-8df5-5ec2391e7162",
+        "text": "cognac brandy",
+        "type": "Entity"
+      },
+      {
+        "id": 5,
+        "original_id": "76d7a88a-db40-5936-a102-3bd86a42bc25",
+        "text": "brandy snifter",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "5e7cbda1-d6b2-5124-9bad-288dc849a4e3",
+        "text": "object",
+        "type": "EntityType"
+      },
+      {
+        "id": 7,
+        "original_id": "f9c5113e-747a-5581-af56-c9d2e76bce9b",
+        "text": "food",
+        "type": "EntityType"
+      },
+      {
+        "id": 8,
+        "original_id": "87c8e326-1201-58f5-8f7a-5e39e674e84f",
+        "text": "lemon disk",
+        "type": "Entity"
+      },
+      {
+        "id": 9,
+        "original_id": "99449dd5-0705-5051-87b0-4b83a723d9ba",
+        "text": "coffee powder",
+        "type": "Entity"
+      },
+      {
+        "id": 10,
+        "original_id": "2ebe3570-c568-5d6d-9fcf-cac81a4867f6",
+        "text": "powdered sugar",
+        "type": "Entity"
+      },
+      {
+        "id": 11,
+        "original_id": "c1fe5852-4701-58f4-8370-1fd0f453f9f7",
+        "text": "white russian",
+        "type": "Entity"
+      },
+      {
+        "id": 12,
+        "original_id": "f2b88082-7236-5f0c-a8cb-82a840f7c244",
+        "text": "vodka",
+        "type": "Entity"
+      },
+      {
+        "id": 13,
+        "original_id": "a8345aee-210f-5fd5-ab9d-88bf09a903dd",
+        "text": "coffee liqueur",
+        "type": "Entity"
+      },
+      {
+        "id": 14,
+        "original_id": "fc39e942-5337-5ee2-9d2d-a16666f2ea2b",
+        "text": "kahlúa",
+        "type": "Entity"
+      },
+      {
+        "id": 15,
+        "original_id": "b4660de7-250c-5bee-8563-4215e7112ce2",
+        "text": "tia maria",
+        "type": "Entity"
+      },
+      {
+        "id": 16,
+        "original_id": "caea8ecb-3a6f-52ba-a96a-d68ca484492e",
+        "text": "cream",
+        "type": "Entity"
+      },
+      {
+        "id": 17,
+        "original_id": "3ef0cdfc-b0bd-5693-a78c-ebbe43a5c693",
+        "text": "ice",
+        "type": "Entity"
+      },
+      {
+        "id": 18,
+        "original_id": "0ba82433-fd17-5657-9568-8d65659d840e",
+        "text": "old fashioned glass",
+        "type": "Entity"
+      },
+      {
+        "id": 19,
+        "original_id": "b43cde2c-a48f-5eb4-b87e-b8895e617d70",
+        "text": "milk",
+        "type": "Entity"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "made_with"
+      },
+      {
+        "source": 1,
+        "target": 4,
+        "type": "contains"
+      },
+      {
+        "source": 4,
+        "target": 5,
+        "type": "poured_into"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 18,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 4,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 9,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 10,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 8,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 12,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 14,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 15,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 13,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 16,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 17,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 19,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 11,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 8,
+        "type": "topped_with"
+      },
+      {
+        "source": 1,
+        "target": 8,
+        "type": "contains"
+      },
+      {
+        "source": 8,
+        "target": 9,
+        "type": "half_covered_with"
+      },
+      {
+        "source": 1,
+        "target": 9,
+        "type": "contains"
+      },
+      {
+        "source": 8,
+        "target": 10,
+        "type": "half_covered_with"
+      },
+      {
+        "source": 1,
+        "target": 10,
+        "type": "contains"
+      },
+      {
+        "source": 1,
+        "target": 11,
+        "type": "contains"
+      },
+      {
+        "source": 11,
+        "target": 12,
+        "type": "made_with"
+      },
+      {
+        "source": 1,
+        "target": 12,
+        "type": "contains"
+      },
+      {
+        "source": 11,
+        "target": 13,
+        "type": "made_with"
+      },
+      {
+        "source": 1,
+        "target": 13,
+        "type": "contains"
+      },
+      {
+        "source": 13,
+        "target": 14,
+        "type": "example_of"
+      },
+      {
+        "source": 1,
+        "target": 14,
+        "type": "contains"
+      },
+      {
+        "source": 13,
+        "target": 15,
+        "type": "example_of"
+      },
+      {
+        "source": 1,
+        "target": 15,
+        "type": "contains"
+      },
+      {
+        "source": 11,
+        "target": 16,
+        "type": "made_with"
+      },
+      {
+        "source": 19,
+        "target": 16,
+        "type": "alternative_to"
+      },
+      {
+        "source": 1,
+        "target": 16,
+        "type": "contains"
+      },
+      {
+        "source": 11,
+        "target": 17,
+        "type": "served_with"
+      },
+      {
+        "source": 1,
+        "target": 17,
+        "type": "contains"
+      },
+      {
+        "source": 11,
+        "target": 18,
+        "type": "served_in"
+      },
+      {
+        "source": 1,
+        "target": 18,
+        "type": "contains"
+      },
+      {
+        "source": 11,
+        "target": 19,
+        "type": "can_use_alternative"
+      },
+      {
+        "source": 1,
+        "target": 19,
+        "type": "contains"
+      }
+    ]
+  }
+}

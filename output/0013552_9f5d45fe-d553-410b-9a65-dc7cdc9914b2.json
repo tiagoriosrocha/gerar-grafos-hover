@@ -1,0 +1,387 @@
+{
+  "dataset": "hover",
+  "id": "9f5d45fe-d553-410b-9a65-dc7cdc9914b2",
+  "split": "train",
+  "claim": "As of 2010, the population of the county that was named after the 13th Speaker of the House of Representatives was 16,825.",
+  "evidencia": "Page: Polk County, Tennessee. Sentence: Polk County is a county located in the southeastern corner of the U.S. state of Tennessee.\nPage: Polk County, Tennessee. Sentence: As of the 2010 census, the population was 16,825.\nPage: James K. Polk. Sentence: He previously served as the 13th Speaker of the House of Representatives and as Governor of Tennessee.",
+  "evidence_text": "Page: Polk County, Tennessee. Sentence: Polk County is a county located in the southeastern corner of the U.S. state of Tennessee.\nPage: Polk County, Tennessee. Sentence: As of the 2010 census, the population was 16,825.\nPage: James K. Polk. Sentence: He previously served as the 13th Speaker of the House of Representatives and as Governor of Tennessee.",
+  "label": "SUPPORTED",
+  "num_hops": 2,
+  "hover_metadata": {
+    "supporting_facts": [
+      [
+        "Polk County, Tennessee",
+        0
+      ],
+      [
+        "Polk County, Tennessee",
+        1
+      ],
+      [
+        "James K. Polk",
+        1
+      ]
+    ],
+    "num_hops": 2,
+    "evidence_annotation_id": [
+      0
+    ],
+    "evidence_id": [
+      "Polk County, Tennessee::sentence::0",
+      "Polk County, Tennessee::sentence::1",
+      "James K. Polk::sentence::1"
+    ],
+    "evidence_wiki_url": [
+      "https://en.wikipedia.org/wiki/Polk_County%2C_Tennessee",
+      "https://en.wikipedia.org/wiki/James_K._Polk"
+    ],
+    "evidence_sentence_id": [
+      "Polk County, Tennessee::sentence::0",
+      "Polk County, Tennessee::sentence::1",
+      "James K. Polk::sentence::1"
+    ]
+  },
+  "grafo_claim": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "02554262-9af2-5a7e-81ce-3d5a25464d67",
+        "text": "This chunk is about:\n- Places: Marion County\n- People: Henry Clay\n- Roles: Speaker of the House of Representatives\n- Topics: Population\n\nFacts:\n- Henry Clay was the 13th Speaker of the House of Representatives.\n- Marion County was named after Henry Clay.\n- As of 2010, Marion County had a population of 16,825.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "3cdcb289-a057-5134-bd70-d5a6ea5adacd",
+        "text": "As of 2010, the population of the county that was named after the 13th Speaker of the House of Representatives was 16,825.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "4b71090b-83c1-50fc-809b-d3a60fe405ca",
+        "text": "text_650e4a3c40d741ae97018ac867ed2b09",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "24860ee4-6c43-5438-95ad-4ca6bd9cc2c5",
+        "text": "13th speaker of the house of representatives",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "99a82eec-bb35-5bb5-9ed2-e73fc7a756de",
+        "text": "person",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "8fa4b2bf-ec54-5714-8ede-fad695543098",
+        "text": "the county",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "5f394058-b2a0-5ba8-8466-ba2a18cfcf4e",
+        "text": "place",
+        "type": "EntityType"
+      },
+      {
+        "id": 7,
+        "original_id": "6972290a-019c-5d53-8b37-978b1a8dbff2",
+        "text": "16,825",
+        "type": "Entity"
+      },
+      {
+        "id": 8,
+        "original_id": "5c1097ca-fab8-54d5-b57f-5dca4b0e2507",
+        "text": "number",
+        "type": "EntityType"
+      },
+      {
+        "id": 9,
+        "original_id": "cb1dc1af-5253-5fa4-877e-246a7629f489",
+        "text": "2010",
+        "type": "Entity"
+      },
+      {
+        "id": 10,
+        "original_id": "b19433ae-558c-5aaf-95ac-6231f2a4be0e",
+        "text": "date",
+        "type": "EntityType"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 3,
+        "type": "named_after"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 5,
+        "target": 7,
+        "type": "has_population"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      },
+      {
+        "source": 7,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 7,
+        "target": 9,
+        "type": "as_of"
+      },
+      {
+        "source": 1,
+        "target": 9,
+        "type": "contains"
+      },
+      {
+        "source": 9,
+        "target": 10,
+        "type": "is_a"
+      }
+    ]
+  },
+  "grafo_evidencia": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "22522c26-03fe-514b-8135-faa1e5dd7795",
+        "text": "This chunk is about:\n- Places: Polk County, Tennessee; Tennessee\n- People: James K. Polk\n- Roles: Speaker of the House of Representatives; Governor of Tennessee\n- Topics: population; U.S. census\n\nFacts:\n- Polk County is a county in the southeastern corner of the U.S. state of Tennessee.\n- James K. Polk previously served as the 13th Speaker of the House of Representatives and as Governor of Tennessee.\n- As of the 2010 census, Polk County had a population of 16,825.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "adf5b707-4562-5ba4-9bbb-b77812409189",
+        "text": "Page: Polk County, Tennessee. Sentence: Polk County is a county located in the southeastern corner of the U.S. state of Tennessee.\nPage: Polk County, Tennessee. Sentence: As of the 2010 census, the population was 16,825.\nPage: James K. Polk. Sentence: He previously served as the 13th Speaker of the House of Representatives and as Governor of Tennessee.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "a1aa2502-edf1-5765-a129-5928fbe6b350",
+        "text": "text_a7bef74488b286799569b132e76c68d8",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "3cd876e5-fedc-51a4-ae41-4458bdab4e59",
+        "text": "polk county",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "5f394058-b2a0-5ba8-8466-ba2a18cfcf4e",
+        "text": "place",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "c20d84b1-bf7c-51dc-9c9e-f1a20e49078d",
+        "text": "tennessee",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "4cb6ada6-82d5-5a31-83fe-5bd97fc4f3b0",
+        "text": "2010 census",
+        "type": "Entity"
+      },
+      {
+        "id": 7,
+        "original_id": "214abcd9-9adf-5c8a-bb35-1e729f2d68c3",
+        "text": "event",
+        "type": "EntityType"
+      },
+      {
+        "id": 8,
+        "original_id": "6972290a-019c-5d53-8b37-978b1a8dbff2",
+        "text": "16,825",
+        "type": "Entity"
+      },
+      {
+        "id": 9,
+        "original_id": "5c1097ca-fab8-54d5-b57f-5dca4b0e2507",
+        "text": "number",
+        "type": "EntityType"
+      },
+      {
+        "id": 10,
+        "original_id": "e3e739dc-e132-515b-9440-0e2051a5cc26",
+        "text": "james k. polk",
+        "type": "Entity"
+      },
+      {
+        "id": 11,
+        "original_id": "99a82eec-bb35-5bb5-9ed2-e73fc7a756de",
+        "text": "person",
+        "type": "EntityType"
+      },
+      {
+        "id": 12,
+        "original_id": "24860ee4-6c43-5438-95ad-4ca6bd9cc2c5",
+        "text": "13th speaker of the house of representatives",
+        "type": "Entity"
+      },
+      {
+        "id": 13,
+        "original_id": "c37fc488-fc9a-5b35-8e54-a50ae1721557",
+        "text": "role",
+        "type": "EntityType"
+      },
+      {
+        "id": 14,
+        "original_id": "681a2977-42aa-507b-8d26-495ad61ce641",
+        "text": "governor of tennessee",
+        "type": "Entity"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 5,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "located_in"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 14,
+        "target": 5,
+        "type": "governs"
+      },
+      {
+        "source": 3,
+        "target": 6,
+        "type": "has_population_as_of"
+      },
+      {
+        "source": 1,
+        "target": 6,
+        "type": "contains"
+      },
+      {
+        "source": 6,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 8,
+        "type": "has_population"
+      },
+      {
+        "source": 1,
+        "target": 8,
+        "type": "contains"
+      },
+      {
+        "source": 8,
+        "target": 9,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 10,
+        "type": "contains"
+      },
+      {
+        "source": 10,
+        "target": 11,
+        "type": "is_a"
+      },
+      {
+        "source": 10,
+        "target": 12,
+        "type": "served_as"
+      },
+      {
+        "source": 1,
+        "target": 12,
+        "type": "contains"
+      },
+      {
+        "source": 12,
+        "target": 13,
+        "type": "is_a"
+      },
+      {
+        "source": 14,
+        "target": 13,
+        "type": "is_a"
+      },
+      {
+        "source": 10,
+        "target": 14,
+        "type": "served_as"
+      },
+      {
+        "source": 1,
+        "target": 14,
+        "type": "contains"
+      }
+    ]
+  }
+}

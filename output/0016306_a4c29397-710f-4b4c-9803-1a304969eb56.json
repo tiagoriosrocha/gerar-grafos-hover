@@ -1,0 +1,422 @@
+{
+  "dataset": "hover",
+  "id": "a4c29397-710f-4b4c-9803-1a304969eb56",
+  "split": "train",
+  "claim": "The Landsman Kill near the road which intersects with New York State Route 199 at Rock City, is a river.",
+  "evidencia": "Page: New York State Route 308. Sentence: The highway passes near the Dutchess County Fairgrounds, several historical landmarks, and the Landsman Kill.\nPage: Kill (body of water). Sentence: As a body of water, a kill is a creek.\nPage: Rock City, New York. Sentence: It is located at the intersection of New York State Route 199 and Route 308, where the towns of Milan, Red Hook and Rhinebeck meet.",
+  "evidence_text": "Page: New York State Route 308. Sentence: The highway passes near the Dutchess County Fairgrounds, several historical landmarks, and the Landsman Kill.\nPage: Kill (body of water). Sentence: As a body of water, a kill is a creek.\nPage: Rock City, New York. Sentence: It is located at the intersection of New York State Route 199 and Route 308, where the towns of Milan, Red Hook and Rhinebeck meet.",
+  "label": "NOT_SUPPORTED",
+  "num_hops": 3,
+  "hover_metadata": {
+    "supporting_facts": [
+      [
+        "New York State Route 308",
+        3
+      ],
+      [
+        "Kill (body of water)",
+        0
+      ],
+      [
+        "Rock City, New York",
+        1
+      ]
+    ],
+    "num_hops": 3,
+    "evidence_annotation_id": [
+      0
+    ],
+    "evidence_id": [
+      "New York State Route 308::sentence::3",
+      "Kill (body of water)::sentence::0",
+      "Rock City, New York::sentence::1"
+    ],
+    "evidence_wiki_url": [
+      "https://en.wikipedia.org/wiki/New_York_State_Route_308",
+      "https://en.wikipedia.org/wiki/Kill_%28body_of_water%29",
+      "https://en.wikipedia.org/wiki/Rock_City%2C_New_York"
+    ],
+    "evidence_sentence_id": [
+      "New York State Route 308::sentence::3",
+      "Kill (body of water)::sentence::0",
+      "Rock City, New York::sentence::1"
+    ]
+  },
+  "grafo_claim": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "204e2b81-cfb9-55bd-9d76-1427f66529c2",
+        "text": "This chunk is about:\n- Places: Landsman Kill, New York State Route 199, Rock City\n- Topics: Rivers, roads\n\nFacts:\n- Landsman Kill is a river.\n- Landsman Kill is near the road that intersects with New York State Route 199 at Rock City.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "4262acda-10c7-5320-a24b-c4043f7776c5",
+        "text": "The Landsman Kill near the road which intersects with New York State Route 199 at Rock City, is a river.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "c3761e8e-880b-557d-adaf-922bdb144c0c",
+        "text": "text_fa096cd794aa00ed29ac853ac9fa95df",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "83ec4e31-d512-5efa-97e8-7b0c40a18860",
+        "text": "landsman kill",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "68afbccf-cae9-529b-9142-2a538b8ed79d",
+        "text": "river",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "123ffdea-f742-5353-8283-363e69d537b3",
+        "text": "new york state route 199",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "5e52d312-a248-534f-a58b-25c5426a89ad",
+        "text": "road",
+        "type": "EntityType"
+      },
+      {
+        "id": 7,
+        "original_id": "af224aff-fd9a-53b6-b968-3c3df8810ff2",
+        "text": "rock city",
+        "type": "Entity"
+      },
+      {
+        "id": 8,
+        "original_id": "5f394058-b2a0-5ba8-8466-ba2a18cfcf4e",
+        "text": "place",
+        "type": "EntityType"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "is_near"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 5,
+        "target": 7,
+        "type": "intersects_at"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      },
+      {
+        "source": 7,
+        "target": 8,
+        "type": "is_a"
+      }
+    ]
+  },
+  "grafo_evidencia": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "81f98ab7-f125-53d2-9e83-ad72fc47eb9c",
+        "text": "This chunk is about:\n- Places: New York State Route 308, Dutchess County Fairgrounds, Landsman Kill, Rock City, New York, Milan, Red Hook, Rhinebeck\n- Concepts: kill (body of water)\n- Roads: New York State Route 199, New York State Route 308\n\nFacts:\n- A kill is a creek as a type of body of water.\n- New York State Route 308 passes near the Dutchess County Fairgrounds, several historical landmarks, and the Landsman Kill.\n- Rock City, New York, is located at the intersection of New York State Route 199 and New York State Route 308.\n- Rock City, New York, is at the point where the towns of Milan, Red Hook, and Rhinebeck meet.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "1de702b4-47ec-5b1d-a98b-a6383860970a",
+        "text": "Page: New York State Route 308. Sentence: The highway passes near the Dutchess County Fairgrounds, several historical landmarks, and the Landsman Kill.\nPage: Kill (body of water). Sentence: As a body of water, a kill is a creek.\nPage: Rock City, New York. Sentence: It is located at the intersection of New York State Route 199 and Route 308, where the towns of Milan, Red Hook and Rhinebeck meet.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "19f5d994-a46b-597e-bb48-d2b0c2430cf2",
+        "text": "text_5f97c28b124230c120048753e4ec07f2",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "458eff8a-4348-5bea-88b7-d5734190a3e5",
+        "text": "new york state route 308",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "5f394058-b2a0-5ba8-8466-ba2a18cfcf4e",
+        "text": "place",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "1cbdb228-dcd2-5444-9d6b-8a4cc798c870",
+        "text": "dutchess county fairgrounds",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "89b4c4cc-01f0-5f8e-8696-5368b379ec86",
+        "text": "historical landmarks",
+        "type": "Entity"
+      },
+      {
+        "id": 7,
+        "original_id": "d2a381fa-3658-5ca6-ada9-2109cfc9331d",
+        "text": "concept",
+        "type": "EntityType"
+      },
+      {
+        "id": 8,
+        "original_id": "83ec4e31-d512-5efa-97e8-7b0c40a18860",
+        "text": "landsman kill",
+        "type": "Entity"
+      },
+      {
+        "id": 9,
+        "original_id": "1307e10a-d347-562f-93d6-6cec7e74145a",
+        "text": "kill",
+        "type": "Entity"
+      },
+      {
+        "id": 10,
+        "original_id": "418bd86f-92e9-5371-8d2a-73b8416635e4",
+        "text": "creek",
+        "type": "Entity"
+      },
+      {
+        "id": 11,
+        "original_id": "02f3ecad-e9cf-55b8-b6c1-7f707f2fac69",
+        "text": "rock city, new york",
+        "type": "Entity"
+      },
+      {
+        "id": 12,
+        "original_id": "123ffdea-f742-5353-8283-363e69d537b3",
+        "text": "new york state route 199",
+        "type": "Entity"
+      },
+      {
+        "id": 13,
+        "original_id": "a78b1bb0-a711-5327-9857-dc50223f157b",
+        "text": "milan",
+        "type": "Entity"
+      },
+      {
+        "id": 14,
+        "original_id": "05d75e20-9227-58b7-8bd5-7b9494303dd0",
+        "text": "red hook",
+        "type": "Entity"
+      },
+      {
+        "id": 15,
+        "original_id": "fe87aff6-67cd-50c6-a56e-521bd7af2757",
+        "text": "rhinebeck",
+        "type": "Entity"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 11,
+        "target": 3,
+        "type": "located_at_intersection_of"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 5,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 8,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 10,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 11,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 12,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 13,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 14,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 15,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "passes_near"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 6,
+        "type": "passes_near"
+      },
+      {
+        "source": 1,
+        "target": 6,
+        "type": "contains"
+      },
+      {
+        "source": 6,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 9,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 8,
+        "type": "passes_near"
+      },
+      {
+        "source": 1,
+        "target": 8,
+        "type": "contains"
+      },
+      {
+        "source": 1,
+        "target": 9,
+        "type": "contains"
+      },
+      {
+        "source": 9,
+        "target": 10,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 10,
+        "type": "contains"
+      },
+      {
+        "source": 1,
+        "target": 11,
+        "type": "contains"
+      },
+      {
+        "source": 11,
+        "target": 12,
+        "type": "located_at_intersection_of"
+      },
+      {
+        "source": 1,
+        "target": 12,
+        "type": "contains"
+      },
+      {
+        "source": 11,
+        "target": 13,
+        "type": "located_where_meet"
+      },
+      {
+        "source": 1,
+        "target": 13,
+        "type": "contains"
+      },
+      {
+        "source": 11,
+        "target": 14,
+        "type": "located_where_meet"
+      },
+      {
+        "source": 1,
+        "target": 14,
+        "type": "contains"
+      },
+      {
+        "source": 11,
+        "target": 15,
+        "type": "located_where_meet"
+      },
+      {
+        "source": 1,
+        "target": 15,
+        "type": "contains"
+      }
+    ]
+  }
+}

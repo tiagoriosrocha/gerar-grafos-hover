@@ -1,0 +1,616 @@
+{
+  "dataset": "hover",
+  "id": "bde9d0aa-d2ef-475a-b041-49f5c23b3eb2",
+  "split": "train",
+  "claim": "The actress made her debut in the film by the director who was American. She also starred in The Death and Life of John F. Donovan.",
+  "evidencia": "Page: Amara Karan. Sentence: Amara Karan (born 1984) is a Sri Lankan-English actress who made her film début as the love interest in Wes Anderson's \"The Darjeeling Limited\".\nPage: Wes Anderson. Sentence: Wesley Wales Anderson (born May 1, 1969) is an American film director, film producer, screenwriter, and actor.\nPage: The Death and Life of John F. Donovan. Sentence: It stars Kit Harington, Natalie Portman, Jessica Chastain, Susan Sarandon, Kathy Bates, Jacob Tremblay, Ben Schnetzer, Thandie Newton, Amara Karan, Chris Zylka, Jared Keeso, Emily Hampshire and Michael Gambon.",
+  "evidence_text": "Page: Amara Karan. Sentence: Amara Karan (born 1984) is a Sri Lankan-English actress who made her film début as the love interest in Wes Anderson's \"The Darjeeling Limited\".\nPage: Wes Anderson. Sentence: Wesley Wales Anderson (born May 1, 1969) is an American film director, film producer, screenwriter, and actor.\nPage: The Death and Life of John F. Donovan. Sentence: It stars Kit Harington, Natalie Portman, Jessica Chastain, Susan Sarandon, Kathy Bates, Jacob Tremblay, Ben Schnetzer, Thandie Newton, Amara Karan, Chris Zylka, Jared Keeso, Emily Hampshire and Michael Gambon.",
+  "label": "SUPPORTED",
+  "num_hops": 3,
+  "hover_metadata": {
+    "supporting_facts": [
+      [
+        "Amara Karan",
+        0
+      ],
+      [
+        "Wes Anderson",
+        0
+      ],
+      [
+        "The Death and Life of John F. Donovan",
+        1
+      ]
+    ],
+    "num_hops": 3,
+    "evidence_annotation_id": [
+      0
+    ],
+    "evidence_id": [
+      "Amara Karan::sentence::0",
+      "Wes Anderson::sentence::0",
+      "The Death and Life of John F. Donovan::sentence::1"
+    ],
+    "evidence_wiki_url": [
+      "https://en.wikipedia.org/wiki/Amara_Karan",
+      "https://en.wikipedia.org/wiki/Wes_Anderson",
+      "https://en.wikipedia.org/wiki/The_Death_and_Life_of_John_F._Donovan"
+    ],
+    "evidence_sentence_id": [
+      "Amara Karan::sentence::0",
+      "Wes Anderson::sentence::0",
+      "The Death and Life of John F. Donovan::sentence::1"
+    ]
+  },
+  "grafo_claim": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "6d4eed98-2633-5788-aeee-54b02769a07d",
+        "text": "This chunk is about:\n- People: actress, American film director\n- Films: The Death and Life of John F. Donovan\n\nFacts:\n- The actress made her debut in a film directed by an American director.\n- The actress also starred in The Death and Life of John F. Donovan.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "bd5318eb-608b-5ad9-964b-abf3466e8d1b",
+        "text": "The actress made her debut in the film by the director who was American. She also starred in The Death and Life of John F. Donovan.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "ad1e09fe-36cd-5856-b203-61c8b639c93b",
+        "text": "text_a42f0638f635b9d322cab32ba17447cf",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "7d6e2b80-13e5-5adf-90b4-a732aeabb07e",
+        "text": "the death and life of john f. donovan actress",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "0644d9bd-b5c5-52c8-bf6a-ab335f78db84",
+        "text": "debut film",
+        "type": "Entity"
+      },
+      {
+        "id": 5,
+        "original_id": "ab76c0f9-dc55-5907-b081-9d78d6982c4a",
+        "text": "american director",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "99a82eec-bb35-5bb5-9ed2-e73fc7a756de",
+        "text": "person",
+        "type": "EntityType"
+      },
+      {
+        "id": 7,
+        "original_id": "5263a535-1b4b-5925-be3e-310d03cd303b",
+        "text": "work",
+        "type": "EntityType"
+      },
+      {
+        "id": 8,
+        "original_id": "6f04e957-161c-59b2-aac5-3c879cfba9c4",
+        "text": "the death and life of john f. donovan",
+        "type": "Entity"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "made_debut_in"
+      },
+      {
+        "source": 1,
+        "target": 4,
+        "type": "contains"
+      },
+      {
+        "source": 4,
+        "target": 5,
+        "type": "directed_by"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 4,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 8,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 8,
+        "type": "starred_in"
+      },
+      {
+        "source": 1,
+        "target": 8,
+        "type": "contains"
+      }
+    ]
+  },
+  "grafo_evidencia": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "38e078b0-be30-5945-ae68-c2161223744c",
+        "text": "This chunk is about:\n- People: Amara Karan, Wes Anderson, Kit Harington, Natalie Portman, Jessica Chastain, Susan Sarandon, Kathy Bates, Jacob Tremblay, Ben Schnetzer, Thandie Newton, Chris Zylka, Jared Keeso, Emily Hampshire, Michael Gambon\n- Films: The Darjeeling Limited, The Death and Life of John F. Donovan\n- Roles: actress, film director, film producer, screenwriter, actor\n\nFacts:\n- Wes Anderson, born May 1, 1969, is an American film director, film producer, screenwriter, and actor.\n- Amara Karan, born in 1984, is a Sri Lankan-English actress.\n- Amara Karan made her film debut as the love interest in Wes Anderson's film The Darjeeling Limited.\n- The Death and Life of John F. Donovan stars Kit Harington, Natalie Portman, Jessica Chastain, Susan Sarandon, Kathy Bates, Jacob Tremblay, Ben Schnetzer, Thandie Newton, Amara Karan, Chris Zylka, Jared Keeso, Emily Hampshire, and Michael Gambon.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "c3dd07e8-f2e2-5491-b003-dc9a551efa48",
+        "text": "Page: Amara Karan. Sentence: Amara Karan (born 1984) is a Sri Lankan-English actress who made her film début as the love interest in Wes Anderson's \"The Darjeeling Limited\".\nPage: Wes Anderson. Sentence: Wesley Wales Anderson (born May 1, 1969) is an American film director, film producer, screenwriter, and actor.\nPage: The Death and Life of John F. Donovan. Sentence: It stars Kit Harington, Natalie Portman, Jessica Chastain, Susan Sarandon, Kathy Bates, Jacob Tremblay, Ben Schnetzer, Thandie Newton, Amara Karan, Chris Zylka, Jared Keeso, Emily Hampshire and Michael Gambon.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "d0c5e4cd-adae-5800-ad06-516c7c377aff",
+        "text": "text_0e6a775870744029d3fc8cd2ef3e2c4e",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "da109165-e7f3-5258-baf0-9c21bae410d2",
+        "text": "amara karan",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "36535bda-358d-582c-896d-8489e824d5db",
+        "text": "1984",
+        "type": "Entity"
+      },
+      {
+        "id": 5,
+        "original_id": "b19433ae-558c-5aaf-95ac-6231f2a4be0e",
+        "text": "date",
+        "type": "EntityType"
+      },
+      {
+        "id": 6,
+        "original_id": "6e9bcc66-ce20-5172-97c5-d41ec5e25140",
+        "text": "the darjeeling limited",
+        "type": "Entity"
+      },
+      {
+        "id": 7,
+        "original_id": "3d307df6-c132-5aa2-81d9-f89769bbb57f",
+        "text": "wes anderson",
+        "type": "Entity"
+      },
+      {
+        "id": 8,
+        "original_id": "259e5900-87cb-5557-b958-ad57b62bc247",
+        "text": "1969-05-01",
+        "type": "Entity"
+      },
+      {
+        "id": 9,
+        "original_id": "d63467c7-ac70-54fe-be3c-8f1dab09c594",
+        "text": "wesley wales anderson",
+        "type": "Entity"
+      },
+      {
+        "id": 10,
+        "original_id": "99a82eec-bb35-5bb5-9ed2-e73fc7a756de",
+        "text": "person",
+        "type": "EntityType"
+      },
+      {
+        "id": 11,
+        "original_id": "5263a535-1b4b-5925-be3e-310d03cd303b",
+        "text": "work",
+        "type": "EntityType"
+      },
+      {
+        "id": 12,
+        "original_id": "6f04e957-161c-59b2-aac5-3c879cfba9c4",
+        "text": "the death and life of john f. donovan",
+        "type": "Entity"
+      },
+      {
+        "id": 13,
+        "original_id": "fba078de-b0c1-5176-9fdc-8caa1d397a5e",
+        "text": "kit harington",
+        "type": "Entity"
+      },
+      {
+        "id": 14,
+        "original_id": "60522ca8-7255-5ef9-9a47-75d4f3765f7e",
+        "text": "natalie portman",
+        "type": "Entity"
+      },
+      {
+        "id": 15,
+        "original_id": "6448f510-f3f5-5e95-b97e-97116efb0697",
+        "text": "jessica chastain",
+        "type": "Entity"
+      },
+      {
+        "id": 16,
+        "original_id": "aa427b4d-0d46-59b8-887f-0069469d256f",
+        "text": "susan sarandon",
+        "type": "Entity"
+      },
+      {
+        "id": 17,
+        "original_id": "1c4898b1-3386-5c7c-a8bd-2f0146c297a2",
+        "text": "kathy bates",
+        "type": "Entity"
+      },
+      {
+        "id": 18,
+        "original_id": "91611bea-d886-5e20-804b-f7f6329d3740",
+        "text": "jacob tremblay",
+        "type": "Entity"
+      },
+      {
+        "id": 19,
+        "original_id": "f718235e-dc0d-5e13-a7e5-9c95868f698d",
+        "text": "ben schnetzer",
+        "type": "Entity"
+      },
+      {
+        "id": 20,
+        "original_id": "8fe83f26-bfe9-5621-bad0-3ae4d2ddb0f4",
+        "text": "thandie newton",
+        "type": "Entity"
+      },
+      {
+        "id": 21,
+        "original_id": "0b36b869-f6da-5c44-a02d-ad1a302127c4",
+        "text": "chris zylka",
+        "type": "Entity"
+      },
+      {
+        "id": 22,
+        "original_id": "7783458b-a958-5689-a54c-83a8da20cd8d",
+        "text": "jared keeso",
+        "type": "Entity"
+      },
+      {
+        "id": 23,
+        "original_id": "0ca85247-a74c-5be4-8f97-01012ff3fde8",
+        "text": "emily hampshire",
+        "type": "Entity"
+      },
+      {
+        "id": 24,
+        "original_id": "516d2561-da00-547b-9cab-33cc63141fdb",
+        "text": "michael gambon",
+        "type": "Entity"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "born_in"
+      },
+      {
+        "source": 1,
+        "target": 4,
+        "type": "contains"
+      },
+      {
+        "source": 4,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 8,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 6,
+        "type": "made_film_debut_in"
+      },
+      {
+        "source": 1,
+        "target": 6,
+        "type": "contains"
+      },
+      {
+        "source": 6,
+        "target": 7,
+        "type": "associated_with"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      },
+      {
+        "source": 7,
+        "target": 8,
+        "type": "born_on"
+      },
+      {
+        "source": 1,
+        "target": 8,
+        "type": "contains"
+      },
+      {
+        "source": 7,
+        "target": 9,
+        "type": "has_full_name"
+      },
+      {
+        "source": 1,
+        "target": 9,
+        "type": "contains"
+      },
+      {
+        "source": 9,
+        "target": 10,
+        "type": "is_a"
+      },
+      {
+        "source": 7,
+        "target": 10,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 10,
+        "type": "is_a"
+      },
+      {
+        "source": 13,
+        "target": 10,
+        "type": "is_a"
+      },
+      {
+        "source": 14,
+        "target": 10,
+        "type": "is_a"
+      },
+      {
+        "source": 15,
+        "target": 10,
+        "type": "is_a"
+      },
+      {
+        "source": 16,
+        "target": 10,
+        "type": "is_a"
+      },
+      {
+        "source": 17,
+        "target": 10,
+        "type": "is_a"
+      },
+      {
+        "source": 18,
+        "target": 10,
+        "type": "is_a"
+      },
+      {
+        "source": 19,
+        "target": 10,
+        "type": "is_a"
+      },
+      {
+        "source": 20,
+        "target": 10,
+        "type": "is_a"
+      },
+      {
+        "source": 21,
+        "target": 10,
+        "type": "is_a"
+      },
+      {
+        "source": 22,
+        "target": 10,
+        "type": "is_a"
+      },
+      {
+        "source": 23,
+        "target": 10,
+        "type": "is_a"
+      },
+      {
+        "source": 24,
+        "target": 10,
+        "type": "is_a"
+      },
+      {
+        "source": 6,
+        "target": 11,
+        "type": "is_a"
+      },
+      {
+        "source": 12,
+        "target": 11,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 12,
+        "type": "starred_in"
+      },
+      {
+        "source": 1,
+        "target": 12,
+        "type": "contains"
+      },
+      {
+        "source": 13,
+        "target": 12,
+        "type": "starred_in"
+      },
+      {
+        "source": 14,
+        "target": 12,
+        "type": "starred_in"
+      },
+      {
+        "source": 15,
+        "target": 12,
+        "type": "starred_in"
+      },
+      {
+        "source": 16,
+        "target": 12,
+        "type": "starred_in"
+      },
+      {
+        "source": 17,
+        "target": 12,
+        "type": "starred_in"
+      },
+      {
+        "source": 18,
+        "target": 12,
+        "type": "starred_in"
+      },
+      {
+        "source": 19,
+        "target": 12,
+        "type": "starred_in"
+      },
+      {
+        "source": 20,
+        "target": 12,
+        "type": "starred_in"
+      },
+      {
+        "source": 21,
+        "target": 12,
+        "type": "starred_in"
+      },
+      {
+        "source": 22,
+        "target": 12,
+        "type": "starred_in"
+      },
+      {
+        "source": 23,
+        "target": 12,
+        "type": "starred_in"
+      },
+      {
+        "source": 24,
+        "target": 12,
+        "type": "starred_in"
+      },
+      {
+        "source": 1,
+        "target": 13,
+        "type": "contains"
+      },
+      {
+        "source": 1,
+        "target": 14,
+        "type": "contains"
+      },
+      {
+        "source": 1,
+        "target": 15,
+        "type": "contains"
+      },
+      {
+        "source": 1,
+        "target": 16,
+        "type": "contains"
+      },
+      {
+        "source": 1,
+        "target": 17,
+        "type": "contains"
+      },
+      {
+        "source": 1,
+        "target": 18,
+        "type": "contains"
+      },
+      {
+        "source": 1,
+        "target": 19,
+        "type": "contains"
+      },
+      {
+        "source": 1,
+        "target": 20,
+        "type": "contains"
+      },
+      {
+        "source": 1,
+        "target": 21,
+        "type": "contains"
+      },
+      {
+        "source": 1,
+        "target": 22,
+        "type": "contains"
+      },
+      {
+        "source": 1,
+        "target": 23,
+        "type": "contains"
+      },
+      {
+        "source": 1,
+        "target": 24,
+        "type": "contains"
+      }
+    ]
+  }
+}

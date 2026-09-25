@@ -1,0 +1,491 @@
+{
+  "dataset": "hover",
+  "id": "80116a54-4065-4d84-826e-1de72110f1f6",
+  "split": "train",
+  "claim": "Delta–Mendota Canal is a 19th-century aqueduct used to divert a canal. The All-American Canal is longer than that canal.",
+  "evidencia": "Page: Madera Canal. Sentence: The Madera Canal is a 35.9 mi aqueduct in the U.S. state of California.\nPage: All-American Canal. Sentence: The All-American Canal is an 80-mile (130 km) long aqueduct, located in southeastern California.\nPage: All-American Canal. Sentence: The Imperial Dam, about 30 miles (48 km) northeast of Yuma, Arizona on the Colorado River, diverts water into the All-American Canal, which runs to just west of Calexico, California before its last branch heads mostly north into the Imperial Valley.\nPage: Delta–Mendota Canal. Sentence: It is part of the Central Valley Project and its purpose is to replace water in the San Joaquin River that is diverted into Madera Canal and Friant-Kern Canal at Friant Dam.",
+  "evidence_text": "Page: Madera Canal. Sentence: The Madera Canal is a 35.9 mi aqueduct in the U.S. state of California.\nPage: All-American Canal. Sentence: The All-American Canal is an 80-mile (130 km) long aqueduct, located in southeastern California.\nPage: All-American Canal. Sentence: The Imperial Dam, about 30 miles (48 km) northeast of Yuma, Arizona on the Colorado River, diverts water into the All-American Canal, which runs to just west of Calexico, California before its last branch heads mostly north into the Imperial Valley.\nPage: Delta–Mendota Canal. Sentence: It is part of the Central Valley Project and its purpose is to replace water in the San Joaquin River that is diverted into Madera Canal and Friant-Kern Canal at Friant Dam.",
+  "label": "NOT_SUPPORTED",
+  "num_hops": 3,
+  "hover_metadata": {
+    "supporting_facts": [
+      [
+        "Madera Canal",
+        0
+      ],
+      [
+        "All-American Canal",
+        0
+      ],
+      [
+        "All-American Canal",
+        3
+      ],
+      [
+        "Delta–Mendota Canal",
+        1
+      ]
+    ],
+    "num_hops": 3,
+    "evidence_annotation_id": [
+      0
+    ],
+    "evidence_id": [
+      "Madera Canal::sentence::0",
+      "All-American Canal::sentence::0",
+      "All-American Canal::sentence::3",
+      "Delta–Mendota Canal::sentence::1"
+    ],
+    "evidence_wiki_url": [
+      "https://en.wikipedia.org/wiki/Madera_Canal",
+      "https://en.wikipedia.org/wiki/All-American_Canal",
+      "https://en.wikipedia.org/wiki/Delta%E2%80%93Mendota_Canal"
+    ],
+    "evidence_sentence_id": [
+      "Madera Canal::sentence::0",
+      "All-American Canal::sentence::0",
+      "All-American Canal::sentence::3",
+      "Delta–Mendota Canal::sentence::1"
+    ]
+  },
+  "grafo_claim": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "46254e3b-9acf-52c1-85fe-9d02020f242d",
+        "text": "This chunk is about:\n- Places: Delta–Mendota Canal, All-American Canal\n- Topics: Canal length, canal function\n\nFacts:\n- The Delta–Mendota Canal is described as a 19th-century aqueduct.\n- The Delta–Mendota Canal is used to divert a canal.\n- The All-American Canal is longer than the Delta–Mendota Canal.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "242eb15d-dd89-5389-9511-aa17c1308fbd",
+        "text": "Delta–Mendota Canal is a 19th-century aqueduct used to divert a canal. The All-American Canal is longer than that canal.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "1574f277-329d-5123-af60-4474f96073c4",
+        "text": "text_1c72d284376d64beecf14fd8c961ffa5",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "ca8d6c92-c6c6-5f31-adbf-b280c9ac25e1",
+        "text": "delta–mendota canal",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "5f394058-b2a0-5ba8-8466-ba2a18cfcf4e",
+        "text": "place",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "0f3696a7-9919-5f85-8326-9801e9ba9f3c",
+        "text": "all-american canal",
+        "type": "Entity"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 3,
+        "type": "longer_than"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 5,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      }
+    ]
+  },
+  "grafo_evidencia": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "b147d2a1-b258-5177-afc9-fed4f5fee911",
+        "text": "This chunk is about:\n- Products: Madera Canal, All-American Canal, Delta–Mendota Canal, Friant-Kern Canal\n- Places: California, southeastern California, Imperial Valley, Yuma, Arizona, Colorado River, Calexico, San Joaquin River, Friant Dam\n- Projects: Central Valley Project\n- Structures: Imperial Dam\n\nFacts:\n- The Madera Canal is a 35.9-mile aqueduct in California.\n- The All-American Canal is an 80-mile aqueduct in southeastern California.\n- Imperial Dam on the Colorado River, about 30 miles northeast of Yuma, Arizona, diverts water into the All-American Canal.\n- The All-American Canal runs to just west of Calexico, California, before its last branch heads mostly north into the Imperial Valley.\n- The Delta–Mendota Canal is part of the Central Valley Project.\n- The Delta–Mendota Canal replaces water in the San Joaquin River that is diverted into the Madera Canal and Friant-Kern Canal at Friant Dam.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "809928ad-cf02-521b-8fe7-98e8a52e3412",
+        "text": "Page: Madera Canal. Sentence: The Madera Canal is a 35.9 mi aqueduct in the U.S. state of California.\nPage: All-American Canal. Sentence: The All-American Canal is an 80-mile (130 km) long aqueduct, located in southeastern California.\nPage: All-American Canal. Sentence: The Imperial Dam, about 30 miles (48 km) northeast of Yuma, Arizona on the Colorado River, diverts water into the All-American Canal, which runs to just west of Calexico, California before its last branch heads mostly north into the Imperial Valley.\nPage: Delta–Mendota Canal. Sentence: It is part of the Central Valley Project and its purpose is to replace water in the San Joaquin River that is diverted into Madera Canal and Friant-Kern Canal at Friant Dam.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "7c134b4e-4e43-5744-bee8-60da7ed6f717",
+        "text": "text_1cbbe749c750075ec0fc2c8cab1f5326",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "5c20cf7a-bffa-5d57-9cfa-14f533355830",
+        "text": "madera canal",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "c6210b29-7e64-5fda-938f-e2350afbeb1d",
+        "text": "canal",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "8294cd6a-6968-5d3a-b0c8-57e08c745c8d",
+        "text": "california",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "5f394058-b2a0-5ba8-8466-ba2a18cfcf4e",
+        "text": "place",
+        "type": "EntityType"
+      },
+      {
+        "id": 7,
+        "original_id": "62804330-6b60-5b19-91b3-11388692afa2",
+        "text": "friant dam",
+        "type": "Entity"
+      },
+      {
+        "id": 8,
+        "original_id": "c7390a0a-960e-56a6-b2be-9c43bfc9097e",
+        "text": "dam",
+        "type": "EntityType"
+      },
+      {
+        "id": 9,
+        "original_id": "0f3696a7-9919-5f85-8326-9801e9ba9f3c",
+        "text": "all-american canal",
+        "type": "Entity"
+      },
+      {
+        "id": 10,
+        "original_id": "dd2f2af6-5fcc-55c8-9847-ddb2a58f7adf",
+        "text": "calexico, california",
+        "type": "Entity"
+      },
+      {
+        "id": 11,
+        "original_id": "086e9757-0588-563f-b5f3-a0aa6f3f59f2",
+        "text": "imperial valley",
+        "type": "Entity"
+      },
+      {
+        "id": 12,
+        "original_id": "46b4bd11-fdf6-5e69-a9a3-1d5a0ae06911",
+        "text": "imperial dam",
+        "type": "Entity"
+      },
+      {
+        "id": 13,
+        "original_id": "6794b015-b53b-5990-894d-985c21b2fcd5",
+        "text": "yuma, arizona",
+        "type": "Entity"
+      },
+      {
+        "id": 14,
+        "original_id": "7ad3b303-1172-5f58-b9e4-d7e3f340888d",
+        "text": "arizona",
+        "type": "Entity"
+      },
+      {
+        "id": 15,
+        "original_id": "7028a010-becf-565d-8e97-460b0b127e71",
+        "text": "colorado river",
+        "type": "Entity"
+      },
+      {
+        "id": 16,
+        "original_id": "68afbccf-cae9-529b-9142-2a538b8ed79d",
+        "text": "river",
+        "type": "EntityType"
+      },
+      {
+        "id": 17,
+        "original_id": "ca8d6c92-c6c6-5f31-adbf-b280c9ac25e1",
+        "text": "delta–mendota canal",
+        "type": "Entity"
+      },
+      {
+        "id": 18,
+        "original_id": "11032061-69c0-5182-bbc4-1445fb7157f2",
+        "text": "central valley project",
+        "type": "Entity"
+      },
+      {
+        "id": 19,
+        "original_id": "ed098e70-7598-5ee9-a836-d175d95aae72",
+        "text": "project",
+        "type": "EntityType"
+      },
+      {
+        "id": 20,
+        "original_id": "8655e698-f571-57f7-bf07-43e13a992517",
+        "text": "san joaquin river",
+        "type": "Entity"
+      },
+      {
+        "id": 21,
+        "original_id": "bc156255-0eb8-5be9-8220-11387c6422f6",
+        "text": "friant-kern canal",
+        "type": "Entity"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 20,
+        "target": 3,
+        "type": "water_diverted_into"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 9,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 17,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 21,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "located_in"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 9,
+        "target": 5,
+        "type": "located_in"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 10,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 11,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 13,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 14,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 7,
+        "type": "receives_diverted_water_at"
+      },
+      {
+        "source": 21,
+        "target": 7,
+        "type": "receives_diverted_water_at"
+      },
+      {
+        "source": 20,
+        "target": 7,
+        "type": "diverted_at"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      },
+      {
+        "source": 7,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 12,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 9,
+        "type": "contains"
+      },
+      {
+        "source": 12,
+        "target": 9,
+        "type": "diverts_water_into"
+      },
+      {
+        "source": 9,
+        "target": 10,
+        "type": "runs_to"
+      },
+      {
+        "source": 1,
+        "target": 10,
+        "type": "contains"
+      },
+      {
+        "source": 9,
+        "target": 11,
+        "type": "last_branch_heads_into"
+      },
+      {
+        "source": 1,
+        "target": 11,
+        "type": "contains"
+      },
+      {
+        "source": 1,
+        "target": 12,
+        "type": "contains"
+      },
+      {
+        "source": 12,
+        "target": 13,
+        "type": "located_northeast_of"
+      },
+      {
+        "source": 1,
+        "target": 13,
+        "type": "contains"
+      },
+      {
+        "source": 13,
+        "target": 14,
+        "type": "located_in"
+      },
+      {
+        "source": 1,
+        "target": 14,
+        "type": "contains"
+      },
+      {
+        "source": 12,
+        "target": 15,
+        "type": "located_on"
+      },
+      {
+        "source": 1,
+        "target": 15,
+        "type": "contains"
+      },
+      {
+        "source": 15,
+        "target": 16,
+        "type": "is_a"
+      },
+      {
+        "source": 20,
+        "target": 16,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 17,
+        "type": "contains"
+      },
+      {
+        "source": 17,
+        "target": 18,
+        "type": "part_of"
+      },
+      {
+        "source": 1,
+        "target": 18,
+        "type": "contains"
+      },
+      {
+        "source": 18,
+        "target": 19,
+        "type": "is_a"
+      },
+      {
+        "source": 17,
+        "target": 20,
+        "type": "replaces_diverted_water_in"
+      },
+      {
+        "source": 1,
+        "target": 20,
+        "type": "contains"
+      },
+      {
+        "source": 20,
+        "target": 21,
+        "type": "water_diverted_into"
+      },
+      {
+        "source": 1,
+        "target": 21,
+        "type": "contains"
+      }
+    ]
+  }
+}

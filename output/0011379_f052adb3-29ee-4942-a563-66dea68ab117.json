@@ -1,0 +1,441 @@
+{
+  "dataset": "hover",
+  "id": "f052adb3-29ee-4942-a563-66dea68ab117",
+  "split": "train",
+  "claim": "Hardley Flood is an area of lagoons that support populations of the waterfowl that are a medium sized version of a duck.",
+  "evidencia": "Page: Hardley Flood. Sentence: Tidal muds attract a range of wading birds and the undisturbed reedbeds support nesting wildfowl and other fenland birds, including nationally important breeding populations of shoveller, pochard and gadwall.\nPage: Common pochard. Sentence: The common pochard (\"Aythya ferina\") is a medium-sized diving duck.",
+  "evidence_text": "Page: Hardley Flood. Sentence: Tidal muds attract a range of wading birds and the undisturbed reedbeds support nesting wildfowl and other fenland birds, including nationally important breeding populations of shoveller, pochard and gadwall.\nPage: Common pochard. Sentence: The common pochard (\"Aythya ferina\") is a medium-sized diving duck.",
+  "label": "SUPPORTED",
+  "num_hops": 2,
+  "hover_metadata": {
+    "supporting_facts": [
+      [
+        "Hardley Flood",
+        2
+      ],
+      [
+        "Common pochard",
+        0
+      ]
+    ],
+    "num_hops": 2,
+    "evidence_annotation_id": [
+      0
+    ],
+    "evidence_id": [
+      "Hardley Flood::sentence::2",
+      "Common pochard::sentence::0"
+    ],
+    "evidence_wiki_url": [
+      "https://en.wikipedia.org/wiki/Hardley_Flood",
+      "https://en.wikipedia.org/wiki/Common_pochard"
+    ],
+    "evidence_sentence_id": [
+      "Hardley Flood::sentence::2",
+      "Common pochard::sentence::0"
+    ]
+  },
+  "grafo_claim": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "7e0df76b-905f-58f6-8c93-b1aff83c1846",
+        "text": "This chunk is about:\n- Places: Hardley Flood\n- Animals: waterfowl, ducks\n- Concepts: lagoons\n\nFacts:\n- Hardley Flood is an area of lagoons.\n- Hardley Flood supports populations of waterfowl.\n- The waterfowl at Hardley Flood are a medium-sized version of a duck.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "044b63c8-67a5-501b-9a10-149d62ac1355",
+        "text": "Hardley Flood is an area of lagoons that support populations of the waterfowl that are a medium sized version of a duck.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "dd5a4f54-630b-5cd3-814c-e3df60585dab",
+        "text": "text_870fc474ed205b68f774be0cd9339453",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "75225cbb-a150-5c85-8cca-7f7341a0a8e0",
+        "text": "hardley flood",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "5f394058-b2a0-5ba8-8466-ba2a18cfcf4e",
+        "text": "place",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "2075c894-e4fb-5198-bc13-1b7239b51126",
+        "text": "lagoon",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "ca009838-c661-5c57-ba76-10d99e39dc91",
+        "text": "waterfowl",
+        "type": "Entity"
+      },
+      {
+        "id": 7,
+        "original_id": "5d76eb72-04ef-5580-b2ea-161f8429437a",
+        "text": "animal",
+        "type": "EntityType"
+      },
+      {
+        "id": 8,
+        "original_id": "e5b261fb-18b2-5441-a88c-f93c5e4f76d6",
+        "text": "duck",
+        "type": "Entity"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 5,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "is_an_area_of"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 6,
+        "type": "supports_populations_of"
+      },
+      {
+        "source": 1,
+        "target": 6,
+        "type": "contains"
+      },
+      {
+        "source": 6,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 8,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 6,
+        "target": 8,
+        "type": "is_a_medium_sized_version_of"
+      },
+      {
+        "source": 1,
+        "target": 8,
+        "type": "contains"
+      }
+    ]
+  },
+  "grafo_evidencia": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "e79fa071-2e0e-5cf4-9cb3-f802d44cd130",
+        "text": "This chunk is about:\n- Places: Hardley Flood\n- Species: common pochard, shoveller, gadwall, wildfowl, wading birds, fenland birds\n- Habitats: tidal muds, reedbeds\n\nFacts:\n- Hardley Flood has tidal muds that attract a range of wading birds.\n- Hardley Flood has undisturbed reedbeds that support nesting wildfowl and other fenland birds.\n- Hardley Flood includes nationally important breeding populations of shoveller, pochard, and gadwall.\n- The common pochard, Aythya ferina, is a medium-sized diving duck.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "7d8483ed-6106-5fdf-ba5d-02e133f023cb",
+        "text": "Page: Hardley Flood. Sentence: Tidal muds attract a range of wading birds and the undisturbed reedbeds support nesting wildfowl and other fenland birds, including nationally important breeding populations of shoveller, pochard and gadwall.\nPage: Common pochard. Sentence: The common pochard (\"Aythya ferina\") is a medium-sized diving duck.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "468537fc-a606-528c-8430-9f94e8ceea10",
+        "text": "text_5036a20a89c7157373bde9ab60cef164",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "75225cbb-a150-5c85-8cca-7f7341a0a8e0",
+        "text": "hardley flood",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "5f394058-b2a0-5ba8-8466-ba2a18cfcf4e",
+        "text": "place",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "31821b97-1c9d-5ceb-a889-db012ca46fee",
+        "text": "tidal muds",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "4fabdc0b-8e9a-5e7a-970d-db700b89bbbe",
+        "text": "habitat",
+        "type": "EntityType"
+      },
+      {
+        "id": 7,
+        "original_id": "8e635554-4fc6-5249-a3d7-a37d231dc890",
+        "text": "wading birds",
+        "type": "Entity"
+      },
+      {
+        "id": 8,
+        "original_id": "5d76eb72-04ef-5580-b2ea-161f8429437a",
+        "text": "animal",
+        "type": "EntityType"
+      },
+      {
+        "id": 9,
+        "original_id": "8bb7c192-0074-51fc-a9fe-090208fb0440",
+        "text": "reedbeds",
+        "type": "Entity"
+      },
+      {
+        "id": 10,
+        "original_id": "a9d19896-4120-576e-a974-3ce6933df565",
+        "text": "wildfowl",
+        "type": "Entity"
+      },
+      {
+        "id": 11,
+        "original_id": "6a3e13f9-435d-5969-abc5-d2382e92d6f4",
+        "text": "fenland birds",
+        "type": "Entity"
+      },
+      {
+        "id": 12,
+        "original_id": "4fdd5b66-d937-55ee-8ffe-9a7985817a0f",
+        "text": "shoveller",
+        "type": "Entity"
+      },
+      {
+        "id": 13,
+        "original_id": "534679ea-5130-5ca6-aad0-0c67d858c962",
+        "text": "common pochard",
+        "type": "Entity"
+      },
+      {
+        "id": 14,
+        "original_id": "2c571289-75c0-51ed-a5f4-91dbe597d185",
+        "text": "aythya ferina",
+        "type": "Entity"
+      },
+      {
+        "id": 15,
+        "original_id": "0528365c-c3b1-597d-8053-93ce013f1491",
+        "text": "diving duck",
+        "type": "Entity"
+      },
+      {
+        "id": 16,
+        "original_id": "304df093-4080-5644-a670-cd84f374175b",
+        "text": "gadwall",
+        "type": "Entity"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "has_habitat"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 9,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 5,
+        "target": 7,
+        "type": "attracts"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      },
+      {
+        "source": 7,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 10,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 11,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 12,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 13,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 14,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 15,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 16,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 9,
+        "type": "has_habitat"
+      },
+      {
+        "source": 1,
+        "target": 9,
+        "type": "contains"
+      },
+      {
+        "source": 9,
+        "target": 10,
+        "type": "supports_nesting"
+      },
+      {
+        "source": 1,
+        "target": 10,
+        "type": "contains"
+      },
+      {
+        "source": 9,
+        "target": 11,
+        "type": "supports"
+      },
+      {
+        "source": 1,
+        "target": 11,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 12,
+        "type": "has_breeding_population"
+      },
+      {
+        "source": 1,
+        "target": 12,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 13,
+        "type": "has_breeding_population"
+      },
+      {
+        "source": 1,
+        "target": 13,
+        "type": "contains"
+      },
+      {
+        "source": 13,
+        "target": 14,
+        "type": "has_scientific_name"
+      },
+      {
+        "source": 1,
+        "target": 14,
+        "type": "contains"
+      },
+      {
+        "source": 13,
+        "target": 15,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 15,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 16,
+        "type": "has_breeding_population"
+      },
+      {
+        "source": 1,
+        "target": 16,
+        "type": "contains"
+      }
+    ]
+  }
+}

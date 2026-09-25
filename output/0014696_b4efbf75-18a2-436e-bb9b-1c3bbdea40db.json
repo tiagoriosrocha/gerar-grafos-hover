@@ -1,0 +1,326 @@
+{
+  "dataset": "hover",
+  "id": "b4efbf75-18a2-436e-bb9b-1c3bbdea40db",
+  "split": "train",
+  "claim": "The faster double-loop roller coaster, between the ride next to Tidal Wave and Green Lantern has a top speed of 65 mph.",
+  "evidencia": "Page: The Riddler's Revenge. Sentence: It stands 156 ft tall and features a top speed of 65 mph .\nPage: Green Lantern (Six Flags Great Adventure). Sentence: \"Green Lantern\" stands 155 ft tall and features a top speed of 63 mph .\nPage: Tidal Wave (Six Flags Magic Mountain). Sentence: The entrance to the ride is next to The Riddler's Revenge which is near to JB's Smokehouse BBQ.",
+  "evidence_text": "Page: The Riddler's Revenge. Sentence: It stands 156 ft tall and features a top speed of 65 mph .\nPage: Green Lantern (Six Flags Great Adventure). Sentence: \"Green Lantern\" stands 155 ft tall and features a top speed of 63 mph .\nPage: Tidal Wave (Six Flags Magic Mountain). Sentence: The entrance to the ride is next to The Riddler's Revenge which is near to JB's Smokehouse BBQ.",
+  "label": "NOT_SUPPORTED",
+  "num_hops": 3,
+  "hover_metadata": {
+    "supporting_facts": [
+      [
+        "The Riddler's Revenge",
+        4
+      ],
+      [
+        "Green Lantern (Six Flags Great Adventure)",
+        1
+      ],
+      [
+        "Tidal Wave (Six Flags Magic Mountain)",
+        3
+      ]
+    ],
+    "num_hops": 3,
+    "evidence_annotation_id": [
+      0
+    ],
+    "evidence_id": [
+      "The Riddler's Revenge::sentence::4",
+      "Green Lantern (Six Flags Great Adventure)::sentence::1",
+      "Tidal Wave (Six Flags Magic Mountain)::sentence::3"
+    ],
+    "evidence_wiki_url": [
+      "https://en.wikipedia.org/wiki/The_Riddler%27s_Revenge",
+      "https://en.wikipedia.org/wiki/Green_Lantern_%28Six_Flags_Great_Adventure%29",
+      "https://en.wikipedia.org/wiki/Tidal_Wave_%28Six_Flags_Magic_Mountain%29"
+    ],
+    "evidence_sentence_id": [
+      "The Riddler's Revenge::sentence::4",
+      "Green Lantern (Six Flags Great Adventure)::sentence::1",
+      "Tidal Wave (Six Flags Magic Mountain)::sentence::3"
+    ]
+  },
+  "grafo_claim": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "bdb27045-6bd6-51a6-9506-ddac258ba2d0",
+        "text": "This chunk is about:\n- Places: Tidal Wave, Green Lantern\n- Products: double-loop roller coaster\n- Topics: ride location, top speed\n\nFacts:\n- The double-loop roller coaster is located between the ride next to Tidal Wave and Green Lantern.\n- The double-loop roller coaster has a top speed of 65 mph.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "1f184d9e-52aa-577c-b4d4-a006ee7350fc",
+        "text": "The faster double-loop roller coaster, between the ride next to Tidal Wave and Green Lantern has a top speed of 65 mph.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "15e17071-b279-5481-8498-05b2d0a13059",
+        "text": "text_5203a5afe6b08e4318cc9717aa81536b",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "9da1eb1e-069f-5498-a62f-3ed23b59b5b2",
+        "text": "faster double-loop roller coaster",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "8b5f79e7-4c6a-569f-822a-4d3a2f2626f3",
+        "text": "ride",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "080eb70f-5c52-5eb4-96ff-5057a78d9d6f",
+        "text": "tidal wave",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "52617ad9-a948-5b26-b898-d80b735b3451",
+        "text": "green lantern",
+        "type": "Entity"
+      },
+      {
+        "id": 7,
+        "original_id": "dac521bf-fe4e-5e55-a5cb-fe72c698a2af",
+        "text": "65 mph",
+        "type": "Entity"
+      },
+      {
+        "id": 8,
+        "original_id": "12d5521e-a878-542e-bebc-84ff79179d8e",
+        "text": "measurement",
+        "type": "EntityType"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 5,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 6,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "is_next_to"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 6,
+        "type": "is_between"
+      },
+      {
+        "source": 1,
+        "target": 6,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 7,
+        "type": "has_top_speed"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      },
+      {
+        "source": 7,
+        "target": 8,
+        "type": "is_a"
+      }
+    ]
+  },
+  "grafo_evidencia": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "0b5dce51-4d5f-5c0f-bef1-c235f969354d",
+        "text": "This chunk is about:\n- Products: The Riddler's Revenge, Green Lantern, Tidal Wave\n- Places: Six Flags Great Adventure, Six Flags Magic Mountain, JB's Smokehouse BBQ\n\nFacts:\n- The Riddler's Revenge stands 156 feet tall and has a top speed of 65 mph.\n- Green Lantern at Six Flags Great Adventure stands 155 feet tall and has a top speed of 63 mph.\n- Tidal Wave at Six Flags Magic Mountain has an entrance next to The Riddler's Revenge, which is near JB's Smokehouse BBQ.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "326b42db-e176-50ad-a5cf-c26c39417179",
+        "text": "Page: The Riddler's Revenge. Sentence: It stands 156 ft tall and features a top speed of 65 mph .\nPage: Green Lantern (Six Flags Great Adventure). Sentence: \"Green Lantern\" stands 155 ft tall and features a top speed of 63 mph .\nPage: Tidal Wave (Six Flags Magic Mountain). Sentence: The entrance to the ride is next to The Riddler's Revenge which is near to JB's Smokehouse BBQ.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "e3b92540-b6c8-59b6-9e7c-d84af3438b66",
+        "text": "text_56eb65a525eb915add3db5053ba14f3a",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "88445ac5-ec73-5ee1-a235-35716684eae4",
+        "text": "the riddlers revenge",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "5f394058-b2a0-5ba8-8466-ba2a18cfcf4e",
+        "text": "place",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "8c534100-5aca-5922-beaf-cf7438e1120e",
+        "text": "jbs smokehouse bbq",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "52617ad9-a948-5b26-b898-d80b735b3451",
+        "text": "green lantern",
+        "type": "Entity"
+      },
+      {
+        "id": 7,
+        "original_id": "68d2f737-053a-553a-b643-7ad6513737d6",
+        "text": "six flags great adventure",
+        "type": "Entity"
+      },
+      {
+        "id": 8,
+        "original_id": "080eb70f-5c52-5eb4-96ff-5057a78d9d6f",
+        "text": "tidal wave",
+        "type": "Entity"
+      },
+      {
+        "id": 9,
+        "original_id": "3a53dd0d-b019-52d6-a6a4-c85c0181bcb1",
+        "text": "six flags magic mountain",
+        "type": "Entity"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 8,
+        "target": 3,
+        "type": "entrance_next_to"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 5,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 6,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 7,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 8,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 9,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "near"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 1,
+        "target": 6,
+        "type": "contains"
+      },
+      {
+        "source": 6,
+        "target": 7,
+        "type": "located_in"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      },
+      {
+        "source": 1,
+        "target": 8,
+        "type": "contains"
+      },
+      {
+        "source": 8,
+        "target": 9,
+        "type": "located_in"
+      },
+      {
+        "source": 1,
+        "target": 9,
+        "type": "contains"
+      }
+    ]
+  }
+}

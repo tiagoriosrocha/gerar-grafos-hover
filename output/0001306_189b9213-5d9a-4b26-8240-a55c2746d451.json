@@ -1,0 +1,397 @@
+{
+  "dataset": "hover",
+  "id": "189b9213-5d9a-4b26-8240-a55c2746d451",
+  "split": "train",
+  "claim": "The jet airliner with which this aircraft, that the General Electric GE9X engine is being developed for, was intended to compete has many seats.",
+  "evidencia": "Page: Boeing 777X. Sentence: It is intended to compete with the Airbus A350.\nPage: Airbus A350 XWB. Sentence: Its variants seat 280 to 366 passengers in typical three-class seating layouts.\nPage: General Electric GE9X. Sentence: The General Electric GE9X is a high-bypass turbofan aircraft engine under development by GE Aviation for the Boeing 777X.",
+  "evidence_text": "Page: Boeing 777X. Sentence: It is intended to compete with the Airbus A350.\nPage: Airbus A350 XWB. Sentence: Its variants seat 280 to 366 passengers in typical three-class seating layouts.\nPage: General Electric GE9X. Sentence: The General Electric GE9X is a high-bypass turbofan aircraft engine under development by GE Aviation for the Boeing 777X.",
+  "label": "SUPPORTED",
+  "num_hops": 3,
+  "hover_metadata": {
+    "supporting_facts": [
+      [
+        "Boeing 777X",
+        3
+      ],
+      [
+        "Airbus A350 XWB",
+        2
+      ],
+      [
+        "General Electric GE9X",
+        0
+      ]
+    ],
+    "num_hops": 3,
+    "evidence_annotation_id": [
+      0
+    ],
+    "evidence_id": [
+      "Boeing 777X::sentence::3",
+      "Airbus A350 XWB::sentence::2",
+      "General Electric GE9X::sentence::0"
+    ],
+    "evidence_wiki_url": [
+      "https://en.wikipedia.org/wiki/Boeing_777X",
+      "https://en.wikipedia.org/wiki/Airbus_A350_XWB",
+      "https://en.wikipedia.org/wiki/General_Electric_GE9X"
+    ],
+    "evidence_sentence_id": [
+      "Boeing 777X::sentence::3",
+      "Airbus A350 XWB::sentence::2",
+      "General Electric GE9X::sentence::0"
+    ]
+  },
+  "grafo_claim": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "7bfde1ec-9d41-52a7-b3f3-0e7a5fa1f599",
+        "text": "This chunk is about:\n- Products: General Electric GE9X, aircraft, jet airliner\n- Topics: market competition, passenger seating\n\nFacts:\n- The General Electric GE9X engine is being developed for an aircraft.\n- That aircraft was intended to compete with a jet airliner.\n- The competing jet airliner has many seats.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "eb33a957-e68a-50f8-be90-1544cf465bbb",
+        "text": "The jet airliner with which this aircraft, that the General Electric GE9X engine is being developed for, was intended to compete has many seats.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "e233cf26-4579-542a-967f-52d418350fca",
+        "text": "text_6fe99f7169a2894a4f566a845a13317b",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "48cdc7a3-0e71-55a5-9df8-1fabdfc152d5",
+        "text": "this aircraft",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "98dbec47-ecb5-5008-91d0-e63d4eb40a4c",
+        "text": "the jet airliner",
+        "type": "Entity"
+      },
+      {
+        "id": 5,
+        "original_id": "fec6a4aa-53c2-5e43-8170-1f9f8fb6de42",
+        "text": "many seats",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "7a7a0687-e490-5167-ad5a-0e39d9055dee",
+        "text": "quantity",
+        "type": "EntityType"
+      },
+      {
+        "id": 7,
+        "original_id": "bde6c33f-6d16-5878-b4ec-69a05a6dcc06",
+        "text": "aircraft",
+        "type": "EntityType"
+      },
+      {
+        "id": 8,
+        "original_id": "df29e781-88ac-5a99-af3f-fa93d5427548",
+        "text": "general electric ge9x",
+        "type": "Entity"
+      },
+      {
+        "id": 9,
+        "original_id": "ddfba1b8-d2b6-511d-8769-8047c69498b5",
+        "text": "engine",
+        "type": "EntityType"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "intended_to_compete_with"
+      },
+      {
+        "source": 8,
+        "target": 4,
+        "type": "being_developed_for"
+      },
+      {
+        "source": 1,
+        "target": 4,
+        "type": "contains"
+      },
+      {
+        "source": 4,
+        "target": 5,
+        "type": "has"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 4,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 8,
+        "type": "contains"
+      },
+      {
+        "source": 8,
+        "target": 9,
+        "type": "is_a"
+      }
+    ]
+  },
+  "grafo_evidencia": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "c07f74a8-2329-5efd-b805-cc875b8b6248",
+        "text": "This chunk is about:\n- Products: Boeing 777X, Airbus A350 XWB, General Electric GE9X\n- Companies: Boeing, Airbus, GE Aviation\n- Concepts: aircraft competition, passenger seating capacity, high-bypass turbofan engines, engine development\n\nFacts:\n- The Boeing 777X is intended to compete with the Airbus A350.\n- The Airbus A350 XWB variants seat 280 to 366 passengers in typical three-class seating layouts.\n- The General Electric GE9X is a high-bypass turbofan aircraft engine under development by GE Aviation for the Boeing 777X.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "f5c2d8f4-1958-5cad-b848-79bb75e93a00",
+        "text": "Page: Boeing 777X. Sentence: It is intended to compete with the Airbus A350.\nPage: Airbus A350 XWB. Sentence: Its variants seat 280 to 366 passengers in typical three-class seating layouts.\nPage: General Electric GE9X. Sentence: The General Electric GE9X is a high-bypass turbofan aircraft engine under development by GE Aviation for the Boeing 777X.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "23f3e2d5-77ad-542d-9302-ffb82cf0ffeb",
+        "text": "text_bdece832a300ebc1d06590d51470e011",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "70274b4d-8338-5b37-a955-bf59d8cb6976",
+        "text": "boeing 777x",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "1b9a5fac-ad0a-5a94-aa38-dad3acf21e69",
+        "text": "airbus a350",
+        "type": "Entity"
+      },
+      {
+        "id": 5,
+        "original_id": "f76d57aa-4740-5218-9539-0e0978cbf183",
+        "text": "product",
+        "type": "EntityType"
+      },
+      {
+        "id": 6,
+        "original_id": "310de65f-aaae-59f9-b07e-04dc752b479e",
+        "text": "airbus a350 variants",
+        "type": "Entity"
+      },
+      {
+        "id": 7,
+        "original_id": "f4f513e0-2d34-5efb-8daf-fdb6d711a225",
+        "text": "280 to 366 passengers",
+        "type": "Entity"
+      },
+      {
+        "id": 8,
+        "original_id": "7a7a0687-e490-5167-ad5a-0e39d9055dee",
+        "text": "quantity",
+        "type": "EntityType"
+      },
+      {
+        "id": 9,
+        "original_id": "a0918466-638d-5d40-968c-98345103162b",
+        "text": "typical three-class seating layouts",
+        "type": "Entity"
+      },
+      {
+        "id": 10,
+        "original_id": "d2a381fa-3658-5ca6-ada9-2109cfc9331d",
+        "text": "concept",
+        "type": "EntityType"
+      },
+      {
+        "id": 11,
+        "original_id": "df29e781-88ac-5a99-af3f-fa93d5427548",
+        "text": "general electric ge9x",
+        "type": "Entity"
+      },
+      {
+        "id": 12,
+        "original_id": "96242ddd-609d-55b8-9aa7-28e80efd26d6",
+        "text": "high-bypass turbofan aircraft engine",
+        "type": "Entity"
+      },
+      {
+        "id": 13,
+        "original_id": "1184655b-90ef-527c-904b-cb4e4dce755c",
+        "text": "ge aviation",
+        "type": "Entity"
+      },
+      {
+        "id": 14,
+        "original_id": "388f60fb-220d-55e8-ae9c-3ac93cead308",
+        "text": "organization",
+        "type": "EntityType"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 11,
+        "target": 3,
+        "type": "developed_for"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "competes_with"
+      },
+      {
+        "source": 1,
+        "target": 4,
+        "type": "contains"
+      },
+      {
+        "source": 6,
+        "target": 4,
+        "type": "variant_of"
+      },
+      {
+        "source": 4,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 6,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 11,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 6,
+        "type": "contains"
+      },
+      {
+        "source": 6,
+        "target": 7,
+        "type": "seats"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      },
+      {
+        "source": 7,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 6,
+        "target": 9,
+        "type": "in_layout"
+      },
+      {
+        "source": 1,
+        "target": 9,
+        "type": "contains"
+      },
+      {
+        "source": 9,
+        "target": 10,
+        "type": "is_a"
+      },
+      {
+        "source": 12,
+        "target": 10,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 11,
+        "type": "contains"
+      },
+      {
+        "source": 13,
+        "target": 11,
+        "type": "develops"
+      },
+      {
+        "source": 11,
+        "target": 12,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 12,
+        "type": "contains"
+      },
+      {
+        "source": 1,
+        "target": 13,
+        "type": "contains"
+      },
+      {
+        "source": 13,
+        "target": 14,
+        "type": "is_a"
+      }
+    ]
+  }
+}

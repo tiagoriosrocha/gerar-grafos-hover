@@ -1,0 +1,566 @@
+{
+  "dataset": "hover",
+  "id": "d92383a4-d774-45d5-9a8e-e0906f9e85ba",
+  "split": "train",
+  "claim": "Gin and tonic is usually garnished with a slice of lime. The drink that's name was invented in Pendennis Club is not garnished this way.",
+  "evidencia": "Page: Old Fashioned. Sentence: The Old Fashioned is a cocktail made by muddling sugar with bitters, then adding alcohol, such as whiskey or brandy, and a twist of citrus rind.\nPage: Gin and tonic. Sentence: A gin and tonic is a highball cocktail made with gin and tonic water poured over ice.\nPage: Gin and tonic. Sentence: It is usually garnished with a slice or wedge of lime.\nPage: Pendennis Club. Sentence: Sometime in the 1880s, the club was the birthplace (by name, not invention) of the Old Fashioned, possibly the first mixed drink to be called a cocktail.",
+  "evidence_text": "Page: Old Fashioned. Sentence: The Old Fashioned is a cocktail made by muddling sugar with bitters, then adding alcohol, such as whiskey or brandy, and a twist of citrus rind.\nPage: Gin and tonic. Sentence: A gin and tonic is a highball cocktail made with gin and tonic water poured over ice.\nPage: Gin and tonic. Sentence: It is usually garnished with a slice or wedge of lime.\nPage: Pendennis Club. Sentence: Sometime in the 1880s, the club was the birthplace (by name, not invention) of the Old Fashioned, possibly the first mixed drink to be called a cocktail.",
+  "label": "SUPPORTED",
+  "num_hops": 3,
+  "hover_metadata": {
+    "supporting_facts": [
+      [
+        "Old Fashioned",
+        0
+      ],
+      [
+        "Gin and tonic",
+        0
+      ],
+      [
+        "Gin and tonic",
+        1
+      ],
+      [
+        "Pendennis Club",
+        5
+      ]
+    ],
+    "num_hops": 3,
+    "evidence_annotation_id": [
+      0
+    ],
+    "evidence_id": [
+      "Old Fashioned::sentence::0",
+      "Gin and tonic::sentence::0",
+      "Gin and tonic::sentence::1",
+      "Pendennis Club::sentence::5"
+    ],
+    "evidence_wiki_url": [
+      "https://en.wikipedia.org/wiki/Old_Fashioned",
+      "https://en.wikipedia.org/wiki/Gin_and_tonic",
+      "https://en.wikipedia.org/wiki/Pendennis_Club"
+    ],
+    "evidence_sentence_id": [
+      "Old Fashioned::sentence::0",
+      "Gin and tonic::sentence::0",
+      "Gin and tonic::sentence::1",
+      "Pendennis Club::sentence::5"
+    ]
+  },
+  "grafo_claim": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "8029b639-0f59-514e-b852-100731b2898d",
+        "text": "This chunk is about:\n- Products: Gin and tonic\n- Organizations: Pendennis Club\n- Concepts: Garnishes, drink naming\n\nFacts:\n- Gin and tonic is usually garnished with a slice of lime.\n- A drink whose name was invented at the Pendennis Club is not garnished with a slice of lime.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "2f54a9d4-df58-5d57-a4c9-7727f41e4a3f",
+        "text": "Gin and tonic is usually garnished with a slice of lime. The drink that's name was invented in Pendennis Club is not garnished this way.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "5ce8444e-f043-5a5e-93c6-5b4b43dfa7a0",
+        "text": "text_e23d304daf1fb86c626f327ce45b72ae",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "d705f5c7-c3d5-5fa7-bfc5-435b7b2a9792",
+        "text": "gin and tonic",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "58c5636a-bd83-593e-87d0-53a002ba21de",
+        "text": "drink",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "ed1e670b-2434-53ed-91ab-1d724502c99b",
+        "text": "slice of lime",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "f9c5113e-747a-5581-af56-c9d2e76bce9b",
+        "text": "food",
+        "type": "EntityType"
+      },
+      {
+        "id": 7,
+        "original_id": "90db8075-a50c-5717-9f8c-5df95cd10065",
+        "text": "pendennis club",
+        "type": "Entity"
+      },
+      {
+        "id": 8,
+        "original_id": "5f394058-b2a0-5ba8-8466-ba2a18cfcf4e",
+        "text": "place",
+        "type": "EntityType"
+      },
+      {
+        "id": 9,
+        "original_id": "74a01e08-9be6-57ca-bef6-30aa7dec48d1",
+        "text": "unnamed drink",
+        "type": "Entity"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 9,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "is_usually_garnished_with"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 9,
+        "target": 5,
+        "type": "is_not_garnished_with"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      },
+      {
+        "source": 9,
+        "target": 7,
+        "type": "name_was_invented_in"
+      },
+      {
+        "source": 7,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 9,
+        "type": "contains"
+      }
+    ]
+  },
+  "grafo_evidencia": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "017fa194-b853-5c51-bf4c-262e7d6ee5f1",
+        "text": "This chunk is about:\n- Products: Old Fashioned, gin and tonic\n- Organizations: Pendennis Club\n- Concepts: cocktails, garnish, ingredients, naming origin\n\nFacts:\n- Sometime in the 1880s, the Pendennis Club was the birthplace by name, not invention, of the Old Fashioned.\n- The Pendennis Club may have given the name to what was possibly the first mixed drink to be called a cocktail.\n- The Old Fashioned is a cocktail made by muddling sugar with bitters, then adding alcohol such as whiskey or brandy and a twist of citrus rind.\n- A gin and tonic is a highball cocktail made with gin and tonic water poured over ice.\n- A gin and tonic is usually garnished with a slice or wedge of lime.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "7bdfdde8-0f0e-5610-999b-a7229e807b98",
+        "text": "Page: Old Fashioned. Sentence: The Old Fashioned is a cocktail made by muddling sugar with bitters, then adding alcohol, such as whiskey or brandy, and a twist of citrus rind.\nPage: Gin and tonic. Sentence: A gin and tonic is a highball cocktail made with gin and tonic water poured over ice.\nPage: Gin and tonic. Sentence: It is usually garnished with a slice or wedge of lime.\nPage: Pendennis Club. Sentence: Sometime in the 1880s, the club was the birthplace (by name, not invention) of the Old Fashioned, possibly the first mixed drink to be called a cocktail.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "a6e6433a-f24b-5bf7-b9ec-18c9a4a1b42e",
+        "text": "text_a8c13a08bed02c1102445727ea90c8e3",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "1a3c2c06-6bd1-5786-88a7-ff6c96ca15da",
+        "text": "old fashioned",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "58c5636a-bd83-593e-87d0-53a002ba21de",
+        "text": "drink",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "5327d4a7-3f83-5b40-bee1-6dd9a02e6a4b",
+        "text": "cocktail",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "eeacbfcc-b7ec-5dbe-9b48-be338233fa80",
+        "text": "sugar",
+        "type": "Entity"
+      },
+      {
+        "id": 7,
+        "original_id": "f9c5113e-747a-5581-af56-c9d2e76bce9b",
+        "text": "food",
+        "type": "EntityType"
+      },
+      {
+        "id": 8,
+        "original_id": "16462da5-2471-5d5e-a9ff-fb6884c0b5d4",
+        "text": "bitters",
+        "type": "Entity"
+      },
+      {
+        "id": 9,
+        "original_id": "b3724e55-8b82-5582-b629-b08169b7a0ce",
+        "text": "alcohol",
+        "type": "Entity"
+      },
+      {
+        "id": 10,
+        "original_id": "4c761264-df4f-5197-9b78-73687cdf39e2",
+        "text": "whiskey",
+        "type": "Entity"
+      },
+      {
+        "id": 11,
+        "original_id": "a04b8f49-f6f8-5610-8136-83f981c5bf19",
+        "text": "brandy",
+        "type": "Entity"
+      },
+      {
+        "id": 12,
+        "original_id": "fdd9d4e6-2a85-55cd-998d-8f513d66c0ca",
+        "text": "citrus rind",
+        "type": "Entity"
+      },
+      {
+        "id": 13,
+        "original_id": "d705f5c7-c3d5-5fa7-bfc5-435b7b2a9792",
+        "text": "gin and tonic",
+        "type": "Entity"
+      },
+      {
+        "id": 14,
+        "original_id": "ce0bafd8-8c64-589e-9781-c7f5df005121",
+        "text": "highball cocktail",
+        "type": "Entity"
+      },
+      {
+        "id": 15,
+        "original_id": "dabf7a70-ebcb-58ca-a6fd-a2d296c3ff59",
+        "text": "gin",
+        "type": "Entity"
+      },
+      {
+        "id": 16,
+        "original_id": "99f21b1b-4566-57fe-af16-b1e782d66d9a",
+        "text": "tonic water",
+        "type": "Entity"
+      },
+      {
+        "id": 17,
+        "original_id": "3ef0cdfc-b0bd-5693-a78c-ebbe43a5c693",
+        "text": "ice",
+        "type": "Entity"
+      },
+      {
+        "id": 18,
+        "original_id": "338e9726-383e-54da-94ac-904ba0f7dc0b",
+        "text": "lime",
+        "type": "Entity"
+      },
+      {
+        "id": 19,
+        "original_id": "90db8075-a50c-5717-9f8c-5df95cd10065",
+        "text": "pendennis club",
+        "type": "Entity"
+      },
+      {
+        "id": 20,
+        "original_id": "388f60fb-220d-55e8-ae9c-3ac93cead308",
+        "text": "organization",
+        "type": "EntityType"
+      },
+      {
+        "id": 21,
+        "original_id": "c1d3f7a5-73c9-58ca-96f4-ea9f126c5148",
+        "text": "1880s",
+        "type": "Entity"
+      },
+      {
+        "id": 22,
+        "original_id": "b19433ae-558c-5aaf-95ac-6231f2a4be0e",
+        "text": "date",
+        "type": "EntityType"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 19,
+        "target": 3,
+        "type": "birthplace_by_name_of"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 5,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 10,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 11,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 13,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 14,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 15,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 16,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 6,
+        "type": "made_by_muddling_with"
+      },
+      {
+        "source": 1,
+        "target": 6,
+        "type": "contains"
+      },
+      {
+        "source": 6,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 8,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 9,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 12,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 17,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 18,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 8,
+        "type": "made_by_muddling_with"
+      },
+      {
+        "source": 1,
+        "target": 8,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 9,
+        "type": "has_added_component"
+      },
+      {
+        "source": 1,
+        "target": 9,
+        "type": "contains"
+      },
+      {
+        "source": 9,
+        "target": 10,
+        "type": "such_as"
+      },
+      {
+        "source": 1,
+        "target": 10,
+        "type": "contains"
+      },
+      {
+        "source": 9,
+        "target": 11,
+        "type": "such_as"
+      },
+      {
+        "source": 1,
+        "target": 11,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 12,
+        "type": "has_garnish"
+      },
+      {
+        "source": 1,
+        "target": 12,
+        "type": "contains"
+      },
+      {
+        "source": 1,
+        "target": 13,
+        "type": "contains"
+      },
+      {
+        "source": 13,
+        "target": 14,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 14,
+        "type": "contains"
+      },
+      {
+        "source": 13,
+        "target": 15,
+        "type": "made_with"
+      },
+      {
+        "source": 1,
+        "target": 15,
+        "type": "contains"
+      },
+      {
+        "source": 13,
+        "target": 16,
+        "type": "made_with"
+      },
+      {
+        "source": 1,
+        "target": 16,
+        "type": "contains"
+      },
+      {
+        "source": 13,
+        "target": 17,
+        "type": "served_over"
+      },
+      {
+        "source": 1,
+        "target": 17,
+        "type": "contains"
+      },
+      {
+        "source": 13,
+        "target": 18,
+        "type": "usually_garnished_with"
+      },
+      {
+        "source": 1,
+        "target": 18,
+        "type": "contains"
+      },
+      {
+        "source": 1,
+        "target": 19,
+        "type": "contains"
+      },
+      {
+        "source": 19,
+        "target": 20,
+        "type": "is_a"
+      },
+      {
+        "source": 19,
+        "target": 21,
+        "type": "had_role_in"
+      },
+      {
+        "source": 1,
+        "target": 21,
+        "type": "contains"
+      },
+      {
+        "source": 21,
+        "target": 22,
+        "type": "is_a"
+      }
+    ]
+  }
+}

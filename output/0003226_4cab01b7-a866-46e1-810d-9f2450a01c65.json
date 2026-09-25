@@ -1,0 +1,366 @@
+{
+  "dataset": "hover",
+  "id": "4cab01b7-a866-46e1-810d-9f2450a01c65",
+  "split": "train",
+  "claim": "Syngenta is a Swiss agribusiness that is a client of Martin Williams Advertising in NY.",
+  "evidencia": "Page: Martin Williams Advertising. Sentence: Clients include Payless ShoeSource, Raymond James, Syngenta, Cargill, Marvin Windows, Simmons Bedding Company, and P.F. Chang.\nPage: Syngenta. Sentence: Syngenta AG is a global Swiss agribusiness that produces agrochemicals and seeds.",
+  "evidence_text": "Page: Martin Williams Advertising. Sentence: Clients include Payless ShoeSource, Raymond James, Syngenta, Cargill, Marvin Windows, Simmons Bedding Company, and P.F. Chang.\nPage: Syngenta. Sentence: Syngenta AG is a global Swiss agribusiness that produces agrochemicals and seeds.",
+  "label": "NOT_SUPPORTED",
+  "num_hops": 2,
+  "hover_metadata": {
+    "supporting_facts": [
+      [
+        "Martin Williams Advertising",
+        2
+      ],
+      [
+        "Syngenta",
+        0
+      ]
+    ],
+    "num_hops": 2,
+    "evidence_annotation_id": [
+      0
+    ],
+    "evidence_id": [
+      "Martin Williams Advertising::sentence::2",
+      "Syngenta::sentence::0"
+    ],
+    "evidence_wiki_url": [
+      "https://en.wikipedia.org/wiki/Martin_Williams_Advertising",
+      "https://en.wikipedia.org/wiki/Syngenta"
+    ],
+    "evidence_sentence_id": [
+      "Martin Williams Advertising::sentence::2",
+      "Syngenta::sentence::0"
+    ]
+  },
+  "grafo_claim": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "19936dcc-9555-5043-83f4-a0cacdf7ea01",
+        "text": "This chunk is about:\n- Companies: Syngenta, Martin Williams Advertising\n- Places: Switzerland, New York\n\nFacts:\n- Syngenta is a Swiss agribusiness company.\n- Martin Williams Advertising is located in New York.\n- Syngenta is a client of Martin Williams Advertising in New York.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "38d0958d-8daf-5f82-b5d9-03b72f071ca0",
+        "text": "Syngenta is a Swiss agribusiness that is a client of Martin Williams Advertising in NY.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "aca85681-3a71-5354-b9ce-8593d2c5bf96",
+        "text": "text_5a84979f64e65d440d700f7e1a2c4039",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "5f8b22a6-df7b-5970-a8b3-e19dc7bdefc4",
+        "text": "syngenta",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "407d2a7f-7562-59fb-a556-934cd90a0107",
+        "text": "switzerland",
+        "type": "Entity"
+      },
+      {
+        "id": 5,
+        "original_id": "5023586d-88a2-53f9-ad15-7e2ebd75eb4c",
+        "text": "location",
+        "type": "EntityType"
+      },
+      {
+        "id": 6,
+        "original_id": "80e22aea-b472-5275-90ac-41b0bbf3c49b",
+        "text": "martin williams advertising",
+        "type": "Entity"
+      },
+      {
+        "id": 7,
+        "original_id": "1000f0fe-7aeb-50c7-aa6b-a363a63c1247",
+        "text": "ny",
+        "type": "Entity"
+      },
+      {
+        "id": 8,
+        "original_id": "388f60fb-220d-55e8-ae9c-3ac93cead308",
+        "text": "organization",
+        "type": "EntityType"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "located_in"
+      },
+      {
+        "source": 1,
+        "target": 4,
+        "type": "contains"
+      },
+      {
+        "source": 4,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 7,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 6,
+        "type": "client_of"
+      },
+      {
+        "source": 1,
+        "target": 6,
+        "type": "contains"
+      },
+      {
+        "source": 6,
+        "target": 7,
+        "type": "located_in"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      },
+      {
+        "source": 6,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 8,
+        "type": "is_a"
+      }
+    ]
+  },
+  "grafo_evidencia": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "126fe1d8-01ac-59b2-917d-b8844b662cd1",
+        "text": "This chunk is about:\n- Companies: Martin Williams Advertising, Syngenta AG\n- Clients: Payless ShoeSource, Raymond James, Cargill, Marvin Windows, Simmons Bedding Company, P.F. Chang\n- Topics: advertising, agribusiness, agrochemicals, seeds\n\nFacts:\n- Martin Williams Advertising lists Payless ShoeSource, Raymond James, Syngenta, Cargill, Marvin Windows, Simmons Bedding Company, and P.F. Chang as clients.\n- Syngenta AG is a global Swiss agribusiness company that produces agrochemicals and seeds.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "0dbbadea-347f-515e-a775-3632b64bf00f",
+        "text": "Page: Martin Williams Advertising. Sentence: Clients include Payless ShoeSource, Raymond James, Syngenta, Cargill, Marvin Windows, Simmons Bedding Company, and P.F. Chang.\nPage: Syngenta. Sentence: Syngenta AG is a global Swiss agribusiness that produces agrochemicals and seeds.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "18c1e61a-56ce-5a8a-92f1-d1b626ab7b28",
+        "text": "text_62cf254c64baa6c6869d86b1817d3937",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "80e22aea-b472-5275-90ac-41b0bbf3c49b",
+        "text": "martin williams advertising",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "388f60fb-220d-55e8-ae9c-3ac93cead308",
+        "text": "organization",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "e799ce6a-396b-53ca-a838-e4ec5812bb2c",
+        "text": "payless shoesource",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "9cbaadf8-ebdc-5b9d-90d9-7e813f8f4da0",
+        "text": "raymond james",
+        "type": "Entity"
+      },
+      {
+        "id": 7,
+        "original_id": "5f8b22a6-df7b-5970-a8b3-e19dc7bdefc4",
+        "text": "syngenta",
+        "type": "Entity"
+      },
+      {
+        "id": 8,
+        "original_id": "b5a70fdc-2eca-553a-8644-af44c39c6573",
+        "text": "cargill",
+        "type": "Entity"
+      },
+      {
+        "id": 9,
+        "original_id": "61a2f06e-6fe1-5f39-beb7-89813d5a5bea",
+        "text": "marvin windows",
+        "type": "Entity"
+      },
+      {
+        "id": 10,
+        "original_id": "1ba3ae75-16f7-5d3e-966c-becb2b4e1c02",
+        "text": "simmons bedding company",
+        "type": "Entity"
+      },
+      {
+        "id": 11,
+        "original_id": "09ffcbbe-f1c4-5dc6-bcd4-60964cf90353",
+        "text": "p.f. chang",
+        "type": "Entity"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 3,
+        "type": "is_client_of"
+      },
+      {
+        "source": 6,
+        "target": 3,
+        "type": "is_client_of"
+      },
+      {
+        "source": 7,
+        "target": 3,
+        "type": "is_client_of"
+      },
+      {
+        "source": 8,
+        "target": 3,
+        "type": "is_client_of"
+      },
+      {
+        "source": 9,
+        "target": 3,
+        "type": "is_client_of"
+      },
+      {
+        "source": 10,
+        "target": 3,
+        "type": "is_client_of"
+      },
+      {
+        "source": 11,
+        "target": 3,
+        "type": "is_client_of"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 5,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 6,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 7,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 8,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 9,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 10,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 11,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 1,
+        "target": 6,
+        "type": "contains"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      },
+      {
+        "source": 1,
+        "target": 8,
+        "type": "contains"
+      },
+      {
+        "source": 1,
+        "target": 9,
+        "type": "contains"
+      },
+      {
+        "source": 1,
+        "target": 10,
+        "type": "contains"
+      },
+      {
+        "source": 1,
+        "target": 11,
+        "type": "contains"
+      }
+    ]
+  }
+}

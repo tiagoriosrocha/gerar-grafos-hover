@@ -1,0 +1,794 @@
+{
+  "dataset": "hover",
+  "id": "4b5f3b2a-aed7-4b5a-b517-845458cb3312",
+  "split": "train",
+  "claim": "Bill Murray was the actor in the miniseries Olive Kitteridge, and was also starring actor in the movie Caddyshack.",
+  "evidencia": "Page: Olive Kitteridge (miniseries). Sentence: Set in Maine, the HBO miniseries features Frances McDormand as the title character, Richard Jenkins as Olive's loving husband Henry Kitteridge, Zoe Kazan as Denise Thibodeau, and Bill Murray as Jack Kennison.\nPage: Bill Murray. Sentence: He first gained exposure on \"Saturday Night Live\", a series of performances that earned him his first Emmy Award, and later starred in comedy films—including \"Meatballs\" (1979), \"Caddyshack\" (1980), \"Stripes\" (1981), \"Tootsie\" (1982), \"Ghostbusters\" (1984), \"Scrooged\" (1988), \"Ghostbusters II\" (1989), \"What About Bob?",
+  "evidence_text": "Page: Olive Kitteridge (miniseries). Sentence: Set in Maine, the HBO miniseries features Frances McDormand as the title character, Richard Jenkins as Olive's loving husband Henry Kitteridge, Zoe Kazan as Denise Thibodeau, and Bill Murray as Jack Kennison.\nPage: Bill Murray. Sentence: He first gained exposure on \"Saturday Night Live\", a series of performances that earned him his first Emmy Award, and later starred in comedy films—including \"Meatballs\" (1979), \"Caddyshack\" (1980), \"Stripes\" (1981), \"Tootsie\" (1982), \"Ghostbusters\" (1984), \"Scrooged\" (1988), \"Ghostbusters II\" (1989), \"What About Bob?",
+  "label": "SUPPORTED",
+  "num_hops": 2,
+  "hover_metadata": {
+    "supporting_facts": [
+      [
+        "Olive Kitteridge (miniseries)",
+        1
+      ],
+      [
+        "Bill Murray",
+        1
+      ]
+    ],
+    "num_hops": 2,
+    "evidence_annotation_id": [
+      0
+    ],
+    "evidence_id": [
+      "Olive Kitteridge (miniseries)::sentence::1",
+      "Bill Murray::sentence::1"
+    ],
+    "evidence_wiki_url": [
+      "https://en.wikipedia.org/wiki/Olive_Kitteridge_%28miniseries%29",
+      "https://en.wikipedia.org/wiki/Bill_Murray"
+    ],
+    "evidence_sentence_id": [
+      "Olive Kitteridge (miniseries)::sentence::1",
+      "Bill Murray::sentence::1"
+    ]
+  },
+  "grafo_claim": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "6ca056a7-4276-5336-85dc-5d6394858b4b",
+        "text": "This chunk is about:\n- People: Bill Murray\n- Works: Olive Kitteridge, Caddyshack\n- Roles: actor, starring actor\n\nFacts:\n- Bill Murray was an actor in the miniseries Olive Kitteridge.\n- Bill Murray was the starring actor in the movie Caddyshack.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "748c0780-6e55-5805-be28-dd2245a08def",
+        "text": "Bill Murray was the actor in the miniseries Olive Kitteridge, and was also starring actor in the movie Caddyshack.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "3f516caf-b909-516e-aa99-6c452fcae2c1",
+        "text": "text_b89a0066d9ba9427eebc7569eab81eff",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "77768a65-916d-583a-a593-5bf7a07fa376",
+        "text": "bill murray",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "0dd9669e-0b90-5cd5-a184-9a553c778bba",
+        "text": "olive kitteridge",
+        "type": "Entity"
+      },
+      {
+        "id": 5,
+        "original_id": "5263a535-1b4b-5925-be3e-310d03cd303b",
+        "text": "work",
+        "type": "EntityType"
+      },
+      {
+        "id": 6,
+        "original_id": "cc7d3239-87ba-5e69-8627-18b45892f64a",
+        "text": "caddyshack",
+        "type": "Entity"
+      },
+      {
+        "id": 7,
+        "original_id": "99a82eec-bb35-5bb5-9ed2-e73fc7a756de",
+        "text": "person",
+        "type": "EntityType"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "acted_in"
+      },
+      {
+        "source": 1,
+        "target": 4,
+        "type": "contains"
+      },
+      {
+        "source": 4,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 6,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 6,
+        "type": "acted_in"
+      },
+      {
+        "source": 1,
+        "target": 6,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 7,
+        "type": "is_a"
+      }
+    ]
+  },
+  "grafo_evidencia": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "5b0ba7dc-fdd3-59ee-9287-7ed99f60d5cf",
+        "text": "This chunk is about:\n- Products: Olive Kitteridge, Saturday Night Live, Meatballs, Caddyshack, Stripes, Tootsie, Ghostbusters, Scrooged, Ghostbusters II, What About Bob?\n- People: Frances McDormand, Richard Jenkins, Zoe Kazan, Bill Murray\n- Places: Maine\n- Roles: Olive Kitteridge, Henry Kitteridge, Denise Thibodeau, Jack Kennison\n\nFacts:\n- The HBO miniseries Olive Kitteridge is set in Maine.\n- In Olive Kitteridge, Frances McDormand plays the title character Olive Kitteridge.\n- In Olive Kitteridge, Richard Jenkins plays Olive's husband Henry Kitteridge.\n- In Olive Kitteridge, Zoe Kazan plays Denise Thibodeau.\n- In Olive Kitteridge, Bill Murray plays Jack Kennison.\n- Bill Murray first gained exposure on Saturday Night Live.\n- Bill Murray earned his first Emmy Award for his performances on Saturday Night Live.\n- Bill Murray later starred in the comedy films Meatballs (1979), Caddyshack (1980), Stripes (1981), Tootsie (1982), Ghostbusters (1984), Scrooged (1988), Ghostbusters II (1989), and What About Bob?.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "deec67e2-e006-5404-8d29-ae61b637bad2",
+        "text": "Page: Olive Kitteridge (miniseries). Sentence: Set in Maine, the HBO miniseries features Frances McDormand as the title character, Richard Jenkins as Olive's loving husband Henry Kitteridge, Zoe Kazan as Denise Thibodeau, and Bill Murray as Jack Kennison.\nPage: Bill Murray. Sentence: He first gained exposure on \"Saturday Night Live\", a series of performances that earned him his first Emmy Award, and later starred in comedy films—including \"Meatballs\" (1979), \"Caddyshack\" (1980), \"Stripes\" (1981), \"Tootsie\" (1982), \"Ghostbusters\" (1984), \"Scrooged\" (1988), \"Ghostbusters II\" (1989), \"What About Bob?",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "a2a95619-ee30-54b2-8a50-7e1bf57eaa7f",
+        "text": "text_e3ca327d6ddb3e132e843254d0d2fad0",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "0dd9669e-0b90-5cd5-a184-9a553c778bba",
+        "text": "olive kitteridge",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "639fdde7-7841-5347-96e3-67ffadb56002",
+        "text": "maine",
+        "type": "Entity"
+      },
+      {
+        "id": 5,
+        "original_id": "5f394058-b2a0-5ba8-8466-ba2a18cfcf4e",
+        "text": "place",
+        "type": "EntityType"
+      },
+      {
+        "id": 6,
+        "original_id": "82d7649c-d136-5039-b19b-8078b6c2e85f",
+        "text": "hbo",
+        "type": "Entity"
+      },
+      {
+        "id": 7,
+        "original_id": "388f60fb-220d-55e8-ae9c-3ac93cead308",
+        "text": "organization",
+        "type": "EntityType"
+      },
+      {
+        "id": 8,
+        "original_id": "5263a535-1b4b-5925-be3e-310d03cd303b",
+        "text": "work",
+        "type": "EntityType"
+      },
+      {
+        "id": 9,
+        "original_id": "33efea5b-c2e7-5e0a-b586-999d2bdb01ad",
+        "text": "frances mcdormand",
+        "type": "Entity"
+      },
+      {
+        "id": 10,
+        "original_id": "99a82eec-bb35-5bb5-9ed2-e73fc7a756de",
+        "text": "person",
+        "type": "EntityType"
+      },
+      {
+        "id": 11,
+        "original_id": "da603643-8dd9-5e2a-9860-b63eeb0b665f",
+        "text": "richard jenkins",
+        "type": "Entity"
+      },
+      {
+        "id": 12,
+        "original_id": "03b95654-790c-56c7-a9c8-26270dd3c541",
+        "text": "henry kitteridge",
+        "type": "Entity"
+      },
+      {
+        "id": 13,
+        "original_id": "641a287f-4727-529b-b638-817008e61bbd",
+        "text": "zoe kazan",
+        "type": "Entity"
+      },
+      {
+        "id": 14,
+        "original_id": "48b4abff-53d8-5240-bf16-12ad42ae2293",
+        "text": "denise thibodeau",
+        "type": "Entity"
+      },
+      {
+        "id": 15,
+        "original_id": "77768a65-916d-583a-a593-5bf7a07fa376",
+        "text": "bill murray",
+        "type": "Entity"
+      },
+      {
+        "id": 16,
+        "original_id": "a74b138f-bdb4-555b-825a-ebe331035c3c",
+        "text": "jack kennison",
+        "type": "Entity"
+      },
+      {
+        "id": 17,
+        "original_id": "06edb165-6bb1-572c-8963-2533e92cac4b",
+        "text": "saturday night live",
+        "type": "Entity"
+      },
+      {
+        "id": 18,
+        "original_id": "440ae13f-14b3-5fcb-95e0-6581897cf59e",
+        "text": "emmy award",
+        "type": "Entity"
+      },
+      {
+        "id": 19,
+        "original_id": "38e42125-31f4-5cd6-993c-dbbc06a88910",
+        "text": "award",
+        "type": "EntityType"
+      },
+      {
+        "id": 20,
+        "original_id": "05c53130-10a0-5e3b-b80b-968842cbdd0e",
+        "text": "meatballs",
+        "type": "Entity"
+      },
+      {
+        "id": 21,
+        "original_id": "ec2eb309-0605-5993-9ada-11b2733384db",
+        "text": "1979",
+        "type": "Entity"
+      },
+      {
+        "id": 22,
+        "original_id": "b19433ae-558c-5aaf-95ac-6231f2a4be0e",
+        "text": "date",
+        "type": "EntityType"
+      },
+      {
+        "id": 23,
+        "original_id": "cc7d3239-87ba-5e69-8627-18b45892f64a",
+        "text": "caddyshack",
+        "type": "Entity"
+      },
+      {
+        "id": 24,
+        "original_id": "0f4fd0b2-fe7d-55ad-9354-6f20b613f9ba",
+        "text": "1980",
+        "type": "Entity"
+      },
+      {
+        "id": 25,
+        "original_id": "09b0f1bf-6848-50d1-b988-ef367506cb80",
+        "text": "stripes",
+        "type": "Entity"
+      },
+      {
+        "id": 26,
+        "original_id": "c8168101-3248-5fef-a74b-eb93b29b066e",
+        "text": "1981",
+        "type": "Entity"
+      },
+      {
+        "id": 27,
+        "original_id": "2dffa9bf-11a1-50fe-81d9-9165f4c711e2",
+        "text": "tootsie",
+        "type": "Entity"
+      },
+      {
+        "id": 28,
+        "original_id": "b7361ba3-6f3e-5c4c-991c-a40154e0cd9c",
+        "text": "1982",
+        "type": "Entity"
+      },
+      {
+        "id": 29,
+        "original_id": "3e1256a9-eb88-5184-a944-c065f27e9a37",
+        "text": "ghostbusters",
+        "type": "Entity"
+      },
+      {
+        "id": 30,
+        "original_id": "36535bda-358d-582c-896d-8489e824d5db",
+        "text": "1984",
+        "type": "Entity"
+      },
+      {
+        "id": 31,
+        "original_id": "755e6ab2-70f4-56c9-b25c-d8563ec65fde",
+        "text": "scrooged",
+        "type": "Entity"
+      },
+      {
+        "id": 32,
+        "original_id": "8c7fdeea-a7d3-5c37-888a-a00392b1f5ad",
+        "text": "1988",
+        "type": "Entity"
+      },
+      {
+        "id": 33,
+        "original_id": "a8a176be-7a95-55df-bb98-1880f1f1e785",
+        "text": "ghostbusters ii",
+        "type": "Entity"
+      },
+      {
+        "id": 34,
+        "original_id": "a8284cdd-dc3d-598c-ab45-6e38bcd96a48",
+        "text": "1989",
+        "type": "Entity"
+      },
+      {
+        "id": 35,
+        "original_id": "e844bfff-acf6-5992-8e2e-a0d297339433",
+        "text": "what about bob?",
+        "type": "Entity"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 9,
+        "target": 3,
+        "type": "acted_in"
+      },
+      {
+        "source": 11,
+        "target": 3,
+        "type": "acted_in"
+      },
+      {
+        "source": 12,
+        "target": 3,
+        "type": "appears_in"
+      },
+      {
+        "source": 13,
+        "target": 3,
+        "type": "acted_in"
+      },
+      {
+        "source": 14,
+        "target": 3,
+        "type": "appears_in"
+      },
+      {
+        "source": 15,
+        "target": 3,
+        "type": "acted_in"
+      },
+      {
+        "source": 16,
+        "target": 3,
+        "type": "appears_in"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "set_in"
+      },
+      {
+        "source": 1,
+        "target": 4,
+        "type": "contains"
+      },
+      {
+        "source": 4,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 6,
+        "type": "associated_with"
+      },
+      {
+        "source": 1,
+        "target": 6,
+        "type": "contains"
+      },
+      {
+        "source": 6,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 17,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 20,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 23,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 25,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 27,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 29,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 31,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 33,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 35,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 9,
+        "type": "contains"
+      },
+      {
+        "source": 9,
+        "target": 10,
+        "type": "is_a"
+      },
+      {
+        "source": 12,
+        "target": 10,
+        "type": "is_a"
+      },
+      {
+        "source": 11,
+        "target": 10,
+        "type": "is_a"
+      },
+      {
+        "source": 14,
+        "target": 10,
+        "type": "is_a"
+      },
+      {
+        "source": 13,
+        "target": 10,
+        "type": "is_a"
+      },
+      {
+        "source": 16,
+        "target": 10,
+        "type": "is_a"
+      },
+      {
+        "source": 15,
+        "target": 10,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 11,
+        "type": "contains"
+      },
+      {
+        "source": 11,
+        "target": 12,
+        "type": "played"
+      },
+      {
+        "source": 1,
+        "target": 12,
+        "type": "contains"
+      },
+      {
+        "source": 1,
+        "target": 13,
+        "type": "contains"
+      },
+      {
+        "source": 13,
+        "target": 14,
+        "type": "played"
+      },
+      {
+        "source": 1,
+        "target": 14,
+        "type": "contains"
+      },
+      {
+        "source": 1,
+        "target": 15,
+        "type": "contains"
+      },
+      {
+        "source": 15,
+        "target": 16,
+        "type": "played"
+      },
+      {
+        "source": 1,
+        "target": 16,
+        "type": "contains"
+      },
+      {
+        "source": 15,
+        "target": 17,
+        "type": "gained_exposure_on"
+      },
+      {
+        "source": 1,
+        "target": 17,
+        "type": "contains"
+      },
+      {
+        "source": 17,
+        "target": 18,
+        "type": "earned_for"
+      },
+      {
+        "source": 15,
+        "target": 18,
+        "type": "earned"
+      },
+      {
+        "source": 1,
+        "target": 18,
+        "type": "contains"
+      },
+      {
+        "source": 18,
+        "target": 19,
+        "type": "is_a"
+      },
+      {
+        "source": 15,
+        "target": 20,
+        "type": "starred_in"
+      },
+      {
+        "source": 1,
+        "target": 20,
+        "type": "contains"
+      },
+      {
+        "source": 20,
+        "target": 21,
+        "type": "released_in"
+      },
+      {
+        "source": 1,
+        "target": 21,
+        "type": "contains"
+      },
+      {
+        "source": 21,
+        "target": 22,
+        "type": "is_a"
+      },
+      {
+        "source": 24,
+        "target": 22,
+        "type": "is_a"
+      },
+      {
+        "source": 26,
+        "target": 22,
+        "type": "is_a"
+      },
+      {
+        "source": 28,
+        "target": 22,
+        "type": "is_a"
+      },
+      {
+        "source": 30,
+        "target": 22,
+        "type": "is_a"
+      },
+      {
+        "source": 32,
+        "target": 22,
+        "type": "is_a"
+      },
+      {
+        "source": 34,
+        "target": 22,
+        "type": "is_a"
+      },
+      {
+        "source": 15,
+        "target": 23,
+        "type": "starred_in"
+      },
+      {
+        "source": 1,
+        "target": 23,
+        "type": "contains"
+      },
+      {
+        "source": 23,
+        "target": 24,
+        "type": "released_in"
+      },
+      {
+        "source": 1,
+        "target": 24,
+        "type": "contains"
+      },
+      {
+        "source": 15,
+        "target": 25,
+        "type": "starred_in"
+      },
+      {
+        "source": 1,
+        "target": 25,
+        "type": "contains"
+      },
+      {
+        "source": 25,
+        "target": 26,
+        "type": "released_in"
+      },
+      {
+        "source": 1,
+        "target": 26,
+        "type": "contains"
+      },
+      {
+        "source": 15,
+        "target": 27,
+        "type": "starred_in"
+      },
+      {
+        "source": 1,
+        "target": 27,
+        "type": "contains"
+      },
+      {
+        "source": 27,
+        "target": 28,
+        "type": "released_in"
+      },
+      {
+        "source": 1,
+        "target": 28,
+        "type": "contains"
+      },
+      {
+        "source": 15,
+        "target": 29,
+        "type": "starred_in"
+      },
+      {
+        "source": 1,
+        "target": 29,
+        "type": "contains"
+      },
+      {
+        "source": 29,
+        "target": 30,
+        "type": "released_in"
+      },
+      {
+        "source": 1,
+        "target": 30,
+        "type": "contains"
+      },
+      {
+        "source": 15,
+        "target": 31,
+        "type": "starred_in"
+      },
+      {
+        "source": 1,
+        "target": 31,
+        "type": "contains"
+      },
+      {
+        "source": 31,
+        "target": 32,
+        "type": "released_in"
+      },
+      {
+        "source": 1,
+        "target": 32,
+        "type": "contains"
+      },
+      {
+        "source": 15,
+        "target": 33,
+        "type": "starred_in"
+      },
+      {
+        "source": 1,
+        "target": 33,
+        "type": "contains"
+      },
+      {
+        "source": 33,
+        "target": 34,
+        "type": "released_in"
+      },
+      {
+        "source": 1,
+        "target": 34,
+        "type": "contains"
+      },
+      {
+        "source": 15,
+        "target": 35,
+        "type": "starred_in"
+      },
+      {
+        "source": 1,
+        "target": 35,
+        "type": "contains"
+      }
+    ]
+  }
+}

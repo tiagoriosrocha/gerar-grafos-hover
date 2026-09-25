@@ -1,0 +1,799 @@
+{
+  "dataset": "hover",
+  "id": "f2eb4309-ec1f-4a04-9847-fc9283a70132",
+  "split": "train",
+  "claim": "David Seltzer directed more movies than Vincent Sherman.",
+  "evidencia": "Page: Vincent Sherman. Sentence: His movies include \"Mr. Skeffington\" (1944), \"Nora Prentiss\" (1947), and \"The Young Philadelphians\" (1959).\nPage: David Seltzer. Sentence: David Seltzer (born 1940) is an American screenwriter, producer and director, perhaps best known for writing the screenplays for \"The Omen\" (1976) and \"Bird on a Wire\" (1990).\nPage: David Seltzer. Sentence: As writer-director, Seltzer's credits include the 1986 teen tragi-comedy \"Lucas\" starring Corey Haim, Charlie Sheen and Winona Ryder, the 1988 comedy \"Punchline\" starring Sally Field and Tom Hanks, and 1992's \"Shining Through\" starring Melanie Griffith and Michael Douglas.",
+  "evidence_text": "Page: Vincent Sherman. Sentence: His movies include \"Mr. Skeffington\" (1944), \"Nora Prentiss\" (1947), and \"The Young Philadelphians\" (1959).\nPage: David Seltzer. Sentence: David Seltzer (born 1940) is an American screenwriter, producer and director, perhaps best known for writing the screenplays for \"The Omen\" (1976) and \"Bird on a Wire\" (1990).\nPage: David Seltzer. Sentence: As writer-director, Seltzer's credits include the 1986 teen tragi-comedy \"Lucas\" starring Corey Haim, Charlie Sheen and Winona Ryder, the 1988 comedy \"Punchline\" starring Sally Field and Tom Hanks, and 1992's \"Shining Through\" starring Melanie Griffith and Michael Douglas.",
+  "label": "SUPPORTED",
+  "num_hops": 2,
+  "hover_metadata": {
+    "supporting_facts": [
+      [
+        "Vincent Sherman",
+        1
+      ],
+      [
+        "David Seltzer",
+        0
+      ],
+      [
+        "David Seltzer",
+        1
+      ]
+    ],
+    "num_hops": 2,
+    "evidence_annotation_id": [
+      0
+    ],
+    "evidence_id": [
+      "Vincent Sherman::sentence::1",
+      "David Seltzer::sentence::0",
+      "David Seltzer::sentence::1"
+    ],
+    "evidence_wiki_url": [
+      "https://en.wikipedia.org/wiki/Vincent_Sherman",
+      "https://en.wikipedia.org/wiki/David_Seltzer"
+    ],
+    "evidence_sentence_id": [
+      "Vincent Sherman::sentence::1",
+      "David Seltzer::sentence::0",
+      "David Seltzer::sentence::1"
+    ]
+  },
+  "grafo_claim": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "8021e265-2dd2-50b6-9f8b-86999e78d022",
+        "text": "This chunk is about:\n- People: David Seltzer, Vincent Sherman\n- Roles: Film directors\n\nFacts:\n- David Seltzer and Vincent Sherman are both film directors.\n- David Seltzer directed more movies than Vincent Sherman.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "4a91970c-e6f8-5d03-a856-7b1db82bb2b6",
+        "text": "David Seltzer directed more movies than Vincent Sherman.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "5e35482a-aff9-50d8-8672-74b11ee4bcb0",
+        "text": "text_a7b15a2266ac26e35cba5ba09b582d24",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "abc1af90-f4f3-5f7c-be27-816ead5df259",
+        "text": "david seltzer",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "99a82eec-bb35-5bb5-9ed2-e73fc7a756de",
+        "text": "person",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "938e6c7f-7df5-5b3a-882d-b4c4106e7fa0",
+        "text": "vincent sherman",
+        "type": "Entity"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 5,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "directed_more_movies_than"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      }
+    ]
+  },
+  "grafo_evidencia": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "70aee69e-bfb3-5cf1-8ea0-56f5d2d58218",
+        "text": "This chunk is about:\n- People: Vincent Sherman, David Seltzer\n- Roles: film director, screenwriter, producer\n- Films: Mr. Skeffington, Nora Prentiss, The Young Philadelphians, The Omen, Bird on a Wire, Lucas, Punchline, Shining Through\n\nFacts:\n- Vincent Sherman directed the films \"Mr. Skeffington\" in 1944, \"Nora Prentiss\" in 1947, and \"The Young Philadelphians\" in 1959.\n- David Seltzer was born in 1940 and is an American screenwriter, producer, and director.\n- David Seltzer wrote the screenplay for \"The Omen\" in 1976.\n- David Seltzer wrote and directed the 1986 teen tragicomedy \"Lucas,\" which starred Corey Haim, Charlie Sheen, and Winona Ryder.\n- David Seltzer wrote and directed the 1988 comedy \"Punchline,\" which starred Sally Field and Tom Hanks.\n- David Seltzer wrote the screenplay for \"Bird on a Wire\" in 1990.\n- David Seltzer wrote and directed the 1992 film \"Shining Through,\" which starred Melanie Griffith and Michael Douglas.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "009d5b22-3795-5ccd-89b0-92688c02726f",
+        "text": "Page: Vincent Sherman. Sentence: His movies include \"Mr. Skeffington\" (1944), \"Nora Prentiss\" (1947), and \"The Young Philadelphians\" (1959).\nPage: David Seltzer. Sentence: David Seltzer (born 1940) is an American screenwriter, producer and director, perhaps best known for writing the screenplays for \"The Omen\" (1976) and \"Bird on a Wire\" (1990).\nPage: David Seltzer. Sentence: As writer-director, Seltzer's credits include the 1986 teen tragi-comedy \"Lucas\" starring Corey Haim, Charlie Sheen and Winona Ryder, the 1988 comedy \"Punchline\" starring Sally Field and Tom Hanks, and 1992's \"Shining Through\" starring Melanie Griffith and Michael Douglas.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "8a0ae1f7-38cd-5c04-9f6f-aa6cebfce4f1",
+        "text": "text_3ca980ee2f5bbd630a009941ff7ac0d5",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "938e6c7f-7df5-5b3a-882d-b4c4106e7fa0",
+        "text": "vincent sherman",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "99a82eec-bb35-5bb5-9ed2-e73fc7a756de",
+        "text": "person",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "c09f5bf8-df85-51d5-a659-d7ae54cf2bd9",
+        "text": "mr. skeffington",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "5263a535-1b4b-5925-be3e-310d03cd303b",
+        "text": "work",
+        "type": "EntityType"
+      },
+      {
+        "id": 7,
+        "original_id": "8dd450b2-2b85-5890-951e-f365a36fcc37",
+        "text": "1944",
+        "type": "Entity"
+      },
+      {
+        "id": 8,
+        "original_id": "b19433ae-558c-5aaf-95ac-6231f2a4be0e",
+        "text": "date",
+        "type": "EntityType"
+      },
+      {
+        "id": 9,
+        "original_id": "daf9925b-4b48-5d59-b722-0bd86c985eb7",
+        "text": "nora prentiss",
+        "type": "Entity"
+      },
+      {
+        "id": 10,
+        "original_id": "afa189e7-975d-54f3-9693-64d7785d0ff8",
+        "text": "1947",
+        "type": "Entity"
+      },
+      {
+        "id": 11,
+        "original_id": "745918c7-0338-59f3-8d64-471a8abab51f",
+        "text": "the young philadelphians",
+        "type": "Entity"
+      },
+      {
+        "id": 12,
+        "original_id": "6aa98d71-fd12-5360-8d7f-7847c9b990db",
+        "text": "1959",
+        "type": "Entity"
+      },
+      {
+        "id": 13,
+        "original_id": "abc1af90-f4f3-5f7c-be27-816ead5df259",
+        "text": "david seltzer",
+        "type": "Entity"
+      },
+      {
+        "id": 14,
+        "original_id": "57326032-3dce-50c6-95dd-f5eace54f804",
+        "text": "1940",
+        "type": "Entity"
+      },
+      {
+        "id": 15,
+        "original_id": "32e5ea46-cca9-5920-8b2d-77357f10ce8d",
+        "text": "american",
+        "type": "Entity"
+      },
+      {
+        "id": 16,
+        "original_id": "d2a381fa-3658-5ca6-ada9-2109cfc9331d",
+        "text": "concept",
+        "type": "EntityType"
+      },
+      {
+        "id": 17,
+        "original_id": "8e7b2f7b-bb03-564f-a168-a48df4aaf988",
+        "text": "screenwriter",
+        "type": "Entity"
+      },
+      {
+        "id": 18,
+        "original_id": "fc2230d6-898d-5221-b1ca-833b27ae6866",
+        "text": "producer",
+        "type": "Entity"
+      },
+      {
+        "id": 19,
+        "original_id": "4f624050-eb80-540a-b5c3-4ad67482ebad",
+        "text": "director",
+        "type": "Entity"
+      },
+      {
+        "id": 20,
+        "original_id": "7921611c-1bc2-5992-8754-76c67241e4d6",
+        "text": "the omen",
+        "type": "Entity"
+      },
+      {
+        "id": 21,
+        "original_id": "5ac33ea7-2993-57be-98a7-b9ee3561ff11",
+        "text": "1976",
+        "type": "Entity"
+      },
+      {
+        "id": 22,
+        "original_id": "e4fbb60c-d4ec-5f7a-9677-6180ad4c3c0a",
+        "text": "bird on a wire",
+        "type": "Entity"
+      },
+      {
+        "id": 23,
+        "original_id": "06c763af-3932-5349-95aa-45db0591abcc",
+        "text": "1990",
+        "type": "Entity"
+      },
+      {
+        "id": 24,
+        "original_id": "8119039f-89a1-55cf-84f5-b8155aeebe63",
+        "text": "lucas",
+        "type": "Entity"
+      },
+      {
+        "id": 25,
+        "original_id": "6ba1afd5-fed2-5c67-8f7d-ad0b76e9a9b6",
+        "text": "1986",
+        "type": "Entity"
+      },
+      {
+        "id": 26,
+        "original_id": "552cd301-143f-525f-a1fa-b876a67f0afc",
+        "text": "corey haim",
+        "type": "Entity"
+      },
+      {
+        "id": 27,
+        "original_id": "3b5c789f-bcde-5e79-9cf7-fa40378aba8d",
+        "text": "charlie sheen",
+        "type": "Entity"
+      },
+      {
+        "id": 28,
+        "original_id": "afb19d31-2264-5fee-93e1-5de805b68692",
+        "text": "winona ryder",
+        "type": "Entity"
+      },
+      {
+        "id": 29,
+        "original_id": "e2df884e-61a1-5e3c-b0e9-d70a688e7fbc",
+        "text": "punchline",
+        "type": "Entity"
+      },
+      {
+        "id": 30,
+        "original_id": "8c7fdeea-a7d3-5c37-888a-a00392b1f5ad",
+        "text": "1988",
+        "type": "Entity"
+      },
+      {
+        "id": 31,
+        "original_id": "2102e1af-694e-5d39-b3ca-9f1c3344847b",
+        "text": "sally field",
+        "type": "Entity"
+      },
+      {
+        "id": 32,
+        "original_id": "d20c7535-5975-532c-87b7-baa48eae10ca",
+        "text": "tom hanks",
+        "type": "Entity"
+      },
+      {
+        "id": 33,
+        "original_id": "3de26a3b-b7b4-5553-84c6-5cd25afb7d11",
+        "text": "shining through",
+        "type": "Entity"
+      },
+      {
+        "id": 34,
+        "original_id": "959b7eb2-55b9-5195-8ef5-802570f87d3c",
+        "text": "1992",
+        "type": "Entity"
+      },
+      {
+        "id": 35,
+        "original_id": "2f1b2761-2619-5bae-bcb8-a633c636a62d",
+        "text": "melanie griffith",
+        "type": "Entity"
+      },
+      {
+        "id": 36,
+        "original_id": "6a5e3882-5c8d-5e3a-9c4a-ff7d729b519c",
+        "text": "michael douglas",
+        "type": "Entity"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 13,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 26,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 27,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 28,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 31,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 32,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 35,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 36,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "has_movie"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 9,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 11,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 20,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 22,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 24,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 29,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 33,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 5,
+        "target": 7,
+        "type": "released_in"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      },
+      {
+        "source": 7,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 10,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 12,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 14,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 21,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 23,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 25,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 30,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 34,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 9,
+        "type": "has_movie"
+      },
+      {
+        "source": 1,
+        "target": 9,
+        "type": "contains"
+      },
+      {
+        "source": 9,
+        "target": 10,
+        "type": "released_in"
+      },
+      {
+        "source": 1,
+        "target": 10,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 11,
+        "type": "has_movie"
+      },
+      {
+        "source": 1,
+        "target": 11,
+        "type": "contains"
+      },
+      {
+        "source": 11,
+        "target": 12,
+        "type": "released_in"
+      },
+      {
+        "source": 1,
+        "target": 12,
+        "type": "contains"
+      },
+      {
+        "source": 1,
+        "target": 13,
+        "type": "contains"
+      },
+      {
+        "source": 13,
+        "target": 14,
+        "type": "born_in"
+      },
+      {
+        "source": 1,
+        "target": 14,
+        "type": "contains"
+      },
+      {
+        "source": 13,
+        "target": 15,
+        "type": "has_nationality"
+      },
+      {
+        "source": 1,
+        "target": 15,
+        "type": "contains"
+      },
+      {
+        "source": 15,
+        "target": 16,
+        "type": "is_a"
+      },
+      {
+        "source": 17,
+        "target": 16,
+        "type": "is_a"
+      },
+      {
+        "source": 18,
+        "target": 16,
+        "type": "is_a"
+      },
+      {
+        "source": 19,
+        "target": 16,
+        "type": "is_a"
+      },
+      {
+        "source": 13,
+        "target": 17,
+        "type": "has_profession"
+      },
+      {
+        "source": 1,
+        "target": 17,
+        "type": "contains"
+      },
+      {
+        "source": 13,
+        "target": 18,
+        "type": "has_profession"
+      },
+      {
+        "source": 1,
+        "target": 18,
+        "type": "contains"
+      },
+      {
+        "source": 13,
+        "target": 19,
+        "type": "has_profession"
+      },
+      {
+        "source": 1,
+        "target": 19,
+        "type": "contains"
+      },
+      {
+        "source": 13,
+        "target": 20,
+        "type": "wrote_screenplay_for"
+      },
+      {
+        "source": 1,
+        "target": 20,
+        "type": "contains"
+      },
+      {
+        "source": 20,
+        "target": 21,
+        "type": "released_in"
+      },
+      {
+        "source": 1,
+        "target": 21,
+        "type": "contains"
+      },
+      {
+        "source": 13,
+        "target": 22,
+        "type": "wrote_screenplay_for"
+      },
+      {
+        "source": 1,
+        "target": 22,
+        "type": "contains"
+      },
+      {
+        "source": 22,
+        "target": 23,
+        "type": "released_in"
+      },
+      {
+        "source": 1,
+        "target": 23,
+        "type": "contains"
+      },
+      {
+        "source": 13,
+        "target": 24,
+        "type": "writer_director_of"
+      },
+      {
+        "source": 1,
+        "target": 24,
+        "type": "contains"
+      },
+      {
+        "source": 24,
+        "target": 25,
+        "type": "released_in"
+      },
+      {
+        "source": 1,
+        "target": 25,
+        "type": "contains"
+      },
+      {
+        "source": 24,
+        "target": 26,
+        "type": "stars"
+      },
+      {
+        "source": 1,
+        "target": 26,
+        "type": "contains"
+      },
+      {
+        "source": 24,
+        "target": 27,
+        "type": "stars"
+      },
+      {
+        "source": 1,
+        "target": 27,
+        "type": "contains"
+      },
+      {
+        "source": 24,
+        "target": 28,
+        "type": "stars"
+      },
+      {
+        "source": 1,
+        "target": 28,
+        "type": "contains"
+      },
+      {
+        "source": 13,
+        "target": 29,
+        "type": "writer_director_of"
+      },
+      {
+        "source": 1,
+        "target": 29,
+        "type": "contains"
+      },
+      {
+        "source": 29,
+        "target": 30,
+        "type": "released_in"
+      },
+      {
+        "source": 1,
+        "target": 30,
+        "type": "contains"
+      },
+      {
+        "source": 29,
+        "target": 31,
+        "type": "stars"
+      },
+      {
+        "source": 1,
+        "target": 31,
+        "type": "contains"
+      },
+      {
+        "source": 29,
+        "target": 32,
+        "type": "stars"
+      },
+      {
+        "source": 1,
+        "target": 32,
+        "type": "contains"
+      },
+      {
+        "source": 13,
+        "target": 33,
+        "type": "writer_director_of"
+      },
+      {
+        "source": 1,
+        "target": 33,
+        "type": "contains"
+      },
+      {
+        "source": 33,
+        "target": 34,
+        "type": "released_in"
+      },
+      {
+        "source": 1,
+        "target": 34,
+        "type": "contains"
+      },
+      {
+        "source": 33,
+        "target": 35,
+        "type": "stars"
+      },
+      {
+        "source": 1,
+        "target": 35,
+        "type": "contains"
+      },
+      {
+        "source": 33,
+        "target": 36,
+        "type": "stars"
+      },
+      {
+        "source": 1,
+        "target": 36,
+        "type": "contains"
+      }
+    ]
+  }
+}

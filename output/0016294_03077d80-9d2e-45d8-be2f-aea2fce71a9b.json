@@ -1,0 +1,386 @@
+{
+  "dataset": "hover",
+  "id": "03077d80-9d2e-45d8-be2f-aea2fce71a9b",
+  "split": "train",
+  "claim": "Robert Thornby was born before the filmmaker who worked on \"Simon Birch\".",
+  "evidencia": "Page: Mark Steven Johnson. Sentence: Mark Steven Johnson (born October 30, 1964) is an American screenwriter, film director, and producer.\nPage: Robert Thornby. Sentence: Robert Thornby (March 27, 1888 – March 6, 1953) was an American director and actor of the silent era.\nPage: Simon Birch. Sentence: Simon Birch is a 1998 American comedy-drama film loosely based on \"A Prayer for Owen Meany\" by John Irving and was directed and written for the screen by Mark Steven Johnson.",
+  "evidence_text": "Page: Mark Steven Johnson. Sentence: Mark Steven Johnson (born October 30, 1964) is an American screenwriter, film director, and producer.\nPage: Robert Thornby. Sentence: Robert Thornby (March 27, 1888 – March 6, 1953) was an American director and actor of the silent era.\nPage: Simon Birch. Sentence: Simon Birch is a 1998 American comedy-drama film loosely based on \"A Prayer for Owen Meany\" by John Irving and was directed and written for the screen by Mark Steven Johnson.",
+  "label": "SUPPORTED",
+  "num_hops": 3,
+  "hover_metadata": {
+    "supporting_facts": [
+      [
+        "Mark Steven Johnson",
+        0
+      ],
+      [
+        "Robert Thornby",
+        0
+      ],
+      [
+        "Simon Birch",
+        0
+      ]
+    ],
+    "num_hops": 3,
+    "evidence_annotation_id": [
+      0
+    ],
+    "evidence_id": [
+      "Mark Steven Johnson::sentence::0",
+      "Robert Thornby::sentence::0",
+      "Simon Birch::sentence::0"
+    ],
+    "evidence_wiki_url": [
+      "https://en.wikipedia.org/wiki/Mark_Steven_Johnson",
+      "https://en.wikipedia.org/wiki/Robert_Thornby",
+      "https://en.wikipedia.org/wiki/Simon_Birch"
+    ],
+    "evidence_sentence_id": [
+      "Mark Steven Johnson::sentence::0",
+      "Robert Thornby::sentence::0",
+      "Simon Birch::sentence::0"
+    ]
+  },
+  "grafo_claim": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "f3b834f7-42cb-5383-b862-7d858d0d9b40",
+        "text": "This chunk is about:\n- People: Robert Thornby, Mark Steven Johnson\n- Films: Simon Birch\n\nFacts:\n- Mark Steven Johnson worked on the film \"Simon Birch.\"\n- Robert Thornby was born before Mark Steven Johnson.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "05662e52-be64-57ff-905f-51bddfb7550e",
+        "text": "Robert Thornby was born before the filmmaker who worked on \"Simon Birch\".",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "bc1ddd4d-8bfd-5cdc-8d26-bdcc30580fc1",
+        "text": "text_4a236380638f484ca9c005a74db4a252",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "9925615e-588c-5784-994a-bd4fa9f8fec2",
+        "text": "robert thornby",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "99a82eec-bb35-5bb5-9ed2-e73fc7a756de",
+        "text": "person",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "e7695f7a-dfa1-5a57-9be4-c9318c709a20",
+        "text": "filmmaker who worked on simon birch",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "bc56780d-1f71-5f8c-ae83-1fe56ac76565",
+        "text": "simon birch",
+        "type": "Entity"
+      },
+      {
+        "id": 7,
+        "original_id": "5263a535-1b4b-5925-be3e-310d03cd303b",
+        "text": "work",
+        "type": "EntityType"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 5,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "born_before"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "worked_on"
+      },
+      {
+        "source": 1,
+        "target": 6,
+        "type": "contains"
+      },
+      {
+        "source": 6,
+        "target": 7,
+        "type": "is_a"
+      }
+    ]
+  },
+  "grafo_evidencia": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "c21f2b7d-3371-5ae4-8943-6737749d75de",
+        "text": "This chunk is about:\n- People: Mark Steven Johnson, Robert Thornby, John Irving\n- Films: Simon Birch\n- Roles: screenwriter, film director, producer, director, actor\n- Topics: silent era, film adaptation\n\nFacts:\n- Robert Thornby was born on March 27, 1888, and he was an American director and actor of the silent era.\n- Robert Thornby died on March 6, 1953.\n- Mark Steven Johnson was born on October 30, 1964, and he is an American screenwriter, film director, and producer.\n- Simon Birch is a 1998 American comedy-drama film.\n- Simon Birch was loosely based on A Prayer for Owen Meany by John Irving.\n- Mark Steven Johnson directed Simon Birch and wrote its screenplay.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "673def9a-ef80-595a-b200-8324c1f02e8d",
+        "text": "Page: Mark Steven Johnson. Sentence: Mark Steven Johnson (born October 30, 1964) is an American screenwriter, film director, and producer.\nPage: Robert Thornby. Sentence: Robert Thornby (March 27, 1888 – March 6, 1953) was an American director and actor of the silent era.\nPage: Simon Birch. Sentence: Simon Birch is a 1998 American comedy-drama film loosely based on \"A Prayer for Owen Meany\" by John Irving and was directed and written for the screen by Mark Steven Johnson.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "8159949c-2ee1-53f6-9f1f-558b69da7155",
+        "text": "text_ef31540dc4ed38daf2ab60eef99521cc",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "80428728-b50c-57a3-a142-d6b299c46d85",
+        "text": "mark steven johnson",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "99a82eec-bb35-5bb5-9ed2-e73fc7a756de",
+        "text": "person",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "bb22567a-e721-5fa8-b672-3d27c3710b20",
+        "text": "1964-10-30",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "b19433ae-558c-5aaf-95ac-6231f2a4be0e",
+        "text": "date",
+        "type": "EntityType"
+      },
+      {
+        "id": 7,
+        "original_id": "9925615e-588c-5784-994a-bd4fa9f8fec2",
+        "text": "robert thornby",
+        "type": "Entity"
+      },
+      {
+        "id": 8,
+        "original_id": "a9ae3e48-9f09-572c-9895-8680f5ae24ef",
+        "text": "1888-03-27",
+        "type": "Entity"
+      },
+      {
+        "id": 9,
+        "original_id": "0be5e6a1-68a3-5bfb-8da0-43daa71b2c49",
+        "text": "1953-03-06",
+        "type": "Entity"
+      },
+      {
+        "id": 10,
+        "original_id": "bc56780d-1f71-5f8c-ae83-1fe56ac76565",
+        "text": "simon birch",
+        "type": "Entity"
+      },
+      {
+        "id": 11,
+        "original_id": "d320c8df-fd51-56e6-b577-e01a688fe6fc",
+        "text": "film",
+        "type": "EntityType"
+      },
+      {
+        "id": 12,
+        "original_id": "111f07f3-2527-5bbf-827f-7a18bb37f150",
+        "text": "1998",
+        "type": "Entity"
+      },
+      {
+        "id": 13,
+        "original_id": "db1cf353-0815-534e-a0ea-dcf46b031508",
+        "text": "a prayer for owen meany",
+        "type": "Entity"
+      },
+      {
+        "id": 14,
+        "original_id": "5263a535-1b4b-5925-be3e-310d03cd303b",
+        "text": "work",
+        "type": "EntityType"
+      },
+      {
+        "id": 15,
+        "original_id": "5a42ea25-b5a9-54b1-8623-bc72a8f70d4d",
+        "text": "john irving",
+        "type": "Entity"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 10,
+        "target": 3,
+        "type": "directed_by"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 7,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 15,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "born_on"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 8,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 9,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 12,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      },
+      {
+        "source": 7,
+        "target": 8,
+        "type": "born_on"
+      },
+      {
+        "source": 1,
+        "target": 8,
+        "type": "contains"
+      },
+      {
+        "source": 7,
+        "target": 9,
+        "type": "died_on"
+      },
+      {
+        "source": 1,
+        "target": 9,
+        "type": "contains"
+      },
+      {
+        "source": 1,
+        "target": 10,
+        "type": "contains"
+      },
+      {
+        "source": 10,
+        "target": 11,
+        "type": "is_a"
+      },
+      {
+        "source": 10,
+        "target": 12,
+        "type": "released_in"
+      },
+      {
+        "source": 1,
+        "target": 12,
+        "type": "contains"
+      },
+      {
+        "source": 10,
+        "target": 13,
+        "type": "loosely_based_on"
+      },
+      {
+        "source": 1,
+        "target": 13,
+        "type": "contains"
+      },
+      {
+        "source": 13,
+        "target": 14,
+        "type": "is_a"
+      },
+      {
+        "source": 13,
+        "target": 15,
+        "type": "created_by"
+      },
+      {
+        "source": 1,
+        "target": 15,
+        "type": "contains"
+      }
+    ]
+  }
+}

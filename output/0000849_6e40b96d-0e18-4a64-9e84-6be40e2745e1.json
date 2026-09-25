@@ -1,0 +1,416 @@
+{
+  "dataset": "hover",
+  "id": "6e40b96d-0e18-4a64-9e84-6be40e2745e1",
+  "split": "train",
+  "claim": "The large village Abbots Langley is serviced by the Kings Langley railway station and was mentioned in the Domesday Book under the name of Langelai.",
+  "evidencia": "Page: Kings Langley railway station. Sentence: Kings Langley railway station is just under the M25 motorway at Junction 20.\nPage: Kings Langley railway station. Sentence: It serves the village of Kings Langley, and the nearby villages of Abbots Langley and Hunton Bridge.\nPage: Abbots Langley. Sentence: Abbots Langley is a large village and civil parish in the English county of Hertfordshire.\nPage: Abbots Langley. Sentence: It is an old settlement and is mentioned (under the name of Langelai) in the Domesday Book.",
+  "evidence_text": "Page: Kings Langley railway station. Sentence: Kings Langley railway station is just under the M25 motorway at Junction 20.\nPage: Kings Langley railway station. Sentence: It serves the village of Kings Langley, and the nearby villages of Abbots Langley and Hunton Bridge.\nPage: Abbots Langley. Sentence: Abbots Langley is a large village and civil parish in the English county of Hertfordshire.\nPage: Abbots Langley. Sentence: It is an old settlement and is mentioned (under the name of Langelai) in the Domesday Book.",
+  "label": "SUPPORTED",
+  "num_hops": 2,
+  "hover_metadata": {
+    "supporting_facts": [
+      [
+        "Kings Langley railway station",
+        0
+      ],
+      [
+        "Kings Langley railway station",
+        1
+      ],
+      [
+        "Abbots Langley",
+        0
+      ],
+      [
+        "Abbots Langley",
+        1
+      ]
+    ],
+    "num_hops": 2,
+    "evidence_annotation_id": [
+      0
+    ],
+    "evidence_id": [
+      "Kings Langley railway station::sentence::0",
+      "Kings Langley railway station::sentence::1",
+      "Abbots Langley::sentence::0",
+      "Abbots Langley::sentence::1"
+    ],
+    "evidence_wiki_url": [
+      "https://en.wikipedia.org/wiki/Kings_Langley_railway_station",
+      "https://en.wikipedia.org/wiki/Abbots_Langley"
+    ],
+    "evidence_sentence_id": [
+      "Kings Langley railway station::sentence::0",
+      "Kings Langley railway station::sentence::1",
+      "Abbots Langley::sentence::0",
+      "Abbots Langley::sentence::1"
+    ]
+  },
+  "grafo_claim": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "aab5e3de-4f1e-5a3e-b5c2-42061f3fffe4",
+        "text": "This chunk is about:\n- Places: Abbots Langley, Kings Langley railway station\n- Topics: Domesday Book\n\nFacts:\n- The Domesday Book mentioned Abbots Langley under the name Langelai.\n- Abbots Langley is a large village.\n- Kings Langley railway station services Abbots Langley.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "4e8c68ec-5a8f-51fb-b72b-ab08e2afa46e",
+        "text": "The large village Abbots Langley is serviced by the Kings Langley railway station and was mentioned in the Domesday Book under the name of Langelai.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "b30c04fe-6ef3-5901-a3bb-737363277224",
+        "text": "text_c2580eeddf7b39279cf8a50f660443d7",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "ec8f9c36-7801-5c1a-b167-e6552719bb4f",
+        "text": "abbots langley",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "3b32f766-b3dd-5e94-9b76-0c980e91462b",
+        "text": "kings langley railway station",
+        "type": "Entity"
+      },
+      {
+        "id": 5,
+        "original_id": "5f394058-b2a0-5ba8-8466-ba2a18cfcf4e",
+        "text": "place",
+        "type": "EntityType"
+      },
+      {
+        "id": 6,
+        "original_id": "4522e996-7c90-5017-920c-43b90214bffc",
+        "text": "domesday book",
+        "type": "Entity"
+      },
+      {
+        "id": 7,
+        "original_id": "3faed6ef-3d90-5ffd-9229-cfb62eb68140",
+        "text": "book",
+        "type": "EntityType"
+      },
+      {
+        "id": 8,
+        "original_id": "3069bd57-c249-551b-b117-c07dfe582cd7",
+        "text": "langelai",
+        "type": "Entity"
+      },
+      {
+        "id": 9,
+        "original_id": "39575085-0710-527d-bd54-019de7b00429",
+        "text": "name",
+        "type": "EntityType"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_serviced_by"
+      },
+      {
+        "source": 1,
+        "target": 4,
+        "type": "contains"
+      },
+      {
+        "source": 4,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 6,
+        "type": "mentioned_in"
+      },
+      {
+        "source": 1,
+        "target": 6,
+        "type": "contains"
+      },
+      {
+        "source": 6,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 8,
+        "type": "mentioned_under_name"
+      },
+      {
+        "source": 1,
+        "target": 8,
+        "type": "contains"
+      },
+      {
+        "source": 8,
+        "target": 9,
+        "type": "is_a"
+      }
+    ]
+  },
+  "grafo_evidencia": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "006e6819-568e-5e14-bdd9-dbc472d4e705",
+        "text": "This chunk is about:\n- Places: Kings Langley railway station, Kings Langley, Abbots Langley, Hunton Bridge, Hertfordshire\n- Systems: M25 motorway, Junction 20\n- Concepts: civil parish, Domesday Book\n\nFacts:\n- Abbots Langley is an old settlement that was mentioned in the Domesday Book under the name Langelai.\n- Abbots Langley is a large village and civil parish in the English county of Hertfordshire.\n- Kings Langley railway station is located just under the M25 motorway at Junction 20.\n- Kings Langley railway station serves the village of Kings Langley and the nearby villages of Abbots Langley and Hunton Bridge.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "5e8daf45-6627-5b10-b88c-bb67834cb110",
+        "text": "Page: Kings Langley railway station. Sentence: Kings Langley railway station is just under the M25 motorway at Junction 20.\nPage: Kings Langley railway station. Sentence: It serves the village of Kings Langley, and the nearby villages of Abbots Langley and Hunton Bridge.\nPage: Abbots Langley. Sentence: Abbots Langley is a large village and civil parish in the English county of Hertfordshire.\nPage: Abbots Langley. Sentence: It is an old settlement and is mentioned (under the name of Langelai) in the Domesday Book.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "1e4b2048-be15-5828-ab3a-5afd5fef8f4f",
+        "text": "text_c9a8c862f142b1ec9ac205d4f27f7cdb",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "3b32f766-b3dd-5e94-9b76-0c980e91462b",
+        "text": "kings langley railway station",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "0862a033-3334-5331-846e-7ff0fdb12d5d",
+        "text": "m25 motorway",
+        "type": "Entity"
+      },
+      {
+        "id": 5,
+        "original_id": "5f394058-b2a0-5ba8-8466-ba2a18cfcf4e",
+        "text": "place",
+        "type": "EntityType"
+      },
+      {
+        "id": 6,
+        "original_id": "c6af1c90-9c97-57da-aa1c-4a9b7f7083ae",
+        "text": "junction 20",
+        "type": "Entity"
+      },
+      {
+        "id": 7,
+        "original_id": "d041d4f7-310b-536a-8f7a-c59c11a8e7c6",
+        "text": "kings langley",
+        "type": "Entity"
+      },
+      {
+        "id": 8,
+        "original_id": "ec8f9c36-7801-5c1a-b167-e6552719bb4f",
+        "text": "abbots langley",
+        "type": "Entity"
+      },
+      {
+        "id": 9,
+        "original_id": "3933dcf2-13e1-5e9e-94c8-b0ebebcfb9c5",
+        "text": "hertfordshire",
+        "type": "Entity"
+      },
+      {
+        "id": 10,
+        "original_id": "3069bd57-c249-551b-b117-c07dfe582cd7",
+        "text": "langelai",
+        "type": "Entity"
+      },
+      {
+        "id": 11,
+        "original_id": "4522e996-7c90-5017-920c-43b90214bffc",
+        "text": "domesday book",
+        "type": "Entity"
+      },
+      {
+        "id": 12,
+        "original_id": "5263a535-1b4b-5925-be3e-310d03cd303b",
+        "text": "work",
+        "type": "EntityType"
+      },
+      {
+        "id": 13,
+        "original_id": "8f020358-2f69-57da-bf9a-ab0ecde1be12",
+        "text": "hunton bridge",
+        "type": "Entity"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_under"
+      },
+      {
+        "source": 6,
+        "target": 4,
+        "type": "is_junction_of"
+      },
+      {
+        "source": 1,
+        "target": 4,
+        "type": "contains"
+      },
+      {
+        "source": 4,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 6,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 7,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 9,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 10,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 8,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 13,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 6,
+        "type": "is_at"
+      },
+      {
+        "source": 1,
+        "target": 6,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 7,
+        "type": "serves"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 8,
+        "type": "serves"
+      },
+      {
+        "source": 1,
+        "target": 8,
+        "type": "contains"
+      },
+      {
+        "source": 8,
+        "target": 9,
+        "type": "is_in"
+      },
+      {
+        "source": 1,
+        "target": 9,
+        "type": "contains"
+      },
+      {
+        "source": 8,
+        "target": 10,
+        "type": "was_named"
+      },
+      {
+        "source": 1,
+        "target": 10,
+        "type": "contains"
+      },
+      {
+        "source": 8,
+        "target": 11,
+        "type": "is_mentioned_in"
+      },
+      {
+        "source": 1,
+        "target": 11,
+        "type": "contains"
+      },
+      {
+        "source": 11,
+        "target": 12,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 13,
+        "type": "serves"
+      },
+      {
+        "source": 1,
+        "target": 13,
+        "type": "contains"
+      }
+    ]
+  }
+}

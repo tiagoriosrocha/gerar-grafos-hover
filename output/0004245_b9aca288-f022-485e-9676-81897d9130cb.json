@@ -1,0 +1,483 @@
+{
+  "dataset": "hover",
+  "id": "b9aca288-f022-485e-9676-81897d9130cb",
+  "split": "train",
+  "claim": "The creator of \"Too Romantic\" was born before this writer. He wrote the film Cold Weather.",
+  "evidencia": "Page: Todd Field. Sentence: William Todd Field (born February 24, 1964) is an American actor and three-time Academy Award nominated filmmaker.\nPage: Aaron Katz (filmmaker). Sentence: Aaron Katz (born October 29, 1981) is an award-winning independent American filmmaker from Portland, Oregon.\nPage: Too Romantic. Sentence: Too Romantic is a 1992 dramatic short film that Todd Field created while a fellow at the AFI Conservatory.\nPage: Cold Weather. Sentence: Cold Weather is an American mystery film written by Aaron Katz, Ben Stambler, and Brendan McFadden and directed by Katz with Stambler and McFadden producing.",
+  "evidence_text": "Page: Todd Field. Sentence: William Todd Field (born February 24, 1964) is an American actor and three-time Academy Award nominated filmmaker.\nPage: Aaron Katz (filmmaker). Sentence: Aaron Katz (born October 29, 1981) is an award-winning independent American filmmaker from Portland, Oregon.\nPage: Too Romantic. Sentence: Too Romantic is a 1992 dramatic short film that Todd Field created while a fellow at the AFI Conservatory.\nPage: Cold Weather. Sentence: Cold Weather is an American mystery film written by Aaron Katz, Ben Stambler, and Brendan McFadden and directed by Katz with Stambler and McFadden producing.",
+  "label": "SUPPORTED",
+  "num_hops": 4,
+  "hover_metadata": {
+    "supporting_facts": [
+      [
+        "Todd Field",
+        0
+      ],
+      [
+        "Aaron Katz (filmmaker)",
+        0
+      ],
+      [
+        "Too Romantic",
+        0
+      ],
+      [
+        "Cold Weather",
+        0
+      ]
+    ],
+    "num_hops": 4,
+    "evidence_annotation_id": [
+      0
+    ],
+    "evidence_id": [
+      "Todd Field::sentence::0",
+      "Aaron Katz (filmmaker)::sentence::0",
+      "Too Romantic::sentence::0",
+      "Cold Weather::sentence::0"
+    ],
+    "evidence_wiki_url": [
+      "https://en.wikipedia.org/wiki/Todd_Field",
+      "https://en.wikipedia.org/wiki/Aaron_Katz_%28filmmaker%29",
+      "https://en.wikipedia.org/wiki/Too_Romantic",
+      "https://en.wikipedia.org/wiki/Cold_Weather"
+    ],
+    "evidence_sentence_id": [
+      "Todd Field::sentence::0",
+      "Aaron Katz (filmmaker)::sentence::0",
+      "Too Romantic::sentence::0",
+      "Cold Weather::sentence::0"
+    ]
+  },
+  "grafo_claim": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "aceaa865-e544-5b54-bdab-9ed8b018024e",
+        "text": "This chunk is about:\n- Works: Too Romantic, Cold Weather\n- People: the creator of Too Romantic, the writer of Cold Weather\n\nFacts:\n- The creator of Too Romantic was born before the writer referenced in this chunk.\n- The writer referenced in this chunk wrote the film Cold Weather.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "912dbcde-9daa-55fa-9ca5-e83b6108a20d",
+        "text": "The creator of \"Too Romantic\" was born before this writer. He wrote the film Cold Weather.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "944a4ef5-3270-546c-9d39-3ee97d43daef",
+        "text": "text_ed4d98caf218ca209b506807696588cf",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "c4433988-9363-5d28-8a83-72273c2ebf02",
+        "text": "too romantic",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "5263a535-1b4b-5925-be3e-310d03cd303b",
+        "text": "work",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "3348c812-db88-53f4-81a3-7e2e79fe726e",
+        "text": "creator of too romantic",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "21832b47-aefd-5832-8158-9563322619fa",
+        "text": "writer",
+        "type": "Entity"
+      },
+      {
+        "id": 7,
+        "original_id": "f5a5f60d-d758-5b9b-a03b-19172d9add9f",
+        "text": "cold weather",
+        "type": "Entity"
+      },
+      {
+        "id": 8,
+        "original_id": "99a82eec-bb35-5bb5-9ed2-e73fc7a756de",
+        "text": "person",
+        "type": "EntityType"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 3,
+        "type": "created"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 7,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "born_before"
+      },
+      {
+        "source": 1,
+        "target": 6,
+        "type": "contains"
+      },
+      {
+        "source": 6,
+        "target": 7,
+        "type": "wrote"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      },
+      {
+        "source": 6,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 5,
+        "target": 8,
+        "type": "is_a"
+      }
+    ]
+  },
+  "grafo_evidencia": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "8c736fbc-fab6-5c0c-9ced-8a88f6555440",
+        "text": "This chunk is about:\n- People: Todd Field, Aaron Katz, Ben Stambler, Brendan McFadden\n- Films: Too Romantic, Cold Weather\n- Organizations: AFI Conservatory, Academy Awards\n- Places: Portland, Oregon\n- Roles: actor, filmmaker, writer, director, producer\n\nFacts:\n- Todd Field was born on February 24, 1964, and he is an American actor and a filmmaker who has received three Academy Award nominations.\n- Too Romantic is a 1992 dramatic short film that Todd Field created while he was a fellow at the AFI Conservatory.\n- Aaron Katz was born on October 29, 1981, and he is an award-winning independent American filmmaker from Portland, Oregon.\n- Cold Weather is an American mystery film written by Aaron Katz, Ben Stambler, and Brendan McFadden, directed by Aaron Katz, and produced by Ben Stambler and Brendan McFadden.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "1d86ad7d-7790-50dc-a93f-197e2adcbf53",
+        "text": "Page: Todd Field. Sentence: William Todd Field (born February 24, 1964) is an American actor and three-time Academy Award nominated filmmaker.\nPage: Aaron Katz (filmmaker). Sentence: Aaron Katz (born October 29, 1981) is an award-winning independent American filmmaker from Portland, Oregon.\nPage: Too Romantic. Sentence: Too Romantic is a 1992 dramatic short film that Todd Field created while a fellow at the AFI Conservatory.\nPage: Cold Weather. Sentence: Cold Weather is an American mystery film written by Aaron Katz, Ben Stambler, and Brendan McFadden and directed by Katz with Stambler and McFadden producing.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "bdbd3a00-490c-5c3b-8703-af881d361038",
+        "text": "text_44630a0b01bfecaf9fbeb0bb61ca3f7b",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "e5fca914-c332-59d2-80cf-5b1e98713444",
+        "text": "todd field",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "92d3fd25-5850-5e73-949d-632d8f9a349c",
+        "text": "william todd field",
+        "type": "Entity"
+      },
+      {
+        "id": 5,
+        "original_id": "0dcbfd2a-4893-5eca-aa1f-a216adb31de9",
+        "text": "1964-02-24",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "b19433ae-558c-5aaf-95ac-6231f2a4be0e",
+        "text": "date",
+        "type": "EntityType"
+      },
+      {
+        "id": 7,
+        "original_id": "99a82eec-bb35-5bb5-9ed2-e73fc7a756de",
+        "text": "person",
+        "type": "EntityType"
+      },
+      {
+        "id": 8,
+        "original_id": "c4433988-9363-5d28-8a83-72273c2ebf02",
+        "text": "too romantic",
+        "type": "Entity"
+      },
+      {
+        "id": 9,
+        "original_id": "959b7eb2-55b9-5195-8ef5-802570f87d3c",
+        "text": "1992",
+        "type": "Entity"
+      },
+      {
+        "id": 10,
+        "original_id": "5263a535-1b4b-5925-be3e-310d03cd303b",
+        "text": "work",
+        "type": "EntityType"
+      },
+      {
+        "id": 11,
+        "original_id": "b52463ff-60a1-56ce-aa5b-699960733e2e",
+        "text": "afi conservatory",
+        "type": "Entity"
+      },
+      {
+        "id": 12,
+        "original_id": "388f60fb-220d-55e8-ae9c-3ac93cead308",
+        "text": "organization",
+        "type": "EntityType"
+      },
+      {
+        "id": 13,
+        "original_id": "e71f400e-c988-50bd-b64c-d1ac3272dd33",
+        "text": "aaron katz",
+        "type": "Entity"
+      },
+      {
+        "id": 14,
+        "original_id": "56847095-82ce-5271-94a3-13ba8ddd9d89",
+        "text": "1981-10-29",
+        "type": "Entity"
+      },
+      {
+        "id": 15,
+        "original_id": "04819dd4-a3a7-5b5b-99c9-a29102bb483f",
+        "text": "portland, oregon",
+        "type": "Entity"
+      },
+      {
+        "id": 16,
+        "original_id": "5f394058-b2a0-5ba8-8466-ba2a18cfcf4e",
+        "text": "place",
+        "type": "EntityType"
+      },
+      {
+        "id": 17,
+        "original_id": "f5a5f60d-d758-5b9b-a03b-19172d9add9f",
+        "text": "cold weather",
+        "type": "Entity"
+      },
+      {
+        "id": 18,
+        "original_id": "72c99f41-dbb3-57de-845f-8be477a10d36",
+        "text": "ben stambler",
+        "type": "Entity"
+      },
+      {
+        "id": 19,
+        "original_id": "1ddff493-6097-563f-b8da-1df327c0982a",
+        "text": "brendan mcfadden",
+        "type": "Entity"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_same_as"
+      },
+      {
+        "source": 1,
+        "target": 4,
+        "type": "contains"
+      },
+      {
+        "source": 4,
+        "target": 5,
+        "type": "born_on"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 9,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 14,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 4,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 13,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 18,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 19,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 8,
+        "type": "created"
+      },
+      {
+        "source": 1,
+        "target": 8,
+        "type": "contains"
+      },
+      {
+        "source": 8,
+        "target": 9,
+        "type": "released_in"
+      },
+      {
+        "source": 1,
+        "target": 9,
+        "type": "contains"
+      },
+      {
+        "source": 8,
+        "target": 10,
+        "type": "is_a"
+      },
+      {
+        "source": 17,
+        "target": 10,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 11,
+        "type": "was_fellow_at"
+      },
+      {
+        "source": 1,
+        "target": 11,
+        "type": "contains"
+      },
+      {
+        "source": 11,
+        "target": 12,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 13,
+        "type": "contains"
+      },
+      {
+        "source": 13,
+        "target": 14,
+        "type": "born_on"
+      },
+      {
+        "source": 1,
+        "target": 14,
+        "type": "contains"
+      },
+      {
+        "source": 13,
+        "target": 15,
+        "type": "from"
+      },
+      {
+        "source": 1,
+        "target": 15,
+        "type": "contains"
+      },
+      {
+        "source": 15,
+        "target": 16,
+        "type": "is_a"
+      },
+      {
+        "source": 13,
+        "target": 17,
+        "type": "wrote"
+      },
+      {
+        "source": 1,
+        "target": 17,
+        "type": "contains"
+      },
+      {
+        "source": 18,
+        "target": 17,
+        "type": "wrote"
+      },
+      {
+        "source": 19,
+        "target": 17,
+        "type": "wrote"
+      },
+      {
+        "source": 1,
+        "target": 18,
+        "type": "contains"
+      },
+      {
+        "source": 1,
+        "target": 19,
+        "type": "contains"
+      }
+    ]
+  }
+}

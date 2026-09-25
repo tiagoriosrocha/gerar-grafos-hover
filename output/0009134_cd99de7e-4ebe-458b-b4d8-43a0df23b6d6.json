@@ -1,0 +1,442 @@
+{
+  "dataset": "hover",
+  "id": "cd99de7e-4ebe-458b-b4d8-43a0df23b6d6",
+  "split": "train",
+  "claim": "Queens had a bigger population than Staten Island in the 2016 census.",
+  "evidencia": "Page: Queens. Sentence: Coterminous with Queens County since 1899, the borough of Queens is the second-largest in population (after Brooklyn), with a census-estimated 2,333,054 residents in 2016, approximately 48% of them foreign-born.\nPage: Staten Island. Sentence: With a 2016 Census-estimated population of 476,015, Staten Island is the least populated of the boroughs but is the third-largest in area at 58 sqmi .",
+  "evidence_text": "Page: Queens. Sentence: Coterminous with Queens County since 1899, the borough of Queens is the second-largest in population (after Brooklyn), with a census-estimated 2,333,054 residents in 2016, approximately 48% of them foreign-born.\nPage: Staten Island. Sentence: With a 2016 Census-estimated population of 476,015, Staten Island is the least populated of the boroughs but is the third-largest in area at 58 sqmi .",
+  "label": "SUPPORTED",
+  "num_hops": 2,
+  "hover_metadata": {
+    "supporting_facts": [
+      [
+        "Queens",
+        2
+      ],
+      [
+        "Staten Island",
+        3
+      ]
+    ],
+    "num_hops": 2,
+    "evidence_annotation_id": [
+      0
+    ],
+    "evidence_id": [
+      "Queens::sentence::2",
+      "Staten Island::sentence::3"
+    ],
+    "evidence_wiki_url": [
+      "https://en.wikipedia.org/wiki/Queens",
+      "https://en.wikipedia.org/wiki/Staten_Island"
+    ],
+    "evidence_sentence_id": [
+      "Queens::sentence::2",
+      "Staten Island::sentence::3"
+    ]
+  },
+  "grafo_claim": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "7671f191-69cb-53bd-ad5e-5544cd73e1c0",
+        "text": "This chunk is about:\n- Places: Queens, Staten Island\n- Topics: 2016 census, population comparison\n\nFacts:\n- The 2016 census reported that Queens had a larger population than Staten Island.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "64e31f30-157f-5c24-b20b-bb932037224b",
+        "text": "Queens had a bigger population than Staten Island in the 2016 census.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "1092ca3b-9a50-5925-ab71-d94c26a81ea8",
+        "text": "text_100ecbd911bac097c2cc9b817142b512",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "6ccad39f-45d0-5fa7-81d4-4b31a43bf715",
+        "text": "queens",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "5f394058-b2a0-5ba8-8466-ba2a18cfcf4e",
+        "text": "place",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "6fa3cdb4-e8f9-515e-abf7-e81d2bdcdc04",
+        "text": "2016 census",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "214abcd9-9adf-5c8a-bb35-1e729f2d68c3",
+        "text": "event",
+        "type": "EntityType"
+      },
+      {
+        "id": 7,
+        "original_id": "e4b4371b-a3be-58ef-8db1-07e189dc56ac",
+        "text": "2016",
+        "type": "Entity"
+      },
+      {
+        "id": 8,
+        "original_id": "b19433ae-558c-5aaf-95ac-6231f2a4be0e",
+        "text": "date",
+        "type": "EntityType"
+      },
+      {
+        "id": 9,
+        "original_id": "d7343678-1efb-5816-ab29-65f5ef2b63bc",
+        "text": "staten island",
+        "type": "Entity"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 9,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "had_population_measured_in"
+      },
+      {
+        "source": 9,
+        "target": 5,
+        "type": "had_population_measured_in"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 5,
+        "target": 7,
+        "type": "occurred_in"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      },
+      {
+        "source": 7,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 9,
+        "type": "had_bigger_population_than"
+      },
+      {
+        "source": 1,
+        "target": 9,
+        "type": "contains"
+      }
+    ]
+  },
+  "grafo_evidencia": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "6dfdb1b8-908b-5684-bc44-bea9ab5fc44d",
+        "text": "This chunk is about:\n- Places: Queens, Staten Island, Queens County, Brooklyn\n- Topics: New York City borough populations, borough area, foreign-born residents\n\nFacts:\n- Since 1899, Queens has been coterminous with Queens County.\n- In 2016, Queens had a census-estimated population of 2,333,054, making it the second-most populous borough after Brooklyn.\n- In 2016, approximately 48% of Queens residents were foreign-born.\n- In 2016, Staten Island had a census-estimated population of 476,015, making it the least populated borough.\n- Staten Island is the third-largest borough in area at 58 square miles.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "87279d33-234f-5b86-8516-f121f0da2d37",
+        "text": "Page: Queens. Sentence: Coterminous with Queens County since 1899, the borough of Queens is the second-largest in population (after Brooklyn), with a census-estimated 2,333,054 residents in 2016, approximately 48% of them foreign-born.\nPage: Staten Island. Sentence: With a 2016 Census-estimated population of 476,015, Staten Island is the least populated of the boroughs but is the third-largest in area at 58 sqmi .",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "dabe3e10-daa2-504a-9b1a-072128062451",
+        "text": "text_f4d860a357e65a8d4bf38b644bda06f4",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "6ccad39f-45d0-5fa7-81d4-4b31a43bf715",
+        "text": "queens",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "5f394058-b2a0-5ba8-8466-ba2a18cfcf4e",
+        "text": "place",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "384b00cd-94aa-5932-876e-9945244330d3",
+        "text": "queens county",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "8ebbb74e-5388-5fe7-8fb0-2746d14b39ab",
+        "text": "1899",
+        "type": "Entity"
+      },
+      {
+        "id": 7,
+        "original_id": "b19433ae-558c-5aaf-95ac-6231f2a4be0e",
+        "text": "date",
+        "type": "EntityType"
+      },
+      {
+        "id": 8,
+        "original_id": "b79ea049-8482-54e7-87c6-6bb7e80bdca9",
+        "text": "brooklyn",
+        "type": "Entity"
+      },
+      {
+        "id": 9,
+        "original_id": "21a7e9ba-a522-5dec-acf3-ea9af9cbad46",
+        "text": "2,333,054",
+        "type": "Entity"
+      },
+      {
+        "id": 10,
+        "original_id": "5c1097ca-fab8-54d5-b57f-5dca4b0e2507",
+        "text": "number",
+        "type": "EntityType"
+      },
+      {
+        "id": 11,
+        "original_id": "e4b4371b-a3be-58ef-8db1-07e189dc56ac",
+        "text": "2016",
+        "type": "Entity"
+      },
+      {
+        "id": 12,
+        "original_id": "634e5ef5-cc08-5c5b-b0c9-a5942ccf4b88",
+        "text": "48%",
+        "type": "Entity"
+      },
+      {
+        "id": 13,
+        "original_id": "d7343678-1efb-5816-ab29-65f5ef2b63bc",
+        "text": "staten island",
+        "type": "Entity"
+      },
+      {
+        "id": 14,
+        "original_id": "9974a81b-fafd-59a0-8126-80eecc6aa766",
+        "text": "476,015",
+        "type": "Entity"
+      },
+      {
+        "id": 15,
+        "original_id": "8429dd7c-d68e-57dc-9474-80ad657a550d",
+        "text": "58 sqmi",
+        "type": "Entity"
+      },
+      {
+        "id": 16,
+        "original_id": "12d5521e-a878-542e-bebc-84ff79179d8e",
+        "text": "measurement",
+        "type": "EntityType"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 5,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 8,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 13,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "is_coterminous_with"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 6,
+        "type": "became_coterminous_in"
+      },
+      {
+        "source": 1,
+        "target": 6,
+        "type": "contains"
+      },
+      {
+        "source": 6,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 11,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 8,
+        "type": "has_smaller_population_than"
+      },
+      {
+        "source": 1,
+        "target": 8,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 9,
+        "type": "had_population"
+      },
+      {
+        "source": 1,
+        "target": 9,
+        "type": "contains"
+      },
+      {
+        "source": 9,
+        "target": 10,
+        "type": "is_a"
+      },
+      {
+        "source": 12,
+        "target": 10,
+        "type": "is_a"
+      },
+      {
+        "source": 14,
+        "target": 10,
+        "type": "is_a"
+      },
+      {
+        "source": 9,
+        "target": 11,
+        "type": "estimated_in"
+      },
+      {
+        "source": 12,
+        "target": 11,
+        "type": "estimated_in"
+      },
+      {
+        "source": 1,
+        "target": 11,
+        "type": "contains"
+      },
+      {
+        "source": 14,
+        "target": 11,
+        "type": "estimated_in"
+      },
+      {
+        "source": 3,
+        "target": 12,
+        "type": "had_foreign_born_share"
+      },
+      {
+        "source": 1,
+        "target": 12,
+        "type": "contains"
+      },
+      {
+        "source": 1,
+        "target": 13,
+        "type": "contains"
+      },
+      {
+        "source": 13,
+        "target": 14,
+        "type": "had_population"
+      },
+      {
+        "source": 1,
+        "target": 14,
+        "type": "contains"
+      },
+      {
+        "source": 13,
+        "target": 15,
+        "type": "has_area"
+      },
+      {
+        "source": 1,
+        "target": 15,
+        "type": "contains"
+      },
+      {
+        "source": 15,
+        "target": 16,
+        "type": "is_a"
+      }
+    ]
+  }
+}

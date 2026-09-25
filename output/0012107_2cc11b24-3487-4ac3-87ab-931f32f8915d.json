@@ -1,0 +1,462 @@
+{
+  "dataset": "hover",
+  "id": "2cc11b24-3487-4ac3-87ab-931f32f8915d",
+  "split": "train",
+  "claim": "The engine, for the redesigned McDonnell F3H Demon, had a name change to J35 after it was modified to a thrust of 7400 lbf.",
+  "evidencia": "Page: Allison J71. Sentence: The Allison J71 was a single spool turbojet engine, designed and built in the United States.\nPage: Allison J71. Sentence: It began development in 1948 as a much modified J35, originally designated J35-A-23.\nPage: Allison J35. Sentence: With the afterburner, which most models carried, it produced a thrust of 7400 lbf .\nPage: McDonnell F3H Demon. Sentence: The successor to the F2H Banshee, the Demon was redesigned with the J71 engine after severe problems with the Westinghouse J40 engine that was part of the original design but ultimately abandoned.",
+  "evidence_text": "Page: Allison J71. Sentence: The Allison J71 was a single spool turbojet engine, designed and built in the United States.\nPage: Allison J71. Sentence: It began development in 1948 as a much modified J35, originally designated J35-A-23.\nPage: Allison J35. Sentence: With the afterburner, which most models carried, it produced a thrust of 7400 lbf .\nPage: McDonnell F3H Demon. Sentence: The successor to the F2H Banshee, the Demon was redesigned with the J71 engine after severe problems with the Westinghouse J40 engine that was part of the original design but ultimately abandoned.",
+  "label": "SUPPORTED",
+  "num_hops": 3,
+  "hover_metadata": {
+    "supporting_facts": [
+      [
+        "Allison J71",
+        0
+      ],
+      [
+        "Allison J71",
+        1
+      ],
+      [
+        "Allison J35",
+        2
+      ],
+      [
+        "McDonnell F3H Demon",
+        1
+      ]
+    ],
+    "num_hops": 3,
+    "evidence_annotation_id": [
+      0
+    ],
+    "evidence_id": [
+      "Allison J71::sentence::0",
+      "Allison J71::sentence::1",
+      "Allison J35::sentence::2",
+      "McDonnell F3H Demon::sentence::1"
+    ],
+    "evidence_wiki_url": [
+      "https://en.wikipedia.org/wiki/Allison_J71",
+      "https://en.wikipedia.org/wiki/Allison_J35",
+      "https://en.wikipedia.org/wiki/McDonnell_F3H_Demon"
+    ],
+    "evidence_sentence_id": [
+      "Allison J71::sentence::0",
+      "Allison J71::sentence::1",
+      "Allison J35::sentence::2",
+      "McDonnell F3H Demon::sentence::1"
+    ]
+  },
+  "grafo_claim": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "0fd00462-6172-5662-952a-c83a74c85682",
+        "text": "This chunk is about:\n- Products: McDonnell F3H Demon, J35\n- Companies: McDonnell\n- Concepts: engine redesign, thrust\n\nFacts:\n- McDonnell redesigned the F3H Demon.\n- The engine for the redesigned McDonnell F3H Demon was renamed J35 after it was modified.\n- The modified J35 engine had a thrust of 7,400 lbf.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "3a85c185-29c4-5f0c-9b03-34379a5a96ce",
+        "text": "The engine, for the redesigned McDonnell F3H Demon, had a name change to J35 after it was modified to a thrust of 7400 lbf.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "2646d277-162b-5de6-af46-a8d86a927ba5",
+        "text": "text_c4caddd3e35689ba214b478bd623aba7",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "3f73b746-2986-5990-b431-7dddb7abc935",
+        "text": "mcdonnell f3h demon",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "bde6c33f-6d16-5878-b4ec-69a05a6dcc06",
+        "text": "aircraft",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "50e51c58-19be-5b25-8af0-e052f246e9c7",
+        "text": "the engine",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "ddfba1b8-d2b6-511d-8769-8047c69498b5",
+        "text": "engine",
+        "type": "EntityType"
+      },
+      {
+        "id": 7,
+        "original_id": "c6de7203-71a5-5d34-b870-410768db8313",
+        "text": "j35",
+        "type": "Entity"
+      },
+      {
+        "id": 8,
+        "original_id": "39767e27-ec40-5fe4-90af-dc23415e0c90",
+        "text": "7400 lbf",
+        "type": "Entity"
+      },
+      {
+        "id": 9,
+        "original_id": "12d5521e-a878-542e-bebc-84ff79179d8e",
+        "text": "measurement",
+        "type": "EntityType"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 3,
+        "type": "engine_for"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 7,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 5,
+        "target": 7,
+        "type": "renamed_to"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 8,
+        "type": "modified_to_thrust"
+      },
+      {
+        "source": 1,
+        "target": 8,
+        "type": "contains"
+      },
+      {
+        "source": 8,
+        "target": 9,
+        "type": "is_a"
+      }
+    ]
+  },
+  "grafo_evidencia": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "ccfd4a2e-92b2-52fe-8e92-09ea95bf0523",
+        "text": "This chunk is about:\n- Products: Allison J71, Allison J35, Westinghouse J40\n- Projects: McDonnell F3H Demon, F2H Banshee\n- Places: United States\n\nFacts:\n- In 1948, development of the Allison J71 began in the United States as a heavily modified Allison J35 and was originally designated J35-A-23.\n- The Allison J71 was a single-spool turbojet engine designed and built in the United States.\n- With an afterburner, which most models carried, the Allison J35 produced 7,400 lbf of thrust.\n- The McDonnell F3H Demon succeeded the F2H Banshee.\n- The McDonnell F3H Demon was redesigned to use the Allison J71 after severe problems with the Westinghouse J40, which had been part of the original design and was ultimately abandoned.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "8f921c4d-577d-553c-a0b8-d2bb0c3ef225",
+        "text": "Page: Allison J71. Sentence: The Allison J71 was a single spool turbojet engine, designed and built in the United States.\nPage: Allison J71. Sentence: It began development in 1948 as a much modified J35, originally designated J35-A-23.\nPage: Allison J35. Sentence: With the afterburner, which most models carried, it produced a thrust of 7400 lbf .\nPage: McDonnell F3H Demon. Sentence: The successor to the F2H Banshee, the Demon was redesigned with the J71 engine after severe problems with the Westinghouse J40 engine that was part of the original design but ultimately abandoned.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "24392baf-b7a0-5094-9fc4-9ff1a598621b",
+        "text": "text_6e3dff789cd93203d3e156f21347ca90",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "0d4d3367-8e19-5726-b3ab-00bf1464b0ce",
+        "text": "allison j71",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "ddfba1b8-d2b6-511d-8769-8047c69498b5",
+        "text": "engine",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "874a51da-34ea-5037-be47-d87785d43c37",
+        "text": "united states",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "5f394058-b2a0-5ba8-8466-ba2a18cfcf4e",
+        "text": "place",
+        "type": "EntityType"
+      },
+      {
+        "id": 7,
+        "original_id": "26ece520-b6ee-5181-987a-9ec239367a39",
+        "text": "1948",
+        "type": "Entity"
+      },
+      {
+        "id": 8,
+        "original_id": "b19433ae-558c-5aaf-95ac-6231f2a4be0e",
+        "text": "date",
+        "type": "EntityType"
+      },
+      {
+        "id": 9,
+        "original_id": "16e6022d-ca67-568a-a2aa-eabb2924662f",
+        "text": "allison j35",
+        "type": "Entity"
+      },
+      {
+        "id": 10,
+        "original_id": "e8ec1f91-068f-5496-a815-77db5ae32f00",
+        "text": "afterburner",
+        "type": "Entity"
+      },
+      {
+        "id": 11,
+        "original_id": "4c092ca6-50b2-5e1e-8f5f-20b77ca1cde0",
+        "text": "component",
+        "type": "EntityType"
+      },
+      {
+        "id": 12,
+        "original_id": "39767e27-ec40-5fe4-90af-dc23415e0c90",
+        "text": "7400 lbf",
+        "type": "Entity"
+      },
+      {
+        "id": 13,
+        "original_id": "12d5521e-a878-542e-bebc-84ff79179d8e",
+        "text": "measurement",
+        "type": "EntityType"
+      },
+      {
+        "id": 14,
+        "original_id": "117f8b76-1039-5d71-b1ff-156c59864b2e",
+        "text": "j35-a-23",
+        "type": "Entity"
+      },
+      {
+        "id": 15,
+        "original_id": "3f73b746-2986-5990-b431-7dddb7abc935",
+        "text": "mcdonnell f3h demon",
+        "type": "Entity"
+      },
+      {
+        "id": 16,
+        "original_id": "bde6c33f-6d16-5878-b4ec-69a05a6dcc06",
+        "text": "aircraft",
+        "type": "EntityType"
+      },
+      {
+        "id": 17,
+        "original_id": "f7b056f6-20f9-568b-9959-20ee39a38f61",
+        "text": "mcdonnell f2h banshee",
+        "type": "Entity"
+      },
+      {
+        "id": 18,
+        "original_id": "abe5d0bb-a6e3-53f0-ba0f-6950acb32aaa",
+        "text": "westinghouse j40",
+        "type": "Entity"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 15,
+        "target": 3,
+        "type": "redesigned_with"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 9,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 14,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 18,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "designed_and_built_in"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 7,
+        "type": "began_development_in"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      },
+      {
+        "source": 7,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 9,
+        "type": "developed_from"
+      },
+      {
+        "source": 1,
+        "target": 9,
+        "type": "contains"
+      },
+      {
+        "source": 9,
+        "target": 10,
+        "type": "carried_on_most_models_with"
+      },
+      {
+        "source": 1,
+        "target": 10,
+        "type": "contains"
+      },
+      {
+        "source": 10,
+        "target": 11,
+        "type": "is_a"
+      },
+      {
+        "source": 9,
+        "target": 12,
+        "type": "produced_thrust_of"
+      },
+      {
+        "source": 1,
+        "target": 12,
+        "type": "contains"
+      },
+      {
+        "source": 12,
+        "target": 13,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 14,
+        "type": "originally_designated_as"
+      },
+      {
+        "source": 1,
+        "target": 14,
+        "type": "contains"
+      },
+      {
+        "source": 1,
+        "target": 15,
+        "type": "contains"
+      },
+      {
+        "source": 18,
+        "target": 15,
+        "type": "abandoned_from"
+      },
+      {
+        "source": 15,
+        "target": 16,
+        "type": "is_a"
+      },
+      {
+        "source": 17,
+        "target": 16,
+        "type": "is_a"
+      },
+      {
+        "source": 15,
+        "target": 17,
+        "type": "successor_to"
+      },
+      {
+        "source": 1,
+        "target": 17,
+        "type": "contains"
+      },
+      {
+        "source": 15,
+        "target": 18,
+        "type": "originally_designed_with"
+      },
+      {
+        "source": 1,
+        "target": 18,
+        "type": "contains"
+      }
+    ]
+  }
+}

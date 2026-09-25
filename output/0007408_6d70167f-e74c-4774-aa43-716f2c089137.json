@@ -1,0 +1,454 @@
+{
+  "dataset": "hover",
+  "id": "6d70167f-e74c-4774-aa43-716f2c089137",
+  "split": "train",
+  "claim": "The pavilion that the Biergarten Restaurant is a part of is in between the Chinese and Italian pavilions at Epcot's World Showcase.",
+  "evidencia": "Page: Biergarten Restaurant. Sentence: Biergarten Restaurant is one of two restaurants in the Germany Pavilion at Epcot's World Showcase at Walt Disney World Resort in Florida.\nPage: Germany Pavilion at Epcot. Sentence: The Germany Pavilion is a German-themed pavilion that is part of the World Showcase, within Epcot at Walt Disney World in Orlando, Florida, United States.\nPage: Germany Pavilion at Epcot. Sentence: Its location is between the Chinese and Italian pavilions.",
+  "evidence_text": "Page: Biergarten Restaurant. Sentence: Biergarten Restaurant is one of two restaurants in the Germany Pavilion at Epcot's World Showcase at Walt Disney World Resort in Florida.\nPage: Germany Pavilion at Epcot. Sentence: The Germany Pavilion is a German-themed pavilion that is part of the World Showcase, within Epcot at Walt Disney World in Orlando, Florida, United States.\nPage: Germany Pavilion at Epcot. Sentence: Its location is between the Chinese and Italian pavilions.",
+  "label": "SUPPORTED",
+  "num_hops": 2,
+  "hover_metadata": {
+    "supporting_facts": [
+      [
+        "Biergarten Restaurant",
+        0
+      ],
+      [
+        "Germany Pavilion at Epcot",
+        0
+      ],
+      [
+        "Germany Pavilion at Epcot",
+        1
+      ]
+    ],
+    "num_hops": 2,
+    "evidence_annotation_id": [
+      0
+    ],
+    "evidence_id": [
+      "Biergarten Restaurant::sentence::0",
+      "Germany Pavilion at Epcot::sentence::0",
+      "Germany Pavilion at Epcot::sentence::1"
+    ],
+    "evidence_wiki_url": [
+      "https://en.wikipedia.org/wiki/Biergarten_Restaurant",
+      "https://en.wikipedia.org/wiki/Germany_Pavilion_at_Epcot"
+    ],
+    "evidence_sentence_id": [
+      "Biergarten Restaurant::sentence::0",
+      "Germany Pavilion at Epcot::sentence::0",
+      "Germany Pavilion at Epcot::sentence::1"
+    ]
+  },
+  "grafo_claim": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "721093dc-2514-5adf-bad8-0b98c9ef5c4a",
+        "text": "This chunk is about:\n- Places: Epcot, World Showcase\n- Products: Biergarten Restaurant\n- Systems: German pavilion, Chinese pavilion, Italian pavilion\n\nFacts:\n- The Biergarten Restaurant is part of the German pavilion at Epcot's World Showcase.\n- The German pavilion is located between the Chinese pavilion and the Italian pavilion at Epcot's World Showcase.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "f9d10251-00f7-5706-8430-355fa2422f9d",
+        "text": "The pavilion that the Biergarten Restaurant is a part of is in between the Chinese and Italian pavilions at Epcot's World Showcase.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "7681f03f-59f9-5b3c-8681-d09b601b52a3",
+        "text": "text_642ec16b3b7c54798f69f68e1c3c6eb4",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "c4b5c012-2ade-5610-b180-4a43aac8e2e8",
+        "text": "biergarten restaurant",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "699e08e2-330f-51d1-9838-377b012e6aec",
+        "text": "pavilion of biergarten restaurant",
+        "type": "Entity"
+      },
+      {
+        "id": 5,
+        "original_id": "95048c92-c413-5e61-bec9-08737e6dbb79",
+        "text": "chinese pavilion",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "6cd78e99-38e5-51cb-97c7-a0ba3e93b1c2",
+        "text": "epcots world showcase",
+        "type": "Entity"
+      },
+      {
+        "id": 7,
+        "original_id": "5f394058-b2a0-5ba8-8466-ba2a18cfcf4e",
+        "text": "place",
+        "type": "EntityType"
+      },
+      {
+        "id": 8,
+        "original_id": "24c39a75-a7a5-5154-9b21-f0c78900ca55",
+        "text": "italian pavilion",
+        "type": "Entity"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "part_of"
+      },
+      {
+        "source": 1,
+        "target": 4,
+        "type": "contains"
+      },
+      {
+        "source": 4,
+        "target": 5,
+        "type": "in_between"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "located_in"
+      },
+      {
+        "source": 8,
+        "target": 6,
+        "type": "located_in"
+      },
+      {
+        "source": 4,
+        "target": 6,
+        "type": "located_in"
+      },
+      {
+        "source": 1,
+        "target": 6,
+        "type": "contains"
+      },
+      {
+        "source": 6,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 5,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 8,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 4,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 4,
+        "target": 8,
+        "type": "in_between"
+      },
+      {
+        "source": 1,
+        "target": 8,
+        "type": "contains"
+      }
+    ]
+  },
+  "grafo_evidencia": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "7082a26b-9f6e-5f28-97ed-4adf930bfef1",
+        "text": "This chunk is about:\n- Places: Biergarten Restaurant, Germany Pavilion, Epcot, World Showcase, Walt Disney World Resort, Florida, Orlando\n- Topics: Germany-themed pavilion, pavilion location\n\nFacts:\n- The Germany Pavilion is a German-themed pavilion in the World Showcase area of Epcot at Walt Disney World in Orlando, Florida, United States.\n- The Germany Pavilion is located between the China Pavilion and the Italy Pavilion.\n- Biergarten Restaurant is one of two restaurants in the Germany Pavilion at Epcot's World Showcase at Walt Disney World Resort in Florida.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "0d928f98-a09d-5e3d-b97d-65b75a8e8eeb",
+        "text": "Page: Biergarten Restaurant. Sentence: Biergarten Restaurant is one of two restaurants in the Germany Pavilion at Epcot's World Showcase at Walt Disney World Resort in Florida.\nPage: Germany Pavilion at Epcot. Sentence: The Germany Pavilion is a German-themed pavilion that is part of the World Showcase, within Epcot at Walt Disney World in Orlando, Florida, United States.\nPage: Germany Pavilion at Epcot. Sentence: Its location is between the Chinese and Italian pavilions.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "81aaaef0-1cfc-5ad9-9018-947815837329",
+        "text": "text_db03009ccb284a7245f65438e1a6f2c3",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "c4b5c012-2ade-5610-b180-4a43aac8e2e8",
+        "text": "biergarten restaurant",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "264ec368-2509-5d01-acb1-0bed593276b2",
+        "text": "germany pavilion",
+        "type": "Entity"
+      },
+      {
+        "id": 5,
+        "original_id": "2a1e3892-5ebb-5b6e-a6f0-5153530569a2",
+        "text": "world showcase",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "5f394058-b2a0-5ba8-8466-ba2a18cfcf4e",
+        "text": "place",
+        "type": "EntityType"
+      },
+      {
+        "id": 7,
+        "original_id": "314068a8-1e71-5b02-b5fb-99c96c9770a9",
+        "text": "epcot",
+        "type": "Entity"
+      },
+      {
+        "id": 8,
+        "original_id": "c9514e73-0811-58fc-b3a6-aaca960fd7a5",
+        "text": "walt disney world resort",
+        "type": "Entity"
+      },
+      {
+        "id": 9,
+        "original_id": "cc742fd7-ba65-509e-bb61-ba57c283d7d0",
+        "text": "florida",
+        "type": "Entity"
+      },
+      {
+        "id": 10,
+        "original_id": "2bdb975e-4e22-56a7-b86f-257de583f96a",
+        "text": "orlando",
+        "type": "Entity"
+      },
+      {
+        "id": 11,
+        "original_id": "874a51da-34ea-5037-be47-d87785d43c37",
+        "text": "united states",
+        "type": "Entity"
+      },
+      {
+        "id": 12,
+        "original_id": "95048c92-c413-5e61-bec9-08737e6dbb79",
+        "text": "chinese pavilion",
+        "type": "Entity"
+      },
+      {
+        "id": 13,
+        "original_id": "24c39a75-a7a5-5154-9b21-f0c78900ca55",
+        "text": "italian pavilion",
+        "type": "Entity"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "located_in"
+      },
+      {
+        "source": 1,
+        "target": 4,
+        "type": "contains"
+      },
+      {
+        "source": 4,
+        "target": 5,
+        "type": "part_of"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "located_in"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 9,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 11,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 10,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 8,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 7,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 12,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 13,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 4,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 4,
+        "target": 7,
+        "type": "located_in"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      },
+      {
+        "source": 7,
+        "target": 8,
+        "type": "located_in"
+      },
+      {
+        "source": 3,
+        "target": 8,
+        "type": "located_in"
+      },
+      {
+        "source": 1,
+        "target": 8,
+        "type": "contains"
+      },
+      {
+        "source": 8,
+        "target": 9,
+        "type": "located_in"
+      },
+      {
+        "source": 10,
+        "target": 9,
+        "type": "located_in"
+      },
+      {
+        "source": 1,
+        "target": 9,
+        "type": "contains"
+      },
+      {
+        "source": 8,
+        "target": 10,
+        "type": "located_in"
+      },
+      {
+        "source": 1,
+        "target": 10,
+        "type": "contains"
+      },
+      {
+        "source": 10,
+        "target": 11,
+        "type": "located_in"
+      },
+      {
+        "source": 1,
+        "target": 11,
+        "type": "contains"
+      },
+      {
+        "source": 4,
+        "target": 12,
+        "type": "between"
+      },
+      {
+        "source": 1,
+        "target": 12,
+        "type": "contains"
+      },
+      {
+        "source": 4,
+        "target": 13,
+        "type": "between"
+      },
+      {
+        "source": 1,
+        "target": 13,
+        "type": "contains"
+      }
+    ]
+  }
+}

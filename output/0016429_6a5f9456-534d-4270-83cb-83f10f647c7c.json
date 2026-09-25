@@ -1,0 +1,402 @@
+{
+  "dataset": "hover",
+  "id": "6a5f9456-534d-4270-83cb-83f10f647c7c",
+  "split": "train",
+  "claim": "Jack Harvey was born in a small civil parish that as of 2011 had a population of 1,425.",
+  "evidencia": "Page: Jack Harvey (racing driver). Sentence: Jack Harvey (born 15 April 1993 in Bassingham, Lincolnshire) is a British auto racing driver, and a former member of McLaren's Young Driver Programme.\nPage: Bassingham. Sentence: Bassingham is a village and civil parish in the North Kesteven district of Lincolnshire, England.\nPage: Bassingham. Sentence: The population of the civil parish at the 2011 census was 1,425.",
+  "evidence_text": "Page: Jack Harvey (racing driver). Sentence: Jack Harvey (born 15 April 1993 in Bassingham, Lincolnshire) is a British auto racing driver, and a former member of McLaren's Young Driver Programme.\nPage: Bassingham. Sentence: Bassingham is a village and civil parish in the North Kesteven district of Lincolnshire, England.\nPage: Bassingham. Sentence: The population of the civil parish at the 2011 census was 1,425.",
+  "label": "NOT_SUPPORTED",
+  "num_hops": 2,
+  "hover_metadata": {
+    "supporting_facts": [
+      [
+        "Jack Harvey (racing driver)",
+        0
+      ],
+      [
+        "Bassingham",
+        0
+      ],
+      [
+        "Bassingham",
+        1
+      ]
+    ],
+    "num_hops": 2,
+    "evidence_annotation_id": [
+      0
+    ],
+    "evidence_id": [
+      "Jack Harvey (racing driver)::sentence::0",
+      "Bassingham::sentence::0",
+      "Bassingham::sentence::1"
+    ],
+    "evidence_wiki_url": [
+      "https://en.wikipedia.org/wiki/Jack_Harvey_%28racing_driver%29",
+      "https://en.wikipedia.org/wiki/Bassingham"
+    ],
+    "evidence_sentence_id": [
+      "Jack Harvey (racing driver)::sentence::0",
+      "Bassingham::sentence::0",
+      "Bassingham::sentence::1"
+    ]
+  },
+  "grafo_claim": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "9b4f673b-cfab-597c-bf1d-132e6f1c4d08",
+        "text": "This chunk is about:\n- People: Jack Harvey\n- Places: Bassingham\n- Topics: Birthplaces, Population\n\nFacts:\n- Jack Harvey was born in Bassingham.\n- Bassingham is a small civil parish that had a population of 1,425 in 2011.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "3ab231e6-c0fc-56d9-98ca-ea9a611e0aef",
+        "text": "Jack Harvey was born in a small civil parish that as of 2011 had a population of 1,425.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "ab5faf2c-0eb9-5d6e-b9c1-bee515a03aaf",
+        "text": "text_7f53bf5c845e16c626c25ff4fc6dfaf0",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "d6c9b17f-fb0b-59e2-bb54-62af70804bd6",
+        "text": "jack harvey",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "99a82eec-bb35-5bb5-9ed2-e73fc7a756de",
+        "text": "person",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "3dbd2dc5-93cb-5e7b-910b-917ead6c7c21",
+        "text": "small civil parish",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "5f394058-b2a0-5ba8-8466-ba2a18cfcf4e",
+        "text": "place",
+        "type": "EntityType"
+      },
+      {
+        "id": 7,
+        "original_id": "f54e52eb-db61-5cc3-aa32-5c78e42891d1",
+        "text": "2011",
+        "type": "Entity"
+      },
+      {
+        "id": 8,
+        "original_id": "b19433ae-558c-5aaf-95ac-6231f2a4be0e",
+        "text": "date",
+        "type": "EntityType"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "born_in"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 5,
+        "target": 7,
+        "type": "population_as_of"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      },
+      {
+        "source": 7,
+        "target": 8,
+        "type": "is_a"
+      }
+    ]
+  },
+  "grafo_evidencia": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "c7491975-0b19-5ed9-98ae-7156a833c52b",
+        "text": "This chunk is about:\n- People: Jack Harvey\n- Places: Bassingham, Lincolnshire, North Kesteven, England\n- Organizations: McLaren Young Driver Programme\n- Roles: Auto racing driver\n\nFacts:\n- Jack Harvey was born on 15 April 1993 in Bassingham, Lincolnshire.\n- Jack Harvey is a British auto racing driver.\n- Jack Harvey was a member of McLaren's Young Driver Programme.\n- Bassingham is a village and civil parish in the North Kesteven district of Lincolnshire, England.\n- The civil parish of Bassingham had a population of 1,425 at the 2011 census.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "921fd045-4cd6-5c72-a7ab-0d292bebe5e9",
+        "text": "Page: Jack Harvey (racing driver). Sentence: Jack Harvey (born 15 April 1993 in Bassingham, Lincolnshire) is a British auto racing driver, and a former member of McLaren's Young Driver Programme.\nPage: Bassingham. Sentence: Bassingham is a village and civil parish in the North Kesteven district of Lincolnshire, England.\nPage: Bassingham. Sentence: The population of the civil parish at the 2011 census was 1,425.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "786fd131-bd31-5227-bbd5-ea1788cc0622",
+        "text": "text_217ad2c47849f5293632faefb645a1c4",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "d6c9b17f-fb0b-59e2-bb54-62af70804bd6",
+        "text": "jack harvey",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "99a82eec-bb35-5bb5-9ed2-e73fc7a756de",
+        "text": "person",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "fd2a0f4b-c953-5a2a-97f0-402b2cc51d1a",
+        "text": "1993-04-15",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "b19433ae-558c-5aaf-95ac-6231f2a4be0e",
+        "text": "date",
+        "type": "EntityType"
+      },
+      {
+        "id": 7,
+        "original_id": "a3ad8dcb-6e4f-5725-bfa7-6ced31be3460",
+        "text": "bassingham",
+        "type": "Entity"
+      },
+      {
+        "id": 8,
+        "original_id": "5f394058-b2a0-5ba8-8466-ba2a18cfcf4e",
+        "text": "place",
+        "type": "EntityType"
+      },
+      {
+        "id": 9,
+        "original_id": "aa7f1137-d114-5100-91ab-b9131406b4af",
+        "text": "north kesteven",
+        "type": "Entity"
+      },
+      {
+        "id": 10,
+        "original_id": "04986ea5-a2d9-5be0-b013-d214e98cff55",
+        "text": "lincolnshire",
+        "type": "Entity"
+      },
+      {
+        "id": 11,
+        "original_id": "27f0656f-762c-54f0-8ed5-c4b27557219f",
+        "text": "england",
+        "type": "Entity"
+      },
+      {
+        "id": 12,
+        "original_id": "a8ae8d1b-3266-5c72-854e-d55170017587",
+        "text": "1,425",
+        "type": "Entity"
+      },
+      {
+        "id": 13,
+        "original_id": "bb0c7c36-9fe9-599a-b5a1-9f82533f276a",
+        "text": "value",
+        "type": "EntityType"
+      },
+      {
+        "id": 14,
+        "original_id": "f54e52eb-db61-5cc3-aa32-5c78e42891d1",
+        "text": "2011",
+        "type": "Entity"
+      },
+      {
+        "id": 15,
+        "original_id": "e9912d2a-994b-566c-8dcd-0c499e9b39fe",
+        "text": "mclaren young driver programme",
+        "type": "Entity"
+      },
+      {
+        "id": 16,
+        "original_id": "388f60fb-220d-55e8-ae9c-3ac93cead308",
+        "text": "organization",
+        "type": "EntityType"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "born_on"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 14,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 7,
+        "type": "born_in"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      },
+      {
+        "source": 7,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 9,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 10,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 11,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 7,
+        "target": 9,
+        "type": "located_in"
+      },
+      {
+        "source": 1,
+        "target": 9,
+        "type": "contains"
+      },
+      {
+        "source": 7,
+        "target": 10,
+        "type": "located_in"
+      },
+      {
+        "source": 1,
+        "target": 10,
+        "type": "contains"
+      },
+      {
+        "source": 7,
+        "target": 11,
+        "type": "located_in"
+      },
+      {
+        "source": 1,
+        "target": 11,
+        "type": "contains"
+      },
+      {
+        "source": 7,
+        "target": 12,
+        "type": "has_population"
+      },
+      {
+        "source": 1,
+        "target": 12,
+        "type": "contains"
+      },
+      {
+        "source": 12,
+        "target": 13,
+        "type": "is_a"
+      },
+      {
+        "source": 12,
+        "target": 14,
+        "type": "reported_in"
+      },
+      {
+        "source": 1,
+        "target": 14,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 15,
+        "type": "former_member_of"
+      },
+      {
+        "source": 1,
+        "target": 15,
+        "type": "contains"
+      },
+      {
+        "source": 15,
+        "target": 16,
+        "type": "is_a"
+      }
+    ]
+  }
+}

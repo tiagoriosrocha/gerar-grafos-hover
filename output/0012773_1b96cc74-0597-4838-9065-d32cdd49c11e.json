@@ -1,0 +1,508 @@
+{
+  "dataset": "hover",
+  "id": "1b96cc74-0597-4838-9065-d32cdd49c11e",
+  "split": "train",
+  "claim": "The company Crown Holdings Incorporated claims to manufacture one out of every three objects that provide a shelf life typically ranging from one to five years.",
+  "evidencia": "Page: Crown Holdings. Sentence: Crown Holdings Incorporated, formerly Crown Cork & Seal Company, is an American company that makes metal beverage and food cans, metal aerosol containers, metal closures and specialty packing.\nPage: Crown Holdings. Sentence: It claims to manufacture one out of every five beverage cans used in the world, and one out of every three food cans used in North America and Europe.\nPage: Canning. Sentence: Canning provides a shelf life typically ranging from one to five years, although under specific circumstances it can be much longer.",
+  "evidence_text": "Page: Crown Holdings. Sentence: Crown Holdings Incorporated, formerly Crown Cork & Seal Company, is an American company that makes metal beverage and food cans, metal aerosol containers, metal closures and specialty packing.\nPage: Crown Holdings. Sentence: It claims to manufacture one out of every five beverage cans used in the world, and one out of every three food cans used in North America and Europe.\nPage: Canning. Sentence: Canning provides a shelf life typically ranging from one to five years, although under specific circumstances it can be much longer.",
+  "label": "SUPPORTED",
+  "num_hops": 2,
+  "hover_metadata": {
+    "supporting_facts": [
+      [
+        "Crown Holdings",
+        0
+      ],
+      [
+        "Crown Holdings",
+        3
+      ],
+      [
+        "Canning",
+        1
+      ]
+    ],
+    "num_hops": 2,
+    "evidence_annotation_id": [
+      0
+    ],
+    "evidence_id": [
+      "Crown Holdings::sentence::0",
+      "Crown Holdings::sentence::3",
+      "Canning::sentence::1"
+    ],
+    "evidence_wiki_url": [
+      "https://en.wikipedia.org/wiki/Crown_Holdings",
+      "https://en.wikipedia.org/wiki/Canning"
+    ],
+    "evidence_sentence_id": [
+      "Crown Holdings::sentence::0",
+      "Crown Holdings::sentence::3",
+      "Canning::sentence::1"
+    ]
+  },
+  "grafo_claim": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "39e4dd14-c786-5760-af40-8eb94a011456",
+        "text": "This chunk is about:\n- Companies: Crown Holdings Incorporated\n- Products: Shelf-stable packaging objects\n- Concepts: Shelf life claims\n\nFacts:\n- Crown Holdings Incorporated claims to manufacture one out of every three objects that provide a shelf life typically ranging from one to five years.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "10a03fab-a831-53f6-ad59-a7164cfcd2b6",
+        "text": "The company Crown Holdings Incorporated claims to manufacture one out of every three objects that provide a shelf life typically ranging from one to five years.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "01ae68c8-08e5-5da0-9d2b-f4647d3aec66",
+        "text": "text_cfc7707a7b49ec19decf2846719e6e49",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "fd37fdd3-52fe-5bda-8c37-e7547484909f",
+        "text": "crown holdings incorporated",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "82bfc922-4fcd-56b0-b353-7b550b51389d",
+        "text": "company",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "177c9e8e-624f-56bf-8b49-17130906604e",
+        "text": "objects that provide a shelf life typically ranging from one to five years",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "5e7cbda1-d6b2-5124-9bad-288dc849a4e3",
+        "text": "object",
+        "type": "EntityType"
+      },
+      {
+        "id": 7,
+        "original_id": "dcbc6b0a-02d5-519e-bacc-9b720396be43",
+        "text": "one to five years",
+        "type": "Entity"
+      },
+      {
+        "id": 8,
+        "original_id": "48332387-4aec-5e6a-a549-a6b3d83ffb4b",
+        "text": "duration",
+        "type": "EntityType"
+      },
+      {
+        "id": 9,
+        "original_id": "532c281a-7ef2-545f-b4f2-d463d061c862",
+        "text": "one out of every three",
+        "type": "Entity"
+      },
+      {
+        "id": 10,
+        "original_id": "7a7a0687-e490-5167-ad5a-0e39d9055dee",
+        "text": "quantity",
+        "type": "EntityType"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "claims_to_manufacture"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 5,
+        "target": 7,
+        "type": "provides_shelf_life"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      },
+      {
+        "source": 7,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 9,
+        "type": "claims_share_of_manufacture"
+      },
+      {
+        "source": 1,
+        "target": 9,
+        "type": "contains"
+      },
+      {
+        "source": 9,
+        "target": 10,
+        "type": "is_a"
+      }
+    ]
+  },
+  "grafo_evidencia": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "5dbfc8da-5fbe-51dc-a54b-51288e7939c0",
+        "text": "This chunk is about:\n- Companies: Crown Holdings, Crown Cork & Seal Company\n- Products: metal beverage cans, food cans, metal aerosol containers, metal closures, specialty packing\n- Concepts: canning, shelf life\n- Places: North America, Europe\n\nFacts:\n- Crown Holdings Incorporated was formerly named Crown Cork & Seal Company.\n- Crown Holdings Incorporated is an American company that makes metal beverage and food cans, metal aerosol containers, metal closures, and specialty packing.\n- Crown Holdings claims to manufacture one out of every five beverage cans used in the world.\n- Crown Holdings claims to manufacture one out of every three food cans used in North America and Europe.\n- Canning typically provides a shelf life ranging from one to five years, although under specific circumstances it can last much longer.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "d3ef8f8a-8858-562a-9fc4-3a0ab2ea1f0a",
+        "text": "Page: Crown Holdings. Sentence: Crown Holdings Incorporated, formerly Crown Cork & Seal Company, is an American company that makes metal beverage and food cans, metal aerosol containers, metal closures and specialty packing.\nPage: Crown Holdings. Sentence: It claims to manufacture one out of every five beverage cans used in the world, and one out of every three food cans used in North America and Europe.\nPage: Canning. Sentence: Canning provides a shelf life typically ranging from one to five years, although under specific circumstances it can be much longer.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "87f710a7-9998-5e21-99de-8260f3a7540c",
+        "text": "text_1cb53b534c5b269e44ae3659a28c9695",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "fd37fdd3-52fe-5bda-8c37-e7547484909f",
+        "text": "crown holdings incorporated",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "82bfc922-4fcd-56b0-b353-7b550b51389d",
+        "text": "company",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "af31def1-ba86-55f9-afa4-1de2cb6325d9",
+        "text": "crown cork & seal company",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "874a51da-34ea-5037-be47-d87785d43c37",
+        "text": "united states",
+        "type": "Entity"
+      },
+      {
+        "id": 7,
+        "original_id": "5f394058-b2a0-5ba8-8466-ba2a18cfcf4e",
+        "text": "place",
+        "type": "EntityType"
+      },
+      {
+        "id": 8,
+        "original_id": "bf567b1f-fc18-524d-8e96-aaa88690927c",
+        "text": "metal beverage cans",
+        "type": "Entity"
+      },
+      {
+        "id": 9,
+        "original_id": "f76d57aa-4740-5218-9539-0e0978cbf183",
+        "text": "product",
+        "type": "EntityType"
+      },
+      {
+        "id": 10,
+        "original_id": "d9f1cc13-610c-50aa-98f9-1f12ac25adac",
+        "text": "world",
+        "type": "Entity"
+      },
+      {
+        "id": 11,
+        "original_id": "f52313f5-ca9e-550e-9515-bb4624d9e634",
+        "text": "food cans",
+        "type": "Entity"
+      },
+      {
+        "id": 12,
+        "original_id": "7bfd7320-7015-5d33-be1e-fbdc9c0b5b79",
+        "text": "north america",
+        "type": "Entity"
+      },
+      {
+        "id": 13,
+        "original_id": "d62d98fd-7636-5918-880e-390a00283ca8",
+        "text": "europe",
+        "type": "Entity"
+      },
+      {
+        "id": 14,
+        "original_id": "de99cae6-ce01-51a2-b2d3-ecd6529fef12",
+        "text": "metal aerosol containers",
+        "type": "Entity"
+      },
+      {
+        "id": 15,
+        "original_id": "4ac12efa-3521-53e9-9937-97d16f2d7ead",
+        "text": "metal closures",
+        "type": "Entity"
+      },
+      {
+        "id": 16,
+        "original_id": "6e9d3482-a3c5-5fc6-830e-ef2e1a74d7b0",
+        "text": "specialty packing",
+        "type": "Entity"
+      },
+      {
+        "id": 17,
+        "original_id": "169fff59-568d-55f5-bab8-c9d0c7b48d5d",
+        "text": "canning",
+        "type": "Entity"
+      },
+      {
+        "id": 18,
+        "original_id": "d2a381fa-3658-5ca6-ada9-2109cfc9331d",
+        "text": "concept",
+        "type": "EntityType"
+      },
+      {
+        "id": 19,
+        "original_id": "dcbc6b0a-02d5-519e-bacc-9b720396be43",
+        "text": "one to five years",
+        "type": "Entity"
+      },
+      {
+        "id": 20,
+        "original_id": "48332387-4aec-5e6a-a549-a6b3d83ffb4b",
+        "text": "duration",
+        "type": "EntityType"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 5,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "formerly_named"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 6,
+        "type": "located_in"
+      },
+      {
+        "source": 1,
+        "target": 6,
+        "type": "contains"
+      },
+      {
+        "source": 6,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 10,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 12,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 13,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 8,
+        "type": "makes"
+      },
+      {
+        "source": 1,
+        "target": 8,
+        "type": "contains"
+      },
+      {
+        "source": 8,
+        "target": 9,
+        "type": "is_a"
+      },
+      {
+        "source": 11,
+        "target": 9,
+        "type": "is_a"
+      },
+      {
+        "source": 14,
+        "target": 9,
+        "type": "is_a"
+      },
+      {
+        "source": 15,
+        "target": 9,
+        "type": "is_a"
+      },
+      {
+        "source": 16,
+        "target": 9,
+        "type": "is_a"
+      },
+      {
+        "source": 8,
+        "target": 10,
+        "type": "used_in"
+      },
+      {
+        "source": 1,
+        "target": 10,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 11,
+        "type": "makes"
+      },
+      {
+        "source": 1,
+        "target": 11,
+        "type": "contains"
+      },
+      {
+        "source": 11,
+        "target": 12,
+        "type": "used_in"
+      },
+      {
+        "source": 1,
+        "target": 12,
+        "type": "contains"
+      },
+      {
+        "source": 11,
+        "target": 13,
+        "type": "used_in"
+      },
+      {
+        "source": 1,
+        "target": 13,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 14,
+        "type": "makes"
+      },
+      {
+        "source": 1,
+        "target": 14,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 15,
+        "type": "makes"
+      },
+      {
+        "source": 1,
+        "target": 15,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 16,
+        "type": "makes"
+      },
+      {
+        "source": 1,
+        "target": 16,
+        "type": "contains"
+      },
+      {
+        "source": 1,
+        "target": 17,
+        "type": "contains"
+      },
+      {
+        "source": 17,
+        "target": 18,
+        "type": "is_a"
+      },
+      {
+        "source": 17,
+        "target": 19,
+        "type": "typically_provides_shelf_life"
+      },
+      {
+        "source": 1,
+        "target": 19,
+        "type": "contains"
+      },
+      {
+        "source": 19,
+        "target": 20,
+        "type": "is_a"
+      }
+    ]
+  }
+}

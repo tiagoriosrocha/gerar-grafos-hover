@@ -1,0 +1,383 @@
+{
+  "dataset": "hover",
+  "id": "df2bee17-447b-42c3-805a-85b8658f0cca",
+  "split": "train",
+  "claim": "The town of Woolwich on Monsweag Bay in Wiscasset, Maine had a population of 3,072 in the 2010 census.",
+  "evidencia": "Page: Montsweag Bay. Sentence: Montsweag Bay is a small brackish water bay near Wiscasset, Maine.\nPage: Woolwich, Maine. Sentence: Woolwich is a town in Sagadahoc County, Maine, United States.\nPage: Woolwich, Maine. Sentence: The population was 3,072 at the 2010 census.",
+  "evidence_text": "Page: Montsweag Bay. Sentence: Montsweag Bay is a small brackish water bay near Wiscasset, Maine.\nPage: Woolwich, Maine. Sentence: Woolwich is a town in Sagadahoc County, Maine, United States.\nPage: Woolwich, Maine. Sentence: The population was 3,072 at the 2010 census.",
+  "label": "SUPPORTED",
+  "num_hops": 2,
+  "hover_metadata": {
+    "supporting_facts": [
+      [
+        "Montsweag Bay",
+        0
+      ],
+      [
+        "Woolwich, Maine",
+        0
+      ],
+      [
+        "Woolwich, Maine",
+        1
+      ]
+    ],
+    "num_hops": 2,
+    "evidence_annotation_id": [
+      0
+    ],
+    "evidence_id": [
+      "Montsweag Bay::sentence::0",
+      "Woolwich, Maine::sentence::0",
+      "Woolwich, Maine::sentence::1"
+    ],
+    "evidence_wiki_url": [
+      "https://en.wikipedia.org/wiki/Montsweag_Bay",
+      "https://en.wikipedia.org/wiki/Woolwich%2C_Maine"
+    ],
+    "evidence_sentence_id": [
+      "Montsweag Bay::sentence::0",
+      "Woolwich, Maine::sentence::0",
+      "Woolwich, Maine::sentence::1"
+    ]
+  },
+  "grafo_claim": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "8e29bc56-7ffb-5886-b84a-5819d39a34aa",
+        "text": "This chunk is about:\n- Places: Woolwich, Monsweag Bay, Wiscasset, Maine\n- Topics: Population, 2010 census\n\nFacts:\n- In 2010, the town of Woolwich in Maine had a population of 3,072 according to the 2010 census.\n- Woolwich is located on Monsweag Bay in Wiscasset, Maine.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "3c017117-d3a7-577a-9e89-a51e65040601",
+        "text": "The town of Woolwich on Monsweag Bay in Wiscasset, Maine had a population of 3,072 in the 2010 census.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "8289e1ff-5287-5c01-bed9-f3ae3b291e7d",
+        "text": "text_1387a3cd9ddfee65e1a436d3bb99da8e",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "a3f9e439-a346-5e4b-8096-1d0c65b7c93b",
+        "text": "woolwich",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "5f394058-b2a0-5ba8-8466-ba2a18cfcf4e",
+        "text": "place",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "c241e7ce-4d1a-5c5e-aefa-d061bc12893d",
+        "text": "monsweag bay",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "67a919c0-cc23-5df1-aedf-44644a4fb91b",
+        "text": "wiscasset",
+        "type": "Entity"
+      },
+      {
+        "id": 7,
+        "original_id": "639fdde7-7841-5347-96e3-67ffadb56002",
+        "text": "maine",
+        "type": "Entity"
+      },
+      {
+        "id": 8,
+        "original_id": "4cb6ada6-82d5-5a31-83fe-5bd97fc4f3b0",
+        "text": "2010 census",
+        "type": "Entity"
+      },
+      {
+        "id": 9,
+        "original_id": "214abcd9-9adf-5c8a-bb35-1e729f2d68c3",
+        "text": "event",
+        "type": "EntityType"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 5,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 6,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 7,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "located_on"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 6,
+        "type": "located_in"
+      },
+      {
+        "source": 1,
+        "target": 6,
+        "type": "contains"
+      },
+      {
+        "source": 6,
+        "target": 7,
+        "type": "located_in"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 8,
+        "type": "had_population_in"
+      },
+      {
+        "source": 1,
+        "target": 8,
+        "type": "contains"
+      },
+      {
+        "source": 8,
+        "target": 9,
+        "type": "is_a"
+      }
+    ]
+  },
+  "grafo_evidencia": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "aa3a943a-c42b-51f9-a4e2-5ca193a15083",
+        "text": "This chunk is about:\n- Places: Montsweag Bay, Wiscasset, Woolwich, Maine, Sagadahoc County\n- Topics: bay characteristics, town classification, population\n\nFacts:\n- Montsweag Bay is a small brackish water bay near Wiscasset, Maine.\n- Woolwich is a town in Sagadahoc County, Maine, United States.\n- Woolwich had a population of 3,072 at the 2010 census.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "4bcbaadc-2404-50c0-8b92-b07e93a1c1d0",
+        "text": "Page: Montsweag Bay. Sentence: Montsweag Bay is a small brackish water bay near Wiscasset, Maine.\nPage: Woolwich, Maine. Sentence: Woolwich is a town in Sagadahoc County, Maine, United States.\nPage: Woolwich, Maine. Sentence: The population was 3,072 at the 2010 census.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "812b8c3b-7d0e-5bcf-893a-67a57874da67",
+        "text": "text_581e68d5533313a01e3fa6575315308e",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "41b21336-f876-51f1-98db-5e8ae2cffe4b",
+        "text": "montsweag bay",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "5f394058-b2a0-5ba8-8466-ba2a18cfcf4e",
+        "text": "place",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "8af9043d-d8eb-5067-a534-5d49b2f9acae",
+        "text": "wiscasset, maine",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "639fdde7-7841-5347-96e3-67ffadb56002",
+        "text": "maine",
+        "type": "Entity"
+      },
+      {
+        "id": 7,
+        "original_id": "df673f31-58f2-5be7-873c-80703ee297f6",
+        "text": "woolwich, maine",
+        "type": "Entity"
+      },
+      {
+        "id": 8,
+        "original_id": "76593eb0-4ca3-5ced-99c1-a91955987611",
+        "text": "sagadahoc county",
+        "type": "Entity"
+      },
+      {
+        "id": 9,
+        "original_id": "874a51da-34ea-5037-be47-d87785d43c37",
+        "text": "united states",
+        "type": "Entity"
+      },
+      {
+        "id": 10,
+        "original_id": "cb1dc1af-5253-5fa4-877e-246a7629f489",
+        "text": "2010",
+        "type": "Entity"
+      },
+      {
+        "id": 11,
+        "original_id": "b19433ae-558c-5aaf-95ac-6231f2a4be0e",
+        "text": "date",
+        "type": "EntityType"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 5,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 6,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 7,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 8,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 9,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "near"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "located_in"
+      },
+      {
+        "source": 3,
+        "target": 6,
+        "type": "located_in"
+      },
+      {
+        "source": 1,
+        "target": 6,
+        "type": "contains"
+      },
+      {
+        "source": 7,
+        "target": 6,
+        "type": "located_in"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      },
+      {
+        "source": 7,
+        "target": 8,
+        "type": "located_in"
+      },
+      {
+        "source": 1,
+        "target": 8,
+        "type": "contains"
+      },
+      {
+        "source": 7,
+        "target": 9,
+        "type": "located_in"
+      },
+      {
+        "source": 1,
+        "target": 9,
+        "type": "contains"
+      },
+      {
+        "source": 7,
+        "target": 10,
+        "type": "population_was"
+      },
+      {
+        "source": 1,
+        "target": 10,
+        "type": "contains"
+      },
+      {
+        "source": 10,
+        "target": 11,
+        "type": "is_a"
+      }
+    ]
+  }
+}

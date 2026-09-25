@@ -1,0 +1,554 @@
+{
+  "dataset": "hover",
+  "id": "d4bd14cf-ef3f-423d-9ca7-779deb29979f",
+  "split": "train",
+  "claim": "Special K is a slang word for a medication whose main effects last up to 25 minutes.",
+  "evidencia": "Page: Special K (song). Sentence: \"Special K\" is a single by British alternative rock band Placebo, released on 19 March 2001 on CD and 12\" vinyl, taken from their third album, \"Black Market Music\".\nPage: Special K (song). Sentence: The title is slang for Ketamine, and the song itself is supposed to explore \"the link between drugs and love,\" and \"\"Special K\" is uppers and the rush of falling in love.\"\nPage: Ketamine. Sentence: Ketamine, sold under the brand name Ketalar among others, is a medication mainly used for starting and maintaining anesthesia.\nPage: Ketamine. Sentence: Effects typically begin within five minutes when given by injection with the main effects lasting up to 25 minutes.",
+  "evidence_text": "Page: Special K (song). Sentence: \"Special K\" is a single by British alternative rock band Placebo, released on 19 March 2001 on CD and 12\" vinyl, taken from their third album, \"Black Market Music\".\nPage: Special K (song). Sentence: The title is slang for Ketamine, and the song itself is supposed to explore \"the link between drugs and love,\" and \"\"Special K\" is uppers and the rush of falling in love.\"\nPage: Ketamine. Sentence: Ketamine, sold under the brand name Ketalar among others, is a medication mainly used for starting and maintaining anesthesia.\nPage: Ketamine. Sentence: Effects typically begin within five minutes when given by injection with the main effects lasting up to 25 minutes.",
+  "label": "SUPPORTED",
+  "num_hops": 2,
+  "hover_metadata": {
+    "supporting_facts": [
+      [
+        "Special K (song)",
+        0
+      ],
+      [
+        "Special K (song)",
+        1
+      ],
+      [
+        "Ketamine",
+        0
+      ],
+      [
+        "Ketamine",
+        4
+      ]
+    ],
+    "num_hops": 2,
+    "evidence_annotation_id": [
+      0
+    ],
+    "evidence_id": [
+      "Special K (song)::sentence::0",
+      "Special K (song)::sentence::1",
+      "Ketamine::sentence::0",
+      "Ketamine::sentence::4"
+    ],
+    "evidence_wiki_url": [
+      "https://en.wikipedia.org/wiki/Special_K_%28song%29",
+      "https://en.wikipedia.org/wiki/Ketamine"
+    ],
+    "evidence_sentence_id": [
+      "Special K (song)::sentence::0",
+      "Special K (song)::sentence::1",
+      "Ketamine::sentence::0",
+      "Ketamine::sentence::4"
+    ]
+  },
+  "grafo_claim": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "b4ca8cbd-4412-5f31-bf1c-f8d48c74f55e",
+        "text": "This chunk is about:\n- Products: Special K, ketamine\n- Concepts: slang terms, drug effects, duration\n\nFacts:\n- Special K is a slang term for ketamine.\n- Ketamine is a medication whose main effects last up to 25 minutes.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "4277dfdd-1369-59ab-9860-81b318e088ae",
+        "text": "Special K is a slang word for a medication whose main effects last up to 25 minutes.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "1401b842-64dd-550f-b352-7d71d15a4a92",
+        "text": "text_d6299d8256b3bb7edd3adbc89754d807",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "0f8e7486-1586-5920-bf52-3be6e8616f09",
+        "text": "special k",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "88890250-2a2b-5428-94a8-d3b645fc52cf",
+        "text": "term",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "a6960ac5-45c9-5fbe-a6a4-6876bed96b9b",
+        "text": "medication",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "6f4f0ae5-130d-54b7-b3d9-217bef1c164f",
+        "text": "drug",
+        "type": "EntityType"
+      },
+      {
+        "id": 7,
+        "original_id": "5a6c4b39-ef0e-557b-8f5e-fb993e0ff8fc",
+        "text": "25 minutes",
+        "type": "Entity"
+      },
+      {
+        "id": 8,
+        "original_id": "48332387-4aec-5e6a-a549-a6b3d83ffb4b",
+        "text": "duration",
+        "type": "EntityType"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "is_slang_for"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 5,
+        "target": 7,
+        "type": "has_main_effects_duration"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      },
+      {
+        "source": 7,
+        "target": 8,
+        "type": "is_a"
+      }
+    ]
+  },
+  "grafo_evidencia": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "ba34f8e3-2cc7-5ce4-96fb-7f3ece4db4b4",
+        "text": "This chunk is about:\n- Products: “Special K” (song), Black Market Music, Ketalar\n- People: Placebo\n- Concepts: Ketamine, anesthesia, drugs and love\n\nFacts:\n- Placebo released “Special K” as a single on 19 March 2001 on CD and 12-inch vinyl.\n- Placebo included “Special K” on its third album, Black Market Music.\n- The title “Special K” is slang for ketamine.\n- “Special K” explores the link between drugs and love and describes “Special K” as uppers and the rush of falling in love.\n- Ketamine is a medication mainly used to start and maintain anesthesia.\n- Ketamine is sold under brand names including Ketalar.\n- Ketamine typically begins to take effect within five minutes when given by injection, and its main effects last up to 25 minutes.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "98f10b04-5a3b-5fa3-abea-933215e03070",
+        "text": "Page: Special K (song). Sentence: \"Special K\" is a single by British alternative rock band Placebo, released on 19 March 2001 on CD and 12\" vinyl, taken from their third album, \"Black Market Music\".\nPage: Special K (song). Sentence: The title is slang for Ketamine, and the song itself is supposed to explore \"the link between drugs and love,\" and \"\"Special K\" is uppers and the rush of falling in love.\"\nPage: Ketamine. Sentence: Ketamine, sold under the brand name Ketalar among others, is a medication mainly used for starting and maintaining anesthesia.\nPage: Ketamine. Sentence: Effects typically begin within five minutes when given by injection with the main effects lasting up to 25 minutes.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "cdab1df1-14e3-5f71-ba07-8aec70b67fc3",
+        "text": "text_6d23a83193a1c7cb4f0b4c36743960cf",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "0f8e7486-1586-5920-bf52-3be6e8616f09",
+        "text": "special k",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "6056b392-f12e-5150-8c0b-ac7545dc2fdf",
+        "text": "song",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "a84e1e78-aa31-57e5-8ea0-d54f171adab7",
+        "text": "placebo",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "a69bcce0-8153-57d6-96fd-6d36e286fb20",
+        "text": "band",
+        "type": "EntityType"
+      },
+      {
+        "id": 7,
+        "original_id": "a6c93450-4f85-5f1e-9c3a-873d1c817eab",
+        "text": "black market music",
+        "type": "Entity"
+      },
+      {
+        "id": 8,
+        "original_id": "213321b1-cf32-59df-847a-8b293b41cf9c",
+        "text": "album",
+        "type": "EntityType"
+      },
+      {
+        "id": 9,
+        "original_id": "910d32d0-b76d-5ce0-9143-516cb34bd58d",
+        "text": "2001-03-19",
+        "type": "Entity"
+      },
+      {
+        "id": 10,
+        "original_id": "b19433ae-558c-5aaf-95ac-6231f2a4be0e",
+        "text": "date",
+        "type": "EntityType"
+      },
+      {
+        "id": 11,
+        "original_id": "0dc7ccf1-b801-5641-94f9-a546f6a15020",
+        "text": "cd",
+        "type": "Entity"
+      },
+      {
+        "id": 12,
+        "original_id": "b320e22c-635b-5f91-ab5a-b34926391670",
+        "text": "format",
+        "type": "EntityType"
+      },
+      {
+        "id": 13,
+        "original_id": "f036b112-ccab-511c-8a2d-7379d622246d",
+        "text": "12-inch vinyl",
+        "type": "Entity"
+      },
+      {
+        "id": 14,
+        "original_id": "bb2b4ae8-09b5-5b58-822a-da1990ed190d",
+        "text": "ketamine",
+        "type": "Entity"
+      },
+      {
+        "id": 15,
+        "original_id": "6f4f0ae5-130d-54b7-b3d9-217bef1c164f",
+        "text": "drug",
+        "type": "EntityType"
+      },
+      {
+        "id": 16,
+        "original_id": "d079862d-7fcf-53ed-bb89-1bcbb73b18ea",
+        "text": "ketalar",
+        "type": "Entity"
+      },
+      {
+        "id": 17,
+        "original_id": "31d368fa-7630-5642-a1c1-e579050f9ac3",
+        "text": "brand",
+        "type": "EntityType"
+      },
+      {
+        "id": 18,
+        "original_id": "3e76b040-de4a-5139-bc4b-536260df52e0",
+        "text": "anesthesia",
+        "type": "Entity"
+      },
+      {
+        "id": 19,
+        "original_id": "8c57c2e7-c660-5f46-a0a8-ec958b2ae88f",
+        "text": "medical procedure",
+        "type": "EntityType"
+      },
+      {
+        "id": 20,
+        "original_id": "dc8f1452-a476-5741-a450-272206c00c92",
+        "text": "five minutes",
+        "type": "Entity"
+      },
+      {
+        "id": 21,
+        "original_id": "48332387-4aec-5e6a-a549-a6b3d83ffb4b",
+        "text": "duration",
+        "type": "EntityType"
+      },
+      {
+        "id": 22,
+        "original_id": "5a6c4b39-ef0e-557b-8f5e-fb993e0ff8fc",
+        "text": "25 minutes",
+        "type": "Entity"
+      },
+      {
+        "id": 23,
+        "original_id": "05aabdff-3b5d-57f2-a329-0aa5c829c7fa",
+        "text": "injection",
+        "type": "Entity"
+      },
+      {
+        "id": 24,
+        "original_id": "0bc7e5d7-7f49-5f01-953a-a4c5f3d97f57",
+        "text": "administration method",
+        "type": "EntityType"
+      },
+      {
+        "id": 25,
+        "original_id": "ba4e2c95-9521-51c7-82a3-6a6f0edcdb75",
+        "text": "drugs and love",
+        "type": "Entity"
+      },
+      {
+        "id": 26,
+        "original_id": "d2a381fa-3658-5ca6-ada9-2109cfc9331d",
+        "text": "concept",
+        "type": "EntityType"
+      },
+      {
+        "id": 27,
+        "original_id": "f89b09e2-ec71-5480-b421-c8e3a8a92602",
+        "text": "falling in love",
+        "type": "Entity"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "is_single_by"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 5,
+        "target": 7,
+        "type": "released_album"
+      },
+      {
+        "source": 3,
+        "target": 7,
+        "type": "taken_from_album"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      },
+      {
+        "source": 7,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 9,
+        "type": "released_on"
+      },
+      {
+        "source": 1,
+        "target": 9,
+        "type": "contains"
+      },
+      {
+        "source": 9,
+        "target": 10,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 11,
+        "type": "released_on_format"
+      },
+      {
+        "source": 1,
+        "target": 11,
+        "type": "contains"
+      },
+      {
+        "source": 11,
+        "target": 12,
+        "type": "is_a"
+      },
+      {
+        "source": 13,
+        "target": 12,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 13,
+        "type": "released_on_format"
+      },
+      {
+        "source": 1,
+        "target": 13,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 14,
+        "type": "title_is_slang_for"
+      },
+      {
+        "source": 1,
+        "target": 14,
+        "type": "contains"
+      },
+      {
+        "source": 14,
+        "target": 15,
+        "type": "is_a"
+      },
+      {
+        "source": 14,
+        "target": 16,
+        "type": "sold_under_brand_name"
+      },
+      {
+        "source": 1,
+        "target": 16,
+        "type": "contains"
+      },
+      {
+        "source": 16,
+        "target": 17,
+        "type": "is_a"
+      },
+      {
+        "source": 14,
+        "target": 18,
+        "type": "mainly_used_for"
+      },
+      {
+        "source": 1,
+        "target": 18,
+        "type": "contains"
+      },
+      {
+        "source": 18,
+        "target": 19,
+        "type": "is_a"
+      },
+      {
+        "source": 14,
+        "target": 20,
+        "type": "effects_begin_within"
+      },
+      {
+        "source": 1,
+        "target": 20,
+        "type": "contains"
+      },
+      {
+        "source": 20,
+        "target": 21,
+        "type": "is_a"
+      },
+      {
+        "source": 22,
+        "target": 21,
+        "type": "is_a"
+      },
+      {
+        "source": 14,
+        "target": 22,
+        "type": "main_effects_last_up_to"
+      },
+      {
+        "source": 1,
+        "target": 22,
+        "type": "contains"
+      },
+      {
+        "source": 14,
+        "target": 23,
+        "type": "given_by"
+      },
+      {
+        "source": 1,
+        "target": 23,
+        "type": "contains"
+      },
+      {
+        "source": 23,
+        "target": 24,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 25,
+        "type": "explores_link_between"
+      },
+      {
+        "source": 1,
+        "target": 25,
+        "type": "contains"
+      },
+      {
+        "source": 25,
+        "target": 26,
+        "type": "is_a"
+      },
+      {
+        "source": 27,
+        "target": 26,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 27,
+        "type": "associated_with_rush_of"
+      },
+      {
+        "source": 1,
+        "target": 27,
+        "type": "contains"
+      }
+    ]
+  }
+}

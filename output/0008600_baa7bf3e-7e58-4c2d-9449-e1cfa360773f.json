@@ -1,0 +1,399 @@
+{
+  "dataset": "hover",
+  "id": "baa7bf3e-7e58-4c2d-9449-e1cfa360773f",
+  "split": "train",
+  "claim": "Both Faxe and Heineken are brewed in Denmark.",
+  "evidencia": "Page: Royal Unibrew. Sentence: It also brews and markets Heineken in Denmark.\nPage: Faxe Brewery. Sentence: It is well known around Germany for its 5% 1 litre cans, North America for its 8% & 10% 500mL cans, and Denmark where it is produced, and especially in Norway.",
+  "evidence_text": "Page: Royal Unibrew. Sentence: It also brews and markets Heineken in Denmark.\nPage: Faxe Brewery. Sentence: It is well known around Germany for its 5% 1 litre cans, North America for its 8% & 10% 500mL cans, and Denmark where it is produced, and especially in Norway.",
+  "label": "SUPPORTED",
+  "num_hops": 2,
+  "hover_metadata": {
+    "supporting_facts": [
+      [
+        "Royal Unibrew",
+        3
+      ],
+      [
+        "Faxe Brewery",
+        3
+      ]
+    ],
+    "num_hops": 2,
+    "evidence_annotation_id": [
+      0
+    ],
+    "evidence_id": [
+      "Royal Unibrew::sentence::3",
+      "Faxe Brewery::sentence::3"
+    ],
+    "evidence_wiki_url": [
+      "https://en.wikipedia.org/wiki/Royal_Unibrew",
+      "https://en.wikipedia.org/wiki/Faxe_Brewery"
+    ],
+    "evidence_sentence_id": [
+      "Royal Unibrew::sentence::3",
+      "Faxe Brewery::sentence::3"
+    ]
+  },
+  "grafo_claim": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "c8b96e4e-9602-5b5a-b5fa-9bb8a2e0fbc7",
+        "text": "This chunk is about:\n- Companies: Faxe, Heineken\n- Places: Denmark\n\nFacts:\n- Faxe is brewed in Denmark.\n- Heineken is brewed in Denmark.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "d266f3f5-c1dd-5c17-a489-646b78dd5501",
+        "text": "Both Faxe and Heineken are brewed in Denmark.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "d396f786-5562-5d66-8c53-8af09dbc0bab",
+        "text": "text_de144be65d5018173a2dbb2ebab12419",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "d2636496-3c1a-590a-b892-06e3a51aaa5c",
+        "text": "faxe",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "f76d57aa-4740-5218-9539-0e0978cbf183",
+        "text": "product",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "d2115ae0-9bfb-5f63-b73a-30df37a0a39b",
+        "text": "denmark",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "5f394058-b2a0-5ba8-8466-ba2a18cfcf4e",
+        "text": "place",
+        "type": "EntityType"
+      },
+      {
+        "id": 7,
+        "original_id": "865f7427-3b92-5c6e-a6b6-edf83ae6c482",
+        "text": "heineken",
+        "type": "Entity"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 7,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "brewed_in"
+      },
+      {
+        "source": 7,
+        "target": 5,
+        "type": "brewed_in"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      }
+    ]
+  },
+  "grafo_evidencia": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "97706ea3-a69c-5d55-ba64-7f22b5b22e93",
+        "text": "This chunk is about:\n- Companies: Royal Unibrew, Faxe Brewery, Heineken\n- Places: Denmark, Germany, North America, Norway\n\nFacts:\n- Royal Unibrew brews and markets Heineken in Denmark.\n- Faxe Brewery produces Faxe in Denmark.\n- Faxe is well known in Germany for its 5% 1 litre cans.\n- Faxe is well known in North America for its 8% and 10% 500 mL cans.\n- Faxe is especially well known in Norway.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "9f9323a4-a876-5294-8576-5ce9119d12c5",
+        "text": "Page: Royal Unibrew. Sentence: It also brews and markets Heineken in Denmark.\nPage: Faxe Brewery. Sentence: It is well known around Germany for its 5% 1 litre cans, North America for its 8% & 10% 500mL cans, and Denmark where it is produced, and especially in Norway.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "2f16bd40-3f33-5489-800d-de7adc51abe5",
+        "text": "text_1be9c1b9b8dafcb5176261cc7f65fa77",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "25363339-31e8-559c-81dc-8af64b9653b0",
+        "text": "royal unibrew",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "388f60fb-220d-55e8-ae9c-3ac93cead308",
+        "text": "organization",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "865f7427-3b92-5c6e-a6b6-edf83ae6c482",
+        "text": "heineken",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "f76d57aa-4740-5218-9539-0e0978cbf183",
+        "text": "product",
+        "type": "EntityType"
+      },
+      {
+        "id": 7,
+        "original_id": "d2115ae0-9bfb-5f63-b73a-30df37a0a39b",
+        "text": "denmark",
+        "type": "Entity"
+      },
+      {
+        "id": 8,
+        "original_id": "5f394058-b2a0-5ba8-8466-ba2a18cfcf4e",
+        "text": "place",
+        "type": "EntityType"
+      },
+      {
+        "id": 9,
+        "original_id": "6f152677-6b63-5d3f-8178-42e2139858d7",
+        "text": "faxe brewery",
+        "type": "Entity"
+      },
+      {
+        "id": 10,
+        "original_id": "f30f124b-1bc0-595d-b0c0-aa20029c2bb4",
+        "text": "germany",
+        "type": "Entity"
+      },
+      {
+        "id": 11,
+        "original_id": "7bfd7320-7015-5d33-be1e-fbdc9c0b5b79",
+        "text": "north america",
+        "type": "Entity"
+      },
+      {
+        "id": 12,
+        "original_id": "8a686226-281a-5503-8de9-971ffe1ad124",
+        "text": "norway",
+        "type": "Entity"
+      },
+      {
+        "id": 13,
+        "original_id": "7ab73261-dc86-59c8-bb89-1deaf8180b15",
+        "text": "5% 1 litre cans",
+        "type": "Entity"
+      },
+      {
+        "id": 14,
+        "original_id": "59e189c5-5c23-5aa6-90c1-18c3ee49a68d",
+        "text": "8% 500ml cans",
+        "type": "Entity"
+      },
+      {
+        "id": 15,
+        "original_id": "5a404fe0-b76f-515f-ab43-7f0646f27142",
+        "text": "10% 500ml cans",
+        "type": "Entity"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 9,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "brews"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 13,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 14,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 15,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 7,
+        "type": "brews_in"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      },
+      {
+        "source": 9,
+        "target": 7,
+        "type": "produced_in"
+      },
+      {
+        "source": 7,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 10,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 11,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 12,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 9,
+        "type": "contains"
+      },
+      {
+        "source": 9,
+        "target": 10,
+        "type": "well_known_in"
+      },
+      {
+        "source": 1,
+        "target": 10,
+        "type": "contains"
+      },
+      {
+        "source": 9,
+        "target": 11,
+        "type": "well_known_in"
+      },
+      {
+        "source": 1,
+        "target": 11,
+        "type": "contains"
+      },
+      {
+        "source": 9,
+        "target": 12,
+        "type": "well_known_in"
+      },
+      {
+        "source": 1,
+        "target": 12,
+        "type": "contains"
+      },
+      {
+        "source": 9,
+        "target": 13,
+        "type": "known_for"
+      },
+      {
+        "source": 1,
+        "target": 13,
+        "type": "contains"
+      },
+      {
+        "source": 9,
+        "target": 14,
+        "type": "known_for"
+      },
+      {
+        "source": 1,
+        "target": 14,
+        "type": "contains"
+      },
+      {
+        "source": 9,
+        "target": 15,
+        "type": "known_for"
+      },
+      {
+        "source": 1,
+        "target": 15,
+        "type": "contains"
+      }
+    ]
+  }
+}

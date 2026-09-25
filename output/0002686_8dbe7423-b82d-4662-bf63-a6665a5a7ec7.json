@@ -1,0 +1,500 @@
+{
+  "dataset": "hover",
+  "id": "8dbe7423-b82d-4662-bf63-a6665a5a7ec7",
+  "split": "train",
+  "claim": "The population in 2010 of the city where the Mount Moriah Cemetery is located is 1,270.",
+  "evidencia": "Page: Mount Moriah Cemetery (South Dakota). Sentence: Mount Moriah Cemetery on Mount Moriah in Deadwood, Lawrence County, South Dakota is the burial place of Wild Bill Hickok, Calamity Jane, Sol Star, Seth Bullock and other notable figures of the Wild West.\nPage: Deadwood, South Dakota. Sentence: The population was 1,270 according to the 2010 census.",
+  "evidence_text": "Page: Mount Moriah Cemetery (South Dakota). Sentence: Mount Moriah Cemetery on Mount Moriah in Deadwood, Lawrence County, South Dakota is the burial place of Wild Bill Hickok, Calamity Jane, Sol Star, Seth Bullock and other notable figures of the Wild West.\nPage: Deadwood, South Dakota. Sentence: The population was 1,270 according to the 2010 census.",
+  "label": "SUPPORTED",
+  "num_hops": 2,
+  "hover_metadata": {
+    "supporting_facts": [
+      [
+        "Mount Moriah Cemetery (South Dakota)",
+        0
+      ],
+      [
+        "Deadwood, South Dakota",
+        2
+      ]
+    ],
+    "num_hops": 2,
+    "evidence_annotation_id": [
+      0
+    ],
+    "evidence_id": [
+      "Mount Moriah Cemetery (South Dakota)::sentence::0",
+      "Deadwood, South Dakota::sentence::2"
+    ],
+    "evidence_wiki_url": [
+      "https://en.wikipedia.org/wiki/Mount_Moriah_Cemetery_%28South_Dakota%29",
+      "https://en.wikipedia.org/wiki/Deadwood%2C_South_Dakota"
+    ],
+    "evidence_sentence_id": [
+      "Mount Moriah Cemetery (South Dakota)::sentence::0",
+      "Deadwood, South Dakota::sentence::2"
+    ]
+  },
+  "grafo_claim": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "6d7812cd-66c0-5931-a277-2103cd2e0ce6",
+        "text": "This chunk is about:\n- Places: Mount Moriah Cemetery, the city where Mount Moriah Cemetery is located\n- Topics: population in 2010\n\nFacts:\n- Mount Moriah Cemetery is located in a city with a population of 1,270 in 2010.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "252a92a7-5c3d-54fa-96f5-dca40965bc6f",
+        "text": "The population in 2010 of the city where the Mount Moriah Cemetery is located is 1,270.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "34c6a724-a0ea-50e3-8e74-1fdbda08aebf",
+        "text": "text_cc33f6890e3d18c5ed1da1a70c3608b1",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "0c4881a5-0361-5da3-ae10-4d7c3095566a",
+        "text": "mount moriah cemetery",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "5c38edad-b29f-527e-a4ba-c0fab7041df2",
+        "text": "1,270",
+        "type": "Entity"
+      },
+      {
+        "id": 5,
+        "original_id": "cb1dc1af-5253-5fa4-877e-246a7629f489",
+        "text": "2010",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "b19433ae-558c-5aaf-95ac-6231f2a4be0e",
+        "text": "date",
+        "type": "EntityType"
+      },
+      {
+        "id": 7,
+        "original_id": "5c1097ca-fab8-54d5-b57f-5dca4b0e2507",
+        "text": "number",
+        "type": "EntityType"
+      },
+      {
+        "id": 8,
+        "original_id": "5f394058-b2a0-5ba8-8466-ba2a18cfcf4e",
+        "text": "place",
+        "type": "EntityType"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "located_city_had_population"
+      },
+      {
+        "source": 1,
+        "target": 4,
+        "type": "contains"
+      },
+      {
+        "source": 4,
+        "target": 5,
+        "type": "population_as_of"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 4,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 8,
+        "type": "is_a"
+      }
+    ]
+  },
+  "grafo_evidencia": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "d19f4312-a68a-5e1e-95f1-065785644e8e",
+        "text": "This chunk is about:\n- Places: Mount Moriah Cemetery, Mount Moriah, Deadwood, Lawrence County, South Dakota\n- People: Wild Bill Hickok, Calamity Jane, Sol Star, Seth Bullock\n- Topics: Wild West, population\n\nFacts:\n- Mount Moriah Cemetery is located on Mount Moriah in Deadwood, Lawrence County, South Dakota.\n- Mount Moriah Cemetery is the burial place of Wild Bill Hickok, Calamity Jane, Sol Star, Seth Bullock, and other notable figures of the Wild West.\n- Deadwood had a population of 1,270 in the 2010 census.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "66209022-c10c-5480-bc2c-b1833ef884d8",
+        "text": "Page: Mount Moriah Cemetery (South Dakota). Sentence: Mount Moriah Cemetery on Mount Moriah in Deadwood, Lawrence County, South Dakota is the burial place of Wild Bill Hickok, Calamity Jane, Sol Star, Seth Bullock and other notable figures of the Wild West.\nPage: Deadwood, South Dakota. Sentence: The population was 1,270 according to the 2010 census.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "eb0cbc95-f74b-578a-895d-87cceba16cdc",
+        "text": "text_69bd1e93bbf28393cb4b2ac4310cde35",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "0c4881a5-0361-5da3-ae10-4d7c3095566a",
+        "text": "mount moriah cemetery",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "b616edb4-c41d-5156-8dd4-a1c182d54378",
+        "text": "mount moriah",
+        "type": "Entity"
+      },
+      {
+        "id": 5,
+        "original_id": "5f394058-b2a0-5ba8-8466-ba2a18cfcf4e",
+        "text": "place",
+        "type": "EntityType"
+      },
+      {
+        "id": 6,
+        "original_id": "610f6a5b-974a-5ce7-bf08-096b05787931",
+        "text": "deadwood",
+        "type": "Entity"
+      },
+      {
+        "id": 7,
+        "original_id": "42f26628-a2ea-565a-b623-3a2e849e5230",
+        "text": "lawrence county",
+        "type": "Entity"
+      },
+      {
+        "id": 8,
+        "original_id": "07de1f03-b1dc-50d0-998c-640566d7dc85",
+        "text": "south dakota",
+        "type": "Entity"
+      },
+      {
+        "id": 9,
+        "original_id": "5c38edad-b29f-527e-a4ba-c0fab7041df2",
+        "text": "1,270",
+        "type": "Entity"
+      },
+      {
+        "id": 10,
+        "original_id": "d2a381fa-3658-5ca6-ada9-2109cfc9331d",
+        "text": "concept",
+        "type": "EntityType"
+      },
+      {
+        "id": 11,
+        "original_id": "4cb6ada6-82d5-5a31-83fe-5bd97fc4f3b0",
+        "text": "2010 census",
+        "type": "Entity"
+      },
+      {
+        "id": 12,
+        "original_id": "cb1dc1af-5253-5fa4-877e-246a7629f489",
+        "text": "2010",
+        "type": "Entity"
+      },
+      {
+        "id": 13,
+        "original_id": "b19433ae-558c-5aaf-95ac-6231f2a4be0e",
+        "text": "date",
+        "type": "EntityType"
+      },
+      {
+        "id": 14,
+        "original_id": "214abcd9-9adf-5c8a-bb35-1e729f2d68c3",
+        "text": "event",
+        "type": "EntityType"
+      },
+      {
+        "id": 15,
+        "original_id": "bc759702-b44c-5739-90e5-010fb004f89a",
+        "text": "wild bill hickok",
+        "type": "Entity"
+      },
+      {
+        "id": 16,
+        "original_id": "1c5e5846-fd26-5da7-a1f0-0ba04e1c1c53",
+        "text": "wild west",
+        "type": "Entity"
+      },
+      {
+        "id": 17,
+        "original_id": "99a82eec-bb35-5bb5-9ed2-e73fc7a756de",
+        "text": "person",
+        "type": "EntityType"
+      },
+      {
+        "id": 18,
+        "original_id": "cdd41e7f-5367-583d-b45e-8c7c49cfd9d8",
+        "text": "calamity jane",
+        "type": "Entity"
+      },
+      {
+        "id": 19,
+        "original_id": "d12e90f5-9e9b-5f06-9d5b-79f6b08a150d",
+        "text": "sol star",
+        "type": "Entity"
+      },
+      {
+        "id": 20,
+        "original_id": "16cd3570-a5ab-5dce-9bc2-e5897527de16",
+        "text": "seth bullock",
+        "type": "Entity"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 15,
+        "target": 3,
+        "type": "buried_at"
+      },
+      {
+        "source": 18,
+        "target": 3,
+        "type": "buried_at"
+      },
+      {
+        "source": 19,
+        "target": 3,
+        "type": "buried_at"
+      },
+      {
+        "source": 20,
+        "target": 3,
+        "type": "buried_at"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "located_on"
+      },
+      {
+        "source": 1,
+        "target": 4,
+        "type": "contains"
+      },
+      {
+        "source": 4,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 8,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 7,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 6,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 6,
+        "type": "located_in"
+      },
+      {
+        "source": 1,
+        "target": 6,
+        "type": "contains"
+      },
+      {
+        "source": 6,
+        "target": 7,
+        "type": "located_in"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      },
+      {
+        "source": 7,
+        "target": 8,
+        "type": "located_in"
+      },
+      {
+        "source": 3,
+        "target": 8,
+        "type": "located_in"
+      },
+      {
+        "source": 1,
+        "target": 8,
+        "type": "contains"
+      },
+      {
+        "source": 6,
+        "target": 9,
+        "type": "has_population"
+      },
+      {
+        "source": 1,
+        "target": 9,
+        "type": "contains"
+      },
+      {
+        "source": 9,
+        "target": 10,
+        "type": "is_a"
+      },
+      {
+        "source": 16,
+        "target": 10,
+        "type": "is_a"
+      },
+      {
+        "source": 6,
+        "target": 11,
+        "type": "population_reported_by"
+      },
+      {
+        "source": 1,
+        "target": 11,
+        "type": "contains"
+      },
+      {
+        "source": 11,
+        "target": 12,
+        "type": "occurred_in"
+      },
+      {
+        "source": 1,
+        "target": 12,
+        "type": "contains"
+      },
+      {
+        "source": 12,
+        "target": 13,
+        "type": "is_a"
+      },
+      {
+        "source": 11,
+        "target": 14,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 15,
+        "type": "contains"
+      },
+      {
+        "source": 15,
+        "target": 16,
+        "type": "notable_figure_of"
+      },
+      {
+        "source": 18,
+        "target": 16,
+        "type": "notable_figure_of"
+      },
+      {
+        "source": 19,
+        "target": 16,
+        "type": "notable_figure_of"
+      },
+      {
+        "source": 20,
+        "target": 16,
+        "type": "notable_figure_of"
+      },
+      {
+        "source": 1,
+        "target": 16,
+        "type": "contains"
+      },
+      {
+        "source": 15,
+        "target": 17,
+        "type": "is_a"
+      },
+      {
+        "source": 18,
+        "target": 17,
+        "type": "is_a"
+      },
+      {
+        "source": 19,
+        "target": 17,
+        "type": "is_a"
+      },
+      {
+        "source": 20,
+        "target": 17,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 18,
+        "type": "contains"
+      },
+      {
+        "source": 1,
+        "target": 19,
+        "type": "contains"
+      },
+      {
+        "source": 1,
+        "target": 20,
+        "type": "contains"
+      }
+    ]
+  }
+}

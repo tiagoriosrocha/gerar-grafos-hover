@@ -1,0 +1,396 @@
+{
+  "dataset": "hover",
+  "id": "4eca0b3a-c95c-479c-85a2-2009ef5299a6",
+  "split": "train",
+  "claim": "The Volvo S70 was essentially modeled after the Volvo 850 and was the first all wheel drive Volvo.",
+  "evidencia": "Page: Volvo S70. Sentence: The S70 was essentially a facelifted 850 saloon.\nPage: Volvo 850. Sentence: The Volvo 850 is a compact executive car that was produced by the Swedish manufacturer Volvo Cars from 1991 to 1996.\nPage: Volvo 850. Sentence: The 850 was the first front-wheel drive vehicle from Volvo to be sold in North America and also the first all-wheel drive Volvo.",
+  "evidence_text": "Page: Volvo S70. Sentence: The S70 was essentially a facelifted 850 saloon.\nPage: Volvo 850. Sentence: The Volvo 850 is a compact executive car that was produced by the Swedish manufacturer Volvo Cars from 1991 to 1996.\nPage: Volvo 850. Sentence: The 850 was the first front-wheel drive vehicle from Volvo to be sold in North America and also the first all-wheel drive Volvo.",
+  "label": "SUPPORTED",
+  "num_hops": 2,
+  "hover_metadata": {
+    "supporting_facts": [
+      [
+        "Volvo S70",
+        1
+      ],
+      [
+        "Volvo 850",
+        0
+      ],
+      [
+        "Volvo 850",
+        2
+      ]
+    ],
+    "num_hops": 2,
+    "evidence_annotation_id": [
+      0
+    ],
+    "evidence_id": [
+      "Volvo S70::sentence::1",
+      "Volvo 850::sentence::0",
+      "Volvo 850::sentence::2"
+    ],
+    "evidence_wiki_url": [
+      "https://en.wikipedia.org/wiki/Volvo_S70",
+      "https://en.wikipedia.org/wiki/Volvo_850"
+    ],
+    "evidence_sentence_id": [
+      "Volvo S70::sentence::1",
+      "Volvo 850::sentence::0",
+      "Volvo 850::sentence::2"
+    ]
+  },
+  "grafo_claim": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "2355083f-03d5-5dce-b6ff-07e1dbbe7621",
+        "text": "This chunk is about:\n- Products: Volvo S70, Volvo 850\n- Companies: Volvo\n- Concepts: all-wheel drive\n\nFacts:\n- The Volvo S70 was essentially modeled after the Volvo 850.\n- The Volvo S70 was the first all-wheel drive Volvo.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "1947569c-5cad-5b84-8bb7-d58672fbad42",
+        "text": "The Volvo S70 was essentially modeled after the Volvo 850 and was the first all wheel drive Volvo.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "96299a29-efc1-52ef-90fe-8d03dcc99fd4",
+        "text": "text_b5c7d1826c142c18e3470559ea43e098",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "2bd15493-f2e7-5b9f-a358-1759c5adeeb2",
+        "text": "volvo s70",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "cbc23dc9-a674-511a-b130-f843aff0cc51",
+        "text": "volvo 850",
+        "type": "Entity"
+      },
+      {
+        "id": 5,
+        "original_id": "f76d57aa-4740-5218-9539-0e0978cbf183",
+        "text": "product",
+        "type": "EntityType"
+      },
+      {
+        "id": 6,
+        "original_id": "478868ed-3bf5-5e2e-8132-d2c3aea663aa",
+        "text": "all wheel drive volvo",
+        "type": "Entity"
+      },
+      {
+        "id": 7,
+        "original_id": "d2a381fa-3658-5ca6-ada9-2109cfc9331d",
+        "text": "concept",
+        "type": "EntityType"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "modeled_after"
+      },
+      {
+        "source": 1,
+        "target": 4,
+        "type": "contains"
+      },
+      {
+        "source": 4,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 6,
+        "type": "first_of_type"
+      },
+      {
+        "source": 1,
+        "target": 6,
+        "type": "contains"
+      },
+      {
+        "source": 6,
+        "target": 7,
+        "type": "is_a"
+      }
+    ]
+  },
+  "grafo_evidencia": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "194f43ba-5a80-5b20-a0d9-8451d2d966c2",
+        "text": "This chunk is about:\n- Products: Volvo S70, Volvo 850\n- Companies: Volvo Cars\n- Concepts: facelift, compact executive car, front-wheel drive, all-wheel drive, North America\n\nFacts:\n- Volvo Cars produced the Volvo 850, a compact executive car, from 1991 to 1996.\n- The Volvo 850 was the first front-wheel drive vehicle from Volvo to be sold in North America.\n- The Volvo 850 was also the first all-wheel drive Volvo.\n- The Volvo S70 was essentially a facelifted Volvo 850 saloon.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "7960ab3e-c05b-51b3-9c06-20896b482e2f",
+        "text": "Page: Volvo S70. Sentence: The S70 was essentially a facelifted 850 saloon.\nPage: Volvo 850. Sentence: The Volvo 850 is a compact executive car that was produced by the Swedish manufacturer Volvo Cars from 1991 to 1996.\nPage: Volvo 850. Sentence: The 850 was the first front-wheel drive vehicle from Volvo to be sold in North America and also the first all-wheel drive Volvo.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "e5e0ca1b-4a3c-5034-bddb-40f48d4b94ff",
+        "text": "text_4b7174d871217a16933c32ab332afc87",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "2bd15493-f2e7-5b9f-a358-1759c5adeeb2",
+        "text": "volvo s70",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "cbc23dc9-a674-511a-b130-f843aff0cc51",
+        "text": "volvo 850",
+        "type": "Entity"
+      },
+      {
+        "id": 5,
+        "original_id": "bf02f29d-aeea-50bf-9b58-2a6d5a13279b",
+        "text": "volvo cars",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "388f60fb-220d-55e8-ae9c-3ac93cead308",
+        "text": "organization",
+        "type": "EntityType"
+      },
+      {
+        "id": 7,
+        "original_id": "720e3f07-c737-5d52-9990-eb6ce06a3479",
+        "text": "1991",
+        "type": "Entity"
+      },
+      {
+        "id": 8,
+        "original_id": "b19433ae-558c-5aaf-95ac-6231f2a4be0e",
+        "text": "date",
+        "type": "EntityType"
+      },
+      {
+        "id": 9,
+        "original_id": "03508744-888e-5e4b-9a29-9ff87ae8d3b3",
+        "text": "1996",
+        "type": "Entity"
+      },
+      {
+        "id": 10,
+        "original_id": "7bfd7320-7015-5d33-be1e-fbdc9c0b5b79",
+        "text": "north america",
+        "type": "Entity"
+      },
+      {
+        "id": 11,
+        "original_id": "5f394058-b2a0-5ba8-8466-ba2a18cfcf4e",
+        "text": "place",
+        "type": "EntityType"
+      },
+      {
+        "id": 12,
+        "original_id": "d0fb602e-d613-588c-bc21-01ad34ed0587",
+        "text": "front-wheel drive",
+        "type": "Entity"
+      },
+      {
+        "id": 13,
+        "original_id": "d2a381fa-3658-5ca6-ada9-2109cfc9331d",
+        "text": "concept",
+        "type": "EntityType"
+      },
+      {
+        "id": 14,
+        "original_id": "e817d949-510b-5dee-bf78-513adc30f144",
+        "text": "all-wheel drive",
+        "type": "Entity"
+      },
+      {
+        "id": 15,
+        "original_id": "f76d57aa-4740-5218-9539-0e0978cbf183",
+        "text": "product",
+        "type": "EntityType"
+      },
+      {
+        "id": 16,
+        "original_id": "76dfb0cd-0702-5f05-8e27-a2ac4ed2ada9",
+        "text": "saloon",
+        "type": "Entity"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_facelifted_version_of"
+      },
+      {
+        "source": 1,
+        "target": 4,
+        "type": "contains"
+      },
+      {
+        "source": 4,
+        "target": 5,
+        "type": "produced_by"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 4,
+        "target": 7,
+        "type": "production_started_in"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      },
+      {
+        "source": 7,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 9,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 4,
+        "target": 9,
+        "type": "production_ended_in"
+      },
+      {
+        "source": 1,
+        "target": 9,
+        "type": "contains"
+      },
+      {
+        "source": 4,
+        "target": 10,
+        "type": "sold_in"
+      },
+      {
+        "source": 1,
+        "target": 10,
+        "type": "contains"
+      },
+      {
+        "source": 10,
+        "target": 11,
+        "type": "is_a"
+      },
+      {
+        "source": 4,
+        "target": 12,
+        "type": "has_drivetrain"
+      },
+      {
+        "source": 1,
+        "target": 12,
+        "type": "contains"
+      },
+      {
+        "source": 12,
+        "target": 13,
+        "type": "is_a"
+      },
+      {
+        "source": 14,
+        "target": 13,
+        "type": "is_a"
+      },
+      {
+        "source": 16,
+        "target": 13,
+        "type": "is_a"
+      },
+      {
+        "source": 4,
+        "target": 14,
+        "type": "has_drivetrain"
+      },
+      {
+        "source": 1,
+        "target": 14,
+        "type": "contains"
+      },
+      {
+        "source": 4,
+        "target": 15,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 15,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 16,
+        "type": "has_body_style"
+      },
+      {
+        "source": 1,
+        "target": 16,
+        "type": "contains"
+      }
+    ]
+  }
+}

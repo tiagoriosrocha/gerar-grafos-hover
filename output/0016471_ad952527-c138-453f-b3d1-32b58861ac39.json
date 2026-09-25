@@ -1,0 +1,449 @@
+{
+  "dataset": "hover",
+  "id": "ad952527-c138-453f-b3d1-32b58861ac39",
+  "split": "train",
+  "claim": "The DAF XF truck is produced by Leyland Trucks at their Farington plant.",
+  "evidencia": "Page: DAF XF. Sentence: The DAF XF is a range of trucks produced by the Dutch manufacturer DAF since 1997.\nPage: DAF XF. Sentence: All right hand drive versions of the XF are assembled at Leyland Trucks in the UK.\nPage: DAF Trucks. Sentence: Some of the truck models sold with the DAF brand are designed and built by Leyland Trucks at their Farington plant in Leyland near Preston, England.",
+  "evidence_text": "Page: DAF XF. Sentence: The DAF XF is a range of trucks produced by the Dutch manufacturer DAF since 1997.\nPage: DAF XF. Sentence: All right hand drive versions of the XF are assembled at Leyland Trucks in the UK.\nPage: DAF Trucks. Sentence: Some of the truck models sold with the DAF brand are designed and built by Leyland Trucks at their Farington plant in Leyland near Preston, England.",
+  "label": "SUPPORTED",
+  "num_hops": 2,
+  "hover_metadata": {
+    "supporting_facts": [
+      [
+        "DAF XF",
+        0
+      ],
+      [
+        "DAF XF",
+        1
+      ],
+      [
+        "DAF Trucks",
+        3
+      ]
+    ],
+    "num_hops": 2,
+    "evidence_annotation_id": [
+      0
+    ],
+    "evidence_id": [
+      "DAF XF::sentence::0",
+      "DAF XF::sentence::1",
+      "DAF Trucks::sentence::3"
+    ],
+    "evidence_wiki_url": [
+      "https://en.wikipedia.org/wiki/DAF_XF",
+      "https://en.wikipedia.org/wiki/DAF_Trucks"
+    ],
+    "evidence_sentence_id": [
+      "DAF XF::sentence::0",
+      "DAF XF::sentence::1",
+      "DAF Trucks::sentence::3"
+    ]
+  },
+  "grafo_claim": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "01a2db4b-6fe3-5f8a-bd4b-33de95080cb6",
+        "text": "This chunk is about:\n- Products: DAF XF truck\n- Companies: Leyland Trucks\n- Places: Farington plant\n\nFacts:\n- Leyland Trucks produces the DAF XF truck at its Farington plant.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "5709d086-5e51-5c1f-8d92-ebc38d345b00",
+        "text": "The DAF XF truck is produced by Leyland Trucks at their Farington plant.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "4e8e26c1-6644-5a87-b3d0-5ed02b4b0e69",
+        "text": "text_a137212d6a97a690ab370d0e8e645146",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "285e2a02-c711-5b94-bb48-6d07e50aad9a",
+        "text": "daf xf truck",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "f76d57aa-4740-5218-9539-0e0978cbf183",
+        "text": "product",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "93771fe6-d4b8-5c78-aa2b-68a16777f010",
+        "text": "leyland trucks",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "388f60fb-220d-55e8-ae9c-3ac93cead308",
+        "text": "organization",
+        "type": "EntityType"
+      },
+      {
+        "id": 7,
+        "original_id": "ba65cfe0-cea4-542d-84ae-9d7010352524",
+        "text": "farington plant",
+        "type": "Entity"
+      },
+      {
+        "id": 8,
+        "original_id": "5f394058-b2a0-5ba8-8466-ba2a18cfcf4e",
+        "text": "place",
+        "type": "EntityType"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "produced_by"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 5,
+        "target": 7,
+        "type": "has_plant"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      },
+      {
+        "source": 7,
+        "target": 8,
+        "type": "is_a"
+      }
+    ]
+  },
+  "grafo_evidencia": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "5e1e9379-5bae-5835-9fe3-201fe0dd6041",
+        "text": "This chunk is about:\n- Products: DAF XF, DAF truck models\n- Companies: DAF, Leyland Trucks\n- Places: Netherlands, UK, Leyland, Preston, England, Farington plant\n\nFacts:\n- DAF has produced the DAF XF range of trucks since 1997.\n- All right-hand-drive versions of the DAF XF are assembled by Leyland Trucks in the UK.\n- Some truck models sold under the DAF brand are designed and built by Leyland Trucks at the Farington plant in Leyland near Preston, England.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "2af4be53-f72c-56e0-a8f3-8957569f4652",
+        "text": "Page: DAF XF. Sentence: The DAF XF is a range of trucks produced by the Dutch manufacturer DAF since 1997.\nPage: DAF XF. Sentence: All right hand drive versions of the XF are assembled at Leyland Trucks in the UK.\nPage: DAF Trucks. Sentence: Some of the truck models sold with the DAF brand are designed and built by Leyland Trucks at their Farington plant in Leyland near Preston, England.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "d7336458-66e0-5543-b233-2cdd19bba5d4",
+        "text": "text_1f41d0223d65b7b0aa7b51b2b6f9c3fe",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "abaa6cab-23b8-55ee-9d3e-40e90a7192be",
+        "text": "daf xf",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "f76d57aa-4740-5218-9539-0e0978cbf183",
+        "text": "product",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "81c7b615-e08d-594e-bbac-9aaf9aa0c587",
+        "text": "daf",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "388f60fb-220d-55e8-ae9c-3ac93cead308",
+        "text": "organization",
+        "type": "EntityType"
+      },
+      {
+        "id": 7,
+        "original_id": "43bacd89-6564-547b-8412-0e96c06e7c27",
+        "text": "1997",
+        "type": "Entity"
+      },
+      {
+        "id": 8,
+        "original_id": "b19433ae-558c-5aaf-95ac-6231f2a4be0e",
+        "text": "date",
+        "type": "EntityType"
+      },
+      {
+        "id": 9,
+        "original_id": "93771fe6-d4b8-5c78-aa2b-68a16777f010",
+        "text": "leyland trucks",
+        "type": "Entity"
+      },
+      {
+        "id": 10,
+        "original_id": "1941be33-5fbb-50eb-a9b1-fa2fc297d7dd",
+        "text": "united kingdom",
+        "type": "Entity"
+      },
+      {
+        "id": 11,
+        "original_id": "5f394058-b2a0-5ba8-8466-ba2a18cfcf4e",
+        "text": "place",
+        "type": "EntityType"
+      },
+      {
+        "id": 12,
+        "original_id": "b674ed90-3c50-5d6e-889e-da075b8d44c2",
+        "text": "daf brand",
+        "type": "Entity"
+      },
+      {
+        "id": 13,
+        "original_id": "31d368fa-7630-5642-a1c1-e579050f9ac3",
+        "text": "brand",
+        "type": "EntityType"
+      },
+      {
+        "id": 14,
+        "original_id": "ba65cfe0-cea4-542d-84ae-9d7010352524",
+        "text": "farington plant",
+        "type": "Entity"
+      },
+      {
+        "id": 15,
+        "original_id": "18bb2581-fa26-5b66-b768-aacc5ebd32b9",
+        "text": "leyland",
+        "type": "Entity"
+      },
+      {
+        "id": 16,
+        "original_id": "9e47c369-2213-5de9-9c85-c119356f42bd",
+        "text": "preston",
+        "type": "Entity"
+      },
+      {
+        "id": 17,
+        "original_id": "27f0656f-762c-54f0-8ed5-c4b27557219f",
+        "text": "england",
+        "type": "Entity"
+      },
+      {
+        "id": 18,
+        "original_id": "5e7220fe-00a7-5986-99b8-085382991e2e",
+        "text": "right hand drive versions of the daf xf",
+        "type": "Entity"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 18,
+        "target": 3,
+        "type": "version_of"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 18,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "produced_by"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 9,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 7,
+        "type": "produced_since"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      },
+      {
+        "source": 7,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 9,
+        "type": "contains"
+      },
+      {
+        "source": 18,
+        "target": 9,
+        "type": "assembled_at"
+      },
+      {
+        "source": 9,
+        "target": 10,
+        "type": "located_in"
+      },
+      {
+        "source": 1,
+        "target": 10,
+        "type": "contains"
+      },
+      {
+        "source": 10,
+        "target": 11,
+        "type": "is_a"
+      },
+      {
+        "source": 14,
+        "target": 11,
+        "type": "is_a"
+      },
+      {
+        "source": 15,
+        "target": 11,
+        "type": "is_a"
+      },
+      {
+        "source": 16,
+        "target": 11,
+        "type": "is_a"
+      },
+      {
+        "source": 17,
+        "target": 11,
+        "type": "is_a"
+      },
+      {
+        "source": 9,
+        "target": 12,
+        "type": "designs_and_builds_models_for"
+      },
+      {
+        "source": 1,
+        "target": 12,
+        "type": "contains"
+      },
+      {
+        "source": 12,
+        "target": 13,
+        "type": "is_a"
+      },
+      {
+        "source": 9,
+        "target": 14,
+        "type": "has_plant"
+      },
+      {
+        "source": 1,
+        "target": 14,
+        "type": "contains"
+      },
+      {
+        "source": 14,
+        "target": 15,
+        "type": "located_in"
+      },
+      {
+        "source": 1,
+        "target": 15,
+        "type": "contains"
+      },
+      {
+        "source": 15,
+        "target": 16,
+        "type": "near"
+      },
+      {
+        "source": 1,
+        "target": 16,
+        "type": "contains"
+      },
+      {
+        "source": 16,
+        "target": 17,
+        "type": "located_in"
+      },
+      {
+        "source": 15,
+        "target": 17,
+        "type": "located_in"
+      },
+      {
+        "source": 1,
+        "target": 17,
+        "type": "contains"
+      },
+      {
+        "source": 1,
+        "target": 18,
+        "type": "contains"
+      }
+    ]
+  }
+}

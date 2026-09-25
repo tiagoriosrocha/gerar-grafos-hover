@@ -1,0 +1,481 @@
+{
+  "dataset": "hover",
+  "id": "d5b6194c-8bf9-4a58-8177-865a15e48ac1",
+  "split": "train",
+  "claim": "Roger Meddows Taylor was born early. He was born earlier than the artist that released the rock album Head overs Heels.",
+  "evidencia": "Page: Roger Taylor (Queen drummer). Sentence: Roger Meddows Taylor (born 26 July 1949) is an English musician, singer and songwriter.\nPage: Elizabeth Fraser. Sentence: Elizabeth Davidson Fraser (born 29 August 1963), sometimes known as Liz Fraser, is a British singer, songwriter and musician from Grangemouth, Scotland, best known as the vocalist for the band Cocteau Twins.\nPage: Head over Heels (Cocteau Twins album). Sentence: The album was released in October 1983 by 4AD, and was their first album as a duo of Elizabeth Fraser and Robin Guthrie.",
+  "evidence_text": "Page: Roger Taylor (Queen drummer). Sentence: Roger Meddows Taylor (born 26 July 1949) is an English musician, singer and songwriter.\nPage: Elizabeth Fraser. Sentence: Elizabeth Davidson Fraser (born 29 August 1963), sometimes known as Liz Fraser, is a British singer, songwriter and musician from Grangemouth, Scotland, best known as the vocalist for the band Cocteau Twins.\nPage: Head over Heels (Cocteau Twins album). Sentence: The album was released in October 1983 by 4AD, and was their first album as a duo of Elizabeth Fraser and Robin Guthrie.",
+  "label": "SUPPORTED",
+  "num_hops": 3,
+  "hover_metadata": {
+    "supporting_facts": [
+      [
+        "Roger Taylor (Queen drummer)",
+        0
+      ],
+      [
+        "Elizabeth Fraser",
+        0
+      ],
+      [
+        "Head over Heels (Cocteau Twins album)",
+        1
+      ]
+    ],
+    "num_hops": 3,
+    "evidence_annotation_id": [
+      0
+    ],
+    "evidence_id": [
+      "Roger Taylor (Queen drummer)::sentence::0",
+      "Elizabeth Fraser::sentence::0",
+      "Head over Heels (Cocteau Twins album)::sentence::1"
+    ],
+    "evidence_wiki_url": [
+      "https://en.wikipedia.org/wiki/Roger_Taylor_%28Queen_drummer%29",
+      "https://en.wikipedia.org/wiki/Elizabeth_Fraser",
+      "https://en.wikipedia.org/wiki/Head_over_Heels_%28Cocteau_Twins_album%29"
+    ],
+    "evidence_sentence_id": [
+      "Roger Taylor (Queen drummer)::sentence::0",
+      "Elizabeth Fraser::sentence::0",
+      "Head over Heels (Cocteau Twins album)::sentence::1"
+    ]
+  },
+  "grafo_claim": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "f547fe9f-8f16-5278-bc36-60ef25b89968",
+        "text": "This chunk is about:\n- People: Roger Meddows Taylor\n- Albums: Head over Heels\n\nFacts:\n- Roger Meddows Taylor was born early.\n- Roger Meddows Taylor was born earlier than the artist who released the rock album Head over Heels.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "09126b8e-2a97-5655-8afd-3dba5e8f0e60",
+        "text": "Roger Meddows Taylor was born early. He was born earlier than the artist that released the rock album Head overs Heels.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "41ce0cd9-02c0-5d92-8d51-dc95e1166225",
+        "text": "text_d69cb0c5d0c102483fb8b003d3fbff68",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "e23b932f-5712-5d19-b7c6-049cac3cf27e",
+        "text": "roger meddows taylor",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "99a82eec-bb35-5bb5-9ed2-e73fc7a756de",
+        "text": "person",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "3310b472-32c5-537b-b0a6-ca527254b51d",
+        "text": "artist that released head overs heels",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "aeea2147-217f-5479-b860-fcd0f8b60796",
+        "text": "head overs heels",
+        "type": "Entity"
+      },
+      {
+        "id": 7,
+        "original_id": "213321b1-cf32-59df-847a-8b293b41cf9c",
+        "text": "album",
+        "type": "EntityType"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 5,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "born_earlier_than"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "released"
+      },
+      {
+        "source": 1,
+        "target": 6,
+        "type": "contains"
+      },
+      {
+        "source": 6,
+        "target": 7,
+        "type": "is_a"
+      }
+    ]
+  },
+  "grafo_evidencia": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "8c340c5a-3ede-58d5-b479-7a897d6c166e",
+        "text": "This chunk is about:\n- People: Roger Taylor, Elizabeth Fraser, Robin Guthrie\n- Bands: Queen, Cocteau Twins\n- Albums: Head over Heels\n- Companies: 4AD\n- Places: Grangemouth, Scotland\n- Topics: musician biographies, album release\n\nFacts:\n- Roger Taylor was born on 26 July 1949 and is an English musician, singer, and songwriter.\n- Elizabeth Fraser was born on 29 August 1963, is also known as Liz Fraser, and is a British singer, songwriter, and musician from Grangemouth, Scotland.\n- Elizabeth Fraser is best known as the vocalist for the band Cocteau Twins.\n- Head over Heels was released in October 1983 by 4AD.\n- Head over Heels was the first Cocteau Twins album made as a duo of Elizabeth Fraser and Robin Guthrie.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "8f22a6ee-aa22-5d31-8e5f-30694d4aabd7",
+        "text": "Page: Roger Taylor (Queen drummer). Sentence: Roger Meddows Taylor (born 26 July 1949) is an English musician, singer and songwriter.\nPage: Elizabeth Fraser. Sentence: Elizabeth Davidson Fraser (born 29 August 1963), sometimes known as Liz Fraser, is a British singer, songwriter and musician from Grangemouth, Scotland, best known as the vocalist for the band Cocteau Twins.\nPage: Head over Heels (Cocteau Twins album). Sentence: The album was released in October 1983 by 4AD, and was their first album as a duo of Elizabeth Fraser and Robin Guthrie.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "287750eb-a585-5404-9f7a-af4b4f18e851",
+        "text": "text_8b4e69f621efe9c62915cbf4b5f395e0",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "e23b932f-5712-5d19-b7c6-049cac3cf27e",
+        "text": "roger meddows taylor",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "99a82eec-bb35-5bb5-9ed2-e73fc7a756de",
+        "text": "person",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "30df9f41-f060-5b57-b210-00d01ac32738",
+        "text": "1949-07-26",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "b19433ae-558c-5aaf-95ac-6231f2a4be0e",
+        "text": "date",
+        "type": "EntityType"
+      },
+      {
+        "id": 7,
+        "original_id": "27f0656f-762c-54f0-8ed5-c4b27557219f",
+        "text": "england",
+        "type": "Entity"
+      },
+      {
+        "id": 8,
+        "original_id": "5f394058-b2a0-5ba8-8466-ba2a18cfcf4e",
+        "text": "place",
+        "type": "EntityType"
+      },
+      {
+        "id": 9,
+        "original_id": "a48400ff-a2a7-5484-a235-59b411fa7447",
+        "text": "elizabeth davidson fraser",
+        "type": "Entity"
+      },
+      {
+        "id": 10,
+        "original_id": "59e20616-fbee-50ec-b2c2-c4d7f4b91fcf",
+        "text": "1963-08-29",
+        "type": "Entity"
+      },
+      {
+        "id": 11,
+        "original_id": "3a7a007b-2c5d-536f-84eb-159899349c9e",
+        "text": "grangemouth",
+        "type": "Entity"
+      },
+      {
+        "id": 12,
+        "original_id": "8869a452-9a66-57bd-aa73-093c45fb3b7a",
+        "text": "scotland",
+        "type": "Entity"
+      },
+      {
+        "id": 13,
+        "original_id": "3bd02122-ef7c-5947-93d7-69786058f6fb",
+        "text": "cocteau twins",
+        "type": "Entity"
+      },
+      {
+        "id": 14,
+        "original_id": "388f60fb-220d-55e8-ae9c-3ac93cead308",
+        "text": "organization",
+        "type": "EntityType"
+      },
+      {
+        "id": 15,
+        "original_id": "e4bfa4b4-2b61-5b7e-ae22-4833283799a5",
+        "text": "liz fraser",
+        "type": "Entity"
+      },
+      {
+        "id": 16,
+        "original_id": "aac654bb-3c0b-5634-bf89-38b4d1261a7b",
+        "text": "head over heels",
+        "type": "Entity"
+      },
+      {
+        "id": 17,
+        "original_id": "5263a535-1b4b-5925-be3e-310d03cd303b",
+        "text": "work",
+        "type": "EntityType"
+      },
+      {
+        "id": 18,
+        "original_id": "535d9d56-8845-59e2-8c16-229b7ebdbaa7",
+        "text": "1983-10",
+        "type": "Entity"
+      },
+      {
+        "id": 19,
+        "original_id": "fbefe16a-5ae5-5992-bd1d-124c65279411",
+        "text": "4ad",
+        "type": "Entity"
+      },
+      {
+        "id": 20,
+        "original_id": "c029f6cd-2f92-5312-94fd-a58c20c2baf8",
+        "text": "robin guthrie",
+        "type": "Entity"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 9,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 15,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 20,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "born_on"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 10,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 18,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 7,
+        "type": "associated_with_nationality"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      },
+      {
+        "source": 7,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 11,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 12,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 9,
+        "type": "contains"
+      },
+      {
+        "source": 15,
+        "target": 9,
+        "type": "alternate_name_of"
+      },
+      {
+        "source": 16,
+        "target": 9,
+        "type": "first_album_as_duo_with_member"
+      },
+      {
+        "source": 9,
+        "target": 10,
+        "type": "born_on"
+      },
+      {
+        "source": 1,
+        "target": 10,
+        "type": "contains"
+      },
+      {
+        "source": 9,
+        "target": 11,
+        "type": "from"
+      },
+      {
+        "source": 1,
+        "target": 11,
+        "type": "contains"
+      },
+      {
+        "source": 11,
+        "target": 12,
+        "type": "located_in"
+      },
+      {
+        "source": 9,
+        "target": 12,
+        "type": "from"
+      },
+      {
+        "source": 1,
+        "target": 12,
+        "type": "contains"
+      },
+      {
+        "source": 9,
+        "target": 13,
+        "type": "vocalist_for"
+      },
+      {
+        "source": 1,
+        "target": 13,
+        "type": "contains"
+      },
+      {
+        "source": 13,
+        "target": 14,
+        "type": "is_a"
+      },
+      {
+        "source": 19,
+        "target": 14,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 15,
+        "type": "contains"
+      },
+      {
+        "source": 1,
+        "target": 16,
+        "type": "contains"
+      },
+      {
+        "source": 16,
+        "target": 17,
+        "type": "is_a"
+      },
+      {
+        "source": 16,
+        "target": 18,
+        "type": "released_on"
+      },
+      {
+        "source": 1,
+        "target": 18,
+        "type": "contains"
+      },
+      {
+        "source": 16,
+        "target": 19,
+        "type": "released_by"
+      },
+      {
+        "source": 1,
+        "target": 19,
+        "type": "contains"
+      },
+      {
+        "source": 16,
+        "target": 20,
+        "type": "first_album_as_duo_with_member"
+      },
+      {
+        "source": 1,
+        "target": 20,
+        "type": "contains"
+      }
+    ]
+  }
+}

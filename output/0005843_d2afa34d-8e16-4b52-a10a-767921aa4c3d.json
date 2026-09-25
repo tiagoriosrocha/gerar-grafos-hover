@@ -1,0 +1,461 @@
+{
+  "dataset": "hover",
+  "id": "d2afa34d-8e16-4b52-a10a-767921aa4c3d",
+  "split": "train",
+  "claim": "An airport is located one nautical mile (2 km) south of the central business district of a town with a population less than 600. The attraction, World's Largest Farm Tractor, in 1998, could be found in this town.",
+  "evidencia": "Page: Big Sandy, Montana. Sentence: The population was 598 at the 2010 census.\nPage: Big Sandy, Montana. Sentence: Big Sandy, Montana, is where the Big Bud 747, the largest farm tractor in the world, was located from 1997 until 2009.\nPage: Big Bud 747. Sentence: It is billed by the owners and exhibitors as the \"World's Largest Farm Tractor\".\nPage: Big Sandy Airport. Sentence: It is owned by the Town of Big Sandy and located one nautical mile (2 km) south of its central business district.",
+  "evidence_text": "Page: Big Sandy, Montana. Sentence: The population was 598 at the 2010 census.\nPage: Big Sandy, Montana. Sentence: Big Sandy, Montana, is where the Big Bud 747, the largest farm tractor in the world, was located from 1997 until 2009.\nPage: Big Bud 747. Sentence: It is billed by the owners and exhibitors as the \"World's Largest Farm Tractor\".\nPage: Big Sandy Airport. Sentence: It is owned by the Town of Big Sandy and located one nautical mile (2 km) south of its central business district.",
+  "label": "SUPPORTED",
+  "num_hops": 3,
+  "hover_metadata": {
+    "supporting_facts": [
+      [
+        "Big Sandy, Montana",
+        1
+      ],
+      [
+        "Big Sandy, Montana",
+        2
+      ],
+      [
+        "Big Bud 747",
+        1
+      ],
+      [
+        "Big Sandy Airport",
+        1
+      ]
+    ],
+    "num_hops": 3,
+    "evidence_annotation_id": [
+      0
+    ],
+    "evidence_id": [
+      "Big Sandy, Montana::sentence::1",
+      "Big Sandy, Montana::sentence::2",
+      "Big Bud 747::sentence::1",
+      "Big Sandy Airport::sentence::1"
+    ],
+    "evidence_wiki_url": [
+      "https://en.wikipedia.org/wiki/Big_Sandy%2C_Montana",
+      "https://en.wikipedia.org/wiki/Big_Bud_747",
+      "https://en.wikipedia.org/wiki/Big_Sandy_Airport"
+    ],
+    "evidence_sentence_id": [
+      "Big Sandy, Montana::sentence::1",
+      "Big Sandy, Montana::sentence::2",
+      "Big Bud 747::sentence::1",
+      "Big Sandy Airport::sentence::1"
+    ]
+  },
+  "grafo_claim": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "4d2f442b-e112-57da-a99d-75536c77d091",
+        "text": "This chunk is about:\n- Places: a small town, its central business district\n- Infrastructure: an airport\n- Attractions: World's Largest Farm Tractor\n- Topics: town population, location clues\n\nFacts:\n- A town with a population of fewer than 600 had the World's Largest Farm Tractor attraction in 1998.\n- An airport is located one nautical mile south of the central business district of that town.\n- One nautical mile is approximately 2 kilometers.\n- The airport serves a town whose population is under 600.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "19cf922e-0773-58ce-b3f8-f817ca59b7f3",
+        "text": "An airport is located one nautical mile (2 km) south of the central business district of a town with a population less than 600. The attraction, World's Largest Farm Tractor, in 1998, could be found in this town.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "06d7682b-1933-5a18-8c4d-52c75db0f4b3",
+        "text": "text_5dc08d732ada8073a50ab547a58cff29",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "4f934275-9ea6-5dda-bc40-2e92cf38a1bb",
+        "text": "airport",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "2684585c-ffd3-5d2d-80d0-a611487c7b75",
+        "text": "central business district",
+        "type": "Entity"
+      },
+      {
+        "id": 5,
+        "original_id": "5f394058-b2a0-5ba8-8466-ba2a18cfcf4e",
+        "text": "place",
+        "type": "EntityType"
+      },
+      {
+        "id": 6,
+        "original_id": "da404d41-fe2c-5286-919b-084bf5a743d2",
+        "text": "town",
+        "type": "Entity"
+      },
+      {
+        "id": 7,
+        "original_id": "a038c193-7050-5ca6-8bed-3727e01bef41",
+        "text": "population less than 600",
+        "type": "Entity"
+      },
+      {
+        "id": 8,
+        "original_id": "d2a381fa-3658-5ca6-ada9-2109cfc9331d",
+        "text": "concept",
+        "type": "EntityType"
+      },
+      {
+        "id": 9,
+        "original_id": "4f275410-2fdc-5048-95b6-0254f815394c",
+        "text": "worlds largest farm tractor",
+        "type": "Entity"
+      },
+      {
+        "id": 10,
+        "original_id": "111f07f3-2527-5bbf-827f-7a18bb37f150",
+        "text": "1998",
+        "type": "Entity"
+      },
+      {
+        "id": 11,
+        "original_id": "b19433ae-558c-5aaf-95ac-6231f2a4be0e",
+        "text": "date",
+        "type": "EntityType"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "located_south_of"
+      },
+      {
+        "source": 1,
+        "target": 4,
+        "type": "contains"
+      },
+      {
+        "source": 4,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 6,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 9,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 6,
+        "type": "located_in"
+      },
+      {
+        "source": 1,
+        "target": 6,
+        "type": "contains"
+      },
+      {
+        "source": 9,
+        "target": 6,
+        "type": "located_in"
+      },
+      {
+        "source": 6,
+        "target": 7,
+        "type": "has_population"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      },
+      {
+        "source": 7,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 9,
+        "type": "contains"
+      },
+      {
+        "source": 9,
+        "target": 10,
+        "type": "found_in_year"
+      },
+      {
+        "source": 1,
+        "target": 10,
+        "type": "contains"
+      },
+      {
+        "source": 10,
+        "target": 11,
+        "type": "is_a"
+      }
+    ]
+  },
+  "grafo_evidencia": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "60fe0890-5378-52d2-8b69-3b9626e1b984",
+        "text": "This chunk is about:\n- Places: Big Sandy, Montana; Big Sandy Airport\n- Products: Big Bud 747\n- Organizations: Town of Big Sandy\n- Concepts: population; world's largest farm tractor\n\nFacts:\n- Big Sandy, Montana, had a population of 598 in the 2010 census.\n- Big Bud 747 was located in Big Sandy, Montana, from 1997 until 2009.\n- Big Bud 747 is billed by its owners and exhibitors as the world's largest farm tractor.\n- Big Sandy Airport is owned by the Town of Big Sandy.\n- Big Sandy Airport is located one nautical mile south of Big Sandy's central business district.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "f4dca010-c541-583d-8f9f-8ebf8a3cfe97",
+        "text": "Page: Big Sandy, Montana. Sentence: The population was 598 at the 2010 census.\nPage: Big Sandy, Montana. Sentence: Big Sandy, Montana, is where the Big Bud 747, the largest farm tractor in the world, was located from 1997 until 2009.\nPage: Big Bud 747. Sentence: It is billed by the owners and exhibitors as the \"World's Largest Farm Tractor\".\nPage: Big Sandy Airport. Sentence: It is owned by the Town of Big Sandy and located one nautical mile (2 km) south of its central business district.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "da41571c-1122-5578-933c-94ae606369dc",
+        "text": "text_c66821487a179127f36722a67711fc9b",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "c88274df-d257-50ad-843d-7befbc9f6117",
+        "text": "big sandy, montana",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "cb1dc1af-5253-5fa4-877e-246a7629f489",
+        "text": "2010",
+        "type": "Entity"
+      },
+      {
+        "id": 5,
+        "original_id": "b19433ae-558c-5aaf-95ac-6231f2a4be0e",
+        "text": "date",
+        "type": "EntityType"
+      },
+      {
+        "id": 6,
+        "original_id": "5f394058-b2a0-5ba8-8466-ba2a18cfcf4e",
+        "text": "place",
+        "type": "EntityType"
+      },
+      {
+        "id": 7,
+        "original_id": "c40ebece-55ad-5433-8570-2df743cd32d0",
+        "text": "big bud 747",
+        "type": "Entity"
+      },
+      {
+        "id": 8,
+        "original_id": "43bacd89-6564-547b-8412-0e96c06e7c27",
+        "text": "1997",
+        "type": "Entity"
+      },
+      {
+        "id": 9,
+        "original_id": "cd2a3377-b1e5-59d1-aeee-d36cdb97efe0",
+        "text": "2009",
+        "type": "Entity"
+      },
+      {
+        "id": 10,
+        "original_id": "5e7cbda1-d6b2-5124-9bad-288dc849a4e3",
+        "text": "object",
+        "type": "EntityType"
+      },
+      {
+        "id": 11,
+        "original_id": "9be21ef8-deb4-5b95-9f51-910993ebc3b2",
+        "text": "owners and exhibitors of big bud 747",
+        "type": "Entity"
+      },
+      {
+        "id": 12,
+        "original_id": "388f60fb-220d-55e8-ae9c-3ac93cead308",
+        "text": "organization",
+        "type": "EntityType"
+      },
+      {
+        "id": 13,
+        "original_id": "ac812c42-2dd5-5377-9da7-d151fb5a83c8",
+        "text": "big sandy airport",
+        "type": "Entity"
+      },
+      {
+        "id": 14,
+        "original_id": "9e8581c8-6a83-5b74-9f70-3522d1649d28",
+        "text": "town of big sandy",
+        "type": "Entity"
+      },
+      {
+        "id": 15,
+        "original_id": "8de32428-e4de-568a-9d6b-818b530d5138",
+        "text": "central business district of big sandy",
+        "type": "Entity"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 7,
+        "target": 3,
+        "type": "was_located_in"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "had_population"
+      },
+      {
+        "source": 1,
+        "target": 4,
+        "type": "contains"
+      },
+      {
+        "source": 4,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 8,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 9,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 15,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 13,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      },
+      {
+        "source": 11,
+        "target": 7,
+        "type": "billed_as"
+      },
+      {
+        "source": 7,
+        "target": 8,
+        "type": "location_start_date"
+      },
+      {
+        "source": 1,
+        "target": 8,
+        "type": "contains"
+      },
+      {
+        "source": 7,
+        "target": 9,
+        "type": "location_end_date"
+      },
+      {
+        "source": 1,
+        "target": 9,
+        "type": "contains"
+      },
+      {
+        "source": 7,
+        "target": 10,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 11,
+        "type": "contains"
+      },
+      {
+        "source": 11,
+        "target": 12,
+        "type": "is_a"
+      },
+      {
+        "source": 14,
+        "target": 12,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 13,
+        "type": "contains"
+      },
+      {
+        "source": 13,
+        "target": 14,
+        "type": "is_owned_by"
+      },
+      {
+        "source": 1,
+        "target": 14,
+        "type": "contains"
+      },
+      {
+        "source": 13,
+        "target": 15,
+        "type": "is_located_south_of"
+      },
+      {
+        "source": 1,
+        "target": 15,
+        "type": "contains"
+      }
+    ]
+  }
+}

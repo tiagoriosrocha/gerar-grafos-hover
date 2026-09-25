@@ -1,0 +1,380 @@
+{
+  "dataset": "hover",
+  "id": "4d384bb2-545c-4dee-ad70-5109d0bb9a65",
+  "split": "train",
+  "claim": "The plant commonly affected by  Rhodococcus fascians is a genus of pine trees. Encyclia is as well.",
+  "evidencia": "Page: Nicotiana. Sentence: Nicotiana ( ) is a genus of herbaceous plants and shrubs of the family Solanaceae, that is indigenous to the Americas, Australia, south west Africa and the South Pacific.\nPage: Encyclia. Sentence: Encyclia is a genus of orchids.\nPage: Rhodococcus fascians. Sentence: Because it commonly afflicts tobacco (\"Nicotiana\") plants, it is an agriculturally significant pathogen.",
+  "evidence_text": "Page: Nicotiana. Sentence: Nicotiana ( ) is a genus of herbaceous plants and shrubs of the family Solanaceae, that is indigenous to the Americas, Australia, south west Africa and the South Pacific.\nPage: Encyclia. Sentence: Encyclia is a genus of orchids.\nPage: Rhodococcus fascians. Sentence: Because it commonly afflicts tobacco (\"Nicotiana\") plants, it is an agriculturally significant pathogen.",
+  "label": "SUPPORTED",
+  "num_hops": 3,
+  "hover_metadata": {
+    "supporting_facts": [
+      [
+        "Nicotiana",
+        0
+      ],
+      [
+        "Encyclia",
+        0
+      ],
+      [
+        "Rhodococcus fascians",
+        2
+      ]
+    ],
+    "num_hops": 3,
+    "evidence_annotation_id": [
+      0
+    ],
+    "evidence_id": [
+      "Nicotiana::sentence::0",
+      "Encyclia::sentence::0",
+      "Rhodococcus fascians::sentence::2"
+    ],
+    "evidence_wiki_url": [
+      "https://en.wikipedia.org/wiki/Nicotiana",
+      "https://en.wikipedia.org/wiki/Encyclia",
+      "https://en.wikipedia.org/wiki/Rhodococcus_fascians"
+    ],
+    "evidence_sentence_id": [
+      "Nicotiana::sentence::0",
+      "Encyclia::sentence::0",
+      "Rhodococcus fascians::sentence::2"
+    ]
+  },
+  "grafo_claim": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "f6404645-a659-53d2-9392-ca9cbfdd3668",
+        "text": "This chunk is about:\n- Concepts: plant diseases and host plants\n- Organisms: Rhodococcus fascians, Encyclia\n- Plants: Pinus\n\nFacts:\n- Rhodococcus fascians commonly affects Pinus, a genus of pine trees.\n- Encyclia is also Pinus, a genus of pine trees.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "90e73f5e-1c32-5bdc-bbeb-9375741baab5",
+        "text": "The plant commonly affected by  Rhodococcus fascians is a genus of pine trees. Encyclia is as well.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "1597809f-a953-53dd-877d-84ee65dc48d4",
+        "text": "text_38dce13cb89644b146783880ccac6494",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "6ccb55d7-69d2-5549-9c50-cdbe4e3afa17",
+        "text": "rhodococcus fascians",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "5cfa726c-e353-55b5-a23f-0b73090354ea",
+        "text": "pine",
+        "type": "Entity"
+      },
+      {
+        "id": 5,
+        "original_id": "58ce8914-8a9e-5302-9b2d-0d97006e12d3",
+        "text": "genus",
+        "type": "EntityType"
+      },
+      {
+        "id": 6,
+        "original_id": "b434e0db-57b6-5306-9fa5-f3b1702f6b03",
+        "text": "organism",
+        "type": "EntityType"
+      },
+      {
+        "id": 7,
+        "original_id": "0383e3c6-ef6d-5984-83d1-ebd7ee34b563",
+        "text": "encyclia",
+        "type": "Entity"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "commonly_affects"
+      },
+      {
+        "source": 1,
+        "target": 4,
+        "type": "contains"
+      },
+      {
+        "source": 7,
+        "target": 4,
+        "type": "is_as_well"
+      },
+      {
+        "source": 4,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 7,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      }
+    ]
+  },
+  "grafo_evidencia": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "f17ee13d-2c25-5156-aa81-d2e89c6290fc",
+        "text": "This chunk is about:\n- Plants: Nicotiana, Encyclia\n- Organisms: Rhodococcus fascians\n- Families: Solanaceae, orchids\n- Places: Americas, Australia, south west Africa, South Pacific\n- Concepts: agricultural pathogens\n\nFacts:\n- Nicotiana is a genus of herbaceous plants and shrubs in the family Solanaceae.\n- Nicotiana is indigenous to the Americas, Australia, south west Africa, and the South Pacific.\n- Encyclia is a genus of orchids.\n- Rhodococcus fascians commonly afflicts Nicotiana plants.\n- Rhodococcus fascians is an agriculturally significant pathogen because it commonly afflicts Nicotiana plants.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "9d74d3a7-f866-5290-b0ff-b53398717722",
+        "text": "Page: Nicotiana. Sentence: Nicotiana ( ) is a genus of herbaceous plants and shrubs of the family Solanaceae, that is indigenous to the Americas, Australia, south west Africa and the South Pacific.\nPage: Encyclia. Sentence: Encyclia is a genus of orchids.\nPage: Rhodococcus fascians. Sentence: Because it commonly afflicts tobacco (\"Nicotiana\") plants, it is an agriculturally significant pathogen.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "bcaa49bf-a98e-5d7b-8f76-54960edb0fb3",
+        "text": "text_0ba9dfb9bdeffdfde8b0f999c05d0d19",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "98925cce-52f0-5522-a513-43d085968d90",
+        "text": "nicotiana",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "ec996026-8e00-5aa9-aff5-b8478dcdf255",
+        "text": "solanaceae",
+        "type": "Entity"
+      },
+      {
+        "id": 5,
+        "original_id": "f7b4540f-d32c-51b3-8970-f282fffab519",
+        "text": "taxon",
+        "type": "EntityType"
+      },
+      {
+        "id": 6,
+        "original_id": "b7d047b4-5a8e-5bd6-b91a-d06990498283",
+        "text": "americas",
+        "type": "Entity"
+      },
+      {
+        "id": 7,
+        "original_id": "5f394058-b2a0-5ba8-8466-ba2a18cfcf4e",
+        "text": "place",
+        "type": "EntityType"
+      },
+      {
+        "id": 8,
+        "original_id": "02448d73-884d-50c7-a919-b94177f1cf43",
+        "text": "australia",
+        "type": "Entity"
+      },
+      {
+        "id": 9,
+        "original_id": "d307527c-c323-5ae1-a3e8-14873552021c",
+        "text": "south west africa",
+        "type": "Entity"
+      },
+      {
+        "id": 10,
+        "original_id": "90f9a27f-7047-504c-85ac-0b413eaad446",
+        "text": "south pacific",
+        "type": "Entity"
+      },
+      {
+        "id": 11,
+        "original_id": "0383e3c6-ef6d-5984-83d1-ebd7ee34b563",
+        "text": "encyclia",
+        "type": "Entity"
+      },
+      {
+        "id": 12,
+        "original_id": "c38c8180-16c6-5fd9-b071-dd20e848ac2f",
+        "text": "orchid",
+        "type": "Entity"
+      },
+      {
+        "id": 13,
+        "original_id": "2df43048-b175-54c2-b72b-0ff24f41e4f1",
+        "text": "plant",
+        "type": "EntityType"
+      },
+      {
+        "id": 14,
+        "original_id": "6ccb55d7-69d2-5549-9c50-cdbe4e3afa17",
+        "text": "rhodococcus fascians",
+        "type": "Entity"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 14,
+        "target": 3,
+        "type": "commonly_afflicts"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "belongs_to_family"
+      },
+      {
+        "source": 1,
+        "target": 4,
+        "type": "contains"
+      },
+      {
+        "source": 4,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 11,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 14,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 6,
+        "type": "indigenous_to"
+      },
+      {
+        "source": 1,
+        "target": 6,
+        "type": "contains"
+      },
+      {
+        "source": 6,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 8,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 9,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 10,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 8,
+        "type": "indigenous_to"
+      },
+      {
+        "source": 1,
+        "target": 8,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 9,
+        "type": "indigenous_to"
+      },
+      {
+        "source": 1,
+        "target": 9,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 10,
+        "type": "indigenous_to"
+      },
+      {
+        "source": 1,
+        "target": 10,
+        "type": "contains"
+      },
+      {
+        "source": 1,
+        "target": 11,
+        "type": "contains"
+      },
+      {
+        "source": 11,
+        "target": 12,
+        "type": "is_a_genus_of"
+      },
+      {
+        "source": 1,
+        "target": 12,
+        "type": "contains"
+      },
+      {
+        "source": 12,
+        "target": 13,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 14,
+        "type": "contains"
+      }
+    ]
+  }
+}

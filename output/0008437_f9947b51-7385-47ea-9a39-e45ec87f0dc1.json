@@ -1,0 +1,404 @@
+{
+  "dataset": "hover",
+  "id": "f9947b51-7385-47ea-9a39-e45ec87f0dc1",
+  "split": "train",
+  "claim": "Coriander leaves are mixed in the eggs at the end of preparation of Huevos a la mexicana, also cooked and mashed beans accompany the dish.",
+  "evidencia": "Page: Huevos a la mexicana. Sentence: The heat is turned off and the coriander leaves are mixed in the eggs, adding salt.\nPage: Refried beans. Sentence: Refried beans (Spanish: \"frijoles refritos\") is a dish of cooked and mashed beans and is a traditional staple of Mexican and Tex-Mex cuisine, although each cuisine has a different approach when making the dish.",
+  "evidence_text": "Page: Huevos a la mexicana. Sentence: The heat is turned off and the coriander leaves are mixed in the eggs, adding salt.\nPage: Refried beans. Sentence: Refried beans (Spanish: \"frijoles refritos\") is a dish of cooked and mashed beans and is a traditional staple of Mexican and Tex-Mex cuisine, although each cuisine has a different approach when making the dish.",
+  "label": "SUPPORTED",
+  "num_hops": 2,
+  "hover_metadata": {
+    "supporting_facts": [
+      [
+        "Huevos a la mexicana",
+        3
+      ],
+      [
+        "Refried beans",
+        0
+      ]
+    ],
+    "num_hops": 2,
+    "evidence_annotation_id": [
+      0
+    ],
+    "evidence_id": [
+      "Huevos a la mexicana::sentence::3",
+      "Refried beans::sentence::0"
+    ],
+    "evidence_wiki_url": [
+      "https://en.wikipedia.org/wiki/Huevos_a_la_mexicana",
+      "https://en.wikipedia.org/wiki/Refried_beans"
+    ],
+    "evidence_sentence_id": [
+      "Huevos a la mexicana::sentence::3",
+      "Refried beans::sentence::0"
+    ]
+  },
+  "grafo_claim": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "40b7c251-89c6-5514-bdba-5022b6ea162b",
+        "text": "This chunk is about:\n- Products: Huevos a la mexicana\n- Ingredients: coriander leaves, eggs, beans\n\nFacts:\n- Huevos a la mexicana is prepared by mixing coriander leaves into the eggs at the end of preparation.\n- Huevos a la mexicana is accompanied by cooked and mashed beans.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "b2494dfa-02df-54c0-98b2-7bb812e243c2",
+        "text": "Coriander leaves are mixed in the eggs at the end of preparation of Huevos a la mexicana, also cooked and mashed beans accompany the dish.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "9044f5f2-f97d-5b7b-a6aa-0ca42145006f",
+        "text": "text_860b087bc0782a501ceefa69dc8d87f7",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "139ef835-9964-53fe-abc2-c5ba507758f3",
+        "text": "coriander leaves",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "f9c5113e-747a-5581-af56-c9d2e76bce9b",
+        "text": "food",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "eb08e5d1-ac3c-55c0-a457-aeb05172803d",
+        "text": "eggs",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "5c209e8a-9eeb-5d76-9003-641750d38e4d",
+        "text": "huevos a la mexicana",
+        "type": "Entity"
+      },
+      {
+        "id": 7,
+        "original_id": "61dd1696-fe5b-5fd9-b422-28834408ec7e",
+        "text": "beans",
+        "type": "Entity"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 5,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 6,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 7,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "mixed_into"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "used_in"
+      },
+      {
+        "source": 1,
+        "target": 6,
+        "type": "contains"
+      },
+      {
+        "source": 7,
+        "target": 6,
+        "type": "accompany"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      }
+    ]
+  },
+  "grafo_evidencia": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "3d15e5ae-f8de-521d-a998-563a01a20af5",
+        "text": "This chunk is about:\n- Products: Huevos a la mexicana, Refried beans\n- Concepts: Mexican cuisine, Tex-Mex cuisine, cooking steps\n\nFacts:\n- In Huevos a la mexicana, the heat is turned off before coriander leaves are mixed into the eggs with salt.\n- Refried beans, called \"frijoles refritos\" in Spanish, are a dish of cooked and mashed beans.\n- Refried beans are a traditional staple of Mexican cuisine and Tex-Mex cuisine.\n- Mexican cuisine and Tex-Mex cuisine use different approaches to make refried beans.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "14b419cc-7eb4-592b-8c5a-8113c5d1f4d2",
+        "text": "Page: Huevos a la mexicana. Sentence: The heat is turned off and the coriander leaves are mixed in the eggs, adding salt.\nPage: Refried beans. Sentence: Refried beans (Spanish: \"frijoles refritos\") is a dish of cooked and mashed beans and is a traditional staple of Mexican and Tex-Mex cuisine, although each cuisine has a different approach when making the dish.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "fffaeb13-937a-5ce0-9c04-7c4925121c70",
+        "text": "text_6d36be97d672fb90d9238dd4c2b4023d",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "5c209e8a-9eeb-5d76-9003-641750d38e4d",
+        "text": "huevos a la mexicana",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "e61ce953-3219-5c88-ba6a-b0c924d4688e",
+        "text": "dish",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "139ef835-9964-53fe-abc2-c5ba507758f3",
+        "text": "coriander leaves",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "de04d8a8-1b78-5a88-bb18-5aa48f533be4",
+        "text": "ingredient",
+        "type": "EntityType"
+      },
+      {
+        "id": 7,
+        "original_id": "eb08e5d1-ac3c-55c0-a457-aeb05172803d",
+        "text": "eggs",
+        "type": "Entity"
+      },
+      {
+        "id": 8,
+        "original_id": "561c348b-e9a9-5abd-b73d-f2c0b7918826",
+        "text": "salt",
+        "type": "Entity"
+      },
+      {
+        "id": 9,
+        "original_id": "8070de13-7a9d-534a-94ff-9fdb4bb53aa4",
+        "text": "refried beans",
+        "type": "Entity"
+      },
+      {
+        "id": 10,
+        "original_id": "01250272-c385-5d9e-83c7-de7281771488",
+        "text": "frijoles refritos",
+        "type": "Entity"
+      },
+      {
+        "id": 11,
+        "original_id": "39575085-0710-527d-bd54-019de7b00429",
+        "text": "name",
+        "type": "EntityType"
+      },
+      {
+        "id": 12,
+        "original_id": "61dd1696-fe5b-5fd9-b422-28834408ec7e",
+        "text": "beans",
+        "type": "Entity"
+      },
+      {
+        "id": 13,
+        "original_id": "f5986076-b86a-5299-822a-75c8a0996969",
+        "text": "mexican cuisine",
+        "type": "Entity"
+      },
+      {
+        "id": 14,
+        "original_id": "0323da01-d2f3-58f2-bcf6-1eac885ec1cb",
+        "text": "cuisine",
+        "type": "EntityType"
+      },
+      {
+        "id": 15,
+        "original_id": "18bf2f17-d339-5cb3-b3f6-65b3882cc455",
+        "text": "tex-mex cuisine",
+        "type": "Entity"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 9,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "includes_ingredient"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 7,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 8,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 12,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 5,
+        "target": 7,
+        "type": "mixed_into"
+      },
+      {
+        "source": 3,
+        "target": 7,
+        "type": "includes_ingredient"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 8,
+        "type": "includes_ingredient"
+      },
+      {
+        "source": 1,
+        "target": 8,
+        "type": "contains"
+      },
+      {
+        "source": 1,
+        "target": 9,
+        "type": "contains"
+      },
+      {
+        "source": 9,
+        "target": 10,
+        "type": "has_spanish_name"
+      },
+      {
+        "source": 1,
+        "target": 10,
+        "type": "contains"
+      },
+      {
+        "source": 10,
+        "target": 11,
+        "type": "is_a"
+      },
+      {
+        "source": 9,
+        "target": 12,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 12,
+        "type": "contains"
+      },
+      {
+        "source": 9,
+        "target": 13,
+        "type": "traditional_staple_of"
+      },
+      {
+        "source": 1,
+        "target": 13,
+        "type": "contains"
+      },
+      {
+        "source": 13,
+        "target": 14,
+        "type": "is_a"
+      },
+      {
+        "source": 15,
+        "target": 14,
+        "type": "is_a"
+      },
+      {
+        "source": 13,
+        "target": 15,
+        "type": "has_different_approach_to_making"
+      },
+      {
+        "source": 9,
+        "target": 15,
+        "type": "traditional_staple_of"
+      },
+      {
+        "source": 1,
+        "target": 15,
+        "type": "contains"
+      }
+    ]
+  }
+}

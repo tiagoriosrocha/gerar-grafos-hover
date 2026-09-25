@@ -1,0 +1,341 @@
+{
+  "dataset": "hover",
+  "id": "a8c331c0-689b-40ea-925c-486a757aa4b7",
+  "split": "train",
+  "claim": "The hotel which Gideon Putnam built it's city is located on Broadway.",
+  "evidencia": "Page: Gideon Putnam. Sentence: He also worked as a miller and built the city's Grand Union and Congress Hotels.\nPage: Grand Union Hotel (Saratoga Springs, New York). Sentence: The Grand Union Hotel was located on Broadway in Saratoga Springs, New York.",
+  "evidence_text": "Page: Gideon Putnam. Sentence: He also worked as a miller and built the city's Grand Union and Congress Hotels.\nPage: Grand Union Hotel (Saratoga Springs, New York). Sentence: The Grand Union Hotel was located on Broadway in Saratoga Springs, New York.",
+  "label": "SUPPORTED",
+  "num_hops": 2,
+  "hover_metadata": {
+    "supporting_facts": [
+      [
+        "Gideon Putnam",
+        1
+      ],
+      [
+        "Grand Union Hotel (Saratoga Springs, New York)",
+        0
+      ]
+    ],
+    "num_hops": 2,
+    "evidence_annotation_id": [
+      0
+    ],
+    "evidence_id": [
+      "Gideon Putnam::sentence::1",
+      "Grand Union Hotel (Saratoga Springs, New York)::sentence::0"
+    ],
+    "evidence_wiki_url": [
+      "https://en.wikipedia.org/wiki/Gideon_Putnam",
+      "https://en.wikipedia.org/wiki/Grand_Union_Hotel_%28Saratoga_Springs%2C_New_York%29"
+    ],
+    "evidence_sentence_id": [
+      "Gideon Putnam::sentence::1",
+      "Grand Union Hotel (Saratoga Springs, New York)::sentence::0"
+    ]
+  },
+  "grafo_claim": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "bf85711f-8416-54ed-9b8a-67d2da668a5f",
+        "text": "This chunk is about:\n- People: Gideon Putnam\n- Places: Broadway\n- Buildings: hotel, city\n\nFacts:\n- Gideon Putnam built a hotel.\n- The city associated with Gideon Putnam's hotel is located on Broadway.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "90630141-48ab-5d83-b814-feac0d73e96f",
+        "text": "The hotel which Gideon Putnam built it's city is located on Broadway.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "8a9eec9f-5bb9-59cd-a12b-9693fc87db0d",
+        "text": "text_fc0d4c1b54126088a9749500b276b891",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "10eb1437-a7bd-56f9-abc5-7d87f03e90cb",
+        "text": "gideon putnam",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "99a82eec-bb35-5bb5-9ed2-e73fc7a756de",
+        "text": "person",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "6253cc7f-7f6c-57ee-8e2a-bed05faf0551",
+        "text": "hotel",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "5f394058-b2a0-5ba8-8466-ba2a18cfcf4e",
+        "text": "place",
+        "type": "EntityType"
+      },
+      {
+        "id": 7,
+        "original_id": "097baf23-1b7f-509b-9608-f19d044d205c",
+        "text": "city",
+        "type": "Entity"
+      },
+      {
+        "id": 8,
+        "original_id": "c53eccd3-029a-57a8-bb6b-ba08f312f92e",
+        "text": "broadway",
+        "type": "Entity"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "built"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 7,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 8,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 5,
+        "target": 7,
+        "type": "associated_with"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      },
+      {
+        "source": 7,
+        "target": 8,
+        "type": "located_on"
+      },
+      {
+        "source": 1,
+        "target": 8,
+        "type": "contains"
+      }
+    ]
+  },
+  "grafo_evidencia": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "19ceab94-2ffb-50cc-a04d-16123e4fbbb3",
+        "text": "This chunk is about:\n- People: Gideon Putnam\n- Places: Saratoga Springs, New York; Broadway\n- Products: Grand Union Hotel; Congress Hotels\n\nFacts:\n- Gideon Putnam worked as a miller.\n- Gideon Putnam built the Grand Union Hotel in Saratoga Springs, New York.\n- Gideon Putnam built the Congress Hotels in Saratoga Springs, New York.\n- The Grand Union Hotel was located on Broadway in Saratoga Springs, New York.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "058a619d-21f1-5772-9a3c-17a607a43a1f",
+        "text": "Page: Gideon Putnam. Sentence: He also worked as a miller and built the city's Grand Union and Congress Hotels.\nPage: Grand Union Hotel (Saratoga Springs, New York). Sentence: The Grand Union Hotel was located on Broadway in Saratoga Springs, New York.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "86bee499-8ef8-56de-9230-a0dc8e1f6526",
+        "text": "text_95115aa29b61a33f132158e4dad0d549",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "10eb1437-a7bd-56f9-abc5-7d87f03e90cb",
+        "text": "gideon putnam",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "99a82eec-bb35-5bb5-9ed2-e73fc7a756de",
+        "text": "person",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "378ff07b-4f24-504f-b33d-e7191d3ac178",
+        "text": "miller",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "d2a381fa-3658-5ca6-ada9-2109cfc9331d",
+        "text": "concept",
+        "type": "EntityType"
+      },
+      {
+        "id": 7,
+        "original_id": "a8604d91-d966-56ed-92c8-34c247427b48",
+        "text": "grand union hotel",
+        "type": "Entity"
+      },
+      {
+        "id": 8,
+        "original_id": "5f394058-b2a0-5ba8-8466-ba2a18cfcf4e",
+        "text": "place",
+        "type": "EntityType"
+      },
+      {
+        "id": 9,
+        "original_id": "c53eccd3-029a-57a8-bb6b-ba08f312f92e",
+        "text": "broadway",
+        "type": "Entity"
+      },
+      {
+        "id": 10,
+        "original_id": "ced60c9a-4610-5cd3-9cc6-12315b73443e",
+        "text": "saratoga springs, new york",
+        "type": "Entity"
+      },
+      {
+        "id": 11,
+        "original_id": "d1e8b5ff-9135-5826-aeda-e31150b26a68",
+        "text": "congress hotel",
+        "type": "Entity"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "worked_as"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 7,
+        "type": "built"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      },
+      {
+        "source": 7,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 9,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 10,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 11,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 7,
+        "target": 9,
+        "type": "located_on"
+      },
+      {
+        "source": 1,
+        "target": 9,
+        "type": "contains"
+      },
+      {
+        "source": 9,
+        "target": 10,
+        "type": "located_in"
+      },
+      {
+        "source": 7,
+        "target": 10,
+        "type": "located_in"
+      },
+      {
+        "source": 1,
+        "target": 10,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 11,
+        "type": "built"
+      },
+      {
+        "source": 1,
+        "target": 11,
+        "type": "contains"
+      }
+    ]
+  }
+}

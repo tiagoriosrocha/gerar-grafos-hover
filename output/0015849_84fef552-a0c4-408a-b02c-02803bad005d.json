@@ -1,0 +1,624 @@
+{
+  "dataset": "hover",
+  "id": "84fef552-a0c4-408a-b02c-02803bad005d",
+  "split": "train",
+  "claim": "The company produced the Evergreen GPU's for its Radeon HD 5000 Series. It's  headquartered farther west than Level 3 Communications.",
+  "evidencia": "Page: Advanced Micro Devices. Sentence: Advanced Micro Devices, Inc. (AMD) is an American multinational semiconductor company based in Sunnyvale, California, United States, that develops computer processors and related technologies for business and consumer markets.\nPage: Level 3 Communications. Sentence: Level 3 Communications is an American multinational telecommunications and Internet service provider company headquartered in Broomfield, Colorado.\nPage: Radeon HD 5000 Series. Sentence: The Evergreen series is a family of GPUs developed by Advanced Micro Devices for its Radeon line under the ATI brand name.",
+  "evidence_text": "Page: Advanced Micro Devices. Sentence: Advanced Micro Devices, Inc. (AMD) is an American multinational semiconductor company based in Sunnyvale, California, United States, that develops computer processors and related technologies for business and consumer markets.\nPage: Level 3 Communications. Sentence: Level 3 Communications is an American multinational telecommunications and Internet service provider company headquartered in Broomfield, Colorado.\nPage: Radeon HD 5000 Series. Sentence: The Evergreen series is a family of GPUs developed by Advanced Micro Devices for its Radeon line under the ATI brand name.",
+  "label": "SUPPORTED",
+  "num_hops": 3,
+  "hover_metadata": {
+    "supporting_facts": [
+      [
+        "Advanced Micro Devices",
+        0
+      ],
+      [
+        "Level 3 Communications",
+        0
+      ],
+      [
+        "Radeon HD 5000 Series",
+        0
+      ]
+    ],
+    "num_hops": 3,
+    "evidence_annotation_id": [
+      0
+    ],
+    "evidence_id": [
+      "Advanced Micro Devices::sentence::0",
+      "Level 3 Communications::sentence::0",
+      "Radeon HD 5000 Series::sentence::0"
+    ],
+    "evidence_wiki_url": [
+      "https://en.wikipedia.org/wiki/Advanced_Micro_Devices",
+      "https://en.wikipedia.org/wiki/Level_3_Communications",
+      "https://en.wikipedia.org/wiki/Radeon_HD_5000_Series"
+    ],
+    "evidence_sentence_id": [
+      "Advanced Micro Devices::sentence::0",
+      "Level 3 Communications::sentence::0",
+      "Radeon HD 5000 Series::sentence::0"
+    ]
+  },
+  "grafo_claim": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "eba3465e-9494-5d94-9a02-0f7b8e5645d6",
+        "text": "This chunk is about:\n- Companies: the company, Level 3 Communications\n- Products: Evergreen GPUs, Radeon HD 5000 Series\n\nFacts:\n- The company produced the Evergreen GPUs for its Radeon HD 5000 Series.\n- The company is headquartered farther west than Level 3 Communications.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "399e274e-5e47-5d9e-9c03-977d0d5d649d",
+        "text": "The company produced the Evergreen GPU's for its Radeon HD 5000 Series. It's  headquartered farther west than Level 3 Communications.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "a00c3181-3c76-51cf-b867-300b00ffaebc",
+        "text": "text_b9cf81814032f05d88901647f48cbf2e",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "8e50ff67-4f20-513e-924b-6ac92cb9478d",
+        "text": "evergreen gpu",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "f76d57aa-4740-5218-9539-0e0978cbf183",
+        "text": "product",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "6a16b9ba-dc22-5086-88dd-03ffb9c1563d",
+        "text": "radeon hd 5000 series",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "4910ce6b-9895-5cdc-93a2-d697e3272005",
+        "text": "level 3 communications",
+        "type": "Entity"
+      },
+      {
+        "id": 7,
+        "original_id": "388f60fb-220d-55e8-ae9c-3ac93cead308",
+        "text": "organization",
+        "type": "EntityType"
+      },
+      {
+        "id": 8,
+        "original_id": "fc2b3f20-7187-531f-9ce6-05bdf1608144",
+        "text": "the company",
+        "type": "Entity"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 8,
+        "target": 3,
+        "type": "produced"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 5,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "for_series"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 1,
+        "target": 6,
+        "type": "contains"
+      },
+      {
+        "source": 8,
+        "target": 6,
+        "type": "headquartered_farther_west_than"
+      },
+      {
+        "source": 6,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 8,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 8,
+        "type": "contains"
+      }
+    ]
+  },
+  "grafo_evidencia": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "fe7d69be-5bb1-5093-bd16-1b98c414db8f",
+        "text": "This chunk is about:\n- Companies: Advanced Micro Devices, Level 3 Communications\n- Products: Evergreen series, Radeon HD 5000 Series\n- Places: Sunnyvale, California; Broomfield, Colorado; United States\n- Topics: Semiconductors, telecommunications, Internet services, GPUs\n\nFacts:\n- Advanced Micro Devices, Inc. is an American multinational semiconductor company based in Sunnyvale, California, United States.\n- Advanced Micro Devices develops computer processors and related technologies for business and consumer markets.\n- Level 3 Communications is an American multinational telecommunications and Internet service provider company headquartered in Broomfield, Colorado.\n- The Evergreen series is a family of GPUs developed by Advanced Micro Devices for its Radeon line under the ATI brand name.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "785a3af6-f51a-5752-91c2-e300ee1abbcd",
+        "text": "Page: Advanced Micro Devices. Sentence: Advanced Micro Devices, Inc. (AMD) is an American multinational semiconductor company based in Sunnyvale, California, United States, that develops computer processors and related technologies for business and consumer markets.\nPage: Level 3 Communications. Sentence: Level 3 Communications is an American multinational telecommunications and Internet service provider company headquartered in Broomfield, Colorado.\nPage: Radeon HD 5000 Series. Sentence: The Evergreen series is a family of GPUs developed by Advanced Micro Devices for its Radeon line under the ATI brand name.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "59be98cc-eb43-522e-89b4-4c5b11be4644",
+        "text": "text_e60c9ebd7377ddbbc250a20195e6e0e9",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "68b922c4-0849-50f9-a767-79c43fadb746",
+        "text": "advanced micro devices, inc.",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "388f60fb-220d-55e8-ae9c-3ac93cead308",
+        "text": "organization",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "57c6b5fe-7e99-51f5-901f-fee923ff2ada",
+        "text": "sunnyvale",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "5f394058-b2a0-5ba8-8466-ba2a18cfcf4e",
+        "text": "place",
+        "type": "EntityType"
+      },
+      {
+        "id": 7,
+        "original_id": "8294cd6a-6968-5d3a-b0c8-57e08c745c8d",
+        "text": "california",
+        "type": "Entity"
+      },
+      {
+        "id": 8,
+        "original_id": "874a51da-34ea-5037-be47-d87785d43c37",
+        "text": "united states",
+        "type": "Entity"
+      },
+      {
+        "id": 9,
+        "original_id": "d9535dff-773a-54a9-be18-639bfd7b6c80",
+        "text": "computer processors",
+        "type": "Entity"
+      },
+      {
+        "id": 10,
+        "original_id": "f76d57aa-4740-5218-9539-0e0978cbf183",
+        "text": "product",
+        "type": "EntityType"
+      },
+      {
+        "id": 11,
+        "original_id": "f5a7bc98-0f37-5e9e-a638-fb0ae12ae5ec",
+        "text": "related technologies",
+        "type": "Entity"
+      },
+      {
+        "id": 12,
+        "original_id": "4e1e3aef-3617-5027-8938-e120e919b834",
+        "text": "technology",
+        "type": "EntityType"
+      },
+      {
+        "id": 13,
+        "original_id": "bd2b66fa-626d-55c3-b500-4b0e2070d921",
+        "text": "business markets",
+        "type": "Entity"
+      },
+      {
+        "id": 14,
+        "original_id": "3fb0aeaa-eba3-5b2f-9226-3f67cfe12a68",
+        "text": "market",
+        "type": "EntityType"
+      },
+      {
+        "id": 15,
+        "original_id": "39f0e688-fc35-5874-ad39-5f2e2596c241",
+        "text": "consumer markets",
+        "type": "Entity"
+      },
+      {
+        "id": 16,
+        "original_id": "670583b5-e1bb-5000-8162-0df669b245b8",
+        "text": "amd",
+        "type": "Entity"
+      },
+      {
+        "id": 17,
+        "original_id": "4910ce6b-9895-5cdc-93a2-d697e3272005",
+        "text": "level 3 communications",
+        "type": "Entity"
+      },
+      {
+        "id": 18,
+        "original_id": "c8ae2b82-8b6b-5aae-8ea8-e0e80e252465",
+        "text": "broomfield",
+        "type": "Entity"
+      },
+      {
+        "id": 19,
+        "original_id": "f4ddfd28-fd72-5252-b2a4-c6f719b4793e",
+        "text": "colorado",
+        "type": "Entity"
+      },
+      {
+        "id": 20,
+        "original_id": "8e583ac5-65b5-5c50-a60b-22ce781b8368",
+        "text": "telecommunications",
+        "type": "Entity"
+      },
+      {
+        "id": 21,
+        "original_id": "9e0056d1-60f0-59a5-ab16-af71295ac23b",
+        "text": "industry",
+        "type": "EntityType"
+      },
+      {
+        "id": 22,
+        "original_id": "d067bd06-d9dd-542b-8057-5f5f383f30b3",
+        "text": "internet service provider",
+        "type": "Entity"
+      },
+      {
+        "id": 23,
+        "original_id": "d2e5b5c0-b959-5b24-86e8-95eb719f9f14",
+        "text": "evergreen series",
+        "type": "Entity"
+      },
+      {
+        "id": 24,
+        "original_id": "93a6e26b-f1af-5414-bab7-f94aba788e34",
+        "text": "gpus",
+        "type": "Entity"
+      },
+      {
+        "id": 25,
+        "original_id": "d448b674-629d-5ae2-89a4-6d01e3ded38c",
+        "text": "radeon",
+        "type": "Entity"
+      },
+      {
+        "id": 26,
+        "original_id": "1d441d91-d863-52b8-93c0-bc3c41227b2b",
+        "text": "ati",
+        "type": "Entity"
+      },
+      {
+        "id": 27,
+        "original_id": "31d368fa-7630-5642-a1c1-e579050f9ac3",
+        "text": "brand",
+        "type": "EntityType"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 16,
+        "target": 3,
+        "type": "abbreviation_of"
+      },
+      {
+        "source": 23,
+        "target": 3,
+        "type": "developed_by"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 16,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 17,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "based_in"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 7,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 8,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 18,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 19,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 5,
+        "target": 7,
+        "type": "located_in"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      },
+      {
+        "source": 7,
+        "target": 8,
+        "type": "located_in"
+      },
+      {
+        "source": 3,
+        "target": 8,
+        "type": "located_in"
+      },
+      {
+        "source": 1,
+        "target": 8,
+        "type": "contains"
+      },
+      {
+        "source": 19,
+        "target": 8,
+        "type": "located_in"
+      },
+      {
+        "source": 3,
+        "target": 9,
+        "type": "develops"
+      },
+      {
+        "source": 1,
+        "target": 9,
+        "type": "contains"
+      },
+      {
+        "source": 9,
+        "target": 10,
+        "type": "is_a"
+      },
+      {
+        "source": 23,
+        "target": 10,
+        "type": "is_a"
+      },
+      {
+        "source": 24,
+        "target": 10,
+        "type": "is_a"
+      },
+      {
+        "source": 25,
+        "target": 10,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 11,
+        "type": "develops"
+      },
+      {
+        "source": 1,
+        "target": 11,
+        "type": "contains"
+      },
+      {
+        "source": 11,
+        "target": 12,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 13,
+        "type": "serves_market"
+      },
+      {
+        "source": 1,
+        "target": 13,
+        "type": "contains"
+      },
+      {
+        "source": 13,
+        "target": 14,
+        "type": "is_a"
+      },
+      {
+        "source": 15,
+        "target": 14,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 15,
+        "type": "serves_market"
+      },
+      {
+        "source": 1,
+        "target": 15,
+        "type": "contains"
+      },
+      {
+        "source": 1,
+        "target": 16,
+        "type": "contains"
+      },
+      {
+        "source": 1,
+        "target": 17,
+        "type": "contains"
+      },
+      {
+        "source": 17,
+        "target": 18,
+        "type": "headquartered_in"
+      },
+      {
+        "source": 1,
+        "target": 18,
+        "type": "contains"
+      },
+      {
+        "source": 18,
+        "target": 19,
+        "type": "located_in"
+      },
+      {
+        "source": 1,
+        "target": 19,
+        "type": "contains"
+      },
+      {
+        "source": 17,
+        "target": 20,
+        "type": "operates_in"
+      },
+      {
+        "source": 1,
+        "target": 20,
+        "type": "contains"
+      },
+      {
+        "source": 20,
+        "target": 21,
+        "type": "is_a"
+      },
+      {
+        "source": 22,
+        "target": 21,
+        "type": "is_a"
+      },
+      {
+        "source": 17,
+        "target": 22,
+        "type": "operates_in"
+      },
+      {
+        "source": 1,
+        "target": 22,
+        "type": "contains"
+      },
+      {
+        "source": 1,
+        "target": 23,
+        "type": "contains"
+      },
+      {
+        "source": 23,
+        "target": 24,
+        "type": "is_a_family_of"
+      },
+      {
+        "source": 1,
+        "target": 24,
+        "type": "contains"
+      },
+      {
+        "source": 23,
+        "target": 25,
+        "type": "for_product_line"
+      },
+      {
+        "source": 1,
+        "target": 25,
+        "type": "contains"
+      },
+      {
+        "source": 25,
+        "target": 26,
+        "type": "under_brand_name"
+      },
+      {
+        "source": 1,
+        "target": 26,
+        "type": "contains"
+      },
+      {
+        "source": 26,
+        "target": 27,
+        "type": "is_a"
+      }
+    ]
+  }
+}

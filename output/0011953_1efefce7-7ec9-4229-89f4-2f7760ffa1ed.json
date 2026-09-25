@@ -1,0 +1,376 @@
+{
+  "dataset": "hover",
+  "id": "1efefce7-7ec9-4229-89f4-2f7760ffa1ed",
+  "split": "train",
+  "claim": "Holland Park is located next to the shopping center owned by Blackwood Partners Management Corporation.",
+  "evidencia": "Page: Holland Park, Surrey BC. Sentence: Holland Park is a park in the city of Surrey, British Columbia, located within the town centre of Whalley beside the Central City Shopping Centre.\nPage: Central City Shopping Centre. Sentence: Central City Shopping Centre (formerly known as Surrey Place Mall) is a shopping mall and office tower complex in Whalley/City Centre, Surrey, British Columbia, Canada, which is owned by Blackwood Partners Management Corporation.",
+  "evidence_text": "Page: Holland Park, Surrey BC. Sentence: Holland Park is a park in the city of Surrey, British Columbia, located within the town centre of Whalley beside the Central City Shopping Centre.\nPage: Central City Shopping Centre. Sentence: Central City Shopping Centre (formerly known as Surrey Place Mall) is a shopping mall and office tower complex in Whalley/City Centre, Surrey, British Columbia, Canada, which is owned by Blackwood Partners Management Corporation.",
+  "label": "SUPPORTED",
+  "num_hops": 2,
+  "hover_metadata": {
+    "supporting_facts": [
+      [
+        "Holland Park, Surrey BC",
+        0
+      ],
+      [
+        "Central City Shopping Centre",
+        0
+      ]
+    ],
+    "num_hops": 2,
+    "evidence_annotation_id": [
+      0
+    ],
+    "evidence_id": [
+      "Holland Park, Surrey BC::sentence::0",
+      "Central City Shopping Centre::sentence::0"
+    ],
+    "evidence_wiki_url": [
+      "https://en.wikipedia.org/wiki/Holland_Park%2C_Surrey_BC",
+      "https://en.wikipedia.org/wiki/Central_City_Shopping_Centre"
+    ],
+    "evidence_sentence_id": [
+      "Holland Park, Surrey BC::sentence::0",
+      "Central City Shopping Centre::sentence::0"
+    ]
+  },
+  "grafo_claim": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "1c4c92b5-8219-52a5-9b60-9c2c515bab7c",
+        "text": "This chunk is about:\n- Places: Holland Park\n- Organizations: Blackwood Partners Management Corporation\n- Properties: shopping center\n\nFacts:\n- Holland Park is located next to a shopping center.\n- Blackwood Partners Management Corporation owns the shopping center next to Holland Park.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "313268b7-4894-5d5a-b4ab-bbed1c8088dd",
+        "text": "Holland Park is located next to the shopping center owned by Blackwood Partners Management Corporation.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "692f92f5-20ad-59bc-b357-320e55f852ef",
+        "text": "text_111f46a7f7b64944878251bd5a24bbe4",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "e766e79d-58e6-5dca-b928-07028a96fc7d",
+        "text": "holland park",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "5f394058-b2a0-5ba8-8466-ba2a18cfcf4e",
+        "text": "place",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "40963f67-3f5a-5981-8fd9-c43b54ad6ec1",
+        "text": "shopping center",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "fd3d98f2-53ef-57ab-a4e6-ae2d600946d7",
+        "text": "blackwood partners management corporation",
+        "type": "Entity"
+      },
+      {
+        "id": 7,
+        "original_id": "388f60fb-220d-55e8-ae9c-3ac93cead308",
+        "text": "organization",
+        "type": "EntityType"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 5,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "located_next_to"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 6,
+        "target": 5,
+        "type": "owns"
+      },
+      {
+        "source": 1,
+        "target": 6,
+        "type": "contains"
+      },
+      {
+        "source": 6,
+        "target": 7,
+        "type": "is_a"
+      }
+    ]
+  },
+  "grafo_evidencia": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "dc162ad4-a488-5694-afba-1cbe28b65eb9",
+        "text": "This chunk is about:\n- Places: Holland Park, Surrey, British Columbia, Whalley\n- Products: Central City Shopping Centre, Surrey Place Mall\n- Companies: Blackwood Partners Management Corporation\n\nFacts:\n- Holland Park is a park in Surrey, British Columbia, located in the Whalley town centre beside Central City Shopping Centre.\n- Central City Shopping Centre was formerly known as Surrey Place Mall.\n- Central City Shopping Centre is a shopping mall and office tower complex in Whalley/City Centre, Surrey, British Columbia, Canada.\n- Blackwood Partners Management Corporation owns Central City Shopping Centre.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "ac37dedd-c8f3-5762-a42c-528c5ff992dd",
+        "text": "Page: Holland Park, Surrey BC. Sentence: Holland Park is a park in the city of Surrey, British Columbia, located within the town centre of Whalley beside the Central City Shopping Centre.\nPage: Central City Shopping Centre. Sentence: Central City Shopping Centre (formerly known as Surrey Place Mall) is a shopping mall and office tower complex in Whalley/City Centre, Surrey, British Columbia, Canada, which is owned by Blackwood Partners Management Corporation.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "1133b9ba-e311-5e25-9ad4-95c660ec5632",
+        "text": "text_63db91a7c23376176af8b20fa56b2757",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "e766e79d-58e6-5dca-b928-07028a96fc7d",
+        "text": "holland park",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "5f394058-b2a0-5ba8-8466-ba2a18cfcf4e",
+        "text": "place",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "2681ea9f-0c43-593f-bb10-3656b2cb3b06",
+        "text": "surrey",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "cfe018d6-a4e1-544f-8c8f-20f7eff93738",
+        "text": "british columbia",
+        "type": "Entity"
+      },
+      {
+        "id": 7,
+        "original_id": "bbedb15c-e733-5a11-9f07-ae16faad96f0",
+        "text": "canada",
+        "type": "Entity"
+      },
+      {
+        "id": 8,
+        "original_id": "54e05697-f4e8-5441-b5e5-1e274d3e7b06",
+        "text": "whalley",
+        "type": "Entity"
+      },
+      {
+        "id": 9,
+        "original_id": "e5450918-f89a-56b4-8c78-0d9e7fddc81f",
+        "text": "central city shopping centre",
+        "type": "Entity"
+      },
+      {
+        "id": 10,
+        "original_id": "a9450683-9e3d-5f9a-99e7-4018bbe6060a",
+        "text": "surrey place mall",
+        "type": "Entity"
+      },
+      {
+        "id": 11,
+        "original_id": "fd3d98f2-53ef-57ab-a4e6-ae2d600946d7",
+        "text": "blackwood partners management corporation",
+        "type": "Entity"
+      },
+      {
+        "id": 12,
+        "original_id": "388f60fb-220d-55e8-ae9c-3ac93cead308",
+        "text": "organization",
+        "type": "EntityType"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 5,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 6,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 7,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 8,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 9,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 10,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "located_in"
+      },
+      {
+        "source": 9,
+        "target": 5,
+        "type": "located_in"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "located_in"
+      },
+      {
+        "source": 3,
+        "target": 6,
+        "type": "located_in"
+      },
+      {
+        "source": 9,
+        "target": 6,
+        "type": "located_in"
+      },
+      {
+        "source": 1,
+        "target": 6,
+        "type": "contains"
+      },
+      {
+        "source": 6,
+        "target": 7,
+        "type": "located_in"
+      },
+      {
+        "source": 9,
+        "target": 7,
+        "type": "located_in"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 8,
+        "type": "located_within"
+      },
+      {
+        "source": 9,
+        "target": 8,
+        "type": "located_in"
+      },
+      {
+        "source": 1,
+        "target": 8,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 9,
+        "type": "beside"
+      },
+      {
+        "source": 1,
+        "target": 9,
+        "type": "contains"
+      },
+      {
+        "source": 9,
+        "target": 10,
+        "type": "formerly_known_as"
+      },
+      {
+        "source": 1,
+        "target": 10,
+        "type": "contains"
+      },
+      {
+        "source": 9,
+        "target": 11,
+        "type": "owned_by"
+      },
+      {
+        "source": 1,
+        "target": 11,
+        "type": "contains"
+      },
+      {
+        "source": 11,
+        "target": 12,
+        "type": "is_a"
+      }
+    ]
+  }
+}

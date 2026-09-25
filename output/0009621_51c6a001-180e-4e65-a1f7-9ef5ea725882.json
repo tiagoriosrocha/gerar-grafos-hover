@@ -1,0 +1,391 @@
+{
+  "dataset": "hover",
+  "id": "51c6a001-180e-4e65-a1f7-9ef5ea725882",
+  "split": "train",
+  "claim": "The specialty of the English man who studies the French composer who wrote the motet \"Illibata Dei virgo nutrix\" is English musicologist.",
+  "evidencia": "Page: David Fallows. Sentence: David Fallows (born 20 December 1945) is an English musicologist specializing in music of the late Middle Ages and Renaissance and the performance practice of music.\nPage: Josquin des Prez. Sentence: His motet \"Illibata Dei virgo nutrix\" includes an acrostic of his name, where he spelled it \"Josquin des Prez\".",
+  "evidence_text": "Page: David Fallows. Sentence: David Fallows (born 20 December 1945) is an English musicologist specializing in music of the late Middle Ages and Renaissance and the performance practice of music.\nPage: Josquin des Prez. Sentence: His motet \"Illibata Dei virgo nutrix\" includes an acrostic of his name, where he spelled it \"Josquin des Prez\".",
+  "label": "SUPPORTED",
+  "num_hops": 2,
+  "hover_metadata": {
+    "supporting_facts": [
+      [
+        "David Fallows",
+        0
+      ],
+      [
+        "Josquin des Prez",
+        2
+      ]
+    ],
+    "num_hops": 2,
+    "evidence_annotation_id": [
+      0
+    ],
+    "evidence_id": [
+      "David Fallows::sentence::0",
+      "Josquin des Prez::sentence::2"
+    ],
+    "evidence_wiki_url": [
+      "https://en.wikipedia.org/wiki/David_Fallows",
+      "https://en.wikipedia.org/wiki/Josquin_des_Prez"
+    ],
+    "evidence_sentence_id": [
+      "David Fallows::sentence::0",
+      "Josquin des Prez::sentence::2"
+    ]
+  },
+  "grafo_claim": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "42171644-79d9-5e1a-891b-d007ab02228e",
+        "text": "This chunk is about:\n- People: English man, French composer\n- Roles: English musicologist\n- Works: \"Illibata Dei virgo nutrix\"\n\nFacts:\n- The French composer wrote the motet \"Illibata Dei virgo nutrix.\"\n- The English man studies the French composer.\n- The English man's specialty is English musicologist.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "ed63ed7d-968a-5ef4-8e45-58dd81a48f16",
+        "text": "The specialty of the English man who studies the French composer who wrote the motet \"Illibata Dei virgo nutrix\" is English musicologist.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "219b2b1b-45d2-5c36-871c-1c9db32df924",
+        "text": "text_55c1c3913a79985d471c194aedbb6d75",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "93fbf7ab-bbb0-56e9-ab94-8fb2a3854985",
+        "text": "english man",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "99a82eec-bb35-5bb5-9ed2-e73fc7a756de",
+        "text": "person",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "7d80d423-3e78-5a9b-9e8c-6a1bb6cbb787",
+        "text": "french composer",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "3cb28700-ef0c-5654-945a-597fcd97407d",
+        "text": "illibata dei virgo nutrix",
+        "type": "Entity"
+      },
+      {
+        "id": 7,
+        "original_id": "5263a535-1b4b-5925-be3e-310d03cd303b",
+        "text": "work",
+        "type": "EntityType"
+      },
+      {
+        "id": 8,
+        "original_id": "057d20ec-04ec-5e0a-a436-7ee36e312478",
+        "text": "english musicologist",
+        "type": "Entity"
+      },
+      {
+        "id": 9,
+        "original_id": "d2a381fa-3658-5ca6-ada9-2109cfc9331d",
+        "text": "concept",
+        "type": "EntityType"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 5,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "studies"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "wrote"
+      },
+      {
+        "source": 1,
+        "target": 6,
+        "type": "contains"
+      },
+      {
+        "source": 6,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 8,
+        "type": "has_specialty"
+      },
+      {
+        "source": 1,
+        "target": 8,
+        "type": "contains"
+      },
+      {
+        "source": 8,
+        "target": 9,
+        "type": "is_a"
+      }
+    ]
+  },
+  "grafo_evidencia": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "fe8ff7b3-d7a6-5607-a36c-b8d3d8f2b922",
+        "text": "This chunk is about:\n- People: David Fallows, Josquin des Prez\n- Roles: musicologist, composer\n- Topics: late Middle Ages music, Renaissance music, performance practice, motets, acrostics\n\nFacts:\n- David Fallows was born on 20 December 1945.\n- David Fallows is an English musicologist.\n- David Fallows specializes in the music of the late Middle Ages, the Renaissance, and the performance practice of music.\n- Josquin des Prez spelled his name as \"Josquin des Prez\" in the acrostic included in his motet \"Illibata Dei virgo nutrix.\"",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "23bf42b5-fdf2-527d-b421-4e35e8d1e7ae",
+        "text": "Page: David Fallows. Sentence: David Fallows (born 20 December 1945) is an English musicologist specializing in music of the late Middle Ages and Renaissance and the performance practice of music.\nPage: Josquin des Prez. Sentence: His motet \"Illibata Dei virgo nutrix\" includes an acrostic of his name, where he spelled it \"Josquin des Prez\".",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "a49362dc-af45-5d0a-a5d6-ef503df67f2c",
+        "text": "text_b871e1ff7c2b2015ca80a00107115b50",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "49a91bb5-bd9c-57fa-81a0-161264d87405",
+        "text": "david fallows",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "99a82eec-bb35-5bb5-9ed2-e73fc7a756de",
+        "text": "person",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "d49e60f8-304e-500d-94d0-a084d7109381",
+        "text": "1945-12-20",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "b19433ae-558c-5aaf-95ac-6231f2a4be0e",
+        "text": "date",
+        "type": "EntityType"
+      },
+      {
+        "id": 7,
+        "original_id": "6cbd9054-63ab-5f51-a3c5-57e0ed3beae4",
+        "text": "musicology",
+        "type": "Entity"
+      },
+      {
+        "id": 8,
+        "original_id": "d2a381fa-3658-5ca6-ada9-2109cfc9331d",
+        "text": "concept",
+        "type": "EntityType"
+      },
+      {
+        "id": 9,
+        "original_id": "c80edeb2-9657-509d-9429-3db1f3c274a1",
+        "text": "late middle ages",
+        "type": "Entity"
+      },
+      {
+        "id": 10,
+        "original_id": "4044c0c6-00ca-5b87-b0cf-cbddc90c7912",
+        "text": "period",
+        "type": "EntityType"
+      },
+      {
+        "id": 11,
+        "original_id": "d1caec83-5f1f-5513-bc04-e8ccc0d49898",
+        "text": "renaissance",
+        "type": "Entity"
+      },
+      {
+        "id": 12,
+        "original_id": "eb8db0d6-9415-58b8-8d3d-dab6957a93f0",
+        "text": "performance practice of music",
+        "type": "Entity"
+      },
+      {
+        "id": 13,
+        "original_id": "c43f200d-9043-56b2-8947-c923285d5c6e",
+        "text": "josquin des prez",
+        "type": "Entity"
+      },
+      {
+        "id": 14,
+        "original_id": "3cb28700-ef0c-5654-945a-597fcd97407d",
+        "text": "illibata dei virgo nutrix",
+        "type": "Entity"
+      },
+      {
+        "id": 15,
+        "original_id": "5263a535-1b4b-5925-be3e-310d03cd303b",
+        "text": "work",
+        "type": "EntityType"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 13,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "born_on"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 7,
+        "type": "profession"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      },
+      {
+        "source": 7,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 12,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 9,
+        "type": "specializes_in"
+      },
+      {
+        "source": 1,
+        "target": 9,
+        "type": "contains"
+      },
+      {
+        "source": 9,
+        "target": 10,
+        "type": "is_a"
+      },
+      {
+        "source": 11,
+        "target": 10,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 11,
+        "type": "specializes_in"
+      },
+      {
+        "source": 1,
+        "target": 11,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 12,
+        "type": "specializes_in"
+      },
+      {
+        "source": 1,
+        "target": 12,
+        "type": "contains"
+      },
+      {
+        "source": 1,
+        "target": 13,
+        "type": "contains"
+      },
+      {
+        "source": 14,
+        "target": 13,
+        "type": "includes_acrostic_of_name"
+      },
+      {
+        "source": 1,
+        "target": 14,
+        "type": "contains"
+      },
+      {
+        "source": 14,
+        "target": 15,
+        "type": "is_a"
+      }
+    ]
+  }
+}

@@ -1,0 +1,448 @@
+{
+  "dataset": "hover",
+  "id": "76646386-2fc4-4778-9d11-109de1f2a51a",
+  "split": "train",
+  "claim": "Orlando International Airport served more people in 2015 than Asheville Regional Airport.",
+  "evidencia": "Page: Asheville Regional Airport. Sentence: In 2016 it served an all-time record number of passengers for the airport, 826,648, an increase of 5% over 2015 and the third consecutive year of record traffic.\nPage: Orlando International Airport. Sentence: Orlando International Airport (IATA: MCO, ICAO: KMCO, FAA LID: MCO) is a major public airport located six miles (10 km) southeast of Orlando, Florida, United States.\nPage: Orlando International Airport. Sentence: It is the second-busiest airport in the state of Florida, as over 40.2 million passengers were handled at the airport as of 2015.",
+  "evidence_text": "Page: Asheville Regional Airport. Sentence: In 2016 it served an all-time record number of passengers for the airport, 826,648, an increase of 5% over 2015 and the third consecutive year of record traffic.\nPage: Orlando International Airport. Sentence: Orlando International Airport (IATA: MCO, ICAO: KMCO, FAA LID: MCO) is a major public airport located six miles (10 km) southeast of Orlando, Florida, United States.\nPage: Orlando International Airport. Sentence: It is the second-busiest airport in the state of Florida, as over 40.2 million passengers were handled at the airport as of 2015.",
+  "label": "SUPPORTED",
+  "num_hops": 2,
+  "hover_metadata": {
+    "supporting_facts": [
+      [
+        "Asheville Regional Airport",
+        3
+      ],
+      [
+        "Orlando International Airport",
+        0
+      ],
+      [
+        "Orlando International Airport",
+        1
+      ]
+    ],
+    "num_hops": 2,
+    "evidence_annotation_id": [
+      0
+    ],
+    "evidence_id": [
+      "Asheville Regional Airport::sentence::3",
+      "Orlando International Airport::sentence::0",
+      "Orlando International Airport::sentence::1"
+    ],
+    "evidence_wiki_url": [
+      "https://en.wikipedia.org/wiki/Asheville_Regional_Airport",
+      "https://en.wikipedia.org/wiki/Orlando_International_Airport"
+    ],
+    "evidence_sentence_id": [
+      "Asheville Regional Airport::sentence::3",
+      "Orlando International Airport::sentence::0",
+      "Orlando International Airport::sentence::1"
+    ]
+  },
+  "grafo_claim": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "94771b71-3d42-5c35-92a6-fee755055cc8",
+        "text": "This chunk is about:\n- Places: Orlando International Airport, Asheville Regional Airport\n- Topics: Airport passenger traffic, 2015\n\nFacts:\n- In 2015, Orlando International Airport served more people than Asheville Regional Airport.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "7bb8364d-fb94-563f-bb5c-f496346954e3",
+        "text": "Orlando International Airport served more people in 2015 than Asheville Regional Airport.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "7829ced8-e5f1-5570-a55b-f33e2cc21db0",
+        "text": "text_42862108e7921211e794ab9673e555b4",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "17ac6f2b-1435-52d0-98b8-739990e78a08",
+        "text": "orlando international airport",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "50596f1a-2d8a-5de7-96b5-ba7068791784",
+        "text": "airport",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "569b401b-994d-514c-a99f-eb0a9609df3e",
+        "text": "asheville regional airport",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "e462afa3-e20a-57e9-b578-82bcd93b548e",
+        "text": "2015",
+        "type": "Entity"
+      },
+      {
+        "id": 7,
+        "original_id": "b19433ae-558c-5aaf-95ac-6231f2a4be0e",
+        "text": "date",
+        "type": "EntityType"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 5,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "served_more_people_than"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "comparison_in_year"
+      },
+      {
+        "source": 3,
+        "target": 6,
+        "type": "comparison_in_year"
+      },
+      {
+        "source": 1,
+        "target": 6,
+        "type": "contains"
+      },
+      {
+        "source": 6,
+        "target": 7,
+        "type": "is_a"
+      }
+    ]
+  },
+  "grafo_evidencia": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "87ac8784-4a6d-5d82-b972-595360c4a87b",
+        "text": "This chunk is about:\n- Places: Asheville Regional Airport, Orlando, Florida, United States\n- Organizations: Orlando International Airport\n- Topics: airport passenger traffic, airport location, airport rankings\n\nFacts:\n- In 2015, Orlando International Airport handled more than 40.2 million passengers.\n- As of 2015, Orlando International Airport was the second-busiest airport in Florida.\n- In 2016, Asheville Regional Airport served a record 826,648 passengers, which was 5% higher than in 2015.\n- In 2016, Asheville Regional Airport recorded its third consecutive year of record passenger traffic.\n- Orlando International Airport is a major public airport located six miles southeast of Orlando, Florida, United States.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "8ef3aa48-8c3d-59f5-a546-2dfdd8fc9bd8",
+        "text": "Page: Asheville Regional Airport. Sentence: In 2016 it served an all-time record number of passengers for the airport, 826,648, an increase of 5% over 2015 and the third consecutive year of record traffic.\nPage: Orlando International Airport. Sentence: Orlando International Airport (IATA: MCO, ICAO: KMCO, FAA LID: MCO) is a major public airport located six miles (10 km) southeast of Orlando, Florida, United States.\nPage: Orlando International Airport. Sentence: It is the second-busiest airport in the state of Florida, as over 40.2 million passengers were handled at the airport as of 2015.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "b92e67f3-060d-563e-b172-a7711623a7f4",
+        "text": "text_9fd012c00ce7d65761ff394b0b196583",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "569b401b-994d-514c-a99f-eb0a9609df3e",
+        "text": "asheville regional airport",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "50596f1a-2d8a-5de7-96b5-ba7068791784",
+        "text": "airport",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "e4b4371b-a3be-58ef-8db1-07e189dc56ac",
+        "text": "2016",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "b19433ae-558c-5aaf-95ac-6231f2a4be0e",
+        "text": "date",
+        "type": "EntityType"
+      },
+      {
+        "id": 7,
+        "original_id": "53b38132-73be-520d-a666-d3b37c860051",
+        "text": "826,648",
+        "type": "Entity"
+      },
+      {
+        "id": 8,
+        "original_id": "5c1097ca-fab8-54d5-b57f-5dca4b0e2507",
+        "text": "number",
+        "type": "EntityType"
+      },
+      {
+        "id": 9,
+        "original_id": "b0a726cb-2a09-5104-a8bf-6814f56726f6",
+        "text": "5%",
+        "type": "Entity"
+      },
+      {
+        "id": 10,
+        "original_id": "e462afa3-e20a-57e9-b578-82bcd93b548e",
+        "text": "2015",
+        "type": "Entity"
+      },
+      {
+        "id": 11,
+        "original_id": "17ac6f2b-1435-52d0-98b8-739990e78a08",
+        "text": "orlando international airport",
+        "type": "Entity"
+      },
+      {
+        "id": 12,
+        "original_id": "5a6aeb28-e37e-5211-affe-6d444d144fe0",
+        "text": "mco",
+        "type": "Entity"
+      },
+      {
+        "id": 13,
+        "original_id": "2c23f4f7-2223-5c53-a5f6-1bd0114fcd6a",
+        "text": "code",
+        "type": "EntityType"
+      },
+      {
+        "id": 14,
+        "original_id": "af504097-c1d0-5b14-87f1-ff8856d6eff1",
+        "text": "kmco",
+        "type": "Entity"
+      },
+      {
+        "id": 15,
+        "original_id": "a4d9c4d0-bd05-537e-9556-670152ec50ac",
+        "text": "orlando, florida, united states",
+        "type": "Entity"
+      },
+      {
+        "id": 16,
+        "original_id": "5f394058-b2a0-5ba8-8466-ba2a18cfcf4e",
+        "text": "place",
+        "type": "EntityType"
+      },
+      {
+        "id": 17,
+        "original_id": "cc742fd7-ba65-509e-bb61-ba57c283d7d0",
+        "text": "florida",
+        "type": "Entity"
+      },
+      {
+        "id": 18,
+        "original_id": "d4de54d6-b9fb-5f1f-a96e-a358e86130c1",
+        "text": "40.2 million",
+        "type": "Entity"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 11,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "served_record_passengers_in"
+      },
+      {
+        "source": 7,
+        "target": 5,
+        "type": "recorded_in"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 10,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 7,
+        "type": "served_passenger_count"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      },
+      {
+        "source": 7,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 9,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 18,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 9,
+        "type": "increased_by_over_previous_year"
+      },
+      {
+        "source": 1,
+        "target": 9,
+        "type": "contains"
+      },
+      {
+        "source": 9,
+        "target": 10,
+        "type": "compared_to"
+      },
+      {
+        "source": 3,
+        "target": 10,
+        "type": "had_record_traffic_third_consecutive_year_from"
+      },
+      {
+        "source": 1,
+        "target": 10,
+        "type": "contains"
+      },
+      {
+        "source": 1,
+        "target": 11,
+        "type": "contains"
+      },
+      {
+        "source": 11,
+        "target": 12,
+        "type": "has_iata_code"
+      },
+      {
+        "source": 1,
+        "target": 12,
+        "type": "contains"
+      },
+      {
+        "source": 12,
+        "target": 13,
+        "type": "is_a"
+      },
+      {
+        "source": 14,
+        "target": 13,
+        "type": "is_a"
+      },
+      {
+        "source": 11,
+        "target": 14,
+        "type": "has_icao_code"
+      },
+      {
+        "source": 1,
+        "target": 14,
+        "type": "contains"
+      },
+      {
+        "source": 11,
+        "target": 15,
+        "type": "located_southeast_of"
+      },
+      {
+        "source": 1,
+        "target": 15,
+        "type": "contains"
+      },
+      {
+        "source": 15,
+        "target": 16,
+        "type": "is_a"
+      },
+      {
+        "source": 17,
+        "target": 16,
+        "type": "is_a"
+      },
+      {
+        "source": 11,
+        "target": 17,
+        "type": "is_second_busiest_airport_in"
+      },
+      {
+        "source": 1,
+        "target": 17,
+        "type": "contains"
+      },
+      {
+        "source": 11,
+        "target": 18,
+        "type": "handled_passengers_as_of"
+      },
+      {
+        "source": 1,
+        "target": 18,
+        "type": "contains"
+      }
+    ]
+  }
+}

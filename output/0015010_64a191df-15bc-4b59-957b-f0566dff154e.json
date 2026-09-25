@@ -1,0 +1,640 @@
+{
+  "dataset": "hover",
+  "id": "64a191df-15bc-4b59-957b-f0566dff154e",
+  "split": "train",
+  "claim": "The writer for whom Darragh Park was the literary executor of his estate, and H. G. Wells have both published books.",
+  "evidencia": "Page: James Schuyler. Sentence: His awards include the Pulitzer Prize for Poetry for his 1980 collection \"The Morning of the Poem\".\nPage: H. G. Wells. Sentence: His most notable science fiction works include \"The Time Machine\" (1895), \"The Island of Doctor Moreau\" (1896), \"The Invisible Man\" (1897), and \"The War of the Worlds\" (1898).\nPage: Darragh Park. Sentence: Darragh Park (July 24, 1939 – April 17, 2009) was an American Artist, and the literary executor of the estate of Pulitzer Prize–winning poet James Schuyler.",
+  "evidence_text": "Page: James Schuyler. Sentence: His awards include the Pulitzer Prize for Poetry for his 1980 collection \"The Morning of the Poem\".\nPage: H. G. Wells. Sentence: His most notable science fiction works include \"The Time Machine\" (1895), \"The Island of Doctor Moreau\" (1896), \"The Invisible Man\" (1897), and \"The War of the Worlds\" (1898).\nPage: Darragh Park. Sentence: Darragh Park (July 24, 1939 – April 17, 2009) was an American Artist, and the literary executor of the estate of Pulitzer Prize–winning poet James Schuyler.",
+  "label": "SUPPORTED",
+  "num_hops": 3,
+  "hover_metadata": {
+    "supporting_facts": [
+      [
+        "James Schuyler",
+        1
+      ],
+      [
+        "H. G. Wells",
+        3
+      ],
+      [
+        "Darragh Park",
+        0
+      ]
+    ],
+    "num_hops": 3,
+    "evidence_annotation_id": [
+      0
+    ],
+    "evidence_id": [
+      "James Schuyler::sentence::1",
+      "H. G. Wells::sentence::3",
+      "Darragh Park::sentence::0"
+    ],
+    "evidence_wiki_url": [
+      "https://en.wikipedia.org/wiki/James_Schuyler",
+      "https://en.wikipedia.org/wiki/H._G._Wells",
+      "https://en.wikipedia.org/wiki/Darragh_Park"
+    ],
+    "evidence_sentence_id": [
+      "James Schuyler::sentence::1",
+      "H. G. Wells::sentence::3",
+      "Darragh Park::sentence::0"
+    ]
+  },
+  "grafo_claim": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "f8683ae9-a953-57e9-a743-1d55f406b40b",
+        "text": "This chunk is about:\n- People: Darragh Park, H. G. Wells\n- Roles: literary executor\n- Topics: books, publishing\n\nFacts:\n- Darragh Park served as the literary executor of a writer's estate.\n- H. G. Wells published books.\n- The writer whose estate was managed by Darragh Park also published books.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "205839c1-04fa-5a6b-90be-a02b91ac9fbd",
+        "text": "The writer for whom Darragh Park was the literary executor of his estate, and H. G. Wells have both published books.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "53b60bcf-e42a-5751-8897-d188c1edf788",
+        "text": "text_ce09e7b6b1325a78d41a96be2f367b49",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "03ebc32b-0c5d-57d0-b862-be9933f638b4",
+        "text": "darragh park",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "99a82eec-bb35-5bb5-9ed2-e73fc7a756de",
+        "text": "person",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "3c10e970-66c0-520f-ba48-90eb68bfc7e6",
+        "text": "the writer whose estate darragh park was literary executor of",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "432f6e68-b2e0-54f6-86ce-65f40b146517",
+        "text": "books",
+        "type": "Entity"
+      },
+      {
+        "id": 7,
+        "original_id": "5263a535-1b4b-5925-be3e-310d03cd303b",
+        "text": "work",
+        "type": "EntityType"
+      },
+      {
+        "id": 8,
+        "original_id": "5f6c6e82-b4cf-5e11-83b3-e82679ddad74",
+        "text": "h. g. wells",
+        "type": "Entity"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 5,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 8,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "was_literary_executor_of_estate"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "published"
+      },
+      {
+        "source": 8,
+        "target": 6,
+        "type": "published"
+      },
+      {
+        "source": 1,
+        "target": 6,
+        "type": "contains"
+      },
+      {
+        "source": 6,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 8,
+        "type": "contains"
+      }
+    ]
+  },
+  "grafo_evidencia": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "ed2b8153-2de1-57d5-b467-dc40c1ad1e13",
+        "text": "This chunk is about:\n- People: James Schuyler, H. G. Wells, Darragh Park\n- Works: The Time Machine, The Island of Doctor Moreau, The Invisible Man, The War of the Worlds, The Morning of the Poem\n- Roles: poet, artist, literary executor\n- Awards: Pulitzer Prize for Poetry\n\nFacts:\n- H. G. Wells wrote The Time Machine in 1895.\n- H. G. Wells wrote The Island of Doctor Moreau in 1896.\n- H. G. Wells wrote The Invisible Man in 1897.\n- H. G. Wells wrote The War of the Worlds in 1898.\n- James Schuyler won the Pulitzer Prize for Poetry for his 1980 collection The Morning of the Poem.\n- Darragh Park was born on July 24, 1939.\n- Darragh Park was an American artist and the literary executor of the estate of Pulitzer Prize-winning poet James Schuyler.\n- Darragh Park died on April 17, 2009.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "5789a124-6950-51c1-a0eb-5530c6a4b24f",
+        "text": "Page: James Schuyler. Sentence: His awards include the Pulitzer Prize for Poetry for his 1980 collection \"The Morning of the Poem\".\nPage: H. G. Wells. Sentence: His most notable science fiction works include \"The Time Machine\" (1895), \"The Island of Doctor Moreau\" (1896), \"The Invisible Man\" (1897), and \"The War of the Worlds\" (1898).\nPage: Darragh Park. Sentence: Darragh Park (July 24, 1939 – April 17, 2009) was an American Artist, and the literary executor of the estate of Pulitzer Prize–winning poet James Schuyler.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "7836e7b3-9a84-5fe7-bb49-540eae99e259",
+        "text": "text_375468d735ee145918f57186eb8b91bf",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "46a7220f-1554-54d6-a9d7-cc57a41369f9",
+        "text": "james schuyler",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "99a82eec-bb35-5bb5-9ed2-e73fc7a756de",
+        "text": "person",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "a1a5b2d4-42ec-56b2-a7eb-72f82b11f190",
+        "text": "pulitzer prize for poetry",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "38e42125-31f4-5cd6-993c-dbbc06a88910",
+        "text": "award",
+        "type": "EntityType"
+      },
+      {
+        "id": 7,
+        "original_id": "4f565993-ccbf-5d2f-892b-5b26b3b12f4f",
+        "text": "the morning of the poem",
+        "type": "Entity"
+      },
+      {
+        "id": 8,
+        "original_id": "5263a535-1b4b-5925-be3e-310d03cd303b",
+        "text": "work",
+        "type": "EntityType"
+      },
+      {
+        "id": 9,
+        "original_id": "0f4fd0b2-fe7d-55ad-9354-6f20b613f9ba",
+        "text": "1980",
+        "type": "Entity"
+      },
+      {
+        "id": 10,
+        "original_id": "b19433ae-558c-5aaf-95ac-6231f2a4be0e",
+        "text": "date",
+        "type": "EntityType"
+      },
+      {
+        "id": 11,
+        "original_id": "5f6c6e82-b4cf-5e11-83b3-e82679ddad74",
+        "text": "h. g. wells",
+        "type": "Entity"
+      },
+      {
+        "id": 12,
+        "original_id": "b9236b62-ecea-536d-af24-4017c705c617",
+        "text": "the time machine",
+        "type": "Entity"
+      },
+      {
+        "id": 13,
+        "original_id": "fe88e1b2-29e7-5610-b46d-e8c69420f718",
+        "text": "1895",
+        "type": "Entity"
+      },
+      {
+        "id": 14,
+        "original_id": "2d0ac3ef-3a43-52c7-b182-d58815bc2cc2",
+        "text": "the island of doctor moreau",
+        "type": "Entity"
+      },
+      {
+        "id": 15,
+        "original_id": "2514479a-04c0-53f1-b332-93b47e34c973",
+        "text": "1896",
+        "type": "Entity"
+      },
+      {
+        "id": 16,
+        "original_id": "7c458ab8-d2f1-5a71-b25a-a94a80c16a80",
+        "text": "the invisible man",
+        "type": "Entity"
+      },
+      {
+        "id": 17,
+        "original_id": "76248e9e-2a28-5e91-8ab3-f3988e67af5f",
+        "text": "1897",
+        "type": "Entity"
+      },
+      {
+        "id": 18,
+        "original_id": "88b5bd78-dd7d-53b4-9576-b81853b5f48e",
+        "text": "the war of the worlds",
+        "type": "Entity"
+      },
+      {
+        "id": 19,
+        "original_id": "7fd95c6f-3be3-5533-8d6f-ec4f6a0602a6",
+        "text": "1898",
+        "type": "Entity"
+      },
+      {
+        "id": 20,
+        "original_id": "03ebc32b-0c5d-57d0-b862-be9933f638b4",
+        "text": "darragh park",
+        "type": "Entity"
+      },
+      {
+        "id": 21,
+        "original_id": "1bf6afa3-bdd2-5c5c-9089-c1fe1ad3a698",
+        "text": "1939-07-24",
+        "type": "Entity"
+      },
+      {
+        "id": 22,
+        "original_id": "23755169-399f-55c1-b1cd-4bdf51252c2a",
+        "text": "2009-04-17",
+        "type": "Entity"
+      },
+      {
+        "id": 23,
+        "original_id": "32e5ea46-cca9-5920-8b2d-77357f10ce8d",
+        "text": "american",
+        "type": "Entity"
+      },
+      {
+        "id": 24,
+        "original_id": "7d08f409-7e55-5a66-935f-7c5c06f9111f",
+        "text": "nationality",
+        "type": "EntityType"
+      },
+      {
+        "id": 25,
+        "original_id": "f1ec5e16-410e-597a-a702-51b31c8fe307",
+        "text": "artist",
+        "type": "Entity"
+      },
+      {
+        "id": 26,
+        "original_id": "9d80eb43-32fa-561c-9371-91f180ebcb6c",
+        "text": "profession",
+        "type": "EntityType"
+      },
+      {
+        "id": 27,
+        "original_id": "a9e3b4da-5242-5d9b-857c-33ba5896a456",
+        "text": "estate of james schuyler",
+        "type": "Entity"
+      },
+      {
+        "id": 28,
+        "original_id": "388f60fb-220d-55e8-ae9c-3ac93cead308",
+        "text": "organization",
+        "type": "EntityType"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 27,
+        "target": 3,
+        "type": "belongs_to"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 11,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 20,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "received_award"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 5,
+        "target": 7,
+        "type": "awarded_for"
+      },
+      {
+        "source": 3,
+        "target": 7,
+        "type": "created"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      },
+      {
+        "source": 7,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 12,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 14,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 16,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 18,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 7,
+        "target": 9,
+        "type": "published_in"
+      },
+      {
+        "source": 1,
+        "target": 9,
+        "type": "contains"
+      },
+      {
+        "source": 9,
+        "target": 10,
+        "type": "is_a"
+      },
+      {
+        "source": 13,
+        "target": 10,
+        "type": "is_a"
+      },
+      {
+        "source": 15,
+        "target": 10,
+        "type": "is_a"
+      },
+      {
+        "source": 17,
+        "target": 10,
+        "type": "is_a"
+      },
+      {
+        "source": 19,
+        "target": 10,
+        "type": "is_a"
+      },
+      {
+        "source": 21,
+        "target": 10,
+        "type": "is_a"
+      },
+      {
+        "source": 22,
+        "target": 10,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 11,
+        "type": "contains"
+      },
+      {
+        "source": 11,
+        "target": 12,
+        "type": "created"
+      },
+      {
+        "source": 1,
+        "target": 12,
+        "type": "contains"
+      },
+      {
+        "source": 12,
+        "target": 13,
+        "type": "published_in"
+      },
+      {
+        "source": 1,
+        "target": 13,
+        "type": "contains"
+      },
+      {
+        "source": 11,
+        "target": 14,
+        "type": "created"
+      },
+      {
+        "source": 1,
+        "target": 14,
+        "type": "contains"
+      },
+      {
+        "source": 14,
+        "target": 15,
+        "type": "published_in"
+      },
+      {
+        "source": 1,
+        "target": 15,
+        "type": "contains"
+      },
+      {
+        "source": 11,
+        "target": 16,
+        "type": "created"
+      },
+      {
+        "source": 1,
+        "target": 16,
+        "type": "contains"
+      },
+      {
+        "source": 16,
+        "target": 17,
+        "type": "published_in"
+      },
+      {
+        "source": 1,
+        "target": 17,
+        "type": "contains"
+      },
+      {
+        "source": 11,
+        "target": 18,
+        "type": "created"
+      },
+      {
+        "source": 1,
+        "target": 18,
+        "type": "contains"
+      },
+      {
+        "source": 18,
+        "target": 19,
+        "type": "published_in"
+      },
+      {
+        "source": 1,
+        "target": 19,
+        "type": "contains"
+      },
+      {
+        "source": 1,
+        "target": 20,
+        "type": "contains"
+      },
+      {
+        "source": 20,
+        "target": 21,
+        "type": "born_on"
+      },
+      {
+        "source": 1,
+        "target": 21,
+        "type": "contains"
+      },
+      {
+        "source": 20,
+        "target": 22,
+        "type": "died_on"
+      },
+      {
+        "source": 1,
+        "target": 22,
+        "type": "contains"
+      },
+      {
+        "source": 20,
+        "target": 23,
+        "type": "has_nationality"
+      },
+      {
+        "source": 1,
+        "target": 23,
+        "type": "contains"
+      },
+      {
+        "source": 23,
+        "target": 24,
+        "type": "is_a"
+      },
+      {
+        "source": 20,
+        "target": 25,
+        "type": "has_profession"
+      },
+      {
+        "source": 1,
+        "target": 25,
+        "type": "contains"
+      },
+      {
+        "source": 25,
+        "target": 26,
+        "type": "is_a"
+      },
+      {
+        "source": 20,
+        "target": 27,
+        "type": "served_as_literary_executor_for"
+      },
+      {
+        "source": 1,
+        "target": 27,
+        "type": "contains"
+      },
+      {
+        "source": 27,
+        "target": 28,
+        "type": "is_a"
+      }
+    ]
+  }
+}

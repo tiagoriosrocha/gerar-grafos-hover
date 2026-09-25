@@ -1,0 +1,632 @@
+{
+  "dataset": "hover",
+  "id": "33c4b577-3158-4b8b-8b56-44dfd646fc07",
+  "split": "train",
+  "claim": "The band Vertex's singer, and not Alexander O'Neal, was a part of the heavy metal band Ratt.",
+  "evidencia": "Page: Stephen Pearcy. Sentence: Stephen Eric Pearcy (born July 3, 1956), known as Stephen Pearcy, is an American musician.\nPage: Stephen Pearcy. Sentence: He is best known as the founder, singer, and songwriter of the heavy metal band Ratt.\nPage: Alexander O'Neal. Sentence: Alexander O'Neal (born November 15, 1953) is an American R&B singer, songwriter and arranger from Natchez, Mississippi.\nPage: Vertex (band). Sentence: Vertex was a band formed in 1995 featuring singer Stephen Pearcy (Ratt, Arcade, Vicious Delite, Nitronic), guitarist Al Pitrelli (Danger Danger, Hotshot, Alice Cooper, Asia, Savatage, Megadeth, Trans-Siberian Orchestra), and drummer Hiro Kuretani (WXXI, Trancentral Station).",
+  "evidence_text": "Page: Stephen Pearcy. Sentence: Stephen Eric Pearcy (born July 3, 1956), known as Stephen Pearcy, is an American musician.\nPage: Stephen Pearcy. Sentence: He is best known as the founder, singer, and songwriter of the heavy metal band Ratt.\nPage: Alexander O'Neal. Sentence: Alexander O'Neal (born November 15, 1953) is an American R&B singer, songwriter and arranger from Natchez, Mississippi.\nPage: Vertex (band). Sentence: Vertex was a band formed in 1995 featuring singer Stephen Pearcy (Ratt, Arcade, Vicious Delite, Nitronic), guitarist Al Pitrelli (Danger Danger, Hotshot, Alice Cooper, Asia, Savatage, Megadeth, Trans-Siberian Orchestra), and drummer Hiro Kuretani (WXXI, Trancentral Station).",
+  "label": "SUPPORTED",
+  "num_hops": 3,
+  "hover_metadata": {
+    "supporting_facts": [
+      [
+        "Stephen Pearcy",
+        0
+      ],
+      [
+        "Stephen Pearcy",
+        1
+      ],
+      [
+        "Alexander O'Neal",
+        0
+      ],
+      [
+        "Vertex (band)",
+        0
+      ]
+    ],
+    "num_hops": 3,
+    "evidence_annotation_id": [
+      0
+    ],
+    "evidence_id": [
+      "Stephen Pearcy::sentence::0",
+      "Stephen Pearcy::sentence::1",
+      "Alexander O'Neal::sentence::0",
+      "Vertex (band)::sentence::0"
+    ],
+    "evidence_wiki_url": [
+      "https://en.wikipedia.org/wiki/Stephen_Pearcy",
+      "https://en.wikipedia.org/wiki/Alexander_O%27Neal",
+      "https://en.wikipedia.org/wiki/Vertex_%28band%29"
+    ],
+    "evidence_sentence_id": [
+      "Stephen Pearcy::sentence::0",
+      "Stephen Pearcy::sentence::1",
+      "Alexander O'Neal::sentence::0",
+      "Vertex (band)::sentence::0"
+    ]
+  },
+  "grafo_claim": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "a79778f1-0b94-533b-aafc-25f7fb749d1b",
+        "text": "This chunk is about:\n- People: Vertex's singer, Alexander O'Neal\n- Bands: Vertex, Ratt\n- Topics: band membership, identity clarification\n\nFacts:\n- Vertex's singer was part of the heavy metal band Ratt.\n- Alexander O'Neal was not part of the heavy metal band Ratt.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "a92fac4b-42e2-5948-94c5-a2a73f9ff231",
+        "text": "The band Vertex's singer, and not Alexander O'Neal, was a part of the heavy metal band Ratt.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "8d158408-e3eb-54d3-83c1-37a3d1587185",
+        "text": "text_8a381a653893925ab07ba09a81cf63cc",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "25af68e6-75b4-5e13-a330-88f24cb20904",
+        "text": "vertex",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "a69bcce0-8153-57d6-96fd-6d36e286fb20",
+        "text": "band",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "04d27f1c-d675-5906-9c5c-3c79e00a7444",
+        "text": "alexander oneal",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "f7cacb18-9773-54a5-aa64-f0e93f0fdd7f",
+        "text": "ratt",
+        "type": "Entity"
+      },
+      {
+        "id": 7,
+        "original_id": "99a82eec-bb35-5bb5-9ed2-e73fc7a756de",
+        "text": "person",
+        "type": "EntityType"
+      },
+      {
+        "id": 8,
+        "original_id": "6ece29cc-f780-5722-aea5-81d4f2dabf45",
+        "text": "vertex singer",
+        "type": "Entity"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 8,
+        "target": 3,
+        "type": "singer_of"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 6,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "not_member_of"
+      },
+      {
+        "source": 1,
+        "target": 6,
+        "type": "contains"
+      },
+      {
+        "source": 8,
+        "target": 6,
+        "type": "member_of"
+      },
+      {
+        "source": 5,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 8,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 8,
+        "type": "contains"
+      }
+    ]
+  },
+  "grafo_evidencia": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "30d3d87b-5196-52fe-89a1-32d423c50003",
+        "text": "This chunk is about:\n- People: Stephen Pearcy, Alexander O'Neal, Al Pitrelli, Hiro Kuretani\n- Bands and Music Projects: Ratt, Vertex, Arcade, Vicious Delite, Nitronic, Danger Danger, Hotshot, Alice Cooper, Asia, Savatage, Megadeth, Trans-Siberian Orchestra, WXXI, Trancentral Station\n- Roles: musician, singer, songwriter, arranger, guitarist, drummer, founder\n- Places: Natchez, Mississippi\n\nFacts:\n- Alexander O'Neal was born on November 15, 1953, and he is an American R&B singer, songwriter, and arranger from Natchez, Mississippi.\n- Stephen Eric Pearcy was born on July 3, 1956, and he is an American musician known as Stephen Pearcy.\n- Stephen Pearcy is best known as the founder, singer, and songwriter of the heavy metal band Ratt.\n- Vertex was a band formed in 1995 featuring singer Stephen Pearcy, guitarist Al Pitrelli, and drummer Hiro Kuretani.\n- Stephen Pearcy had associations with Ratt, Arcade, Vicious Delite, and Nitronic when he was identified as a member of Vertex.\n- Al Pitrelli had associations with Danger Danger, Hotshot, Alice Cooper, Asia, Savatage, Megadeth, and Trans-Siberian Orchestra when he was identified as a member of Vertex.\n- Hiro Kuretani had associations with WXXI and Trancentral Station when he was identified as a member of Vertex.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "844fc914-8419-5a85-86e5-b09250a35475",
+        "text": "Page: Stephen Pearcy. Sentence: Stephen Eric Pearcy (born July 3, 1956), known as Stephen Pearcy, is an American musician.\nPage: Stephen Pearcy. Sentence: He is best known as the founder, singer, and songwriter of the heavy metal band Ratt.\nPage: Alexander O'Neal. Sentence: Alexander O'Neal (born November 15, 1953) is an American R&B singer, songwriter and arranger from Natchez, Mississippi.\nPage: Vertex (band). Sentence: Vertex was a band formed in 1995 featuring singer Stephen Pearcy (Ratt, Arcade, Vicious Delite, Nitronic), guitarist Al Pitrelli (Danger Danger, Hotshot, Alice Cooper, Asia, Savatage, Megadeth, Trans-Siberian Orchestra), and drummer Hiro Kuretani (WXXI, Trancentral Station).",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "20ef17c1-e077-58fc-948b-b95dbd01a43d",
+        "text": "text_b7814789a517ef5009e4372cef458be2",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "1be118a0-7e08-53fc-a152-e2c738dbaf3b",
+        "text": "stephen eric pearcy",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "1cf5321c-0461-5934-bb1f-ae3cc5f81a1e",
+        "text": "1956-07-03",
+        "type": "Entity"
+      },
+      {
+        "id": 5,
+        "original_id": "b19433ae-558c-5aaf-95ac-6231f2a4be0e",
+        "text": "date",
+        "type": "EntityType"
+      },
+      {
+        "id": 6,
+        "original_id": "f7cacb18-9773-54a5-aa64-f0e93f0fdd7f",
+        "text": "ratt",
+        "type": "Entity"
+      },
+      {
+        "id": 7,
+        "original_id": "a69bcce0-8153-57d6-96fd-6d36e286fb20",
+        "text": "band",
+        "type": "EntityType"
+      },
+      {
+        "id": 8,
+        "original_id": "99a82eec-bb35-5bb5-9ed2-e73fc7a756de",
+        "text": "person",
+        "type": "EntityType"
+      },
+      {
+        "id": 9,
+        "original_id": "04d27f1c-d675-5906-9c5c-3c79e00a7444",
+        "text": "alexander oneal",
+        "type": "Entity"
+      },
+      {
+        "id": 10,
+        "original_id": "07dfac99-c8e0-55bb-8d75-df73279642a9",
+        "text": "1953-11-15",
+        "type": "Entity"
+      },
+      {
+        "id": 11,
+        "original_id": "7dd43f8d-67af-5b8b-9001-8e60dadb82f6",
+        "text": "natchez, mississippi",
+        "type": "Entity"
+      },
+      {
+        "id": 12,
+        "original_id": "5f394058-b2a0-5ba8-8466-ba2a18cfcf4e",
+        "text": "place",
+        "type": "EntityType"
+      },
+      {
+        "id": 13,
+        "original_id": "25af68e6-75b4-5e13-a330-88f24cb20904",
+        "text": "vertex",
+        "type": "Entity"
+      },
+      {
+        "id": 14,
+        "original_id": "ee5ab8c2-0240-5792-985d-a9d5064b1b91",
+        "text": "1995",
+        "type": "Entity"
+      },
+      {
+        "id": 15,
+        "original_id": "6bc6da01-55ac-5a20-b86b-ad1d2de814bc",
+        "text": "al pitrelli",
+        "type": "Entity"
+      },
+      {
+        "id": 16,
+        "original_id": "c62f4c5d-b8f5-580f-846a-46550e9a228f",
+        "text": "hiro kuretani",
+        "type": "Entity"
+      },
+      {
+        "id": 17,
+        "original_id": "f92953b1-ed1d-5b02-b436-d009e7eca524",
+        "text": "arcade",
+        "type": "Entity"
+      },
+      {
+        "id": 18,
+        "original_id": "57360968-b845-53ea-9e8a-3c089fd6416e",
+        "text": "vicious delite",
+        "type": "Entity"
+      },
+      {
+        "id": 19,
+        "original_id": "174055d6-444c-554a-b11b-a0c2860c7b63",
+        "text": "nitronic",
+        "type": "Entity"
+      },
+      {
+        "id": 20,
+        "original_id": "a3c77137-d7a7-5b66-9dba-9b4c0e00c222",
+        "text": "danger danger",
+        "type": "Entity"
+      },
+      {
+        "id": 21,
+        "original_id": "3046e85c-362d-5134-8f25-5b41d677abee",
+        "text": "hotshot",
+        "type": "Entity"
+      },
+      {
+        "id": 22,
+        "original_id": "fab9557a-2822-55be-9510-8075b7e7a3c1",
+        "text": "alice cooper",
+        "type": "Entity"
+      },
+      {
+        "id": 23,
+        "original_id": "21d096f4-373a-585b-85d5-3b4b9dfc4785",
+        "text": "asia",
+        "type": "Entity"
+      },
+      {
+        "id": 24,
+        "original_id": "ed135863-7286-56dd-ba44-082e2ef06ce7",
+        "text": "savatage",
+        "type": "Entity"
+      },
+      {
+        "id": 25,
+        "original_id": "3669057d-669f-517d-a222-eb90ba4b96e5",
+        "text": "megadeth",
+        "type": "Entity"
+      },
+      {
+        "id": 26,
+        "original_id": "cdc7c6fb-91f6-5556-b7f8-ee3b6f47684a",
+        "text": "trans-siberian orchestra",
+        "type": "Entity"
+      },
+      {
+        "id": 27,
+        "original_id": "4f714139-ebf3-5964-87f8-4c99a98c2b77",
+        "text": "wxxi",
+        "type": "Entity"
+      },
+      {
+        "id": 28,
+        "original_id": "388f60fb-220d-55e8-ae9c-3ac93cead308",
+        "text": "organization",
+        "type": "EntityType"
+      },
+      {
+        "id": 29,
+        "original_id": "36954617-e7e9-51af-a5cc-182268530c63",
+        "text": "trancentral station",
+        "type": "Entity"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 13,
+        "target": 3,
+        "type": "featured_member"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "born_on"
+      },
+      {
+        "source": 1,
+        "target": 4,
+        "type": "contains"
+      },
+      {
+        "source": 4,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 10,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 14,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 6,
+        "type": "founded"
+      },
+      {
+        "source": 1,
+        "target": 6,
+        "type": "contains"
+      },
+      {
+        "source": 6,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 13,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 17,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 18,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 19,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 20,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 21,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 23,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 24,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 25,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 26,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 29,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 9,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 15,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 16,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 22,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 9,
+        "type": "contains"
+      },
+      {
+        "source": 9,
+        "target": 10,
+        "type": "born_on"
+      },
+      {
+        "source": 1,
+        "target": 10,
+        "type": "contains"
+      },
+      {
+        "source": 9,
+        "target": 11,
+        "type": "from"
+      },
+      {
+        "source": 1,
+        "target": 11,
+        "type": "contains"
+      },
+      {
+        "source": 11,
+        "target": 12,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 13,
+        "type": "contains"
+      },
+      {
+        "source": 13,
+        "target": 14,
+        "type": "formed_in"
+      },
+      {
+        "source": 1,
+        "target": 14,
+        "type": "contains"
+      },
+      {
+        "source": 13,
+        "target": 15,
+        "type": "featured_member"
+      },
+      {
+        "source": 1,
+        "target": 15,
+        "type": "contains"
+      },
+      {
+        "source": 13,
+        "target": 16,
+        "type": "featured_member"
+      },
+      {
+        "source": 1,
+        "target": 16,
+        "type": "contains"
+      },
+      {
+        "source": 1,
+        "target": 17,
+        "type": "contains"
+      },
+      {
+        "source": 1,
+        "target": 18,
+        "type": "contains"
+      },
+      {
+        "source": 1,
+        "target": 19,
+        "type": "contains"
+      },
+      {
+        "source": 1,
+        "target": 20,
+        "type": "contains"
+      },
+      {
+        "source": 1,
+        "target": 21,
+        "type": "contains"
+      },
+      {
+        "source": 1,
+        "target": 22,
+        "type": "contains"
+      },
+      {
+        "source": 1,
+        "target": 23,
+        "type": "contains"
+      },
+      {
+        "source": 1,
+        "target": 24,
+        "type": "contains"
+      },
+      {
+        "source": 1,
+        "target": 25,
+        "type": "contains"
+      },
+      {
+        "source": 1,
+        "target": 26,
+        "type": "contains"
+      },
+      {
+        "source": 1,
+        "target": 27,
+        "type": "contains"
+      },
+      {
+        "source": 27,
+        "target": 28,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 29,
+        "type": "contains"
+      }
+    ]
+  }
+}

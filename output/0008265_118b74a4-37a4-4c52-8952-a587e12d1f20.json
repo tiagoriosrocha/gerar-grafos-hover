@@ -1,0 +1,398 @@
+{
+  "dataset": "hover",
+  "id": "118b74a4-37a4-4c52-8952-a587e12d1f20",
+  "split": "train",
+  "claim": "The island, on which the melting glacier that flows into Marinelli Creek is located, was formerly known as Isla de Xativa.",
+  "evidencia": "Page: Marinelli Glacier. Sentence: Marinelli Glacier is a tidewater glacier located in Alberto de Agostini National Park, Isla Grande de Tierra del Fuego.\nPage: Isla Grande de Tierra del Fuego. Sentence: Tierra del Fuego—literally \"Land of the Fire\", formerly \"Isla de Xativa\" and also known as Isla Grande de Tierra del Fuego—is an island near the southern tip of South America from which it is separated by the Strait of Magellan.\nPage: Marinelli Creek. Sentence: Marinelli Creek is a watercourse whose headwaters emerge from the melting of Marinelli Glacier in Tierra del Fuego, Chile.",
+  "evidence_text": "Page: Marinelli Glacier. Sentence: Marinelli Glacier is a tidewater glacier located in Alberto de Agostini National Park, Isla Grande de Tierra del Fuego.\nPage: Isla Grande de Tierra del Fuego. Sentence: Tierra del Fuego—literally \"Land of the Fire\", formerly \"Isla de Xativa\" and also known as Isla Grande de Tierra del Fuego—is an island near the southern tip of South America from which it is separated by the Strait of Magellan.\nPage: Marinelli Creek. Sentence: Marinelli Creek is a watercourse whose headwaters emerge from the melting of Marinelli Glacier in Tierra del Fuego, Chile.",
+  "label": "SUPPORTED",
+  "num_hops": 3,
+  "hover_metadata": {
+    "supporting_facts": [
+      [
+        "Marinelli Glacier",
+        0
+      ],
+      [
+        "Isla Grande de Tierra del Fuego",
+        0
+      ],
+      [
+        "Marinelli Creek",
+        0
+      ]
+    ],
+    "num_hops": 3,
+    "evidence_annotation_id": [
+      0
+    ],
+    "evidence_id": [
+      "Marinelli Glacier::sentence::0",
+      "Isla Grande de Tierra del Fuego::sentence::0",
+      "Marinelli Creek::sentence::0"
+    ],
+    "evidence_wiki_url": [
+      "https://en.wikipedia.org/wiki/Marinelli_Glacier",
+      "https://en.wikipedia.org/wiki/Isla_Grande_de_Tierra_del_Fuego",
+      "https://en.wikipedia.org/wiki/Marinelli_Creek"
+    ],
+    "evidence_sentence_id": [
+      "Marinelli Glacier::sentence::0",
+      "Isla Grande de Tierra del Fuego::sentence::0",
+      "Marinelli Creek::sentence::0"
+    ]
+  },
+  "grafo_claim": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "07d0bcaa-dbc9-51bc-99ce-c819ca9c54de",
+        "text": "This chunk is about:\n- Places: Isla de Xativa, Marinelli Creek\n- Natural Features: glacier, island\n\nFacts:\n- The glacier that flows into Marinelli Creek is located on an island.\n- The island was formerly known as Isla de Xativa.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "e5703cc7-aa52-593e-a156-6bb4631209bd",
+        "text": "The island, on which the melting glacier that flows into Marinelli Creek is located, was formerly known as Isla de Xativa.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "273c6eca-dbce-5c3f-984b-a5675d8b123f",
+        "text": "text_f475cb3a29c6b47b2ff0029f31f68446",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "99d2e575-ee0f-505f-877d-ea92667b3f54",
+        "text": "isla grande de tierra del fuego",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "5f394058-b2a0-5ba8-8466-ba2a18cfcf4e",
+        "text": "place",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "64ab4d6b-3af4-5a2e-a311-f147b474ccf0",
+        "text": "isla de xativa",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "5c06201c-4faa-5516-8c48-3301b521b4c8",
+        "text": "marinelli glacier",
+        "type": "Entity"
+      },
+      {
+        "id": 7,
+        "original_id": "27e85c2d-39de-5c71-8b22-f0fedde3e32d",
+        "text": "marinelli creek",
+        "type": "Entity"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 6,
+        "target": 3,
+        "type": "located_on"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 5,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 6,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 7,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "formerly_known_as"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 1,
+        "target": 6,
+        "type": "contains"
+      },
+      {
+        "source": 6,
+        "target": 7,
+        "type": "flows_into"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      }
+    ]
+  },
+  "grafo_evidencia": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "40c48587-3bc2-54f2-944c-e0cda57e6bca",
+        "text": "This chunk is about:\n- Places: Marinelli Glacier, Alberto de Agostini National Park, Isla Grande de Tierra del Fuego, South America, Strait of Magellan, Tierra del Fuego, Chile\n- Systems: Marinelli Creek\n- Concepts: tidewater glacier, island, watercourse, headwaters, glacier melt\n\nFacts:\n- Isla Grande de Tierra del Fuego, also called Tierra del Fuego, was formerly known as Isla de Xativa.\n- Tierra del Fuego literally means \"Land of the Fire.\"\n- Isla Grande de Tierra del Fuego is an island near the southern tip of South America and is separated from South America by the Strait of Magellan.\n- Marinelli Glacier is a tidewater glacier in Alberto de Agostini National Park on Isla Grande de Tierra del Fuego.\n- Marinelli Creek is a watercourse in Tierra del Fuego, Chile.\n- The headwaters of Marinelli Creek emerge from the melting of Marinelli Glacier.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "46d277b5-e54b-5c19-8b54-edbb40dc05c1",
+        "text": "Page: Marinelli Glacier. Sentence: Marinelli Glacier is a tidewater glacier located in Alberto de Agostini National Park, Isla Grande de Tierra del Fuego.\nPage: Isla Grande de Tierra del Fuego. Sentence: Tierra del Fuego—literally \"Land of the Fire\", formerly \"Isla de Xativa\" and also known as Isla Grande de Tierra del Fuego—is an island near the southern tip of South America from which it is separated by the Strait of Magellan.\nPage: Marinelli Creek. Sentence: Marinelli Creek is a watercourse whose headwaters emerge from the melting of Marinelli Glacier in Tierra del Fuego, Chile.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "aec135e1-a267-5d1a-b236-6c2d136d978e",
+        "text": "text_0d6a8280180d248c10e77315b9d5fffd",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "5c06201c-4faa-5516-8c48-3301b521b4c8",
+        "text": "marinelli glacier",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "5f394058-b2a0-5ba8-8466-ba2a18cfcf4e",
+        "text": "place",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "d0422799-f857-5ae1-8227-eb3cffb7e0cd",
+        "text": "alberto de agostini national park",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "99d2e575-ee0f-505f-877d-ea92667b3f54",
+        "text": "isla grande de tierra del fuego",
+        "type": "Entity"
+      },
+      {
+        "id": 7,
+        "original_id": "3e507ae8-a14b-53d0-bc7a-70df9fd4b560",
+        "text": "south america",
+        "type": "Entity"
+      },
+      {
+        "id": 8,
+        "original_id": "1b41dd90-8b4a-5ad2-a16f-c24cbb663654",
+        "text": "tierra del fuego",
+        "type": "Entity"
+      },
+      {
+        "id": 9,
+        "original_id": "64ab4d6b-3af4-5a2e-a311-f147b474ccf0",
+        "text": "isla de xativa",
+        "type": "Entity"
+      },
+      {
+        "id": 10,
+        "original_id": "108ac88e-016a-50be-9a2b-457f6bced610",
+        "text": "strait of magellan",
+        "type": "Entity"
+      },
+      {
+        "id": 11,
+        "original_id": "27e85c2d-39de-5c71-8b22-f0fedde3e32d",
+        "text": "marinelli creek",
+        "type": "Entity"
+      },
+      {
+        "id": 12,
+        "original_id": "5c85106a-74a9-5b71-84b7-082999da1c1f",
+        "text": "chile",
+        "type": "Entity"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 11,
+        "target": 3,
+        "type": "headwaters_emerge_from_melting_of"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 5,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 6,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 7,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 8,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 9,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 10,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 11,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 12,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "located_in"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 6,
+        "type": "located_on"
+      },
+      {
+        "source": 1,
+        "target": 6,
+        "type": "contains"
+      },
+      {
+        "source": 8,
+        "target": 6,
+        "type": "alternate_name_of"
+      },
+      {
+        "source": 9,
+        "target": 6,
+        "type": "former_name_of"
+      },
+      {
+        "source": 10,
+        "target": 6,
+        "type": "separates_from"
+      },
+      {
+        "source": 6,
+        "target": 7,
+        "type": "near"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      },
+      {
+        "source": 10,
+        "target": 7,
+        "type": "separates_from"
+      },
+      {
+        "source": 1,
+        "target": 8,
+        "type": "contains"
+      },
+      {
+        "source": 11,
+        "target": 8,
+        "type": "located_in"
+      },
+      {
+        "source": 1,
+        "target": 9,
+        "type": "contains"
+      },
+      {
+        "source": 1,
+        "target": 10,
+        "type": "contains"
+      },
+      {
+        "source": 1,
+        "target": 11,
+        "type": "contains"
+      },
+      {
+        "source": 11,
+        "target": 12,
+        "type": "located_in"
+      },
+      {
+        "source": 1,
+        "target": 12,
+        "type": "contains"
+      }
+    ]
+  }
+}

@@ -1,0 +1,398 @@
+{
+  "dataset": "hover",
+  "id": "e98f68db-29e1-4e05-a074-fb2f57fbdd3a",
+  "split": "train",
+  "claim": "SLS station was just south of those that were designed to give access to the RV park and casino in the Nevada suburb of Winchester.",
+  "evidencia": "Page: SLS station. Sentence: The tracks just north of Sahara station were designed to provide access to a possible downtown extension of the monorail via the northern portion of the Las Vegas Strip in the area of the Circus Circus Las Vegas and the Riviera.\nPage: Circus Circus Las Vegas. Sentence: Circus Circus Las Vegas is a hotel, 123928 sqft casino, and RV park located on the Las Vegas Strip in Winchester, Nevada.",
+  "evidence_text": "Page: SLS station. Sentence: The tracks just north of Sahara station were designed to provide access to a possible downtown extension of the monorail via the northern portion of the Las Vegas Strip in the area of the Circus Circus Las Vegas and the Riviera.\nPage: Circus Circus Las Vegas. Sentence: Circus Circus Las Vegas is a hotel, 123928 sqft casino, and RV park located on the Las Vegas Strip in Winchester, Nevada.",
+  "label": "SUPPORTED",
+  "num_hops": 2,
+  "hover_metadata": {
+    "supporting_facts": [
+      [
+        "SLS station",
+        3
+      ],
+      [
+        "Circus Circus Las Vegas",
+        0
+      ]
+    ],
+    "num_hops": 2,
+    "evidence_annotation_id": [
+      0
+    ],
+    "evidence_id": [
+      "SLS station::sentence::3",
+      "Circus Circus Las Vegas::sentence::0"
+    ],
+    "evidence_wiki_url": [
+      "https://en.wikipedia.org/wiki/SLS_station",
+      "https://en.wikipedia.org/wiki/Circus_Circus_Las_Vegas"
+    ],
+    "evidence_sentence_id": [
+      "SLS station::sentence::3",
+      "Circus Circus Las Vegas::sentence::0"
+    ]
+  },
+  "grafo_claim": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "bd1b99ab-9f5a-570d-ad2b-4c28fa09966c",
+        "text": "This chunk is about:\n- Places: SLS station, RV park, casino, Winchester, Nevada\n- Topics: station location, station access\n\nFacts:\n- SLS station was located just south of stations that were designed to provide access to the RV park and casino in Winchester, Nevada.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "5ec346af-1609-5dee-a07d-0dd23d00c937",
+        "text": "SLS station was just south of those that were designed to give access to the RV park and casino in the Nevada suburb of Winchester.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "b9d64327-ce49-56f0-8e69-03260d539e33",
+        "text": "text_86534fc26f1b37a3f126a0cd38f1920e",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "68a89198-550f-53df-b7b6-a896d183cb49",
+        "text": "sls station",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "5f394058-b2a0-5ba8-8466-ba2a18cfcf4e",
+        "text": "place",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "07464b90-1417-5628-8511-1b2452c0e98f",
+        "text": "stations designed to give access to the rv park and casino",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "46012b80-0403-5f23-8bed-5230b9ebb98f",
+        "text": "rv park and casino",
+        "type": "Entity"
+      },
+      {
+        "id": 7,
+        "original_id": "c27643a1-f25f-57f3-aa91-1dbcba48dbc5",
+        "text": "winchester",
+        "type": "Entity"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 5,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 6,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 7,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "located_south_of"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "designed_to_give_access_to"
+      },
+      {
+        "source": 1,
+        "target": 6,
+        "type": "contains"
+      },
+      {
+        "source": 6,
+        "target": 7,
+        "type": "located_in"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      }
+    ]
+  },
+  "grafo_evidencia": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "136253da-99c1-5bf7-a602-0eedff76ea19",
+        "text": "This chunk is about:\n- Places: SLS station, Sahara station, Circus Circus Las Vegas, Las Vegas Strip, Winchester, Nevada\n- Systems: Las Vegas Monorail\n- Projects: possible downtown extension of the monorail\n- Topics: station track design, hotel and casino property\n\nFacts:\n- The tracks just north of Sahara station were designed to provide access to a possible downtown extension of the Las Vegas Monorail.\n- The possible downtown extension of the Las Vegas Monorail would have run via the northern portion of the Las Vegas Strip near Circus Circus Las Vegas and the Riviera.\n- Circus Circus Las Vegas is a hotel, a 123,928 square foot casino, and an RV park.\n- Circus Circus Las Vegas is located on the Las Vegas Strip in Winchester, Nevada.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "52c45526-8a10-5f5f-a588-9df85472b117",
+        "text": "Page: SLS station. Sentence: The tracks just north of Sahara station were designed to provide access to a possible downtown extension of the monorail via the northern portion of the Las Vegas Strip in the area of the Circus Circus Las Vegas and the Riviera.\nPage: Circus Circus Las Vegas. Sentence: Circus Circus Las Vegas is a hotel, 123928 sqft casino, and RV park located on the Las Vegas Strip in Winchester, Nevada.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "03492eab-2206-5a50-897c-04cb339a2b72",
+        "text": "text_0bfa180b38b491412e61b38547aa79d5",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "b92ddec9-ab9b-568c-a1f4-c1957e742a3d",
+        "text": "sahara station",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "5f394058-b2a0-5ba8-8466-ba2a18cfcf4e",
+        "text": "place",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "ee2d8a2b-cc0d-51f8-bea8-fcbeaa760a1f",
+        "text": "tracks north of sahara station",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "b0fd9df7-d231-56c6-b6de-b38c3191fef6",
+        "text": "infrastructure",
+        "type": "EntityType"
+      },
+      {
+        "id": 7,
+        "original_id": "6af20cd3-2300-54a8-8ee2-cdede7d61a95",
+        "text": "downtown extension of the monorail",
+        "type": "Entity"
+      },
+      {
+        "id": 8,
+        "original_id": "ed098e70-7598-5ee9-a836-d175d95aae72",
+        "text": "project",
+        "type": "EntityType"
+      },
+      {
+        "id": 9,
+        "original_id": "15d27b14-b48f-5a14-8146-84f202b1933b",
+        "text": "northern portion of the las vegas strip",
+        "type": "Entity"
+      },
+      {
+        "id": 10,
+        "original_id": "60152a3c-19f4-5b80-8305-51c3a57f8052",
+        "text": "las vegas strip",
+        "type": "Entity"
+      },
+      {
+        "id": 11,
+        "original_id": "378720d9-d6f0-59ef-8bce-2fc14f8ef98f",
+        "text": "circus circus las vegas",
+        "type": "Entity"
+      },
+      {
+        "id": 12,
+        "original_id": "e705bbd3-4d42-5ae9-9b65-ebc305cc9568",
+        "text": "winchester, nevada",
+        "type": "Entity"
+      },
+      {
+        "id": 13,
+        "original_id": "d4c20785-febb-5902-b72d-bd387dd1a25d",
+        "text": "123928 sqft casino",
+        "type": "Entity"
+      },
+      {
+        "id": 14,
+        "original_id": "8c75943c-1440-52c9-88e5-03be61329ab2",
+        "text": "riviera",
+        "type": "Entity"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 3,
+        "type": "is_north_of"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 9,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 10,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 11,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 12,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 13,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 14,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 5,
+        "target": 7,
+        "type": "were_designed_to_provide_access_to"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      },
+      {
+        "source": 7,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 7,
+        "target": 9,
+        "type": "would_run_via"
+      },
+      {
+        "source": 1,
+        "target": 9,
+        "type": "contains"
+      },
+      {
+        "source": 11,
+        "target": 9,
+        "type": "is_in_the_area_of"
+      },
+      {
+        "source": 14,
+        "target": 9,
+        "type": "is_in_the_area_of"
+      },
+      {
+        "source": 9,
+        "target": 10,
+        "type": "is_portion_of"
+      },
+      {
+        "source": 1,
+        "target": 10,
+        "type": "contains"
+      },
+      {
+        "source": 11,
+        "target": 10,
+        "type": "is_located_on"
+      },
+      {
+        "source": 1,
+        "target": 11,
+        "type": "contains"
+      },
+      {
+        "source": 11,
+        "target": 12,
+        "type": "is_located_in"
+      },
+      {
+        "source": 1,
+        "target": 12,
+        "type": "contains"
+      },
+      {
+        "source": 11,
+        "target": 13,
+        "type": "has_component"
+      },
+      {
+        "source": 1,
+        "target": 13,
+        "type": "contains"
+      },
+      {
+        "source": 1,
+        "target": 14,
+        "type": "contains"
+      }
+    ]
+  }
+}

@@ -1,0 +1,623 @@
+{
+  "dataset": "hover",
+  "id": "2f7bae06-e823-49f8-97df-dcf9cc72fb61",
+  "split": "train",
+  "claim": "Max Gail starred in the film that Jim Moody played Arnie in. He also had a role in the TV series Barney Miller.",
+  "evidencia": "Page: D.C. Cab. Sentence: D.C. Cab (also known as Street Fight) is a 1983 American comedy film, starring Max Gail, Adam Baldwin, Mr. T, Charlie Barnett, Gary Busey, Marsha Warfield, and Whitman Mayo.\nPage: Max Gail. Sentence: He most notably portrayed the role of Detective Stan \"Wojo\" Wojciehowicz on the television sitcom \"Barney Miller\".\nPage: Jim Moody (actor). Sentence: Jim starred in the 1983 comedy film \"D.C. Cab\" as Arnie, a member of the rival cab company, Emerald Cab.",
+  "evidence_text": "Page: D.C. Cab. Sentence: D.C. Cab (also known as Street Fight) is a 1983 American comedy film, starring Max Gail, Adam Baldwin, Mr. T, Charlie Barnett, Gary Busey, Marsha Warfield, and Whitman Mayo.\nPage: Max Gail. Sentence: He most notably portrayed the role of Detective Stan \"Wojo\" Wojciehowicz on the television sitcom \"Barney Miller\".\nPage: Jim Moody (actor). Sentence: Jim starred in the 1983 comedy film \"D.C. Cab\" as Arnie, a member of the rival cab company, Emerald Cab.",
+  "label": "SUPPORTED",
+  "num_hops": 3,
+  "hover_metadata": {
+    "supporting_facts": [
+      [
+        "D.C. Cab",
+        0
+      ],
+      [
+        "Max Gail",
+        1
+      ],
+      [
+        "Jim Moody (actor)",
+        3
+      ]
+    ],
+    "num_hops": 3,
+    "evidence_annotation_id": [
+      0
+    ],
+    "evidence_id": [
+      "D.C. Cab::sentence::0",
+      "Max Gail::sentence::1",
+      "Jim Moody (actor)::sentence::3"
+    ],
+    "evidence_wiki_url": [
+      "https://en.wikipedia.org/wiki/D.C._Cab",
+      "https://en.wikipedia.org/wiki/Max_Gail",
+      "https://en.wikipedia.org/wiki/Jim_Moody_%28actor%29"
+    ],
+    "evidence_sentence_id": [
+      "D.C. Cab::sentence::0",
+      "Max Gail::sentence::1",
+      "Jim Moody (actor)::sentence::3"
+    ]
+  },
+  "grafo_claim": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "9e7c5b95-f432-57e4-b180-35700c96d576",
+        "text": "This chunk is about:\n- People: Max Gail, Jim Moody\n- Works: D.C. Cab, Barney Miller\n- Roles: Arnie\n\nFacts:\n- Jim Moody played Arnie in the film D.C. Cab.\n- Max Gail starred in the film D.C. Cab.\n- Max Gail had a role in the TV series Barney Miller.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "7ccfb2a0-ab92-589d-91a5-859faca51977",
+        "text": "Max Gail starred in the film that Jim Moody played Arnie in. He also had a role in the TV series Barney Miller.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "b3dcc5c7-623e-5b00-8a4b-65e9d85ce244",
+        "text": "text_e2c67464f60c72cd3c352dd292f075a1",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "738a29ab-23fa-53c3-8529-63da5d965cfa",
+        "text": "max gail",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "99a82eec-bb35-5bb5-9ed2-e73fc7a756de",
+        "text": "person",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "8574b1a0-a72f-5f2d-85e2-488ec88c5c1e",
+        "text": "the film",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "5263a535-1b4b-5925-be3e-310d03cd303b",
+        "text": "work",
+        "type": "EntityType"
+      },
+      {
+        "id": 7,
+        "original_id": "64ab2977-9863-57c6-992c-a6952951f235",
+        "text": "barney miller",
+        "type": "Entity"
+      },
+      {
+        "id": 8,
+        "original_id": "4a613616-dedf-5401-86e6-77a6b2284fdd",
+        "text": "jim moody",
+        "type": "Entity"
+      },
+      {
+        "id": 9,
+        "original_id": "fa853db6-62fa-53b3-a382-83c985f0c963",
+        "text": "arnie",
+        "type": "Entity"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 8,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 9,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "starred_in"
+      },
+      {
+        "source": 9,
+        "target": 5,
+        "type": "character_in"
+      },
+      {
+        "source": 8,
+        "target": 5,
+        "type": "appeared_in"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 7,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 7,
+        "type": "had_role_in"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      },
+      {
+        "source": 1,
+        "target": 8,
+        "type": "contains"
+      },
+      {
+        "source": 8,
+        "target": 9,
+        "type": "played"
+      },
+      {
+        "source": 1,
+        "target": 9,
+        "type": "contains"
+      }
+    ]
+  },
+  "grafo_evidencia": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "7c4ec03a-44b4-52b3-84fa-f11e92581b6d",
+        "text": "This chunk is about:\n- Products: D.C. Cab, Street Fight, Barney Miller\n- People: Max Gail, Adam Baldwin, Mr. T, Charlie Barnett, Gary Busey, Marsha Warfield, Whitman Mayo, Jim Moody\n- Roles: Detective Stan \"Wojo\" Wojciehowicz, Arnie\n- Organizations: Emerald Cab\n\nFacts:\n- D.C. Cab, also known as Street Fight, is a 1983 American comedy film.\n- D.C. Cab stars Max Gail, Adam Baldwin, Mr. T, Charlie Barnett, Gary Busey, Marsha Warfield, and Whitman Mayo.\n- Jim Moody starred in the 1983 comedy film D.C. Cab as Arnie.\n- Arnie is a member of the rival cab company Emerald Cab in D.C. Cab.\n- Max Gail is most notable for portraying Detective Stan \"Wojo\" Wojciehowicz on the television sitcom Barney Miller.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "aa7d3a36-891d-5380-b34c-26304e90a49c",
+        "text": "Page: D.C. Cab. Sentence: D.C. Cab (also known as Street Fight) is a 1983 American comedy film, starring Max Gail, Adam Baldwin, Mr. T, Charlie Barnett, Gary Busey, Marsha Warfield, and Whitman Mayo.\nPage: Max Gail. Sentence: He most notably portrayed the role of Detective Stan \"Wojo\" Wojciehowicz on the television sitcom \"Barney Miller\".\nPage: Jim Moody (actor). Sentence: Jim starred in the 1983 comedy film \"D.C. Cab\" as Arnie, a member of the rival cab company, Emerald Cab.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "8f9805f2-ed4b-52ad-ab5f-69460258ff82",
+        "text": "text_91a753f3436f1959febe1dfe0986e372",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "dba33dbf-1837-5339-9310-0ef823cce8ed",
+        "text": "d.c. cab",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "5263a535-1b4b-5925-be3e-310d03cd303b",
+        "text": "work",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "3754c4e5-3d69-5758-97a2-8f5e536e5265",
+        "text": "street fight",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "3c0215ee-b605-50ca-9446-679776fa6623",
+        "text": "1983",
+        "type": "Entity"
+      },
+      {
+        "id": 7,
+        "original_id": "b19433ae-558c-5aaf-95ac-6231f2a4be0e",
+        "text": "date",
+        "type": "EntityType"
+      },
+      {
+        "id": 8,
+        "original_id": "874a51da-34ea-5037-be47-d87785d43c37",
+        "text": "united states",
+        "type": "Entity"
+      },
+      {
+        "id": 9,
+        "original_id": "5f394058-b2a0-5ba8-8466-ba2a18cfcf4e",
+        "text": "place",
+        "type": "EntityType"
+      },
+      {
+        "id": 10,
+        "original_id": "be905a6f-1cd7-554d-9044-b1f6460e3f54",
+        "text": "comedy film",
+        "type": "Entity"
+      },
+      {
+        "id": 11,
+        "original_id": "d2a381fa-3658-5ca6-ada9-2109cfc9331d",
+        "text": "concept",
+        "type": "EntityType"
+      },
+      {
+        "id": 12,
+        "original_id": "738a29ab-23fa-53c3-8529-63da5d965cfa",
+        "text": "max gail",
+        "type": "Entity"
+      },
+      {
+        "id": 13,
+        "original_id": "99a82eec-bb35-5bb5-9ed2-e73fc7a756de",
+        "text": "person",
+        "type": "EntityType"
+      },
+      {
+        "id": 14,
+        "original_id": "88f0b1e6-7d46-5a1a-86c9-c6471a6a853c",
+        "text": "detective stan wojo wojciehowicz",
+        "type": "Entity"
+      },
+      {
+        "id": 15,
+        "original_id": "64ab2977-9863-57c6-992c-a6952951f235",
+        "text": "barney miller",
+        "type": "Entity"
+      },
+      {
+        "id": 16,
+        "original_id": "dc9516b1-33ce-53cc-9688-e2414658a80e",
+        "text": "adam baldwin",
+        "type": "Entity"
+      },
+      {
+        "id": 17,
+        "original_id": "1f16c523-6e50-5405-bb27-6faab0cb3e86",
+        "text": "mr. t",
+        "type": "Entity"
+      },
+      {
+        "id": 18,
+        "original_id": "3565dfc0-f369-571e-86ea-f2adee86bda1",
+        "text": "charlie barnett",
+        "type": "Entity"
+      },
+      {
+        "id": 19,
+        "original_id": "56efd198-2646-5d36-89fe-95789578f7b4",
+        "text": "gary busey",
+        "type": "Entity"
+      },
+      {
+        "id": 20,
+        "original_id": "9eaeaf58-c106-5f21-aac6-a7461d7f2705",
+        "text": "marsha warfield",
+        "type": "Entity"
+      },
+      {
+        "id": 21,
+        "original_id": "5d24d89b-4f1e-5871-8195-632e293eb084",
+        "text": "whitman mayo",
+        "type": "Entity"
+      },
+      {
+        "id": 22,
+        "original_id": "4a613616-dedf-5401-86e6-77a6b2284fdd",
+        "text": "jim moody",
+        "type": "Entity"
+      },
+      {
+        "id": 23,
+        "original_id": "fa853db6-62fa-53b3-a382-83c985f0c963",
+        "text": "arnie",
+        "type": "Entity"
+      },
+      {
+        "id": 24,
+        "original_id": "79e32f7a-ec53-5ced-9744-6a7c70c4531c",
+        "text": "emerald cab",
+        "type": "Entity"
+      },
+      {
+        "id": 25,
+        "original_id": "388f60fb-220d-55e8-ae9c-3ac93cead308",
+        "text": "organization",
+        "type": "EntityType"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 12,
+        "target": 3,
+        "type": "starred_in"
+      },
+      {
+        "source": 16,
+        "target": 3,
+        "type": "starred_in"
+      },
+      {
+        "source": 17,
+        "target": 3,
+        "type": "starred_in"
+      },
+      {
+        "source": 18,
+        "target": 3,
+        "type": "starred_in"
+      },
+      {
+        "source": 19,
+        "target": 3,
+        "type": "starred_in"
+      },
+      {
+        "source": 20,
+        "target": 3,
+        "type": "starred_in"
+      },
+      {
+        "source": 21,
+        "target": 3,
+        "type": "starred_in"
+      },
+      {
+        "source": 22,
+        "target": 3,
+        "type": "starred_in"
+      },
+      {
+        "source": 24,
+        "target": 3,
+        "type": "appears_in"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 5,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 15,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "also_known_as"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 6,
+        "type": "released_in"
+      },
+      {
+        "source": 1,
+        "target": 6,
+        "type": "contains"
+      },
+      {
+        "source": 6,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 8,
+        "type": "has_country_of_origin"
+      },
+      {
+        "source": 1,
+        "target": 8,
+        "type": "contains"
+      },
+      {
+        "source": 8,
+        "target": 9,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 10,
+        "type": "has_genre"
+      },
+      {
+        "source": 1,
+        "target": 10,
+        "type": "contains"
+      },
+      {
+        "source": 10,
+        "target": 11,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 12,
+        "type": "contains"
+      },
+      {
+        "source": 12,
+        "target": 13,
+        "type": "is_a"
+      },
+      {
+        "source": 14,
+        "target": 13,
+        "type": "is_a"
+      },
+      {
+        "source": 16,
+        "target": 13,
+        "type": "is_a"
+      },
+      {
+        "source": 17,
+        "target": 13,
+        "type": "is_a"
+      },
+      {
+        "source": 18,
+        "target": 13,
+        "type": "is_a"
+      },
+      {
+        "source": 19,
+        "target": 13,
+        "type": "is_a"
+      },
+      {
+        "source": 20,
+        "target": 13,
+        "type": "is_a"
+      },
+      {
+        "source": 21,
+        "target": 13,
+        "type": "is_a"
+      },
+      {
+        "source": 22,
+        "target": 13,
+        "type": "is_a"
+      },
+      {
+        "source": 23,
+        "target": 13,
+        "type": "is_a"
+      },
+      {
+        "source": 12,
+        "target": 14,
+        "type": "portrayed"
+      },
+      {
+        "source": 1,
+        "target": 14,
+        "type": "contains"
+      },
+      {
+        "source": 14,
+        "target": 15,
+        "type": "appears_in"
+      },
+      {
+        "source": 1,
+        "target": 15,
+        "type": "contains"
+      },
+      {
+        "source": 1,
+        "target": 16,
+        "type": "contains"
+      },
+      {
+        "source": 1,
+        "target": 17,
+        "type": "contains"
+      },
+      {
+        "source": 1,
+        "target": 18,
+        "type": "contains"
+      },
+      {
+        "source": 1,
+        "target": 19,
+        "type": "contains"
+      },
+      {
+        "source": 1,
+        "target": 20,
+        "type": "contains"
+      },
+      {
+        "source": 1,
+        "target": 21,
+        "type": "contains"
+      },
+      {
+        "source": 1,
+        "target": 22,
+        "type": "contains"
+      },
+      {
+        "source": 22,
+        "target": 23,
+        "type": "portrayed"
+      },
+      {
+        "source": 1,
+        "target": 23,
+        "type": "contains"
+      },
+      {
+        "source": 23,
+        "target": 24,
+        "type": "member_of"
+      },
+      {
+        "source": 1,
+        "target": 24,
+        "type": "contains"
+      },
+      {
+        "source": 24,
+        "target": 25,
+        "type": "is_a"
+      }
+    ]
+  }
+}

@@ -1,0 +1,479 @@
+{
+  "dataset": "hover",
+  "id": "799d509e-e92d-4a29-85fc-b119d3ae6f85",
+  "split": "train",
+  "claim": "Fairlane Village Mall is anchored by Boscov's, Michaels, and a company whose first department store opened in September 1962, and that went public in 1992.",
+  "evidencia": "Page: Fairlane Village Mall. Sentence: It is anchored by Boscov's, Kohl's, and Michaels.\nPage: Kohl's. Sentence: The company's first department store opened in September 1962.\nPage: Kohl's. Sentence: A group of investors purchased the company in 1986 from British-American Tobacco and took it public in 1992.",
+  "evidence_text": "Page: Fairlane Village Mall. Sentence: It is anchored by Boscov's, Kohl's, and Michaels.\nPage: Kohl's. Sentence: The company's first department store opened in September 1962.\nPage: Kohl's. Sentence: A group of investors purchased the company in 1986 from British-American Tobacco and took it public in 1992.",
+  "label": "SUPPORTED",
+  "num_hops": 2,
+  "hover_metadata": {
+    "supporting_facts": [
+      [
+        "Fairlane Village Mall",
+        1
+      ],
+      [
+        "Kohl's",
+        2
+      ],
+      [
+        "Kohl's",
+        4
+      ]
+    ],
+    "num_hops": 2,
+    "evidence_annotation_id": [
+      0
+    ],
+    "evidence_id": [
+      "Fairlane Village Mall::sentence::1",
+      "Kohl's::sentence::2",
+      "Kohl's::sentence::4"
+    ],
+    "evidence_wiki_url": [
+      "https://en.wikipedia.org/wiki/Fairlane_Village_Mall",
+      "https://en.wikipedia.org/wiki/Kohl%27s"
+    ],
+    "evidence_sentence_id": [
+      "Fairlane Village Mall::sentence::1",
+      "Kohl's::sentence::2",
+      "Kohl's::sentence::4"
+    ]
+  },
+  "grafo_claim": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "457e61f8-8ab2-57b7-bbc8-b7b6c6a38cf3",
+        "text": "This chunk is about:\n- Places: Fairlane Village Mall\n- Companies: Boscov's, Michaels, Kohl's\n\nFacts:\n- Kohl's opened its first department store in September 1962.\n- Kohl's went public in 1992.\n- Fairlane Village Mall is anchored by Boscov's, Michaels, and Kohl's.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "78836a70-142c-52fb-8ccc-ec47c945d359",
+        "text": "Fairlane Village Mall is anchored by Boscov's, Michaels, and a company whose first department store opened in September 1962, and that went public in 1992.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "ba56a884-4714-5034-8619-47e544cd3a65",
+        "text": "text_d2dc64956a3e30f550404181fe916a7c",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "fff0dc32-77ef-5563-838e-8894e2d9b799",
+        "text": "fairlane village mall",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "0946cfd7-5e9e-5cc9-925d-86cadb8c4a65",
+        "text": "boscovs",
+        "type": "Entity"
+      },
+      {
+        "id": 5,
+        "original_id": "82bfc922-4fcd-56b0-b353-7b550b51389d",
+        "text": "company",
+        "type": "EntityType"
+      },
+      {
+        "id": 6,
+        "original_id": "cd85b97e-f9f5-59bf-9c3e-c0bbd6f0655f",
+        "text": "michaels",
+        "type": "Entity"
+      },
+      {
+        "id": 7,
+        "original_id": "f63d9142-d1da-5e0a-a4b1-b1b3446647a5",
+        "text": "jcpenney",
+        "type": "Entity"
+      },
+      {
+        "id": 8,
+        "original_id": "b0a7a9ab-5c76-5cb2-9045-511c778349ae",
+        "text": "1962-09",
+        "type": "Entity"
+      },
+      {
+        "id": 9,
+        "original_id": "b19433ae-558c-5aaf-95ac-6231f2a4be0e",
+        "text": "date",
+        "type": "EntityType"
+      },
+      {
+        "id": 10,
+        "original_id": "959b7eb2-55b9-5195-8ef5-802570f87d3c",
+        "text": "1992",
+        "type": "Entity"
+      },
+      {
+        "id": 11,
+        "original_id": "5f394058-b2a0-5ba8-8466-ba2a18cfcf4e",
+        "text": "place",
+        "type": "EntityType"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "anchored_by"
+      },
+      {
+        "source": 1,
+        "target": 4,
+        "type": "contains"
+      },
+      {
+        "source": 4,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 6,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 7,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 6,
+        "type": "anchored_by"
+      },
+      {
+        "source": 1,
+        "target": 6,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 7,
+        "type": "anchored_by"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      },
+      {
+        "source": 7,
+        "target": 8,
+        "type": "opened_first_department_store_in"
+      },
+      {
+        "source": 1,
+        "target": 8,
+        "type": "contains"
+      },
+      {
+        "source": 8,
+        "target": 9,
+        "type": "is_a"
+      },
+      {
+        "source": 10,
+        "target": 9,
+        "type": "is_a"
+      },
+      {
+        "source": 7,
+        "target": 10,
+        "type": "went_public_in"
+      },
+      {
+        "source": 1,
+        "target": 10,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 11,
+        "type": "is_a"
+      }
+    ]
+  },
+  "grafo_evidencia": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "4d1d3dcc-3924-51e3-927f-b705792b104a",
+        "text": "This chunk is about:\n- Places: Fairlane Village Mall\n- Companies: Kohl's, Boscov's, Michaels, British-American Tobacco\n- Events: Kohl's founding, acquisition, IPO\n\nFacts:\n- Kohl's opened its first department store in September 1962.\n- A group of investors purchased Kohl's from British-American Tobacco in 1986.\n- The group of investors took Kohl's public in 1992.\n- Fairlane Village Mall is anchored by Boscov's, Kohl's, and Michaels.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "7d217b62-dd81-569b-9078-e6f09b564a85",
+        "text": "Page: Fairlane Village Mall. Sentence: It is anchored by Boscov's, Kohl's, and Michaels.\nPage: Kohl's. Sentence: The company's first department store opened in September 1962.\nPage: Kohl's. Sentence: A group of investors purchased the company in 1986 from British-American Tobacco and took it public in 1992.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "060e7f29-ae64-56f4-a8bd-d010966dd782",
+        "text": "text_b536dbd8044a74d64d7e50d51461f82c",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "fff0dc32-77ef-5563-838e-8894e2d9b799",
+        "text": "fairlane village mall",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "0946cfd7-5e9e-5cc9-925d-86cadb8c4a65",
+        "text": "boscovs",
+        "type": "Entity"
+      },
+      {
+        "id": 5,
+        "original_id": "388f60fb-220d-55e8-ae9c-3ac93cead308",
+        "text": "organization",
+        "type": "EntityType"
+      },
+      {
+        "id": 6,
+        "original_id": "ae7a2208-dbdf-5548-b77a-035d70e61ddd",
+        "text": "kohls",
+        "type": "Entity"
+      },
+      {
+        "id": 7,
+        "original_id": "a88cb519-b3cc-560b-a903-8482bf1d48b6",
+        "text": "kohls first department store",
+        "type": "Entity"
+      },
+      {
+        "id": 8,
+        "original_id": "b0a7a9ab-5c76-5cb2-9045-511c778349ae",
+        "text": "1962-09",
+        "type": "Entity"
+      },
+      {
+        "id": 9,
+        "original_id": "b19433ae-558c-5aaf-95ac-6231f2a4be0e",
+        "text": "date",
+        "type": "EntityType"
+      },
+      {
+        "id": 10,
+        "original_id": "5f394058-b2a0-5ba8-8466-ba2a18cfcf4e",
+        "text": "place",
+        "type": "EntityType"
+      },
+      {
+        "id": 11,
+        "original_id": "959b7eb2-55b9-5195-8ef5-802570f87d3c",
+        "text": "1992",
+        "type": "Entity"
+      },
+      {
+        "id": 12,
+        "original_id": "cd85b97e-f9f5-59bf-9c3e-c0bbd6f0655f",
+        "text": "michaels",
+        "type": "Entity"
+      },
+      {
+        "id": 13,
+        "original_id": "6ba1afd5-fed2-5c67-8f7d-ad0b76e9a9b6",
+        "text": "1986",
+        "type": "Entity"
+      },
+      {
+        "id": 14,
+        "original_id": "caed6690-d2fc-54b0-8ebe-9cbca48403d3",
+        "text": "british-american tobacco",
+        "type": "Entity"
+      },
+      {
+        "id": 15,
+        "original_id": "76016925-cc35-523d-a309-865215a65b72",
+        "text": "group of investors",
+        "type": "Entity"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "anchored_by"
+      },
+      {
+        "source": 1,
+        "target": 4,
+        "type": "contains"
+      },
+      {
+        "source": 4,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 6,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 12,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 14,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 15,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 6,
+        "type": "anchored_by"
+      },
+      {
+        "source": 1,
+        "target": 6,
+        "type": "contains"
+      },
+      {
+        "source": 15,
+        "target": 6,
+        "type": "purchased"
+      },
+      {
+        "source": 6,
+        "target": 7,
+        "type": "opened"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      },
+      {
+        "source": 7,
+        "target": 8,
+        "type": "opened_in"
+      },
+      {
+        "source": 1,
+        "target": 8,
+        "type": "contains"
+      },
+      {
+        "source": 8,
+        "target": 9,
+        "type": "is_a"
+      },
+      {
+        "source": 11,
+        "target": 9,
+        "type": "is_a"
+      },
+      {
+        "source": 13,
+        "target": 9,
+        "type": "is_a"
+      },
+      {
+        "source": 7,
+        "target": 10,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 10,
+        "type": "is_a"
+      },
+      {
+        "source": 6,
+        "target": 11,
+        "type": "taken_public_in"
+      },
+      {
+        "source": 1,
+        "target": 11,
+        "type": "contains"
+      },
+      {
+        "source": 15,
+        "target": 11,
+        "type": "took_public_in"
+      },
+      {
+        "source": 3,
+        "target": 12,
+        "type": "anchored_by"
+      },
+      {
+        "source": 1,
+        "target": 12,
+        "type": "contains"
+      },
+      {
+        "source": 1,
+        "target": 13,
+        "type": "contains"
+      },
+      {
+        "source": 15,
+        "target": 13,
+        "type": "purchased_in"
+      },
+      {
+        "source": 1,
+        "target": 14,
+        "type": "contains"
+      },
+      {
+        "source": 15,
+        "target": 14,
+        "type": "purchased_from"
+      },
+      {
+        "source": 1,
+        "target": 15,
+        "type": "contains"
+      }
+    ]
+  }
+}

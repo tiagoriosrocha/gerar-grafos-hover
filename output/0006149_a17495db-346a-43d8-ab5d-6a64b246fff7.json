@@ -1,0 +1,629 @@
+{
+  "dataset": "hover",
+  "id": "a17495db-346a-43d8-ab5d-6a64b246fff7",
+  "split": "train",
+  "claim": "Pedro del Valle was a Lieutenant in this battle. Operation North Wind happened before that battle in 1886.",
+  "evidencia": "Page: Battle of Okinawa. Sentence: The 82-day battle lasted from April 1 until June 22, 1945.\nPage: Operation Nordwind. Sentence: Operation North Wind (German: \"Unternehmen Nordwind\" ) was the last major German offensive of World War II on the Western Front.\nPage: Operation Nordwind. Sentence: It began on 31 December 1944 in Alsace and Lorraine in northeastern France, and ended on 25 January.\nPage: Pedro del Valle. Sentence: His military career included service in World War I, Haiti and Nicaragua during the Banana Wars of the 1920s, and in World War II, the Battle of Guadalcanal and Battle of Okinawa (Commanding General of the 1st Marine Division).",
+  "evidence_text": "Page: Battle of Okinawa. Sentence: The 82-day battle lasted from April 1 until June 22, 1945.\nPage: Operation Nordwind. Sentence: Operation North Wind (German: \"Unternehmen Nordwind\" ) was the last major German offensive of World War II on the Western Front.\nPage: Operation Nordwind. Sentence: It began on 31 December 1944 in Alsace and Lorraine in northeastern France, and ended on 25 January.\nPage: Pedro del Valle. Sentence: His military career included service in World War I, Haiti and Nicaragua during the Banana Wars of the 1920s, and in World War II, the Battle of Guadalcanal and Battle of Okinawa (Commanding General of the 1st Marine Division).",
+  "label": "NOT_SUPPORTED",
+  "num_hops": 3,
+  "hover_metadata": {
+    "supporting_facts": [
+      [
+        "Battle of Okinawa",
+        1
+      ],
+      [
+        "Operation Nordwind",
+        0
+      ],
+      [
+        "Operation Nordwind",
+        1
+      ],
+      [
+        "Pedro del Valle",
+        1
+      ]
+    ],
+    "num_hops": 3,
+    "evidence_annotation_id": [
+      0
+    ],
+    "evidence_id": [
+      "Battle of Okinawa::sentence::1",
+      "Operation Nordwind::sentence::0",
+      "Operation Nordwind::sentence::1",
+      "Pedro del Valle::sentence::1"
+    ],
+    "evidence_wiki_url": [
+      "https://en.wikipedia.org/wiki/Battle_of_Okinawa",
+      "https://en.wikipedia.org/wiki/Operation_Nordwind",
+      "https://en.wikipedia.org/wiki/Pedro_del_Valle"
+    ],
+    "evidence_sentence_id": [
+      "Battle of Okinawa::sentence::1",
+      "Operation Nordwind::sentence::0",
+      "Operation Nordwind::sentence::1",
+      "Pedro del Valle::sentence::1"
+    ]
+  },
+  "grafo_claim": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "225c82c8-134d-5063-b83c-da760ebc29de",
+        "text": "This chunk is about:\n- People: Pedro del Valle\n- Roles: Lieutenant\n- Events: Operation North Wind, battle\n- Time: 1886\n\nFacts:\n- Operation North Wind happened before the battle in 1886.\n- Pedro del Valle was a Lieutenant in the battle.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "aaeafb0a-e8ff-5505-81bd-66052f051d69",
+        "text": "Pedro del Valle was a Lieutenant in this battle. Operation North Wind happened before that battle in 1886.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "38445925-eb75-508f-bf0c-a047a477603e",
+        "text": "text_1d591a35ef593d06156b655305cb91c5",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "7e1c1a14-4490-57d9-ba9b-8ea0ee061639",
+        "text": "pedro del valle",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "4428e432-bb71-545c-8478-c4ff7409a273",
+        "text": "this battle",
+        "type": "Entity"
+      },
+      {
+        "id": 5,
+        "original_id": "214abcd9-9adf-5c8a-bb35-1e729f2d68c3",
+        "text": "event",
+        "type": "EntityType"
+      },
+      {
+        "id": 6,
+        "original_id": "99a82eec-bb35-5bb5-9ed2-e73fc7a756de",
+        "text": "person",
+        "type": "EntityType"
+      },
+      {
+        "id": 7,
+        "original_id": "b45806ac-237b-54d0-aeb6-3ef550cd9cdc",
+        "text": "operation north wind",
+        "type": "Entity"
+      },
+      {
+        "id": 8,
+        "original_id": "30789281-277a-51ca-b071-fff2e1b62ee5",
+        "text": "1886",
+        "type": "Entity"
+      },
+      {
+        "id": 9,
+        "original_id": "b19433ae-558c-5aaf-95ac-6231f2a4be0e",
+        "text": "date",
+        "type": "EntityType"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "served_as_lieutenant_in"
+      },
+      {
+        "source": 1,
+        "target": 4,
+        "type": "contains"
+      },
+      {
+        "source": 7,
+        "target": 4,
+        "type": "happened_before"
+      },
+      {
+        "source": 4,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 7,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      },
+      {
+        "source": 7,
+        "target": 8,
+        "type": "occurred_in"
+      },
+      {
+        "source": 1,
+        "target": 8,
+        "type": "contains"
+      },
+      {
+        "source": 8,
+        "target": 9,
+        "type": "is_a"
+      }
+    ]
+  },
+  "grafo_evidencia": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "e771b183-163d-57c8-aa92-eb3da000c301",
+        "text": "This chunk is about:\n- Events: Battle of Okinawa, Operation Nordwind\n- People: Pedro del Valle\n- Places: Alsace, Lorraine, northeastern France\n- Concepts: World War I, World War II, Banana Wars, Western Front\n- Roles: Commanding General of the 1st Marine Division\n\nFacts:\n- Operation Nordwind was the last major German offensive of World War II on the Western Front.\n- Operation Nordwind began on 31 December 1944 in Alsace and Lorraine in northeastern France.\n- The Battle of Okinawa lasted 82 days from April 1 to June 22, 1945.\n- Operation Nordwind ended on 25 January 1945.\n- Pedro del Valle served in World War I, in Haiti and Nicaragua during the Banana Wars of the 1920s, and in World War II.\n- In World War II, Pedro del Valle served in the Battle of Guadalcanal and in the Battle of Okinawa as Commanding General of the 1st Marine Division.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "22b77d58-9149-5b09-8e67-9e141525619e",
+        "text": "Page: Battle of Okinawa. Sentence: The 82-day battle lasted from April 1 until June 22, 1945.\nPage: Operation Nordwind. Sentence: Operation North Wind (German: \"Unternehmen Nordwind\" ) was the last major German offensive of World War II on the Western Front.\nPage: Operation Nordwind. Sentence: It began on 31 December 1944 in Alsace and Lorraine in northeastern France, and ended on 25 January.\nPage: Pedro del Valle. Sentence: His military career included service in World War I, Haiti and Nicaragua during the Banana Wars of the 1920s, and in World War II, the Battle of Guadalcanal and Battle of Okinawa (Commanding General of the 1st Marine Division).",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "24a65cad-7fd2-5144-8d0e-c5cfae1872fb",
+        "text": "text_7c767134772e790b485ae94a0344b08c",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "2d1f75cc-f19d-5469-9ea7-849e1dc03cc2",
+        "text": "battle of okinawa",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "3d802323-8f16-58a7-bbba-11b823a9d3e9",
+        "text": "1945-04-01",
+        "type": "Entity"
+      },
+      {
+        "id": 5,
+        "original_id": "b19433ae-558c-5aaf-95ac-6231f2a4be0e",
+        "text": "date",
+        "type": "EntityType"
+      },
+      {
+        "id": 6,
+        "original_id": "1c99d272-8063-576a-9441-3335937db02f",
+        "text": "1945-06-22",
+        "type": "Entity"
+      },
+      {
+        "id": 7,
+        "original_id": "214abcd9-9adf-5c8a-bb35-1e729f2d68c3",
+        "text": "event",
+        "type": "EntityType"
+      },
+      {
+        "id": 8,
+        "original_id": "9814cdc0-69b5-5f30-8543-d8871a13e7c9",
+        "text": "operation nordwind",
+        "type": "Entity"
+      },
+      {
+        "id": 9,
+        "original_id": "307234d1-8757-51ab-8eb8-40aae3d498a1",
+        "text": "world war ii",
+        "type": "Entity"
+      },
+      {
+        "id": 10,
+        "original_id": "01623f6f-d575-5415-b016-25591f250aae",
+        "text": "western front",
+        "type": "Entity"
+      },
+      {
+        "id": 11,
+        "original_id": "5f394058-b2a0-5ba8-8466-ba2a18cfcf4e",
+        "text": "place",
+        "type": "EntityType"
+      },
+      {
+        "id": 12,
+        "original_id": "5ce4b675-c3bd-54bf-b04e-52b039d32550",
+        "text": "1944-12-31",
+        "type": "Entity"
+      },
+      {
+        "id": 13,
+        "original_id": "3f40c8df-bda6-5aee-9859-dc4693bfb4b3",
+        "text": "alsace",
+        "type": "Entity"
+      },
+      {
+        "id": 14,
+        "original_id": "a8066324-c284-54ec-94f9-d06effe82f5e",
+        "text": "northeastern france",
+        "type": "Entity"
+      },
+      {
+        "id": 15,
+        "original_id": "da55cecf-006f-5f58-a8af-3777df59344c",
+        "text": "lorraine",
+        "type": "Entity"
+      },
+      {
+        "id": 16,
+        "original_id": "400c5cae-e1a3-5a8c-81d3-bf537db5093d",
+        "text": "1945-01-25",
+        "type": "Entity"
+      },
+      {
+        "id": 17,
+        "original_id": "7e1c1a14-4490-57d9-ba9b-8ea0ee061639",
+        "text": "pedro del valle",
+        "type": "Entity"
+      },
+      {
+        "id": 18,
+        "original_id": "c8ea1a4b-9014-5eb3-9791-88be38bfcf80",
+        "text": "world war i",
+        "type": "Entity"
+      },
+      {
+        "id": 19,
+        "original_id": "cc1635af-6f61-5a81-8ba2-cab8943e3ea0",
+        "text": "haiti",
+        "type": "Entity"
+      },
+      {
+        "id": 20,
+        "original_id": "2d21f7d5-b324-5844-9ede-087ee01d435d",
+        "text": "nicaragua",
+        "type": "Entity"
+      },
+      {
+        "id": 21,
+        "original_id": "ad85f860-c738-556f-a2aa-982e4264dd3b",
+        "text": "banana wars",
+        "type": "Entity"
+      },
+      {
+        "id": 22,
+        "original_id": "d26cde9e-3a8c-5e24-ae76-b181a96863a2",
+        "text": "battle of guadalcanal",
+        "type": "Entity"
+      },
+      {
+        "id": 23,
+        "original_id": "f2582ade-adc5-5afc-8f2d-3be15b0bf46a",
+        "text": "1st marine division",
+        "type": "Entity"
+      },
+      {
+        "id": 24,
+        "original_id": "388f60fb-220d-55e8-ae9c-3ac93cead308",
+        "text": "organization",
+        "type": "EntityType"
+      },
+      {
+        "id": 25,
+        "original_id": "99a82eec-bb35-5bb5-9ed2-e73fc7a756de",
+        "text": "person",
+        "type": "EntityType"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 17,
+        "target": 3,
+        "type": "served_in"
+      },
+      {
+        "source": 23,
+        "target": 3,
+        "type": "participated_in"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "started_on"
+      },
+      {
+        "source": 1,
+        "target": 4,
+        "type": "contains"
+      },
+      {
+        "source": 4,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 6,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 12,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 16,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 6,
+        "type": "ended_on"
+      },
+      {
+        "source": 1,
+        "target": 6,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 9,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 8,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 18,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 21,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 22,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 8,
+        "type": "contains"
+      },
+      {
+        "source": 8,
+        "target": 9,
+        "type": "occurred_during"
+      },
+      {
+        "source": 1,
+        "target": 9,
+        "type": "contains"
+      },
+      {
+        "source": 17,
+        "target": 9,
+        "type": "served_in"
+      },
+      {
+        "source": 8,
+        "target": 10,
+        "type": "occurred_on"
+      },
+      {
+        "source": 1,
+        "target": 10,
+        "type": "contains"
+      },
+      {
+        "source": 10,
+        "target": 11,
+        "type": "is_a"
+      },
+      {
+        "source": 14,
+        "target": 11,
+        "type": "is_a"
+      },
+      {
+        "source": 13,
+        "target": 11,
+        "type": "is_a"
+      },
+      {
+        "source": 15,
+        "target": 11,
+        "type": "is_a"
+      },
+      {
+        "source": 19,
+        "target": 11,
+        "type": "is_a"
+      },
+      {
+        "source": 20,
+        "target": 11,
+        "type": "is_a"
+      },
+      {
+        "source": 8,
+        "target": 12,
+        "type": "started_on"
+      },
+      {
+        "source": 1,
+        "target": 12,
+        "type": "contains"
+      },
+      {
+        "source": 8,
+        "target": 13,
+        "type": "began_in"
+      },
+      {
+        "source": 1,
+        "target": 13,
+        "type": "contains"
+      },
+      {
+        "source": 13,
+        "target": 14,
+        "type": "located_in"
+      },
+      {
+        "source": 15,
+        "target": 14,
+        "type": "located_in"
+      },
+      {
+        "source": 1,
+        "target": 14,
+        "type": "contains"
+      },
+      {
+        "source": 8,
+        "target": 15,
+        "type": "began_in"
+      },
+      {
+        "source": 1,
+        "target": 15,
+        "type": "contains"
+      },
+      {
+        "source": 8,
+        "target": 16,
+        "type": "ended_on"
+      },
+      {
+        "source": 1,
+        "target": 16,
+        "type": "contains"
+      },
+      {
+        "source": 1,
+        "target": 17,
+        "type": "contains"
+      },
+      {
+        "source": 17,
+        "target": 18,
+        "type": "served_in"
+      },
+      {
+        "source": 1,
+        "target": 18,
+        "type": "contains"
+      },
+      {
+        "source": 17,
+        "target": 19,
+        "type": "served_in"
+      },
+      {
+        "source": 1,
+        "target": 19,
+        "type": "contains"
+      },
+      {
+        "source": 17,
+        "target": 20,
+        "type": "served_in"
+      },
+      {
+        "source": 1,
+        "target": 20,
+        "type": "contains"
+      },
+      {
+        "source": 17,
+        "target": 21,
+        "type": "served_in"
+      },
+      {
+        "source": 1,
+        "target": 21,
+        "type": "contains"
+      },
+      {
+        "source": 17,
+        "target": 22,
+        "type": "served_in"
+      },
+      {
+        "source": 1,
+        "target": 22,
+        "type": "contains"
+      },
+      {
+        "source": 17,
+        "target": 23,
+        "type": "commanded"
+      },
+      {
+        "source": 1,
+        "target": 23,
+        "type": "contains"
+      },
+      {
+        "source": 23,
+        "target": 24,
+        "type": "is_a"
+      },
+      {
+        "source": 17,
+        "target": 25,
+        "type": "is_a"
+      }
+    ]
+  }
+}

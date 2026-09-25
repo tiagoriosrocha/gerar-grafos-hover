@@ -1,0 +1,306 @@
+{
+  "dataset": "hover",
+  "id": "a4b07432-7ccd-4f45-913c-7ffc05be6e94",
+  "split": "train",
+  "claim": "Mile 81 contained an excerpt from the Stephen King novel 11/22/63, which was published November 8, 2011.",
+  "evidencia": "Page: Mile 81. Sentence: The publication also includes an excerpt from King's novel \"11/22/63\", published two months later.\nPage: 11/22/63. Sentence: The novel was published on November 8, 2011 and quickly became a number-one bestseller.",
+  "evidence_text": "Page: Mile 81. Sentence: The publication also includes an excerpt from King's novel \"11/22/63\", published two months later.\nPage: 11/22/63. Sentence: The novel was published on November 8, 2011 and quickly became a number-one bestseller.",
+  "label": "SUPPORTED",
+  "num_hops": 2,
+  "hover_metadata": {
+    "supporting_facts": [
+      [
+        "Mile 81",
+        1
+      ],
+      [
+        "11/22/63",
+        4
+      ]
+    ],
+    "num_hops": 2,
+    "evidence_annotation_id": [
+      0
+    ],
+    "evidence_id": [
+      "Mile 81::sentence::1",
+      "11/22/63::sentence::4"
+    ],
+    "evidence_wiki_url": [
+      "https://en.wikipedia.org/wiki/Mile_81",
+      "https://en.wikipedia.org/wiki/11/22/63"
+    ],
+    "evidence_sentence_id": [
+      "Mile 81::sentence::1",
+      "11/22/63::sentence::4"
+    ]
+  },
+  "grafo_claim": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "e88aea23-3a4c-5285-b456-d26156ba80e6",
+        "text": "This chunk is about:\n- Works: Mile 81, 11/22/63\n- People: Stephen King\n- Dates: November 8, 2011\n\nFacts:\n- Stephen King wrote the novel 11/22/63.\n- The novel 11/22/63 was published on November 8, 2011.\n- Mile 81 contained an excerpt from 11/22/63.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "3e90061f-ec70-5833-919d-27d21a80481c",
+        "text": "Mile 81 contained an excerpt from the Stephen King novel 11/22/63, which was published November 8, 2011.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "2cb91998-d913-546f-b2f8-4fe651c59673",
+        "text": "text_e042329ab6804da5456b28603ba465c1",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "b96d0d3c-7797-52c6-b6a8-5a1f670377ac",
+        "text": "mile 81",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "5263a535-1b4b-5925-be3e-310d03cd303b",
+        "text": "work",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "cf8eb3c5-bd8c-51cb-b3f4-018db0edc9d4",
+        "text": "11/22/63",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "cfb6f519-9e11-5a33-945e-de06de6ca04a",
+        "text": "stephen king",
+        "type": "Entity"
+      },
+      {
+        "id": 7,
+        "original_id": "99a82eec-bb35-5bb5-9ed2-e73fc7a756de",
+        "text": "person",
+        "type": "EntityType"
+      },
+      {
+        "id": 8,
+        "original_id": "e9c7fe03-5855-5d24-80f6-fabc0eaac513",
+        "text": "2011-11-08",
+        "type": "Entity"
+      },
+      {
+        "id": 9,
+        "original_id": "b19433ae-558c-5aaf-95ac-6231f2a4be0e",
+        "text": "date",
+        "type": "EntityType"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 5,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "contained_excerpt_from"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "written_by"
+      },
+      {
+        "source": 1,
+        "target": 6,
+        "type": "contains"
+      },
+      {
+        "source": 6,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 5,
+        "target": 8,
+        "type": "published_on"
+      },
+      {
+        "source": 1,
+        "target": 8,
+        "type": "contains"
+      },
+      {
+        "source": 8,
+        "target": 9,
+        "type": "is_a"
+      }
+    ]
+  },
+  "grafo_evidencia": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "aaf85e58-c21e-5beb-8f26-891096fa543f",
+        "text": "This chunk is about:\n- People: Stephen King\n- Products: Mile 81, 11/22/63\n- Topics: publication timing, excerpt inclusion, bestseller status\n\nFacts:\n- The publication Mile 81 includes an excerpt from Stephen King's novel 11/22/63.\n- Stephen King's novel 11/22/63 was published two months after Mile 81.\n- Stephen King's novel 11/22/63 was published on November 8, 2011.\n- Stephen King's novel 11/22/63 quickly became a number-one bestseller.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "19f274c4-a49f-50b8-9406-f83fc9c06005",
+        "text": "Page: Mile 81. Sentence: The publication also includes an excerpt from King's novel \"11/22/63\", published two months later.\nPage: 11/22/63. Sentence: The novel was published on November 8, 2011 and quickly became a number-one bestseller.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "c5b37f8b-d2b0-5ce1-aa00-8ee6a61257fd",
+        "text": "text_fc892471215bc662e79125d01532959f",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "b96d0d3c-7797-52c6-b6a8-5a1f670377ac",
+        "text": "mile 81",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "116f7e5a-b2e1-59db-a42f-fdaf43712464",
+        "text": "publication",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "cf8eb3c5-bd8c-51cb-b3f4-018db0edc9d4",
+        "text": "11/22/63",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "3faed6ef-3d90-5ffd-9229-cfb62eb68140",
+        "text": "book",
+        "type": "EntityType"
+      },
+      {
+        "id": 7,
+        "original_id": "cfb6f519-9e11-5a33-945e-de06de6ca04a",
+        "text": "stephen king",
+        "type": "Entity"
+      },
+      {
+        "id": 8,
+        "original_id": "99a82eec-bb35-5bb5-9ed2-e73fc7a756de",
+        "text": "person",
+        "type": "EntityType"
+      },
+      {
+        "id": 9,
+        "original_id": "e9c7fe03-5855-5d24-80f6-fabc0eaac513",
+        "text": "2011-11-08",
+        "type": "Entity"
+      },
+      {
+        "id": 10,
+        "original_id": "b19433ae-558c-5aaf-95ac-6231f2a4be0e",
+        "text": "date",
+        "type": "EntityType"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "includes_excerpt_from"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 5,
+        "target": 7,
+        "type": "written_by"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      },
+      {
+        "source": 7,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 5,
+        "target": 9,
+        "type": "published_on"
+      },
+      {
+        "source": 1,
+        "target": 9,
+        "type": "contains"
+      },
+      {
+        "source": 9,
+        "target": 10,
+        "type": "is_a"
+      }
+    ]
+  }
+}

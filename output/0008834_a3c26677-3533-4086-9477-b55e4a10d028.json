@@ -1,0 +1,428 @@
+{
+  "dataset": "hover",
+  "id": "a3c26677-3533-4086-9477-b55e4a10d028",
+  "split": "train",
+  "claim": "The city home to  Guangxi University of Technology has a greater area than Muling.",
+  "evidencia": "Page: Liuzhou. Sentence: Liuzhou ( , ) is a prefecture-level city in north-central Guangxi Zhuang Autonomous Region, People's Republic of China.\nPage: Liuzhou. Sentence: Its total area is 18,777 km2 and 667 km2 for built up area.\nPage: Muling. Sentence: As of 2004, it has an area of 6,094 km2 and a population of 330,000.\nPage: Guangxi University of Technology. Sentence: Guangxi University of Technology (GXUT; ) is a university based in Liuzhou, Guangxi, China.",
+  "evidence_text": "Page: Liuzhou. Sentence: Liuzhou ( , ) is a prefecture-level city in north-central Guangxi Zhuang Autonomous Region, People's Republic of China.\nPage: Liuzhou. Sentence: Its total area is 18,777 km2 and 667 km2 for built up area.\nPage: Muling. Sentence: As of 2004, it has an area of 6,094 km2 and a population of 330,000.\nPage: Guangxi University of Technology. Sentence: Guangxi University of Technology (GXUT; ) is a university based in Liuzhou, Guangxi, China.",
+  "label": "SUPPORTED",
+  "num_hops": 3,
+  "hover_metadata": {
+    "supporting_facts": [
+      [
+        "Liuzhou",
+        0
+      ],
+      [
+        "Liuzhou",
+        2
+      ],
+      [
+        "Muling",
+        1
+      ],
+      [
+        "Guangxi University of Technology",
+        0
+      ]
+    ],
+    "num_hops": 3,
+    "evidence_annotation_id": [
+      0
+    ],
+    "evidence_id": [
+      "Liuzhou::sentence::0",
+      "Liuzhou::sentence::2",
+      "Muling::sentence::1",
+      "Guangxi University of Technology::sentence::0"
+    ],
+    "evidence_wiki_url": [
+      "https://en.wikipedia.org/wiki/Liuzhou",
+      "https://en.wikipedia.org/wiki/Muling",
+      "https://en.wikipedia.org/wiki/Guangxi_University_of_Technology"
+    ],
+    "evidence_sentence_id": [
+      "Liuzhou::sentence::0",
+      "Liuzhou::sentence::2",
+      "Muling::sentence::1",
+      "Guangxi University of Technology::sentence::0"
+    ]
+  },
+  "grafo_claim": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "4698d088-83b4-553d-ac2c-890b7c73ac9c",
+        "text": "This chunk is about:\n- Places: Guangxi University of Technology, Muling\n- Organizations: Guangxi University of Technology\n\nFacts:\n- Guangxi University of Technology is located in a city.\n- The city that is home to Guangxi University of Technology has a greater area than Muling.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "506c5c5a-d25f-5c6d-94c8-9f3a8ae93344",
+        "text": "The city home to  Guangxi University of Technology has a greater area than Muling.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "4b8e83ac-bfd8-5ee1-97b6-6c7a5683971b",
+        "text": "text_c1a2c8f2551538e996cb751a9975187b",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "dd1c8760-f535-5eb6-ac7c-99870402f7a2",
+        "text": "guangxi university of technology",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "388f60fb-220d-55e8-ae9c-3ac93cead308",
+        "text": "organization",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "da2902ce-848e-5da4-b2ef-b332956d8422",
+        "text": "home city of guangxi university of technology",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "4f155b46-e814-58f6-97cf-55d2ac3a572d",
+        "text": "city",
+        "type": "EntityType"
+      },
+      {
+        "id": 7,
+        "original_id": "d4b555bb-88b8-5582-a8a4-075c910fc004",
+        "text": "muling",
+        "type": "Entity"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 3,
+        "type": "is_home_to"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 7,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 5,
+        "target": 7,
+        "type": "has_greater_area_than"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      }
+    ]
+  },
+  "grafo_evidencia": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "f339f4cc-2116-56e5-9610-f4a1489e3ddf",
+        "text": "This chunk is about:\n- Places: Liuzhou, Muling, Guangxi, China\n- Organizations: Guangxi University of Technology\n- Topics: area, population, location\n\nFacts:\n- Liuzhou is a prefecture-level city in north-central Guangxi Zhuang Autonomous Region, China.\n- Liuzhou has a total area of 18,777 km2 and a built-up area of 667 km2.\n- As of 2004, Muling had an area of 6,094 km2 and a population of 330,000.\n- Guangxi University of Technology is a university based in Liuzhou, Guangxi, China.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "08d0d045-263d-5a34-8e99-bd9052f8c74e",
+        "text": "Page: Liuzhou. Sentence: Liuzhou ( , ) is a prefecture-level city in north-central Guangxi Zhuang Autonomous Region, People's Republic of China.\nPage: Liuzhou. Sentence: Its total area is 18,777 km2 and 667 km2 for built up area.\nPage: Muling. Sentence: As of 2004, it has an area of 6,094 km2 and a population of 330,000.\nPage: Guangxi University of Technology. Sentence: Guangxi University of Technology (GXUT; ) is a university based in Liuzhou, Guangxi, China.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "490d02f8-51c3-57ba-8dc1-fcd49bf0b95e",
+        "text": "text_8632932633b165861c04efe001b82915",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "e6740c11-9dbd-51a5-a56d-38e16f74a99a",
+        "text": "liuzhou",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "5f394058-b2a0-5ba8-8466-ba2a18cfcf4e",
+        "text": "place",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "6954c7a9-df32-5aa4-a331-2abba2881712",
+        "text": "guangxi zhuang autonomous region",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "cc237b73-b957-56f0-9cff-82357be15d0b",
+        "text": "peoples republic of china",
+        "type": "Entity"
+      },
+      {
+        "id": 7,
+        "original_id": "0c8b6562-405c-59e6-8e52-2709d39ddbc1",
+        "text": "18,777 km2",
+        "type": "Entity"
+      },
+      {
+        "id": 8,
+        "original_id": "12d5521e-a878-542e-bebc-84ff79179d8e",
+        "text": "measurement",
+        "type": "EntityType"
+      },
+      {
+        "id": 9,
+        "original_id": "10f8998c-9995-5fbc-bca7-38a1b68e9c6b",
+        "text": "667 km2",
+        "type": "Entity"
+      },
+      {
+        "id": 10,
+        "original_id": "d4b555bb-88b8-5582-a8a4-075c910fc004",
+        "text": "muling",
+        "type": "Entity"
+      },
+      {
+        "id": 11,
+        "original_id": "559b7176-da84-5102-a855-b896617a9c3b",
+        "text": "2004",
+        "type": "Entity"
+      },
+      {
+        "id": 12,
+        "original_id": "b19433ae-558c-5aaf-95ac-6231f2a4be0e",
+        "text": "date",
+        "type": "EntityType"
+      },
+      {
+        "id": 13,
+        "original_id": "a79eaf4a-fce6-5bd2-81d5-d0803da99e93",
+        "text": "6,094 km2",
+        "type": "Entity"
+      },
+      {
+        "id": 14,
+        "original_id": "e04e598c-87c7-5abd-b8d6-87b7de11916a",
+        "text": "330,000",
+        "type": "Entity"
+      },
+      {
+        "id": 15,
+        "original_id": "dd1c8760-f535-5eb6-ac7c-99870402f7a2",
+        "text": "guangxi university of technology",
+        "type": "Entity"
+      },
+      {
+        "id": 16,
+        "original_id": "388f60fb-220d-55e8-ae9c-3ac93cead308",
+        "text": "organization",
+        "type": "EntityType"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 15,
+        "target": 3,
+        "type": "based_in"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 5,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 6,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 10,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "located_in"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 15,
+        "target": 5,
+        "type": "based_in"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "located_in"
+      },
+      {
+        "source": 3,
+        "target": 6,
+        "type": "located_in"
+      },
+      {
+        "source": 1,
+        "target": 6,
+        "type": "contains"
+      },
+      {
+        "source": 15,
+        "target": 6,
+        "type": "based_in"
+      },
+      {
+        "source": 3,
+        "target": 7,
+        "type": "has_total_area"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      },
+      {
+        "source": 7,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 9,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 13,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 14,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 9,
+        "type": "has_built_up_area"
+      },
+      {
+        "source": 1,
+        "target": 9,
+        "type": "contains"
+      },
+      {
+        "source": 1,
+        "target": 10,
+        "type": "contains"
+      },
+      {
+        "source": 10,
+        "target": 11,
+        "type": "as_of"
+      },
+      {
+        "source": 1,
+        "target": 11,
+        "type": "contains"
+      },
+      {
+        "source": 11,
+        "target": 12,
+        "type": "is_a"
+      },
+      {
+        "source": 10,
+        "target": 13,
+        "type": "has_area"
+      },
+      {
+        "source": 1,
+        "target": 13,
+        "type": "contains"
+      },
+      {
+        "source": 10,
+        "target": 14,
+        "type": "has_population"
+      },
+      {
+        "source": 1,
+        "target": 14,
+        "type": "contains"
+      },
+      {
+        "source": 1,
+        "target": 15,
+        "type": "contains"
+      },
+      {
+        "source": 15,
+        "target": 16,
+        "type": "is_a"
+      }
+    ]
+  }
+}

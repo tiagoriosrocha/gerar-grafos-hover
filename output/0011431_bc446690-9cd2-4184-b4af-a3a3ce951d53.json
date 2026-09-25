@@ -1,0 +1,442 @@
+{
+  "dataset": "hover",
+  "id": "bc446690-9cd2-4184-b4af-a3a3ce951d53",
+  "split": "train",
+  "claim": "San Diego International Airport and McCarran International Airport are not located in the same state.",
+  "evidencia": "Page: San Diego International Airport. Sentence: San Diego International Airport (IATA: SAN, ICAO: KSAN, FAA LID: SAN) , formerly known as Lindbergh Field, is an international airport 3 mi northwest of Downtown San Diego, California, United States.\nPage: McCarran International Airport. Sentence: McCarran International Airport (IATA: LAS, ICAO: KLAS, FAA LID: LAS) is the primary commercial airport serving the Las Vegas Valley, a major metropolitan area in the U.S. state of Nevada.",
+  "evidence_text": "Page: San Diego International Airport. Sentence: San Diego International Airport (IATA: SAN, ICAO: KSAN, FAA LID: SAN) , formerly known as Lindbergh Field, is an international airport 3 mi northwest of Downtown San Diego, California, United States.\nPage: McCarran International Airport. Sentence: McCarran International Airport (IATA: LAS, ICAO: KLAS, FAA LID: LAS) is the primary commercial airport serving the Las Vegas Valley, a major metropolitan area in the U.S. state of Nevada.",
+  "label": "SUPPORTED",
+  "num_hops": 2,
+  "hover_metadata": {
+    "supporting_facts": [
+      [
+        "San Diego International Airport",
+        0
+      ],
+      [
+        "McCarran International Airport",
+        0
+      ]
+    ],
+    "num_hops": 2,
+    "evidence_annotation_id": [
+      0
+    ],
+    "evidence_id": [
+      "San Diego International Airport::sentence::0",
+      "McCarran International Airport::sentence::0"
+    ],
+    "evidence_wiki_url": [
+      "https://en.wikipedia.org/wiki/San_Diego_International_Airport",
+      "https://en.wikipedia.org/wiki/McCarran_International_Airport"
+    ],
+    "evidence_sentence_id": [
+      "San Diego International Airport::sentence::0",
+      "McCarran International Airport::sentence::0"
+    ]
+  },
+  "grafo_claim": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "5c1bcb4a-98aa-5747-8357-d90c2e401cc5",
+        "text": "This chunk is about:\n- Places: San Diego International Airport, McCarran International Airport\n- Topics: U.S. state location\n\nFacts:\n- San Diego International Airport and McCarran International Airport are not located in the same U.S. state.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "d294c78a-324d-5ab9-83b6-c7b13a541e1e",
+        "text": "San Diego International Airport and McCarran International Airport are not located in the same state.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "7916d662-de8d-5206-9cf0-95f0e0fb0574",
+        "text": "text_72010a58ad378c561c3c716388880983",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "600fbe0c-70a3-5953-9a76-f0436a436db9",
+        "text": "san diego international airport",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "50596f1a-2d8a-5de7-96b5-ba7068791784",
+        "text": "airport",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "b761ab89-7454-5f86-8c3e-976b31f37206",
+        "text": "mccarran international airport",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "86334567-603d-54f9-9c25-f2cb1dac506e",
+        "text": "same state",
+        "type": "Entity"
+      },
+      {
+        "id": 7,
+        "original_id": "d2a381fa-3658-5ca6-ada9-2109cfc9331d",
+        "text": "concept",
+        "type": "EntityType"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 5,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "not_in_same_state_as"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 1,
+        "target": 6,
+        "type": "contains"
+      },
+      {
+        "source": 6,
+        "target": 7,
+        "type": "is_a"
+      }
+    ]
+  },
+  "grafo_evidencia": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "082b6bb2-4ceb-5a22-af9f-253885b27d33",
+        "text": "This chunk is about:\n- Places: San Diego, Downtown San Diego, California, United States, Las Vegas Valley, Nevada\n- Products: San Diego International Airport, McCarran International Airport\n- Concepts: IATA codes, ICAO codes, FAA LID codes\n\nFacts:\n- San Diego International Airport, formerly known as Lindbergh Field, is an international airport located 3 miles northwest of Downtown San Diego, California, United States.\n- San Diego International Airport has the codes IATA SAN, ICAO KSAN, and FAA LID SAN.\n- McCarran International Airport is the primary commercial airport serving the Las Vegas Valley in Nevada.\n- McCarran International Airport has the codes IATA LAS, ICAO KLAS, and FAA LID LAS.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "474a6e66-a5c3-57c9-af7c-9b179229f58d",
+        "text": "Page: San Diego International Airport. Sentence: San Diego International Airport (IATA: SAN, ICAO: KSAN, FAA LID: SAN) , formerly known as Lindbergh Field, is an international airport 3 mi northwest of Downtown San Diego, California, United States.\nPage: McCarran International Airport. Sentence: McCarran International Airport (IATA: LAS, ICAO: KLAS, FAA LID: LAS) is the primary commercial airport serving the Las Vegas Valley, a major metropolitan area in the U.S. state of Nevada.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "c3c1688c-70f4-54a2-beb2-fc9151f12b62",
+        "text": "text_927d7ce865918d67613cd95e94898170",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "600fbe0c-70a3-5953-9a76-f0436a436db9",
+        "text": "san diego international airport",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "50596f1a-2d8a-5de7-96b5-ba7068791784",
+        "text": "airport",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "656c90de-bdc2-5110-8495-6793699ca9c4",
+        "text": "lindbergh field",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "64d22853-c91d-50d9-8b55-1c021eb0c15e",
+        "text": "san",
+        "type": "Entity"
+      },
+      {
+        "id": 7,
+        "original_id": "2c23f4f7-2223-5c53-a5f6-1bd0114fcd6a",
+        "text": "code",
+        "type": "EntityType"
+      },
+      {
+        "id": 8,
+        "original_id": "57d1b2a5-e025-51dc-b6b0-1f674c7991c1",
+        "text": "ksan",
+        "type": "Entity"
+      },
+      {
+        "id": 9,
+        "original_id": "6b5f7b12-7d5f-5a1a-987a-2a98efd02d79",
+        "text": "downtown san diego",
+        "type": "Entity"
+      },
+      {
+        "id": 10,
+        "original_id": "5f394058-b2a0-5ba8-8466-ba2a18cfcf4e",
+        "text": "place",
+        "type": "EntityType"
+      },
+      {
+        "id": 11,
+        "original_id": "8294cd6a-6968-5d3a-b0c8-57e08c745c8d",
+        "text": "california",
+        "type": "Entity"
+      },
+      {
+        "id": 12,
+        "original_id": "874a51da-34ea-5037-be47-d87785d43c37",
+        "text": "united states",
+        "type": "Entity"
+      },
+      {
+        "id": 13,
+        "original_id": "35e29ad1-17b7-507a-a205-d7851a5e7102",
+        "text": "country",
+        "type": "EntityType"
+      },
+      {
+        "id": 14,
+        "original_id": "b761ab89-7454-5f86-8c3e-976b31f37206",
+        "text": "mccarran international airport",
+        "type": "Entity"
+      },
+      {
+        "id": 15,
+        "original_id": "e1a3a720-6c13-5783-9d23-04c7787be6ea",
+        "text": "las",
+        "type": "Entity"
+      },
+      {
+        "id": 16,
+        "original_id": "9ce19d45-3461-538f-8c91-e694e7fb588c",
+        "text": "klas",
+        "type": "Entity"
+      },
+      {
+        "id": 17,
+        "original_id": "31f53c23-3062-5a9a-8a39-94a9702ca5e8",
+        "text": "las vegas valley",
+        "type": "Entity"
+      },
+      {
+        "id": 18,
+        "original_id": "cca9924d-3e69-59c5-be62-5ec26c26b0db",
+        "text": "nevada",
+        "type": "Entity"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 5,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 14,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "formerly_known_as"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 6,
+        "type": "has_iata_code"
+      },
+      {
+        "source": 1,
+        "target": 6,
+        "type": "contains"
+      },
+      {
+        "source": 6,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 8,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 15,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 16,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 8,
+        "type": "has_icao_code"
+      },
+      {
+        "source": 1,
+        "target": 8,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 9,
+        "type": "located_northwest_of"
+      },
+      {
+        "source": 1,
+        "target": 9,
+        "type": "contains"
+      },
+      {
+        "source": 9,
+        "target": 10,
+        "type": "is_a"
+      },
+      {
+        "source": 11,
+        "target": 10,
+        "type": "is_a"
+      },
+      {
+        "source": 17,
+        "target": 10,
+        "type": "is_a"
+      },
+      {
+        "source": 18,
+        "target": 10,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 11,
+        "type": "located_in"
+      },
+      {
+        "source": 1,
+        "target": 11,
+        "type": "contains"
+      },
+      {
+        "source": 11,
+        "target": 12,
+        "type": "located_in"
+      },
+      {
+        "source": 3,
+        "target": 12,
+        "type": "located_in"
+      },
+      {
+        "source": 1,
+        "target": 12,
+        "type": "contains"
+      },
+      {
+        "source": 12,
+        "target": 13,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 14,
+        "type": "contains"
+      },
+      {
+        "source": 14,
+        "target": 15,
+        "type": "has_iata_code"
+      },
+      {
+        "source": 1,
+        "target": 15,
+        "type": "contains"
+      },
+      {
+        "source": 14,
+        "target": 16,
+        "type": "has_icao_code"
+      },
+      {
+        "source": 1,
+        "target": 16,
+        "type": "contains"
+      },
+      {
+        "source": 14,
+        "target": 17,
+        "type": "serves"
+      },
+      {
+        "source": 1,
+        "target": 17,
+        "type": "contains"
+      },
+      {
+        "source": 17,
+        "target": 18,
+        "type": "located_in"
+      },
+      {
+        "source": 1,
+        "target": 18,
+        "type": "contains"
+      }
+    ]
+  }
+}

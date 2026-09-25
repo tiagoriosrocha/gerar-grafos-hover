@@ -1,0 +1,371 @@
+{
+  "dataset": "hover",
+  "id": "cdf02be2-4d7a-4b92-a140-f389fbe25dbb",
+  "split": "train",
+  "claim": "Buffalo Rock produced a nutritional drink under its own name that along with Izze are not both artificially flavored soft drinks.",
+  "evidencia": "Page: Grapico. Sentence: Grapico is a caffeine-free, artificially flavored carbonated soft drink with a purple color and a grape taste that is sold in the Southeastern United States.\nPage: Izze. Sentence: Izze is an all-natural, no-preservatives-added fruit soda.\nPage: Buffalo Rock. Sentence: In addition to bottling Pepsi products, the company produced Grapico in 1981, a grape-flavored soft drink, and a ginger ale under its own brand name.",
+  "evidence_text": "Page: Grapico. Sentence: Grapico is a caffeine-free, artificially flavored carbonated soft drink with a purple color and a grape taste that is sold in the Southeastern United States.\nPage: Izze. Sentence: Izze is an all-natural, no-preservatives-added fruit soda.\nPage: Buffalo Rock. Sentence: In addition to bottling Pepsi products, the company produced Grapico in 1981, a grape-flavored soft drink, and a ginger ale under its own brand name.",
+  "label": "NOT_SUPPORTED",
+  "num_hops": 3,
+  "hover_metadata": {
+    "supporting_facts": [
+      [
+        "Grapico",
+        0
+      ],
+      [
+        "Izze",
+        2
+      ],
+      [
+        "Buffalo Rock",
+        2
+      ]
+    ],
+    "num_hops": 3,
+    "evidence_annotation_id": [
+      0
+    ],
+    "evidence_id": [
+      "Grapico::sentence::0",
+      "Izze::sentence::2",
+      "Buffalo Rock::sentence::2"
+    ],
+    "evidence_wiki_url": [
+      "https://en.wikipedia.org/wiki/Grapico",
+      "https://en.wikipedia.org/wiki/Izze",
+      "https://en.wikipedia.org/wiki/Buffalo_Rock"
+    ],
+    "evidence_sentence_id": [
+      "Grapico::sentence::0",
+      "Izze::sentence::2",
+      "Buffalo Rock::sentence::2"
+    ]
+  },
+  "grafo_claim": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "ac8458c1-1502-5bd8-a1d0-4107a87d8eb8",
+        "text": "This chunk is about:\n- Companies: Buffalo Rock, Izze\n- Products: Buffalo Rock nutritional drink, Izze soft drink\n- Concepts: artificial flavoring, soft drink classification\n\nFacts:\n- Buffalo Rock produced a nutritional drink under the Buffalo Rock name.\n- Buffalo Rock and Izze are not both artificially flavored soft drinks.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "8202da7d-0e95-5ebf-9f0a-6305cab626d5",
+        "text": "Buffalo Rock produced a nutritional drink under its own name that along with Izze are not both artificially flavored soft drinks.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "3c3f4eab-ad12-5876-afe5-a2d75c464bd4",
+        "text": "text_5ab62aeae6b0cfb1c05f7e00e411fc24",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "ebd5864d-8897-58a4-9d5f-03038d8972ca",
+        "text": "buffalo rock",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "388f60fb-220d-55e8-ae9c-3ac93cead308",
+        "text": "organization",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "2a043e00-6c86-55c5-924d-1c5c41b427b4",
+        "text": "buffalo rock nutritional drink",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "f76d57aa-4740-5218-9539-0e0978cbf183",
+        "text": "product",
+        "type": "EntityType"
+      },
+      {
+        "id": 7,
+        "original_id": "4d4d5638-da9e-5472-93ad-6fc4b9ae4975",
+        "text": "artificially flavored soft drinks",
+        "type": "Entity"
+      },
+      {
+        "id": 8,
+        "original_id": "d2a381fa-3658-5ca6-ada9-2109cfc9331d",
+        "text": "concept",
+        "type": "EntityType"
+      },
+      {
+        "id": 9,
+        "original_id": "cd10c695-8b60-54bf-9066-96006afd0a6e",
+        "text": "izze",
+        "type": "Entity"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "produced"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 9,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 5,
+        "target": 7,
+        "type": "not_both_are"
+      },
+      {
+        "source": 9,
+        "target": 7,
+        "type": "not_both_are"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      },
+      {
+        "source": 7,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 9,
+        "type": "contains"
+      }
+    ]
+  },
+  "grafo_evidencia": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "ba4db282-6869-51c9-9e52-3269c204fbb1",
+        "text": "This chunk is about:\n- Products: Grapico, Izze\n- Companies: Buffalo Rock\n- Places: Southeastern United States\n- Topics: soft drinks, fruit soda, bottling\n\nFacts:\n- Buffalo Rock produced Grapico in 1981 as a grape-flavored soft drink under its own brand name, while also bottling Pepsi products and producing a ginger ale under its own brand name.\n- Grapico is a caffeine-free, artificially flavored, purple carbonated soft drink with a grape taste that is sold in the Southeastern United States.\n- Izze is an all-natural fruit soda with no preservatives added.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "a8b298f3-0db7-5ff2-8679-70680b1b521a",
+        "text": "Page: Grapico. Sentence: Grapico is a caffeine-free, artificially flavored carbonated soft drink with a purple color and a grape taste that is sold in the Southeastern United States.\nPage: Izze. Sentence: Izze is an all-natural, no-preservatives-added fruit soda.\nPage: Buffalo Rock. Sentence: In addition to bottling Pepsi products, the company produced Grapico in 1981, a grape-flavored soft drink, and a ginger ale under its own brand name.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "690fd5b6-21e4-5352-99f9-dbc3ff413252",
+        "text": "text_b3afb766ee1bc2da893d7705adc6350a",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "0d683920-3696-50f7-be1f-6c7e4b4f6abf",
+        "text": "grapico",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "f76d57aa-4740-5218-9539-0e0978cbf183",
+        "text": "product",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "3a425b5a-4532-5424-a5de-ae282cc6d69b",
+        "text": "southeastern united states",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "5f394058-b2a0-5ba8-8466-ba2a18cfcf4e",
+        "text": "place",
+        "type": "EntityType"
+      },
+      {
+        "id": 7,
+        "original_id": "cd10c695-8b60-54bf-9066-96006afd0a6e",
+        "text": "izze",
+        "type": "Entity"
+      },
+      {
+        "id": 8,
+        "original_id": "ebd5864d-8897-58a4-9d5f-03038d8972ca",
+        "text": "buffalo rock",
+        "type": "Entity"
+      },
+      {
+        "id": 9,
+        "original_id": "388f60fb-220d-55e8-ae9c-3ac93cead308",
+        "text": "organization",
+        "type": "EntityType"
+      },
+      {
+        "id": 10,
+        "original_id": "e0a083eb-cbdf-56b2-bccf-b1b558d4d7d9",
+        "text": "pepsi products",
+        "type": "Entity"
+      },
+      {
+        "id": 11,
+        "original_id": "c8168101-3248-5fef-a74b-eb93b29b066e",
+        "text": "1981",
+        "type": "Entity"
+      },
+      {
+        "id": 12,
+        "original_id": "b19433ae-558c-5aaf-95ac-6231f2a4be0e",
+        "text": "date",
+        "type": "EntityType"
+      },
+      {
+        "id": 13,
+        "original_id": "e1128446-f466-56c8-9205-055dca2a1730",
+        "text": "ginger ale",
+        "type": "Entity"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 8,
+        "target": 3,
+        "type": "produced"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 7,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 10,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 13,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "sold_in"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      },
+      {
+        "source": 1,
+        "target": 8,
+        "type": "contains"
+      },
+      {
+        "source": 8,
+        "target": 9,
+        "type": "is_a"
+      },
+      {
+        "source": 8,
+        "target": 10,
+        "type": "bottles"
+      },
+      {
+        "source": 1,
+        "target": 10,
+        "type": "contains"
+      },
+      {
+        "source": 8,
+        "target": 11,
+        "type": "produced_in"
+      },
+      {
+        "source": 1,
+        "target": 11,
+        "type": "contains"
+      },
+      {
+        "source": 11,
+        "target": 12,
+        "type": "is_a"
+      },
+      {
+        "source": 8,
+        "target": 13,
+        "type": "produced"
+      },
+      {
+        "source": 1,
+        "target": 13,
+        "type": "contains"
+      }
+    ]
+  }
+}

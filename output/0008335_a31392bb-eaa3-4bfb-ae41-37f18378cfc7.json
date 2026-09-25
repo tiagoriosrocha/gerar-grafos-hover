@@ -1,0 +1,504 @@
+{
+  "dataset": "hover",
+  "id": "a31392bb-eaa3-4bfb-ae41-37f18378cfc7",
+  "split": "train",
+  "claim": "Howard University Hospital and MedStar National Rehabilitation Hospital, are both located in the city of Washington, D.C.",
+  "evidencia": "Page: Howard University Hospital. Sentence: Howard University Hospital, previously known as Freedmen's Hospital, is a major hospital lcated in Washington, D.C., built on the site of the previous Griffith Stadium.\nPage: MedStar National Rehabilitation Hospital. Sentence: MedStar National Rehabilitation Network (MedStar NRH) is located in Washington, D.C., and specializes in treating persons with physical disabilities, including spinal cord injury, brain injury, stroke, arthritis, amputation, multiple sclerosis, post-polio syndrome, orthopedic, and other neurological conditions.",
+  "evidence_text": "Page: Howard University Hospital. Sentence: Howard University Hospital, previously known as Freedmen's Hospital, is a major hospital lcated in Washington, D.C., built on the site of the previous Griffith Stadium.\nPage: MedStar National Rehabilitation Hospital. Sentence: MedStar National Rehabilitation Network (MedStar NRH) is located in Washington, D.C., and specializes in treating persons with physical disabilities, including spinal cord injury, brain injury, stroke, arthritis, amputation, multiple sclerosis, post-polio syndrome, orthopedic, and other neurological conditions.",
+  "label": "SUPPORTED",
+  "num_hops": 2,
+  "hover_metadata": {
+    "supporting_facts": [
+      [
+        "Howard University Hospital",
+        0
+      ],
+      [
+        "MedStar National Rehabilitation Hospital",
+        0
+      ]
+    ],
+    "num_hops": 2,
+    "evidence_annotation_id": [
+      0
+    ],
+    "evidence_id": [
+      "Howard University Hospital::sentence::0",
+      "MedStar National Rehabilitation Hospital::sentence::0"
+    ],
+    "evidence_wiki_url": [
+      "https://en.wikipedia.org/wiki/Howard_University_Hospital",
+      "https://en.wikipedia.org/wiki/MedStar_National_Rehabilitation_Hospital"
+    ],
+    "evidence_sentence_id": [
+      "Howard University Hospital::sentence::0",
+      "MedStar National Rehabilitation Hospital::sentence::0"
+    ]
+  },
+  "grafo_claim": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "fec7c878-51e0-5857-a2b1-7a7f823f3485",
+        "text": "This chunk is about:\n- Organizations: Howard University Hospital, MedStar National Rehabilitation Hospital\n- Places: Washington, D.C.\n\nFacts:\n- Howard University Hospital is located in Washington, D.C.\n- MedStar National Rehabilitation Hospital is located in Washington, D.C.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "2a8e2106-0a2d-55ee-a810-e6d9fdc63b49",
+        "text": "Howard University Hospital and MedStar National Rehabilitation Hospital, are both located in the city of Washington, D.C.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "f1e2cc5c-d37e-5ef1-a58b-06ff72d241d2",
+        "text": "text_c46a9a9ae056340afe3607f1664d020c",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "18bcd623-4088-596c-88c4-af15d0aa1d07",
+        "text": "howard university hospital",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "388f60fb-220d-55e8-ae9c-3ac93cead308",
+        "text": "organization",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "193a9885-0f59-521c-a4b2-e6d5a15561ed",
+        "text": "washington, d.c.",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "5023586d-88a2-53f9-ad15-7e2ebd75eb4c",
+        "text": "location",
+        "type": "EntityType"
+      },
+      {
+        "id": 7,
+        "original_id": "0250150e-c054-5fd1-a309-b3841ccc2d8e",
+        "text": "medstar national rehabilitation hospital",
+        "type": "Entity"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 7,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "located_in"
+      },
+      {
+        "source": 7,
+        "target": 5,
+        "type": "located_in"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      }
+    ]
+  },
+  "grafo_evidencia": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "a624d023-c32e-5ee4-bad6-509dbb4202af",
+        "text": "This chunk is about:\n- Organizations: Howard University Hospital, Freedmen's Hospital, MedStar National Rehabilitation Hospital, MedStar National Rehabilitation Network\n- Places: Washington, D.C., Griffith Stadium\n- Topics: hospital history, rehabilitation care, physical disabilities\n\nFacts:\n- Howard University Hospital was previously known as Freedmen's Hospital.\n- Howard University Hospital is a major hospital located in Washington, D.C.\n- Howard University Hospital was built on the site of the previous Griffith Stadium.\n- MedStar National Rehabilitation Network is located in Washington, D.C.\n- MedStar National Rehabilitation Network specializes in treating people with physical disabilities.\n- MedStar National Rehabilitation Network treats conditions including spinal cord injury, brain injury, stroke, arthritis, amputation, multiple sclerosis, post-polio syndrome, orthopedic conditions, and other neurological conditions.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "87bb5061-5eff-50d1-945c-e4d936f247a4",
+        "text": "Page: Howard University Hospital. Sentence: Howard University Hospital, previously known as Freedmen's Hospital, is a major hospital lcated in Washington, D.C., built on the site of the previous Griffith Stadium.\nPage: MedStar National Rehabilitation Hospital. Sentence: MedStar National Rehabilitation Network (MedStar NRH) is located in Washington, D.C., and specializes in treating persons with physical disabilities, including spinal cord injury, brain injury, stroke, arthritis, amputation, multiple sclerosis, post-polio syndrome, orthopedic, and other neurological conditions.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "f747390f-f50e-54e0-b533-c71f6a504fac",
+        "text": "text_5abf5529afe1fba0795ea9d0bb01fa2d",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "18bcd623-4088-596c-88c4-af15d0aa1d07",
+        "text": "howard university hospital",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "388f60fb-220d-55e8-ae9c-3ac93cead308",
+        "text": "organization",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "1599daf9-bdf3-51bf-bc9d-3aa77a51b7ad",
+        "text": "freedmens hospital",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "193a9885-0f59-521c-a4b2-e6d5a15561ed",
+        "text": "washington, d.c.",
+        "type": "Entity"
+      },
+      {
+        "id": 7,
+        "original_id": "5f394058-b2a0-5ba8-8466-ba2a18cfcf4e",
+        "text": "place",
+        "type": "EntityType"
+      },
+      {
+        "id": 8,
+        "original_id": "c8f0b43b-2f57-5466-ac5b-bacaeabc1b17",
+        "text": "griffith stadium",
+        "type": "Entity"
+      },
+      {
+        "id": 9,
+        "original_id": "8e63faff-d2d0-5204-9c7c-eb164d12ab9b",
+        "text": "medstar national rehabilitation network",
+        "type": "Entity"
+      },
+      {
+        "id": 10,
+        "original_id": "919e1458-7e73-5ca2-80fe-0d9ff23aabbf",
+        "text": "physical disabilities",
+        "type": "Entity"
+      },
+      {
+        "id": 11,
+        "original_id": "d2a381fa-3658-5ca6-ada9-2109cfc9331d",
+        "text": "concept",
+        "type": "EntityType"
+      },
+      {
+        "id": 12,
+        "original_id": "db894403-3dec-5bb7-ac80-4681611ab91b",
+        "text": "spinal cord injury",
+        "type": "Entity"
+      },
+      {
+        "id": 13,
+        "original_id": "6827f9a4-a199-5337-aaee-672ddc9f1039",
+        "text": "brain injury",
+        "type": "Entity"
+      },
+      {
+        "id": 14,
+        "original_id": "c93214d5-437e-5903-9e3b-e7f9b3d94662",
+        "text": "stroke",
+        "type": "Entity"
+      },
+      {
+        "id": 15,
+        "original_id": "4e7f437c-5638-5736-8efb-1875f27b1518",
+        "text": "arthritis",
+        "type": "Entity"
+      },
+      {
+        "id": 16,
+        "original_id": "26bc769d-1513-514f-ac51-8da3b4847c9d",
+        "text": "amputation",
+        "type": "Entity"
+      },
+      {
+        "id": 17,
+        "original_id": "3d0a1033-2035-5f42-b097-2a2b0cfb2516",
+        "text": "multiple sclerosis",
+        "type": "Entity"
+      },
+      {
+        "id": 18,
+        "original_id": "5f8e3aff-3cae-54eb-933b-791570ee3200",
+        "text": "post-polio syndrome",
+        "type": "Entity"
+      },
+      {
+        "id": 19,
+        "original_id": "796d0057-4acb-5e6a-a8fc-54e2c7112aac",
+        "text": "orthopedic conditions",
+        "type": "Entity"
+      },
+      {
+        "id": 20,
+        "original_id": "a24d0814-8e52-563c-813c-9d9fbdd22e9e",
+        "text": "neurological conditions",
+        "type": "Entity"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 5,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 9,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "previously_known_as"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 6,
+        "type": "located_in"
+      },
+      {
+        "source": 1,
+        "target": 6,
+        "type": "contains"
+      },
+      {
+        "source": 9,
+        "target": 6,
+        "type": "located_in"
+      },
+      {
+        "source": 6,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 8,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 8,
+        "type": "built_on_site_of"
+      },
+      {
+        "source": 1,
+        "target": 8,
+        "type": "contains"
+      },
+      {
+        "source": 1,
+        "target": 9,
+        "type": "contains"
+      },
+      {
+        "source": 9,
+        "target": 10,
+        "type": "specializes_in_treating"
+      },
+      {
+        "source": 1,
+        "target": 10,
+        "type": "contains"
+      },
+      {
+        "source": 10,
+        "target": 11,
+        "type": "is_a"
+      },
+      {
+        "source": 12,
+        "target": 11,
+        "type": "is_a"
+      },
+      {
+        "source": 13,
+        "target": 11,
+        "type": "is_a"
+      },
+      {
+        "source": 14,
+        "target": 11,
+        "type": "is_a"
+      },
+      {
+        "source": 15,
+        "target": 11,
+        "type": "is_a"
+      },
+      {
+        "source": 16,
+        "target": 11,
+        "type": "is_a"
+      },
+      {
+        "source": 17,
+        "target": 11,
+        "type": "is_a"
+      },
+      {
+        "source": 18,
+        "target": 11,
+        "type": "is_a"
+      },
+      {
+        "source": 19,
+        "target": 11,
+        "type": "is_a"
+      },
+      {
+        "source": 20,
+        "target": 11,
+        "type": "is_a"
+      },
+      {
+        "source": 9,
+        "target": 12,
+        "type": "treats"
+      },
+      {
+        "source": 1,
+        "target": 12,
+        "type": "contains"
+      },
+      {
+        "source": 9,
+        "target": 13,
+        "type": "treats"
+      },
+      {
+        "source": 1,
+        "target": 13,
+        "type": "contains"
+      },
+      {
+        "source": 9,
+        "target": 14,
+        "type": "treats"
+      },
+      {
+        "source": 1,
+        "target": 14,
+        "type": "contains"
+      },
+      {
+        "source": 9,
+        "target": 15,
+        "type": "treats"
+      },
+      {
+        "source": 1,
+        "target": 15,
+        "type": "contains"
+      },
+      {
+        "source": 9,
+        "target": 16,
+        "type": "treats"
+      },
+      {
+        "source": 1,
+        "target": 16,
+        "type": "contains"
+      },
+      {
+        "source": 9,
+        "target": 17,
+        "type": "treats"
+      },
+      {
+        "source": 1,
+        "target": 17,
+        "type": "contains"
+      },
+      {
+        "source": 9,
+        "target": 18,
+        "type": "treats"
+      },
+      {
+        "source": 1,
+        "target": 18,
+        "type": "contains"
+      },
+      {
+        "source": 9,
+        "target": 19,
+        "type": "treats"
+      },
+      {
+        "source": 1,
+        "target": 19,
+        "type": "contains"
+      },
+      {
+        "source": 9,
+        "target": 20,
+        "type": "treats"
+      },
+      {
+        "source": 1,
+        "target": 20,
+        "type": "contains"
+      }
+    ]
+  }
+}

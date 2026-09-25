@@ -1,0 +1,393 @@
+{
+  "dataset": "hover",
+  "id": "33d7960e-9e70-47d4-ab7c-6a97d6a102f8",
+  "split": "train",
+  "claim": "A castle, which is near to Wallace's Cave, is located downstream relative to a castle south of Edinburgh",
+  "evidencia": "Page: Hawthornden Castle. Sentence: The castle lies a mile to the east of Roslin at grid reference [ NT287637] , and is just downstream from Roslin Castle.\nPage: Roslin Castle. Sentence: It is located around 9 miles south of Edinburgh, on the north bank of the North Esk, only a few hundred metres from the famous Rosslyn Chapel.\nPage: Wallace's Cave. Sentence: It is also known as Hawthornden Castle Cave, after Hawthornden Castle which is nearby.",
+  "evidence_text": "Page: Hawthornden Castle. Sentence: The castle lies a mile to the east of Roslin at grid reference [ NT287637] , and is just downstream from Roslin Castle.\nPage: Roslin Castle. Sentence: It is located around 9 miles south of Edinburgh, on the north bank of the North Esk, only a few hundred metres from the famous Rosslyn Chapel.\nPage: Wallace's Cave. Sentence: It is also known as Hawthornden Castle Cave, after Hawthornden Castle which is nearby.",
+  "label": "SUPPORTED",
+  "num_hops": 3,
+  "hover_metadata": {
+    "supporting_facts": [
+      [
+        "Hawthornden Castle",
+        1
+      ],
+      [
+        "Roslin Castle",
+        1
+      ],
+      [
+        "Wallace's Cave",
+        1
+      ]
+    ],
+    "num_hops": 3,
+    "evidence_annotation_id": [
+      0
+    ],
+    "evidence_id": [
+      "Hawthornden Castle::sentence::1",
+      "Roslin Castle::sentence::1",
+      "Wallace's Cave::sentence::1"
+    ],
+    "evidence_wiki_url": [
+      "https://en.wikipedia.org/wiki/Hawthornden_Castle",
+      "https://en.wikipedia.org/wiki/Roslin_Castle",
+      "https://en.wikipedia.org/wiki/Wallace%27s_Cave"
+    ],
+    "evidence_sentence_id": [
+      "Hawthornden Castle::sentence::1",
+      "Roslin Castle::sentence::1",
+      "Wallace's Cave::sentence::1"
+    ]
+  },
+  "grafo_claim": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "9979334a-8f2f-5c23-a99e-5f10e1f42826",
+        "text": "This chunk is about:\n- Places: Wallace's Cave\n- Structures: castles\n- Geography: Edinburgh, downstream location\n\nFacts:\n- Wallace's Cave is a landmark used to describe the location of a castle.\n- One castle is near Wallace's Cave.\n- Another castle is south of Edinburgh.\n- The castle near Wallace's Cave is downstream from the castle south of Edinburgh.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "bfad5fc2-0dc7-5f8f-94d2-fcb37dc49b0f",
+        "text": "A castle, which is near to Wallace's Cave, is located downstream relative to a castle south of Edinburgh",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "b8ba6743-79b1-5d4b-9287-3da21afabfb7",
+        "text": "text_cb604fe550210841e66dc2d743c934c5",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "3cdae80d-1e90-5a42-90bc-43ba40a78e2c",
+        "text": "wallaces cave",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "5f394058-b2a0-5ba8-8466-ba2a18cfcf4e",
+        "text": "place",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "4adae99d-4b78-53b3-a844-b8f330cb6812",
+        "text": "unnamed castle near wallaces cave",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "8100fc4b-a461-56ef-9015-41b741545518",
+        "text": "unnamed castle south of edinburgh",
+        "type": "Entity"
+      },
+      {
+        "id": 7,
+        "original_id": "21779a9c-250c-5cad-a677-62072a2c9a2d",
+        "text": "edinburgh",
+        "type": "Entity"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 3,
+        "type": "is_near"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 5,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 6,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 7,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "is_downstream_of"
+      },
+      {
+        "source": 1,
+        "target": 6,
+        "type": "contains"
+      },
+      {
+        "source": 6,
+        "target": 7,
+        "type": "is_south_of"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      }
+    ]
+  },
+  "grafo_evidencia": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "214ee353-3241-58a3-a8b0-a0f99dc13734",
+        "text": "This chunk is about:\n- Places: Hawthornden Castle, Roslin Castle, Wallace's Cave, Roslin, Edinburgh, Rosslyn Chapel\n- Concepts: location, proximity, alternate names\n\nFacts:\n- Roslin Castle is located around 9 miles south of Edinburgh on the north bank of the North Esk.\n- Roslin Castle is only a few hundred metres from Rosslyn Chapel.\n- Hawthornden Castle lies one mile east of Roslin at grid reference NT287637.\n- Hawthornden Castle is just downstream from Roslin Castle.\n- Wallace's Cave is also known as Hawthornden Castle Cave.\n- Wallace's Cave is named after nearby Hawthornden Castle.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "535612c5-8eb3-5801-9ed4-ebbf49c9613e",
+        "text": "Page: Hawthornden Castle. Sentence: The castle lies a mile to the east of Roslin at grid reference [ NT287637] , and is just downstream from Roslin Castle.\nPage: Roslin Castle. Sentence: It is located around 9 miles south of Edinburgh, on the north bank of the North Esk, only a few hundred metres from the famous Rosslyn Chapel.\nPage: Wallace's Cave. Sentence: It is also known as Hawthornden Castle Cave, after Hawthornden Castle which is nearby.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "b70c4de1-417b-51f7-bbcc-76fdd6523500",
+        "text": "text_34f8c8de213c5a0caf7074f2d92a1802",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "f1ba6b27-0ae3-575d-9adf-7a70b2ed42eb",
+        "text": "hawthornden castle",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "5f394058-b2a0-5ba8-8466-ba2a18cfcf4e",
+        "text": "place",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "a28363d1-4269-5f2a-9001-9871eba0b285",
+        "text": "roslin",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "b881bec2-d74f-594a-aed2-01cb9e6fae93",
+        "text": "nt287637",
+        "type": "Entity"
+      },
+      {
+        "id": 7,
+        "original_id": "af647926-9ee8-5233-8f8f-20be058bacc0",
+        "text": "roslin castle",
+        "type": "Entity"
+      },
+      {
+        "id": 8,
+        "original_id": "21779a9c-250c-5cad-a677-62072a2c9a2d",
+        "text": "edinburgh",
+        "type": "Entity"
+      },
+      {
+        "id": 9,
+        "original_id": "f838bee6-b44b-588e-8632-6c21c99a1fdd",
+        "text": "north esk",
+        "type": "Entity"
+      },
+      {
+        "id": 10,
+        "original_id": "a8b3257c-1c2f-51cd-8ca9-cc498328c26a",
+        "text": "rosslyn chapel",
+        "type": "Entity"
+      },
+      {
+        "id": 11,
+        "original_id": "3cdae80d-1e90-5a42-90bc-43ba40a78e2c",
+        "text": "wallaces cave",
+        "type": "Entity"
+      },
+      {
+        "id": 12,
+        "original_id": "cbb271fb-821e-5507-bb5e-50e87f7fc67b",
+        "text": "hawthornden castle cave",
+        "type": "Entity"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 12,
+        "target": 3,
+        "type": "named_after"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 5,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 6,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 7,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 8,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 9,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 10,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 11,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 12,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "lies_east_of"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 6,
+        "type": "has_grid_reference"
+      },
+      {
+        "source": 1,
+        "target": 6,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 7,
+        "type": "is_downstream_from"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      },
+      {
+        "source": 7,
+        "target": 8,
+        "type": "is_south_of"
+      },
+      {
+        "source": 1,
+        "target": 8,
+        "type": "contains"
+      },
+      {
+        "source": 7,
+        "target": 9,
+        "type": "is_on_north_bank_of"
+      },
+      {
+        "source": 1,
+        "target": 9,
+        "type": "contains"
+      },
+      {
+        "source": 7,
+        "target": 10,
+        "type": "is_near"
+      },
+      {
+        "source": 1,
+        "target": 10,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 11,
+        "type": "is_nearby_to"
+      },
+      {
+        "source": 1,
+        "target": 11,
+        "type": "contains"
+      },
+      {
+        "source": 11,
+        "target": 12,
+        "type": "also_known_as"
+      },
+      {
+        "source": 1,
+        "target": 12,
+        "type": "contains"
+      }
+    ]
+  }
+}

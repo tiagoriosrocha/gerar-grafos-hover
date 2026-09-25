@@ -1,0 +1,400 @@
+{
+  "dataset": "hover",
+  "id": "9f1f9a08-71e9-4c2f-af0e-d54102476934",
+  "split": "train",
+  "claim": "The opera that Julien (opera) is the sequel, has no more acts than the opera Le roi malgré lui.",
+  "evidencia": "Page: Louise (opera). Sentence: Louise is an opera (\"roman musical\" ) in four acts by Gustave Charpentier to an original French libretto by the composer, with some contributions by Saint-Pol-Roux, a symbolist poet and inspiration of the surrealists.\nPage: Le roi malgré lui. Sentence: Le roi malgré lui (\"King in Spite of Himself\" or \"The reluctant king\") is an opéra-comique in three acts by Emmanuel Chabrier of 1887 with an original libretto by Emile de Najac and Paul Burani.\nPage: Julien (opera). Sentence: \"Julien\" is a sequel to Charpentier's \"Louise\" (1900) and describes the artistic aspirations of Louise’s suitor Julien.",
+  "evidence_text": "Page: Louise (opera). Sentence: Louise is an opera (\"roman musical\" ) in four acts by Gustave Charpentier to an original French libretto by the composer, with some contributions by Saint-Pol-Roux, a symbolist poet and inspiration of the surrealists.\nPage: Le roi malgré lui. Sentence: Le roi malgré lui (\"King in Spite of Himself\" or \"The reluctant king\") is an opéra-comique in three acts by Emmanuel Chabrier of 1887 with an original libretto by Emile de Najac and Paul Burani.\nPage: Julien (opera). Sentence: \"Julien\" is a sequel to Charpentier's \"Louise\" (1900) and describes the artistic aspirations of Louise’s suitor Julien.",
+  "label": "NOT_SUPPORTED",
+  "num_hops": 3,
+  "hover_metadata": {
+    "supporting_facts": [
+      [
+        "Louise (opera)",
+        0
+      ],
+      [
+        "Le roi malgré lui",
+        0
+      ],
+      [
+        "Julien (opera)",
+        2
+      ]
+    ],
+    "num_hops": 3,
+    "evidence_annotation_id": [
+      0
+    ],
+    "evidence_id": [
+      "Louise (opera)::sentence::0",
+      "Le roi malgré lui::sentence::0",
+      "Julien (opera)::sentence::2"
+    ],
+    "evidence_wiki_url": [
+      "https://en.wikipedia.org/wiki/Louise_%28opera%29",
+      "https://en.wikipedia.org/wiki/Le_roi_malgr%C3%A9_lui",
+      "https://en.wikipedia.org/wiki/Julien_%28opera%29"
+    ],
+    "evidence_sentence_id": [
+      "Louise (opera)::sentence::0",
+      "Le roi malgré lui::sentence::0",
+      "Julien (opera)::sentence::2"
+    ]
+  },
+  "grafo_claim": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "9edce6a6-5a72-59d6-bc5c-05fa90874322",
+        "text": "This chunk is about:\n- Works: Julien, Le roi malgré lui\n- Concepts: opera sequels, number of acts\n\nFacts:\n- Julien is an opera.\n- Julien is the sequel to another opera.\n- Le roi malgré lui is an opera.\n- The opera that Julien follows has no more acts than Le roi malgré lui.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "72835df0-a20a-56a1-b15f-988afb34ac59",
+        "text": "The opera that Julien (opera) is the sequel, has no more acts than the opera Le roi malgré lui.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "57dff842-79d3-5507-b522-909e5d8d173d",
+        "text": "text_0eb396fab33197c9b868460380b19f5d",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "2e4b3fd5-519a-5b5e-8793-da300e47180b",
+        "text": "julien (opera)",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "87424522-a5ae-53db-8e71-d04cec238ed2",
+        "text": "le roi malgré lui",
+        "type": "Entity"
+      },
+      {
+        "id": 5,
+        "original_id": "5263a535-1b4b-5925-be3e-310d03cd303b",
+        "text": "work",
+        "type": "EntityType"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "has_no_more_acts_than"
+      },
+      {
+        "source": 1,
+        "target": 4,
+        "type": "contains"
+      },
+      {
+        "source": 4,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "is_a"
+      }
+    ]
+  },
+  "grafo_evidencia": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "50f4a24c-9fa4-52ec-a294-1b49e1443b42",
+        "text": "This chunk is about:\n- Products: Louise, Le roi malgré lui, Julien\n- People: Gustave Charpentier, Saint-Pol-Roux, Emmanuel Chabrier, Emile de Najac, Paul Burani\n- Concepts: opera, opéra-comique, libretto, sequel\n\nFacts:\n- In 1887, Emmanuel Chabrier’s Le roi malgré lui was composed as an opéra-comique in three acts with an original libretto by Emile de Najac and Paul Burani.\n- In 1900, Gustave Charpentier’s Louise was an opera described as a “roman musical” in four acts with an original French libretto by Charpentier.\n- Saint-Pol-Roux, a symbolist poet and an inspiration for the surrealists, contributed to the libretto of Louise.\n- Julien is a sequel to Gustave Charpentier’s Louise and portrays the artistic aspirations of Louise’s suitor Julien.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "874a4873-702d-54bd-b5ce-d8c838eadfaa",
+        "text": "Page: Louise (opera). Sentence: Louise is an opera (\"roman musical\" ) in four acts by Gustave Charpentier to an original French libretto by the composer, with some contributions by Saint-Pol-Roux, a symbolist poet and inspiration of the surrealists.\nPage: Le roi malgré lui. Sentence: Le roi malgré lui (\"King in Spite of Himself\" or \"The reluctant king\") is an opéra-comique in three acts by Emmanuel Chabrier of 1887 with an original libretto by Emile de Najac and Paul Burani.\nPage: Julien (opera). Sentence: \"Julien\" is a sequel to Charpentier's \"Louise\" (1900) and describes the artistic aspirations of Louise’s suitor Julien.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "b5aab637-120b-52bf-b9a4-ae1982abcc62",
+        "text": "text_076ccbb4b5a9eb394274d19bfa582ff5",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "1c2afac1-b264-5878-97f1-c623bcdd84a3",
+        "text": "louise",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "dc1c0348-3e02-560a-87bc-2dc3a47c2e90",
+        "text": "gustave charpentier",
+        "type": "Entity"
+      },
+      {
+        "id": 5,
+        "original_id": "99a82eec-bb35-5bb5-9ed2-e73fc7a756de",
+        "text": "person",
+        "type": "EntityType"
+      },
+      {
+        "id": 6,
+        "original_id": "274db19f-2bd0-5bfa-a2c8-80a5436b822d",
+        "text": "saint-pol-roux",
+        "type": "Entity"
+      },
+      {
+        "id": 7,
+        "original_id": "343ed072-57b8-5cba-9e92-6078d5d692f2",
+        "text": "1900",
+        "type": "Entity"
+      },
+      {
+        "id": 8,
+        "original_id": "b19433ae-558c-5aaf-95ac-6231f2a4be0e",
+        "text": "date",
+        "type": "EntityType"
+      },
+      {
+        "id": 9,
+        "original_id": "5263a535-1b4b-5925-be3e-310d03cd303b",
+        "text": "work",
+        "type": "EntityType"
+      },
+      {
+        "id": 10,
+        "original_id": "87424522-a5ae-53db-8e71-d04cec238ed2",
+        "text": "le roi malgré lui",
+        "type": "Entity"
+      },
+      {
+        "id": 11,
+        "original_id": "bcbdbebc-cbeb-557c-9522-a930d98532cb",
+        "text": "emmanuel chabrier",
+        "type": "Entity"
+      },
+      {
+        "id": 12,
+        "original_id": "528e374c-2d35-569b-8962-5d42f441e229",
+        "text": "1887",
+        "type": "Entity"
+      },
+      {
+        "id": 13,
+        "original_id": "7928651e-c6b1-5f37-bf1b-f9dabc376274",
+        "text": "emile de najac",
+        "type": "Entity"
+      },
+      {
+        "id": 14,
+        "original_id": "ef925979-062f-5b97-8704-25e5903408e4",
+        "text": "paul burani",
+        "type": "Entity"
+      },
+      {
+        "id": 15,
+        "original_id": "5779b876-8776-5879-8519-8f57ffbecb8f",
+        "text": "julien",
+        "type": "Entity"
+      },
+      {
+        "id": 16,
+        "original_id": "5fca1acd-6806-5571-adaa-d1198b2d7552",
+        "text": "julien",
+        "type": "Entity"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 15,
+        "target": 3,
+        "type": "sequel_to"
+      },
+      {
+        "source": 16,
+        "target": 3,
+        "type": "suitor_of"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "composed_by"
+      },
+      {
+        "source": 1,
+        "target": 4,
+        "type": "contains"
+      },
+      {
+        "source": 4,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 6,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 11,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 13,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 14,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 16,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 6,
+        "type": "has_libretto_contributions_by"
+      },
+      {
+        "source": 1,
+        "target": 6,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 7,
+        "type": "from_year"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      },
+      {
+        "source": 7,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 12,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 9,
+        "type": "is_a"
+      },
+      {
+        "source": 10,
+        "target": 9,
+        "type": "is_a"
+      },
+      {
+        "source": 15,
+        "target": 9,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 10,
+        "type": "contains"
+      },
+      {
+        "source": 10,
+        "target": 11,
+        "type": "composed_by"
+      },
+      {
+        "source": 1,
+        "target": 11,
+        "type": "contains"
+      },
+      {
+        "source": 10,
+        "target": 12,
+        "type": "from_year"
+      },
+      {
+        "source": 1,
+        "target": 12,
+        "type": "contains"
+      },
+      {
+        "source": 10,
+        "target": 13,
+        "type": "has_libretto_by"
+      },
+      {
+        "source": 1,
+        "target": 13,
+        "type": "contains"
+      },
+      {
+        "source": 10,
+        "target": 14,
+        "type": "has_libretto_by"
+      },
+      {
+        "source": 1,
+        "target": 14,
+        "type": "contains"
+      },
+      {
+        "source": 1,
+        "target": 15,
+        "type": "contains"
+      },
+      {
+        "source": 15,
+        "target": 16,
+        "type": "describes_aspirations_of"
+      },
+      {
+        "source": 1,
+        "target": 16,
+        "type": "contains"
+      }
+    ]
+  }
+}

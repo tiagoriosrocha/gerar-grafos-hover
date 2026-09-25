@@ -1,0 +1,495 @@
+{
+  "dataset": "hover",
+  "id": "e0f951fd-1e5b-40ed-b615-301cea1ccd7b",
+  "split": "train",
+  "claim": "According to the 2010 census, the population of the city after which the vice president, in April 1813, was named was 5,922.",
+  "evidencia": "Page: Elbridge, New York. Sentence: The population was 5,922 at the 2010 census.\nPage: Elbridge, New York. Sentence: The town is named after Elbridge Gerry, the fifth Vice President of the United States, and one of the signers of the Declaration of Independence.\nPage: Elbridge Gerry. Sentence: As a Democratic-Republican he served as the fifth Vice President of the United States from March 1813 until his death in November 1814.",
+  "evidence_text": "Page: Elbridge, New York. Sentence: The population was 5,922 at the 2010 census.\nPage: Elbridge, New York. Sentence: The town is named after Elbridge Gerry, the fifth Vice President of the United States, and one of the signers of the Declaration of Independence.\nPage: Elbridge Gerry. Sentence: As a Democratic-Republican he served as the fifth Vice President of the United States from March 1813 until his death in November 1814.",
+  "label": "SUPPORTED",
+  "num_hops": 2,
+  "hover_metadata": {
+    "supporting_facts": [
+      [
+        "Elbridge, New York",
+        1
+      ],
+      [
+        "Elbridge, New York",
+        2
+      ],
+      [
+        "Elbridge Gerry",
+        1
+      ]
+    ],
+    "num_hops": 2,
+    "evidence_annotation_id": [
+      0
+    ],
+    "evidence_id": [
+      "Elbridge, New York::sentence::1",
+      "Elbridge, New York::sentence::2",
+      "Elbridge Gerry::sentence::1"
+    ],
+    "evidence_wiki_url": [
+      "https://en.wikipedia.org/wiki/Elbridge%2C_New_York",
+      "https://en.wikipedia.org/wiki/Elbridge_Gerry"
+    ],
+    "evidence_sentence_id": [
+      "Elbridge, New York::sentence::1",
+      "Elbridge, New York::sentence::2",
+      "Elbridge Gerry::sentence::1"
+    ]
+  },
+  "grafo_claim": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "9b84cd73-3963-5c16-a04a-501160af6bf3",
+        "text": "This chunk is about:\n- People: a vice president\n- Places: a city\n- Events: the 2010 census, naming in April 1813\n\nFacts:\n- In April 1813, a vice president was named after a city.\n- According to the 2010 census, that city had a population of 5,922.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "39c7377e-a6a1-53a0-9e62-a4d3c4071cc8",
+        "text": "According to the 2010 census, the population of the city after which the vice president, in April 1813, was named was 5,922.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "3e21441d-def6-5e5e-9da0-ffd60db605d5",
+        "text": "text_5c0ecd9da86b820da1efb83bf17b17ba",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "4cb6ada6-82d5-5a31-83fe-5bd97fc4f3b0",
+        "text": "2010 census",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "088800fa-6992-5bc1-8fe3-06461c262945",
+        "text": "5,922",
+        "type": "Entity"
+      },
+      {
+        "id": 5,
+        "original_id": "5c1097ca-fab8-54d5-b57f-5dca4b0e2507",
+        "text": "number",
+        "type": "EntityType"
+      },
+      {
+        "id": 6,
+        "original_id": "214abcd9-9adf-5c8a-bb35-1e729f2d68c3",
+        "text": "event",
+        "type": "EntityType"
+      },
+      {
+        "id": 7,
+        "original_id": "6b8788d4-061b-5070-a789-4ef51f41f55f",
+        "text": "april 1813",
+        "type": "Entity"
+      },
+      {
+        "id": 8,
+        "original_id": "b19433ae-558c-5aaf-95ac-6231f2a4be0e",
+        "text": "date",
+        "type": "EntityType"
+      },
+      {
+        "id": 9,
+        "original_id": "de43edfc-4334-58da-a89a-ef225f43c683",
+        "text": "vice president",
+        "type": "Entity"
+      },
+      {
+        "id": 10,
+        "original_id": "5c1cb01b-c84a-511a-b879-6cdd33fa4d74",
+        "text": "the city",
+        "type": "Entity"
+      },
+      {
+        "id": 11,
+        "original_id": "5f394058-b2a0-5ba8-8466-ba2a18cfcf4e",
+        "text": "place",
+        "type": "EntityType"
+      },
+      {
+        "id": 12,
+        "original_id": "99a82eec-bb35-5bb5-9ed2-e73fc7a756de",
+        "text": "person",
+        "type": "EntityType"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "reports"
+      },
+      {
+        "source": 10,
+        "target": 4,
+        "type": "has_population"
+      },
+      {
+        "source": 1,
+        "target": 4,
+        "type": "contains"
+      },
+      {
+        "source": 4,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      },
+      {
+        "source": 9,
+        "target": 7,
+        "type": "was_named_in"
+      },
+      {
+        "source": 7,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 9,
+        "type": "contains"
+      },
+      {
+        "source": 9,
+        "target": 10,
+        "type": "was_named_after"
+      },
+      {
+        "source": 1,
+        "target": 10,
+        "type": "contains"
+      },
+      {
+        "source": 10,
+        "target": 11,
+        "type": "is_a"
+      },
+      {
+        "source": 9,
+        "target": 12,
+        "type": "is_a"
+      }
+    ]
+  },
+  "grafo_evidencia": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "62cda808-01b8-53dd-bc60-0c37d604f052",
+        "text": "This chunk is about:\n- Places: Elbridge, New York\n- People: Elbridge Gerry\n- Roles: Vice President of the United States\n- Topics: United States census, place naming\n\nFacts:\n- Elbridge Gerry served as the fifth Vice President of the United States from March 1813 until his death in November 1814.\n- Elbridge Gerry was a Democratic-Republican and one of the signers of the Declaration of Independence.\n- The town of Elbridge, New York, is named after Elbridge Gerry.\n- Elbridge, New York, had a population of 5,922 at the 2010 census.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "14005e6b-c41e-56f6-80dc-353d3e9690be",
+        "text": "Page: Elbridge, New York. Sentence: The population was 5,922 at the 2010 census.\nPage: Elbridge, New York. Sentence: The town is named after Elbridge Gerry, the fifth Vice President of the United States, and one of the signers of the Declaration of Independence.\nPage: Elbridge Gerry. Sentence: As a Democratic-Republican he served as the fifth Vice President of the United States from March 1813 until his death in November 1814.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "2126a1cf-3d00-5895-a8b1-7aa5a8e73ae9",
+        "text": "text_930b5a6e81481089a9f0992f64288414",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "7ddf1c9a-fcf6-5335-ac26-4cf396558c6f",
+        "text": "elbridge, new york",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "088800fa-6992-5bc1-8fe3-06461c262945",
+        "text": "5,922",
+        "type": "Entity"
+      },
+      {
+        "id": 5,
+        "original_id": "5c1097ca-fab8-54d5-b57f-5dca4b0e2507",
+        "text": "number",
+        "type": "EntityType"
+      },
+      {
+        "id": 6,
+        "original_id": "4cb6ada6-82d5-5a31-83fe-5bd97fc4f3b0",
+        "text": "2010 census",
+        "type": "Entity"
+      },
+      {
+        "id": 7,
+        "original_id": "214abcd9-9adf-5c8a-bb35-1e729f2d68c3",
+        "text": "event",
+        "type": "EntityType"
+      },
+      {
+        "id": 8,
+        "original_id": "bc1bb08e-2ee3-53a1-ba38-3df249f90ebe",
+        "text": "elbridge gerry",
+        "type": "Entity"
+      },
+      {
+        "id": 9,
+        "original_id": "8cbdf03a-f7ba-5e35-82e7-676babaccdfa",
+        "text": "fifth vice president of the united states",
+        "type": "Entity"
+      },
+      {
+        "id": 10,
+        "original_id": "874a51da-34ea-5037-be47-d87785d43c37",
+        "text": "united states",
+        "type": "Entity"
+      },
+      {
+        "id": 11,
+        "original_id": "5f394058-b2a0-5ba8-8466-ba2a18cfcf4e",
+        "text": "place",
+        "type": "EntityType"
+      },
+      {
+        "id": 12,
+        "original_id": "8789768e-777e-505f-9788-4d23e6b11ee4",
+        "text": "position",
+        "type": "EntityType"
+      },
+      {
+        "id": 13,
+        "original_id": "51160f4e-e848-5e33-baa0-c48caa4ce768",
+        "text": "declaration of independence",
+        "type": "Entity"
+      },
+      {
+        "id": 14,
+        "original_id": "3d897781-1f4f-59f0-9622-97d2f17ed585",
+        "text": "document",
+        "type": "EntityType"
+      },
+      {
+        "id": 15,
+        "original_id": "589003b6-1e07-5f4a-bf0c-8c25e6d33dc8",
+        "text": "1813-03",
+        "type": "Entity"
+      },
+      {
+        "id": 16,
+        "original_id": "b19433ae-558c-5aaf-95ac-6231f2a4be0e",
+        "text": "date",
+        "type": "EntityType"
+      },
+      {
+        "id": 17,
+        "original_id": "7f48a257-ada1-50eb-8e08-eb6b940ba7cc",
+        "text": "1814-11",
+        "type": "Entity"
+      },
+      {
+        "id": 18,
+        "original_id": "90779f13-35f6-57cb-854b-541223a44ab1",
+        "text": "democratic-republican",
+        "type": "Entity"
+      },
+      {
+        "id": 19,
+        "original_id": "388f60fb-220d-55e8-ae9c-3ac93cead308",
+        "text": "organization",
+        "type": "EntityType"
+      },
+      {
+        "id": 20,
+        "original_id": "99a82eec-bb35-5bb5-9ed2-e73fc7a756de",
+        "text": "person",
+        "type": "EntityType"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "has_population"
+      },
+      {
+        "source": 1,
+        "target": 4,
+        "type": "contains"
+      },
+      {
+        "source": 4,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 6,
+        "type": "population_measured_at"
+      },
+      {
+        "source": 1,
+        "target": 6,
+        "type": "contains"
+      },
+      {
+        "source": 6,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 8,
+        "type": "named_after"
+      },
+      {
+        "source": 1,
+        "target": 8,
+        "type": "contains"
+      },
+      {
+        "source": 8,
+        "target": 9,
+        "type": "held_position"
+      },
+      {
+        "source": 1,
+        "target": 9,
+        "type": "contains"
+      },
+      {
+        "source": 9,
+        "target": 10,
+        "type": "position_in"
+      },
+      {
+        "source": 1,
+        "target": 10,
+        "type": "contains"
+      },
+      {
+        "source": 10,
+        "target": 11,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 11,
+        "type": "is_a"
+      },
+      {
+        "source": 9,
+        "target": 12,
+        "type": "is_a"
+      },
+      {
+        "source": 8,
+        "target": 13,
+        "type": "signed"
+      },
+      {
+        "source": 1,
+        "target": 13,
+        "type": "contains"
+      },
+      {
+        "source": 13,
+        "target": 14,
+        "type": "is_a"
+      },
+      {
+        "source": 8,
+        "target": 15,
+        "type": "started_service"
+      },
+      {
+        "source": 1,
+        "target": 15,
+        "type": "contains"
+      },
+      {
+        "source": 15,
+        "target": 16,
+        "type": "is_a"
+      },
+      {
+        "source": 17,
+        "target": 16,
+        "type": "is_a"
+      },
+      {
+        "source": 8,
+        "target": 17,
+        "type": "served_until"
+      },
+      {
+        "source": 1,
+        "target": 17,
+        "type": "contains"
+      },
+      {
+        "source": 8,
+        "target": 18,
+        "type": "member_of"
+      },
+      {
+        "source": 1,
+        "target": 18,
+        "type": "contains"
+      },
+      {
+        "source": 18,
+        "target": 19,
+        "type": "is_a"
+      },
+      {
+        "source": 8,
+        "target": 20,
+        "type": "is_a"
+      }
+    ]
+  }
+}

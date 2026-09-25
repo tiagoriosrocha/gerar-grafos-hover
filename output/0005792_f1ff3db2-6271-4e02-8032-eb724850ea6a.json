@@ -1,0 +1,408 @@
+{
+  "dataset": "hover",
+  "id": "f1ff3db2-6271-4e02-8032-eb724850ea6a",
+  "split": "train",
+  "claim": "The Astor Bridge carries State Road 40 over a river that his 310 mi long.",
+  "evidencia": "Page: Astor Bridge. Sentence: The Astor Bridge is a single-leaf bascule bridge located in Astor, Florida that carries State Road 40 over the St. Johns River.\nPage: St. Johns River. Sentence: The St. Johns River (Spanish: \"Río San Juan\" ) is the longest river in the U.S. state of Florida and its most significant one for commercial and recreational use.\nPage: St. Johns River. Sentence: At 310 mi long, it winds through or borders twelve counties, three of which are the state's largest.",
+  "evidence_text": "Page: Astor Bridge. Sentence: The Astor Bridge is a single-leaf bascule bridge located in Astor, Florida that carries State Road 40 over the St. Johns River.\nPage: St. Johns River. Sentence: The St. Johns River (Spanish: \"Río San Juan\" ) is the longest river in the U.S. state of Florida and its most significant one for commercial and recreational use.\nPage: St. Johns River. Sentence: At 310 mi long, it winds through or borders twelve counties, three of which are the state's largest.",
+  "label": "SUPPORTED",
+  "num_hops": 2,
+  "hover_metadata": {
+    "supporting_facts": [
+      [
+        "Astor Bridge",
+        0
+      ],
+      [
+        "St. Johns River",
+        0
+      ],
+      [
+        "St. Johns River",
+        1
+      ]
+    ],
+    "num_hops": 2,
+    "evidence_annotation_id": [
+      0
+    ],
+    "evidence_id": [
+      "Astor Bridge::sentence::0",
+      "St. Johns River::sentence::0",
+      "St. Johns River::sentence::1"
+    ],
+    "evidence_wiki_url": [
+      "https://en.wikipedia.org/wiki/Astor_Bridge",
+      "https://en.wikipedia.org/wiki/St._Johns_River"
+    ],
+    "evidence_sentence_id": [
+      "Astor Bridge::sentence::0",
+      "St. Johns River::sentence::0",
+      "St. Johns River::sentence::1"
+    ]
+  },
+  "grafo_claim": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "606a84b1-501e-57f7-9b7f-cdf518a5c3d1",
+        "text": "This chunk is about:\n- Places: Astor Bridge, State Road 40\n- Concepts: river length\n\nFacts:\n- The Astor Bridge carries State Road 40 over a river.\n- The river crossed by the Astor Bridge is 310 miles long.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "4056542f-de16-5666-9605-79edd581b026",
+        "text": "The Astor Bridge carries State Road 40 over a river that his 310 mi long.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "a6e00e42-e05e-5b6b-8aed-8f3df217d7d9",
+        "text": "text_c665e930285983849986c61833617016",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "a5e8aeb6-7f17-5845-94a5-ae62122576c2",
+        "text": "astor bridge",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "6968f928-d3f5-5960-bcd4-71d6e20bce80",
+        "text": "state road 40",
+        "type": "Entity"
+      },
+      {
+        "id": 5,
+        "original_id": "5e52d312-a248-534f-a58b-25c5426a89ad",
+        "text": "road",
+        "type": "EntityType"
+      },
+      {
+        "id": 6,
+        "original_id": "7de5c6db-21bd-5baa-a20c-5d361193e9be",
+        "text": "river",
+        "type": "Entity"
+      },
+      {
+        "id": 7,
+        "original_id": "68afbccf-cae9-529b-9142-2a538b8ed79d",
+        "text": "river",
+        "type": "EntityType"
+      },
+      {
+        "id": 8,
+        "original_id": "f52a988d-e6a2-51a0-8c2a-890426be6230",
+        "text": "structure",
+        "type": "EntityType"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "carries"
+      },
+      {
+        "source": 1,
+        "target": 4,
+        "type": "contains"
+      },
+      {
+        "source": 4,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 6,
+        "type": "crosses"
+      },
+      {
+        "source": 1,
+        "target": 6,
+        "type": "contains"
+      },
+      {
+        "source": 6,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 8,
+        "type": "is_a"
+      }
+    ]
+  },
+  "grafo_evidencia": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "d9df7bfc-3129-54a8-a910-7b0dad646116",
+        "text": "This chunk is about:\n- Places: Astor, Florida; St. Johns River; Florida\n- Systems: Astor Bridge; State Road 40\n- Concepts: single-leaf bascule bridge; river length; commercial and recreational use; counties\n\nFacts:\n- The St. Johns River is the longest river in the U.S. state of Florida and is the state's most significant river for commercial and recreational use.\n- The St. Johns River is 310 miles long and winds through or borders twelve counties, including three of Florida's largest counties.\n- The Astor Bridge is a single-leaf bascule bridge in Astor, Florida.\n- The Astor Bridge carries State Road 40 over the St. Johns River.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "ea12103f-e132-572d-b851-17b2e9a78bf8",
+        "text": "Page: Astor Bridge. Sentence: The Astor Bridge is a single-leaf bascule bridge located in Astor, Florida that carries State Road 40 over the St. Johns River.\nPage: St. Johns River. Sentence: The St. Johns River (Spanish: \"Río San Juan\" ) is the longest river in the U.S. state of Florida and its most significant one for commercial and recreational use.\nPage: St. Johns River. Sentence: At 310 mi long, it winds through or borders twelve counties, three of which are the state's largest.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "8007f872-1aa0-5a22-9cc3-693ad0b73cb2",
+        "text": "text_f14c8139f77a0fae26e56642d8e4d0f7",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "a5e8aeb6-7f17-5845-94a5-ae62122576c2",
+        "text": "astor bridge",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "3b693111-bac2-5336-a3e6-4340b4cb65a4",
+        "text": "astor, florida",
+        "type": "Entity"
+      },
+      {
+        "id": 5,
+        "original_id": "5f394058-b2a0-5ba8-8466-ba2a18cfcf4e",
+        "text": "place",
+        "type": "EntityType"
+      },
+      {
+        "id": 6,
+        "original_id": "6968f928-d3f5-5960-bcd4-71d6e20bce80",
+        "text": "state road 40",
+        "type": "Entity"
+      },
+      {
+        "id": 7,
+        "original_id": "5e52d312-a248-534f-a58b-25c5426a89ad",
+        "text": "road",
+        "type": "EntityType"
+      },
+      {
+        "id": 8,
+        "original_id": "6527b7e5-b401-580f-91a0-fb72f39c2dd7",
+        "text": "st. johns river",
+        "type": "Entity"
+      },
+      {
+        "id": 9,
+        "original_id": "cc742fd7-ba65-509e-bb61-ba57c283d7d0",
+        "text": "florida",
+        "type": "Entity"
+      },
+      {
+        "id": 10,
+        "original_id": "fc908651-aea1-590d-9730-ddd847173cf3",
+        "text": "río san juan",
+        "type": "Entity"
+      },
+      {
+        "id": 11,
+        "original_id": "39575085-0710-527d-bd54-019de7b00429",
+        "text": "name",
+        "type": "EntityType"
+      },
+      {
+        "id": 12,
+        "original_id": "92769ed3-d625-544d-bd93-d2715b895267",
+        "text": "310 mi",
+        "type": "Entity"
+      },
+      {
+        "id": 13,
+        "original_id": "12d5521e-a878-542e-bebc-84ff79179d8e",
+        "text": "measurement",
+        "type": "EntityType"
+      },
+      {
+        "id": 14,
+        "original_id": "ce26e824-5423-59e3-a0ef-ce741d8abf2a",
+        "text": "twelve counties",
+        "type": "Entity"
+      },
+      {
+        "id": 15,
+        "original_id": "68afbccf-cae9-529b-9142-2a538b8ed79d",
+        "text": "river",
+        "type": "EntityType"
+      },
+      {
+        "id": 16,
+        "original_id": "855123a6-e621-5460-8343-2003e9f6632c",
+        "text": "bridge",
+        "type": "EntityType"
+      },
+      {
+        "id": 17,
+        "original_id": "2e6fd869-4e98-5cbb-b1fb-69c1ca8bfcdd",
+        "text": "three of the states largest counties",
+        "type": "Entity"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "located_in"
+      },
+      {
+        "source": 1,
+        "target": 4,
+        "type": "contains"
+      },
+      {
+        "source": 4,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 9,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 14,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 17,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 6,
+        "type": "carries"
+      },
+      {
+        "source": 1,
+        "target": 6,
+        "type": "contains"
+      },
+      {
+        "source": 6,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 8,
+        "type": "crosses"
+      },
+      {
+        "source": 1,
+        "target": 8,
+        "type": "contains"
+      },
+      {
+        "source": 8,
+        "target": 9,
+        "type": "located_in"
+      },
+      {
+        "source": 1,
+        "target": 9,
+        "type": "contains"
+      },
+      {
+        "source": 8,
+        "target": 10,
+        "type": "has_spanish_name"
+      },
+      {
+        "source": 1,
+        "target": 10,
+        "type": "contains"
+      },
+      {
+        "source": 10,
+        "target": 11,
+        "type": "is_a"
+      },
+      {
+        "source": 8,
+        "target": 12,
+        "type": "has_length"
+      },
+      {
+        "source": 1,
+        "target": 12,
+        "type": "contains"
+      },
+      {
+        "source": 12,
+        "target": 13,
+        "type": "is_a"
+      },
+      {
+        "source": 8,
+        "target": 14,
+        "type": "winds_through_or_borders"
+      },
+      {
+        "source": 1,
+        "target": 14,
+        "type": "contains"
+      },
+      {
+        "source": 17,
+        "target": 14,
+        "type": "subset_of"
+      },
+      {
+        "source": 8,
+        "target": 15,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 16,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 17,
+        "type": "contains"
+      }
+    ]
+  }
+}

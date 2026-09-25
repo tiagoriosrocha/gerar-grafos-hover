@@ -1,0 +1,592 @@
+{
+  "dataset": "hover",
+  "id": "33e96a52-6fb3-4c1b-82c8-5e1bd535452a",
+  "split": "train",
+  "claim": "The player that is featured on the cover of the 2018 German version of this video game is 6 ft tall. This game is the predecessor to NBA 2K17.",
+  "evidencia": "Page: NBA 2K16. Sentence: Additionally, the French version of \"NBA 2K16\" features Tony Parker of the San Antonio Spurs as the cover athlete, the German version, Dennis Schröder of the Atlanta Hawks, and the Spanish version, Marc and Pau Gasol of the Memphis Grizzlies and Chicago Bulls respectively.\nPage: Dennis Schröder. Sentence: Standing at 6 ft , he plays at the point guard position.\nPage: NBA 2K17. Sentence: It is the 18th installment in the \"NBA 2K\" franchise and the successor to \"NBA 2K16\".",
+  "evidence_text": "Page: NBA 2K16. Sentence: Additionally, the French version of \"NBA 2K16\" features Tony Parker of the San Antonio Spurs as the cover athlete, the German version, Dennis Schröder of the Atlanta Hawks, and the Spanish version, Marc and Pau Gasol of the Memphis Grizzlies and Chicago Bulls respectively.\nPage: Dennis Schröder. Sentence: Standing at 6 ft , he plays at the point guard position.\nPage: NBA 2K17. Sentence: It is the 18th installment in the \"NBA 2K\" franchise and the successor to \"NBA 2K16\".",
+  "label": "NOT_SUPPORTED",
+  "num_hops": 3,
+  "hover_metadata": {
+    "supporting_facts": [
+      [
+        "NBA 2K16",
+        6
+      ],
+      [
+        "Dennis Schröder",
+        1
+      ],
+      [
+        "NBA 2K17",
+        1
+      ]
+    ],
+    "num_hops": 3,
+    "evidence_annotation_id": [
+      0
+    ],
+    "evidence_id": [
+      "NBA 2K16::sentence::6",
+      "Dennis Schröder::sentence::1",
+      "NBA 2K17::sentence::1"
+    ],
+    "evidence_wiki_url": [
+      "https://en.wikipedia.org/wiki/NBA_2K16",
+      "https://en.wikipedia.org/wiki/Dennis_Schr%C3%B6der",
+      "https://en.wikipedia.org/wiki/NBA_2K17"
+    ],
+    "evidence_sentence_id": [
+      "NBA 2K16::sentence::6",
+      "Dennis Schröder::sentence::1",
+      "NBA 2K17::sentence::1"
+    ]
+  },
+  "grafo_claim": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "d0fe5f70-df93-5703-b84f-fb54b3c9d296",
+        "text": "This chunk is about:\n- Products: NBA 2K16, NBA 2K17\n- People: Dennis Schröder\n- Places: Germany\n\nFacts:\n- NBA 2K16 is the predecessor to NBA 2K17.\n- The 2018 German version referenced in the chunk features Dennis Schröder on its cover.\n- Dennis Schröder is 6 feet tall.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "5da2a953-00dc-59f4-bccf-a3e5dc6b5eaa",
+        "text": "The player that is featured on the cover of the 2018 German version of this video game is 6 ft tall. This game is the predecessor to NBA 2K17.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "0f980ba4-ffd7-5656-b397-e6799e15c65c",
+        "text": "text_02297e49cb94fabd54169b0a07bc079a",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "06df521e-a948-5529-be09-9fed2ff5b9f6",
+        "text": "nba 2k16",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "a9c12196-b358-52db-ac80-eaa2c0b803d1",
+        "text": "nba 2k17",
+        "type": "Entity"
+      },
+      {
+        "id": 5,
+        "original_id": "57cfa528-89d4-5bd6-9e28-19c996964389",
+        "text": "video game",
+        "type": "EntityType"
+      },
+      {
+        "id": 6,
+        "original_id": "f8f83df6-4125-5601-bf80-d65a2234231c",
+        "text": "2018 german version of nba 2k16",
+        "type": "Entity"
+      },
+      {
+        "id": 7,
+        "original_id": "f3edde2c-556b-5d47-8cad-eeec5f5b5a67",
+        "text": "version",
+        "type": "EntityType"
+      },
+      {
+        "id": 8,
+        "original_id": "1b8e5979-d263-5b62-b7d1-d7ada143f46f",
+        "text": "cover player of 2018 german version of nba 2k16",
+        "type": "Entity"
+      },
+      {
+        "id": 9,
+        "original_id": "4f2efba0-94cf-53e5-ba27-d6251bf66d40",
+        "text": "6 ft",
+        "type": "Entity"
+      },
+      {
+        "id": 10,
+        "original_id": "12d5521e-a878-542e-bebc-84ff79179d8e",
+        "text": "measurement",
+        "type": "EntityType"
+      },
+      {
+        "id": 11,
+        "original_id": "99a82eec-bb35-5bb5-9ed2-e73fc7a756de",
+        "text": "person",
+        "type": "EntityType"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 6,
+        "target": 3,
+        "type": "is_version_of"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_predecessor_to"
+      },
+      {
+        "source": 1,
+        "target": 4,
+        "type": "contains"
+      },
+      {
+        "source": 4,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 6,
+        "type": "contains"
+      },
+      {
+        "source": 8,
+        "target": 6,
+        "type": "featured_on_cover_of"
+      },
+      {
+        "source": 6,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 8,
+        "type": "contains"
+      },
+      {
+        "source": 8,
+        "target": 9,
+        "type": "has_height"
+      },
+      {
+        "source": 1,
+        "target": 9,
+        "type": "contains"
+      },
+      {
+        "source": 9,
+        "target": 10,
+        "type": "is_a"
+      },
+      {
+        "source": 8,
+        "target": 11,
+        "type": "is_a"
+      }
+    ]
+  },
+  "grafo_evidencia": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "97f5b02c-7452-5866-92a1-4ba9ee74c80a",
+        "text": "This chunk is about:\n- Products: NBA 2K16, NBA 2K17\n- People: Tony Parker, Dennis Schröder, Marc Gasol, Pau Gasol\n- Companies/Organizations: San Antonio Spurs, Atlanta Hawks, Memphis Grizzlies, Chicago Bulls\n- Roles: cover athletes, point guard\n- Topics: NBA 2K franchise installments\n\nFacts:\n- NBA 2K16 has regional cover athletes: Tony Parker for the French version, Dennis Schröder for the German version, and Marc Gasol and Pau Gasol for the Spanish version.\n- Tony Parker was with the San Antonio Spurs when he was featured as the French cover athlete for NBA 2K16.\n- Dennis Schröder was with the Atlanta Hawks when he was featured as the German cover athlete for NBA 2K16.\n- Marc Gasol and Pau Gasol were with the Memphis Grizzlies and Chicago Bulls respectively when they were featured on the Spanish version of NBA 2K16.\n- Dennis Schröder plays the point guard position.\n- NBA 2K17 is the 18th installment in the NBA 2K franchise and is the successor to NBA 2K16.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "dda102f6-27eb-5ddc-a5b6-51b3a5d54680",
+        "text": "Page: NBA 2K16. Sentence: Additionally, the French version of \"NBA 2K16\" features Tony Parker of the San Antonio Spurs as the cover athlete, the German version, Dennis Schröder of the Atlanta Hawks, and the Spanish version, Marc and Pau Gasol of the Memphis Grizzlies and Chicago Bulls respectively.\nPage: Dennis Schröder. Sentence: Standing at 6 ft , he plays at the point guard position.\nPage: NBA 2K17. Sentence: It is the 18th installment in the \"NBA 2K\" franchise and the successor to \"NBA 2K16\".",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "271439fd-0925-5445-8318-669cbabfa878",
+        "text": "text_00fdae67527c9ac24cbefe6b7247abec",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "06df521e-a948-5529-be09-9fed2ff5b9f6",
+        "text": "nba 2k16",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "5263a535-1b4b-5925-be3e-310d03cd303b",
+        "text": "work",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "b2448cd5-c20d-59f7-ba72-a8cc2154fd69",
+        "text": "french version of nba 2k16",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "dd34618e-a922-5a85-bdc9-7c2ada49e20e",
+        "text": "tony parker",
+        "type": "Entity"
+      },
+      {
+        "id": 7,
+        "original_id": "7de294c3-dd1d-5832-91c6-6b2a5c619987",
+        "text": "san antonio spurs",
+        "type": "Entity"
+      },
+      {
+        "id": 8,
+        "original_id": "388f60fb-220d-55e8-ae9c-3ac93cead308",
+        "text": "organization",
+        "type": "EntityType"
+      },
+      {
+        "id": 9,
+        "original_id": "99a82eec-bb35-5bb5-9ed2-e73fc7a756de",
+        "text": "person",
+        "type": "EntityType"
+      },
+      {
+        "id": 10,
+        "original_id": "e2b533e3-65ec-513f-9bcb-1e37d45cabba",
+        "text": "german version of nba 2k16",
+        "type": "Entity"
+      },
+      {
+        "id": 11,
+        "original_id": "03494339-fb90-52fb-a3ed-55bb35d5b204",
+        "text": "dennis schröder",
+        "type": "Entity"
+      },
+      {
+        "id": 12,
+        "original_id": "cca1852d-95a0-5592-91cd-a2189d57618b",
+        "text": "atlanta hawks",
+        "type": "Entity"
+      },
+      {
+        "id": 13,
+        "original_id": "5662cdb8-569f-5d05-abc0-5953970a80b5",
+        "text": "point guard",
+        "type": "Entity"
+      },
+      {
+        "id": 14,
+        "original_id": "d2a381fa-3658-5ca6-ada9-2109cfc9331d",
+        "text": "concept",
+        "type": "EntityType"
+      },
+      {
+        "id": 15,
+        "original_id": "97d1ed64-f193-5dc6-90d0-fe5486fadd75",
+        "text": "spanish version of nba 2k16",
+        "type": "Entity"
+      },
+      {
+        "id": 16,
+        "original_id": "1eabfd4b-9233-5011-9250-b35311a53aaa",
+        "text": "marc gasol",
+        "type": "Entity"
+      },
+      {
+        "id": 17,
+        "original_id": "ffacac46-5340-5381-869c-3087f5cca011",
+        "text": "memphis grizzlies",
+        "type": "Entity"
+      },
+      {
+        "id": 18,
+        "original_id": "f94444f4-0e19-5efd-8fd9-72bbb68edc19",
+        "text": "pau gasol",
+        "type": "Entity"
+      },
+      {
+        "id": 19,
+        "original_id": "ed8aadbf-f23a-57c3-a54f-fed5b8bc939c",
+        "text": "chicago bulls",
+        "type": "Entity"
+      },
+      {
+        "id": 20,
+        "original_id": "a9c12196-b358-52db-ac80-eaa2c0b803d1",
+        "text": "nba 2k17",
+        "type": "Entity"
+      },
+      {
+        "id": 21,
+        "original_id": "d074bc6d-f4b4-5667-930b-e1460e19c554",
+        "text": "nba 2k franchise",
+        "type": "Entity"
+      },
+      {
+        "id": 22,
+        "original_id": "2b5c17f1-ab69-509a-914e-228fc0ca5438",
+        "text": "18th installment",
+        "type": "Entity"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 3,
+        "type": "version_of"
+      },
+      {
+        "source": 10,
+        "target": 3,
+        "type": "version_of"
+      },
+      {
+        "source": 15,
+        "target": 3,
+        "type": "version_of"
+      },
+      {
+        "source": 20,
+        "target": 3,
+        "type": "successor_to"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 5,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 10,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 15,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 21,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 20,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "features_as_cover_athlete"
+      },
+      {
+        "source": 1,
+        "target": 6,
+        "type": "contains"
+      },
+      {
+        "source": 6,
+        "target": 7,
+        "type": "associated_with"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      },
+      {
+        "source": 7,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 12,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 17,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 19,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 6,
+        "target": 9,
+        "type": "is_a"
+      },
+      {
+        "source": 11,
+        "target": 9,
+        "type": "is_a"
+      },
+      {
+        "source": 16,
+        "target": 9,
+        "type": "is_a"
+      },
+      {
+        "source": 18,
+        "target": 9,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 10,
+        "type": "contains"
+      },
+      {
+        "source": 10,
+        "target": 11,
+        "type": "features_as_cover_athlete"
+      },
+      {
+        "source": 1,
+        "target": 11,
+        "type": "contains"
+      },
+      {
+        "source": 11,
+        "target": 12,
+        "type": "associated_with"
+      },
+      {
+        "source": 1,
+        "target": 12,
+        "type": "contains"
+      },
+      {
+        "source": 11,
+        "target": 13,
+        "type": "plays_position"
+      },
+      {
+        "source": 1,
+        "target": 13,
+        "type": "contains"
+      },
+      {
+        "source": 13,
+        "target": 14,
+        "type": "is_a"
+      },
+      {
+        "source": 22,
+        "target": 14,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 15,
+        "type": "contains"
+      },
+      {
+        "source": 15,
+        "target": 16,
+        "type": "features_as_cover_athlete"
+      },
+      {
+        "source": 1,
+        "target": 16,
+        "type": "contains"
+      },
+      {
+        "source": 16,
+        "target": 17,
+        "type": "associated_with"
+      },
+      {
+        "source": 1,
+        "target": 17,
+        "type": "contains"
+      },
+      {
+        "source": 15,
+        "target": 18,
+        "type": "features_as_cover_athlete"
+      },
+      {
+        "source": 1,
+        "target": 18,
+        "type": "contains"
+      },
+      {
+        "source": 18,
+        "target": 19,
+        "type": "associated_with"
+      },
+      {
+        "source": 1,
+        "target": 19,
+        "type": "contains"
+      },
+      {
+        "source": 1,
+        "target": 20,
+        "type": "contains"
+      },
+      {
+        "source": 20,
+        "target": 21,
+        "type": "part_of"
+      },
+      {
+        "source": 1,
+        "target": 21,
+        "type": "contains"
+      },
+      {
+        "source": 20,
+        "target": 22,
+        "type": "has_installment_number"
+      },
+      {
+        "source": 1,
+        "target": 22,
+        "type": "contains"
+      }
+    ]
+  }
+}

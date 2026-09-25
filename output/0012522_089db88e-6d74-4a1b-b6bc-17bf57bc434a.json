@@ -1,0 +1,336 @@
+{
+  "dataset": "hover",
+  "id": "089db88e-6d74-4a1b-b6bc-17bf57bc434a",
+  "split": "train",
+  "claim": "The movie The Frog Prince is loosley based off the Brother Grimm's \"Iron Henry\".",
+  "evidencia": "Page: The Princess and the Frog. Sentence: The 49th Disney animated feature film, the film is loosely based on the novel \"The Frog Princess\" by E. D. Baker, which is in turn based on the Brothers Grimm fairy tale \"The Frog Prince\".\nPage: The Frog Prince. Sentence: \"The Frog Prince; or, Iron Henry\" (German: \"Der Froschkönig oder der eisen Heinrich\" , literally \"The Frog King; or, The Iron Heinrich\") is a fairy tale, best known through the Brothers Grimm's written version; traditionally it is the first story in their collection.",
+  "evidence_text": "Page: The Princess and the Frog. Sentence: The 49th Disney animated feature film, the film is loosely based on the novel \"The Frog Princess\" by E. D. Baker, which is in turn based on the Brothers Grimm fairy tale \"The Frog Prince\".\nPage: The Frog Prince. Sentence: \"The Frog Prince; or, Iron Henry\" (German: \"Der Froschkönig oder der eisen Heinrich\" , literally \"The Frog King; or, The Iron Heinrich\") is a fairy tale, best known through the Brothers Grimm's written version; traditionally it is the first story in their collection.",
+  "label": "SUPPORTED",
+  "num_hops": 2,
+  "hover_metadata": {
+    "supporting_facts": [
+      [
+        "The Princess and the Frog",
+        1
+      ],
+      [
+        "The Frog Prince",
+        0
+      ]
+    ],
+    "num_hops": 2,
+    "evidence_annotation_id": [
+      0
+    ],
+    "evidence_id": [
+      "The Princess and the Frog::sentence::1",
+      "The Frog Prince::sentence::0"
+    ],
+    "evidence_wiki_url": [
+      "https://en.wikipedia.org/wiki/The_Princess_and_the_Frog",
+      "https://en.wikipedia.org/wiki/The_Frog_Prince"
+    ],
+    "evidence_sentence_id": [
+      "The Princess and the Frog::sentence::1",
+      "The Frog Prince::sentence::0"
+    ]
+  },
+  "grafo_claim": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "99fd5dc6-3fa9-5740-9b0b-393e6ffe711d",
+        "text": "This chunk is about:\n- Products: The Frog Prince\n- People: Brothers Grimm\n- Works: “Iron Henry”\n\nFacts:\n- The movie The Frog Prince is loosely based on “Iron Henry” by the Brothers Grimm.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "ccfea42b-4495-59fc-a2db-573244f0e2b7",
+        "text": "The movie The Frog Prince is loosley based off the Brother Grimm's \"Iron Henry\".",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "ec4125a4-cebb-5d3b-800d-f593e1f1e975",
+        "text": "text_3176e03bb48da50d2a52630235e4b8db",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "0da4edcf-0a78-5371-a97f-8443a9a0dc43",
+        "text": "the frog prince",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "5263a535-1b4b-5925-be3e-310d03cd303b",
+        "text": "work",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "fec6d9ad-5229-56c3-82ff-86b90801c22a",
+        "text": "iron henry",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "8f8fd8ce-a670-5d78-bd37-8e5168184bcd",
+        "text": "brothers grimm",
+        "type": "Entity"
+      },
+      {
+        "id": 7,
+        "original_id": "99a82eec-bb35-5bb5-9ed2-e73fc7a756de",
+        "text": "person",
+        "type": "EntityType"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 5,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "based_on"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "created_by"
+      },
+      {
+        "source": 1,
+        "target": 6,
+        "type": "contains"
+      },
+      {
+        "source": 6,
+        "target": 7,
+        "type": "is_a"
+      }
+    ]
+  },
+  "grafo_evidencia": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "b2e20c65-8c36-5b68-9473-9a1aa67f57d5",
+        "text": "This chunk is about:\n- Products: The Princess and the Frog, The Frog Princess, The Frog Prince\n- People: E. D. Baker, Brothers Grimm\n- Topics: Disney animated feature films, fairy tales\n\nFacts:\n- The Frog Prince; or, Iron Henry is a fairy tale best known through the Brothers Grimm's written version.\n- The Frog Prince; or, Iron Henry is traditionally the first story in the Brothers Grimm collection.\n- The Frog Princess is a novel by E. D. Baker that is based on the fairy tale The Frog Prince.\n- The Princess and the Frog is the 49th Disney animated feature film.\n- The Princess and the Frog is loosely based on E. D. Baker's novel The Frog Princess.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "7e8cd25b-d830-5610-b8a6-7cb6a723436e",
+        "text": "Page: The Princess and the Frog. Sentence: The 49th Disney animated feature film, the film is loosely based on the novel \"The Frog Princess\" by E. D. Baker, which is in turn based on the Brothers Grimm fairy tale \"The Frog Prince\".\nPage: The Frog Prince. Sentence: \"The Frog Prince; or, Iron Henry\" (German: \"Der Froschkönig oder der eisen Heinrich\" , literally \"The Frog King; or, The Iron Heinrich\") is a fairy tale, best known through the Brothers Grimm's written version; traditionally it is the first story in their collection.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "58525640-c5d7-5fce-ba33-14a34110862b",
+        "text": "text_27f69794f782df16e3d49bbc83ef1b21",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "58bc83f8-5133-50f6-ba18-cbfc8a7dab53",
+        "text": "the princess and the frog",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "5263a535-1b4b-5925-be3e-310d03cd303b",
+        "text": "work",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "abc41f17-bac5-5884-9202-f7493941fc27",
+        "text": "disney",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "388f60fb-220d-55e8-ae9c-3ac93cead308",
+        "text": "organization",
+        "type": "EntityType"
+      },
+      {
+        "id": 7,
+        "original_id": "b5b58591-a658-5386-aed2-b1e74fca34ea",
+        "text": "the frog princess",
+        "type": "Entity"
+      },
+      {
+        "id": 8,
+        "original_id": "b02efcf2-db91-5c94-adac-4308da091c8c",
+        "text": "e. d. baker",
+        "type": "Entity"
+      },
+      {
+        "id": 9,
+        "original_id": "99a82eec-bb35-5bb5-9ed2-e73fc7a756de",
+        "text": "person",
+        "type": "EntityType"
+      },
+      {
+        "id": 10,
+        "original_id": "0da4edcf-0a78-5371-a97f-8443a9a0dc43",
+        "text": "the frog prince",
+        "type": "Entity"
+      },
+      {
+        "id": 11,
+        "original_id": "60dfe2a1-d802-544a-9aee-250f400238da",
+        "text": "the frog prince; or, iron henry",
+        "type": "Entity"
+      },
+      {
+        "id": 12,
+        "original_id": "8f8fd8ce-a670-5d78-bd37-8e5168184bcd",
+        "text": "brothers grimm",
+        "type": "Entity"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 7,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 10,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 11,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "is_animated_feature_film_of"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 7,
+        "type": "is_loosely_based_on"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      },
+      {
+        "source": 7,
+        "target": 8,
+        "type": "written_by"
+      },
+      {
+        "source": 1,
+        "target": 8,
+        "type": "contains"
+      },
+      {
+        "source": 8,
+        "target": 9,
+        "type": "is_a"
+      },
+      {
+        "source": 12,
+        "target": 9,
+        "type": "is_a"
+      },
+      {
+        "source": 7,
+        "target": 10,
+        "type": "is_based_on"
+      },
+      {
+        "source": 1,
+        "target": 10,
+        "type": "contains"
+      },
+      {
+        "source": 11,
+        "target": 10,
+        "type": "also_known_as"
+      },
+      {
+        "source": 1,
+        "target": 11,
+        "type": "contains"
+      },
+      {
+        "source": 11,
+        "target": 12,
+        "type": "known_through_written_version_by"
+      },
+      {
+        "source": 1,
+        "target": 12,
+        "type": "contains"
+      }
+    ]
+  }
+}

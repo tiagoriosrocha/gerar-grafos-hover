@@ -1,0 +1,282 @@
+{
+  "dataset": "hover",
+  "id": "15c93c0f-0cbd-4aaf-afe1-38ab16c73de8",
+  "split": "train",
+  "claim": "The creation of Fontana Lake submerged the small town of Proctor, North Carolina and Judson in 1982.",
+  "evidencia": "Page: Proctor, North Carolina. Sentence: The town was flooded by Fontana Lake, which was created by the construction of the Fontana Dam, and remains submerged unless lake levels are very low.\nPage: Fontana Lake. Sentence: Many towns were submerged shortly after the creation of Fontana Lake, such as Proctor and Judson.",
+  "evidence_text": "Page: Proctor, North Carolina. Sentence: The town was flooded by Fontana Lake, which was created by the construction of the Fontana Dam, and remains submerged unless lake levels are very low.\nPage: Fontana Lake. Sentence: Many towns were submerged shortly after the creation of Fontana Lake, such as Proctor and Judson.",
+  "label": "NOT_SUPPORTED",
+  "num_hops": 2,
+  "hover_metadata": {
+    "supporting_facts": [
+      [
+        "Proctor, North Carolina",
+        3
+      ],
+      [
+        "Fontana Lake",
+        7
+      ]
+    ],
+    "num_hops": 2,
+    "evidence_annotation_id": [
+      0
+    ],
+    "evidence_id": [
+      "Proctor, North Carolina::sentence::3",
+      "Fontana Lake::sentence::7"
+    ],
+    "evidence_wiki_url": [
+      "https://en.wikipedia.org/wiki/Proctor%2C_North_Carolina",
+      "https://en.wikipedia.org/wiki/Fontana_Lake"
+    ],
+    "evidence_sentence_id": [
+      "Proctor, North Carolina::sentence::3",
+      "Fontana Lake::sentence::7"
+    ]
+  },
+  "grafo_claim": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "6234d929-96ca-5681-a3c6-530e7edda243",
+        "text": "This chunk is about:\n- Places: Fontana Lake, Proctor, North Carolina, Judson\n- Events: creation of Fontana Lake\n\nFacts:\n- The creation of Fontana Lake submerged the small town of Proctor, North Carolina.\n- Judson was submerged in 1982.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "98ae8ac5-a3c9-5ead-92b7-a5c1ea089f33",
+        "text": "The creation of Fontana Lake submerged the small town of Proctor, North Carolina and Judson in 1982.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "da3632b0-8141-524a-88bb-92e7153fbeca",
+        "text": "text_1be15f13ff42e2140794cf35c8dc9811",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "6e85eb2d-e601-5c16-9eee-ae29d9b467c9",
+        "text": "fontana lake",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "8ad54189-77b7-5c35-8edb-5041fd760efe",
+        "text": "proctor, north carolina",
+        "type": "Entity"
+      },
+      {
+        "id": 5,
+        "original_id": "5f394058-b2a0-5ba8-8466-ba2a18cfcf4e",
+        "text": "place",
+        "type": "EntityType"
+      },
+      {
+        "id": 6,
+        "original_id": "c646c5f8-71cb-532e-a98f-b717c5e93c9d",
+        "text": "judson",
+        "type": "Entity"
+      },
+      {
+        "id": 7,
+        "original_id": "b7361ba3-6f3e-5c4c-991c-a40154e0cd9c",
+        "text": "1982",
+        "type": "Entity"
+      },
+      {
+        "id": 8,
+        "original_id": "b19433ae-558c-5aaf-95ac-6231f2a4be0e",
+        "text": "date",
+        "type": "EntityType"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "submerged"
+      },
+      {
+        "source": 1,
+        "target": 4,
+        "type": "contains"
+      },
+      {
+        "source": 4,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 6,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 6,
+        "type": "submerged"
+      },
+      {
+        "source": 1,
+        "target": 6,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 7,
+        "type": "associated_with_date"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      },
+      {
+        "source": 7,
+        "target": 8,
+        "type": "is_a"
+      }
+    ]
+  },
+  "grafo_evidencia": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "2de60646-6784-557e-a043-123dd24401a0",
+        "text": "This chunk is about:\n- Places: Proctor, North Carolina; Fontana Lake; Fontana Dam; Judson\n- Topics: submerged towns; flooding caused by reservoir creation\n\nFacts:\n- Fontana Lake was created by the construction of Fontana Dam.\n- Many towns were submerged shortly after Fontana Lake was created, including Proctor and Judson.\n- Proctor, North Carolina, was flooded by Fontana Lake.\n- Proctor, North Carolina, remains submerged unless Fontana Lake levels are very low.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "79792daa-10d1-58c5-85ba-9d3fa99503a0",
+        "text": "Page: Proctor, North Carolina. Sentence: The town was flooded by Fontana Lake, which was created by the construction of the Fontana Dam, and remains submerged unless lake levels are very low.\nPage: Fontana Lake. Sentence: Many towns were submerged shortly after the creation of Fontana Lake, such as Proctor and Judson.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "b0947e7f-39dc-5812-9901-363b6f90bfd1",
+        "text": "text_21f1d187ba69d0a018e0e7fef20fece1",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "8ad54189-77b7-5c35-8edb-5041fd760efe",
+        "text": "proctor, north carolina",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "5f394058-b2a0-5ba8-8466-ba2a18cfcf4e",
+        "text": "place",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "6e85eb2d-e601-5c16-9eee-ae29d9b467c9",
+        "text": "fontana lake",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "c646c5f8-71cb-532e-a98f-b717c5e93c9d",
+        "text": "judson",
+        "type": "Entity"
+      },
+      {
+        "id": 7,
+        "original_id": "934f7eaa-d350-5a58-a4df-7aa688f98f0d",
+        "text": "fontana dam",
+        "type": "Entity"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 3,
+        "type": "submerged"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 6,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 5,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 7,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 7,
+        "target": 5,
+        "type": "created"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "submerged"
+      },
+      {
+        "source": 1,
+        "target": 6,
+        "type": "contains"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      }
+    ]
+  }
+}

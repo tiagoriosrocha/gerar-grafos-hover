@@ -1,0 +1,411 @@
+{
+  "dataset": "hover",
+  "id": "ae439068-8d6e-46b2-a5f4-be8eb1774162",
+  "split": "train",
+  "claim": "Jeremy Renner was in the 2007 movie that was a sequel to the successful 2002 film, 28 Days Later.",
+  "evidencia": "Page: Jeremy Renner. Sentence: Renner appeared in supporting roles in bigger films, such as \"S.W.A.T.\" (2003) and \"28 Weeks Later\" (2007).\nPage: 28 Weeks Later. Sentence: 28 Weeks Later is a 2007 British science fiction horror film, structured as a sequel to the critically and commercially successful 2002 film \"28 Days Later\".",
+  "evidence_text": "Page: Jeremy Renner. Sentence: Renner appeared in supporting roles in bigger films, such as \"S.W.A.T.\" (2003) and \"28 Weeks Later\" (2007).\nPage: 28 Weeks Later. Sentence: 28 Weeks Later is a 2007 British science fiction horror film, structured as a sequel to the critically and commercially successful 2002 film \"28 Days Later\".",
+  "label": "SUPPORTED",
+  "num_hops": 2,
+  "hover_metadata": {
+    "supporting_facts": [
+      [
+        "Jeremy Renner",
+        2
+      ],
+      [
+        "28 Weeks Later",
+        0
+      ]
+    ],
+    "num_hops": 2,
+    "evidence_annotation_id": [
+      0
+    ],
+    "evidence_id": [
+      "Jeremy Renner::sentence::2",
+      "28 Weeks Later::sentence::0"
+    ],
+    "evidence_wiki_url": [
+      "https://en.wikipedia.org/wiki/Jeremy_Renner",
+      "https://en.wikipedia.org/wiki/28_Weeks_Later"
+    ],
+    "evidence_sentence_id": [
+      "Jeremy Renner::sentence::2",
+      "28 Weeks Later::sentence::0"
+    ]
+  },
+  "grafo_claim": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "951e0046-15ee-51c6-be67-bedd26fb873a",
+        "text": "This chunk is about:\n- People: Jeremy Renner\n- Products: 28 Weeks Later, 28 Days Later\n- Topics: film sequels\n\nFacts:\n- 28 Days Later was released in 2002.\n- 28 Weeks Later was released in 2007 as a sequel to 28 Days Later.\n- Jeremy Renner was in 28 Weeks Later.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "1f7def4a-4cb5-5a73-9737-4fad04eef304",
+        "text": "Jeremy Renner was in the 2007 movie that was a sequel to the successful 2002 film, 28 Days Later.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "db1931f1-f3e0-5354-a9e0-4e0503f36bdd",
+        "text": "text_6eccac5005480acc9e86e8f2dded9fbc",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "b010bd52-3e4c-5e71-ae48-597b19c40295",
+        "text": "jeremy renner",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "e9af62da-e531-50b3-acbf-00bc82eefb06",
+        "text": "2007 movie",
+        "type": "Entity"
+      },
+      {
+        "id": 5,
+        "original_id": "8c1717b1-65cb-5e93-89d4-09769e803cd6",
+        "text": "28 days later",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "d4028376-9599-5def-be60-886e367316ac",
+        "text": "2002",
+        "type": "Entity"
+      },
+      {
+        "id": 7,
+        "original_id": "b19433ae-558c-5aaf-95ac-6231f2a4be0e",
+        "text": "date",
+        "type": "EntityType"
+      },
+      {
+        "id": 8,
+        "original_id": "1155038a-04d1-5d6a-9c60-e4f499a6913c",
+        "text": "movie",
+        "type": "EntityType"
+      },
+      {
+        "id": 9,
+        "original_id": "c22ffe02-635b-5be0-94d3-f307bea262e3",
+        "text": "2007",
+        "type": "Entity"
+      },
+      {
+        "id": 10,
+        "original_id": "99a82eec-bb35-5bb5-9ed2-e73fc7a756de",
+        "text": "person",
+        "type": "EntityType"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "appeared_in"
+      },
+      {
+        "source": 1,
+        "target": 4,
+        "type": "contains"
+      },
+      {
+        "source": 4,
+        "target": 5,
+        "type": "is_sequel_to"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "released_in"
+      },
+      {
+        "source": 1,
+        "target": 6,
+        "type": "contains"
+      },
+      {
+        "source": 6,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 9,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 5,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 4,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 4,
+        "target": 9,
+        "type": "released_in"
+      },
+      {
+        "source": 1,
+        "target": 9,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 10,
+        "type": "is_a"
+      }
+    ]
+  },
+  "grafo_evidencia": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "86f1a05f-740c-53cc-b337-341540aef2b7",
+        "text": "This chunk is about:\n- People: Jeremy Renner\n- Products: S.W.A.T., 28 Weeks Later, 28 Days Later\n- Topics: film roles, film sequel relationships\n\nFacts:\n- Jeremy Renner appeared in a supporting role in the film S.W.A.T. in 2003.\n- 28 Weeks Later is a 2007 British science fiction horror film.\n- 28 Weeks Later was structured as a sequel to the critically and commercially successful 2002 film 28 Days Later.\n- Jeremy Renner appeared in a supporting role in the film 28 Weeks Later in 2007.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "fb6d7d56-b810-5a9f-98e2-065f4c22e9e2",
+        "text": "Page: Jeremy Renner. Sentence: Renner appeared in supporting roles in bigger films, such as \"S.W.A.T.\" (2003) and \"28 Weeks Later\" (2007).\nPage: 28 Weeks Later. Sentence: 28 Weeks Later is a 2007 British science fiction horror film, structured as a sequel to the critically and commercially successful 2002 film \"28 Days Later\".",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "c8005aba-c8f0-5aba-a2e5-d40c9088f432",
+        "text": "text_bd9841a5be61db5506321c01ce46ed5d",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "b010bd52-3e4c-5e71-ae48-597b19c40295",
+        "text": "jeremy renner",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "41dc2370-0216-5fcd-9ed9-2728b389d251",
+        "text": "s.w.a.t.",
+        "type": "Entity"
+      },
+      {
+        "id": 5,
+        "original_id": "e243b5c4-48fe-5f0b-9d10-673d4ca025e7",
+        "text": "2003",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "b19433ae-558c-5aaf-95ac-6231f2a4be0e",
+        "text": "date",
+        "type": "EntityType"
+      },
+      {
+        "id": 7,
+        "original_id": "5263a535-1b4b-5925-be3e-310d03cd303b",
+        "text": "work",
+        "type": "EntityType"
+      },
+      {
+        "id": 8,
+        "original_id": "e38abfe0-bb32-58ba-bc31-616d7055adb6",
+        "text": "28 weeks later",
+        "type": "Entity"
+      },
+      {
+        "id": 9,
+        "original_id": "c22ffe02-635b-5be0-94d3-f307bea262e3",
+        "text": "2007",
+        "type": "Entity"
+      },
+      {
+        "id": 10,
+        "original_id": "8c1717b1-65cb-5e93-89d4-09769e803cd6",
+        "text": "28 days later",
+        "type": "Entity"
+      },
+      {
+        "id": 11,
+        "original_id": "d4028376-9599-5def-be60-886e367316ac",
+        "text": "2002",
+        "type": "Entity"
+      },
+      {
+        "id": 12,
+        "original_id": "e50fb0eb-d886-5004-9d34-b5856e2472ed",
+        "text": "british science fiction horror film",
+        "type": "Entity"
+      },
+      {
+        "id": 13,
+        "original_id": "d2a381fa-3658-5ca6-ada9-2109cfc9331d",
+        "text": "concept",
+        "type": "EntityType"
+      },
+      {
+        "id": 14,
+        "original_id": "99a82eec-bb35-5bb5-9ed2-e73fc7a756de",
+        "text": "person",
+        "type": "EntityType"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "appeared_in"
+      },
+      {
+        "source": 1,
+        "target": 4,
+        "type": "contains"
+      },
+      {
+        "source": 4,
+        "target": 5,
+        "type": "released_in"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 9,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 11,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 4,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 10,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 8,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 8,
+        "type": "appeared_in"
+      },
+      {
+        "source": 1,
+        "target": 8,
+        "type": "contains"
+      },
+      {
+        "source": 8,
+        "target": 9,
+        "type": "released_in"
+      },
+      {
+        "source": 1,
+        "target": 9,
+        "type": "contains"
+      },
+      {
+        "source": 8,
+        "target": 10,
+        "type": "sequel_to"
+      },
+      {
+        "source": 1,
+        "target": 10,
+        "type": "contains"
+      },
+      {
+        "source": 10,
+        "target": 11,
+        "type": "released_in"
+      },
+      {
+        "source": 1,
+        "target": 11,
+        "type": "contains"
+      },
+      {
+        "source": 8,
+        "target": 12,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 12,
+        "type": "contains"
+      },
+      {
+        "source": 12,
+        "target": 13,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 14,
+        "type": "is_a"
+      }
+    ]
+  }
+}

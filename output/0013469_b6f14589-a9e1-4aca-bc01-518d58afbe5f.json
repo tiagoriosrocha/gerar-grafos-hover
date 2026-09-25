@@ -1,0 +1,409 @@
+{
+  "dataset": "hover",
+  "id": "b6f14589-a9e1-4aca-bc01-518d58afbe5f",
+  "split": "train",
+  "claim": "The Airlines Moscow Airways is a subsidiary of was a company with a hub at Sheremetyevo International Airport.",
+  "evidencia": "Page: Babyflot. Sentence: Babyflot is the informal name given to any airline in the former Soviet Union created from the dissolution of the Soviet airline monopoly Aeroflot in the early 1990s, at the time of the breakup of the Soviet Union.\nPage: Aeroflot. Sentence: PJSC AeroflotRussian Airlines (Russian: ПАО \"Аэрофло́т-Росси́йские авиали́нии\" , \"ПAO Aeroflot-Rossiyskiye avialinii\" ) (), commonly known as Aeroflot ( or ) (Russian: Аэрофлот , English translation: \"air fleet\", ] ), is the flag carrier and largest airline of the Russian Federation.\nPage: Aeroflot. Sentence: The carrier is an open joint stock company that operates domestic and international passenger and services, mainly from its hub at Sheremetyevo International Airport.\nPage: Moscow Airways. Sentence: Moscow Airways was a Russian airline that was formed as a subsidiary of Aeroflot to operate the airline's fleet of Ilyushin Il-62s.",
+  "evidence_text": "Page: Babyflot. Sentence: Babyflot is the informal name given to any airline in the former Soviet Union created from the dissolution of the Soviet airline monopoly Aeroflot in the early 1990s, at the time of the breakup of the Soviet Union.\nPage: Aeroflot. Sentence: PJSC AeroflotRussian Airlines (Russian: ПАО \"Аэрофло́т-Росси́йские авиали́нии\" , \"ПAO Aeroflot-Rossiyskiye avialinii\" ) (), commonly known as Aeroflot ( or ) (Russian: Аэрофлот , English translation: \"air fleet\", ] ), is the flag carrier and largest airline of the Russian Federation.\nPage: Aeroflot. Sentence: The carrier is an open joint stock company that operates domestic and international passenger and services, mainly from its hub at Sheremetyevo International Airport.\nPage: Moscow Airways. Sentence: Moscow Airways was a Russian airline that was formed as a subsidiary of Aeroflot to operate the airline's fleet of Ilyushin Il-62s.",
+  "label": "SUPPORTED",
+  "num_hops": 3,
+  "hover_metadata": {
+    "supporting_facts": [
+      [
+        "Babyflot",
+        0
+      ],
+      [
+        "Aeroflot",
+        0
+      ],
+      [
+        "Aeroflot",
+        1
+      ],
+      [
+        "Moscow Airways",
+        0
+      ]
+    ],
+    "num_hops": 3,
+    "evidence_annotation_id": [
+      0
+    ],
+    "evidence_id": [
+      "Babyflot::sentence::0",
+      "Aeroflot::sentence::0",
+      "Aeroflot::sentence::1",
+      "Moscow Airways::sentence::0"
+    ],
+    "evidence_wiki_url": [
+      "https://en.wikipedia.org/wiki/Babyflot",
+      "https://en.wikipedia.org/wiki/Aeroflot",
+      "https://en.wikipedia.org/wiki/Moscow_Airways"
+    ],
+    "evidence_sentence_id": [
+      "Babyflot::sentence::0",
+      "Aeroflot::sentence::0",
+      "Aeroflot::sentence::1",
+      "Moscow Airways::sentence::0"
+    ]
+  },
+  "grafo_claim": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "c05dad9c-4ded-53ac-b14b-b0202d8c9781",
+        "text": "This chunk is about:\n- Companies: Moscow Airways\n- Places: Sheremetyevo International Airport\n\nFacts:\n- Moscow Airways was a company.\n- Moscow Airways was a subsidiary of another company.\n- Moscow Airways had a hub at Sheremetyevo International Airport.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "9355925f-cf5d-51ff-a1f4-eae53ef45b06",
+        "text": "The Airlines Moscow Airways is a subsidiary of was a company with a hub at Sheremetyevo International Airport.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "56133349-f98e-53b7-a85b-ee366ac1f18c",
+        "text": "text_2bace451f83ca7ec2f4c59c334206486",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "95766acb-24b7-551b-b9a5-1c3731968af6",
+        "text": "moscow airways",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "82bfc922-4fcd-56b0-b353-7b550b51389d",
+        "text": "company",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "7c401af3-53b4-5144-b514-49e0f8fbaddc",
+        "text": "sheremetyevo international airport",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "5f394058-b2a0-5ba8-8466-ba2a18cfcf4e",
+        "text": "place",
+        "type": "EntityType"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "has_hub_at"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "is_a"
+      }
+    ]
+  },
+  "grafo_evidencia": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "7e09f672-0e1f-5077-a6ab-7e182d422510",
+        "text": "This chunk is about:\n- Companies: Aeroflot, Moscow Airways\n- Concepts: Babyflot\n- Places: Soviet Union, Russian Federation, Sheremetyevo International Airport\n- Products: Ilyushin Il-62\n\nFacts:\n- In the early 1990s, during the breakup of the Soviet Union, “Babyflot” became the informal name for any airline in the former Soviet Union created from the dissolution of Aeroflot’s Soviet airline monopoly.\n- Aeroflot, formally PJSC Aeroflot – Russian Airlines, is the flag carrier and largest airline of the Russian Federation.\n- Aeroflot is an open joint stock company that operates domestic and international passenger services mainly from its hub at Sheremetyevo International Airport.\n- Moscow Airways was a Russian airline formed as a subsidiary of Aeroflot to operate Aeroflot’s fleet of Ilyushin Il-62 aircraft.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "9afc1e9c-bf94-5364-acdf-45f91aad574d",
+        "text": "Page: Babyflot. Sentence: Babyflot is the informal name given to any airline in the former Soviet Union created from the dissolution of the Soviet airline monopoly Aeroflot in the early 1990s, at the time of the breakup of the Soviet Union.\nPage: Aeroflot. Sentence: PJSC AeroflotRussian Airlines (Russian: ПАО \"Аэрофло́т-Росси́йские авиали́нии\" , \"ПAO Aeroflot-Rossiyskiye avialinii\" ) (), commonly known as Aeroflot ( or ) (Russian: Аэрофлот , English translation: \"air fleet\", ] ), is the flag carrier and largest airline of the Russian Federation.\nPage: Aeroflot. Sentence: The carrier is an open joint stock company that operates domestic and international passenger and services, mainly from its hub at Sheremetyevo International Airport.\nPage: Moscow Airways. Sentence: Moscow Airways was a Russian airline that was formed as a subsidiary of Aeroflot to operate the airline's fleet of Ilyushin Il-62s.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "11dc7379-45c4-5c11-951e-978909227e45",
+        "text": "text_c4533504dceed1c44a205a02e84e19ad",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "14a78af2-ece7-5f37-8757-6a31b6bc04c5",
+        "text": "babyflot",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "d2a381fa-3658-5ca6-ada9-2109cfc9331d",
+        "text": "concept",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "e4b58668-a6f8-531f-a4f5-d4d62dccb7f0",
+        "text": "aeroflot",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "388f60fb-220d-55e8-ae9c-3ac93cead308",
+        "text": "organization",
+        "type": "EntityType"
+      },
+      {
+        "id": 7,
+        "original_id": "e343ae37-b3bc-5076-bf36-b54419fbc3d7",
+        "text": "russian federation",
+        "type": "Entity"
+      },
+      {
+        "id": 8,
+        "original_id": "5f394058-b2a0-5ba8-8466-ba2a18cfcf4e",
+        "text": "place",
+        "type": "EntityType"
+      },
+      {
+        "id": 9,
+        "original_id": "7c401af3-53b4-5144-b514-49e0f8fbaddc",
+        "text": "sheremetyevo international airport",
+        "type": "Entity"
+      },
+      {
+        "id": 10,
+        "original_id": "4fd5b268-931e-5fd5-8654-c0a3db704fb1",
+        "text": "former soviet union",
+        "type": "Entity"
+      },
+      {
+        "id": 11,
+        "original_id": "559578d1-bc02-5c4c-8a84-35413829511b",
+        "text": "early 1990s",
+        "type": "Entity"
+      },
+      {
+        "id": 12,
+        "original_id": "b19433ae-558c-5aaf-95ac-6231f2a4be0e",
+        "text": "date",
+        "type": "EntityType"
+      },
+      {
+        "id": 13,
+        "original_id": "4e4608f9-b1ab-58a1-86de-1b6cb2a7c0ce",
+        "text": "breakup of the soviet union",
+        "type": "Entity"
+      },
+      {
+        "id": 14,
+        "original_id": "214abcd9-9adf-5c8a-bb35-1e729f2d68c3",
+        "text": "event",
+        "type": "EntityType"
+      },
+      {
+        "id": 15,
+        "original_id": "95766acb-24b7-551b-b9a5-1c3731968af6",
+        "text": "moscow airways",
+        "type": "Entity"
+      },
+      {
+        "id": 16,
+        "original_id": "e8b17bc2-c6d6-55ae-9020-fa5770c3e33a",
+        "text": "ilyushin il-62",
+        "type": "Entity"
+      },
+      {
+        "id": 17,
+        "original_id": "0f5ec78d-c353-540c-b8bd-bce84eac0af4",
+        "text": "vehicle",
+        "type": "EntityType"
+      },
+      {
+        "id": 18,
+        "original_id": "263944c9-8d65-580f-8914-02577489a213",
+        "text": "russia",
+        "type": "Entity"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "refers_to_airlines_created_from_dissolution_of"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 15,
+        "target": 5,
+        "type": "is_subsidiary_of"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 15,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 5,
+        "target": 7,
+        "type": "is_flag_carrier_of"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      },
+      {
+        "source": 7,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 9,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 10,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 18,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 5,
+        "target": 9,
+        "type": "has_hub_at"
+      },
+      {
+        "source": 1,
+        "target": 9,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 10,
+        "type": "applies_in"
+      },
+      {
+        "source": 1,
+        "target": 10,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 11,
+        "type": "originated_in_period"
+      },
+      {
+        "source": 1,
+        "target": 11,
+        "type": "contains"
+      },
+      {
+        "source": 11,
+        "target": 12,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 13,
+        "type": "created_at_time_of"
+      },
+      {
+        "source": 1,
+        "target": 13,
+        "type": "contains"
+      },
+      {
+        "source": 13,
+        "target": 14,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 15,
+        "type": "contains"
+      },
+      {
+        "source": 15,
+        "target": 16,
+        "type": "operates"
+      },
+      {
+        "source": 1,
+        "target": 16,
+        "type": "contains"
+      },
+      {
+        "source": 16,
+        "target": 17,
+        "type": "is_a"
+      },
+      {
+        "source": 15,
+        "target": 18,
+        "type": "is_airline_of"
+      },
+      {
+        "source": 1,
+        "target": 18,
+        "type": "contains"
+      }
+    ]
+  }
+}

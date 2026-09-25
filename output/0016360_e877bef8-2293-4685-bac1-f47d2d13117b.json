@@ -1,0 +1,336 @@
+{
+  "dataset": "hover",
+  "id": "e877bef8-2293-4685-bac1-f47d2d13117b",
+  "split": "train",
+  "claim": "The population of the village at which Smith Haven Mall was located was 11,163 in 2010.",
+  "evidencia": "Page: Smith Haven Mall. Sentence: Smith Haven Mall is a shopping mall located in Lake Grove, New York and is the main mall for the \"Mid Island\" area of Long Island.\nPage: Lake Grove, New York. Sentence: The population was 11,163 at the 2010 census.",
+  "evidence_text": "Page: Smith Haven Mall. Sentence: Smith Haven Mall is a shopping mall located in Lake Grove, New York and is the main mall for the \"Mid Island\" area of Long Island.\nPage: Lake Grove, New York. Sentence: The population was 11,163 at the 2010 census.",
+  "label": "SUPPORTED",
+  "num_hops": 2,
+  "hover_metadata": {
+    "supporting_facts": [
+      [
+        "Smith Haven Mall",
+        0
+      ],
+      [
+        "Lake Grove, New York",
+        1
+      ]
+    ],
+    "num_hops": 2,
+    "evidence_annotation_id": [
+      0
+    ],
+    "evidence_id": [
+      "Smith Haven Mall::sentence::0",
+      "Lake Grove, New York::sentence::1"
+    ],
+    "evidence_wiki_url": [
+      "https://en.wikipedia.org/wiki/Smith_Haven_Mall",
+      "https://en.wikipedia.org/wiki/Lake_Grove%2C_New_York"
+    ],
+    "evidence_sentence_id": [
+      "Smith Haven Mall::sentence::0",
+      "Lake Grove, New York::sentence::1"
+    ]
+  },
+  "grafo_claim": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "93d7a95d-ac69-5aa1-a997-7bd3a3f478b4",
+        "text": "This chunk is about:\n- Places: Smith Haven Mall, the village where Smith Haven Mall was located\n- Topics: population, 2010 census\n\nFacts:\n- In 2010, the village where Smith Haven Mall was located had a population of 11,163.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "cfd6c19a-d282-5d05-a90a-a7411374fd4a",
+        "text": "The population of the village at which Smith Haven Mall was located was 11,163 in 2010.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "5d8f655f-3ba7-545d-80ab-c4e295effd0a",
+        "text": "text_8d9c63cc37a04f1c70d6bd1ddeaf3630",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "f5e6827c-6f17-5332-af66-6e0068db801e",
+        "text": "smith haven mall",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "5f394058-b2a0-5ba8-8466-ba2a18cfcf4e",
+        "text": "place",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "8fad21a0-6cfb-5f2a-a678-370768cb5f4d",
+        "text": "the village",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "6466a700-768d-5c2d-a34c-f9f223d8b2cb",
+        "text": "11,163",
+        "type": "Entity"
+      },
+      {
+        "id": 7,
+        "original_id": "5c1097ca-fab8-54d5-b57f-5dca4b0e2507",
+        "text": "number",
+        "type": "EntityType"
+      },
+      {
+        "id": 8,
+        "original_id": "cb1dc1af-5253-5fa4-877e-246a7629f489",
+        "text": "2010",
+        "type": "Entity"
+      },
+      {
+        "id": 9,
+        "original_id": "b19433ae-558c-5aaf-95ac-6231f2a4be0e",
+        "text": "date",
+        "type": "EntityType"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 5,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "located_in"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "had_population"
+      },
+      {
+        "source": 1,
+        "target": 6,
+        "type": "contains"
+      },
+      {
+        "source": 6,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 5,
+        "target": 8,
+        "type": "population_reported_in"
+      },
+      {
+        "source": 1,
+        "target": 8,
+        "type": "contains"
+      },
+      {
+        "source": 8,
+        "target": 9,
+        "type": "is_a"
+      }
+    ]
+  },
+  "grafo_evidencia": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "76f1601c-f6ad-5f05-be4e-bd889b5e2676",
+        "text": "This chunk is about:\n- Places: Smith Haven Mall; Lake Grove, New York; Long Island\n- Topics: shopping malls; population\n\nFacts:\n- Smith Haven Mall is a shopping mall located in Lake Grove, New York.\n- Smith Haven Mall is the main mall for the Mid Island area of Long Island.\n- Lake Grove, New York, had a population of 11,163 at the 2010 census.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "ab9a0026-3c18-5c79-80d8-3a1c48a68986",
+        "text": "Page: Smith Haven Mall. Sentence: Smith Haven Mall is a shopping mall located in Lake Grove, New York and is the main mall for the \"Mid Island\" area of Long Island.\nPage: Lake Grove, New York. Sentence: The population was 11,163 at the 2010 census.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "698ecb9f-7c60-560c-9089-b2c7bddf2e74",
+        "text": "text_4f5155a4dfe575e9adcf1d3776365309",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "f5e6827c-6f17-5332-af66-6e0068db801e",
+        "text": "smith haven mall",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "5f394058-b2a0-5ba8-8466-ba2a18cfcf4e",
+        "text": "place",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "2c8f5165-0716-5f23-be51-891b28df8490",
+        "text": "lake grove, new york",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "a7852d00-db75-55e2-bd9a-468ada762d39",
+        "text": "new york",
+        "type": "Entity"
+      },
+      {
+        "id": 7,
+        "original_id": "cb1dc1af-5253-5fa4-877e-246a7629f489",
+        "text": "2010",
+        "type": "Entity"
+      },
+      {
+        "id": 8,
+        "original_id": "b19433ae-558c-5aaf-95ac-6231f2a4be0e",
+        "text": "date",
+        "type": "EntityType"
+      },
+      {
+        "id": 9,
+        "original_id": "374d62ea-e664-50f8-8c62-dfbade27cc79",
+        "text": "mid island",
+        "type": "Entity"
+      },
+      {
+        "id": 10,
+        "original_id": "48eaf726-ad0d-5fe5-956f-c9a7e675606e",
+        "text": "long island",
+        "type": "Entity"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 5,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 6,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 9,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 10,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "located_in"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "located_in"
+      },
+      {
+        "source": 1,
+        "target": 6,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 7,
+        "type": "had_population_at_census"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      },
+      {
+        "source": 7,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 9,
+        "type": "is_main_mall_for"
+      },
+      {
+        "source": 1,
+        "target": 9,
+        "type": "contains"
+      },
+      {
+        "source": 9,
+        "target": 10,
+        "type": "area_of"
+      },
+      {
+        "source": 1,
+        "target": 10,
+        "type": "contains"
+      }
+    ]
+  }
+}

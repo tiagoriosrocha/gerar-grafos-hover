@@ -1,0 +1,406 @@
+{
+  "dataset": "hover",
+  "id": "b469ae85-59f9-4585-9af4-a7ffb16d19cd",
+  "split": "train",
+  "claim": "Motor Trend has a higher circulation than Y'all.",
+  "evidencia": "Page: Y'all (magazine). Sentence: Y'all magazine is an American magazine based out of Oxford, Mississippi, literary hub of the American South.\nPage: Y'all (magazine). Sentence: It was published bimonthly with a circulation of 100,000 and features Southern celebrities, events and ordinary people with extraordinary stories to tell.\nPage: Motor Trend. Sentence: Motor Trend is an American automobile magazine.\nPage: Motor Trend. Sentence: It has a monthly circulation of over one million readers.",
+  "evidence_text": "Page: Y'all (magazine). Sentence: Y'all magazine is an American magazine based out of Oxford, Mississippi, literary hub of the American South.\nPage: Y'all (magazine). Sentence: It was published bimonthly with a circulation of 100,000 and features Southern celebrities, events and ordinary people with extraordinary stories to tell.\nPage: Motor Trend. Sentence: Motor Trend is an American automobile magazine.\nPage: Motor Trend. Sentence: It has a monthly circulation of over one million readers.",
+  "label": "SUPPORTED",
+  "num_hops": 2,
+  "hover_metadata": {
+    "supporting_facts": [
+      [
+        "Y'all (magazine)",
+        0
+      ],
+      [
+        "Y'all (magazine)",
+        1
+      ],
+      [
+        "Motor Trend",
+        0
+      ],
+      [
+        "Motor Trend",
+        4
+      ]
+    ],
+    "num_hops": 2,
+    "evidence_annotation_id": [
+      0
+    ],
+    "evidence_id": [
+      "Y'all (magazine)::sentence::0",
+      "Y'all (magazine)::sentence::1",
+      "Motor Trend::sentence::0",
+      "Motor Trend::sentence::4"
+    ],
+    "evidence_wiki_url": [
+      "https://en.wikipedia.org/wiki/Y%27all_%28magazine%29",
+      "https://en.wikipedia.org/wiki/Motor_Trend"
+    ],
+    "evidence_sentence_id": [
+      "Y'all (magazine)::sentence::0",
+      "Y'all (magazine)::sentence::1",
+      "Motor Trend::sentence::0",
+      "Motor Trend::sentence::4"
+    ]
+  },
+  "grafo_claim": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "1b172c2c-520e-5cd3-be8c-61593efc7fee",
+        "text": "This chunk is about:\n- Magazines: Motor Trend, Y'all\n- Topic: circulation comparison\n\nFacts:\n- Motor Trend has a higher circulation than Y'all.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "c0115f57-3883-5e51-b196-a3f68af333a5",
+        "text": "Motor Trend has a higher circulation than Y'all.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "773ddd06-34fa-5f51-86a0-e54e86fac015",
+        "text": "text_c447845a5b4a51c26a946da7a3062134",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "4a878f45-ee8b-591e-b5de-1689c6480b48",
+        "text": "motor trend",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "7bc11e3c-b82a-57cb-94b2-a9a47bfc82f2",
+        "text": "yall",
+        "type": "Entity"
+      },
+      {
+        "id": 5,
+        "original_id": "116f7e5a-b2e1-59db-a42f-fdaf43712464",
+        "text": "publication",
+        "type": "EntityType"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "has_higher_circulation_than"
+      },
+      {
+        "source": 1,
+        "target": 4,
+        "type": "contains"
+      },
+      {
+        "source": 4,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "is_a"
+      }
+    ]
+  },
+  "grafo_evidencia": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "069f71eb-a150-5478-8247-15e61563459e",
+        "text": "This chunk is about:\n- Products: Y'all magazine, Motor Trend\n- Places: Oxford, Mississippi, American South\n- Topics: magazine publishing, circulation, editorial focus\n\nFacts:\n- Y'all magazine is an American magazine based in Oxford, Mississippi, which is described as a literary hub of the American South.\n- Y'all magazine was published bimonthly with a circulation of 100,000.\n- Y'all magazine features Southern celebrities, events, and ordinary people with extraordinary stories.\n- Motor Trend is an American automobile magazine.\n- Motor Trend has a monthly circulation of over one million readers.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "a0640fbe-dc73-58ab-93e7-46d5e759a150",
+        "text": "Page: Y'all (magazine). Sentence: Y'all magazine is an American magazine based out of Oxford, Mississippi, literary hub of the American South.\nPage: Y'all (magazine). Sentence: It was published bimonthly with a circulation of 100,000 and features Southern celebrities, events and ordinary people with extraordinary stories to tell.\nPage: Motor Trend. Sentence: Motor Trend is an American automobile magazine.\nPage: Motor Trend. Sentence: It has a monthly circulation of over one million readers.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "f7b04de2-71eb-5a26-9a8f-16900af112c4",
+        "text": "text_3b72516ff60cddff7403771303256ce0",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "0427f066-36ba-505f-b5e7-a5a748247330",
+        "text": "yall magazine",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "7e805394-2b59-5387-b963-535f8999fae5",
+        "text": "american magazine",
+        "type": "Entity"
+      },
+      {
+        "id": 5,
+        "original_id": "d2a381fa-3658-5ca6-ada9-2109cfc9331d",
+        "text": "concept",
+        "type": "EntityType"
+      },
+      {
+        "id": 6,
+        "original_id": "b4b53f31-56b4-532d-ab9f-206197b26b53",
+        "text": "oxford, mississippi",
+        "type": "Entity"
+      },
+      {
+        "id": 7,
+        "original_id": "06f4b5d8-9f1b-54a6-86af-5dee42c1fe14",
+        "text": "american south",
+        "type": "Entity"
+      },
+      {
+        "id": 8,
+        "original_id": "5f394058-b2a0-5ba8-8466-ba2a18cfcf4e",
+        "text": "place",
+        "type": "EntityType"
+      },
+      {
+        "id": 9,
+        "original_id": "1c5457fd-cb95-51e2-9ca1-f61ec8cf5a34",
+        "text": "100,000",
+        "type": "Entity"
+      },
+      {
+        "id": 10,
+        "original_id": "bb0c7c36-9fe9-599a-b5a1-9f82533f276a",
+        "text": "value",
+        "type": "EntityType"
+      },
+      {
+        "id": 11,
+        "original_id": "c7512430-5e8a-5849-822f-cb7ae258c7df",
+        "text": "southern celebrities",
+        "type": "Entity"
+      },
+      {
+        "id": 12,
+        "original_id": "6070b2e2-fbcc-59a9-923f-754e7633e951",
+        "text": "events",
+        "type": "Entity"
+      },
+      {
+        "id": 13,
+        "original_id": "f764b624-f5a1-5b35-a6f9-91975ccc7a09",
+        "text": "ordinary people with extraordinary stories to tell",
+        "type": "Entity"
+      },
+      {
+        "id": 14,
+        "original_id": "388f60fb-220d-55e8-ae9c-3ac93cead308",
+        "text": "organization",
+        "type": "EntityType"
+      },
+      {
+        "id": 15,
+        "original_id": "4a878f45-ee8b-591e-b5de-1689c6480b48",
+        "text": "motor trend",
+        "type": "Entity"
+      },
+      {
+        "id": 16,
+        "original_id": "a2912424-c667-52f1-b7f5-975f50ec95d4",
+        "text": "american automobile magazine",
+        "type": "Entity"
+      },
+      {
+        "id": 17,
+        "original_id": "1584731f-fb8f-5009-a5aa-85747d6b97e4",
+        "text": "over one million readers",
+        "type": "Entity"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 4,
+        "type": "contains"
+      },
+      {
+        "source": 4,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 11,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 12,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 13,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 16,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 6,
+        "type": "based_in"
+      },
+      {
+        "source": 1,
+        "target": 6,
+        "type": "contains"
+      },
+      {
+        "source": 6,
+        "target": 7,
+        "type": "is_literary_hub_of"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      },
+      {
+        "source": 7,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 6,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 9,
+        "type": "has_circulation"
+      },
+      {
+        "source": 1,
+        "target": 9,
+        "type": "contains"
+      },
+      {
+        "source": 9,
+        "target": 10,
+        "type": "is_a"
+      },
+      {
+        "source": 17,
+        "target": 10,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 11,
+        "type": "features"
+      },
+      {
+        "source": 1,
+        "target": 11,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 12,
+        "type": "features"
+      },
+      {
+        "source": 1,
+        "target": 12,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 13,
+        "type": "features"
+      },
+      {
+        "source": 1,
+        "target": 13,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 14,
+        "type": "is_a"
+      },
+      {
+        "source": 15,
+        "target": 14,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 15,
+        "type": "contains"
+      },
+      {
+        "source": 15,
+        "target": 16,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 16,
+        "type": "contains"
+      },
+      {
+        "source": 15,
+        "target": 17,
+        "type": "has_monthly_circulation"
+      },
+      {
+        "source": 1,
+        "target": 17,
+        "type": "contains"
+      }
+    ]
+  }
+}

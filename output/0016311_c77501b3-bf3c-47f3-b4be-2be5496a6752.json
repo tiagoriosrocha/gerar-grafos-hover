@@ -1,0 +1,612 @@
+{
+  "dataset": "hover",
+  "id": "c77501b3-bf3c-47f3-b4be-2be5496a6752",
+  "split": "train",
+  "claim": "28000 km2 is the approximate area of the country where the flower species Lobelia columnaris can be found (other than Cameroon).",
+  "evidencia": "Page: Lobelia columnaris. Sentence: It is the only giant Lobelia occurring in West Africa and is found in Cameroon and Equatorial Guinea.\nPage: Equatorial Guinea. Sentence: Equatorial Guinea (Spanish: \"Guinea Ecuatorial\" , French: \"Guinée équatoriale\" , Portuguese: \"Guiné Equatorial\" ), officially the Republic of Equatorial Guinea (Spanish: \"República de Guinea Ecuatorial\" , French: \"République de Guinée équatoriale\" , Portuguese: \"República da Guiné Equatorial\" ), is a country located in Central Africa, with an area of 28000 km2 .",
+  "evidence_text": "Page: Lobelia columnaris. Sentence: It is the only giant Lobelia occurring in West Africa and is found in Cameroon and Equatorial Guinea.\nPage: Equatorial Guinea. Sentence: Equatorial Guinea (Spanish: \"Guinea Ecuatorial\" , French: \"Guinée équatoriale\" , Portuguese: \"Guiné Equatorial\" ), officially the Republic of Equatorial Guinea (Spanish: \"República de Guinea Ecuatorial\" , French: \"République de Guinée équatoriale\" , Portuguese: \"República da Guiné Equatorial\" ), is a country located in Central Africa, with an area of 28000 km2 .",
+  "label": "NOT_SUPPORTED",
+  "num_hops": 2,
+  "hover_metadata": {
+    "supporting_facts": [
+      [
+        "Lobelia columnaris",
+        1
+      ],
+      [
+        "Equatorial Guinea",
+        0
+      ]
+    ],
+    "num_hops": 2,
+    "evidence_annotation_id": [
+      0
+    ],
+    "evidence_id": [
+      "Lobelia columnaris::sentence::1",
+      "Equatorial Guinea::sentence::0"
+    ],
+    "evidence_wiki_url": [
+      "https://en.wikipedia.org/wiki/Lobelia_columnaris",
+      "https://en.wikipedia.org/wiki/Equatorial_Guinea"
+    ],
+    "evidence_sentence_id": [
+      "Lobelia columnaris::sentence::1",
+      "Equatorial Guinea::sentence::0"
+    ]
+  },
+  "grafo_claim": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "d098ad69-40f3-5480-aa5a-9018c236afeb",
+        "text": "This chunk is about:\n- Places: Cameroon, Equatorial Guinea\n- Species: Lobelia columnaris\n\nFacts:\n- Lobelia columnaris can be found in Cameroon.\n- Lobelia columnaris can also be found in Equatorial Guinea.\n- Equatorial Guinea has an approximate area of 28,000 square kilometers.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "9c289439-3c11-59ff-aa0c-12735f5e051d",
+        "text": "28000 km2 is the approximate area of the country where the flower species Lobelia columnaris can be found (other than Cameroon).",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "16593d30-f49d-5b1e-a0ff-865fa7ff6657",
+        "text": "text_1ac6655a6b1659f83c07951f2be000c7",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "0111b00d-b359-55e9-b081-af3879866944",
+        "text": "lobelia columnaris",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "f23a15ce-c0de-5c57-9205-8c9d01026b05",
+        "text": "species",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "11d1fb1a-3b0b-5139-8189-8ab3d3b3dda8",
+        "text": "cameroon",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "35e29ad1-17b7-507a-a205-d7851a5e7102",
+        "text": "country",
+        "type": "EntityType"
+      },
+      {
+        "id": 7,
+        "original_id": "22d8a8bc-e064-5f51-b739-37447d325305",
+        "text": "28000 km2 country",
+        "type": "Entity"
+      },
+      {
+        "id": 8,
+        "original_id": "3cc53a47-8850-5d76-8cf5-1d03acc26114",
+        "text": "28000 km2",
+        "type": "Entity"
+      },
+      {
+        "id": 9,
+        "original_id": "12d5521e-a878-542e-bebc-84ff79179d8e",
+        "text": "measurement",
+        "type": "EntityType"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "can_be_found_in"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 7,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 7,
+        "type": "can_be_found_in"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      },
+      {
+        "source": 7,
+        "target": 8,
+        "type": "has_approximate_area"
+      },
+      {
+        "source": 1,
+        "target": 8,
+        "type": "contains"
+      },
+      {
+        "source": 8,
+        "target": 9,
+        "type": "is_a"
+      }
+    ]
+  },
+  "grafo_evidencia": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "68afc616-2a25-5b11-9821-5eb89dc27c34",
+        "text": "This chunk is about:\n- Species: Lobelia columnaris\n- Places: West Africa, Cameroon, Equatorial Guinea, Central Africa\n- Countries: Equatorial Guinea\n\nFacts:\n- Lobelia columnaris is the only giant Lobelia occurring in West Africa.\n- Lobelia columnaris is found in Cameroon and Equatorial Guinea.\n- Equatorial Guinea is officially called the Republic of Equatorial Guinea.\n- Equatorial Guinea is a country in Central Africa.\n- Equatorial Guinea has an area of 28,000 km2.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "02f626dd-6bdb-5633-8fa1-1ca8147fb0ae",
+        "text": "Page: Lobelia columnaris. Sentence: It is the only giant Lobelia occurring in West Africa and is found in Cameroon and Equatorial Guinea.\nPage: Equatorial Guinea. Sentence: Equatorial Guinea (Spanish: \"Guinea Ecuatorial\" , French: \"Guinée équatoriale\" , Portuguese: \"Guiné Equatorial\" ), officially the Republic of Equatorial Guinea (Spanish: \"República de Guinea Ecuatorial\" , French: \"République de Guinée équatoriale\" , Portuguese: \"República da Guiné Equatorial\" ), is a country located in Central Africa, with an area of 28000 km2 .",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "cff4d2c3-7612-5443-9003-fe4dd5487108",
+        "text": "text_d04c631ce1cbcd6753745f10df6835f8",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "0111b00d-b359-55e9-b081-af3879866944",
+        "text": "lobelia columnaris",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "f23a15ce-c0de-5c57-9205-8c9d01026b05",
+        "text": "species",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "812c44e5-dc97-5bce-8e11-08c255dfc634",
+        "text": "giant lobelia",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "2df43048-b175-54c2-b72b-0ff24f41e4f1",
+        "text": "plant",
+        "type": "EntityType"
+      },
+      {
+        "id": 7,
+        "original_id": "3f760321-e0d5-56cd-8956-a126bc08abdb",
+        "text": "west africa",
+        "type": "Entity"
+      },
+      {
+        "id": 8,
+        "original_id": "5f394058-b2a0-5ba8-8466-ba2a18cfcf4e",
+        "text": "place",
+        "type": "EntityType"
+      },
+      {
+        "id": 9,
+        "original_id": "11d1fb1a-3b0b-5139-8189-8ab3d3b3dda8",
+        "text": "cameroon",
+        "type": "Entity"
+      },
+      {
+        "id": 10,
+        "original_id": "35e29ad1-17b7-507a-a205-d7851a5e7102",
+        "text": "country",
+        "type": "EntityType"
+      },
+      {
+        "id": 11,
+        "original_id": "d96824d0-3e0a-5a81-aecf-414b06aeebca",
+        "text": "equatorial guinea",
+        "type": "Entity"
+      },
+      {
+        "id": 12,
+        "original_id": "6b124eb6-16b0-515d-9e16-af0f64c122b4",
+        "text": "republic of equatorial guinea",
+        "type": "Entity"
+      },
+      {
+        "id": 13,
+        "original_id": "5ec5e1b0-fe0c-55d1-a363-f2e95a272618",
+        "text": "república de guinea ecuatorial",
+        "type": "Entity"
+      },
+      {
+        "id": 14,
+        "original_id": "39575085-0710-527d-bd54-019de7b00429",
+        "text": "name",
+        "type": "EntityType"
+      },
+      {
+        "id": 15,
+        "original_id": "9a3ddd6d-122b-5d30-94b8-3fafa0f2916e",
+        "text": "spanish",
+        "type": "Entity"
+      },
+      {
+        "id": 16,
+        "original_id": "68024490-0b05-56a0-8dee-c3fcc0d06d48",
+        "text": "language",
+        "type": "EntityType"
+      },
+      {
+        "id": 17,
+        "original_id": "bfd49169-fba5-5fe8-bda5-1635fcd8aa4c",
+        "text": "république de guinée équatoriale",
+        "type": "Entity"
+      },
+      {
+        "id": 18,
+        "original_id": "eb9d7b11-73cb-5d01-83e1-c53a66608ef3",
+        "text": "french",
+        "type": "Entity"
+      },
+      {
+        "id": 19,
+        "original_id": "36cc5dc5-64bc-5a6b-9030-1e736eb32e3d",
+        "text": "república da guiné equatorial",
+        "type": "Entity"
+      },
+      {
+        "id": 20,
+        "original_id": "5c3c4f9d-a5a0-5f17-85cd-304fd678a983",
+        "text": "portuguese",
+        "type": "Entity"
+      },
+      {
+        "id": 21,
+        "original_id": "dc7d44dd-7d14-537f-9f4d-51fb89108cdd",
+        "text": "central africa",
+        "type": "Entity"
+      },
+      {
+        "id": 22,
+        "original_id": "3cc53a47-8850-5d76-8cf5-1d03acc26114",
+        "text": "28000 km2",
+        "type": "Entity"
+      },
+      {
+        "id": 23,
+        "original_id": "12d5521e-a878-542e-bebc-84ff79179d8e",
+        "text": "measurement",
+        "type": "EntityType"
+      },
+      {
+        "id": 24,
+        "original_id": "3f1a0aab-633a-5328-b938-93572aa6f80a",
+        "text": "guinea ecuatorial",
+        "type": "Entity"
+      },
+      {
+        "id": 25,
+        "original_id": "81f745da-d691-5ff9-8ce9-1c4be4d266e1",
+        "text": "guinée équatoriale",
+        "type": "Entity"
+      },
+      {
+        "id": 26,
+        "original_id": "8bebb701-cfa4-530a-b157-8ec7b2e5045a",
+        "text": "guiné equatorial",
+        "type": "Entity"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 7,
+        "type": "occurs_in"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      },
+      {
+        "source": 7,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 21,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 9,
+        "type": "found_in"
+      },
+      {
+        "source": 1,
+        "target": 9,
+        "type": "contains"
+      },
+      {
+        "source": 9,
+        "target": 10,
+        "type": "is_a"
+      },
+      {
+        "source": 11,
+        "target": 10,
+        "type": "is_a"
+      },
+      {
+        "source": 12,
+        "target": 10,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 11,
+        "type": "found_in"
+      },
+      {
+        "source": 1,
+        "target": 11,
+        "type": "contains"
+      },
+      {
+        "source": 11,
+        "target": 12,
+        "type": "officially_named"
+      },
+      {
+        "source": 1,
+        "target": 12,
+        "type": "contains"
+      },
+      {
+        "source": 12,
+        "target": 13,
+        "type": "has_name_in_language"
+      },
+      {
+        "source": 1,
+        "target": 13,
+        "type": "contains"
+      },
+      {
+        "source": 13,
+        "target": 14,
+        "type": "is_a"
+      },
+      {
+        "source": 17,
+        "target": 14,
+        "type": "is_a"
+      },
+      {
+        "source": 19,
+        "target": 14,
+        "type": "is_a"
+      },
+      {
+        "source": 24,
+        "target": 14,
+        "type": "is_a"
+      },
+      {
+        "source": 25,
+        "target": 14,
+        "type": "is_a"
+      },
+      {
+        "source": 26,
+        "target": 14,
+        "type": "is_a"
+      },
+      {
+        "source": 13,
+        "target": 15,
+        "type": "in_language"
+      },
+      {
+        "source": 24,
+        "target": 15,
+        "type": "in_language"
+      },
+      {
+        "source": 1,
+        "target": 15,
+        "type": "contains"
+      },
+      {
+        "source": 15,
+        "target": 16,
+        "type": "is_a"
+      },
+      {
+        "source": 18,
+        "target": 16,
+        "type": "is_a"
+      },
+      {
+        "source": 20,
+        "target": 16,
+        "type": "is_a"
+      },
+      {
+        "source": 12,
+        "target": 17,
+        "type": "has_name_in_language"
+      },
+      {
+        "source": 1,
+        "target": 17,
+        "type": "contains"
+      },
+      {
+        "source": 17,
+        "target": 18,
+        "type": "in_language"
+      },
+      {
+        "source": 25,
+        "target": 18,
+        "type": "in_language"
+      },
+      {
+        "source": 1,
+        "target": 18,
+        "type": "contains"
+      },
+      {
+        "source": 12,
+        "target": 19,
+        "type": "has_name_in_language"
+      },
+      {
+        "source": 1,
+        "target": 19,
+        "type": "contains"
+      },
+      {
+        "source": 19,
+        "target": 20,
+        "type": "in_language"
+      },
+      {
+        "source": 26,
+        "target": 20,
+        "type": "in_language"
+      },
+      {
+        "source": 1,
+        "target": 20,
+        "type": "contains"
+      },
+      {
+        "source": 11,
+        "target": 21,
+        "type": "located_in"
+      },
+      {
+        "source": 1,
+        "target": 21,
+        "type": "contains"
+      },
+      {
+        "source": 11,
+        "target": 22,
+        "type": "has_area"
+      },
+      {
+        "source": 1,
+        "target": 22,
+        "type": "contains"
+      },
+      {
+        "source": 22,
+        "target": 23,
+        "type": "is_a"
+      },
+      {
+        "source": 11,
+        "target": 24,
+        "type": "has_name_in_language"
+      },
+      {
+        "source": 1,
+        "target": 24,
+        "type": "contains"
+      },
+      {
+        "source": 11,
+        "target": 25,
+        "type": "has_name_in_language"
+      },
+      {
+        "source": 1,
+        "target": 25,
+        "type": "contains"
+      },
+      {
+        "source": 11,
+        "target": 26,
+        "type": "has_name_in_language"
+      },
+      {
+        "source": 1,
+        "target": 26,
+        "type": "contains"
+      }
+    ]
+  }
+}

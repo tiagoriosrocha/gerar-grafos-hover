@@ -1,0 +1,496 @@
+{
+  "dataset": "hover",
+  "id": "173ebc10-513a-4a6b-b3b4-564357a9d2ba",
+  "split": "train",
+  "claim": "Arthur Hiller Penn was born before the director of \"We, the Normal\".",
+  "evidencia": "Page: George Kuchar. Sentence: George Kuchar (August 31, 1942 – September 6, 2011) was an American underground film director and video artist, known for his \"low-fi\" aesthetic.\nPage: Arthur Penn. Sentence: Arthur Hiller Penn (September 27, 1922 – September 28, 2010) was an American director and producer of film, television and theater.\nPage: We, the Normal. Sentence: We, the Normal is a 1987 video by American video artist George Kuchar.",
+  "evidence_text": "Page: George Kuchar. Sentence: George Kuchar (August 31, 1942 – September 6, 2011) was an American underground film director and video artist, known for his \"low-fi\" aesthetic.\nPage: Arthur Penn. Sentence: Arthur Hiller Penn (September 27, 1922 – September 28, 2010) was an American director and producer of film, television and theater.\nPage: We, the Normal. Sentence: We, the Normal is a 1987 video by American video artist George Kuchar.",
+  "label": "SUPPORTED",
+  "num_hops": 3,
+  "hover_metadata": {
+    "supporting_facts": [
+      [
+        "George Kuchar",
+        0
+      ],
+      [
+        "Arthur Penn",
+        0
+      ],
+      [
+        "We, the Normal",
+        0
+      ]
+    ],
+    "num_hops": 3,
+    "evidence_annotation_id": [
+      0
+    ],
+    "evidence_id": [
+      "George Kuchar::sentence::0",
+      "Arthur Penn::sentence::0",
+      "We, the Normal::sentence::0"
+    ],
+    "evidence_wiki_url": [
+      "https://en.wikipedia.org/wiki/George_Kuchar",
+      "https://en.wikipedia.org/wiki/Arthur_Penn",
+      "https://en.wikipedia.org/wiki/We%2C_the_Normal"
+    ],
+    "evidence_sentence_id": [
+      "George Kuchar::sentence::0",
+      "Arthur Penn::sentence::0",
+      "We, the Normal::sentence::0"
+    ]
+  },
+  "grafo_claim": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "565ede68-a6f2-543e-a833-e03ec2963a19",
+        "text": "This chunk is about:\n- People: Arthur Hiller Penn\n- Works: \"We, the Normal\"\n- Concepts: birth order comparison\n\nFacts:\n- Arthur Hiller Penn was born before the director of \"We, the Normal.\"\n- The chunk states a birth order comparison between Arthur Hiller Penn and the director of \"We, the Normal,\" but it does not name the director or give either birth date.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "4dcd9a63-77bd-5fef-a126-67defec3a298",
+        "text": "Arthur Hiller Penn was born before the director of \"We, the Normal\".",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "5724f2b9-8654-5312-90aa-27d504705281",
+        "text": "text_84dbd06572177bd8cdb43a2878d32dce",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "6d7c9687-5907-5afd-bd10-33f882e51360",
+        "text": "arthur hiller penn",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "f405d4d2-40a6-5efb-9e73-500126994e89",
+        "text": "director of we, the normal",
+        "type": "Entity"
+      },
+      {
+        "id": 5,
+        "original_id": "9a36aa43-c0b0-5ae7-8725-e28f782f4d07",
+        "text": "we, the normal",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "5263a535-1b4b-5925-be3e-310d03cd303b",
+        "text": "work",
+        "type": "EntityType"
+      },
+      {
+        "id": 7,
+        "original_id": "99a82eec-bb35-5bb5-9ed2-e73fc7a756de",
+        "text": "person",
+        "type": "EntityType"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "born_before"
+      },
+      {
+        "source": 1,
+        "target": 4,
+        "type": "contains"
+      },
+      {
+        "source": 4,
+        "target": 5,
+        "type": "directed"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 4,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 7,
+        "type": "is_a"
+      }
+    ]
+  },
+  "grafo_evidencia": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "8298529f-03c4-534c-a753-ffd4a982bd13",
+        "text": "This chunk is about:\n- People: George Kuchar, Arthur Penn\n- Roles: film director, video artist, producer\n- Works: We, the Normal\n\nFacts:\n- Arthur Penn was born on September 27, 1922, and he was an American director and producer of film, television, and theater.\n- George Kuchar was born on August 31, 1942, and he was an American underground film director and video artist known for his low-fi aesthetic.\n- George Kuchar created We, the Normal in 1987, and the work is a video.\n- Arthur Penn died on September 28, 2010.\n- George Kuchar died on September 6, 2011.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "1849ca16-a7bc-5de4-b4b1-1f087237c1a9",
+        "text": "Page: George Kuchar. Sentence: George Kuchar (August 31, 1942 – September 6, 2011) was an American underground film director and video artist, known for his \"low-fi\" aesthetic.\nPage: Arthur Penn. Sentence: Arthur Hiller Penn (September 27, 1922 – September 28, 2010) was an American director and producer of film, television and theater.\nPage: We, the Normal. Sentence: We, the Normal is a 1987 video by American video artist George Kuchar.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "c921615e-46d4-55bd-8382-057474a79c0a",
+        "text": "text_e9679f6b3e65155c519f31ecce144f1c",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "5ef9ca0b-cb52-5d62-b475-9ea985fa0074",
+        "text": "george kuchar",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "0bb9a10a-3d63-5f18-b040-46b6dc90542c",
+        "text": "1942-08-31",
+        "type": "Entity"
+      },
+      {
+        "id": 5,
+        "original_id": "b19433ae-558c-5aaf-95ac-6231f2a4be0e",
+        "text": "date",
+        "type": "EntityType"
+      },
+      {
+        "id": 6,
+        "original_id": "0f054829-c7ca-56b4-b6ac-55d6452a415e",
+        "text": "2011-09-06",
+        "type": "Entity"
+      },
+      {
+        "id": 7,
+        "original_id": "32e5ea46-cca9-5920-8b2d-77357f10ce8d",
+        "text": "american",
+        "type": "Entity"
+      },
+      {
+        "id": 8,
+        "original_id": "d2a381fa-3658-5ca6-ada9-2109cfc9331d",
+        "text": "concept",
+        "type": "EntityType"
+      },
+      {
+        "id": 9,
+        "original_id": "8fe18c2b-768a-52ce-87a4-9b05c1757e7b",
+        "text": "underground film director",
+        "type": "Entity"
+      },
+      {
+        "id": 10,
+        "original_id": "b4d16561-d41d-59e6-b8a3-1f0d780e9583",
+        "text": "video artist",
+        "type": "Entity"
+      },
+      {
+        "id": 11,
+        "original_id": "a257ce0e-3570-5ff2-8000-1185a85b2c9a",
+        "text": "low-fi aesthetic",
+        "type": "Entity"
+      },
+      {
+        "id": 12,
+        "original_id": "99a82eec-bb35-5bb5-9ed2-e73fc7a756de",
+        "text": "person",
+        "type": "EntityType"
+      },
+      {
+        "id": 13,
+        "original_id": "77cb31d9-cd5f-567e-bc66-7a4212cc7352",
+        "text": "arthur penn",
+        "type": "Entity"
+      },
+      {
+        "id": 14,
+        "original_id": "fca01c43-d658-597b-bee9-34a6f229f1e4",
+        "text": "1922-09-27",
+        "type": "Entity"
+      },
+      {
+        "id": 15,
+        "original_id": "b8eab95a-7a37-55c7-942a-d544631905af",
+        "text": "2010-09-28",
+        "type": "Entity"
+      },
+      {
+        "id": 16,
+        "original_id": "4f624050-eb80-540a-b5c3-4ad67482ebad",
+        "text": "director",
+        "type": "Entity"
+      },
+      {
+        "id": 17,
+        "original_id": "fc2230d6-898d-5221-b1ca-833b27ae6866",
+        "text": "producer",
+        "type": "Entity"
+      },
+      {
+        "id": 18,
+        "original_id": "9a36aa43-c0b0-5ae7-8725-e28f782f4d07",
+        "text": "we, the normal",
+        "type": "Entity"
+      },
+      {
+        "id": 19,
+        "original_id": "19e766a6-2146-5019-b62d-75b94a79d2b8",
+        "text": "1987",
+        "type": "Entity"
+      },
+      {
+        "id": 20,
+        "original_id": "5263a535-1b4b-5925-be3e-310d03cd303b",
+        "text": "work",
+        "type": "EntityType"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 18,
+        "target": 3,
+        "type": "created_by"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "born_on"
+      },
+      {
+        "source": 1,
+        "target": 4,
+        "type": "contains"
+      },
+      {
+        "source": 4,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 6,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 14,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 15,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 19,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 6,
+        "type": "died_on"
+      },
+      {
+        "source": 1,
+        "target": 6,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 7,
+        "type": "has_nationality"
+      },
+      {
+        "source": 13,
+        "target": 7,
+        "type": "has_nationality"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      },
+      {
+        "source": 7,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 9,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 10,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 11,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 16,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 17,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 9,
+        "type": "has_profession"
+      },
+      {
+        "source": 1,
+        "target": 9,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 10,
+        "type": "has_profession"
+      },
+      {
+        "source": 1,
+        "target": 10,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 11,
+        "type": "known_for"
+      },
+      {
+        "source": 1,
+        "target": 11,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 12,
+        "type": "is_a"
+      },
+      {
+        "source": 13,
+        "target": 12,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 13,
+        "type": "contains"
+      },
+      {
+        "source": 13,
+        "target": 14,
+        "type": "born_on"
+      },
+      {
+        "source": 1,
+        "target": 14,
+        "type": "contains"
+      },
+      {
+        "source": 13,
+        "target": 15,
+        "type": "died_on"
+      },
+      {
+        "source": 1,
+        "target": 15,
+        "type": "contains"
+      },
+      {
+        "source": 13,
+        "target": 16,
+        "type": "has_profession"
+      },
+      {
+        "source": 1,
+        "target": 16,
+        "type": "contains"
+      },
+      {
+        "source": 13,
+        "target": 17,
+        "type": "has_profession"
+      },
+      {
+        "source": 1,
+        "target": 17,
+        "type": "contains"
+      },
+      {
+        "source": 1,
+        "target": 18,
+        "type": "contains"
+      },
+      {
+        "source": 18,
+        "target": 19,
+        "type": "released_in"
+      },
+      {
+        "source": 1,
+        "target": 19,
+        "type": "contains"
+      },
+      {
+        "source": 18,
+        "target": 20,
+        "type": "is_a"
+      }
+    ]
+  }
+}

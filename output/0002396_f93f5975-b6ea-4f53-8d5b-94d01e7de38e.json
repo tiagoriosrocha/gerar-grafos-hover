@@ -1,0 +1,529 @@
+{
+  "dataset": "hover",
+  "id": "f93f5975-b6ea-4f53-8d5b-94d01e7de38e",
+  "split": "train",
+  "claim": "The movie co-directed by Lee Unkrich and the singalong \"Mary Poppins\" are both made by the same company.",
+  "evidencia": "Page: Monsters, Inc.. Sentence: Monsters, Inc. is a 2001 American computer-animated comedy film produced by Pixar Animation Studios and distributed by Walt Disney Pictures.\nPage: Mary Poppins (film). Sentence: Mary Poppins is a 1964 American musical-fantasy film directed by Robert Stevenson and produced by Walt Disney, with songs written and composed by the Sherman Brothers.\nPage: Lee Unkrich. Sentence: After co-directing \"Monsters, Inc.\" and \"Finding Nemo\", Unkrich made his solo directorial debut with \"Toy Story 3\", for which he won the Academy Award for Best Animated Film in 2011.",
+  "evidence_text": "Page: Monsters, Inc.. Sentence: Monsters, Inc. is a 2001 American computer-animated comedy film produced by Pixar Animation Studios and distributed by Walt Disney Pictures.\nPage: Mary Poppins (film). Sentence: Mary Poppins is a 1964 American musical-fantasy film directed by Robert Stevenson and produced by Walt Disney, with songs written and composed by the Sherman Brothers.\nPage: Lee Unkrich. Sentence: After co-directing \"Monsters, Inc.\" and \"Finding Nemo\", Unkrich made his solo directorial debut with \"Toy Story 3\", for which he won the Academy Award for Best Animated Film in 2011.",
+  "label": "SUPPORTED",
+  "num_hops": 3,
+  "hover_metadata": {
+    "supporting_facts": [
+      [
+        "Monsters, Inc.",
+        0
+      ],
+      [
+        "Mary Poppins (film)",
+        0
+      ],
+      [
+        "Lee Unkrich",
+        3
+      ]
+    ],
+    "num_hops": 3,
+    "evidence_annotation_id": [
+      0
+    ],
+    "evidence_id": [
+      "Monsters, Inc.::sentence::0",
+      "Mary Poppins (film)::sentence::0",
+      "Lee Unkrich::sentence::3"
+    ],
+    "evidence_wiki_url": [
+      "https://en.wikipedia.org/wiki/Monsters%2C_Inc.",
+      "https://en.wikipedia.org/wiki/Mary_Poppins_%28film%29",
+      "https://en.wikipedia.org/wiki/Lee_Unkrich"
+    ],
+    "evidence_sentence_id": [
+      "Monsters, Inc.::sentence::0",
+      "Mary Poppins (film)::sentence::0",
+      "Lee Unkrich::sentence::3"
+    ]
+  },
+  "grafo_claim": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "d79bdefa-2b9a-595f-adc9-a87d01d124e3",
+        "text": "This chunk is about:\n- People: Lee Unkrich\n- Works: the co-directed movie, the singalong \"Mary Poppins\"\n- Companies: the shared production company\n\nFacts:\n- Lee Unkrich co-directed the referenced movie.\n- The singalong \"Mary Poppins\" and the movie co-directed by Lee Unkrich were made by the same company.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "b5f86c8c-74f8-54a3-a7ff-1f066f68edb2",
+        "text": "The movie co-directed by Lee Unkrich and the singalong \"Mary Poppins\" are both made by the same company.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "8e71fb23-fedd-560d-b76e-62d4f15ca210",
+        "text": "text_93c756fa28c3799ed26c058c7978ac58",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "37cc5944-08ec-501b-bb12-8273d2a6d599",
+        "text": "lee unkrich",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "400d109e-bb44-5ae7-a32e-e4e30e0817f5",
+        "text": "the movie",
+        "type": "Entity"
+      },
+      {
+        "id": 5,
+        "original_id": "5263a535-1b4b-5925-be3e-310d03cd303b",
+        "text": "work",
+        "type": "EntityType"
+      },
+      {
+        "id": 6,
+        "original_id": "99a82eec-bb35-5bb5-9ed2-e73fc7a756de",
+        "text": "person",
+        "type": "EntityType"
+      },
+      {
+        "id": 7,
+        "original_id": "3142353a-38a4-5843-8719-635021590175",
+        "text": "mary poppins",
+        "type": "Entity"
+      },
+      {
+        "id": 8,
+        "original_id": "5be21056-04da-56a8-a272-a610bc666fdb",
+        "text": "the same company",
+        "type": "Entity"
+      },
+      {
+        "id": 9,
+        "original_id": "388f60fb-220d-55e8-ae9c-3ac93cead308",
+        "text": "organization",
+        "type": "EntityType"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "co_directed"
+      },
+      {
+        "source": 1,
+        "target": 4,
+        "type": "contains"
+      },
+      {
+        "source": 8,
+        "target": 4,
+        "type": "made"
+      },
+      {
+        "source": 4,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 7,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      },
+      {
+        "source": 8,
+        "target": 7,
+        "type": "made"
+      },
+      {
+        "source": 1,
+        "target": 8,
+        "type": "contains"
+      },
+      {
+        "source": 8,
+        "target": 9,
+        "type": "is_a"
+      }
+    ]
+  },
+  "grafo_evidencia": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "18fcd591-a3f8-549a-8831-8658ff775d19",
+        "text": "This chunk is about:\n- People: Lee Unkrich, Robert Stevenson, Walt Disney, Sherman Brothers\n- Companies: Pixar Animation Studios, Walt Disney Pictures\n- Films: Monsters, Inc., Mary Poppins, Finding Nemo, Toy Story 3\n- Awards: Academy Award for Best Animated Film\n\nFacts:\n- Mary Poppins is a 1964 American musical-fantasy film directed by Robert Stevenson and produced by Walt Disney.\n- The Sherman Brothers wrote and composed the songs for Mary Poppins.\n- Monsters, Inc. is a 2001 American computer-animated comedy film produced by Pixar Animation Studios and distributed by Walt Disney Pictures.\n- Lee Unkrich co-directed Monsters, Inc. and Finding Nemo before making his solo directorial debut with Toy Story 3.\n- Lee Unkrich won the Academy Award for Best Animated Film in 2011 for Toy Story 3.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "1a7d0de8-9be6-588e-82a0-295f50c865d7",
+        "text": "Page: Monsters, Inc.. Sentence: Monsters, Inc. is a 2001 American computer-animated comedy film produced by Pixar Animation Studios and distributed by Walt Disney Pictures.\nPage: Mary Poppins (film). Sentence: Mary Poppins is a 1964 American musical-fantasy film directed by Robert Stevenson and produced by Walt Disney, with songs written and composed by the Sherman Brothers.\nPage: Lee Unkrich. Sentence: After co-directing \"Monsters, Inc.\" and \"Finding Nemo\", Unkrich made his solo directorial debut with \"Toy Story 3\", for which he won the Academy Award for Best Animated Film in 2011.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "d1bb6cae-4e51-5b33-bc46-704cb290e00b",
+        "text": "text_330b0565866f88db4a764ad96f37e89c",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "eaade023-255b-554b-9d93-3e777e1ea732",
+        "text": "monsters, inc.",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "7bd3af1d-2fce-5267-8017-1300d5a6e9f4",
+        "text": "2001",
+        "type": "Entity"
+      },
+      {
+        "id": 5,
+        "original_id": "b19433ae-558c-5aaf-95ac-6231f2a4be0e",
+        "text": "date",
+        "type": "EntityType"
+      },
+      {
+        "id": 6,
+        "original_id": "a5046e1f-c353-56ba-8475-76001df7e5af",
+        "text": "pixar animation studios",
+        "type": "Entity"
+      },
+      {
+        "id": 7,
+        "original_id": "388f60fb-220d-55e8-ae9c-3ac93cead308",
+        "text": "organization",
+        "type": "EntityType"
+      },
+      {
+        "id": 8,
+        "original_id": "d690cff4-f313-556d-b1c6-fb0b070cd921",
+        "text": "walt disney pictures",
+        "type": "Entity"
+      },
+      {
+        "id": 9,
+        "original_id": "d320c8df-fd51-56e6-b577-e01a688fe6fc",
+        "text": "film",
+        "type": "EntityType"
+      },
+      {
+        "id": 10,
+        "original_id": "3142353a-38a4-5843-8719-635021590175",
+        "text": "mary poppins",
+        "type": "Entity"
+      },
+      {
+        "id": 11,
+        "original_id": "f84b53f0-d68a-5f9c-b437-b5b836eed4d3",
+        "text": "1964",
+        "type": "Entity"
+      },
+      {
+        "id": 12,
+        "original_id": "5564a8b8-e355-508b-9f8a-3adf1fcf46c6",
+        "text": "robert stevenson",
+        "type": "Entity"
+      },
+      {
+        "id": 13,
+        "original_id": "99a82eec-bb35-5bb5-9ed2-e73fc7a756de",
+        "text": "person",
+        "type": "EntityType"
+      },
+      {
+        "id": 14,
+        "original_id": "a5e99a25-0725-5be3-9cf3-4990386f9ad2",
+        "text": "walt disney",
+        "type": "Entity"
+      },
+      {
+        "id": 15,
+        "original_id": "d7e33479-d477-55b7-a4e4-7a50c2f3d509",
+        "text": "sherman brothers",
+        "type": "Entity"
+      },
+      {
+        "id": 16,
+        "original_id": "37cc5944-08ec-501b-bb12-8273d2a6d599",
+        "text": "lee unkrich",
+        "type": "Entity"
+      },
+      {
+        "id": 17,
+        "original_id": "938c3001-d9cd-5581-b18f-e2aa7879ca81",
+        "text": "finding nemo",
+        "type": "Entity"
+      },
+      {
+        "id": 18,
+        "original_id": "f8cb6302-9b71-53ad-a6af-906e2baa8af8",
+        "text": "toy story 3",
+        "type": "Entity"
+      },
+      {
+        "id": 19,
+        "original_id": "f97d8299-cd75-5f3b-bfcb-e0f52e513c1e",
+        "text": "academy award for best animated film",
+        "type": "Entity"
+      },
+      {
+        "id": 20,
+        "original_id": "38e42125-31f4-5cd6-993c-dbbc06a88910",
+        "text": "award",
+        "type": "EntityType"
+      },
+      {
+        "id": 21,
+        "original_id": "f54e52eb-db61-5cc3-aa32-5c78e42891d1",
+        "text": "2011",
+        "type": "Entity"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 16,
+        "target": 3,
+        "type": "co_directed"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "released_in"
+      },
+      {
+        "source": 1,
+        "target": 4,
+        "type": "contains"
+      },
+      {
+        "source": 4,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 11,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 21,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 6,
+        "type": "produced_by"
+      },
+      {
+        "source": 1,
+        "target": 6,
+        "type": "contains"
+      },
+      {
+        "source": 6,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 8,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 8,
+        "type": "distributed_by"
+      },
+      {
+        "source": 1,
+        "target": 8,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 9,
+        "type": "is_a"
+      },
+      {
+        "source": 10,
+        "target": 9,
+        "type": "is_a"
+      },
+      {
+        "source": 17,
+        "target": 9,
+        "type": "is_a"
+      },
+      {
+        "source": 18,
+        "target": 9,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 10,
+        "type": "contains"
+      },
+      {
+        "source": 10,
+        "target": 11,
+        "type": "released_in"
+      },
+      {
+        "source": 1,
+        "target": 11,
+        "type": "contains"
+      },
+      {
+        "source": 10,
+        "target": 12,
+        "type": "directed_by"
+      },
+      {
+        "source": 1,
+        "target": 12,
+        "type": "contains"
+      },
+      {
+        "source": 12,
+        "target": 13,
+        "type": "is_a"
+      },
+      {
+        "source": 14,
+        "target": 13,
+        "type": "is_a"
+      },
+      {
+        "source": 15,
+        "target": 13,
+        "type": "is_a"
+      },
+      {
+        "source": 16,
+        "target": 13,
+        "type": "is_a"
+      },
+      {
+        "source": 10,
+        "target": 14,
+        "type": "produced_by"
+      },
+      {
+        "source": 1,
+        "target": 14,
+        "type": "contains"
+      },
+      {
+        "source": 10,
+        "target": 15,
+        "type": "songs_written_and_composed_by"
+      },
+      {
+        "source": 1,
+        "target": 15,
+        "type": "contains"
+      },
+      {
+        "source": 1,
+        "target": 16,
+        "type": "contains"
+      },
+      {
+        "source": 16,
+        "target": 17,
+        "type": "co_directed"
+      },
+      {
+        "source": 1,
+        "target": 17,
+        "type": "contains"
+      },
+      {
+        "source": 16,
+        "target": 18,
+        "type": "directed"
+      },
+      {
+        "source": 1,
+        "target": 18,
+        "type": "contains"
+      },
+      {
+        "source": 18,
+        "target": 19,
+        "type": "earned"
+      },
+      {
+        "source": 16,
+        "target": 19,
+        "type": "won"
+      },
+      {
+        "source": 1,
+        "target": 19,
+        "type": "contains"
+      },
+      {
+        "source": 19,
+        "target": 20,
+        "type": "is_a"
+      },
+      {
+        "source": 16,
+        "target": 21,
+        "type": "won_in"
+      },
+      {
+        "source": 1,
+        "target": 21,
+        "type": "contains"
+      }
+    ]
+  }
+}

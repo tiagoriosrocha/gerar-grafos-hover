@@ -1,0 +1,419 @@
+{
+  "dataset": "hover",
+  "id": "35f3f71b-a993-4fea-850c-ec51e5a7ed9d",
+  "split": "train",
+  "claim": "The company Margaret Sullivan worked for as the Director of Political Risk Management was founded by a hedge fund manager. That hedgefund manager was born in the year 1957.",
+  "evidencia": "Page: Farallon Capital. Sentence: The firm was founded by Tom Steyer in 1986.\nPage: Tom Steyer. Sentence: Thomas Fahr Steyer (born June 27, 1957) is an American hedge fund manager, philanthropist, environmentalist, liberal activist, and fundraiser.\nPage: Margaret Sullivan. Sentence: Prior to joining the Obama Administration, she served as Director of Political Risk Management at Farallon Capital Management.",
+  "evidence_text": "Page: Farallon Capital. Sentence: The firm was founded by Tom Steyer in 1986.\nPage: Tom Steyer. Sentence: Thomas Fahr Steyer (born June 27, 1957) is an American hedge fund manager, philanthropist, environmentalist, liberal activist, and fundraiser.\nPage: Margaret Sullivan. Sentence: Prior to joining the Obama Administration, she served as Director of Political Risk Management at Farallon Capital Management.",
+  "label": "SUPPORTED",
+  "num_hops": 3,
+  "hover_metadata": {
+    "supporting_facts": [
+      [
+        "Farallon Capital",
+        1
+      ],
+      [
+        "Tom Steyer",
+        0
+      ],
+      [
+        "Margaret Sullivan",
+        1
+      ]
+    ],
+    "num_hops": 3,
+    "evidence_annotation_id": [
+      0
+    ],
+    "evidence_id": [
+      "Farallon Capital::sentence::1",
+      "Tom Steyer::sentence::0",
+      "Margaret Sullivan::sentence::1"
+    ],
+    "evidence_wiki_url": [
+      "https://en.wikipedia.org/wiki/Farallon_Capital",
+      "https://en.wikipedia.org/wiki/Tom_Steyer",
+      "https://en.wikipedia.org/wiki/Margaret_Sullivan"
+    ],
+    "evidence_sentence_id": [
+      "Farallon Capital::sentence::1",
+      "Tom Steyer::sentence::0",
+      "Margaret Sullivan::sentence::1"
+    ]
+  },
+  "grafo_claim": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "df1b84f9-e8b5-565e-91e3-ca8b2051b78b",
+        "text": "This chunk is about:\n- People: Margaret Sullivan, hedge fund manager\n- Companies: the company where Margaret Sullivan was Director of Political Risk Management\n- Roles: Director of Political Risk Management\n\nFacts:\n- Margaret Sullivan worked for a company as the Director of Political Risk Management.\n- That company was founded by a hedge fund manager.\n- The hedge fund manager who founded that company was born in 1957.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "65eb667e-bd77-5906-b74b-8527b8b9bde0",
+        "text": "The company Margaret Sullivan worked for as the Director of Political Risk Management was founded by a hedge fund manager. That hedgefund manager was born in the year 1957.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "15d3c9b8-9623-5c0e-bbcd-8ce5d8c37629",
+        "text": "text_bdd1327059b21ced8d197346d41691b6",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "ff51fef2-40fb-577a-bdae-e39a409c0368",
+        "text": "margaret sullivan",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "fc2b3f20-7187-531f-9ce6-05bdf1608144",
+        "text": "the company",
+        "type": "Entity"
+      },
+      {
+        "id": 5,
+        "original_id": "82bfc922-4fcd-56b0-b353-7b550b51389d",
+        "text": "company",
+        "type": "EntityType"
+      },
+      {
+        "id": 6,
+        "original_id": "6bbd0ba8-ab70-5481-af09-92ecd12c7f92",
+        "text": "director of political risk management",
+        "type": "Entity"
+      },
+      {
+        "id": 7,
+        "original_id": "c37fc488-fc9a-5b35-8e54-a50ae1721557",
+        "text": "role",
+        "type": "EntityType"
+      },
+      {
+        "id": 8,
+        "original_id": "99a82eec-bb35-5bb5-9ed2-e73fc7a756de",
+        "text": "person",
+        "type": "EntityType"
+      },
+      {
+        "id": 9,
+        "original_id": "72fa7ad2-d153-578a-8fdc-2a132a56f980",
+        "text": "the hedge fund manager",
+        "type": "Entity"
+      },
+      {
+        "id": 10,
+        "original_id": "e8ebfb27-a139-5715-abfd-78f9cc1cb291",
+        "text": "1957",
+        "type": "Entity"
+      },
+      {
+        "id": 11,
+        "original_id": "b19433ae-558c-5aaf-95ac-6231f2a4be0e",
+        "text": "date",
+        "type": "EntityType"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "worked_for"
+      },
+      {
+        "source": 1,
+        "target": 4,
+        "type": "contains"
+      },
+      {
+        "source": 9,
+        "target": 4,
+        "type": "founded"
+      },
+      {
+        "source": 4,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 6,
+        "type": "held_role"
+      },
+      {
+        "source": 1,
+        "target": 6,
+        "type": "contains"
+      },
+      {
+        "source": 6,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 9,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 9,
+        "type": "contains"
+      },
+      {
+        "source": 9,
+        "target": 10,
+        "type": "born_in"
+      },
+      {
+        "source": 1,
+        "target": 10,
+        "type": "contains"
+      },
+      {
+        "source": 10,
+        "target": 11,
+        "type": "is_a"
+      }
+    ]
+  },
+  "grafo_evidencia": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "f4e7a2c5-3913-56f3-8fe1-a16e9d55760b",
+        "text": "This chunk is about:\n- People: Tom Steyer, Thomas Fahr Steyer, Margaret Sullivan\n- Companies: Farallon Capital, Farallon Capital Management\n- Organizations: Obama Administration\n- Roles: founder, hedge fund manager, philanthropist, environmentalist, liberal activist, fundraiser, Director of Political Risk Management\n\nFacts:\n- Thomas Fahr Steyer was born on June 27, 1957.\n- Thomas Fahr Steyer is an American hedge fund manager, philanthropist, environmentalist, liberal activist, and fundraiser.\n- Farallon Capital was founded by Tom Steyer in 1986.\n- Prior to joining the Obama Administration, Margaret Sullivan served as Director of Political Risk Management at Farallon Capital Management.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "128aada7-b716-539b-92f4-cdfa925263ff",
+        "text": "Page: Farallon Capital. Sentence: The firm was founded by Tom Steyer in 1986.\nPage: Tom Steyer. Sentence: Thomas Fahr Steyer (born June 27, 1957) is an American hedge fund manager, philanthropist, environmentalist, liberal activist, and fundraiser.\nPage: Margaret Sullivan. Sentence: Prior to joining the Obama Administration, she served as Director of Political Risk Management at Farallon Capital Management.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "33e0e4ca-8a00-59b0-8649-4be750fc065c",
+        "text": "text_20c2dbdce0363a569accd0130f6d5a07",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "78aab428-dcfb-53ad-b3d3-e4086b868aa8",
+        "text": "farallon capital",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "6ba1afd5-fed2-5c67-8f7d-ad0b76e9a9b6",
+        "text": "1986",
+        "type": "Entity"
+      },
+      {
+        "id": 5,
+        "original_id": "b19433ae-558c-5aaf-95ac-6231f2a4be0e",
+        "text": "date",
+        "type": "EntityType"
+      },
+      {
+        "id": 6,
+        "original_id": "388f60fb-220d-55e8-ae9c-3ac93cead308",
+        "text": "organization",
+        "type": "EntityType"
+      },
+      {
+        "id": 7,
+        "original_id": "d3448125-a188-56dc-9701-50c4d62da451",
+        "text": "tom steyer",
+        "type": "Entity"
+      },
+      {
+        "id": 8,
+        "original_id": "3bf82c3a-6318-5e7b-9058-8deff73955f9",
+        "text": "1957-06-27",
+        "type": "Entity"
+      },
+      {
+        "id": 9,
+        "original_id": "99a82eec-bb35-5bb5-9ed2-e73fc7a756de",
+        "text": "person",
+        "type": "EntityType"
+      },
+      {
+        "id": 10,
+        "original_id": "ff51fef2-40fb-577a-bdae-e39a409c0368",
+        "text": "margaret sullivan",
+        "type": "Entity"
+      },
+      {
+        "id": 11,
+        "original_id": "98c9e0c4-33f1-5e58-aa12-63cab70f22e2",
+        "text": "farallon capital management",
+        "type": "Entity"
+      },
+      {
+        "id": 12,
+        "original_id": "6bbd0ba8-ab70-5481-af09-92ecd12c7f92",
+        "text": "director of political risk management",
+        "type": "Entity"
+      },
+      {
+        "id": 13,
+        "original_id": "c37fc488-fc9a-5b35-8e54-a50ae1721557",
+        "text": "role",
+        "type": "EntityType"
+      },
+      {
+        "id": 14,
+        "original_id": "d55ac1ca-caef-5cec-a6db-a3a06a642534",
+        "text": "obama administration",
+        "type": "Entity"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 7,
+        "target": 3,
+        "type": "founded"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "founded_in"
+      },
+      {
+        "source": 1,
+        "target": 4,
+        "type": "contains"
+      },
+      {
+        "source": 4,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 8,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 11,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 14,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      },
+      {
+        "source": 7,
+        "target": 8,
+        "type": "born_on"
+      },
+      {
+        "source": 1,
+        "target": 8,
+        "type": "contains"
+      },
+      {
+        "source": 7,
+        "target": 9,
+        "type": "is_a"
+      },
+      {
+        "source": 10,
+        "target": 9,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 10,
+        "type": "contains"
+      },
+      {
+        "source": 10,
+        "target": 11,
+        "type": "served_at"
+      },
+      {
+        "source": 1,
+        "target": 11,
+        "type": "contains"
+      },
+      {
+        "source": 10,
+        "target": 12,
+        "type": "held_role"
+      },
+      {
+        "source": 1,
+        "target": 12,
+        "type": "contains"
+      },
+      {
+        "source": 12,
+        "target": 13,
+        "type": "is_a"
+      },
+      {
+        "source": 10,
+        "target": 14,
+        "type": "joined_after"
+      },
+      {
+        "source": 1,
+        "target": 14,
+        "type": "contains"
+      }
+    ]
+  }
+}

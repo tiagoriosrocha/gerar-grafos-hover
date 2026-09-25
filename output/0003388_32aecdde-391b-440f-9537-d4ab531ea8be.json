@@ -1,0 +1,400 @@
+{
+  "dataset": "hover",
+  "id": "32aecdde-391b-440f-9537-d4ab531ea8be",
+  "split": "train",
+  "claim": "Jean Epstein and Tim Whelan are not French.",
+  "evidencia": "Page: Jean Epstein. Sentence: Jean Epstein (] ; March 25, 1897 – April 2, 1953) was a French filmmaker, film theorist, literary critic, and novelist.\nPage: Tim Whelan. Sentence: Tim Whelan (November 2, 1893 – August 12, 1957) was an American film director, writer, producer and actor best remembered for \"The Thief of Bagdad\" (1940).",
+  "evidence_text": "Page: Jean Epstein. Sentence: Jean Epstein (] ; March 25, 1897 – April 2, 1953) was a French filmmaker, film theorist, literary critic, and novelist.\nPage: Tim Whelan. Sentence: Tim Whelan (November 2, 1893 – August 12, 1957) was an American film director, writer, producer and actor best remembered for \"The Thief of Bagdad\" (1940).",
+  "label": "SUPPORTED",
+  "num_hops": 2,
+  "hover_metadata": {
+    "supporting_facts": [
+      [
+        "Jean Epstein",
+        0
+      ],
+      [
+        "Tim Whelan",
+        0
+      ]
+    ],
+    "num_hops": 2,
+    "evidence_annotation_id": [
+      0
+    ],
+    "evidence_id": [
+      "Jean Epstein::sentence::0",
+      "Tim Whelan::sentence::0"
+    ],
+    "evidence_wiki_url": [
+      "https://en.wikipedia.org/wiki/Jean_Epstein",
+      "https://en.wikipedia.org/wiki/Tim_Whelan"
+    ],
+    "evidence_sentence_id": [
+      "Jean Epstein::sentence::0",
+      "Tim Whelan::sentence::0"
+    ]
+  },
+  "grafo_claim": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "e91443c5-3dce-5c93-8959-5284c98ffbe5",
+        "text": "This chunk is about:\n- People: Jean Epstein, Tim Whelan\n- Topics: Nationality\n\nFacts:\n- Jean Epstein is not French.\n- Tim Whelan is not French.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "a059f5b2-5073-5690-88a3-5bb5d344a01e",
+        "text": "Jean Epstein and Tim Whelan are not French.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "63ad0173-d56e-5157-a04f-fa9af6fe9900",
+        "text": "text_2cab4d9e6cdc0e8b480f46a955a477ac",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "e5be06c9-ab40-5c93-9dfa-acac4889cd96",
+        "text": "jean epstein",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "eb9d7b11-73cb-5d01-83e1-c53a66608ef3",
+        "text": "french",
+        "type": "Entity"
+      },
+      {
+        "id": 5,
+        "original_id": "7d08f409-7e55-5a66-935f-7c5c06f9111f",
+        "text": "nationality",
+        "type": "EntityType"
+      },
+      {
+        "id": 6,
+        "original_id": "99a82eec-bb35-5bb5-9ed2-e73fc7a756de",
+        "text": "person",
+        "type": "EntityType"
+      },
+      {
+        "id": 7,
+        "original_id": "c18e0bdb-2765-5867-a14e-03f19175d28a",
+        "text": "tim whelan",
+        "type": "Entity"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "not_of_nationality"
+      },
+      {
+        "source": 7,
+        "target": 4,
+        "type": "not_of_nationality"
+      },
+      {
+        "source": 1,
+        "target": 4,
+        "type": "contains"
+      },
+      {
+        "source": 4,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 7,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      }
+    ]
+  },
+  "grafo_evidencia": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "9708726d-e78d-50e2-a2f4-25816596dee6",
+        "text": "This chunk is about:\n- People: Jean Epstein, Tim Whelan\n- Roles: filmmaker, film theorist, literary critic, novelist, film director, writer, producer, actor\n- Works: The Thief of Bagdad\n\nFacts:\n- Tim Whelan was born on November 2, 1893.\n- Jean Epstein was born on March 25, 1897.\n- Tim Whelan was an American film director, writer, producer, and actor.\n- Jean Epstein was a French filmmaker, film theorist, literary critic, and novelist.\n- Tim Whelan is best remembered for The Thief of Bagdad (1940).\n- Jean Epstein died on April 2, 1953.\n- Tim Whelan died on August 12, 1957.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "5ad4c9bf-5205-58a6-b28b-1d4105a5d0de",
+        "text": "Page: Jean Epstein. Sentence: Jean Epstein (] ; March 25, 1897 – April 2, 1953) was a French filmmaker, film theorist, literary critic, and novelist.\nPage: Tim Whelan. Sentence: Tim Whelan (November 2, 1893 – August 12, 1957) was an American film director, writer, producer and actor best remembered for \"The Thief of Bagdad\" (1940).",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "1f40b856-f623-5796-a0c2-1788d133968a",
+        "text": "text_8961c4ce3b39280cf7f301b5b7df090f",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "e5be06c9-ab40-5c93-9dfa-acac4889cd96",
+        "text": "jean epstein",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "95494683-bf11-5a47-9c7e-465b7498e26b",
+        "text": "1897-03-25",
+        "type": "Entity"
+      },
+      {
+        "id": 5,
+        "original_id": "b19433ae-558c-5aaf-95ac-6231f2a4be0e",
+        "text": "date",
+        "type": "EntityType"
+      },
+      {
+        "id": 6,
+        "original_id": "b9e8c955-f0db-59ac-9f4c-dcf3c5c82190",
+        "text": "1953-04-02",
+        "type": "Entity"
+      },
+      {
+        "id": 7,
+        "original_id": "c529785c-647b-5d0f-88d0-151b1fff337c",
+        "text": "france",
+        "type": "Entity"
+      },
+      {
+        "id": 8,
+        "original_id": "5f394058-b2a0-5ba8-8466-ba2a18cfcf4e",
+        "text": "place",
+        "type": "EntityType"
+      },
+      {
+        "id": 9,
+        "original_id": "99a82eec-bb35-5bb5-9ed2-e73fc7a756de",
+        "text": "person",
+        "type": "EntityType"
+      },
+      {
+        "id": 10,
+        "original_id": "c18e0bdb-2765-5867-a14e-03f19175d28a",
+        "text": "tim whelan",
+        "type": "Entity"
+      },
+      {
+        "id": 11,
+        "original_id": "ff5b7f38-f612-578f-b60b-5dc5525ab419",
+        "text": "1893-11-02",
+        "type": "Entity"
+      },
+      {
+        "id": 12,
+        "original_id": "6312efcd-e0d1-591f-ae86-84e14f8f64ed",
+        "text": "1957-08-12",
+        "type": "Entity"
+      },
+      {
+        "id": 13,
+        "original_id": "874a51da-34ea-5037-be47-d87785d43c37",
+        "text": "united states",
+        "type": "Entity"
+      },
+      {
+        "id": 14,
+        "original_id": "a035ae27-8073-5f60-8d4f-486137838f75",
+        "text": "the thief of bagdad",
+        "type": "Entity"
+      },
+      {
+        "id": 15,
+        "original_id": "57326032-3dce-50c6-95dd-f5eace54f804",
+        "text": "1940",
+        "type": "Entity"
+      },
+      {
+        "id": 16,
+        "original_id": "5263a535-1b4b-5925-be3e-310d03cd303b",
+        "text": "work",
+        "type": "EntityType"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "born_on"
+      },
+      {
+        "source": 1,
+        "target": 4,
+        "type": "contains"
+      },
+      {
+        "source": 4,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 6,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 11,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 12,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 15,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 6,
+        "type": "died_on"
+      },
+      {
+        "source": 1,
+        "target": 6,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 7,
+        "type": "has_nationality"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      },
+      {
+        "source": 7,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 13,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 9,
+        "type": "is_a"
+      },
+      {
+        "source": 10,
+        "target": 9,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 10,
+        "type": "contains"
+      },
+      {
+        "source": 10,
+        "target": 11,
+        "type": "born_on"
+      },
+      {
+        "source": 1,
+        "target": 11,
+        "type": "contains"
+      },
+      {
+        "source": 10,
+        "target": 12,
+        "type": "died_on"
+      },
+      {
+        "source": 1,
+        "target": 12,
+        "type": "contains"
+      },
+      {
+        "source": 10,
+        "target": 13,
+        "type": "has_nationality"
+      },
+      {
+        "source": 1,
+        "target": 13,
+        "type": "contains"
+      },
+      {
+        "source": 10,
+        "target": 14,
+        "type": "best_remembered_for"
+      },
+      {
+        "source": 1,
+        "target": 14,
+        "type": "contains"
+      },
+      {
+        "source": 14,
+        "target": 15,
+        "type": "released_in"
+      },
+      {
+        "source": 1,
+        "target": 15,
+        "type": "contains"
+      },
+      {
+        "source": 14,
+        "target": 16,
+        "type": "is_a"
+      }
+    ]
+  }
+}

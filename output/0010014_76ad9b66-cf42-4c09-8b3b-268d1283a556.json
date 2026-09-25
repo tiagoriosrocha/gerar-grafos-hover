@@ -1,0 +1,490 @@
+{
+  "dataset": "hover",
+  "id": "76ad9b66-cf42-4c09-8b3b-268d1283a556",
+  "split": "train",
+  "claim": "Glenn Hughes plays more instruments than Dave Evans.",
+  "evidencia": "Page: Glenn Hughes. Sentence: Glenn Hughes (born 21 August 1951) is an English rock bassist and vocalist, best known for playing bass and performing vocals for funk rock pioneers Trapeze, the Mk.\nPage: Dave Evans (singer). Sentence: Dave Evans (born 20 July 1953) is an Australian singer who briefly sang for the hard rock band AC/DC in 1973–1974.",
+  "evidence_text": "Page: Glenn Hughes. Sentence: Glenn Hughes (born 21 August 1951) is an English rock bassist and vocalist, best known for playing bass and performing vocals for funk rock pioneers Trapeze, the Mk.\nPage: Dave Evans (singer). Sentence: Dave Evans (born 20 July 1953) is an Australian singer who briefly sang for the hard rock band AC/DC in 1973–1974.",
+  "label": "SUPPORTED",
+  "num_hops": 2,
+  "hover_metadata": {
+    "supporting_facts": [
+      [
+        "Glenn Hughes",
+        0
+      ],
+      [
+        "Dave Evans (singer)",
+        0
+      ]
+    ],
+    "num_hops": 2,
+    "evidence_annotation_id": [
+      0
+    ],
+    "evidence_id": [
+      "Glenn Hughes::sentence::0",
+      "Dave Evans (singer)::sentence::0"
+    ],
+    "evidence_wiki_url": [
+      "https://en.wikipedia.org/wiki/Glenn_Hughes",
+      "https://en.wikipedia.org/wiki/Dave_Evans_%28singer%29"
+    ],
+    "evidence_sentence_id": [
+      "Glenn Hughes::sentence::0",
+      "Dave Evans (singer)::sentence::0"
+    ]
+  },
+  "grafo_claim": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "874aa1d2-83c3-5dc4-8927-20e7f0ee24e6",
+        "text": "This chunk is about:\n- People: Glenn Hughes, Dave Evans\n- Topics: Instrument-playing comparison\n\nFacts:\n- Glenn Hughes plays more instruments than Dave Evans.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "29a8cc3c-9822-55c5-b655-71f34227fa4f",
+        "text": "Glenn Hughes plays more instruments than Dave Evans.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "69be4270-e6ea-52eb-a626-d50d3664daff",
+        "text": "text_f767120b9044e329bb04810fd68f4446",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "cbac010c-f4e4-568a-95c6-59558dfcd3c2",
+        "text": "glenn hughes",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "99a82eec-bb35-5bb5-9ed2-e73fc7a756de",
+        "text": "person",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "457caa6e-304e-51c4-885e-f20aeb7930e0",
+        "text": "instruments played by glenn hughes",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "d2a381fa-3658-5ca6-ada9-2109cfc9331d",
+        "text": "concept",
+        "type": "EntityType"
+      },
+      {
+        "id": 7,
+        "original_id": "3fdf6066-7272-5d6b-b6d6-af6252c43fe8",
+        "text": "instruments played by dave evans",
+        "type": "Entity"
+      },
+      {
+        "id": 8,
+        "original_id": "3850f6ab-1a26-536e-b9af-d445e6cbc8f3",
+        "text": "dave evans",
+        "type": "Entity"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 8,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "plays_instruments_count"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 7,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 5,
+        "target": 7,
+        "type": "greater_than"
+      },
+      {
+        "source": 8,
+        "target": 7,
+        "type": "plays_instruments_count"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      },
+      {
+        "source": 1,
+        "target": 8,
+        "type": "contains"
+      }
+    ]
+  },
+  "grafo_evidencia": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "f4cc3dc0-84be-5877-8e7f-9b79c585a409",
+        "text": "This chunk is about:\n- People: Glenn Hughes, Dave Evans\n- Roles: bassist, vocalist, singer\n- Organizations: Trapeze, AC/DC\n- Topics: rock music, hard rock, funk rock\n\nFacts:\n- Glenn Hughes was born on 21 August 1951.\n- Glenn Hughes is an English rock bassist and vocalist.\n- Glenn Hughes is best known for playing bass and performing vocals for the funk rock pioneers Trapeze.\n- Dave Evans was born on 20 July 1953.\n- Dave Evans is an Australian singer.\n- Dave Evans briefly sang for the hard rock band AC/DC from 1973 to 1974.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "a6d1c810-624a-5049-8d6a-aa177da3c23c",
+        "text": "Page: Glenn Hughes. Sentence: Glenn Hughes (born 21 August 1951) is an English rock bassist and vocalist, best known for playing bass and performing vocals for funk rock pioneers Trapeze, the Mk.\nPage: Dave Evans (singer). Sentence: Dave Evans (born 20 July 1953) is an Australian singer who briefly sang for the hard rock band AC/DC in 1973–1974.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "7b2a7691-fe89-5224-96db-2d8a38f08043",
+        "text": "text_736fa62eb3c79b82d1c6c1101a509433",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "cbac010c-f4e4-568a-95c6-59558dfcd3c2",
+        "text": "glenn hughes",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "99a82eec-bb35-5bb5-9ed2-e73fc7a756de",
+        "text": "person",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "5eb64240-3cb2-5eb5-ba3e-9a43119ec073",
+        "text": "1951-08-21",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "b19433ae-558c-5aaf-95ac-6231f2a4be0e",
+        "text": "date",
+        "type": "EntityType"
+      },
+      {
+        "id": 7,
+        "original_id": "27f0656f-762c-54f0-8ed5-c4b27557219f",
+        "text": "england",
+        "type": "Entity"
+      },
+      {
+        "id": 8,
+        "original_id": "5f394058-b2a0-5ba8-8466-ba2a18cfcf4e",
+        "text": "place",
+        "type": "EntityType"
+      },
+      {
+        "id": 9,
+        "original_id": "a7ae0218-0d78-530d-9619-02629ec88115",
+        "text": "rock bassist",
+        "type": "Entity"
+      },
+      {
+        "id": 10,
+        "original_id": "d2a381fa-3658-5ca6-ada9-2109cfc9331d",
+        "text": "concept",
+        "type": "EntityType"
+      },
+      {
+        "id": 11,
+        "original_id": "794192dd-5efd-5ff8-aac5-4c6e4528a66b",
+        "text": "vocalist",
+        "type": "Entity"
+      },
+      {
+        "id": 12,
+        "original_id": "3e6b5d19-4b6d-5fa2-9949-49609de4cf67",
+        "text": "trapeze",
+        "type": "Entity"
+      },
+      {
+        "id": 13,
+        "original_id": "388f60fb-220d-55e8-ae9c-3ac93cead308",
+        "text": "organization",
+        "type": "EntityType"
+      },
+      {
+        "id": 14,
+        "original_id": "3850f6ab-1a26-536e-b9af-d445e6cbc8f3",
+        "text": "dave evans",
+        "type": "Entity"
+      },
+      {
+        "id": 15,
+        "original_id": "3796d789-e9f6-5dce-ae05-3bdf01587200",
+        "text": "1953-07-20",
+        "type": "Entity"
+      },
+      {
+        "id": 16,
+        "original_id": "02448d73-884d-50c7-a919-b94177f1cf43",
+        "text": "australia",
+        "type": "Entity"
+      },
+      {
+        "id": 17,
+        "original_id": "eab5737a-cd7b-5a0b-b6f7-660bb3ed3495",
+        "text": "singer",
+        "type": "Entity"
+      },
+      {
+        "id": 18,
+        "original_id": "d08ce4b9-0c66-5525-9d28-1de577555cfa",
+        "text": "ac/dc",
+        "type": "Entity"
+      },
+      {
+        "id": 19,
+        "original_id": "39e9a75c-18e0-5c79-94c6-266b4a369596",
+        "text": "1973",
+        "type": "Entity"
+      },
+      {
+        "id": 20,
+        "original_id": "681376de-d401-54ac-8198-569c27eed3e6",
+        "text": "1974",
+        "type": "Entity"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 14,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "born_on"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 15,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 19,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 20,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 7,
+        "type": "associated_with_place"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      },
+      {
+        "source": 7,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 16,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 9,
+        "type": "has_role"
+      },
+      {
+        "source": 1,
+        "target": 9,
+        "type": "contains"
+      },
+      {
+        "source": 9,
+        "target": 10,
+        "type": "is_a"
+      },
+      {
+        "source": 11,
+        "target": 10,
+        "type": "is_a"
+      },
+      {
+        "source": 17,
+        "target": 10,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 11,
+        "type": "has_role"
+      },
+      {
+        "source": 1,
+        "target": 11,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 12,
+        "type": "played_for"
+      },
+      {
+        "source": 1,
+        "target": 12,
+        "type": "contains"
+      },
+      {
+        "source": 12,
+        "target": 13,
+        "type": "is_a"
+      },
+      {
+        "source": 18,
+        "target": 13,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 14,
+        "type": "contains"
+      },
+      {
+        "source": 14,
+        "target": 15,
+        "type": "born_on"
+      },
+      {
+        "source": 1,
+        "target": 15,
+        "type": "contains"
+      },
+      {
+        "source": 14,
+        "target": 16,
+        "type": "associated_with_place"
+      },
+      {
+        "source": 1,
+        "target": 16,
+        "type": "contains"
+      },
+      {
+        "source": 14,
+        "target": 17,
+        "type": "has_role"
+      },
+      {
+        "source": 1,
+        "target": 17,
+        "type": "contains"
+      },
+      {
+        "source": 14,
+        "target": 18,
+        "type": "sang_for"
+      },
+      {
+        "source": 1,
+        "target": 18,
+        "type": "contains"
+      },
+      {
+        "source": 14,
+        "target": 19,
+        "type": "started_singing_for_in"
+      },
+      {
+        "source": 1,
+        "target": 19,
+        "type": "contains"
+      },
+      {
+        "source": 14,
+        "target": 20,
+        "type": "stopped_singing_for_in"
+      },
+      {
+        "source": 1,
+        "target": 20,
+        "type": "contains"
+      }
+    ]
+  }
+}

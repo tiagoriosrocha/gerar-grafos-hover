@@ -1,0 +1,413 @@
+{
+  "dataset": "hover",
+  "id": "67643532-fa65-4716-ae50-55b39775a077",
+  "split": "train",
+  "claim": "American wide receiver, Titus Davis, has a brother who was drafted by the Titans fifth overall in the 2017 NFL Draft.",
+  "evidencia": "Page: Titus Davis. Sentence: Titus Davis (born January 3, 1993) is an American football wide receiver who is currently a free agent.\nPage: Titus Davis. Sentence: His younger brother, Corey Davis is a wide receiver for the Tennessee Titans.\nPage: Corey Davis (wide receiver). Sentence: Corey Davis (born January 11, 1995) is an American football wide receiver for the Tennessee Titans of the National Football League (NFL).\nPage: Corey Davis (wide receiver). Sentence: He was drafted by the Titans fifth overall in the 2017 NFL Draft.",
+  "evidence_text": "Page: Titus Davis. Sentence: Titus Davis (born January 3, 1993) is an American football wide receiver who is currently a free agent.\nPage: Titus Davis. Sentence: His younger brother, Corey Davis is a wide receiver for the Tennessee Titans.\nPage: Corey Davis (wide receiver). Sentence: Corey Davis (born January 11, 1995) is an American football wide receiver for the Tennessee Titans of the National Football League (NFL).\nPage: Corey Davis (wide receiver). Sentence: He was drafted by the Titans fifth overall in the 2017 NFL Draft.",
+  "label": "SUPPORTED",
+  "num_hops": 2,
+  "hover_metadata": {
+    "supporting_facts": [
+      [
+        "Titus Davis",
+        0
+      ],
+      [
+        "Titus Davis",
+        3
+      ],
+      [
+        "Corey Davis (wide receiver)",
+        0
+      ],
+      [
+        "Corey Davis (wide receiver)",
+        2
+      ]
+    ],
+    "num_hops": 2,
+    "evidence_annotation_id": [
+      0
+    ],
+    "evidence_id": [
+      "Titus Davis::sentence::0",
+      "Titus Davis::sentence::3",
+      "Corey Davis (wide receiver)::sentence::0",
+      "Corey Davis (wide receiver)::sentence::2"
+    ],
+    "evidence_wiki_url": [
+      "https://en.wikipedia.org/wiki/Titus_Davis",
+      "https://en.wikipedia.org/wiki/Corey_Davis_%28wide_receiver%29"
+    ],
+    "evidence_sentence_id": [
+      "Titus Davis::sentence::0",
+      "Titus Davis::sentence::3",
+      "Corey Davis (wide receiver)::sentence::0",
+      "Corey Davis (wide receiver)::sentence::2"
+    ]
+  },
+  "grafo_claim": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "ccf5a681-dd49-5db3-a078-08b0b28fc1a6",
+        "text": "This chunk is about:\n- People: Titus Davis, Corey Davis\n- Organizations: Tennessee Titans, NFL Draft\n- Roles: American wide receiver\n\nFacts:\n- Titus Davis is an American wide receiver.\n- Titus Davis has a brother named Corey Davis.\n- Corey Davis was drafted fifth overall by the Tennessee Titans in the 2017 NFL Draft.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "7b95dd91-ccfa-5224-ae3a-db01f0405bcf",
+        "text": "American wide receiver, Titus Davis, has a brother who was drafted by the Titans fifth overall in the 2017 NFL Draft.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "95a6003a-75eb-57c9-b05e-3b37c629d45c",
+        "text": "text_0602e0999c8f6aab7fae0b78ceecfe3d",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "7af51b1f-a0a8-54fa-8fa5-c427d9f01f54",
+        "text": "titus davis",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "99a82eec-bb35-5bb5-9ed2-e73fc7a756de",
+        "text": "person",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "4a85bbf9-63e0-5c6b-b221-058d80f15f77",
+        "text": "brother of titus davis",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "b7e0c0a6-84b5-5094-a3b8-9cd447686b4a",
+        "text": "tennessee titans",
+        "type": "Entity"
+      },
+      {
+        "id": 7,
+        "original_id": "8118d213-4743-5c2b-8bbd-b7515ec691ce",
+        "text": "2017 nfl draft",
+        "type": "Entity"
+      },
+      {
+        "id": 8,
+        "original_id": "214abcd9-9adf-5c8a-bb35-1e729f2d68c3",
+        "text": "event",
+        "type": "EntityType"
+      },
+      {
+        "id": 9,
+        "original_id": "388f60fb-220d-55e8-ae9c-3ac93cead308",
+        "text": "organization",
+        "type": "EntityType"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 3,
+        "type": "sibling_of"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 5,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "drafted_by"
+      },
+      {
+        "source": 1,
+        "target": 6,
+        "type": "contains"
+      },
+      {
+        "source": 6,
+        "target": 7,
+        "type": "participated_in"
+      },
+      {
+        "source": 5,
+        "target": 7,
+        "type": "drafted_in"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      },
+      {
+        "source": 7,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 6,
+        "target": 9,
+        "type": "is_a"
+      }
+    ]
+  },
+  "grafo_evidencia": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "4bf5ea82-96b6-592e-80a9-c8f693324897",
+        "text": "This chunk is about:\n- People: Titus Davis, Corey Davis\n- Organizations: Tennessee Titans, National Football League\n- Roles: American football wide receiver, free agent\n- Events: 2017 NFL Draft\n\nFacts:\n- Titus Davis was born on January 3, 1993.\n- Titus Davis is an American football wide receiver and is currently a free agent.\n- Corey Davis is the younger brother of Titus Davis.\n- Corey Davis was born on January 11, 1995.\n- Corey Davis is an American football wide receiver for the Tennessee Titans of the National Football League.\n- Corey Davis was drafted fifth overall by the Tennessee Titans in the 2017 NFL Draft.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "bc63e5eb-30fa-5dff-ac2d-3a414ed091ea",
+        "text": "Page: Titus Davis. Sentence: Titus Davis (born January 3, 1993) is an American football wide receiver who is currently a free agent.\nPage: Titus Davis. Sentence: His younger brother, Corey Davis is a wide receiver for the Tennessee Titans.\nPage: Corey Davis (wide receiver). Sentence: Corey Davis (born January 11, 1995) is an American football wide receiver for the Tennessee Titans of the National Football League (NFL).\nPage: Corey Davis (wide receiver). Sentence: He was drafted by the Titans fifth overall in the 2017 NFL Draft.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "bea4d087-5be8-5264-a17d-5fd9e773f7a3",
+        "text": "text_65d8fb6a9d2df07ba837c06b664960f4",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "7af51b1f-a0a8-54fa-8fa5-c427d9f01f54",
+        "text": "titus davis",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "ec027809-4f5f-5bb7-a545-fe255ab9a71d",
+        "text": "1993-01-03",
+        "type": "Entity"
+      },
+      {
+        "id": 5,
+        "original_id": "b19433ae-558c-5aaf-95ac-6231f2a4be0e",
+        "text": "date",
+        "type": "EntityType"
+      },
+      {
+        "id": 6,
+        "original_id": "9be8053f-166b-529d-a2bb-d4828ebd8dd1",
+        "text": "free agent",
+        "type": "Entity"
+      },
+      {
+        "id": 7,
+        "original_id": "d67a1ee5-ba28-5311-9852-701992027df5",
+        "text": "status",
+        "type": "EntityType"
+      },
+      {
+        "id": 8,
+        "original_id": "a76f113a-6b8a-511b-b64a-fab23c3548e6",
+        "text": "corey davis",
+        "type": "Entity"
+      },
+      {
+        "id": 9,
+        "original_id": "b7e0c0a6-84b5-5094-a3b8-9cd447686b4a",
+        "text": "tennessee titans",
+        "type": "Entity"
+      },
+      {
+        "id": 10,
+        "original_id": "2bf6deb2-20f3-5ced-bec4-a26143ce3525",
+        "text": "national football league",
+        "type": "Entity"
+      },
+      {
+        "id": 11,
+        "original_id": "388f60fb-220d-55e8-ae9c-3ac93cead308",
+        "text": "organization",
+        "type": "EntityType"
+      },
+      {
+        "id": 12,
+        "original_id": "e2738ab4-1ac6-546d-87e8-1de19d2b67e5",
+        "text": "1995-01-11",
+        "type": "Entity"
+      },
+      {
+        "id": 13,
+        "original_id": "8118d213-4743-5c2b-8bbd-b7515ec691ce",
+        "text": "2017 nfl draft",
+        "type": "Entity"
+      },
+      {
+        "id": 14,
+        "original_id": "214abcd9-9adf-5c8a-bb35-1e729f2d68c3",
+        "text": "event",
+        "type": "EntityType"
+      },
+      {
+        "id": 15,
+        "original_id": "99a82eec-bb35-5bb5-9ed2-e73fc7a756de",
+        "text": "person",
+        "type": "EntityType"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "born_on"
+      },
+      {
+        "source": 1,
+        "target": 4,
+        "type": "contains"
+      },
+      {
+        "source": 4,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 12,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 6,
+        "type": "has_status"
+      },
+      {
+        "source": 1,
+        "target": 6,
+        "type": "contains"
+      },
+      {
+        "source": 6,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 8,
+        "type": "sibling_of"
+      },
+      {
+        "source": 1,
+        "target": 8,
+        "type": "contains"
+      },
+      {
+        "source": 8,
+        "target": 9,
+        "type": "plays_for"
+      },
+      {
+        "source": 1,
+        "target": 9,
+        "type": "contains"
+      },
+      {
+        "source": 9,
+        "target": 10,
+        "type": "member_of"
+      },
+      {
+        "source": 1,
+        "target": 10,
+        "type": "contains"
+      },
+      {
+        "source": 10,
+        "target": 11,
+        "type": "is_a"
+      },
+      {
+        "source": 9,
+        "target": 11,
+        "type": "is_a"
+      },
+      {
+        "source": 8,
+        "target": 12,
+        "type": "born_on"
+      },
+      {
+        "source": 1,
+        "target": 12,
+        "type": "contains"
+      },
+      {
+        "source": 8,
+        "target": 13,
+        "type": "drafted_in"
+      },
+      {
+        "source": 1,
+        "target": 13,
+        "type": "contains"
+      },
+      {
+        "source": 13,
+        "target": 14,
+        "type": "is_a"
+      },
+      {
+        "source": 8,
+        "target": 15,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 15,
+        "type": "is_a"
+      }
+    ]
+  }
+}

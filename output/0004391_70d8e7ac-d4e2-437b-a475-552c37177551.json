@@ -1,0 +1,352 @@
+{
+  "dataset": "hover",
+  "id": "70d8e7ac-d4e2-437b-a475-552c37177551",
+  "split": "train",
+  "claim": "Gin and tonic and Paloma cocktails do not have tequila as a base.",
+  "evidencia": "Page: Gin and tonic. Sentence: A gin and tonic is a highball cocktail made with gin and tonic water poured over ice.\nPage: Paloma (cocktail). Sentence: The paloma (Spanish for \"dove\") is a tequila-based cocktail.",
+  "evidence_text": "Page: Gin and tonic. Sentence: A gin and tonic is a highball cocktail made with gin and tonic water poured over ice.\nPage: Paloma (cocktail). Sentence: The paloma (Spanish for \"dove\") is a tequila-based cocktail.",
+  "label": "SUPPORTED",
+  "num_hops": 2,
+  "hover_metadata": {
+    "supporting_facts": [
+      [
+        "Gin and tonic",
+        0
+      ],
+      [
+        "Paloma (cocktail)",
+        0
+      ]
+    ],
+    "num_hops": 2,
+    "evidence_annotation_id": [
+      0
+    ],
+    "evidence_id": [
+      "Gin and tonic::sentence::0",
+      "Paloma (cocktail)::sentence::0"
+    ],
+    "evidence_wiki_url": [
+      "https://en.wikipedia.org/wiki/Gin_and_tonic",
+      "https://en.wikipedia.org/wiki/Paloma_%28cocktail%29"
+    ],
+    "evidence_sentence_id": [
+      "Gin and tonic::sentence::0",
+      "Paloma (cocktail)::sentence::0"
+    ]
+  },
+  "grafo_claim": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "6095a876-f038-5f74-b586-53bcc08f5d65",
+        "text": "This chunk is about:\n- Products: Gin and tonic, Paloma, tequila\n- Concepts: Cocktail bases\n\nFacts:\n- Gin and tonic does not have tequila as a base.\n- Paloma does not have tequila as a base.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "06c9df70-e647-5622-a680-2dd2c75864a2",
+        "text": "Gin and tonic and Paloma cocktails do not have tequila as a base.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "0ed68b5c-bf59-53ea-9c78-12c2f4c09a76",
+        "text": "text_1e2f9bc5ada8174a4480dc8e4c46b883",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "d705f5c7-c3d5-5fa7-bfc5-435b7b2a9792",
+        "text": "gin and tonic",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "5d9a5ba0-54cf-5189-9757-45f888d61695",
+        "text": "tequila",
+        "type": "Entity"
+      },
+      {
+        "id": 5,
+        "original_id": "de04d8a8-1b78-5a88-bb18-5aa48f533be4",
+        "text": "ingredient",
+        "type": "EntityType"
+      },
+      {
+        "id": 6,
+        "original_id": "6db8ddc4-ae16-5cb9-99f4-b16b70503f38",
+        "text": "cocktail",
+        "type": "EntityType"
+      },
+      {
+        "id": 7,
+        "original_id": "78503417-0cbf-5690-8322-5dc109bd597c",
+        "text": "paloma",
+        "type": "Entity"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "does_not_have_as_base"
+      },
+      {
+        "source": 7,
+        "target": 4,
+        "type": "does_not_have_as_base"
+      },
+      {
+        "source": 1,
+        "target": 4,
+        "type": "contains"
+      },
+      {
+        "source": 4,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 7,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      }
+    ]
+  },
+  "grafo_evidencia": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "9860dfba-7cc6-51db-a4a3-4f42ddb153df",
+        "text": "This chunk is about:\n- Products: gin and tonic, paloma\n- Concepts: highball cocktails, tequila-based cocktails\n\nFacts:\n- A gin and tonic is a highball cocktail made with gin and tonic water poured over ice.\n- The paloma is a tequila-based cocktail, and its name means \"dove\" in Spanish.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "e874d92e-a3bc-512e-bdba-7c11608a7b1c",
+        "text": "Page: Gin and tonic. Sentence: A gin and tonic is a highball cocktail made with gin and tonic water poured over ice.\nPage: Paloma (cocktail). Sentence: The paloma (Spanish for \"dove\") is a tequila-based cocktail.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "43f33c37-93e5-53bb-ac4c-594838945021",
+        "text": "text_e25b15e3b19e54220ce33396f44bf503",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "d705f5c7-c3d5-5fa7-bfc5-435b7b2a9792",
+        "text": "gin and tonic",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "ce0bafd8-8c64-589e-9781-c7f5df005121",
+        "text": "highball cocktail",
+        "type": "Entity"
+      },
+      {
+        "id": 5,
+        "original_id": "58c5636a-bd83-593e-87d0-53a002ba21de",
+        "text": "drink",
+        "type": "EntityType"
+      },
+      {
+        "id": 6,
+        "original_id": "dabf7a70-ebcb-58ca-a6fd-a2d296c3ff59",
+        "text": "gin",
+        "type": "Entity"
+      },
+      {
+        "id": 7,
+        "original_id": "de04d8a8-1b78-5a88-bb18-5aa48f533be4",
+        "text": "ingredient",
+        "type": "EntityType"
+      },
+      {
+        "id": 8,
+        "original_id": "99f21b1b-4566-57fe-af16-b1e782d66d9a",
+        "text": "tonic water",
+        "type": "Entity"
+      },
+      {
+        "id": 9,
+        "original_id": "3ef0cdfc-b0bd-5693-a78c-ebbe43a5c693",
+        "text": "ice",
+        "type": "Entity"
+      },
+      {
+        "id": 10,
+        "original_id": "78503417-0cbf-5690-8322-5dc109bd597c",
+        "text": "paloma",
+        "type": "Entity"
+      },
+      {
+        "id": 11,
+        "original_id": "5d9a5ba0-54cf-5189-9757-45f888d61695",
+        "text": "tequila",
+        "type": "Entity"
+      },
+      {
+        "id": 12,
+        "original_id": "985ca678-fbe9-51f4-bd46-a2f1d0b398bf",
+        "text": "dove",
+        "type": "Entity"
+      },
+      {
+        "id": 13,
+        "original_id": "d2a381fa-3658-5ca6-ada9-2109cfc9331d",
+        "text": "concept",
+        "type": "EntityType"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 4,
+        "type": "contains"
+      },
+      {
+        "source": 4,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 10,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 6,
+        "type": "made_with"
+      },
+      {
+        "source": 1,
+        "target": 6,
+        "type": "contains"
+      },
+      {
+        "source": 6,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 8,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 9,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 11,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 8,
+        "type": "made_with"
+      },
+      {
+        "source": 1,
+        "target": 8,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 9,
+        "type": "poured_over"
+      },
+      {
+        "source": 1,
+        "target": 9,
+        "type": "contains"
+      },
+      {
+        "source": 1,
+        "target": 10,
+        "type": "contains"
+      },
+      {
+        "source": 10,
+        "target": 11,
+        "type": "based_on"
+      },
+      {
+        "source": 1,
+        "target": 11,
+        "type": "contains"
+      },
+      {
+        "source": 10,
+        "target": 12,
+        "type": "means_in_spanish"
+      },
+      {
+        "source": 1,
+        "target": 12,
+        "type": "contains"
+      },
+      {
+        "source": 12,
+        "target": 13,
+        "type": "is_a"
+      }
+    ]
+  }
+}

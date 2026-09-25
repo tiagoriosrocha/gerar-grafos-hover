@@ -1,0 +1,492 @@
+{
+  "dataset": "hover",
+  "id": "ae3e0f1d-49b3-4728-a559-f7eed5658070",
+  "split": "train",
+  "claim": "The travel hub is a mile south of the area KJAL is licensed to. Along with the six-runway Hoonah Airport, which is also a mile south, are both on American territory.",
+  "evidencia": "Page: Pago Pago International Airport. Sentence: Pago Pago International Airport (IATA: PPG, ICAO: NSTU, FAA LID: PPG) , also known as Tafuna Airport, is a public airport located 7 miles (11.3 km) southwest of the central business district of Pago Pago, in the village and plains of Tafuna on the island of Tutuila in American Samoa, an unincorporated territory of the United States.\nPage: Hoonah Airport. Sentence: Hoonah Airport (IATA: HNH, ICAO: PAOH, FAA LID: HNH) is a state-owned public-use airport located one nautical mile (2 km) southeast of the central business district of Hoonah, Alaska.\nPage: Tafuna, American Samoa. Sentence: It is located on a peninsula a mile north of Pago Pago International Airport and one mile south of Nu'uuli, American Samoa.\nPage: KJAL. Sentence: Licensed to Tafuna, American Samoa, it served the American Samoa area.",
+  "evidence_text": "Page: Pago Pago International Airport. Sentence: Pago Pago International Airport (IATA: PPG, ICAO: NSTU, FAA LID: PPG) , also known as Tafuna Airport, is a public airport located 7 miles (11.3 km) southwest of the central business district of Pago Pago, in the village and plains of Tafuna on the island of Tutuila in American Samoa, an unincorporated territory of the United States.\nPage: Hoonah Airport. Sentence: Hoonah Airport (IATA: HNH, ICAO: PAOH, FAA LID: HNH) is a state-owned public-use airport located one nautical mile (2 km) southeast of the central business district of Hoonah, Alaska.\nPage: Tafuna, American Samoa. Sentence: It is located on a peninsula a mile north of Pago Pago International Airport and one mile south of Nu'uuli, American Samoa.\nPage: KJAL. Sentence: Licensed to Tafuna, American Samoa, it served the American Samoa area.",
+  "label": "NOT_SUPPORTED",
+  "num_hops": 4,
+  "hover_metadata": {
+    "supporting_facts": [
+      [
+        "Pago Pago International Airport",
+        0
+      ],
+      [
+        "Hoonah Airport",
+        0
+      ],
+      [
+        "Tafuna, American Samoa",
+        1
+      ],
+      [
+        "KJAL",
+        1
+      ]
+    ],
+    "num_hops": 4,
+    "evidence_annotation_id": [
+      0
+    ],
+    "evidence_id": [
+      "Pago Pago International Airport::sentence::0",
+      "Hoonah Airport::sentence::0",
+      "Tafuna, American Samoa::sentence::1",
+      "KJAL::sentence::1"
+    ],
+    "evidence_wiki_url": [
+      "https://en.wikipedia.org/wiki/Pago_Pago_International_Airport",
+      "https://en.wikipedia.org/wiki/Hoonah_Airport",
+      "https://en.wikipedia.org/wiki/Tafuna%2C_American_Samoa",
+      "https://en.wikipedia.org/wiki/KJAL"
+    ],
+    "evidence_sentence_id": [
+      "Pago Pago International Airport::sentence::0",
+      "Hoonah Airport::sentence::0",
+      "Tafuna, American Samoa::sentence::1",
+      "KJAL::sentence::1"
+    ]
+  },
+  "grafo_claim": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "ca6e0e77-0942-57f2-9add-8d40914b0f61",
+        "text": "This chunk is about:\n- Places: travel hub, KJAL, Hoonah Airport, American territory\n- Topics: relative location\n\nFacts:\n- The travel hub is located one mile south of the area to which KJAL is licensed.\n- Hoonah Airport has six runways.\n- Hoonah Airport is located one mile south of the area to which KJAL is licensed.\n- The travel hub is on American territory.\n- Hoonah Airport is on American territory.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "bd214dc9-6678-5c54-a049-1c5250e448dc",
+        "text": "The travel hub is a mile south of the area KJAL is licensed to. Along with the six-runway Hoonah Airport, which is also a mile south, are both on American territory.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "2bff8e4f-c075-5673-8a84-dfafd31844b0",
+        "text": "text_e011c676570458baa273c4f00b7342b9",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "4aff8609-5b42-59f6-8820-6b312b79c773",
+        "text": "kjal",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "5f394058-b2a0-5ba8-8466-ba2a18cfcf4e",
+        "text": "place",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "eedb8d9e-f7bf-579b-8c40-9ef2e1c4893b",
+        "text": "travel hub",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "a150e589-4c62-5580-b416-c24d227b72fb",
+        "text": "american territory",
+        "type": "Entity"
+      },
+      {
+        "id": 7,
+        "original_id": "87ba0f99-ab74-561d-ac96-72ac9defea97",
+        "text": "hoonah airport",
+        "type": "Entity"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 3,
+        "type": "located_south_of"
+      },
+      {
+        "source": 7,
+        "target": 3,
+        "type": "located_south_of"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 5,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 6,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 7,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "located_on"
+      },
+      {
+        "source": 7,
+        "target": 6,
+        "type": "located_on"
+      },
+      {
+        "source": 1,
+        "target": 6,
+        "type": "contains"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      }
+    ]
+  },
+  "grafo_evidencia": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "6b5a5c6c-2888-5ef1-9778-fad1d0f38b2a",
+        "text": "This chunk is about:\n- Places: Pago Pago, Tafuna, Tutuila, American Samoa, Hoonah, Alaska, Nu'uuli\n- Airports: Pago Pago International Airport, Tafuna Airport, Hoonah Airport, KJAL\n- Codes: IATA PPG, ICAO NSTU, FAA LID PPG, IATA HNH, ICAO PAOH, FAA LID HNH\n- Topics: airport location, airport licensing\n\nFacts:\n- Pago Pago International Airport, also known as Tafuna Airport, is a public airport in Tafuna on Tutuila in American Samoa, 7 miles southwest of Pago Pago's central business district.\n- Pago Pago International Airport has the codes IATA PPG, ICAO NSTU, and FAA LID PPG.\n- Hoonah Airport is a state-owned public-use airport 1 nautical mile southeast of the central business district of Hoonah, Alaska.\n- Hoonah Airport has the codes IATA HNH, ICAO PAOH, and FAA LID HNH.\n- Tafuna, American Samoa, is on a peninsula 1 mile north of Pago Pago International Airport and 1 mile south of Nu'uuli, American Samoa.\n- KJAL was licensed to Tafuna, American Samoa, and served the American Samoa area.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "640063b1-f266-51f1-944e-4e4554d7f05c",
+        "text": "Page: Pago Pago International Airport. Sentence: Pago Pago International Airport (IATA: PPG, ICAO: NSTU, FAA LID: PPG) , also known as Tafuna Airport, is a public airport located 7 miles (11.3 km) southwest of the central business district of Pago Pago, in the village and plains of Tafuna on the island of Tutuila in American Samoa, an unincorporated territory of the United States.\nPage: Hoonah Airport. Sentence: Hoonah Airport (IATA: HNH, ICAO: PAOH, FAA LID: HNH) is a state-owned public-use airport located one nautical mile (2 km) southeast of the central business district of Hoonah, Alaska.\nPage: Tafuna, American Samoa. Sentence: It is located on a peninsula a mile north of Pago Pago International Airport and one mile south of Nu'uuli, American Samoa.\nPage: KJAL. Sentence: Licensed to Tafuna, American Samoa, it served the American Samoa area.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "676ef8cd-e3b6-510e-ad97-614de4be7a03",
+        "text": "text_cead805953568f7691e23b3ef3039ca3",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "65d50bf8-2eae-5cfc-87f0-2eba1147d83b",
+        "text": "pago pago international airport",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "50596f1a-2d8a-5de7-96b5-ba7068791784",
+        "text": "airport",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "a520bf8d-cbdb-5817-8de6-a525be8516b4",
+        "text": "tafuna airport",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "c0fafd28-d6a5-54ae-a17a-ce7ad940b385",
+        "text": "pago pago",
+        "type": "Entity"
+      },
+      {
+        "id": 7,
+        "original_id": "5f394058-b2a0-5ba8-8466-ba2a18cfcf4e",
+        "text": "place",
+        "type": "EntityType"
+      },
+      {
+        "id": 8,
+        "original_id": "85c32ab6-8689-5fb1-8a9c-e7ed4172474f",
+        "text": "tafuna",
+        "type": "Entity"
+      },
+      {
+        "id": 9,
+        "original_id": "37fdc827-890a-5483-a53b-f0218161e520",
+        "text": "nuuuli, american samoa",
+        "type": "Entity"
+      },
+      {
+        "id": 10,
+        "original_id": "f9359144-d285-5600-873b-2637feda7c8e",
+        "text": "tutuila",
+        "type": "Entity"
+      },
+      {
+        "id": 11,
+        "original_id": "80d9208c-7834-5e86-a525-4dd194db608e",
+        "text": "island",
+        "type": "EntityType"
+      },
+      {
+        "id": 12,
+        "original_id": "8906b005-1f33-57f8-a8a2-1685c9392921",
+        "text": "american samoa",
+        "type": "Entity"
+      },
+      {
+        "id": 13,
+        "original_id": "84af07b6-4827-5e16-af5f-6bb5d48242db",
+        "text": "territory",
+        "type": "EntityType"
+      },
+      {
+        "id": 14,
+        "original_id": "874a51da-34ea-5037-be47-d87785d43c37",
+        "text": "united states",
+        "type": "Entity"
+      },
+      {
+        "id": 15,
+        "original_id": "35e29ad1-17b7-507a-a205-d7851a5e7102",
+        "text": "country",
+        "type": "EntityType"
+      },
+      {
+        "id": 16,
+        "original_id": "87ba0f99-ab74-561d-ac96-72ac9defea97",
+        "text": "hoonah airport",
+        "type": "Entity"
+      },
+      {
+        "id": 17,
+        "original_id": "555a2b42-5b29-5163-8570-feac746e9078",
+        "text": "hoonah",
+        "type": "Entity"
+      },
+      {
+        "id": 18,
+        "original_id": "d7402577-c43b-5ad1-a134-b926ae71ce41",
+        "text": "alaska",
+        "type": "Entity"
+      },
+      {
+        "id": 19,
+        "original_id": "4aff8609-5b42-59f6-8820-6b312b79c773",
+        "text": "kjal",
+        "type": "Entity"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 8,
+        "target": 3,
+        "type": "located_north_of"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 5,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 16,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 19,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "also_known_as"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 6,
+        "type": "located_southwest_of"
+      },
+      {
+        "source": 1,
+        "target": 6,
+        "type": "contains"
+      },
+      {
+        "source": 6,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 8,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 9,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 17,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 18,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 8,
+        "type": "located_in"
+      },
+      {
+        "source": 1,
+        "target": 8,
+        "type": "contains"
+      },
+      {
+        "source": 19,
+        "target": 8,
+        "type": "licensed_to"
+      },
+      {
+        "source": 8,
+        "target": 9,
+        "type": "located_south_of"
+      },
+      {
+        "source": 1,
+        "target": 9,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 10,
+        "type": "located_on"
+      },
+      {
+        "source": 1,
+        "target": 10,
+        "type": "contains"
+      },
+      {
+        "source": 10,
+        "target": 11,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 12,
+        "type": "located_in"
+      },
+      {
+        "source": 1,
+        "target": 12,
+        "type": "contains"
+      },
+      {
+        "source": 19,
+        "target": 12,
+        "type": "served_area"
+      },
+      {
+        "source": 12,
+        "target": 13,
+        "type": "is_a"
+      },
+      {
+        "source": 12,
+        "target": 14,
+        "type": "territory_of"
+      },
+      {
+        "source": 1,
+        "target": 14,
+        "type": "contains"
+      },
+      {
+        "source": 14,
+        "target": 15,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 16,
+        "type": "contains"
+      },
+      {
+        "source": 16,
+        "target": 17,
+        "type": "located_southeast_of"
+      },
+      {
+        "source": 1,
+        "target": 17,
+        "type": "contains"
+      },
+      {
+        "source": 17,
+        "target": 18,
+        "type": "located_in"
+      },
+      {
+        "source": 1,
+        "target": 18,
+        "type": "contains"
+      },
+      {
+        "source": 1,
+        "target": 19,
+        "type": "contains"
+      }
+    ]
+  }
+}

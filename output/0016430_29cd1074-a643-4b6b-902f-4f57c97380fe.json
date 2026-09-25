@@ -1,0 +1,502 @@
+{
+  "dataset": "hover",
+  "id": "29cd1074-a643-4b6b-902f-4f57c97380fe",
+  "split": "train",
+  "claim": "Drew Barry's younger brother won the 1996 NBA Slam Dunk Contest in 1996.",
+  "evidencia": "Page: Drew Barry. Sentence: Drew William Barry (born February 17, 1973) is an American retired professional basketball player.\nPage: Drew Barry. Sentence: He is the son of Basketball Hall of Famer Rick Barry and has three brothers: Scooter, Jon and Brent, who also share his profession.\nPage: Brent Barry. Sentence: Brent Robert Barry (born December 31, 1971) is an American retired professional basketball player.\nPage: Brent Barry. Sentence: He also won the 1996 NBA Slam Dunk Contest.",
+  "evidence_text": "Page: Drew Barry. Sentence: Drew William Barry (born February 17, 1973) is an American retired professional basketball player.\nPage: Drew Barry. Sentence: He is the son of Basketball Hall of Famer Rick Barry and has three brothers: Scooter, Jon and Brent, who also share his profession.\nPage: Brent Barry. Sentence: Brent Robert Barry (born December 31, 1971) is an American retired professional basketball player.\nPage: Brent Barry. Sentence: He also won the 1996 NBA Slam Dunk Contest.",
+  "label": "SUPPORTED",
+  "num_hops": 2,
+  "hover_metadata": {
+    "supporting_facts": [
+      [
+        "Drew Barry",
+        0
+      ],
+      [
+        "Drew Barry",
+        1
+      ],
+      [
+        "Brent Barry",
+        0
+      ],
+      [
+        "Brent Barry",
+        3
+      ]
+    ],
+    "num_hops": 2,
+    "evidence_annotation_id": [
+      0
+    ],
+    "evidence_id": [
+      "Drew Barry::sentence::0",
+      "Drew Barry::sentence::1",
+      "Brent Barry::sentence::0",
+      "Brent Barry::sentence::3"
+    ],
+    "evidence_wiki_url": [
+      "https://en.wikipedia.org/wiki/Drew_Barry",
+      "https://en.wikipedia.org/wiki/Brent_Barry"
+    ],
+    "evidence_sentence_id": [
+      "Drew Barry::sentence::0",
+      "Drew Barry::sentence::1",
+      "Brent Barry::sentence::0",
+      "Brent Barry::sentence::3"
+    ]
+  },
+  "grafo_claim": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "1e6964a1-6a32-5aee-84df-c8ee26da7c4b",
+        "text": "This chunk is about:\n- People: Drew Barry, Brent Barry\n- Events: 1996 NBA Slam Dunk Contest\n\nFacts:\n- Brent Barry is Drew Barry's younger brother.\n- Brent Barry won the 1996 NBA Slam Dunk Contest in 1996.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "bc2d5148-050b-5741-ab89-cd66a3b511df",
+        "text": "Drew Barry's younger brother won the 1996 NBA Slam Dunk Contest in 1996.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "c727fef5-3d64-5d35-a26c-d7a9465206e4",
+        "text": "text_12847cbcbb2ecbbf7416d392d194efca",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "a9889d1d-1b0a-5f98-b937-dd5767023ef6",
+        "text": "drew barry",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "99a82eec-bb35-5bb5-9ed2-e73fc7a756de",
+        "text": "person",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "830e2e05-22ab-5bc6-a222-c1f8098aa502",
+        "text": "brent barry",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "d706482b-8d78-59b7-bbf3-f607e8cbe27f",
+        "text": "1996 nba slam dunk contest",
+        "type": "Entity"
+      },
+      {
+        "id": 7,
+        "original_id": "214abcd9-9adf-5c8a-bb35-1e729f2d68c3",
+        "text": "event",
+        "type": "EntityType"
+      },
+      {
+        "id": 8,
+        "original_id": "03508744-888e-5e4b-9a29-9ff87ae8d3b3",
+        "text": "1996",
+        "type": "Entity"
+      },
+      {
+        "id": 9,
+        "original_id": "b19433ae-558c-5aaf-95ac-6231f2a4be0e",
+        "text": "date",
+        "type": "EntityType"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 3,
+        "type": "younger_brother_of"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 5,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "won"
+      },
+      {
+        "source": 1,
+        "target": 6,
+        "type": "contains"
+      },
+      {
+        "source": 6,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 6,
+        "target": 8,
+        "type": "occurred_in"
+      },
+      {
+        "source": 1,
+        "target": 8,
+        "type": "contains"
+      },
+      {
+        "source": 8,
+        "target": 9,
+        "type": "is_a"
+      }
+    ]
+  },
+  "grafo_evidencia": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "acf7b8ac-fcb4-515d-b4ab-8501e2b12bf2",
+        "text": "This chunk is about:\n- People: Drew Barry, Brent Barry, Rick Barry, Scooter Barry, Jon Barry\n- Roles: retired professional basketball players, Basketball Hall of Famer\n- Events: 1996 NBA Slam Dunk Contest\n\nFacts:\n- Brent Barry was born on December 31, 1971, and is an American retired professional basketball player.\n- Drew Barry was born on February 17, 1973, and is an American retired professional basketball player.\n- Drew Barry is the son of Basketball Hall of Famer Rick Barry.\n- Drew Barry has three brothers named Scooter Barry, Jon Barry, and Brent Barry, and they also became professional basketball players.\n- Brent Barry won the 1996 NBA Slam Dunk Contest.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "9eb3340b-56ca-5d98-af6b-f9c3e2635e23",
+        "text": "Page: Drew Barry. Sentence: Drew William Barry (born February 17, 1973) is an American retired professional basketball player.\nPage: Drew Barry. Sentence: He is the son of Basketball Hall of Famer Rick Barry and has three brothers: Scooter, Jon and Brent, who also share his profession.\nPage: Brent Barry. Sentence: Brent Robert Barry (born December 31, 1971) is an American retired professional basketball player.\nPage: Brent Barry. Sentence: He also won the 1996 NBA Slam Dunk Contest.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "8c3d0794-f5b2-54c0-84e7-b96b2596e952",
+        "text": "text_e105c2e1ca2e9a023a5b39579513ce2d",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "a9889d1d-1b0a-5f98-b937-dd5767023ef6",
+        "text": "drew barry",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "99a82eec-bb35-5bb5-9ed2-e73fc7a756de",
+        "text": "person",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "26206a1c-d0a1-5cda-995a-c72c3219d18b",
+        "text": "drew william barry",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "3fd73d2e-07a7-5e17-b39b-55b0fb7d73b4",
+        "text": "1973-02-17",
+        "type": "Entity"
+      },
+      {
+        "id": 7,
+        "original_id": "b19433ae-558c-5aaf-95ac-6231f2a4be0e",
+        "text": "date",
+        "type": "EntityType"
+      },
+      {
+        "id": 8,
+        "original_id": "874a51da-34ea-5037-be47-d87785d43c37",
+        "text": "united states",
+        "type": "Entity"
+      },
+      {
+        "id": 9,
+        "original_id": "5f394058-b2a0-5ba8-8466-ba2a18cfcf4e",
+        "text": "place",
+        "type": "EntityType"
+      },
+      {
+        "id": 10,
+        "original_id": "068e834d-f02a-5f64-a70f-396333a542bd",
+        "text": "professional basketball player",
+        "type": "Entity"
+      },
+      {
+        "id": 11,
+        "original_id": "9d80eb43-32fa-561c-9371-91f180ebcb6c",
+        "text": "profession",
+        "type": "EntityType"
+      },
+      {
+        "id": 12,
+        "original_id": "aeed2af7-8012-5bbf-a87b-ef7bf6d907a9",
+        "text": "rick barry",
+        "type": "Entity"
+      },
+      {
+        "id": 13,
+        "original_id": "84196359-9c6b-5d24-b50b-7fcd72d2a431",
+        "text": "scooter barry",
+        "type": "Entity"
+      },
+      {
+        "id": 14,
+        "original_id": "02d0dc71-69af-578a-a6aa-c91fd70178e2",
+        "text": "jon barry",
+        "type": "Entity"
+      },
+      {
+        "id": 15,
+        "original_id": "1221b036-eda7-556c-9896-692822b3d145",
+        "text": "brent robert barry",
+        "type": "Entity"
+      },
+      {
+        "id": 16,
+        "original_id": "79f95310-2424-5eb4-a66d-0c72d768501b",
+        "text": "1971-12-31",
+        "type": "Entity"
+      },
+      {
+        "id": 17,
+        "original_id": "d706482b-8d78-59b7-bbf3-f607e8cbe27f",
+        "text": "1996 nba slam dunk contest",
+        "type": "Entity"
+      },
+      {
+        "id": 18,
+        "original_id": "214abcd9-9adf-5c8a-bb35-1e729f2d68c3",
+        "text": "event",
+        "type": "EntityType"
+      },
+      {
+        "id": 19,
+        "original_id": "830e2e05-22ab-5bc6-a222-c1f8098aa502",
+        "text": "brent barry",
+        "type": "Entity"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 5,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 12,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 13,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 14,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 15,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 19,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "born_on"
+      },
+      {
+        "source": 1,
+        "target": 6,
+        "type": "contains"
+      },
+      {
+        "source": 6,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 16,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 5,
+        "target": 8,
+        "type": "has_nationality"
+      },
+      {
+        "source": 15,
+        "target": 8,
+        "type": "has_nationality"
+      },
+      {
+        "source": 1,
+        "target": 8,
+        "type": "contains"
+      },
+      {
+        "source": 8,
+        "target": 9,
+        "type": "is_a"
+      },
+      {
+        "source": 5,
+        "target": 10,
+        "type": "has_profession"
+      },
+      {
+        "source": 13,
+        "target": 10,
+        "type": "has_profession"
+      },
+      {
+        "source": 14,
+        "target": 10,
+        "type": "has_profession"
+      },
+      {
+        "source": 15,
+        "target": 10,
+        "type": "has_profession"
+      },
+      {
+        "source": 1,
+        "target": 10,
+        "type": "contains"
+      },
+      {
+        "source": 10,
+        "target": 11,
+        "type": "is_a"
+      },
+      {
+        "source": 5,
+        "target": 12,
+        "type": "child_of"
+      },
+      {
+        "source": 1,
+        "target": 12,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 13,
+        "type": "sibling_of"
+      },
+      {
+        "source": 1,
+        "target": 13,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 14,
+        "type": "sibling_of"
+      },
+      {
+        "source": 1,
+        "target": 14,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 15,
+        "type": "sibling_of"
+      },
+      {
+        "source": 1,
+        "target": 15,
+        "type": "contains"
+      },
+      {
+        "source": 15,
+        "target": 16,
+        "type": "born_on"
+      },
+      {
+        "source": 1,
+        "target": 16,
+        "type": "contains"
+      },
+      {
+        "source": 15,
+        "target": 17,
+        "type": "won"
+      },
+      {
+        "source": 1,
+        "target": 17,
+        "type": "contains"
+      },
+      {
+        "source": 17,
+        "target": 18,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 19,
+        "type": "contains"
+      }
+    ]
+  }
+}

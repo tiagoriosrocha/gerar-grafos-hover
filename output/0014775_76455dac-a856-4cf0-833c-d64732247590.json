@@ -1,0 +1,439 @@
+{
+  "dataset": "hover",
+  "id": "76455dac-a856-4cf0-833c-d64732247590",
+  "split": "train",
+  "claim": "Finding Kraftland and Shikashika are not both frozen drinks, Shikashika is a shaved ice drink.",
+  "evidencia": "Page: Finding Kraftland. Sentence: Finding Kraftland is a 2006 independent documentary from Richard Kraft productions starring Stacey J. Aswad, Richard Kraft, and Nicky Kraft.\nPage: Shikashika. Sentence: Shikashika is a shaved ice drink made from glacier ice in Peru and Bolivia.",
+  "evidence_text": "Page: Finding Kraftland. Sentence: Finding Kraftland is a 2006 independent documentary from Richard Kraft productions starring Stacey J. Aswad, Richard Kraft, and Nicky Kraft.\nPage: Shikashika. Sentence: Shikashika is a shaved ice drink made from glacier ice in Peru and Bolivia.",
+  "label": "SUPPORTED",
+  "num_hops": 2,
+  "hover_metadata": {
+    "supporting_facts": [
+      [
+        "Finding Kraftland",
+        0
+      ],
+      [
+        "Shikashika",
+        0
+      ]
+    ],
+    "num_hops": 2,
+    "evidence_annotation_id": [
+      0
+    ],
+    "evidence_id": [
+      "Finding Kraftland::sentence::0",
+      "Shikashika::sentence::0"
+    ],
+    "evidence_wiki_url": [
+      "https://en.wikipedia.org/wiki/Finding_Kraftland",
+      "https://en.wikipedia.org/wiki/Shikashika"
+    ],
+    "evidence_sentence_id": [
+      "Finding Kraftland::sentence::0",
+      "Shikashika::sentence::0"
+    ]
+  },
+  "grafo_claim": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "bc9adaa7-d351-5eda-a4da-d045d7a4f372",
+        "text": "This chunk is about:\n- Products: Kraftland, Shikashika\n- Concepts: frozen drinks, shaved ice drinks\n\nFacts:\n- Shikashika is a shaved ice drink.\n- Kraftland and Shikashika are not both frozen drinks.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "46e7d474-24ec-56ba-bf41-797a40b366bd",
+        "text": "Finding Kraftland and Shikashika are not both frozen drinks, Shikashika is a shaved ice drink.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "e75d6f24-a8eb-5797-8da6-49cab571a46b",
+        "text": "text_9197320c3b051215dce1b0fafe8c086f",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "c3817a66-f6ba-5a3a-a9a5-ee66d0bac70b",
+        "text": "kraftland",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "58c5636a-bd83-593e-87d0-53a002ba21de",
+        "text": "drink",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "7a308f1d-ea1e-52cb-a243-b64cd12c5110",
+        "text": "frozen drink",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "d2a381fa-3658-5ca6-ada9-2109cfc9331d",
+        "text": "concept",
+        "type": "EntityType"
+      },
+      {
+        "id": 7,
+        "original_id": "987fe06b-1cce-5038-a71e-9e3a04a8c4ca",
+        "text": "shikashika",
+        "type": "Entity"
+      },
+      {
+        "id": 8,
+        "original_id": "ad4b9223-6650-5873-a53d-c8c274532ab0",
+        "text": "shaved ice drink",
+        "type": "Entity"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 7,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "not_both_with_shikashika"
+      },
+      {
+        "source": 7,
+        "target": 5,
+        "type": "not_both_with_kraftland"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 8,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      },
+      {
+        "source": 7,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 8,
+        "type": "contains"
+      }
+    ]
+  },
+  "grafo_evidencia": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "2dd372da-3efb-5e10-88c2-c2e611ee8103",
+        "text": "This chunk is about:\n- Products: Finding Kraftland, Shikashika\n- People: Stacey J. Aswad, Richard Kraft, Nicky Kraft\n- Companies: Richard Kraft productions\n- Places: Peru, Bolivia\n- Topics: Independent documentaries, shaved ice drinks\n\nFacts:\n- Finding Kraftland is a 2006 independent documentary.\n- Finding Kraftland was produced by Richard Kraft productions.\n- Finding Kraftland stars Stacey J. Aswad, Richard Kraft, and Nicky Kraft.\n- Shikashika is a shaved ice drink made from glacier ice.\n- Shikashika is associated with Peru and Bolivia.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "06741499-c564-5fe4-bf61-e43e24dc6437",
+        "text": "Page: Finding Kraftland. Sentence: Finding Kraftland is a 2006 independent documentary from Richard Kraft productions starring Stacey J. Aswad, Richard Kraft, and Nicky Kraft.\nPage: Shikashika. Sentence: Shikashika is a shaved ice drink made from glacier ice in Peru and Bolivia.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "67b11d07-487c-52cd-81f9-8a785c246b2f",
+        "text": "text_fd9dfcf8e3bcf6358b4b24f3061418c0",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "79d8a5fe-9133-560c-83be-d15d9cd234f6",
+        "text": "finding kraftland",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "5263a535-1b4b-5925-be3e-310d03cd303b",
+        "text": "work",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "285bee7c-7ad4-5fb4-b1e7-7fc82362724c",
+        "text": "2006",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "b19433ae-558c-5aaf-95ac-6231f2a4be0e",
+        "text": "date",
+        "type": "EntityType"
+      },
+      {
+        "id": 7,
+        "original_id": "3d59902d-d75d-5726-bc59-b38479320ca3",
+        "text": "richard kraft productions",
+        "type": "Entity"
+      },
+      {
+        "id": 8,
+        "original_id": "388f60fb-220d-55e8-ae9c-3ac93cead308",
+        "text": "organization",
+        "type": "EntityType"
+      },
+      {
+        "id": 9,
+        "original_id": "10f15ae5-1fe4-50c7-b67e-a384badc263e",
+        "text": "stacey j. aswad",
+        "type": "Entity"
+      },
+      {
+        "id": 10,
+        "original_id": "99a82eec-bb35-5bb5-9ed2-e73fc7a756de",
+        "text": "person",
+        "type": "EntityType"
+      },
+      {
+        "id": 11,
+        "original_id": "71c6bbd6-48af-57df-bec7-7fe120287845",
+        "text": "richard kraft",
+        "type": "Entity"
+      },
+      {
+        "id": 12,
+        "original_id": "eba123e4-c44a-5326-89b5-2ed57aa1a6f7",
+        "text": "nicky kraft",
+        "type": "Entity"
+      },
+      {
+        "id": 13,
+        "original_id": "987fe06b-1cce-5038-a71e-9e3a04a8c4ca",
+        "text": "shikashika",
+        "type": "Entity"
+      },
+      {
+        "id": 14,
+        "original_id": "f9c5113e-747a-5581-af56-c9d2e76bce9b",
+        "text": "food",
+        "type": "EntityType"
+      },
+      {
+        "id": 15,
+        "original_id": "919b4a06-b755-543e-8926-259a45d02b35",
+        "text": "glacier ice",
+        "type": "Entity"
+      },
+      {
+        "id": 16,
+        "original_id": "41edc28f-34d7-56fd-9d04-d3445597e8fd",
+        "text": "material",
+        "type": "EntityType"
+      },
+      {
+        "id": 17,
+        "original_id": "e3af7237-08ca-56f5-90bc-f6ae8f8accdc",
+        "text": "peru",
+        "type": "Entity"
+      },
+      {
+        "id": 18,
+        "original_id": "5f394058-b2a0-5ba8-8466-ba2a18cfcf4e",
+        "text": "place",
+        "type": "EntityType"
+      },
+      {
+        "id": 19,
+        "original_id": "1b793828-b8bb-5d82-988c-815be60829d0",
+        "text": "bolivia",
+        "type": "Entity"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "released_in"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 7,
+        "type": "produced_by"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      },
+      {
+        "source": 7,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 9,
+        "type": "stars"
+      },
+      {
+        "source": 1,
+        "target": 9,
+        "type": "contains"
+      },
+      {
+        "source": 9,
+        "target": 10,
+        "type": "is_a"
+      },
+      {
+        "source": 11,
+        "target": 10,
+        "type": "is_a"
+      },
+      {
+        "source": 12,
+        "target": 10,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 11,
+        "type": "stars"
+      },
+      {
+        "source": 1,
+        "target": 11,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 12,
+        "type": "stars"
+      },
+      {
+        "source": 1,
+        "target": 12,
+        "type": "contains"
+      },
+      {
+        "source": 1,
+        "target": 13,
+        "type": "contains"
+      },
+      {
+        "source": 13,
+        "target": 14,
+        "type": "is_a"
+      },
+      {
+        "source": 13,
+        "target": 15,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 15,
+        "type": "contains"
+      },
+      {
+        "source": 15,
+        "target": 16,
+        "type": "is_a"
+      },
+      {
+        "source": 13,
+        "target": 17,
+        "type": "made_in"
+      },
+      {
+        "source": 1,
+        "target": 17,
+        "type": "contains"
+      },
+      {
+        "source": 17,
+        "target": 18,
+        "type": "is_a"
+      },
+      {
+        "source": 19,
+        "target": 18,
+        "type": "is_a"
+      },
+      {
+        "source": 13,
+        "target": 19,
+        "type": "made_in"
+      },
+      {
+        "source": 1,
+        "target": 19,
+        "type": "contains"
+      }
+    ]
+  }
+}

@@ -1,0 +1,606 @@
+{
+  "dataset": "hover",
+  "id": "b65723cb-f1a8-46e6-8439-40313edb5ffa",
+  "split": "train",
+  "claim": "The NASDAQ ticker code for Spirit Airlines, based at Detroit Metro Airport among others and an ultra low cost carrier is SAVE.",
+  "evidencia": "Page: Spirit Airlines. Sentence: Spirit Airlines, Inc. (NASDAQ: SAVE ) is an American Ultra Low Cost Carrier, headquartered in Miramar, Florida.\nPage: Spirit Airlines. Sentence: The airline operates bases at Atlantic City, Chicago–O'Hare, Dallas/Fort Worth, Detroit, Fort Lauderdale and Las Vegas as of 2015 .\nPage: Detroit Metropolitan Airport. Sentence: Detroit Metropolitan Wayne County Airport (IATA: DTW, ICAO: KDTW, FAA LID: DTW) , usually called Detroit Metro Airport, Metro Airport, or just DTW, is a major international airport in the United States covering 4,850 acre in Romulus, Michigan, a suburb of Detroit.",
+  "evidence_text": "Page: Spirit Airlines. Sentence: Spirit Airlines, Inc. (NASDAQ: SAVE ) is an American Ultra Low Cost Carrier, headquartered in Miramar, Florida.\nPage: Spirit Airlines. Sentence: The airline operates bases at Atlantic City, Chicago–O'Hare, Dallas/Fort Worth, Detroit, Fort Lauderdale and Las Vegas as of 2015 .\nPage: Detroit Metropolitan Airport. Sentence: Detroit Metropolitan Wayne County Airport (IATA: DTW, ICAO: KDTW, FAA LID: DTW) , usually called Detroit Metro Airport, Metro Airport, or just DTW, is a major international airport in the United States covering 4,850 acre in Romulus, Michigan, a suburb of Detroit.",
+  "label": "SUPPORTED",
+  "num_hops": 2,
+  "hover_metadata": {
+    "supporting_facts": [
+      [
+        "Spirit Airlines",
+        0
+      ],
+      [
+        "Spirit Airlines",
+        2
+      ],
+      [
+        "Detroit Metropolitan Airport",
+        0
+      ]
+    ],
+    "num_hops": 2,
+    "evidence_annotation_id": [
+      0
+    ],
+    "evidence_id": [
+      "Spirit Airlines::sentence::0",
+      "Spirit Airlines::sentence::2",
+      "Detroit Metropolitan Airport::sentence::0"
+    ],
+    "evidence_wiki_url": [
+      "https://en.wikipedia.org/wiki/Spirit_Airlines",
+      "https://en.wikipedia.org/wiki/Detroit_Metropolitan_Airport"
+    ],
+    "evidence_sentence_id": [
+      "Spirit Airlines::sentence::0",
+      "Spirit Airlines::sentence::2",
+      "Detroit Metropolitan Airport::sentence::0"
+    ]
+  },
+  "grafo_claim": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "7df502e4-cc56-5334-af70-23d31d953626",
+        "text": "This chunk is about:\n- Companies: Spirit Airlines\n- Products: NASDAQ ticker codes\n- Places: Detroit Metro Airport\n- Topics: ultra low-cost carriers\n\nFacts:\n- Spirit Airlines is an ultra low-cost carrier.\n- Spirit Airlines is based at Detroit Metro Airport among other locations.\n- Spirit Airlines has the NASDAQ ticker code SAVE.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "f4367afb-96b1-56f3-91de-893f635ac0de",
+        "text": "The NASDAQ ticker code for Spirit Airlines, based at Detroit Metro Airport among others and an ultra low cost carrier is SAVE.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "c37d5428-c0f6-5ebd-8e93-f2ec6dbaa276",
+        "text": "text_163155976725a0f26447f292fc828297",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "fbfb9340-3364-506a-8e62-e0f676f50681",
+        "text": "spirit airlines",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "388f60fb-220d-55e8-ae9c-3ac93cead308",
+        "text": "organization",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "8d0be70e-6a25-5764-9060-f226fe4d5185",
+        "text": "save",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "49606b1f-89e5-5f00-b597-52e6a2799273",
+        "text": "ticker",
+        "type": "EntityType"
+      },
+      {
+        "id": 7,
+        "original_id": "1058ab7c-58dc-59d3-97b7-9bf133def3bc",
+        "text": "nasdaq",
+        "type": "Entity"
+      },
+      {
+        "id": 8,
+        "original_id": "623c2819-bdae-5eba-acd7-3bb86a60597b",
+        "text": "detroit metro airport",
+        "type": "Entity"
+      },
+      {
+        "id": 9,
+        "original_id": "5f394058-b2a0-5ba8-8466-ba2a18cfcf4e",
+        "text": "place",
+        "type": "EntityType"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 7,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "has_ticker"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 5,
+        "target": 7,
+        "type": "listed_on"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 8,
+        "type": "based_at"
+      },
+      {
+        "source": 1,
+        "target": 8,
+        "type": "contains"
+      },
+      {
+        "source": 8,
+        "target": 9,
+        "type": "is_a"
+      }
+    ]
+  },
+  "grafo_evidencia": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "72dd3d11-ac52-552f-b686-8fe06e7c5aae",
+        "text": "This chunk is about:\n- Companies: Spirit Airlines\n- Places: Miramar, Florida; Atlantic City; Chicago–O'Hare; Dallas/Fort Worth; Detroit; Fort Lauderdale; Las Vegas; Detroit Metropolitan Wayne County Airport; Romulus, Michigan; Detroit\n- Topics: Ultra low-cost carriers; airport identifiers\n\nFacts:\n- Spirit Airlines, Inc. is an American ultra low-cost carrier headquartered in Miramar, Florida.\n- As of 2015, Spirit Airlines operated bases at Atlantic City, Chicago–O'Hare, Dallas/Fort Worth, Detroit, Fort Lauderdale, and Las Vegas.\n- Detroit Metropolitan Wayne County Airport is a major international airport in the United States.\n- Detroit Metropolitan Wayne County Airport covers 4,850 acres in Romulus, Michigan, a suburb of Detroit.\n- Detroit Metropolitan Wayne County Airport is usually called Detroit Metro Airport, Metro Airport, or DTW.\n- Detroit Metropolitan Wayne County Airport has the identifiers IATA DTW, ICAO KDTW, and FAA LID DTW.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "b45c81cb-8c71-568b-8182-449e4cf0b6d3",
+        "text": "Page: Spirit Airlines. Sentence: Spirit Airlines, Inc. (NASDAQ: SAVE ) is an American Ultra Low Cost Carrier, headquartered in Miramar, Florida.\nPage: Spirit Airlines. Sentence: The airline operates bases at Atlantic City, Chicago–O'Hare, Dallas/Fort Worth, Detroit, Fort Lauderdale and Las Vegas as of 2015 .\nPage: Detroit Metropolitan Airport. Sentence: Detroit Metropolitan Wayne County Airport (IATA: DTW, ICAO: KDTW, FAA LID: DTW) , usually called Detroit Metro Airport, Metro Airport, or just DTW, is a major international airport in the United States covering 4,850 acre in Romulus, Michigan, a suburb of Detroit.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "312e9f82-f100-586e-9d76-06844f99de2a",
+        "text": "text_3f29c720733dc6fed05bfa61112d016b",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "739d8fa3-4b51-51fe-8fc9-c7c9ad0d294d",
+        "text": "spirit airlines, inc.",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "388f60fb-220d-55e8-ae9c-3ac93cead308",
+        "text": "organization",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "f0f0b672-1175-58ba-92b5-1da5d38305d7",
+        "text": "nasdaq: save",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "5daeb78b-dad2-5007-aa93-b96afb6927b7",
+        "text": "miramar, florida",
+        "type": "Entity"
+      },
+      {
+        "id": 7,
+        "original_id": "5f394058-b2a0-5ba8-8466-ba2a18cfcf4e",
+        "text": "place",
+        "type": "EntityType"
+      },
+      {
+        "id": 8,
+        "original_id": "866f5443-94f4-5a51-a7eb-6193fddcdebe",
+        "text": "atlantic city",
+        "type": "Entity"
+      },
+      {
+        "id": 9,
+        "original_id": "5814bc49-a9fd-530e-9283-295440af93c6",
+        "text": "chicago ohare",
+        "type": "Entity"
+      },
+      {
+        "id": 10,
+        "original_id": "33719611-6821-5861-8e16-46a4592184bb",
+        "text": "dallas/fort worth",
+        "type": "Entity"
+      },
+      {
+        "id": 11,
+        "original_id": "d1dc06f9-5da9-5e2d-932c-74d953497a09",
+        "text": "detroit",
+        "type": "Entity"
+      },
+      {
+        "id": 12,
+        "original_id": "0863c0fb-6a6d-5b7f-9e2c-b7364cb4b112",
+        "text": "fort lauderdale",
+        "type": "Entity"
+      },
+      {
+        "id": 13,
+        "original_id": "2768ffee-4734-5551-9369-d2097b287276",
+        "text": "las vegas",
+        "type": "Entity"
+      },
+      {
+        "id": 14,
+        "original_id": "e462afa3-e20a-57e9-b578-82bcd93b548e",
+        "text": "2015",
+        "type": "Entity"
+      },
+      {
+        "id": 15,
+        "original_id": "b19433ae-558c-5aaf-95ac-6231f2a4be0e",
+        "text": "date",
+        "type": "EntityType"
+      },
+      {
+        "id": 16,
+        "original_id": "e1b82462-039a-50ad-8f84-a24ed8918eb5",
+        "text": "detroit metropolitan wayne county airport",
+        "type": "Entity"
+      },
+      {
+        "id": 17,
+        "original_id": "f5b92d05-7a4b-5013-82cc-5fa6442a3f99",
+        "text": "dtw",
+        "type": "Entity"
+      },
+      {
+        "id": 18,
+        "original_id": "ad53c2cb-4b31-54bb-bd03-fe2c06dd8fdb",
+        "text": "kdtw",
+        "type": "Entity"
+      },
+      {
+        "id": 19,
+        "original_id": "623c2819-bdae-5eba-acd7-3bb86a60597b",
+        "text": "detroit metro airport",
+        "type": "Entity"
+      },
+      {
+        "id": 20,
+        "original_id": "5dbd29bc-1a0f-5b7b-b8d8-ceb1249b245e",
+        "text": "metro airport",
+        "type": "Entity"
+      },
+      {
+        "id": 21,
+        "original_id": "874a51da-34ea-5037-be47-d87785d43c37",
+        "text": "united states",
+        "type": "Entity"
+      },
+      {
+        "id": 22,
+        "original_id": "88081184-0a3a-5cc6-b768-0a709b93f8e8",
+        "text": "romulus, michigan",
+        "type": "Entity"
+      },
+      {
+        "id": 23,
+        "original_id": "5afa3cd4-6bc4-56c4-9651-68242b6f91a7",
+        "text": "4,850 acre",
+        "type": "Entity"
+      },
+      {
+        "id": 24,
+        "original_id": "d2a381fa-3658-5ca6-ada9-2109cfc9331d",
+        "text": "concept",
+        "type": "EntityType"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 5,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "listed_as"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 6,
+        "type": "headquartered_in"
+      },
+      {
+        "source": 1,
+        "target": 6,
+        "type": "contains"
+      },
+      {
+        "source": 6,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 8,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 9,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 10,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 11,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 12,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 13,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 16,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 17,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 18,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 19,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 20,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 21,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 22,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 8,
+        "type": "operates_base_at"
+      },
+      {
+        "source": 1,
+        "target": 8,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 9,
+        "type": "operates_base_at"
+      },
+      {
+        "source": 1,
+        "target": 9,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 10,
+        "type": "operates_base_at"
+      },
+      {
+        "source": 1,
+        "target": 10,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 11,
+        "type": "operates_base_at"
+      },
+      {
+        "source": 1,
+        "target": 11,
+        "type": "contains"
+      },
+      {
+        "source": 22,
+        "target": 11,
+        "type": "is_suburb_of"
+      },
+      {
+        "source": 3,
+        "target": 12,
+        "type": "operates_base_at"
+      },
+      {
+        "source": 1,
+        "target": 12,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 13,
+        "type": "operates_base_at"
+      },
+      {
+        "source": 1,
+        "target": 13,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 14,
+        "type": "base_locations_stated_as_of"
+      },
+      {
+        "source": 1,
+        "target": 14,
+        "type": "contains"
+      },
+      {
+        "source": 14,
+        "target": 15,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 16,
+        "type": "contains"
+      },
+      {
+        "source": 16,
+        "target": 17,
+        "type": "has_iata_code"
+      },
+      {
+        "source": 1,
+        "target": 17,
+        "type": "contains"
+      },
+      {
+        "source": 16,
+        "target": 18,
+        "type": "has_icao_code"
+      },
+      {
+        "source": 1,
+        "target": 18,
+        "type": "contains"
+      },
+      {
+        "source": 16,
+        "target": 19,
+        "type": "usually_called"
+      },
+      {
+        "source": 1,
+        "target": 19,
+        "type": "contains"
+      },
+      {
+        "source": 16,
+        "target": 20,
+        "type": "usually_called"
+      },
+      {
+        "source": 1,
+        "target": 20,
+        "type": "contains"
+      },
+      {
+        "source": 16,
+        "target": 21,
+        "type": "located_in"
+      },
+      {
+        "source": 1,
+        "target": 21,
+        "type": "contains"
+      },
+      {
+        "source": 16,
+        "target": 22,
+        "type": "located_in"
+      },
+      {
+        "source": 1,
+        "target": 22,
+        "type": "contains"
+      },
+      {
+        "source": 16,
+        "target": 23,
+        "type": "covers_area"
+      },
+      {
+        "source": 1,
+        "target": 23,
+        "type": "contains"
+      },
+      {
+        "source": 23,
+        "target": 24,
+        "type": "is_a"
+      }
+    ]
+  }
+}

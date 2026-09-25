@@ -1,0 +1,559 @@
+{
+  "dataset": "hover",
+  "id": "fb1a0297-9fd2-496e-a761-d30b2a3070ae",
+  "split": "train",
+  "claim": "Ray Wilson and a member of VIXX that is also a member of VIXX LR, do not have the same nationality.",
+  "evidencia": "Page: Ray Wilson (musician). Sentence: Raymond Wilson (born 8 September 1968) is a Scottish musician, best known as vocalist in the post-grunge band Stiltskin, and in Genesis from 1996 to 1998.\nPage: Leo (singer). Sentence: Jung Taek-woon (Hangul: 정택운 , born on November 10, 1990), better known by his stage name Leo (Hangul: 레오 ), is a South Korean singer, songwriter and musical theatre actor, signed under Jellyfish Entertainment.\nPage: VIXX LR. Sentence: Established in August 2015, VIXX LR consists of VIXX's main vocalist Leo and main rapper Ravi.",
+  "evidence_text": "Page: Ray Wilson (musician). Sentence: Raymond Wilson (born 8 September 1968) is a Scottish musician, best known as vocalist in the post-grunge band Stiltskin, and in Genesis from 1996 to 1998.\nPage: Leo (singer). Sentence: Jung Taek-woon (Hangul: 정택운 , born on November 10, 1990), better known by his stage name Leo (Hangul: 레오 ), is a South Korean singer, songwriter and musical theatre actor, signed under Jellyfish Entertainment.\nPage: VIXX LR. Sentence: Established in August 2015, VIXX LR consists of VIXX's main vocalist Leo and main rapper Ravi.",
+  "label": "SUPPORTED",
+  "num_hops": 3,
+  "hover_metadata": {
+    "supporting_facts": [
+      [
+        "Ray Wilson (musician)",
+        0
+      ],
+      [
+        "Leo (singer)",
+        0
+      ],
+      [
+        "VIXX LR",
+        1
+      ]
+    ],
+    "num_hops": 3,
+    "evidence_annotation_id": [
+      0
+    ],
+    "evidence_id": [
+      "Ray Wilson (musician)::sentence::0",
+      "Leo (singer)::sentence::0",
+      "VIXX LR::sentence::1"
+    ],
+    "evidence_wiki_url": [
+      "https://en.wikipedia.org/wiki/Ray_Wilson_%28musician%29",
+      "https://en.wikipedia.org/wiki/Leo_%28singer%29",
+      "https://en.wikipedia.org/wiki/VIXX_LR"
+    ],
+    "evidence_sentence_id": [
+      "Ray Wilson (musician)::sentence::0",
+      "Leo (singer)::sentence::0",
+      "VIXX LR::sentence::1"
+    ]
+  },
+  "grafo_claim": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "a3e5155a-7717-5e6b-9f0f-de60abfaf685",
+        "text": "This chunk is about:\n- People: Ray Wilson, Leo\n- Music Groups: VIXX, VIXX LR\n\nFacts:\n- Ray Wilson and Leo do not have the same nationality.\n- Leo is a member of VIXX and also a member of VIXX LR.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "5380a73d-3d6a-5eb1-8148-3187af60f138",
+        "text": "Ray Wilson and a member of VIXX that is also a member of VIXX LR, do not have the same nationality.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "080910b9-eabe-55ff-b4b3-3a1915f83623",
+        "text": "text_d7d038881524ecb7fc62e70fa6a2056c",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "95958ef6-75f9-5fe3-97be-2fee453097df",
+        "text": "ray wilson",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "09619015-3080-5758-9cbe-b7774471362b",
+        "text": "nationality of ray wilson",
+        "type": "Entity"
+      },
+      {
+        "id": 5,
+        "original_id": "9a8fe814-8a03-51d7-ab68-059f727231d3",
+        "text": "nationality of member of vixx and vixx lr",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "d2a381fa-3658-5ca6-ada9-2109cfc9331d",
+        "text": "concept",
+        "type": "EntityType"
+      },
+      {
+        "id": 7,
+        "original_id": "99a82eec-bb35-5bb5-9ed2-e73fc7a756de",
+        "text": "person",
+        "type": "EntityType"
+      },
+      {
+        "id": 8,
+        "original_id": "86ced449-4e7a-5a3a-8f5a-1fd46ea30fbf",
+        "text": "vixx",
+        "type": "Entity"
+      },
+      {
+        "id": 9,
+        "original_id": "388f60fb-220d-55e8-ae9c-3ac93cead308",
+        "text": "organization",
+        "type": "EntityType"
+      },
+      {
+        "id": 10,
+        "original_id": "da4d9fdb-2fef-55f2-9dbd-12c159fd3070",
+        "text": "vixx lr",
+        "type": "Entity"
+      },
+      {
+        "id": 11,
+        "original_id": "53b8ba25-46d9-5de3-9d31-73010bb8b143",
+        "text": "member of vixx and vixx lr",
+        "type": "Entity"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "has_nationality"
+      },
+      {
+        "source": 1,
+        "target": 4,
+        "type": "contains"
+      },
+      {
+        "source": 4,
+        "target": 5,
+        "type": "not_same_as"
+      },
+      {
+        "source": 11,
+        "target": 5,
+        "type": "has_nationality"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 4,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 11,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 8,
+        "type": "contains"
+      },
+      {
+        "source": 11,
+        "target": 8,
+        "type": "member_of"
+      },
+      {
+        "source": 8,
+        "target": 9,
+        "type": "is_a"
+      },
+      {
+        "source": 10,
+        "target": 9,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 10,
+        "type": "contains"
+      },
+      {
+        "source": 11,
+        "target": 10,
+        "type": "member_of"
+      },
+      {
+        "source": 1,
+        "target": 11,
+        "type": "contains"
+      }
+    ]
+  },
+  "grafo_evidencia": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "0212dde9-234d-5cb5-805d-43abed350273",
+        "text": "This chunk is about:\n- People: Ray Wilson, Leo, Ravi\n- Groups: Genesis, Stiltskin, VIXX LR, VIXX\n- Companies: Jellyfish Entertainment\n- Roles: vocalist, singer, songwriter, musical theatre actor, rapper\n\nFacts:\n- Ray Wilson was born on 8 September 1968 and is a Scottish musician.\n- Leo, whose birth name is Jung Taek-woon, was born on 10 November 1990 and is a South Korean singer, songwriter, and musical theatre actor.\n- Leo is signed under Jellyfish Entertainment.\n- Ray Wilson was the vocalist in the post-grunge band Stiltskin.\n- Ray Wilson was in Genesis from 1996 to 1998.\n- VIXX LR was established in August 2015.\n- VIXX LR consists of VIXX's main vocalist Leo and main rapper Ravi.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "bccc5482-4e7c-5b41-9d58-cc8358ca5e07",
+        "text": "Page: Ray Wilson (musician). Sentence: Raymond Wilson (born 8 September 1968) is a Scottish musician, best known as vocalist in the post-grunge band Stiltskin, and in Genesis from 1996 to 1998.\nPage: Leo (singer). Sentence: Jung Taek-woon (Hangul: 정택운 , born on November 10, 1990), better known by his stage name Leo (Hangul: 레오 ), is a South Korean singer, songwriter and musical theatre actor, signed under Jellyfish Entertainment.\nPage: VIXX LR. Sentence: Established in August 2015, VIXX LR consists of VIXX's main vocalist Leo and main rapper Ravi.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "96d70d6d-51c0-50cf-bf55-8b2c4e117f68",
+        "text": "text_aa0595126353e0d98dd39aa8c4a760c9",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "7884a980-76eb-5661-aa6c-0816fdce841e",
+        "text": "raymond wilson",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "26e31e5d-cd94-545b-b112-5ca224093a66",
+        "text": "1968-09-08",
+        "type": "Entity"
+      },
+      {
+        "id": 5,
+        "original_id": "b19433ae-558c-5aaf-95ac-6231f2a4be0e",
+        "text": "date",
+        "type": "EntityType"
+      },
+      {
+        "id": 6,
+        "original_id": "8afc1ca9-e622-57a8-96f8-b7e9cf143c56",
+        "text": "stiltskin",
+        "type": "Entity"
+      },
+      {
+        "id": 7,
+        "original_id": "388f60fb-220d-55e8-ae9c-3ac93cead308",
+        "text": "organization",
+        "type": "EntityType"
+      },
+      {
+        "id": 8,
+        "original_id": "1dfdfe4d-8f90-5f96-911a-a6337394958e",
+        "text": "genesis",
+        "type": "Entity"
+      },
+      {
+        "id": 9,
+        "original_id": "03508744-888e-5e4b-9a29-9ff87ae8d3b3",
+        "text": "1996",
+        "type": "Entity"
+      },
+      {
+        "id": 10,
+        "original_id": "111f07f3-2527-5bbf-827f-7a18bb37f150",
+        "text": "1998",
+        "type": "Entity"
+      },
+      {
+        "id": 11,
+        "original_id": "99a82eec-bb35-5bb5-9ed2-e73fc7a756de",
+        "text": "person",
+        "type": "EntityType"
+      },
+      {
+        "id": 12,
+        "original_id": "d4671cfa-2a3f-5aad-bdbf-ef2412b9335e",
+        "text": "jung taek-woon",
+        "type": "Entity"
+      },
+      {
+        "id": 13,
+        "original_id": "7dd4b07a-c7c3-5e90-b8f2-0e3f7dd63724",
+        "text": "1990-11-10",
+        "type": "Entity"
+      },
+      {
+        "id": 14,
+        "original_id": "77a9578c-a5d4-503a-ba59-3c5ffba8b1f9",
+        "text": "leo",
+        "type": "Entity"
+      },
+      {
+        "id": 15,
+        "original_id": "86ced449-4e7a-5a3a-8f5a-1fd46ea30fbf",
+        "text": "vixx",
+        "type": "Entity"
+      },
+      {
+        "id": 16,
+        "original_id": "fa99a37c-2788-56d9-a125-ef20ce07bb7c",
+        "text": "jellyfish entertainment",
+        "type": "Entity"
+      },
+      {
+        "id": 17,
+        "original_id": "da4d9fdb-2fef-55f2-9dbd-12c159fd3070",
+        "text": "vixx lr",
+        "type": "Entity"
+      },
+      {
+        "id": 18,
+        "original_id": "673164f2-b152-52de-a030-32d96aab39ba",
+        "text": "2015-08",
+        "type": "Entity"
+      },
+      {
+        "id": 19,
+        "original_id": "eb26e8b7-7083-5c24-813c-b057f8292628",
+        "text": "ravi",
+        "type": "Entity"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "born_on"
+      },
+      {
+        "source": 1,
+        "target": 4,
+        "type": "contains"
+      },
+      {
+        "source": 4,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 9,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 10,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 13,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 18,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 6,
+        "type": "vocalist_in"
+      },
+      {
+        "source": 1,
+        "target": 6,
+        "type": "contains"
+      },
+      {
+        "source": 6,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 8,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 15,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 16,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 17,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 8,
+        "type": "vocalist_in"
+      },
+      {
+        "source": 1,
+        "target": 8,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 9,
+        "type": "started_role_in"
+      },
+      {
+        "source": 1,
+        "target": 9,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 10,
+        "type": "ended_role_in"
+      },
+      {
+        "source": 1,
+        "target": 10,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 11,
+        "type": "is_a"
+      },
+      {
+        "source": 14,
+        "target": 11,
+        "type": "is_a"
+      },
+      {
+        "source": 12,
+        "target": 11,
+        "type": "is_a"
+      },
+      {
+        "source": 19,
+        "target": 11,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 12,
+        "type": "contains"
+      },
+      {
+        "source": 12,
+        "target": 13,
+        "type": "born_on"
+      },
+      {
+        "source": 1,
+        "target": 13,
+        "type": "contains"
+      },
+      {
+        "source": 12,
+        "target": 14,
+        "type": "better_known_as"
+      },
+      {
+        "source": 1,
+        "target": 14,
+        "type": "contains"
+      },
+      {
+        "source": 17,
+        "target": 14,
+        "type": "consists_of"
+      },
+      {
+        "source": 14,
+        "target": 15,
+        "type": "main_vocalist_of"
+      },
+      {
+        "source": 19,
+        "target": 15,
+        "type": "main_rapper_of"
+      },
+      {
+        "source": 1,
+        "target": 15,
+        "type": "contains"
+      },
+      {
+        "source": 12,
+        "target": 16,
+        "type": "signed_under"
+      },
+      {
+        "source": 1,
+        "target": 16,
+        "type": "contains"
+      },
+      {
+        "source": 1,
+        "target": 17,
+        "type": "contains"
+      },
+      {
+        "source": 17,
+        "target": 18,
+        "type": "established_on"
+      },
+      {
+        "source": 1,
+        "target": 18,
+        "type": "contains"
+      },
+      {
+        "source": 17,
+        "target": 19,
+        "type": "consists_of"
+      },
+      {
+        "source": 1,
+        "target": 19,
+        "type": "contains"
+      }
+    ]
+  }
+}

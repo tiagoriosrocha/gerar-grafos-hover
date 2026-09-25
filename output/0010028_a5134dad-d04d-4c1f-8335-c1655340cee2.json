@@ -1,0 +1,352 @@
+{
+  "dataset": "hover",
+  "id": "a5134dad-d04d-4c1f-8335-c1655340cee2",
+  "split": "train",
+  "claim": "Keith County, Nebraska is located over the 174000 sq mi water area. This area supplies water the the Texas High Plains AVA.",
+  "evidencia": "Page: Ogallala, Nebraska. Sentence: Ogallala is a city in Keith County, Nebraska, United States.\nPage: Ogallala Aquifer. Sentence: The Ogallala Aquifer is a shallow water table aquifer surrounded by sand, silt, clay and gravel located beneath the Great Plains in the United States.\nPage: Texas High Plains AVA. Sentence: The Texas plains can be extremely dry, so most vineyards are irrigated with water from the Ogallala Aquifer.",
+  "evidence_text": "Page: Ogallala, Nebraska. Sentence: Ogallala is a city in Keith County, Nebraska, United States.\nPage: Ogallala Aquifer. Sentence: The Ogallala Aquifer is a shallow water table aquifer surrounded by sand, silt, clay and gravel located beneath the Great Plains in the United States.\nPage: Texas High Plains AVA. Sentence: The Texas plains can be extremely dry, so most vineyards are irrigated with water from the Ogallala Aquifer.",
+  "label": "SUPPORTED",
+  "num_hops": 3,
+  "hover_metadata": {
+    "supporting_facts": [
+      [
+        "Ogallala, Nebraska",
+        0
+      ],
+      [
+        "Ogallala Aquifer",
+        0
+      ],
+      [
+        "Texas High Plains AVA",
+        3
+      ]
+    ],
+    "num_hops": 3,
+    "evidence_annotation_id": [
+      0
+    ],
+    "evidence_id": [
+      "Ogallala, Nebraska::sentence::0",
+      "Ogallala Aquifer::sentence::0",
+      "Texas High Plains AVA::sentence::3"
+    ],
+    "evidence_wiki_url": [
+      "https://en.wikipedia.org/wiki/Ogallala%2C_Nebraska",
+      "https://en.wikipedia.org/wiki/Ogallala_Aquifer",
+      "https://en.wikipedia.org/wiki/Texas_High_Plains_AVA"
+    ],
+    "evidence_sentence_id": [
+      "Ogallala, Nebraska::sentence::0",
+      "Ogallala Aquifer::sentence::0",
+      "Texas High Plains AVA::sentence::3"
+    ]
+  },
+  "grafo_claim": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "26b14275-184c-54b9-91c4-a8d98ca66352",
+        "text": "This chunk is about:\n- Places: Keith County, Nebraska\n- Systems: water area\n- Places: Texas High Plains AVA\n\nFacts:\n- Keith County, Nebraska is located over a 174,000 square mile water area.\n- The 174,000 square mile water area supplies water to the Texas High Plains AVA.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "683b18ad-d80c-57a6-ae6f-4bd878c3fa83",
+        "text": "Keith County, Nebraska is located over the 174000 sq mi water area. This area supplies water the the Texas High Plains AVA.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "2d688e16-6844-5df4-9e5e-47586c7ccab8",
+        "text": "text_e4dd86adaeb415b9ba089771eab8230a",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "334ada65-009b-57a0-89a7-11535610e63f",
+        "text": "keith county, nebraska",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "5f394058-b2a0-5ba8-8466-ba2a18cfcf4e",
+        "text": "place",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "b6f17fb4-ab58-5b68-83f2-18438464b2c4",
+        "text": "174000 sq mi water area",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "b8531634-6db3-57c5-8bfb-308666170b4f",
+        "text": "texas high plains ava",
+        "type": "Entity"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 5,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 6,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "located_over"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "supplies_water_to"
+      },
+      {
+        "source": 1,
+        "target": 6,
+        "type": "contains"
+      }
+    ]
+  },
+  "grafo_evidencia": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "68ede224-c975-5fa0-a162-a1dd055f3ebc",
+        "text": "This chunk is about:\n- Places: Ogallala, Nebraska, Keith County, Nebraska, United States, Great Plains, Texas High Plains AVA\n- Systems: Ogallala Aquifer\n- Topics: irrigation, vineyards, aquifers\n\nFacts:\n- Ogallala is a city in Keith County, Nebraska, United States.\n- The Ogallala Aquifer is a shallow water table aquifer beneath the Great Plains in the United States.\n- The Ogallala Aquifer is surrounded by sand, silt, clay, and gravel.\n- The Texas High Plains AVA can be extremely dry.\n- Most vineyards in the Texas High Plains AVA are irrigated with water from the Ogallala Aquifer.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "ffa25ac9-bd21-5dec-a7db-4ea3432d2578",
+        "text": "Page: Ogallala, Nebraska. Sentence: Ogallala is a city in Keith County, Nebraska, United States.\nPage: Ogallala Aquifer. Sentence: The Ogallala Aquifer is a shallow water table aquifer surrounded by sand, silt, clay and gravel located beneath the Great Plains in the United States.\nPage: Texas High Plains AVA. Sentence: The Texas plains can be extremely dry, so most vineyards are irrigated with water from the Ogallala Aquifer.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "75d5c03b-a818-5bd5-9ac8-a6ee9158398a",
+        "text": "text_e87b8c59aa3f941c364ab2e45b920941",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "cf4d5290-4706-50aa-b308-f484b74e3aa3",
+        "text": "ogallala",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "5f394058-b2a0-5ba8-8466-ba2a18cfcf4e",
+        "text": "place",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "c5bd462d-8f92-5c6e-907f-7d46bb73fe6f",
+        "text": "keith county",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "17e50cde-5482-5767-8ae7-b1a63cde7a28",
+        "text": "nebraska",
+        "type": "Entity"
+      },
+      {
+        "id": 7,
+        "original_id": "874a51da-34ea-5037-be47-d87785d43c37",
+        "text": "united states",
+        "type": "Entity"
+      },
+      {
+        "id": 8,
+        "original_id": "9eb35b76-4339-503c-b78f-2b106f59bb33",
+        "text": "ogallala aquifer",
+        "type": "Entity"
+      },
+      {
+        "id": 9,
+        "original_id": "db6bbb0e-7ae7-53dc-a0c8-115a333ee23a",
+        "text": "great plains",
+        "type": "Entity"
+      },
+      {
+        "id": 10,
+        "original_id": "1dae8b93-0c78-5e25-bae0-8b1c9053a280",
+        "text": "texas plains",
+        "type": "Entity"
+      },
+      {
+        "id": 11,
+        "original_id": "0bcefdcb-720f-5e41-bf31-05a133875a7c",
+        "text": "vineyards",
+        "type": "Entity"
+      },
+      {
+        "id": 12,
+        "original_id": "388f60fb-220d-55e8-ae9c-3ac93cead308",
+        "text": "organization",
+        "type": "EntityType"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 5,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 6,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 7,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 8,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 9,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 10,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "located_in"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "located_in"
+      },
+      {
+        "source": 1,
+        "target": 6,
+        "type": "contains"
+      },
+      {
+        "source": 6,
+        "target": 7,
+        "type": "located_in"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      },
+      {
+        "source": 9,
+        "target": 7,
+        "type": "located_in"
+      },
+      {
+        "source": 1,
+        "target": 8,
+        "type": "contains"
+      },
+      {
+        "source": 11,
+        "target": 8,
+        "type": "irrigated_with_water_from"
+      },
+      {
+        "source": 8,
+        "target": 9,
+        "type": "located_beneath"
+      },
+      {
+        "source": 1,
+        "target": 9,
+        "type": "contains"
+      },
+      {
+        "source": 1,
+        "target": 10,
+        "type": "contains"
+      },
+      {
+        "source": 11,
+        "target": 10,
+        "type": "located_in"
+      },
+      {
+        "source": 1,
+        "target": 11,
+        "type": "contains"
+      },
+      {
+        "source": 11,
+        "target": 12,
+        "type": "is_a"
+      }
+    ]
+  }
+}

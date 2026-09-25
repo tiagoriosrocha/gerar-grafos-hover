@@ -1,0 +1,381 @@
+{
+  "dataset": "hover",
+  "id": "303027a1-55f4-4503-8e37-e1451a62653a",
+  "split": "train",
+  "claim": "Niki Lauda had a near-fatal accident at a race in 1976, showing the importance of a racing helmet. The winner of that event retired in 1979.",
+  "evidencia": "Page: 1976 German Grand Prix. Sentence: The 14-lap race was the tenth round of the 1976 Formula One season and was won by James Hunt.\nPage: James Hunt. Sentence: After retiring from racing in 1979, Hunt became a media commentator and businessman.\nPage: Racing helmet. Sentence: This happened to world champion driver Niki Lauda at the 1976 German Grand Prix race at the Nürburgring in a crash from which he barely escaped alive.",
+  "evidence_text": "Page: 1976 German Grand Prix. Sentence: The 14-lap race was the tenth round of the 1976 Formula One season and was won by James Hunt.\nPage: James Hunt. Sentence: After retiring from racing in 1979, Hunt became a media commentator and businessman.\nPage: Racing helmet. Sentence: This happened to world champion driver Niki Lauda at the 1976 German Grand Prix race at the Nürburgring in a crash from which he barely escaped alive.",
+  "label": "SUPPORTED",
+  "num_hops": 3,
+  "hover_metadata": {
+    "supporting_facts": [
+      [
+        "1976 German Grand Prix",
+        2
+      ],
+      [
+        "James Hunt",
+        1
+      ],
+      [
+        "Racing helmet",
+        3
+      ]
+    ],
+    "num_hops": 3,
+    "evidence_annotation_id": [
+      0
+    ],
+    "evidence_id": [
+      "1976 German Grand Prix::sentence::2",
+      "James Hunt::sentence::1",
+      "Racing helmet::sentence::3"
+    ],
+    "evidence_wiki_url": [
+      "https://en.wikipedia.org/wiki/1976_German_Grand_Prix",
+      "https://en.wikipedia.org/wiki/James_Hunt",
+      "https://en.wikipedia.org/wiki/Racing_helmet"
+    ],
+    "evidence_sentence_id": [
+      "1976 German Grand Prix::sentence::2",
+      "James Hunt::sentence::1",
+      "Racing helmet::sentence::3"
+    ]
+  },
+  "grafo_claim": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "069a73e4-b6a7-57cb-a9f2-cb77a36a0f3c",
+        "text": "This chunk is about:\n- People: Niki Lauda\n- Events: 1976 race accident\n- Products: racing helmet\n\nFacts:\n- In 1976, Niki Lauda had a near-fatal accident at a race.\n- Niki Lauda's 1976 race accident showed the importance of a racing helmet.\n- The winner of that 1976 race retired in 1979.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "dd4ece55-9e11-5dd8-8d47-37a69c98bb29",
+        "text": "Niki Lauda had a near-fatal accident at a race in 1976, showing the importance of a racing helmet. The winner of that event retired in 1979.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "4a5fc5bc-8fca-5e56-a069-a41614b0278f",
+        "text": "text_0b24bde4c992fb08748ebdf9282b5e52",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "10ff297d-400d-5289-a087-a9e801a53dc0",
+        "text": "niki lauda",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "99a82eec-bb35-5bb5-9ed2-e73fc7a756de",
+        "text": "person",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "5ac33ea7-2993-57be-98a7-b9ee3561ff11",
+        "text": "1976",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "b19433ae-558c-5aaf-95ac-6231f2a4be0e",
+        "text": "date",
+        "type": "EntityType"
+      },
+      {
+        "id": 7,
+        "original_id": "6396cac7-9531-5162-a76e-6d6005013b7b",
+        "text": "racing helmet",
+        "type": "Entity"
+      },
+      {
+        "id": 8,
+        "original_id": "1b7c3ad9-e154-56b4-908d-043ea548b500",
+        "text": "thing",
+        "type": "EntityType"
+      },
+      {
+        "id": 9,
+        "original_id": "ec2eb309-0605-5993-9ada-11b2733384db",
+        "text": "1979",
+        "type": "Entity"
+      },
+      {
+        "id": 10,
+        "original_id": "9dc6f94e-8916-5e7a-8f52-dd82086365e2",
+        "text": "winner of that event",
+        "type": "Entity"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 10,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "had_accident_in"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 10,
+        "target": 5,
+        "type": "won_event_in"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 9,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 7,
+        "type": "showed_importance_of"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      },
+      {
+        "source": 7,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 9,
+        "type": "contains"
+      },
+      {
+        "source": 10,
+        "target": 9,
+        "type": "retired_in"
+      },
+      {
+        "source": 1,
+        "target": 10,
+        "type": "contains"
+      }
+    ]
+  },
+  "grafo_evidencia": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "206a9118-2d12-5444-881f-1d938b057c78",
+        "text": "This chunk is about:\n- Events: 1976 German Grand Prix\n- People: James Hunt, Niki Lauda\n- Topics: 1976 Formula One season, racing safety, racing helmets\n\nFacts:\n- The 1976 German Grand Prix was the tenth round of the 1976 Formula One season.\n- The 1976 German Grand Prix was a 14-lap race.\n- James Hunt won the 1976 German Grand Prix.\n- Niki Lauda crashed at the 1976 German Grand Prix at the Nürburgring and barely escaped alive.\n- After retiring from racing in 1979, James Hunt became a media commentator and businessman.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "33e74f55-4401-54d4-be82-f65a4a5d54fc",
+        "text": "Page: 1976 German Grand Prix. Sentence: The 14-lap race was the tenth round of the 1976 Formula One season and was won by James Hunt.\nPage: James Hunt. Sentence: After retiring from racing in 1979, Hunt became a media commentator and businessman.\nPage: Racing helmet. Sentence: This happened to world champion driver Niki Lauda at the 1976 German Grand Prix race at the Nürburgring in a crash from which he barely escaped alive.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "f4a5d529-30b3-53d7-b005-4a99081270bf",
+        "text": "text_3096617d8fd9da0735cab14bbb62ba78",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "bd891691-7828-53d8-95f2-a1e0d7c635de",
+        "text": "1976 german grand prix",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "214abcd9-9adf-5c8a-bb35-1e729f2d68c3",
+        "text": "event",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "fc808820-c786-5c1d-925b-1ad576d7bb5f",
+        "text": "1976 formula one season",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "55960f8c-12c8-5680-ba75-98c49c3bf3a8",
+        "text": "nürburgring",
+        "type": "Entity"
+      },
+      {
+        "id": 7,
+        "original_id": "5f394058-b2a0-5ba8-8466-ba2a18cfcf4e",
+        "text": "place",
+        "type": "EntityType"
+      },
+      {
+        "id": 8,
+        "original_id": "28c4286c-9532-5a09-852e-7a0658b98620",
+        "text": "james hunt",
+        "type": "Entity"
+      },
+      {
+        "id": 9,
+        "original_id": "99a82eec-bb35-5bb5-9ed2-e73fc7a756de",
+        "text": "person",
+        "type": "EntityType"
+      },
+      {
+        "id": 10,
+        "original_id": "ec2eb309-0605-5993-9ada-11b2733384db",
+        "text": "1979",
+        "type": "Entity"
+      },
+      {
+        "id": 11,
+        "original_id": "b19433ae-558c-5aaf-95ac-6231f2a4be0e",
+        "text": "date",
+        "type": "EntityType"
+      },
+      {
+        "id": 12,
+        "original_id": "10ff297d-400d-5289-a087-a9e801a53dc0",
+        "text": "niki lauda",
+        "type": "Entity"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 8,
+        "target": 3,
+        "type": "won"
+      },
+      {
+        "source": 12,
+        "target": 3,
+        "type": "crashed_at"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 5,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "was_tenth_round_of"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 6,
+        "type": "took_place_at"
+      },
+      {
+        "source": 1,
+        "target": 6,
+        "type": "contains"
+      },
+      {
+        "source": 6,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 8,
+        "type": "contains"
+      },
+      {
+        "source": 8,
+        "target": 9,
+        "type": "is_a"
+      },
+      {
+        "source": 12,
+        "target": 9,
+        "type": "is_a"
+      },
+      {
+        "source": 8,
+        "target": 10,
+        "type": "retired_from_racing_in"
+      },
+      {
+        "source": 1,
+        "target": 10,
+        "type": "contains"
+      },
+      {
+        "source": 10,
+        "target": 11,
+        "type": "is_a"
+      },
+      {
+        "source": 8,
+        "target": 12,
+        "type": "contemporary_of"
+      },
+      {
+        "source": 1,
+        "target": 12,
+        "type": "contains"
+      }
+    ]
+  }
+}

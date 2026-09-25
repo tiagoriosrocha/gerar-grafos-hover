@@ -1,0 +1,389 @@
+{
+  "dataset": "hover",
+  "id": "3e8b013e-2ae5-47dc-ba9f-5a46e6c46f1b",
+  "split": "train",
+  "claim": "Andrew (Andy) Stephen Roddick was born before Brooklyn Decker.",
+  "evidencia": "Page: Brooklyn Decker. Sentence: Brooklyn Danielle Decker Roddick (born April 12, 1987) is an American fashion model and actress best known for her appearances in the \"Sports Illustrated Swimsuit Issue\", including the cover of the 2010 issue.\nPage: Andy Roddick. Sentence: Andrew Stephen Roddick (born August 30, 1982) is an American former professional tennis player from the US.",
+  "evidence_text": "Page: Brooklyn Decker. Sentence: Brooklyn Danielle Decker Roddick (born April 12, 1987) is an American fashion model and actress best known for her appearances in the \"Sports Illustrated Swimsuit Issue\", including the cover of the 2010 issue.\nPage: Andy Roddick. Sentence: Andrew Stephen Roddick (born August 30, 1982) is an American former professional tennis player from the US.",
+  "label": "SUPPORTED",
+  "num_hops": 2,
+  "hover_metadata": {
+    "supporting_facts": [
+      [
+        "Brooklyn Decker",
+        0
+      ],
+      [
+        "Andy Roddick",
+        0
+      ]
+    ],
+    "num_hops": 2,
+    "evidence_annotation_id": [
+      0
+    ],
+    "evidence_id": [
+      "Brooklyn Decker::sentence::0",
+      "Andy Roddick::sentence::0"
+    ],
+    "evidence_wiki_url": [
+      "https://en.wikipedia.org/wiki/Brooklyn_Decker",
+      "https://en.wikipedia.org/wiki/Andy_Roddick"
+    ],
+    "evidence_sentence_id": [
+      "Brooklyn Decker::sentence::0",
+      "Andy Roddick::sentence::0"
+    ]
+  },
+  "grafo_claim": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "71a0c046-ca2f-5bfc-b247-41dadb9812bf",
+        "text": "This chunk is about:\n- People: Andrew (Andy) Stephen Roddick, Brooklyn Decker\n- Topics: Birth order\n\nFacts:\n- Andrew (Andy) Stephen Roddick was born before Brooklyn Decker.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "9212407e-f95c-5fbc-a62e-2c37adbf46d8",
+        "text": "Andrew (Andy) Stephen Roddick was born before Brooklyn Decker.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "d6a4b639-410f-5b49-a1bd-7fdf9b86707b",
+        "text": "text_f1018d898bf6bcc9de74eb1499b65fb5",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "5565a294-b5b8-576d-8dd8-0ec8977a5a55",
+        "text": "andrew stephen roddick",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "99a82eec-bb35-5bb5-9ed2-e73fc7a756de",
+        "text": "person",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "57091859-f033-5682-9799-0ce94e75a1e7",
+        "text": "brooklyn decker",
+        "type": "Entity"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 5,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "born_before"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      }
+    ]
+  },
+  "grafo_evidencia": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "a80db6fe-c660-5adb-bd48-b3bf275d4de0",
+        "text": "This chunk is about:\n- People: Brooklyn Decker, Andy Roddick\n- Roles: fashion model, actress, professional tennis player\n- Publications: Sports Illustrated Swimsuit Issue\n\nFacts:\n- Andy Roddick, born August 30, 1982, is an American former professional tennis player.\n- Brooklyn Danielle Decker Roddick, born April 12, 1987, is an American fashion model and actress.\n- Brooklyn Decker is best known for appearing in the Sports Illustrated Swimsuit Issue.\n- Brooklyn Decker appeared on the cover of the 2010 Sports Illustrated Swimsuit Issue.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "82353720-2767-55ea-a54f-a8470e0d83fc",
+        "text": "Page: Brooklyn Decker. Sentence: Brooklyn Danielle Decker Roddick (born April 12, 1987) is an American fashion model and actress best known for her appearances in the \"Sports Illustrated Swimsuit Issue\", including the cover of the 2010 issue.\nPage: Andy Roddick. Sentence: Andrew Stephen Roddick (born August 30, 1982) is an American former professional tennis player from the US.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "179453fe-aa7d-590b-b45c-af785f0dc03e",
+        "text": "text_b97a7942ad6e5a2bf717a8f3bec4c807",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "a79eb956-fcea-555f-ac05-6aad2cd37fd5",
+        "text": "brooklyn danielle decker roddick",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "99a82eec-bb35-5bb5-9ed2-e73fc7a756de",
+        "text": "person",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "e0e41c0c-8d43-5ee9-a45f-b1212778907d",
+        "text": "1987-04-12",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "b19433ae-558c-5aaf-95ac-6231f2a4be0e",
+        "text": "date",
+        "type": "EntityType"
+      },
+      {
+        "id": 7,
+        "original_id": "51064ea7-a098-58bd-b81d-f82ac9d52ef4",
+        "text": "fashion model",
+        "type": "Entity"
+      },
+      {
+        "id": 8,
+        "original_id": "9d80eb43-32fa-561c-9371-91f180ebcb6c",
+        "text": "profession",
+        "type": "EntityType"
+      },
+      {
+        "id": 9,
+        "original_id": "be064bd7-d09a-5d92-8597-34373f35ef55",
+        "text": "actress",
+        "type": "Entity"
+      },
+      {
+        "id": 10,
+        "original_id": "14693248-a466-5ee3-9345-ef143155cf86",
+        "text": "sports illustrated swimsuit issue",
+        "type": "Entity"
+      },
+      {
+        "id": 11,
+        "original_id": "5263a535-1b4b-5925-be3e-310d03cd303b",
+        "text": "work",
+        "type": "EntityType"
+      },
+      {
+        "id": 12,
+        "original_id": "cd0eeeb2-617b-56b8-8a9a-aa1d66061a85",
+        "text": "2010 issue of sports illustrated swimsuit issue",
+        "type": "Entity"
+      },
+      {
+        "id": 13,
+        "original_id": "874a51da-34ea-5037-be47-d87785d43c37",
+        "text": "united states",
+        "type": "Entity"
+      },
+      {
+        "id": 14,
+        "original_id": "5f394058-b2a0-5ba8-8466-ba2a18cfcf4e",
+        "text": "place",
+        "type": "EntityType"
+      },
+      {
+        "id": 15,
+        "original_id": "5565a294-b5b8-576d-8dd8-0ec8977a5a55",
+        "text": "andrew stephen roddick",
+        "type": "Entity"
+      },
+      {
+        "id": 16,
+        "original_id": "3f33206f-c0a5-54a9-a571-84c1067b5b3c",
+        "text": "1982-08-30",
+        "type": "Entity"
+      },
+      {
+        "id": 17,
+        "original_id": "0e7b272d-0374-5716-96e0-29187a43cfe4",
+        "text": "professional tennis player",
+        "type": "Entity"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 15,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "born_on"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 16,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 7,
+        "type": "has_profession"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      },
+      {
+        "source": 7,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 9,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 17,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 9,
+        "type": "has_profession"
+      },
+      {
+        "source": 1,
+        "target": 9,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 10,
+        "type": "appeared_in"
+      },
+      {
+        "source": 12,
+        "target": 10,
+        "type": "issue_of"
+      },
+      {
+        "source": 1,
+        "target": 10,
+        "type": "contains"
+      },
+      {
+        "source": 10,
+        "target": 11,
+        "type": "is_a"
+      },
+      {
+        "source": 12,
+        "target": 11,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 12,
+        "type": "appeared_on_cover_of"
+      },
+      {
+        "source": 1,
+        "target": 12,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 13,
+        "type": "associated_with_country"
+      },
+      {
+        "source": 15,
+        "target": 13,
+        "type": "associated_with_country"
+      },
+      {
+        "source": 1,
+        "target": 13,
+        "type": "contains"
+      },
+      {
+        "source": 13,
+        "target": 14,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 15,
+        "type": "contains"
+      },
+      {
+        "source": 15,
+        "target": 16,
+        "type": "born_on"
+      },
+      {
+        "source": 1,
+        "target": 16,
+        "type": "contains"
+      },
+      {
+        "source": 15,
+        "target": 17,
+        "type": "has_profession"
+      },
+      {
+        "source": 1,
+        "target": 17,
+        "type": "contains"
+      }
+    ]
+  }
+}

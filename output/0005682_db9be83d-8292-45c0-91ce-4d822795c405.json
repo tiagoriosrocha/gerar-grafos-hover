@@ -1,0 +1,501 @@
+{
+  "dataset": "hover",
+  "id": "db9be83d-8292-45c0-91ce-4d822795c405",
+  "split": "train",
+  "claim": "Sarpino's Pizzeria sells food. So does the restaurant New Haven-style pizza originates from.",
+  "evidencia": "Page: Frank Pepe Pizzeria Napoletana. Sentence: Frank Pepe Pizzeria Napoletana, known locally as Pepe's, is a popular pizza restaurant in the Wooster Square neighborhood of New Haven, Connecticut, at 163 Wooster Street.\nPage: Sarpino's Pizzeria. Sentence: Sarpino's Pizzeria is a fast food restaurant chain specializing in pizza, with international operations headquartered in Singapore and U.S. operations headquartered in the Chicago suburb of Lincolnshire, Illinois.\nPage: New Haven-style pizza. Sentence: It originated at the Frank Pepe Pizzeria Napoletana and is now served in many other pizza restaurants in the area, most notably Sally's Apizza and Modern Apizza.",
+  "evidence_text": "Page: Frank Pepe Pizzeria Napoletana. Sentence: Frank Pepe Pizzeria Napoletana, known locally as Pepe's, is a popular pizza restaurant in the Wooster Square neighborhood of New Haven, Connecticut, at 163 Wooster Street.\nPage: Sarpino's Pizzeria. Sentence: Sarpino's Pizzeria is a fast food restaurant chain specializing in pizza, with international operations headquartered in Singapore and U.S. operations headquartered in the Chicago suburb of Lincolnshire, Illinois.\nPage: New Haven-style pizza. Sentence: It originated at the Frank Pepe Pizzeria Napoletana and is now served in many other pizza restaurants in the area, most notably Sally's Apizza and Modern Apizza.",
+  "label": "SUPPORTED",
+  "num_hops": 3,
+  "hover_metadata": {
+    "supporting_facts": [
+      [
+        "Frank Pepe Pizzeria Napoletana",
+        0
+      ],
+      [
+        "Sarpino's Pizzeria",
+        0
+      ],
+      [
+        "New Haven-style pizza",
+        1
+      ]
+    ],
+    "num_hops": 3,
+    "evidence_annotation_id": [
+      0
+    ],
+    "evidence_id": [
+      "Frank Pepe Pizzeria Napoletana::sentence::0",
+      "Sarpino's Pizzeria::sentence::0",
+      "New Haven-style pizza::sentence::1"
+    ],
+    "evidence_wiki_url": [
+      "https://en.wikipedia.org/wiki/Frank_Pepe_Pizzeria_Napoletana",
+      "https://en.wikipedia.org/wiki/Sarpino%27s_Pizzeria",
+      "https://en.wikipedia.org/wiki/New_Haven-style_pizza"
+    ],
+    "evidence_sentence_id": [
+      "Frank Pepe Pizzeria Napoletana::sentence::0",
+      "Sarpino's Pizzeria::sentence::0",
+      "New Haven-style pizza::sentence::1"
+    ]
+  },
+  "grafo_claim": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "f494b3b5-b9a3-5fb7-b4aa-d9a925bbde5c",
+        "text": "This chunk is about:\n- Companies: Sarpino's Pizzeria\n- Places: New Haven\n- Products: pizza, food\n- Concepts: origin\n\nFacts:\n- Sarpino's Pizzeria sells food.\n- New Haven-style pizza originates from a restaurant in New Haven.\n- That restaurant also sells food.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "46284183-0e3a-50d9-9d96-a1687d2014cb",
+        "text": "Sarpino's Pizzeria sells food. So does the restaurant New Haven-style pizza originates from.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "f2a47b89-c451-5989-80b5-0e1064738934",
+        "text": "text_c218db07759f4f54fc75e7227110af77",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "ea00a6e7-ca11-5088-b9b4-1cf2a5292196",
+        "text": "sarpinos pizzeria",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "dba72a6d-afff-5d83-8229-c17e5de4ae9c",
+        "text": "food",
+        "type": "Entity"
+      },
+      {
+        "id": 5,
+        "original_id": "d2a381fa-3658-5ca6-ada9-2109cfc9331d",
+        "text": "concept",
+        "type": "EntityType"
+      },
+      {
+        "id": 6,
+        "original_id": "388f60fb-220d-55e8-ae9c-3ac93cead308",
+        "text": "organization",
+        "type": "EntityType"
+      },
+      {
+        "id": 7,
+        "original_id": "87f2cd92-865e-5f3d-9532-d159c12bfd87",
+        "text": "new haven-style pizza",
+        "type": "Entity"
+      },
+      {
+        "id": 8,
+        "original_id": "01976513-8a5b-5e69-b984-2861e9ee497d",
+        "text": "restaurant",
+        "type": "Entity"
+      },
+      {
+        "id": 9,
+        "original_id": "f9c5113e-747a-5581-af56-c9d2e76bce9b",
+        "text": "food",
+        "type": "EntityType"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "sells"
+      },
+      {
+        "source": 1,
+        "target": 4,
+        "type": "contains"
+      },
+      {
+        "source": 8,
+        "target": 4,
+        "type": "sells"
+      },
+      {
+        "source": 4,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 8,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      },
+      {
+        "source": 7,
+        "target": 8,
+        "type": "originates_from"
+      },
+      {
+        "source": 1,
+        "target": 8,
+        "type": "contains"
+      },
+      {
+        "source": 7,
+        "target": 9,
+        "type": "is_a"
+      }
+    ]
+  },
+  "grafo_evidencia": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "d314a21f-14e5-55b8-928a-49b88a190264",
+        "text": "This chunk is about:\n- Companies: Frank Pepe Pizzeria Napoletana, Sarpino's Pizzeria\n- Places: Wooster Square, New Haven, Connecticut, Singapore, Lincolnshire, Illinois\n- Concepts: New Haven-style pizza\n- Organizations: Sally's Apizza, Modern Apizza\n\nFacts:\n- Frank Pepe Pizzeria Napoletana is a popular pizza restaurant at 163 Wooster Street in the Wooster Square neighborhood of New Haven, Connecticut.\n- Frank Pepe Pizzeria Napoletana is known locally as Pepe's.\n- Sarpino's Pizzeria is a fast food restaurant chain specializing in pizza.\n- Sarpino's Pizzeria has international operations headquartered in Singapore.\n- Sarpino's Pizzeria has U.S. operations headquartered in Lincolnshire, Illinois.\n- New Haven-style pizza originated at Frank Pepe Pizzeria Napoletana.\n- New Haven-style pizza is served at many other pizza restaurants in the New Haven area, including Sally's Apizza and Modern Apizza.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "c432a21a-15e9-5d0d-8b4b-a9dcfd50f015",
+        "text": "Page: Frank Pepe Pizzeria Napoletana. Sentence: Frank Pepe Pizzeria Napoletana, known locally as Pepe's, is a popular pizza restaurant in the Wooster Square neighborhood of New Haven, Connecticut, at 163 Wooster Street.\nPage: Sarpino's Pizzeria. Sentence: Sarpino's Pizzeria is a fast food restaurant chain specializing in pizza, with international operations headquartered in Singapore and U.S. operations headquartered in the Chicago suburb of Lincolnshire, Illinois.\nPage: New Haven-style pizza. Sentence: It originated at the Frank Pepe Pizzeria Napoletana and is now served in many other pizza restaurants in the area, most notably Sally's Apizza and Modern Apizza.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "86bada3b-b5d4-573d-977a-aea1c4d1ee91",
+        "text": "text_8ac6b2330472f28b611619d8b8e7cf35",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "814010d0-ef38-5147-998b-492466722b27",
+        "text": "frank pepe pizzeria napoletana",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "eba57af3-de1c-55e8-96f5-79ff4c0ebaf7",
+        "text": "wooster square",
+        "type": "Entity"
+      },
+      {
+        "id": 5,
+        "original_id": "9a03e84a-010c-5f83-8423-106ebaecc018",
+        "text": "new haven",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "41d83147-79b6-55d6-8298-0b7031edadde",
+        "text": "connecticut",
+        "type": "Entity"
+      },
+      {
+        "id": 7,
+        "original_id": "5f394058-b2a0-5ba8-8466-ba2a18cfcf4e",
+        "text": "place",
+        "type": "EntityType"
+      },
+      {
+        "id": 8,
+        "original_id": "7b1dfe03-fcf8-5a9f-bb90-1fa64cbb2870",
+        "text": "163 wooster street",
+        "type": "Entity"
+      },
+      {
+        "id": 9,
+        "original_id": "388f60fb-220d-55e8-ae9c-3ac93cead308",
+        "text": "organization",
+        "type": "EntityType"
+      },
+      {
+        "id": 10,
+        "original_id": "90b025a8-5ee9-5164-af13-f9b0df1d00b2",
+        "text": "pepes",
+        "type": "Entity"
+      },
+      {
+        "id": 11,
+        "original_id": "ea00a6e7-ca11-5088-b9b4-1cf2a5292196",
+        "text": "sarpinos pizzeria",
+        "type": "Entity"
+      },
+      {
+        "id": 12,
+        "original_id": "7b8ef6cf-3d8c-5f1f-a8b6-0a53e2108f82",
+        "text": "singapore",
+        "type": "Entity"
+      },
+      {
+        "id": 13,
+        "original_id": "8a5f4fdc-2869-5d91-8e42-c0fd9b61ab9e",
+        "text": "lincolnshire, illinois",
+        "type": "Entity"
+      },
+      {
+        "id": 14,
+        "original_id": "ec047af9-0db4-5349-a274-c803926fd58c",
+        "text": "chicago",
+        "type": "Entity"
+      },
+      {
+        "id": 15,
+        "original_id": "87f2cd92-865e-5f3d-9532-d159c12bfd87",
+        "text": "new haven-style pizza",
+        "type": "Entity"
+      },
+      {
+        "id": 16,
+        "original_id": "f9c5113e-747a-5581-af56-c9d2e76bce9b",
+        "text": "food",
+        "type": "EntityType"
+      },
+      {
+        "id": 17,
+        "original_id": "efd9f615-f174-5f25-8e3d-4001308c880a",
+        "text": "sallys apizza",
+        "type": "Entity"
+      },
+      {
+        "id": 18,
+        "original_id": "cd104087-28aa-5743-9282-90bdc55801f6",
+        "text": "modern apizza",
+        "type": "Entity"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 10,
+        "target": 3,
+        "type": "is_local_name_for"
+      },
+      {
+        "source": 15,
+        "target": 3,
+        "type": "originated_at"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "located_in"
+      },
+      {
+        "source": 1,
+        "target": 4,
+        "type": "contains"
+      },
+      {
+        "source": 4,
+        "target": 5,
+        "type": "located_in"
+      },
+      {
+        "source": 8,
+        "target": 5,
+        "type": "located_in"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "located_in"
+      },
+      {
+        "source": 8,
+        "target": 6,
+        "type": "located_in"
+      },
+      {
+        "source": 1,
+        "target": 6,
+        "type": "contains"
+      },
+      {
+        "source": 6,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 5,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 4,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 8,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 12,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 14,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 13,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 8,
+        "type": "located_at"
+      },
+      {
+        "source": 1,
+        "target": 8,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 9,
+        "type": "is_a"
+      },
+      {
+        "source": 10,
+        "target": 9,
+        "type": "is_a"
+      },
+      {
+        "source": 11,
+        "target": 9,
+        "type": "is_a"
+      },
+      {
+        "source": 17,
+        "target": 9,
+        "type": "is_a"
+      },
+      {
+        "source": 18,
+        "target": 9,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 10,
+        "type": "contains"
+      },
+      {
+        "source": 1,
+        "target": 11,
+        "type": "contains"
+      },
+      {
+        "source": 11,
+        "target": 12,
+        "type": "has_international_operations_headquarters_in"
+      },
+      {
+        "source": 1,
+        "target": 12,
+        "type": "contains"
+      },
+      {
+        "source": 11,
+        "target": 13,
+        "type": "has_us_operations_headquarters_in"
+      },
+      {
+        "source": 1,
+        "target": 13,
+        "type": "contains"
+      },
+      {
+        "source": 13,
+        "target": 14,
+        "type": "is_suburb_of"
+      },
+      {
+        "source": 1,
+        "target": 14,
+        "type": "contains"
+      },
+      {
+        "source": 1,
+        "target": 15,
+        "type": "contains"
+      },
+      {
+        "source": 17,
+        "target": 15,
+        "type": "serves"
+      },
+      {
+        "source": 18,
+        "target": 15,
+        "type": "serves"
+      },
+      {
+        "source": 15,
+        "target": 16,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 17,
+        "type": "contains"
+      },
+      {
+        "source": 1,
+        "target": 18,
+        "type": "contains"
+      }
+    ]
+  }
+}

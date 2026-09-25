@@ -1,0 +1,480 @@
+{
+  "dataset": "hover",
+  "id": "d7adb254-96af-483e-a4b6-41e15ace7c0f",
+  "split": "train",
+  "claim": "Echeveria is native or semi-desert areas, while Alopecurus creticus is not.",
+  "evidencia": "Page: Alopecurus. Sentence: It is common across temperate and subtropical parts of Eurasia, northern Africa, and the Americas, as well as naturalized in Australia and on various islands.\nPage: Echeveria. Sentence: Echeveria is a large genus of flowering plants in the Crassulaceae family, native to semi-desert areas of Central America, Mexico and northwestern South America.\nPage: Alopecurus creticus. Sentence: Alopecurus creticus, the Cretan meadow foxtail, is a species of foxtail grass.",
+  "evidence_text": "Page: Alopecurus. Sentence: It is common across temperate and subtropical parts of Eurasia, northern Africa, and the Americas, as well as naturalized in Australia and on various islands.\nPage: Echeveria. Sentence: Echeveria is a large genus of flowering plants in the Crassulaceae family, native to semi-desert areas of Central America, Mexico and northwestern South America.\nPage: Alopecurus creticus. Sentence: Alopecurus creticus, the Cretan meadow foxtail, is a species of foxtail grass.",
+  "label": "SUPPORTED",
+  "num_hops": 3,
+  "hover_metadata": {
+    "supporting_facts": [
+      [
+        "Alopecurus",
+        1
+      ],
+      [
+        "Echeveria",
+        0
+      ],
+      [
+        "Alopecurus creticus",
+        0
+      ]
+    ],
+    "num_hops": 3,
+    "evidence_annotation_id": [
+      0
+    ],
+    "evidence_id": [
+      "Alopecurus::sentence::1",
+      "Echeveria::sentence::0",
+      "Alopecurus creticus::sentence::0"
+    ],
+    "evidence_wiki_url": [
+      "https://en.wikipedia.org/wiki/Alopecurus",
+      "https://en.wikipedia.org/wiki/Echeveria",
+      "https://en.wikipedia.org/wiki/Alopecurus_creticus"
+    ],
+    "evidence_sentence_id": [
+      "Alopecurus::sentence::1",
+      "Echeveria::sentence::0",
+      "Alopecurus creticus::sentence::0"
+    ]
+  },
+  "grafo_claim": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "ed9eb6a1-5c66-5c77-b883-7265ad620b8a",
+        "text": "This chunk is about:\n- Plants: Echeveria, Alopecurus creticus\n- Topics: Native habitats, semi-desert environments\n\nFacts:\n- Echeveria is native to semi-desert areas.\n- Alopecurus creticus is not native to semi-desert areas.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "2d6f1566-6a5b-556f-af91-ca3c6802b49a",
+        "text": "Echeveria is native or semi-desert areas, while Alopecurus creticus is not.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "0a60f8b7-e383-5624-bd31-5d31aac0ebb2",
+        "text": "text_4ecdc8838e9beab3354e9f880a3e30a0",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "6acd5b1b-8cc2-5608-afd5-46ed5a013578",
+        "text": "echeveria",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "35e80040-1fa9-5600-92f2-666178c34b4c",
+        "text": "semi-desert areas",
+        "type": "Entity"
+      },
+      {
+        "id": 5,
+        "original_id": "5f394058-b2a0-5ba8-8466-ba2a18cfcf4e",
+        "text": "place",
+        "type": "EntityType"
+      },
+      {
+        "id": 6,
+        "original_id": "2df43048-b175-54c2-b72b-0ff24f41e4f1",
+        "text": "plant",
+        "type": "EntityType"
+      },
+      {
+        "id": 7,
+        "original_id": "1de8ef8a-6a39-5e22-bc44-a4e2ce295b3e",
+        "text": "alopecurus creticus",
+        "type": "Entity"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_native_to"
+      },
+      {
+        "source": 1,
+        "target": 4,
+        "type": "contains"
+      },
+      {
+        "source": 7,
+        "target": 4,
+        "type": "is_not_native_to"
+      },
+      {
+        "source": 4,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 7,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      }
+    ]
+  },
+  "grafo_evidencia": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "8042cbbd-9290-5af3-95a0-620d6441b37b",
+        "text": "This chunk is about:\n- Plants: Alopecurus, Echeveria, Alopecurus creticus\n- Places: Eurasia, northern Africa, the Americas, Australia, various islands, Central America, Mexico, northwestern South America, Crete\n- Concepts: plant distribution, naturalization, taxonomy\n\nFacts:\n- Alopecurus is common across temperate and subtropical parts of Eurasia, northern Africa, and the Americas.\n- Alopecurus is naturalized in Australia and on various islands.\n- Echeveria is a large genus of flowering plants in the Crassulaceae family.\n- Echeveria is native to semi-desert areas of Central America, Mexico, and northwestern South America.\n- Alopecurus creticus is a species of foxtail grass known as the Cretan meadow foxtail.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "001d9152-41d4-5433-8d27-5731cfa58827",
+        "text": "Page: Alopecurus. Sentence: It is common across temperate and subtropical parts of Eurasia, northern Africa, and the Americas, as well as naturalized in Australia and on various islands.\nPage: Echeveria. Sentence: Echeveria is a large genus of flowering plants in the Crassulaceae family, native to semi-desert areas of Central America, Mexico and northwestern South America.\nPage: Alopecurus creticus. Sentence: Alopecurus creticus, the Cretan meadow foxtail, is a species of foxtail grass.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "883dd36e-ff29-5a1a-acea-303ccc4b456b",
+        "text": "text_c5afaa6151acbfde18fba02dfc6b6acf",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "ecb20f7b-d176-5468-92cf-4b82b423d878",
+        "text": "alopecurus",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "a6d66aaa-ebe6-5b41-92de-a480fd9b5acb",
+        "text": "eurasia",
+        "type": "Entity"
+      },
+      {
+        "id": 5,
+        "original_id": "5f394058-b2a0-5ba8-8466-ba2a18cfcf4e",
+        "text": "place",
+        "type": "EntityType"
+      },
+      {
+        "id": 6,
+        "original_id": "13a0f4fc-7ed4-5b48-b44a-3223f62ff335",
+        "text": "northern africa",
+        "type": "Entity"
+      },
+      {
+        "id": 7,
+        "original_id": "e0c37d05-6b77-59af-8850-f1a31863242c",
+        "text": "the americas",
+        "type": "Entity"
+      },
+      {
+        "id": 8,
+        "original_id": "02448d73-884d-50c7-a919-b94177f1cf43",
+        "text": "australia",
+        "type": "Entity"
+      },
+      {
+        "id": 9,
+        "original_id": "3ecd509a-8341-55d5-b28a-93662cb062bc",
+        "text": "various islands",
+        "type": "Entity"
+      },
+      {
+        "id": 10,
+        "original_id": "f7b4540f-d32c-51b3-8970-f282fffab519",
+        "text": "taxon",
+        "type": "EntityType"
+      },
+      {
+        "id": 11,
+        "original_id": "6acd5b1b-8cc2-5608-afd5-46ed5a013578",
+        "text": "echeveria",
+        "type": "Entity"
+      },
+      {
+        "id": 12,
+        "original_id": "2c7b67f5-b4c0-576d-a035-3086cec20715",
+        "text": "crassulaceae",
+        "type": "Entity"
+      },
+      {
+        "id": 13,
+        "original_id": "768386d6-3408-561d-8bb8-1f5f80e19ac5",
+        "text": "central america",
+        "type": "Entity"
+      },
+      {
+        "id": 14,
+        "original_id": "cf7d42b5-76f2-568d-9972-0d0264af1b93",
+        "text": "mexico",
+        "type": "Entity"
+      },
+      {
+        "id": 15,
+        "original_id": "a59b436e-bbba-534c-8158-7d9be0a4f6ed",
+        "text": "northwestern south america",
+        "type": "Entity"
+      },
+      {
+        "id": 16,
+        "original_id": "1de8ef8a-6a39-5e22-bc44-a4e2ce295b3e",
+        "text": "alopecurus creticus",
+        "type": "Entity"
+      },
+      {
+        "id": 17,
+        "original_id": "1004a75e-6cfb-50c8-9692-8a628947c8f4",
+        "text": "cretan meadow foxtail",
+        "type": "Entity"
+      },
+      {
+        "id": 18,
+        "original_id": "39575085-0710-527d-bd54-019de7b00429",
+        "text": "name",
+        "type": "EntityType"
+      },
+      {
+        "id": 19,
+        "original_id": "aed38eb3-d05e-5f4a-a23f-f4b3dcedbd9b",
+        "text": "foxtail grass",
+        "type": "Entity"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "common_in"
+      },
+      {
+        "source": 1,
+        "target": 4,
+        "type": "contains"
+      },
+      {
+        "source": 4,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 6,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 7,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 8,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 9,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 13,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 14,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 15,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 6,
+        "type": "common_in"
+      },
+      {
+        "source": 1,
+        "target": 6,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 7,
+        "type": "common_in"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 8,
+        "type": "naturalized_in"
+      },
+      {
+        "source": 1,
+        "target": 8,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 9,
+        "type": "naturalized_in"
+      },
+      {
+        "source": 1,
+        "target": 9,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 10,
+        "type": "is_a"
+      },
+      {
+        "source": 12,
+        "target": 10,
+        "type": "is_a"
+      },
+      {
+        "source": 11,
+        "target": 10,
+        "type": "is_a"
+      },
+      {
+        "source": 19,
+        "target": 10,
+        "type": "is_a"
+      },
+      {
+        "source": 16,
+        "target": 10,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 11,
+        "type": "contains"
+      },
+      {
+        "source": 11,
+        "target": 12,
+        "type": "in_family"
+      },
+      {
+        "source": 1,
+        "target": 12,
+        "type": "contains"
+      },
+      {
+        "source": 11,
+        "target": 13,
+        "type": "native_to"
+      },
+      {
+        "source": 1,
+        "target": 13,
+        "type": "contains"
+      },
+      {
+        "source": 11,
+        "target": 14,
+        "type": "native_to"
+      },
+      {
+        "source": 1,
+        "target": 14,
+        "type": "contains"
+      },
+      {
+        "source": 11,
+        "target": 15,
+        "type": "native_to"
+      },
+      {
+        "source": 1,
+        "target": 15,
+        "type": "contains"
+      },
+      {
+        "source": 1,
+        "target": 16,
+        "type": "contains"
+      },
+      {
+        "source": 16,
+        "target": 17,
+        "type": "has_common_name"
+      },
+      {
+        "source": 1,
+        "target": 17,
+        "type": "contains"
+      },
+      {
+        "source": 17,
+        "target": 18,
+        "type": "is_a"
+      },
+      {
+        "source": 16,
+        "target": 19,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 19,
+        "type": "contains"
+      }
+    ]
+  }
+}

@@ -1,0 +1,605 @@
+{
+  "dataset": "hover",
+  "id": "b714e510-3a07-4d57-a85c-87e4dd0f3186",
+  "split": "train",
+  "claim": "The hotel located where the fire happened that ranked one above the MGM Grand fire in severity was on Peachtree Street.",
+  "evidencia": "Page: MGM Grand fire. Sentence: The tragedy remains the worst disaster in Nevada history, and the third-worst hotel fire in modern U.S. history, after the 1946 Winecoff Hotel fire in Atlanta that killed 119 people and the Dupont Plaza Hotel, San Juan, Puerto Rico fire on December 31, 1986, in which 97 perished.\nPage: Winecoff Hotel fire. Sentence: Located at 176 Peachtree Street in downtown Atlanta, Georgia, United States, the Winecoff Hotel was advertised as \"absolutely fireproof\".",
+  "evidence_text": "Page: MGM Grand fire. Sentence: The tragedy remains the worst disaster in Nevada history, and the third-worst hotel fire in modern U.S. history, after the 1946 Winecoff Hotel fire in Atlanta that killed 119 people and the Dupont Plaza Hotel, San Juan, Puerto Rico fire on December 31, 1986, in which 97 perished.\nPage: Winecoff Hotel fire. Sentence: Located at 176 Peachtree Street in downtown Atlanta, Georgia, United States, the Winecoff Hotel was advertised as \"absolutely fireproof\".",
+  "label": "SUPPORTED",
+  "num_hops": 2,
+  "hover_metadata": {
+    "supporting_facts": [
+      [
+        "MGM Grand fire",
+        2
+      ],
+      [
+        "Winecoff Hotel fire",
+        1
+      ]
+    ],
+    "num_hops": 2,
+    "evidence_annotation_id": [
+      0
+    ],
+    "evidence_id": [
+      "MGM Grand fire::sentence::2",
+      "Winecoff Hotel fire::sentence::1"
+    ],
+    "evidence_wiki_url": [
+      "https://en.wikipedia.org/wiki/MGM_Grand_fire",
+      "https://en.wikipedia.org/wiki/Winecoff_Hotel_fire"
+    ],
+    "evidence_sentence_id": [
+      "MGM Grand fire::sentence::2",
+      "Winecoff Hotel fire::sentence::1"
+    ]
+  },
+  "grafo_claim": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "35f43c4e-cd82-5058-b464-7dfd503515e9",
+        "text": "This chunk is about:\n- Places: Peachtree Street\n- Events: hotel fires, MGM Grand fire\n- Concepts: severity ranking\n\nFacts:\n- A hotel fire occurred at a hotel located on Peachtree Street.\n- The Peachtree Street hotel fire ranked one place above the MGM Grand fire in severity.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "baae8e07-2a41-5f64-b23b-b902c9ba0571",
+        "text": "The hotel located where the fire happened that ranked one above the MGM Grand fire in severity was on Peachtree Street.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "6bd06171-5b30-5fdd-b691-8e22fe8d2d1f",
+        "text": "text_0f5caacaefc165bdccefe32798d37c55",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "a08aa78f-75d1-5079-978a-91330df70bd9",
+        "text": "mgm grand fire",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "214abcd9-9adf-5c8a-bb35-1e729f2d68c3",
+        "text": "event",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "3dbf9551-e791-5c09-8e4e-5c17a006d6ea",
+        "text": "fire",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "62d96fb1-e51f-56b3-a4fb-16de40420581",
+        "text": "hotel on peachtree street",
+        "type": "Entity"
+      },
+      {
+        "id": 7,
+        "original_id": "13ac8628-1888-5b9f-a7a8-eacc98f4a904",
+        "text": "peachtree street",
+        "type": "Entity"
+      },
+      {
+        "id": 8,
+        "original_id": "5f394058-b2a0-5ba8-8466-ba2a18cfcf4e",
+        "text": "place",
+        "type": "EntityType"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 3,
+        "type": "ranked_above_in_severity"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 5,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "occurred_at"
+      },
+      {
+        "source": 1,
+        "target": 6,
+        "type": "contains"
+      },
+      {
+        "source": 6,
+        "target": 7,
+        "type": "located_on"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      },
+      {
+        "source": 7,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 6,
+        "target": 8,
+        "type": "is_a"
+      }
+    ]
+  },
+  "grafo_evidencia": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "6a9f75ac-688a-5507-a678-afa530e36a5c",
+        "text": "This chunk is about:\n- Events: MGM Grand fire, Winecoff Hotel fire, Dupont Plaza Hotel fire\n- Places: Nevada, Atlanta, Georgia, San Juan, Puerto Rico, Peachtree Street\n- Buildings: Winecoff Hotel\n\nFacts:\n- The 1946 Winecoff Hotel fire in Atlanta killed 119 people.\n- The Winecoff Hotel was located at 176 Peachtree Street in downtown Atlanta, Georgia, United States.\n- The Winecoff Hotel was advertised as \"absolutely fireproof\".\n- The Dupont Plaza Hotel fire in San Juan, Puerto Rico, occurred on December 31, 1986, and killed 97 people.\n- The MGM Grand fire remains the worst disaster in Nevada history.\n- The MGM Grand fire is the third-worst hotel fire in modern U.S. history, after the 1946 Winecoff Hotel fire and the 1986 Dupont Plaza Hotel fire.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "1ee4ae46-4a5f-5de4-98d9-093ca961b06c",
+        "text": "Page: MGM Grand fire. Sentence: The tragedy remains the worst disaster in Nevada history, and the third-worst hotel fire in modern U.S. history, after the 1946 Winecoff Hotel fire in Atlanta that killed 119 people and the Dupont Plaza Hotel, San Juan, Puerto Rico fire on December 31, 1986, in which 97 perished.\nPage: Winecoff Hotel fire. Sentence: Located at 176 Peachtree Street in downtown Atlanta, Georgia, United States, the Winecoff Hotel was advertised as \"absolutely fireproof\".",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "a0d56243-b04a-5bed-858c-3863f0c188be",
+        "text": "text_5c2897df7829c672a3e8721a534b50fd",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "a08aa78f-75d1-5079-978a-91330df70bd9",
+        "text": "mgm grand fire",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "cca9924d-3e69-59c5-be62-5ec26c26b0db",
+        "text": "nevada",
+        "type": "Entity"
+      },
+      {
+        "id": 5,
+        "original_id": "5f394058-b2a0-5ba8-8466-ba2a18cfcf4e",
+        "text": "place",
+        "type": "EntityType"
+      },
+      {
+        "id": 6,
+        "original_id": "3c27c6ee-f036-554b-8a44-b0cd8ce716ab",
+        "text": "modern u.s. history",
+        "type": "Entity"
+      },
+      {
+        "id": 7,
+        "original_id": "d2a381fa-3658-5ca6-ada9-2109cfc9331d",
+        "text": "concept",
+        "type": "EntityType"
+      },
+      {
+        "id": 8,
+        "original_id": "bc13c21b-96fa-5841-88fe-22f59efbd757",
+        "text": "winecoff hotel fire",
+        "type": "Entity"
+      },
+      {
+        "id": 9,
+        "original_id": "8c62f6d4-910c-55ca-8ddf-54ffe8165d95",
+        "text": "1946",
+        "type": "Entity"
+      },
+      {
+        "id": 10,
+        "original_id": "b19433ae-558c-5aaf-95ac-6231f2a4be0e",
+        "text": "date",
+        "type": "EntityType"
+      },
+      {
+        "id": 11,
+        "original_id": "4aa199bf-ca95-5409-bbe5-ab916a752491",
+        "text": "atlanta",
+        "type": "Entity"
+      },
+      {
+        "id": 12,
+        "original_id": "1a8a1dae-ccdc-5bd1-a5aa-9c308020ebd6",
+        "text": "georgia",
+        "type": "Entity"
+      },
+      {
+        "id": 13,
+        "original_id": "874a51da-34ea-5037-be47-d87785d43c37",
+        "text": "united states",
+        "type": "Entity"
+      },
+      {
+        "id": 14,
+        "original_id": "124bdbae-2e6f-59ee-ab11-c18fb4b9a82a",
+        "text": "119 people",
+        "type": "Entity"
+      },
+      {
+        "id": 15,
+        "original_id": "7a7a0687-e490-5167-ad5a-0e39d9055dee",
+        "text": "quantity",
+        "type": "EntityType"
+      },
+      {
+        "id": 16,
+        "original_id": "38a74151-b650-5577-8338-fcaf44066b99",
+        "text": "winecoff hotel",
+        "type": "Entity"
+      },
+      {
+        "id": 17,
+        "original_id": "886a0702-cb13-5601-8eb6-2f14baadf835",
+        "text": "176 peachtree street",
+        "type": "Entity"
+      },
+      {
+        "id": 18,
+        "original_id": "9068ea90-4f58-5bb5-b673-5382d36a536d",
+        "text": "downtown atlanta",
+        "type": "Entity"
+      },
+      {
+        "id": 19,
+        "original_id": "4d00cdca-815e-5fdf-a8e6-c06e6cac3f69",
+        "text": "absolutely fireproof",
+        "type": "Entity"
+      },
+      {
+        "id": 20,
+        "original_id": "214abcd9-9adf-5c8a-bb35-1e729f2d68c3",
+        "text": "event",
+        "type": "EntityType"
+      },
+      {
+        "id": 21,
+        "original_id": "2e9af1e9-8e52-5879-a032-b3fbfaa47f9f",
+        "text": "dupont plaza hotel fire",
+        "type": "Entity"
+      },
+      {
+        "id": 22,
+        "original_id": "1c738450-a8ed-565f-b526-f2dfb3ba5343",
+        "text": "san juan",
+        "type": "Entity"
+      },
+      {
+        "id": 23,
+        "original_id": "3df5b702-b3aa-5ddc-9a1a-4bae6a65521e",
+        "text": "puerto rico",
+        "type": "Entity"
+      },
+      {
+        "id": 24,
+        "original_id": "fc1ee8ba-e344-597a-90fc-80e345c3a66f",
+        "text": "1986-12-31",
+        "type": "Entity"
+      },
+      {
+        "id": 25,
+        "original_id": "b9dddca9-7146-5a3f-a226-63765cefd3ab",
+        "text": "97 people",
+        "type": "Entity"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "worst_disaster_in_history_of"
+      },
+      {
+        "source": 1,
+        "target": 4,
+        "type": "contains"
+      },
+      {
+        "source": 4,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 13,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 12,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 11,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 17,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 18,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 16,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 22,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 23,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 6,
+        "type": "ranked_third_worst_hotel_fire_in"
+      },
+      {
+        "source": 1,
+        "target": 6,
+        "type": "contains"
+      },
+      {
+        "source": 6,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 19,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 8,
+        "type": "ranked_after"
+      },
+      {
+        "source": 1,
+        "target": 8,
+        "type": "contains"
+      },
+      {
+        "source": 8,
+        "target": 9,
+        "type": "occurred_in"
+      },
+      {
+        "source": 1,
+        "target": 9,
+        "type": "contains"
+      },
+      {
+        "source": 9,
+        "target": 10,
+        "type": "is_a"
+      },
+      {
+        "source": 24,
+        "target": 10,
+        "type": "is_a"
+      },
+      {
+        "source": 8,
+        "target": 11,
+        "type": "occurred_in"
+      },
+      {
+        "source": 18,
+        "target": 11,
+        "type": "part_of"
+      },
+      {
+        "source": 1,
+        "target": 11,
+        "type": "contains"
+      },
+      {
+        "source": 11,
+        "target": 12,
+        "type": "located_in"
+      },
+      {
+        "source": 1,
+        "target": 12,
+        "type": "contains"
+      },
+      {
+        "source": 12,
+        "target": 13,
+        "type": "located_in"
+      },
+      {
+        "source": 1,
+        "target": 13,
+        "type": "contains"
+      },
+      {
+        "source": 8,
+        "target": 14,
+        "type": "killed"
+      },
+      {
+        "source": 1,
+        "target": 14,
+        "type": "contains"
+      },
+      {
+        "source": 14,
+        "target": 15,
+        "type": "is_a"
+      },
+      {
+        "source": 25,
+        "target": 15,
+        "type": "is_a"
+      },
+      {
+        "source": 8,
+        "target": 16,
+        "type": "occurred_at"
+      },
+      {
+        "source": 1,
+        "target": 16,
+        "type": "contains"
+      },
+      {
+        "source": 16,
+        "target": 17,
+        "type": "located_at"
+      },
+      {
+        "source": 1,
+        "target": 17,
+        "type": "contains"
+      },
+      {
+        "source": 16,
+        "target": 18,
+        "type": "located_in"
+      },
+      {
+        "source": 1,
+        "target": 18,
+        "type": "contains"
+      },
+      {
+        "source": 16,
+        "target": 19,
+        "type": "advertised_as"
+      },
+      {
+        "source": 1,
+        "target": 19,
+        "type": "contains"
+      },
+      {
+        "source": 8,
+        "target": 20,
+        "type": "is_a"
+      },
+      {
+        "source": 21,
+        "target": 20,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 20,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 21,
+        "type": "ranked_after"
+      },
+      {
+        "source": 1,
+        "target": 21,
+        "type": "contains"
+      },
+      {
+        "source": 21,
+        "target": 22,
+        "type": "occurred_in"
+      },
+      {
+        "source": 1,
+        "target": 22,
+        "type": "contains"
+      },
+      {
+        "source": 21,
+        "target": 23,
+        "type": "occurred_in"
+      },
+      {
+        "source": 1,
+        "target": 23,
+        "type": "contains"
+      },
+      {
+        "source": 21,
+        "target": 24,
+        "type": "occurred_on"
+      },
+      {
+        "source": 1,
+        "target": 24,
+        "type": "contains"
+      },
+      {
+        "source": 21,
+        "target": 25,
+        "type": "killed"
+      },
+      {
+        "source": 1,
+        "target": 25,
+        "type": "contains"
+      }
+    ]
+  }
+}

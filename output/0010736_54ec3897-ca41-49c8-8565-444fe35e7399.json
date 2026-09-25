@@ -1,0 +1,494 @@
+{
+  "dataset": "hover",
+  "id": "54ec3897-ca41-49c8-8565-444fe35e7399",
+  "split": "train",
+  "claim": "Boston College, not Stanford University, is a private research university located in Chestnut Hill, Massachusetts.",
+  "evidencia": "Page: Boston College. Sentence: Boston College (also referred to as BC) is a private Jesuit Catholic research university located in the affluent village of Chestnut Hill, Massachusetts, United States, 6 mi west of downtown Boston.\nPage: Stanford University. Sentence: Stanford University (Stanford; officially Leland Stanford Junior University, colloquially the Farm) is a private research university in Stanford, California, adjacent to Palo Alto and between San Jose and San Francisco.",
+  "evidence_text": "Page: Boston College. Sentence: Boston College (also referred to as BC) is a private Jesuit Catholic research university located in the affluent village of Chestnut Hill, Massachusetts, United States, 6 mi west of downtown Boston.\nPage: Stanford University. Sentence: Stanford University (Stanford; officially Leland Stanford Junior University, colloquially the Farm) is a private research university in Stanford, California, adjacent to Palo Alto and between San Jose and San Francisco.",
+  "label": "SUPPORTED",
+  "num_hops": 2,
+  "hover_metadata": {
+    "supporting_facts": [
+      [
+        "Boston College",
+        0
+      ],
+      [
+        "Stanford University",
+        0
+      ]
+    ],
+    "num_hops": 2,
+    "evidence_annotation_id": [
+      0
+    ],
+    "evidence_id": [
+      "Boston College::sentence::0",
+      "Stanford University::sentence::0"
+    ],
+    "evidence_wiki_url": [
+      "https://en.wikipedia.org/wiki/Boston_College",
+      "https://en.wikipedia.org/wiki/Stanford_University"
+    ],
+    "evidence_sentence_id": [
+      "Boston College::sentence::0",
+      "Stanford University::sentence::0"
+    ]
+  },
+  "grafo_claim": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "3c62fa41-b508-5794-9c99-5c14c1c93f1d",
+        "text": "This chunk is about:\n- Organizations: Boston College, Stanford University\n- Places: Chestnut Hill, Massachusetts\n- Concepts: private research universities\n\nFacts:\n- Boston College is a private research university located in Chestnut Hill, Massachusetts.\n- Stanford University is contrasted with Boston College as not being the university identified in this statement.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "f7b62e91-fe84-5890-b13f-7f9205435045",
+        "text": "Boston College, not Stanford University, is a private research university located in Chestnut Hill, Massachusetts.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "248f20d9-a5ba-53c6-8fa5-02c64344cf6b",
+        "text": "text_33f9acc5a84af01df4f0d5382d41d7b5",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "181aa9ed-a288-5a22-845f-3c5384828181",
+        "text": "boston college",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "388f60fb-220d-55e8-ae9c-3ac93cead308",
+        "text": "organization",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "73882be7-d5cf-5c14-8b5a-dd5276b69460",
+        "text": "chestnut hill, massachusetts",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "5f394058-b2a0-5ba8-8466-ba2a18cfcf4e",
+        "text": "place",
+        "type": "EntityType"
+      },
+      {
+        "id": 7,
+        "original_id": "8214f4bf-eea2-51e4-bbd1-cb742be8fd7c",
+        "text": "stanford university",
+        "type": "Entity"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 7,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "located_in"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      }
+    ]
+  },
+  "grafo_evidencia": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "2514d2b5-0d49-57b3-9e11-f3cd7c3851ac",
+        "text": "This chunk is about:\n- Organizations: Boston College, Stanford University\n- Places: Chestnut Hill, Massachusetts, Boston, Stanford, California, Palo Alto, San Jose, San Francisco, United States\n- Concepts: private research universities, Jesuit Catholic universities\n\nFacts:\n- Boston College is a private Jesuit Catholic research university in Chestnut Hill, Massachusetts, United States, 6 miles west of downtown Boston.\n- Boston College is also referred to as BC.\n- Stanford University is officially named Leland Stanford Junior University and is colloquially called the Farm.\n- Stanford University is a private research university in Stanford, California, adjacent to Palo Alto and between San Jose and San Francisco.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "1a098313-0a79-5d33-865c-2a8ff9fc8d78",
+        "text": "Page: Boston College. Sentence: Boston College (also referred to as BC) is a private Jesuit Catholic research university located in the affluent village of Chestnut Hill, Massachusetts, United States, 6 mi west of downtown Boston.\nPage: Stanford University. Sentence: Stanford University (Stanford; officially Leland Stanford Junior University, colloquially the Farm) is a private research university in Stanford, California, adjacent to Palo Alto and between San Jose and San Francisco.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "a02e1db8-7299-5eb3-9f07-9f53a0401793",
+        "text": "text_14ca0a59fc02d081922be0d6e506cf35",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "181aa9ed-a288-5a22-845f-3c5384828181",
+        "text": "boston college",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "388f60fb-220d-55e8-ae9c-3ac93cead308",
+        "text": "organization",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "39b8ac08-dbea-5652-8d0c-a9d772c86ec2",
+        "text": "chestnut hill",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "5f394058-b2a0-5ba8-8466-ba2a18cfcf4e",
+        "text": "place",
+        "type": "EntityType"
+      },
+      {
+        "id": 7,
+        "original_id": "eec21b3c-7649-58b4-9316-43035f0483fd",
+        "text": "massachusetts",
+        "type": "Entity"
+      },
+      {
+        "id": 8,
+        "original_id": "874a51da-34ea-5037-be47-d87785d43c37",
+        "text": "united states",
+        "type": "Entity"
+      },
+      {
+        "id": 9,
+        "original_id": "943a5e16-1e4d-5ea8-bc79-d234d76ed06b",
+        "text": "boston",
+        "type": "Entity"
+      },
+      {
+        "id": 10,
+        "original_id": "19c82ab4-e98c-5640-9eed-5730fc5f3fb7",
+        "text": "bc",
+        "type": "Entity"
+      },
+      {
+        "id": 11,
+        "original_id": "e2c15541-9836-5130-9acc-3c8e49caa20b",
+        "text": "alias",
+        "type": "EntityType"
+      },
+      {
+        "id": 12,
+        "original_id": "8214f4bf-eea2-51e4-bbd1-cb742be8fd7c",
+        "text": "stanford university",
+        "type": "Entity"
+      },
+      {
+        "id": 13,
+        "original_id": "daeadec7-4d4e-53e8-b627-d643535f77c9",
+        "text": "stanford, california",
+        "type": "Entity"
+      },
+      {
+        "id": 14,
+        "original_id": "8294cd6a-6968-5d3a-b0c8-57e08c745c8d",
+        "text": "california",
+        "type": "Entity"
+      },
+      {
+        "id": 15,
+        "original_id": "e2243eb4-68ea-58e6-8d39-d3ca7daec696",
+        "text": "palo alto",
+        "type": "Entity"
+      },
+      {
+        "id": 16,
+        "original_id": "6beb3b06-cfdd-5737-8a2a-1985c67b2cf6",
+        "text": "san jose",
+        "type": "Entity"
+      },
+      {
+        "id": 17,
+        "original_id": "ef432684-2d90-5950-95e7-984103a1d211",
+        "text": "san francisco",
+        "type": "Entity"
+      },
+      {
+        "id": 18,
+        "original_id": "4e6b008b-c6c5-5d56-84fa-36f0bba4a392",
+        "text": "stanford",
+        "type": "Entity"
+      },
+      {
+        "id": 19,
+        "original_id": "d3089e29-fc63-52df-b1fd-56ede950df80",
+        "text": "leland stanford junior university",
+        "type": "Entity"
+      },
+      {
+        "id": 20,
+        "original_id": "343f8c16-e85c-5d1e-ae66-42c4bf77a5c9",
+        "text": "the farm",
+        "type": "Entity"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 10,
+        "target": 3,
+        "type": "alias_of"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 12,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "located_in"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 7,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 8,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 9,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 13,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 14,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 15,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 16,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 17,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 5,
+        "target": 7,
+        "type": "located_in"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      },
+      {
+        "source": 7,
+        "target": 8,
+        "type": "located_in"
+      },
+      {
+        "source": 1,
+        "target": 8,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 9,
+        "type": "located_west_of"
+      },
+      {
+        "source": 1,
+        "target": 9,
+        "type": "contains"
+      },
+      {
+        "source": 1,
+        "target": 10,
+        "type": "contains"
+      },
+      {
+        "source": 10,
+        "target": 11,
+        "type": "is_a"
+      },
+      {
+        "source": 18,
+        "target": 11,
+        "type": "is_a"
+      },
+      {
+        "source": 19,
+        "target": 11,
+        "type": "is_a"
+      },
+      {
+        "source": 20,
+        "target": 11,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 12,
+        "type": "contains"
+      },
+      {
+        "source": 18,
+        "target": 12,
+        "type": "alias_of"
+      },
+      {
+        "source": 19,
+        "target": 12,
+        "type": "alias_of"
+      },
+      {
+        "source": 20,
+        "target": 12,
+        "type": "alias_of"
+      },
+      {
+        "source": 12,
+        "target": 13,
+        "type": "located_in"
+      },
+      {
+        "source": 1,
+        "target": 13,
+        "type": "contains"
+      },
+      {
+        "source": 13,
+        "target": 14,
+        "type": "located_in"
+      },
+      {
+        "source": 1,
+        "target": 14,
+        "type": "contains"
+      },
+      {
+        "source": 13,
+        "target": 15,
+        "type": "adjacent_to"
+      },
+      {
+        "source": 1,
+        "target": 15,
+        "type": "contains"
+      },
+      {
+        "source": 13,
+        "target": 16,
+        "type": "between_and"
+      },
+      {
+        "source": 1,
+        "target": 16,
+        "type": "contains"
+      },
+      {
+        "source": 13,
+        "target": 17,
+        "type": "between_and"
+      },
+      {
+        "source": 1,
+        "target": 17,
+        "type": "contains"
+      },
+      {
+        "source": 1,
+        "target": 18,
+        "type": "contains"
+      },
+      {
+        "source": 1,
+        "target": 19,
+        "type": "contains"
+      },
+      {
+        "source": 1,
+        "target": 20,
+        "type": "contains"
+      }
+    ]
+  }
+}

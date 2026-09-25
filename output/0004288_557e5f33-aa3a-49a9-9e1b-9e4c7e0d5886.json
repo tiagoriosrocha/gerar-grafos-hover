@@ -1,0 +1,417 @@
+{
+  "dataset": "hover",
+  "id": "557e5f33-aa3a-49a9-9e1b-9e4c7e0d5886",
+  "split": "train",
+  "claim": "The song \"Only a Pawn in Their Game\" was based on a crime whose perpetrator was convicted in the year 1994.",
+  "evidencia": "Page: Only a Pawn in Their Game. Sentence: \"Only a Pawn in Their Game\" is a song written by Bob Dylan about the assassination of civil rights activist Medgar Evers.\nPage: Byron De La Beckwith. Sentence: Byron De La Beckwith, Sr. (November 9, 1920 – January 21, 2001) was an American white supremacist and Klansman from Greenwood, Mississippi, who in 1994 was convicted of assassinating civil rights leader Medgar Wiley Evers on June 12, 1963.",
+  "evidence_text": "Page: Only a Pawn in Their Game. Sentence: \"Only a Pawn in Their Game\" is a song written by Bob Dylan about the assassination of civil rights activist Medgar Evers.\nPage: Byron De La Beckwith. Sentence: Byron De La Beckwith, Sr. (November 9, 1920 – January 21, 2001) was an American white supremacist and Klansman from Greenwood, Mississippi, who in 1994 was convicted of assassinating civil rights leader Medgar Wiley Evers on June 12, 1963.",
+  "label": "SUPPORTED",
+  "num_hops": 2,
+  "hover_metadata": {
+    "supporting_facts": [
+      [
+        "Only a Pawn in Their Game",
+        0
+      ],
+      [
+        "Byron De La Beckwith",
+        0
+      ]
+    ],
+    "num_hops": 2,
+    "evidence_annotation_id": [
+      0
+    ],
+    "evidence_id": [
+      "Only a Pawn in Their Game::sentence::0",
+      "Byron De La Beckwith::sentence::0"
+    ],
+    "evidence_wiki_url": [
+      "https://en.wikipedia.org/wiki/Only_a_Pawn_in_Their_Game",
+      "https://en.wikipedia.org/wiki/Byron_De_La_Beckwith"
+    ],
+    "evidence_sentence_id": [
+      "Only a Pawn in Their Game::sentence::0",
+      "Byron De La Beckwith::sentence::0"
+    ]
+  },
+  "grafo_claim": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "daf238f0-8dd2-5fda-a0d6-eeff5fd039d7",
+        "text": "This chunk is about:\n- Products: \"Only a Pawn in Their Game\"\n- Events: the crime behind the song, the 1994 conviction\n- People: the perpetrator\n\nFacts:\n- The song \"Only a Pawn in Their Game\" was based on a crime.\n- The perpetrator of the crime that inspired \"Only a Pawn in Their Game\" was convicted in 1994.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "0366403e-57b8-5c76-a1f6-1252d53519f0",
+        "text": "The song \"Only a Pawn in Their Game\" was based on a crime whose perpetrator was convicted in the year 1994.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "967ba7aa-d9fb-5afe-b735-2a740f98e680",
+        "text": "text_151c2ab49830690ec0e85a4b2fc0a11b",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "90ae1b75-6a0e-5fcc-9dee-49f818e7d44d",
+        "text": "only a pawn in their game",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "a8f21824-2200-5672-8134-c035d298bdb7",
+        "text": "crime",
+        "type": "Entity"
+      },
+      {
+        "id": 5,
+        "original_id": "214abcd9-9adf-5c8a-bb35-1e729f2d68c3",
+        "text": "event",
+        "type": "EntityType"
+      },
+      {
+        "id": 6,
+        "original_id": "6056b392-f12e-5150-8c0b-ac7545dc2fdf",
+        "text": "song",
+        "type": "EntityType"
+      },
+      {
+        "id": 7,
+        "original_id": "47298c7b-06d6-557a-9b42-14bc432a9f43",
+        "text": "1994",
+        "type": "Entity"
+      },
+      {
+        "id": 8,
+        "original_id": "b19433ae-558c-5aaf-95ac-6231f2a4be0e",
+        "text": "date",
+        "type": "EntityType"
+      },
+      {
+        "id": 9,
+        "original_id": "f015d2b6-29e9-5dd4-b68a-d472b4ccf82b",
+        "text": "perpetrator",
+        "type": "Entity"
+      },
+      {
+        "id": 10,
+        "original_id": "99a82eec-bb35-5bb5-9ed2-e73fc7a756de",
+        "text": "person",
+        "type": "EntityType"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "based_on"
+      },
+      {
+        "source": 1,
+        "target": 4,
+        "type": "contains"
+      },
+      {
+        "source": 9,
+        "target": 4,
+        "type": "perpetrated"
+      },
+      {
+        "source": 4,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      },
+      {
+        "source": 9,
+        "target": 7,
+        "type": "convicted_in"
+      },
+      {
+        "source": 7,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 9,
+        "type": "contains"
+      },
+      {
+        "source": 9,
+        "target": 10,
+        "type": "is_a"
+      }
+    ]
+  },
+  "grafo_evidencia": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "c9ed5436-d21d-5403-ba04-0f88a09a2e2a",
+        "text": "This chunk is about:\n- People: Bob Dylan, Byron De La Beckwith, Medgar Evers\n- Works: \"Only a Pawn in Their Game\"\n- Topics: assassination of Medgar Evers, civil rights, white supremacy\n\nFacts:\n- On June 12, 1963, Medgar Wiley Evers was assassinated.\n- Byron De La Beckwith, Sr. was an American white supremacist and Klansman from Greenwood, Mississippi.\n- In 1994, Byron De La Beckwith was convicted of assassinating Medgar Wiley Evers.\n- Bob Dylan wrote the song \"Only a Pawn in Their Game\" about the assassination of civil rights activist Medgar Evers.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "b848a3f2-3308-5971-88cb-b3e77faf618d",
+        "text": "Page: Only a Pawn in Their Game. Sentence: \"Only a Pawn in Their Game\" is a song written by Bob Dylan about the assassination of civil rights activist Medgar Evers.\nPage: Byron De La Beckwith. Sentence: Byron De La Beckwith, Sr. (November 9, 1920 – January 21, 2001) was an American white supremacist and Klansman from Greenwood, Mississippi, who in 1994 was convicted of assassinating civil rights leader Medgar Wiley Evers on June 12, 1963.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "ea418227-2ba2-56ad-8592-e85c47ca6dfb",
+        "text": "text_04d0599df6c483e67994c074b695468b",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "90ae1b75-6a0e-5fcc-9dee-49f818e7d44d",
+        "text": "only a pawn in their game",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "c183e379-94dc-57a0-9503-e247ead4a071",
+        "text": "bob dylan",
+        "type": "Entity"
+      },
+      {
+        "id": 5,
+        "original_id": "99a82eec-bb35-5bb5-9ed2-e73fc7a756de",
+        "text": "person",
+        "type": "EntityType"
+      },
+      {
+        "id": 6,
+        "original_id": "ed1586f9-daf4-5c48-93e4-42763e422912",
+        "text": "medgar wiley evers",
+        "type": "Entity"
+      },
+      {
+        "id": 7,
+        "original_id": "7220d758-28b9-5341-b90f-63e90145566d",
+        "text": "1963-06-12",
+        "type": "Entity"
+      },
+      {
+        "id": 8,
+        "original_id": "b19433ae-558c-5aaf-95ac-6231f2a4be0e",
+        "text": "date",
+        "type": "EntityType"
+      },
+      {
+        "id": 9,
+        "original_id": "6056b392-f12e-5150-8c0b-ac7545dc2fdf",
+        "text": "song",
+        "type": "EntityType"
+      },
+      {
+        "id": 10,
+        "original_id": "39fd66c9-00fd-53c2-aab0-a6f695824b8c",
+        "text": "byron de la beckwith, sr.",
+        "type": "Entity"
+      },
+      {
+        "id": 11,
+        "original_id": "8e8d5a11-8d2b-5d25-a61a-b7216cb83105",
+        "text": "greenwood, mississippi",
+        "type": "Entity"
+      },
+      {
+        "id": 12,
+        "original_id": "5f394058-b2a0-5ba8-8466-ba2a18cfcf4e",
+        "text": "place",
+        "type": "EntityType"
+      },
+      {
+        "id": 13,
+        "original_id": "47298c7b-06d6-557a-9b42-14bc432a9f43",
+        "text": "1994",
+        "type": "Entity"
+      },
+      {
+        "id": 14,
+        "original_id": "e63c37d6-c48f-5c35-ab92-a142a9ab9a59",
+        "text": "1920-11-09",
+        "type": "Entity"
+      },
+      {
+        "id": 15,
+        "original_id": "e1c91626-6201-5e5e-a590-f7ac91ba6b35",
+        "text": "2001-01-21",
+        "type": "Entity"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "written_by"
+      },
+      {
+        "source": 1,
+        "target": 4,
+        "type": "contains"
+      },
+      {
+        "source": 4,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 6,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 10,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 6,
+        "type": "about_assassination_of"
+      },
+      {
+        "source": 1,
+        "target": 6,
+        "type": "contains"
+      },
+      {
+        "source": 10,
+        "target": 6,
+        "type": "assassinated"
+      },
+      {
+        "source": 6,
+        "target": 7,
+        "type": "assassinated_on"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      },
+      {
+        "source": 7,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 13,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 14,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 15,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 9,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 10,
+        "type": "contains"
+      },
+      {
+        "source": 10,
+        "target": 11,
+        "type": "from"
+      },
+      {
+        "source": 1,
+        "target": 11,
+        "type": "contains"
+      },
+      {
+        "source": 11,
+        "target": 12,
+        "type": "is_a"
+      },
+      {
+        "source": 10,
+        "target": 13,
+        "type": "convicted_in"
+      },
+      {
+        "source": 1,
+        "target": 13,
+        "type": "contains"
+      },
+      {
+        "source": 10,
+        "target": 14,
+        "type": "born_on"
+      },
+      {
+        "source": 1,
+        "target": 14,
+        "type": "contains"
+      },
+      {
+        "source": 10,
+        "target": 15,
+        "type": "died_on"
+      },
+      {
+        "source": 1,
+        "target": 15,
+        "type": "contains"
+      }
+    ]
+  }
+}

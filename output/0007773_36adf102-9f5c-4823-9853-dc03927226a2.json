@@ -1,0 +1,685 @@
+{
+  "dataset": "hover",
+  "id": "36adf102-9f5c-4823-9853-dc03927226a2",
+  "split": "train",
+  "claim": "Jefferson Memorial is the name of the presidential bridge in Washington, D.C that connects to an artificial island.",
+  "evidencia": "Page: Hains Point. Sentence: The island is artificial: it was built up from Potomac dredging material from 1880 to 1892.\nPage: Jefferson Memorial. Sentence: The Jefferson Memorial is a presidential memorial in Washington, D.C., dedicated to Thomas Jefferson (1743–1826), one of the most important of the American Founding Fathers as the main drafter and writer of the Declaration of Independence, member of the Continental Congress, governor of the newly independent Commonwealth of Virginia, American minister to King Louis XVI and the Kingdom of France, first U.S. Secretary of State under the first President George Washington, the second Vice President of the United States under second President John Adams, and also the third President (1801–1809), as well as being the founder of the University of Virginia at Charlottesville, Virginia.",
+  "evidence_text": "Page: Hains Point. Sentence: The island is artificial: it was built up from Potomac dredging material from 1880 to 1892.\nPage: Jefferson Memorial. Sentence: The Jefferson Memorial is a presidential memorial in Washington, D.C., dedicated to Thomas Jefferson (1743–1826), one of the most important of the American Founding Fathers as the main drafter and writer of the Declaration of Independence, member of the Continental Congress, governor of the newly independent Commonwealth of Virginia, American minister to King Louis XVI and the Kingdom of France, first U.S. Secretary of State under the first President George Washington, the second Vice President of the United States under second President John Adams, and also the third President (1801–1809), as well as being the founder of the University of Virginia at Charlottesville, Virginia.",
+  "label": "NOT_SUPPORTED",
+  "num_hops": 2,
+  "hover_metadata": {
+    "supporting_facts": [
+      [
+        "Hains Point",
+        1
+      ],
+      [
+        "Jefferson Memorial",
+        0
+      ]
+    ],
+    "num_hops": 2,
+    "evidence_annotation_id": [
+      0
+    ],
+    "evidence_id": [
+      "Hains Point::sentence::1",
+      "Jefferson Memorial::sentence::0"
+    ],
+    "evidence_wiki_url": [
+      "https://en.wikipedia.org/wiki/Hains_Point",
+      "https://en.wikipedia.org/wiki/Jefferson_Memorial"
+    ],
+    "evidence_sentence_id": [
+      "Hains Point::sentence::1",
+      "Jefferson Memorial::sentence::0"
+    ]
+  },
+  "grafo_claim": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "e04c3dc2-6498-5261-9728-1b87bf001951",
+        "text": "This chunk is about:\n- Places: Jefferson Memorial, Washington, D.C., artificial island\n- Topics: presidential bridge\n\nFacts:\n- Jefferson Memorial is identified as the name of a presidential bridge in Washington, D.C.\n- The presidential bridge in Washington, D.C., is described as connecting to an artificial island.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "615ce022-31d7-50ed-b71b-90512decf02f",
+        "text": "Jefferson Memorial is the name of the presidential bridge in Washington, D.C that connects to an artificial island.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "7d3f2d7f-2607-52f7-9e6d-684923de06c7",
+        "text": "text_114c37f037b7d29806fc995016b3bbd1",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "2d78fbde-3245-5ab8-a945-0c7797bf62ed",
+        "text": "jefferson memorial",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "5f394058-b2a0-5ba8-8466-ba2a18cfcf4e",
+        "text": "place",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "193a9885-0f59-521c-a4b2-e6d5a15561ed",
+        "text": "washington, d.c.",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "be2f6984-c220-58ba-a917-65e6e6ac57b3",
+        "text": "artificial island",
+        "type": "Entity"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 5,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 6,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "located_in"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 6,
+        "type": "connects_to"
+      },
+      {
+        "source": 1,
+        "target": 6,
+        "type": "contains"
+      }
+    ]
+  },
+  "grafo_evidencia": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "bcd8b91d-8beb-5f55-bc33-001331c65c6f",
+        "text": "This chunk is about:\n- Places: Hains Point, Washington, D.C., Charlottesville, Virginia\n- Monuments: Jefferson Memorial\n- People: Thomas Jefferson, George Washington, John Adams, King Louis XVI\n- Concepts: American Founding Fathers, Declaration of Independence, Continental Congress, University of Virginia\n\nFacts:\n- Hains Point is an artificial island that was built up from Potomac River dredging material between 1880 and 1892.\n- Thomas Jefferson lived from 1743 to 1826.\n- The Jefferson Memorial is a presidential memorial in Washington, D.C., dedicated to Thomas Jefferson.\n- Thomas Jefferson was one of the most important American Founding Fathers and the main drafter and writer of the Declaration of Independence.\n- Thomas Jefferson was a member of the Continental Congress, governor of the Commonwealth of Virginia, American minister to King Louis XVI in France, the first U.S. Secretary of State under President George Washington, the second Vice President under President John Adams, and the third President of the United States from 1801 to 1809.\n- Thomas Jefferson founded the University of Virginia at Charlottesville, Virginia.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "235b792a-1d38-5038-860f-b8fae38cfcec",
+        "text": "Page: Hains Point. Sentence: The island is artificial: it was built up from Potomac dredging material from 1880 to 1892.\nPage: Jefferson Memorial. Sentence: The Jefferson Memorial is a presidential memorial in Washington, D.C., dedicated to Thomas Jefferson (1743–1826), one of the most important of the American Founding Fathers as the main drafter and writer of the Declaration of Independence, member of the Continental Congress, governor of the newly independent Commonwealth of Virginia, American minister to King Louis XVI and the Kingdom of France, first U.S. Secretary of State under the first President George Washington, the second Vice President of the United States under second President John Adams, and also the third President (1801–1809), as well as being the founder of the University of Virginia at Charlottesville, Virginia.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "4310c7d3-35b9-5430-b732-72b86e580181",
+        "text": "text_77f24393e00fd199783123cb3a8938a1",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "6d76eefd-47bb-53dd-878b-20a2e9470bf1",
+        "text": "hains point",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "5f394058-b2a0-5ba8-8466-ba2a18cfcf4e",
+        "text": "place",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "5fdd9d59-f520-540e-8c41-8f6976c99f8d",
+        "text": "potomac dredging material",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "41edc28f-34d7-56fd-9d04-d3445597e8fd",
+        "text": "material",
+        "type": "EntityType"
+      },
+      {
+        "id": 7,
+        "original_id": "0add5333-2c99-5b27-a19a-b554d33b9d37",
+        "text": "1880",
+        "type": "Entity"
+      },
+      {
+        "id": 8,
+        "original_id": "b19433ae-558c-5aaf-95ac-6231f2a4be0e",
+        "text": "date",
+        "type": "EntityType"
+      },
+      {
+        "id": 9,
+        "original_id": "7b99a75a-6f8d-5e95-b3d8-5db3da593efc",
+        "text": "1892",
+        "type": "Entity"
+      },
+      {
+        "id": 10,
+        "original_id": "2d78fbde-3245-5ab8-a945-0c7797bf62ed",
+        "text": "jefferson memorial",
+        "type": "Entity"
+      },
+      {
+        "id": 11,
+        "original_id": "193a9885-0f59-521c-a4b2-e6d5a15561ed",
+        "text": "washington, d.c.",
+        "type": "Entity"
+      },
+      {
+        "id": 12,
+        "original_id": "ce8e6b1b-7064-5af8-8801-cbb31b29cbed",
+        "text": "thomas jefferson",
+        "type": "Entity"
+      },
+      {
+        "id": 13,
+        "original_id": "99a82eec-bb35-5bb5-9ed2-e73fc7a756de",
+        "text": "person",
+        "type": "EntityType"
+      },
+      {
+        "id": 14,
+        "original_id": "44772f22-649c-5d86-8a79-9d978814af8d",
+        "text": "1743",
+        "type": "Entity"
+      },
+      {
+        "id": 15,
+        "original_id": "20e7f376-a8db-59c8-a38f-03f05639b269",
+        "text": "1826",
+        "type": "Entity"
+      },
+      {
+        "id": 16,
+        "original_id": "51160f4e-e848-5e33-baa0-c48caa4ce768",
+        "text": "declaration of independence",
+        "type": "Entity"
+      },
+      {
+        "id": 17,
+        "original_id": "3d897781-1f4f-59f0-9622-97d2f17ed585",
+        "text": "document",
+        "type": "EntityType"
+      },
+      {
+        "id": 18,
+        "original_id": "bb3cc16b-a464-55d0-8cea-12b520e1b012",
+        "text": "continental congress",
+        "type": "Entity"
+      },
+      {
+        "id": 19,
+        "original_id": "388f60fb-220d-55e8-ae9c-3ac93cead308",
+        "text": "organization",
+        "type": "EntityType"
+      },
+      {
+        "id": 20,
+        "original_id": "9fbc3c78-f669-55c7-8b62-9d4dc42feab9",
+        "text": "commonwealth of virginia",
+        "type": "Entity"
+      },
+      {
+        "id": 21,
+        "original_id": "fd9ae632-99de-526f-9b61-bf26db2bcfad",
+        "text": "king louis xvi",
+        "type": "Entity"
+      },
+      {
+        "id": 22,
+        "original_id": "9b47b22f-f68f-51dc-ad88-a1facb230909",
+        "text": "kingdom of france",
+        "type": "Entity"
+      },
+      {
+        "id": 23,
+        "original_id": "ee48ea14-8d38-521a-afdf-af21b864d763",
+        "text": "united states secretary of state",
+        "type": "Entity"
+      },
+      {
+        "id": 24,
+        "original_id": "c37fc488-fc9a-5b35-8e54-a50ae1721557",
+        "text": "role",
+        "type": "EntityType"
+      },
+      {
+        "id": 25,
+        "original_id": "12474b83-6526-57bc-9f8b-60dd08a13b6d",
+        "text": "george washington",
+        "type": "Entity"
+      },
+      {
+        "id": 26,
+        "original_id": "3833ff6f-2f5c-5211-8f01-93c107877a57",
+        "text": "vice president of the united states",
+        "type": "Entity"
+      },
+      {
+        "id": 27,
+        "original_id": "8b5c978b-c26c-5741-9df8-99d1b2827835",
+        "text": "john adams",
+        "type": "Entity"
+      },
+      {
+        "id": 28,
+        "original_id": "c4962b19-7fa4-5fac-91c6-42173f89d182",
+        "text": "president of the united states",
+        "type": "Entity"
+      },
+      {
+        "id": 29,
+        "original_id": "067c3f05-a2d4-5cb5-b292-6557195dee22",
+        "text": "1801",
+        "type": "Entity"
+      },
+      {
+        "id": 30,
+        "original_id": "586461a7-1eb5-582f-9f89-48aa87630486",
+        "text": "1809",
+        "type": "Entity"
+      },
+      {
+        "id": 31,
+        "original_id": "1b7b774a-fdaf-5d3b-91ba-91ebff693eae",
+        "text": "university of virginia",
+        "type": "Entity"
+      },
+      {
+        "id": 32,
+        "original_id": "a3352cb5-9b31-5557-a3c0-05364d7b30ef",
+        "text": "charlottesville, virginia",
+        "type": "Entity"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 10,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 11,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 20,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 22,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 32,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "built_up_from"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 7,
+        "type": "build_up_started_in"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      },
+      {
+        "source": 7,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 9,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 14,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 15,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 29,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 30,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 9,
+        "type": "build_up_ended_in"
+      },
+      {
+        "source": 1,
+        "target": 9,
+        "type": "contains"
+      },
+      {
+        "source": 1,
+        "target": 10,
+        "type": "contains"
+      },
+      {
+        "source": 10,
+        "target": 11,
+        "type": "located_in"
+      },
+      {
+        "source": 1,
+        "target": 11,
+        "type": "contains"
+      },
+      {
+        "source": 10,
+        "target": 12,
+        "type": "dedicated_to"
+      },
+      {
+        "source": 1,
+        "target": 12,
+        "type": "contains"
+      },
+      {
+        "source": 12,
+        "target": 13,
+        "type": "is_a"
+      },
+      {
+        "source": 21,
+        "target": 13,
+        "type": "is_a"
+      },
+      {
+        "source": 25,
+        "target": 13,
+        "type": "is_a"
+      },
+      {
+        "source": 27,
+        "target": 13,
+        "type": "is_a"
+      },
+      {
+        "source": 12,
+        "target": 14,
+        "type": "born_in"
+      },
+      {
+        "source": 1,
+        "target": 14,
+        "type": "contains"
+      },
+      {
+        "source": 12,
+        "target": 15,
+        "type": "died_in"
+      },
+      {
+        "source": 1,
+        "target": 15,
+        "type": "contains"
+      },
+      {
+        "source": 12,
+        "target": 16,
+        "type": "main_drafter_of"
+      },
+      {
+        "source": 1,
+        "target": 16,
+        "type": "contains"
+      },
+      {
+        "source": 16,
+        "target": 17,
+        "type": "is_a"
+      },
+      {
+        "source": 12,
+        "target": 18,
+        "type": "member_of"
+      },
+      {
+        "source": 1,
+        "target": 18,
+        "type": "contains"
+      },
+      {
+        "source": 18,
+        "target": 19,
+        "type": "is_a"
+      },
+      {
+        "source": 31,
+        "target": 19,
+        "type": "is_a"
+      },
+      {
+        "source": 12,
+        "target": 20,
+        "type": "governor_of"
+      },
+      {
+        "source": 1,
+        "target": 20,
+        "type": "contains"
+      },
+      {
+        "source": 12,
+        "target": 21,
+        "type": "american_minister_to"
+      },
+      {
+        "source": 1,
+        "target": 21,
+        "type": "contains"
+      },
+      {
+        "source": 12,
+        "target": 22,
+        "type": "american_minister_to"
+      },
+      {
+        "source": 1,
+        "target": 22,
+        "type": "contains"
+      },
+      {
+        "source": 12,
+        "target": 23,
+        "type": "held_role"
+      },
+      {
+        "source": 1,
+        "target": 23,
+        "type": "contains"
+      },
+      {
+        "source": 23,
+        "target": 24,
+        "type": "is_a"
+      },
+      {
+        "source": 26,
+        "target": 24,
+        "type": "is_a"
+      },
+      {
+        "source": 28,
+        "target": 24,
+        "type": "is_a"
+      },
+      {
+        "source": 12,
+        "target": 25,
+        "type": "served_under"
+      },
+      {
+        "source": 1,
+        "target": 25,
+        "type": "contains"
+      },
+      {
+        "source": 12,
+        "target": 26,
+        "type": "held_role"
+      },
+      {
+        "source": 1,
+        "target": 26,
+        "type": "contains"
+      },
+      {
+        "source": 12,
+        "target": 27,
+        "type": "served_under"
+      },
+      {
+        "source": 1,
+        "target": 27,
+        "type": "contains"
+      },
+      {
+        "source": 12,
+        "target": 28,
+        "type": "held_role"
+      },
+      {
+        "source": 1,
+        "target": 28,
+        "type": "contains"
+      },
+      {
+        "source": 12,
+        "target": 29,
+        "type": "presidency_started_in"
+      },
+      {
+        "source": 1,
+        "target": 29,
+        "type": "contains"
+      },
+      {
+        "source": 12,
+        "target": 30,
+        "type": "presidency_ended_in"
+      },
+      {
+        "source": 1,
+        "target": 30,
+        "type": "contains"
+      },
+      {
+        "source": 12,
+        "target": 31,
+        "type": "founded"
+      },
+      {
+        "source": 1,
+        "target": 31,
+        "type": "contains"
+      },
+      {
+        "source": 31,
+        "target": 32,
+        "type": "located_in"
+      },
+      {
+        "source": 1,
+        "target": 32,
+        "type": "contains"
+      }
+    ]
+  }
+}

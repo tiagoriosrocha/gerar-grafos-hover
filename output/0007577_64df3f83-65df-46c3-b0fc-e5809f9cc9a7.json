@@ -1,0 +1,651 @@
+{
+  "dataset": "hover",
+  "id": "64df3f83-65df-46c3-b0fc-e5809f9cc9a7",
+  "split": "train",
+  "claim": "The animated movie The Lorax, starring Danny Devito, featured music written and produced by Kool Kojak.",
+  "evidencia": "Page: Kool Kojak. Sentence: Kool Kojak has written and produced for artists such as Sean Paul, Yelle, Waka Flocka Flame, Travis Barker, Dr. Seuss's The Lorax, Britney Spears, Jesse and Joy, Andy Milonakis, Icona Pop, N.A.S.A., Dirt Nasty, Lordz of Brooklyn, Ursula 1000, and Warren G.\nPage: The Lorax (film). Sentence: The cast includes Danny DeVito as the Lorax, Ed Helms as the Once-ler, and Zac Efron as Ted.",
+  "evidence_text": "Page: Kool Kojak. Sentence: Kool Kojak has written and produced for artists such as Sean Paul, Yelle, Waka Flocka Flame, Travis Barker, Dr. Seuss's The Lorax, Britney Spears, Jesse and Joy, Andy Milonakis, Icona Pop, N.A.S.A., Dirt Nasty, Lordz of Brooklyn, Ursula 1000, and Warren G.\nPage: The Lorax (film). Sentence: The cast includes Danny DeVito as the Lorax, Ed Helms as the Once-ler, and Zac Efron as Ted.",
+  "label": "SUPPORTED",
+  "num_hops": 2,
+  "hover_metadata": {
+    "supporting_facts": [
+      [
+        "Kool Kojak",
+        1
+      ],
+      [
+        "The Lorax (film)",
+        3
+      ]
+    ],
+    "num_hops": 2,
+    "evidence_annotation_id": [
+      0
+    ],
+    "evidence_id": [
+      "Kool Kojak::sentence::1",
+      "The Lorax (film)::sentence::3"
+    ],
+    "evidence_wiki_url": [
+      "https://en.wikipedia.org/wiki/Kool_Kojak",
+      "https://en.wikipedia.org/wiki/The_Lorax_%28film%29"
+    ],
+    "evidence_sentence_id": [
+      "Kool Kojak::sentence::1",
+      "The Lorax (film)::sentence::3"
+    ]
+  },
+  "grafo_claim": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "feb14c63-f05a-5004-b04e-bc6d200200e0",
+        "text": "This chunk is about:\n- Products: The Lorax\n- People: Danny DeVito, Kool Kojak\n- Roles: starring, music writing, music production\n\nFacts:\n- The animated movie The Lorax starred Danny DeVito.\n- Kool Kojak wrote and produced music for the animated movie The Lorax.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "48784d5f-6aea-5d90-935d-53d18b5fd087",
+        "text": "The animated movie The Lorax, starring Danny Devito, featured music written and produced by Kool Kojak.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "6a2909b8-a9d5-5a0d-90d3-2f152e53948c",
+        "text": "text_1b2d15268597ac19c417c4766883dccf",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "9fa495a8-bd34-5b9c-929d-1887083e6813",
+        "text": "the lorax",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "1155038a-04d1-5d6a-9c60-e4f499a6913c",
+        "text": "movie",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "d73ef324-5ca8-5c1e-9ed3-40c35dfdf4a3",
+        "text": "danny devito",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "99a82eec-bb35-5bb5-9ed2-e73fc7a756de",
+        "text": "person",
+        "type": "EntityType"
+      },
+      {
+        "id": 7,
+        "original_id": "3579f945-c001-5046-9c8a-bad89d7b6bb2",
+        "text": "kool kojak",
+        "type": "Entity"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 3,
+        "type": "starred_in"
+      },
+      {
+        "source": 7,
+        "target": 3,
+        "type": "wrote_music_for"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 7,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      }
+    ]
+  },
+  "grafo_evidencia": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "9710856c-9a9c-58fc-b31f-8064928a2de6",
+        "text": "This chunk is about:\n- People: Kool Kojak, Sean Paul, Yelle, Waka Flocka Flame, Travis Barker, Britney Spears, Jesse and Joy, Andy Milonakis, Danny DeVito, Ed Helms, Zac Efron, Warren G\n- Projects: Dr. Seuss's The Lorax, The Lorax (film)\n- Groups: Icona Pop, N.A.S.A., Dirt Nasty, Lordz of Brooklyn\n- Roles: cast, writer, producer\n- Topics: music production, film casting\n\nFacts:\n- Kool Kojak has written and produced for Sean Paul, Yelle, Waka Flocka Flame, Travis Barker, Britney Spears, Jesse and Joy, Andy Milonakis, Icona Pop, N.A.S.A., Dirt Nasty, Lordz of Brooklyn, Ursula 1000, and Warren G.\n- Kool Kojak has also written and produced for Dr. Seuss's The Lorax.\n- The cast of The Lorax (film) includes Danny DeVito as the Lorax.\n- The cast of The Lorax (film) includes Ed Helms as the Once-ler.\n- The cast of The Lorax (film) includes Zac Efron as Ted.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "fb19d586-d48c-5e27-bfc9-e9cf0bb15f57",
+        "text": "Page: Kool Kojak. Sentence: Kool Kojak has written and produced for artists such as Sean Paul, Yelle, Waka Flocka Flame, Travis Barker, Dr. Seuss's The Lorax, Britney Spears, Jesse and Joy, Andy Milonakis, Icona Pop, N.A.S.A., Dirt Nasty, Lordz of Brooklyn, Ursula 1000, and Warren G.\nPage: The Lorax (film). Sentence: The cast includes Danny DeVito as the Lorax, Ed Helms as the Once-ler, and Zac Efron as Ted.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "c8ba8db9-b6aa-5395-bee4-0ee53490b699",
+        "text": "text_8064c48fe51bf45d2528a719b5dd1de4",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "3579f945-c001-5046-9c8a-bad89d7b6bb2",
+        "text": "kool kojak",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "a0d97a64-170c-57a2-9aad-4275d43e16d6",
+        "text": "sean paul",
+        "type": "Entity"
+      },
+      {
+        "id": 5,
+        "original_id": "99a82eec-bb35-5bb5-9ed2-e73fc7a756de",
+        "text": "person",
+        "type": "EntityType"
+      },
+      {
+        "id": 6,
+        "original_id": "b422b027-4717-5cc2-991d-24e5f15414f5",
+        "text": "yelle",
+        "type": "Entity"
+      },
+      {
+        "id": 7,
+        "original_id": "a437e9e0-609d-5ebc-99cc-4f0cbff23ca1",
+        "text": "waka flocka flame",
+        "type": "Entity"
+      },
+      {
+        "id": 8,
+        "original_id": "2586a497-f9af-5fd5-9de3-22692f2aae73",
+        "text": "travis barker",
+        "type": "Entity"
+      },
+      {
+        "id": 9,
+        "original_id": "9fa495a8-bd34-5b9c-929d-1887083e6813",
+        "text": "dr. seusss the lorax",
+        "type": "Entity"
+      },
+      {
+        "id": 10,
+        "original_id": "d320c8df-fd51-56e6-b577-e01a688fe6fc",
+        "text": "film",
+        "type": "EntityType"
+      },
+      {
+        "id": 11,
+        "original_id": "8114bc70-56f8-5ecf-a7c0-8e99a6d66982",
+        "text": "britney spears",
+        "type": "Entity"
+      },
+      {
+        "id": 12,
+        "original_id": "45fd5fbb-18bd-5b2c-b329-9f106907522c",
+        "text": "jesse and joy",
+        "type": "Entity"
+      },
+      {
+        "id": 13,
+        "original_id": "388f60fb-220d-55e8-ae9c-3ac93cead308",
+        "text": "organization",
+        "type": "EntityType"
+      },
+      {
+        "id": 14,
+        "original_id": "6d5f51f6-2f98-5e83-b366-1ee622aa035f",
+        "text": "andy milonakis",
+        "type": "Entity"
+      },
+      {
+        "id": 15,
+        "original_id": "ea4d9708-353e-565d-8a74-b7da6eccc024",
+        "text": "icona pop",
+        "type": "Entity"
+      },
+      {
+        "id": 16,
+        "original_id": "fcb36d9f-43a3-5892-94b2-7568a1799ea4",
+        "text": "n.a.s.a.",
+        "type": "Entity"
+      },
+      {
+        "id": 17,
+        "original_id": "475654e0-4cdc-586f-926c-ca06d1e0e93b",
+        "text": "dirt nasty",
+        "type": "Entity"
+      },
+      {
+        "id": 18,
+        "original_id": "7cbb0e18-4e8c-5e30-968f-6ae870649e64",
+        "text": "lordz of brooklyn",
+        "type": "Entity"
+      },
+      {
+        "id": 19,
+        "original_id": "b3fae96d-4929-57a4-aa65-6bfa24e11a2a",
+        "text": "ursula 1000",
+        "type": "Entity"
+      },
+      {
+        "id": 20,
+        "original_id": "18ccca77-40b8-53cb-bd22-be3146bf1f0e",
+        "text": "warren g",
+        "type": "Entity"
+      },
+      {
+        "id": 21,
+        "original_id": "d73ef324-5ca8-5c1e-9ed3-40c35dfdf4a3",
+        "text": "danny devito",
+        "type": "Entity"
+      },
+      {
+        "id": 22,
+        "original_id": "2a2e745e-9fd4-5d12-8599-2a7f65d3f5c2",
+        "text": "lorax",
+        "type": "Entity"
+      },
+      {
+        "id": 23,
+        "original_id": "d3db161f-3fd9-5366-919b-ad9f9a1ba392",
+        "text": "character",
+        "type": "EntityType"
+      },
+      {
+        "id": 24,
+        "original_id": "25258f6b-7c76-5a09-8856-84d186b2507b",
+        "text": "ed helms",
+        "type": "Entity"
+      },
+      {
+        "id": 25,
+        "original_id": "de3c7675-1a5a-597c-9907-7181d0a45456",
+        "text": "once-ler",
+        "type": "Entity"
+      },
+      {
+        "id": 26,
+        "original_id": "a2e7519f-bcee-5cba-a554-76c1d461e882",
+        "text": "zac efron",
+        "type": "Entity"
+      },
+      {
+        "id": 27,
+        "original_id": "dbcef13c-21b5-57f6-a52b-9f1ff6b8bf3a",
+        "text": "ted",
+        "type": "Entity"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "wrote_and_produced_for"
+      },
+      {
+        "source": 1,
+        "target": 4,
+        "type": "contains"
+      },
+      {
+        "source": 4,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 6,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 7,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 8,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 11,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 14,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 17,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 19,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 20,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 21,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 24,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 26,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 6,
+        "type": "wrote_and_produced_for"
+      },
+      {
+        "source": 1,
+        "target": 6,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 7,
+        "type": "wrote_and_produced_for"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 8,
+        "type": "wrote_and_produced_for"
+      },
+      {
+        "source": 1,
+        "target": 8,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 9,
+        "type": "wrote_and_produced_for"
+      },
+      {
+        "source": 1,
+        "target": 9,
+        "type": "contains"
+      },
+      {
+        "source": 21,
+        "target": 9,
+        "type": "cast_in"
+      },
+      {
+        "source": 22,
+        "target": 9,
+        "type": "appears_in"
+      },
+      {
+        "source": 24,
+        "target": 9,
+        "type": "cast_in"
+      },
+      {
+        "source": 25,
+        "target": 9,
+        "type": "appears_in"
+      },
+      {
+        "source": 26,
+        "target": 9,
+        "type": "cast_in"
+      },
+      {
+        "source": 27,
+        "target": 9,
+        "type": "appears_in"
+      },
+      {
+        "source": 9,
+        "target": 10,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 11,
+        "type": "wrote_and_produced_for"
+      },
+      {
+        "source": 1,
+        "target": 11,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 12,
+        "type": "wrote_and_produced_for"
+      },
+      {
+        "source": 1,
+        "target": 12,
+        "type": "contains"
+      },
+      {
+        "source": 12,
+        "target": 13,
+        "type": "is_a"
+      },
+      {
+        "source": 15,
+        "target": 13,
+        "type": "is_a"
+      },
+      {
+        "source": 16,
+        "target": 13,
+        "type": "is_a"
+      },
+      {
+        "source": 18,
+        "target": 13,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 14,
+        "type": "wrote_and_produced_for"
+      },
+      {
+        "source": 1,
+        "target": 14,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 15,
+        "type": "wrote_and_produced_for"
+      },
+      {
+        "source": 1,
+        "target": 15,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 16,
+        "type": "wrote_and_produced_for"
+      },
+      {
+        "source": 1,
+        "target": 16,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 17,
+        "type": "wrote_and_produced_for"
+      },
+      {
+        "source": 1,
+        "target": 17,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 18,
+        "type": "wrote_and_produced_for"
+      },
+      {
+        "source": 1,
+        "target": 18,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 19,
+        "type": "wrote_and_produced_for"
+      },
+      {
+        "source": 1,
+        "target": 19,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 20,
+        "type": "wrote_and_produced_for"
+      },
+      {
+        "source": 1,
+        "target": 20,
+        "type": "contains"
+      },
+      {
+        "source": 1,
+        "target": 21,
+        "type": "contains"
+      },
+      {
+        "source": 21,
+        "target": 22,
+        "type": "played"
+      },
+      {
+        "source": 1,
+        "target": 22,
+        "type": "contains"
+      },
+      {
+        "source": 22,
+        "target": 23,
+        "type": "is_a"
+      },
+      {
+        "source": 25,
+        "target": 23,
+        "type": "is_a"
+      },
+      {
+        "source": 27,
+        "target": 23,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 24,
+        "type": "contains"
+      },
+      {
+        "source": 24,
+        "target": 25,
+        "type": "played"
+      },
+      {
+        "source": 1,
+        "target": 25,
+        "type": "contains"
+      },
+      {
+        "source": 1,
+        "target": 26,
+        "type": "contains"
+      },
+      {
+        "source": 26,
+        "target": 27,
+        "type": "played"
+      },
+      {
+        "source": 1,
+        "target": 27,
+        "type": "contains"
+      }
+    ]
+  }
+}

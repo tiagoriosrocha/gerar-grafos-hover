@@ -1,0 +1,465 @@
+{
+  "dataset": "hover",
+  "id": "ef231eb5-e8c6-46bc-87ee-fe55a71da0e7",
+  "split": "train",
+  "claim": "Bill Boyd is the chairman of the company that operates the place Thomas Eje made his debut at.",
+  "evidencia": "Page: Suncoast Hotel and Casino. Sentence: It is owned and operated by Boyd Gaming.\nPage: Boyd Gaming. Sentence: The company continues to be run by founder Sam Boyd's family under the management of Sam's son, Bill Boyd (born 1931), who currently serves as the company's executive chairman after retiring as CEO in January 2008.\nPage: Thomas Eje. Sentence: On November 15, 2006 he made his Las Vegas debut at the Suncoast Casino, under the moniker \"Tom Dane\".",
+  "evidence_text": "Page: Suncoast Hotel and Casino. Sentence: It is owned and operated by Boyd Gaming.\nPage: Boyd Gaming. Sentence: The company continues to be run by founder Sam Boyd's family under the management of Sam's son, Bill Boyd (born 1931), who currently serves as the company's executive chairman after retiring as CEO in January 2008.\nPage: Thomas Eje. Sentence: On November 15, 2006 he made his Las Vegas debut at the Suncoast Casino, under the moniker \"Tom Dane\".",
+  "label": "SUPPORTED",
+  "num_hops": 3,
+  "hover_metadata": {
+    "supporting_facts": [
+      [
+        "Suncoast Hotel and Casino",
+        1
+      ],
+      [
+        "Boyd Gaming",
+        1
+      ],
+      [
+        "Thomas Eje",
+        2
+      ]
+    ],
+    "num_hops": 3,
+    "evidence_annotation_id": [
+      0
+    ],
+    "evidence_id": [
+      "Suncoast Hotel and Casino::sentence::1",
+      "Boyd Gaming::sentence::1",
+      "Thomas Eje::sentence::2"
+    ],
+    "evidence_wiki_url": [
+      "https://en.wikipedia.org/wiki/Suncoast_Hotel_and_Casino",
+      "https://en.wikipedia.org/wiki/Boyd_Gaming",
+      "https://en.wikipedia.org/wiki/Thomas_Eje"
+    ],
+    "evidence_sentence_id": [
+      "Suncoast Hotel and Casino::sentence::1",
+      "Boyd Gaming::sentence::1",
+      "Thomas Eje::sentence::2"
+    ]
+  },
+  "grafo_claim": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "5aefbdba-3f9e-5a2f-bdbd-64af308ed53c",
+        "text": "This chunk is about:\n- People: Bill Boyd, Thomas Eje\n- Companies: the company that operates Thomas Eje's debut venue\n- Places: Thomas Eje's debut venue\n- Roles: chairman\n\nFacts:\n- Thomas Eje made his debut at a particular place.\n- A company operates the place where Thomas Eje made his debut.\n- Bill Boyd is the chairman of the company that operates the place where Thomas Eje made his debut.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "102434c0-da50-5707-a5ed-26a802dbb7d3",
+        "text": "Bill Boyd is the chairman of the company that operates the place Thomas Eje made his debut at.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "439d5c2f-693e-5901-8003-49327ae9ddba",
+        "text": "text_c10a104c434105c5c7c67a047077c656",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "d77534a4-6c6d-5705-8bc0-2ab93b3bf400",
+        "text": "bill boyd",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "5d442446-1ff4-5407-a878-974ecd9cbab4",
+        "text": "company",
+        "type": "Entity"
+      },
+      {
+        "id": 5,
+        "original_id": "d1150612-efa2-573c-97f9-862360c05fa7",
+        "text": "place",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "5f394058-b2a0-5ba8-8466-ba2a18cfcf4e",
+        "text": "place",
+        "type": "EntityType"
+      },
+      {
+        "id": 7,
+        "original_id": "388f60fb-220d-55e8-ae9c-3ac93cead308",
+        "text": "organization",
+        "type": "EntityType"
+      },
+      {
+        "id": 8,
+        "original_id": "99a82eec-bb35-5bb5-9ed2-e73fc7a756de",
+        "text": "person",
+        "type": "EntityType"
+      },
+      {
+        "id": 9,
+        "original_id": "b1d46af1-1dc9-5dd5-b9ee-f218b41d3d46",
+        "text": "thomas eje",
+        "type": "Entity"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_chairman_of"
+      },
+      {
+        "source": 1,
+        "target": 4,
+        "type": "contains"
+      },
+      {
+        "source": 4,
+        "target": 5,
+        "type": "operates"
+      },
+      {
+        "source": 9,
+        "target": 5,
+        "type": "made_debut_at"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 4,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 9,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 9,
+        "type": "contains"
+      }
+    ]
+  },
+  "grafo_evidencia": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "40387f5a-1412-56ae-9389-9dab78100e6e",
+        "text": "This chunk is about:\n- Companies: Boyd Gaming\n- Places: Suncoast Hotel and Casino, Suncoast Casino, Las Vegas\n- People: Sam Boyd, Bill Boyd, Thomas Eje, Tom Dane\n- Roles: founder, executive chairman, CEO\n\nFacts:\n- On November 15, 2006, Thomas Eje made his Las Vegas debut at the Suncoast Casino under the moniker Tom Dane.\n- In January 2008, Bill Boyd retired as CEO of Boyd Gaming and became the company's executive chairman.\n- Boyd Gaming is owned and operated by Sam Boyd's family.\n- Sam Boyd founded Boyd Gaming.\n- Bill Boyd, born in 1931, is Sam Boyd's son and helps run Boyd Gaming.\n- Suncoast Hotel and Casino is owned and operated by Boyd Gaming.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "5c159636-c2bc-5783-b44b-b82f5fe1fe2e",
+        "text": "Page: Suncoast Hotel and Casino. Sentence: It is owned and operated by Boyd Gaming.\nPage: Boyd Gaming. Sentence: The company continues to be run by founder Sam Boyd's family under the management of Sam's son, Bill Boyd (born 1931), who currently serves as the company's executive chairman after retiring as CEO in January 2008.\nPage: Thomas Eje. Sentence: On November 15, 2006 he made his Las Vegas debut at the Suncoast Casino, under the moniker \"Tom Dane\".",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "010bc503-520d-52a0-a66e-43bd3f234eec",
+        "text": "text_456033a5e558629002d7f48d1c311691",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "9463553c-67a0-5884-a429-c458f7ac3542",
+        "text": "suncoast hotel and casino",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "9bc3aab3-51f0-5c23-8793-45878c157108",
+        "text": "boyd gaming",
+        "type": "Entity"
+      },
+      {
+        "id": 5,
+        "original_id": "076c41bb-ac20-5b28-a89c-e1880e987df3",
+        "text": "sam boyd",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "99a82eec-bb35-5bb5-9ed2-e73fc7a756de",
+        "text": "person",
+        "type": "EntityType"
+      },
+      {
+        "id": 7,
+        "original_id": "d77534a4-6c6d-5705-8bc0-2ab93b3bf400",
+        "text": "bill boyd",
+        "type": "Entity"
+      },
+      {
+        "id": 8,
+        "original_id": "bfe2d1c5-e7be-5bce-ba30-9589ffdee3a2",
+        "text": "1931",
+        "type": "Entity"
+      },
+      {
+        "id": 9,
+        "original_id": "b19433ae-558c-5aaf-95ac-6231f2a4be0e",
+        "text": "date",
+        "type": "EntityType"
+      },
+      {
+        "id": 10,
+        "original_id": "00313564-0f17-53fd-8834-f379f89260a2",
+        "text": "2008-01",
+        "type": "Entity"
+      },
+      {
+        "id": 11,
+        "original_id": "388f60fb-220d-55e8-ae9c-3ac93cead308",
+        "text": "organization",
+        "type": "EntityType"
+      },
+      {
+        "id": 12,
+        "original_id": "b1d46af1-1dc9-5dd5-b9ee-f218b41d3d46",
+        "text": "thomas eje",
+        "type": "Entity"
+      },
+      {
+        "id": 13,
+        "original_id": "4505f106-aa60-5442-867e-240f47fefb18",
+        "text": "2006-11-15",
+        "type": "Entity"
+      },
+      {
+        "id": 14,
+        "original_id": "2768ffee-4734-5551-9369-d2097b287276",
+        "text": "las vegas",
+        "type": "Entity"
+      },
+      {
+        "id": 15,
+        "original_id": "5f394058-b2a0-5ba8-8466-ba2a18cfcf4e",
+        "text": "place",
+        "type": "EntityType"
+      },
+      {
+        "id": 16,
+        "original_id": "b30b942d-ecbe-5781-b450-6f74e96e932d",
+        "text": "suncoast casino",
+        "type": "Entity"
+      },
+      {
+        "id": 17,
+        "original_id": "3e02ee3b-c4f0-56de-b1f4-1423155e233d",
+        "text": "tom dane",
+        "type": "Entity"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "owned_by"
+      },
+      {
+        "source": 7,
+        "target": 4,
+        "type": "executive_chairman_of"
+      },
+      {
+        "source": 1,
+        "target": 4,
+        "type": "contains"
+      },
+      {
+        "source": 4,
+        "target": 5,
+        "type": "founded_by"
+      },
+      {
+        "source": 7,
+        "target": 5,
+        "type": "child_of"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 7,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 17,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 12,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 4,
+        "target": 7,
+        "type": "managed_by"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      },
+      {
+        "source": 7,
+        "target": 8,
+        "type": "born_on"
+      },
+      {
+        "source": 1,
+        "target": 8,
+        "type": "contains"
+      },
+      {
+        "source": 8,
+        "target": 9,
+        "type": "is_a"
+      },
+      {
+        "source": 10,
+        "target": 9,
+        "type": "is_a"
+      },
+      {
+        "source": 13,
+        "target": 9,
+        "type": "is_a"
+      },
+      {
+        "source": 7,
+        "target": 10,
+        "type": "retired_as_ceo_in"
+      },
+      {
+        "source": 1,
+        "target": 10,
+        "type": "contains"
+      },
+      {
+        "source": 4,
+        "target": 11,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 11,
+        "type": "is_a"
+      },
+      {
+        "source": 16,
+        "target": 11,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 12,
+        "type": "contains"
+      },
+      {
+        "source": 12,
+        "target": 13,
+        "type": "made_debut_on"
+      },
+      {
+        "source": 1,
+        "target": 13,
+        "type": "contains"
+      },
+      {
+        "source": 12,
+        "target": 14,
+        "type": "made_debut_in"
+      },
+      {
+        "source": 1,
+        "target": 14,
+        "type": "contains"
+      },
+      {
+        "source": 14,
+        "target": 15,
+        "type": "is_a"
+      },
+      {
+        "source": 12,
+        "target": 16,
+        "type": "made_debut_at"
+      },
+      {
+        "source": 1,
+        "target": 16,
+        "type": "contains"
+      },
+      {
+        "source": 12,
+        "target": 17,
+        "type": "used_moniker"
+      },
+      {
+        "source": 1,
+        "target": 17,
+        "type": "contains"
+      }
+    ]
+  }
+}

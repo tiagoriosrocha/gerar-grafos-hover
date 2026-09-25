@@ -1,0 +1,382 @@
+{
+  "dataset": "hover",
+  "id": "82a6d215-dfb7-476d-b1b2-82c0fdabdd93",
+  "split": "train",
+  "claim": "The Chien-gris is now extinct, while another type of dog is not. This dog breed is one that is specifically bred to have Canine follicular dysplasia.",
+  "evidencia": "Page: Chinese Crested Dog. Sentence: The Chinese crested dog is a hairless breed of dog.\nPage: Chinese Crested Dog. Sentence: Like most hairless dog breeds, the Chinese crested comes in two varieties, with and without fur, which are born in the same litter: the Powderpuff and the Hairless.\nPage: Chien-gris. Sentence: The Chien-gris a.k.a. Gris de Saint-Louis (\"Grey St. Louis Hound\") was a breed of dog, now extinct, which originated in Medieval times.\nPage: Canine follicular dysplasia. Sentence: Certain breeds, such as the Mexican Hairless Dog and Chinese Crested Dog, are bred specifically for alopecia.",
+  "evidence_text": "Page: Chinese Crested Dog. Sentence: The Chinese crested dog is a hairless breed of dog.\nPage: Chinese Crested Dog. Sentence: Like most hairless dog breeds, the Chinese crested comes in two varieties, with and without fur, which are born in the same litter: the Powderpuff and the Hairless.\nPage: Chien-gris. Sentence: The Chien-gris a.k.a. Gris de Saint-Louis (\"Grey St. Louis Hound\") was a breed of dog, now extinct, which originated in Medieval times.\nPage: Canine follicular dysplasia. Sentence: Certain breeds, such as the Mexican Hairless Dog and Chinese Crested Dog, are bred specifically for alopecia.",
+  "label": "SUPPORTED",
+  "num_hops": 3,
+  "hover_metadata": {
+    "supporting_facts": [
+      [
+        "Chinese Crested Dog",
+        0
+      ],
+      [
+        "Chinese Crested Dog",
+        1
+      ],
+      [
+        "Chien-gris",
+        0
+      ],
+      [
+        "Canine follicular dysplasia",
+        4
+      ]
+    ],
+    "num_hops": 3,
+    "evidence_annotation_id": [
+      0
+    ],
+    "evidence_id": [
+      "Chinese Crested Dog::sentence::0",
+      "Chinese Crested Dog::sentence::1",
+      "Chien-gris::sentence::0",
+      "Canine follicular dysplasia::sentence::4"
+    ],
+    "evidence_wiki_url": [
+      "https://en.wikipedia.org/wiki/Chinese_Crested_Dog",
+      "https://en.wikipedia.org/wiki/Chien-gris",
+      "https://en.wikipedia.org/wiki/Canine_follicular_dysplasia"
+    ],
+    "evidence_sentence_id": [
+      "Chinese Crested Dog::sentence::0",
+      "Chinese Crested Dog::sentence::1",
+      "Chien-gris::sentence::0",
+      "Canine follicular dysplasia::sentence::4"
+    ]
+  },
+  "grafo_claim": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "9a609816-782e-587f-9d9e-89233cbb6613",
+        "text": "This chunk is about:\n- Dog breeds: Chien-gris, Mexican Hairless Dog\n- Concepts: extinction, Canine follicular dysplasia\n\nFacts:\n- The Chien-gris is extinct.\n- The Mexican Hairless Dog is not extinct.\n- The Mexican Hairless Dog is specifically bred to have Canine follicular dysplasia.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "44b0f4e1-4307-591e-af6b-5cc43a317685",
+        "text": "The Chien-gris is now extinct, while another type of dog is not. This dog breed is one that is specifically bred to have Canine follicular dysplasia.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "66d2e7ce-2f8b-5bd5-9fe0-4b363840a0f3",
+        "text": "text_dcd8d80a90f9ba393e4fd0f871e0b7cb",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "77aebcb0-829c-5ec9-8adf-b54882f25ab8",
+        "text": "chien-gris",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "f52824cb-bc2f-5154-89f9-e884cc4f0ca8",
+        "text": "another type of dog",
+        "type": "Entity"
+      },
+      {
+        "id": 5,
+        "original_id": "32411a2e-a9fc-5b93-bbcb-f0910058a072",
+        "text": "canine follicular dysplasia",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "69535c8d-1b49-5628-a2b4-3df868e6c5e0",
+        "text": "disease",
+        "type": "EntityType"
+      },
+      {
+        "id": 7,
+        "original_id": "29eda40d-66d5-59be-b17c-7c4969f51367",
+        "text": "dog breed",
+        "type": "EntityType"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "contrasted_with"
+      },
+      {
+        "source": 1,
+        "target": 4,
+        "type": "contains"
+      },
+      {
+        "source": 4,
+        "target": 5,
+        "type": "bred_to_have"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 4,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 7,
+        "type": "is_a"
+      }
+    ]
+  },
+  "grafo_evidencia": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "c4c05455-b6a6-5b66-9489-efed30d0336a",
+        "text": "This chunk is about:\n- Products: Chinese Crested Dog, Chien-gris, Mexican Hairless Dog\n- Concepts: hairless dog breeds, Powderpuff, Hairless, canine follicular dysplasia, alopecia\n\nFacts:\n- The Chien-gris, also called Gris de Saint-Louis or Grey St. Louis Hound, was a dog breed that originated in Medieval times and is now extinct.\n- The Chinese Crested Dog is a hairless breed of dog.\n- The Chinese Crested Dog has two varieties born in the same litter, the Powderpuff and the Hairless.\n- The Chinese Crested Dog is like most hairless dog breeds in having both furred and hairless varieties.\n- Certain dog breeds, including the Mexican Hairless Dog and the Chinese Crested Dog, are bred specifically for alopecia.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "48e0a521-0bfb-5331-b2d3-c92ec0bc92b4",
+        "text": "Page: Chinese Crested Dog. Sentence: The Chinese crested dog is a hairless breed of dog.\nPage: Chinese Crested Dog. Sentence: Like most hairless dog breeds, the Chinese crested comes in two varieties, with and without fur, which are born in the same litter: the Powderpuff and the Hairless.\nPage: Chien-gris. Sentence: The Chien-gris a.k.a. Gris de Saint-Louis (\"Grey St. Louis Hound\") was a breed of dog, now extinct, which originated in Medieval times.\nPage: Canine follicular dysplasia. Sentence: Certain breeds, such as the Mexican Hairless Dog and Chinese Crested Dog, are bred specifically for alopecia.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "e2a06ebf-96ce-53e5-bc8c-4e02090e2f03",
+        "text": "text_e8c8edeee10a7c84c01878d68ad0ce29",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "687b14b1-0232-50a7-9d8c-6469f64293f2",
+        "text": "chinese crested dog",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "d6f294f2-0787-588b-8137-8ff21af95df1",
+        "text": "hairless",
+        "type": "Entity"
+      },
+      {
+        "id": 5,
+        "original_id": "846a4057-9948-524e-b05f-99626c3556f9",
+        "text": "powderpuff",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "cc92176a-b6bc-5357-8e5d-5ba96c917f79",
+        "text": "variety",
+        "type": "EntityType"
+      },
+      {
+        "id": 7,
+        "original_id": "b68aeecd-8641-5bcf-b292-f9663e5e7f87",
+        "text": "alopecia",
+        "type": "Entity"
+      },
+      {
+        "id": 8,
+        "original_id": "a76bc211-9839-5298-a5b4-4b8f9a52713d",
+        "text": "condition",
+        "type": "EntityType"
+      },
+      {
+        "id": 9,
+        "original_id": "29eda40d-66d5-59be-b17c-7c4969f51367",
+        "text": "dog breed",
+        "type": "EntityType"
+      },
+      {
+        "id": 10,
+        "original_id": "77aebcb0-829c-5ec9-8adf-b54882f25ab8",
+        "text": "chien-gris",
+        "type": "Entity"
+      },
+      {
+        "id": 11,
+        "original_id": "e5b04c71-46ba-5126-a311-c25bd7f028bd",
+        "text": "gris de saint-louis",
+        "type": "Entity"
+      },
+      {
+        "id": 12,
+        "original_id": "39575085-0710-527d-bd54-019de7b00429",
+        "text": "name",
+        "type": "EntityType"
+      },
+      {
+        "id": 13,
+        "original_id": "f160b87f-e92b-5ac4-a7ac-9bef6f1bde73",
+        "text": "medieval times",
+        "type": "Entity"
+      },
+      {
+        "id": 14,
+        "original_id": "006c260a-6b32-550b-a527-54cbc2e25601",
+        "text": "time period",
+        "type": "EntityType"
+      },
+      {
+        "id": 15,
+        "original_id": "81ae6f81-301a-590d-a198-f193d769e036",
+        "text": "mexican hairless dog",
+        "type": "Entity"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "has_variety"
+      },
+      {
+        "source": 1,
+        "target": 4,
+        "type": "contains"
+      },
+      {
+        "source": 4,
+        "target": 5,
+        "type": "born_in_same_litter_as"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "has_variety"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 4,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 7,
+        "type": "bred_for"
+      },
+      {
+        "source": 15,
+        "target": 7,
+        "type": "bred_for"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      },
+      {
+        "source": 7,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 9,
+        "type": "is_a"
+      },
+      {
+        "source": 10,
+        "target": 9,
+        "type": "is_a"
+      },
+      {
+        "source": 15,
+        "target": 9,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 10,
+        "type": "contains"
+      },
+      {
+        "source": 10,
+        "target": 11,
+        "type": "also_known_as"
+      },
+      {
+        "source": 1,
+        "target": 11,
+        "type": "contains"
+      },
+      {
+        "source": 11,
+        "target": 12,
+        "type": "is_a"
+      },
+      {
+        "source": 10,
+        "target": 13,
+        "type": "originated_in"
+      },
+      {
+        "source": 1,
+        "target": 13,
+        "type": "contains"
+      },
+      {
+        "source": 13,
+        "target": 14,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 15,
+        "type": "contains"
+      }
+    ]
+  }
+}

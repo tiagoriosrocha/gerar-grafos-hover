@@ -1,0 +1,460 @@
+{
+  "dataset": "hover",
+  "id": "082717d3-4f68-48b7-b4cf-42b804b49813",
+  "split": "train",
+  "claim": "The chain that Jack O'Shea's was formerly located in is the UK's second largest shop; Harrods - today owned by the State of Qatar - is the biggest.",
+  "evidencia": "Page: Selfridges. Sentence: The flagship store on London's Oxford Street is the second largest shop in the UK (after Harrods) and opened 15 March 1909.\nPage: Harrods. Sentence: It is owned by the state of Qatar.\nPage: Jack O'Shea's. Sentence: The chain was formerly located in Selfridges, but had its contract terminated in 2012 after breaking the store's ethical code on selling foie gras.",
+  "evidence_text": "Page: Selfridges. Sentence: The flagship store on London's Oxford Street is the second largest shop in the UK (after Harrods) and opened 15 March 1909.\nPage: Harrods. Sentence: It is owned by the state of Qatar.\nPage: Jack O'Shea's. Sentence: The chain was formerly located in Selfridges, but had its contract terminated in 2012 after breaking the store's ethical code on selling foie gras.",
+  "label": "SUPPORTED",
+  "num_hops": 3,
+  "hover_metadata": {
+    "supporting_facts": [
+      [
+        "Selfridges",
+        2
+      ],
+      [
+        "Harrods",
+        1
+      ],
+      [
+        "Jack O'Shea's",
+        1
+      ]
+    ],
+    "num_hops": 3,
+    "evidence_annotation_id": [
+      0
+    ],
+    "evidence_id": [
+      "Selfridges::sentence::2",
+      "Harrods::sentence::1",
+      "Jack O'Shea's::sentence::1"
+    ],
+    "evidence_wiki_url": [
+      "https://en.wikipedia.org/wiki/Selfridges",
+      "https://en.wikipedia.org/wiki/Harrods",
+      "https://en.wikipedia.org/wiki/Jack_O%27Shea%27s"
+    ],
+    "evidence_sentence_id": [
+      "Selfridges::sentence::2",
+      "Harrods::sentence::1",
+      "Jack O'Shea's::sentence::1"
+    ]
+  },
+  "grafo_claim": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "a8434352-bcec-5884-9b1f-a12b71b7fb1f",
+        "text": "This chunk is about:\n- Companies: Jack O'Shea's, Harrods\n- Places: United Kingdom, Qatar\n\nFacts:\n- Jack O'Shea's was formerly located in the United Kingdom's second largest shop.\n- Harrods is the biggest shop in the United Kingdom.\n- Harrods is currently owned by the State of Qatar.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "8720f68c-8518-5b51-acd6-649cf932a70e",
+        "text": "The chain that Jack O'Shea's was formerly located in is the UK's second largest shop; Harrods - today owned by the State of Qatar - is the biggest.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "4148bb3f-7771-53af-9cfe-16f33ce42a23",
+        "text": "text_474aed4d24239597e2b1c72c9801a881",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "187b92f1-e6af-5d08-a536-d2ef820c837b",
+        "text": "jack osheas",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "388f60fb-220d-55e8-ae9c-3ac93cead308",
+        "text": "organization",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "76d4c35e-8f9b-54ee-a97f-4f5659cdf73a",
+        "text": "uks second largest shop",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "5f394058-b2a0-5ba8-8466-ba2a18cfcf4e",
+        "text": "place",
+        "type": "EntityType"
+      },
+      {
+        "id": 7,
+        "original_id": "1ae6a299-87d4-51f9-8a29-7075baf515aa",
+        "text": "harrods",
+        "type": "Entity"
+      },
+      {
+        "id": 8,
+        "original_id": "bf3f2352-f7df-58ba-87d7-dd3398095f90",
+        "text": "state of qatar",
+        "type": "Entity"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 7,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 8,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "formerly_located_in"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 7,
+        "target": 5,
+        "type": "bigger_than"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      },
+      {
+        "source": 7,
+        "target": 8,
+        "type": "owned_by"
+      },
+      {
+        "source": 1,
+        "target": 8,
+        "type": "contains"
+      }
+    ]
+  },
+  "grafo_evidencia": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "5b86dc8a-df4c-53c2-b7d9-144cc3b43e62",
+        "text": "This chunk is about:\n- Companies: Selfridges, Harrods, Jack O'Shea's\n- Places: London's Oxford Street, UK, Qatar\n- Topics: retail stores, ownership, contracts, ethical code, foie gras\n\nFacts:\n- Selfridges opened its flagship store on London's Oxford Street on 15 March 1909.\n- Selfridges' flagship store on London's Oxford Street is the second largest shop in the UK after Harrods.\n- Harrods is owned by the state of Qatar.\n- Jack O'Shea's was formerly located in Selfridges.\n- Selfridges terminated Jack O'Shea's contract in 2012 after Jack O'Shea's broke the store's ethical code by selling foie gras.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "b0bcbcfe-6ba7-52d3-ab45-76e62102249d",
+        "text": "Page: Selfridges. Sentence: The flagship store on London's Oxford Street is the second largest shop in the UK (after Harrods) and opened 15 March 1909.\nPage: Harrods. Sentence: It is owned by the state of Qatar.\nPage: Jack O'Shea's. Sentence: The chain was formerly located in Selfridges, but had its contract terminated in 2012 after breaking the store's ethical code on selling foie gras.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "08e718a0-a996-5f81-bdf9-0fd566ace657",
+        "text": "text_42cbf685d37080e1da9c932d294bae5f",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "1dced421-540e-5632-999f-4fbe3f801599",
+        "text": "selfridges",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "388f60fb-220d-55e8-ae9c-3ac93cead308",
+        "text": "organization",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "e90e2ba5-f42e-542e-ae0d-b686df72c05a",
+        "text": "selfridges flagship store",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "5f394058-b2a0-5ba8-8466-ba2a18cfcf4e",
+        "text": "place",
+        "type": "EntityType"
+      },
+      {
+        "id": 7,
+        "original_id": "a412d632-f5c7-5b4e-90d3-47a67ad63b95",
+        "text": "oxford street",
+        "type": "Entity"
+      },
+      {
+        "id": 8,
+        "original_id": "1941be33-5fbb-50eb-a9b1-fa2fc297d7dd",
+        "text": "united kingdom",
+        "type": "Entity"
+      },
+      {
+        "id": 9,
+        "original_id": "1ae6a299-87d4-51f9-8a29-7075baf515aa",
+        "text": "harrods",
+        "type": "Entity"
+      },
+      {
+        "id": 10,
+        "original_id": "2a9602b7-6000-516d-be2d-00df56f3db49",
+        "text": "qatar",
+        "type": "Entity"
+      },
+      {
+        "id": 11,
+        "original_id": "9997fb25-b67b-540f-99dd-d1ef4d00dec7",
+        "text": "1909-03-15",
+        "type": "Entity"
+      },
+      {
+        "id": 12,
+        "original_id": "b19433ae-558c-5aaf-95ac-6231f2a4be0e",
+        "text": "date",
+        "type": "EntityType"
+      },
+      {
+        "id": 13,
+        "original_id": "187b92f1-e6af-5d08-a536-d2ef820c837b",
+        "text": "jack osheas",
+        "type": "Entity"
+      },
+      {
+        "id": 14,
+        "original_id": "43e69636-c134-5dc8-b21a-52ba284d9418",
+        "text": "2012",
+        "type": "Entity"
+      },
+      {
+        "id": 15,
+        "original_id": "59c5b0f9-1f9a-5022-9276-0fe683c888c3",
+        "text": "selfridges ethical code",
+        "type": "Entity"
+      },
+      {
+        "id": 16,
+        "original_id": "d2a381fa-3658-5ca6-ada9-2109cfc9331d",
+        "text": "concept",
+        "type": "EntityType"
+      },
+      {
+        "id": 17,
+        "original_id": "9b611642-6d25-5e00-ac9a-c3cc728c5f05",
+        "text": "foie gras",
+        "type": "Entity"
+      },
+      {
+        "id": 18,
+        "original_id": "f76d57aa-4740-5218-9539-0e0978cbf183",
+        "text": "product",
+        "type": "EntityType"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 13,
+        "target": 3,
+        "type": "formerly_located_in"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 9,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 13,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "has_flagship_store"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 7,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 8,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 10,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 5,
+        "target": 7,
+        "type": "located_on"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 8,
+        "type": "located_in"
+      },
+      {
+        "source": 1,
+        "target": 8,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 9,
+        "type": "second_largest_shop_after"
+      },
+      {
+        "source": 1,
+        "target": 9,
+        "type": "contains"
+      },
+      {
+        "source": 9,
+        "target": 10,
+        "type": "owned_by"
+      },
+      {
+        "source": 1,
+        "target": 10,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 11,
+        "type": "opened_on"
+      },
+      {
+        "source": 1,
+        "target": 11,
+        "type": "contains"
+      },
+      {
+        "source": 11,
+        "target": 12,
+        "type": "is_a"
+      },
+      {
+        "source": 14,
+        "target": 12,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 13,
+        "type": "contains"
+      },
+      {
+        "source": 13,
+        "target": 14,
+        "type": "contract_terminated_in"
+      },
+      {
+        "source": 1,
+        "target": 14,
+        "type": "contains"
+      },
+      {
+        "source": 13,
+        "target": 15,
+        "type": "broke"
+      },
+      {
+        "source": 1,
+        "target": 15,
+        "type": "contains"
+      },
+      {
+        "source": 15,
+        "target": 16,
+        "type": "is_a"
+      },
+      {
+        "source": 15,
+        "target": 17,
+        "type": "concerns_selling"
+      },
+      {
+        "source": 1,
+        "target": 17,
+        "type": "contains"
+      },
+      {
+        "source": 17,
+        "target": 18,
+        "type": "is_a"
+      }
+    ]
+  }
+}

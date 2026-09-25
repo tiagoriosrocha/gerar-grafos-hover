@@ -1,0 +1,566 @@
+{
+  "dataset": "hover",
+  "id": "d93f085d-6b71-460c-b2fa-1ecfef1c34fa",
+  "split": "train",
+  "claim": "Montrose Regional Airport is a public airport. As opposed to the airport where Pro-Air Services is based, which is a joint civil-military international airport.",
+  "evidencia": "Page: Luis Muñoz Marín International Airport. Sentence: Luis Muñoz Marín International Airport (IATA: SJU, ICAO: TJSJ, FAA LID: SJU) (Spanish: \"Aeropuerto Internacional Luis Muñoz Marín\" , Or Isla Verde International Airport/Aeropuerto Internacional de Isla Verde) is a joint civil-military international airport named for Puerto Rico's first democratically elected governor and located in suburban Carolina, Puerto Rico, 3 mi southeast of San Juan.\nPage: Montrose Regional Airport. Sentence: Montrose Regional Airport (IATA: MTJ, ICAO: KMTJ, FAA LID: MTJ) is a non-towered public airport on the northwest side of Montrose, in zip code 81401 in southwestern Colorado.\nPage: Pro-Air Services. Sentence: Pro-Air Services is an Air Charter operator based at Luis Muñoz Marín International Airport, San Juan, Puerto Rico.",
+  "evidence_text": "Page: Luis Muñoz Marín International Airport. Sentence: Luis Muñoz Marín International Airport (IATA: SJU, ICAO: TJSJ, FAA LID: SJU) (Spanish: \"Aeropuerto Internacional Luis Muñoz Marín\" , Or Isla Verde International Airport/Aeropuerto Internacional de Isla Verde) is a joint civil-military international airport named for Puerto Rico's first democratically elected governor and located in suburban Carolina, Puerto Rico, 3 mi southeast of San Juan.\nPage: Montrose Regional Airport. Sentence: Montrose Regional Airport (IATA: MTJ, ICAO: KMTJ, FAA LID: MTJ) is a non-towered public airport on the northwest side of Montrose, in zip code 81401 in southwestern Colorado.\nPage: Pro-Air Services. Sentence: Pro-Air Services is an Air Charter operator based at Luis Muñoz Marín International Airport, San Juan, Puerto Rico.",
+  "label": "SUPPORTED",
+  "num_hops": 3,
+  "hover_metadata": {
+    "supporting_facts": [
+      [
+        "Luis Muñoz Marín International Airport",
+        0
+      ],
+      [
+        "Montrose Regional Airport",
+        0
+      ],
+      [
+        "Pro-Air Services",
+        0
+      ]
+    ],
+    "num_hops": 3,
+    "evidence_annotation_id": [
+      0
+    ],
+    "evidence_id": [
+      "Luis Muñoz Marín International Airport::sentence::0",
+      "Montrose Regional Airport::sentence::0",
+      "Pro-Air Services::sentence::0"
+    ],
+    "evidence_wiki_url": [
+      "https://en.wikipedia.org/wiki/Luis_Mu%C3%B1oz_Mar%C3%ADn_International_Airport",
+      "https://en.wikipedia.org/wiki/Montrose_Regional_Airport",
+      "https://en.wikipedia.org/wiki/Pro-Air_Services"
+    ],
+    "evidence_sentence_id": [
+      "Luis Muñoz Marín International Airport::sentence::0",
+      "Montrose Regional Airport::sentence::0",
+      "Pro-Air Services::sentence::0"
+    ]
+  },
+  "grafo_claim": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "a6e7ea5e-fc07-5771-93c3-05e3940ca39e",
+        "text": "This chunk is about:\n- Places: Montrose Regional Airport\n- Companies: Pro-Air Services\n- Concepts: airport types\n\nFacts:\n- Montrose Regional Airport is a public airport.\n- The airport where Pro-Air Services is based is a joint civil-military international airport.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "08f437f4-6d9f-5add-9edd-ef75b6b3755e",
+        "text": "Montrose Regional Airport is a public airport. As opposed to the airport where Pro-Air Services is based, which is a joint civil-military international airport.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "e9650cd7-c4b9-5b3e-947d-fdaa4733d290",
+        "text": "text_b7d4602c14f56888956aeede64284f65",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "430c359f-e37c-56a1-93e5-d1cdb74bc566",
+        "text": "montrose regional airport",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "5f4a23a8-ff2c-50b9-abdc-50505ca8d573",
+        "text": "pro-air services base airport",
+        "type": "Entity"
+      },
+      {
+        "id": 5,
+        "original_id": "50596f1a-2d8a-5de7-96b5-ba7068791784",
+        "text": "airport",
+        "type": "EntityType"
+      },
+      {
+        "id": 6,
+        "original_id": "3950d71b-ae5b-5e1c-aba8-140c98280b61",
+        "text": "pro-air services",
+        "type": "Entity"
+      },
+      {
+        "id": 7,
+        "original_id": "388f60fb-220d-55e8-ae9c-3ac93cead308",
+        "text": "organization",
+        "type": "EntityType"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "contrasted_with"
+      },
+      {
+        "source": 6,
+        "target": 4,
+        "type": "based_at"
+      },
+      {
+        "source": 1,
+        "target": 4,
+        "type": "contains"
+      },
+      {
+        "source": 4,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 6,
+        "type": "contains"
+      },
+      {
+        "source": 6,
+        "target": 7,
+        "type": "is_a"
+      }
+    ]
+  },
+  "grafo_evidencia": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "09e62e7e-cdbf-5d82-ac1f-7e3d29ebddfe",
+        "text": "This chunk is about:\n- Places: Carolina, Puerto Rico; San Juan; Montrose; southwestern Colorado\n- Airports: Luis Muñoz Marín International Airport; Montrose Regional Airport\n- Companies: Pro-Air Services\n- Concepts: airport codes; air charter operations\n\nFacts:\n- Luis Muñoz Marín International Airport has the codes IATA SJU, ICAO TJSJ, and FAA LID SJU.\n- Luis Muñoz Marín International Airport is a joint civil-military international airport in suburban Carolina, Puerto Rico, 3 miles southeast of San Juan.\n- Luis Muñoz Marín International Airport is also known in Spanish as Aeropuerto Internacional Luis Muñoz Marín and as Isla Verde International Airport or Aeropuerto Internacional de Isla Verde.\n- Luis Muñoz Marín International Airport is named for Puerto Rico's first democratically elected governor.\n- Montrose Regional Airport has the codes IATA MTJ, ICAO KMTJ, and FAA LID MTJ.\n- Montrose Regional Airport is a non-towered public airport on the northwest side of Montrose, in zip code 81401 in southwestern Colorado.\n- Pro-Air Services is an air charter operator based at Luis Muñoz Marín International Airport in San Juan, Puerto Rico.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "1adfb289-d5a1-5d4f-97e3-b18b468d1dcb",
+        "text": "Page: Luis Muñoz Marín International Airport. Sentence: Luis Muñoz Marín International Airport (IATA: SJU, ICAO: TJSJ, FAA LID: SJU) (Spanish: \"Aeropuerto Internacional Luis Muñoz Marín\" , Or Isla Verde International Airport/Aeropuerto Internacional de Isla Verde) is a joint civil-military international airport named for Puerto Rico's first democratically elected governor and located in suburban Carolina, Puerto Rico, 3 mi southeast of San Juan.\nPage: Montrose Regional Airport. Sentence: Montrose Regional Airport (IATA: MTJ, ICAO: KMTJ, FAA LID: MTJ) is a non-towered public airport on the northwest side of Montrose, in zip code 81401 in southwestern Colorado.\nPage: Pro-Air Services. Sentence: Pro-Air Services is an Air Charter operator based at Luis Muñoz Marín International Airport, San Juan, Puerto Rico.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "ed32ad02-0a96-56b5-b7a0-2739077ad0cb",
+        "text": "text_8b2f63737a4d05bd9aaba2b91b075890",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "5a7be384-9618-5a2e-91d1-a40c969145d0",
+        "text": "luis muñoz marín international airport",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "4ec6b41f-e2b4-56d2-b691-4439c26bb23f",
+        "text": "sju",
+        "type": "Entity"
+      },
+      {
+        "id": 5,
+        "original_id": "2c23f4f7-2223-5c53-a5f6-1bd0114fcd6a",
+        "text": "code",
+        "type": "EntityType"
+      },
+      {
+        "id": 6,
+        "original_id": "267a8a26-1030-57a6-9aa8-6e3f1ab935ea",
+        "text": "tjsj",
+        "type": "Entity"
+      },
+      {
+        "id": 7,
+        "original_id": "74223522-36cf-5173-a87a-76c803958e80",
+        "text": "aeropuerto internacional luis muñoz marín",
+        "type": "Entity"
+      },
+      {
+        "id": 8,
+        "original_id": "39575085-0710-527d-bd54-019de7b00429",
+        "text": "name",
+        "type": "EntityType"
+      },
+      {
+        "id": 9,
+        "original_id": "84fff288-4b99-5f20-8c8c-d84966a3bd1a",
+        "text": "isla verde international airport",
+        "type": "Entity"
+      },
+      {
+        "id": 10,
+        "original_id": "7c7ac4fb-a720-51fb-b815-2c1381b4e0cc",
+        "text": "aeropuerto internacional de isla verde",
+        "type": "Entity"
+      },
+      {
+        "id": 11,
+        "original_id": "b98c96cd-8a1e-5d7c-a5b9-0edd15255e29",
+        "text": "puerto ricos first democratically elected governor",
+        "type": "Entity"
+      },
+      {
+        "id": 12,
+        "original_id": "99a82eec-bb35-5bb5-9ed2-e73fc7a756de",
+        "text": "person",
+        "type": "EntityType"
+      },
+      {
+        "id": 13,
+        "original_id": "aed610f0-71b0-561a-b79c-c3a4d0672831",
+        "text": "carolina, puerto rico",
+        "type": "Entity"
+      },
+      {
+        "id": 14,
+        "original_id": "5f394058-b2a0-5ba8-8466-ba2a18cfcf4e",
+        "text": "place",
+        "type": "EntityType"
+      },
+      {
+        "id": 15,
+        "original_id": "1c738450-a8ed-565f-b526-f2dfb3ba5343",
+        "text": "san juan",
+        "type": "Entity"
+      },
+      {
+        "id": 16,
+        "original_id": "50596f1a-2d8a-5de7-96b5-ba7068791784",
+        "text": "airport",
+        "type": "EntityType"
+      },
+      {
+        "id": 17,
+        "original_id": "430c359f-e37c-56a1-93e5-d1cdb74bc566",
+        "text": "montrose regional airport",
+        "type": "Entity"
+      },
+      {
+        "id": 18,
+        "original_id": "763f3718-88e2-5246-95da-41690b4d332d",
+        "text": "mtj",
+        "type": "Entity"
+      },
+      {
+        "id": 19,
+        "original_id": "3be56a6b-f1f1-5e68-b675-19cab96a73e5",
+        "text": "kmtj",
+        "type": "Entity"
+      },
+      {
+        "id": 20,
+        "original_id": "f18a5270-c0ad-5e8b-9c51-849613f429f4",
+        "text": "montrose",
+        "type": "Entity"
+      },
+      {
+        "id": 21,
+        "original_id": "6dcc5451-f3ef-5e7d-b1a1-3e3513e648c1",
+        "text": "81401",
+        "type": "Entity"
+      },
+      {
+        "id": 22,
+        "original_id": "f30656a1-7e7c-5ca9-a1cd-16aec79b646d",
+        "text": "southwestern colorado",
+        "type": "Entity"
+      },
+      {
+        "id": 23,
+        "original_id": "3950d71b-ae5b-5e1c-aba8-140c98280b61",
+        "text": "pro-air services",
+        "type": "Entity"
+      },
+      {
+        "id": 24,
+        "original_id": "f0fb0a90-725d-5702-9453-e1521428b954",
+        "text": "san juan, puerto rico",
+        "type": "Entity"
+      },
+      {
+        "id": 25,
+        "original_id": "388f60fb-220d-55e8-ae9c-3ac93cead308",
+        "text": "organization",
+        "type": "EntityType"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 23,
+        "target": 3,
+        "type": "based_at"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "has_iata_code"
+      },
+      {
+        "source": 1,
+        "target": 4,
+        "type": "contains"
+      },
+      {
+        "source": 4,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 6,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 18,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 19,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 21,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 6,
+        "type": "has_icao_code"
+      },
+      {
+        "source": 1,
+        "target": 6,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 7,
+        "type": "has_spanish_name"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      },
+      {
+        "source": 7,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 9,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 10,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 9,
+        "type": "also_known_as"
+      },
+      {
+        "source": 1,
+        "target": 9,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 10,
+        "type": "also_known_as"
+      },
+      {
+        "source": 1,
+        "target": 10,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 11,
+        "type": "named_for"
+      },
+      {
+        "source": 1,
+        "target": 11,
+        "type": "contains"
+      },
+      {
+        "source": 11,
+        "target": 12,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 13,
+        "type": "located_in"
+      },
+      {
+        "source": 1,
+        "target": 13,
+        "type": "contains"
+      },
+      {
+        "source": 13,
+        "target": 14,
+        "type": "is_a"
+      },
+      {
+        "source": 15,
+        "target": 14,
+        "type": "is_a"
+      },
+      {
+        "source": 20,
+        "target": 14,
+        "type": "is_a"
+      },
+      {
+        "source": 22,
+        "target": 14,
+        "type": "is_a"
+      },
+      {
+        "source": 24,
+        "target": 14,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 15,
+        "type": "located_southeast_of"
+      },
+      {
+        "source": 1,
+        "target": 15,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 16,
+        "type": "is_a"
+      },
+      {
+        "source": 17,
+        "target": 16,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 17,
+        "type": "contains"
+      },
+      {
+        "source": 17,
+        "target": 18,
+        "type": "has_iata_code"
+      },
+      {
+        "source": 1,
+        "target": 18,
+        "type": "contains"
+      },
+      {
+        "source": 17,
+        "target": 19,
+        "type": "has_icao_code"
+      },
+      {
+        "source": 1,
+        "target": 19,
+        "type": "contains"
+      },
+      {
+        "source": 17,
+        "target": 20,
+        "type": "located_on_northwest_side_of"
+      },
+      {
+        "source": 1,
+        "target": 20,
+        "type": "contains"
+      },
+      {
+        "source": 17,
+        "target": 21,
+        "type": "located_in_zip_code"
+      },
+      {
+        "source": 1,
+        "target": 21,
+        "type": "contains"
+      },
+      {
+        "source": 17,
+        "target": 22,
+        "type": "located_in"
+      },
+      {
+        "source": 1,
+        "target": 22,
+        "type": "contains"
+      },
+      {
+        "source": 1,
+        "target": 23,
+        "type": "contains"
+      },
+      {
+        "source": 23,
+        "target": 24,
+        "type": "based_in"
+      },
+      {
+        "source": 1,
+        "target": 24,
+        "type": "contains"
+      },
+      {
+        "source": 23,
+        "target": 25,
+        "type": "is_a"
+      }
+    ]
+  }
+}

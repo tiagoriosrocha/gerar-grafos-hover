@@ -1,0 +1,449 @@
+{
+  "dataset": "hover",
+  "id": "4c9c3dcc-e424-4902-b15f-0d2a3b960937",
+  "split": "train",
+  "claim": "Skyplex has the roller coaster Skyscraper which will become the largest in the world when it opens in 2020.",
+  "evidencia": "Page: Skyplex. Sentence: The complex will include a 570 ft tower, which will feature the world's tallest roller coaster, Skyscraper, and the world's largest Perkins Restaurant and Bakery.\nPage: Skyscraper (roller coaster). Sentence: Skyscraper is an upcoming roller coaster that will be located at the planned Skyplex complex in Orlando, Florida.\nPage: Skyscraper (roller coaster). Sentence: Upon completion, it will become the tallest roller coaster in the world at over 500 ft and will feature both the steepest drop and highest inversion.",
+  "evidence_text": "Page: Skyplex. Sentence: The complex will include a 570 ft tower, which will feature the world's tallest roller coaster, Skyscraper, and the world's largest Perkins Restaurant and Bakery.\nPage: Skyscraper (roller coaster). Sentence: Skyscraper is an upcoming roller coaster that will be located at the planned Skyplex complex in Orlando, Florida.\nPage: Skyscraper (roller coaster). Sentence: Upon completion, it will become the tallest roller coaster in the world at over 500 ft and will feature both the steepest drop and highest inversion.",
+  "label": "SUPPORTED",
+  "num_hops": 2,
+  "hover_metadata": {
+    "supporting_facts": [
+      [
+        "Skyplex",
+        2
+      ],
+      [
+        "Skyscraper (roller coaster)",
+        0
+      ],
+      [
+        "Skyscraper (roller coaster)",
+        3
+      ]
+    ],
+    "num_hops": 2,
+    "evidence_annotation_id": [
+      0
+    ],
+    "evidence_id": [
+      "Skyplex::sentence::2",
+      "Skyscraper (roller coaster)::sentence::0",
+      "Skyscraper (roller coaster)::sentence::3"
+    ],
+    "evidence_wiki_url": [
+      "https://en.wikipedia.org/wiki/Skyplex",
+      "https://en.wikipedia.org/wiki/Skyscraper_%28roller_coaster%29"
+    ],
+    "evidence_sentence_id": [
+      "Skyplex::sentence::2",
+      "Skyscraper (roller coaster)::sentence::0",
+      "Skyscraper (roller coaster)::sentence::3"
+    ]
+  },
+  "grafo_claim": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "ef26e7b2-0060-5b30-882c-914615074061",
+        "text": "This chunk is about:\n- Places: Skyplex\n- Products: Skyscraper\n- Topics: Roller coasters, world records, opening dates\n\nFacts:\n- Skyplex has a roller coaster named Skyscraper.\n- Skyscraper is expected to become the largest roller coaster in the world when it opens in 2020.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "2e47618c-55df-5f8b-81fe-4ac6b089ec49",
+        "text": "Skyplex has the roller coaster Skyscraper which will become the largest in the world when it opens in 2020.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "80d2991d-8515-5494-b33b-8f940bf5792f",
+        "text": "text_5a836fc9acd5310aaaa597fc897eb417",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "f5b2973b-5212-538d-9bc7-8882d5cb6da9",
+        "text": "skyplex",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "5f394058-b2a0-5ba8-8466-ba2a18cfcf4e",
+        "text": "place",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "7ac049f3-954c-5f62-9666-ca76ee776c19",
+        "text": "skyscraper",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "5e7cbda1-d6b2-5124-9bad-288dc849a4e3",
+        "text": "object",
+        "type": "EntityType"
+      },
+      {
+        "id": 7,
+        "original_id": "d0285b1b-13c6-5096-93cc-08787e9282c1",
+        "text": "2020",
+        "type": "Entity"
+      },
+      {
+        "id": 8,
+        "original_id": "b19433ae-558c-5aaf-95ac-6231f2a4be0e",
+        "text": "date",
+        "type": "EntityType"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "has"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 5,
+        "target": 7,
+        "type": "opens_in"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      },
+      {
+        "source": 7,
+        "target": 8,
+        "type": "is_a"
+      }
+    ]
+  },
+  "grafo_evidencia": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "a69915e2-8015-5f58-99f3-f5ecf0c7f293",
+        "text": "This chunk is about:\n- Projects: Skyplex, Skyscraper\n- Places: Orlando, Florida\n- Products: Perkins Restaurant and Bakery\n- Concepts: world records\n\nFacts:\n- Skyplex is a planned complex in Orlando, Florida.\n- Skyplex will include a 570 ft tower.\n- Skyplex's tower will feature Skyscraper, a roller coaster.\n- Skyscraper is an upcoming roller coaster planned for the Skyplex complex in Orlando, Florida.\n- Upon completion, Skyscraper will become the tallest roller coaster in the world at over 500 ft.\n- Upon completion, Skyscraper will also feature the world's steepest drop and highest inversion.\n- Skyplex will also include the world's largest Perkins Restaurant and Bakery.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "ae6481ed-59f1-5e84-952d-a359152199eb",
+        "text": "Page: Skyplex. Sentence: The complex will include a 570 ft tower, which will feature the world's tallest roller coaster, Skyscraper, and the world's largest Perkins Restaurant and Bakery.\nPage: Skyscraper (roller coaster). Sentence: Skyscraper is an upcoming roller coaster that will be located at the planned Skyplex complex in Orlando, Florida.\nPage: Skyscraper (roller coaster). Sentence: Upon completion, it will become the tallest roller coaster in the world at over 500 ft and will feature both the steepest drop and highest inversion.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "e819f217-a92a-55af-86af-78eaf608cb62",
+        "text": "text_3f5be9583db18c8f7f20ef57d1343956",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "f5b2973b-5212-538d-9bc7-8882d5cb6da9",
+        "text": "skyplex",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "5f394058-b2a0-5ba8-8466-ba2a18cfcf4e",
+        "text": "place",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "f875804e-cae6-5581-b0b1-0d80665dc7f4",
+        "text": "570 ft tower",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "f52a988d-e6a2-51a0-8c2a-890426be6230",
+        "text": "structure",
+        "type": "EntityType"
+      },
+      {
+        "id": 7,
+        "original_id": "7ac049f3-954c-5f62-9666-ca76ee776c19",
+        "text": "skyscraper",
+        "type": "Entity"
+      },
+      {
+        "id": 8,
+        "original_id": "de647749-d597-5d22-9667-ebd536eb8198",
+        "text": "worlds tallest roller coaster",
+        "type": "Entity"
+      },
+      {
+        "id": 9,
+        "original_id": "d2a381fa-3658-5ca6-ada9-2109cfc9331d",
+        "text": "concept",
+        "type": "EntityType"
+      },
+      {
+        "id": 10,
+        "original_id": "0debea4a-e568-5f98-bff8-7bd69d461c51",
+        "text": "tallest roller coaster in the world",
+        "type": "Entity"
+      },
+      {
+        "id": 11,
+        "original_id": "b95ec2c8-3aed-5dcc-bff3-5234500823a8",
+        "text": "over 500 ft",
+        "type": "Entity"
+      },
+      {
+        "id": 12,
+        "original_id": "12d5521e-a878-542e-bebc-84ff79179d8e",
+        "text": "measurement",
+        "type": "EntityType"
+      },
+      {
+        "id": 13,
+        "original_id": "6b31cbd2-c1d9-5f12-9efe-a2ab2a6281f4",
+        "text": "steepest drop",
+        "type": "Entity"
+      },
+      {
+        "id": 14,
+        "original_id": "26fb426f-c539-5444-8ab3-d81ab2504c58",
+        "text": "highest inversion",
+        "type": "Entity"
+      },
+      {
+        "id": 15,
+        "original_id": "2ea19add-92a9-54df-a2ba-b969a8547ee0",
+        "text": "worlds largest perkins restaurant and bakery",
+        "type": "Entity"
+      },
+      {
+        "id": 16,
+        "original_id": "516998a9-0d21-5ff6-bf2e-f853b68ae0a9",
+        "text": "perkins restaurant and bakery",
+        "type": "Entity"
+      },
+      {
+        "id": 17,
+        "original_id": "388f60fb-220d-55e8-ae9c-3ac93cead308",
+        "text": "organization",
+        "type": "EntityType"
+      },
+      {
+        "id": 18,
+        "original_id": "f158e7a8-3a71-51a3-8df8-180337655394",
+        "text": "orlando, florida",
+        "type": "Entity"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 7,
+        "target": 3,
+        "type": "will_be_located_at"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 15,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 18,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "will_include"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 7,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 5,
+        "target": 7,
+        "type": "will_feature"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      },
+      {
+        "source": 7,
+        "target": 8,
+        "type": "is_described_as"
+      },
+      {
+        "source": 1,
+        "target": 8,
+        "type": "contains"
+      },
+      {
+        "source": 8,
+        "target": 9,
+        "type": "is_a"
+      },
+      {
+        "source": 10,
+        "target": 9,
+        "type": "is_a"
+      },
+      {
+        "source": 13,
+        "target": 9,
+        "type": "is_a"
+      },
+      {
+        "source": 14,
+        "target": 9,
+        "type": "is_a"
+      },
+      {
+        "source": 7,
+        "target": 10,
+        "type": "will_become"
+      },
+      {
+        "source": 1,
+        "target": 10,
+        "type": "contains"
+      },
+      {
+        "source": 7,
+        "target": 11,
+        "type": "height_at_completion"
+      },
+      {
+        "source": 1,
+        "target": 11,
+        "type": "contains"
+      },
+      {
+        "source": 11,
+        "target": 12,
+        "type": "is_a"
+      },
+      {
+        "source": 7,
+        "target": 13,
+        "type": "will_feature"
+      },
+      {
+        "source": 1,
+        "target": 13,
+        "type": "contains"
+      },
+      {
+        "source": 7,
+        "target": 14,
+        "type": "will_feature"
+      },
+      {
+        "source": 1,
+        "target": 14,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 15,
+        "type": "will_feature"
+      },
+      {
+        "source": 1,
+        "target": 15,
+        "type": "contains"
+      },
+      {
+        "source": 15,
+        "target": 16,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 16,
+        "type": "contains"
+      },
+      {
+        "source": 16,
+        "target": 17,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 18,
+        "type": "located_in"
+      },
+      {
+        "source": 1,
+        "target": 18,
+        "type": "contains"
+      }
+    ]
+  }
+}

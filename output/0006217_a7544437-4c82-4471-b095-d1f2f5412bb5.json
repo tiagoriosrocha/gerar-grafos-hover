@@ -1,0 +1,614 @@
+{
+  "dataset": "hover",
+  "id": "a7544437-4c82-4471-b095-d1f2f5412bb5",
+  "split": "train",
+  "claim": "Kyle Schickner and another director are of the same nationality. This other director wrote and directed one of the films produced by the Filmways company.",
+  "evidencia": "Page: Randal Kleiser. Sentence: John Randal Kleiser (born July 20, 1946) is an American film director and producer, best known for directing the 1978 musical romantic comedy film \"Grease\".\nPage: Kyle Schickner. Sentence: Kyle Schickner is an American film producer, writer, director, actor and a bisexual civil rights activist.\nPage: Summer Lovers. Sentence: Summer Lovers is a 1982 American romantic comedy film written and directed by Randal Kleiser, starring Peter Gallagher, Daryl Hannah and Valerie Quennessen.\nPage: Filmways. Sentence: Notable films the company produced include \"The Sandpiper\", \"The Cincinnati Kid\", \"The Fearless Vampire Killers\", \"Ice Station Zebra\", \"Summer Lovers\", \"The Burning\", \"King\" and Brian De Palma's \"Dressed to Kill\" and \"Blow Out\".",
+  "evidence_text": "Page: Randal Kleiser. Sentence: John Randal Kleiser (born July 20, 1946) is an American film director and producer, best known for directing the 1978 musical romantic comedy film \"Grease\".\nPage: Kyle Schickner. Sentence: Kyle Schickner is an American film producer, writer, director, actor and a bisexual civil rights activist.\nPage: Summer Lovers. Sentence: Summer Lovers is a 1982 American romantic comedy film written and directed by Randal Kleiser, starring Peter Gallagher, Daryl Hannah and Valerie Quennessen.\nPage: Filmways. Sentence: Notable films the company produced include \"The Sandpiper\", \"The Cincinnati Kid\", \"The Fearless Vampire Killers\", \"Ice Station Zebra\", \"Summer Lovers\", \"The Burning\", \"King\" and Brian De Palma's \"Dressed to Kill\" and \"Blow Out\".",
+  "label": "SUPPORTED",
+  "num_hops": 4,
+  "hover_metadata": {
+    "supporting_facts": [
+      [
+        "Randal Kleiser",
+        0
+      ],
+      [
+        "Kyle Schickner",
+        0
+      ],
+      [
+        "Summer Lovers",
+        0
+      ],
+      [
+        "Filmways",
+        3
+      ]
+    ],
+    "num_hops": 4,
+    "evidence_annotation_id": [
+      0
+    ],
+    "evidence_id": [
+      "Randal Kleiser::sentence::0",
+      "Kyle Schickner::sentence::0",
+      "Summer Lovers::sentence::0",
+      "Filmways::sentence::3"
+    ],
+    "evidence_wiki_url": [
+      "https://en.wikipedia.org/wiki/Randal_Kleiser",
+      "https://en.wikipedia.org/wiki/Kyle_Schickner",
+      "https://en.wikipedia.org/wiki/Summer_Lovers",
+      "https://en.wikipedia.org/wiki/Filmways"
+    ],
+    "evidence_sentence_id": [
+      "Randal Kleiser::sentence::0",
+      "Kyle Schickner::sentence::0",
+      "Summer Lovers::sentence::0",
+      "Filmways::sentence::3"
+    ]
+  },
+  "grafo_claim": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "8882603a-17f3-57c3-99f3-5884bfc469bd",
+        "text": "This chunk is about:\n- People: Kyle Schickner, another director\n- Companies: Filmways\n- Concepts: nationality, writing and directing credits\n\nFacts:\n- Kyle Schickner and the other director share the same nationality.\n- The other director wrote and directed a film that was produced by Filmways.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "d93a9551-2e93-512f-8e5d-ad2401755741",
+        "text": "Kyle Schickner and another director are of the same nationality. This other director wrote and directed one of the films produced by the Filmways company.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "33d50ed7-c2eb-5859-be0f-9698f24623cc",
+        "text": "text_a6c5acf671f05e185e2f249f8140ffe4",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "78375b9b-4679-5540-a4dd-6fee26b583a3",
+        "text": "kyle schickner",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "99a82eec-bb35-5bb5-9ed2-e73fc7a756de",
+        "text": "person",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "09412896-5464-501f-8c0e-b6532569c499",
+        "text": "other director",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "a04ad86a-e591-581d-8a66-bd1e1a98e9f1",
+        "text": "one of the films produced by filmways",
+        "type": "Entity"
+      },
+      {
+        "id": 7,
+        "original_id": "d320c8df-fd51-56e6-b577-e01a688fe6fc",
+        "text": "film",
+        "type": "EntityType"
+      },
+      {
+        "id": 8,
+        "original_id": "4d0ea666-bf35-5a61-957a-0f7609798491",
+        "text": "filmways",
+        "type": "Entity"
+      },
+      {
+        "id": 9,
+        "original_id": "82bfc922-4fcd-56b0-b353-7b550b51389d",
+        "text": "company",
+        "type": "EntityType"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 3,
+        "type": "has_same_nationality_as"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 5,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "wrote"
+      },
+      {
+        "source": 8,
+        "target": 6,
+        "type": "produced"
+      },
+      {
+        "source": 1,
+        "target": 6,
+        "type": "contains"
+      },
+      {
+        "source": 6,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 8,
+        "type": "contains"
+      },
+      {
+        "source": 8,
+        "target": 9,
+        "type": "is_a"
+      }
+    ]
+  },
+  "grafo_evidencia": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "646781cf-5aa3-553e-bc6d-56fb70f65211",
+        "text": "This chunk is about:\n- People: Randal Kleiser, Kyle Schickner, Peter Gallagher, Daryl Hannah, Valerie Quennessen, Brian De Palma\n- Companies: Filmways\n- Works: Grease, Summer Lovers, The Sandpiper, The Cincinnati Kid, The Fearless Vampire Killers, Ice Station Zebra, The Burning, King, Dressed to Kill, Blow Out\n- Roles: film director, producer, writer, actor, civil rights activist\n\nFacts:\n- Randal Kleiser was born on July 20, 1946, and he is an American film director and producer.\n- Randal Kleiser is best known for directing the 1978 musical romantic comedy film \"Grease.\"\n- Summer Lovers is a 1982 American romantic comedy film written and directed by Randal Kleiser.\n- Summer Lovers stars Peter Gallagher, Daryl Hannah, and Valerie Quennessen.\n- Kyle Schickner is an American film producer, writer, director, actor, and bisexual civil rights activist.\n- Filmways produced notable films including The Sandpiper, The Cincinnati Kid, The Fearless Vampire Killers, Ice Station Zebra, Summer Lovers, The Burning, King, Brian De Palma's Dressed to Kill, and Brian De Palma's Blow Out.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "bd374276-f57d-53d7-88ee-54203c1c9e73",
+        "text": "Page: Randal Kleiser. Sentence: John Randal Kleiser (born July 20, 1946) is an American film director and producer, best known for directing the 1978 musical romantic comedy film \"Grease\".\nPage: Kyle Schickner. Sentence: Kyle Schickner is an American film producer, writer, director, actor and a bisexual civil rights activist.\nPage: Summer Lovers. Sentence: Summer Lovers is a 1982 American romantic comedy film written and directed by Randal Kleiser, starring Peter Gallagher, Daryl Hannah and Valerie Quennessen.\nPage: Filmways. Sentence: Notable films the company produced include \"The Sandpiper\", \"The Cincinnati Kid\", \"The Fearless Vampire Killers\", \"Ice Station Zebra\", \"Summer Lovers\", \"The Burning\", \"King\" and Brian De Palma's \"Dressed to Kill\" and \"Blow Out\".",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "8b2bce8a-4030-506d-afc5-79241b4b725b",
+        "text": "text_8e3143545153ee71e8a24adb4607ba89",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "91827287-d75a-512d-8b90-8ec888011965",
+        "text": "randal kleiser",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "bf3b7110-7782-5f91-bdfd-4b76fbf9a1c2",
+        "text": "1946-07-20",
+        "type": "Entity"
+      },
+      {
+        "id": 5,
+        "original_id": "b19433ae-558c-5aaf-95ac-6231f2a4be0e",
+        "text": "date",
+        "type": "EntityType"
+      },
+      {
+        "id": 6,
+        "original_id": "2421f2ef-ba77-5bf8-a0a4-1ebbe9e2b448",
+        "text": "grease",
+        "type": "Entity"
+      },
+      {
+        "id": 7,
+        "original_id": "d320c8df-fd51-56e6-b577-e01a688fe6fc",
+        "text": "film",
+        "type": "EntityType"
+      },
+      {
+        "id": 8,
+        "original_id": "e07d5137-09d7-5624-972b-94d3e101e378",
+        "text": "summer lovers",
+        "type": "Entity"
+      },
+      {
+        "id": 9,
+        "original_id": "1b56c220-bd9c-5124-a057-6acd934f894f",
+        "text": "peter gallagher",
+        "type": "Entity"
+      },
+      {
+        "id": 10,
+        "original_id": "99a82eec-bb35-5bb5-9ed2-e73fc7a756de",
+        "text": "person",
+        "type": "EntityType"
+      },
+      {
+        "id": 11,
+        "original_id": "c06cba50-93ae-58a7-9821-5bb5cbb93214",
+        "text": "daryl hannah",
+        "type": "Entity"
+      },
+      {
+        "id": 12,
+        "original_id": "18a2440e-4bb6-5fe6-8dbd-a4c6985538b3",
+        "text": "valerie quennessen",
+        "type": "Entity"
+      },
+      {
+        "id": 13,
+        "original_id": "78375b9b-4679-5540-a4dd-6fee26b583a3",
+        "text": "kyle schickner",
+        "type": "Entity"
+      },
+      {
+        "id": 14,
+        "original_id": "4d0ea666-bf35-5a61-957a-0f7609798491",
+        "text": "filmways",
+        "type": "Entity"
+      },
+      {
+        "id": 15,
+        "original_id": "fa3be0ca-c71f-5964-95fc-b1cc6f48d28f",
+        "text": "the sandpiper",
+        "type": "Entity"
+      },
+      {
+        "id": 16,
+        "original_id": "8b6c8d7b-5ebf-5582-b7f5-6c1345a56119",
+        "text": "the cincinnati kid",
+        "type": "Entity"
+      },
+      {
+        "id": 17,
+        "original_id": "f3f83627-48f1-50b5-8e4c-2a3d0b4af106",
+        "text": "the fearless vampire killers",
+        "type": "Entity"
+      },
+      {
+        "id": 18,
+        "original_id": "43e1f846-cca0-5543-af5e-42b6c0b5ce6e",
+        "text": "ice station zebra",
+        "type": "Entity"
+      },
+      {
+        "id": 19,
+        "original_id": "9a1b6e6a-1cba-5db3-98eb-e392ea23ae82",
+        "text": "the burning",
+        "type": "Entity"
+      },
+      {
+        "id": 20,
+        "original_id": "492b2fd3-74b5-5246-ad10-b149fe9a14e7",
+        "text": "king",
+        "type": "Entity"
+      },
+      {
+        "id": 21,
+        "original_id": "a7611cbf-adbd-52dd-84a0-b1aa24783caf",
+        "text": "dressed to kill",
+        "type": "Entity"
+      },
+      {
+        "id": 22,
+        "original_id": "ac7dc906-a642-5b3f-8d6f-7db55648b9c5",
+        "text": "blow out",
+        "type": "Entity"
+      },
+      {
+        "id": 23,
+        "original_id": "388f60fb-220d-55e8-ae9c-3ac93cead308",
+        "text": "organization",
+        "type": "EntityType"
+      },
+      {
+        "id": 24,
+        "original_id": "456be91e-3661-5047-ae45-67a6101689d0",
+        "text": "brian de palma",
+        "type": "Entity"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "born_on"
+      },
+      {
+        "source": 1,
+        "target": 4,
+        "type": "contains"
+      },
+      {
+        "source": 4,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 6,
+        "type": "directed"
+      },
+      {
+        "source": 1,
+        "target": 6,
+        "type": "contains"
+      },
+      {
+        "source": 6,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 8,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 15,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 16,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 17,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 18,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 19,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 20,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 21,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 22,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 8,
+        "type": "wrote"
+      },
+      {
+        "source": 1,
+        "target": 8,
+        "type": "contains"
+      },
+      {
+        "source": 14,
+        "target": 8,
+        "type": "produced"
+      },
+      {
+        "source": 8,
+        "target": 9,
+        "type": "stars"
+      },
+      {
+        "source": 1,
+        "target": 9,
+        "type": "contains"
+      },
+      {
+        "source": 9,
+        "target": 10,
+        "type": "is_a"
+      },
+      {
+        "source": 11,
+        "target": 10,
+        "type": "is_a"
+      },
+      {
+        "source": 12,
+        "target": 10,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 10,
+        "type": "is_a"
+      },
+      {
+        "source": 13,
+        "target": 10,
+        "type": "is_a"
+      },
+      {
+        "source": 24,
+        "target": 10,
+        "type": "is_a"
+      },
+      {
+        "source": 8,
+        "target": 11,
+        "type": "stars"
+      },
+      {
+        "source": 1,
+        "target": 11,
+        "type": "contains"
+      },
+      {
+        "source": 8,
+        "target": 12,
+        "type": "stars"
+      },
+      {
+        "source": 1,
+        "target": 12,
+        "type": "contains"
+      },
+      {
+        "source": 1,
+        "target": 13,
+        "type": "contains"
+      },
+      {
+        "source": 1,
+        "target": 14,
+        "type": "contains"
+      },
+      {
+        "source": 14,
+        "target": 15,
+        "type": "produced"
+      },
+      {
+        "source": 1,
+        "target": 15,
+        "type": "contains"
+      },
+      {
+        "source": 14,
+        "target": 16,
+        "type": "produced"
+      },
+      {
+        "source": 1,
+        "target": 16,
+        "type": "contains"
+      },
+      {
+        "source": 14,
+        "target": 17,
+        "type": "produced"
+      },
+      {
+        "source": 1,
+        "target": 17,
+        "type": "contains"
+      },
+      {
+        "source": 14,
+        "target": 18,
+        "type": "produced"
+      },
+      {
+        "source": 1,
+        "target": 18,
+        "type": "contains"
+      },
+      {
+        "source": 14,
+        "target": 19,
+        "type": "produced"
+      },
+      {
+        "source": 1,
+        "target": 19,
+        "type": "contains"
+      },
+      {
+        "source": 14,
+        "target": 20,
+        "type": "produced"
+      },
+      {
+        "source": 1,
+        "target": 20,
+        "type": "contains"
+      },
+      {
+        "source": 14,
+        "target": 21,
+        "type": "produced"
+      },
+      {
+        "source": 1,
+        "target": 21,
+        "type": "contains"
+      },
+      {
+        "source": 24,
+        "target": 21,
+        "type": "associated_with"
+      },
+      {
+        "source": 14,
+        "target": 22,
+        "type": "produced"
+      },
+      {
+        "source": 1,
+        "target": 22,
+        "type": "contains"
+      },
+      {
+        "source": 24,
+        "target": 22,
+        "type": "associated_with"
+      },
+      {
+        "source": 14,
+        "target": 23,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 24,
+        "type": "contains"
+      }
+    ]
+  }
+}

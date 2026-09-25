@@ -1,0 +1,516 @@
+{
+  "dataset": "hover",
+  "id": "87327da7-2e6f-4747-a84f-30d49f94dfaa",
+  "split": "train",
+  "claim": "The director of the film The Girl Who Ran Wild was born. He was born before the director of The Divorcee.",
+  "evidencia": "Page: Rupert Julian. Sentence: Rupert Julian (25 January 1879 – 27 December 1943) was the first New Zealand cinema actor, director, writer and producer.\nPage: Robert Z. Leonard. Sentence: Robert Zigler Leonard (October 7, 1889 – August 27, 1968) was an American film director, actor, producer, and screenwriter.\nPage: The Girl Who Ran Wild. Sentence: The Girl Who Ran Wild is a 1922 Universal film directed by Rupert Julian.\nPage: The Divorcee. Sentence: It was directed by Robert Z. Leonard, who was nominated for the Academy Award for Best Director.",
+  "evidence_text": "Page: Rupert Julian. Sentence: Rupert Julian (25 January 1879 – 27 December 1943) was the first New Zealand cinema actor, director, writer and producer.\nPage: Robert Z. Leonard. Sentence: Robert Zigler Leonard (October 7, 1889 – August 27, 1968) was an American film director, actor, producer, and screenwriter.\nPage: The Girl Who Ran Wild. Sentence: The Girl Who Ran Wild is a 1922 Universal film directed by Rupert Julian.\nPage: The Divorcee. Sentence: It was directed by Robert Z. Leonard, who was nominated for the Academy Award for Best Director.",
+  "label": "SUPPORTED",
+  "num_hops": 4,
+  "hover_metadata": {
+    "supporting_facts": [
+      [
+        "Rupert Julian",
+        0
+      ],
+      [
+        "Robert Z. Leonard",
+        0
+      ],
+      [
+        "The Girl Who Ran Wild",
+        0
+      ],
+      [
+        "The Divorcee",
+        1
+      ]
+    ],
+    "num_hops": 4,
+    "evidence_annotation_id": [
+      0
+    ],
+    "evidence_id": [
+      "Rupert Julian::sentence::0",
+      "Robert Z. Leonard::sentence::0",
+      "The Girl Who Ran Wild::sentence::0",
+      "The Divorcee::sentence::1"
+    ],
+    "evidence_wiki_url": [
+      "https://en.wikipedia.org/wiki/Rupert_Julian",
+      "https://en.wikipedia.org/wiki/Robert_Z._Leonard",
+      "https://en.wikipedia.org/wiki/The_Girl_Who_Ran_Wild",
+      "https://en.wikipedia.org/wiki/The_Divorcee"
+    ],
+    "evidence_sentence_id": [
+      "Rupert Julian::sentence::0",
+      "Robert Z. Leonard::sentence::0",
+      "The Girl Who Ran Wild::sentence::0",
+      "The Divorcee::sentence::1"
+    ]
+  },
+  "grafo_claim": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "a7f92f17-4fa0-587a-99a5-88cd265eaa85",
+        "text": "This chunk is about:\n- People: director of The Girl Who Ran Wild, director of The Divorcee\n- Films: The Girl Who Ran Wild, The Divorcee\n\nFacts:\n- The director of The Girl Who Ran Wild was born.\n- The director of The Girl Who Ran Wild was born before the director of The Divorcee.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "6a30a896-09f0-518b-8733-d96664d7f199",
+        "text": "The director of the film The Girl Who Ran Wild was born. He was born before the director of The Divorcee.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "c16b9883-2bb8-5892-9df2-1c4d4b12fe5a",
+        "text": "text_ac1729f4979256d4f1eaba7f3b2bced4",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "cb0edbc9-304c-57cf-984f-5a052572c13c",
+        "text": "the girl who ran wild",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "d320c8df-fd51-56e6-b577-e01a688fe6fc",
+        "text": "film",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "b138311b-6d07-528d-80a8-ca9f98a9ab23",
+        "text": "the divorcee",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "5b3b5270-25fb-5150-b04a-1192b1c16626",
+        "text": "director of the girl who ran wild",
+        "type": "Entity"
+      },
+      {
+        "id": 7,
+        "original_id": "99a82eec-bb35-5bb5-9ed2-e73fc7a756de",
+        "text": "person",
+        "type": "EntityType"
+      },
+      {
+        "id": 8,
+        "original_id": "826cd563-77d4-5ccb-b158-fc8a58e1726a",
+        "text": "director of the divorcee",
+        "type": "Entity"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 6,
+        "target": 3,
+        "type": "directed"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 5,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 8,
+        "target": 5,
+        "type": "directed"
+      },
+      {
+        "source": 1,
+        "target": 6,
+        "type": "contains"
+      },
+      {
+        "source": 6,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 8,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 6,
+        "target": 8,
+        "type": "born_before"
+      },
+      {
+        "source": 1,
+        "target": 8,
+        "type": "contains"
+      }
+    ]
+  },
+  "grafo_evidencia": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "2f67bacf-c2a6-5ef6-8b3a-8f832be4a120",
+        "text": "This chunk is about:\n- People: Rupert Julian, Robert Z. Leonard\n- Films: The Girl Who Ran Wild, The Divorcee\n- Companies: Universal\n- Awards: Academy Award for Best Director\n\nFacts:\n- Rupert Julian was born on 25 January 1879 and died on 27 December 1943.\n- Rupert Julian was the first New Zealand cinema actor, director, writer, and producer.\n- Robert Z. Leonard was born on October 7, 1889 and died on August 27, 1968.\n- Robert Z. Leonard was an American film director, actor, producer, and screenwriter.\n- The Girl Who Ran Wild is a 1922 Universal film directed by Rupert Julian.\n- The Divorcee was directed by Robert Z. Leonard.\n- Robert Z. Leonard was nominated for the Academy Award for Best Director for The Divorcee.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "57557330-04aa-5ef3-9093-62b90911bdcb",
+        "text": "Page: Rupert Julian. Sentence: Rupert Julian (25 January 1879 – 27 December 1943) was the first New Zealand cinema actor, director, writer and producer.\nPage: Robert Z. Leonard. Sentence: Robert Zigler Leonard (October 7, 1889 – August 27, 1968) was an American film director, actor, producer, and screenwriter.\nPage: The Girl Who Ran Wild. Sentence: The Girl Who Ran Wild is a 1922 Universal film directed by Rupert Julian.\nPage: The Divorcee. Sentence: It was directed by Robert Z. Leonard, who was nominated for the Academy Award for Best Director.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "9583b7a1-17ae-5e14-80f3-376a753415f6",
+        "text": "text_4debf35d1316526580450aec7814ef66",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "3d497d4f-61df-5a3d-a10f-f2ee905d98f5",
+        "text": "rupert julian",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "99a82eec-bb35-5bb5-9ed2-e73fc7a756de",
+        "text": "person",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "b50788d5-1623-5755-a252-d2c00478b563",
+        "text": "1879-01-25",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "b19433ae-558c-5aaf-95ac-6231f2a4be0e",
+        "text": "date",
+        "type": "EntityType"
+      },
+      {
+        "id": 7,
+        "original_id": "6df40f80-7fa5-5b04-af7a-97ba2fc4fc28",
+        "text": "1943-12-27",
+        "type": "Entity"
+      },
+      {
+        "id": 8,
+        "original_id": "b9e6f04b-3af0-5fd3-8eac-4b641d227752",
+        "text": "new zealand",
+        "type": "Entity"
+      },
+      {
+        "id": 9,
+        "original_id": "5f394058-b2a0-5ba8-8466-ba2a18cfcf4e",
+        "text": "place",
+        "type": "EntityType"
+      },
+      {
+        "id": 10,
+        "original_id": "accfe1f5-b4f8-5748-80c4-9a174c57e575",
+        "text": "robert zigler leonard",
+        "type": "Entity"
+      },
+      {
+        "id": 11,
+        "original_id": "baace215-a01c-5ba2-bf10-30056909d0ba",
+        "text": "1889-10-07",
+        "type": "Entity"
+      },
+      {
+        "id": 12,
+        "original_id": "06589fab-8b3a-529e-aae6-34eb5daa1be0",
+        "text": "1968-08-27",
+        "type": "Entity"
+      },
+      {
+        "id": 13,
+        "original_id": "32e5ea46-cca9-5920-8b2d-77357f10ce8d",
+        "text": "american",
+        "type": "Entity"
+      },
+      {
+        "id": 14,
+        "original_id": "7d08f409-7e55-5a66-935f-7c5c06f9111f",
+        "text": "nationality",
+        "type": "EntityType"
+      },
+      {
+        "id": 15,
+        "original_id": "7684b8ee-46e5-587c-9dc9-66548af690ce",
+        "text": "academy award for best director",
+        "type": "Entity"
+      },
+      {
+        "id": 16,
+        "original_id": "38e42125-31f4-5cd6-993c-dbbc06a88910",
+        "text": "award",
+        "type": "EntityType"
+      },
+      {
+        "id": 17,
+        "original_id": "cb0edbc9-304c-57cf-984f-5a052572c13c",
+        "text": "the girl who ran wild",
+        "type": "Entity"
+      },
+      {
+        "id": 18,
+        "original_id": "d320c8df-fd51-56e6-b577-e01a688fe6fc",
+        "text": "film",
+        "type": "EntityType"
+      },
+      {
+        "id": 19,
+        "original_id": "5a4417f7-418a-55d6-bba2-981d57395a78",
+        "text": "1922",
+        "type": "Entity"
+      },
+      {
+        "id": 20,
+        "original_id": "d0a0ea05-e0da-56de-b712-d4305fb2930a",
+        "text": "universal",
+        "type": "Entity"
+      },
+      {
+        "id": 21,
+        "original_id": "388f60fb-220d-55e8-ae9c-3ac93cead308",
+        "text": "organization",
+        "type": "EntityType"
+      },
+      {
+        "id": 22,
+        "original_id": "b138311b-6d07-528d-80a8-ca9f98a9ab23",
+        "text": "the divorcee",
+        "type": "Entity"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 17,
+        "target": 3,
+        "type": "directed_by"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 10,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "born_on"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 7,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 11,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 12,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 19,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 7,
+        "type": "died_on"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 8,
+        "type": "associated_with_place"
+      },
+      {
+        "source": 1,
+        "target": 8,
+        "type": "contains"
+      },
+      {
+        "source": 8,
+        "target": 9,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 10,
+        "type": "contains"
+      },
+      {
+        "source": 22,
+        "target": 10,
+        "type": "directed_by"
+      },
+      {
+        "source": 10,
+        "target": 11,
+        "type": "born_on"
+      },
+      {
+        "source": 1,
+        "target": 11,
+        "type": "contains"
+      },
+      {
+        "source": 10,
+        "target": 12,
+        "type": "died_on"
+      },
+      {
+        "source": 1,
+        "target": 12,
+        "type": "contains"
+      },
+      {
+        "source": 10,
+        "target": 13,
+        "type": "has_nationality"
+      },
+      {
+        "source": 1,
+        "target": 13,
+        "type": "contains"
+      },
+      {
+        "source": 13,
+        "target": 14,
+        "type": "is_a"
+      },
+      {
+        "source": 10,
+        "target": 15,
+        "type": "nominated_for"
+      },
+      {
+        "source": 1,
+        "target": 15,
+        "type": "contains"
+      },
+      {
+        "source": 15,
+        "target": 16,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 17,
+        "type": "contains"
+      },
+      {
+        "source": 17,
+        "target": 18,
+        "type": "is_a"
+      },
+      {
+        "source": 22,
+        "target": 18,
+        "type": "is_a"
+      },
+      {
+        "source": 17,
+        "target": 19,
+        "type": "released_in"
+      },
+      {
+        "source": 1,
+        "target": 19,
+        "type": "contains"
+      },
+      {
+        "source": 17,
+        "target": 20,
+        "type": "associated_with_organization"
+      },
+      {
+        "source": 1,
+        "target": 20,
+        "type": "contains"
+      },
+      {
+        "source": 20,
+        "target": 21,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 22,
+        "type": "contains"
+      }
+    ]
+  }
+}

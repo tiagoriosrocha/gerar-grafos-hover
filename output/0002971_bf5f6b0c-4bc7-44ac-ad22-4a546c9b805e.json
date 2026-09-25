@@ -1,0 +1,516 @@
+{
+  "dataset": "hover",
+  "id": "bf5f6b0c-4bc7-44ac-ad22-4a546c9b805e",
+  "split": "train",
+  "claim": "Crosstown Plaza in Schenectady, NY is near a major interstate. This interstate and the I-90 are Highways that run through Schenectady, New York.",
+  "evidencia": "Page: Fort Hunter, Albany County, New York. Sentence: Fort Hunter lies along New York Route 146 near the Albany-Schenectady county line.\nPage: Interstate 890. Sentence: Interstate 890 (I-890) is a 9.45 mi long auxiliary Interstate Highway in the vicinity of Schenectady, New York, in the United States.\nPage: Interstate 890. Sentence: The highway runs southeast–northwest from an interchange with the New York State Thruway (I-90) northwest of Schenectady to another junction with the Thruway south of the city and passes through Downtown Schenectady along the way.\nPage: Crosstown Plaza (Schenectady, NY). Sentence: Crosstown Plaza is a large strip mall in Schenectady, NY (at the Rotterdam-Schenectady line) along Watt Street and NY State Route 7 near the I-890 entrance.",
+  "evidence_text": "Page: Fort Hunter, Albany County, New York. Sentence: Fort Hunter lies along New York Route 146 near the Albany-Schenectady county line.\nPage: Interstate 890. Sentence: Interstate 890 (I-890) is a 9.45 mi long auxiliary Interstate Highway in the vicinity of Schenectady, New York, in the United States.\nPage: Interstate 890. Sentence: The highway runs southeast–northwest from an interchange with the New York State Thruway (I-90) northwest of Schenectady to another junction with the Thruway south of the city and passes through Downtown Schenectady along the way.\nPage: Crosstown Plaza (Schenectady, NY). Sentence: Crosstown Plaza is a large strip mall in Schenectady, NY (at the Rotterdam-Schenectady line) along Watt Street and NY State Route 7 near the I-890 entrance.",
+  "label": "SUPPORTED",
+  "num_hops": 3,
+  "hover_metadata": {
+    "supporting_facts": [
+      [
+        "Fort Hunter, Albany County, New York",
+        1
+      ],
+      [
+        "Interstate 890",
+        0
+      ],
+      [
+        "Interstate 890",
+        1
+      ],
+      [
+        "Crosstown Plaza (Schenectady, NY)",
+        0
+      ]
+    ],
+    "num_hops": 3,
+    "evidence_annotation_id": [
+      0
+    ],
+    "evidence_id": [
+      "Fort Hunter, Albany County, New York::sentence::1",
+      "Interstate 890::sentence::0",
+      "Interstate 890::sentence::1",
+      "Crosstown Plaza (Schenectady, NY)::sentence::0"
+    ],
+    "evidence_wiki_url": [
+      "https://en.wikipedia.org/wiki/Fort_Hunter%2C_Albany_County%2C_New_York",
+      "https://en.wikipedia.org/wiki/Interstate_890",
+      "https://en.wikipedia.org/wiki/Crosstown_Plaza_%28Schenectady%2C_NY%29"
+    ],
+    "evidence_sentence_id": [
+      "Fort Hunter, Albany County, New York::sentence::1",
+      "Interstate 890::sentence::0",
+      "Interstate 890::sentence::1",
+      "Crosstown Plaza (Schenectady, NY)::sentence::0"
+    ]
+  },
+  "grafo_claim": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "fe56a777-0f88-5354-b7ee-927339db93e5",
+        "text": "This chunk is about:\n- Places: Crosstown Plaza, Schenectady, New York\n- Highways: a major interstate, I-90\n\nFacts:\n- Crosstown Plaza is in Schenectady, New York.\n- A major interstate runs near Crosstown Plaza in Schenectady, New York.\n- The major interstate and I-90 are highways that run through Schenectady, New York.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "7cfdeb03-09a8-5633-9c7a-73512a7f864d",
+        "text": "Crosstown Plaza in Schenectady, NY is near a major interstate. This interstate and the I-90 are Highways that run through Schenectady, New York.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "66eb6b22-767d-54ed-912b-718e57099df7",
+        "text": "text_cc19f995a5222bcaf749dc229ca972fe",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "9e0b9c3b-ed95-5c5c-b8d7-df21c69d038c",
+        "text": "crosstown plaza",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "bfe470c0-ef47-5b7d-b81f-e5180ef9640f",
+        "text": "schenectady, new york",
+        "type": "Entity"
+      },
+      {
+        "id": 5,
+        "original_id": "5f394058-b2a0-5ba8-8466-ba2a18cfcf4e",
+        "text": "place",
+        "type": "EntityType"
+      },
+      {
+        "id": 6,
+        "original_id": "414a5360-0474-5bbb-b09c-a67fa3168c8d",
+        "text": "major interstate",
+        "type": "Entity"
+      },
+      {
+        "id": 7,
+        "original_id": "ac6e4ca3-93a7-5a68-a378-e686b17763d3",
+        "text": "highway",
+        "type": "EntityType"
+      },
+      {
+        "id": 8,
+        "original_id": "642517b2-f521-54c1-a191-ca33e30e1842",
+        "text": "i-90",
+        "type": "Entity"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "located_in"
+      },
+      {
+        "source": 6,
+        "target": 4,
+        "type": "runs_through"
+      },
+      {
+        "source": 1,
+        "target": 4,
+        "type": "contains"
+      },
+      {
+        "source": 8,
+        "target": 4,
+        "type": "runs_through"
+      },
+      {
+        "source": 4,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 6,
+        "type": "near"
+      },
+      {
+        "source": 1,
+        "target": 6,
+        "type": "contains"
+      },
+      {
+        "source": 6,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 8,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 8,
+        "type": "contains"
+      }
+    ]
+  },
+  "grafo_evidencia": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "5fd4a946-5192-5abc-a780-5a3d519c05ee",
+        "text": "This chunk is about:\n- Places: Fort Hunter, Albany County, Schenectady, Rotterdam, Downtown Schenectady\n- Roads: New York Route 146, Interstate 890, Interstate 90, New York State Route 7, Watt Street\n- Products: Crosstown Plaza\n\nFacts:\n- Fort Hunter lies along New York Route 146 near the Albany–Schenectady county line.\n- Interstate 890 is a 9.45-mile auxiliary Interstate Highway in the vicinity of Schenectady, New York.\n- Interstate 890 runs southeast–northwest from an interchange with the New York State Thruway (Interstate 90) northwest of Schenectady to another junction with the Thruway south of the city.\n- Interstate 890 passes through Downtown Schenectady.\n- Crosstown Plaza is a large strip mall in Schenectady at the Rotterdam–Schenectady line.\n- Crosstown Plaza is located along Watt Street and New York State Route 7 near an entrance to Interstate 890.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "a0d83eb7-5f25-5d75-b7d7-fd8a188f44ef",
+        "text": "Page: Fort Hunter, Albany County, New York. Sentence: Fort Hunter lies along New York Route 146 near the Albany-Schenectady county line.\nPage: Interstate 890. Sentence: Interstate 890 (I-890) is a 9.45 mi long auxiliary Interstate Highway in the vicinity of Schenectady, New York, in the United States.\nPage: Interstate 890. Sentence: The highway runs southeast–northwest from an interchange with the New York State Thruway (I-90) northwest of Schenectady to another junction with the Thruway south of the city and passes through Downtown Schenectady along the way.\nPage: Crosstown Plaza (Schenectady, NY). Sentence: Crosstown Plaza is a large strip mall in Schenectady, NY (at the Rotterdam-Schenectady line) along Watt Street and NY State Route 7 near the I-890 entrance.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "fca91a32-50c8-5e17-9898-4d680d7e7e06",
+        "text": "text_6f1c8e92fdd928af6803d2afe061eaff",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "925629c0-3e06-5546-b983-87dc4c795b22",
+        "text": "fort hunter",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "211a433f-3916-538a-8d53-8481108784c7",
+        "text": "new york route 146",
+        "type": "Entity"
+      },
+      {
+        "id": 5,
+        "original_id": "5e52d312-a248-534f-a58b-25c5426a89ad",
+        "text": "road",
+        "type": "EntityType"
+      },
+      {
+        "id": 6,
+        "original_id": "c18adc76-10ba-573b-8a45-397c759c5cc7",
+        "text": "albany-schenectady county line",
+        "type": "Entity"
+      },
+      {
+        "id": 7,
+        "original_id": "5f394058-b2a0-5ba8-8466-ba2a18cfcf4e",
+        "text": "place",
+        "type": "EntityType"
+      },
+      {
+        "id": 8,
+        "original_id": "416f9644-9990-5abc-bc04-db308fe68d5e",
+        "text": "albany county, new york",
+        "type": "Entity"
+      },
+      {
+        "id": 9,
+        "original_id": "3f8c0e4e-ce66-50ad-83ef-055b32ccfd18",
+        "text": "interstate 890",
+        "type": "Entity"
+      },
+      {
+        "id": 10,
+        "original_id": "bfe470c0-ef47-5b7d-b81f-e5180ef9640f",
+        "text": "schenectady, new york",
+        "type": "Entity"
+      },
+      {
+        "id": 11,
+        "original_id": "874a51da-34ea-5037-be47-d87785d43c37",
+        "text": "united states",
+        "type": "Entity"
+      },
+      {
+        "id": 12,
+        "original_id": "5ee51883-1888-509b-bfee-5e55dcea2eb1",
+        "text": "new york state thruway",
+        "type": "Entity"
+      },
+      {
+        "id": 13,
+        "original_id": "e5a50aa1-888f-5135-8317-04dcafafc06d",
+        "text": "downtown schenectady",
+        "type": "Entity"
+      },
+      {
+        "id": 14,
+        "original_id": "9e0b9c3b-ed95-5c5c-b8d7-df21c69d038c",
+        "text": "crosstown plaza",
+        "type": "Entity"
+      },
+      {
+        "id": 15,
+        "original_id": "f5c60617-152a-558d-b551-3bb9f389d7b5",
+        "text": "rotterdam-schenectady line",
+        "type": "Entity"
+      },
+      {
+        "id": 16,
+        "original_id": "a6201bd4-9d53-580c-90f3-8cb82fb30627",
+        "text": "watt street",
+        "type": "Entity"
+      },
+      {
+        "id": 17,
+        "original_id": "baeb57ea-287b-561c-bc36-ba61e823b117",
+        "text": "new york state route 7",
+        "type": "Entity"
+      },
+      {
+        "id": 18,
+        "original_id": "e2f34ab3-5182-50b5-863a-66175a214a01",
+        "text": "i-890 entrance",
+        "type": "Entity"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "lies_along"
+      },
+      {
+        "source": 1,
+        "target": 4,
+        "type": "contains"
+      },
+      {
+        "source": 4,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 12,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 9,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 16,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 17,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 6,
+        "type": "lies_near"
+      },
+      {
+        "source": 1,
+        "target": 6,
+        "type": "contains"
+      },
+      {
+        "source": 6,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 8,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 11,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 10,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 13,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 15,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 18,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 14,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 8,
+        "type": "located_in"
+      },
+      {
+        "source": 1,
+        "target": 8,
+        "type": "contains"
+      },
+      {
+        "source": 1,
+        "target": 9,
+        "type": "contains"
+      },
+      {
+        "source": 18,
+        "target": 9,
+        "type": "entrance_to"
+      },
+      {
+        "source": 9,
+        "target": 10,
+        "type": "in_vicinity_of"
+      },
+      {
+        "source": 1,
+        "target": 10,
+        "type": "contains"
+      },
+      {
+        "source": 14,
+        "target": 10,
+        "type": "located_in"
+      },
+      {
+        "source": 10,
+        "target": 11,
+        "type": "located_in"
+      },
+      {
+        "source": 1,
+        "target": 11,
+        "type": "contains"
+      },
+      {
+        "source": 9,
+        "target": 12,
+        "type": "interchanges_with"
+      },
+      {
+        "source": 1,
+        "target": 12,
+        "type": "contains"
+      },
+      {
+        "source": 9,
+        "target": 13,
+        "type": "passes_through"
+      },
+      {
+        "source": 1,
+        "target": 13,
+        "type": "contains"
+      },
+      {
+        "source": 1,
+        "target": 14,
+        "type": "contains"
+      },
+      {
+        "source": 14,
+        "target": 15,
+        "type": "located_at"
+      },
+      {
+        "source": 1,
+        "target": 15,
+        "type": "contains"
+      },
+      {
+        "source": 14,
+        "target": 16,
+        "type": "along"
+      },
+      {
+        "source": 1,
+        "target": 16,
+        "type": "contains"
+      },
+      {
+        "source": 14,
+        "target": 17,
+        "type": "along"
+      },
+      {
+        "source": 1,
+        "target": 17,
+        "type": "contains"
+      },
+      {
+        "source": 14,
+        "target": 18,
+        "type": "near"
+      },
+      {
+        "source": 1,
+        "target": 18,
+        "type": "contains"
+      }
+    ]
+  }
+}

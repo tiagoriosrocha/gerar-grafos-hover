@@ -1,0 +1,455 @@
+{
+  "dataset": "hover",
+  "id": "adc456d3-dcca-4c9f-a91c-b0edac7e4f0d",
+  "split": "train",
+  "claim": "Paul Verhoeven is older than the director of the 2008 neo-noir film Yesterday Was a Lie.",
+  "evidencia": "Page: James Kerwin. Sentence: James Kerwin (born October 13, 1973 in St. Louis, Missouri) is an American film and theatre director.\nPage: Paul Verhoeven. Sentence: Paul Verhoeven (] ; born 18 July 1938) is a Dutch film director, film producer, television director, television producer, and screenwriter.\nPage: Yesterday Was a Lie. Sentence: Yesterday Was a Lie is a 2008 neo-noir film written and directed by James Kerwin and starring Kipleigh Brown, Chase Masterson, John Newton, and Mik Scriba.",
+  "evidence_text": "Page: James Kerwin. Sentence: James Kerwin (born October 13, 1973 in St. Louis, Missouri) is an American film and theatre director.\nPage: Paul Verhoeven. Sentence: Paul Verhoeven (] ; born 18 July 1938) is a Dutch film director, film producer, television director, television producer, and screenwriter.\nPage: Yesterday Was a Lie. Sentence: Yesterday Was a Lie is a 2008 neo-noir film written and directed by James Kerwin and starring Kipleigh Brown, Chase Masterson, John Newton, and Mik Scriba.",
+  "label": "SUPPORTED",
+  "num_hops": 3,
+  "hover_metadata": {
+    "supporting_facts": [
+      [
+        "James Kerwin",
+        0
+      ],
+      [
+        "Paul Verhoeven",
+        0
+      ],
+      [
+        "Yesterday Was a Lie",
+        0
+      ]
+    ],
+    "num_hops": 3,
+    "evidence_annotation_id": [
+      0
+    ],
+    "evidence_id": [
+      "James Kerwin::sentence::0",
+      "Paul Verhoeven::sentence::0",
+      "Yesterday Was a Lie::sentence::0"
+    ],
+    "evidence_wiki_url": [
+      "https://en.wikipedia.org/wiki/James_Kerwin",
+      "https://en.wikipedia.org/wiki/Paul_Verhoeven",
+      "https://en.wikipedia.org/wiki/Yesterday_Was_a_Lie"
+    ],
+    "evidence_sentence_id": [
+      "James Kerwin::sentence::0",
+      "Paul Verhoeven::sentence::0",
+      "Yesterday Was a Lie::sentence::0"
+    ]
+  },
+  "grafo_claim": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "c0ca2612-29ac-5596-93d5-be5587068636",
+        "text": "This chunk is about:\n- People: Paul Verhoeven, James Kerwin\n- Works: Yesterday Was a Lie\n- Roles: film director\n\nFacts:\n- Yesterday Was a Lie is a 2008 neo-noir film.\n- James Kerwin is the director of Yesterday Was a Lie.\n- Paul Verhoeven is older than James Kerwin.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "13dc285d-4e1a-5b56-b1d6-8ceb74ea023e",
+        "text": "Paul Verhoeven is older than the director of the 2008 neo-noir film Yesterday Was a Lie.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "efdfcee5-e4d1-5a44-881f-18e33ddf442a",
+        "text": "text_b7b050e1cbbfafc8c83b9066bdadf21a",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "f7799108-4214-524d-a0e0-090649f8e08a",
+        "text": "paul verhoeven",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "ba10ddc0-aacf-5ec8-8978-4fcfecff6e76",
+        "text": "director of yesterday was a lie",
+        "type": "Entity"
+      },
+      {
+        "id": 5,
+        "original_id": "45e63d56-e546-5d72-b53b-5c82f4441d2e",
+        "text": "yesterday was a lie",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "bb91a3b7-7918-5ca7-973e-342dc472e263",
+        "text": "2008",
+        "type": "Entity"
+      },
+      {
+        "id": 7,
+        "original_id": "b19433ae-558c-5aaf-95ac-6231f2a4be0e",
+        "text": "date",
+        "type": "EntityType"
+      },
+      {
+        "id": 8,
+        "original_id": "d320c8df-fd51-56e6-b577-e01a688fe6fc",
+        "text": "film",
+        "type": "EntityType"
+      },
+      {
+        "id": 9,
+        "original_id": "99a82eec-bb35-5bb5-9ed2-e73fc7a756de",
+        "text": "person",
+        "type": "EntityType"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "older_than"
+      },
+      {
+        "source": 1,
+        "target": 4,
+        "type": "contains"
+      },
+      {
+        "source": 4,
+        "target": 5,
+        "type": "directed"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "released_in"
+      },
+      {
+        "source": 1,
+        "target": 6,
+        "type": "contains"
+      },
+      {
+        "source": 6,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 5,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 4,
+        "target": 9,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 9,
+        "type": "is_a"
+      }
+    ]
+  },
+  "grafo_evidencia": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "a0ccfdb8-3276-5ec5-9156-2d998f4993f5",
+        "text": "This chunk is about:\n- People: James Kerwin, Paul Verhoeven, Kipleigh Brown, Chase Masterson, John Newton, Mik Scriba\n- Works: Yesterday Was a Lie\n- Roles: film director, theatre director, film producer, television director, television producer, screenwriter\n- Places: St. Louis, Missouri\n\nFacts:\n- Paul Verhoeven was born on 18 July 1938 and is a Dutch film director, film producer, television director, television producer, and screenwriter.\n- James Kerwin was born on October 13, 1973, in St. Louis, Missouri, and is an American film and theatre director.\n- Yesterday Was a Lie is a 2008 neo-noir film written and directed by James Kerwin.\n- Yesterday Was a Lie stars Kipleigh Brown, Chase Masterson, John Newton, and Mik Scriba.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "933cbb7a-7852-5de6-ad55-5d935f495ddc",
+        "text": "Page: James Kerwin. Sentence: James Kerwin (born October 13, 1973 in St. Louis, Missouri) is an American film and theatre director.\nPage: Paul Verhoeven. Sentence: Paul Verhoeven (] ; born 18 July 1938) is a Dutch film director, film producer, television director, television producer, and screenwriter.\nPage: Yesterday Was a Lie. Sentence: Yesterday Was a Lie is a 2008 neo-noir film written and directed by James Kerwin and starring Kipleigh Brown, Chase Masterson, John Newton, and Mik Scriba.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "94bdf56b-986d-5165-82b3-5fa612ffef6f",
+        "text": "text_7a31ed2ea52fb762ab061d65d14055c0",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "f420ea2d-10c6-5225-ae88-597b56eb3861",
+        "text": "james kerwin",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "45903028-b912-5b4f-a12a-8bfc8da62ee9",
+        "text": "1973-10-13",
+        "type": "Entity"
+      },
+      {
+        "id": 5,
+        "original_id": "b19433ae-558c-5aaf-95ac-6231f2a4be0e",
+        "text": "date",
+        "type": "EntityType"
+      },
+      {
+        "id": 6,
+        "original_id": "752cf22b-03b7-58a3-bacb-501560835609",
+        "text": "st. louis, missouri",
+        "type": "Entity"
+      },
+      {
+        "id": 7,
+        "original_id": "5f394058-b2a0-5ba8-8466-ba2a18cfcf4e",
+        "text": "place",
+        "type": "EntityType"
+      },
+      {
+        "id": 8,
+        "original_id": "45e63d56-e546-5d72-b53b-5c82f4441d2e",
+        "text": "yesterday was a lie",
+        "type": "Entity"
+      },
+      {
+        "id": 9,
+        "original_id": "bb91a3b7-7918-5ca7-973e-342dc472e263",
+        "text": "2008",
+        "type": "Entity"
+      },
+      {
+        "id": 10,
+        "original_id": "5263a535-1b4b-5925-be3e-310d03cd303b",
+        "text": "work",
+        "type": "EntityType"
+      },
+      {
+        "id": 11,
+        "original_id": "99a82eec-bb35-5bb5-9ed2-e73fc7a756de",
+        "text": "person",
+        "type": "EntityType"
+      },
+      {
+        "id": 12,
+        "original_id": "f7799108-4214-524d-a0e0-090649f8e08a",
+        "text": "paul verhoeven",
+        "type": "Entity"
+      },
+      {
+        "id": 13,
+        "original_id": "67d028ee-5c9e-56e3-bf82-402795e0e9f0",
+        "text": "1938-07-18",
+        "type": "Entity"
+      },
+      {
+        "id": 14,
+        "original_id": "f6e04020-5928-52b2-97e2-49bfa1d876af",
+        "text": "kipleigh brown",
+        "type": "Entity"
+      },
+      {
+        "id": 15,
+        "original_id": "9a1498b8-d4fc-5589-8375-63cc6a5d592b",
+        "text": "chase masterson",
+        "type": "Entity"
+      },
+      {
+        "id": 16,
+        "original_id": "564d8515-f591-5c3a-9c52-3dfdc86d5025",
+        "text": "john newton",
+        "type": "Entity"
+      },
+      {
+        "id": 17,
+        "original_id": "3d069a14-2f05-57a0-8706-7671a115abaa",
+        "text": "mik scriba",
+        "type": "Entity"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "born_on"
+      },
+      {
+        "source": 1,
+        "target": 4,
+        "type": "contains"
+      },
+      {
+        "source": 4,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 9,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 13,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 6,
+        "type": "born_in"
+      },
+      {
+        "source": 1,
+        "target": 6,
+        "type": "contains"
+      },
+      {
+        "source": 6,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 8,
+        "type": "wrote"
+      },
+      {
+        "source": 1,
+        "target": 8,
+        "type": "contains"
+      },
+      {
+        "source": 14,
+        "target": 8,
+        "type": "starred_in"
+      },
+      {
+        "source": 15,
+        "target": 8,
+        "type": "starred_in"
+      },
+      {
+        "source": 16,
+        "target": 8,
+        "type": "starred_in"
+      },
+      {
+        "source": 17,
+        "target": 8,
+        "type": "starred_in"
+      },
+      {
+        "source": 8,
+        "target": 9,
+        "type": "released_in"
+      },
+      {
+        "source": 1,
+        "target": 9,
+        "type": "contains"
+      },
+      {
+        "source": 8,
+        "target": 10,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 11,
+        "type": "is_a"
+      },
+      {
+        "source": 12,
+        "target": 11,
+        "type": "is_a"
+      },
+      {
+        "source": 14,
+        "target": 11,
+        "type": "is_a"
+      },
+      {
+        "source": 15,
+        "target": 11,
+        "type": "is_a"
+      },
+      {
+        "source": 16,
+        "target": 11,
+        "type": "is_a"
+      },
+      {
+        "source": 17,
+        "target": 11,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 12,
+        "type": "contains"
+      },
+      {
+        "source": 12,
+        "target": 13,
+        "type": "born_on"
+      },
+      {
+        "source": 1,
+        "target": 13,
+        "type": "contains"
+      },
+      {
+        "source": 1,
+        "target": 14,
+        "type": "contains"
+      },
+      {
+        "source": 1,
+        "target": 15,
+        "type": "contains"
+      },
+      {
+        "source": 1,
+        "target": 16,
+        "type": "contains"
+      },
+      {
+        "source": 1,
+        "target": 17,
+        "type": "contains"
+      }
+    ]
+  }
+}

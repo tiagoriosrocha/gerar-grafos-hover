@@ -1,0 +1,728 @@
+{
+  "dataset": "hover",
+  "id": "d5341455-142c-4ef2-89de-4661e35ec8c5",
+  "split": "train",
+  "claim": "The movie Khan Kluay was released before the 2009 movie that Jason Schwartzman collaborated with Wes Anderson on.",
+  "evidencia": "Page: Fantastic Mr. Fox (film). Sentence: Fantastic Mr. Fox is a 2009 American stop-motion animated comedy film based on Roald Dahl's children's novel of the same name.\nPage: Khan Kluay. Sentence: Khan Kluay (Thai: ก้านกล้วย) is a 2006 Thai 3D computer-animated Action adventure comedy family feature film set during Ayutthaya-era Siam about a Thai elephant who wanders away from his mother and eventually becomes the war elephant for King Naresuan.\nPage: Jason Schwartzman. Sentence: He is known for his frequent collaborations with Wes Anderson, such as \"Rushmore\" (1998), \"The Darjeeling Limited\" (2007), \"Fantastic Mr. Fox\" (2009), \"Moonrise Kingdom\" (2012) and \"The Grand Budapest Hotel\" (2014).",
+  "evidence_text": "Page: Fantastic Mr. Fox (film). Sentence: Fantastic Mr. Fox is a 2009 American stop-motion animated comedy film based on Roald Dahl's children's novel of the same name.\nPage: Khan Kluay. Sentence: Khan Kluay (Thai: ก้านกล้วย) is a 2006 Thai 3D computer-animated Action adventure comedy family feature film set during Ayutthaya-era Siam about a Thai elephant who wanders away from his mother and eventually becomes the war elephant for King Naresuan.\nPage: Jason Schwartzman. Sentence: He is known for his frequent collaborations with Wes Anderson, such as \"Rushmore\" (1998), \"The Darjeeling Limited\" (2007), \"Fantastic Mr. Fox\" (2009), \"Moonrise Kingdom\" (2012) and \"The Grand Budapest Hotel\" (2014).",
+  "label": "SUPPORTED",
+  "num_hops": 3,
+  "hover_metadata": {
+    "supporting_facts": [
+      [
+        "Fantastic Mr. Fox (film)",
+        0
+      ],
+      [
+        "Khan Kluay",
+        0
+      ],
+      [
+        "Jason Schwartzman",
+        1
+      ]
+    ],
+    "num_hops": 3,
+    "evidence_annotation_id": [
+      0
+    ],
+    "evidence_id": [
+      "Fantastic Mr. Fox (film)::sentence::0",
+      "Khan Kluay::sentence::0",
+      "Jason Schwartzman::sentence::1"
+    ],
+    "evidence_wiki_url": [
+      "https://en.wikipedia.org/wiki/Fantastic_Mr._Fox_%28film%29",
+      "https://en.wikipedia.org/wiki/Khan_Kluay",
+      "https://en.wikipedia.org/wiki/Jason_Schwartzman"
+    ],
+    "evidence_sentence_id": [
+      "Fantastic Mr. Fox (film)::sentence::0",
+      "Khan Kluay::sentence::0",
+      "Jason Schwartzman::sentence::1"
+    ]
+  },
+  "grafo_claim": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "abd22271-bf1c-57f4-969d-5e808609cca9",
+        "text": "This chunk is about:\n- Products: Khan Kluay\n- People: Jason Schwartzman, Wes Anderson\n\nFacts:\n- Khan Kluay was released before 2009.\n- Jason Schwartzman collaborated with Wes Anderson on a movie released in 2009.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "5256eaa3-2f25-55fe-83d7-e6c4046783d2",
+        "text": "The movie Khan Kluay was released before the 2009 movie that Jason Schwartzman collaborated with Wes Anderson on.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "863d5c4d-efcb-5535-85ac-ede29cdae821",
+        "text": "text_102db2510aa970c61e6740952692c673",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "eb75d138-1c09-51cb-b923-77f54650a712",
+        "text": "khan kluay",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "b1845c62-da4a-5bcf-90f7-14224a4ca37e",
+        "text": "2009 movie",
+        "type": "Entity"
+      },
+      {
+        "id": 5,
+        "original_id": "81f73667-218f-5921-9868-2335277c43fc",
+        "text": "jason schwartzman",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "3d307df6-c132-5aa2-81d9-f89769bbb57f",
+        "text": "wes anderson",
+        "type": "Entity"
+      },
+      {
+        "id": 7,
+        "original_id": "99a82eec-bb35-5bb5-9ed2-e73fc7a756de",
+        "text": "person",
+        "type": "EntityType"
+      },
+      {
+        "id": 8,
+        "original_id": "cd2a3377-b1e5-59d1-aeee-d36cdb97efe0",
+        "text": "2009",
+        "type": "Entity"
+      },
+      {
+        "id": 9,
+        "original_id": "b19433ae-558c-5aaf-95ac-6231f2a4be0e",
+        "text": "date",
+        "type": "EntityType"
+      },
+      {
+        "id": 10,
+        "original_id": "1155038a-04d1-5d6a-9c60-e4f499a6913c",
+        "text": "movie",
+        "type": "EntityType"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "released_before"
+      },
+      {
+        "source": 1,
+        "target": 4,
+        "type": "contains"
+      },
+      {
+        "source": 4,
+        "target": 5,
+        "type": "has_collaborator"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "collaborated_with"
+      },
+      {
+        "source": 4,
+        "target": 6,
+        "type": "has_collaborator"
+      },
+      {
+        "source": 1,
+        "target": 6,
+        "type": "contains"
+      },
+      {
+        "source": 6,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 5,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 4,
+        "target": 8,
+        "type": "released_in"
+      },
+      {
+        "source": 1,
+        "target": 8,
+        "type": "contains"
+      },
+      {
+        "source": 8,
+        "target": 9,
+        "type": "is_a"
+      },
+      {
+        "source": 4,
+        "target": 10,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 10,
+        "type": "is_a"
+      }
+    ]
+  },
+  "grafo_evidencia": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "99b0ea80-cf9f-5589-811e-288adc8aca3e",
+        "text": "This chunk is about:\n- People: Jason Schwartzman, Wes Anderson, Roald Dahl, King Naresuan\n- Films: Fantastic Mr. Fox, Khan Kluay, Rushmore, The Darjeeling Limited, Moonrise Kingdom, The Grand Budapest Hotel\n- Literature: Roald Dahl's children's novel Fantastic Mr. Fox\n- Topics: stop-motion animation, 3D computer animation, Thai cinema, Ayutthaya-era Siam\n\nFacts:\n- In 1998, Jason Schwartzman collaborated with Wes Anderson on the film Rushmore.\n- In 2006, Khan Kluay was released as a Thai 3D computer-animated action-adventure comedy family film set during Ayutthaya-era Siam.\n- Khan Kluay follows a Thai elephant who becomes the war elephant for King Naresuan after wandering away from his mother.\n- In 2007, Jason Schwartzman collaborated with Wes Anderson on The Darjeeling Limited.\n- In 2009, Fantastic Mr. Fox was released as an American stop-motion animated comedy film based on Roald Dahl's children's novel of the same name.\n- In 2009, Jason Schwartzman collaborated with Wes Anderson on Fantastic Mr. Fox.\n- In 2012, Jason Schwartzman collaborated with Wes Anderson on Moonrise Kingdom.\n- In 2014, Jason Schwartzman collaborated with Wes Anderson on The Grand Budapest Hotel.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "e4b1209d-8e7c-56f1-b565-eb6a27216ac0",
+        "text": "Page: Fantastic Mr. Fox (film). Sentence: Fantastic Mr. Fox is a 2009 American stop-motion animated comedy film based on Roald Dahl's children's novel of the same name.\nPage: Khan Kluay. Sentence: Khan Kluay (Thai: ก้านกล้วย) is a 2006 Thai 3D computer-animated Action adventure comedy family feature film set during Ayutthaya-era Siam about a Thai elephant who wanders away from his mother and eventually becomes the war elephant for King Naresuan.\nPage: Jason Schwartzman. Sentence: He is known for his frequent collaborations with Wes Anderson, such as \"Rushmore\" (1998), \"The Darjeeling Limited\" (2007), \"Fantastic Mr. Fox\" (2009), \"Moonrise Kingdom\" (2012) and \"The Grand Budapest Hotel\" (2014).",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "ed442995-b080-5feb-a785-e4a032dac5dd",
+        "text": "text_5b968dcafc586a20a3c113631a817b8a",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "6c554676-2ab8-5e7a-a930-51ec924ab848",
+        "text": "fantastic mr. fox",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "cd2a3377-b1e5-59d1-aeee-d36cdb97efe0",
+        "text": "2009",
+        "type": "Entity"
+      },
+      {
+        "id": 5,
+        "original_id": "b19433ae-558c-5aaf-95ac-6231f2a4be0e",
+        "text": "date",
+        "type": "EntityType"
+      },
+      {
+        "id": 6,
+        "original_id": "874a51da-34ea-5037-be47-d87785d43c37",
+        "text": "united states",
+        "type": "Entity"
+      },
+      {
+        "id": 7,
+        "original_id": "5f394058-b2a0-5ba8-8466-ba2a18cfcf4e",
+        "text": "place",
+        "type": "EntityType"
+      },
+      {
+        "id": 8,
+        "original_id": "8f8eb772-5b17-5fa1-adb6-b3315376905a",
+        "text": "roald dahls childrens novel of the same name",
+        "type": "Entity"
+      },
+      {
+        "id": 9,
+        "original_id": "12b21837-3999-5df6-9c81-02aeab6550d1",
+        "text": "roald dahl",
+        "type": "Entity"
+      },
+      {
+        "id": 10,
+        "original_id": "99a82eec-bb35-5bb5-9ed2-e73fc7a756de",
+        "text": "person",
+        "type": "EntityType"
+      },
+      {
+        "id": 11,
+        "original_id": "3faed6ef-3d90-5ffd-9229-cfb62eb68140",
+        "text": "book",
+        "type": "EntityType"
+      },
+      {
+        "id": 12,
+        "original_id": "3d307df6-c132-5aa2-81d9-f89769bbb57f",
+        "text": "wes anderson",
+        "type": "Entity"
+      },
+      {
+        "id": 13,
+        "original_id": "d320c8df-fd51-56e6-b577-e01a688fe6fc",
+        "text": "film",
+        "type": "EntityType"
+      },
+      {
+        "id": 14,
+        "original_id": "eb75d138-1c09-51cb-b923-77f54650a712",
+        "text": "khan kluay",
+        "type": "Entity"
+      },
+      {
+        "id": 15,
+        "original_id": "285bee7c-7ad4-5fb4-b1e7-7fc82362724c",
+        "text": "2006",
+        "type": "Entity"
+      },
+      {
+        "id": 16,
+        "original_id": "af639d1c-0079-56f7-8b5d-fa5c9552a25e",
+        "text": "thailand",
+        "type": "Entity"
+      },
+      {
+        "id": 17,
+        "original_id": "a88bc7ef-65d0-5fb0-a005-860819c80a21",
+        "text": "ayutthaya-era siam",
+        "type": "Entity"
+      },
+      {
+        "id": 18,
+        "original_id": "d8ad8dc2-67e5-5275-9925-4ca71584f3a4",
+        "text": "thai elephant",
+        "type": "Entity"
+      },
+      {
+        "id": 19,
+        "original_id": "1ead863b-fa58-5049-91ce-d87f6d48b416",
+        "text": "king naresuan",
+        "type": "Entity"
+      },
+      {
+        "id": 20,
+        "original_id": "5d76eb72-04ef-5580-b2ea-161f8429437a",
+        "text": "animal",
+        "type": "EntityType"
+      },
+      {
+        "id": 21,
+        "original_id": "81f73667-218f-5921-9868-2335277c43fc",
+        "text": "jason schwartzman",
+        "type": "Entity"
+      },
+      {
+        "id": 22,
+        "original_id": "e1c8d237-dbd3-50e6-b74f-cee4ffa72adb",
+        "text": "rushmore",
+        "type": "Entity"
+      },
+      {
+        "id": 23,
+        "original_id": "111f07f3-2527-5bbf-827f-7a18bb37f150",
+        "text": "1998",
+        "type": "Entity"
+      },
+      {
+        "id": 24,
+        "original_id": "6e9bcc66-ce20-5172-97c5-d41ec5e25140",
+        "text": "the darjeeling limited",
+        "type": "Entity"
+      },
+      {
+        "id": 25,
+        "original_id": "c22ffe02-635b-5be0-94d3-f307bea262e3",
+        "text": "2007",
+        "type": "Entity"
+      },
+      {
+        "id": 26,
+        "original_id": "2ebbc9ed-ac50-5e8e-a0dd-968f0fa85710",
+        "text": "moonrise kingdom",
+        "type": "Entity"
+      },
+      {
+        "id": 27,
+        "original_id": "43e69636-c134-5dc8-b21a-52ba284d9418",
+        "text": "2012",
+        "type": "Entity"
+      },
+      {
+        "id": 28,
+        "original_id": "36d67577-3e2b-5e5b-a300-16f5dbb795e3",
+        "text": "the grand budapest hotel",
+        "type": "Entity"
+      },
+      {
+        "id": 29,
+        "original_id": "8b81e666-937e-557b-9b2d-fbabf5175591",
+        "text": "2014",
+        "type": "Entity"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 21,
+        "target": 3,
+        "type": "collaborated_on"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "released_in"
+      },
+      {
+        "source": 1,
+        "target": 4,
+        "type": "contains"
+      },
+      {
+        "source": 4,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 15,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 23,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 25,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 27,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 29,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 6,
+        "type": "originates_from"
+      },
+      {
+        "source": 1,
+        "target": 6,
+        "type": "contains"
+      },
+      {
+        "source": 6,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 16,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 17,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 8,
+        "type": "based_on"
+      },
+      {
+        "source": 1,
+        "target": 8,
+        "type": "contains"
+      },
+      {
+        "source": 8,
+        "target": 9,
+        "type": "written_by"
+      },
+      {
+        "source": 1,
+        "target": 9,
+        "type": "contains"
+      },
+      {
+        "source": 9,
+        "target": 10,
+        "type": "is_a"
+      },
+      {
+        "source": 12,
+        "target": 10,
+        "type": "is_a"
+      },
+      {
+        "source": 19,
+        "target": 10,
+        "type": "is_a"
+      },
+      {
+        "source": 21,
+        "target": 10,
+        "type": "is_a"
+      },
+      {
+        "source": 8,
+        "target": 11,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 12,
+        "type": "collaboration_example_with"
+      },
+      {
+        "source": 21,
+        "target": 12,
+        "type": "frequently_collaborates_with"
+      },
+      {
+        "source": 22,
+        "target": 12,
+        "type": "collaboration_example_with"
+      },
+      {
+        "source": 24,
+        "target": 12,
+        "type": "collaboration_example_with"
+      },
+      {
+        "source": 26,
+        "target": 12,
+        "type": "collaboration_example_with"
+      },
+      {
+        "source": 28,
+        "target": 12,
+        "type": "collaboration_example_with"
+      },
+      {
+        "source": 1,
+        "target": 12,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 13,
+        "type": "is_a"
+      },
+      {
+        "source": 14,
+        "target": 13,
+        "type": "is_a"
+      },
+      {
+        "source": 22,
+        "target": 13,
+        "type": "is_a"
+      },
+      {
+        "source": 24,
+        "target": 13,
+        "type": "is_a"
+      },
+      {
+        "source": 26,
+        "target": 13,
+        "type": "is_a"
+      },
+      {
+        "source": 28,
+        "target": 13,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 14,
+        "type": "contains"
+      },
+      {
+        "source": 14,
+        "target": 15,
+        "type": "released_in"
+      },
+      {
+        "source": 1,
+        "target": 15,
+        "type": "contains"
+      },
+      {
+        "source": 14,
+        "target": 16,
+        "type": "originates_from"
+      },
+      {
+        "source": 1,
+        "target": 16,
+        "type": "contains"
+      },
+      {
+        "source": 14,
+        "target": 17,
+        "type": "set_in"
+      },
+      {
+        "source": 1,
+        "target": 17,
+        "type": "contains"
+      },
+      {
+        "source": 14,
+        "target": 18,
+        "type": "features_character"
+      },
+      {
+        "source": 1,
+        "target": 18,
+        "type": "contains"
+      },
+      {
+        "source": 18,
+        "target": 19,
+        "type": "becomes_war_elephant_for"
+      },
+      {
+        "source": 1,
+        "target": 19,
+        "type": "contains"
+      },
+      {
+        "source": 18,
+        "target": 20,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 21,
+        "type": "contains"
+      },
+      {
+        "source": 21,
+        "target": 22,
+        "type": "collaborated_on"
+      },
+      {
+        "source": 1,
+        "target": 22,
+        "type": "contains"
+      },
+      {
+        "source": 22,
+        "target": 23,
+        "type": "released_in"
+      },
+      {
+        "source": 1,
+        "target": 23,
+        "type": "contains"
+      },
+      {
+        "source": 21,
+        "target": 24,
+        "type": "collaborated_on"
+      },
+      {
+        "source": 1,
+        "target": 24,
+        "type": "contains"
+      },
+      {
+        "source": 24,
+        "target": 25,
+        "type": "released_in"
+      },
+      {
+        "source": 1,
+        "target": 25,
+        "type": "contains"
+      },
+      {
+        "source": 21,
+        "target": 26,
+        "type": "collaborated_on"
+      },
+      {
+        "source": 1,
+        "target": 26,
+        "type": "contains"
+      },
+      {
+        "source": 26,
+        "target": 27,
+        "type": "released_in"
+      },
+      {
+        "source": 1,
+        "target": 27,
+        "type": "contains"
+      },
+      {
+        "source": 21,
+        "target": 28,
+        "type": "collaborated_on"
+      },
+      {
+        "source": 1,
+        "target": 28,
+        "type": "contains"
+      },
+      {
+        "source": 28,
+        "target": 29,
+        "type": "released_in"
+      },
+      {
+        "source": 1,
+        "target": 29,
+        "type": "contains"
+      }
+    ]
+  }
+}

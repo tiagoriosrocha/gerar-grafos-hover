@@ -1,0 +1,410 @@
+{
+  "dataset": "hover",
+  "id": "5754da21-59ab-4ebd-8203-0b00a1f9484a",
+  "split": "train",
+  "claim": "The Mercury tracer is based on variations of the Mazada Protege which is manufactured by the Mazda Familia company.",
+  "evidencia": "Page: Mercury Tracer. Sentence: All three generations of the Tracer were based on variations of the Mazda 323/Protegé.\nPage: Mazda Familia. Sentence: The Mazda Familia, also marketed prominently as the Mazda 323 and Mazda Protegé, was a small family car that was manufactured by Mazda between 1963 and 2003.\nPage: Mazda Familia. Sentence: The Familia line was replaced by the Mazda3/Axela for 2004.",
+  "evidence_text": "Page: Mercury Tracer. Sentence: All three generations of the Tracer were based on variations of the Mazda 323/Protegé.\nPage: Mazda Familia. Sentence: The Mazda Familia, also marketed prominently as the Mazda 323 and Mazda Protegé, was a small family car that was manufactured by Mazda between 1963 and 2003.\nPage: Mazda Familia. Sentence: The Familia line was replaced by the Mazda3/Axela for 2004.",
+  "label": "SUPPORTED",
+  "num_hops": 2,
+  "hover_metadata": {
+    "supporting_facts": [
+      [
+        "Mercury Tracer",
+        3
+      ],
+      [
+        "Mazda Familia",
+        0
+      ],
+      [
+        "Mazda Familia",
+        1
+      ]
+    ],
+    "num_hops": 2,
+    "evidence_annotation_id": [
+      0
+    ],
+    "evidence_id": [
+      "Mercury Tracer::sentence::3",
+      "Mazda Familia::sentence::0",
+      "Mazda Familia::sentence::1"
+    ],
+    "evidence_wiki_url": [
+      "https://en.wikipedia.org/wiki/Mercury_Tracer",
+      "https://en.wikipedia.org/wiki/Mazda_Familia"
+    ],
+    "evidence_sentence_id": [
+      "Mercury Tracer::sentence::3",
+      "Mazda Familia::sentence::0",
+      "Mazda Familia::sentence::1"
+    ]
+  },
+  "grafo_claim": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "07066a77-d56d-5826-bc66-48baed58d11f",
+        "text": "This chunk is about:\n- Products: Mercury Tracer, Mazda Protegé, Mazda Familia\n- Companies: Mazda\n\nFacts:\n- The Mercury Tracer is based on variations of the Mazda Protegé.\n- Mazda manufactures the Mazda Familia.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "c6fb7885-8ede-5e50-b274-9f7c04bb8f72",
+        "text": "The Mercury tracer is based on variations of the Mazada Protege which is manufactured by the Mazda Familia company.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "d9d576f6-3703-508a-83c4-c0def2a5ac88",
+        "text": "text_e22003ebf19ceed0cd5e20e8a23be60d",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "9ebbdeea-1efa-53e4-b9be-55a2dfe46fca",
+        "text": "mercury tracer",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "f76d57aa-4740-5218-9539-0e0978cbf183",
+        "text": "product",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "f30de7f3-48df-5c9a-b7ea-02c531144ea7",
+        "text": "mazda protege",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "490b56cb-5c7d-54ac-9199-13eb4d7a4866",
+        "text": "mazda familia company",
+        "type": "Entity"
+      },
+      {
+        "id": 7,
+        "original_id": "388f60fb-220d-55e8-ae9c-3ac93cead308",
+        "text": "organization",
+        "type": "EntityType"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 5,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "is_based_on_variations_of"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 6,
+        "target": 5,
+        "type": "manufactures"
+      },
+      {
+        "source": 1,
+        "target": 6,
+        "type": "contains"
+      },
+      {
+        "source": 6,
+        "target": 7,
+        "type": "is_a"
+      }
+    ]
+  },
+  "grafo_evidencia": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "0e00c339-1070-531f-97e3-42e2c59a0609",
+        "text": "This chunk is about:\n- Products: Mercury Tracer, Mazda Familia, Mazda 323, Mazda Protegé, Mazda3, Mazda Axela\n- Companies: Mazda\n- Concepts: model generations, vehicle platform lineage, model replacement\n\nFacts:\n- Mazda manufactured the Mazda Familia, also marketed as the Mazda 323 and Mazda Protegé, from 1963 to 2003.\n- The Mazda Familia line was replaced by the Mazda3/Axela for the 2004 model year.\n- All three generations of the Mercury Tracer were based on variations of the Mazda 323/Protegé.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "01ebe456-a197-5c45-9b8d-553eabd3c37c",
+        "text": "Page: Mercury Tracer. Sentence: All three generations of the Tracer were based on variations of the Mazda 323/Protegé.\nPage: Mazda Familia. Sentence: The Mazda Familia, also marketed prominently as the Mazda 323 and Mazda Protegé, was a small family car that was manufactured by Mazda between 1963 and 2003.\nPage: Mazda Familia. Sentence: The Familia line was replaced by the Mazda3/Axela for 2004.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "1d3bccb3-b77c-5c07-b404-254bc485b1c0",
+        "text": "text_6dec64f5e112816c0851f18fdd45f44c",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "9ebbdeea-1efa-53e4-b9be-55a2dfe46fca",
+        "text": "mercury tracer",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "f76d57aa-4740-5218-9539-0e0978cbf183",
+        "text": "product",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "ea1c3d7c-a7e8-57e3-be18-1b7081769dde",
+        "text": "mazda 323",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "12462370-25d2-57d4-b2b9-32878a6a5118",
+        "text": "mazda protegé",
+        "type": "Entity"
+      },
+      {
+        "id": 7,
+        "original_id": "d05e6808-9bc5-50eb-b35e-bd5efc6b9c31",
+        "text": "mazda familia",
+        "type": "Entity"
+      },
+      {
+        "id": 8,
+        "original_id": "b02901d8-d525-5df9-a0d2-5b08bb564534",
+        "text": "mazda",
+        "type": "Entity"
+      },
+      {
+        "id": 9,
+        "original_id": "388f60fb-220d-55e8-ae9c-3ac93cead308",
+        "text": "organization",
+        "type": "EntityType"
+      },
+      {
+        "id": 10,
+        "original_id": "1d57c19e-94e1-5bf9-aba5-5b5ce6aaa176",
+        "text": "1963",
+        "type": "Entity"
+      },
+      {
+        "id": 11,
+        "original_id": "b19433ae-558c-5aaf-95ac-6231f2a4be0e",
+        "text": "date",
+        "type": "EntityType"
+      },
+      {
+        "id": 12,
+        "original_id": "e243b5c4-48fe-5f0b-9d10-673d4ca025e7",
+        "text": "2003",
+        "type": "Entity"
+      },
+      {
+        "id": 13,
+        "original_id": "4ceed474-d290-559d-9fca-3c5e9d113a0e",
+        "text": "mazda3",
+        "type": "Entity"
+      },
+      {
+        "id": 14,
+        "original_id": "b9d4a04a-c9ef-549f-afee-e9f910a7f831",
+        "text": "axela",
+        "type": "Entity"
+      },
+      {
+        "id": 15,
+        "original_id": "559b7176-da84-5102-a855-b896617a9c3b",
+        "text": "2004",
+        "type": "Entity"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 5,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 6,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 7,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 13,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 14,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "based_on"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 7,
+        "target": 5,
+        "type": "marketed_as"
+      },
+      {
+        "source": 3,
+        "target": 6,
+        "type": "based_on"
+      },
+      {
+        "source": 1,
+        "target": 6,
+        "type": "contains"
+      },
+      {
+        "source": 7,
+        "target": 6,
+        "type": "marketed_as"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      },
+      {
+        "source": 7,
+        "target": 8,
+        "type": "manufactured_by"
+      },
+      {
+        "source": 1,
+        "target": 8,
+        "type": "contains"
+      },
+      {
+        "source": 8,
+        "target": 9,
+        "type": "is_a"
+      },
+      {
+        "source": 7,
+        "target": 10,
+        "type": "manufacturing_started"
+      },
+      {
+        "source": 1,
+        "target": 10,
+        "type": "contains"
+      },
+      {
+        "source": 10,
+        "target": 11,
+        "type": "is_a"
+      },
+      {
+        "source": 12,
+        "target": 11,
+        "type": "is_a"
+      },
+      {
+        "source": 15,
+        "target": 11,
+        "type": "is_a"
+      },
+      {
+        "source": 7,
+        "target": 12,
+        "type": "manufacturing_ended"
+      },
+      {
+        "source": 1,
+        "target": 12,
+        "type": "contains"
+      },
+      {
+        "source": 7,
+        "target": 13,
+        "type": "replaced_by"
+      },
+      {
+        "source": 1,
+        "target": 13,
+        "type": "contains"
+      },
+      {
+        "source": 7,
+        "target": 14,
+        "type": "replaced_by"
+      },
+      {
+        "source": 1,
+        "target": 14,
+        "type": "contains"
+      },
+      {
+        "source": 7,
+        "target": 15,
+        "type": "replaced_for_year"
+      },
+      {
+        "source": 1,
+        "target": 15,
+        "type": "contains"
+      }
+    ]
+  }
+}

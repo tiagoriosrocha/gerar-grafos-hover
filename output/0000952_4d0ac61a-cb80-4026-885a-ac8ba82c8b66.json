@@ -1,0 +1,372 @@
+{
+  "dataset": "hover",
+  "id": "4d0ac61a-cb80-4026-885a-ac8ba82c8b66",
+  "split": "train",
+  "claim": "SkyJump Las Vegas is located on Las Vegas Boulevard.",
+  "evidencia": "Page: SkyJump Las Vegas. Sentence: SkyJump Las Vegas holds the Guinness World Record for highest commercial decelerator descent with an official height of 829 ft and is located at Stratosphere Las Vegas.\nPage: Stratosphere Las Vegas. Sentence: The Stratosphere Las Vegas (formerly Vegas World) is a hotel, casino, and tower located on Las Vegas Boulevard just north of the Las Vegas Strip in Las Vegas, Nevada, United States.",
+  "evidence_text": "Page: SkyJump Las Vegas. Sentence: SkyJump Las Vegas holds the Guinness World Record for highest commercial decelerator descent with an official height of 829 ft and is located at Stratosphere Las Vegas.\nPage: Stratosphere Las Vegas. Sentence: The Stratosphere Las Vegas (formerly Vegas World) is a hotel, casino, and tower located on Las Vegas Boulevard just north of the Las Vegas Strip in Las Vegas, Nevada, United States.",
+  "label": "SUPPORTED",
+  "num_hops": 2,
+  "hover_metadata": {
+    "supporting_facts": [
+      [
+        "SkyJump Las Vegas",
+        0
+      ],
+      [
+        "Stratosphere Las Vegas",
+        0
+      ]
+    ],
+    "num_hops": 2,
+    "evidence_annotation_id": [
+      0
+    ],
+    "evidence_id": [
+      "SkyJump Las Vegas::sentence::0",
+      "Stratosphere Las Vegas::sentence::0"
+    ],
+    "evidence_wiki_url": [
+      "https://en.wikipedia.org/wiki/SkyJump_Las_Vegas",
+      "https://en.wikipedia.org/wiki/Stratosphere_Las_Vegas"
+    ],
+    "evidence_sentence_id": [
+      "SkyJump Las Vegas::sentence::0",
+      "Stratosphere Las Vegas::sentence::0"
+    ]
+  },
+  "grafo_claim": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "38855e83-bddf-5332-bbe6-2c51f5964587",
+        "text": "This chunk is about:\n- Places: Las Vegas Boulevard\n- Attractions: SkyJump Las Vegas\n\nFacts:\n- SkyJump Las Vegas is located on Las Vegas Boulevard.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "23afb179-81a9-5cf4-bae4-278cb4a74101",
+        "text": "SkyJump Las Vegas is located on Las Vegas Boulevard.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "066f8b62-6669-58eb-908b-814d3baab914",
+        "text": "text_f0cefa83a1278de9e95fd414aa80a2d3",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "769c3914-d4cd-5c1d-bcce-483f9ce5d4bb",
+        "text": "skyjump las vegas",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "f671db9e-87bd-599d-9609-38e6287874db",
+        "text": "las vegas boulevard",
+        "type": "Entity"
+      },
+      {
+        "id": 5,
+        "original_id": "5f394058-b2a0-5ba8-8466-ba2a18cfcf4e",
+        "text": "place",
+        "type": "EntityType"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "located_on"
+      },
+      {
+        "source": 1,
+        "target": 4,
+        "type": "contains"
+      },
+      {
+        "source": 4,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "is_a"
+      }
+    ]
+  },
+  "grafo_evidencia": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "283f09d2-f587-54ad-973a-4674f6d18836",
+        "text": "This chunk is about:\n- Places: SkyJump Las Vegas, Stratosphere Las Vegas, Las Vegas Boulevard, Las Vegas Strip, Las Vegas, Nevada, United States\n- Concepts: Guinness World Record, highest commercial decelerator descent\n\nFacts:\n- Stratosphere Las Vegas was formerly known as Vegas World.\n- Stratosphere Las Vegas is a hotel, casino, and tower on Las Vegas Boulevard just north of the Las Vegas Strip in Las Vegas, Nevada, United States.\n- SkyJump Las Vegas is located at Stratosphere Las Vegas.\n- SkyJump Las Vegas holds the Guinness World Record for the highest commercial decelerator descent with an official height of 829 feet.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "0f67107c-975b-5e35-814b-31f4c27658a9",
+        "text": "Page: SkyJump Las Vegas. Sentence: SkyJump Las Vegas holds the Guinness World Record for highest commercial decelerator descent with an official height of 829 ft and is located at Stratosphere Las Vegas.\nPage: Stratosphere Las Vegas. Sentence: The Stratosphere Las Vegas (formerly Vegas World) is a hotel, casino, and tower located on Las Vegas Boulevard just north of the Las Vegas Strip in Las Vegas, Nevada, United States.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "ecfbe107-ac23-544a-8697-d202130e5773",
+        "text": "text_4356f782a347958b191b9d80287acdbe",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "769c3914-d4cd-5c1d-bcce-483f9ce5d4bb",
+        "text": "skyjump las vegas",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "e55b91b2-cd8b-5c5a-9bf1-625454a5bb6c",
+        "text": "guinness world record",
+        "type": "Entity"
+      },
+      {
+        "id": 5,
+        "original_id": "38e42125-31f4-5cd6-993c-dbbc06a88910",
+        "text": "award",
+        "type": "EntityType"
+      },
+      {
+        "id": 6,
+        "original_id": "a99510db-833f-5991-8966-447990ab9458",
+        "text": "829 ft",
+        "type": "Entity"
+      },
+      {
+        "id": 7,
+        "original_id": "12d5521e-a878-542e-bebc-84ff79179d8e",
+        "text": "measurement",
+        "type": "EntityType"
+      },
+      {
+        "id": 8,
+        "original_id": "83afd6f0-f928-53e5-9991-547f1f295854",
+        "text": "stratosphere las vegas",
+        "type": "Entity"
+      },
+      {
+        "id": 9,
+        "original_id": "aea23c53-8748-5fae-93cf-831b05ae4cf9",
+        "text": "vegas world",
+        "type": "Entity"
+      },
+      {
+        "id": 10,
+        "original_id": "5f394058-b2a0-5ba8-8466-ba2a18cfcf4e",
+        "text": "place",
+        "type": "EntityType"
+      },
+      {
+        "id": 11,
+        "original_id": "f671db9e-87bd-599d-9609-38e6287874db",
+        "text": "las vegas boulevard",
+        "type": "Entity"
+      },
+      {
+        "id": 12,
+        "original_id": "60152a3c-19f4-5b80-8305-51c3a57f8052",
+        "text": "las vegas strip",
+        "type": "Entity"
+      },
+      {
+        "id": 13,
+        "original_id": "2768ffee-4734-5551-9369-d2097b287276",
+        "text": "las vegas",
+        "type": "Entity"
+      },
+      {
+        "id": 14,
+        "original_id": "cca9924d-3e69-59c5-be62-5ec26c26b0db",
+        "text": "nevada",
+        "type": "Entity"
+      },
+      {
+        "id": 15,
+        "original_id": "874a51da-34ea-5037-be47-d87785d43c37",
+        "text": "united states",
+        "type": "Entity"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "holds"
+      },
+      {
+        "source": 1,
+        "target": 4,
+        "type": "contains"
+      },
+      {
+        "source": 4,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 6,
+        "type": "has_official_height"
+      },
+      {
+        "source": 1,
+        "target": 6,
+        "type": "contains"
+      },
+      {
+        "source": 6,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 8,
+        "type": "located_at"
+      },
+      {
+        "source": 1,
+        "target": 8,
+        "type": "contains"
+      },
+      {
+        "source": 8,
+        "target": 9,
+        "type": "formerly_named"
+      },
+      {
+        "source": 1,
+        "target": 9,
+        "type": "contains"
+      },
+      {
+        "source": 9,
+        "target": 10,
+        "type": "is_a"
+      },
+      {
+        "source": 11,
+        "target": 10,
+        "type": "is_a"
+      },
+      {
+        "source": 12,
+        "target": 10,
+        "type": "is_a"
+      },
+      {
+        "source": 15,
+        "target": 10,
+        "type": "is_a"
+      },
+      {
+        "source": 14,
+        "target": 10,
+        "type": "is_a"
+      },
+      {
+        "source": 13,
+        "target": 10,
+        "type": "is_a"
+      },
+      {
+        "source": 8,
+        "target": 10,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 10,
+        "type": "is_a"
+      },
+      {
+        "source": 8,
+        "target": 11,
+        "type": "located_on"
+      },
+      {
+        "source": 1,
+        "target": 11,
+        "type": "contains"
+      },
+      {
+        "source": 8,
+        "target": 12,
+        "type": "located_north_of"
+      },
+      {
+        "source": 1,
+        "target": 12,
+        "type": "contains"
+      },
+      {
+        "source": 8,
+        "target": 13,
+        "type": "located_in"
+      },
+      {
+        "source": 1,
+        "target": 13,
+        "type": "contains"
+      },
+      {
+        "source": 13,
+        "target": 14,
+        "type": "located_in"
+      },
+      {
+        "source": 1,
+        "target": 14,
+        "type": "contains"
+      },
+      {
+        "source": 14,
+        "target": 15,
+        "type": "located_in"
+      },
+      {
+        "source": 1,
+        "target": 15,
+        "type": "contains"
+      }
+    ]
+  }
+}

@@ -1,0 +1,419 @@
+{
+  "dataset": "hover",
+  "id": "70d91b96-1bbc-4959-bdb4-866245217fa6",
+  "split": "train",
+  "claim": "Grand Canyon National Park Airport and the airport in the city part of the Des Moines-West Des Moines Metropolitan Statistical area are not both major international airline hubs.",
+  "evidencia": "Page: Des Moines International Airport. Sentence: It has 19 connections to major airline hubs.\nPage: Grand Canyon National Park Airport. Sentence: The airport is primarily used for scenic tours and charter flights, but there is scheduled commercial service.\nPage: Norwalk, Iowa. Sentence: The city is part of the Des Moines–West Des Moines Metropolitan Statistical Area and is located just south of the Des Moines International Airport.",
+  "evidence_text": "Page: Des Moines International Airport. Sentence: It has 19 connections to major airline hubs.\nPage: Grand Canyon National Park Airport. Sentence: The airport is primarily used for scenic tours and charter flights, but there is scheduled commercial service.\nPage: Norwalk, Iowa. Sentence: The city is part of the Des Moines–West Des Moines Metropolitan Statistical Area and is located just south of the Des Moines International Airport.",
+  "label": "NOT_SUPPORTED",
+  "num_hops": 3,
+  "hover_metadata": {
+    "supporting_facts": [
+      [
+        "Des Moines International Airport",
+        1
+      ],
+      [
+        "Grand Canyon National Park Airport",
+        2
+      ],
+      [
+        "Norwalk, Iowa",
+        2
+      ]
+    ],
+    "num_hops": 3,
+    "evidence_annotation_id": [
+      0
+    ],
+    "evidence_id": [
+      "Des Moines International Airport::sentence::1",
+      "Grand Canyon National Park Airport::sentence::2",
+      "Norwalk, Iowa::sentence::2"
+    ],
+    "evidence_wiki_url": [
+      "https://en.wikipedia.org/wiki/Des_Moines_International_Airport",
+      "https://en.wikipedia.org/wiki/Grand_Canyon_National_Park_Airport",
+      "https://en.wikipedia.org/wiki/Norwalk%2C_Iowa"
+    ],
+    "evidence_sentence_id": [
+      "Des Moines International Airport::sentence::1",
+      "Grand Canyon National Park Airport::sentence::2",
+      "Norwalk, Iowa::sentence::2"
+    ]
+  },
+  "grafo_claim": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "d4805cbb-c2c4-557c-92ab-8767eb96ee22",
+        "text": "This chunk is about:\n- Places: Grand Canyon National Park Airport, Des Moines-West Des Moines Metropolitan Statistical Area\n- Topics: Airport hub status, international airline hubs\n\nFacts:\n- Grand Canyon National Park Airport and the airport in the city part of the Des Moines-West Des Moines Metropolitan Statistical Area are not both major international airline hubs.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "b5940eaa-5252-581e-b037-8cda5485dbb7",
+        "text": "Grand Canyon National Park Airport and the airport in the city part of the Des Moines-West Des Moines Metropolitan Statistical area are not both major international airline hubs.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "332af900-eba1-57c6-b461-4889d58986a1",
+        "text": "text_a5b81f8affdbd03ffc058dd4442c026b",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "7458e37c-be7f-566a-b638-4fac00be3a74",
+        "text": "grand canyon national park airport",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "5f394058-b2a0-5ba8-8466-ba2a18cfcf4e",
+        "text": "place",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "edb9a947-f57a-5601-a31c-19da1d80c28b",
+        "text": "major international airline hub",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "d2a381fa-3658-5ca6-ada9-2109cfc9331d",
+        "text": "concept",
+        "type": "EntityType"
+      },
+      {
+        "id": 7,
+        "original_id": "9adec6c6-e8ee-546e-a166-5efc32199de4",
+        "text": "des moines-west des moines metropolitan statistical area",
+        "type": "Entity"
+      },
+      {
+        "id": 8,
+        "original_id": "5a5f5f9f-f7f0-5e2a-a7c7-82851e629e8b",
+        "text": "des moines",
+        "type": "Entity"
+      },
+      {
+        "id": 9,
+        "original_id": "76ef1e9c-bb44-5f74-a1ba-a3431cfe6545",
+        "text": "des moines international airport",
+        "type": "Entity"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 7,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 8,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 9,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "not_both_are_with"
+      },
+      {
+        "source": 9,
+        "target": 5,
+        "type": "not_both_are_with"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      },
+      {
+        "source": 8,
+        "target": 7,
+        "type": "part_of"
+      },
+      {
+        "source": 1,
+        "target": 8,
+        "type": "contains"
+      },
+      {
+        "source": 9,
+        "target": 8,
+        "type": "located_in"
+      },
+      {
+        "source": 1,
+        "target": 9,
+        "type": "contains"
+      }
+    ]
+  },
+  "grafo_evidencia": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "22711720-c121-5d7c-9920-9b6943e40243",
+        "text": "This chunk is about:\n- Places: Des Moines International Airport, Grand Canyon National Park Airport, Norwalk, Iowa\n- Topics: airline hub connections, scenic tours, charter flights, scheduled commercial service, metropolitan area\n\nFacts:\n- Des Moines International Airport has 19 connections to major airline hubs.\n- Grand Canyon National Park Airport is primarily used for scenic tours and charter flights, but it also has scheduled commercial service.\n- Norwalk, Iowa is part of the Des Moines–West Des Moines Metropolitan Statistical Area.\n- Norwalk, Iowa is located just south of Des Moines International Airport.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "4a1658ea-4268-54ee-8bd1-cbc329397f31",
+        "text": "Page: Des Moines International Airport. Sentence: It has 19 connections to major airline hubs.\nPage: Grand Canyon National Park Airport. Sentence: The airport is primarily used for scenic tours and charter flights, but there is scheduled commercial service.\nPage: Norwalk, Iowa. Sentence: The city is part of the Des Moines–West Des Moines Metropolitan Statistical Area and is located just south of the Des Moines International Airport.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "20b8faa2-8d5a-5863-a9de-df42a5efa6d3",
+        "text": "text_8f396b69c4a23c5522f74dec2a29f905",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "76ef1e9c-bb44-5f74-a1ba-a3431cfe6545",
+        "text": "des moines international airport",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "50596f1a-2d8a-5de7-96b5-ba7068791784",
+        "text": "airport",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "6a8222cd-66f3-51c1-b240-bc7f9f9ee5cd",
+        "text": "19 connections to major airline hubs",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "d2a381fa-3658-5ca6-ada9-2109cfc9331d",
+        "text": "concept",
+        "type": "EntityType"
+      },
+      {
+        "id": 7,
+        "original_id": "7458e37c-be7f-566a-b638-4fac00be3a74",
+        "text": "grand canyon national park airport",
+        "type": "Entity"
+      },
+      {
+        "id": 8,
+        "original_id": "0a32c521-d394-57e8-8b25-23463764163f",
+        "text": "scenic tours",
+        "type": "Entity"
+      },
+      {
+        "id": 9,
+        "original_id": "061e6aeb-2efb-5b39-8108-7ea2796d7248",
+        "text": "activity",
+        "type": "EntityType"
+      },
+      {
+        "id": 10,
+        "original_id": "58b03ce7-ff99-56f2-8a40-27d85434304e",
+        "text": "charter flights",
+        "type": "Entity"
+      },
+      {
+        "id": 11,
+        "original_id": "d94cc0ba-c2d1-5bce-867b-36f6b39ae678",
+        "text": "scheduled commercial service",
+        "type": "Entity"
+      },
+      {
+        "id": 12,
+        "original_id": "cca61dbb-0e3d-5b0b-9098-fc254ce885e7",
+        "text": "service",
+        "type": "EntityType"
+      },
+      {
+        "id": 13,
+        "original_id": "d522c693-2e12-58ad-a5a2-6c75461980bd",
+        "text": "norwalk, iowa",
+        "type": "Entity"
+      },
+      {
+        "id": 14,
+        "original_id": "5f394058-b2a0-5ba8-8466-ba2a18cfcf4e",
+        "text": "place",
+        "type": "EntityType"
+      },
+      {
+        "id": 15,
+        "original_id": "7a9e5e21-a830-5322-ab20-d112df0b8c11",
+        "text": "des moines–west des moines metropolitan statistical area",
+        "type": "Entity"
+      },
+      {
+        "id": 16,
+        "original_id": "b8e14757-405d-5dcf-9719-b196f979bc89",
+        "text": "region",
+        "type": "EntityType"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 13,
+        "target": 3,
+        "type": "located_just_south_of"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 7,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "has_connections"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      },
+      {
+        "source": 7,
+        "target": 8,
+        "type": "primarily_used_for"
+      },
+      {
+        "source": 1,
+        "target": 8,
+        "type": "contains"
+      },
+      {
+        "source": 8,
+        "target": 9,
+        "type": "is_a"
+      },
+      {
+        "source": 10,
+        "target": 9,
+        "type": "is_a"
+      },
+      {
+        "source": 7,
+        "target": 10,
+        "type": "primarily_used_for"
+      },
+      {
+        "source": 1,
+        "target": 10,
+        "type": "contains"
+      },
+      {
+        "source": 7,
+        "target": 11,
+        "type": "has_service"
+      },
+      {
+        "source": 1,
+        "target": 11,
+        "type": "contains"
+      },
+      {
+        "source": 11,
+        "target": 12,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 13,
+        "type": "contains"
+      },
+      {
+        "source": 13,
+        "target": 14,
+        "type": "is_a"
+      },
+      {
+        "source": 13,
+        "target": 15,
+        "type": "part_of"
+      },
+      {
+        "source": 1,
+        "target": 15,
+        "type": "contains"
+      },
+      {
+        "source": 15,
+        "target": 16,
+        "type": "is_a"
+      }
+    ]
+  }
+}

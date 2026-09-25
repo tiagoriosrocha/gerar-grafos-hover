@@ -1,0 +1,375 @@
+{
+  "dataset": "hover",
+  "id": "7b14e162-dcf0-45ff-87f8-5d3244ac6038",
+  "split": "train",
+  "claim": "This company operates flights to Lufthansa destinations, on behalf of Lufthansa. Its headquarters are 4 km from the city center.",
+  "evidencia": "Page: PrivatAir. Sentence: PrivatAir is a Swiss airline operating business jets, headquartered at Geneva Airport in Meyrin.\nPage: Geneva Airport. Sentence: It is located 4 km northwest of the city centre.\nPage: Lufthansa destinations. Sentence: Flights operated on behalf of Lufthansa by PrivatAir are also listed.",
+  "evidence_text": "Page: PrivatAir. Sentence: PrivatAir is a Swiss airline operating business jets, headquartered at Geneva Airport in Meyrin.\nPage: Geneva Airport. Sentence: It is located 4 km northwest of the city centre.\nPage: Lufthansa destinations. Sentence: Flights operated on behalf of Lufthansa by PrivatAir are also listed.",
+  "label": "SUPPORTED",
+  "num_hops": 3,
+  "hover_metadata": {
+    "supporting_facts": [
+      [
+        "PrivatAir",
+        0
+      ],
+      [
+        "Geneva Airport",
+        1
+      ],
+      [
+        "Lufthansa destinations",
+        1
+      ]
+    ],
+    "num_hops": 3,
+    "evidence_annotation_id": [
+      0
+    ],
+    "evidence_id": [
+      "PrivatAir::sentence::0",
+      "Geneva Airport::sentence::1",
+      "Lufthansa destinations::sentence::1"
+    ],
+    "evidence_wiki_url": [
+      "https://en.wikipedia.org/wiki/PrivatAir",
+      "https://en.wikipedia.org/wiki/Geneva_Airport",
+      "https://en.wikipedia.org/wiki/Lufthansa_destinations"
+    ],
+    "evidence_sentence_id": [
+      "PrivatAir::sentence::0",
+      "Geneva Airport::sentence::1",
+      "Lufthansa destinations::sentence::1"
+    ]
+  },
+  "grafo_claim": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "1ffbd4e8-e8b0-5c54-9511-4f31250695d2",
+        "text": "This chunk is about:\n- Companies: Lufthansa, the company\n- Places: the city center\n\nFacts:\n- The company operates flights to Lufthansa destinations on behalf of Lufthansa.\n- The company’s headquarters are 4 km from the city center.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "c8b05e71-172a-5c51-96fb-d704ed5c703d",
+        "text": "This company operates flights to Lufthansa destinations, on behalf of Lufthansa. Its headquarters are 4 km from the city center.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "611d0544-afba-5a75-a759-052b27ca00c4",
+        "text": "text_12e0a5100a3c7543a3148cb16f4b9ad9",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "2d3d9e4f-3a6c-582b-9cd6-41e12ba9189d",
+        "text": "lufthansa",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "82bfc922-4fcd-56b0-b353-7b550b51389d",
+        "text": "company",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "62f01bf1-4499-5ae3-9115-54cc5dc4b296",
+        "text": "this company",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "5e1e5a65-3a5a-5bc7-b08e-495affd3072f",
+        "text": "4 km",
+        "type": "Entity"
+      },
+      {
+        "id": 7,
+        "original_id": "7a7a0687-e490-5167-ad5a-0e39d9055dee",
+        "text": "quantity",
+        "type": "EntityType"
+      },
+      {
+        "id": 8,
+        "original_id": "63f568eb-8276-5b24-a0e5-d833dfb33b24",
+        "text": "headquarters",
+        "type": "Entity"
+      },
+      {
+        "id": 9,
+        "original_id": "5f394058-b2a0-5ba8-8466-ba2a18cfcf4e",
+        "text": "place",
+        "type": "EntityType"
+      },
+      {
+        "id": 10,
+        "original_id": "2742e141-10aa-5485-9368-759859b2f62d",
+        "text": "the city center",
+        "type": "Entity"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 3,
+        "type": "operates_flights_to_destinations_of"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 5,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 8,
+        "target": 5,
+        "type": "is_headquarters_of"
+      },
+      {
+        "source": 1,
+        "target": 6,
+        "type": "contains"
+      },
+      {
+        "source": 6,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 6,
+        "target": 8,
+        "type": "measures_distance_to_city_center_of"
+      },
+      {
+        "source": 1,
+        "target": 8,
+        "type": "contains"
+      },
+      {
+        "source": 8,
+        "target": 9,
+        "type": "is_a"
+      },
+      {
+        "source": 10,
+        "target": 9,
+        "type": "is_a"
+      },
+      {
+        "source": 8,
+        "target": 10,
+        "type": "is_4_km_from"
+      },
+      {
+        "source": 1,
+        "target": 10,
+        "type": "contains"
+      }
+    ]
+  },
+  "grafo_evidencia": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "3cee7ddc-f66b-5620-8403-f2df2710b069",
+        "text": "This chunk is about:\n- Companies: PrivatAir, Lufthansa\n- Places: Geneva Airport, Meyrin\n- Topics: Lufthansa destinations\n\nFacts:\n- PrivatAir is a Swiss airline that operates business jets.\n- PrivatAir is headquartered at Geneva Airport in Meyrin.\n- Geneva Airport is located 4 km northwest of the city centre.\n- Flights operated by PrivatAir on behalf of Lufthansa are included in Lufthansa destinations.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "2ba7354d-1b86-5bc3-a669-0b9c6f8bf4fc",
+        "text": "Page: PrivatAir. Sentence: PrivatAir is a Swiss airline operating business jets, headquartered at Geneva Airport in Meyrin.\nPage: Geneva Airport. Sentence: It is located 4 km northwest of the city centre.\nPage: Lufthansa destinations. Sentence: Flights operated on behalf of Lufthansa by PrivatAir are also listed.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "cf26e6d5-1d50-52cb-941b-d861086e0246",
+        "text": "text_50c955b4074f56533e0836cb313567b6",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "80bab9bb-3a88-5af5-8187-902c39ef4afb",
+        "text": "privatair",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "388f60fb-220d-55e8-ae9c-3ac93cead308",
+        "text": "organization",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "407d2a7f-7562-59fb-a556-934cd90a0107",
+        "text": "switzerland",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "5f394058-b2a0-5ba8-8466-ba2a18cfcf4e",
+        "text": "place",
+        "type": "EntityType"
+      },
+      {
+        "id": 7,
+        "original_id": "11f89eb1-3f95-5304-8b17-7da1add5c48e",
+        "text": "geneva airport",
+        "type": "Entity"
+      },
+      {
+        "id": 8,
+        "original_id": "3da1488f-a2f3-59a4-a2f3-3c0d584c8be6",
+        "text": "meyrin",
+        "type": "Entity"
+      },
+      {
+        "id": 9,
+        "original_id": "2d3d9e4f-3a6c-582b-9cd6-41e12ba9189d",
+        "text": "lufthansa",
+        "type": "Entity"
+      },
+      {
+        "id": 10,
+        "original_id": "6a82b905-da9f-5dea-97b2-5ce3121b2567",
+        "text": "lufthansa destinations",
+        "type": "Entity"
+      },
+      {
+        "id": 11,
+        "original_id": "d2a381fa-3658-5ca6-ada9-2109cfc9331d",
+        "text": "concept",
+        "type": "EntityType"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 10,
+        "target": 3,
+        "type": "lists_flights_operated_by"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 9,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "based_in"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 7,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 8,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 7,
+        "type": "headquartered_at"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      },
+      {
+        "source": 7,
+        "target": 8,
+        "type": "located_in"
+      },
+      {
+        "source": 1,
+        "target": 8,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 9,
+        "type": "operates_flights_on_behalf_of"
+      },
+      {
+        "source": 1,
+        "target": 9,
+        "type": "contains"
+      },
+      {
+        "source": 10,
+        "target": 9,
+        "type": "lists_destinations_for"
+      },
+      {
+        "source": 1,
+        "target": 10,
+        "type": "contains"
+      },
+      {
+        "source": 10,
+        "target": 11,
+        "type": "is_a"
+      }
+    ]
+  }
+}

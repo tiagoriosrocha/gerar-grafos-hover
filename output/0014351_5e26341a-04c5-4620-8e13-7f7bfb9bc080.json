@@ -1,0 +1,465 @@
+{
+  "dataset": "hover",
+  "id": "5e26341a-04c5-4620-8e13-7f7bfb9bc080",
+  "split": "train",
+  "claim": "The Toyota Owners 400 was sponsored from 2007 to 2011 by a brand that is owned by Diageo.",
+  "evidencia": "Page: Toyota Owners 400. Sentence: From 2007 to 2011, former race title sponsor Crown Royal named the race after the winner of an essay contest during Daytona Speedweeks.\nPage: Crown Royal. Sentence: Crown Royal is a blended Canadian whisky owned by Diageo, which purchased it when the Seagram portfolio was dissolved in 2000.",
+  "evidence_text": "Page: Toyota Owners 400. Sentence: From 2007 to 2011, former race title sponsor Crown Royal named the race after the winner of an essay contest during Daytona Speedweeks.\nPage: Crown Royal. Sentence: Crown Royal is a blended Canadian whisky owned by Diageo, which purchased it when the Seagram portfolio was dissolved in 2000.",
+  "label": "SUPPORTED",
+  "num_hops": 2,
+  "hover_metadata": {
+    "supporting_facts": [
+      [
+        "Toyota Owners 400",
+        1
+      ],
+      [
+        "Crown Royal",
+        0
+      ]
+    ],
+    "num_hops": 2,
+    "evidence_annotation_id": [
+      0
+    ],
+    "evidence_id": [
+      "Toyota Owners 400::sentence::1",
+      "Crown Royal::sentence::0"
+    ],
+    "evidence_wiki_url": [
+      "https://en.wikipedia.org/wiki/Toyota_Owners_400",
+      "https://en.wikipedia.org/wiki/Crown_Royal"
+    ],
+    "evidence_sentence_id": [
+      "Toyota Owners 400::sentence::1",
+      "Crown Royal::sentence::0"
+    ]
+  },
+  "grafo_claim": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "1c4ab8e9-9b79-5c73-8a8a-11e19222d256",
+        "text": "This chunk is about:\n- Events: Toyota Owners 400\n- Companies: Diageo\n- Products: Crown Royal\n\nFacts:\n- From 2007 to 2011, the Toyota Owners 400 was sponsored by Crown Royal.\n- Crown Royal is a brand owned by Diageo.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "587cfbe4-c5e4-5a2c-8bf7-7127b5fe1260",
+        "text": "The Toyota Owners 400 was sponsored from 2007 to 2011 by a brand that is owned by Diageo.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "b26757bf-a46d-56e7-87f7-f8e9ac5cfc74",
+        "text": "text_d2d4039f8e31ac405b579850662426f4",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "e5721cd5-92b0-533e-9050-2b0c05c3d3f3",
+        "text": "toyota owners 400",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "214abcd9-9adf-5c8a-bb35-1e729f2d68c3",
+        "text": "event",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "c22ffe02-635b-5be0-94d3-f307bea262e3",
+        "text": "2007",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "b19433ae-558c-5aaf-95ac-6231f2a4be0e",
+        "text": "date",
+        "type": "EntityType"
+      },
+      {
+        "id": 7,
+        "original_id": "f54e52eb-db61-5cc3-aa32-5c78e42891d1",
+        "text": "2011",
+        "type": "Entity"
+      },
+      {
+        "id": 8,
+        "original_id": "d3f18d60-cfe1-5745-8e69-a62a26cb9c5a",
+        "text": "diageo",
+        "type": "Entity"
+      },
+      {
+        "id": 9,
+        "original_id": "388f60fb-220d-55e8-ae9c-3ac93cead308",
+        "text": "organization",
+        "type": "EntityType"
+      },
+      {
+        "id": 10,
+        "original_id": "4abb04e5-2798-59d5-83f4-855b9634f360",
+        "text": "brand owned by diageo",
+        "type": "Entity"
+      },
+      {
+        "id": 11,
+        "original_id": "31d368fa-7630-5642-a1c1-e579050f9ac3",
+        "text": "brand",
+        "type": "EntityType"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 10,
+        "target": 3,
+        "type": "sponsored"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "sponsorship_started_in"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 7,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 7,
+        "type": "sponsorship_ended_in"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      },
+      {
+        "source": 1,
+        "target": 8,
+        "type": "contains"
+      },
+      {
+        "source": 10,
+        "target": 8,
+        "type": "owned_by"
+      },
+      {
+        "source": 8,
+        "target": 9,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 10,
+        "type": "contains"
+      },
+      {
+        "source": 10,
+        "target": 11,
+        "type": "is_a"
+      }
+    ]
+  },
+  "grafo_evidencia": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "5fb1fcdc-24b4-5a3f-8826-4d35f27d9492",
+        "text": "This chunk is about:\n- Events: Toyota Owners 400\n- Companies: Crown Royal, Diageo, Seagram\n- Concepts: race title sponsorship, essay contest, Daytona Speedweeks\n\nFacts:\n- In 2000, Diageo purchased Crown Royal when the Seagram portfolio was dissolved.\n- Crown Royal is a blended Canadian whisky owned by Diageo.\n- From 2007 to 2011, Crown Royal was the former title sponsor of the Toyota Owners 400 race.\n- From 2007 to 2011, Crown Royal named the Toyota Owners 400 after the winner of an essay contest held during Daytona Speedweeks.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "3eef3c64-c5e3-5b05-a738-833a5c2cc68d",
+        "text": "Page: Toyota Owners 400. Sentence: From 2007 to 2011, former race title sponsor Crown Royal named the race after the winner of an essay contest during Daytona Speedweeks.\nPage: Crown Royal. Sentence: Crown Royal is a blended Canadian whisky owned by Diageo, which purchased it when the Seagram portfolio was dissolved in 2000.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "f798bc0a-7669-51f3-a0ee-bb67623ef546",
+        "text": "text_4796097124f23d254e8cf446e9bd8121",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "e5721cd5-92b0-533e-9050-2b0c05c3d3f3",
+        "text": "toyota owners 400",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "214abcd9-9adf-5c8a-bb35-1e729f2d68c3",
+        "text": "event",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "60ef1dce-9d05-59b8-b651-5fd45ad3ca44",
+        "text": "crown royal",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "388f60fb-220d-55e8-ae9c-3ac93cead308",
+        "text": "organization",
+        "type": "EntityType"
+      },
+      {
+        "id": 7,
+        "original_id": "8450f568-9491-5e44-850c-c33c299e1116",
+        "text": "essay contest winner",
+        "type": "Entity"
+      },
+      {
+        "id": 8,
+        "original_id": "99a82eec-bb35-5bb5-9ed2-e73fc7a756de",
+        "text": "person",
+        "type": "EntityType"
+      },
+      {
+        "id": 9,
+        "original_id": "772c6c26-7998-568b-8741-cf2477cc6dbe",
+        "text": "daytona speedweeks",
+        "type": "Entity"
+      },
+      {
+        "id": 10,
+        "original_id": "c22ffe02-635b-5be0-94d3-f307bea262e3",
+        "text": "2007",
+        "type": "Entity"
+      },
+      {
+        "id": 11,
+        "original_id": "b19433ae-558c-5aaf-95ac-6231f2a4be0e",
+        "text": "date",
+        "type": "EntityType"
+      },
+      {
+        "id": 12,
+        "original_id": "f54e52eb-db61-5cc3-aa32-5c78e42891d1",
+        "text": "2011",
+        "type": "Entity"
+      },
+      {
+        "id": 13,
+        "original_id": "b9344b77-3966-5996-bd3a-89c2fba164e3",
+        "text": "crown royal whisky",
+        "type": "Entity"
+      },
+      {
+        "id": 14,
+        "original_id": "f76d57aa-4740-5218-9539-0e0978cbf183",
+        "text": "product",
+        "type": "EntityType"
+      },
+      {
+        "id": 15,
+        "original_id": "e2ea31c8-751a-5c2e-a3b6-d9194a1c6b87",
+        "text": "seagram portfolio",
+        "type": "Entity"
+      },
+      {
+        "id": 16,
+        "original_id": "d1c22bf3-b08d-531b-a0cc-a04132cf6c6f",
+        "text": "2000",
+        "type": "Entity"
+      },
+      {
+        "id": 17,
+        "original_id": "d3f18d60-cfe1-5745-8e69-a62a26cb9c5a",
+        "text": "diageo",
+        "type": "Entity"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 3,
+        "type": "was_title_sponsor_of"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 9,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 17,
+        "target": 5,
+        "type": "owns"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 15,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 17,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 5,
+        "target": 7,
+        "type": "named_race_after"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      },
+      {
+        "source": 7,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 7,
+        "target": 9,
+        "type": "won_during"
+      },
+      {
+        "source": 1,
+        "target": 9,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 10,
+        "type": "started_naming_race_after_winner_in"
+      },
+      {
+        "source": 1,
+        "target": 10,
+        "type": "contains"
+      },
+      {
+        "source": 10,
+        "target": 11,
+        "type": "is_a"
+      },
+      {
+        "source": 12,
+        "target": 11,
+        "type": "is_a"
+      },
+      {
+        "source": 16,
+        "target": 11,
+        "type": "is_a"
+      },
+      {
+        "source": 5,
+        "target": 12,
+        "type": "stopped_naming_race_after_winner_in"
+      },
+      {
+        "source": 1,
+        "target": 12,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 13,
+        "type": "is"
+      },
+      {
+        "source": 1,
+        "target": 13,
+        "type": "contains"
+      },
+      {
+        "source": 13,
+        "target": 14,
+        "type": "is_a"
+      },
+      {
+        "source": 5,
+        "target": 15,
+        "type": "was_included_in"
+      },
+      {
+        "source": 1,
+        "target": 15,
+        "type": "contains"
+      },
+      {
+        "source": 15,
+        "target": 16,
+        "type": "was_dissolved_in"
+      },
+      {
+        "source": 1,
+        "target": 16,
+        "type": "contains"
+      },
+      {
+        "source": 1,
+        "target": 17,
+        "type": "contains"
+      }
+    ]
+  }
+}

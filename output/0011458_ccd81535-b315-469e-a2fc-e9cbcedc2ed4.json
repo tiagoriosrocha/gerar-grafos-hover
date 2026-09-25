@@ -1,0 +1,440 @@
+{
+  "dataset": "hover",
+  "id": "ccd81535-b315-469e-a2fc-e9cbcedc2ed4",
+  "split": "train",
+  "claim": "The director of the film The Girl Who Ran Wild was born. He was born before Robert Z. Leonard.",
+  "evidencia": "Page: Rupert Julian. Sentence: Rupert Julian (25 January 1879 – 27 December 1943) was the first New Zealand cinema actor, director, writer and producer.\nPage: Robert Z. Leonard. Sentence: Robert Zigler Leonard (October 7, 1889 – August 27, 1968) was an American film director, actor, producer, and screenwriter.\nPage: The Girl Who Ran Wild. Sentence: The Girl Who Ran Wild is a 1922 Universal film directed by Rupert Julian.",
+  "evidence_text": "Page: Rupert Julian. Sentence: Rupert Julian (25 January 1879 – 27 December 1943) was the first New Zealand cinema actor, director, writer and producer.\nPage: Robert Z. Leonard. Sentence: Robert Zigler Leonard (October 7, 1889 – August 27, 1968) was an American film director, actor, producer, and screenwriter.\nPage: The Girl Who Ran Wild. Sentence: The Girl Who Ran Wild is a 1922 Universal film directed by Rupert Julian.",
+  "label": "SUPPORTED",
+  "num_hops": 3,
+  "hover_metadata": {
+    "supporting_facts": [
+      [
+        "Rupert Julian",
+        0
+      ],
+      [
+        "Robert Z. Leonard",
+        0
+      ],
+      [
+        "The Girl Who Ran Wild",
+        0
+      ]
+    ],
+    "num_hops": 3,
+    "evidence_annotation_id": [
+      0
+    ],
+    "evidence_id": [
+      "Rupert Julian::sentence::0",
+      "Robert Z. Leonard::sentence::0",
+      "The Girl Who Ran Wild::sentence::0"
+    ],
+    "evidence_wiki_url": [
+      "https://en.wikipedia.org/wiki/Rupert_Julian",
+      "https://en.wikipedia.org/wiki/Robert_Z._Leonard",
+      "https://en.wikipedia.org/wiki/The_Girl_Who_Ran_Wild"
+    ],
+    "evidence_sentence_id": [
+      "Rupert Julian::sentence::0",
+      "Robert Z. Leonard::sentence::0",
+      "The Girl Who Ran Wild::sentence::0"
+    ]
+  },
+  "grafo_claim": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "044696af-9c0d-55e8-a8db-d433a5213c48",
+        "text": "This chunk is about:\n- People: the director of The Girl Who Ran Wild, Robert Z. Leonard\n- Works: The Girl Who Ran Wild\n\nFacts:\n- The director of The Girl Who Ran Wild was born.\n- The director of The Girl Who Ran Wild was born before Robert Z. Leonard was born.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "f6dab24d-e1bd-5877-a554-e4836bed7f50",
+        "text": "The director of the film The Girl Who Ran Wild was born. He was born before Robert Z. Leonard.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "2aba75f8-3ea9-5793-a05d-0452b33dc3a1",
+        "text": "text_d2787e5f0af7e25713160ad8147b6209",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "cb0edbc9-304c-57cf-984f-5a052572c13c",
+        "text": "the girl who ran wild",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "d320c8df-fd51-56e6-b577-e01a688fe6fc",
+        "text": "film",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "5b3b5270-25fb-5150-b04a-1192b1c16626",
+        "text": "director of the girl who ran wild",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "99a82eec-bb35-5bb5-9ed2-e73fc7a756de",
+        "text": "person",
+        "type": "EntityType"
+      },
+      {
+        "id": 7,
+        "original_id": "cab76b52-e550-586f-8a5a-84fc613ada15",
+        "text": "robert z. leonard",
+        "type": "Entity"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 3,
+        "type": "directed"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 7,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 5,
+        "target": 7,
+        "type": "born_before"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      }
+    ]
+  },
+  "grafo_evidencia": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "c627084f-e711-53ef-bfce-e92eaa3bfc9e",
+        "text": "This chunk is about:\n- People: Rupert Julian, Robert Z. Leonard\n- Works: The Girl Who Ran Wild\n- Companies: Universal\n- Roles: actor, director, writer, producer, screenwriter\n- Places: New Zealand, America\n\nFacts:\n- Rupert Julian was born on 25 January 1879 and died on 27 December 1943.\n- Robert Zigler Leonard was born on October 7, 1889 and died on August 27, 1968.\n- Rupert Julian was the first New Zealand cinema actor, director, writer, and producer.\n- Robert Zigler Leonard was an American film director, actor, producer, and screenwriter.\n- The Girl Who Ran Wild is a 1922 Universal film directed by Rupert Julian.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "82fee06a-d6a8-570f-97e5-5fd858091977",
+        "text": "Page: Rupert Julian. Sentence: Rupert Julian (25 January 1879 – 27 December 1943) was the first New Zealand cinema actor, director, writer and producer.\nPage: Robert Z. Leonard. Sentence: Robert Zigler Leonard (October 7, 1889 – August 27, 1968) was an American film director, actor, producer, and screenwriter.\nPage: The Girl Who Ran Wild. Sentence: The Girl Who Ran Wild is a 1922 Universal film directed by Rupert Julian.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "e4fd77bb-3966-5b57-a09b-efc975e2d2a8",
+        "text": "text_fcd94a5dd53c243018f2055400f51265",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "3d497d4f-61df-5a3d-a10f-f2ee905d98f5",
+        "text": "rupert julian",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "99a82eec-bb35-5bb5-9ed2-e73fc7a756de",
+        "text": "person",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "b50788d5-1623-5755-a252-d2c00478b563",
+        "text": "1879-01-25",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "b19433ae-558c-5aaf-95ac-6231f2a4be0e",
+        "text": "date",
+        "type": "EntityType"
+      },
+      {
+        "id": 7,
+        "original_id": "6df40f80-7fa5-5b04-af7a-97ba2fc4fc28",
+        "text": "1943-12-27",
+        "type": "Entity"
+      },
+      {
+        "id": 8,
+        "original_id": "b9e6f04b-3af0-5fd3-8eac-4b641d227752",
+        "text": "new zealand",
+        "type": "Entity"
+      },
+      {
+        "id": 9,
+        "original_id": "5f394058-b2a0-5ba8-8466-ba2a18cfcf4e",
+        "text": "place",
+        "type": "EntityType"
+      },
+      {
+        "id": 10,
+        "original_id": "accfe1f5-b4f8-5748-80c4-9a174c57e575",
+        "text": "robert zigler leonard",
+        "type": "Entity"
+      },
+      {
+        "id": 11,
+        "original_id": "baace215-a01c-5ba2-bf10-30056909d0ba",
+        "text": "1889-10-07",
+        "type": "Entity"
+      },
+      {
+        "id": 12,
+        "original_id": "06589fab-8b3a-529e-aae6-34eb5daa1be0",
+        "text": "1968-08-27",
+        "type": "Entity"
+      },
+      {
+        "id": 13,
+        "original_id": "32e5ea46-cca9-5920-8b2d-77357f10ce8d",
+        "text": "american",
+        "type": "Entity"
+      },
+      {
+        "id": 14,
+        "original_id": "d2a381fa-3658-5ca6-ada9-2109cfc9331d",
+        "text": "concept",
+        "type": "EntityType"
+      },
+      {
+        "id": 15,
+        "original_id": "cb0edbc9-304c-57cf-984f-5a052572c13c",
+        "text": "the girl who ran wild",
+        "type": "Entity"
+      },
+      {
+        "id": 16,
+        "original_id": "5263a535-1b4b-5925-be3e-310d03cd303b",
+        "text": "work",
+        "type": "EntityType"
+      },
+      {
+        "id": 17,
+        "original_id": "5a4417f7-418a-55d6-bba2-981d57395a78",
+        "text": "1922",
+        "type": "Entity"
+      },
+      {
+        "id": 18,
+        "original_id": "d0a0ea05-e0da-56de-b712-d4305fb2930a",
+        "text": "universal",
+        "type": "Entity"
+      },
+      {
+        "id": 19,
+        "original_id": "388f60fb-220d-55e8-ae9c-3ac93cead308",
+        "text": "organization",
+        "type": "EntityType"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 15,
+        "target": 3,
+        "type": "directed_by"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 10,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "born_on"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 7,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 11,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 12,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 17,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 7,
+        "type": "died_on"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 8,
+        "type": "associated_with_place"
+      },
+      {
+        "source": 1,
+        "target": 8,
+        "type": "contains"
+      },
+      {
+        "source": 8,
+        "target": 9,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 10,
+        "type": "contains"
+      },
+      {
+        "source": 10,
+        "target": 11,
+        "type": "born_on"
+      },
+      {
+        "source": 1,
+        "target": 11,
+        "type": "contains"
+      },
+      {
+        "source": 10,
+        "target": 12,
+        "type": "died_on"
+      },
+      {
+        "source": 1,
+        "target": 12,
+        "type": "contains"
+      },
+      {
+        "source": 10,
+        "target": 13,
+        "type": "has_nationality"
+      },
+      {
+        "source": 1,
+        "target": 13,
+        "type": "contains"
+      },
+      {
+        "source": 13,
+        "target": 14,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 15,
+        "type": "contains"
+      },
+      {
+        "source": 15,
+        "target": 16,
+        "type": "is_a"
+      },
+      {
+        "source": 15,
+        "target": 17,
+        "type": "released_in"
+      },
+      {
+        "source": 1,
+        "target": 17,
+        "type": "contains"
+      },
+      {
+        "source": 15,
+        "target": 18,
+        "type": "associated_with"
+      },
+      {
+        "source": 1,
+        "target": 18,
+        "type": "contains"
+      },
+      {
+        "source": 18,
+        "target": 19,
+        "type": "is_a"
+      }
+    ]
+  }
+}

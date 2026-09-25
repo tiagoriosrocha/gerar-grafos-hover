@@ -1,0 +1,666 @@
+{
+  "dataset": "hover",
+  "id": "dd49f159-8eaf-4617-a868-3441bf6527ba",
+  "split": "train",
+  "claim": "The Battle of Stones River occurred before the battle for which Thomas Baker received the Medal of Honor.",
+  "evidencia": "Page: Battle of Saipan. Sentence: The Battle of Saipan was a battle of the Pacific campaign of World War II, fought on the island of Saipan in the Mariana Islands from 15 June to 9 July 1944.\nPage: Battle of Stones River. Sentence: The Battle of Stones River or Second Battle of Murfreesboro, was fought from December 31, 1862, to January 2, 1863, in Middle Tennessee, as the culmination of the Stones River Campaign in the Western Theater of the American Civil War.\nPage: Thomas Baker (Medal of Honor). Sentence: Thomas Alexander Baker (June 25, 1916 – July 7, 1944) was a United States Army soldier who posthumously received the U.S. military's highest decoration, the Medal of Honor, for his actions in World War II during the Battle of Saipan.",
+  "evidence_text": "Page: Battle of Saipan. Sentence: The Battle of Saipan was a battle of the Pacific campaign of World War II, fought on the island of Saipan in the Mariana Islands from 15 June to 9 July 1944.\nPage: Battle of Stones River. Sentence: The Battle of Stones River or Second Battle of Murfreesboro, was fought from December 31, 1862, to January 2, 1863, in Middle Tennessee, as the culmination of the Stones River Campaign in the Western Theater of the American Civil War.\nPage: Thomas Baker (Medal of Honor). Sentence: Thomas Alexander Baker (June 25, 1916 – July 7, 1944) was a United States Army soldier who posthumously received the U.S. military's highest decoration, the Medal of Honor, for his actions in World War II during the Battle of Saipan.",
+  "label": "SUPPORTED",
+  "num_hops": 3,
+  "hover_metadata": {
+    "supporting_facts": [
+      [
+        "Battle of Saipan",
+        0
+      ],
+      [
+        "Battle of Stones River",
+        0
+      ],
+      [
+        "Thomas Baker (Medal of Honor)",
+        0
+      ]
+    ],
+    "num_hops": 3,
+    "evidence_annotation_id": [
+      0
+    ],
+    "evidence_id": [
+      "Battle of Saipan::sentence::0",
+      "Battle of Stones River::sentence::0",
+      "Thomas Baker (Medal of Honor)::sentence::0"
+    ],
+    "evidence_wiki_url": [
+      "https://en.wikipedia.org/wiki/Battle_of_Saipan",
+      "https://en.wikipedia.org/wiki/Battle_of_Stones_River",
+      "https://en.wikipedia.org/wiki/Thomas_Baker_%28Medal_of_Honor%29"
+    ],
+    "evidence_sentence_id": [
+      "Battle of Saipan::sentence::0",
+      "Battle of Stones River::sentence::0",
+      "Thomas Baker (Medal of Honor)::sentence::0"
+    ]
+  },
+  "grafo_claim": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "223c4686-8d7e-51cf-9b32-ef82b50dc8a3",
+        "text": "This chunk is about:\n- People: Thomas Baker\n- Events: Battle of Stones River, battle for which Thomas Baker received the Medal of Honor\n- Awards: Medal of Honor\n\nFacts:\n- The Battle of Stones River occurred before the battle for which Thomas Baker received the Medal of Honor.\n- Thomas Baker received the Medal of Honor for a later battle than the Battle of Stones River.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "2e590570-8952-5937-9b00-428971177be4",
+        "text": "The Battle of Stones River occurred before the battle for which Thomas Baker received the Medal of Honor.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "d9fac014-23a7-5b13-903d-58692f9ac061",
+        "text": "text_e6d366c2f5ba1d0f9a521e23c9dcbad2",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "6f9bd9e9-4a11-5ee6-8ef5-7b2e362e89d5",
+        "text": "battle of stones river",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "214abcd9-9adf-5c8a-bb35-1e729f2d68c3",
+        "text": "event",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "f14e6bc2-35e4-5af0-9f90-ae67d3d0b5b7",
+        "text": "battle for which thomas baker received the medal of honor",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "e7860d76-0d7d-5443-80d5-c348d62aa712",
+        "text": "thomas baker",
+        "type": "Entity"
+      },
+      {
+        "id": 7,
+        "original_id": "99a82eec-bb35-5bb5-9ed2-e73fc7a756de",
+        "text": "person",
+        "type": "EntityType"
+      },
+      {
+        "id": 8,
+        "original_id": "3e0a6e35-6255-52b9-988b-184b593e2382",
+        "text": "medal of honor",
+        "type": "Entity"
+      },
+      {
+        "id": 9,
+        "original_id": "38e42125-31f4-5cd6-993c-dbbc06a88910",
+        "text": "award",
+        "type": "EntityType"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 5,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "occurred_before"
+      },
+      {
+        "source": 6,
+        "target": 5,
+        "type": "received_medal_for"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 1,
+        "target": 6,
+        "type": "contains"
+      },
+      {
+        "source": 6,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 6,
+        "target": 8,
+        "type": "received"
+      },
+      {
+        "source": 1,
+        "target": 8,
+        "type": "contains"
+      },
+      {
+        "source": 8,
+        "target": 9,
+        "type": "is_a"
+      }
+    ]
+  },
+  "grafo_evidencia": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "15ca4fbd-512d-594b-9ab7-c29251f843b5",
+        "text": "This chunk is about:\n- Events: Battle of Saipan, Battle of Stones River\n- People: Thomas Alexander Baker\n- Places: Saipan, Mariana Islands, Middle Tennessee\n- Conflicts: World War II, Pacific campaign, American Civil War, Stones River Campaign, Western Theater\n- Awards: Medal of Honor\n\nFacts:\n- The Battle of Stones River, also called the Second Battle of Murfreesboro, was fought in Middle Tennessee from December 31, 1862, to January 2, 1863, as the culmination of the Stones River Campaign in the Western Theater of the American Civil War.\n- Thomas Alexander Baker was born on June 25, 1916.\n- The Battle of Saipan was fought on the island of Saipan in the Mariana Islands from 15 June to 9 July 1944 as part of the Pacific campaign of World War II.\n- Thomas Alexander Baker was a United States Army soldier who died on July 7, 1944.\n- Thomas Alexander Baker posthumously received the Medal of Honor for his actions during World War II in the Battle of Saipan.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "f85ee1e1-52fe-504a-815e-751bdde980b2",
+        "text": "Page: Battle of Saipan. Sentence: The Battle of Saipan was a battle of the Pacific campaign of World War II, fought on the island of Saipan in the Mariana Islands from 15 June to 9 July 1944.\nPage: Battle of Stones River. Sentence: The Battle of Stones River or Second Battle of Murfreesboro, was fought from December 31, 1862, to January 2, 1863, in Middle Tennessee, as the culmination of the Stones River Campaign in the Western Theater of the American Civil War.\nPage: Thomas Baker (Medal of Honor). Sentence: Thomas Alexander Baker (June 25, 1916 – July 7, 1944) was a United States Army soldier who posthumously received the U.S. military's highest decoration, the Medal of Honor, for his actions in World War II during the Battle of Saipan.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "45692dc2-5946-5645-840e-2edf4b4930bf",
+        "text": "text_333af0c05c34630b50c707709a195ce3",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "11d1b03a-f3d1-56f2-9105-21a9c741ae52",
+        "text": "battle of saipan",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "214abcd9-9adf-5c8a-bb35-1e729f2d68c3",
+        "text": "event",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "6dc213dd-3fa9-59da-8b64-3f04c09304b0",
+        "text": "pacific campaign",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "307234d1-8757-51ab-8eb8-40aae3d498a1",
+        "text": "world war ii",
+        "type": "Entity"
+      },
+      {
+        "id": 7,
+        "original_id": "f046942c-2dff-51d7-b95d-ff4acf91a3f0",
+        "text": "saipan",
+        "type": "Entity"
+      },
+      {
+        "id": 8,
+        "original_id": "5f394058-b2a0-5ba8-8466-ba2a18cfcf4e",
+        "text": "place",
+        "type": "EntityType"
+      },
+      {
+        "id": 9,
+        "original_id": "18b3629d-c8b6-5f59-851f-90da1b98f362",
+        "text": "mariana islands",
+        "type": "Entity"
+      },
+      {
+        "id": 10,
+        "original_id": "fc8bbfa7-87d1-5fcd-95fd-eb48b0c1f934",
+        "text": "1944-06-15",
+        "type": "Entity"
+      },
+      {
+        "id": 11,
+        "original_id": "b19433ae-558c-5aaf-95ac-6231f2a4be0e",
+        "text": "date",
+        "type": "EntityType"
+      },
+      {
+        "id": 12,
+        "original_id": "5509015e-6053-56fd-ad26-88dcf445419c",
+        "text": "1944-07-09",
+        "type": "Entity"
+      },
+      {
+        "id": 13,
+        "original_id": "6f9bd9e9-4a11-5ee6-8ef5-7b2e362e89d5",
+        "text": "battle of stones river",
+        "type": "Entity"
+      },
+      {
+        "id": 14,
+        "original_id": "55b670c2-184a-5628-b0f0-4fa841f84cd2",
+        "text": "second battle of murfreesboro",
+        "type": "Entity"
+      },
+      {
+        "id": 15,
+        "original_id": "50c1857b-194c-5879-87f7-063df522b10a",
+        "text": "1862-12-31",
+        "type": "Entity"
+      },
+      {
+        "id": 16,
+        "original_id": "fd01dae0-4919-5735-9f5a-40486f8193e6",
+        "text": "1863-01-02",
+        "type": "Entity"
+      },
+      {
+        "id": 17,
+        "original_id": "eaa8dbba-9d1d-54b6-bd79-b82536eaab26",
+        "text": "middle tennessee",
+        "type": "Entity"
+      },
+      {
+        "id": 18,
+        "original_id": "1e8118d6-c34a-508f-a6f7-c908059bcf84",
+        "text": "stones river campaign",
+        "type": "Entity"
+      },
+      {
+        "id": 19,
+        "original_id": "86800d5d-09c4-5441-8963-c9af169ae6b6",
+        "text": "western theater of the american civil war",
+        "type": "Entity"
+      },
+      {
+        "id": 20,
+        "original_id": "c0e24a2b-92c2-52c1-9a9b-1d1ea008c2c2",
+        "text": "american civil war",
+        "type": "Entity"
+      },
+      {
+        "id": 21,
+        "original_id": "a7d47792-62cb-57f5-80ab-8a724d17e07d",
+        "text": "thomas alexander baker",
+        "type": "Entity"
+      },
+      {
+        "id": 22,
+        "original_id": "99a82eec-bb35-5bb5-9ed2-e73fc7a756de",
+        "text": "person",
+        "type": "EntityType"
+      },
+      {
+        "id": 23,
+        "original_id": "0f008cbd-9a43-5332-b01d-9f85a645ca73",
+        "text": "1916-06-25",
+        "type": "Entity"
+      },
+      {
+        "id": 24,
+        "original_id": "08108d7b-5fcc-52cd-9c3a-9b71563cbc09",
+        "text": "1944-07-07",
+        "type": "Entity"
+      },
+      {
+        "id": 25,
+        "original_id": "8e1a69ef-8a4a-5980-9422-b280c8053dfe",
+        "text": "united states army",
+        "type": "Entity"
+      },
+      {
+        "id": 26,
+        "original_id": "388f60fb-220d-55e8-ae9c-3ac93cead308",
+        "text": "organization",
+        "type": "EntityType"
+      },
+      {
+        "id": 27,
+        "original_id": "3e0a6e35-6255-52b9-988b-184b593e2382",
+        "text": "medal of honor",
+        "type": "Entity"
+      },
+      {
+        "id": 28,
+        "original_id": "38e42125-31f4-5cd6-993c-dbbc06a88910",
+        "text": "award",
+        "type": "EntityType"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 21,
+        "target": 3,
+        "type": "acted_during"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 5,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 6,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 13,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 14,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 18,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 19,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 20,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "part_of"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "part_of"
+      },
+      {
+        "source": 3,
+        "target": 6,
+        "type": "part_of"
+      },
+      {
+        "source": 1,
+        "target": 6,
+        "type": "contains"
+      },
+      {
+        "source": 21,
+        "target": 6,
+        "type": "participated_in"
+      },
+      {
+        "source": 3,
+        "target": 7,
+        "type": "fought_on"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      },
+      {
+        "source": 7,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 9,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 17,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 7,
+        "target": 9,
+        "type": "located_in"
+      },
+      {
+        "source": 1,
+        "target": 9,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 10,
+        "type": "start_date"
+      },
+      {
+        "source": 1,
+        "target": 10,
+        "type": "contains"
+      },
+      {
+        "source": 10,
+        "target": 11,
+        "type": "is_a"
+      },
+      {
+        "source": 12,
+        "target": 11,
+        "type": "is_a"
+      },
+      {
+        "source": 15,
+        "target": 11,
+        "type": "is_a"
+      },
+      {
+        "source": 16,
+        "target": 11,
+        "type": "is_a"
+      },
+      {
+        "source": 23,
+        "target": 11,
+        "type": "is_a"
+      },
+      {
+        "source": 24,
+        "target": 11,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 12,
+        "type": "end_date"
+      },
+      {
+        "source": 1,
+        "target": 12,
+        "type": "contains"
+      },
+      {
+        "source": 1,
+        "target": 13,
+        "type": "contains"
+      },
+      {
+        "source": 13,
+        "target": 14,
+        "type": "also_known_as"
+      },
+      {
+        "source": 1,
+        "target": 14,
+        "type": "contains"
+      },
+      {
+        "source": 13,
+        "target": 15,
+        "type": "start_date"
+      },
+      {
+        "source": 1,
+        "target": 15,
+        "type": "contains"
+      },
+      {
+        "source": 13,
+        "target": 16,
+        "type": "end_date"
+      },
+      {
+        "source": 1,
+        "target": 16,
+        "type": "contains"
+      },
+      {
+        "source": 13,
+        "target": 17,
+        "type": "fought_in"
+      },
+      {
+        "source": 1,
+        "target": 17,
+        "type": "contains"
+      },
+      {
+        "source": 13,
+        "target": 18,
+        "type": "culmination_of"
+      },
+      {
+        "source": 1,
+        "target": 18,
+        "type": "contains"
+      },
+      {
+        "source": 18,
+        "target": 19,
+        "type": "part_of"
+      },
+      {
+        "source": 1,
+        "target": 19,
+        "type": "contains"
+      },
+      {
+        "source": 19,
+        "target": 20,
+        "type": "part_of"
+      },
+      {
+        "source": 1,
+        "target": 20,
+        "type": "contains"
+      },
+      {
+        "source": 1,
+        "target": 21,
+        "type": "contains"
+      },
+      {
+        "source": 21,
+        "target": 22,
+        "type": "is_a"
+      },
+      {
+        "source": 21,
+        "target": 23,
+        "type": "birth_date"
+      },
+      {
+        "source": 1,
+        "target": 23,
+        "type": "contains"
+      },
+      {
+        "source": 21,
+        "target": 24,
+        "type": "death_date"
+      },
+      {
+        "source": 1,
+        "target": 24,
+        "type": "contains"
+      },
+      {
+        "source": 21,
+        "target": 25,
+        "type": "member_of"
+      },
+      {
+        "source": 1,
+        "target": 25,
+        "type": "contains"
+      },
+      {
+        "source": 25,
+        "target": 26,
+        "type": "is_a"
+      },
+      {
+        "source": 21,
+        "target": 27,
+        "type": "received"
+      },
+      {
+        "source": 1,
+        "target": 27,
+        "type": "contains"
+      },
+      {
+        "source": 27,
+        "target": 28,
+        "type": "is_a"
+      }
+    ]
+  }
+}

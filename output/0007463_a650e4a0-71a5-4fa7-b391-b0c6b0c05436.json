@@ -1,0 +1,415 @@
+{
+  "dataset": "hover",
+  "id": "a650e4a0-71a5-4fa7-b391-b0c6b0c05436",
+  "split": "train",
+  "claim": "Stephen Smith appears on ESPN First Take alongside HBO boxing commentator Max Kellerman.",
+  "evidencia": "Page: Stephen A. Smith. Sentence: Smith is a commentator on \"ESPN First Take\", where he appears with Max Kellerman and Molly Qerim.\nPage: Max Kellerman. Sentence: Starting on June 24, 2013, Kellerman, Michelle Beadle and Wiley co-hosted the sports comedy talk show \"SportsNation\" on ESPN.",
+  "evidence_text": "Page: Stephen A. Smith. Sentence: Smith is a commentator on \"ESPN First Take\", where he appears with Max Kellerman and Molly Qerim.\nPage: Max Kellerman. Sentence: Starting on June 24, 2013, Kellerman, Michelle Beadle and Wiley co-hosted the sports comedy talk show \"SportsNation\" on ESPN.",
+  "label": "SUPPORTED",
+  "num_hops": 2,
+  "hover_metadata": {
+    "supporting_facts": [
+      [
+        "Stephen A. Smith",
+        1
+      ],
+      [
+        "Max Kellerman",
+        2
+      ]
+    ],
+    "num_hops": 2,
+    "evidence_annotation_id": [
+      0
+    ],
+    "evidence_id": [
+      "Stephen A. Smith::sentence::1",
+      "Max Kellerman::sentence::2"
+    ],
+    "evidence_wiki_url": [
+      "https://en.wikipedia.org/wiki/Stephen_A._Smith",
+      "https://en.wikipedia.org/wiki/Max_Kellerman"
+    ],
+    "evidence_sentence_id": [
+      "Stephen A. Smith::sentence::1",
+      "Max Kellerman::sentence::2"
+    ]
+  },
+  "grafo_claim": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "ffb646d2-2f01-56da-8190-069f76bf6469",
+        "text": "This chunk is about:\n- People: Stephen Smith, Max Kellerman\n- Organizations: ESPN, HBO\n- Programs: First Take\n- Roles: boxing commentator\n\nFacts:\n- Stephen Smith appears on ESPN's program First Take.\n- Max Kellerman appears alongside Stephen Smith on ESPN's program First Take.\n- Max Kellerman is an HBO boxing commentator.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "70eafa6b-031c-5087-ac51-542cda3fcea9",
+        "text": "Stephen Smith appears on ESPN First Take alongside HBO boxing commentator Max Kellerman.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "4167b58c-e10b-52ff-8fa7-33e72025aa2f",
+        "text": "text_6bab1490ca2ee3be91c8f49ffb6a9418",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "8143d21e-ecf9-53fb-9aad-e713a8636d28",
+        "text": "stephen smith",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "ffd7224c-7539-5e51-9734-12dae3a0e056",
+        "text": "espn first take",
+        "type": "Entity"
+      },
+      {
+        "id": 5,
+        "original_id": "388f60fb-220d-55e8-ae9c-3ac93cead308",
+        "text": "organization",
+        "type": "EntityType"
+      },
+      {
+        "id": 6,
+        "original_id": "201dd6b2-185a-50de-8fed-a28f21c7d0c6",
+        "text": "max kellerman",
+        "type": "Entity"
+      },
+      {
+        "id": 7,
+        "original_id": "82d7649c-d136-5039-b19b-8078b6c2e85f",
+        "text": "hbo",
+        "type": "Entity"
+      },
+      {
+        "id": 8,
+        "original_id": "99a82eec-bb35-5bb5-9ed2-e73fc7a756de",
+        "text": "person",
+        "type": "EntityType"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "appears_on"
+      },
+      {
+        "source": 1,
+        "target": 4,
+        "type": "contains"
+      },
+      {
+        "source": 4,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 7,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 6,
+        "type": "appears_alongside"
+      },
+      {
+        "source": 1,
+        "target": 6,
+        "type": "contains"
+      },
+      {
+        "source": 6,
+        "target": 7,
+        "type": "commentates_for"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      },
+      {
+        "source": 6,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 8,
+        "type": "is_a"
+      }
+    ]
+  },
+  "grafo_evidencia": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "27381d2e-4811-54b3-bf5b-2cd5ba84207c",
+        "text": "This chunk is about:\n- People: Stephen A. Smith, Max Kellerman, Michelle Beadle, Wiley, Molly Qerim\n- Organizations: ESPN\n- Products: ESPN First Take, SportsNation\n\nFacts:\n- Starting on June 24, 2013, Max Kellerman, Michelle Beadle, and Wiley co-hosted the ESPN sports comedy talk show \"SportsNation.\"\n- Stephen A. Smith is a commentator on \"ESPN First Take,\" where he appears with Max Kellerman and Molly Qerim.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "bec7e7f3-f77e-50d4-a0da-abd2e2ca35b1",
+        "text": "Page: Stephen A. Smith. Sentence: Smith is a commentator on \"ESPN First Take\", where he appears with Max Kellerman and Molly Qerim.\nPage: Max Kellerman. Sentence: Starting on June 24, 2013, Kellerman, Michelle Beadle and Wiley co-hosted the sports comedy talk show \"SportsNation\" on ESPN.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "3103a62b-3402-5478-a1fa-1142234fd036",
+        "text": "text_b4683a3c7db65a4502085f8fc3a09a0b",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "17b6e0ae-4e35-58e0-b387-ba54b935380a",
+        "text": "stephen a. smith",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "ffd7224c-7539-5e51-9734-12dae3a0e056",
+        "text": "espn first take",
+        "type": "Entity"
+      },
+      {
+        "id": 5,
+        "original_id": "5263a535-1b4b-5925-be3e-310d03cd303b",
+        "text": "work",
+        "type": "EntityType"
+      },
+      {
+        "id": 6,
+        "original_id": "201dd6b2-185a-50de-8fed-a28f21c7d0c6",
+        "text": "max kellerman",
+        "type": "Entity"
+      },
+      {
+        "id": 7,
+        "original_id": "dcefc99b-4045-5609-a5b8-09a887aecc7e",
+        "text": "sportsnation",
+        "type": "Entity"
+      },
+      {
+        "id": 8,
+        "original_id": "4d68e3aa-d630-557e-82f8-e69c40e12dc3",
+        "text": "espn",
+        "type": "Entity"
+      },
+      {
+        "id": 9,
+        "original_id": "388f60fb-220d-55e8-ae9c-3ac93cead308",
+        "text": "organization",
+        "type": "EntityType"
+      },
+      {
+        "id": 10,
+        "original_id": "ec462690-0cc2-5312-9789-5a39d5c59c14",
+        "text": "2013-06-24",
+        "type": "Entity"
+      },
+      {
+        "id": 11,
+        "original_id": "b19433ae-558c-5aaf-95ac-6231f2a4be0e",
+        "text": "date",
+        "type": "EntityType"
+      },
+      {
+        "id": 12,
+        "original_id": "99a82eec-bb35-5bb5-9ed2-e73fc7a756de",
+        "text": "person",
+        "type": "EntityType"
+      },
+      {
+        "id": 13,
+        "original_id": "87884d33-9885-5849-971a-ab20be122223",
+        "text": "molly qerim",
+        "type": "Entity"
+      },
+      {
+        "id": 14,
+        "original_id": "14cd442e-070c-5fa1-bf71-bcd0e2b56515",
+        "text": "michelle beadle",
+        "type": "Entity"
+      },
+      {
+        "id": 15,
+        "original_id": "bbfde0e7-bda3-592e-a275-25efc639949f",
+        "text": "wiley",
+        "type": "Entity"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "commentator_on"
+      },
+      {
+        "source": 1,
+        "target": 4,
+        "type": "contains"
+      },
+      {
+        "source": 4,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 7,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 6,
+        "type": "appears_with"
+      },
+      {
+        "source": 1,
+        "target": 6,
+        "type": "contains"
+      },
+      {
+        "source": 6,
+        "target": 7,
+        "type": "co_hosted"
+      },
+      {
+        "source": 14,
+        "target": 7,
+        "type": "co_hosted"
+      },
+      {
+        "source": 15,
+        "target": 7,
+        "type": "co_hosted"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      },
+      {
+        "source": 7,
+        "target": 8,
+        "type": "aired_on"
+      },
+      {
+        "source": 1,
+        "target": 8,
+        "type": "contains"
+      },
+      {
+        "source": 8,
+        "target": 9,
+        "type": "is_a"
+      },
+      {
+        "source": 6,
+        "target": 10,
+        "type": "started_on"
+      },
+      {
+        "source": 1,
+        "target": 10,
+        "type": "contains"
+      },
+      {
+        "source": 14,
+        "target": 10,
+        "type": "started_on"
+      },
+      {
+        "source": 15,
+        "target": 10,
+        "type": "started_on"
+      },
+      {
+        "source": 10,
+        "target": 11,
+        "type": "is_a"
+      },
+      {
+        "source": 6,
+        "target": 12,
+        "type": "is_a"
+      },
+      {
+        "source": 13,
+        "target": 12,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 12,
+        "type": "is_a"
+      },
+      {
+        "source": 14,
+        "target": 12,
+        "type": "is_a"
+      },
+      {
+        "source": 15,
+        "target": 12,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 13,
+        "type": "appears_with"
+      },
+      {
+        "source": 1,
+        "target": 13,
+        "type": "contains"
+      },
+      {
+        "source": 1,
+        "target": 14,
+        "type": "contains"
+      },
+      {
+        "source": 1,
+        "target": 15,
+        "type": "contains"
+      }
+    ]
+  }
+}

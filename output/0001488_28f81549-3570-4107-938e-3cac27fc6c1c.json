@@ -1,0 +1,572 @@
+{
+  "dataset": "hover",
+  "id": "28f81549-3570-4107-938e-3cac27fc6c1c",
+  "split": "train",
+  "claim": "The film, with \"Fortuosity\" as the first song, was created before another film. The other film was created by the studio ImageMovers.",
+  "evidencia": "Page: The Happiest Millionaire. Sentence: The Happiest Millionaire is a 1967 musical film starring Fred MacMurray and based upon the true story of Philadelphia millionaire Anthony J. Drexel Biddle.\nPage: Mars Needs Moms. Sentence: Mars Needs Moms is a 2011 American computer-animated film based on the Berkeley Breathed book of the same title.\nPage: Fortuosity. Sentence: \"Fortuosity\" is the first song in the 1967 motion picture The Happiest Millionaire.\nPage: ImageMovers. Sentence: From 2007 to 2010, The Walt Disney Company and ImageMovers ran a joint animation facility, ImageMovers Digital, which produced two performance captured animated films, \"A Christmas Carol\" and \"Mars Needs Moms\", for The Walt Disney Studios.",
+  "evidence_text": "Page: The Happiest Millionaire. Sentence: The Happiest Millionaire is a 1967 musical film starring Fred MacMurray and based upon the true story of Philadelphia millionaire Anthony J. Drexel Biddle.\nPage: Mars Needs Moms. Sentence: Mars Needs Moms is a 2011 American computer-animated film based on the Berkeley Breathed book of the same title.\nPage: Fortuosity. Sentence: \"Fortuosity\" is the first song in the 1967 motion picture The Happiest Millionaire.\nPage: ImageMovers. Sentence: From 2007 to 2010, The Walt Disney Company and ImageMovers ran a joint animation facility, ImageMovers Digital, which produced two performance captured animated films, \"A Christmas Carol\" and \"Mars Needs Moms\", for The Walt Disney Studios.",
+  "label": "SUPPORTED",
+  "num_hops": 4,
+  "hover_metadata": {
+    "supporting_facts": [
+      [
+        "The Happiest Millionaire",
+        0
+      ],
+      [
+        "Mars Needs Moms",
+        0
+      ],
+      [
+        "Fortuosity",
+        0
+      ],
+      [
+        "ImageMovers",
+        2
+      ]
+    ],
+    "num_hops": 4,
+    "evidence_annotation_id": [
+      0
+    ],
+    "evidence_id": [
+      "The Happiest Millionaire::sentence::0",
+      "Mars Needs Moms::sentence::0",
+      "Fortuosity::sentence::0",
+      "ImageMovers::sentence::2"
+    ],
+    "evidence_wiki_url": [
+      "https://en.wikipedia.org/wiki/The_Happiest_Millionaire",
+      "https://en.wikipedia.org/wiki/Mars_Needs_Moms",
+      "https://en.wikipedia.org/wiki/Fortuosity",
+      "https://en.wikipedia.org/wiki/ImageMovers"
+    ],
+    "evidence_sentence_id": [
+      "The Happiest Millionaire::sentence::0",
+      "Mars Needs Moms::sentence::0",
+      "Fortuosity::sentence::0",
+      "ImageMovers::sentence::2"
+    ]
+  },
+  "grafo_claim": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "c2cd7350-a442-567e-9631-29701d90d05b",
+        "text": "This chunk is about:\n- Products: The film with \"Fortuosity\" as its first song, the other film\n- Companies: ImageMovers\n- Songs: \"Fortuosity\"\n\nFacts:\n- A film has \"Fortuosity\" as its first song.\n- Another film was created after the film with \"Fortuosity\" as its first song.\n- ImageMovers created the other film.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "a5163da6-70af-5704-b226-f8dc7ccfd32d",
+        "text": "The film, with \"Fortuosity\" as the first song, was created before another film. The other film was created by the studio ImageMovers.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "8aec52c0-a841-5dce-8610-16b3d09b1bb8",
+        "text": "text_2f02c869aef9f2122ef2734bcb9cdbe6",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "d1b97610-7ad2-52dd-9014-6a320258b7b9",
+        "text": "fortuosity",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "6056b392-f12e-5150-8c0b-ac7545dc2fdf",
+        "text": "song",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "deff29b0-e1b5-5d04-82a7-fd6280b2932a",
+        "text": "unnamed film with fortuosity as the first song",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "f4f11b1a-48fa-57d0-8769-e5ac41e99569",
+        "text": "other film created by imagemovers",
+        "type": "Entity"
+      },
+      {
+        "id": 7,
+        "original_id": "85a20961-c496-59cc-a3f3-fe7d11c108ac",
+        "text": "imagemovers",
+        "type": "Entity"
+      },
+      {
+        "id": 8,
+        "original_id": "388f60fb-220d-55e8-ae9c-3ac93cead308",
+        "text": "organization",
+        "type": "EntityType"
+      },
+      {
+        "id": 9,
+        "original_id": "d320c8df-fd51-56e6-b577-e01a688fe6fc",
+        "text": "film",
+        "type": "EntityType"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 3,
+        "type": "has_first_song"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "created_before"
+      },
+      {
+        "source": 1,
+        "target": 6,
+        "type": "contains"
+      },
+      {
+        "source": 6,
+        "target": 7,
+        "type": "created_by"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      },
+      {
+        "source": 7,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 6,
+        "target": 9,
+        "type": "is_a"
+      },
+      {
+        "source": 5,
+        "target": 9,
+        "type": "is_a"
+      }
+    ]
+  },
+  "grafo_evidencia": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "978b6b1c-ee92-504b-88d1-370adfc7d570",
+        "text": "This chunk is about:\n- Products: The Happiest Millionaire, Mars Needs Moms, Fortuosity, A Christmas Carol\n- Companies: The Walt Disney Company, ImageMovers, ImageMovers Digital, The Walt Disney Studios\n- People: Fred MacMurray, Anthony J. Drexel Biddle, Berkeley Breathed\n\nFacts:\n- The Happiest Millionaire is a 1967 musical film starring Fred MacMurray and based on the true story of Anthony J. Drexel Biddle, a Philadelphia millionaire.\n- Fortuosity is the first song in the 1967 motion picture The Happiest Millionaire.\n- From 2007 to 2010, The Walt Disney Company and ImageMovers operated the joint animation facility ImageMovers Digital.\n- ImageMovers Digital produced the performance-captured animated films A Christmas Carol and Mars Needs Moms for The Walt Disney Studios.\n- Mars Needs Moms is a 2011 American computer-animated film based on Berkeley Breathed's book of the same title.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "01f81f4e-9963-57dd-86bc-a292b037e464",
+        "text": "Page: The Happiest Millionaire. Sentence: The Happiest Millionaire is a 1967 musical film starring Fred MacMurray and based upon the true story of Philadelphia millionaire Anthony J. Drexel Biddle.\nPage: Mars Needs Moms. Sentence: Mars Needs Moms is a 2011 American computer-animated film based on the Berkeley Breathed book of the same title.\nPage: Fortuosity. Sentence: \"Fortuosity\" is the first song in the 1967 motion picture The Happiest Millionaire.\nPage: ImageMovers. Sentence: From 2007 to 2010, The Walt Disney Company and ImageMovers ran a joint animation facility, ImageMovers Digital, which produced two performance captured animated films, \"A Christmas Carol\" and \"Mars Needs Moms\", for The Walt Disney Studios.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "a2432718-117e-5eb7-acbb-cfe74d65a138",
+        "text": "text_0fb315465c8c90bc21be347da4187698",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "fcfd11d0-9409-5e35-898c-b964fab58d1b",
+        "text": "the happiest millionaire",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "f9e4a9ec-682c-5341-862a-1783ba768a49",
+        "text": "1967",
+        "type": "Entity"
+      },
+      {
+        "id": 5,
+        "original_id": "b19433ae-558c-5aaf-95ac-6231f2a4be0e",
+        "text": "date",
+        "type": "EntityType"
+      },
+      {
+        "id": 6,
+        "original_id": "5462dab2-18c2-5442-89e2-9086a903c1c5",
+        "text": "fred macmurray",
+        "type": "Entity"
+      },
+      {
+        "id": 7,
+        "original_id": "99a82eec-bb35-5bb5-9ed2-e73fc7a756de",
+        "text": "person",
+        "type": "EntityType"
+      },
+      {
+        "id": 8,
+        "original_id": "adf6dfc7-8b22-5f66-85fa-93db592e3c71",
+        "text": "anthony j. drexel biddle",
+        "type": "Entity"
+      },
+      {
+        "id": 9,
+        "original_id": "5263a535-1b4b-5925-be3e-310d03cd303b",
+        "text": "work",
+        "type": "EntityType"
+      },
+      {
+        "id": 10,
+        "original_id": "1d780d35-82f3-5754-b986-63dddb513390",
+        "text": "mars needs moms",
+        "type": "Entity"
+      },
+      {
+        "id": 11,
+        "original_id": "f54e52eb-db61-5cc3-aa32-5c78e42891d1",
+        "text": "2011",
+        "type": "Entity"
+      },
+      {
+        "id": 12,
+        "original_id": "c45cf203-bb05-522e-81a6-f9172c97c7ef",
+        "text": "mars needs moms",
+        "type": "Entity"
+      },
+      {
+        "id": 13,
+        "original_id": "cfdce44e-8efa-5376-bc5e-ef527283834d",
+        "text": "berkeley breathed",
+        "type": "Entity"
+      },
+      {
+        "id": 14,
+        "original_id": "d1b97610-7ad2-52dd-9014-6a320258b7b9",
+        "text": "fortuosity",
+        "type": "Entity"
+      },
+      {
+        "id": 15,
+        "original_id": "85a20961-c496-59cc-a3f3-fe7d11c108ac",
+        "text": "imagemovers",
+        "type": "Entity"
+      },
+      {
+        "id": 16,
+        "original_id": "aa17d112-4b88-545e-8559-f3e67afbc42c",
+        "text": "imagemovers digital",
+        "type": "Entity"
+      },
+      {
+        "id": 17,
+        "original_id": "c22ffe02-635b-5be0-94d3-f307bea262e3",
+        "text": "2007",
+        "type": "Entity"
+      },
+      {
+        "id": 18,
+        "original_id": "cb1dc1af-5253-5fa4-877e-246a7629f489",
+        "text": "2010",
+        "type": "Entity"
+      },
+      {
+        "id": 19,
+        "original_id": "433e035a-6c21-5766-b15e-9d37f78a1259",
+        "text": "a christmas carol",
+        "type": "Entity"
+      },
+      {
+        "id": 20,
+        "original_id": "8b32a3d4-c4f9-503c-958b-f445070b339d",
+        "text": "the walt disney studios",
+        "type": "Entity"
+      },
+      {
+        "id": 21,
+        "original_id": "388f60fb-220d-55e8-ae9c-3ac93cead308",
+        "text": "organization",
+        "type": "EntityType"
+      },
+      {
+        "id": 22,
+        "original_id": "4dc9e186-8d4f-56f8-af4a-ec25bf38f04f",
+        "text": "the walt disney company",
+        "type": "Entity"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 14,
+        "target": 3,
+        "type": "first_song_in"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "released_in"
+      },
+      {
+        "source": 1,
+        "target": 4,
+        "type": "contains"
+      },
+      {
+        "source": 14,
+        "target": 4,
+        "type": "appears_in_motion_picture_from"
+      },
+      {
+        "source": 4,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 11,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 17,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 18,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 6,
+        "type": "stars"
+      },
+      {
+        "source": 1,
+        "target": 6,
+        "type": "contains"
+      },
+      {
+        "source": 6,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 8,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 13,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 8,
+        "type": "based_on_true_story_of"
+      },
+      {
+        "source": 1,
+        "target": 8,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 9,
+        "type": "is_a"
+      },
+      {
+        "source": 12,
+        "target": 9,
+        "type": "is_a"
+      },
+      {
+        "source": 10,
+        "target": 9,
+        "type": "is_a"
+      },
+      {
+        "source": 14,
+        "target": 9,
+        "type": "is_a"
+      },
+      {
+        "source": 19,
+        "target": 9,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 10,
+        "type": "contains"
+      },
+      {
+        "source": 16,
+        "target": 10,
+        "type": "produced"
+      },
+      {
+        "source": 10,
+        "target": 11,
+        "type": "released_in"
+      },
+      {
+        "source": 1,
+        "target": 11,
+        "type": "contains"
+      },
+      {
+        "source": 10,
+        "target": 12,
+        "type": "based_on"
+      },
+      {
+        "source": 1,
+        "target": 12,
+        "type": "contains"
+      },
+      {
+        "source": 12,
+        "target": 13,
+        "type": "written_by"
+      },
+      {
+        "source": 1,
+        "target": 13,
+        "type": "contains"
+      },
+      {
+        "source": 1,
+        "target": 14,
+        "type": "contains"
+      },
+      {
+        "source": 1,
+        "target": 15,
+        "type": "contains"
+      },
+      {
+        "source": 15,
+        "target": 16,
+        "type": "ran_jointly"
+      },
+      {
+        "source": 22,
+        "target": 16,
+        "type": "ran_jointly"
+      },
+      {
+        "source": 1,
+        "target": 16,
+        "type": "contains"
+      },
+      {
+        "source": 16,
+        "target": 17,
+        "type": "started_in"
+      },
+      {
+        "source": 1,
+        "target": 17,
+        "type": "contains"
+      },
+      {
+        "source": 16,
+        "target": 18,
+        "type": "ended_in"
+      },
+      {
+        "source": 1,
+        "target": 18,
+        "type": "contains"
+      },
+      {
+        "source": 16,
+        "target": 19,
+        "type": "produced"
+      },
+      {
+        "source": 1,
+        "target": 19,
+        "type": "contains"
+      },
+      {
+        "source": 16,
+        "target": 20,
+        "type": "produced_for"
+      },
+      {
+        "source": 1,
+        "target": 20,
+        "type": "contains"
+      },
+      {
+        "source": 20,
+        "target": 21,
+        "type": "is_a"
+      },
+      {
+        "source": 16,
+        "target": 21,
+        "type": "is_a"
+      },
+      {
+        "source": 15,
+        "target": 21,
+        "type": "is_a"
+      },
+      {
+        "source": 22,
+        "target": 21,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 22,
+        "type": "contains"
+      }
+    ]
+  }
+}

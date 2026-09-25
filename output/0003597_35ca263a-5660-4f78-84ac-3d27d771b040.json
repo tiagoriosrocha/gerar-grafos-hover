@@ -1,0 +1,538 @@
+{
+  "dataset": "hover",
+  "id": "35ca263a-5660-4f78-84ac-3d27d771b040",
+  "split": "train",
+  "claim": "The actor that uses the stage name \"Li Ming\" starred with Donnie Yen in a 2005 Hong Kong film directed by Tsui Hark.",
+  "evidencia": "Page: Seven Swords. Sentence: Seven Swords is a 2005 Hong Kong \"wuxia\" film produced and directed by Tsui Hark, starring Leon Lai, Donnie Yen, Charlie Yeung, Sun Honglei, Lu Yi and Kim So-yeon.\nPage: Leon Lai. Sentence: He uses the stage name \"Li Ming\" or \"Lai Ming\" which literally means \"dawn.\"",
+  "evidence_text": "Page: Seven Swords. Sentence: Seven Swords is a 2005 Hong Kong \"wuxia\" film produced and directed by Tsui Hark, starring Leon Lai, Donnie Yen, Charlie Yeung, Sun Honglei, Lu Yi and Kim So-yeon.\nPage: Leon Lai. Sentence: He uses the stage name \"Li Ming\" or \"Lai Ming\" which literally means \"dawn.\"",
+  "label": "SUPPORTED",
+  "num_hops": 2,
+  "hover_metadata": {
+    "supporting_facts": [
+      [
+        "Seven Swords",
+        0
+      ],
+      [
+        "Leon Lai",
+        2
+      ]
+    ],
+    "num_hops": 2,
+    "evidence_annotation_id": [
+      0
+    ],
+    "evidence_id": [
+      "Seven Swords::sentence::0",
+      "Leon Lai::sentence::2"
+    ],
+    "evidence_wiki_url": [
+      "https://en.wikipedia.org/wiki/Seven_Swords",
+      "https://en.wikipedia.org/wiki/Leon_Lai"
+    ],
+    "evidence_sentence_id": [
+      "Seven Swords::sentence::0",
+      "Leon Lai::sentence::2"
+    ]
+  },
+  "grafo_claim": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "a50b1823-5812-5d04-8d61-6aab6b062698",
+        "text": "This chunk is about:\n- People: Li Ming, Donnie Yen, Tsui Hark\n- Works: a 2005 Hong Kong film\n\nFacts:\n- Tsui Hark directed a 2005 Hong Kong film that starred Donnie Yen.\n- The actor using the stage name Li Ming starred with Donnie Yen in that 2005 Hong Kong film directed by Tsui Hark.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "4208d043-6b8f-5346-89c0-2d5ad0695094",
+        "text": "The actor that uses the stage name \"Li Ming\" starred with Donnie Yen in a 2005 Hong Kong film directed by Tsui Hark.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "05b577ad-3c2f-5ed0-9ac1-f70118cefd63",
+        "text": "text_bd72f69ab00223ef22bda537a443db9b",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "8e148efd-3e62-5a34-b57a-1e321ec72adc",
+        "text": "li ming",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "a18c2314-3b58-5d41-82b8-1ae232b7291f",
+        "text": "hong kong film",
+        "type": "Entity"
+      },
+      {
+        "id": 5,
+        "original_id": "c134b9c3-6b55-5a5a-b8ca-c2f1a633a648",
+        "text": "2005",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "b19433ae-558c-5aaf-95ac-6231f2a4be0e",
+        "text": "date",
+        "type": "EntityType"
+      },
+      {
+        "id": 7,
+        "original_id": "5263a535-1b4b-5925-be3e-310d03cd303b",
+        "text": "work",
+        "type": "EntityType"
+      },
+      {
+        "id": 8,
+        "original_id": "0dd9dde2-59f9-5353-a588-9e1ee8e35de7",
+        "text": "donnie yen",
+        "type": "Entity"
+      },
+      {
+        "id": 9,
+        "original_id": "99a82eec-bb35-5bb5-9ed2-e73fc7a756de",
+        "text": "person",
+        "type": "EntityType"
+      },
+      {
+        "id": 10,
+        "original_id": "23c6a0e1-98b0-5992-9d7d-b654ca616ea7",
+        "text": "tsui hark",
+        "type": "Entity"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "starred_in"
+      },
+      {
+        "source": 8,
+        "target": 4,
+        "type": "starred_in"
+      },
+      {
+        "source": 10,
+        "target": 4,
+        "type": "directed"
+      },
+      {
+        "source": 1,
+        "target": 4,
+        "type": "contains"
+      },
+      {
+        "source": 4,
+        "target": 5,
+        "type": "released_in"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 4,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 8,
+        "type": "starred_with"
+      },
+      {
+        "source": 1,
+        "target": 8,
+        "type": "contains"
+      },
+      {
+        "source": 8,
+        "target": 9,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 9,
+        "type": "is_a"
+      },
+      {
+        "source": 10,
+        "target": 9,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 10,
+        "type": "contains"
+      }
+    ]
+  },
+  "grafo_evidencia": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "a9cea9a4-ae40-5c13-92e8-413438797f27",
+        "text": "This chunk is about:\n- Products: Seven Swords\n- People: Tsui Hark, Leon Lai, Donnie Yen, Charlie Yeung, Sun Honglei, Lu Yi, Kim So-yeon\n- Topics: wuxia, stage names\n\nFacts:\n- Seven Swords is a 2005 Hong Kong wuxia film.\n- Seven Swords was produced and directed by Tsui Hark.\n- Seven Swords stars Leon Lai, Donnie Yen, Charlie Yeung, Sun Honglei, Lu Yi, and Kim So-yeon.\n- Leon Lai uses the stage name Li Ming or Lai Ming.\n- Leon Lai's stage name Li Ming or Lai Ming literally means dawn.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "11b97c93-c1b3-5c2b-9a9c-4f4ad2ffc765",
+        "text": "Page: Seven Swords. Sentence: Seven Swords is a 2005 Hong Kong \"wuxia\" film produced and directed by Tsui Hark, starring Leon Lai, Donnie Yen, Charlie Yeung, Sun Honglei, Lu Yi and Kim So-yeon.\nPage: Leon Lai. Sentence: He uses the stage name \"Li Ming\" or \"Lai Ming\" which literally means \"dawn.\"",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "e8a52df0-df29-59a4-9285-0c20ce16f39d",
+        "text": "text_31feec0e4d36b5e132a2a52e8dbfccd3",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "abaf40bf-d034-5318-8976-baab15e6daaf",
+        "text": "seven swords",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "c134b9c3-6b55-5a5a-b8ca-c2f1a633a648",
+        "text": "2005",
+        "type": "Entity"
+      },
+      {
+        "id": 5,
+        "original_id": "b19433ae-558c-5aaf-95ac-6231f2a4be0e",
+        "text": "date",
+        "type": "EntityType"
+      },
+      {
+        "id": 6,
+        "original_id": "2f1ebd4c-24ba-5453-92b3-7c21bf3f65a8",
+        "text": "hong kong",
+        "type": "Entity"
+      },
+      {
+        "id": 7,
+        "original_id": "5f394058-b2a0-5ba8-8466-ba2a18cfcf4e",
+        "text": "place",
+        "type": "EntityType"
+      },
+      {
+        "id": 8,
+        "original_id": "23c6a0e1-98b0-5992-9d7d-b654ca616ea7",
+        "text": "tsui hark",
+        "type": "Entity"
+      },
+      {
+        "id": 9,
+        "original_id": "99a82eec-bb35-5bb5-9ed2-e73fc7a756de",
+        "text": "person",
+        "type": "EntityType"
+      },
+      {
+        "id": 10,
+        "original_id": "5263a535-1b4b-5925-be3e-310d03cd303b",
+        "text": "work",
+        "type": "EntityType"
+      },
+      {
+        "id": 11,
+        "original_id": "d9947bca-4764-5ac1-9030-bb0b0b135f59",
+        "text": "leon lai",
+        "type": "Entity"
+      },
+      {
+        "id": 12,
+        "original_id": "8e148efd-3e62-5a34-b57a-1e321ec72adc",
+        "text": "li ming",
+        "type": "Entity"
+      },
+      {
+        "id": 13,
+        "original_id": "b5cf6316-87ae-545d-be68-e275d2a5bb41",
+        "text": "dawn",
+        "type": "Entity"
+      },
+      {
+        "id": 14,
+        "original_id": "d2a381fa-3658-5ca6-ada9-2109cfc9331d",
+        "text": "concept",
+        "type": "EntityType"
+      },
+      {
+        "id": 15,
+        "original_id": "39575085-0710-527d-bd54-019de7b00429",
+        "text": "name",
+        "type": "EntityType"
+      },
+      {
+        "id": 16,
+        "original_id": "830d7333-47c2-5012-a44a-09e90bb67f11",
+        "text": "lai ming",
+        "type": "Entity"
+      },
+      {
+        "id": 17,
+        "original_id": "0dd9dde2-59f9-5353-a588-9e1ee8e35de7",
+        "text": "donnie yen",
+        "type": "Entity"
+      },
+      {
+        "id": 18,
+        "original_id": "910cee16-1368-56b4-b7e7-90f600ac61f2",
+        "text": "charlie yeung",
+        "type": "Entity"
+      },
+      {
+        "id": 19,
+        "original_id": "a02c418b-f805-5e2a-92ad-7259dcca93e4",
+        "text": "sun honglei",
+        "type": "Entity"
+      },
+      {
+        "id": 20,
+        "original_id": "9e144489-0361-5ceb-9bd3-56fef3095260",
+        "text": "lu yi",
+        "type": "Entity"
+      },
+      {
+        "id": 21,
+        "original_id": "a2eaf84a-f417-50ed-9b30-0dd83b766b3c",
+        "text": "kim so-yeon",
+        "type": "Entity"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 11,
+        "target": 3,
+        "type": "starred_in"
+      },
+      {
+        "source": 17,
+        "target": 3,
+        "type": "starred_in"
+      },
+      {
+        "source": 18,
+        "target": 3,
+        "type": "starred_in"
+      },
+      {
+        "source": 19,
+        "target": 3,
+        "type": "starred_in"
+      },
+      {
+        "source": 20,
+        "target": 3,
+        "type": "starred_in"
+      },
+      {
+        "source": 21,
+        "target": 3,
+        "type": "starred_in"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "released_in"
+      },
+      {
+        "source": 1,
+        "target": 4,
+        "type": "contains"
+      },
+      {
+        "source": 4,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 6,
+        "type": "associated_with_place"
+      },
+      {
+        "source": 1,
+        "target": 6,
+        "type": "contains"
+      },
+      {
+        "source": 6,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 8,
+        "type": "produced_by"
+      },
+      {
+        "source": 1,
+        "target": 8,
+        "type": "contains"
+      },
+      {
+        "source": 8,
+        "target": 9,
+        "type": "is_a"
+      },
+      {
+        "source": 11,
+        "target": 9,
+        "type": "is_a"
+      },
+      {
+        "source": 17,
+        "target": 9,
+        "type": "is_a"
+      },
+      {
+        "source": 18,
+        "target": 9,
+        "type": "is_a"
+      },
+      {
+        "source": 19,
+        "target": 9,
+        "type": "is_a"
+      },
+      {
+        "source": 20,
+        "target": 9,
+        "type": "is_a"
+      },
+      {
+        "source": 21,
+        "target": 9,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 10,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 11,
+        "type": "contains"
+      },
+      {
+        "source": 11,
+        "target": 12,
+        "type": "uses_stage_name"
+      },
+      {
+        "source": 1,
+        "target": 12,
+        "type": "contains"
+      },
+      {
+        "source": 12,
+        "target": 13,
+        "type": "literally_means"
+      },
+      {
+        "source": 16,
+        "target": 13,
+        "type": "literally_means"
+      },
+      {
+        "source": 1,
+        "target": 13,
+        "type": "contains"
+      },
+      {
+        "source": 13,
+        "target": 14,
+        "type": "is_a"
+      },
+      {
+        "source": 12,
+        "target": 15,
+        "type": "is_a"
+      },
+      {
+        "source": 16,
+        "target": 15,
+        "type": "is_a"
+      },
+      {
+        "source": 11,
+        "target": 16,
+        "type": "uses_stage_name"
+      },
+      {
+        "source": 1,
+        "target": 16,
+        "type": "contains"
+      },
+      {
+        "source": 1,
+        "target": 17,
+        "type": "contains"
+      },
+      {
+        "source": 1,
+        "target": 18,
+        "type": "contains"
+      },
+      {
+        "source": 1,
+        "target": 19,
+        "type": "contains"
+      },
+      {
+        "source": 1,
+        "target": 20,
+        "type": "contains"
+      },
+      {
+        "source": 1,
+        "target": 21,
+        "type": "contains"
+      }
+    ]
+  }
+}

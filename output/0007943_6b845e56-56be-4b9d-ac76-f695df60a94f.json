@@ -1,0 +1,413 @@
+{
+  "dataset": "hover",
+  "id": "6b845e56-56be-4b9d-ac76-f695df60a94f",
+  "split": "train",
+  "claim": "Melanie Hamilton Wilkes is a fictional character first appearing in a book whose story is set during the American Civil War.",
+  "evidencia": "Page: Melanie Hamilton. Sentence: Melanie Hamilton Wilkes is a fictional character first appearing in the novel \"Gone with the Wind\" by Margaret Mitchell.\nPage: Gone with the Wind (novel). Sentence: Gone with the Wind is a novel by American writer Margaret Mitchell, first published in 1936.\nPage: Gone with the Wind (novel). Sentence: The story is set in Clayton County and Atlanta, both in Georgia, during the American Civil War and Reconstruction Era.",
+  "evidence_text": "Page: Melanie Hamilton. Sentence: Melanie Hamilton Wilkes is a fictional character first appearing in the novel \"Gone with the Wind\" by Margaret Mitchell.\nPage: Gone with the Wind (novel). Sentence: Gone with the Wind is a novel by American writer Margaret Mitchell, first published in 1936.\nPage: Gone with the Wind (novel). Sentence: The story is set in Clayton County and Atlanta, both in Georgia, during the American Civil War and Reconstruction Era.",
+  "label": "SUPPORTED",
+  "num_hops": 2,
+  "hover_metadata": {
+    "supporting_facts": [
+      [
+        "Melanie Hamilton",
+        0
+      ],
+      [
+        "Gone with the Wind (novel)",
+        0
+      ],
+      [
+        "Gone with the Wind (novel)",
+        1
+      ]
+    ],
+    "num_hops": 2,
+    "evidence_annotation_id": [
+      0
+    ],
+    "evidence_id": [
+      "Melanie Hamilton::sentence::0",
+      "Gone with the Wind (novel)::sentence::0",
+      "Gone with the Wind (novel)::sentence::1"
+    ],
+    "evidence_wiki_url": [
+      "https://en.wikipedia.org/wiki/Melanie_Hamilton",
+      "https://en.wikipedia.org/wiki/Gone_with_the_Wind_%28novel%29"
+    ],
+    "evidence_sentence_id": [
+      "Melanie Hamilton::sentence::0",
+      "Gone with the Wind (novel)::sentence::0",
+      "Gone with the Wind (novel)::sentence::1"
+    ]
+  },
+  "grafo_claim": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "803b8e89-0b30-551f-b0bb-f9981af8914b",
+        "text": "This chunk is about:\n- People: Melanie Hamilton Wilkes\n- Works: a book\n- Events: the American Civil War\n\nFacts:\n- Melanie Hamilton Wilkes is a fictional character.\n- Melanie Hamilton Wilkes first appears in a book.\n- The story of that book is set during the American Civil War.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "f629c067-74c2-5348-9952-402ae7ca304d",
+        "text": "Melanie Hamilton Wilkes is a fictional character first appearing in a book whose story is set during the American Civil War.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "2f638a74-1bbb-5ef8-ad98-facb3fb45a34",
+        "text": "text_4d7650dd0e7c535a3337ccce1c7c8ef6",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "f370d804-5545-51b3-9632-d7d09bcd23e0",
+        "text": "melanie hamilton wilkes",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "d3db161f-3fd9-5366-919b-ad9f9a1ba392",
+        "text": "character",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "29acf0b7-df8a-558b-aad5-9ad4c7cf790e",
+        "text": "book",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "5263a535-1b4b-5925-be3e-310d03cd303b",
+        "text": "work",
+        "type": "EntityType"
+      },
+      {
+        "id": 7,
+        "original_id": "c0e24a2b-92c2-52c1-9a9b-1d1ea008c2c2",
+        "text": "american civil war",
+        "type": "Entity"
+      },
+      {
+        "id": 8,
+        "original_id": "214abcd9-9adf-5c8a-bb35-1e729f2d68c3",
+        "text": "event",
+        "type": "EntityType"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "first_appears_in"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 5,
+        "target": 7,
+        "type": "set_during"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      },
+      {
+        "source": 7,
+        "target": 8,
+        "type": "is_a"
+      }
+    ]
+  },
+  "grafo_evidencia": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "2a242aa1-9bcc-5baf-88bb-15230916278b",
+        "text": "This chunk is about:\n- People: Melanie Hamilton Wilkes, Margaret Mitchell\n- Works: Gone with the Wind\n- Places: Clayton County, Atlanta, Georgia\n- Events: American Civil War, Reconstruction Era\n\nFacts:\n- Gone with the Wind is a novel by American writer Margaret Mitchell that was first published in 1936.\n- Melanie Hamilton Wilkes is a fictional character who first appears in Margaret Mitchell's novel Gone with the Wind.\n- Gone with the Wind is set in Clayton County and Atlanta in Georgia during the American Civil War and the Reconstruction Era.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "6dc15d91-3466-554a-beab-bf0b47dd16bb",
+        "text": "Page: Melanie Hamilton. Sentence: Melanie Hamilton Wilkes is a fictional character first appearing in the novel \"Gone with the Wind\" by Margaret Mitchell.\nPage: Gone with the Wind (novel). Sentence: Gone with the Wind is a novel by American writer Margaret Mitchell, first published in 1936.\nPage: Gone with the Wind (novel). Sentence: The story is set in Clayton County and Atlanta, both in Georgia, during the American Civil War and Reconstruction Era.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "32d7f488-2df9-5eee-8cc6-6d7e7950e99e",
+        "text": "text_00b3d2515d7cdfea63fbb65bb01dc493",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "f370d804-5545-51b3-9632-d7d09bcd23e0",
+        "text": "melanie hamilton wilkes",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "d3db161f-3fd9-5366-919b-ad9f9a1ba392",
+        "text": "character",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "70c4edb6-cc20-582a-8a62-edfeec807d50",
+        "text": "gone with the wind",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "3faed6ef-3d90-5ffd-9229-cfb62eb68140",
+        "text": "book",
+        "type": "EntityType"
+      },
+      {
+        "id": 7,
+        "original_id": "22e9423e-10ba-5fcb-bd41-5ed9ff6684b2",
+        "text": "margaret mitchell",
+        "type": "Entity"
+      },
+      {
+        "id": 8,
+        "original_id": "99a82eec-bb35-5bb5-9ed2-e73fc7a756de",
+        "text": "person",
+        "type": "EntityType"
+      },
+      {
+        "id": 9,
+        "original_id": "0ee0e31c-cb08-5100-85ec-f5ceb8edcf6f",
+        "text": "1936",
+        "type": "Entity"
+      },
+      {
+        "id": 10,
+        "original_id": "b19433ae-558c-5aaf-95ac-6231f2a4be0e",
+        "text": "date",
+        "type": "EntityType"
+      },
+      {
+        "id": 11,
+        "original_id": "effe03af-3b15-5864-a145-7cfd61045e61",
+        "text": "clayton county",
+        "type": "Entity"
+      },
+      {
+        "id": 12,
+        "original_id": "5f394058-b2a0-5ba8-8466-ba2a18cfcf4e",
+        "text": "place",
+        "type": "EntityType"
+      },
+      {
+        "id": 13,
+        "original_id": "1a8a1dae-ccdc-5bd1-a5aa-9c308020ebd6",
+        "text": "georgia",
+        "type": "Entity"
+      },
+      {
+        "id": 14,
+        "original_id": "4aa199bf-ca95-5409-bbe5-ab916a752491",
+        "text": "atlanta",
+        "type": "Entity"
+      },
+      {
+        "id": 15,
+        "original_id": "c0e24a2b-92c2-52c1-9a9b-1d1ea008c2c2",
+        "text": "american civil war",
+        "type": "Entity"
+      },
+      {
+        "id": 16,
+        "original_id": "214abcd9-9adf-5c8a-bb35-1e729f2d68c3",
+        "text": "event",
+        "type": "EntityType"
+      },
+      {
+        "id": 17,
+        "original_id": "274f7371-a6f0-506e-ae8e-f38a10c6d63d",
+        "text": "reconstruction era",
+        "type": "Entity"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "first_appears_in"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 5,
+        "target": 7,
+        "type": "written_by"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      },
+      {
+        "source": 7,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 5,
+        "target": 9,
+        "type": "first_published_in"
+      },
+      {
+        "source": 1,
+        "target": 9,
+        "type": "contains"
+      },
+      {
+        "source": 9,
+        "target": 10,
+        "type": "is_a"
+      },
+      {
+        "source": 5,
+        "target": 11,
+        "type": "set_in"
+      },
+      {
+        "source": 1,
+        "target": 11,
+        "type": "contains"
+      },
+      {
+        "source": 11,
+        "target": 12,
+        "type": "is_a"
+      },
+      {
+        "source": 13,
+        "target": 12,
+        "type": "is_a"
+      },
+      {
+        "source": 14,
+        "target": 12,
+        "type": "is_a"
+      },
+      {
+        "source": 11,
+        "target": 13,
+        "type": "located_in"
+      },
+      {
+        "source": 14,
+        "target": 13,
+        "type": "located_in"
+      },
+      {
+        "source": 1,
+        "target": 13,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 14,
+        "type": "set_in"
+      },
+      {
+        "source": 1,
+        "target": 14,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 15,
+        "type": "set_during"
+      },
+      {
+        "source": 1,
+        "target": 15,
+        "type": "contains"
+      },
+      {
+        "source": 15,
+        "target": 16,
+        "type": "is_a"
+      },
+      {
+        "source": 17,
+        "target": 16,
+        "type": "is_a"
+      },
+      {
+        "source": 5,
+        "target": 17,
+        "type": "set_during"
+      },
+      {
+        "source": 1,
+        "target": 17,
+        "type": "contains"
+      }
+    ]
+  }
+}

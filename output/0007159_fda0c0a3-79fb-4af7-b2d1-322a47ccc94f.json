@@ -1,0 +1,417 @@
+{
+  "dataset": "hover",
+  "id": "fda0c0a3-79fb-4af7-b2d1-322a47ccc94f",
+  "split": "train",
+  "claim": "R.Kelly released the album \"I Believe I Can Fly\" the same year as producing \"These Are Special Times\" for Celine Dion.",
+  "evidencia": "Page: These Are Special Times. Sentence: Released by Sony Music Entertainment on 30 October 1998, it features cover versions of popular Christmas tunes and original material.\nPage: R. Kelly. Sentence: In 1998, Kelly won three Grammy Awards for \"I Believe I Can Fly\".",
+  "evidence_text": "Page: These Are Special Times. Sentence: Released by Sony Music Entertainment on 30 October 1998, it features cover versions of popular Christmas tunes and original material.\nPage: R. Kelly. Sentence: In 1998, Kelly won three Grammy Awards for \"I Believe I Can Fly\".",
+  "label": "SUPPORTED",
+  "num_hops": 2,
+  "hover_metadata": {
+    "supporting_facts": [
+      [
+        "These Are Special Times",
+        1
+      ],
+      [
+        "R. Kelly",
+        4
+      ]
+    ],
+    "num_hops": 2,
+    "evidence_annotation_id": [
+      0
+    ],
+    "evidence_id": [
+      "These Are Special Times::sentence::1",
+      "R. Kelly::sentence::4"
+    ],
+    "evidence_wiki_url": [
+      "https://en.wikipedia.org/wiki/These_Are_Special_Times",
+      "https://en.wikipedia.org/wiki/R._Kelly"
+    ],
+    "evidence_sentence_id": [
+      "These Are Special Times::sentence::1",
+      "R. Kelly::sentence::4"
+    ]
+  },
+  "grafo_claim": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "2e879944-6635-5352-a34f-0da729a1634f",
+        "text": "This chunk is about:\n- People: R. Kelly, Celine Dion\n- Products: \"I Believe I Can Fly\", \"These Are Special Times\"\n- Roles: album artist, producer\n\nFacts:\n- R. Kelly released the album \"I Believe I Can Fly\" in the same year that he produced \"These Are Special Times\" for Celine Dion.\n- Celine Dion had \"These Are Special Times\" produced for her by R. Kelly in the same year that R. Kelly released the album \"I Believe I Can Fly\".",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "c8508fc4-fe40-5cee-a965-edd4f15012df",
+        "text": "R.Kelly released the album \"I Believe I Can Fly\" the same year as producing \"These Are Special Times\" for Celine Dion.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "70f05095-2222-5696-8086-123144572e44",
+        "text": "text_76329c9ff97cecf2a8753a9581bd3555",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "0fbb35bb-c197-50e4-b34a-f11c5514ff02",
+        "text": "r. kelly",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "d4f39529-c525-5c51-b58f-e46186cbd6d8",
+        "text": "i believe i can fly",
+        "type": "Entity"
+      },
+      {
+        "id": 5,
+        "original_id": "c2d62978-19c7-5950-9ba8-35cfc5db53ad",
+        "text": "these are special times",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "3d82021c-855d-5b41-a3d3-3ac09d0b7722",
+        "text": "celine dion",
+        "type": "Entity"
+      },
+      {
+        "id": 7,
+        "original_id": "99a82eec-bb35-5bb5-9ed2-e73fc7a756de",
+        "text": "person",
+        "type": "EntityType"
+      },
+      {
+        "id": 8,
+        "original_id": "213321b1-cf32-59df-847a-8b293b41cf9c",
+        "text": "album",
+        "type": "EntityType"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "released"
+      },
+      {
+        "source": 1,
+        "target": 4,
+        "type": "contains"
+      },
+      {
+        "source": 4,
+        "target": 5,
+        "type": "same_year_as"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "produced"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "created_for"
+      },
+      {
+        "source": 1,
+        "target": 6,
+        "type": "contains"
+      },
+      {
+        "source": 6,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 5,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 4,
+        "target": 8,
+        "type": "is_a"
+      }
+    ]
+  },
+  "grafo_evidencia": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "1d69bb67-8dec-5124-916e-9f464c57983c",
+        "text": "This chunk is about:\n- Products: These Are Special Times, \"I Believe I Can Fly\"\n- People: R. Kelly\n- Companies: Sony Music Entertainment\n- Events: Grammy Awards\n- Topics: Christmas music, cover versions, original material\n\nFacts:\n- In 1998, R. Kelly won three Grammy Awards for \"I Believe I Can Fly\".\n- On 30 October 1998, Sony Music Entertainment released These Are Special Times.\n- These Are Special Times features cover versions of popular Christmas tunes and original material.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "75ac5cbe-4099-53ee-84bc-33aecd615797",
+        "text": "Page: These Are Special Times. Sentence: Released by Sony Music Entertainment on 30 October 1998, it features cover versions of popular Christmas tunes and original material.\nPage: R. Kelly. Sentence: In 1998, Kelly won three Grammy Awards for \"I Believe I Can Fly\".",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "e9daf54b-79d0-5b78-87cc-105d7bea56ad",
+        "text": "text_64e7d94f684d6e2afd28246abb7cf19f",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "c2d62978-19c7-5950-9ba8-35cfc5db53ad",
+        "text": "these are special times",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "b42a57da-6877-5cb9-b6ae-e2cc9c5d779a",
+        "text": "sony music entertainment",
+        "type": "Entity"
+      },
+      {
+        "id": 5,
+        "original_id": "388f60fb-220d-55e8-ae9c-3ac93cead308",
+        "text": "organization",
+        "type": "EntityType"
+      },
+      {
+        "id": 6,
+        "original_id": "4012594b-c6cd-55ec-8b64-2771d75e0e0c",
+        "text": "1998-10-30",
+        "type": "Entity"
+      },
+      {
+        "id": 7,
+        "original_id": "b19433ae-558c-5aaf-95ac-6231f2a4be0e",
+        "text": "date",
+        "type": "EntityType"
+      },
+      {
+        "id": 8,
+        "original_id": "c8ea5b7e-eabc-5b12-ab1f-0fce31e11f16",
+        "text": "cover versions of popular christmas tunes",
+        "type": "Entity"
+      },
+      {
+        "id": 9,
+        "original_id": "d2a381fa-3658-5ca6-ada9-2109cfc9331d",
+        "text": "concept",
+        "type": "EntityType"
+      },
+      {
+        "id": 10,
+        "original_id": "c01f3c12-72d0-55b1-ada5-379215719691",
+        "text": "original material",
+        "type": "Entity"
+      },
+      {
+        "id": 11,
+        "original_id": "5263a535-1b4b-5925-be3e-310d03cd303b",
+        "text": "work",
+        "type": "EntityType"
+      },
+      {
+        "id": 12,
+        "original_id": "0fbb35bb-c197-50e4-b34a-f11c5514ff02",
+        "text": "r. kelly",
+        "type": "Entity"
+      },
+      {
+        "id": 13,
+        "original_id": "0f52079e-3906-5997-9b21-d5b9f516068a",
+        "text": "grammy awards",
+        "type": "Entity"
+      },
+      {
+        "id": 14,
+        "original_id": "38e42125-31f4-5cd6-993c-dbbc06a88910",
+        "text": "award",
+        "type": "EntityType"
+      },
+      {
+        "id": 15,
+        "original_id": "111f07f3-2527-5bbf-827f-7a18bb37f150",
+        "text": "1998",
+        "type": "Entity"
+      },
+      {
+        "id": 16,
+        "original_id": "d4f39529-c525-5c51-b58f-e46186cbd6d8",
+        "text": "i believe i can fly",
+        "type": "Entity"
+      },
+      {
+        "id": 17,
+        "original_id": "99a82eec-bb35-5bb5-9ed2-e73fc7a756de",
+        "text": "person",
+        "type": "EntityType"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "released_by"
+      },
+      {
+        "source": 1,
+        "target": 4,
+        "type": "contains"
+      },
+      {
+        "source": 4,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 6,
+        "type": "released_on"
+      },
+      {
+        "source": 1,
+        "target": 6,
+        "type": "contains"
+      },
+      {
+        "source": 6,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 15,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 8,
+        "type": "features"
+      },
+      {
+        "source": 1,
+        "target": 8,
+        "type": "contains"
+      },
+      {
+        "source": 8,
+        "target": 9,
+        "type": "is_a"
+      },
+      {
+        "source": 10,
+        "target": 9,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 10,
+        "type": "features"
+      },
+      {
+        "source": 1,
+        "target": 10,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 11,
+        "type": "is_a"
+      },
+      {
+        "source": 16,
+        "target": 11,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 12,
+        "type": "contains"
+      },
+      {
+        "source": 12,
+        "target": 13,
+        "type": "won"
+      },
+      {
+        "source": 1,
+        "target": 13,
+        "type": "contains"
+      },
+      {
+        "source": 13,
+        "target": 14,
+        "type": "is_a"
+      },
+      {
+        "source": 12,
+        "target": 15,
+        "type": "won_in"
+      },
+      {
+        "source": 1,
+        "target": 15,
+        "type": "contains"
+      },
+      {
+        "source": 12,
+        "target": 16,
+        "type": "won_for"
+      },
+      {
+        "source": 1,
+        "target": 16,
+        "type": "contains"
+      },
+      {
+        "source": 12,
+        "target": 17,
+        "type": "is_a"
+      }
+    ]
+  }
+}

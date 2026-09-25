@@ -1,0 +1,443 @@
+{
+  "dataset": "hover",
+  "id": "20d63d44-b0c6-440f-af23-2ea6ff819300",
+  "split": "train",
+  "claim": "Brabus is the high-performance aftermarket tuning company specializes in German automotive marque Smart. The company designed an automobile called the Brabus Bullit.",
+  "evidencia": "Page: Brabus. Sentence: BRABUS GmbH, founded 1977 in Bottrop (Ruhr Area), Germany, is a high-performance aftermarket tuning company which specializes in Mercedes-Benz, Smart, Tesla and Maybach vehicles.\nPage: Smart (marque). Sentence: smart Automobile (stylized and marketed as \"smart\") is a German automotive marque and division of Daimler AG, based in Böblingen, Germany.\nPage: Brabus Bullit. Sentence: The Brabus Bullit is an automobile designed and made by Brabus.",
+  "evidence_text": "Page: Brabus. Sentence: BRABUS GmbH, founded 1977 in Bottrop (Ruhr Area), Germany, is a high-performance aftermarket tuning company which specializes in Mercedes-Benz, Smart, Tesla and Maybach vehicles.\nPage: Smart (marque). Sentence: smart Automobile (stylized and marketed as \"smart\") is a German automotive marque and division of Daimler AG, based in Böblingen, Germany.\nPage: Brabus Bullit. Sentence: The Brabus Bullit is an automobile designed and made by Brabus.",
+  "label": "SUPPORTED",
+  "num_hops": 3,
+  "hover_metadata": {
+    "supporting_facts": [
+      [
+        "Brabus",
+        0
+      ],
+      [
+        "Smart (marque)",
+        0
+      ],
+      [
+        "Brabus Bullit",
+        0
+      ]
+    ],
+    "num_hops": 3,
+    "evidence_annotation_id": [
+      0
+    ],
+    "evidence_id": [
+      "Brabus::sentence::0",
+      "Smart (marque)::sentence::0",
+      "Brabus Bullit::sentence::0"
+    ],
+    "evidence_wiki_url": [
+      "https://en.wikipedia.org/wiki/Brabus",
+      "https://en.wikipedia.org/wiki/Smart_%28marque%29",
+      "https://en.wikipedia.org/wiki/Brabus_Bullit"
+    ],
+    "evidence_sentence_id": [
+      "Brabus::sentence::0",
+      "Smart (marque)::sentence::0",
+      "Brabus Bullit::sentence::0"
+    ]
+  },
+  "grafo_claim": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "82295a6b-de81-5282-a1be-b1d5b0a28d3e",
+        "text": "This chunk is about:\n- Companies: Brabus, Smart\n- Products: Brabus Bullit\n- Topics: aftermarket tuning, high-performance automobiles\n\nFacts:\n- Brabus is a high-performance aftermarket tuning company.\n- Brabus specializes in the German automotive marque Smart.\n- Brabus designed an automobile called the Brabus Bullit.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "f91e9502-7cdd-5c85-bdd3-fd09500c43fa",
+        "text": "Brabus is the high-performance aftermarket tuning company specializes in German automotive marque Smart. The company designed an automobile called the Brabus Bullit.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "b665c19b-93e1-587a-a94f-6de7d260061d",
+        "text": "text_ec622245bc62b09696675cf988b7f760",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "95b3ac6a-6558-5465-b66c-b1a41bca5cd3",
+        "text": "brabus",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "d56a8ef0-4d99-5960-9565-084255cf4443",
+        "text": "smart",
+        "type": "Entity"
+      },
+      {
+        "id": 5,
+        "original_id": "388f60fb-220d-55e8-ae9c-3ac93cead308",
+        "text": "organization",
+        "type": "EntityType"
+      },
+      {
+        "id": 6,
+        "original_id": "a4e019a9-fd9e-576d-8a87-21b5c0270242",
+        "text": "brabus bullit",
+        "type": "Entity"
+      },
+      {
+        "id": 7,
+        "original_id": "f76d57aa-4740-5218-9539-0e0978cbf183",
+        "text": "product",
+        "type": "EntityType"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "specializes_in"
+      },
+      {
+        "source": 1,
+        "target": 4,
+        "type": "contains"
+      },
+      {
+        "source": 4,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 6,
+        "type": "designed"
+      },
+      {
+        "source": 1,
+        "target": 6,
+        "type": "contains"
+      },
+      {
+        "source": 6,
+        "target": 7,
+        "type": "is_a"
+      }
+    ]
+  },
+  "grafo_evidencia": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "5b43af7c-fdf4-5292-86f1-e6284f70bda2",
+        "text": "This chunk is about:\n- Companies: BRABUS GmbH, Daimler AG\n- Products: Brabus Bullit\n- Brands: smart, Mercedes-Benz, Tesla, Maybach\n- Places: Bottrop, Ruhr Area, Böblingen, Germany\n\nFacts:\n- BRABUS GmbH was founded in 1977 in Bottrop in the Ruhr Area of Germany.\n- BRABUS GmbH is a high-performance aftermarket tuning company.\n- BRABUS GmbH specializes in Mercedes-Benz, smart, Tesla, and Maybach vehicles.\n- smart Automobile, marketed as \"smart,\" is a German automotive marque and a division of Daimler AG based in Böblingen, Germany.\n- The Brabus Bullit is an automobile designed and made by BRABUS GmbH.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "a401c154-a937-5e23-8486-b7affcbe0434",
+        "text": "Page: Brabus. Sentence: BRABUS GmbH, founded 1977 in Bottrop (Ruhr Area), Germany, is a high-performance aftermarket tuning company which specializes in Mercedes-Benz, Smart, Tesla and Maybach vehicles.\nPage: Smart (marque). Sentence: smart Automobile (stylized and marketed as \"smart\") is a German automotive marque and division of Daimler AG, based in Böblingen, Germany.\nPage: Brabus Bullit. Sentence: The Brabus Bullit is an automobile designed and made by Brabus.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "2d2f741e-2df4-5487-8e96-e400dcd8f252",
+        "text": "text_71c131a5a9c4d7ef7fa4b690798bd906",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "9ac8201a-ebaa-578a-b3ce-0f9e41ed5f51",
+        "text": "brabus gmbh",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "8770aa76-d776-510e-a21c-4a9c1d2af56d",
+        "text": "1977",
+        "type": "Entity"
+      },
+      {
+        "id": 5,
+        "original_id": "b19433ae-558c-5aaf-95ac-6231f2a4be0e",
+        "text": "date",
+        "type": "EntityType"
+      },
+      {
+        "id": 6,
+        "original_id": "a65fde94-dd41-51b5-88ac-726b32b64895",
+        "text": "bottrop",
+        "type": "Entity"
+      },
+      {
+        "id": 7,
+        "original_id": "f30f124b-1bc0-595d-b0c0-aa20029c2bb4",
+        "text": "germany",
+        "type": "Entity"
+      },
+      {
+        "id": 8,
+        "original_id": "5f394058-b2a0-5ba8-8466-ba2a18cfcf4e",
+        "text": "place",
+        "type": "EntityType"
+      },
+      {
+        "id": 9,
+        "original_id": "e92f4efa-507c-5dbb-80bd-5856946f1e42",
+        "text": "mercedes-benz",
+        "type": "Entity"
+      },
+      {
+        "id": 10,
+        "original_id": "388f60fb-220d-55e8-ae9c-3ac93cead308",
+        "text": "organization",
+        "type": "EntityType"
+      },
+      {
+        "id": 11,
+        "original_id": "141716ac-90a9-53c0-a992-9745fd124702",
+        "text": "smart automobile",
+        "type": "Entity"
+      },
+      {
+        "id": 12,
+        "original_id": "0096514f-5b5e-5413-98bb-c3c074f91416",
+        "text": "daimler ag",
+        "type": "Entity"
+      },
+      {
+        "id": 13,
+        "original_id": "057cd36b-e5b8-5e21-ab04-d139cadb238c",
+        "text": "böblingen",
+        "type": "Entity"
+      },
+      {
+        "id": 14,
+        "original_id": "26dbd7ef-8be0-5fe2-9b97-ad277a0ce9ef",
+        "text": "tesla",
+        "type": "Entity"
+      },
+      {
+        "id": 15,
+        "original_id": "643950a8-e10d-5a27-87f6-58e035c1af72",
+        "text": "maybach",
+        "type": "Entity"
+      },
+      {
+        "id": 16,
+        "original_id": "a4e019a9-fd9e-576d-8a87-21b5c0270242",
+        "text": "brabus bullit",
+        "type": "Entity"
+      },
+      {
+        "id": 17,
+        "original_id": "f76d57aa-4740-5218-9539-0e0978cbf183",
+        "text": "product",
+        "type": "EntityType"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 16,
+        "target": 3,
+        "type": "designed_by"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "founded_in"
+      },
+      {
+        "source": 1,
+        "target": 4,
+        "type": "contains"
+      },
+      {
+        "source": 4,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 6,
+        "type": "founded_in_place"
+      },
+      {
+        "source": 1,
+        "target": 6,
+        "type": "contains"
+      },
+      {
+        "source": 6,
+        "target": 7,
+        "type": "located_in"
+      },
+      {
+        "source": 3,
+        "target": 7,
+        "type": "founded_in_country"
+      },
+      {
+        "source": 13,
+        "target": 7,
+        "type": "located_in"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      },
+      {
+        "source": 7,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 6,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 13,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 9,
+        "type": "specializes_in"
+      },
+      {
+        "source": 1,
+        "target": 9,
+        "type": "contains"
+      },
+      {
+        "source": 9,
+        "target": 10,
+        "type": "is_a"
+      },
+      {
+        "source": 12,
+        "target": 10,
+        "type": "is_a"
+      },
+      {
+        "source": 11,
+        "target": 10,
+        "type": "is_a"
+      },
+      {
+        "source": 14,
+        "target": 10,
+        "type": "is_a"
+      },
+      {
+        "source": 15,
+        "target": 10,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 10,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 11,
+        "type": "specializes_in"
+      },
+      {
+        "source": 1,
+        "target": 11,
+        "type": "contains"
+      },
+      {
+        "source": 11,
+        "target": 12,
+        "type": "division_of"
+      },
+      {
+        "source": 1,
+        "target": 12,
+        "type": "contains"
+      },
+      {
+        "source": 11,
+        "target": 13,
+        "type": "based_in"
+      },
+      {
+        "source": 1,
+        "target": 13,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 14,
+        "type": "specializes_in"
+      },
+      {
+        "source": 1,
+        "target": 14,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 15,
+        "type": "specializes_in"
+      },
+      {
+        "source": 1,
+        "target": 15,
+        "type": "contains"
+      },
+      {
+        "source": 1,
+        "target": 16,
+        "type": "contains"
+      },
+      {
+        "source": 16,
+        "target": 17,
+        "type": "is_a"
+      }
+    ]
+  }
+}

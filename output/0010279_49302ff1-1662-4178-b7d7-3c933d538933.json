@@ -1,0 +1,428 @@
+{
+  "dataset": "hover",
+  "id": "49302ff1-1662-4178-b7d7-3c933d538933",
+  "split": "train",
+  "claim": "Billy Idol is older than the artist who co-wrote \"Love No Limit\" with Dave Hall.",
+  "evidencia": "Page: Kenny Greene. Sentence: Kenny Greene (January 17, 1969 – October 1, 2001) was an American singer-songwriter who was also a member of the R&B group Intro.\nPage: Billy Idol. Sentence: William Michael Albert Broad (born 30 November 1955), known professionally as Billy Idol, is an English musician, singer, songwriter, and actor.\nPage: Love No Limit. Sentence: It was co-written by Kenny Greene and Dave Hall for her debut album, \"What's the 411?",
+  "evidence_text": "Page: Kenny Greene. Sentence: Kenny Greene (January 17, 1969 – October 1, 2001) was an American singer-songwriter who was also a member of the R&B group Intro.\nPage: Billy Idol. Sentence: William Michael Albert Broad (born 30 November 1955), known professionally as Billy Idol, is an English musician, singer, songwriter, and actor.\nPage: Love No Limit. Sentence: It was co-written by Kenny Greene and Dave Hall for her debut album, \"What's the 411?",
+  "label": "SUPPORTED",
+  "num_hops": 3,
+  "hover_metadata": {
+    "supporting_facts": [
+      [
+        "Kenny Greene",
+        0
+      ],
+      [
+        "Billy Idol",
+        0
+      ],
+      [
+        "Love No Limit",
+        1
+      ]
+    ],
+    "num_hops": 3,
+    "evidence_annotation_id": [
+      0
+    ],
+    "evidence_id": [
+      "Kenny Greene::sentence::0",
+      "Billy Idol::sentence::0",
+      "Love No Limit::sentence::1"
+    ],
+    "evidence_wiki_url": [
+      "https://en.wikipedia.org/wiki/Kenny_Greene",
+      "https://en.wikipedia.org/wiki/Billy_Idol",
+      "https://en.wikipedia.org/wiki/Love_No_Limit"
+    ],
+    "evidence_sentence_id": [
+      "Kenny Greene::sentence::0",
+      "Billy Idol::sentence::0",
+      "Love No Limit::sentence::1"
+    ]
+  },
+  "grafo_claim": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "92d5f3c6-8760-51e4-944c-8c345582d617",
+        "text": "This chunk is about:\n- People: Billy Idol, Mary J. Blige, Dave Hall\n- Songs: \"Love No Limit\"\n\nFacts:\n- Dave Hall co-wrote the song \"Love No Limit\" with Mary J. Blige.\n- Billy Idol is older than Mary J. Blige.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "34bace52-c245-5a6e-badb-51ca95ef6f80",
+        "text": "Billy Idol is older than the artist who co-wrote \"Love No Limit\" with Dave Hall.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "b385db6e-e0c2-550b-bb38-3e23dc04316a",
+        "text": "text_de8ac97b7db8fac17beec5c870517eba",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "907171d3-2b49-56f7-874d-516dcec9871e",
+        "text": "billy idol",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "99a82eec-bb35-5bb5-9ed2-e73fc7a756de",
+        "text": "person",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "df7afc03-ddaf-5dcd-a6de-e0e260543527",
+        "text": "artist who co-wrote love no limit with dave hall",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "0e5d5eef-763c-5ba0-a205-d51e19a4f32f",
+        "text": "love no limit",
+        "type": "Entity"
+      },
+      {
+        "id": 7,
+        "original_id": "5263a535-1b4b-5925-be3e-310d03cd303b",
+        "text": "work",
+        "type": "EntityType"
+      },
+      {
+        "id": 8,
+        "original_id": "842fd0ce-7af3-58ac-8e7f-7bdcf50b200a",
+        "text": "dave hall",
+        "type": "Entity"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 5,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 8,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "older_than"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "co_wrote"
+      },
+      {
+        "source": 1,
+        "target": 6,
+        "type": "contains"
+      },
+      {
+        "source": 8,
+        "target": 6,
+        "type": "co_wrote"
+      },
+      {
+        "source": 6,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 8,
+        "type": "contains"
+      }
+    ]
+  },
+  "grafo_evidencia": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "8492d0c5-fb67-51c4-b4cf-c16831f16018",
+        "text": "This chunk is about:\n- People: Kenny Greene, Billy Idol, Dave Hall, Mary J. Blige\n- Groups: Intro\n- Works: \"Love No Limit\", \"What's the 411?\"\n- Roles: singer-songwriter, musician, singer, songwriter, actor\n\nFacts:\n- Billy Idol was born as William Michael Albert Broad on 30 November 1955 and is an English musician, singer, songwriter, and actor.\n- Kenny Greene was born on January 17, 1969 and was an American singer-songwriter.\n- Kenny Greene was a member of the R&B group Intro.\n- \"Love No Limit\" was co-written by Kenny Greene and Dave Hall for Mary J. Blige's debut album \"What's the 411?\".\n- Kenny Greene died on October 1, 2001.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "30a3f8c6-008a-5fd1-97be-47dd6d83238a",
+        "text": "Page: Kenny Greene. Sentence: Kenny Greene (January 17, 1969 – October 1, 2001) was an American singer-songwriter who was also a member of the R&B group Intro.\nPage: Billy Idol. Sentence: William Michael Albert Broad (born 30 November 1955), known professionally as Billy Idol, is an English musician, singer, songwriter, and actor.\nPage: Love No Limit. Sentence: It was co-written by Kenny Greene and Dave Hall for her debut album, \"What's the 411?",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "66b383c6-d8f4-5b91-95b5-8a593c09ed61",
+        "text": "text_71828b20938cdcfbe60cc8985577f593",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "8de62448-7239-5e5b-a7d8-34f724188f33",
+        "text": "kenny greene",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "99a82eec-bb35-5bb5-9ed2-e73fc7a756de",
+        "text": "person",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "7aab7e94-3e8d-58da-9633-43ce31890762",
+        "text": "1969-01-17",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "b19433ae-558c-5aaf-95ac-6231f2a4be0e",
+        "text": "date",
+        "type": "EntityType"
+      },
+      {
+        "id": 7,
+        "original_id": "5ef64e3c-43eb-555d-bdf0-8145eff0602a",
+        "text": "2001-10-01",
+        "type": "Entity"
+      },
+      {
+        "id": 8,
+        "original_id": "05e41831-9090-55b9-8251-587f4d632dbc",
+        "text": "intro",
+        "type": "Entity"
+      },
+      {
+        "id": 9,
+        "original_id": "388f60fb-220d-55e8-ae9c-3ac93cead308",
+        "text": "organization",
+        "type": "EntityType"
+      },
+      {
+        "id": 10,
+        "original_id": "0e5d5eef-763c-5ba0-a205-d51e19a4f32f",
+        "text": "love no limit",
+        "type": "Entity"
+      },
+      {
+        "id": 11,
+        "original_id": "5263a535-1b4b-5925-be3e-310d03cd303b",
+        "text": "work",
+        "type": "EntityType"
+      },
+      {
+        "id": 12,
+        "original_id": "fb2d4d00-5b40-5f23-bd57-466f435bb7bd",
+        "text": "whats the 411?",
+        "type": "Entity"
+      },
+      {
+        "id": 13,
+        "original_id": "7972462c-3b06-58c1-8d61-d5bbf87add61",
+        "text": "william michael albert broad",
+        "type": "Entity"
+      },
+      {
+        "id": 14,
+        "original_id": "609cd638-3ccf-5b1a-88b7-d38e4464b46f",
+        "text": "1955-11-30",
+        "type": "Entity"
+      },
+      {
+        "id": 15,
+        "original_id": "907171d3-2b49-56f7-874d-516dcec9871e",
+        "text": "billy idol",
+        "type": "Entity"
+      },
+      {
+        "id": 16,
+        "original_id": "842fd0ce-7af3-58ac-8e7f-7bdcf50b200a",
+        "text": "dave hall",
+        "type": "Entity"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 13,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 15,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 16,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "born_on"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 7,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 14,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 7,
+        "type": "died_on"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 8,
+        "type": "member_of"
+      },
+      {
+        "source": 1,
+        "target": 8,
+        "type": "contains"
+      },
+      {
+        "source": 8,
+        "target": 9,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 10,
+        "type": "co_wrote"
+      },
+      {
+        "source": 1,
+        "target": 10,
+        "type": "contains"
+      },
+      {
+        "source": 16,
+        "target": 10,
+        "type": "co_wrote"
+      },
+      {
+        "source": 10,
+        "target": 11,
+        "type": "is_a"
+      },
+      {
+        "source": 12,
+        "target": 11,
+        "type": "is_a"
+      },
+      {
+        "source": 10,
+        "target": 12,
+        "type": "written_for"
+      },
+      {
+        "source": 1,
+        "target": 12,
+        "type": "contains"
+      },
+      {
+        "source": 1,
+        "target": 13,
+        "type": "contains"
+      },
+      {
+        "source": 13,
+        "target": 14,
+        "type": "born_on"
+      },
+      {
+        "source": 1,
+        "target": 14,
+        "type": "contains"
+      },
+      {
+        "source": 13,
+        "target": 15,
+        "type": "professionally_known_as"
+      },
+      {
+        "source": 1,
+        "target": 15,
+        "type": "contains"
+      },
+      {
+        "source": 1,
+        "target": 16,
+        "type": "contains"
+      }
+    ]
+  }
+}

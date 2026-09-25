@@ -1,0 +1,428 @@
+{
+  "dataset": "hover",
+  "id": "1afb02bd-6dd7-4076-9af4-eb19f0b06dec",
+  "split": "train",
+  "claim": "FEMSA owns the football club that Ángel Adán López Sandoval plays for.",
+  "evidencia": "Page: Ángel Lopez. Sentence: Ángel Adán López Sandoval (born 13 March 1997) is a Mexican footballer who plays as a forward for Monterrey.\nPage: C.F. Monterrey. Sentence: Club de Fútbol Monterrey is a Mexican football club from Monterrey, Nuevo León.\nPage: C.F. Monterrey. Sentence: The club is owned by FEMSA, Latin America's largest bottling company.",
+  "evidence_text": "Page: Ángel Lopez. Sentence: Ángel Adán López Sandoval (born 13 March 1997) is a Mexican footballer who plays as a forward for Monterrey.\nPage: C.F. Monterrey. Sentence: Club de Fútbol Monterrey is a Mexican football club from Monterrey, Nuevo León.\nPage: C.F. Monterrey. Sentence: The club is owned by FEMSA, Latin America's largest bottling company.",
+  "label": "SUPPORTED",
+  "num_hops": 2,
+  "hover_metadata": {
+    "supporting_facts": [
+      [
+        "Ángel Lopez",
+        0
+      ],
+      [
+        "C.F. Monterrey",
+        0
+      ],
+      [
+        "C.F. Monterrey",
+        2
+      ]
+    ],
+    "num_hops": 2,
+    "evidence_annotation_id": [
+      0
+    ],
+    "evidence_id": [
+      "Ángel Lopez::sentence::0",
+      "C.F. Monterrey::sentence::0",
+      "C.F. Monterrey::sentence::2"
+    ],
+    "evidence_wiki_url": [
+      "https://en.wikipedia.org/wiki/%C3%81ngel_Lopez",
+      "https://en.wikipedia.org/wiki/C.F._Monterrey"
+    ],
+    "evidence_sentence_id": [
+      "Ángel Lopez::sentence::0",
+      "C.F. Monterrey::sentence::0",
+      "C.F. Monterrey::sentence::2"
+    ]
+  },
+  "grafo_claim": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "309c834f-04bb-5fbf-8f16-0a085487e27a",
+        "text": "This chunk is about:\n- Companies: FEMSA\n- People: Ángel Adán López Sandoval\n- Organizations: the football club Ángel Adán López Sandoval plays for\n\nFacts:\n- FEMSA owns the football club that Ángel Adán López Sandoval plays for.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "2294cab2-1a0f-594a-8093-a4695236db50",
+        "text": "FEMSA owns the football club that Ángel Adán López Sandoval plays for.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "460eead3-88dc-5527-bcc1-9faee2bd5730",
+        "text": "text_4a62d742ea427f536eca86ce71228a3a",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "83705722-611a-5957-b8e2-24e456ceb3d5",
+        "text": "femsa",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "2d8170a2-a124-5cc0-ba53-fd159a926924",
+        "text": "the football club",
+        "type": "Entity"
+      },
+      {
+        "id": 5,
+        "original_id": "388f60fb-220d-55e8-ae9c-3ac93cead308",
+        "text": "organization",
+        "type": "EntityType"
+      },
+      {
+        "id": 6,
+        "original_id": "f9701c1d-3346-52d6-a1d3-56c63fe5bead",
+        "text": "ángel adán lópez sandoval",
+        "type": "Entity"
+      },
+      {
+        "id": 7,
+        "original_id": "99a82eec-bb35-5bb5-9ed2-e73fc7a756de",
+        "text": "person",
+        "type": "EntityType"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "owns"
+      },
+      {
+        "source": 6,
+        "target": 4,
+        "type": "plays_for"
+      },
+      {
+        "source": 1,
+        "target": 4,
+        "type": "contains"
+      },
+      {
+        "source": 4,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 6,
+        "type": "contains"
+      },
+      {
+        "source": 6,
+        "target": 7,
+        "type": "is_a"
+      }
+    ]
+  },
+  "grafo_evidencia": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "6e0218d5-308d-5cc0-b29f-c823507c69d4",
+        "text": "This chunk is about:\n- People: Ángel Adán López Sandoval\n- Organizations: Club de Fútbol Monterrey, FEMSA\n- Places: Monterrey, Nuevo León, Mexico\n- Roles: Forward\n- Topics: Mexican football\n\nFacts:\n- Ángel Adán López Sandoval was born on 13 March 1997.\n- Ángel Adán López Sandoval is a Mexican footballer.\n- Ángel Adán López Sandoval plays as a forward for Club de Fútbol Monterrey.\n- Club de Fútbol Monterrey is a Mexican football club from Monterrey, Nuevo León.\n- FEMSA owns Club de Fútbol Monterrey.\n- FEMSA is Latin America's largest bottling company.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "d8186dbc-5f38-557e-baef-bc205b22e85b",
+        "text": "Page: Ángel Lopez. Sentence: Ángel Adán López Sandoval (born 13 March 1997) is a Mexican footballer who plays as a forward for Monterrey.\nPage: C.F. Monterrey. Sentence: Club de Fútbol Monterrey is a Mexican football club from Monterrey, Nuevo León.\nPage: C.F. Monterrey. Sentence: The club is owned by FEMSA, Latin America's largest bottling company.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "69c495ed-008f-567f-b51a-ea523f5376b7",
+        "text": "text_e2364da5b58ebc766c742055cf154d5b",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "f9701c1d-3346-52d6-a1d3-56c63fe5bead",
+        "text": "ángel adán lópez sandoval",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "75d22aaa-104b-50ce-9ad6-d3e0d181ce10",
+        "text": "1997-03-13",
+        "type": "Entity"
+      },
+      {
+        "id": 5,
+        "original_id": "b19433ae-558c-5aaf-95ac-6231f2a4be0e",
+        "text": "date",
+        "type": "EntityType"
+      },
+      {
+        "id": 6,
+        "original_id": "cf7d42b5-76f2-568d-9972-0d0264af1b93",
+        "text": "mexico",
+        "type": "Entity"
+      },
+      {
+        "id": 7,
+        "original_id": "5f394058-b2a0-5ba8-8466-ba2a18cfcf4e",
+        "text": "place",
+        "type": "EntityType"
+      },
+      {
+        "id": 8,
+        "original_id": "b5ca55f0-6daa-5444-a4aa-9ede3d532b70",
+        "text": "forward",
+        "type": "Entity"
+      },
+      {
+        "id": 9,
+        "original_id": "8789768e-777e-505f-9788-4d23e6b11ee4",
+        "text": "position",
+        "type": "EntityType"
+      },
+      {
+        "id": 10,
+        "original_id": "fe7d9748-0020-57a1-9969-e00704455de2",
+        "text": "club de fútbol monterrey",
+        "type": "Entity"
+      },
+      {
+        "id": 11,
+        "original_id": "894b60f1-1447-5b5d-aafc-fa68bb23a85c",
+        "text": "monterrey",
+        "type": "Entity"
+      },
+      {
+        "id": 12,
+        "original_id": "b2629c63-cd47-525b-b0bd-770130879b00",
+        "text": "nuevo león",
+        "type": "Entity"
+      },
+      {
+        "id": 13,
+        "original_id": "83705722-611a-5957-b8e2-24e456ceb3d5",
+        "text": "femsa",
+        "type": "Entity"
+      },
+      {
+        "id": 14,
+        "original_id": "a0ed6bec-2475-51f5-8bab-95b63ca3b72b",
+        "text": "bottling company",
+        "type": "Entity"
+      },
+      {
+        "id": 15,
+        "original_id": "d2a381fa-3658-5ca6-ada9-2109cfc9331d",
+        "text": "concept",
+        "type": "EntityType"
+      },
+      {
+        "id": 16,
+        "original_id": "47b4312c-3b1c-5e57-9df3-de444bda695d",
+        "text": "latin america",
+        "type": "Entity"
+      },
+      {
+        "id": 17,
+        "original_id": "388f60fb-220d-55e8-ae9c-3ac93cead308",
+        "text": "organization",
+        "type": "EntityType"
+      },
+      {
+        "id": 18,
+        "original_id": "99a82eec-bb35-5bb5-9ed2-e73fc7a756de",
+        "text": "person",
+        "type": "EntityType"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "born_on"
+      },
+      {
+        "source": 1,
+        "target": 4,
+        "type": "contains"
+      },
+      {
+        "source": 4,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 6,
+        "type": "has_nationality"
+      },
+      {
+        "source": 10,
+        "target": 6,
+        "type": "located_in_country"
+      },
+      {
+        "source": 1,
+        "target": 6,
+        "type": "contains"
+      },
+      {
+        "source": 6,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 12,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 11,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 16,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 8,
+        "type": "plays_as"
+      },
+      {
+        "source": 1,
+        "target": 8,
+        "type": "contains"
+      },
+      {
+        "source": 8,
+        "target": 9,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 10,
+        "type": "plays_for"
+      },
+      {
+        "source": 1,
+        "target": 10,
+        "type": "contains"
+      },
+      {
+        "source": 10,
+        "target": 11,
+        "type": "from"
+      },
+      {
+        "source": 1,
+        "target": 11,
+        "type": "contains"
+      },
+      {
+        "source": 11,
+        "target": 12,
+        "type": "located_in"
+      },
+      {
+        "source": 1,
+        "target": 12,
+        "type": "contains"
+      },
+      {
+        "source": 10,
+        "target": 13,
+        "type": "owned_by"
+      },
+      {
+        "source": 1,
+        "target": 13,
+        "type": "contains"
+      },
+      {
+        "source": 13,
+        "target": 14,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 14,
+        "type": "contains"
+      },
+      {
+        "source": 14,
+        "target": 15,
+        "type": "is_a"
+      },
+      {
+        "source": 13,
+        "target": 16,
+        "type": "largest_in_region"
+      },
+      {
+        "source": 1,
+        "target": 16,
+        "type": "contains"
+      },
+      {
+        "source": 13,
+        "target": 17,
+        "type": "is_a"
+      },
+      {
+        "source": 10,
+        "target": 17,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 18,
+        "type": "is_a"
+      }
+    ]
+  }
+}

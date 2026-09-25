@@ -1,0 +1,500 @@
+{
+  "dataset": "hover",
+  "id": "fd211933-c547-4bd4-93dd-3c96a9ba5806",
+  "split": "train",
+  "claim": "The military base that functioned as a World War II armament storage depot and is located near Seal Islands was established in 1942.",
+  "evidencia": "Page: Seal Islands (California). Sentence: Seal Islands are a pair of islands in Suisun Bay at the mouth of the Sacramento-San Joaquin River Delta in Contra Costa County, California, 10 km east of Benicia, and 500 metres off-shore from the former Concord Naval Weapons Station and Port Chicago Naval Magazine.\nPage: Concord Naval Weapons Station. Sentence: Concord Naval Weapons Station was a military base established in 1942 north of the city of Concord, California at the shore of the Sacramento River where it widens into Suisun Bay.\nPage: Concord Naval Weapons Station. Sentence: The station functioned as a World War II armament storage depot, supplying ships at Port Chicago.",
+  "evidence_text": "Page: Seal Islands (California). Sentence: Seal Islands are a pair of islands in Suisun Bay at the mouth of the Sacramento-San Joaquin River Delta in Contra Costa County, California, 10 km east of Benicia, and 500 metres off-shore from the former Concord Naval Weapons Station and Port Chicago Naval Magazine.\nPage: Concord Naval Weapons Station. Sentence: Concord Naval Weapons Station was a military base established in 1942 north of the city of Concord, California at the shore of the Sacramento River where it widens into Suisun Bay.\nPage: Concord Naval Weapons Station. Sentence: The station functioned as a World War II armament storage depot, supplying ships at Port Chicago.",
+  "label": "SUPPORTED",
+  "num_hops": 2,
+  "hover_metadata": {
+    "supporting_facts": [
+      [
+        "Seal Islands (California)",
+        0
+      ],
+      [
+        "Concord Naval Weapons Station",
+        0
+      ],
+      [
+        "Concord Naval Weapons Station",
+        1
+      ]
+    ],
+    "num_hops": 2,
+    "evidence_annotation_id": [
+      0
+    ],
+    "evidence_id": [
+      "Seal Islands (California)::sentence::0",
+      "Concord Naval Weapons Station::sentence::0",
+      "Concord Naval Weapons Station::sentence::1"
+    ],
+    "evidence_wiki_url": [
+      "https://en.wikipedia.org/wiki/Seal_Islands_%28California%29",
+      "https://en.wikipedia.org/wiki/Concord_Naval_Weapons_Station"
+    ],
+    "evidence_sentence_id": [
+      "Seal Islands (California)::sentence::0",
+      "Concord Naval Weapons Station::sentence::0",
+      "Concord Naval Weapons Station::sentence::1"
+    ]
+  },
+  "grafo_claim": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "c4e62314-9b72-5cb9-a5f5-3a712b454f8d",
+        "text": "This chunk is about:\n- Places: military base, Seal Islands\n- Topics: World War II armament storage depots\n\nFacts:\n- The military base was established in 1942.\n- The military base functioned as a World War II armament storage depot.\n- The military base is located near Seal Islands.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "e88dac44-055c-5963-a9ce-6693ba399e50",
+        "text": "The military base that functioned as a World War II armament storage depot and is located near Seal Islands was established in 1942.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "c49455cb-52a6-531d-aef7-71540e4c28e6",
+        "text": "text_ed5142cee9a2f9eac67a2eb12b37a7db",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "2b843249-6464-5920-9151-07ca90af40c3",
+        "text": "military base near seal islands",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "5f394058-b2a0-5ba8-8466-ba2a18cfcf4e",
+        "text": "place",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "c00754e5-3722-59b6-80e5-fa44b52c352b",
+        "text": "seal islands",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "307234d1-8757-51ab-8eb8-40aae3d498a1",
+        "text": "world war ii",
+        "type": "Entity"
+      },
+      {
+        "id": 7,
+        "original_id": "214abcd9-9adf-5c8a-bb35-1e729f2d68c3",
+        "text": "event",
+        "type": "EntityType"
+      },
+      {
+        "id": 8,
+        "original_id": "1a7960c7-a88a-5382-9b35-522624fa6f44",
+        "text": "1942",
+        "type": "Entity"
+      },
+      {
+        "id": 9,
+        "original_id": "b19433ae-558c-5aaf-95ac-6231f2a4be0e",
+        "text": "date",
+        "type": "EntityType"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 5,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "located_near"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 6,
+        "type": "functioned_as_armament_storage_depot_during"
+      },
+      {
+        "source": 1,
+        "target": 6,
+        "type": "contains"
+      },
+      {
+        "source": 6,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 8,
+        "type": "established_in"
+      },
+      {
+        "source": 1,
+        "target": 8,
+        "type": "contains"
+      },
+      {
+        "source": 8,
+        "target": 9,
+        "type": "is_a"
+      }
+    ]
+  },
+  "grafo_evidencia": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "48eefd43-5af4-5701-a5b7-8d32981d51a6",
+        "text": "This chunk is about:\n- Places: Seal Islands, Suisun Bay, Sacramento-San Joaquin River Delta, Contra Costa County, Benicia, Concord, California\n- Organizations: Concord Naval Weapons Station, Port Chicago Naval Magazine\n- Topics: Military bases, World War II armament storage\n\nFacts:\n- In 1942, Concord Naval Weapons Station was established as a military base north of Concord, California, on the shore of the Sacramento River where it widens into Suisun Bay.\n- During World War II, Concord Naval Weapons Station functioned as an armament storage depot that supplied ships at Port Chicago.\n- Seal Islands are a pair of islands in Suisun Bay at the mouth of the Sacramento-San Joaquin River Delta in Contra Costa County, California.\n- Seal Islands are 10 kilometers east of Benicia and 500 meters offshore from the former Concord Naval Weapons Station and Port Chicago Naval Magazine.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "40a04519-33f3-58b9-af3e-30744c442c69",
+        "text": "Page: Seal Islands (California). Sentence: Seal Islands are a pair of islands in Suisun Bay at the mouth of the Sacramento-San Joaquin River Delta in Contra Costa County, California, 10 km east of Benicia, and 500 metres off-shore from the former Concord Naval Weapons Station and Port Chicago Naval Magazine.\nPage: Concord Naval Weapons Station. Sentence: Concord Naval Weapons Station was a military base established in 1942 north of the city of Concord, California at the shore of the Sacramento River where it widens into Suisun Bay.\nPage: Concord Naval Weapons Station. Sentence: The station functioned as a World War II armament storage depot, supplying ships at Port Chicago.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "eedc66de-19c9-5660-b1fc-ca1ab3faf4fe",
+        "text": "text_31faa6a77dc1a58af8143f07beb500c1",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "c00754e5-3722-59b6-80e5-fa44b52c352b",
+        "text": "seal islands",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "5f394058-b2a0-5ba8-8466-ba2a18cfcf4e",
+        "text": "place",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "21d78d6b-1d92-5136-ac49-52881ce5ded7",
+        "text": "suisun bay",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "09c872a6-8245-5c8e-9f9c-edc8ca9e4667",
+        "text": "sacramento-san joaquin river delta",
+        "type": "Entity"
+      },
+      {
+        "id": 7,
+        "original_id": "294fed0f-4210-5c18-80b8-41048a2dafed",
+        "text": "contra costa county",
+        "type": "Entity"
+      },
+      {
+        "id": 8,
+        "original_id": "8294cd6a-6968-5d3a-b0c8-57e08c745c8d",
+        "text": "california",
+        "type": "Entity"
+      },
+      {
+        "id": 9,
+        "original_id": "92ee721e-d421-5c01-a830-4bfb1c2fa640",
+        "text": "benicia",
+        "type": "Entity"
+      },
+      {
+        "id": 10,
+        "original_id": "0dee11ab-ac8e-5628-bbae-012d05ecfa47",
+        "text": "concord naval weapons station",
+        "type": "Entity"
+      },
+      {
+        "id": 11,
+        "original_id": "1a7960c7-a88a-5382-9b35-522624fa6f44",
+        "text": "1942",
+        "type": "Entity"
+      },
+      {
+        "id": 12,
+        "original_id": "b19433ae-558c-5aaf-95ac-6231f2a4be0e",
+        "text": "date",
+        "type": "EntityType"
+      },
+      {
+        "id": 13,
+        "original_id": "d20fe3b2-cd3c-5f7a-918a-de434d758757",
+        "text": "concord, california",
+        "type": "Entity"
+      },
+      {
+        "id": 14,
+        "original_id": "3dc827d9-c179-5cb5-abe3-1ce679c13d47",
+        "text": "sacramento river",
+        "type": "Entity"
+      },
+      {
+        "id": 15,
+        "original_id": "307234d1-8757-51ab-8eb8-40aae3d498a1",
+        "text": "world war ii",
+        "type": "Entity"
+      },
+      {
+        "id": 16,
+        "original_id": "214abcd9-9adf-5c8a-bb35-1e729f2d68c3",
+        "text": "event",
+        "type": "EntityType"
+      },
+      {
+        "id": 17,
+        "original_id": "1eeeda5f-5a87-5132-b91d-b5c77bde73ce",
+        "text": "port chicago",
+        "type": "Entity"
+      },
+      {
+        "id": 18,
+        "original_id": "bb993610-c12d-5891-96bf-5c7a74218b70",
+        "text": "port chicago naval magazine",
+        "type": "Entity"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 5,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 6,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 7,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 8,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 9,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 10,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 13,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 14,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 17,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 18,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "located_in"
+      },
+      {
+        "source": 14,
+        "target": 5,
+        "type": "widens_into"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 6,
+        "type": "located_at_mouth_of"
+      },
+      {
+        "source": 1,
+        "target": 6,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 7,
+        "type": "located_in"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      },
+      {
+        "source": 7,
+        "target": 8,
+        "type": "located_in"
+      },
+      {
+        "source": 1,
+        "target": 8,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 9,
+        "type": "located_east_of"
+      },
+      {
+        "source": 1,
+        "target": 9,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 10,
+        "type": "offshore_from"
+      },
+      {
+        "source": 1,
+        "target": 10,
+        "type": "contains"
+      },
+      {
+        "source": 10,
+        "target": 11,
+        "type": "established_in"
+      },
+      {
+        "source": 1,
+        "target": 11,
+        "type": "contains"
+      },
+      {
+        "source": 11,
+        "target": 12,
+        "type": "is_a"
+      },
+      {
+        "source": 10,
+        "target": 13,
+        "type": "located_north_of"
+      },
+      {
+        "source": 1,
+        "target": 13,
+        "type": "contains"
+      },
+      {
+        "source": 10,
+        "target": 14,
+        "type": "located_on_shore_of"
+      },
+      {
+        "source": 1,
+        "target": 14,
+        "type": "contains"
+      },
+      {
+        "source": 10,
+        "target": 15,
+        "type": "functioned_during"
+      },
+      {
+        "source": 1,
+        "target": 15,
+        "type": "contains"
+      },
+      {
+        "source": 15,
+        "target": 16,
+        "type": "is_a"
+      },
+      {
+        "source": 10,
+        "target": 17,
+        "type": "supplied_ships_at"
+      },
+      {
+        "source": 1,
+        "target": 17,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 18,
+        "type": "offshore_from"
+      },
+      {
+        "source": 1,
+        "target": 18,
+        "type": "contains"
+      }
+    ]
+  }
+}

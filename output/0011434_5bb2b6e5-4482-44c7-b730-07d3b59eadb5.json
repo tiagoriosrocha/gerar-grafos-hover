@@ -1,0 +1,481 @@
+{
+  "dataset": "hover",
+  "id": "5bb2b6e5-4482-44c7-b730-07d3b59eadb5",
+  "split": "train",
+  "claim": "There is an airport across the street from the U.S. Coast Guard Air Station San Diego. That airport and the McCarran International Airport are not located in the same state.",
+  "evidencia": "Page: San Diego International Airport. Sentence: San Diego International Airport (IATA: SAN, ICAO: KSAN, FAA LID: SAN) , formerly known as Lindbergh Field, is an international airport 3 mi northwest of Downtown San Diego, California, United States.\nPage: McCarran International Airport. Sentence: McCarran International Airport (IATA: LAS, ICAO: KLAS, FAA LID: LAS) is the primary commercial airport serving the Las Vegas Valley, a major metropolitan area in the U.S. state of Nevada.\nPage: Coast Guard Air Station San Diego. Sentence: U.S. Coast Guard Air Station San Diego (CGAS San Diego) is a Coast Guard Air Station based in San Diego, California, United States, across the street from San Diego International Airport.",
+  "evidence_text": "Page: San Diego International Airport. Sentence: San Diego International Airport (IATA: SAN, ICAO: KSAN, FAA LID: SAN) , formerly known as Lindbergh Field, is an international airport 3 mi northwest of Downtown San Diego, California, United States.\nPage: McCarran International Airport. Sentence: McCarran International Airport (IATA: LAS, ICAO: KLAS, FAA LID: LAS) is the primary commercial airport serving the Las Vegas Valley, a major metropolitan area in the U.S. state of Nevada.\nPage: Coast Guard Air Station San Diego. Sentence: U.S. Coast Guard Air Station San Diego (CGAS San Diego) is a Coast Guard Air Station based in San Diego, California, United States, across the street from San Diego International Airport.",
+  "label": "SUPPORTED",
+  "num_hops": 3,
+  "hover_metadata": {
+    "supporting_facts": [
+      [
+        "San Diego International Airport",
+        0
+      ],
+      [
+        "McCarran International Airport",
+        0
+      ],
+      [
+        "Coast Guard Air Station San Diego",
+        0
+      ]
+    ],
+    "num_hops": 3,
+    "evidence_annotation_id": [
+      0
+    ],
+    "evidence_id": [
+      "San Diego International Airport::sentence::0",
+      "McCarran International Airport::sentence::0",
+      "Coast Guard Air Station San Diego::sentence::0"
+    ],
+    "evidence_wiki_url": [
+      "https://en.wikipedia.org/wiki/San_Diego_International_Airport",
+      "https://en.wikipedia.org/wiki/McCarran_International_Airport",
+      "https://en.wikipedia.org/wiki/Coast_Guard_Air_Station_San_Diego"
+    ],
+    "evidence_sentence_id": [
+      "San Diego International Airport::sentence::0",
+      "McCarran International Airport::sentence::0",
+      "Coast Guard Air Station San Diego::sentence::0"
+    ]
+  },
+  "grafo_claim": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "71063b4f-64f9-5d2a-a425-805d1b0470b6",
+        "text": "This chunk is about:\n- Places: U.S. Coast Guard Air Station San Diego, McCarran International Airport\n- Airports: the airport across the street from U.S. Coast Guard Air Station San Diego\n- Topics: relative location, state comparison\n\nFacts:\n- An airport is located across the street from U.S. Coast Guard Air Station San Diego.\n- The airport across the street from U.S. Coast Guard Air Station San Diego and McCarran International Airport are not in the same state.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "852d7d26-9204-5e17-9fad-61759b274ba6",
+        "text": "There is an airport across the street from the U.S. Coast Guard Air Station San Diego. That airport and the McCarran International Airport are not located in the same state.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "a81470fc-895c-59bc-9403-8022619070c6",
+        "text": "text_0d048822a37d77c9ab23106f21c401cc",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "7e42341c-ab26-52cf-8f2a-0af40d13f46d",
+        "text": "u.s. coast guard air station san diego",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "5f394058-b2a0-5ba8-8466-ba2a18cfcf4e",
+        "text": "place",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "26555b8c-be47-55c6-9f84-52ffbeb5ba49",
+        "text": "airport across the street from the u.s. coast guard air station san diego",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "50596f1a-2d8a-5de7-96b5-ba7068791784",
+        "text": "airport",
+        "type": "EntityType"
+      },
+      {
+        "id": 7,
+        "original_id": "b761ab89-7454-5f86-8c3e-976b31f37206",
+        "text": "mccarran international airport",
+        "type": "Entity"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 3,
+        "type": "located_across_the_street_from"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 7,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 5,
+        "target": 7,
+        "type": "not_located_in_same_state_as"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      }
+    ]
+  },
+  "grafo_evidencia": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "cb002d7b-6478-5d7b-90a9-15265d877791",
+        "text": "This chunk is about:\n- Places: San Diego, Downtown San Diego, Las Vegas Valley, Nevada, California, United States\n- Organizations: San Diego International Airport, McCarran International Airport, U.S. Coast Guard Air Station San Diego\n- Concepts: airport identifiers, former names, airport service areas\n\nFacts:\n- San Diego International Airport has the identifiers IATA SAN, ICAO KSAN, and FAA LID SAN.\n- San Diego International Airport was formerly known as Lindbergh Field.\n- San Diego International Airport is an international airport located 3 miles northwest of Downtown San Diego, California, United States.\n- McCarran International Airport has the identifiers IATA LAS, ICAO KLAS, and FAA LID LAS.\n- McCarran International Airport is the primary commercial airport serving the Las Vegas Valley in Nevada.\n- U.S. Coast Guard Air Station San Diego is a Coast Guard Air Station based in San Diego, California, United States.\n- U.S. Coast Guard Air Station San Diego is located across the street from San Diego International Airport.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "e0fea518-1c86-5f82-af42-e4490c5b6f8c",
+        "text": "Page: San Diego International Airport. Sentence: San Diego International Airport (IATA: SAN, ICAO: KSAN, FAA LID: SAN) , formerly known as Lindbergh Field, is an international airport 3 mi northwest of Downtown San Diego, California, United States.\nPage: McCarran International Airport. Sentence: McCarran International Airport (IATA: LAS, ICAO: KLAS, FAA LID: LAS) is the primary commercial airport serving the Las Vegas Valley, a major metropolitan area in the U.S. state of Nevada.\nPage: Coast Guard Air Station San Diego. Sentence: U.S. Coast Guard Air Station San Diego (CGAS San Diego) is a Coast Guard Air Station based in San Diego, California, United States, across the street from San Diego International Airport.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "54de971a-a52d-5c6a-9cfb-870d693f1722",
+        "text": "text_becdaed4c282625a1e4997f5ab9362e0",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "600fbe0c-70a3-5953-9a76-f0436a436db9",
+        "text": "san diego international airport",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "50596f1a-2d8a-5de7-96b5-ba7068791784",
+        "text": "airport",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "64d22853-c91d-50d9-8b55-1c021eb0c15e",
+        "text": "san",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "2c23f4f7-2223-5c53-a5f6-1bd0114fcd6a",
+        "text": "code",
+        "type": "EntityType"
+      },
+      {
+        "id": 7,
+        "original_id": "57d1b2a5-e025-51dc-b6b0-1f674c7991c1",
+        "text": "ksan",
+        "type": "Entity"
+      },
+      {
+        "id": 8,
+        "original_id": "656c90de-bdc2-5110-8495-6793699ca9c4",
+        "text": "lindbergh field",
+        "type": "Entity"
+      },
+      {
+        "id": 9,
+        "original_id": "39575085-0710-527d-bd54-019de7b00429",
+        "text": "name",
+        "type": "EntityType"
+      },
+      {
+        "id": 10,
+        "original_id": "6b5f7b12-7d5f-5a1a-987a-2a98efd02d79",
+        "text": "downtown san diego",
+        "type": "Entity"
+      },
+      {
+        "id": 11,
+        "original_id": "5f394058-b2a0-5ba8-8466-ba2a18cfcf4e",
+        "text": "place",
+        "type": "EntityType"
+      },
+      {
+        "id": 12,
+        "original_id": "14bc9df1-4970-544a-beb4-41b6ab84f56d",
+        "text": "san diego, california, united states",
+        "type": "Entity"
+      },
+      {
+        "id": 13,
+        "original_id": "b761ab89-7454-5f86-8c3e-976b31f37206",
+        "text": "mccarran international airport",
+        "type": "Entity"
+      },
+      {
+        "id": 14,
+        "original_id": "e1a3a720-6c13-5783-9d23-04c7787be6ea",
+        "text": "las",
+        "type": "Entity"
+      },
+      {
+        "id": 15,
+        "original_id": "9ce19d45-3461-538f-8c91-e694e7fb588c",
+        "text": "klas",
+        "type": "Entity"
+      },
+      {
+        "id": 16,
+        "original_id": "31f53c23-3062-5a9a-8a39-94a9702ca5e8",
+        "text": "las vegas valley",
+        "type": "Entity"
+      },
+      {
+        "id": 17,
+        "original_id": "cca9924d-3e69-59c5-be62-5ec26c26b0db",
+        "text": "nevada",
+        "type": "Entity"
+      },
+      {
+        "id": 18,
+        "original_id": "7e42341c-ab26-52cf-8f2a-0af40d13f46d",
+        "text": "u.s. coast guard air station san diego",
+        "type": "Entity"
+      },
+      {
+        "id": 19,
+        "original_id": "388f60fb-220d-55e8-ae9c-3ac93cead308",
+        "text": "organization",
+        "type": "EntityType"
+      },
+      {
+        "id": 20,
+        "original_id": "22b81d41-a1cf-5969-909e-68126a0c19be",
+        "text": "cgas san diego",
+        "type": "Entity"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 18,
+        "target": 3,
+        "type": "across_the_street_from"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 13,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "has_iata_code"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 7,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 14,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 15,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 7,
+        "type": "has_icao_code"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 8,
+        "type": "formerly_known_as"
+      },
+      {
+        "source": 1,
+        "target": 8,
+        "type": "contains"
+      },
+      {
+        "source": 8,
+        "target": 9,
+        "type": "is_a"
+      },
+      {
+        "source": 20,
+        "target": 9,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 10,
+        "type": "located_northwest_of"
+      },
+      {
+        "source": 1,
+        "target": 10,
+        "type": "contains"
+      },
+      {
+        "source": 10,
+        "target": 11,
+        "type": "is_a"
+      },
+      {
+        "source": 12,
+        "target": 11,
+        "type": "is_a"
+      },
+      {
+        "source": 16,
+        "target": 11,
+        "type": "is_a"
+      },
+      {
+        "source": 17,
+        "target": 11,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 12,
+        "type": "located_in"
+      },
+      {
+        "source": 1,
+        "target": 12,
+        "type": "contains"
+      },
+      {
+        "source": 18,
+        "target": 12,
+        "type": "based_in"
+      },
+      {
+        "source": 1,
+        "target": 13,
+        "type": "contains"
+      },
+      {
+        "source": 13,
+        "target": 14,
+        "type": "has_iata_code"
+      },
+      {
+        "source": 1,
+        "target": 14,
+        "type": "contains"
+      },
+      {
+        "source": 13,
+        "target": 15,
+        "type": "has_icao_code"
+      },
+      {
+        "source": 1,
+        "target": 15,
+        "type": "contains"
+      },
+      {
+        "source": 13,
+        "target": 16,
+        "type": "serves"
+      },
+      {
+        "source": 1,
+        "target": 16,
+        "type": "contains"
+      },
+      {
+        "source": 16,
+        "target": 17,
+        "type": "located_in"
+      },
+      {
+        "source": 1,
+        "target": 17,
+        "type": "contains"
+      },
+      {
+        "source": 1,
+        "target": 18,
+        "type": "contains"
+      },
+      {
+        "source": 18,
+        "target": 19,
+        "type": "is_a"
+      },
+      {
+        "source": 18,
+        "target": 20,
+        "type": "also_known_as"
+      },
+      {
+        "source": 1,
+        "target": 20,
+        "type": "contains"
+      }
+    ]
+  }
+}

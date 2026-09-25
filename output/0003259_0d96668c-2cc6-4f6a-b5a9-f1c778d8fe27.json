@@ -1,0 +1,529 @@
+{
+  "dataset": "hover",
+  "id": "0d96668c-2cc6-4f6a-b5a9-f1c778d8fe27",
+  "split": "train",
+  "claim": "This multiracial neighborhood has more social problems than Northside, Paterson. The neighborhood in question and social networks have the term used to describe Park Hill, Yonkers in common.",
+  "evidencia": "Page: Wrigley Park. Sentence: Wrigley Park, also called Fourth Ward, is a neighborhood located north of Broadway in Paterson, New Jersey.\nPage: Neighbourhood. Sentence: Researchers have not agreed on an exact definition, but the following may serve as a starting point: \"…Neighbourhood is generally defined spatially as a specific geographic area and functionally as a set of social networks.\nPage: Northside, Paterson. Sentence: It suffers from some of the social problems currently facing the Wrigley Park neighborhood but to a lesser extent.\nPage: Park Hill, Yonkers. Sentence: Park Hill is a neighborhood in southwestern Yonkers, New York.",
+  "evidence_text": "Page: Wrigley Park. Sentence: Wrigley Park, also called Fourth Ward, is a neighborhood located north of Broadway in Paterson, New Jersey.\nPage: Neighbourhood. Sentence: Researchers have not agreed on an exact definition, but the following may serve as a starting point: \"…Neighbourhood is generally defined spatially as a specific geographic area and functionally as a set of social networks.\nPage: Northside, Paterson. Sentence: It suffers from some of the social problems currently facing the Wrigley Park neighborhood but to a lesser extent.\nPage: Park Hill, Yonkers. Sentence: Park Hill is a neighborhood in southwestern Yonkers, New York.",
+  "label": "NOT_SUPPORTED",
+  "num_hops": 4,
+  "hover_metadata": {
+    "supporting_facts": [
+      [
+        "Wrigley Park",
+        0
+      ],
+      [
+        "Neighbourhood",
+        2
+      ],
+      [
+        "Northside, Paterson",
+        2
+      ],
+      [
+        "Park Hill, Yonkers",
+        0
+      ]
+    ],
+    "num_hops": 4,
+    "evidence_annotation_id": [
+      0
+    ],
+    "evidence_id": [
+      "Wrigley Park::sentence::0",
+      "Neighbourhood::sentence::2",
+      "Northside, Paterson::sentence::2",
+      "Park Hill, Yonkers::sentence::0"
+    ],
+    "evidence_wiki_url": [
+      "https://en.wikipedia.org/wiki/Wrigley_Park",
+      "https://en.wikipedia.org/wiki/Neighbourhood",
+      "https://en.wikipedia.org/wiki/Northside%2C_Paterson",
+      "https://en.wikipedia.org/wiki/Park_Hill%2C_Yonkers"
+    ],
+    "evidence_sentence_id": [
+      "Wrigley Park::sentence::0",
+      "Neighbourhood::sentence::2",
+      "Northside, Paterson::sentence::2",
+      "Park Hill, Yonkers::sentence::0"
+    ]
+  },
+  "grafo_claim": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "da54967d-4945-56d3-bafa-39c290043db5",
+        "text": "This chunk is about:\n- Places: Park Hill, Yonkers; Northside, Paterson\n- Concepts: social problems; social networks; multiracial neighborhoods\n\nFacts:\n- Park Hill, Yonkers is described with a term that is also used in the phrase social networks.\n- The neighborhood in question is a multiracial neighborhood.\n- The neighborhood in question has more social problems than Northside, Paterson.\n- The neighborhood in question shares with social networks the term used to describe Park Hill, Yonkers.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "74e5ad8e-c6ec-5aa1-92e0-737d70e72840",
+        "text": "This multiracial neighborhood has more social problems than Northside, Paterson. The neighborhood in question and social networks have the term used to describe Park Hill, Yonkers in common.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "bc5cdb63-027f-548c-b78c-ac813608da1d",
+        "text": "text_3164a7f4113b16cea314b4480c77f66c",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "bd9c031e-d8fa-5571-b8fc-7fb7cdee8f38",
+        "text": "park hill, yonkers",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "43825cbd-8150-5ace-9a2c-4a3dc7a24997",
+        "text": "multiracial",
+        "type": "Entity"
+      },
+      {
+        "id": 5,
+        "original_id": "d2a381fa-3658-5ca6-ada9-2109cfc9331d",
+        "text": "concept",
+        "type": "EntityType"
+      },
+      {
+        "id": 6,
+        "original_id": "4950d262-0d9f-5f03-b557-e425642c2b75",
+        "text": "northside, paterson",
+        "type": "Entity"
+      },
+      {
+        "id": 7,
+        "original_id": "5f394058-b2a0-5ba8-8466-ba2a18cfcf4e",
+        "text": "place",
+        "type": "EntityType"
+      },
+      {
+        "id": 8,
+        "original_id": "d038db0f-df10-5488-8135-c22e58337deb",
+        "text": "social problems",
+        "type": "Entity"
+      },
+      {
+        "id": 9,
+        "original_id": "50e87512-f215-5fd0-bf4e-16c7e47e2fa4",
+        "text": "social networks",
+        "type": "Entity"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "described_as"
+      },
+      {
+        "source": 1,
+        "target": 4,
+        "type": "contains"
+      },
+      {
+        "source": 9,
+        "target": 4,
+        "type": "have_term_in_common"
+      },
+      {
+        "source": 4,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 8,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 9,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 6,
+        "type": "has_more_social_problems_than"
+      },
+      {
+        "source": 1,
+        "target": 6,
+        "type": "contains"
+      },
+      {
+        "source": 6,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 8,
+        "type": "has"
+      },
+      {
+        "source": 1,
+        "target": 8,
+        "type": "contains"
+      },
+      {
+        "source": 1,
+        "target": 9,
+        "type": "contains"
+      }
+    ]
+  },
+  "grafo_evidencia": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "7aff8361-863c-57e8-bbc6-90b87e410aa9",
+        "text": "This chunk is about:\n- Places: Wrigley Park, Fourth Ward, Northside, Park Hill, Paterson, Yonkers, New Jersey, New York\n- Concepts: neighbourhood\n\nFacts:\n- Wrigley Park, also called Fourth Ward, is a neighborhood north of Broadway in Paterson, New Jersey.\n- Researchers have not agreed on an exact definition of neighbourhood.\n- Neighbourhood may be defined spatially as a specific geographic area and functionally as a set of social networks.\n- Northside in Paterson suffers from some of the social problems facing the Wrigley Park neighborhood, but to a lesser extent.\n- Park Hill is a neighborhood in southwestern Yonkers, New York.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "9e3f6553-c4ff-555f-a909-8c75c1888595",
+        "text": "Page: Wrigley Park. Sentence: Wrigley Park, also called Fourth Ward, is a neighborhood located north of Broadway in Paterson, New Jersey.\nPage: Neighbourhood. Sentence: Researchers have not agreed on an exact definition, but the following may serve as a starting point: \"…Neighbourhood is generally defined spatially as a specific geographic area and functionally as a set of social networks.\nPage: Northside, Paterson. Sentence: It suffers from some of the social problems currently facing the Wrigley Park neighborhood but to a lesser extent.\nPage: Park Hill, Yonkers. Sentence: Park Hill is a neighborhood in southwestern Yonkers, New York.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "834953f7-c3be-52ad-826a-d5ead75034a1",
+        "text": "text_6cd2760fae7ae396ec368cd85037e9f4",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "7a746f7a-9779-52d3-9ece-9ca4b1ebf2ef",
+        "text": "wrigley park",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "b9634cae-db6c-51ee-9d5c-261223d9b7b9",
+        "text": "fourth ward",
+        "type": "Entity"
+      },
+      {
+        "id": 5,
+        "original_id": "5f394058-b2a0-5ba8-8466-ba2a18cfcf4e",
+        "text": "place",
+        "type": "EntityType"
+      },
+      {
+        "id": 6,
+        "original_id": "c53eccd3-029a-57a8-bb6b-ba08f312f92e",
+        "text": "broadway",
+        "type": "Entity"
+      },
+      {
+        "id": 7,
+        "original_id": "7f4216bf-bd11-544a-9f73-23e64ae06dfc",
+        "text": "paterson",
+        "type": "Entity"
+      },
+      {
+        "id": 8,
+        "original_id": "9e009832-3cca-5a9f-949f-073e455c61d3",
+        "text": "new jersey",
+        "type": "Entity"
+      },
+      {
+        "id": 9,
+        "original_id": "b8167703-9c96-529b-8f66-b7b6d92bc9d6",
+        "text": "neighbourhood",
+        "type": "Entity"
+      },
+      {
+        "id": 10,
+        "original_id": "919f1587-79f2-5f2a-bad6-0c58426ad74b",
+        "text": "specific geographic area",
+        "type": "Entity"
+      },
+      {
+        "id": 11,
+        "original_id": "d2a381fa-3658-5ca6-ada9-2109cfc9331d",
+        "text": "concept",
+        "type": "EntityType"
+      },
+      {
+        "id": 12,
+        "original_id": "03dee1fb-3285-5b56-8a1b-358f51c93c82",
+        "text": "set of social networks",
+        "type": "Entity"
+      },
+      {
+        "id": 13,
+        "original_id": "e1abd6d8-debd-560c-b045-66cf6bf31d77",
+        "text": "researchers",
+        "type": "Entity"
+      },
+      {
+        "id": 14,
+        "original_id": "98ed3a15-eaa2-57c6-8de5-e1dabaf57f77",
+        "text": "group",
+        "type": "EntityType"
+      },
+      {
+        "id": 15,
+        "original_id": "4950d262-0d9f-5f03-b557-e425642c2b75",
+        "text": "northside, paterson",
+        "type": "Entity"
+      },
+      {
+        "id": 16,
+        "original_id": "d038db0f-df10-5488-8135-c22e58337deb",
+        "text": "social problems",
+        "type": "Entity"
+      },
+      {
+        "id": 17,
+        "original_id": "ede3c9cb-8228-5da9-b336-653cefe761d6",
+        "text": "park hill",
+        "type": "Entity"
+      },
+      {
+        "id": 18,
+        "original_id": "120c10f6-5bc3-59e6-9ba4-c76300cfe0ac",
+        "text": "yonkers",
+        "type": "Entity"
+      },
+      {
+        "id": 19,
+        "original_id": "a7852d00-db75-55e2-bd9a-468ada762d39",
+        "text": "new york",
+        "type": "Entity"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 16,
+        "target": 3,
+        "type": "currently_facing"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "also_called"
+      },
+      {
+        "source": 1,
+        "target": 4,
+        "type": "contains"
+      },
+      {
+        "source": 4,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 6,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 8,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 7,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 15,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 19,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 18,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 17,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 6,
+        "type": "located_north_of"
+      },
+      {
+        "source": 1,
+        "target": 6,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 7,
+        "type": "located_in"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      },
+      {
+        "source": 7,
+        "target": 8,
+        "type": "located_in"
+      },
+      {
+        "source": 1,
+        "target": 8,
+        "type": "contains"
+      },
+      {
+        "source": 1,
+        "target": 9,
+        "type": "contains"
+      },
+      {
+        "source": 13,
+        "target": 9,
+        "type": "have_not_agreed_on_exact_definition_of"
+      },
+      {
+        "source": 9,
+        "target": 10,
+        "type": "defined_spatially_as"
+      },
+      {
+        "source": 1,
+        "target": 10,
+        "type": "contains"
+      },
+      {
+        "source": 10,
+        "target": 11,
+        "type": "is_a"
+      },
+      {
+        "source": 12,
+        "target": 11,
+        "type": "is_a"
+      },
+      {
+        "source": 9,
+        "target": 11,
+        "type": "is_a"
+      },
+      {
+        "source": 16,
+        "target": 11,
+        "type": "is_a"
+      },
+      {
+        "source": 9,
+        "target": 12,
+        "type": "defined_functionally_as"
+      },
+      {
+        "source": 1,
+        "target": 12,
+        "type": "contains"
+      },
+      {
+        "source": 1,
+        "target": 13,
+        "type": "contains"
+      },
+      {
+        "source": 13,
+        "target": 14,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 15,
+        "type": "contains"
+      },
+      {
+        "source": 15,
+        "target": 16,
+        "type": "suffers_from"
+      },
+      {
+        "source": 1,
+        "target": 16,
+        "type": "contains"
+      },
+      {
+        "source": 1,
+        "target": 17,
+        "type": "contains"
+      },
+      {
+        "source": 17,
+        "target": 18,
+        "type": "located_in"
+      },
+      {
+        "source": 1,
+        "target": 18,
+        "type": "contains"
+      },
+      {
+        "source": 18,
+        "target": 19,
+        "type": "located_in"
+      },
+      {
+        "source": 1,
+        "target": 19,
+        "type": "contains"
+      }
+    ]
+  }
+}

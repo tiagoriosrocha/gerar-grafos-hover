@@ -1,0 +1,548 @@
+{
+  "dataset": "hover",
+  "id": "27aedf8a-d2f6-4694-a789-7bd6d12b28be",
+  "split": "train",
+  "claim": "The film Christopher Robin has more writers than the 1984 film that Mermaid Got Married was based on.",
+  "evidencia": "Page: Splash (film). Sentence: Splash is a 1984 American fantasy romantic comedy film directed by Ron Howard, written by Lowell Ganz and Babaloo Mandel, and starring Tom Hanks, Daryl Hannah, John Candy, and Eugene Levy.\nPage: Christopher Robin (film). Sentence: Christopher Robin is an upcoming American comedy-drama adventure film directed by Marc Forster, with a screenplay written by Tom McCarthy, Alex Ross Perry, and Allison Schroeder.\nPage: Mermaid Got Married. Sentence: Based on the 1984 American film \"Splash\", the plot involves a mermaid who travels onto land and falls in love with a human man.",
+  "evidence_text": "Page: Splash (film). Sentence: Splash is a 1984 American fantasy romantic comedy film directed by Ron Howard, written by Lowell Ganz and Babaloo Mandel, and starring Tom Hanks, Daryl Hannah, John Candy, and Eugene Levy.\nPage: Christopher Robin (film). Sentence: Christopher Robin is an upcoming American comedy-drama adventure film directed by Marc Forster, with a screenplay written by Tom McCarthy, Alex Ross Perry, and Allison Schroeder.\nPage: Mermaid Got Married. Sentence: Based on the 1984 American film \"Splash\", the plot involves a mermaid who travels onto land and falls in love with a human man.",
+  "label": "SUPPORTED",
+  "num_hops": 3,
+  "hover_metadata": {
+    "supporting_facts": [
+      [
+        "Splash (film)",
+        0
+      ],
+      [
+        "Christopher Robin (film)",
+        0
+      ],
+      [
+        "Mermaid Got Married",
+        1
+      ]
+    ],
+    "num_hops": 3,
+    "evidence_annotation_id": [
+      0
+    ],
+    "evidence_id": [
+      "Splash (film)::sentence::0",
+      "Christopher Robin (film)::sentence::0",
+      "Mermaid Got Married::sentence::1"
+    ],
+    "evidence_wiki_url": [
+      "https://en.wikipedia.org/wiki/Splash_%28film%29",
+      "https://en.wikipedia.org/wiki/Christopher_Robin_%28film%29",
+      "https://en.wikipedia.org/wiki/Mermaid_Got_Married"
+    ],
+    "evidence_sentence_id": [
+      "Splash (film)::sentence::0",
+      "Christopher Robin (film)::sentence::0",
+      "Mermaid Got Married::sentence::1"
+    ]
+  },
+  "grafo_claim": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "d8f990b2-49b5-5b91-89d6-2f49422922d8",
+        "text": "This chunk is about:\n- Products: Christopher Robin, Mermaid Got Married\n- People: writers of Christopher Robin, writers of the 1984 film Splash\n\nFacts:\n- Mermaid Got Married was based on the 1984 film Splash.\n- Christopher Robin has more writers than the 1984 film Splash.\n- Christopher Robin therefore has more writers than Mermaid Got Married’s source film.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "448b7559-f2e3-5482-8eeb-03f30c63c7a7",
+        "text": "The film Christopher Robin has more writers than the 1984 film that Mermaid Got Married was based on.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "85ad4440-179b-54b0-bb2b-e9f3a156c44a",
+        "text": "christopher robin",
+        "type": "Entity"
+      },
+      {
+        "id": 3,
+        "original_id": "0e720739-3b4a-5545-bf41-9fcb4abe3053",
+        "text": "1984 film",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "d320c8df-fd51-56e6-b577-e01a688fe6fc",
+        "text": "film",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "210c3643-1e41-5d12-8527-3838648fb9b4",
+        "text": "mermaid got married",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "00305259-ac38-5f72-8dfb-fb8e85f82828",
+        "text": "text_12012f31a5478da1ef2a24288168499e",
+        "type": "TextDocument"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "contains"
+      },
+      {
+        "source": 2,
+        "target": 3,
+        "type": "has_more_writers_than"
+      },
+      {
+        "source": 5,
+        "target": 3,
+        "type": "based_on"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 2,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 5,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 1,
+        "target": 6,
+        "type": "is_part_of"
+      }
+    ]
+  },
+  "grafo_evidencia": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "9fbfdcac-d429-5dda-ac5c-cbeb03ee4b36",
+        "text": "This chunk is about:\n- Products: Splash, Christopher Robin, Mermaid Got Married\n- People: Ron Howard, Lowell Ganz, Babaloo Mandel, Tom Hanks, Daryl Hannah, John Candy, Eugene Levy, Marc Forster, Tom McCarthy, Alex Ross Perry, Allison Schroeder\n- Concepts: mermaids, film adaptation\n\nFacts:\n- Splash is a 1984 American fantasy romantic comedy film directed by Ron Howard and written by Lowell Ganz and Babaloo Mandel.\n- Splash stars Tom Hanks, Daryl Hannah, John Candy, and Eugene Levy.\n- Mermaid Got Married is based on the 1984 American film Splash.\n- Mermaid Got Married has a plot about a mermaid who comes onto land and falls in love with a human man.\n- Christopher Robin is an upcoming American comedy-drama adventure film directed by Marc Forster.\n- The screenplay for Christopher Robin was written by Tom McCarthy, Alex Ross Perry, and Allison Schroeder.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "c25ca80c-0bfc-5b27-b3b8-d00d2d9adc3a",
+        "text": "Page: Splash (film). Sentence: Splash is a 1984 American fantasy romantic comedy film directed by Ron Howard, written by Lowell Ganz and Babaloo Mandel, and starring Tom Hanks, Daryl Hannah, John Candy, and Eugene Levy.\nPage: Christopher Robin (film). Sentence: Christopher Robin is an upcoming American comedy-drama adventure film directed by Marc Forster, with a screenplay written by Tom McCarthy, Alex Ross Perry, and Allison Schroeder.\nPage: Mermaid Got Married. Sentence: Based on the 1984 American film \"Splash\", the plot involves a mermaid who travels onto land and falls in love with a human man.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "2123f2b6-8afe-513e-850b-47bbe6020683",
+        "text": "splash",
+        "type": "Entity"
+      },
+      {
+        "id": 3,
+        "original_id": "36535bda-358d-582c-896d-8489e824d5db",
+        "text": "1984",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "b19433ae-558c-5aaf-95ac-6231f2a4be0e",
+        "text": "date",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "d320c8df-fd51-56e6-b577-e01a688fe6fc",
+        "text": "film",
+        "type": "EntityType"
+      },
+      {
+        "id": 6,
+        "original_id": "e0f53af4-376d-57a2-828b-2ab634544a68",
+        "text": "ron howard",
+        "type": "Entity"
+      },
+      {
+        "id": 7,
+        "original_id": "99a82eec-bb35-5bb5-9ed2-e73fc7a756de",
+        "text": "person",
+        "type": "EntityType"
+      },
+      {
+        "id": 8,
+        "original_id": "94d2d3ad-51cb-5507-90fd-fa50ea16cd29",
+        "text": "lowell ganz",
+        "type": "Entity"
+      },
+      {
+        "id": 9,
+        "original_id": "8cb1f713-4629-5272-9b54-7fde03ccea14",
+        "text": "babaloo mandel",
+        "type": "Entity"
+      },
+      {
+        "id": 10,
+        "original_id": "d20c7535-5975-532c-87b7-baa48eae10ca",
+        "text": "tom hanks",
+        "type": "Entity"
+      },
+      {
+        "id": 11,
+        "original_id": "c06cba50-93ae-58a7-9821-5bb5cbb93214",
+        "text": "daryl hannah",
+        "type": "Entity"
+      },
+      {
+        "id": 12,
+        "original_id": "e886f197-0199-51ad-9896-ef1408b0501a",
+        "text": "john candy",
+        "type": "Entity"
+      },
+      {
+        "id": 13,
+        "original_id": "a7682a7d-aeac-5e7c-9e16-208a2426f3a0",
+        "text": "eugene levy",
+        "type": "Entity"
+      },
+      {
+        "id": 14,
+        "original_id": "85ad4440-179b-54b0-bb2b-e9f3a156c44a",
+        "text": "christopher robin",
+        "type": "Entity"
+      },
+      {
+        "id": 15,
+        "original_id": "a9f7eec8-7679-578e-a905-0a367c8ebe47",
+        "text": "marc forster",
+        "type": "Entity"
+      },
+      {
+        "id": 16,
+        "original_id": "ba26e12f-b592-563d-82b0-c10f6e9d21d6",
+        "text": "tom mccarthy",
+        "type": "Entity"
+      },
+      {
+        "id": 17,
+        "original_id": "b181ff0f-26dd-59d2-9e69-d1149f89f929",
+        "text": "alex ross perry",
+        "type": "Entity"
+      },
+      {
+        "id": 18,
+        "original_id": "11f0a1f2-5bdf-583b-8572-04ca1126c086",
+        "text": "allison schroeder",
+        "type": "Entity"
+      },
+      {
+        "id": 19,
+        "original_id": "210c3643-1e41-5d12-8527-3838648fb9b4",
+        "text": "mermaid got married",
+        "type": "Entity"
+      },
+      {
+        "id": 20,
+        "original_id": "106e4a8a-be1d-5f46-a12c-adbd3b5ed0aa",
+        "text": "mermaid",
+        "type": "Entity"
+      },
+      {
+        "id": 21,
+        "original_id": "c150651f-0636-5fd5-a77c-baaaef5c5af9",
+        "text": "human man",
+        "type": "Entity"
+      },
+      {
+        "id": 22,
+        "original_id": "d3db161f-3fd9-5366-919b-ad9f9a1ba392",
+        "text": "character",
+        "type": "EntityType"
+      },
+      {
+        "id": 23,
+        "original_id": "97492ea6-4f5c-5a49-8687-e6aaddd50af1",
+        "text": "text_70325366cd03d11c3e9f60875fee6608",
+        "type": "TextDocument"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "contains"
+      },
+      {
+        "source": 6,
+        "target": 2,
+        "type": "directed"
+      },
+      {
+        "source": 8,
+        "target": 2,
+        "type": "wrote"
+      },
+      {
+        "source": 9,
+        "target": 2,
+        "type": "wrote"
+      },
+      {
+        "source": 10,
+        "target": 2,
+        "type": "starred_in"
+      },
+      {
+        "source": 11,
+        "target": 2,
+        "type": "starred_in"
+      },
+      {
+        "source": 12,
+        "target": 2,
+        "type": "starred_in"
+      },
+      {
+        "source": 13,
+        "target": 2,
+        "type": "starred_in"
+      },
+      {
+        "source": 19,
+        "target": 2,
+        "type": "based_on"
+      },
+      {
+        "source": 2,
+        "target": 3,
+        "type": "released_in"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 2,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 14,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 19,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 6,
+        "type": "contains"
+      },
+      {
+        "source": 6,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 8,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 9,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 10,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 11,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 12,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 13,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 15,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 16,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 17,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 18,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 8,
+        "type": "contains"
+      },
+      {
+        "source": 1,
+        "target": 9,
+        "type": "contains"
+      },
+      {
+        "source": 1,
+        "target": 10,
+        "type": "contains"
+      },
+      {
+        "source": 1,
+        "target": 11,
+        "type": "contains"
+      },
+      {
+        "source": 1,
+        "target": 12,
+        "type": "contains"
+      },
+      {
+        "source": 1,
+        "target": 13,
+        "type": "contains"
+      },
+      {
+        "source": 1,
+        "target": 14,
+        "type": "contains"
+      },
+      {
+        "source": 15,
+        "target": 14,
+        "type": "directed"
+      },
+      {
+        "source": 16,
+        "target": 14,
+        "type": "wrote_screenplay_for"
+      },
+      {
+        "source": 17,
+        "target": 14,
+        "type": "wrote_screenplay_for"
+      },
+      {
+        "source": 18,
+        "target": 14,
+        "type": "wrote_screenplay_for"
+      },
+      {
+        "source": 1,
+        "target": 15,
+        "type": "contains"
+      },
+      {
+        "source": 1,
+        "target": 16,
+        "type": "contains"
+      },
+      {
+        "source": 1,
+        "target": 17,
+        "type": "contains"
+      },
+      {
+        "source": 1,
+        "target": 18,
+        "type": "contains"
+      },
+      {
+        "source": 1,
+        "target": 19,
+        "type": "contains"
+      },
+      {
+        "source": 20,
+        "target": 19,
+        "type": "appears_in"
+      },
+      {
+        "source": 1,
+        "target": 20,
+        "type": "contains"
+      },
+      {
+        "source": 20,
+        "target": 21,
+        "type": "falls_in_love_with"
+      },
+      {
+        "source": 1,
+        "target": 21,
+        "type": "contains"
+      },
+      {
+        "source": 21,
+        "target": 22,
+        "type": "is_a"
+      },
+      {
+        "source": 20,
+        "target": 22,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 23,
+        "type": "is_part_of"
+      }
+    ]
+  }
+}

@@ -1,0 +1,487 @@
+{
+  "dataset": "hover",
+  "id": "abc811ff-1f0f-417c-9963-dbfab2cd404e",
+  "split": "train",
+  "claim": "James Matheson received an award in 2011 which was named after someone who  died in 1954.",
+  "evidencia": "Page: James Matheson (composer). Sentence: James Matheson (born 1970 in Des Moines, Iowa) is an American composer.\nPage: James Matheson (composer). Sentence: In December 2011, he received the Charles Ives Living from the American Academy of Arts and Letters, an award providing him with $100,000 for two years (2012-2014).\nPage: Charles Ives. Sentence: Charles Edward Ives ( ; October 20, 1874May 19, 1954) was an American modernist composer.",
+  "evidence_text": "Page: James Matheson (composer). Sentence: James Matheson (born 1970 in Des Moines, Iowa) is an American composer.\nPage: James Matheson (composer). Sentence: In December 2011, he received the Charles Ives Living from the American Academy of Arts and Letters, an award providing him with $100,000 for two years (2012-2014).\nPage: Charles Ives. Sentence: Charles Edward Ives ( ; October 20, 1874May 19, 1954) was an American modernist composer.",
+  "label": "SUPPORTED",
+  "num_hops": 2,
+  "hover_metadata": {
+    "supporting_facts": [
+      [
+        "James Matheson (composer)",
+        0
+      ],
+      [
+        "James Matheson (composer)",
+        2
+      ],
+      [
+        "Charles Ives",
+        0
+      ]
+    ],
+    "num_hops": 2,
+    "evidence_annotation_id": [
+      0
+    ],
+    "evidence_id": [
+      "James Matheson (composer)::sentence::0",
+      "James Matheson (composer)::sentence::2",
+      "Charles Ives::sentence::0"
+    ],
+    "evidence_wiki_url": [
+      "https://en.wikipedia.org/wiki/James_Matheson_%28composer%29",
+      "https://en.wikipedia.org/wiki/Charles_Ives"
+    ],
+    "evidence_sentence_id": [
+      "James Matheson (composer)::sentence::0",
+      "James Matheson (composer)::sentence::2",
+      "Charles Ives::sentence::0"
+    ]
+  },
+  "grafo_claim": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "7bb00cb7-b8cf-5d3b-a358-46c34b8d2276",
+        "text": "This chunk is about:\n- People: James Matheson\n- Awards: 2011 award, namesake honored by the award\n\nFacts:\n- James Matheson received an award in 2011.\n- The award James Matheson received in 2011 was named after a person who died in 1954.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "958c1c19-0568-5123-9204-641b43b28fb5",
+        "text": "James Matheson received an award in 2011 which was named after someone who  died in 1954.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "16ce338a-c11c-5996-a1b9-7f36cbdd763a",
+        "text": "text_420f23af4278d3419c698f111e401e69",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "b2e94f07-6657-5b44-8f6d-161538d7f44f",
+        "text": "james matheson",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "d1fb5680-8d71-513f-8a10-5115ae740c0f",
+        "text": "unnamed award",
+        "type": "Entity"
+      },
+      {
+        "id": 5,
+        "original_id": "4547a02b-7595-5de3-b6d4-4f90c9993e9d",
+        "text": "unnamed namesake",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "5eb5e882-f41a-513a-ace5-af87dc0c579f",
+        "text": "1954",
+        "type": "Entity"
+      },
+      {
+        "id": 7,
+        "original_id": "b19433ae-558c-5aaf-95ac-6231f2a4be0e",
+        "text": "date",
+        "type": "EntityType"
+      },
+      {
+        "id": 8,
+        "original_id": "99a82eec-bb35-5bb5-9ed2-e73fc7a756de",
+        "text": "person",
+        "type": "EntityType"
+      },
+      {
+        "id": 9,
+        "original_id": "38e42125-31f4-5cd6-993c-dbbc06a88910",
+        "text": "award",
+        "type": "EntityType"
+      },
+      {
+        "id": 10,
+        "original_id": "f54e52eb-db61-5cc3-aa32-5c78e42891d1",
+        "text": "2011",
+        "type": "Entity"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "received"
+      },
+      {
+        "source": 1,
+        "target": 4,
+        "type": "contains"
+      },
+      {
+        "source": 4,
+        "target": 5,
+        "type": "named_after"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "died_in"
+      },
+      {
+        "source": 1,
+        "target": 6,
+        "type": "contains"
+      },
+      {
+        "source": 6,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 10,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 5,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 4,
+        "target": 9,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 10,
+        "type": "received_in"
+      },
+      {
+        "source": 1,
+        "target": 10,
+        "type": "contains"
+      }
+    ]
+  },
+  "grafo_evidencia": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "db213009-7a98-5d06-850f-7a8310feff12",
+        "text": "This chunk is about:\n- People: James Matheson, Charles Ives\n- Organizations: American Academy of Arts and Letters\n- Awards: Charles Ives Living\n- Places: Des Moines, Iowa\n- Topics: American composition, modernist composition\n\nFacts:\n- Charles Ives was born on October 20, 1874, and was an American modernist composer.\n- Charles Ives died on May 19, 1954.\n- James Matheson was born in 1970 in Des Moines, Iowa, and is an American composer.\n- In December 2011, the American Academy of Arts and Letters awarded James Matheson the Charles Ives Living.\n- The Charles Ives Living awarded to James Matheson provided $100,000 for two years from 2012 to 2014.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "55a939c0-1e81-50c4-9af3-56e1beb8b071",
+        "text": "Page: James Matheson (composer). Sentence: James Matheson (born 1970 in Des Moines, Iowa) is an American composer.\nPage: James Matheson (composer). Sentence: In December 2011, he received the Charles Ives Living from the American Academy of Arts and Letters, an award providing him with $100,000 for two years (2012-2014).\nPage: Charles Ives. Sentence: Charles Edward Ives ( ; October 20, 1874May 19, 1954) was an American modernist composer.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "47ebeddb-4ccf-5131-a699-103342d0ce8a",
+        "text": "text_fd2be00a620de1e91b773bbffb30b04c",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "b2e94f07-6657-5b44-8f6d-161538d7f44f",
+        "text": "james matheson",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "355cf8f5-d714-5717-85b1-e6823bb908b0",
+        "text": "1970",
+        "type": "Entity"
+      },
+      {
+        "id": 5,
+        "original_id": "b19433ae-558c-5aaf-95ac-6231f2a4be0e",
+        "text": "date",
+        "type": "EntityType"
+      },
+      {
+        "id": 6,
+        "original_id": "03abe584-9b52-5e4b-8fae-4e596db56867",
+        "text": "des moines, iowa",
+        "type": "Entity"
+      },
+      {
+        "id": 7,
+        "original_id": "5f394058-b2a0-5ba8-8466-ba2a18cfcf4e",
+        "text": "place",
+        "type": "EntityType"
+      },
+      {
+        "id": 8,
+        "original_id": "09a64b1e-1101-5e79-9864-dcdb9bb42b1d",
+        "text": "charles ives living",
+        "type": "Entity"
+      },
+      {
+        "id": 9,
+        "original_id": "7fac5b30-3015-53ea-84c8-528a5011966c",
+        "text": "american academy of arts and letters",
+        "type": "Entity"
+      },
+      {
+        "id": 10,
+        "original_id": "388f60fb-220d-55e8-ae9c-3ac93cead308",
+        "text": "organization",
+        "type": "EntityType"
+      },
+      {
+        "id": 11,
+        "original_id": "7b754102-2b9c-5684-90b3-2ab829e5631a",
+        "text": "$100,000",
+        "type": "Entity"
+      },
+      {
+        "id": 12,
+        "original_id": "42291403-cec2-5c77-8d65-5c76fd6f72ac",
+        "text": "amount",
+        "type": "EntityType"
+      },
+      {
+        "id": 13,
+        "original_id": "4a8fe7c7-65be-52a5-8e8b-37dfb2ff2cc6",
+        "text": "2012-2014",
+        "type": "Entity"
+      },
+      {
+        "id": 14,
+        "original_id": "38e42125-31f4-5cd6-993c-dbbc06a88910",
+        "text": "award",
+        "type": "EntityType"
+      },
+      {
+        "id": 15,
+        "original_id": "d7df21d9-e477-528a-bd37-e042032d0237",
+        "text": "december 2011",
+        "type": "Entity"
+      },
+      {
+        "id": 16,
+        "original_id": "99a82eec-bb35-5bb5-9ed2-e73fc7a756de",
+        "text": "person",
+        "type": "EntityType"
+      },
+      {
+        "id": 17,
+        "original_id": "b28e99cd-d141-5bbf-a22e-cf7efa729962",
+        "text": "charles edward ives",
+        "type": "Entity"
+      },
+      {
+        "id": 18,
+        "original_id": "77f8f2c2-8a53-5f5e-91b9-efab1eae0106",
+        "text": "1874-10-20",
+        "type": "Entity"
+      },
+      {
+        "id": 19,
+        "original_id": "f63a0dd4-a6c8-5957-a7e2-72345a14454b",
+        "text": "1954-05-19",
+        "type": "Entity"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "born_in"
+      },
+      {
+        "source": 1,
+        "target": 4,
+        "type": "contains"
+      },
+      {
+        "source": 4,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 13,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 15,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 18,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 19,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 6,
+        "type": "born_in"
+      },
+      {
+        "source": 1,
+        "target": 6,
+        "type": "contains"
+      },
+      {
+        "source": 6,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 8,
+        "type": "received"
+      },
+      {
+        "source": 1,
+        "target": 8,
+        "type": "contains"
+      },
+      {
+        "source": 8,
+        "target": 9,
+        "type": "awarded_by"
+      },
+      {
+        "source": 1,
+        "target": 9,
+        "type": "contains"
+      },
+      {
+        "source": 9,
+        "target": 10,
+        "type": "is_a"
+      },
+      {
+        "source": 8,
+        "target": 11,
+        "type": "provides_amount"
+      },
+      {
+        "source": 1,
+        "target": 11,
+        "type": "contains"
+      },
+      {
+        "source": 11,
+        "target": 12,
+        "type": "is_a"
+      },
+      {
+        "source": 8,
+        "target": 13,
+        "type": "provides_during"
+      },
+      {
+        "source": 1,
+        "target": 13,
+        "type": "contains"
+      },
+      {
+        "source": 8,
+        "target": 14,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 15,
+        "type": "received_in"
+      },
+      {
+        "source": 1,
+        "target": 15,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 16,
+        "type": "is_a"
+      },
+      {
+        "source": 17,
+        "target": 16,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 17,
+        "type": "contains"
+      },
+      {
+        "source": 17,
+        "target": 18,
+        "type": "born_on"
+      },
+      {
+        "source": 1,
+        "target": 18,
+        "type": "contains"
+      },
+      {
+        "source": 17,
+        "target": 19,
+        "type": "died_on"
+      },
+      {
+        "source": 1,
+        "target": 19,
+        "type": "contains"
+      }
+    ]
+  }
+}

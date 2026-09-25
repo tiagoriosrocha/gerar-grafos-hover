@@ -1,0 +1,417 @@
+{
+  "dataset": "hover",
+  "id": "d5b113a8-9941-4676-99d6-408e775d04a5",
+  "split": "train",
+  "claim": "The star of \"Joe Bash\" won an Emmy Award in 1996.",
+  "evidencia": "Page: Joe Bash. Sentence: Starring Peter Boyle as a weary and embittered New York City Police Department beat cop, it was created by veteran TV producer Danny Arnold following his successful New York City police detective sitcom \"Barney Miller\".\nPage: Peter Boyle. Sentence: Boyle, who won an Emmy Award in 1996 for a guest-starring role on the science-fiction drama \"The X-Files\", won praise in both comedic and dramatic parts following his breakthrough performance in the 1970 film \"Joe\".",
+  "evidence_text": "Page: Joe Bash. Sentence: Starring Peter Boyle as a weary and embittered New York City Police Department beat cop, it was created by veteran TV producer Danny Arnold following his successful New York City police detective sitcom \"Barney Miller\".\nPage: Peter Boyle. Sentence: Boyle, who won an Emmy Award in 1996 for a guest-starring role on the science-fiction drama \"The X-Files\", won praise in both comedic and dramatic parts following his breakthrough performance in the 1970 film \"Joe\".",
+  "label": "SUPPORTED",
+  "num_hops": 2,
+  "hover_metadata": {
+    "supporting_facts": [
+      [
+        "Joe Bash",
+        1
+      ],
+      [
+        "Peter Boyle",
+        2
+      ]
+    ],
+    "num_hops": 2,
+    "evidence_annotation_id": [
+      0
+    ],
+    "evidence_id": [
+      "Joe Bash::sentence::1",
+      "Peter Boyle::sentence::2"
+    ],
+    "evidence_wiki_url": [
+      "https://en.wikipedia.org/wiki/Joe_Bash",
+      "https://en.wikipedia.org/wiki/Peter_Boyle"
+    ],
+    "evidence_sentence_id": [
+      "Joe Bash::sentence::1",
+      "Peter Boyle::sentence::2"
+    ]
+  },
+  "grafo_claim": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "8db96f3b-3d85-5ef7-b9af-d5fbd7a3d713",
+        "text": "This chunk is about:\n- People: Peter Boyle\n- Works: \"Joe Bash\"\n- Awards: Emmy Awards\n\nFacts:\n- Peter Boyle starred in \"Joe Bash.\"\n- Peter Boyle won an Emmy Award in 1996.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "7dc3b519-9d35-5a60-996e-5dc2428e5896",
+        "text": "The star of \"Joe Bash\" won an Emmy Award in 1996.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "d428f3cb-a068-5260-b76c-e95a1195b6ee",
+        "text": "text_ffdf9c63e86277e1513b220cd5c57f70",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "3aa76517-8db6-505c-87e6-99f3507d0724",
+        "text": "joe bash",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "440ae13f-14b3-5fcb-95e0-6581897cf59e",
+        "text": "emmy award",
+        "type": "Entity"
+      },
+      {
+        "id": 5,
+        "original_id": "03508744-888e-5e4b-9a29-9ff87ae8d3b3",
+        "text": "1996",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "b19433ae-558c-5aaf-95ac-6231f2a4be0e",
+        "text": "date",
+        "type": "EntityType"
+      },
+      {
+        "id": 7,
+        "original_id": "38e42125-31f4-5cd6-993c-dbbc06a88910",
+        "text": "award",
+        "type": "EntityType"
+      },
+      {
+        "id": 8,
+        "original_id": "5263a535-1b4b-5925-be3e-310d03cd303b",
+        "text": "work",
+        "type": "EntityType"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "has_star_who_won"
+      },
+      {
+        "source": 1,
+        "target": 4,
+        "type": "contains"
+      },
+      {
+        "source": 4,
+        "target": 5,
+        "type": "won_in"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 4,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 8,
+        "type": "is_a"
+      }
+    ]
+  },
+  "grafo_evidencia": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "1aa361ae-42e6-55d4-89ca-b0290eed7553",
+        "text": "This chunk is about:\n- TV Series: Joe Bash, Barney Miller, The X-Files\n- People: Peter Boyle, Danny Arnold\n- Organizations: New York City Police Department\n- Roles: beat cop, TV producer\n- Awards: Emmy Award\n- Places: New York City\n- Topics: acting career, television production\n\nFacts:\n- In 1970, Peter Boyle had a breakthrough performance in the film \"Joe\".\n- After his breakthrough in \"Joe,\" Peter Boyle won praise in both comedic and dramatic roles.\n- Danny Arnold created the TV series \"Joe Bash\" after the success of his New York City police detective sitcom \"Barney Miller\".\n- \"Joe Bash\" starred Peter Boyle as a weary and embittered New York City Police Department beat cop.\n- In 1996, Peter Boyle won an Emmy Award for a guest-starring role on the science-fiction drama \"The X-Files\".",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "b9adf252-3574-5706-ba68-14aa11b9e3c3",
+        "text": "Page: Joe Bash. Sentence: Starring Peter Boyle as a weary and embittered New York City Police Department beat cop, it was created by veteran TV producer Danny Arnold following his successful New York City police detective sitcom \"Barney Miller\".\nPage: Peter Boyle. Sentence: Boyle, who won an Emmy Award in 1996 for a guest-starring role on the science-fiction drama \"The X-Files\", won praise in both comedic and dramatic parts following his breakthrough performance in the 1970 film \"Joe\".",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "09cfacf2-a744-5d58-ba51-850afe0fe54b",
+        "text": "text_1c703f17daa20fe6047fd4b9c7339f52",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "3aa76517-8db6-505c-87e6-99f3507d0724",
+        "text": "joe bash",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "f2216619-3090-5c74-9b57-e8b353fe552f",
+        "text": "peter boyle",
+        "type": "Entity"
+      },
+      {
+        "id": 5,
+        "original_id": "6ab5934a-657e-5fa2-9f79-ead54b3d0056",
+        "text": "new york city police department",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "388f60fb-220d-55e8-ae9c-3ac93cead308",
+        "text": "organization",
+        "type": "EntityType"
+      },
+      {
+        "id": 7,
+        "original_id": "440ae13f-14b3-5fcb-95e0-6581897cf59e",
+        "text": "emmy award",
+        "type": "Entity"
+      },
+      {
+        "id": 8,
+        "original_id": "38e42125-31f4-5cd6-993c-dbbc06a88910",
+        "text": "award",
+        "type": "EntityType"
+      },
+      {
+        "id": 9,
+        "original_id": "03508744-888e-5e4b-9a29-9ff87ae8d3b3",
+        "text": "1996",
+        "type": "Entity"
+      },
+      {
+        "id": 10,
+        "original_id": "b19433ae-558c-5aaf-95ac-6231f2a4be0e",
+        "text": "date",
+        "type": "EntityType"
+      },
+      {
+        "id": 11,
+        "original_id": "afe7c954-40e4-5026-87bc-0d6ebff0900e",
+        "text": "the x-files",
+        "type": "Entity"
+      },
+      {
+        "id": 12,
+        "original_id": "5263a535-1b4b-5925-be3e-310d03cd303b",
+        "text": "work",
+        "type": "EntityType"
+      },
+      {
+        "id": 13,
+        "original_id": "b4176478-bd8a-5b71-af7b-202afa5e60cf",
+        "text": "joe",
+        "type": "Entity"
+      },
+      {
+        "id": 14,
+        "original_id": "355cf8f5-d714-5717-85b1-e6823bb908b0",
+        "text": "1970",
+        "type": "Entity"
+      },
+      {
+        "id": 15,
+        "original_id": "99a82eec-bb35-5bb5-9ed2-e73fc7a756de",
+        "text": "person",
+        "type": "EntityType"
+      },
+      {
+        "id": 16,
+        "original_id": "105f2841-3ecf-5e86-a078-e2dd06586e74",
+        "text": "danny arnold",
+        "type": "Entity"
+      },
+      {
+        "id": 17,
+        "original_id": "64ab2977-9863-57c6-992c-a6952951f235",
+        "text": "barney miller",
+        "type": "Entity"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 16,
+        "target": 3,
+        "type": "created"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "starred_person"
+      },
+      {
+        "source": 1,
+        "target": 4,
+        "type": "contains"
+      },
+      {
+        "source": 4,
+        "target": 5,
+        "type": "portrayed_member_of"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 4,
+        "target": 7,
+        "type": "won"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      },
+      {
+        "source": 7,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 4,
+        "target": 9,
+        "type": "won_in"
+      },
+      {
+        "source": 1,
+        "target": 9,
+        "type": "contains"
+      },
+      {
+        "source": 9,
+        "target": 10,
+        "type": "is_a"
+      },
+      {
+        "source": 14,
+        "target": 10,
+        "type": "is_a"
+      },
+      {
+        "source": 4,
+        "target": 11,
+        "type": "guest_starred_in"
+      },
+      {
+        "source": 1,
+        "target": 11,
+        "type": "contains"
+      },
+      {
+        "source": 11,
+        "target": 12,
+        "type": "is_a"
+      },
+      {
+        "source": 13,
+        "target": 12,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 12,
+        "type": "is_a"
+      },
+      {
+        "source": 17,
+        "target": 12,
+        "type": "is_a"
+      },
+      {
+        "source": 4,
+        "target": 13,
+        "type": "had_breakthrough_performance_in"
+      },
+      {
+        "source": 1,
+        "target": 13,
+        "type": "contains"
+      },
+      {
+        "source": 13,
+        "target": 14,
+        "type": "released_in"
+      },
+      {
+        "source": 1,
+        "target": 14,
+        "type": "contains"
+      },
+      {
+        "source": 4,
+        "target": 15,
+        "type": "is_a"
+      },
+      {
+        "source": 16,
+        "target": 15,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 16,
+        "type": "contains"
+      },
+      {
+        "source": 16,
+        "target": 17,
+        "type": "created"
+      },
+      {
+        "source": 1,
+        "target": 17,
+        "type": "contains"
+      }
+    ]
+  }
+}

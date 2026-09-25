@@ -1,0 +1,357 @@
+{
+  "dataset": "hover",
+  "id": "b83565ca-00ab-421b-8348-9e2ca6e75530",
+  "split": "train",
+  "claim": "TerraTrike is based in a city that is on the Grand River about thirty miles east of Lake Michigan.",
+  "evidencia": "Page: TerraTrike. Sentence: TerraTrike is based in Grand Rapids, Michigan USA.\nPage: Grand Rapids, Michigan. Sentence: Grand Rapids is the second-largest city in Michigan, and the largest city in West Michigan.\nPage: Grand Rapids, Michigan. Sentence: It is on the Grand River about 30 mi east of Lake Michigan.",
+  "evidence_text": "Page: TerraTrike. Sentence: TerraTrike is based in Grand Rapids, Michigan USA.\nPage: Grand Rapids, Michigan. Sentence: Grand Rapids is the second-largest city in Michigan, and the largest city in West Michigan.\nPage: Grand Rapids, Michigan. Sentence: It is on the Grand River about 30 mi east of Lake Michigan.",
+  "label": "SUPPORTED",
+  "num_hops": 2,
+  "hover_metadata": {
+    "supporting_facts": [
+      [
+        "TerraTrike",
+        1
+      ],
+      [
+        "Grand Rapids, Michigan",
+        0
+      ],
+      [
+        "Grand Rapids, Michigan",
+        1
+      ]
+    ],
+    "num_hops": 2,
+    "evidence_annotation_id": [
+      0
+    ],
+    "evidence_id": [
+      "TerraTrike::sentence::1",
+      "Grand Rapids, Michigan::sentence::0",
+      "Grand Rapids, Michigan::sentence::1"
+    ],
+    "evidence_wiki_url": [
+      "https://en.wikipedia.org/wiki/TerraTrike",
+      "https://en.wikipedia.org/wiki/Grand_Rapids%2C_Michigan"
+    ],
+    "evidence_sentence_id": [
+      "TerraTrike::sentence::1",
+      "Grand Rapids, Michigan::sentence::0",
+      "Grand Rapids, Michigan::sentence::1"
+    ]
+  },
+  "grafo_claim": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "4c8bea64-61b3-5ec9-bb02-43d1db62fd23",
+        "text": "This chunk is about:\n- Companies: TerraTrike\n- Places: Grand River, Lake Michigan\n\nFacts:\n- TerraTrike is based in a city on the Grand River.\n- TerraTrike is based in a city about thirty miles east of Lake Michigan.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "d5af9420-fb70-5fe5-a272-5587d49eefa4",
+        "text": "TerraTrike is based in a city that is on the Grand River about thirty miles east of Lake Michigan.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "0187bff7-b81d-531b-9190-38aa7f52c1c0",
+        "text": "text_61b2fb137ab9be0ccda14d67e060a12d",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "b732f4d6-b9e0-5e38-bd29-95c1836baa60",
+        "text": "terratrike",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "5c1cb01b-c84a-511a-b879-6cdd33fa4d74",
+        "text": "the city",
+        "type": "Entity"
+      },
+      {
+        "id": 5,
+        "original_id": "3d912f50-b4f7-5e77-bb5b-25fe39f53ac8",
+        "text": "grand river",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "5f394058-b2a0-5ba8-8466-ba2a18cfcf4e",
+        "text": "place",
+        "type": "EntityType"
+      },
+      {
+        "id": 7,
+        "original_id": "4883a091-d6b0-5133-aa97-829933d8409f",
+        "text": "lake michigan",
+        "type": "Entity"
+      },
+      {
+        "id": 8,
+        "original_id": "388f60fb-220d-55e8-ae9c-3ac93cead308",
+        "text": "organization",
+        "type": "EntityType"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_based_in"
+      },
+      {
+        "source": 1,
+        "target": 4,
+        "type": "contains"
+      },
+      {
+        "source": 4,
+        "target": 5,
+        "type": "is_on"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 7,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 4,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 4,
+        "target": 7,
+        "type": "is_about_thirty_miles_east_of"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 8,
+        "type": "is_a"
+      }
+    ]
+  },
+  "grafo_evidencia": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "b32b5cef-62a6-59c0-aeca-f567d3f05635",
+        "text": "This chunk is about:\n- Companies: TerraTrike\n- Places: Grand Rapids, Michigan; Michigan; West Michigan; Grand River; Lake Michigan\n\nFacts:\n- Grand Rapids is the second-largest city in Michigan and the largest city in West Michigan.\n- Grand Rapids is on the Grand River about 30 miles east of Lake Michigan.\n- TerraTrike is based in Grand Rapids, Michigan, USA.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "1f8eee5f-338f-5bfd-a740-67afafdff07d",
+        "text": "Page: TerraTrike. Sentence: TerraTrike is based in Grand Rapids, Michigan USA.\nPage: Grand Rapids, Michigan. Sentence: Grand Rapids is the second-largest city in Michigan, and the largest city in West Michigan.\nPage: Grand Rapids, Michigan. Sentence: It is on the Grand River about 30 mi east of Lake Michigan.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "dadaab6b-f3fd-5049-a731-6d4b6cd96a6c",
+        "text": "text_f5260e7f9c17bbb78a45ff246d64df88",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "b732f4d6-b9e0-5e38-bd29-95c1836baa60",
+        "text": "terratrike",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "5b599c81-7ad2-5628-8e5a-07a8a995c5c2",
+        "text": "grand rapids",
+        "type": "Entity"
+      },
+      {
+        "id": 5,
+        "original_id": "2a04dbe3-217e-53af-95e9-82f50cdcf4d4",
+        "text": "michigan",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "874a51da-34ea-5037-be47-d87785d43c37",
+        "text": "united states",
+        "type": "Entity"
+      },
+      {
+        "id": 7,
+        "original_id": "5f394058-b2a0-5ba8-8466-ba2a18cfcf4e",
+        "text": "place",
+        "type": "EntityType"
+      },
+      {
+        "id": 8,
+        "original_id": "c783ffc5-4cb3-5196-a735-04fb7412de05",
+        "text": "west michigan",
+        "type": "Entity"
+      },
+      {
+        "id": 9,
+        "original_id": "3d912f50-b4f7-5e77-bb5b-25fe39f53ac8",
+        "text": "grand river",
+        "type": "Entity"
+      },
+      {
+        "id": 10,
+        "original_id": "4883a091-d6b0-5133-aa97-829933d8409f",
+        "text": "lake michigan",
+        "type": "Entity"
+      },
+      {
+        "id": 11,
+        "original_id": "388f60fb-220d-55e8-ae9c-3ac93cead308",
+        "text": "organization",
+        "type": "EntityType"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "based_in"
+      },
+      {
+        "source": 1,
+        "target": 4,
+        "type": "contains"
+      },
+      {
+        "source": 4,
+        "target": 5,
+        "type": "located_in"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "located_in"
+      },
+      {
+        "source": 1,
+        "target": 6,
+        "type": "contains"
+      },
+      {
+        "source": 6,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 5,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 8,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 9,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 10,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 4,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 4,
+        "target": 8,
+        "type": "largest_city_in"
+      },
+      {
+        "source": 1,
+        "target": 8,
+        "type": "contains"
+      },
+      {
+        "source": 4,
+        "target": 9,
+        "type": "located_on"
+      },
+      {
+        "source": 1,
+        "target": 9,
+        "type": "contains"
+      },
+      {
+        "source": 4,
+        "target": 10,
+        "type": "located_east_of"
+      },
+      {
+        "source": 1,
+        "target": 10,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 11,
+        "type": "is_a"
+      }
+    ]
+  }
+}

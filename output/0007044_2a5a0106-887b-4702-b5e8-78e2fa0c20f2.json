@@ -1,0 +1,369 @@
+{
+  "dataset": "hover",
+  "id": "2a5a0106-887b-4702-b5e8-78e2fa0c20f2",
+  "split": "train",
+  "claim": "In the 2011 census the population of suburban area in which BA Connect is headquartered was 26,788.",
+  "evidencia": "Page: BA Connect. Sentence: Headquartered in Didsbury, Manchester, England, it operated a network of domestic and European services from a number of airports in the United Kingdom on behalf of British Airways.\nPage: Didsbury. Sentence: The population at the 2011 census was 26,788.",
+  "evidence_text": "Page: BA Connect. Sentence: Headquartered in Didsbury, Manchester, England, it operated a network of domestic and European services from a number of airports in the United Kingdom on behalf of British Airways.\nPage: Didsbury. Sentence: The population at the 2011 census was 26,788.",
+  "label": "SUPPORTED",
+  "num_hops": 2,
+  "hover_metadata": {
+    "supporting_facts": [
+      [
+        "BA Connect",
+        1
+      ],
+      [
+        "Didsbury",
+        2
+      ]
+    ],
+    "num_hops": 2,
+    "evidence_annotation_id": [
+      0
+    ],
+    "evidence_id": [
+      "BA Connect::sentence::1",
+      "Didsbury::sentence::2"
+    ],
+    "evidence_wiki_url": [
+      "https://en.wikipedia.org/wiki/BA_Connect",
+      "https://en.wikipedia.org/wiki/Didsbury"
+    ],
+    "evidence_sentence_id": [
+      "BA Connect::sentence::1",
+      "Didsbury::sentence::2"
+    ]
+  },
+  "grafo_claim": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "73871727-cdf8-5124-90a1-feb1b8e3cd8d",
+        "text": "This chunk is about:\n- Companies: BA Connect\n- Places: suburban area\n- Topics: 2011 census, population\n\nFacts:\n- In the 2011 census, the suburban area in which BA Connect is headquartered had a population of 26,788.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "02726f98-a98c-5388-b209-8c57a93288f3",
+        "text": "In the 2011 census the population of suburban area in which BA Connect is headquartered was 26,788.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "640d13e5-2353-5e16-b074-649df31d2050",
+        "text": "text_4627682ea6b0d68c4746c43b21030465",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "d42c1c24-2adb-57a0-a28b-e1d9f1d9057c",
+        "text": "ba connect",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "74a6fe37-0031-5f8a-ae50-a8d469e59c58",
+        "text": "suburban area where ba connect is headquartered",
+        "type": "Entity"
+      },
+      {
+        "id": 5,
+        "original_id": "b61f970c-38cc-5233-8623-f78bf72a7bdf",
+        "text": "26,788",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "27e0ee44-fc4c-504c-8206-44c59de4ef7c",
+        "text": "2011 census",
+        "type": "Entity"
+      },
+      {
+        "id": 7,
+        "original_id": "214abcd9-9adf-5c8a-bb35-1e729f2d68c3",
+        "text": "event",
+        "type": "EntityType"
+      },
+      {
+        "id": 8,
+        "original_id": "7a7a0687-e490-5167-ad5a-0e39d9055dee",
+        "text": "quantity",
+        "type": "EntityType"
+      },
+      {
+        "id": 9,
+        "original_id": "5f394058-b2a0-5ba8-8466-ba2a18cfcf4e",
+        "text": "place",
+        "type": "EntityType"
+      },
+      {
+        "id": 10,
+        "original_id": "388f60fb-220d-55e8-ae9c-3ac93cead308",
+        "text": "organization",
+        "type": "EntityType"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "headquartered_in"
+      },
+      {
+        "source": 1,
+        "target": 4,
+        "type": "contains"
+      },
+      {
+        "source": 4,
+        "target": 5,
+        "type": "has_population"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "reported_in"
+      },
+      {
+        "source": 1,
+        "target": 6,
+        "type": "contains"
+      },
+      {
+        "source": 6,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 5,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 4,
+        "target": 9,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 10,
+        "type": "is_a"
+      }
+    ]
+  },
+  "grafo_evidencia": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "b45a314d-e9ed-59e7-a09a-a121cb07b09b",
+        "text": "This chunk is about:\n- Companies: BA Connect, British Airways\n- Places: Didsbury, Manchester, England, United Kingdom\n- Topics: airline operations, population\n\nFacts:\n- BA Connect was headquartered in Didsbury, Manchester, England.\n- BA Connect operated a network of domestic and European airline services from a number of airports in the United Kingdom on behalf of British Airways.\n- Didsbury had a population of 26,788 at the 2011 census.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "1b007cd8-324e-5d6e-bc72-d861b6a71a49",
+        "text": "Page: BA Connect. Sentence: Headquartered in Didsbury, Manchester, England, it operated a network of domestic and European services from a number of airports in the United Kingdom on behalf of British Airways.\nPage: Didsbury. Sentence: The population at the 2011 census was 26,788.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "a2012ce4-f19f-5a15-9a70-59e599f61176",
+        "text": "text_e46dc5377583f73340b8d7159a58a2fc",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "d42c1c24-2adb-57a0-a28b-e1d9f1d9057c",
+        "text": "ba connect",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "1b887d21-cf4f-5d61-9cf1-a364a05b2624",
+        "text": "didsbury",
+        "type": "Entity"
+      },
+      {
+        "id": 5,
+        "original_id": "07b01e42-6a81-5fcb-af7f-85f36dcfd338",
+        "text": "manchester",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "27f0656f-762c-54f0-8ed5-c4b27557219f",
+        "text": "england",
+        "type": "Entity"
+      },
+      {
+        "id": 7,
+        "original_id": "5f394058-b2a0-5ba8-8466-ba2a18cfcf4e",
+        "text": "place",
+        "type": "EntityType"
+      },
+      {
+        "id": 8,
+        "original_id": "27e0ee44-fc4c-504c-8206-44c59de4ef7c",
+        "text": "2011 census",
+        "type": "Entity"
+      },
+      {
+        "id": 9,
+        "original_id": "b19433ae-558c-5aaf-95ac-6231f2a4be0e",
+        "text": "date",
+        "type": "EntityType"
+      },
+      {
+        "id": 10,
+        "original_id": "1941be33-5fbb-50eb-a9b1-fa2fc297d7dd",
+        "text": "united kingdom",
+        "type": "Entity"
+      },
+      {
+        "id": 11,
+        "original_id": "540b0ca6-d7f8-510b-b7c0-05c8484679e3",
+        "text": "british airways",
+        "type": "Entity"
+      },
+      {
+        "id": 12,
+        "original_id": "388f60fb-220d-55e8-ae9c-3ac93cead308",
+        "text": "organization",
+        "type": "EntityType"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "headquartered_in"
+      },
+      {
+        "source": 1,
+        "target": 4,
+        "type": "contains"
+      },
+      {
+        "source": 4,
+        "target": 5,
+        "type": "located_in"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "located_in"
+      },
+      {
+        "source": 1,
+        "target": 6,
+        "type": "contains"
+      },
+      {
+        "source": 6,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 5,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 4,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 10,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 4,
+        "target": 8,
+        "type": "population_recorded_at"
+      },
+      {
+        "source": 1,
+        "target": 8,
+        "type": "contains"
+      },
+      {
+        "source": 8,
+        "target": 9,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 10,
+        "type": "operated_from"
+      },
+      {
+        "source": 1,
+        "target": 10,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 11,
+        "type": "operated_on_behalf_of"
+      },
+      {
+        "source": 1,
+        "target": 11,
+        "type": "contains"
+      },
+      {
+        "source": 11,
+        "target": 12,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 12,
+        "type": "is_a"
+      }
+    ]
+  }
+}

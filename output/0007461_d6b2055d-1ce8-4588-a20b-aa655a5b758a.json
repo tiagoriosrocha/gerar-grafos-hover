@@ -1,0 +1,432 @@
+{
+  "dataset": "hover",
+  "id": "d6b2055d-1ce8-4588-a20b-aa655a5b758a",
+  "split": "train",
+  "claim": "The city where the Róisín Dubh is located is in the Western area of Ireland. It is also the home of Sean Smyth.",
+  "evidencia": "Page: Seán Smyth. Sentence: Born in Straide, County Mayo, and now living in Galway, Seán is an All-Ireland champion on both fiddle and whistle .\nPage: Galway. Sentence: Galway ( ; Irish: \"Gaillimh\" , ] ) is a city in the West of Ireland in the province of Connacht.\nPage: Róisín Dubh (music venue). Sentence: The Róisín Dubh is an established live music venue in Galway, Ireland.",
+  "evidence_text": "Page: Seán Smyth. Sentence: Born in Straide, County Mayo, and now living in Galway, Seán is an All-Ireland champion on both fiddle and whistle .\nPage: Galway. Sentence: Galway ( ; Irish: \"Gaillimh\" , ] ) is a city in the West of Ireland in the province of Connacht.\nPage: Róisín Dubh (music venue). Sentence: The Róisín Dubh is an established live music venue in Galway, Ireland.",
+  "label": "SUPPORTED",
+  "num_hops": 3,
+  "hover_metadata": {
+    "supporting_facts": [
+      [
+        "Seán Smyth",
+        1
+      ],
+      [
+        "Galway",
+        0
+      ],
+      [
+        "Róisín Dubh (music venue)",
+        0
+      ]
+    ],
+    "num_hops": 3,
+    "evidence_annotation_id": [
+      0
+    ],
+    "evidence_id": [
+      "Seán Smyth::sentence::1",
+      "Galway::sentence::0",
+      "Róisín Dubh (music venue)::sentence::0"
+    ],
+    "evidence_wiki_url": [
+      "https://en.wikipedia.org/wiki/Se%C3%A1n_Smyth",
+      "https://en.wikipedia.org/wiki/Galway",
+      "https://en.wikipedia.org/wiki/R%C3%B3is%C3%ADn_Dubh_%28music_venue%29"
+    ],
+    "evidence_sentence_id": [
+      "Seán Smyth::sentence::1",
+      "Galway::sentence::0",
+      "Róisín Dubh (music venue)::sentence::0"
+    ]
+  },
+  "grafo_claim": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "f58bcfef-a1d6-591a-bc16-85fbec35146b",
+        "text": "This chunk is about:\n- Places: Galway, Western Ireland\n- Organizations: Róisín Dubh\n- People: Sean Smyth\n\nFacts:\n- Galway is a city in the Western area of Ireland.\n- The Róisín Dubh is located in Galway.\n- Sean Smyth is from Galway.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "060f9cde-85e9-56a7-89c3-b2ba90a54d94",
+        "text": "The city where the Róisín Dubh is located is in the Western area of Ireland. It is also the home of Sean Smyth.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "8c62dbea-a4f5-5dab-98ed-af3d6d61e0f9",
+        "text": "text_bcf652ba1f33f68c080476328fd366ac",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "21888a44-f512-5638-a4b2-0fa6c79dce9e",
+        "text": "róisín dubh",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "bfcb542a-c75e-5b89-8d83-0d99bedd7768",
+        "text": "western area of ireland",
+        "type": "Entity"
+      },
+      {
+        "id": 5,
+        "original_id": "8d89e8e3-3c7e-58b7-b102-ef57de092b66",
+        "text": "ireland",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "5f394058-b2a0-5ba8-8466-ba2a18cfcf4e",
+        "text": "place",
+        "type": "EntityType"
+      },
+      {
+        "id": 7,
+        "original_id": "66c2ebdf-bb42-552f-8f56-579ed4192275",
+        "text": "sean smyth",
+        "type": "Entity"
+      },
+      {
+        "id": 8,
+        "original_id": "99a82eec-bb35-5bb5-9ed2-e73fc7a756de",
+        "text": "person",
+        "type": "EntityType"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 7,
+        "target": 3,
+        "type": "shares_city_with"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "located_in"
+      },
+      {
+        "source": 1,
+        "target": 4,
+        "type": "contains"
+      },
+      {
+        "source": 4,
+        "target": 5,
+        "type": "part_of"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 4,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      },
+      {
+        "source": 7,
+        "target": 8,
+        "type": "is_a"
+      }
+    ]
+  },
+  "grafo_evidencia": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "c6811aea-79f1-54ec-b3b5-491e84fb884a",
+        "text": "This chunk is about:\n- People: Seán Smyth\n- Places: Straide, County Mayo, Galway, Ireland, Connacht\n- Roles: All-Ireland champion\n- Products: fiddle, whistle\n- Organizations: Róisín Dubh\n- Topics: live music venues\n\nFacts:\n- Seán Smyth was born in Straide, County Mayo.\n- Seán Smyth now lives in Galway.\n- Seán Smyth is an All-Ireland champion on both the fiddle and the whistle.\n- Galway is a city in the West of Ireland in the province of Connacht.\n- The Róisín Dubh is an established live music venue in Galway, Ireland.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "a9c8f782-c9f3-5f62-986e-498abcf529d5",
+        "text": "Page: Seán Smyth. Sentence: Born in Straide, County Mayo, and now living in Galway, Seán is an All-Ireland champion on both fiddle and whistle .\nPage: Galway. Sentence: Galway ( ; Irish: \"Gaillimh\" , ] ) is a city in the West of Ireland in the province of Connacht.\nPage: Róisín Dubh (music venue). Sentence: The Róisín Dubh is an established live music venue in Galway, Ireland.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "7b9e7482-e7bf-550a-8104-4f1f2cb5e692",
+        "text": "text_5e9744f785d99cad198993b1395747f7",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "5dcf705a-e773-5092-a4d3-89ea501b820e",
+        "text": "seán smyth",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "3697c5e9-f823-56e6-ac70-de1f4189a61b",
+        "text": "straide",
+        "type": "Entity"
+      },
+      {
+        "id": 5,
+        "original_id": "9189f979-0404-531b-aec5-ca8df3fb414b",
+        "text": "county mayo",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "5f394058-b2a0-5ba8-8466-ba2a18cfcf4e",
+        "text": "place",
+        "type": "EntityType"
+      },
+      {
+        "id": 7,
+        "original_id": "33628fc4-bf93-5b75-8221-ba1d453f02b0",
+        "text": "galway",
+        "type": "Entity"
+      },
+      {
+        "id": 8,
+        "original_id": "4ecf46c9-2588-53f7-be87-7d7b7f6d332b",
+        "text": "west of ireland",
+        "type": "Entity"
+      },
+      {
+        "id": 9,
+        "original_id": "044283c2-a45a-59c9-a963-5fc8419c8d12",
+        "text": "connacht",
+        "type": "Entity"
+      },
+      {
+        "id": 10,
+        "original_id": "8d89e8e3-3c7e-58b7-b102-ef57de092b66",
+        "text": "ireland",
+        "type": "Entity"
+      },
+      {
+        "id": 11,
+        "original_id": "24cb484d-2bae-5f3c-9ab4-86a459dd289d",
+        "text": "fiddle",
+        "type": "Entity"
+      },
+      {
+        "id": 12,
+        "original_id": "d2a381fa-3658-5ca6-ada9-2109cfc9331d",
+        "text": "concept",
+        "type": "EntityType"
+      },
+      {
+        "id": 13,
+        "original_id": "0e32e8e7-9449-5beb-ac60-60707d63e1bc",
+        "text": "whistle",
+        "type": "Entity"
+      },
+      {
+        "id": 14,
+        "original_id": "99a82eec-bb35-5bb5-9ed2-e73fc7a756de",
+        "text": "person",
+        "type": "EntityType"
+      },
+      {
+        "id": 15,
+        "original_id": "21888a44-f512-5638-a4b2-0fa6c79dce9e",
+        "text": "róisín dubh",
+        "type": "Entity"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "born_in"
+      },
+      {
+        "source": 1,
+        "target": 4,
+        "type": "contains"
+      },
+      {
+        "source": 4,
+        "target": 5,
+        "type": "located_in"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 4,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 8,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 9,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 10,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 7,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 15,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 7,
+        "type": "lives_in"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      },
+      {
+        "source": 15,
+        "target": 7,
+        "type": "located_in"
+      },
+      {
+        "source": 7,
+        "target": 8,
+        "type": "located_in"
+      },
+      {
+        "source": 1,
+        "target": 8,
+        "type": "contains"
+      },
+      {
+        "source": 7,
+        "target": 9,
+        "type": "located_in"
+      },
+      {
+        "source": 1,
+        "target": 9,
+        "type": "contains"
+      },
+      {
+        "source": 7,
+        "target": 10,
+        "type": "located_in"
+      },
+      {
+        "source": 1,
+        "target": 10,
+        "type": "contains"
+      },
+      {
+        "source": 15,
+        "target": 10,
+        "type": "located_in"
+      },
+      {
+        "source": 3,
+        "target": 11,
+        "type": "all_ireland_champion_in"
+      },
+      {
+        "source": 1,
+        "target": 11,
+        "type": "contains"
+      },
+      {
+        "source": 11,
+        "target": 12,
+        "type": "is_a"
+      },
+      {
+        "source": 13,
+        "target": 12,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 13,
+        "type": "all_ireland_champion_in"
+      },
+      {
+        "source": 1,
+        "target": 13,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 14,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 15,
+        "type": "contains"
+      }
+    ]
+  }
+}

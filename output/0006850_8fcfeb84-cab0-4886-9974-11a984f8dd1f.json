@@ -1,0 +1,438 @@
+{
+  "dataset": "hover",
+  "id": "8fcfeb84-cab0-4886-9974-11a984f8dd1f",
+  "split": "train",
+  "claim": "In 2002, Suining had a population of 658,798 and not Qionghai.",
+  "evidencia": "Page: Qionghai. Sentence: Although called a \"city\", Qionghai refers to a large land area in Hainan - an area which was once a county.\nPage: Qionghai. Sentence: It has an area of 1692 km2 and in 2010, it had a population of 483,217.\nPage: Suining. Sentence: Suining (; Sichuanese Pinyin: Xunin; Sichuanese pronunciation: ; ) is a prefecture-level city of eastern Sichuan province in Southwest China.\nPage: Suining. Sentence: In 2002, Suining had a population of 658,798.",
+  "evidence_text": "Page: Qionghai. Sentence: Although called a \"city\", Qionghai refers to a large land area in Hainan - an area which was once a county.\nPage: Qionghai. Sentence: It has an area of 1692 km2 and in 2010, it had a population of 483,217.\nPage: Suining. Sentence: Suining (; Sichuanese Pinyin: Xunin; Sichuanese pronunciation: ; ) is a prefecture-level city of eastern Sichuan province in Southwest China.\nPage: Suining. Sentence: In 2002, Suining had a population of 658,798.",
+  "label": "SUPPORTED",
+  "num_hops": 2,
+  "hover_metadata": {
+    "supporting_facts": [
+      [
+        "Qionghai",
+        1
+      ],
+      [
+        "Qionghai",
+        4
+      ],
+      [
+        "Suining",
+        0
+      ],
+      [
+        "Suining",
+        1
+      ]
+    ],
+    "num_hops": 2,
+    "evidence_annotation_id": [
+      0
+    ],
+    "evidence_id": [
+      "Qionghai::sentence::1",
+      "Qionghai::sentence::4",
+      "Suining::sentence::0",
+      "Suining::sentence::1"
+    ],
+    "evidence_wiki_url": [
+      "https://en.wikipedia.org/wiki/Qionghai",
+      "https://en.wikipedia.org/wiki/Suining"
+    ],
+    "evidence_sentence_id": [
+      "Qionghai::sentence::1",
+      "Qionghai::sentence::4",
+      "Suining::sentence::0",
+      "Suining::sentence::1"
+    ]
+  },
+  "grafo_claim": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "787f60eb-5baf-5d87-97aa-cdbb3d36a777",
+        "text": "This chunk is about:\n- Places: Suining, Qionghai\n- Topics: Population\n\nFacts:\n- In 2002, Suining had a population of 658,798.\n- In 2002, Qionghai did not have a population of 658,798.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "34e34e90-acc5-53e2-959c-c57ee452a35b",
+        "text": "In 2002, Suining had a population of 658,798 and not Qionghai.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "c9056f18-067d-5f84-98a5-57a1f3e613d0",
+        "text": "text_6726a7b6ceab18a476f3cebd0885601c",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "cacb085d-8f60-5b0d-809a-a17e32daee49",
+        "text": "suining",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "5fd3c508-d6cf-5297-a432-519fed6fe1a0",
+        "text": "658,798",
+        "type": "Entity"
+      },
+      {
+        "id": 5,
+        "original_id": "5c1097ca-fab8-54d5-b57f-5dca4b0e2507",
+        "text": "number",
+        "type": "EntityType"
+      },
+      {
+        "id": 6,
+        "original_id": "d4028376-9599-5def-be60-886e367316ac",
+        "text": "2002",
+        "type": "Entity"
+      },
+      {
+        "id": 7,
+        "original_id": "b19433ae-558c-5aaf-95ac-6231f2a4be0e",
+        "text": "date",
+        "type": "EntityType"
+      },
+      {
+        "id": 8,
+        "original_id": "5f394058-b2a0-5ba8-8466-ba2a18cfcf4e",
+        "text": "place",
+        "type": "EntityType"
+      },
+      {
+        "id": 9,
+        "original_id": "313f3a03-62e4-5d97-b298-93da2bfc04f9",
+        "text": "qionghai",
+        "type": "Entity"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "had_population"
+      },
+      {
+        "source": 1,
+        "target": 4,
+        "type": "contains"
+      },
+      {
+        "source": 9,
+        "target": 4,
+        "type": "not_had_population"
+      },
+      {
+        "source": 4,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 6,
+        "type": "population_as_of"
+      },
+      {
+        "source": 1,
+        "target": 6,
+        "type": "contains"
+      },
+      {
+        "source": 9,
+        "target": 6,
+        "type": "population_not_as_of"
+      },
+      {
+        "source": 6,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 9,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 9,
+        "type": "contains"
+      }
+    ]
+  },
+  "grafo_evidencia": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "0f14fca9-c9e8-56c6-ae25-9262239d7104",
+        "text": "This chunk is about:\n- Places: Qionghai, Suining, Hainan, Sichuan, Southwest China\n- Concepts: city status, county history, area, population, prefecture-level city\n\nFacts:\n- Qionghai is a large land area in Hainan that was formerly a county, despite being called a city.\n- In 2010, Qionghai had an area of 1,692 km2 and a population of 483,217.\n- Suining is a prefecture-level city in eastern Sichuan province in Southwest China.\n- In 2002, Suining had a population of 658,798.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "d17c5cc0-bcc1-5a5b-9ac0-861c5b71de8a",
+        "text": "Page: Qionghai. Sentence: Although called a \"city\", Qionghai refers to a large land area in Hainan - an area which was once a county.\nPage: Qionghai. Sentence: It has an area of 1692 km2 and in 2010, it had a population of 483,217.\nPage: Suining. Sentence: Suining (; Sichuanese Pinyin: Xunin; Sichuanese pronunciation: ; ) is a prefecture-level city of eastern Sichuan province in Southwest China.\nPage: Suining. Sentence: In 2002, Suining had a population of 658,798.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "f5e36f27-23ce-51fa-a554-2c10f305e6e4",
+        "text": "text_1668d31e69ab7b83bb07b0be16332e89",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "313f3a03-62e4-5d97-b298-93da2bfc04f9",
+        "text": "qionghai",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "c74702a3-694a-541d-a7b9-8075baa0d210",
+        "text": "hainan",
+        "type": "Entity"
+      },
+      {
+        "id": 5,
+        "original_id": "5f394058-b2a0-5ba8-8466-ba2a18cfcf4e",
+        "text": "place",
+        "type": "EntityType"
+      },
+      {
+        "id": 6,
+        "original_id": "76321a5f-6485-51dc-84ba-1c33cba3b784",
+        "text": "1692 km2",
+        "type": "Entity"
+      },
+      {
+        "id": 7,
+        "original_id": "12d5521e-a878-542e-bebc-84ff79179d8e",
+        "text": "measurement",
+        "type": "EntityType"
+      },
+      {
+        "id": 8,
+        "original_id": "2ca45409-279a-5162-b77d-e36cfaba840f",
+        "text": "483,217",
+        "type": "Entity"
+      },
+      {
+        "id": 9,
+        "original_id": "cb1dc1af-5253-5fa4-877e-246a7629f489",
+        "text": "2010",
+        "type": "Entity"
+      },
+      {
+        "id": 10,
+        "original_id": "b19433ae-558c-5aaf-95ac-6231f2a4be0e",
+        "text": "date",
+        "type": "EntityType"
+      },
+      {
+        "id": 11,
+        "original_id": "cacb085d-8f60-5b0d-809a-a17e32daee49",
+        "text": "suining",
+        "type": "Entity"
+      },
+      {
+        "id": 12,
+        "original_id": "bfc84566-6b4e-5a52-8467-047d900fc43f",
+        "text": "sichuan",
+        "type": "Entity"
+      },
+      {
+        "id": 13,
+        "original_id": "5369edde-3b09-5773-9d69-c61ff73e31e0",
+        "text": "southwest china",
+        "type": "Entity"
+      },
+      {
+        "id": 14,
+        "original_id": "5fd3c508-d6cf-5297-a432-519fed6fe1a0",
+        "text": "658,798",
+        "type": "Entity"
+      },
+      {
+        "id": 15,
+        "original_id": "d4028376-9599-5def-be60-886e367316ac",
+        "text": "2002",
+        "type": "Entity"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "located_in"
+      },
+      {
+        "source": 1,
+        "target": 4,
+        "type": "contains"
+      },
+      {
+        "source": 4,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 13,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 12,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 11,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 6,
+        "type": "has_area"
+      },
+      {
+        "source": 1,
+        "target": 6,
+        "type": "contains"
+      },
+      {
+        "source": 6,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 8,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 14,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 8,
+        "type": "had_population"
+      },
+      {
+        "source": 1,
+        "target": 8,
+        "type": "contains"
+      },
+      {
+        "source": 8,
+        "target": 9,
+        "type": "recorded_in"
+      },
+      {
+        "source": 1,
+        "target": 9,
+        "type": "contains"
+      },
+      {
+        "source": 9,
+        "target": 10,
+        "type": "is_a"
+      },
+      {
+        "source": 15,
+        "target": 10,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 11,
+        "type": "contains"
+      },
+      {
+        "source": 11,
+        "target": 12,
+        "type": "located_in"
+      },
+      {
+        "source": 1,
+        "target": 12,
+        "type": "contains"
+      },
+      {
+        "source": 12,
+        "target": 13,
+        "type": "located_in"
+      },
+      {
+        "source": 1,
+        "target": 13,
+        "type": "contains"
+      },
+      {
+        "source": 11,
+        "target": 14,
+        "type": "had_population"
+      },
+      {
+        "source": 1,
+        "target": 14,
+        "type": "contains"
+      },
+      {
+        "source": 14,
+        "target": 15,
+        "type": "recorded_in"
+      },
+      {
+        "source": 1,
+        "target": 15,
+        "type": "contains"
+      }
+    ]
+  }
+}

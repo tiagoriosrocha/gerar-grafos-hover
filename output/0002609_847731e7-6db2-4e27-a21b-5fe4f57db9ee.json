@@ -1,0 +1,386 @@
+{
+  "dataset": "hover",
+  "id": "847731e7-6db2-4e27-a21b-5fe4f57db9ee",
+  "split": "train",
+  "claim": "Grace Metalious is younger than the author of the novel \"Lonely Road\".",
+  "evidencia": "Page: Nevil Shute. Sentence: Nevil Shute Norway (17 January 189912 January 1960) was an English novelist and aeronautical engineer who spent his later years in Australia.\nPage: Grace Metalious. Sentence: Grace Metalious (September 8, 1924 – February 25, 1964) was an American author known for her controversial novel \"Peyton Place\", one of the best-selling works in publishing history.\nPage: Lonely Road (novel). Sentence: Lonely Road is a novel by British author Nevil Shute.",
+  "evidence_text": "Page: Nevil Shute. Sentence: Nevil Shute Norway (17 January 189912 January 1960) was an English novelist and aeronautical engineer who spent his later years in Australia.\nPage: Grace Metalious. Sentence: Grace Metalious (September 8, 1924 – February 25, 1964) was an American author known for her controversial novel \"Peyton Place\", one of the best-selling works in publishing history.\nPage: Lonely Road (novel). Sentence: Lonely Road is a novel by British author Nevil Shute.",
+  "label": "SUPPORTED",
+  "num_hops": 3,
+  "hover_metadata": {
+    "supporting_facts": [
+      [
+        "Nevil Shute",
+        0
+      ],
+      [
+        "Grace Metalious",
+        0
+      ],
+      [
+        "Lonely Road (novel)",
+        0
+      ]
+    ],
+    "num_hops": 3,
+    "evidence_annotation_id": [
+      0
+    ],
+    "evidence_id": [
+      "Nevil Shute::sentence::0",
+      "Grace Metalious::sentence::0",
+      "Lonely Road (novel)::sentence::0"
+    ],
+    "evidence_wiki_url": [
+      "https://en.wikipedia.org/wiki/Nevil_Shute",
+      "https://en.wikipedia.org/wiki/Grace_Metalious",
+      "https://en.wikipedia.org/wiki/Lonely_Road_%28novel%29"
+    ],
+    "evidence_sentence_id": [
+      "Nevil Shute::sentence::0",
+      "Grace Metalious::sentence::0",
+      "Lonely Road (novel)::sentence::0"
+    ]
+  },
+  "grafo_claim": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "a65cc4d0-5bd8-5c7f-80da-e71f706d9f67",
+        "text": "This chunk is about:\n- People: Grace Metalious\n- Works: \"Lonely Road\"\n\nFacts:\n- Grace Metalious is younger than the author of the novel \"Lonely Road\".",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "7032b02b-ed82-50dc-ad06-12d636d66a82",
+        "text": "Grace Metalious is younger than the author of the novel \"Lonely Road\".",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "2f3b1605-b485-53c3-816f-f5a45c4b17d4",
+        "text": "text_c063df468975103c489deef711040ceb",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "72c42d3b-ed98-5809-9588-06c1a5cbfac5",
+        "text": "grace metalious",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "0ee3b28c-6fac-5518-a923-678dffeffbf0",
+        "text": "author of lonely road",
+        "type": "Entity"
+      },
+      {
+        "id": 5,
+        "original_id": "ba0d3966-d80f-5458-baae-31af002b661a",
+        "text": "lonely road",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "3faed6ef-3d90-5ffd-9229-cfb62eb68140",
+        "text": "book",
+        "type": "EntityType"
+      },
+      {
+        "id": 7,
+        "original_id": "99a82eec-bb35-5bb5-9ed2-e73fc7a756de",
+        "text": "person",
+        "type": "EntityType"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "younger_than"
+      },
+      {
+        "source": 1,
+        "target": 4,
+        "type": "contains"
+      },
+      {
+        "source": 4,
+        "target": 5,
+        "type": "authored"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 4,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 7,
+        "type": "is_a"
+      }
+    ]
+  },
+  "grafo_evidencia": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "6a116e41-9852-58f7-93db-b6d0e9319938",
+        "text": "This chunk is about:\n- People: Nevil Shute, Grace Metalious\n- Works: Lonely Road, Peyton Place\n- Roles: novelist, aeronautical engineer, author\n- Places: England, Australia\n\nFacts:\n- Nevil Shute Norway was born on 17 January 1899 and died on 12 January 1960.\n- Nevil Shute Norway was an English novelist and aeronautical engineer.\n- Nevil Shute Norway spent his later years in Australia.\n- Grace Metalious was born on September 8, 1924 and died on February 25, 1964.\n- Grace Metalious was an American author.\n- Grace Metalious was known for the controversial novel Peyton Place, which was one of the best-selling works in publishing history.\n- Lonely Road is a novel by British author Nevil Shute.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "b7144b7d-2585-59e1-b506-02661d5c5d78",
+        "text": "Page: Nevil Shute. Sentence: Nevil Shute Norway (17 January 189912 January 1960) was an English novelist and aeronautical engineer who spent his later years in Australia.\nPage: Grace Metalious. Sentence: Grace Metalious (September 8, 1924 – February 25, 1964) was an American author known for her controversial novel \"Peyton Place\", one of the best-selling works in publishing history.\nPage: Lonely Road (novel). Sentence: Lonely Road is a novel by British author Nevil Shute.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "d0e2bf73-4294-55aa-a0a1-18c2f7205811",
+        "text": "text_b75adfc2fe875d753062033e1734cc7f",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "cdc8a003-174f-543b-b918-b1502488b551",
+        "text": "nevil shute norway",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "0530be95-9717-59bd-81b9-b3c32d374eaf",
+        "text": "1899-01-17",
+        "type": "Entity"
+      },
+      {
+        "id": 5,
+        "original_id": "b19433ae-558c-5aaf-95ac-6231f2a4be0e",
+        "text": "date",
+        "type": "EntityType"
+      },
+      {
+        "id": 6,
+        "original_id": "cde2d7aa-d584-5305-85ba-f169b231be08",
+        "text": "1960-01-12",
+        "type": "Entity"
+      },
+      {
+        "id": 7,
+        "original_id": "02448d73-884d-50c7-a919-b94177f1cf43",
+        "text": "australia",
+        "type": "Entity"
+      },
+      {
+        "id": 8,
+        "original_id": "5f394058-b2a0-5ba8-8466-ba2a18cfcf4e",
+        "text": "place",
+        "type": "EntityType"
+      },
+      {
+        "id": 9,
+        "original_id": "99a82eec-bb35-5bb5-9ed2-e73fc7a756de",
+        "text": "person",
+        "type": "EntityType"
+      },
+      {
+        "id": 10,
+        "original_id": "72c42d3b-ed98-5809-9588-06c1a5cbfac5",
+        "text": "grace metalious",
+        "type": "Entity"
+      },
+      {
+        "id": 11,
+        "original_id": "ab643f81-c069-5ed3-b48e-3085e1f301df",
+        "text": "1924-09-08",
+        "type": "Entity"
+      },
+      {
+        "id": 12,
+        "original_id": "2a716f09-6b07-595c-9fa7-26e4a104e4af",
+        "text": "1964-02-25",
+        "type": "Entity"
+      },
+      {
+        "id": 13,
+        "original_id": "7366ebb8-d2cf-5902-aa70-bb335c1e5783",
+        "text": "peyton place",
+        "type": "Entity"
+      },
+      {
+        "id": 14,
+        "original_id": "3faed6ef-3d90-5ffd-9229-cfb62eb68140",
+        "text": "book",
+        "type": "EntityType"
+      },
+      {
+        "id": 15,
+        "original_id": "ba0d3966-d80f-5458-baae-31af002b661a",
+        "text": "lonely road",
+        "type": "Entity"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 15,
+        "target": 3,
+        "type": "written_by"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "born_on"
+      },
+      {
+        "source": 1,
+        "target": 4,
+        "type": "contains"
+      },
+      {
+        "source": 4,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 6,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 11,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 12,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 6,
+        "type": "died_on"
+      },
+      {
+        "source": 1,
+        "target": 6,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 7,
+        "type": "spent_later_years_in"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      },
+      {
+        "source": 7,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 9,
+        "type": "is_a"
+      },
+      {
+        "source": 10,
+        "target": 9,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 10,
+        "type": "contains"
+      },
+      {
+        "source": 10,
+        "target": 11,
+        "type": "born_on"
+      },
+      {
+        "source": 1,
+        "target": 11,
+        "type": "contains"
+      },
+      {
+        "source": 10,
+        "target": 12,
+        "type": "died_on"
+      },
+      {
+        "source": 1,
+        "target": 12,
+        "type": "contains"
+      },
+      {
+        "source": 10,
+        "target": 13,
+        "type": "known_for"
+      },
+      {
+        "source": 1,
+        "target": 13,
+        "type": "contains"
+      },
+      {
+        "source": 13,
+        "target": 14,
+        "type": "is_a"
+      },
+      {
+        "source": 15,
+        "target": 14,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 15,
+        "type": "contains"
+      }
+    ]
+  }
+}

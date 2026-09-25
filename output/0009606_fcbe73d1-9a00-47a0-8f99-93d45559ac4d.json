@@ -1,0 +1,525 @@
+{
+  "dataset": "hover",
+  "id": "fcbe73d1-9a00-47a0-8f99-93d45559ac4d",
+  "split": "train",
+  "claim": "Margot Robbie is an actor who won two Logie Award nominations. These were for her portrayal of the character who had an on-off relationship with Ringo Brown.",
+  "evidencia": "Page: Donna Freedman. Sentence: Donna Freedman (also Brown) is a fictional character from the Australian soap opera \"Neighbours\", played by Margot Robbie.\nPage: Margot Robbie. Sentence: She was later cast in the soap opera \"Neighbours\" (2008–2011), which earned her two Logie Award nominations.\nPage: Ringo Brown. Sentence: Ringo's storylines have included his ongoing battle with an eating disorder, a bus crash, a relationship with an older woman, the collapse of a warehouse roof at an illegal dance party and his on-off relationship with Donna Freedman.",
+  "evidence_text": "Page: Donna Freedman. Sentence: Donna Freedman (also Brown) is a fictional character from the Australian soap opera \"Neighbours\", played by Margot Robbie.\nPage: Margot Robbie. Sentence: She was later cast in the soap opera \"Neighbours\" (2008–2011), which earned her two Logie Award nominations.\nPage: Ringo Brown. Sentence: Ringo's storylines have included his ongoing battle with an eating disorder, a bus crash, a relationship with an older woman, the collapse of a warehouse roof at an illegal dance party and his on-off relationship with Donna Freedman.",
+  "label": "SUPPORTED",
+  "num_hops": 3,
+  "hover_metadata": {
+    "supporting_facts": [
+      [
+        "Donna Freedman",
+        0
+      ],
+      [
+        "Margot Robbie",
+        2
+      ],
+      [
+        "Ringo Brown",
+        3
+      ]
+    ],
+    "num_hops": 3,
+    "evidence_annotation_id": [
+      0
+    ],
+    "evidence_id": [
+      "Donna Freedman::sentence::0",
+      "Margot Robbie::sentence::2",
+      "Ringo Brown::sentence::3"
+    ],
+    "evidence_wiki_url": [
+      "https://en.wikipedia.org/wiki/Donna_Freedman",
+      "https://en.wikipedia.org/wiki/Margot_Robbie",
+      "https://en.wikipedia.org/wiki/Ringo_Brown"
+    ],
+    "evidence_sentence_id": [
+      "Donna Freedman::sentence::0",
+      "Margot Robbie::sentence::2",
+      "Ringo Brown::sentence::3"
+    ]
+  },
+  "grafo_claim": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "58fa59a6-30cd-500c-ab97-e5f0af443805",
+        "text": "This chunk is about:\n- People: Margot Robbie, Ringo Brown\n- Roles: actor, character\n- Awards: Logie Award nominations\n\nFacts:\n- Margot Robbie is an actor.\n- Margot Robbie received two Logie Award nominations.\n- The two Logie Award nominations were for Margot Robbie's portrayal of a character who had an on-off relationship with Ringo Brown.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "13e4d780-7824-5572-ae16-15afcf472fa9",
+        "text": "Margot Robbie is an actor who won two Logie Award nominations. These were for her portrayal of the character who had an on-off relationship with Ringo Brown.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "1fbd4f0d-1a1b-542e-bd12-2bec76108785",
+        "text": "text_02e54a3a24d1974f2ef6557388261d1b",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "78301e55-21bb-57cc-89b2-d3bc16c3de34",
+        "text": "margot robbie",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "99a82eec-bb35-5bb5-9ed2-e73fc7a756de",
+        "text": "person",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "84574d6b-77cb-535c-987b-8ba915d8a3b6",
+        "text": "logie award nominations",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "38e42125-31f4-5cd6-993c-dbbc06a88910",
+        "text": "award",
+        "type": "EntityType"
+      },
+      {
+        "id": 7,
+        "original_id": "6f11cffa-8cb9-58a8-b151-680b94f0fac6",
+        "text": "character portrayed by margot robbie",
+        "type": "Entity"
+      },
+      {
+        "id": 8,
+        "original_id": "d3db161f-3fd9-5366-919b-ad9f9a1ba392",
+        "text": "character",
+        "type": "EntityType"
+      },
+      {
+        "id": 9,
+        "original_id": "1c44258d-df59-5960-a9cd-7c5df39963de",
+        "text": "ringo brown",
+        "type": "Entity"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 9,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "won"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 7,
+        "type": "portrayed"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      },
+      {
+        "source": 7,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 7,
+        "target": 9,
+        "type": "had_on_off_relationship_with"
+      },
+      {
+        "source": 1,
+        "target": 9,
+        "type": "contains"
+      }
+    ]
+  },
+  "grafo_evidencia": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "cff1ffb5-a051-5122-9a33-d946665560ba",
+        "text": "This chunk is about:\n- People: Donna Freedman, Margot Robbie, Ringo Brown\n- Works: Neighbours\n- Topics: Casting, award nominations, character storylines, relationships\n\nFacts:\n- Margot Robbie played Donna Freedman, also known as Donna Brown, in the Australian soap opera Neighbours.\n- Margot Robbie was later cast in Neighbours for 2008 to 2011, and that role earned her two Logie Award nominations.\n- Ringo Brown is a character in Neighbours whose storylines include an ongoing eating disorder, a bus crash, a relationship with an older woman, the collapse of a warehouse roof at an illegal dance party, and an on-off relationship with Donna Freedman.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "7334198d-2d33-55d3-9259-e7b72ec24c93",
+        "text": "Page: Donna Freedman. Sentence: Donna Freedman (also Brown) is a fictional character from the Australian soap opera \"Neighbours\", played by Margot Robbie.\nPage: Margot Robbie. Sentence: She was later cast in the soap opera \"Neighbours\" (2008–2011), which earned her two Logie Award nominations.\nPage: Ringo Brown. Sentence: Ringo's storylines have included his ongoing battle with an eating disorder, a bus crash, a relationship with an older woman, the collapse of a warehouse roof at an illegal dance party and his on-off relationship with Donna Freedman.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "31509827-59bd-5aa2-8df4-b24b2b93072f",
+        "text": "text_7563aea6a14b44271f8b042c48cff9e9",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "8242c628-bb20-55db-93e5-90db9671f247",
+        "text": "donna freedman",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "d3db161f-3fd9-5366-919b-ad9f9a1ba392",
+        "text": "character",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "a0c7368b-2920-5314-b145-62e9f7c5a363",
+        "text": "neighbours",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "5263a535-1b4b-5925-be3e-310d03cd303b",
+        "text": "work",
+        "type": "EntityType"
+      },
+      {
+        "id": 7,
+        "original_id": "b5151779-e268-51e1-97b9-57afdc4844fe",
+        "text": "donna brown",
+        "type": "Entity"
+      },
+      {
+        "id": 8,
+        "original_id": "78301e55-21bb-57cc-89b2-d3bc16c3de34",
+        "text": "margot robbie",
+        "type": "Entity"
+      },
+      {
+        "id": 9,
+        "original_id": "99a82eec-bb35-5bb5-9ed2-e73fc7a756de",
+        "text": "person",
+        "type": "EntityType"
+      },
+      {
+        "id": 10,
+        "original_id": "bb91a3b7-7918-5ca7-973e-342dc472e263",
+        "text": "2008",
+        "type": "Entity"
+      },
+      {
+        "id": 11,
+        "original_id": "b19433ae-558c-5aaf-95ac-6231f2a4be0e",
+        "text": "date",
+        "type": "EntityType"
+      },
+      {
+        "id": 12,
+        "original_id": "f54e52eb-db61-5cc3-aa32-5c78e42891d1",
+        "text": "2011",
+        "type": "Entity"
+      },
+      {
+        "id": 13,
+        "original_id": "0a61d5f8-e2d0-5868-84cc-c838eb20d96d",
+        "text": "logie award",
+        "type": "Entity"
+      },
+      {
+        "id": 14,
+        "original_id": "38e42125-31f4-5cd6-993c-dbbc06a88910",
+        "text": "award",
+        "type": "EntityType"
+      },
+      {
+        "id": 15,
+        "original_id": "1c44258d-df59-5960-a9cd-7c5df39963de",
+        "text": "ringo brown",
+        "type": "Entity"
+      },
+      {
+        "id": 16,
+        "original_id": "81848cbc-b606-51ef-b371-91c691f1f272",
+        "text": "eating disorder",
+        "type": "Entity"
+      },
+      {
+        "id": 17,
+        "original_id": "d2a381fa-3658-5ca6-ada9-2109cfc9331d",
+        "text": "concept",
+        "type": "EntityType"
+      },
+      {
+        "id": 18,
+        "original_id": "3776244d-bf01-5055-a36c-c98fa10c5c22",
+        "text": "bus crash",
+        "type": "Entity"
+      },
+      {
+        "id": 19,
+        "original_id": "214abcd9-9adf-5c8a-bb35-1e729f2d68c3",
+        "text": "event",
+        "type": "EntityType"
+      },
+      {
+        "id": 20,
+        "original_id": "19aa819a-a7d8-5495-847f-2b6dedf01f66",
+        "text": "older woman",
+        "type": "Entity"
+      },
+      {
+        "id": 21,
+        "original_id": "27d048e9-c3d9-54b4-8cc1-ff671ba05b6f",
+        "text": "warehouse roof collapse",
+        "type": "Entity"
+      },
+      {
+        "id": 22,
+        "original_id": "f487dbf8-429a-5837-a315-cfb8a0f724d3",
+        "text": "illegal dance party",
+        "type": "Entity"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 7,
+        "target": 3,
+        "type": "alternate_name_of"
+      },
+      {
+        "source": 8,
+        "target": 3,
+        "type": "played"
+      },
+      {
+        "source": 15,
+        "target": 3,
+        "type": "has_on_off_relationship_with"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 7,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 15,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "appears_in"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 8,
+        "target": 5,
+        "type": "cast_in"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      },
+      {
+        "source": 1,
+        "target": 8,
+        "type": "contains"
+      },
+      {
+        "source": 8,
+        "target": 9,
+        "type": "is_a"
+      },
+      {
+        "source": 20,
+        "target": 9,
+        "type": "is_a"
+      },
+      {
+        "source": 8,
+        "target": 10,
+        "type": "cast_start_year"
+      },
+      {
+        "source": 1,
+        "target": 10,
+        "type": "contains"
+      },
+      {
+        "source": 10,
+        "target": 11,
+        "type": "is_a"
+      },
+      {
+        "source": 12,
+        "target": 11,
+        "type": "is_a"
+      },
+      {
+        "source": 8,
+        "target": 12,
+        "type": "cast_end_year"
+      },
+      {
+        "source": 1,
+        "target": 12,
+        "type": "contains"
+      },
+      {
+        "source": 8,
+        "target": 13,
+        "type": "nominated_for"
+      },
+      {
+        "source": 1,
+        "target": 13,
+        "type": "contains"
+      },
+      {
+        "source": 13,
+        "target": 14,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 15,
+        "type": "contains"
+      },
+      {
+        "source": 15,
+        "target": 16,
+        "type": "battles"
+      },
+      {
+        "source": 1,
+        "target": 16,
+        "type": "contains"
+      },
+      {
+        "source": 16,
+        "target": 17,
+        "type": "is_a"
+      },
+      {
+        "source": 15,
+        "target": 18,
+        "type": "involved_in"
+      },
+      {
+        "source": 1,
+        "target": 18,
+        "type": "contains"
+      },
+      {
+        "source": 18,
+        "target": 19,
+        "type": "is_a"
+      },
+      {
+        "source": 21,
+        "target": 19,
+        "type": "is_a"
+      },
+      {
+        "source": 22,
+        "target": 19,
+        "type": "is_a"
+      },
+      {
+        "source": 15,
+        "target": 20,
+        "type": "has_relationship_with"
+      },
+      {
+        "source": 1,
+        "target": 20,
+        "type": "contains"
+      },
+      {
+        "source": 15,
+        "target": 21,
+        "type": "involved_in"
+      },
+      {
+        "source": 1,
+        "target": 21,
+        "type": "contains"
+      },
+      {
+        "source": 21,
+        "target": 22,
+        "type": "occurred_at"
+      },
+      {
+        "source": 1,
+        "target": 22,
+        "type": "contains"
+      }
+    ]
+  }
+}

@@ -1,0 +1,392 @@
+{
+  "dataset": "hover",
+  "id": "df905b21-83ef-4556-9755-fa56cf85401e",
+  "split": "train",
+  "claim": "The singer Sonya Scarlet, is younger than the singer who had left their band, when it recorded Information (Berlin album).",
+  "evidencia": "Page: Terri Nunn. Sentence: Terri Kathleen Nunn (born June 26, 1961), is an American singer and actress.\nPage: Sonya Scarlet. Sentence: Sonya Scarlet (born 2 April 1980) is the singer and lyricist of the Italian extreme gothic metal band Theatres des Vampires.\nPage: Information (Berlin album). Sentence: It was recorded during the period when Terri Nunn had temporarily left the band to pursue an acting career and Virginia Macolino performed the lead vocals.",
+  "evidence_text": "Page: Terri Nunn. Sentence: Terri Kathleen Nunn (born June 26, 1961), is an American singer and actress.\nPage: Sonya Scarlet. Sentence: Sonya Scarlet (born 2 April 1980) is the singer and lyricist of the Italian extreme gothic metal band Theatres des Vampires.\nPage: Information (Berlin album). Sentence: It was recorded during the period when Terri Nunn had temporarily left the band to pursue an acting career and Virginia Macolino performed the lead vocals.",
+  "label": "SUPPORTED",
+  "num_hops": 3,
+  "hover_metadata": {
+    "supporting_facts": [
+      [
+        "Terri Nunn",
+        0
+      ],
+      [
+        "Sonya Scarlet",
+        0
+      ],
+      [
+        "Information (Berlin album)",
+        1
+      ]
+    ],
+    "num_hops": 3,
+    "evidence_annotation_id": [
+      0
+    ],
+    "evidence_id": [
+      "Terri Nunn::sentence::0",
+      "Sonya Scarlet::sentence::0",
+      "Information (Berlin album)::sentence::1"
+    ],
+    "evidence_wiki_url": [
+      "https://en.wikipedia.org/wiki/Terri_Nunn",
+      "https://en.wikipedia.org/wiki/Sonya_Scarlet",
+      "https://en.wikipedia.org/wiki/Information_%28Berlin_album%29"
+    ],
+    "evidence_sentence_id": [
+      "Terri Nunn::sentence::0",
+      "Sonya Scarlet::sentence::0",
+      "Information (Berlin album)::sentence::1"
+    ]
+  },
+  "grafo_claim": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "7ec9f9bd-4664-5c65-beea-9e663368c732",
+        "text": "This chunk is about:\n- People: Sonya Scarlet\n- Bands: Information\n- Albums: Berlin\n- Topics: age comparison, band departure\n\nFacts:\n- The band Information recorded the album Berlin after a singer had left the band.\n- Sonya Scarlet is younger than the singer who had left Information when Information recorded Berlin.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "0c44e9ed-f4e5-5a93-97e0-cf2d4f181c30",
+        "text": "The singer Sonya Scarlet, is younger than the singer who had left their band, when it recorded Information (Berlin album).",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "924b8b5e-0b12-5804-b5e1-ebd240b2e7a0",
+        "text": "text_ead0b6153eb4d7b56aa3e440129aa9a7",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "5752c02b-dcc1-5510-bcd3-88d39950c90d",
+        "text": "sonya scarlet",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "99a82eec-bb35-5bb5-9ed2-e73fc7a756de",
+        "text": "person",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "9a9200b8-8509-56aa-a5b4-a13d033fc3c3",
+        "text": "singer who left their band",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "f59727cc-507e-5683-affb-e169ac84b77c",
+        "text": "information",
+        "type": "Entity"
+      },
+      {
+        "id": 7,
+        "original_id": "213321b1-cf32-59df-847a-8b293b41cf9c",
+        "text": "album",
+        "type": "EntityType"
+      },
+      {
+        "id": 8,
+        "original_id": "0aa5a634-829a-5222-8568-d7631357800d",
+        "text": "berlin",
+        "type": "Entity"
+      },
+      {
+        "id": 9,
+        "original_id": "a69bcce0-8153-57d6-96fd-6d36e286fb20",
+        "text": "band",
+        "type": "EntityType"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 5,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "younger_than"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "left_band_before_recording"
+      },
+      {
+        "source": 1,
+        "target": 6,
+        "type": "contains"
+      },
+      {
+        "source": 6,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 6,
+        "target": 8,
+        "type": "recorded_by"
+      },
+      {
+        "source": 1,
+        "target": 8,
+        "type": "contains"
+      },
+      {
+        "source": 8,
+        "target": 9,
+        "type": "is_a"
+      }
+    ]
+  },
+  "grafo_evidencia": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "7d79420c-d8b3-5d27-a722-69d448f0de56",
+        "text": "This chunk is about:\n- People: Terri Nunn, Sonya Scarlet, Virginia Macolino\n- Organizations: Berlin, Theatres des Vampires\n- Products: Information\n- Roles: singer, actress, lyricist, lead vocals\n\nFacts:\n- Terri Nunn was born on June 26, 1961.\n- Terri Nunn is an American singer and actress.\n- Sonya Scarlet was born on April 2, 1980.\n- Sonya Scarlet is the singer and lyricist of the Italian extreme gothic metal band Theatres des Vampires.\n- During the recording of the album Information, Terri Nunn had temporarily left Berlin to pursue an acting career.\n- During the recording of Information, Virginia Macolino performed the lead vocals for Berlin.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "df554230-ab5d-5e99-a224-14f85746a95c",
+        "text": "Page: Terri Nunn. Sentence: Terri Kathleen Nunn (born June 26, 1961), is an American singer and actress.\nPage: Sonya Scarlet. Sentence: Sonya Scarlet (born 2 April 1980) is the singer and lyricist of the Italian extreme gothic metal band Theatres des Vampires.\nPage: Information (Berlin album). Sentence: It was recorded during the period when Terri Nunn had temporarily left the band to pursue an acting career and Virginia Macolino performed the lead vocals.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "d1ec203a-9a66-5343-9666-abc091aecc70",
+        "text": "text_8ce4d842510b91bcfa62086203efbaeb",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "51f8b56f-a4d0-56ec-8db9-4fe3a2551846",
+        "text": "terri kathleen nunn",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "99a82eec-bb35-5bb5-9ed2-e73fc7a756de",
+        "text": "person",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "d109f1b2-4eaf-5943-b7c3-58e8f6c39b18",
+        "text": "1961-06-26",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "b19433ae-558c-5aaf-95ac-6231f2a4be0e",
+        "text": "date",
+        "type": "EntityType"
+      },
+      {
+        "id": 7,
+        "original_id": "0aa5a634-829a-5222-8568-d7631357800d",
+        "text": "berlin",
+        "type": "Entity"
+      },
+      {
+        "id": 8,
+        "original_id": "388f60fb-220d-55e8-ae9c-3ac93cead308",
+        "text": "organization",
+        "type": "EntityType"
+      },
+      {
+        "id": 9,
+        "original_id": "5752c02b-dcc1-5510-bcd3-88d39950c90d",
+        "text": "sonya scarlet",
+        "type": "Entity"
+      },
+      {
+        "id": 10,
+        "original_id": "8679c8b2-9dd0-519b-85a6-1808f68b772f",
+        "text": "1980-04-02",
+        "type": "Entity"
+      },
+      {
+        "id": 11,
+        "original_id": "413c2dd7-074f-5ec7-b01f-a91915d6003f",
+        "text": "theatres des vampires",
+        "type": "Entity"
+      },
+      {
+        "id": 12,
+        "original_id": "f59727cc-507e-5683-affb-e169ac84b77c",
+        "text": "information",
+        "type": "Entity"
+      },
+      {
+        "id": 13,
+        "original_id": "5263a535-1b4b-5925-be3e-310d03cd303b",
+        "text": "work",
+        "type": "EntityType"
+      },
+      {
+        "id": 14,
+        "original_id": "e3cfc107-cd5c-5b16-ba5f-b4bc79f8b0dd",
+        "text": "virginia macolino",
+        "type": "Entity"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 9,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 14,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "born_on"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 10,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 7,
+        "type": "temporarily_left"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      },
+      {
+        "source": 7,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 11,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 9,
+        "type": "contains"
+      },
+      {
+        "source": 9,
+        "target": 10,
+        "type": "born_on"
+      },
+      {
+        "source": 1,
+        "target": 10,
+        "type": "contains"
+      },
+      {
+        "source": 9,
+        "target": 11,
+        "type": "is_singer_and_lyricist_of"
+      },
+      {
+        "source": 1,
+        "target": 11,
+        "type": "contains"
+      },
+      {
+        "source": 1,
+        "target": 12,
+        "type": "contains"
+      },
+      {
+        "source": 14,
+        "target": 12,
+        "type": "performed_lead_vocals_on"
+      },
+      {
+        "source": 12,
+        "target": 13,
+        "type": "is_a"
+      },
+      {
+        "source": 12,
+        "target": 14,
+        "type": "had_lead_vocals_performed_by"
+      },
+      {
+        "source": 1,
+        "target": 14,
+        "type": "contains"
+      }
+    ]
+  }
+}

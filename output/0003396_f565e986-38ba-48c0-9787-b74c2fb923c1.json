@@ -1,0 +1,529 @@
+{
+  "dataset": "hover",
+  "id": "f565e986-38ba-48c0-9787-b74c2fb923c1",
+  "split": "train",
+  "claim": "American Bulldog, not French Bulldog, includes breeds such as \"Standard\" and \"Classic\".",
+  "evidencia": "Page: French Bulldog. Sentence: The French Bulldog also known as the Frenchie is a small breed of domestic dog.\nPage: French Bulldog. Sentence: Frenchies were the result in the 1800s of a cross between bulldog ancestors imported from England and local ratters in Paris (France).\nPage: American Bulldog. Sentence: The American Bulldog is a breed of utility dog.\nPage: American Bulldog. Sentence: There are two specific types of American Bulldog, Standard and Classic; additionally, there are also mixes of the two types.",
+  "evidence_text": "Page: French Bulldog. Sentence: The French Bulldog also known as the Frenchie is a small breed of domestic dog.\nPage: French Bulldog. Sentence: Frenchies were the result in the 1800s of a cross between bulldog ancestors imported from England and local ratters in Paris (France).\nPage: American Bulldog. Sentence: The American Bulldog is a breed of utility dog.\nPage: American Bulldog. Sentence: There are two specific types of American Bulldog, Standard and Classic; additionally, there are also mixes of the two types.",
+  "label": "SUPPORTED",
+  "num_hops": 2,
+  "hover_metadata": {
+    "supporting_facts": [
+      [
+        "French Bulldog",
+        0
+      ],
+      [
+        "French Bulldog",
+        1
+      ],
+      [
+        "American Bulldog",
+        0
+      ],
+      [
+        "American Bulldog",
+        1
+      ]
+    ],
+    "num_hops": 2,
+    "evidence_annotation_id": [
+      0
+    ],
+    "evidence_id": [
+      "French Bulldog::sentence::0",
+      "French Bulldog::sentence::1",
+      "American Bulldog::sentence::0",
+      "American Bulldog::sentence::1"
+    ],
+    "evidence_wiki_url": [
+      "https://en.wikipedia.org/wiki/French_Bulldog",
+      "https://en.wikipedia.org/wiki/American_Bulldog"
+    ],
+    "evidence_sentence_id": [
+      "French Bulldog::sentence::0",
+      "French Bulldog::sentence::1",
+      "American Bulldog::sentence::0",
+      "American Bulldog::sentence::1"
+    ]
+  },
+  "grafo_claim": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "e3b4160f-f57e-5804-977f-adf23b08218a",
+        "text": "This chunk is about:\n- Animals: American Bulldog, French Bulldog\n- Dog breed types: Standard, Classic\n\nFacts:\n- American Bulldog includes breed types such as Standard and Classic.\n- French Bulldog is explicitly distinguished from American Bulldog and is not the breed being described.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "0b2a2d6e-71bd-57fa-8e13-1df79f0ed481",
+        "text": "American Bulldog, not French Bulldog, includes breeds such as \"Standard\" and \"Classic\".",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "75f0e281-d74d-593d-8d14-e7b964c82793",
+        "text": "text_474a1bd40ca2ea7203512ca9d1bedd1e",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "3a9b001a-bd00-559f-9352-26b0d762922d",
+        "text": "american bulldog",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "29423a5c-2cc3-54de-b15a-cdf50dad5ebf",
+        "text": "standard",
+        "type": "Entity"
+      },
+      {
+        "id": 5,
+        "original_id": "3cbc00c5-3f12-53f1-a9de-415c25061833",
+        "text": "breedvariant",
+        "type": "EntityType"
+      },
+      {
+        "id": 6,
+        "original_id": "f4e5a3de-fc3a-5d35-8f89-1978da68d3cc",
+        "text": "classic",
+        "type": "Entity"
+      },
+      {
+        "id": 7,
+        "original_id": "17f41b02-9313-5d46-9858-936946d4f8ff",
+        "text": "french bulldog",
+        "type": "Entity"
+      },
+      {
+        "id": 8,
+        "original_id": "75696507-1787-56c5-b11e-c6e230ccfe26",
+        "text": "breed",
+        "type": "EntityType"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "includes_breed_variant"
+      },
+      {
+        "source": 1,
+        "target": 4,
+        "type": "contains"
+      },
+      {
+        "source": 4,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 6,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 6,
+        "type": "includes_breed_variant"
+      },
+      {
+        "source": 1,
+        "target": 6,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 7,
+        "type": "not_same_as"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      },
+      {
+        "source": 7,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 8,
+        "type": "is_a"
+      }
+    ]
+  },
+  "grafo_evidencia": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "646f92ba-6dc3-5222-b275-f7019d62b188",
+        "text": "This chunk is about:\n- Products: French Bulldog, American Bulldog\n- Places: England, Paris, France\n- Concepts: dog breeds, breed types, breed origins\n\nFacts:\n- In the 1800s, French Bulldog originated from a cross between bulldog ancestors imported from England and local ratters in Paris, France.\n- French Bulldog is also known as the Frenchie.\n- French Bulldog is a small breed of domestic dog.\n- American Bulldog is a breed of utility dog.\n- American Bulldog has two specific types called Standard and Classic.\n- American Bulldog also includes mixes of the Standard and Classic types.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "6ea56c7e-f524-54db-9d2d-16c9f4dc713c",
+        "text": "Page: French Bulldog. Sentence: The French Bulldog also known as the Frenchie is a small breed of domestic dog.\nPage: French Bulldog. Sentence: Frenchies were the result in the 1800s of a cross between bulldog ancestors imported from England and local ratters in Paris (France).\nPage: American Bulldog. Sentence: The American Bulldog is a breed of utility dog.\nPage: American Bulldog. Sentence: There are two specific types of American Bulldog, Standard and Classic; additionally, there are also mixes of the two types.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "83f4d87d-0e9d-5d51-a8a0-a73d1a80fb93",
+        "text": "text_4084bd96865808ffcd4a9f31402934b8",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "17f41b02-9313-5d46-9858-936946d4f8ff",
+        "text": "french bulldog",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "35015e51-3fb3-5b76-80be-f5e59d3479b3",
+        "text": "frenchie",
+        "type": "Entity"
+      },
+      {
+        "id": 5,
+        "original_id": "39575085-0710-527d-bd54-019de7b00429",
+        "text": "name",
+        "type": "EntityType"
+      },
+      {
+        "id": 6,
+        "original_id": "4f8a49f9-b3cf-5bc4-ade6-c399538a914e",
+        "text": "domestic dog",
+        "type": "Entity"
+      },
+      {
+        "id": 7,
+        "original_id": "5d76eb72-04ef-5580-b2ea-161f8429437a",
+        "text": "animal",
+        "type": "EntityType"
+      },
+      {
+        "id": 8,
+        "original_id": "e97e74f3-181e-546b-be53-1a576a2c0cf9",
+        "text": "1800s",
+        "type": "Entity"
+      },
+      {
+        "id": 9,
+        "original_id": "b19433ae-558c-5aaf-95ac-6231f2a4be0e",
+        "text": "date",
+        "type": "EntityType"
+      },
+      {
+        "id": 10,
+        "original_id": "cc2d9ef9-5ab9-5818-acd8-bf0db82e13d5",
+        "text": "bulldog ancestors",
+        "type": "Entity"
+      },
+      {
+        "id": 11,
+        "original_id": "27f0656f-762c-54f0-8ed5-c4b27557219f",
+        "text": "england",
+        "type": "Entity"
+      },
+      {
+        "id": 12,
+        "original_id": "5f394058-b2a0-5ba8-8466-ba2a18cfcf4e",
+        "text": "place",
+        "type": "EntityType"
+      },
+      {
+        "id": 13,
+        "original_id": "f399539c-85a0-55cb-92bc-5a3fb1fa8886",
+        "text": "local ratters",
+        "type": "Entity"
+      },
+      {
+        "id": 14,
+        "original_id": "27d985ea-055a-54fb-bcc4-f29d9d892867",
+        "text": "paris",
+        "type": "Entity"
+      },
+      {
+        "id": 15,
+        "original_id": "c529785c-647b-5d0f-88d0-151b1fff337c",
+        "text": "france",
+        "type": "Entity"
+      },
+      {
+        "id": 16,
+        "original_id": "67a184b0-2450-5b72-9617-e9811ef6244d",
+        "text": "animal breed",
+        "type": "EntityType"
+      },
+      {
+        "id": 17,
+        "original_id": "3a9b001a-bd00-559f-9352-26b0d762922d",
+        "text": "american bulldog",
+        "type": "Entity"
+      },
+      {
+        "id": 18,
+        "original_id": "83f6a2b3-2451-5a11-ab3a-e3106de462c4",
+        "text": "utility dog",
+        "type": "Entity"
+      },
+      {
+        "id": 19,
+        "original_id": "29423a5c-2cc3-54de-b15a-cdf50dad5ebf",
+        "text": "standard",
+        "type": "Entity"
+      },
+      {
+        "id": 20,
+        "original_id": "bdc60a3c-6411-5515-ab99-972e9f669d79",
+        "text": "type",
+        "type": "EntityType"
+      },
+      {
+        "id": 21,
+        "original_id": "f4e5a3de-fc3a-5d35-8f89-1978da68d3cc",
+        "text": "classic",
+        "type": "Entity"
+      },
+      {
+        "id": 22,
+        "original_id": "a7b334aa-76ca-5739-9946-f4633a25eaef",
+        "text": "mixes of standard and classic",
+        "type": "Entity"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "also_known_as"
+      },
+      {
+        "source": 1,
+        "target": 4,
+        "type": "contains"
+      },
+      {
+        "source": 4,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 6,
+        "type": "contains"
+      },
+      {
+        "source": 6,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 10,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 13,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 18,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 8,
+        "type": "originated_in_period"
+      },
+      {
+        "source": 1,
+        "target": 8,
+        "type": "contains"
+      },
+      {
+        "source": 8,
+        "target": 9,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 10,
+        "type": "resulted_from_cross_with"
+      },
+      {
+        "source": 1,
+        "target": 10,
+        "type": "contains"
+      },
+      {
+        "source": 10,
+        "target": 11,
+        "type": "imported_from"
+      },
+      {
+        "source": 1,
+        "target": 11,
+        "type": "contains"
+      },
+      {
+        "source": 11,
+        "target": 12,
+        "type": "is_a"
+      },
+      {
+        "source": 15,
+        "target": 12,
+        "type": "is_a"
+      },
+      {
+        "source": 14,
+        "target": 12,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 13,
+        "type": "resulted_from_cross_with"
+      },
+      {
+        "source": 1,
+        "target": 13,
+        "type": "contains"
+      },
+      {
+        "source": 13,
+        "target": 14,
+        "type": "located_in"
+      },
+      {
+        "source": 1,
+        "target": 14,
+        "type": "contains"
+      },
+      {
+        "source": 14,
+        "target": 15,
+        "type": "located_in"
+      },
+      {
+        "source": 1,
+        "target": 15,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 16,
+        "type": "is_a"
+      },
+      {
+        "source": 17,
+        "target": 16,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 17,
+        "type": "contains"
+      },
+      {
+        "source": 17,
+        "target": 18,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 18,
+        "type": "contains"
+      },
+      {
+        "source": 17,
+        "target": 19,
+        "type": "has_type"
+      },
+      {
+        "source": 1,
+        "target": 19,
+        "type": "contains"
+      },
+      {
+        "source": 19,
+        "target": 20,
+        "type": "is_a"
+      },
+      {
+        "source": 21,
+        "target": 20,
+        "type": "is_a"
+      },
+      {
+        "source": 22,
+        "target": 20,
+        "type": "is_a"
+      },
+      {
+        "source": 17,
+        "target": 21,
+        "type": "has_type"
+      },
+      {
+        "source": 1,
+        "target": 21,
+        "type": "contains"
+      },
+      {
+        "source": 17,
+        "target": 22,
+        "type": "has_type_mix"
+      },
+      {
+        "source": 1,
+        "target": 22,
+        "type": "contains"
+      }
+    ]
+  }
+}

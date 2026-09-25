@@ -1,0 +1,517 @@
+{
+  "dataset": "hover",
+  "id": "5bf6124a-507c-4381-a080-e1566681d19f",
+  "split": "train",
+  "claim": "U.S. Route 27 in Kentucky, runs 190.785 miles from the Tennessee border to the Ohio border, it crosses into the state at the Lake Cumberland reservoir in Kentucky.",
+  "evidencia": "Page: U.S. Route 27 in Kentucky. Sentence: It crosses into the state in the Lake Cumberland area, passing near or through many small towns, including Somerset, Stanford, Nicholasville.\nPage: Lake Cumberland. Sentence: Lake Cumberland is a reservoir in Clinton, Laurel, McCreary, Pulaski, Russell, and Wayne counties in Kentucky.",
+  "evidence_text": "Page: U.S. Route 27 in Kentucky. Sentence: It crosses into the state in the Lake Cumberland area, passing near or through many small towns, including Somerset, Stanford, Nicholasville.\nPage: Lake Cumberland. Sentence: Lake Cumberland is a reservoir in Clinton, Laurel, McCreary, Pulaski, Russell, and Wayne counties in Kentucky.",
+  "label": "SUPPORTED",
+  "num_hops": 2,
+  "hover_metadata": {
+    "supporting_facts": [
+      [
+        "U.S. Route 27 in Kentucky",
+        1
+      ],
+      [
+        "Lake Cumberland",
+        0
+      ]
+    ],
+    "num_hops": 2,
+    "evidence_annotation_id": [
+      0
+    ],
+    "evidence_id": [
+      "U.S. Route 27 in Kentucky::sentence::1",
+      "Lake Cumberland::sentence::0"
+    ],
+    "evidence_wiki_url": [
+      "https://en.wikipedia.org/wiki/U.S._Route_27_in_Kentucky",
+      "https://en.wikipedia.org/wiki/Lake_Cumberland"
+    ],
+    "evidence_sentence_id": [
+      "U.S. Route 27 in Kentucky::sentence::1",
+      "Lake Cumberland::sentence::0"
+    ]
+  },
+  "grafo_claim": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "4eee72b6-5663-5d28-b7ac-ee9a4dc19e09",
+        "text": "This chunk is about:\n- Places: Kentucky, Tennessee border, Ohio border, Lake Cumberland reservoir\n- Systems: U.S. Route 27\n\nFacts:\n- U.S. Route 27 in Kentucky runs 190.785 miles from the Tennessee border to the Ohio border.\n- U.S. Route 27 enters Kentucky at the Lake Cumberland reservoir.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "977f70ed-b8c0-5cb8-8f93-5fbc46576114",
+        "text": "U.S. Route 27 in Kentucky, runs 190.785 miles from the Tennessee border to the Ohio border, it crosses into the state at the Lake Cumberland reservoir in Kentucky.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "02cbd27f-0b82-59ed-88d3-426401c363fe",
+        "text": "text_1ba86d76f21e2bf25dc14d02aba29f88",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "3c87f78d-2b2f-5de8-b6bc-14bb5b164afb",
+        "text": "u.s. route 27 in kentucky",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "5e52d312-a248-534f-a58b-25c5426a89ad",
+        "text": "road",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "d3a0feda-4497-5663-bcb5-8634a56e698b",
+        "text": "kentucky",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "5f394058-b2a0-5ba8-8466-ba2a18cfcf4e",
+        "text": "place",
+        "type": "EntityType"
+      },
+      {
+        "id": 7,
+        "original_id": "cf2769e1-c06f-5e50-9ee3-07fde2be3c92",
+        "text": "tennessee border",
+        "type": "Entity"
+      },
+      {
+        "id": 8,
+        "original_id": "00570168-1aa4-5712-af9d-b02bad90e3b9",
+        "text": "ohio border",
+        "type": "Entity"
+      },
+      {
+        "id": 9,
+        "original_id": "4e85c48a-8ceb-5439-9798-dcc5509e49ac",
+        "text": "lake cumberland reservoir",
+        "type": "Entity"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "located_in"
+      },
+      {
+        "source": 9,
+        "target": 5,
+        "type": "located_in"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 7,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 8,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 9,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 7,
+        "type": "runs_from"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 8,
+        "type": "runs_to"
+      },
+      {
+        "source": 1,
+        "target": 8,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 9,
+        "type": "crosses_into_state_at"
+      },
+      {
+        "source": 1,
+        "target": 9,
+        "type": "contains"
+      }
+    ]
+  },
+  "grafo_evidencia": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "29593487-b16b-53f5-abe4-4d632459f8d7",
+        "text": "This chunk is about:\n- Places: Kentucky, Lake Cumberland area, Somerset, Stanford, Nicholasville\n- Systems: U.S. Route 27\n- Concepts: Lake Cumberland, reservoir\n\nFacts:\n- U.S. Route 27 crosses into Kentucky in the Lake Cumberland area.\n- U.S. Route 27 passes near or through the Kentucky towns of Somerset, Stanford, and Nicholasville.\n- Lake Cumberland is a reservoir in Kentucky.\n- Lake Cumberland is located in Clinton, Laurel, McCreary, Pulaski, Russell, and Wayne counties in Kentucky.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "5909cd16-17e5-5a81-b91d-f523142c2d72",
+        "text": "Page: U.S. Route 27 in Kentucky. Sentence: It crosses into the state in the Lake Cumberland area, passing near or through many small towns, including Somerset, Stanford, Nicholasville.\nPage: Lake Cumberland. Sentence: Lake Cumberland is a reservoir in Clinton, Laurel, McCreary, Pulaski, Russell, and Wayne counties in Kentucky.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "1bea65ac-6f32-55c1-9cd8-b589b405ab9a",
+        "text": "text_bb9b34f598b7896e5b74bd677be3c413",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "3c87f78d-2b2f-5de8-b6bc-14bb5b164afb",
+        "text": "u.s. route 27 in kentucky",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "5e52d312-a248-534f-a58b-25c5426a89ad",
+        "text": "road",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "d3a0feda-4497-5663-bcb5-8634a56e698b",
+        "text": "kentucky",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "5f394058-b2a0-5ba8-8466-ba2a18cfcf4e",
+        "text": "place",
+        "type": "EntityType"
+      },
+      {
+        "id": 7,
+        "original_id": "3a6c712a-d7e0-511f-afc1-bbec1ddc0a49",
+        "text": "lake cumberland",
+        "type": "Entity"
+      },
+      {
+        "id": 8,
+        "original_id": "708676f2-46f1-58f0-b540-690096b614d3",
+        "text": "clinton county",
+        "type": "Entity"
+      },
+      {
+        "id": 9,
+        "original_id": "c9879572-c587-5e1d-b145-4b61d26db67b",
+        "text": "laurel county",
+        "type": "Entity"
+      },
+      {
+        "id": 10,
+        "original_id": "3a977203-b1e4-504f-89be-b0d1f7b4c1d5",
+        "text": "mccreary county",
+        "type": "Entity"
+      },
+      {
+        "id": 11,
+        "original_id": "4b307f7d-f64d-58c9-b81f-d8011c4f757a",
+        "text": "pulaski county",
+        "type": "Entity"
+      },
+      {
+        "id": 12,
+        "original_id": "a407d5d0-9756-5db0-be9d-3cd5203f0139",
+        "text": "russell county",
+        "type": "Entity"
+      },
+      {
+        "id": 13,
+        "original_id": "a2da214b-e020-53d7-93b0-d6985b4801d5",
+        "text": "wayne county",
+        "type": "Entity"
+      },
+      {
+        "id": 14,
+        "original_id": "f42667b3-0223-5f85-b896-4e3f346ad6c1",
+        "text": "somerset",
+        "type": "Entity"
+      },
+      {
+        "id": 15,
+        "original_id": "4e6b008b-c6c5-5d56-84fa-36f0bba4a392",
+        "text": "stanford",
+        "type": "Entity"
+      },
+      {
+        "id": 16,
+        "original_id": "7096d9a5-f246-5cd1-85a4-bdbdc1c4283e",
+        "text": "nicholasville",
+        "type": "Entity"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "crosses_into"
+      },
+      {
+        "source": 7,
+        "target": 5,
+        "type": "located_in"
+      },
+      {
+        "source": 8,
+        "target": 5,
+        "type": "located_in"
+      },
+      {
+        "source": 9,
+        "target": 5,
+        "type": "located_in"
+      },
+      {
+        "source": 10,
+        "target": 5,
+        "type": "located_in"
+      },
+      {
+        "source": 11,
+        "target": 5,
+        "type": "located_in"
+      },
+      {
+        "source": 12,
+        "target": 5,
+        "type": "located_in"
+      },
+      {
+        "source": 13,
+        "target": 5,
+        "type": "located_in"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 7,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 8,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 9,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 10,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 11,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 12,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 13,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 14,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 15,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 16,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 7,
+        "type": "passes_through_area"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      },
+      {
+        "source": 7,
+        "target": 8,
+        "type": "located_in"
+      },
+      {
+        "source": 1,
+        "target": 8,
+        "type": "contains"
+      },
+      {
+        "source": 7,
+        "target": 9,
+        "type": "located_in"
+      },
+      {
+        "source": 1,
+        "target": 9,
+        "type": "contains"
+      },
+      {
+        "source": 7,
+        "target": 10,
+        "type": "located_in"
+      },
+      {
+        "source": 1,
+        "target": 10,
+        "type": "contains"
+      },
+      {
+        "source": 7,
+        "target": 11,
+        "type": "located_in"
+      },
+      {
+        "source": 1,
+        "target": 11,
+        "type": "contains"
+      },
+      {
+        "source": 7,
+        "target": 12,
+        "type": "located_in"
+      },
+      {
+        "source": 1,
+        "target": 12,
+        "type": "contains"
+      },
+      {
+        "source": 7,
+        "target": 13,
+        "type": "located_in"
+      },
+      {
+        "source": 1,
+        "target": 13,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 14,
+        "type": "passes_near_or_through"
+      },
+      {
+        "source": 1,
+        "target": 14,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 15,
+        "type": "passes_near_or_through"
+      },
+      {
+        "source": 1,
+        "target": 15,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 16,
+        "type": "passes_near_or_through"
+      },
+      {
+        "source": 1,
+        "target": 16,
+        "type": "contains"
+      }
+    ]
+  }
+}

@@ -1,0 +1,373 @@
+{
+  "dataset": "hover",
+  "id": "19b36629-6ebd-4dd9-b286-02c4bf0e6c65",
+  "split": "train",
+  "claim": "220000 sqft of retail space is in the major development in London that holds Gordon Ramsay's restaurant, Bread Street Kitchen.",
+  "evidencia": "Page: Bread Street Kitchen. Sentence: Bread Street Kitchen is a restaurant owned by chef Gordon Ramsay within the One New Change retail and office development in London.\nPage: One New Change. Sentence: One New Change is a major office and retail development in London, United Kingdom.\nPage: One New Change. Sentence: It comprises 560000 sqft of floor space, including 220000 sqft of retail space and 330000 sqft of office space and is the only large shopping centre in the City of London, the historic nucleus and modern financial centre of London.",
+  "evidence_text": "Page: Bread Street Kitchen. Sentence: Bread Street Kitchen is a restaurant owned by chef Gordon Ramsay within the One New Change retail and office development in London.\nPage: One New Change. Sentence: One New Change is a major office and retail development in London, United Kingdom.\nPage: One New Change. Sentence: It comprises 560000 sqft of floor space, including 220000 sqft of retail space and 330000 sqft of office space and is the only large shopping centre in the City of London, the historic nucleus and modern financial centre of London.",
+  "label": "SUPPORTED",
+  "num_hops": 2,
+  "hover_metadata": {
+    "supporting_facts": [
+      [
+        "Bread Street Kitchen",
+        0
+      ],
+      [
+        "One New Change",
+        0
+      ],
+      [
+        "One New Change",
+        1
+      ]
+    ],
+    "num_hops": 2,
+    "evidence_annotation_id": [
+      0
+    ],
+    "evidence_id": [
+      "Bread Street Kitchen::sentence::0",
+      "One New Change::sentence::0",
+      "One New Change::sentence::1"
+    ],
+    "evidence_wiki_url": [
+      "https://en.wikipedia.org/wiki/Bread_Street_Kitchen",
+      "https://en.wikipedia.org/wiki/One_New_Change"
+    ],
+    "evidence_sentence_id": [
+      "Bread Street Kitchen::sentence::0",
+      "One New Change::sentence::0",
+      "One New Change::sentence::1"
+    ]
+  },
+  "grafo_claim": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "0f6507d9-82ba-5c82-81ed-3ac0f2ecc4fd",
+        "text": "This chunk is about:\n- Places: London\n- Developments: a major retail development in London\n- People: Gordon Ramsay\n- Restaurants: Bread Street Kitchen\n\nFacts:\n- A major development in London includes 220,000 square feet of retail space.\n- Gordon Ramsay's restaurant Bread Street Kitchen is located in the major development in London.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "c4e25e3b-cade-58e4-aa71-3811bb1937be",
+        "text": "220000 sqft of retail space is in the major development in London that holds Gordon Ramsay's restaurant, Bread Street Kitchen.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "52b06d62-66a1-5a64-bbff-51cd06da4a5a",
+        "text": "text_d218266f5d8b8ead56fd5acb49c2b6dc",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "8101175c-1d1b-530a-a662-59de058c5dc3",
+        "text": "220000 sqft of retail space",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "31a75ed9-e793-593d-b128-8a37a58bbd4f",
+        "text": "major development in london",
+        "type": "Entity"
+      },
+      {
+        "id": 5,
+        "original_id": "29402dc0-a0ae-5d8e-8034-e62d821db121",
+        "text": "london",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "5f394058-b2a0-5ba8-8466-ba2a18cfcf4e",
+        "text": "place",
+        "type": "EntityType"
+      },
+      {
+        "id": 7,
+        "original_id": "1212dcf4-9d79-577d-8ff6-5035fc6e2355",
+        "text": "bread street kitchen",
+        "type": "Entity"
+      },
+      {
+        "id": 8,
+        "original_id": "e226d629-f630-5c2b-bd3e-f20f7e011ff3",
+        "text": "gordon ramsay",
+        "type": "Entity"
+      },
+      {
+        "id": 9,
+        "original_id": "99a82eec-bb35-5bb5-9ed2-e73fc7a756de",
+        "text": "person",
+        "type": "EntityType"
+      },
+      {
+        "id": 10,
+        "original_id": "7a7a0687-e490-5167-ad5a-0e39d9055dee",
+        "text": "quantity",
+        "type": "EntityType"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_in"
+      },
+      {
+        "source": 1,
+        "target": 4,
+        "type": "contains"
+      },
+      {
+        "source": 4,
+        "target": 5,
+        "type": "located_in"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 7,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 4,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 4,
+        "target": 7,
+        "type": "holds"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      },
+      {
+        "source": 7,
+        "target": 8,
+        "type": "associated_with"
+      },
+      {
+        "source": 1,
+        "target": 8,
+        "type": "contains"
+      },
+      {
+        "source": 8,
+        "target": 9,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 10,
+        "type": "is_a"
+      }
+    ]
+  },
+  "grafo_evidencia": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "6792a458-f24e-5bbd-ab82-cbe54b0a1d15",
+        "text": "This chunk is about:\n- Places: London, City of London\n- Companies/Developments: One New Change\n- Restaurants: Bread Street Kitchen\n- People: Gordon Ramsay\n\nFacts:\n- One New Change is a major office and retail development in London, United Kingdom.\n- One New Change comprises 560,000 square feet of floor space, including 220,000 square feet of retail space and 330,000 square feet of office space.\n- One New Change is the only large shopping centre in the City of London, the historic nucleus and modern financial centre of London.\n- Bread Street Kitchen is a restaurant within the One New Change development in London.\n- Gordon Ramsay owns Bread Street Kitchen.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "3274959c-f2de-5f26-8941-8d3b5db0dc7f",
+        "text": "Page: Bread Street Kitchen. Sentence: Bread Street Kitchen is a restaurant owned by chef Gordon Ramsay within the One New Change retail and office development in London.\nPage: One New Change. Sentence: One New Change is a major office and retail development in London, United Kingdom.\nPage: One New Change. Sentence: It comprises 560000 sqft of floor space, including 220000 sqft of retail space and 330000 sqft of office space and is the only large shopping centre in the City of London, the historic nucleus and modern financial centre of London.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "5cd3fc81-652d-567b-a8a9-6094beb2fa98",
+        "text": "text_4f7d61b5e5afc527ab34e41cc69133d8",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "1212dcf4-9d79-577d-8ff6-5035fc6e2355",
+        "text": "bread street kitchen",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "e226d629-f630-5c2b-bd3e-f20f7e011ff3",
+        "text": "gordon ramsay",
+        "type": "Entity"
+      },
+      {
+        "id": 5,
+        "original_id": "99a82eec-bb35-5bb5-9ed2-e73fc7a756de",
+        "text": "person",
+        "type": "EntityType"
+      },
+      {
+        "id": 6,
+        "original_id": "7e11667f-4c30-57d2-aaa6-0aed40151e91",
+        "text": "one new change",
+        "type": "Entity"
+      },
+      {
+        "id": 7,
+        "original_id": "29402dc0-a0ae-5d8e-8034-e62d821db121",
+        "text": "london",
+        "type": "Entity"
+      },
+      {
+        "id": 8,
+        "original_id": "5f394058-b2a0-5ba8-8466-ba2a18cfcf4e",
+        "text": "place",
+        "type": "EntityType"
+      },
+      {
+        "id": 9,
+        "original_id": "1941be33-5fbb-50eb-a9b1-fa2fc297d7dd",
+        "text": "united kingdom",
+        "type": "Entity"
+      },
+      {
+        "id": 10,
+        "original_id": "70785c9e-12b7-5c81-88ed-63b11ca40362",
+        "text": "city of london",
+        "type": "Entity"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "owned_by"
+      },
+      {
+        "source": 1,
+        "target": 4,
+        "type": "contains"
+      },
+      {
+        "source": 4,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 6,
+        "type": "located_within"
+      },
+      {
+        "source": 1,
+        "target": 6,
+        "type": "contains"
+      },
+      {
+        "source": 6,
+        "target": 7,
+        "type": "located_in"
+      },
+      {
+        "source": 10,
+        "target": 7,
+        "type": "part_of"
+      },
+      {
+        "source": 3,
+        "target": 7,
+        "type": "located_in"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      },
+      {
+        "source": 7,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 9,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 10,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 6,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 6,
+        "target": 9,
+        "type": "located_in"
+      },
+      {
+        "source": 1,
+        "target": 9,
+        "type": "contains"
+      },
+      {
+        "source": 6,
+        "target": 10,
+        "type": "only_large_shopping_centre_in"
+      },
+      {
+        "source": 1,
+        "target": 10,
+        "type": "contains"
+      }
+    ]
+  }
+}

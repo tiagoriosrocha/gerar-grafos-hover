@@ -1,0 +1,330 @@
+{
+  "dataset": "hover",
+  "id": "c88d314a-9f1e-44d7-b91a-6a6cac0fd31a",
+  "split": "train",
+  "claim": "Charles Hurt is currently the opinion editor of \"The Washington Times\", Fox News contributor, Breitbart News contributor, and editor of Drudge Report the politically conservative American news aggregation website.",
+  "evidencia": "Page: Charles Hurt. Sentence: He is currently the opinion editor of \"The Washington Times\", Fox News contributor, Breitbart News contributor, and a Drudge Report editor.\nPage: Drudge Report. Sentence: The Drudge Report is a politically conservative American news aggregation website.",
+  "evidence_text": "Page: Charles Hurt. Sentence: He is currently the opinion editor of \"The Washington Times\", Fox News contributor, Breitbart News contributor, and a Drudge Report editor.\nPage: Drudge Report. Sentence: The Drudge Report is a politically conservative American news aggregation website.",
+  "label": "SUPPORTED",
+  "num_hops": 2,
+  "hover_metadata": {
+    "supporting_facts": [
+      [
+        "Charles Hurt",
+        1
+      ],
+      [
+        "Drudge Report",
+        0
+      ]
+    ],
+    "num_hops": 2,
+    "evidence_annotation_id": [
+      0
+    ],
+    "evidence_id": [
+      "Charles Hurt::sentence::1",
+      "Drudge Report::sentence::0"
+    ],
+    "evidence_wiki_url": [
+      "https://en.wikipedia.org/wiki/Charles_Hurt",
+      "https://en.wikipedia.org/wiki/Drudge_Report"
+    ],
+    "evidence_sentence_id": [
+      "Charles Hurt::sentence::1",
+      "Drudge Report::sentence::0"
+    ]
+  },
+  "grafo_claim": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "37e8711e-3d87-528a-bfd2-0b2505a0809f",
+        "text": "This chunk is about:\n- People: Charles Hurt\n- Organizations: The Washington Times, Fox News, Breitbart News, Drudge Report\n- Roles: opinion editor, contributor, editor\n\nFacts:\n- Charles Hurt is currently the opinion editor of The Washington Times.\n- Charles Hurt is a contributor to Fox News.\n- Charles Hurt is a contributor to Breitbart News.\n- Charles Hurt is the editor of Drudge Report, a politically conservative American news aggregation website.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "3502a21c-187e-5779-80f1-30eb7bc7aab1",
+        "text": "Charles Hurt is currently the opinion editor of \"The Washington Times\", Fox News contributor, Breitbart News contributor, and editor of Drudge Report the politically conservative American news aggregation website.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "1aa0e185-848a-5a05-a975-c8d3195f6980",
+        "text": "text_c22a4a26fa59dd20a689693c020d5a02",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "30a7a5a4-616a-5d63-97a9-42daeb6c5002",
+        "text": "charles hurt",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "99a82eec-bb35-5bb5-9ed2-e73fc7a756de",
+        "text": "person",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "3174b680-c0b8-55fa-a3fc-9959f5258300",
+        "text": "the washington times",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "388f60fb-220d-55e8-ae9c-3ac93cead308",
+        "text": "organization",
+        "type": "EntityType"
+      },
+      {
+        "id": 7,
+        "original_id": "65d2f968-76b6-5432-b85b-708bf7f0874a",
+        "text": "fox news",
+        "type": "Entity"
+      },
+      {
+        "id": 8,
+        "original_id": "2944a259-f07c-5f0b-a447-853b4e97d0ad",
+        "text": "breitbart news",
+        "type": "Entity"
+      },
+      {
+        "id": 9,
+        "original_id": "423dae7c-be0e-58e9-9097-93d0d790c7c4",
+        "text": "drudge report",
+        "type": "Entity"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "opinion_editor_of"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 7,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 8,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 9,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 7,
+        "type": "contributor_to"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 8,
+        "type": "contributor_to"
+      },
+      {
+        "source": 1,
+        "target": 8,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 9,
+        "type": "editor_of"
+      },
+      {
+        "source": 1,
+        "target": 9,
+        "type": "contains"
+      }
+    ]
+  },
+  "grafo_evidencia": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "252b24f6-2fae-5f20-9300-84c94fd32cab",
+        "text": "This chunk is about:\n- People: Charles Hurt\n- Organizations: The Washington Times, Fox News, Breitbart News, Drudge Report\n- Products: Drudge Report website\n- Topics: Political orientation, media roles\n\nFacts:\n- Charles Hurt is currently the opinion editor of The Washington Times.\n- Charles Hurt is currently a contributor to Fox News.\n- Charles Hurt is currently a contributor to Breitbart News.\n- Charles Hurt is currently an editor for the Drudge Report.\n- The Drudge Report is an American news aggregation website.\n- The Drudge Report is politically conservative.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "bb80ea12-37a9-5c4b-bd8c-d8b93247d37e",
+        "text": "Page: Charles Hurt. Sentence: He is currently the opinion editor of \"The Washington Times\", Fox News contributor, Breitbart News contributor, and a Drudge Report editor.\nPage: Drudge Report. Sentence: The Drudge Report is a politically conservative American news aggregation website.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "36de2fbe-3be1-5e7d-87a9-58cefb38a454",
+        "text": "text_cb9a522b488fc651c4aa1c87a7b1b69b",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "30a7a5a4-616a-5d63-97a9-42daeb6c5002",
+        "text": "charles hurt",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "99a82eec-bb35-5bb5-9ed2-e73fc7a756de",
+        "text": "person",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "3174b680-c0b8-55fa-a3fc-9959f5258300",
+        "text": "the washington times",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "388f60fb-220d-55e8-ae9c-3ac93cead308",
+        "text": "organization",
+        "type": "EntityType"
+      },
+      {
+        "id": 7,
+        "original_id": "65d2f968-76b6-5432-b85b-708bf7f0874a",
+        "text": "fox news",
+        "type": "Entity"
+      },
+      {
+        "id": 8,
+        "original_id": "2944a259-f07c-5f0b-a447-853b4e97d0ad",
+        "text": "breitbart news",
+        "type": "Entity"
+      },
+      {
+        "id": 9,
+        "original_id": "423dae7c-be0e-58e9-9097-93d0d790c7c4",
+        "text": "drudge report",
+        "type": "Entity"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "works_at"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 7,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 8,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 9,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 7,
+        "type": "contributes_to"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 8,
+        "type": "contributes_to"
+      },
+      {
+        "source": 1,
+        "target": 8,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 9,
+        "type": "works_at"
+      },
+      {
+        "source": 1,
+        "target": 9,
+        "type": "contains"
+      }
+    ]
+  }
+}

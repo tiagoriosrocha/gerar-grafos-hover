@@ -1,0 +1,528 @@
+{
+  "dataset": "hover",
+  "id": "2ee215a0-393a-4769-9b73-3270910f0196",
+  "split": "train",
+  "claim": "Chino Moreno has played in more bands than Kim Wilson.",
+  "evidencia": "Page: Kim Wilson. Sentence: He is best known as the lead vocalist and frontman for the Fabulous Thunderbirds on two hit songs of the 1980s, \"Tuff Enuff\" and \"Wrap It Up.\"\nPage: Chino Moreno. Sentence: Chino Moreno (born Camillo Wong Moreno; June 20, 1973) is an American musician.\nPage: Chino Moreno. Sentence: He is best known as the lead vocalist and contributing guitarist of Deftones.\nPage: Chino Moreno. Sentence: He is also a member of the side-project groups Team Sleep, Crosses, Saudade, and Palms.",
+  "evidence_text": "Page: Kim Wilson. Sentence: He is best known as the lead vocalist and frontman for the Fabulous Thunderbirds on two hit songs of the 1980s, \"Tuff Enuff\" and \"Wrap It Up.\"\nPage: Chino Moreno. Sentence: Chino Moreno (born Camillo Wong Moreno; June 20, 1973) is an American musician.\nPage: Chino Moreno. Sentence: He is best known as the lead vocalist and contributing guitarist of Deftones.\nPage: Chino Moreno. Sentence: He is also a member of the side-project groups Team Sleep, Crosses, Saudade, and Palms.",
+  "label": "SUPPORTED",
+  "num_hops": 2,
+  "hover_metadata": {
+    "supporting_facts": [
+      [
+        "Kim Wilson",
+        1
+      ],
+      [
+        "Chino Moreno",
+        0
+      ],
+      [
+        "Chino Moreno",
+        1
+      ],
+      [
+        "Chino Moreno",
+        2
+      ]
+    ],
+    "num_hops": 2,
+    "evidence_annotation_id": [
+      0
+    ],
+    "evidence_id": [
+      "Kim Wilson::sentence::1",
+      "Chino Moreno::sentence::0",
+      "Chino Moreno::sentence::1",
+      "Chino Moreno::sentence::2"
+    ],
+    "evidence_wiki_url": [
+      "https://en.wikipedia.org/wiki/Kim_Wilson",
+      "https://en.wikipedia.org/wiki/Chino_Moreno"
+    ],
+    "evidence_sentence_id": [
+      "Kim Wilson::sentence::1",
+      "Chino Moreno::sentence::0",
+      "Chino Moreno::sentence::1",
+      "Chino Moreno::sentence::2"
+    ]
+  },
+  "grafo_claim": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "a29610af-171b-505d-85f9-f5c326ad268d",
+        "text": "This chunk is about:\n- People: Chino Moreno, Kim Wilson\n- Topics: Band participation comparison\n\nFacts:\n- Chino Moreno has played in more bands than Kim Wilson.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "767ecaea-17e7-507d-a1a9-aadd27149c86",
+        "text": "Chino Moreno has played in more bands than Kim Wilson.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "1188991c-6226-5524-83f1-53f8cf2c2909",
+        "text": "text_8028c608d1782e4640406d374aaae5fc",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "327d2643-7c28-5353-a6ca-db309a2d10ae",
+        "text": "chino moreno",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "527d69f5-a6a3-5593-ac3d-7ff0bdd43cda",
+        "text": "bands played in by chino moreno",
+        "type": "Entity"
+      },
+      {
+        "id": 5,
+        "original_id": "63bfa366-6cd8-5549-b1b2-1b8d62cfaf9d",
+        "text": "bands played in by kim wilson",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "d2a381fa-3658-5ca6-ada9-2109cfc9331d",
+        "text": "concept",
+        "type": "EntityType"
+      },
+      {
+        "id": 7,
+        "original_id": "99a82eec-bb35-5bb5-9ed2-e73fc7a756de",
+        "text": "person",
+        "type": "EntityType"
+      },
+      {
+        "id": 8,
+        "original_id": "6532d527-1f3c-567a-a8b3-abde91847003",
+        "text": "kim wilson",
+        "type": "Entity"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "has_band_count"
+      },
+      {
+        "source": 1,
+        "target": 4,
+        "type": "contains"
+      },
+      {
+        "source": 4,
+        "target": 5,
+        "type": "greater_than"
+      },
+      {
+        "source": 8,
+        "target": 5,
+        "type": "has_band_count"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 4,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 8,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 8,
+        "type": "contains"
+      }
+    ]
+  },
+  "grafo_evidencia": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "58f3b732-22cc-5262-a2ba-602d66222ab4",
+        "text": "This chunk is about:\n- People: Kim Wilson, Chino Moreno\n- Organizations: Fabulous Thunderbirds, Deftones, Team Sleep, Crosses, Saudade, Palms\n- Roles: lead vocalist, frontman, contributing guitarist, musician\n- Songs: \"Tuff Enuff\", \"Wrap It Up\"\n\nFacts:\n- In the 1980s, Kim Wilson was the lead vocalist and frontman for the Fabulous Thunderbirds on the hit songs \"Tuff Enuff\" and \"Wrap It Up.\"\n- Chino Moreno was born as Camillo Wong Moreno on June 20, 1973.\n- Chino Moreno is an American musician.\n- Chino Moreno is the lead vocalist and a contributing guitarist of Deftones.\n- Chino Moreno is also a member of Team Sleep, Crosses, Saudade, and Palms.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "1d02f406-1343-54c3-b9a0-dde45d2e253b",
+        "text": "Page: Kim Wilson. Sentence: He is best known as the lead vocalist and frontman for the Fabulous Thunderbirds on two hit songs of the 1980s, \"Tuff Enuff\" and \"Wrap It Up.\"\nPage: Chino Moreno. Sentence: Chino Moreno (born Camillo Wong Moreno; June 20, 1973) is an American musician.\nPage: Chino Moreno. Sentence: He is best known as the lead vocalist and contributing guitarist of Deftones.\nPage: Chino Moreno. Sentence: He is also a member of the side-project groups Team Sleep, Crosses, Saudade, and Palms.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "e7ac6efa-40b2-512f-aa10-a80b6929d4a7",
+        "text": "text_7c5d1b90e50b757a4c25381ac5431d01",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "6532d527-1f3c-567a-a8b3-abde91847003",
+        "text": "kim wilson",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "c05dbdd4-6691-5764-b1c2-5d5701af739f",
+        "text": "fabulous thunderbirds",
+        "type": "Entity"
+      },
+      {
+        "id": 5,
+        "original_id": "f48d4c3d-7e42-5b50-970b-990690b888b9",
+        "text": "tuff enuff",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "656814d1-33cb-5b41-9eec-aae09b484d7d",
+        "text": "1980s",
+        "type": "Entity"
+      },
+      {
+        "id": 7,
+        "original_id": "b19433ae-558c-5aaf-95ac-6231f2a4be0e",
+        "text": "date",
+        "type": "EntityType"
+      },
+      {
+        "id": 8,
+        "original_id": "6056b392-f12e-5150-8c0b-ac7545dc2fdf",
+        "text": "song",
+        "type": "EntityType"
+      },
+      {
+        "id": 9,
+        "original_id": "b1c004c0-cb53-521d-9ee8-c8b066fb9ac9",
+        "text": "wrap it up",
+        "type": "Entity"
+      },
+      {
+        "id": 10,
+        "original_id": "ead2e5de-def9-59b3-ab95-ff52c4506908",
+        "text": "musicgroup",
+        "type": "EntityType"
+      },
+      {
+        "id": 11,
+        "original_id": "99a82eec-bb35-5bb5-9ed2-e73fc7a756de",
+        "text": "person",
+        "type": "EntityType"
+      },
+      {
+        "id": 12,
+        "original_id": "327d2643-7c28-5353-a6ca-db309a2d10ae",
+        "text": "chino moreno",
+        "type": "Entity"
+      },
+      {
+        "id": 13,
+        "original_id": "15209c64-4e9d-5fd9-ac7b-ac44d73c3882",
+        "text": "camillo wong moreno",
+        "type": "Entity"
+      },
+      {
+        "id": 14,
+        "original_id": "99db6a00-7a8d-5da6-90b1-a85b43994bb2",
+        "text": "1973-06-20",
+        "type": "Entity"
+      },
+      {
+        "id": 15,
+        "original_id": "32e5ea46-cca9-5920-8b2d-77357f10ce8d",
+        "text": "american",
+        "type": "Entity"
+      },
+      {
+        "id": 16,
+        "original_id": "7d08f409-7e55-5a66-935f-7c5c06f9111f",
+        "text": "nationality",
+        "type": "EntityType"
+      },
+      {
+        "id": 17,
+        "original_id": "a65b0e74-c2d6-5521-895f-7a23a68be992",
+        "text": "deftones",
+        "type": "Entity"
+      },
+      {
+        "id": 18,
+        "original_id": "f3717806-d40d-5f98-ae8a-9b080f5fe7d2",
+        "text": "team sleep",
+        "type": "Entity"
+      },
+      {
+        "id": 19,
+        "original_id": "227f4ad1-6801-531d-a61f-974a119892f3",
+        "text": "crosses",
+        "type": "Entity"
+      },
+      {
+        "id": 20,
+        "original_id": "2bfca16b-e4da-59d4-b591-671a88b35e42",
+        "text": "saudade",
+        "type": "Entity"
+      },
+      {
+        "id": 21,
+        "original_id": "95e4d4d3-64ac-50b1-ad47-2217a573fba1",
+        "text": "palms",
+        "type": "Entity"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "lead_vocalist_of"
+      },
+      {
+        "source": 1,
+        "target": 4,
+        "type": "contains"
+      },
+      {
+        "source": 4,
+        "target": 5,
+        "type": "has_hit_song"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "hit_in"
+      },
+      {
+        "source": 9,
+        "target": 6,
+        "type": "hit_in"
+      },
+      {
+        "source": 1,
+        "target": 6,
+        "type": "contains"
+      },
+      {
+        "source": 6,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 14,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 5,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 9,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 4,
+        "target": 9,
+        "type": "has_hit_song"
+      },
+      {
+        "source": 1,
+        "target": 9,
+        "type": "contains"
+      },
+      {
+        "source": 4,
+        "target": 10,
+        "type": "is_a"
+      },
+      {
+        "source": 17,
+        "target": 10,
+        "type": "is_a"
+      },
+      {
+        "source": 18,
+        "target": 10,
+        "type": "is_a"
+      },
+      {
+        "source": 19,
+        "target": 10,
+        "type": "is_a"
+      },
+      {
+        "source": 20,
+        "target": 10,
+        "type": "is_a"
+      },
+      {
+        "source": 21,
+        "target": 10,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 11,
+        "type": "is_a"
+      },
+      {
+        "source": 13,
+        "target": 11,
+        "type": "is_a"
+      },
+      {
+        "source": 12,
+        "target": 11,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 12,
+        "type": "contains"
+      },
+      {
+        "source": 12,
+        "target": 13,
+        "type": "born_as"
+      },
+      {
+        "source": 1,
+        "target": 13,
+        "type": "contains"
+      },
+      {
+        "source": 12,
+        "target": 14,
+        "type": "born_on"
+      },
+      {
+        "source": 1,
+        "target": 14,
+        "type": "contains"
+      },
+      {
+        "source": 12,
+        "target": 15,
+        "type": "has_nationality"
+      },
+      {
+        "source": 1,
+        "target": 15,
+        "type": "contains"
+      },
+      {
+        "source": 15,
+        "target": 16,
+        "type": "is_a"
+      },
+      {
+        "source": 12,
+        "target": 17,
+        "type": "lead_vocalist_of"
+      },
+      {
+        "source": 1,
+        "target": 17,
+        "type": "contains"
+      },
+      {
+        "source": 12,
+        "target": 18,
+        "type": "member_of"
+      },
+      {
+        "source": 1,
+        "target": 18,
+        "type": "contains"
+      },
+      {
+        "source": 12,
+        "target": 19,
+        "type": "member_of"
+      },
+      {
+        "source": 1,
+        "target": 19,
+        "type": "contains"
+      },
+      {
+        "source": 12,
+        "target": 20,
+        "type": "member_of"
+      },
+      {
+        "source": 1,
+        "target": 20,
+        "type": "contains"
+      },
+      {
+        "source": 12,
+        "target": 21,
+        "type": "member_of"
+      },
+      {
+        "source": 1,
+        "target": 21,
+        "type": "contains"
+      }
+    ]
+  }
+}

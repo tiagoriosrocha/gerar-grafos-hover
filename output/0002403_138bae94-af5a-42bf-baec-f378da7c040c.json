@@ -1,0 +1,379 @@
+{
+  "dataset": "hover",
+  "id": "138bae94-af5a-42bf-baec-f378da7c040c",
+  "split": "train",
+  "claim": "The  movies \"Monsters, Inc.\" and \"Mary Poppins\"  are both made by the same company.",
+  "evidencia": "Page: Monsters, Inc.. Sentence: Monsters, Inc. is a 2001 American computer-animated comedy film produced by Pixar Animation Studios and distributed by Walt Disney Pictures.\nPage: Mary Poppins (film). Sentence: Mary Poppins is a 1964 American musical-fantasy film directed by Robert Stevenson and produced by Walt Disney, with songs written and composed by the Sherman Brothers.",
+  "evidence_text": "Page: Monsters, Inc.. Sentence: Monsters, Inc. is a 2001 American computer-animated comedy film produced by Pixar Animation Studios and distributed by Walt Disney Pictures.\nPage: Mary Poppins (film). Sentence: Mary Poppins is a 1964 American musical-fantasy film directed by Robert Stevenson and produced by Walt Disney, with songs written and composed by the Sherman Brothers.",
+  "label": "SUPPORTED",
+  "num_hops": 2,
+  "hover_metadata": {
+    "supporting_facts": [
+      [
+        "Monsters, Inc.",
+        0
+      ],
+      [
+        "Mary Poppins (film)",
+        0
+      ]
+    ],
+    "num_hops": 2,
+    "evidence_annotation_id": [
+      0
+    ],
+    "evidence_id": [
+      "Monsters, Inc.::sentence::0",
+      "Mary Poppins (film)::sentence::0"
+    ],
+    "evidence_wiki_url": [
+      "https://en.wikipedia.org/wiki/Monsters%2C_Inc.",
+      "https://en.wikipedia.org/wiki/Mary_Poppins_%28film%29"
+    ],
+    "evidence_sentence_id": [
+      "Monsters, Inc.::sentence::0",
+      "Mary Poppins (film)::sentence::0"
+    ]
+  },
+  "grafo_claim": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "8722a04a-145c-5f29-b93a-18931d17bdf0",
+        "text": "This chunk is about:\n- Products: \"Monsters, Inc.\", \"Mary Poppins\"\n- Companies: The Walt Disney Company\n\nFacts:\n- \"Monsters, Inc.\" and \"Mary Poppins\" were both made by The Walt Disney Company.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "71b3fc44-97b4-5dfe-bde0-ee2faffca3a4",
+        "text": "The  movies \"Monsters, Inc.\" and \"Mary Poppins\"  are both made by the same company.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "01bdf381-f596-5725-930a-73424f85ce22",
+        "text": "text_a99559e8f5c67b50f170629067f917db",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "eaade023-255b-554b-9d93-3e777e1ea732",
+        "text": "monsters, inc.",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "1155038a-04d1-5d6a-9c60-e4f499a6913c",
+        "text": "movie",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "3142353a-38a4-5843-8719-635021590175",
+        "text": "mary poppins",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "5be21056-04da-56a8-a272-a610bc666fdb",
+        "text": "the same company",
+        "type": "Entity"
+      },
+      {
+        "id": 7,
+        "original_id": "82bfc922-4fcd-56b0-b353-7b550b51389d",
+        "text": "company",
+        "type": "EntityType"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 6,
+        "target": 3,
+        "type": "made"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 5,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 6,
+        "target": 5,
+        "type": "made"
+      },
+      {
+        "source": 1,
+        "target": 6,
+        "type": "contains"
+      },
+      {
+        "source": 6,
+        "target": 7,
+        "type": "is_a"
+      }
+    ]
+  },
+  "grafo_evidencia": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "78347a75-66ed-5633-a152-a90ce0d7162c",
+        "text": "This chunk is about:\n- Products: Monsters, Inc.; Mary Poppins\n- Companies: Pixar Animation Studios; Walt Disney Pictures\n- People: Robert Stevenson; Walt Disney; Sherman Brothers\n- Topics: American films; animation; comedy; musical fantasy\n\nFacts:\n- Mary Poppins is a 1964 American musical-fantasy film.\n- Mary Poppins was directed by Robert Stevenson.\n- Mary Poppins was produced by Walt Disney.\n- The Sherman Brothers wrote and composed the songs for Mary Poppins.\n- Monsters, Inc. is a 2001 American computer-animated comedy film.\n- Pixar Animation Studios produced Monsters, Inc..\n- Walt Disney Pictures distributed Monsters, Inc..",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "bcab8685-e92c-5d69-b9b6-c65d842bf657",
+        "text": "Page: Monsters, Inc.. Sentence: Monsters, Inc. is a 2001 American computer-animated comedy film produced by Pixar Animation Studios and distributed by Walt Disney Pictures.\nPage: Mary Poppins (film). Sentence: Mary Poppins is a 1964 American musical-fantasy film directed by Robert Stevenson and produced by Walt Disney, with songs written and composed by the Sherman Brothers.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "53479ee3-7b13-5c19-b940-fa0ac632d1bc",
+        "text": "text_c8bdaa388f6d7e29f136bcad425df965",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "eaade023-255b-554b-9d93-3e777e1ea732",
+        "text": "monsters, inc.",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "7bd3af1d-2fce-5267-8017-1300d5a6e9f4",
+        "text": "2001",
+        "type": "Entity"
+      },
+      {
+        "id": 5,
+        "original_id": "b19433ae-558c-5aaf-95ac-6231f2a4be0e",
+        "text": "date",
+        "type": "EntityType"
+      },
+      {
+        "id": 6,
+        "original_id": "a5046e1f-c353-56ba-8475-76001df7e5af",
+        "text": "pixar animation studios",
+        "type": "Entity"
+      },
+      {
+        "id": 7,
+        "original_id": "388f60fb-220d-55e8-ae9c-3ac93cead308",
+        "text": "organization",
+        "type": "EntityType"
+      },
+      {
+        "id": 8,
+        "original_id": "d690cff4-f313-556d-b1c6-fb0b070cd921",
+        "text": "walt disney pictures",
+        "type": "Entity"
+      },
+      {
+        "id": 9,
+        "original_id": "5263a535-1b4b-5925-be3e-310d03cd303b",
+        "text": "work",
+        "type": "EntityType"
+      },
+      {
+        "id": 10,
+        "original_id": "3142353a-38a4-5843-8719-635021590175",
+        "text": "mary poppins",
+        "type": "Entity"
+      },
+      {
+        "id": 11,
+        "original_id": "f84b53f0-d68a-5f9c-b437-b5b836eed4d3",
+        "text": "1964",
+        "type": "Entity"
+      },
+      {
+        "id": 12,
+        "original_id": "5564a8b8-e355-508b-9f8a-3adf1fcf46c6",
+        "text": "robert stevenson",
+        "type": "Entity"
+      },
+      {
+        "id": 13,
+        "original_id": "99a82eec-bb35-5bb5-9ed2-e73fc7a756de",
+        "text": "person",
+        "type": "EntityType"
+      },
+      {
+        "id": 14,
+        "original_id": "a5e99a25-0725-5be3-9cf3-4990386f9ad2",
+        "text": "walt disney",
+        "type": "Entity"
+      },
+      {
+        "id": 15,
+        "original_id": "d7e33479-d477-55b7-a4e4-7a50c2f3d509",
+        "text": "sherman brothers",
+        "type": "Entity"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "released_in"
+      },
+      {
+        "source": 1,
+        "target": 4,
+        "type": "contains"
+      },
+      {
+        "source": 4,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 11,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 6,
+        "type": "produced_by"
+      },
+      {
+        "source": 1,
+        "target": 6,
+        "type": "contains"
+      },
+      {
+        "source": 6,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 8,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 8,
+        "type": "distributed_by"
+      },
+      {
+        "source": 1,
+        "target": 8,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 9,
+        "type": "is_a"
+      },
+      {
+        "source": 10,
+        "target": 9,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 10,
+        "type": "contains"
+      },
+      {
+        "source": 10,
+        "target": 11,
+        "type": "released_in"
+      },
+      {
+        "source": 1,
+        "target": 11,
+        "type": "contains"
+      },
+      {
+        "source": 10,
+        "target": 12,
+        "type": "directed_by"
+      },
+      {
+        "source": 1,
+        "target": 12,
+        "type": "contains"
+      },
+      {
+        "source": 12,
+        "target": 13,
+        "type": "is_a"
+      },
+      {
+        "source": 14,
+        "target": 13,
+        "type": "is_a"
+      },
+      {
+        "source": 15,
+        "target": 13,
+        "type": "is_a"
+      },
+      {
+        "source": 10,
+        "target": 14,
+        "type": "produced_by"
+      },
+      {
+        "source": 1,
+        "target": 14,
+        "type": "contains"
+      },
+      {
+        "source": 10,
+        "target": 15,
+        "type": "songs_written_and_composed_by"
+      },
+      {
+        "source": 1,
+        "target": 15,
+        "type": "contains"
+      }
+    ]
+  }
+}

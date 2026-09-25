@@ -1,0 +1,588 @@
+{
+  "dataset": "hover",
+  "id": "b4e37b76-b14a-4cdc-8067-0367d5c837aa",
+  "split": "train",
+  "claim": "The father of the namesake of the Italian transatlantic ocean liner, the SS Principessa Mafalda, was born in 1869.",
+  "evidencia": "Page: Princess Mafalda of Savoy. Sentence: Princess Mafalda of Savoy (2 November 1902 – 27 August 1944) was the second daughter of King Victor Emmanuel III of Italy and his wife Elena of Montenegro.\nPage: Victor Emmanuel III of Italy. Sentence: Victor Emmanuel III (Italian: \"Vittorio Emanuele III\" , Albanian: \"Viktor Emanueli III\" ; 11 November 1869 – 28 December 1947) was the King of Italy from 29 July 1900 until his abdication on 9 May 1946.\nPage: SS Principessa Mafalda. Sentence: Named after Princess Mafalda of Savoy, second daughter of King Victor Emmanuel III, the ship entered NGI's South American service between Genoa and Buenos Aires in 1909.",
+  "evidence_text": "Page: Princess Mafalda of Savoy. Sentence: Princess Mafalda of Savoy (2 November 1902 – 27 August 1944) was the second daughter of King Victor Emmanuel III of Italy and his wife Elena of Montenegro.\nPage: Victor Emmanuel III of Italy. Sentence: Victor Emmanuel III (Italian: \"Vittorio Emanuele III\" , Albanian: \"Viktor Emanueli III\" ; 11 November 1869 – 28 December 1947) was the King of Italy from 29 July 1900 until his abdication on 9 May 1946.\nPage: SS Principessa Mafalda. Sentence: Named after Princess Mafalda of Savoy, second daughter of King Victor Emmanuel III, the ship entered NGI's South American service between Genoa and Buenos Aires in 1909.",
+  "label": "SUPPORTED",
+  "num_hops": 3,
+  "hover_metadata": {
+    "supporting_facts": [
+      [
+        "Princess Mafalda of Savoy",
+        0
+      ],
+      [
+        "Victor Emmanuel III of Italy",
+        0
+      ],
+      [
+        "SS Principessa Mafalda",
+        1
+      ]
+    ],
+    "num_hops": 3,
+    "evidence_annotation_id": [
+      0
+    ],
+    "evidence_id": [
+      "Princess Mafalda of Savoy::sentence::0",
+      "Victor Emmanuel III of Italy::sentence::0",
+      "SS Principessa Mafalda::sentence::1"
+    ],
+    "evidence_wiki_url": [
+      "https://en.wikipedia.org/wiki/Princess_Mafalda_of_Savoy",
+      "https://en.wikipedia.org/wiki/Victor_Emmanuel_III_of_Italy",
+      "https://en.wikipedia.org/wiki/SS_Principessa_Mafalda"
+    ],
+    "evidence_sentence_id": [
+      "Princess Mafalda of Savoy::sentence::0",
+      "Victor Emmanuel III of Italy::sentence::0",
+      "SS Principessa Mafalda::sentence::1"
+    ]
+  },
+  "grafo_claim": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "c2699004-85f4-5ffb-bf97-8ccd994756c0",
+        "text": "This chunk is about:\n- People: Principessa Mafalda of Savoy, Victor Emmanuel III of Italy\n- Products: SS Principessa Mafalda\n\nFacts:\n- Victor Emmanuel III of Italy was born in 1869.\n- Principessa Mafalda of Savoy was the namesake of the Italian transatlantic ocean liner SS Principessa Mafalda.\n- Victor Emmanuel III of Italy was the father of Principessa Mafalda of Savoy.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "4dc37d54-2f75-507a-8829-3f3980119ac7",
+        "text": "The father of the namesake of the Italian transatlantic ocean liner, the SS Principessa Mafalda, was born in 1869.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "2ccb36c0-c246-55ef-8eca-f92c0567c0cb",
+        "text": "text_e015ea64c2033445a6552cf1cd1957d2",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "c2133dcf-d1a6-5b17-82c0-6ffb11334f7c",
+        "text": "ss principessa mafalda",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "8faadbce-6531-5e5c-872b-9bb96922cd15",
+        "text": "principessa mafalda",
+        "type": "Entity"
+      },
+      {
+        "id": 5,
+        "original_id": "99a82eec-bb35-5bb5-9ed2-e73fc7a756de",
+        "text": "person",
+        "type": "EntityType"
+      },
+      {
+        "id": 6,
+        "original_id": "1b7c3ad9-e154-56b4-908d-043ea548b500",
+        "text": "thing",
+        "type": "EntityType"
+      },
+      {
+        "id": 7,
+        "original_id": "24ddbfb9-0ee9-5afc-a08f-14591c6c20da",
+        "text": "father of principessa mafalda",
+        "type": "Entity"
+      },
+      {
+        "id": 8,
+        "original_id": "90a16084-9a0e-586d-b016-dd800c7f70ed",
+        "text": "1869",
+        "type": "Entity"
+      },
+      {
+        "id": 9,
+        "original_id": "b19433ae-558c-5aaf-95ac-6231f2a4be0e",
+        "text": "date",
+        "type": "EntityType"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "named_after"
+      },
+      {
+        "source": 1,
+        "target": 4,
+        "type": "contains"
+      },
+      {
+        "source": 7,
+        "target": 4,
+        "type": "father_of"
+      },
+      {
+        "source": 4,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 7,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      },
+      {
+        "source": 7,
+        "target": 8,
+        "type": "born_in"
+      },
+      {
+        "source": 1,
+        "target": 8,
+        "type": "contains"
+      },
+      {
+        "source": 8,
+        "target": 9,
+        "type": "is_a"
+      }
+    ]
+  },
+  "grafo_evidencia": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "1881013b-68de-5d74-b700-56a9f9b4090d",
+        "text": "This chunk is about:\n- People: Princess Mafalda of Savoy, Victor Emmanuel III, Elena of Montenegro\n- Organizations: NGI\n- Products: SS Principessa Mafalda\n- Places: Italy, Genoa, Buenos Aires, South America\n\nFacts:\n- Victor Emmanuel III was born on 11 November 1869 and became King of Italy on 29 July 1900.\n- Princess Mafalda of Savoy was born on 2 November 1902 as the second daughter of King Victor Emmanuel III of Italy and his wife Elena of Montenegro.\n- In 1909, the SS Principessa Mafalda, which was named after Princess Mafalda of Savoy, entered NGI's South American service between Genoa and Buenos Aires.\n- Victor Emmanuel III abdicated as King of Italy on 9 May 1946.\n- Princess Mafalda of Savoy died on 27 August 1944.\n- Victor Emmanuel III died on 28 December 1947.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "4ec36a4d-59a4-5c4f-bed8-0e910e8f7fe6",
+        "text": "Page: Princess Mafalda of Savoy. Sentence: Princess Mafalda of Savoy (2 November 1902 – 27 August 1944) was the second daughter of King Victor Emmanuel III of Italy and his wife Elena of Montenegro.\nPage: Victor Emmanuel III of Italy. Sentence: Victor Emmanuel III (Italian: \"Vittorio Emanuele III\" , Albanian: \"Viktor Emanueli III\" ; 11 November 1869 – 28 December 1947) was the King of Italy from 29 July 1900 until his abdication on 9 May 1946.\nPage: SS Principessa Mafalda. Sentence: Named after Princess Mafalda of Savoy, second daughter of King Victor Emmanuel III, the ship entered NGI's South American service between Genoa and Buenos Aires in 1909.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "474232f7-1d73-5b13-a762-a307c2e27548",
+        "text": "text_cd46b66905720bea1c251f5e23f28d79",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "2c739d57-1eee-527c-b44a-6c82bcc91a94",
+        "text": "princess mafalda of savoy",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "03828acc-f315-5453-816e-6e78e99c363a",
+        "text": "1902-11-02",
+        "type": "Entity"
+      },
+      {
+        "id": 5,
+        "original_id": "b19433ae-558c-5aaf-95ac-6231f2a4be0e",
+        "text": "date",
+        "type": "EntityType"
+      },
+      {
+        "id": 6,
+        "original_id": "7c3b140f-7bcd-5132-9b3c-99150f83f269",
+        "text": "1944-08-27",
+        "type": "Entity"
+      },
+      {
+        "id": 7,
+        "original_id": "a9bd3aa6-5293-5d9f-9050-e3c827e2a8c1",
+        "text": "victor emmanuel iii of italy",
+        "type": "Entity"
+      },
+      {
+        "id": 8,
+        "original_id": "084aed77-9618-5c7d-8d6a-60cbdd3e04f1",
+        "text": "1869-11-11",
+        "type": "Entity"
+      },
+      {
+        "id": 9,
+        "original_id": "ffc0bdf6-3774-507f-b41c-c2861265a31c",
+        "text": "1947-12-28",
+        "type": "Entity"
+      },
+      {
+        "id": 10,
+        "original_id": "577ac3d5-5a05-5cfa-9361-dc82167f5c1e",
+        "text": "king of italy",
+        "type": "Entity"
+      },
+      {
+        "id": 11,
+        "original_id": "4fb639a0-083a-5b92-8c23-a04b01bc6b29",
+        "text": "title",
+        "type": "EntityType"
+      },
+      {
+        "id": 12,
+        "original_id": "69ccc3db-d86f-5610-9886-312462f7cc2a",
+        "text": "1900-07-29",
+        "type": "Entity"
+      },
+      {
+        "id": 13,
+        "original_id": "0a94039e-14c9-53e6-b7cd-53dc800d5b1e",
+        "text": "1946-05-09",
+        "type": "Entity"
+      },
+      {
+        "id": 14,
+        "original_id": "74b99510-f127-57ba-b6fc-91a5e9e9fce0",
+        "text": "elena of montenegro",
+        "type": "Entity"
+      },
+      {
+        "id": 15,
+        "original_id": "99a82eec-bb35-5bb5-9ed2-e73fc7a756de",
+        "text": "person",
+        "type": "EntityType"
+      },
+      {
+        "id": 16,
+        "original_id": "c2133dcf-d1a6-5b17-82c0-6ffb11334f7c",
+        "text": "ss principessa mafalda",
+        "type": "Entity"
+      },
+      {
+        "id": 17,
+        "original_id": "a222a0a8-99a8-5854-8693-075a7dd69e54",
+        "text": "ngi",
+        "type": "Entity"
+      },
+      {
+        "id": 18,
+        "original_id": "388f60fb-220d-55e8-ae9c-3ac93cead308",
+        "text": "organization",
+        "type": "EntityType"
+      },
+      {
+        "id": 19,
+        "original_id": "cceb7da3-c21b-55e1-a1bc-cc796a985ecc",
+        "text": "south american service",
+        "type": "Entity"
+      },
+      {
+        "id": 20,
+        "original_id": "70a5ddfd-0938-5b6b-acf6-854aaff030e2",
+        "text": "genoa",
+        "type": "Entity"
+      },
+      {
+        "id": 21,
+        "original_id": "5f394058-b2a0-5ba8-8466-ba2a18cfcf4e",
+        "text": "place",
+        "type": "EntityType"
+      },
+      {
+        "id": 22,
+        "original_id": "27a1c249-c043-599c-bf7b-e35ba579cc50",
+        "text": "buenos aires",
+        "type": "Entity"
+      },
+      {
+        "id": 23,
+        "original_id": "cca61dbb-0e3d-5b0b-9098-fc254ce885e7",
+        "text": "service",
+        "type": "EntityType"
+      },
+      {
+        "id": 24,
+        "original_id": "e1f8c7f7-c554-5fc9-8d0e-55c57ab48051",
+        "text": "1909",
+        "type": "Entity"
+      },
+      {
+        "id": 25,
+        "original_id": "d7189c1f-62f9-5967-8266-f2fecf50d34d",
+        "text": "ship",
+        "type": "EntityType"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 16,
+        "target": 3,
+        "type": "named_after"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "born_on"
+      },
+      {
+        "source": 1,
+        "target": 4,
+        "type": "contains"
+      },
+      {
+        "source": 4,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 6,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 8,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 9,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 12,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 13,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 24,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 6,
+        "type": "died_on"
+      },
+      {
+        "source": 1,
+        "target": 6,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 7,
+        "type": "daughter_of"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      },
+      {
+        "source": 7,
+        "target": 8,
+        "type": "born_on"
+      },
+      {
+        "source": 1,
+        "target": 8,
+        "type": "contains"
+      },
+      {
+        "source": 7,
+        "target": 9,
+        "type": "died_on"
+      },
+      {
+        "source": 1,
+        "target": 9,
+        "type": "contains"
+      },
+      {
+        "source": 7,
+        "target": 10,
+        "type": "held_title"
+      },
+      {
+        "source": 1,
+        "target": 10,
+        "type": "contains"
+      },
+      {
+        "source": 10,
+        "target": 11,
+        "type": "is_a"
+      },
+      {
+        "source": 7,
+        "target": 12,
+        "type": "reign_started_on"
+      },
+      {
+        "source": 1,
+        "target": 12,
+        "type": "contains"
+      },
+      {
+        "source": 7,
+        "target": 13,
+        "type": "abdicated_on"
+      },
+      {
+        "source": 1,
+        "target": 13,
+        "type": "contains"
+      },
+      {
+        "source": 7,
+        "target": 14,
+        "type": "spouse_of"
+      },
+      {
+        "source": 3,
+        "target": 14,
+        "type": "daughter_of"
+      },
+      {
+        "source": 1,
+        "target": 14,
+        "type": "contains"
+      },
+      {
+        "source": 14,
+        "target": 15,
+        "type": "is_a"
+      },
+      {
+        "source": 7,
+        "target": 15,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 15,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 16,
+        "type": "contains"
+      },
+      {
+        "source": 16,
+        "target": 17,
+        "type": "entered_service_of"
+      },
+      {
+        "source": 1,
+        "target": 17,
+        "type": "contains"
+      },
+      {
+        "source": 17,
+        "target": 18,
+        "type": "is_a"
+      },
+      {
+        "source": 16,
+        "target": 19,
+        "type": "entered_service"
+      },
+      {
+        "source": 1,
+        "target": 19,
+        "type": "contains"
+      },
+      {
+        "source": 19,
+        "target": 20,
+        "type": "between"
+      },
+      {
+        "source": 1,
+        "target": 20,
+        "type": "contains"
+      },
+      {
+        "source": 20,
+        "target": 21,
+        "type": "is_a"
+      },
+      {
+        "source": 22,
+        "target": 21,
+        "type": "is_a"
+      },
+      {
+        "source": 19,
+        "target": 22,
+        "type": "between"
+      },
+      {
+        "source": 1,
+        "target": 22,
+        "type": "contains"
+      },
+      {
+        "source": 19,
+        "target": 23,
+        "type": "is_a"
+      },
+      {
+        "source": 16,
+        "target": 24,
+        "type": "entered_service_in"
+      },
+      {
+        "source": 1,
+        "target": 24,
+        "type": "contains"
+      },
+      {
+        "source": 16,
+        "target": 25,
+        "type": "is_a"
+      }
+    ]
+  }
+}

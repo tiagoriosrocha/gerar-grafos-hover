@@ -1,0 +1,239 @@
+{
+  "dataset": "hover",
+  "id": "8f40e79d-2039-4f60-b7ae-6f28f14d2b1a",
+  "split": "train",
+  "claim": "Southridge mall is tied with the largest, not second largest, mall in state.",
+  "evidencia": "Page: Southridge Mall (Wisconsin). Sentence: At 1.2 million square feet,(1.26 million) it is tied with the Fox River Mall in Grand Chute as the largest mall in the state (by square footage).\nPage: Fox River Mall. Sentence: At 1.21 million square feet, it is the largest mall in Wisconsin.",
+  "evidence_text": "Page: Southridge Mall (Wisconsin). Sentence: At 1.2 million square feet,(1.26 million) it is tied with the Fox River Mall in Grand Chute as the largest mall in the state (by square footage).\nPage: Fox River Mall. Sentence: At 1.21 million square feet, it is the largest mall in Wisconsin.",
+  "label": "SUPPORTED",
+  "num_hops": 2,
+  "hover_metadata": {
+    "supporting_facts": [
+      [
+        "Southridge Mall (Wisconsin)",
+        1
+      ],
+      [
+        "Fox River Mall",
+        2
+      ]
+    ],
+    "num_hops": 2,
+    "evidence_annotation_id": [
+      0
+    ],
+    "evidence_id": [
+      "Southridge Mall (Wisconsin)::sentence::1",
+      "Fox River Mall::sentence::2"
+    ],
+    "evidence_wiki_url": [
+      "https://en.wikipedia.org/wiki/Southridge_Mall_%28Wisconsin%29",
+      "https://en.wikipedia.org/wiki/Fox_River_Mall"
+    ],
+    "evidence_sentence_id": [
+      "Southridge Mall (Wisconsin)::sentence::1",
+      "Fox River Mall::sentence::2"
+    ]
+  },
+  "grafo_claim": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "2200e0e3-c1b6-5300-9221-d2599835fde5",
+        "text": "This chunk is about:\n- Places: Southridge Mall, the state\n- Topics: mall size ranking\n\nFacts:\n- Southridge Mall is tied for the largest mall in the state.\n- Southridge Mall is not the second-largest mall in the state.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "038957c0-aff1-564c-abf3-43ec348d8775",
+        "text": "Southridge mall is tied with the largest, not second largest, mall in state.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "bf52b3ee-a26d-5650-815c-3e12368604b3",
+        "text": "text_9072fe6cd38f9dda6bb229b4c001c92a",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "d9dc6979-d2b1-5a0b-aa08-25c9bf9fe1bb",
+        "text": "southridge mall",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "5f394058-b2a0-5ba8-8466-ba2a18cfcf4e",
+        "text": "place",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "d43dd56d-da6d-5ba4-85d7-a39fd436be27",
+        "text": "state",
+        "type": "Entity"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 5,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "is_tied_for_largest_mall_in"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      }
+    ]
+  },
+  "grafo_evidencia": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "3fb0e5d9-8cd1-5382-8539-d70576a2a8aa",
+        "text": "This chunk is about:\n- Places: Southridge Mall, Fox River Mall, Grand Chute, Wisconsin\n- Topics: mall size, square footage rankings\n\nFacts:\n- Southridge Mall in Wisconsin has 1.2 million square feet, with one source stating 1.26 million square feet.\n- Southridge Mall is tied with Fox River Mall in Grand Chute as the largest mall in Wisconsin by square footage.\n- Fox River Mall has 1.21 million square feet.\n- Fox River Mall is described as the largest mall in Wisconsin.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "2e5d85a4-de51-5760-8975-0cf9ab582579",
+        "text": "Page: Southridge Mall (Wisconsin). Sentence: At 1.2 million square feet,(1.26 million) it is tied with the Fox River Mall in Grand Chute as the largest mall in the state (by square footage).\nPage: Fox River Mall. Sentence: At 1.21 million square feet, it is the largest mall in Wisconsin.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "ae1badaa-dbe0-528e-898d-1af8e1e7e1c6",
+        "text": "text_d5509135fd81ab16d72f2d4d67468f32",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "1e498bd9-c672-5912-ae83-f6fac1308f8e",
+        "text": "southridge mall (wisconsin)",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "5f394058-b2a0-5ba8-8466-ba2a18cfcf4e",
+        "text": "place",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "a00ae9d7-8396-5ae3-82a7-af23dc2593fa",
+        "text": "fox river mall",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "48ed5656-c851-565f-834b-2d6595e4b95c",
+        "text": "grand chute",
+        "type": "Entity"
+      },
+      {
+        "id": 7,
+        "original_id": "5b6c5f70-3c26-54d4-8322-0035b918d1ff",
+        "text": "wisconsin",
+        "type": "Entity"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 5,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 6,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 7,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "is_tied_with"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "is_in"
+      },
+      {
+        "source": 1,
+        "target": 6,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 7,
+        "type": "is_in"
+      },
+      {
+        "source": 3,
+        "target": 7,
+        "type": "is_in"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      }
+    ]
+  }
+}

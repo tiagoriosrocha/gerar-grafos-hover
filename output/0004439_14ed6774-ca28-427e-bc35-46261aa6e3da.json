@@ -1,0 +1,379 @@
+{
+  "dataset": "hover",
+  "id": "14ed6774-ca28-427e-bc35-46261aa6e3da",
+  "split": "train",
+  "claim": "Bayer 04 Leverkusen is a club that has hosted matches at BayArena  since 1958.",
+  "evidencia": "Page: Bayer 04 Leverkusen. Sentence: The club plays in the Bundesliga, the top tier of the German football league system, and hosts matches at the BayArena.\nPage: BayArena. Sentence: BayArena (] ) is a football stadium in Leverkusen, North Rhine-Westphalia, Germany, which has been the home ground of Bundesliga club Bayer Leverkusen since 1958.",
+  "evidence_text": "Page: Bayer 04 Leverkusen. Sentence: The club plays in the Bundesliga, the top tier of the German football league system, and hosts matches at the BayArena.\nPage: BayArena. Sentence: BayArena (] ) is a football stadium in Leverkusen, North Rhine-Westphalia, Germany, which has been the home ground of Bundesliga club Bayer Leverkusen since 1958.",
+  "label": "SUPPORTED",
+  "num_hops": 2,
+  "hover_metadata": {
+    "supporting_facts": [
+      [
+        "Bayer 04 Leverkusen",
+        1
+      ],
+      [
+        "BayArena",
+        0
+      ]
+    ],
+    "num_hops": 2,
+    "evidence_annotation_id": [
+      0
+    ],
+    "evidence_id": [
+      "Bayer 04 Leverkusen::sentence::1",
+      "BayArena::sentence::0"
+    ],
+    "evidence_wiki_url": [
+      "https://en.wikipedia.org/wiki/Bayer_04_Leverkusen",
+      "https://en.wikipedia.org/wiki/BayArena"
+    ],
+    "evidence_sentence_id": [
+      "Bayer 04 Leverkusen::sentence::1",
+      "BayArena::sentence::0"
+    ]
+  },
+  "grafo_claim": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "85480c76-87b5-53a5-b2db-ca1161798b8d",
+        "text": "This chunk is about:\n- Organizations: Bayer 04 Leverkusen\n- Places: BayArena\n\nFacts:\n- Bayer 04 Leverkusen has hosted matches at BayArena since 1958.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "5bf5e3a7-7fc9-54f3-9ea3-934a56e40c69",
+        "text": "Bayer 04 Leverkusen is a club that has hosted matches at BayArena  since 1958.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "9d7c7f52-96c7-569a-a5c6-27c066d65795",
+        "text": "text_7934971ed24af3ef1f9e4af1379e604d",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "06ed792f-ce6b-59e3-b458-5a01d9e57a19",
+        "text": "bayer 04 leverkusen",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "f62701c8-f66c-5990-aba4-8a498fd809e4",
+        "text": "bayarena",
+        "type": "Entity"
+      },
+      {
+        "id": 5,
+        "original_id": "f0b6ca26-9c95-5729-b556-e90c1d176909",
+        "text": "1958",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "b19433ae-558c-5aaf-95ac-6231f2a4be0e",
+        "text": "date",
+        "type": "EntityType"
+      },
+      {
+        "id": 7,
+        "original_id": "5f394058-b2a0-5ba8-8466-ba2a18cfcf4e",
+        "text": "place",
+        "type": "EntityType"
+      },
+      {
+        "id": 8,
+        "original_id": "388f60fb-220d-55e8-ae9c-3ac93cead308",
+        "text": "organization",
+        "type": "EntityType"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "hosted_matches_at"
+      },
+      {
+        "source": 1,
+        "target": 4,
+        "type": "contains"
+      },
+      {
+        "source": 4,
+        "target": 5,
+        "type": "hosting_since"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "hosted_matches_since"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 4,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 8,
+        "type": "is_a"
+      }
+    ]
+  },
+  "grafo_evidencia": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "dff263ff-2ed0-5888-8503-1d8bd933342e",
+        "text": "This chunk is about:\n- Organizations: Bayer 04 Leverkusen\n- Places: BayArena, Leverkusen, North Rhine-Westphalia, Germany\n- Competitions: Bundesliga, German football league system\n\nFacts:\n- Bayer 04 Leverkusen plays in the Bundesliga, the top tier of the German football league system.\n- Since 1958, BayArena in Leverkusen, North Rhine-Westphalia, Germany, has been the home ground of Bundesliga club Bayer 04 Leverkusen.\n- Bayer 04 Leverkusen hosts its matches at BayArena.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "b8eec1cd-9076-5aba-9ea5-7cfea06fc584",
+        "text": "Page: Bayer 04 Leverkusen. Sentence: The club plays in the Bundesliga, the top tier of the German football league system, and hosts matches at the BayArena.\nPage: BayArena. Sentence: BayArena (] ) is a football stadium in Leverkusen, North Rhine-Westphalia, Germany, which has been the home ground of Bundesliga club Bayer Leverkusen since 1958.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "fd406cf3-b5f8-5698-a7c2-b775328d978f",
+        "text": "text_4b2913d5e8385e0b0db9a7598b666021",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "06ed792f-ce6b-59e3-b458-5a01d9e57a19",
+        "text": "bayer 04 leverkusen",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "8fd61613-aeda-55a2-8fda-9d3c6cecac9b",
+        "text": "bundesliga",
+        "type": "Entity"
+      },
+      {
+        "id": 5,
+        "original_id": "40f6b2a7-1189-5137-9380-6a107da7b460",
+        "text": "german football league system",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "b8ca42ef-0c9b-5bb4-af4b-cae4c0d61c6c",
+        "text": "competition",
+        "type": "EntityType"
+      },
+      {
+        "id": 7,
+        "original_id": "f62701c8-f66c-5990-aba4-8a498fd809e4",
+        "text": "bayarena",
+        "type": "Entity"
+      },
+      {
+        "id": 8,
+        "original_id": "abc1bd36-5754-5725-9666-33b8cf1d1394",
+        "text": "leverkusen",
+        "type": "Entity"
+      },
+      {
+        "id": 9,
+        "original_id": "f2979e1f-0b12-5f85-9183-2a7dde39661c",
+        "text": "north rhine-westphalia",
+        "type": "Entity"
+      },
+      {
+        "id": 10,
+        "original_id": "f30f124b-1bc0-595d-b0c0-aa20029c2bb4",
+        "text": "germany",
+        "type": "Entity"
+      },
+      {
+        "id": 11,
+        "original_id": "5f394058-b2a0-5ba8-8466-ba2a18cfcf4e",
+        "text": "place",
+        "type": "EntityType"
+      },
+      {
+        "id": 12,
+        "original_id": "f0b6ca26-9c95-5729-b556-e90c1d176909",
+        "text": "1958",
+        "type": "Entity"
+      },
+      {
+        "id": 13,
+        "original_id": "b19433ae-558c-5aaf-95ac-6231f2a4be0e",
+        "text": "date",
+        "type": "EntityType"
+      },
+      {
+        "id": 14,
+        "original_id": "388f60fb-220d-55e8-ae9c-3ac93cead308",
+        "text": "organization",
+        "type": "EntityType"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 7,
+        "target": 3,
+        "type": "home_ground_of"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "plays_in"
+      },
+      {
+        "source": 1,
+        "target": 4,
+        "type": "contains"
+      },
+      {
+        "source": 4,
+        "target": 5,
+        "type": "is_top_tier_of"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 4,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 7,
+        "type": "hosts_matches_at"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      },
+      {
+        "source": 7,
+        "target": 8,
+        "type": "located_in"
+      },
+      {
+        "source": 1,
+        "target": 8,
+        "type": "contains"
+      },
+      {
+        "source": 8,
+        "target": 9,
+        "type": "located_in"
+      },
+      {
+        "source": 1,
+        "target": 9,
+        "type": "contains"
+      },
+      {
+        "source": 9,
+        "target": 10,
+        "type": "located_in"
+      },
+      {
+        "source": 1,
+        "target": 10,
+        "type": "contains"
+      },
+      {
+        "source": 10,
+        "target": 11,
+        "type": "is_a"
+      },
+      {
+        "source": 9,
+        "target": 11,
+        "type": "is_a"
+      },
+      {
+        "source": 8,
+        "target": 11,
+        "type": "is_a"
+      },
+      {
+        "source": 7,
+        "target": 11,
+        "type": "is_a"
+      },
+      {
+        "source": 7,
+        "target": 12,
+        "type": "home_ground_since"
+      },
+      {
+        "source": 1,
+        "target": 12,
+        "type": "contains"
+      },
+      {
+        "source": 12,
+        "target": 13,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 14,
+        "type": "is_a"
+      }
+    ]
+  }
+}

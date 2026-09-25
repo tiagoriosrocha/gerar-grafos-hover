@@ -1,0 +1,411 @@
+{
+  "dataset": "hover",
+  "id": "49fe950e-caec-4c2e-8ecf-bfad7409c4c3",
+  "split": "train",
+  "claim": "Metro West Ambulance serves event support for the building in Portland formerly known as Rose Garden.",
+  "evidencia": "Page: Metro West Ambulance. Sentence: In addition to daily emergency ambulance services, Metro West also serves customers through a comprehensive wheelchair van service, special event medical support for Portland's Moda Center, the Oregon State Fair, and many other events throughout the year.\nPage: Moda Center. Sentence: Moda Center, formerly known as the Rose Garden, is the primary indoor sports arena in Portland, Oregon, United States.",
+  "evidence_text": "Page: Metro West Ambulance. Sentence: In addition to daily emergency ambulance services, Metro West also serves customers through a comprehensive wheelchair van service, special event medical support for Portland's Moda Center, the Oregon State Fair, and many other events throughout the year.\nPage: Moda Center. Sentence: Moda Center, formerly known as the Rose Garden, is the primary indoor sports arena in Portland, Oregon, United States.",
+  "label": "SUPPORTED",
+  "num_hops": 2,
+  "hover_metadata": {
+    "supporting_facts": [
+      [
+        "Metro West Ambulance",
+        2
+      ],
+      [
+        "Moda Center",
+        0
+      ]
+    ],
+    "num_hops": 2,
+    "evidence_annotation_id": [
+      0
+    ],
+    "evidence_id": [
+      "Metro West Ambulance::sentence::2",
+      "Moda Center::sentence::0"
+    ],
+    "evidence_wiki_url": [
+      "https://en.wikipedia.org/wiki/Metro_West_Ambulance",
+      "https://en.wikipedia.org/wiki/Moda_Center"
+    ],
+    "evidence_sentence_id": [
+      "Metro West Ambulance::sentence::2",
+      "Moda Center::sentence::0"
+    ]
+  },
+  "grafo_claim": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "b9184ad1-ab10-5eb8-92c0-2fabd116d7e4",
+        "text": "This chunk is about:\n- Organizations: Metro West Ambulance\n- Places: Portland, Rose Garden\n- Topics: event support, venue naming\n\nFacts:\n- Metro West Ambulance serves event support for a building in Portland.\n- The Portland building was formerly known as the Rose Garden.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "c0f671b0-2987-531e-8ef1-7225da9fbe08",
+        "text": "Metro West Ambulance serves event support for the building in Portland formerly known as Rose Garden.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "82b2b3e0-042d-56e1-b522-fcfd5a0f66f7",
+        "text": "text_3befef4ff23c14820b52d5e0379a4727",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "5df6aeec-97e5-518e-92be-bee1fbee88f4",
+        "text": "metro west ambulance",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "388f60fb-220d-55e8-ae9c-3ac93cead308",
+        "text": "organization",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "7f895c50-c329-5a29-9791-5df1dc713bc1",
+        "text": "event support",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "d2a381fa-3658-5ca6-ada9-2109cfc9331d",
+        "text": "concept",
+        "type": "EntityType"
+      },
+      {
+        "id": 7,
+        "original_id": "6eb64657-8b2b-5f4b-832d-e78b5d663b95",
+        "text": "rose garden",
+        "type": "Entity"
+      },
+      {
+        "id": 8,
+        "original_id": "5f394058-b2a0-5ba8-8466-ba2a18cfcf4e",
+        "text": "place",
+        "type": "EntityType"
+      },
+      {
+        "id": 9,
+        "original_id": "159807eb-2372-5683-98d6-bba17b85ae1e",
+        "text": "portland",
+        "type": "Entity"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "serves"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 5,
+        "target": 7,
+        "type": "for"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      },
+      {
+        "source": 7,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 9,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 7,
+        "target": 9,
+        "type": "located_in"
+      },
+      {
+        "source": 1,
+        "target": 9,
+        "type": "contains"
+      }
+    ]
+  },
+  "grafo_evidencia": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "a0d54056-b8c8-553b-bf5f-8f6d76ea5fff",
+        "text": "This chunk is about:\n- Organizations: Metro West Ambulance, Moda Center, Oregon State Fair\n- Places: Portland, Oregon, United States\n- Services: emergency ambulance services, wheelchair van service, special event medical support\n\nFacts:\n- Moda Center was formerly known as the Rose Garden.\n- Moda Center is the primary indoor sports arena in Portland, Oregon, United States.\n- Metro West Ambulance provides daily emergency ambulance services.\n- Metro West Ambulance provides a comprehensive wheelchair van service.\n- Metro West Ambulance provides special event medical support for Portland's Moda Center, the Oregon State Fair, and many other events throughout the year.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "737ae7c1-904f-5f85-8f4d-13968af47a11",
+        "text": "Page: Metro West Ambulance. Sentence: In addition to daily emergency ambulance services, Metro West also serves customers through a comprehensive wheelchair van service, special event medical support for Portland's Moda Center, the Oregon State Fair, and many other events throughout the year.\nPage: Moda Center. Sentence: Moda Center, formerly known as the Rose Garden, is the primary indoor sports arena in Portland, Oregon, United States.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "4f352cf4-35f4-5dd8-bac2-3b24189fada7",
+        "text": "text_83fe2521c62d0bbef18251db6e56d157",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "5df6aeec-97e5-518e-92be-bee1fbee88f4",
+        "text": "metro west ambulance",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "388f60fb-220d-55e8-ae9c-3ac93cead308",
+        "text": "organization",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "86fc8537-7617-5507-b3ca-9010758bb7e1",
+        "text": "wheelchair van service",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "cca61dbb-0e3d-5b0b-9098-fc254ce885e7",
+        "text": "service",
+        "type": "EntityType"
+      },
+      {
+        "id": 7,
+        "original_id": "92b8cb30-a90d-5b12-9645-bbd04c06dc78",
+        "text": "special event medical support",
+        "type": "Entity"
+      },
+      {
+        "id": 8,
+        "original_id": "ce3b6a12-c7fa-5ed6-aa01-1d2a7a296050",
+        "text": "moda center",
+        "type": "Entity"
+      },
+      {
+        "id": 9,
+        "original_id": "5f394058-b2a0-5ba8-8466-ba2a18cfcf4e",
+        "text": "place",
+        "type": "EntityType"
+      },
+      {
+        "id": 10,
+        "original_id": "6eb64657-8b2b-5f4b-832d-e78b5d663b95",
+        "text": "rose garden",
+        "type": "Entity"
+      },
+      {
+        "id": 11,
+        "original_id": "159807eb-2372-5683-98d6-bba17b85ae1e",
+        "text": "portland",
+        "type": "Entity"
+      },
+      {
+        "id": 12,
+        "original_id": "f7515f39-0536-54e2-904a-b2063b9c5007",
+        "text": "oregon",
+        "type": "Entity"
+      },
+      {
+        "id": 13,
+        "original_id": "874a51da-34ea-5037-be47-d87785d43c37",
+        "text": "united states",
+        "type": "Entity"
+      },
+      {
+        "id": 14,
+        "original_id": "5df90b5a-9a94-5631-84a6-6ff2f04fa0b6",
+        "text": "oregon state fair",
+        "type": "Entity"
+      },
+      {
+        "id": 15,
+        "original_id": "214abcd9-9adf-5c8a-bb35-1e729f2d68c3",
+        "text": "event",
+        "type": "EntityType"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "provides"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 7,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 7,
+        "type": "provides"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      },
+      {
+        "source": 7,
+        "target": 8,
+        "type": "supports"
+      },
+      {
+        "source": 1,
+        "target": 8,
+        "type": "contains"
+      },
+      {
+        "source": 8,
+        "target": 9,
+        "type": "is_a"
+      },
+      {
+        "source": 10,
+        "target": 9,
+        "type": "is_a"
+      },
+      {
+        "source": 11,
+        "target": 9,
+        "type": "is_a"
+      },
+      {
+        "source": 12,
+        "target": 9,
+        "type": "is_a"
+      },
+      {
+        "source": 13,
+        "target": 9,
+        "type": "is_a"
+      },
+      {
+        "source": 8,
+        "target": 10,
+        "type": "formerly_known_as"
+      },
+      {
+        "source": 1,
+        "target": 10,
+        "type": "contains"
+      },
+      {
+        "source": 8,
+        "target": 11,
+        "type": "located_in"
+      },
+      {
+        "source": 1,
+        "target": 11,
+        "type": "contains"
+      },
+      {
+        "source": 11,
+        "target": 12,
+        "type": "located_in"
+      },
+      {
+        "source": 1,
+        "target": 12,
+        "type": "contains"
+      },
+      {
+        "source": 12,
+        "target": 13,
+        "type": "located_in"
+      },
+      {
+        "source": 1,
+        "target": 13,
+        "type": "contains"
+      },
+      {
+        "source": 7,
+        "target": 14,
+        "type": "supports"
+      },
+      {
+        "source": 1,
+        "target": 14,
+        "type": "contains"
+      },
+      {
+        "source": 14,
+        "target": 15,
+        "type": "is_a"
+      }
+    ]
+  }
+}

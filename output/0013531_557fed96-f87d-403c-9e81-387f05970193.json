@@ -1,0 +1,448 @@
+{
+  "dataset": "hover",
+  "id": "557fed96-f87d-403c-9e81-387f05970193",
+  "split": "train",
+  "claim": "Dichroa and Lathyrus are not both native to Europe.",
+  "evidencia": "Page: Lathyrus. Sentence: They are native to temperate areas, with a breakdown of 52 species in Europe, 30 species in North America, 78 in Asia, 24 in tropical East Africa, and 24 in temperate South America.\nPage: Dichroa. Sentence: Dichroa is a genus of 12 species of flowering plants in the family Hydrangeaceae, native to eastern and southeastern Asia.",
+  "evidence_text": "Page: Lathyrus. Sentence: They are native to temperate areas, with a breakdown of 52 species in Europe, 30 species in North America, 78 in Asia, 24 in tropical East Africa, and 24 in temperate South America.\nPage: Dichroa. Sentence: Dichroa is a genus of 12 species of flowering plants in the family Hydrangeaceae, native to eastern and southeastern Asia.",
+  "label": "SUPPORTED",
+  "num_hops": 2,
+  "hover_metadata": {
+    "supporting_facts": [
+      [
+        "Lathyrus",
+        1
+      ],
+      [
+        "Dichroa",
+        0
+      ]
+    ],
+    "num_hops": 2,
+    "evidence_annotation_id": [
+      0
+    ],
+    "evidence_id": [
+      "Lathyrus::sentence::1",
+      "Dichroa::sentence::0"
+    ],
+    "evidence_wiki_url": [
+      "https://en.wikipedia.org/wiki/Lathyrus",
+      "https://en.wikipedia.org/wiki/Dichroa"
+    ],
+    "evidence_sentence_id": [
+      "Lathyrus::sentence::1",
+      "Dichroa::sentence::0"
+    ]
+  },
+  "grafo_claim": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "a655c393-7299-5e1b-b883-994156b26b65",
+        "text": "This chunk is about:\n- Plants: Dichroa, Lathyrus\n- Places: Europe\n\nFacts:\n- Dichroa and Lathyrus are not both native to Europe.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "d7db1ba9-573a-5e8a-a993-83c0d7d94b7f",
+        "text": "Dichroa and Lathyrus are not both native to Europe.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "819a001e-36e5-5823-b73e-176d8e16e5b3",
+        "text": "text_20937184fffdc0f910f436c57d727150",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "5431e41c-dbaf-53f6-9be1-4a26c6522671",
+        "text": "dichroa",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "2df43048-b175-54c2-b72b-0ff24f41e4f1",
+        "text": "plant",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "d62d98fd-7636-5918-880e-390a00283ca8",
+        "text": "europe",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "5f394058-b2a0-5ba8-8466-ba2a18cfcf4e",
+        "text": "place",
+        "type": "EntityType"
+      },
+      {
+        "id": 7,
+        "original_id": "435f093e-c3dc-55af-ab78-fe61d85fdca2",
+        "text": "lathyrus",
+        "type": "Entity"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 7,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "native_to"
+      },
+      {
+        "source": 7,
+        "target": 5,
+        "type": "native_to"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      }
+    ]
+  },
+  "grafo_evidencia": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "e71b80f0-73fc-5e03-ab9b-31510523c6d6",
+        "text": "This chunk is about:\n- Plants: Lathyrus, Dichroa\n- Places: Europe, North America, Asia, tropical East Africa, temperate South America, eastern Asia, southeastern Asia\n- Concepts: Native range, species counts, plant taxonomy\n\nFacts:\n- Lathyrus is native to temperate areas.\n- Lathyrus has 52 species in Europe, 30 species in North America, 78 in Asia, 24 in tropical East Africa, and 24 in temperate South America.\n- Dichroa is a genus of 12 species of flowering plants in the family Hydrangeaceae.\n- Dichroa is native to eastern and southeastern Asia.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "4b69c319-365d-5e1e-aa4b-8e38fb55bf85",
+        "text": "Page: Lathyrus. Sentence: They are native to temperate areas, with a breakdown of 52 species in Europe, 30 species in North America, 78 in Asia, 24 in tropical East Africa, and 24 in temperate South America.\nPage: Dichroa. Sentence: Dichroa is a genus of 12 species of flowering plants in the family Hydrangeaceae, native to eastern and southeastern Asia.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "7a6abab0-03d3-580d-a89e-66b5e464a80d",
+        "text": "text_aae27f3e39629b66fb68472a7e6ca49b",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "435f093e-c3dc-55af-ab78-fe61d85fdca2",
+        "text": "lathyrus",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "58ce8914-8a9e-5302-9b2d-0d97006e12d3",
+        "text": "genus",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "0fef3a89-0a63-500c-be4d-1bbbf624d8df",
+        "text": "temperate areas",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "5f394058-b2a0-5ba8-8466-ba2a18cfcf4e",
+        "text": "place",
+        "type": "EntityType"
+      },
+      {
+        "id": 7,
+        "original_id": "d62d98fd-7636-5918-880e-390a00283ca8",
+        "text": "europe",
+        "type": "Entity"
+      },
+      {
+        "id": 8,
+        "original_id": "7bfd7320-7015-5d33-be1e-fbdc9c0b5b79",
+        "text": "north america",
+        "type": "Entity"
+      },
+      {
+        "id": 9,
+        "original_id": "21d096f4-373a-585b-85d5-3b4b9dfc4785",
+        "text": "asia",
+        "type": "Entity"
+      },
+      {
+        "id": 10,
+        "original_id": "cd758da9-79bd-5238-b9de-593ee9f6ce85",
+        "text": "tropical east africa",
+        "type": "Entity"
+      },
+      {
+        "id": 11,
+        "original_id": "278403c2-0178-5299-843f-d17cc9da0abb",
+        "text": "temperate south america",
+        "type": "Entity"
+      },
+      {
+        "id": 12,
+        "original_id": "5431e41c-dbaf-53f6-9be1-4a26c6522671",
+        "text": "dichroa",
+        "type": "Entity"
+      },
+      {
+        "id": 13,
+        "original_id": "b25b230f-1369-588e-9e7f-c08dcbef237c",
+        "text": "12 species",
+        "type": "Entity"
+      },
+      {
+        "id": 14,
+        "original_id": "7a7a0687-e490-5167-ad5a-0e39d9055dee",
+        "text": "quantity",
+        "type": "EntityType"
+      },
+      {
+        "id": 15,
+        "original_id": "b3d963be-f53b-5653-978a-a5e5bd2dd7c4",
+        "text": "flowering plants",
+        "type": "Entity"
+      },
+      {
+        "id": 16,
+        "original_id": "2df43048-b175-54c2-b72b-0ff24f41e4f1",
+        "text": "plant",
+        "type": "EntityType"
+      },
+      {
+        "id": 17,
+        "original_id": "4a3ec8bf-eeed-522a-adad-766012ad7353",
+        "text": "hydrangeaceae",
+        "type": "Entity"
+      },
+      {
+        "id": 18,
+        "original_id": "030da7f2-9df8-5253-8cfc-609957d4e333",
+        "text": "family",
+        "type": "EntityType"
+      },
+      {
+        "id": 19,
+        "original_id": "3e39b730-3c73-5ba3-a5bd-91dff480da13",
+        "text": "eastern and southeastern asia",
+        "type": "Entity"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 12,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "native_to"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 7,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 8,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 9,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 10,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 11,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 19,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 7,
+        "type": "has_species_in"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 8,
+        "type": "has_species_in"
+      },
+      {
+        "source": 1,
+        "target": 8,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 9,
+        "type": "has_species_in"
+      },
+      {
+        "source": 1,
+        "target": 9,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 10,
+        "type": "has_species_in"
+      },
+      {
+        "source": 1,
+        "target": 10,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 11,
+        "type": "has_species_in"
+      },
+      {
+        "source": 1,
+        "target": 11,
+        "type": "contains"
+      },
+      {
+        "source": 1,
+        "target": 12,
+        "type": "contains"
+      },
+      {
+        "source": 12,
+        "target": 13,
+        "type": "has_count"
+      },
+      {
+        "source": 1,
+        "target": 13,
+        "type": "contains"
+      },
+      {
+        "source": 13,
+        "target": 14,
+        "type": "is_a"
+      },
+      {
+        "source": 12,
+        "target": 15,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 15,
+        "type": "contains"
+      },
+      {
+        "source": 15,
+        "target": 16,
+        "type": "is_a"
+      },
+      {
+        "source": 12,
+        "target": 17,
+        "type": "in_family"
+      },
+      {
+        "source": 1,
+        "target": 17,
+        "type": "contains"
+      },
+      {
+        "source": 17,
+        "target": 18,
+        "type": "is_a"
+      },
+      {
+        "source": 12,
+        "target": 19,
+        "type": "native_to"
+      },
+      {
+        "source": 1,
+        "target": 19,
+        "type": "contains"
+      }
+    ]
+  }
+}

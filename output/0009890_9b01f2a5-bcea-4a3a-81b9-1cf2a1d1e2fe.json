@@ -1,0 +1,346 @@
+{
+  "dataset": "hover",
+  "id": "9b01f2a5-bcea-4a3a-81b9-1cf2a1d1e2fe",
+  "split": "train",
+  "claim": "Out of the two parks Doñana National Park and Timanfaya National Park, Doñana National Park is larger.",
+  "evidencia": "Page: Doñana National Park. Sentence: Doñana National Park is a natural reserve in Andalusia, southern Spain, in the provinces of Huelva (most of its territory) and Seville.\nPage: Doñana National Park. Sentence: It covers 543 km² , of which 135 km² are a protected area.\nPage: Timanfaya National Park. Sentence: The area is 51.07 km2 .",
+  "evidence_text": "Page: Doñana National Park. Sentence: Doñana National Park is a natural reserve in Andalusia, southern Spain, in the provinces of Huelva (most of its territory) and Seville.\nPage: Doñana National Park. Sentence: It covers 543 km² , of which 135 km² are a protected area.\nPage: Timanfaya National Park. Sentence: The area is 51.07 km2 .",
+  "label": "SUPPORTED",
+  "num_hops": 2,
+  "hover_metadata": {
+    "supporting_facts": [
+      [
+        "Doñana National Park",
+        0
+      ],
+      [
+        "Doñana National Park",
+        1
+      ],
+      [
+        "Timanfaya National Park",
+        2
+      ]
+    ],
+    "num_hops": 2,
+    "evidence_annotation_id": [
+      0
+    ],
+    "evidence_id": [
+      "Doñana National Park::sentence::0",
+      "Doñana National Park::sentence::1",
+      "Timanfaya National Park::sentence::2"
+    ],
+    "evidence_wiki_url": [
+      "https://en.wikipedia.org/wiki/Do%C3%B1ana_National_Park",
+      "https://en.wikipedia.org/wiki/Timanfaya_National_Park"
+    ],
+    "evidence_sentence_id": [
+      "Doñana National Park::sentence::0",
+      "Doñana National Park::sentence::1",
+      "Timanfaya National Park::sentence::2"
+    ]
+  },
+  "grafo_claim": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "9bef79a3-5364-5cba-9a6b-249c46673f64",
+        "text": "This chunk is about:\n- Places: Doñana National Park, Timanfaya National Park\n- Topics: park size comparison\n\nFacts:\n- Doñana National Park and Timanfaya National Park are both parks.\n- Doñana National Park is larger than Timanfaya National Park.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "4b042374-4bea-574c-9170-061c9a25795f",
+        "text": "Out of the two parks Doñana National Park and Timanfaya National Park, Doñana National Park is larger.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "0c01b000-2393-554a-a3e0-10579aae70d0",
+        "text": "text_1019897c81dd71b861ef94a1bb830d8c",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "2700eefd-b924-51b8-9ba5-fba72c4f2140",
+        "text": "doñana national park",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "5f394058-b2a0-5ba8-8466-ba2a18cfcf4e",
+        "text": "place",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "add43458-8bda-5fbc-a010-e492e81ea5a9",
+        "text": "timanfaya national park",
+        "type": "Entity"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 5,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "is_larger_than"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      }
+    ]
+  },
+  "grafo_evidencia": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "bbcab3b5-6066-526b-9a2f-eb0c6282a66d",
+        "text": "This chunk is about:\n- Places: Doñana National Park, Timanfaya National Park, Andalusia, southern Spain, Huelva, Seville\n- Topics: protected area, area size\n\nFacts:\n- Doñana National Park is a natural reserve in Andalusia, southern Spain, in the provinces of Huelva and Seville.\n- Most of Doñana National Park's territory is in Huelva.\n- Doñana National Park covers 543 km², of which 135 km² are a protected area.\n- Timanfaya National Park has an area of 51.07 km².",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "dd5cc358-a175-5348-846d-9bc916b3d3a8",
+        "text": "Page: Doñana National Park. Sentence: Doñana National Park is a natural reserve in Andalusia, southern Spain, in the provinces of Huelva (most of its territory) and Seville.\nPage: Doñana National Park. Sentence: It covers 543 km² , of which 135 km² are a protected area.\nPage: Timanfaya National Park. Sentence: The area is 51.07 km2 .",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "a0a28bf1-8f9b-586d-8644-534674047e67",
+        "text": "text_f756675f8ac25b3615f77f03920adcd6",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "2700eefd-b924-51b8-9ba5-fba72c4f2140",
+        "text": "doñana national park",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "5f394058-b2a0-5ba8-8466-ba2a18cfcf4e",
+        "text": "place",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "3830f7aa-4f4d-5cd6-8b0f-ebd4d8398530",
+        "text": "andalusia",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "f2ae3fab-b1f6-5e66-b573-047fb78e1603",
+        "text": "spain",
+        "type": "Entity"
+      },
+      {
+        "id": 7,
+        "original_id": "74471366-cd58-5a44-9ca9-fabb10db90f8",
+        "text": "huelva",
+        "type": "Entity"
+      },
+      {
+        "id": 8,
+        "original_id": "758cfe11-ca33-53c8-97d8-20aab9133ca9",
+        "text": "seville",
+        "type": "Entity"
+      },
+      {
+        "id": 9,
+        "original_id": "c1c18eb5-d5ef-59fb-9489-ddc940ba514b",
+        "text": "543 km²",
+        "type": "Entity"
+      },
+      {
+        "id": 10,
+        "original_id": "7a7a0687-e490-5167-ad5a-0e39d9055dee",
+        "text": "quantity",
+        "type": "EntityType"
+      },
+      {
+        "id": 11,
+        "original_id": "33487603-ebbb-5d1d-a15f-c38cb88114db",
+        "text": "135 km²",
+        "type": "Entity"
+      },
+      {
+        "id": 12,
+        "original_id": "add43458-8bda-5fbc-a010-e492e81ea5a9",
+        "text": "timanfaya national park",
+        "type": "Entity"
+      },
+      {
+        "id": 13,
+        "original_id": "68e5fb4f-da0b-53f5-83b5-01299bf3b98b",
+        "text": "51.07 km2",
+        "type": "Entity"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 5,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 6,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 7,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 8,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 12,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "located_in"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "located_in"
+      },
+      {
+        "source": 1,
+        "target": 6,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 7,
+        "type": "located_in"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 8,
+        "type": "located_in"
+      },
+      {
+        "source": 1,
+        "target": 8,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 9,
+        "type": "covers_area"
+      },
+      {
+        "source": 1,
+        "target": 9,
+        "type": "contains"
+      },
+      {
+        "source": 9,
+        "target": 10,
+        "type": "is_a"
+      },
+      {
+        "source": 11,
+        "target": 10,
+        "type": "is_a"
+      },
+      {
+        "source": 13,
+        "target": 10,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 11,
+        "type": "has_protected_area"
+      },
+      {
+        "source": 1,
+        "target": 11,
+        "type": "contains"
+      },
+      {
+        "source": 1,
+        "target": 12,
+        "type": "contains"
+      },
+      {
+        "source": 12,
+        "target": 13,
+        "type": "has_area"
+      },
+      {
+        "source": 1,
+        "target": 13,
+        "type": "contains"
+      }
+    ]
+  }
+}

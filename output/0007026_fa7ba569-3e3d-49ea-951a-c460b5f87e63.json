@@ -1,0 +1,463 @@
+{
+  "dataset": "hover",
+  "id": "fa7ba569-3e3d-49ea-951a-c460b5f87e63",
+  "split": "train",
+  "claim": "El Paso International Airport is further from their town than Grand Forks International.",
+  "evidencia": "Page: Grand Forks International Airport. Sentence: Grand Forks International Airport (IATA: GFK, ICAO: KGFK, FAA LID: GFK) is a public airport five miles (8 km) northwest of Grand Forks, in Grand Forks County, North Dakota.\nPage: El Paso International Airport. Sentence: El Paso International Airport (IATA: ELP, ICAO: KELP, FAA LID: ELP) is a public airport four miles (6 km) northeast of downtown El Paso, in El Paso County, Texas, United States.",
+  "evidence_text": "Page: Grand Forks International Airport. Sentence: Grand Forks International Airport (IATA: GFK, ICAO: KGFK, FAA LID: GFK) is a public airport five miles (8 km) northwest of Grand Forks, in Grand Forks County, North Dakota.\nPage: El Paso International Airport. Sentence: El Paso International Airport (IATA: ELP, ICAO: KELP, FAA LID: ELP) is a public airport four miles (6 km) northeast of downtown El Paso, in El Paso County, Texas, United States.",
+  "label": "NOT_SUPPORTED",
+  "num_hops": 2,
+  "hover_metadata": {
+    "supporting_facts": [
+      [
+        "Grand Forks International Airport",
+        0
+      ],
+      [
+        "El Paso International Airport",
+        0
+      ]
+    ],
+    "num_hops": 2,
+    "evidence_annotation_id": [
+      0
+    ],
+    "evidence_id": [
+      "Grand Forks International Airport::sentence::0",
+      "El Paso International Airport::sentence::0"
+    ],
+    "evidence_wiki_url": [
+      "https://en.wikipedia.org/wiki/Grand_Forks_International_Airport",
+      "https://en.wikipedia.org/wiki/El_Paso_International_Airport"
+    ],
+    "evidence_sentence_id": [
+      "Grand Forks International Airport::sentence::0",
+      "El Paso International Airport::sentence::0"
+    ]
+  },
+  "grafo_claim": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "c68061f2-c7de-5de7-9fd1-50daaa571f46",
+        "text": "This chunk is about:\n- Places: El Paso International Airport, Grand Forks International, their town\n- Topics: relative distance\n\nFacts:\n- El Paso International Airport is farther from their town than Grand Forks International.\n- Grand Forks International is closer to their town than El Paso International Airport.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "9ff3e841-61fc-52f2-afba-f10ab93b68d8",
+        "text": "El Paso International Airport is further from their town than Grand Forks International.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "cbe3d0e9-caec-5bfd-9c59-861d992019e0",
+        "text": "text_2dc3e8dc4f9b50e66f421bad1dc82de1",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "5ee4dc87-c7f9-5a5d-86ed-ed7b38cba206",
+        "text": "el paso international airport",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "2243857b-b72e-5a1a-b868-cdf4040c572b",
+        "text": "their town",
+        "type": "Entity"
+      },
+      {
+        "id": 5,
+        "original_id": "5f394058-b2a0-5ba8-8466-ba2a18cfcf4e",
+        "text": "place",
+        "type": "EntityType"
+      },
+      {
+        "id": 6,
+        "original_id": "50596f1a-2d8a-5de7-96b5-ba7068791784",
+        "text": "airport",
+        "type": "EntityType"
+      },
+      {
+        "id": 7,
+        "original_id": "a54cd76d-511a-548b-90fb-c8982f46e0d0",
+        "text": "grand forks international",
+        "type": "Entity"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_further_from"
+      },
+      {
+        "source": 1,
+        "target": 4,
+        "type": "contains"
+      },
+      {
+        "source": 7,
+        "target": 4,
+        "type": "is_closer_to"
+      },
+      {
+        "source": 4,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 7,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      }
+    ]
+  },
+  "grafo_evidencia": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "8095fb82-46ef-5123-8a6e-e61142c10f90",
+        "text": "This chunk is about:\n- Places: Grand Forks County, North Dakota; El Paso County, Texas; Grand Forks; El Paso\n- Organizations: Grand Forks International Airport; El Paso International Airport\n- Codes: IATA GFK, ICAO KGFK, FAA LID GFK; IATA ELP, ICAO KELP, FAA LID ELP\n\nFacts:\n- Grand Forks International Airport is a public airport located five miles northwest of Grand Forks in Grand Forks County, North Dakota.\n- Grand Forks International Airport uses IATA code GFK, ICAO code KGFK, and FAA LID GFK.\n- El Paso International Airport is a public airport located four miles northeast of downtown El Paso in El Paso County, Texas, United States.\n- El Paso International Airport uses IATA code ELP, ICAO code KELP, and FAA LID ELP.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "cdb8df7d-574e-53a6-b4f0-d910b21e4ae2",
+        "text": "Page: Grand Forks International Airport. Sentence: Grand Forks International Airport (IATA: GFK, ICAO: KGFK, FAA LID: GFK) is a public airport five miles (8 km) northwest of Grand Forks, in Grand Forks County, North Dakota.\nPage: El Paso International Airport. Sentence: El Paso International Airport (IATA: ELP, ICAO: KELP, FAA LID: ELP) is a public airport four miles (6 km) northeast of downtown El Paso, in El Paso County, Texas, United States.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "0901f752-1de4-51d7-821f-847a15fec062",
+        "text": "text_449c971211ece4789f43c5e2ae265c1b",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "84a1bfd9-b046-5c1b-94e6-f3de876c30d8",
+        "text": "grand forks international airport",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "9d34d6bd-9484-5874-b303-57235894febc",
+        "text": "gfk",
+        "type": "Entity"
+      },
+      {
+        "id": 5,
+        "original_id": "2c23f4f7-2223-5c53-a5f6-1bd0114fcd6a",
+        "text": "code",
+        "type": "EntityType"
+      },
+      {
+        "id": 6,
+        "original_id": "1e3b2807-afd6-53ce-b779-90e38b2c1707",
+        "text": "kgfk",
+        "type": "Entity"
+      },
+      {
+        "id": 7,
+        "original_id": "766a7b4a-ec1e-5233-9ee9-2dbcdd532fbc",
+        "text": "grand forks",
+        "type": "Entity"
+      },
+      {
+        "id": 8,
+        "original_id": "5f394058-b2a0-5ba8-8466-ba2a18cfcf4e",
+        "text": "place",
+        "type": "EntityType"
+      },
+      {
+        "id": 9,
+        "original_id": "e1e6816a-5773-57f3-8dcb-f94634959e76",
+        "text": "grand forks county",
+        "type": "Entity"
+      },
+      {
+        "id": 10,
+        "original_id": "ddbb30e3-928f-53f9-be84-e132b0494cc1",
+        "text": "north dakota",
+        "type": "Entity"
+      },
+      {
+        "id": 11,
+        "original_id": "50596f1a-2d8a-5de7-96b5-ba7068791784",
+        "text": "airport",
+        "type": "EntityType"
+      },
+      {
+        "id": 12,
+        "original_id": "5ee4dc87-c7f9-5a5d-86ed-ed7b38cba206",
+        "text": "el paso international airport",
+        "type": "Entity"
+      },
+      {
+        "id": 13,
+        "original_id": "cf8fc57d-7b61-541e-ae48-19f993c5c3d0",
+        "text": "elp",
+        "type": "Entity"
+      },
+      {
+        "id": 14,
+        "original_id": "78933c9a-cd4e-5669-b707-7d427597017f",
+        "text": "kelp",
+        "type": "Entity"
+      },
+      {
+        "id": 15,
+        "original_id": "977608e3-fa0c-5cc2-9f62-650dd457045e",
+        "text": "el paso",
+        "type": "Entity"
+      },
+      {
+        "id": 16,
+        "original_id": "816d391f-6721-54f0-9c4d-88ff3d603711",
+        "text": "el paso county",
+        "type": "Entity"
+      },
+      {
+        "id": 17,
+        "original_id": "5b5c9733-5661-5cc8-814f-2796b46669fa",
+        "text": "texas",
+        "type": "Entity"
+      },
+      {
+        "id": 18,
+        "original_id": "874a51da-34ea-5037-be47-d87785d43c37",
+        "text": "united states",
+        "type": "Entity"
+      },
+      {
+        "id": 19,
+        "original_id": "35e29ad1-17b7-507a-a205-d7851a5e7102",
+        "text": "country",
+        "type": "EntityType"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "has_iata_code"
+      },
+      {
+        "source": 1,
+        "target": 4,
+        "type": "contains"
+      },
+      {
+        "source": 4,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 6,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 13,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 14,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 6,
+        "type": "has_icao_code"
+      },
+      {
+        "source": 1,
+        "target": 6,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 7,
+        "type": "located_northwest_of"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      },
+      {
+        "source": 7,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 10,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 9,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 15,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 17,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 16,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 9,
+        "type": "located_in"
+      },
+      {
+        "source": 1,
+        "target": 9,
+        "type": "contains"
+      },
+      {
+        "source": 9,
+        "target": 10,
+        "type": "located_in"
+      },
+      {
+        "source": 1,
+        "target": 10,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 11,
+        "type": "is_a"
+      },
+      {
+        "source": 12,
+        "target": 11,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 12,
+        "type": "contains"
+      },
+      {
+        "source": 12,
+        "target": 13,
+        "type": "has_iata_code"
+      },
+      {
+        "source": 1,
+        "target": 13,
+        "type": "contains"
+      },
+      {
+        "source": 12,
+        "target": 14,
+        "type": "has_icao_code"
+      },
+      {
+        "source": 1,
+        "target": 14,
+        "type": "contains"
+      },
+      {
+        "source": 12,
+        "target": 15,
+        "type": "located_northeast_of"
+      },
+      {
+        "source": 1,
+        "target": 15,
+        "type": "contains"
+      },
+      {
+        "source": 12,
+        "target": 16,
+        "type": "located_in"
+      },
+      {
+        "source": 1,
+        "target": 16,
+        "type": "contains"
+      },
+      {
+        "source": 16,
+        "target": 17,
+        "type": "located_in"
+      },
+      {
+        "source": 1,
+        "target": 17,
+        "type": "contains"
+      },
+      {
+        "source": 17,
+        "target": 18,
+        "type": "located_in"
+      },
+      {
+        "source": 1,
+        "target": 18,
+        "type": "contains"
+      },
+      {
+        "source": 18,
+        "target": 19,
+        "type": "is_a"
+      }
+    ]
+  }
+}

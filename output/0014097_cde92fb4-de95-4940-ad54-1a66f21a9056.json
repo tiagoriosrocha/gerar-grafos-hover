@@ -1,0 +1,443 @@
+{
+  "dataset": "hover",
+  "id": "cde92fb4-de95-4940-ad54-1a66f21a9056",
+  "split": "train",
+  "claim": "The manufacturer of the plane that shot down Jameel Sayhood is McDonnell Douglas.",
+  "evidencia": "Page: Jameel Sayhood. Sentence: Captain Jameel Sayhood was an Iraqi pilot in the Gulf War who it is claimed managed to attain one of the few aerial victories by the Iraqi Air Force in his MiG-29B, before being shot down by USAF Captain Craig Underhill and Captain Cesar Rodriguez with their F-15Cs mere minutes after his air-air victory.\nPage: McDonnell Douglas F-15 Eagle. Sentence: The McDonnell Douglas F-15 Eagle is an American twin-engine, all-weather tactical fighter aircraft designed by McDonnell Douglas (now Boeing) to gain and maintain air supremacy in aerial combat.",
+  "evidence_text": "Page: Jameel Sayhood. Sentence: Captain Jameel Sayhood was an Iraqi pilot in the Gulf War who it is claimed managed to attain one of the few aerial victories by the Iraqi Air Force in his MiG-29B, before being shot down by USAF Captain Craig Underhill and Captain Cesar Rodriguez with their F-15Cs mere minutes after his air-air victory.\nPage: McDonnell Douglas F-15 Eagle. Sentence: The McDonnell Douglas F-15 Eagle is an American twin-engine, all-weather tactical fighter aircraft designed by McDonnell Douglas (now Boeing) to gain and maintain air supremacy in aerial combat.",
+  "label": "SUPPORTED",
+  "num_hops": 2,
+  "hover_metadata": {
+    "supporting_facts": [
+      [
+        "Jameel Sayhood",
+        0
+      ],
+      [
+        "McDonnell Douglas F-15 Eagle",
+        0
+      ]
+    ],
+    "num_hops": 2,
+    "evidence_annotation_id": [
+      0
+    ],
+    "evidence_id": [
+      "Jameel Sayhood::sentence::0",
+      "McDonnell Douglas F-15 Eagle::sentence::0"
+    ],
+    "evidence_wiki_url": [
+      "https://en.wikipedia.org/wiki/Jameel_Sayhood",
+      "https://en.wikipedia.org/wiki/McDonnell_Douglas_F-15_Eagle"
+    ],
+    "evidence_sentence_id": [
+      "Jameel Sayhood::sentence::0",
+      "McDonnell Douglas F-15 Eagle::sentence::0"
+    ]
+  },
+  "grafo_claim": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "5efb2920-9fa3-5ebf-807d-5dbb9c63cdb7",
+        "text": "This chunk is about:\n- Companies: McDonnell Douglas\n- People: Jameel Sayhood\n- Events: a plane shooting down Jameel Sayhood\n\nFacts:\n- McDonnell Douglas manufactured the plane involved in the shooting down of Jameel Sayhood.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "10811d3c-7daa-5dd3-8f0b-56138da06103",
+        "text": "The manufacturer of the plane that shot down Jameel Sayhood is McDonnell Douglas.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "374551ad-aa04-5b72-b89f-1932c3bbd688",
+        "text": "text_64d85daeb78ed8444cf9e1e8d9d31850",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "aa4ddb31-acc6-50eb-b11e-19350ee9472b",
+        "text": "jameel sayhood",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "99a82eec-bb35-5bb5-9ed2-e73fc7a756de",
+        "text": "person",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "6a45c144-369e-5242-9203-ff68653302f2",
+        "text": "plane that shot down jameel sayhood",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "0f5ec78d-c353-540c-b8bd-bce84eac0af4",
+        "text": "vehicle",
+        "type": "EntityType"
+      },
+      {
+        "id": 7,
+        "original_id": "02d4d56f-af5f-543d-a493-d30276a77e6c",
+        "text": "mcdonnell douglas",
+        "type": "Entity"
+      },
+      {
+        "id": 8,
+        "original_id": "388f60fb-220d-55e8-ae9c-3ac93cead308",
+        "text": "organization",
+        "type": "EntityType"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 3,
+        "type": "shot_down"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 7,
+        "target": 5,
+        "type": "manufactured"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      },
+      {
+        "source": 7,
+        "target": 8,
+        "type": "is_a"
+      }
+    ]
+  },
+  "grafo_evidencia": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "1cca3578-7fb9-5848-96ba-f05daa6019ce",
+        "text": "This chunk is about:\n- People: Jameel Sayhood, Craig Underhill, Cesar Rodriguez\n- Products: MiG-29B, McDonnell Douglas F-15 Eagle, F-15C\n- Organizations: Iraqi Air Force, USAF, McDonnell Douglas, Boeing\n- Events: Gulf War, aerial combat\n- Concepts: air supremacy, aerial victory\n\nFacts:\n- During the Gulf War, Captain Jameel Sayhood was an Iraqi pilot.\n- It is claimed that during the Gulf War, Jameel Sayhood achieved one of the few aerial victories credited to the Iraqi Air Force while flying a MiG-29B.\n- Minutes after that claimed air-air victory, USAF Captains Craig Underhill and Cesar Rodriguez shot down Jameel Sayhood in their F-15Cs.\n- The McDonnell Douglas F-15 Eagle is an American twin-engine, all-weather tactical fighter aircraft.\n- McDonnell Douglas designed the F-15 Eagle to gain and maintain air supremacy in aerial combat.\n- McDonnell Douglas is now part of Boeing.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "c8ce0b33-8ec6-5cee-827f-6edcd207147c",
+        "text": "Page: Jameel Sayhood. Sentence: Captain Jameel Sayhood was an Iraqi pilot in the Gulf War who it is claimed managed to attain one of the few aerial victories by the Iraqi Air Force in his MiG-29B, before being shot down by USAF Captain Craig Underhill and Captain Cesar Rodriguez with their F-15Cs mere minutes after his air-air victory.\nPage: McDonnell Douglas F-15 Eagle. Sentence: The McDonnell Douglas F-15 Eagle is an American twin-engine, all-weather tactical fighter aircraft designed by McDonnell Douglas (now Boeing) to gain and maintain air supremacy in aerial combat.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "b7248a91-4c3d-5077-9728-b3c5da73f71f",
+        "text": "text_33d48be4d6a499c2ba6a10c08990c9e4",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "aa4ddb31-acc6-50eb-b11e-19350ee9472b",
+        "text": "jameel sayhood",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "99a82eec-bb35-5bb5-9ed2-e73fc7a756de",
+        "text": "person",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "0bc7e2a5-a89d-5ba0-b8f7-e416756f6bde",
+        "text": "gulf war",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "214abcd9-9adf-5c8a-bb35-1e729f2d68c3",
+        "text": "event",
+        "type": "EntityType"
+      },
+      {
+        "id": 7,
+        "original_id": "ee44513b-243c-5a5a-856e-ee0ed8880f17",
+        "text": "iraqi air force",
+        "type": "Entity"
+      },
+      {
+        "id": 8,
+        "original_id": "388f60fb-220d-55e8-ae9c-3ac93cead308",
+        "text": "organization",
+        "type": "EntityType"
+      },
+      {
+        "id": 9,
+        "original_id": "32f1d0e6-2503-53e5-9546-8766a76abfd5",
+        "text": "mig-29b",
+        "type": "Entity"
+      },
+      {
+        "id": 10,
+        "original_id": "0f5ec78d-c353-540c-b8bd-bce84eac0af4",
+        "text": "vehicle",
+        "type": "EntityType"
+      },
+      {
+        "id": 11,
+        "original_id": "d568c64a-5e5b-590f-95c5-4164f85cebc6",
+        "text": "craig underhill",
+        "type": "Entity"
+      },
+      {
+        "id": 12,
+        "original_id": "a0370990-c1d6-5d2c-9cee-f29260090017",
+        "text": "f-15c",
+        "type": "Entity"
+      },
+      {
+        "id": 13,
+        "original_id": "a24407b8-8e8d-59ba-ab3e-a93d69744e48",
+        "text": "mcdonnell douglas f-15 eagle",
+        "type": "Entity"
+      },
+      {
+        "id": 14,
+        "original_id": "02d4d56f-af5f-543d-a493-d30276a77e6c",
+        "text": "mcdonnell douglas",
+        "type": "Entity"
+      },
+      {
+        "id": 15,
+        "original_id": "935cb5be-d672-5720-a097-a2878cb45c82",
+        "text": "boeing",
+        "type": "Entity"
+      },
+      {
+        "id": 16,
+        "original_id": "874a51da-34ea-5037-be47-d87785d43c37",
+        "text": "united states",
+        "type": "Entity"
+      },
+      {
+        "id": 17,
+        "original_id": "5f394058-b2a0-5ba8-8466-ba2a18cfcf4e",
+        "text": "place",
+        "type": "EntityType"
+      },
+      {
+        "id": 18,
+        "original_id": "523c6c7c-994a-5075-ad66-a9c5e31c50b5",
+        "text": "cesar rodriguez",
+        "type": "Entity"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 11,
+        "target": 3,
+        "type": "shot_down"
+      },
+      {
+        "source": 18,
+        "target": 3,
+        "type": "shot_down"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 11,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 18,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "participated_in"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 7,
+        "type": "served_in"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      },
+      {
+        "source": 7,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 14,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 15,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 9,
+        "type": "piloted"
+      },
+      {
+        "source": 1,
+        "target": 9,
+        "type": "contains"
+      },
+      {
+        "source": 9,
+        "target": 10,
+        "type": "is_a"
+      },
+      {
+        "source": 12,
+        "target": 10,
+        "type": "is_a"
+      },
+      {
+        "source": 13,
+        "target": 10,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 11,
+        "type": "contains"
+      },
+      {
+        "source": 11,
+        "target": 12,
+        "type": "piloted"
+      },
+      {
+        "source": 18,
+        "target": 12,
+        "type": "piloted"
+      },
+      {
+        "source": 1,
+        "target": 12,
+        "type": "contains"
+      },
+      {
+        "source": 12,
+        "target": 13,
+        "type": "variant_of"
+      },
+      {
+        "source": 1,
+        "target": 13,
+        "type": "contains"
+      },
+      {
+        "source": 13,
+        "target": 14,
+        "type": "designed_by"
+      },
+      {
+        "source": 1,
+        "target": 14,
+        "type": "contains"
+      },
+      {
+        "source": 14,
+        "target": 15,
+        "type": "now_part_of"
+      },
+      {
+        "source": 1,
+        "target": 15,
+        "type": "contains"
+      },
+      {
+        "source": 13,
+        "target": 16,
+        "type": "has_national_origin"
+      },
+      {
+        "source": 1,
+        "target": 16,
+        "type": "contains"
+      },
+      {
+        "source": 16,
+        "target": 17,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 18,
+        "type": "contains"
+      }
+    ]
+  }
+}

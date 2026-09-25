@@ -1,0 +1,399 @@
+{
+  "dataset": "hover",
+  "id": "f1991e4f-7af5-4ae9-903e-8fe9800638da",
+  "split": "train",
+  "claim": "The 2010 population of the town where Black Crescent Mountain was located was 310.",
+  "evidencia": "Page: Black Crescent Mountain. Sentence: Black Crescent Mountain is a mountain in the Crescent Range of the White Mountains, 4.4 mi north of Randolph and 4.7 mi southwest of Berlin in New Hampshire.\nPage: Randolph, New Hampshire. Sentence: As of the 2010 census, the town had a total population of 310.",
+  "evidence_text": "Page: Black Crescent Mountain. Sentence: Black Crescent Mountain is a mountain in the Crescent Range of the White Mountains, 4.4 mi north of Randolph and 4.7 mi southwest of Berlin in New Hampshire.\nPage: Randolph, New Hampshire. Sentence: As of the 2010 census, the town had a total population of 310.",
+  "label": "SUPPORTED",
+  "num_hops": 2,
+  "hover_metadata": {
+    "supporting_facts": [
+      [
+        "Black Crescent Mountain",
+        0
+      ],
+      [
+        "Randolph, New Hampshire",
+        2
+      ]
+    ],
+    "num_hops": 2,
+    "evidence_annotation_id": [
+      0
+    ],
+    "evidence_id": [
+      "Black Crescent Mountain::sentence::0",
+      "Randolph, New Hampshire::sentence::2"
+    ],
+    "evidence_wiki_url": [
+      "https://en.wikipedia.org/wiki/Black_Crescent_Mountain",
+      "https://en.wikipedia.org/wiki/Randolph%2C_New_Hampshire"
+    ],
+    "evidence_sentence_id": [
+      "Black Crescent Mountain::sentence::0",
+      "Randolph, New Hampshire::sentence::2"
+    ]
+  },
+  "grafo_claim": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "a7c4b610-2dbf-5f81-9e19-a1862fee3979",
+        "text": "This chunk is about:\n- Places: Black Crescent Mountain, the town where it was located\n- Topics: population\n\nFacts:\n- In 2010, the population of the town where Black Crescent Mountain was located was 310.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "f2535862-1a24-5a83-8b98-edbd0ade207e",
+        "text": "The 2010 population of the town where Black Crescent Mountain was located was 310.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "8d266160-d383-55a5-8dfd-483a17df84ec",
+        "text": "text_fc8947e23f72a0cc01d68383c3d73de8",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "db339343-8940-5393-8459-bdf2c92618fd",
+        "text": "black crescent mountain",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "5f394058-b2a0-5ba8-8466-ba2a18cfcf4e",
+        "text": "place",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "97f0ad2b-ad32-57eb-8941-fd749e47870d",
+        "text": "the town where black crescent mountain was located",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "1c76634a-91a0-56ac-a527-eac32d210957",
+        "text": "310",
+        "type": "Entity"
+      },
+      {
+        "id": 7,
+        "original_id": "5c1097ca-fab8-54d5-b57f-5dca4b0e2507",
+        "text": "number",
+        "type": "EntityType"
+      },
+      {
+        "id": 8,
+        "original_id": "cb1dc1af-5253-5fa4-877e-246a7629f489",
+        "text": "2010",
+        "type": "Entity"
+      },
+      {
+        "id": 9,
+        "original_id": "b19433ae-558c-5aaf-95ac-6231f2a4be0e",
+        "text": "date",
+        "type": "EntityType"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 5,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "located_in"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "had_population"
+      },
+      {
+        "source": 1,
+        "target": 6,
+        "type": "contains"
+      },
+      {
+        "source": 6,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 5,
+        "target": 8,
+        "type": "population_as_of"
+      },
+      {
+        "source": 1,
+        "target": 8,
+        "type": "contains"
+      },
+      {
+        "source": 8,
+        "target": 9,
+        "type": "is_a"
+      }
+    ]
+  },
+  "grafo_evidencia": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "3722e01e-7895-5580-9fc0-9f04032e3ab3",
+        "text": "This chunk is about:\n- Places: Black Crescent Mountain, Randolph, Berlin, New Hampshire\n- Mountain ranges: Crescent Range, White Mountains\n- Topics: geography, population\n\nFacts:\n- Black Crescent Mountain is a mountain in the Crescent Range of the White Mountains in New Hampshire.\n- Black Crescent Mountain is 4.4 miles north of Randolph, New Hampshire.\n- Black Crescent Mountain is 4.7 miles southwest of Berlin, New Hampshire.\n- As of the 2010 census, Randolph, New Hampshire, had a population of 310.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "b9213559-84be-59b9-9c21-6e4f1a7bdf6a",
+        "text": "Page: Black Crescent Mountain. Sentence: Black Crescent Mountain is a mountain in the Crescent Range of the White Mountains, 4.4 mi north of Randolph and 4.7 mi southwest of Berlin in New Hampshire.\nPage: Randolph, New Hampshire. Sentence: As of the 2010 census, the town had a total population of 310.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "77259a15-d3dc-55aa-8249-b53bda9a9969",
+        "text": "text_34a8f1d6c4a8fbc9540f96b912e1ebe1",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "db339343-8940-5393-8459-bdf2c92618fd",
+        "text": "black crescent mountain",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "5f394058-b2a0-5ba8-8466-ba2a18cfcf4e",
+        "text": "place",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "91b56f9f-3660-5427-a8e6-2ae961e33966",
+        "text": "crescent range",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "79d96a1e-0a35-5b01-aa8b-7fe844ff022c",
+        "text": "white mountains",
+        "type": "Entity"
+      },
+      {
+        "id": 7,
+        "original_id": "3409deca-1897-57a8-8d78-5810b3e1482a",
+        "text": "randolph",
+        "type": "Entity"
+      },
+      {
+        "id": 8,
+        "original_id": "959ee710-8c33-5f11-8edd-11df04c0edba",
+        "text": "new hampshire",
+        "type": "Entity"
+      },
+      {
+        "id": 9,
+        "original_id": "1c76634a-91a0-56ac-a527-eac32d210957",
+        "text": "310",
+        "type": "Entity"
+      },
+      {
+        "id": 10,
+        "original_id": "5c1097ca-fab8-54d5-b57f-5dca4b0e2507",
+        "text": "number",
+        "type": "EntityType"
+      },
+      {
+        "id": 11,
+        "original_id": "cb1dc1af-5253-5fa4-877e-246a7629f489",
+        "text": "2010",
+        "type": "Entity"
+      },
+      {
+        "id": 12,
+        "original_id": "b19433ae-558c-5aaf-95ac-6231f2a4be0e",
+        "text": "date",
+        "type": "EntityType"
+      },
+      {
+        "id": 13,
+        "original_id": "0aa5a634-829a-5222-8568-d7631357800d",
+        "text": "berlin",
+        "type": "Entity"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 5,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 6,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 7,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 8,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 13,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "located_in"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "located_in"
+      },
+      {
+        "source": 3,
+        "target": 6,
+        "type": "located_in"
+      },
+      {
+        "source": 1,
+        "target": 6,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 7,
+        "type": "located_north_of"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      },
+      {
+        "source": 7,
+        "target": 8,
+        "type": "located_in"
+      },
+      {
+        "source": 13,
+        "target": 8,
+        "type": "located_in"
+      },
+      {
+        "source": 3,
+        "target": 8,
+        "type": "located_in"
+      },
+      {
+        "source": 1,
+        "target": 8,
+        "type": "contains"
+      },
+      {
+        "source": 7,
+        "target": 9,
+        "type": "has_population"
+      },
+      {
+        "source": 1,
+        "target": 9,
+        "type": "contains"
+      },
+      {
+        "source": 9,
+        "target": 10,
+        "type": "is_a"
+      },
+      {
+        "source": 7,
+        "target": 11,
+        "type": "population_as_of"
+      },
+      {
+        "source": 1,
+        "target": 11,
+        "type": "contains"
+      },
+      {
+        "source": 11,
+        "target": 12,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 13,
+        "type": "located_southwest_of"
+      },
+      {
+        "source": 1,
+        "target": 13,
+        "type": "contains"
+      }
+    ]
+  }
+}

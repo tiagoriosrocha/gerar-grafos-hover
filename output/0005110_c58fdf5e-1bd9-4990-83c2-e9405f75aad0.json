@@ -1,0 +1,439 @@
+{
+  "dataset": "hover",
+  "id": "c58fdf5e-1bd9-4990-83c2-e9405f75aad0",
+  "split": "train",
+  "claim": "A star of Hello! Stranger is the younger brother of the mixed martial artist of French nationality.",
+  "evidencia": "Page: Julien Kang. Sentence: He is the younger brother of mixed martial artist Denis Kang.\nPage: Denis Kang. Sentence: Denis Kang (Hangul: 강대수 , born September 17, 1977) is a Canadian professional mixed martial artist who most recently competed in the Middleweight division.\nPage: Hello! Stranger. Sentence: Stranger () is a 2014 South Korean television program starring Kim Kwang-kyu, Julien Kang, Kangnam and Mina Fujii.",
+  "evidence_text": "Page: Julien Kang. Sentence: He is the younger brother of mixed martial artist Denis Kang.\nPage: Denis Kang. Sentence: Denis Kang (Hangul: 강대수 , born September 17, 1977) is a Canadian professional mixed martial artist who most recently competed in the Middleweight division.\nPage: Hello! Stranger. Sentence: Stranger () is a 2014 South Korean television program starring Kim Kwang-kyu, Julien Kang, Kangnam and Mina Fujii.",
+  "label": "NOT_SUPPORTED",
+  "num_hops": 3,
+  "hover_metadata": {
+    "supporting_facts": [
+      [
+        "Julien Kang",
+        1
+      ],
+      [
+        "Denis Kang",
+        0
+      ],
+      [
+        "Hello! Stranger",
+        1
+      ]
+    ],
+    "num_hops": 3,
+    "evidence_annotation_id": [
+      0
+    ],
+    "evidence_id": [
+      "Julien Kang::sentence::1",
+      "Denis Kang::sentence::0",
+      "Hello! Stranger::sentence::1"
+    ],
+    "evidence_wiki_url": [
+      "https://en.wikipedia.org/wiki/Julien_Kang",
+      "https://en.wikipedia.org/wiki/Denis_Kang",
+      "https://en.wikipedia.org/wiki/Hello%21_Stranger"
+    ],
+    "evidence_sentence_id": [
+      "Julien Kang::sentence::1",
+      "Denis Kang::sentence::0",
+      "Hello! Stranger::sentence::1"
+    ]
+  },
+  "grafo_claim": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "e6c45da0-b9a5-5f9a-a307-63263ecc0e55",
+        "text": "This chunk is about:\n- People: cast members, a mixed martial artist\n- Works: Hello! Stranger\n- Relationships: sibling relationship\n\nFacts:\n- A star of Hello! Stranger is the younger brother of a mixed martial artist of French nationality.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "30771494-a165-5ac5-8a0b-51e5c8163a2d",
+        "text": "A star of Hello! Stranger is the younger brother of the mixed martial artist of French nationality.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "2b39aac0-32cc-59d7-af02-a422542f037d",
+        "text": "text_b8abf5045c92ca378e22498dea39b4cf",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "a42aa269-52d4-53e1-b7f3-a0e942d56e38",
+        "text": "hello! stranger",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "5263a535-1b4b-5925-be3e-310d03cd303b",
+        "text": "work",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "b79ed28e-a4ea-5ef2-a65e-a492bfdbaaa8",
+        "text": "star of hello! stranger",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "3f3487e9-7bf4-5d5e-bb6c-b75e091651dc",
+        "text": "mixed martial artist of french nationality",
+        "type": "Entity"
+      },
+      {
+        "id": 7,
+        "original_id": "99a82eec-bb35-5bb5-9ed2-e73fc7a756de",
+        "text": "person",
+        "type": "EntityType"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 3,
+        "type": "starred_in"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "younger_brother_of"
+      },
+      {
+        "source": 1,
+        "target": 6,
+        "type": "contains"
+      },
+      {
+        "source": 6,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 5,
+        "target": 7,
+        "type": "is_a"
+      }
+    ]
+  },
+  "grafo_evidencia": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "40688561-b324-5e9f-b664-c2bc95d103dd",
+        "text": "This chunk is about:\n- People: Julien Kang, Denis Kang, Kim Kwang-kyu, Kangnam, Mina Fujii\n- Roles: mixed martial artist\n- Programs: Hello! Stranger\n- Topics: family relationships\n\nFacts:\n- Denis Kang was born on September 17, 1977.\n- Denis Kang is a Canadian professional mixed martial artist who most recently competed in the Middleweight division.\n- Julien Kang is the younger brother of Denis Kang.\n- Hello! Stranger is a 2014 South Korean television program.\n- Hello! Stranger starred Kim Kwang-kyu, Julien Kang, Kangnam, and Mina Fujii.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "a63ffbb5-8dcc-57d2-8e10-d156a19993d2",
+        "text": "Page: Julien Kang. Sentence: He is the younger brother of mixed martial artist Denis Kang.\nPage: Denis Kang. Sentence: Denis Kang (Hangul: 강대수 , born September 17, 1977) is a Canadian professional mixed martial artist who most recently competed in the Middleweight division.\nPage: Hello! Stranger. Sentence: Stranger () is a 2014 South Korean television program starring Kim Kwang-kyu, Julien Kang, Kangnam and Mina Fujii.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "c6a3ecfd-17b0-5f50-9966-fbab05260819",
+        "text": "text_65ca5ee11fc5b488cae77fc4913c13a6",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "d50e11b3-7099-5b0b-b30d-2dc05a8798f1",
+        "text": "julien kang",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "f64b31dd-4f7f-5b49-8066-c4d12471d499",
+        "text": "denis kang",
+        "type": "Entity"
+      },
+      {
+        "id": 5,
+        "original_id": "25da5557-d26d-5bc6-8131-bc94afdebda0",
+        "text": "1977-09-17",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "b19433ae-558c-5aaf-95ac-6231f2a4be0e",
+        "text": "date",
+        "type": "EntityType"
+      },
+      {
+        "id": 7,
+        "original_id": "ac6a6bbc-54f4-5038-a2f6-8c7892b7262b",
+        "text": "mixed martial artist",
+        "type": "Entity"
+      },
+      {
+        "id": 8,
+        "original_id": "d2a381fa-3658-5ca6-ada9-2109cfc9331d",
+        "text": "concept",
+        "type": "EntityType"
+      },
+      {
+        "id": 9,
+        "original_id": "bf1fff87-8d5d-5262-b9d2-94b793feb6ee",
+        "text": "middleweight division",
+        "type": "Entity"
+      },
+      {
+        "id": 10,
+        "original_id": "99a82eec-bb35-5bb5-9ed2-e73fc7a756de",
+        "text": "person",
+        "type": "EntityType"
+      },
+      {
+        "id": 11,
+        "original_id": "a42aa269-52d4-53e1-b7f3-a0e942d56e38",
+        "text": "hello! stranger",
+        "type": "Entity"
+      },
+      {
+        "id": 12,
+        "original_id": "8b81e666-937e-557b-9b2d-fbabf5175591",
+        "text": "2014",
+        "type": "Entity"
+      },
+      {
+        "id": 13,
+        "original_id": "8239eed1-dc07-5554-bf00-1ecb37f51492",
+        "text": "south korea",
+        "type": "Entity"
+      },
+      {
+        "id": 14,
+        "original_id": "5f394058-b2a0-5ba8-8466-ba2a18cfcf4e",
+        "text": "place",
+        "type": "EntityType"
+      },
+      {
+        "id": 15,
+        "original_id": "3f5f923c-ef90-5aad-971b-c195d5fba5a9",
+        "text": "kim kwang-kyu",
+        "type": "Entity"
+      },
+      {
+        "id": 16,
+        "original_id": "115ad661-5b32-5fd9-bc42-f7b76a1c0d4d",
+        "text": "kangnam",
+        "type": "Entity"
+      },
+      {
+        "id": 17,
+        "original_id": "3be52123-1a24-5a43-b183-74ab65cef45a",
+        "text": "mina fujii",
+        "type": "Entity"
+      },
+      {
+        "id": 18,
+        "original_id": "5263a535-1b4b-5925-be3e-310d03cd303b",
+        "text": "work",
+        "type": "EntityType"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 11,
+        "target": 3,
+        "type": "stars"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "younger_brother_of"
+      },
+      {
+        "source": 1,
+        "target": 4,
+        "type": "contains"
+      },
+      {
+        "source": 4,
+        "target": 5,
+        "type": "born_on"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 12,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 4,
+        "target": 7,
+        "type": "has_profession"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      },
+      {
+        "source": 7,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 9,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 4,
+        "target": 9,
+        "type": "most_recently_competed_in"
+      },
+      {
+        "source": 1,
+        "target": 9,
+        "type": "contains"
+      },
+      {
+        "source": 4,
+        "target": 10,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 10,
+        "type": "is_a"
+      },
+      {
+        "source": 15,
+        "target": 10,
+        "type": "is_a"
+      },
+      {
+        "source": 16,
+        "target": 10,
+        "type": "is_a"
+      },
+      {
+        "source": 17,
+        "target": 10,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 11,
+        "type": "contains"
+      },
+      {
+        "source": 11,
+        "target": 12,
+        "type": "released_in"
+      },
+      {
+        "source": 1,
+        "target": 12,
+        "type": "contains"
+      },
+      {
+        "source": 11,
+        "target": 13,
+        "type": "originates_from"
+      },
+      {
+        "source": 1,
+        "target": 13,
+        "type": "contains"
+      },
+      {
+        "source": 13,
+        "target": 14,
+        "type": "is_a"
+      },
+      {
+        "source": 11,
+        "target": 15,
+        "type": "stars"
+      },
+      {
+        "source": 1,
+        "target": 15,
+        "type": "contains"
+      },
+      {
+        "source": 11,
+        "target": 16,
+        "type": "stars"
+      },
+      {
+        "source": 1,
+        "target": 16,
+        "type": "contains"
+      },
+      {
+        "source": 11,
+        "target": 17,
+        "type": "stars"
+      },
+      {
+        "source": 1,
+        "target": 17,
+        "type": "contains"
+      },
+      {
+        "source": 11,
+        "target": 18,
+        "type": "is_a"
+      }
+    ]
+  }
+}

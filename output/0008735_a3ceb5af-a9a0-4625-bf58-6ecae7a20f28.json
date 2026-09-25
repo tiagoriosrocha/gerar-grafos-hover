@@ -1,0 +1,389 @@
+{
+  "dataset": "hover",
+  "id": "a3ceb5af-a9a0-4625-bf58-6ecae7a20f28",
+  "split": "train",
+  "claim": "2027 Fairmount Avenue was the address of the penitentiary where Jimmy Elliot was sentenced.",
+  "evidencia": "Page: Jimmy Elliott. Sentence: He was sentenced to sixteen years and ten months at the Eastern State Penitentiary in Philadelphia.\nPage: Eastern State Penitentiary. Sentence: It is located at 2027 Fairmount Avenue between Corinthian Avenue and North 22nd Street in the Fairmount section of the city, and was operational from 1829 until 1971.",
+  "evidence_text": "Page: Jimmy Elliott. Sentence: He was sentenced to sixteen years and ten months at the Eastern State Penitentiary in Philadelphia.\nPage: Eastern State Penitentiary. Sentence: It is located at 2027 Fairmount Avenue between Corinthian Avenue and North 22nd Street in the Fairmount section of the city, and was operational from 1829 until 1971.",
+  "label": "SUPPORTED",
+  "num_hops": 2,
+  "hover_metadata": {
+    "supporting_facts": [
+      [
+        "Jimmy Elliott",
+        2
+      ],
+      [
+        "Eastern State Penitentiary",
+        1
+      ]
+    ],
+    "num_hops": 2,
+    "evidence_annotation_id": [
+      0
+    ],
+    "evidence_id": [
+      "Jimmy Elliott::sentence::2",
+      "Eastern State Penitentiary::sentence::1"
+    ],
+    "evidence_wiki_url": [
+      "https://en.wikipedia.org/wiki/Jimmy_Elliott",
+      "https://en.wikipedia.org/wiki/Eastern_State_Penitentiary"
+    ],
+    "evidence_sentence_id": [
+      "Jimmy Elliott::sentence::2",
+      "Eastern State Penitentiary::sentence::1"
+    ]
+  },
+  "grafo_claim": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "72f0d3ea-4d09-59a2-8aaa-a2b6b7c2471c",
+        "text": "This chunk is about:\n- Places: 2027 Fairmount Avenue\n- People: Jimmy Elliot\n- Organizations: penitentiary\n\nFacts:\n- 2027 Fairmount Avenue was the address of the penitentiary.\n- Jimmy Elliot was sentenced to the penitentiary at 2027 Fairmount Avenue.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "149f611c-a69f-523c-8756-f2d542b1fd30",
+        "text": "2027 Fairmount Avenue was the address of the penitentiary where Jimmy Elliot was sentenced.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "ff3661f2-fe6d-5836-8084-57bdea179a2e",
+        "text": "text_da26417c9f57e3cc6880a4fd15dee40e",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "c5f68c70-c496-5172-ab82-ded09cd0709f",
+        "text": "2027 fairmount avenue",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "5023586d-88a2-53f9-ad15-7e2ebd75eb4c",
+        "text": "location",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "9ea89bd6-e099-5cb3-acfc-909755cc5e76",
+        "text": "the penitentiary",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "388f60fb-220d-55e8-ae9c-3ac93cead308",
+        "text": "organization",
+        "type": "EntityType"
+      },
+      {
+        "id": 7,
+        "original_id": "b121924d-b965-5439-9519-3b410472d487",
+        "text": "jimmy elliot",
+        "type": "Entity"
+      },
+      {
+        "id": 8,
+        "original_id": "99a82eec-bb35-5bb5-9ed2-e73fc7a756de",
+        "text": "person",
+        "type": "EntityType"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 3,
+        "type": "has_address"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 7,
+        "target": 5,
+        "type": "was_sentenced_to"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      },
+      {
+        "source": 7,
+        "target": 8,
+        "type": "is_a"
+      }
+    ]
+  },
+  "grafo_evidencia": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "754a7e1b-0f16-5902-aa06-3078a1308f8d",
+        "text": "This chunk is about:\n- People: Jimmy Elliott\n- Places: Eastern State Penitentiary, Philadelphia, Fairmount\n\nFacts:\n- Eastern State Penitentiary was operational from 1829 until 1971.\n- Eastern State Penitentiary is located at 2027 Fairmount Avenue between Corinthian Avenue and North 22nd Street in the Fairmount section of Philadelphia.\n- Jimmy Elliott was sentenced to sixteen years and ten months at Eastern State Penitentiary in Philadelphia.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "58969b25-c111-56ea-9376-a4bbf153fb56",
+        "text": "Page: Jimmy Elliott. Sentence: He was sentenced to sixteen years and ten months at the Eastern State Penitentiary in Philadelphia.\nPage: Eastern State Penitentiary. Sentence: It is located at 2027 Fairmount Avenue between Corinthian Avenue and North 22nd Street in the Fairmount section of the city, and was operational from 1829 until 1971.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "b4637e33-b441-5897-a3ac-343692a6575b",
+        "text": "text_e444e170532e2204ba1d91a3c5c8b4b0",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "d0c56047-d67c-5ba6-bbf6-491084d0557c",
+        "text": "jimmy elliott",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "99a82eec-bb35-5bb5-9ed2-e73fc7a756de",
+        "text": "person",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "fb3e8cfd-a63c-524f-b34c-ea0ae1534031",
+        "text": "eastern state penitentiary",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "5f394058-b2a0-5ba8-8466-ba2a18cfcf4e",
+        "text": "place",
+        "type": "EntityType"
+      },
+      {
+        "id": 7,
+        "original_id": "867dc04f-3136-5678-beed-fc7f0c292c2f",
+        "text": "philadelphia",
+        "type": "Entity"
+      },
+      {
+        "id": 8,
+        "original_id": "c5f68c70-c496-5172-ab82-ded09cd0709f",
+        "text": "2027 fairmount avenue",
+        "type": "Entity"
+      },
+      {
+        "id": 9,
+        "original_id": "55b2d072-c242-52e0-bad1-c014979b01d2",
+        "text": "corinthian avenue",
+        "type": "Entity"
+      },
+      {
+        "id": 10,
+        "original_id": "0e738c6f-69d5-5d49-951f-89d3ca282b17",
+        "text": "north 22nd street",
+        "type": "Entity"
+      },
+      {
+        "id": 11,
+        "original_id": "7b8adf1d-1b15-5a9a-9c51-6f5e7f4ea94d",
+        "text": "fairmount section",
+        "type": "Entity"
+      },
+      {
+        "id": 12,
+        "original_id": "af44706b-bc11-50ce-82d1-759507cce107",
+        "text": "1829",
+        "type": "Entity"
+      },
+      {
+        "id": 13,
+        "original_id": "b19433ae-558c-5aaf-95ac-6231f2a4be0e",
+        "text": "date",
+        "type": "EntityType"
+      },
+      {
+        "id": 14,
+        "original_id": "c6610c11-9e72-5400-83dc-1941717f474d",
+        "text": "1971",
+        "type": "Entity"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "sentenced_to"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 7,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 8,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 9,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 10,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 11,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 5,
+        "target": 7,
+        "type": "located_in"
+      },
+      {
+        "source": 11,
+        "target": 7,
+        "type": "part_of"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 8,
+        "type": "located_at"
+      },
+      {
+        "source": 1,
+        "target": 8,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 9,
+        "type": "between"
+      },
+      {
+        "source": 1,
+        "target": 9,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 10,
+        "type": "between"
+      },
+      {
+        "source": 1,
+        "target": 10,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 11,
+        "type": "located_in"
+      },
+      {
+        "source": 1,
+        "target": 11,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 12,
+        "type": "operational_from"
+      },
+      {
+        "source": 1,
+        "target": 12,
+        "type": "contains"
+      },
+      {
+        "source": 12,
+        "target": 13,
+        "type": "is_a"
+      },
+      {
+        "source": 14,
+        "target": 13,
+        "type": "is_a"
+      },
+      {
+        "source": 5,
+        "target": 14,
+        "type": "operational_until"
+      },
+      {
+        "source": 1,
+        "target": 14,
+        "type": "contains"
+      }
+    ]
+  }
+}

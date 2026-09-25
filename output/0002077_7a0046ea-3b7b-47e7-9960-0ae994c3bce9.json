@@ -1,0 +1,348 @@
+{
+  "dataset": "hover",
+  "id": "7a0046ea-3b7b-47e7-9960-0ae994c3bce9",
+  "split": "train",
+  "claim": "The cemetery that professional golf player George W. Wallace is buried at, is located at a park that is part of Golden Gate National Recreation Area.",
+  "evidencia": "Page: San Francisco National Cemetery. Sentence: San Francisco National Cemetery is an United States national cemetery, located in the Presidio of San Francisco, California.\nPage: Presidio of San Francisco. Sentence: The Presidio of San Francisco (originally, El Presidio Real de San Francisco or The Royal Fortress of Saint Francis) is a park and former U.S. Army military fort on the northern tip of the San Francisco Peninsula in San Francisco, California, and is part of the Golden Gate National Recreation Area.\nPage: George W. Wallace. Sentence: He is buried at San Francisco National Cemetery.",
+  "evidence_text": "Page: San Francisco National Cemetery. Sentence: San Francisco National Cemetery is an United States national cemetery, located in the Presidio of San Francisco, California.\nPage: Presidio of San Francisco. Sentence: The Presidio of San Francisco (originally, El Presidio Real de San Francisco or The Royal Fortress of Saint Francis) is a park and former U.S. Army military fort on the northern tip of the San Francisco Peninsula in San Francisco, California, and is part of the Golden Gate National Recreation Area.\nPage: George W. Wallace. Sentence: He is buried at San Francisco National Cemetery.",
+  "label": "NOT_SUPPORTED",
+  "num_hops": 3,
+  "hover_metadata": {
+    "supporting_facts": [
+      [
+        "San Francisco National Cemetery",
+        0
+      ],
+      [
+        "Presidio of San Francisco",
+        0
+      ],
+      [
+        "George W. Wallace",
+        2
+      ]
+    ],
+    "num_hops": 3,
+    "evidence_annotation_id": [
+      0
+    ],
+    "evidence_id": [
+      "San Francisco National Cemetery::sentence::0",
+      "Presidio of San Francisco::sentence::0",
+      "George W. Wallace::sentence::2"
+    ],
+    "evidence_wiki_url": [
+      "https://en.wikipedia.org/wiki/San_Francisco_National_Cemetery",
+      "https://en.wikipedia.org/wiki/Presidio_of_San_Francisco",
+      "https://en.wikipedia.org/wiki/George_W._Wallace"
+    ],
+    "evidence_sentence_id": [
+      "San Francisco National Cemetery::sentence::0",
+      "Presidio of San Francisco::sentence::0",
+      "George W. Wallace::sentence::2"
+    ]
+  },
+  "grafo_claim": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "09e7747a-18ed-514d-802f-944456546b4b",
+        "text": "This chunk is about:\n- People: George W. Wallace\n- Places: cemetery in Golden Gate National Recreation Area, park in Golden Gate National Recreation Area\n- Organizations: Golden Gate National Recreation Area\n\nFacts:\n- George W. Wallace was a professional golf player.\n- George W. Wallace is buried at a cemetery.\n- The cemetery where George W. Wallace is buried is located at a park.\n- That park is part of the Golden Gate National Recreation Area.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "e6f478b5-cd3f-5c21-b56d-0f620339004a",
+        "text": "The cemetery that professional golf player George W. Wallace is buried at, is located at a park that is part of Golden Gate National Recreation Area.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "d3e328c3-96ae-52d0-9465-deb00bf6ee6f",
+        "text": "text_743e86c59596d49e55978922ffcb2151",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "3396ee9e-5795-58db-b5f8-eeed473c7651",
+        "text": "george w. wallace",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "43336d32-1e22-5bb3-944e-1287c6e80281",
+        "text": "cemetery of george w. wallace",
+        "type": "Entity"
+      },
+      {
+        "id": 5,
+        "original_id": "91b0f96a-1be7-5a5b-a368-e0aa6bf40ef9",
+        "text": "park containing cemetery of george w. wallace",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "0026ecc9-12ab-5b00-989a-4c8d88f17fa0",
+        "text": "golden gate national recreation area",
+        "type": "Entity"
+      },
+      {
+        "id": 7,
+        "original_id": "5f394058-b2a0-5ba8-8466-ba2a18cfcf4e",
+        "text": "place",
+        "type": "EntityType"
+      },
+      {
+        "id": 8,
+        "original_id": "99a82eec-bb35-5bb5-9ed2-e73fc7a756de",
+        "text": "person",
+        "type": "EntityType"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "buried_at"
+      },
+      {
+        "source": 1,
+        "target": 4,
+        "type": "contains"
+      },
+      {
+        "source": 4,
+        "target": 5,
+        "type": "located_at"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "part_of"
+      },
+      {
+        "source": 1,
+        "target": 6,
+        "type": "contains"
+      },
+      {
+        "source": 6,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 5,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 4,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 8,
+        "type": "is_a"
+      }
+    ]
+  },
+  "grafo_evidencia": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "98a55628-fa4a-5ecb-a5a4-35a06b4e6bf4",
+        "text": "This chunk is about:\n- Places: San Francisco National Cemetery, Presidio of San Francisco, San Francisco Peninsula, San Francisco, California\n- Organizations: United States national cemeteries, U.S. Army, Golden Gate National Recreation Area\n- People: George W. Wallace\n\nFacts:\n- The Presidio of San Francisco was originally called El Presidio Real de San Francisco, or The Royal Fortress of Saint Francis.\n- The Presidio of San Francisco is a park and former U.S. Army military fort on the northern tip of the San Francisco Peninsula in San Francisco, California.\n- The Presidio of San Francisco is part of the Golden Gate National Recreation Area.\n- San Francisco National Cemetery is a United States national cemetery located in the Presidio of San Francisco, California.\n- George W. Wallace is buried at San Francisco National Cemetery.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "180645e1-5a31-5f31-b77c-8504d7d6c266",
+        "text": "Page: San Francisco National Cemetery. Sentence: San Francisco National Cemetery is an United States national cemetery, located in the Presidio of San Francisco, California.\nPage: Presidio of San Francisco. Sentence: The Presidio of San Francisco (originally, El Presidio Real de San Francisco or The Royal Fortress of Saint Francis) is a park and former U.S. Army military fort on the northern tip of the San Francisco Peninsula in San Francisco, California, and is part of the Golden Gate National Recreation Area.\nPage: George W. Wallace. Sentence: He is buried at San Francisco National Cemetery.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "02890c79-57f2-52f2-9e3f-c6fa44dfd66e",
+        "text": "text_6da2b2500989e39142eb2369eaf56b82",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "3eb8edbd-e4be-5d65-a2c9-8cd49d5679a8",
+        "text": "san francisco national cemetery",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "dbd554c7-bfb6-599d-ab47-f52e3ecb6fb3",
+        "text": "united states national cemetery",
+        "type": "Entity"
+      },
+      {
+        "id": 5,
+        "original_id": "d2a381fa-3658-5ca6-ada9-2109cfc9331d",
+        "text": "concept",
+        "type": "EntityType"
+      },
+      {
+        "id": 6,
+        "original_id": "6849f163-77c9-577a-93ac-ba97abe73eb8",
+        "text": "presidio of san francisco",
+        "type": "Entity"
+      },
+      {
+        "id": 7,
+        "original_id": "8294cd6a-6968-5d3a-b0c8-57e08c745c8d",
+        "text": "california",
+        "type": "Entity"
+      },
+      {
+        "id": 8,
+        "original_id": "5f394058-b2a0-5ba8-8466-ba2a18cfcf4e",
+        "text": "place",
+        "type": "EntityType"
+      },
+      {
+        "id": 9,
+        "original_id": "0026ecc9-12ab-5b00-989a-4c8d88f17fa0",
+        "text": "golden gate national recreation area",
+        "type": "Entity"
+      },
+      {
+        "id": 10,
+        "original_id": "3396ee9e-5795-58db-b5f8-eeed473c7651",
+        "text": "george w. wallace",
+        "type": "Entity"
+      },
+      {
+        "id": 11,
+        "original_id": "99a82eec-bb35-5bb5-9ed2-e73fc7a756de",
+        "text": "person",
+        "type": "EntityType"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 10,
+        "target": 3,
+        "type": "buried_at"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 4,
+        "type": "contains"
+      },
+      {
+        "source": 4,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 6,
+        "type": "located_in"
+      },
+      {
+        "source": 1,
+        "target": 6,
+        "type": "contains"
+      },
+      {
+        "source": 6,
+        "target": 7,
+        "type": "located_in"
+      },
+      {
+        "source": 3,
+        "target": 7,
+        "type": "located_in"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      },
+      {
+        "source": 7,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 9,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 6,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 6,
+        "target": 9,
+        "type": "part_of"
+      },
+      {
+        "source": 1,
+        "target": 9,
+        "type": "contains"
+      },
+      {
+        "source": 1,
+        "target": 10,
+        "type": "contains"
+      },
+      {
+        "source": 10,
+        "target": 11,
+        "type": "is_a"
+      }
+    ]
+  }
+}

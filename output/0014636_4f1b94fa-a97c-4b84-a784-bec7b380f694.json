@@ -1,0 +1,354 @@
+{
+  "dataset": "hover",
+  "id": "4f1b94fa-a97c-4b84-a784-bec7b380f694",
+  "split": "train",
+  "claim": "The population of the town as of 2000 where the historic tugboat Catawissa is located was 8,515.",
+  "evidencia": "Page: Catawissa (tugboat). Sentence: Catawissa was a historic tugboat located at Waterford in Saratoga County, New York.\nPage: Waterford, New York. Sentence: Waterford is a town in Saratoga County, New York, United States.\nPage: Waterford, New York. Sentence: The population was 8,515 at the 2000 census.",
+  "evidence_text": "Page: Catawissa (tugboat). Sentence: Catawissa was a historic tugboat located at Waterford in Saratoga County, New York.\nPage: Waterford, New York. Sentence: Waterford is a town in Saratoga County, New York, United States.\nPage: Waterford, New York. Sentence: The population was 8,515 at the 2000 census.",
+  "label": "SUPPORTED",
+  "num_hops": 2,
+  "hover_metadata": {
+    "supporting_facts": [
+      [
+        "Catawissa (tugboat)",
+        0
+      ],
+      [
+        "Waterford, New York",
+        0
+      ],
+      [
+        "Waterford, New York",
+        1
+      ]
+    ],
+    "num_hops": 2,
+    "evidence_annotation_id": [
+      0
+    ],
+    "evidence_id": [
+      "Catawissa (tugboat)::sentence::0",
+      "Waterford, New York::sentence::0",
+      "Waterford, New York::sentence::1"
+    ],
+    "evidence_wiki_url": [
+      "https://en.wikipedia.org/wiki/Catawissa_%28tugboat%29",
+      "https://en.wikipedia.org/wiki/Waterford%2C_New_York"
+    ],
+    "evidence_sentence_id": [
+      "Catawissa (tugboat)::sentence::0",
+      "Waterford, New York::sentence::0",
+      "Waterford, New York::sentence::1"
+    ]
+  },
+  "grafo_claim": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "a481c532-56d1-583f-8d19-e866f8027f12",
+        "text": "This chunk is about:\n- Places: the town where the historic tugboat Catawissa is located\n- Vessels: Catawissa\n- Topics: population data\n\nFacts:\n- As of 2000, the town where the historic tugboat Catawissa is located had a population of 8,515.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "86736dda-6197-555a-8b23-c7893f9c0b8e",
+        "text": "The population of the town as of 2000 where the historic tugboat Catawissa is located was 8,515.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "0ee79020-cfee-5c36-8c30-b8d8630328c2",
+        "text": "text_e16f54f201ada5945c08ff02943839e1",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "455aeda3-035a-55e8-ba03-5284f471a35c",
+        "text": "catawissa",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "0f5ec78d-c353-540c-b8bd-bce84eac0af4",
+        "text": "vehicle",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "e9ec1124-55cd-5e09-be24-ddf75310e6d8",
+        "text": "the town",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "5f394058-b2a0-5ba8-8466-ba2a18cfcf4e",
+        "text": "place",
+        "type": "EntityType"
+      },
+      {
+        "id": 7,
+        "original_id": "3835ca77-74e6-535d-8220-d222c50d4d9a",
+        "text": "8,515",
+        "type": "Entity"
+      },
+      {
+        "id": 8,
+        "original_id": "5c1097ca-fab8-54d5-b57f-5dca4b0e2507",
+        "text": "number",
+        "type": "EntityType"
+      },
+      {
+        "id": 9,
+        "original_id": "d1c22bf3-b08d-531b-a0cc-a04132cf6c6f",
+        "text": "2000",
+        "type": "Entity"
+      },
+      {
+        "id": 10,
+        "original_id": "b19433ae-558c-5aaf-95ac-6231f2a4be0e",
+        "text": "date",
+        "type": "EntityType"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "is_located_in"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 5,
+        "target": 7,
+        "type": "has_population"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      },
+      {
+        "source": 7,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 5,
+        "target": 9,
+        "type": "population_as_of"
+      },
+      {
+        "source": 1,
+        "target": 9,
+        "type": "contains"
+      },
+      {
+        "source": 9,
+        "target": 10,
+        "type": "is_a"
+      }
+    ]
+  },
+  "grafo_evidencia": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "9b18ff83-8467-50fe-9fc4-e56c31673558",
+        "text": "This chunk is about:\n- Products: Catawissa\n- Places: Waterford, Saratoga County, New York\n- Topics: Historic tugboats, population\n\nFacts:\n- Catawissa was a historic tugboat located at Waterford in Saratoga County, New York.\n- Waterford is a town in Saratoga County, New York, United States.\n- Waterford had a population of 8,515 at the 2000 census.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "e490853b-9045-5769-9d06-db963e57aa4a",
+        "text": "Page: Catawissa (tugboat). Sentence: Catawissa was a historic tugboat located at Waterford in Saratoga County, New York.\nPage: Waterford, New York. Sentence: Waterford is a town in Saratoga County, New York, United States.\nPage: Waterford, New York. Sentence: The population was 8,515 at the 2000 census.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "8635d6e3-65a2-52f1-b1d7-5877abc867b0",
+        "text": "text_ef5d3f5403e530218ca7ba120d6c7cac",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "455aeda3-035a-55e8-ba03-5284f471a35c",
+        "text": "catawissa",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "5e2f000e-12f3-55fb-a933-cf762140bf48",
+        "text": "vessel",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "bb887019-145c-51bc-8d58-a3c14db85364",
+        "text": "waterford",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "5f394058-b2a0-5ba8-8466-ba2a18cfcf4e",
+        "text": "place",
+        "type": "EntityType"
+      },
+      {
+        "id": 7,
+        "original_id": "2369ac0a-da7b-51e2-b6d9-8364bb7cea19",
+        "text": "saratoga county",
+        "type": "Entity"
+      },
+      {
+        "id": 8,
+        "original_id": "a7852d00-db75-55e2-bd9a-468ada762d39",
+        "text": "new york",
+        "type": "Entity"
+      },
+      {
+        "id": 9,
+        "original_id": "874a51da-34ea-5037-be47-d87785d43c37",
+        "text": "united states",
+        "type": "Entity"
+      },
+      {
+        "id": 10,
+        "original_id": "46cc7465-3053-52fb-b512-292967a846a4",
+        "text": "2000 census",
+        "type": "Entity"
+      },
+      {
+        "id": 11,
+        "original_id": "214abcd9-9adf-5c8a-bb35-1e729f2d68c3",
+        "text": "event",
+        "type": "EntityType"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "located_at"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 7,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 8,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 9,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 5,
+        "target": 7,
+        "type": "located_in"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      },
+      {
+        "source": 7,
+        "target": 8,
+        "type": "located_in"
+      },
+      {
+        "source": 1,
+        "target": 8,
+        "type": "contains"
+      },
+      {
+        "source": 8,
+        "target": 9,
+        "type": "located_in"
+      },
+      {
+        "source": 1,
+        "target": 9,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 10,
+        "type": "population_at_census"
+      },
+      {
+        "source": 1,
+        "target": 10,
+        "type": "contains"
+      },
+      {
+        "source": 10,
+        "target": 11,
+        "type": "is_a"
+      }
+    ]
+  }
+}

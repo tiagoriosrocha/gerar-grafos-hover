@@ -1,0 +1,455 @@
+{
+  "dataset": "hover",
+  "id": "391c1ff1-824c-458b-8111-d553026ef173",
+  "split": "train",
+  "claim": "The musician that released the CD \"Live and Acoustic\" is younger than Billy Idol.",
+  "evidencia": "Page: Ray Wilson (musician). Sentence: Raymond Wilson (born 8 September 1968) is a Scottish musician, best known as vocalist in the post-grunge band Stiltskin, and in Genesis from 1996 to 1998.\nPage: Billy Idol. Sentence: William Michael Albert Broad (born 30 November 1955), known professionally as Billy Idol, is an English musician, singer, songwriter, and actor.\nPage: Live and Acoustic (Ray Wilson album). Sentence: Live and Acoustic is the first live CD release from Ray Wilson.",
+  "evidence_text": "Page: Ray Wilson (musician). Sentence: Raymond Wilson (born 8 September 1968) is a Scottish musician, best known as vocalist in the post-grunge band Stiltskin, and in Genesis from 1996 to 1998.\nPage: Billy Idol. Sentence: William Michael Albert Broad (born 30 November 1955), known professionally as Billy Idol, is an English musician, singer, songwriter, and actor.\nPage: Live and Acoustic (Ray Wilson album). Sentence: Live and Acoustic is the first live CD release from Ray Wilson.",
+  "label": "SUPPORTED",
+  "num_hops": 3,
+  "hover_metadata": {
+    "supporting_facts": [
+      [
+        "Ray Wilson (musician)",
+        0
+      ],
+      [
+        "Billy Idol",
+        0
+      ],
+      [
+        "Live and Acoustic (Ray Wilson album)",
+        0
+      ]
+    ],
+    "num_hops": 3,
+    "evidence_annotation_id": [
+      0
+    ],
+    "evidence_id": [
+      "Ray Wilson (musician)::sentence::0",
+      "Billy Idol::sentence::0",
+      "Live and Acoustic (Ray Wilson album)::sentence::0"
+    ],
+    "evidence_wiki_url": [
+      "https://en.wikipedia.org/wiki/Ray_Wilson_%28musician%29",
+      "https://en.wikipedia.org/wiki/Billy_Idol",
+      "https://en.wikipedia.org/wiki/Live_and_Acoustic_%28Ray_Wilson_album%29"
+    ],
+    "evidence_sentence_id": [
+      "Ray Wilson (musician)::sentence::0",
+      "Billy Idol::sentence::0",
+      "Live and Acoustic (Ray Wilson album)::sentence::0"
+    ]
+  },
+  "grafo_claim": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "af963e9d-9bc2-5c5a-b9c7-aa5f04300f78",
+        "text": "This chunk is about:\n- People: Billy Idol\n- Products: \"Live and Acoustic\" CD\n- Topics: age comparison, music release attribution\n\nFacts:\n- Billy Idol is a person used as the reference in an age comparison.\n- The musician who released the CD \"Live and Acoustic\" is younger than Billy Idol.\n- \"Live and Acoustic\" is a CD release associated with a musician.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "03c79c51-fa22-5ab9-a1e7-9f45f708daea",
+        "text": "The musician that released the CD \"Live and Acoustic\" is younger than Billy Idol.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "cf4362a6-7eb6-508c-8eb4-0138bcdeaa5d",
+        "text": "text_fe178b6066502af0d35b841742d484b4",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "56e1f46d-8f11-5898-bd8f-7e1b3195e2d8",
+        "text": "live and acoustic",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "79acf5fa-2add-5fac-a4c5-aa733a78a8b4",
+        "text": "creativework",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "907171d3-2b49-56f7-874d-516dcec9871e",
+        "text": "billy idol",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "99a82eec-bb35-5bb5-9ed2-e73fc7a756de",
+        "text": "person",
+        "type": "EntityType"
+      },
+      {
+        "id": 7,
+        "original_id": "b483fbb3-4022-59e8-8bed-0e2f330c6735",
+        "text": "the musician that released live and acoustic",
+        "type": "Entity"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 7,
+        "target": 3,
+        "type": "released"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 7,
+        "target": 5,
+        "type": "younger_than"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 7,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      }
+    ]
+  },
+  "grafo_evidencia": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "e6d1beb0-de2c-58c6-91ba-34edd887d998",
+        "text": "This chunk is about:\n- People: Ray Wilson, Billy Idol\n- Bands: Stiltskin, Genesis\n- Albums: Live and Acoustic\n\nFacts:\n- Billy Idol was born as William Michael Albert Broad on 30 November 1955.\n- Billy Idol is an English musician, singer, songwriter, and actor.\n- Ray Wilson was born on 8 September 1968.\n- Ray Wilson is a Scottish musician.\n- Ray Wilson is best known as the vocalist in the post-grunge band Stiltskin.\n- Ray Wilson was in Genesis from 1996 to 1998.\n- Live and Acoustic is the first live CD release from Ray Wilson.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "6a053380-7893-50ab-9d5d-eedf14357af9",
+        "text": "Page: Ray Wilson (musician). Sentence: Raymond Wilson (born 8 September 1968) is a Scottish musician, best known as vocalist in the post-grunge band Stiltskin, and in Genesis from 1996 to 1998.\nPage: Billy Idol. Sentence: William Michael Albert Broad (born 30 November 1955), known professionally as Billy Idol, is an English musician, singer, songwriter, and actor.\nPage: Live and Acoustic (Ray Wilson album). Sentence: Live and Acoustic is the first live CD release from Ray Wilson.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "c1e1e8a1-024c-5813-a10b-199ec1cdd596",
+        "text": "text_f1bc3a8a81eda5a82ffb090e288975c8",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "7884a980-76eb-5661-aa6c-0816fdce841e",
+        "text": "raymond wilson",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "26e31e5d-cd94-545b-b112-5ca224093a66",
+        "text": "1968-09-08",
+        "type": "Entity"
+      },
+      {
+        "id": 5,
+        "original_id": "b19433ae-558c-5aaf-95ac-6231f2a4be0e",
+        "text": "date",
+        "type": "EntityType"
+      },
+      {
+        "id": 6,
+        "original_id": "8869a452-9a66-57bd-aa73-093c45fb3b7a",
+        "text": "scotland",
+        "type": "Entity"
+      },
+      {
+        "id": 7,
+        "original_id": "5f394058-b2a0-5ba8-8466-ba2a18cfcf4e",
+        "text": "place",
+        "type": "EntityType"
+      },
+      {
+        "id": 8,
+        "original_id": "8afc1ca9-e622-57a8-96f8-b7e9cf143c56",
+        "text": "stiltskin",
+        "type": "Entity"
+      },
+      {
+        "id": 9,
+        "original_id": "388f60fb-220d-55e8-ae9c-3ac93cead308",
+        "text": "organization",
+        "type": "EntityType"
+      },
+      {
+        "id": 10,
+        "original_id": "1dfdfe4d-8f90-5f96-911a-a6337394958e",
+        "text": "genesis",
+        "type": "Entity"
+      },
+      {
+        "id": 11,
+        "original_id": "03508744-888e-5e4b-9a29-9ff87ae8d3b3",
+        "text": "1996",
+        "type": "Entity"
+      },
+      {
+        "id": 12,
+        "original_id": "111f07f3-2527-5bbf-827f-7a18bb37f150",
+        "text": "1998",
+        "type": "Entity"
+      },
+      {
+        "id": 13,
+        "original_id": "99a82eec-bb35-5bb5-9ed2-e73fc7a756de",
+        "text": "person",
+        "type": "EntityType"
+      },
+      {
+        "id": 14,
+        "original_id": "7972462c-3b06-58c1-8d61-d5bbf87add61",
+        "text": "william michael albert broad",
+        "type": "Entity"
+      },
+      {
+        "id": 15,
+        "original_id": "609cd638-3ccf-5b1a-88b7-d38e4464b46f",
+        "text": "1955-11-30",
+        "type": "Entity"
+      },
+      {
+        "id": 16,
+        "original_id": "27f0656f-762c-54f0-8ed5-c4b27557219f",
+        "text": "england",
+        "type": "Entity"
+      },
+      {
+        "id": 17,
+        "original_id": "907171d3-2b49-56f7-874d-516dcec9871e",
+        "text": "billy idol",
+        "type": "Entity"
+      },
+      {
+        "id": 18,
+        "original_id": "56e1f46d-8f11-5898-bd8f-7e1b3195e2d8",
+        "text": "live and acoustic",
+        "type": "Entity"
+      },
+      {
+        "id": 19,
+        "original_id": "5263a535-1b4b-5925-be3e-310d03cd303b",
+        "text": "work",
+        "type": "EntityType"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 18,
+        "target": 3,
+        "type": "live_cd_release_from"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "born_on"
+      },
+      {
+        "source": 1,
+        "target": 4,
+        "type": "contains"
+      },
+      {
+        "source": 4,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 11,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 12,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 15,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 6,
+        "type": "associated_with_place"
+      },
+      {
+        "source": 1,
+        "target": 6,
+        "type": "contains"
+      },
+      {
+        "source": 6,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 16,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 8,
+        "type": "vocalist_in"
+      },
+      {
+        "source": 1,
+        "target": 8,
+        "type": "contains"
+      },
+      {
+        "source": 8,
+        "target": 9,
+        "type": "is_a"
+      },
+      {
+        "source": 10,
+        "target": 9,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 10,
+        "type": "vocalist_in"
+      },
+      {
+        "source": 1,
+        "target": 10,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 11,
+        "type": "role_started_in"
+      },
+      {
+        "source": 1,
+        "target": 11,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 12,
+        "type": "role_ended_in"
+      },
+      {
+        "source": 1,
+        "target": 12,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 13,
+        "type": "is_a"
+      },
+      {
+        "source": 14,
+        "target": 13,
+        "type": "is_a"
+      },
+      {
+        "source": 17,
+        "target": 13,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 14,
+        "type": "contains"
+      },
+      {
+        "source": 17,
+        "target": 14,
+        "type": "professional_name_of"
+      },
+      {
+        "source": 14,
+        "target": 15,
+        "type": "born_on"
+      },
+      {
+        "source": 1,
+        "target": 15,
+        "type": "contains"
+      },
+      {
+        "source": 14,
+        "target": 16,
+        "type": "associated_with_place"
+      },
+      {
+        "source": 1,
+        "target": 16,
+        "type": "contains"
+      },
+      {
+        "source": 1,
+        "target": 17,
+        "type": "contains"
+      },
+      {
+        "source": 1,
+        "target": 18,
+        "type": "contains"
+      },
+      {
+        "source": 18,
+        "target": 19,
+        "type": "is_a"
+      }
+    ]
+  }
+}

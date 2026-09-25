@@ -1,0 +1,309 @@
+{
+  "dataset": "hover",
+  "id": "ec37cd2a-3e3c-48c9-be85-3ae2c744740d",
+  "split": "train",
+  "claim": "The AXIS is located in a casino that is owned and operated by the Caesars Entertainment Corporation.",
+  "evidencia": "Page: The AXIS. Sentence: The AXIS (known as The AXIS powered by Monster for sponsorship purposes, also referred to as the AXIS Theater) is a mid-sized auditorium located at Planet Hollywood Las Vegas on the Las Vegas Strip.\nPage: Planet Hollywood Las Vegas. Sentence: It is owned and operated by Caesars Entertainment Corporation.",
+  "evidence_text": "Page: The AXIS. Sentence: The AXIS (known as The AXIS powered by Monster for sponsorship purposes, also referred to as the AXIS Theater) is a mid-sized auditorium located at Planet Hollywood Las Vegas on the Las Vegas Strip.\nPage: Planet Hollywood Las Vegas. Sentence: It is owned and operated by Caesars Entertainment Corporation.",
+  "label": "SUPPORTED",
+  "num_hops": 2,
+  "hover_metadata": {
+    "supporting_facts": [
+      [
+        "The AXIS",
+        0
+      ],
+      [
+        "Planet Hollywood Las Vegas",
+        1
+      ]
+    ],
+    "num_hops": 2,
+    "evidence_annotation_id": [
+      0
+    ],
+    "evidence_id": [
+      "The AXIS::sentence::0",
+      "Planet Hollywood Las Vegas::sentence::1"
+    ],
+    "evidence_wiki_url": [
+      "https://en.wikipedia.org/wiki/The_AXIS",
+      "https://en.wikipedia.org/wiki/Planet_Hollywood_Las_Vegas"
+    ],
+    "evidence_sentence_id": [
+      "The AXIS::sentence::0",
+      "Planet Hollywood Las Vegas::sentence::1"
+    ]
+  },
+  "grafo_claim": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "e5c98e93-a47e-5efb-aac2-b5179790e7d6",
+        "text": "This chunk is about:\n- Places: The AXIS, a casino\n- Companies: Caesars Entertainment Corporation\n\nFacts:\n- The AXIS is located in a casino.\n- Caesars Entertainment Corporation owns and operates the casino that contains The AXIS.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "83c391a0-9c38-5b9a-bd42-e0cfbe85b216",
+        "text": "The AXIS is located in a casino that is owned and operated by the Caesars Entertainment Corporation.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "eae6ec20-931c-5b18-97e5-e37e88181f8c",
+        "text": "text_512b7883d56f8347bb73a0f6b763009b",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "d3003f66-335f-5a29-9dd7-595643352fe0",
+        "text": "axis",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "8c34324b-4454-5115-a64e-9f4c9e1c6199",
+        "text": "casino",
+        "type": "Entity"
+      },
+      {
+        "id": 5,
+        "original_id": "dacea73c-3c76-5b65-abe7-70037f4329a8",
+        "text": "caesars entertainment corporation",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "388f60fb-220d-55e8-ae9c-3ac93cead308",
+        "text": "organization",
+        "type": "EntityType"
+      },
+      {
+        "id": 7,
+        "original_id": "5f394058-b2a0-5ba8-8466-ba2a18cfcf4e",
+        "text": "place",
+        "type": "EntityType"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "located_in"
+      },
+      {
+        "source": 1,
+        "target": 4,
+        "type": "contains"
+      },
+      {
+        "source": 4,
+        "target": 5,
+        "type": "owned_by"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 4,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 7,
+        "type": "is_a"
+      }
+    ]
+  },
+  "grafo_evidencia": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "02515d8d-eaa6-5579-b464-87f2976cd25e",
+        "text": "This chunk is about:\n- Places: The AXIS, Planet Hollywood Las Vegas, Las Vegas Strip\n- Companies: Caesars Entertainment Corporation, Monster\n- Products: AXIS Theater\n\nFacts:\n- The AXIS is a mid-sized auditorium located at Planet Hollywood Las Vegas on the Las Vegas Strip.\n- The AXIS is known as The AXIS powered by Monster for sponsorship purposes.\n- The AXIS is also referred to as the AXIS Theater.\n- Planet Hollywood Las Vegas is owned and operated by Caesars Entertainment Corporation.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "95574c3b-c63a-5d10-b8b3-78caa243d0f2",
+        "text": "Page: The AXIS. Sentence: The AXIS (known as The AXIS powered by Monster for sponsorship purposes, also referred to as the AXIS Theater) is a mid-sized auditorium located at Planet Hollywood Las Vegas on the Las Vegas Strip.\nPage: Planet Hollywood Las Vegas. Sentence: It is owned and operated by Caesars Entertainment Corporation.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "ce6575d5-d2b1-5807-95a7-a39799c97049",
+        "text": "text_fc688679dc1a3a8e1e059ce85156f860",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "637c83e2-3890-5922-91f0-216ac5b19306",
+        "text": "the axis",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "8ffef65a-8520-5368-ba09-e5e5d021f98e",
+        "text": "the axis powered by monster",
+        "type": "Entity"
+      },
+      {
+        "id": 5,
+        "original_id": "5f394058-b2a0-5ba8-8466-ba2a18cfcf4e",
+        "text": "place",
+        "type": "EntityType"
+      },
+      {
+        "id": 6,
+        "original_id": "2fe483d0-73b7-5106-8f9c-c696a630ac88",
+        "text": "axis theater",
+        "type": "Entity"
+      },
+      {
+        "id": 7,
+        "original_id": "96b41adc-b30a-5d48-87c7-2c16d939c7c4",
+        "text": "planet hollywood las vegas",
+        "type": "Entity"
+      },
+      {
+        "id": 8,
+        "original_id": "60152a3c-19f4-5b80-8305-51c3a57f8052",
+        "text": "las vegas strip",
+        "type": "Entity"
+      },
+      {
+        "id": 9,
+        "original_id": "dacea73c-3c76-5b65-abe7-70037f4329a8",
+        "text": "caesars entertainment corporation",
+        "type": "Entity"
+      },
+      {
+        "id": 10,
+        "original_id": "388f60fb-220d-55e8-ae9c-3ac93cead308",
+        "text": "organization",
+        "type": "EntityType"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "also_known_as"
+      },
+      {
+        "source": 1,
+        "target": 4,
+        "type": "contains"
+      },
+      {
+        "source": 4,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 6,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 8,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 7,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 6,
+        "type": "also_referred_to_as"
+      },
+      {
+        "source": 1,
+        "target": 6,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 7,
+        "type": "located_at"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      },
+      {
+        "source": 7,
+        "target": 8,
+        "type": "located_on"
+      },
+      {
+        "source": 1,
+        "target": 8,
+        "type": "contains"
+      },
+      {
+        "source": 7,
+        "target": 9,
+        "type": "owned_by"
+      },
+      {
+        "source": 1,
+        "target": 9,
+        "type": "contains"
+      },
+      {
+        "source": 9,
+        "target": 10,
+        "type": "is_a"
+      }
+    ]
+  }
+}

@@ -1,0 +1,423 @@
+{
+  "dataset": "hover",
+  "id": "817c22f4-d895-45b4-9477-16efd34b6c5f",
+  "split": "train",
+  "claim": "Daniel Hudson Burnham was born before a famous architect. That architect designed the Society for Saving Buildings.",
+  "evidencia": "Page: John Wellborn Root. Sentence: John Wellborn Root (January 10, 1850 – January 15, 1891) was an American architect who was based in Chicago with Daniel Burnham.\nPage: Daniel Burnham. Sentence: Daniel Hudson Burnham, FAIA (September 4, 1846 – June 1, 1912) was an American architect and urban designer.\nPage: Society for Savings Building. Sentence: It was designed by John Wellborn Root of the Chicago-based architectural firm Burnham & Root.",
+  "evidence_text": "Page: John Wellborn Root. Sentence: John Wellborn Root (January 10, 1850 – January 15, 1891) was an American architect who was based in Chicago with Daniel Burnham.\nPage: Daniel Burnham. Sentence: Daniel Hudson Burnham, FAIA (September 4, 1846 – June 1, 1912) was an American architect and urban designer.\nPage: Society for Savings Building. Sentence: It was designed by John Wellborn Root of the Chicago-based architectural firm Burnham & Root.",
+  "label": "SUPPORTED",
+  "num_hops": 3,
+  "hover_metadata": {
+    "supporting_facts": [
+      [
+        "John Wellborn Root",
+        0
+      ],
+      [
+        "Daniel Burnham",
+        0
+      ],
+      [
+        "Society for Savings Building",
+        5
+      ]
+    ],
+    "num_hops": 3,
+    "evidence_annotation_id": [
+      0
+    ],
+    "evidence_id": [
+      "John Wellborn Root::sentence::0",
+      "Daniel Burnham::sentence::0",
+      "Society for Savings Building::sentence::5"
+    ],
+    "evidence_wiki_url": [
+      "https://en.wikipedia.org/wiki/John_Wellborn_Root",
+      "https://en.wikipedia.org/wiki/Daniel_Burnham",
+      "https://en.wikipedia.org/wiki/Society_for_Savings_Building"
+    ],
+    "evidence_sentence_id": [
+      "John Wellborn Root::sentence::0",
+      "Daniel Burnham::sentence::0",
+      "Society for Savings Building::sentence::5"
+    ]
+  },
+  "grafo_claim": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "81296eba-fa3f-5208-bfbc-ace3f0a52d87",
+        "text": "This chunk is about:\n- People: Daniel Hudson Burnham\n- Organizations: Society for Saving Buildings\n- Roles: architect\n\nFacts:\n- Daniel Hudson Burnham was born before a famous architect.\n- The famous architect designed the Society for Saving Buildings.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "713f68a1-37dc-5f88-a58c-e436a751797e",
+        "text": "Daniel Hudson Burnham was born before a famous architect. That architect designed the Society for Saving Buildings.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "bec75619-250d-55ff-97cf-fc0a4f18a080",
+        "text": "text_962be359b5f68174c15d23fbb5f16f31",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "aad8ffb3-eccd-5cf8-a7cc-a0557deb2d5a",
+        "text": "daniel hudson burnham",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "094cdf96-1a13-52a0-8f7f-e5394a623eab",
+        "text": "famous architect",
+        "type": "Entity"
+      },
+      {
+        "id": 5,
+        "original_id": "251490b2-b438-51a3-b136-869d50f676cc",
+        "text": "society for saving buildings",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "388f60fb-220d-55e8-ae9c-3ac93cead308",
+        "text": "organization",
+        "type": "EntityType"
+      },
+      {
+        "id": 7,
+        "original_id": "99a82eec-bb35-5bb5-9ed2-e73fc7a756de",
+        "text": "person",
+        "type": "EntityType"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "was_born_before"
+      },
+      {
+        "source": 1,
+        "target": 4,
+        "type": "contains"
+      },
+      {
+        "source": 4,
+        "target": 5,
+        "type": "designed"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 4,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 7,
+        "type": "is_a"
+      }
+    ]
+  },
+  "grafo_evidencia": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "d38dd31a-b4d9-5ead-ac41-7800cdcccf15",
+        "text": "This chunk is about:\n- People: John Wellborn Root, Daniel Burnham\n- Organizations: Burnham & Root\n- Places: Chicago\n- Roles: architect, urban designer\n- Buildings: Society for Savings Building\n\nFacts:\n- Daniel Burnham was born on September 4, 1846, and was an American architect and urban designer.\n- John Wellborn Root was born on January 10, 1850, and was an American architect.\n- John Wellborn Root was based in Chicago with Daniel Burnham.\n- John Wellborn Root died on January 15, 1891.\n- The Society for Savings Building was designed by John Wellborn Root of the Chicago-based architectural firm Burnham & Root.\n- Daniel Burnham died on June 1, 1912.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "f1df202e-6aaf-5bb9-9d3e-94da817dab21",
+        "text": "Page: John Wellborn Root. Sentence: John Wellborn Root (January 10, 1850 – January 15, 1891) was an American architect who was based in Chicago with Daniel Burnham.\nPage: Daniel Burnham. Sentence: Daniel Hudson Burnham, FAIA (September 4, 1846 – June 1, 1912) was an American architect and urban designer.\nPage: Society for Savings Building. Sentence: It was designed by John Wellborn Root of the Chicago-based architectural firm Burnham & Root.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "fa383115-5554-594d-970d-395c51ed0f1b",
+        "text": "text_891b3c8043d43184a10aa806fe6e1c1c",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "9e5d90ba-3813-5745-9879-972d847630e1",
+        "text": "john wellborn root",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "e1009623-c895-52bb-8ce1-0889b334ef78",
+        "text": "1850-01-10",
+        "type": "Entity"
+      },
+      {
+        "id": 5,
+        "original_id": "b19433ae-558c-5aaf-95ac-6231f2a4be0e",
+        "text": "date",
+        "type": "EntityType"
+      },
+      {
+        "id": 6,
+        "original_id": "c7e3cdf8-045f-5b32-a7da-c3a642704057",
+        "text": "1891-01-15",
+        "type": "Entity"
+      },
+      {
+        "id": 7,
+        "original_id": "ec047af9-0db4-5349-a274-c803926fd58c",
+        "text": "chicago",
+        "type": "Entity"
+      },
+      {
+        "id": 8,
+        "original_id": "5f394058-b2a0-5ba8-8466-ba2a18cfcf4e",
+        "text": "place",
+        "type": "EntityType"
+      },
+      {
+        "id": 9,
+        "original_id": "f1ea027c-37ad-5cd8-9922-e101121484ab",
+        "text": "daniel burnham",
+        "type": "Entity"
+      },
+      {
+        "id": 10,
+        "original_id": "aad8ffb3-eccd-5cf8-a7cc-a0557deb2d5a",
+        "text": "daniel hudson burnham",
+        "type": "Entity"
+      },
+      {
+        "id": 11,
+        "original_id": "10a8f1e2-e13c-520f-8c63-1e7b7bd6f04f",
+        "text": "1846-09-04",
+        "type": "Entity"
+      },
+      {
+        "id": 12,
+        "original_id": "0a0457fd-17a2-5b89-bd95-abf65a11e6be",
+        "text": "1912-06-01",
+        "type": "Entity"
+      },
+      {
+        "id": 13,
+        "original_id": "99a82eec-bb35-5bb5-9ed2-e73fc7a756de",
+        "text": "person",
+        "type": "EntityType"
+      },
+      {
+        "id": 14,
+        "original_id": "8ecc69a0-b481-598b-8c78-18f297ec22c6",
+        "text": "burnham & root",
+        "type": "Entity"
+      },
+      {
+        "id": 15,
+        "original_id": "388f60fb-220d-55e8-ae9c-3ac93cead308",
+        "text": "organization",
+        "type": "EntityType"
+      },
+      {
+        "id": 16,
+        "original_id": "ee200c95-64ff-5de6-824c-5aa7a4258dac",
+        "text": "society for savings building",
+        "type": "Entity"
+      },
+      {
+        "id": 17,
+        "original_id": "b011d686-ca3a-5398-b03c-f44518808ad9",
+        "text": "building",
+        "type": "EntityType"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 16,
+        "target": 3,
+        "type": "designed_by"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "born_on"
+      },
+      {
+        "source": 1,
+        "target": 4,
+        "type": "contains"
+      },
+      {
+        "source": 4,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 6,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 11,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 12,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 6,
+        "type": "died_on"
+      },
+      {
+        "source": 1,
+        "target": 6,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 7,
+        "type": "based_in"
+      },
+      {
+        "source": 14,
+        "target": 7,
+        "type": "based_in"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      },
+      {
+        "source": 7,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 9,
+        "type": "based_with"
+      },
+      {
+        "source": 1,
+        "target": 9,
+        "type": "contains"
+      },
+      {
+        "source": 9,
+        "target": 10,
+        "type": "same_as"
+      },
+      {
+        "source": 1,
+        "target": 10,
+        "type": "contains"
+      },
+      {
+        "source": 10,
+        "target": 11,
+        "type": "born_on"
+      },
+      {
+        "source": 1,
+        "target": 11,
+        "type": "contains"
+      },
+      {
+        "source": 10,
+        "target": 12,
+        "type": "died_on"
+      },
+      {
+        "source": 1,
+        "target": 12,
+        "type": "contains"
+      },
+      {
+        "source": 10,
+        "target": 13,
+        "type": "is_a"
+      },
+      {
+        "source": 9,
+        "target": 13,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 13,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 14,
+        "type": "associated_with"
+      },
+      {
+        "source": 1,
+        "target": 14,
+        "type": "contains"
+      },
+      {
+        "source": 14,
+        "target": 15,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 16,
+        "type": "contains"
+      },
+      {
+        "source": 16,
+        "target": 17,
+        "type": "is_a"
+      }
+    ]
+  }
+}

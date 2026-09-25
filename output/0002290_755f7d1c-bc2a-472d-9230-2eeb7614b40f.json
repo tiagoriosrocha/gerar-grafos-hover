@@ -1,0 +1,371 @@
+{
+  "dataset": "hover",
+  "id": "755f7d1c-bc2a-472d-9230-2eeb7614b40f",
+  "split": "train",
+  "claim": "The writer of the song \"Veteran of the Psychic Wars\" is a lyricist, not Otep Shamaya.",
+  "evidencia": "Page: Eric Bloom. Sentence: Eric Bloom (born December 1, 1944) is an American singer, songwriter and musician.\nPage: Otep Shamaya. Sentence: Otep Shamaya is the lead vocalist of the nu metal band Otep.\nPage: Veteran of the Psychic Wars. Sentence: \"Veteran of the Psychic Wars\" is a song by the American hard rock band Blue Öyster Cult, written by Eric Bloom and British author Michael Moorcock (creator of Elric of Melniboné).",
+  "evidence_text": "Page: Eric Bloom. Sentence: Eric Bloom (born December 1, 1944) is an American singer, songwriter and musician.\nPage: Otep Shamaya. Sentence: Otep Shamaya is the lead vocalist of the nu metal band Otep.\nPage: Veteran of the Psychic Wars. Sentence: \"Veteran of the Psychic Wars\" is a song by the American hard rock band Blue Öyster Cult, written by Eric Bloom and British author Michael Moorcock (creator of Elric of Melniboné).",
+  "label": "SUPPORTED",
+  "num_hops": 3,
+  "hover_metadata": {
+    "supporting_facts": [
+      [
+        "Eric Bloom",
+        0
+      ],
+      [
+        "Otep Shamaya",
+        0
+      ],
+      [
+        "Veteran of the Psychic Wars",
+        0
+      ]
+    ],
+    "num_hops": 3,
+    "evidence_annotation_id": [
+      0
+    ],
+    "evidence_id": [
+      "Eric Bloom::sentence::0",
+      "Otep Shamaya::sentence::0",
+      "Veteran of the Psychic Wars::sentence::0"
+    ],
+    "evidence_wiki_url": [
+      "https://en.wikipedia.org/wiki/Eric_Bloom",
+      "https://en.wikipedia.org/wiki/Otep_Shamaya",
+      "https://en.wikipedia.org/wiki/Veteran_of_the_Psychic_Wars"
+    ],
+    "evidence_sentence_id": [
+      "Eric Bloom::sentence::0",
+      "Otep Shamaya::sentence::0",
+      "Veteran of the Psychic Wars::sentence::0"
+    ]
+  },
+  "grafo_claim": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "f4d4fb05-cc78-5ece-affe-cf7f8fb02170",
+        "text": "This chunk is about:\n- People: Otep Shamaya, Michael Moorcock\n- Songs: \"Veteran of the Psychic Wars\"\n- Roles: lyricist, writer\n\nFacts:\n- Michael Moorcock is the lyricist and writer associated with the song \"Veteran of the Psychic Wars.\"\n- Otep Shamaya is not the writer of the song \"Veteran of the Psychic Wars.\"\n- The chunk clarifies that the song's writer should be identified as a lyricist rather than as Otep Shamaya.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "fdff39ca-d202-52f6-856c-87bb3893f8ad",
+        "text": "The writer of the song \"Veteran of the Psychic Wars\" is a lyricist, not Otep Shamaya.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "f9ed0f15-4dd3-5cc6-95b8-8abe1442eb13",
+        "text": "text_e0e62cde99d3006769b5d0ec726a7e70",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "14dc2701-5a48-5596-a33b-7318a0e6f1c2",
+        "text": "veteran of the psychic wars",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "095cc403-9836-5768-b2f8-c90dd8ece1e4",
+        "text": "lyricist",
+        "type": "Entity"
+      },
+      {
+        "id": 5,
+        "original_id": "9d80eb43-32fa-561c-9371-91f180ebcb6c",
+        "text": "profession",
+        "type": "EntityType"
+      },
+      {
+        "id": 6,
+        "original_id": "6056b392-f12e-5150-8c0b-ac7545dc2fdf",
+        "text": "song",
+        "type": "EntityType"
+      },
+      {
+        "id": 7,
+        "original_id": "d8bb7df1-3ec4-5386-9641-82d57cd8dbe7",
+        "text": "otep shamaya",
+        "type": "Entity"
+      },
+      {
+        "id": 8,
+        "original_id": "99a82eec-bb35-5bb5-9ed2-e73fc7a756de",
+        "text": "person",
+        "type": "EntityType"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 7,
+        "target": 3,
+        "type": "not_writer_of"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "written_by_profession"
+      },
+      {
+        "source": 1,
+        "target": 4,
+        "type": "contains"
+      },
+      {
+        "source": 4,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      },
+      {
+        "source": 7,
+        "target": 8,
+        "type": "is_a"
+      }
+    ]
+  },
+  "grafo_evidencia": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "81814c1d-46d0-58ba-ada1-4e01b675890c",
+        "text": "This chunk is about:\n- People: Eric Bloom, Otep Shamaya, Michael Moorcock\n- Bands: Blue Öyster Cult, Otep\n- Songs: \"Veteran of the Psychic Wars\"\n- Topics: American singers, songwriters, musicians, lead vocalists, nu metal, hard rock\n\nFacts:\n- Eric Bloom was born on December 1, 1944.\n- Eric Bloom is an American singer, songwriter, and musician.\n- Otep Shamaya is the lead vocalist of the nu metal band Otep.\n- \"Veteran of the Psychic Wars\" is a song by the American hard rock band Blue Öyster Cult.\n- Eric Bloom and British author Michael Moorcock wrote \"Veteran of the Psychic Wars.\"\n- Michael Moorcock is the creator of Elric of Melniboné.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "a785b335-f010-5d12-aef5-30bf7cfc1460",
+        "text": "Page: Eric Bloom. Sentence: Eric Bloom (born December 1, 1944) is an American singer, songwriter and musician.\nPage: Otep Shamaya. Sentence: Otep Shamaya is the lead vocalist of the nu metal band Otep.\nPage: Veteran of the Psychic Wars. Sentence: \"Veteran of the Psychic Wars\" is a song by the American hard rock band Blue Öyster Cult, written by Eric Bloom and British author Michael Moorcock (creator of Elric of Melniboné).",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "fdcf3440-48a6-552d-8717-1b176cc94627",
+        "text": "text_6342918e562bdc55ee40ef0765e5cbcd",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "539b915e-8c17-5ead-a8b6-efd3924f4346",
+        "text": "eric bloom",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "a1686196-d7c7-5c56-a9db-facb5ef7fea8",
+        "text": "1944-12-01",
+        "type": "Entity"
+      },
+      {
+        "id": 5,
+        "original_id": "b19433ae-558c-5aaf-95ac-6231f2a4be0e",
+        "text": "date",
+        "type": "EntityType"
+      },
+      {
+        "id": 6,
+        "original_id": "99a82eec-bb35-5bb5-9ed2-e73fc7a756de",
+        "text": "person",
+        "type": "EntityType"
+      },
+      {
+        "id": 7,
+        "original_id": "d8bb7df1-3ec4-5386-9641-82d57cd8dbe7",
+        "text": "otep shamaya",
+        "type": "Entity"
+      },
+      {
+        "id": 8,
+        "original_id": "e83c5c2a-27ae-5eb2-b59f-e88d83400012",
+        "text": "otep",
+        "type": "Entity"
+      },
+      {
+        "id": 9,
+        "original_id": "388f60fb-220d-55e8-ae9c-3ac93cead308",
+        "text": "organization",
+        "type": "EntityType"
+      },
+      {
+        "id": 10,
+        "original_id": "14dc2701-5a48-5596-a33b-7318a0e6f1c2",
+        "text": "veteran of the psychic wars",
+        "type": "Entity"
+      },
+      {
+        "id": 11,
+        "original_id": "04bcb8bf-452f-519b-9ae5-72122bdafe60",
+        "text": "blue öyster cult",
+        "type": "Entity"
+      },
+      {
+        "id": 12,
+        "original_id": "b4d6ff5b-13da-5f25-9090-ce75bcac2924",
+        "text": "michael moorcock",
+        "type": "Entity"
+      },
+      {
+        "id": 13,
+        "original_id": "e70ac6dd-2826-54cb-b405-cbc6ce53ef28",
+        "text": "elric of melniboné",
+        "type": "Entity"
+      },
+      {
+        "id": 14,
+        "original_id": "5263a535-1b4b-5925-be3e-310d03cd303b",
+        "text": "work",
+        "type": "EntityType"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 10,
+        "target": 3,
+        "type": "written_by"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "born_on"
+      },
+      {
+        "source": 1,
+        "target": 4,
+        "type": "contains"
+      },
+      {
+        "source": 4,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 7,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 12,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      },
+      {
+        "source": 7,
+        "target": 8,
+        "type": "lead_vocalist_of"
+      },
+      {
+        "source": 1,
+        "target": 8,
+        "type": "contains"
+      },
+      {
+        "source": 8,
+        "target": 9,
+        "type": "is_a"
+      },
+      {
+        "source": 11,
+        "target": 9,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 10,
+        "type": "contains"
+      },
+      {
+        "source": 10,
+        "target": 11,
+        "type": "performed_by"
+      },
+      {
+        "source": 1,
+        "target": 11,
+        "type": "contains"
+      },
+      {
+        "source": 10,
+        "target": 12,
+        "type": "written_by"
+      },
+      {
+        "source": 1,
+        "target": 12,
+        "type": "contains"
+      },
+      {
+        "source": 12,
+        "target": 13,
+        "type": "created"
+      },
+      {
+        "source": 1,
+        "target": 13,
+        "type": "contains"
+      },
+      {
+        "source": 13,
+        "target": 14,
+        "type": "is_a"
+      },
+      {
+        "source": 10,
+        "target": 14,
+        "type": "is_a"
+      }
+    ]
+  }
+}

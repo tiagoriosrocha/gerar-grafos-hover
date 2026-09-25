@@ -1,0 +1,352 @@
+{
+  "dataset": "hover",
+  "id": "00d65a7b-c9c2-42dc-9143-9944ed7e5d93",
+  "split": "train",
+  "claim": "Jet Airways is the second largest airline after a low cost airline located in Gurgaon.",
+  "evidencia": "Page: Jet Airways. Sentence: In July 2017, it was the second largest airline in India after IndiGo with an 18.2% passenger market share.\nPage: IndiGo. Sentence: IndiGo is a low-cost airline headquartered at Gurgaon, Haryana, India.",
+  "evidence_text": "Page: Jet Airways. Sentence: In July 2017, it was the second largest airline in India after IndiGo with an 18.2% passenger market share.\nPage: IndiGo. Sentence: IndiGo is a low-cost airline headquartered at Gurgaon, Haryana, India.",
+  "label": "SUPPORTED",
+  "num_hops": 2,
+  "hover_metadata": {
+    "supporting_facts": [
+      [
+        "Jet Airways",
+        1
+      ],
+      [
+        "IndiGo",
+        0
+      ]
+    ],
+    "num_hops": 2,
+    "evidence_annotation_id": [
+      0
+    ],
+    "evidence_id": [
+      "Jet Airways::sentence::1",
+      "IndiGo::sentence::0"
+    ],
+    "evidence_wiki_url": [
+      "https://en.wikipedia.org/wiki/Jet_Airways",
+      "https://en.wikipedia.org/wiki/IndiGo"
+    ],
+    "evidence_sentence_id": [
+      "Jet Airways::sentence::1",
+      "IndiGo::sentence::0"
+    ]
+  },
+  "grafo_claim": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "1c83f5b8-092f-5d02-a9c7-da73521dc83b",
+        "text": "This chunk is about:\n- Companies: Jet Airways\n- Places: Gurgaon\n- Topics: airline industry ranking, low-cost airlines\n\nFacts:\n- Jet Airways is the second largest airline.\n- A low-cost airline located in Gurgaon is ranked above Jet Airways.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "d368493e-805b-5387-9f05-ce3ad571f62b",
+        "text": "Jet Airways is the second largest airline after a low cost airline located in Gurgaon.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "8a30c016-686f-51b4-befc-69acb0737709",
+        "text": "text_68c4a674fb52561dc120e9630273125c",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "f16d8569-0bef-57de-b0fe-a49d198f0b6a",
+        "text": "jet airways",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "388f60fb-220d-55e8-ae9c-3ac93cead308",
+        "text": "organization",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "b70dca44-eb18-5e5f-a045-466f68389f42",
+        "text": "low cost airline",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "8361d341-43df-5767-ade9-82e1ce42f532",
+        "text": "gurgaon",
+        "type": "Entity"
+      },
+      {
+        "id": 7,
+        "original_id": "5f394058-b2a0-5ba8-8466-ba2a18cfcf4e",
+        "text": "place",
+        "type": "EntityType"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 5,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "ranked_after"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "located_in"
+      },
+      {
+        "source": 1,
+        "target": 6,
+        "type": "contains"
+      },
+      {
+        "source": 6,
+        "target": 7,
+        "type": "is_a"
+      }
+    ]
+  },
+  "grafo_evidencia": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "addbe8f2-b803-514a-a255-07d0894d03f2",
+        "text": "This chunk is about:\n- Companies: Jet Airways, IndiGo\n- Places: India, Gurgaon, Haryana\n- Topics: airline market share, airline type\n\nFacts:\n- In July 2017, Jet Airways was the second largest airline in India after IndiGo, with an 18.2% passenger market share.\n- IndiGo is a low-cost airline headquartered in Gurgaon, Haryana, India.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "f4cc88a8-6ec9-5863-afe0-5e5fb9a6a397",
+        "text": "Page: Jet Airways. Sentence: In July 2017, it was the second largest airline in India after IndiGo with an 18.2% passenger market share.\nPage: IndiGo. Sentence: IndiGo is a low-cost airline headquartered at Gurgaon, Haryana, India.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "727383e4-9d92-5834-9f15-b39c60c66115",
+        "text": "text_94e89cc3f52a0fd5d0f3c20247de599a",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "f16d8569-0bef-57de-b0fe-a49d198f0b6a",
+        "text": "jet airways",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "388f60fb-220d-55e8-ae9c-3ac93cead308",
+        "text": "organization",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "d17c342d-b55c-5bc1-b9fc-594c728f8140",
+        "text": "2017-07",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "b19433ae-558c-5aaf-95ac-6231f2a4be0e",
+        "text": "date",
+        "type": "EntityType"
+      },
+      {
+        "id": 7,
+        "original_id": "20e4745c-2e0c-5a62-bd6e-d7ae760774fe",
+        "text": "india",
+        "type": "Entity"
+      },
+      {
+        "id": 8,
+        "original_id": "5f394058-b2a0-5ba8-8466-ba2a18cfcf4e",
+        "text": "place",
+        "type": "EntityType"
+      },
+      {
+        "id": 9,
+        "original_id": "dcb7c563-dc5b-5ac2-ac69-b0d237cfbb0a",
+        "text": "indigo",
+        "type": "Entity"
+      },
+      {
+        "id": 10,
+        "original_id": "8361d341-43df-5767-ade9-82e1ce42f532",
+        "text": "gurgaon",
+        "type": "Entity"
+      },
+      {
+        "id": 11,
+        "original_id": "759b4f20-53df-5f74-8e55-53c21e82aadf",
+        "text": "haryana",
+        "type": "Entity"
+      },
+      {
+        "id": 12,
+        "original_id": "e3611a68-791b-5e56-b5b1-13f5762d6733",
+        "text": "18.2% passenger market share",
+        "type": "Entity"
+      },
+      {
+        "id": 13,
+        "original_id": "d2a381fa-3658-5ca6-ada9-2109cfc9331d",
+        "text": "concept",
+        "type": "EntityType"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 9,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "ranked_in"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 7,
+        "type": "was_second_largest_airline_in"
+      },
+      {
+        "source": 11,
+        "target": 7,
+        "type": "located_in"
+      },
+      {
+        "source": 9,
+        "target": 7,
+        "type": "headquartered_in"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      },
+      {
+        "source": 7,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 10,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 11,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 9,
+        "type": "ranked_after"
+      },
+      {
+        "source": 1,
+        "target": 9,
+        "type": "contains"
+      },
+      {
+        "source": 9,
+        "target": 10,
+        "type": "headquartered_in"
+      },
+      {
+        "source": 1,
+        "target": 10,
+        "type": "contains"
+      },
+      {
+        "source": 10,
+        "target": 11,
+        "type": "located_in"
+      },
+      {
+        "source": 1,
+        "target": 11,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 12,
+        "type": "had_passenger_market_share"
+      },
+      {
+        "source": 1,
+        "target": 12,
+        "type": "contains"
+      },
+      {
+        "source": 12,
+        "target": 13,
+        "type": "is_a"
+      }
+    ]
+  }
+}

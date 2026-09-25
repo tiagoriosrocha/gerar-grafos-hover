@@ -1,0 +1,389 @@
+{
+  "dataset": "hover",
+  "id": "e220f847-8ebd-4f1a-9415-a63f3431a681",
+  "split": "train",
+  "claim": "Both Cervecería Nacional Dominicana and Ambev produce beer.",
+  "evidencia": "Page: Cervecería Nacional Dominicana. Sentence: Cerveceria Nacional Dominicana (CND), is the primary beer producer in the Dominican Republic, the company is owned by AmBev and Grupo León Jimenes.\nPage: AmBev. Sentence: Ambev, formally Companhia de Bebidas das Américas (official English translation: \"Americas' Beverage Company\", hence the name \"Ambev\", formerly styled as \"AmBev\") is a Brazilian brewing company.\nPage: AmBev. Sentence: It was created on July 1, 1999, with the merger of two breweries, Brahma and Antarctica.",
+  "evidence_text": "Page: Cervecería Nacional Dominicana. Sentence: Cerveceria Nacional Dominicana (CND), is the primary beer producer in the Dominican Republic, the company is owned by AmBev and Grupo León Jimenes.\nPage: AmBev. Sentence: Ambev, formally Companhia de Bebidas das Américas (official English translation: \"Americas' Beverage Company\", hence the name \"Ambev\", formerly styled as \"AmBev\") is a Brazilian brewing company.\nPage: AmBev. Sentence: It was created on July 1, 1999, with the merger of two breweries, Brahma and Antarctica.",
+  "label": "SUPPORTED",
+  "num_hops": 2,
+  "hover_metadata": {
+    "supporting_facts": [
+      [
+        "Cervecería Nacional Dominicana",
+        0
+      ],
+      [
+        "AmBev",
+        0
+      ],
+      [
+        "AmBev",
+        2
+      ]
+    ],
+    "num_hops": 2,
+    "evidence_annotation_id": [
+      0
+    ],
+    "evidence_id": [
+      "Cervecería Nacional Dominicana::sentence::0",
+      "AmBev::sentence::0",
+      "AmBev::sentence::2"
+    ],
+    "evidence_wiki_url": [
+      "https://en.wikipedia.org/wiki/Cervecer%C3%ADa_Nacional_Dominicana",
+      "https://en.wikipedia.org/wiki/AmBev"
+    ],
+    "evidence_sentence_id": [
+      "Cervecería Nacional Dominicana::sentence::0",
+      "AmBev::sentence::0",
+      "AmBev::sentence::2"
+    ]
+  },
+  "grafo_claim": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "0cac965b-a121-5e22-8673-630bf475f9ec",
+        "text": "This chunk is about:\n- Companies: Cervecería Nacional Dominicana, Ambev\n- Products: beer\n\nFacts:\n- Cervecería Nacional Dominicana produces beer.\n- Ambev produces beer.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "04544ca3-a667-56f2-bd2a-21d35eebac60",
+        "text": "Both Cervecería Nacional Dominicana and Ambev produce beer.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "be63d39e-2ec5-5b0e-acd8-20141c315f0c",
+        "text": "text_491ba014a148b13a81db4a32efa966d1",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "5b51ece8-a2be-5c0f-a7d3-1ed03ff19a49",
+        "text": "cervecería nacional dominicana",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "388f60fb-220d-55e8-ae9c-3ac93cead308",
+        "text": "organization",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "9a14f0a1-3653-5864-83eb-533dd237e618",
+        "text": "beer",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "f76d57aa-4740-5218-9539-0e0978cbf183",
+        "text": "product",
+        "type": "EntityType"
+      },
+      {
+        "id": 7,
+        "original_id": "03f49cc2-47e5-57ab-b4ca-cbb427a8dd72",
+        "text": "ambev",
+        "type": "Entity"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 7,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "produces"
+      },
+      {
+        "source": 7,
+        "target": 5,
+        "type": "produces"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      }
+    ]
+  },
+  "grafo_evidencia": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "b68ca9b1-f7d4-5dfe-8aa5-962dcd62e80a",
+        "text": "This chunk is about:\n- Companies: Cervecería Nacional Dominicana, AmBev, Grupo León Jimenes, Brahma, Antarctica\n- Places: Dominican Republic, Brazil\n- Topics: brewing, mergers, ownership\n\nFacts:\n- On July 1, 1999, AmBev was created through the merger of the breweries Brahma and Antarctica.\n- AmBev, formally Companhia de Bebidas das Américas, is a Brazilian brewing company.\n- Cervecería Nacional Dominicana is the primary beer producer in the Dominican Republic.\n- Cervecería Nacional Dominicana is owned by AmBev and Grupo León Jimenes.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "39d30618-fc84-55cd-ad04-876e87b3293a",
+        "text": "Page: Cervecería Nacional Dominicana. Sentence: Cerveceria Nacional Dominicana (CND), is the primary beer producer in the Dominican Republic, the company is owned by AmBev and Grupo León Jimenes.\nPage: AmBev. Sentence: Ambev, formally Companhia de Bebidas das Américas (official English translation: \"Americas' Beverage Company\", hence the name \"Ambev\", formerly styled as \"AmBev\") is a Brazilian brewing company.\nPage: AmBev. Sentence: It was created on July 1, 1999, with the merger of two breweries, Brahma and Antarctica.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "b6cc2352-d59f-5742-8b64-9e7dd6af5e87",
+        "text": "text_c99f91cc0cc5079674140cd2241d8b0d",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "5b51ece8-a2be-5c0f-a7d3-1ed03ff19a49",
+        "text": "cervecería nacional dominicana",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "388f60fb-220d-55e8-ae9c-3ac93cead308",
+        "text": "organization",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "b0d0b4f7-a40c-5762-92b1-eb8c61f23569",
+        "text": "dominican republic",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "5f394058-b2a0-5ba8-8466-ba2a18cfcf4e",
+        "text": "place",
+        "type": "EntityType"
+      },
+      {
+        "id": 7,
+        "original_id": "03f49cc2-47e5-57ab-b4ca-cbb427a8dd72",
+        "text": "ambev",
+        "type": "Entity"
+      },
+      {
+        "id": 8,
+        "original_id": "b5c36c88-c0ca-5eef-844a-d16722651101",
+        "text": "companhia de bebidas das américas",
+        "type": "Entity"
+      },
+      {
+        "id": 9,
+        "original_id": "1b8d0830-8d98-5d0f-887d-d593ee280998",
+        "text": "brazil",
+        "type": "Entity"
+      },
+      {
+        "id": 10,
+        "original_id": "cefa1e8d-0a08-578b-8785-0899519de0fb",
+        "text": "1999-07-01",
+        "type": "Entity"
+      },
+      {
+        "id": 11,
+        "original_id": "b19433ae-558c-5aaf-95ac-6231f2a4be0e",
+        "text": "date",
+        "type": "EntityType"
+      },
+      {
+        "id": 12,
+        "original_id": "f76b917d-bfd9-5e94-8538-5838d1dba6ff",
+        "text": "brahma",
+        "type": "Entity"
+      },
+      {
+        "id": 13,
+        "original_id": "0a7a0523-e9ef-5883-a5a8-65641baa0332",
+        "text": "antarctica",
+        "type": "Entity"
+      },
+      {
+        "id": 14,
+        "original_id": "72e74d5e-7584-529f-932f-fdad3ea869c9",
+        "text": "grupo león jimenes",
+        "type": "Entity"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 7,
+        "target": 3,
+        "type": "owns"
+      },
+      {
+        "source": 14,
+        "target": 3,
+        "type": "owns"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 7,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 8,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 12,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 13,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 14,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "primary_beer_producer_in"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 9,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      },
+      {
+        "source": 7,
+        "target": 8,
+        "type": "formally_named"
+      },
+      {
+        "source": 1,
+        "target": 8,
+        "type": "contains"
+      },
+      {
+        "source": 7,
+        "target": 9,
+        "type": "is_brewing_company_in"
+      },
+      {
+        "source": 1,
+        "target": 9,
+        "type": "contains"
+      },
+      {
+        "source": 7,
+        "target": 10,
+        "type": "created_on"
+      },
+      {
+        "source": 1,
+        "target": 10,
+        "type": "contains"
+      },
+      {
+        "source": 10,
+        "target": 11,
+        "type": "is_a"
+      },
+      {
+        "source": 7,
+        "target": 12,
+        "type": "created_from_merger_of"
+      },
+      {
+        "source": 1,
+        "target": 12,
+        "type": "contains"
+      },
+      {
+        "source": 12,
+        "target": 13,
+        "type": "merged_with"
+      },
+      {
+        "source": 7,
+        "target": 13,
+        "type": "created_from_merger_of"
+      },
+      {
+        "source": 1,
+        "target": 13,
+        "type": "contains"
+      },
+      {
+        "source": 1,
+        "target": 14,
+        "type": "contains"
+      }
+    ]
+  }
+}

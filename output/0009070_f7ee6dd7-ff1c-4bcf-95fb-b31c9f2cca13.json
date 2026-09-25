@@ -1,0 +1,294 @@
+{
+  "dataset": "hover",
+  "id": "f7ee6dd7-ff1c-4bcf-95fb-b31c9f2cca13",
+  "split": "train",
+  "claim": "George Washington University Hospital and Psychiatric Institute of Washington is located in Washington, D.C.",
+  "evidencia": "Page: George Washington University Hospital. Sentence: The George Washington University Hospital is located in Washington, D.C. in the United States.\nPage: Psychiatric Institute of Washington. Sentence: The Psychiatric Institute of Washington (PIW) is an acute (104 bed) psychiatric hospital in Washington, D.C. Opened in 1967, PIW is a short-term, private hospital.",
+  "evidence_text": "Page: George Washington University Hospital. Sentence: The George Washington University Hospital is located in Washington, D.C. in the United States.\nPage: Psychiatric Institute of Washington. Sentence: The Psychiatric Institute of Washington (PIW) is an acute (104 bed) psychiatric hospital in Washington, D.C. Opened in 1967, PIW is a short-term, private hospital.",
+  "label": "SUPPORTED",
+  "num_hops": 2,
+  "hover_metadata": {
+    "supporting_facts": [
+      [
+        "George Washington University Hospital",
+        0
+      ],
+      [
+        "Psychiatric Institute of Washington",
+        0
+      ]
+    ],
+    "num_hops": 2,
+    "evidence_annotation_id": [
+      0
+    ],
+    "evidence_id": [
+      "George Washington University Hospital::sentence::0",
+      "Psychiatric Institute of Washington::sentence::0"
+    ],
+    "evidence_wiki_url": [
+      "https://en.wikipedia.org/wiki/George_Washington_University_Hospital",
+      "https://en.wikipedia.org/wiki/Psychiatric_Institute_of_Washington"
+    ],
+    "evidence_sentence_id": [
+      "George Washington University Hospital::sentence::0",
+      "Psychiatric Institute of Washington::sentence::0"
+    ]
+  },
+  "grafo_claim": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "63ce411e-a4d7-58cd-98d2-919b0ea967ac",
+        "text": "This chunk is about:\n- Organizations: George Washington University Hospital, Psychiatric Institute of Washington\n- Places: Washington, D.C.\n\nFacts:\n- George Washington University Hospital is located in Washington, D.C.\n- The Psychiatric Institute of Washington is located in Washington, D.C.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "7be86726-100e-5a8d-b2c8-969a2fa007fb",
+        "text": "George Washington University Hospital and Psychiatric Institute of Washington is located in Washington, D.C.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "5b9c70cf-ff8a-5597-a76a-2f079c73ff47",
+        "text": "text_00b2704102bbd199d0cdf1e0077f14a5",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "b9ae09a0-2fa3-51f1-b3f8-54bf174a20d5",
+        "text": "george washington university hospital and psychiatric institute of washington",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "388f60fb-220d-55e8-ae9c-3ac93cead308",
+        "text": "organization",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "193a9885-0f59-521c-a4b2-e6d5a15561ed",
+        "text": "washington, d.c.",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "5f394058-b2a0-5ba8-8466-ba2a18cfcf4e",
+        "text": "place",
+        "type": "EntityType"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "located_in"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "is_a"
+      }
+    ]
+  },
+  "grafo_evidencia": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "01209e51-ddbe-5723-b975-f51548e4d2d5",
+        "text": "This chunk is about:\n- Organizations: George Washington University Hospital, Psychiatric Institute of Washington\n- Places: Washington, D.C., United States\n- Topics: hospitals, psychiatric care\n\nFacts:\n- The Psychiatric Institute of Washington opened in 1967.\n- The George Washington University Hospital is located in Washington, D.C., in the United States.\n- The Psychiatric Institute of Washington is an acute 104-bed psychiatric hospital in Washington, D.C.\n- The Psychiatric Institute of Washington is a short-term private hospital.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "898c643b-4eae-59bc-8baf-95f7dab26948",
+        "text": "Page: George Washington University Hospital. Sentence: The George Washington University Hospital is located in Washington, D.C. in the United States.\nPage: Psychiatric Institute of Washington. Sentence: The Psychiatric Institute of Washington (PIW) is an acute (104 bed) psychiatric hospital in Washington, D.C. Opened in 1967, PIW is a short-term, private hospital.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "c1542cf4-eae0-5838-acfb-4b4913fed8f7",
+        "text": "text_a08e8d6fa3b44680be37cf4573676183",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "de768f5f-ddac-526f-8b85-9bbe169764ce",
+        "text": "george washington university hospital",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "388f60fb-220d-55e8-ae9c-3ac93cead308",
+        "text": "organization",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "193a9885-0f59-521c-a4b2-e6d5a15561ed",
+        "text": "washington, d.c.",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "5f394058-b2a0-5ba8-8466-ba2a18cfcf4e",
+        "text": "place",
+        "type": "EntityType"
+      },
+      {
+        "id": 7,
+        "original_id": "874a51da-34ea-5037-be47-d87785d43c37",
+        "text": "united states",
+        "type": "Entity"
+      },
+      {
+        "id": 8,
+        "original_id": "19f62b0a-2875-5812-be38-00ecbfadcd06",
+        "text": "psychiatric institute of washington",
+        "type": "Entity"
+      },
+      {
+        "id": 9,
+        "original_id": "a21d6279-9ecb-5254-a861-b2c22c7db25a",
+        "text": "piw",
+        "type": "Entity"
+      },
+      {
+        "id": 10,
+        "original_id": "f9e4a9ec-682c-5341-862a-1783ba768a49",
+        "text": "1967",
+        "type": "Entity"
+      },
+      {
+        "id": 11,
+        "original_id": "b19433ae-558c-5aaf-95ac-6231f2a4be0e",
+        "text": "date",
+        "type": "EntityType"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 8,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 9,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "located_in"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 8,
+        "target": 5,
+        "type": "located_in"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 7,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 5,
+        "target": 7,
+        "type": "located_in"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      },
+      {
+        "source": 1,
+        "target": 8,
+        "type": "contains"
+      },
+      {
+        "source": 8,
+        "target": 9,
+        "type": "abbreviated_as"
+      },
+      {
+        "source": 1,
+        "target": 9,
+        "type": "contains"
+      },
+      {
+        "source": 8,
+        "target": 10,
+        "type": "opened_in"
+      },
+      {
+        "source": 1,
+        "target": 10,
+        "type": "contains"
+      },
+      {
+        "source": 10,
+        "target": 11,
+        "type": "is_a"
+      }
+    ]
+  }
+}

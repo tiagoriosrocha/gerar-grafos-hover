@@ -1,0 +1,339 @@
+{
+  "dataset": "hover",
+  "id": "6e754cbc-5c4f-4519-b3d8-e82077dc13df",
+  "split": "train",
+  "claim": "Shenandoah National Park contains the Thornton River and the Blue Ridge Mountains.",
+  "evidencia": "Page: Thornton River. Sentence: It rises at Thornton Gap in Shenandoah National Park and flows east through Rappahannock County, running parallel to U.S. Route 211 until it reaches the town of Sperryville.\nPage: Shenandoah National Park. Sentence: Shenandoah National Park (often ) is a national park that encompasses part of the Blue Ridge Mountains in the U.S. state of Virginia.",
+  "evidence_text": "Page: Thornton River. Sentence: It rises at Thornton Gap in Shenandoah National Park and flows east through Rappahannock County, running parallel to U.S. Route 211 until it reaches the town of Sperryville.\nPage: Shenandoah National Park. Sentence: Shenandoah National Park (often ) is a national park that encompasses part of the Blue Ridge Mountains in the U.S. state of Virginia.",
+  "label": "SUPPORTED",
+  "num_hops": 2,
+  "hover_metadata": {
+    "supporting_facts": [
+      [
+        "Thornton River",
+        1
+      ],
+      [
+        "Shenandoah National Park",
+        0
+      ]
+    ],
+    "num_hops": 2,
+    "evidence_annotation_id": [
+      0
+    ],
+    "evidence_id": [
+      "Thornton River::sentence::1",
+      "Shenandoah National Park::sentence::0"
+    ],
+    "evidence_wiki_url": [
+      "https://en.wikipedia.org/wiki/Thornton_River",
+      "https://en.wikipedia.org/wiki/Shenandoah_National_Park"
+    ],
+    "evidence_sentence_id": [
+      "Thornton River::sentence::1",
+      "Shenandoah National Park::sentence::0"
+    ]
+  },
+  "grafo_claim": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "75b5027d-30c4-5ab9-be09-224b8a067a82",
+        "text": "This chunk is about:\n- Places: Shenandoah National Park\n- Natural Features: Thornton River, Blue Ridge Mountains\n\nFacts:\n- Shenandoah National Park contains the Thornton River.\n- Shenandoah National Park contains the Blue Ridge Mountains.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "548e6393-0c4c-5cd2-8876-9476beb0c5e3",
+        "text": "Shenandoah National Park contains the Thornton River and the Blue Ridge Mountains.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "c85b9169-37c5-5deb-aa34-37a0b30e3faa",
+        "text": "text_bef98bd18fb5c09b20f2ca17c6847d46",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "1b29e7cc-c7e4-59e1-8d0c-27f62a9ecac3",
+        "text": "shenandoah national park",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "9aecc171-9787-5fd3-ba8b-01974ca7b99a",
+        "text": "thornton river",
+        "type": "Entity"
+      },
+      {
+        "id": 5,
+        "original_id": "5f394058-b2a0-5ba8-8466-ba2a18cfcf4e",
+        "text": "place",
+        "type": "EntityType"
+      },
+      {
+        "id": 6,
+        "original_id": "15118fe5-34e9-5c74-b96f-cf0fea89e1bc",
+        "text": "blue ridge mountains",
+        "type": "Entity"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "contains"
+      },
+      {
+        "source": 1,
+        "target": 4,
+        "type": "contains"
+      },
+      {
+        "source": 4,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 6,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 6,
+        "type": "contains"
+      },
+      {
+        "source": 1,
+        "target": 6,
+        "type": "contains"
+      }
+    ]
+  },
+  "grafo_evidencia": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "5e99807c-59fb-5ee7-8999-85bc2c1fe960",
+        "text": "This chunk is about:\n- Places: Thornton Gap, Shenandoah National Park, Rappahannock County, Sperryville, Virginia\n- Systems: Thornton River, U.S. Route 211, Blue Ridge Mountains\n\nFacts:\n- Shenandoah National Park is a national park in Virginia that encompasses part of the Blue Ridge Mountains.\n- The Thornton River rises at Thornton Gap in Shenandoah National Park.\n- The Thornton River flows east through Rappahannock County.\n- The Thornton River runs parallel to U.S. Route 211 until it reaches the town of Sperryville.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "c9cafc9e-f204-56eb-bf10-22562b4f9892",
+        "text": "Page: Thornton River. Sentence: It rises at Thornton Gap in Shenandoah National Park and flows east through Rappahannock County, running parallel to U.S. Route 211 until it reaches the town of Sperryville.\nPage: Shenandoah National Park. Sentence: Shenandoah National Park (often ) is a national park that encompasses part of the Blue Ridge Mountains in the U.S. state of Virginia.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "b08e4216-ed7f-5c8a-acb1-2c4cd7bf2201",
+        "text": "text_d6cccb23f7e098c7fad52c8ebd63cb32",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "9aecc171-9787-5fd3-ba8b-01974ca7b99a",
+        "text": "thornton river",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "8e29dfb9-e6dc-5ea1-9eed-a34b5e8f44cd",
+        "text": "thornton gap",
+        "type": "Entity"
+      },
+      {
+        "id": 5,
+        "original_id": "5f394058-b2a0-5ba8-8466-ba2a18cfcf4e",
+        "text": "place",
+        "type": "EntityType"
+      },
+      {
+        "id": 6,
+        "original_id": "1b29e7cc-c7e4-59e1-8d0c-27f62a9ecac3",
+        "text": "shenandoah national park",
+        "type": "Entity"
+      },
+      {
+        "id": 7,
+        "original_id": "15118fe5-34e9-5c74-b96f-cf0fea89e1bc",
+        "text": "blue ridge mountains",
+        "type": "Entity"
+      },
+      {
+        "id": 8,
+        "original_id": "843daa7c-23fc-5336-8066-bb004c7567bb",
+        "text": "virginia",
+        "type": "Entity"
+      },
+      {
+        "id": 9,
+        "original_id": "87795cec-0147-54dc-8022-f17489db2d74",
+        "text": "rappahannock county",
+        "type": "Entity"
+      },
+      {
+        "id": 10,
+        "original_id": "9e7cf10b-93e8-5df2-bc8d-f38ff8d804b2",
+        "text": "u.s. route 211",
+        "type": "Entity"
+      },
+      {
+        "id": 11,
+        "original_id": "6cd174f4-5464-5e33-a557-a4a79d4ad6e4",
+        "text": "sperryville",
+        "type": "Entity"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "rises_at"
+      },
+      {
+        "source": 1,
+        "target": 4,
+        "type": "contains"
+      },
+      {
+        "source": 4,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 7,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 8,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 6,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 9,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 10,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 11,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 6,
+        "type": "rises_in"
+      },
+      {
+        "source": 1,
+        "target": 6,
+        "type": "contains"
+      },
+      {
+        "source": 6,
+        "target": 7,
+        "type": "encompasses_part_of"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      },
+      {
+        "source": 6,
+        "target": 8,
+        "type": "located_in"
+      },
+      {
+        "source": 1,
+        "target": 8,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 9,
+        "type": "flows_through"
+      },
+      {
+        "source": 1,
+        "target": 9,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 10,
+        "type": "runs_parallel_to"
+      },
+      {
+        "source": 1,
+        "target": 10,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 11,
+        "type": "reaches"
+      },
+      {
+        "source": 1,
+        "target": 11,
+        "type": "contains"
+      }
+    ]
+  }
+}

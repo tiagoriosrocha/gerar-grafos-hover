@@ -1,0 +1,273 @@
+{
+  "dataset": "hover",
+  "id": "774f33df-6637-47ec-9951-dda0dcf9f924",
+  "split": "train",
+  "claim": "Piaggio manufactured the scooter upon which the Bajaj Priya was based off of.",
+  "evidencia": "Page: Bajaj Priya. Sentence: The design was very similar to that of the earlier \"Bajaj 150\" model (which was in turn based upon a Vespa 150 (VBA type) with a slightly modified body).\nPage: Vespa. Sentence: Vespa (] ) is an Italian brand of scooter manufactured by Piaggio.",
+  "evidence_text": "Page: Bajaj Priya. Sentence: The design was very similar to that of the earlier \"Bajaj 150\" model (which was in turn based upon a Vespa 150 (VBA type) with a slightly modified body).\nPage: Vespa. Sentence: Vespa (] ) is an Italian brand of scooter manufactured by Piaggio.",
+  "label": "SUPPORTED",
+  "num_hops": 2,
+  "hover_metadata": {
+    "supporting_facts": [
+      [
+        "Bajaj Priya",
+        1
+      ],
+      [
+        "Vespa",
+        0
+      ]
+    ],
+    "num_hops": 2,
+    "evidence_annotation_id": [
+      0
+    ],
+    "evidence_id": [
+      "Bajaj Priya::sentence::1",
+      "Vespa::sentence::0"
+    ],
+    "evidence_wiki_url": [
+      "https://en.wikipedia.org/wiki/Bajaj_Priya",
+      "https://en.wikipedia.org/wiki/Vespa"
+    ],
+    "evidence_sentence_id": [
+      "Bajaj Priya::sentence::1",
+      "Vespa::sentence::0"
+    ]
+  },
+  "grafo_claim": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "3a0e2d83-6436-5e4d-9295-7856eff9d5c1",
+        "text": "This chunk is about:\n- Companies: Piaggio, Bajaj\n- Products: Bajaj Priya, scooter\n\nFacts:\n- Piaggio manufactured the scooter that served as the basis for the Bajaj Priya.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "92fd89e9-73d4-5c79-8e50-812e44a69514",
+        "text": "Piaggio manufactured the scooter upon which the Bajaj Priya was based off of.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "5ddcd2d2-58c3-5a33-baec-d20820202112",
+        "text": "text_5e679d5210afafef8a42d9d4fc10ab5e",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "925671dc-ab3c-5e09-93fe-7edc561e4fa4",
+        "text": "piaggio",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "388f60fb-220d-55e8-ae9c-3ac93cead308",
+        "text": "organization",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "73a7fd04-0599-5807-b4dc-abe8dae44615",
+        "text": "bajaj priya",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "f76d57aa-4740-5218-9539-0e0978cbf183",
+        "text": "product",
+        "type": "EntityType"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 3,
+        "type": "based_on_scooter_manufactured_by"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "is_a"
+      }
+    ]
+  },
+  "grafo_evidencia": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "746041c0-21a1-51ef-aef1-351ea49dde28",
+        "text": "This chunk is about:\n- Products: Bajaj Priya, Bajaj 150, Vespa 150 (VBA type), Vespa\n- Companies: Piaggio\n- Concepts: scooter design lineage, brand manufacturing\n\nFacts:\n- The Bajaj Priya had a design very similar to the earlier Bajaj 150 model.\n- The Bajaj 150 model was based on a Vespa 150 of the VBA type with a slightly modified body.\n- Vespa is an Italian scooter brand manufactured by Piaggio.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "aafefede-edc6-5836-a0c4-5966334e0e39",
+        "text": "Page: Bajaj Priya. Sentence: The design was very similar to that of the earlier \"Bajaj 150\" model (which was in turn based upon a Vespa 150 (VBA type) with a slightly modified body).\nPage: Vespa. Sentence: Vespa (] ) is an Italian brand of scooter manufactured by Piaggio.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "4874ab22-dc19-5d19-b97c-1f448bd4ae23",
+        "text": "text_3151ccc405935ad967095cf42be1db99",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "73a7fd04-0599-5807-b4dc-abe8dae44615",
+        "text": "bajaj priya",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "0f5ec78d-c353-540c-b8bd-bce84eac0af4",
+        "text": "vehicle",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "46172ecd-018b-594f-975a-4f66e3d92c4b",
+        "text": "bajaj 150",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "23541d13-cbde-5afc-88eb-db0409be4d27",
+        "text": "vespa 150 (vba type)",
+        "type": "Entity"
+      },
+      {
+        "id": 7,
+        "original_id": "a0bd286b-2665-587c-9b04-38433a25431d",
+        "text": "vespa",
+        "type": "Entity"
+      },
+      {
+        "id": 8,
+        "original_id": "31d368fa-7630-5642-a1c1-e579050f9ac3",
+        "text": "brand",
+        "type": "EntityType"
+      },
+      {
+        "id": 9,
+        "original_id": "925671dc-ab3c-5e09-93fe-7edc561e4fa4",
+        "text": "piaggio",
+        "type": "Entity"
+      },
+      {
+        "id": 10,
+        "original_id": "388f60fb-220d-55e8-ae9c-3ac93cead308",
+        "text": "organization",
+        "type": "EntityType"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 5,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 6,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "design_similar_to"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "based_on"
+      },
+      {
+        "source": 1,
+        "target": 6,
+        "type": "contains"
+      },
+      {
+        "source": 6,
+        "target": 7,
+        "type": "variant_of"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      },
+      {
+        "source": 7,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 7,
+        "target": 9,
+        "type": "manufactured_by"
+      },
+      {
+        "source": 1,
+        "target": 9,
+        "type": "contains"
+      },
+      {
+        "source": 9,
+        "target": 10,
+        "type": "is_a"
+      }
+    ]
+  }
+}

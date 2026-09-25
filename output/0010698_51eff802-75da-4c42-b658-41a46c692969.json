@@ -1,0 +1,326 @@
+{
+  "dataset": "hover",
+  "id": "51eff802-75da-4c42-b658-41a46c692969",
+  "split": "train",
+  "claim": "Fred Gehrke is the great-grandfather to the 23rd overall pick in the 2010 Major League Baseball.",
+  "evidencia": "Page: Fred Gehrke. Sentence: He is the great-grandfather of Miami Marlin Christian Yelich\nPage: Christian Yelich. Sentence: Yelich was drafted out of high school by the Marlins in the 1st round (23rd overall) of the 2010 Major League Baseball Draft.",
+  "evidence_text": "Page: Fred Gehrke. Sentence: He is the great-grandfather of Miami Marlin Christian Yelich\nPage: Christian Yelich. Sentence: Yelich was drafted out of high school by the Marlins in the 1st round (23rd overall) of the 2010 Major League Baseball Draft.",
+  "label": "SUPPORTED",
+  "num_hops": 2,
+  "hover_metadata": {
+    "supporting_facts": [
+      [
+        "Fred Gehrke",
+        4
+      ],
+      [
+        "Christian Yelich",
+        1
+      ]
+    ],
+    "num_hops": 2,
+    "evidence_annotation_id": [
+      0
+    ],
+    "evidence_id": [
+      "Fred Gehrke::sentence::4",
+      "Christian Yelich::sentence::1"
+    ],
+    "evidence_wiki_url": [
+      "https://en.wikipedia.org/wiki/Fred_Gehrke",
+      "https://en.wikipedia.org/wiki/Christian_Yelich"
+    ],
+    "evidence_sentence_id": [
+      "Fred Gehrke::sentence::4",
+      "Christian Yelich::sentence::1"
+    ]
+  },
+  "grafo_claim": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "06f7df67-419c-519a-907d-79e88a3cec9c",
+        "text": "This chunk is about:\n- People: Fred Gehrke\n- Events: 2010 Major League Baseball draft\n\nFacts:\n- Fred Gehrke is the great-grandfather of the 23rd overall pick in the 2010 Major League Baseball draft.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "615ddd06-13fb-5d2c-a5c7-7bb99416a2fd",
+        "text": "Fred Gehrke is the great-grandfather to the 23rd overall pick in the 2010 Major League Baseball.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "4bc05c80-2638-5216-aae0-ab6f5dddffc8",
+        "text": "text_2c56b63346e4d8f374812aabc56e6728",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "d1696f3f-37c0-5a7c-8cc5-b6ed149d1578",
+        "text": "fred gehrke",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "99a82eec-bb35-5bb5-9ed2-e73fc7a756de",
+        "text": "person",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "ee64e78a-5209-5257-8913-2bcf5dff978c",
+        "text": "23rd overall pick in the 2010 major league baseball",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "cb1dc1af-5253-5fa4-877e-246a7629f489",
+        "text": "2010",
+        "type": "Entity"
+      },
+      {
+        "id": 7,
+        "original_id": "b19433ae-558c-5aaf-95ac-6231f2a4be0e",
+        "text": "date",
+        "type": "EntityType"
+      },
+      {
+        "id": 8,
+        "original_id": "cf909215-30fe-5f0e-b322-17f785015389",
+        "text": "major league baseball",
+        "type": "Entity"
+      },
+      {
+        "id": 9,
+        "original_id": "388f60fb-220d-55e8-ae9c-3ac93cead308",
+        "text": "organization",
+        "type": "EntityType"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 5,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "great_grandfather_of"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "associated_with_date"
+      },
+      {
+        "source": 1,
+        "target": 6,
+        "type": "contains"
+      },
+      {
+        "source": 6,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 5,
+        "target": 8,
+        "type": "associated_with"
+      },
+      {
+        "source": 1,
+        "target": 8,
+        "type": "contains"
+      },
+      {
+        "source": 8,
+        "target": 9,
+        "type": "is_a"
+      }
+    ]
+  },
+  "grafo_evidencia": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "37c9f5b2-fb81-5a82-a489-77fad7533124",
+        "text": "This chunk is about:\n- People: Fred Gehrke, Christian Yelich\n- Organizations: Miami Marlins, Major League Baseball\n- Events: 2010 Major League Baseball Draft\n\nFacts:\n- Fred Gehrke is the great-grandfather of Christian Yelich of the Miami Marlins.\n- Christian Yelich was drafted out of high school by the Marlins in the first round with the 23rd overall pick of the 2010 Major League Baseball Draft.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "e0f0ed3a-33a1-5cba-9399-07c76ff497fb",
+        "text": "Page: Fred Gehrke. Sentence: He is the great-grandfather of Miami Marlin Christian Yelich\nPage: Christian Yelich. Sentence: Yelich was drafted out of high school by the Marlins in the 1st round (23rd overall) of the 2010 Major League Baseball Draft.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "1c07c0cc-49ed-536f-b065-2d042fbf3d4f",
+        "text": "text_3993796885df04f13afa0a16b1950bbb",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "d1696f3f-37c0-5a7c-8cc5-b6ed149d1578",
+        "text": "fred gehrke",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "99a82eec-bb35-5bb5-9ed2-e73fc7a756de",
+        "text": "person",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "7408673f-32b9-5a25-9a3b-5c263203337a",
+        "text": "christian yelich",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "1c2799fb-7875-5f35-affc-2882d593061d",
+        "text": "miami marlins",
+        "type": "Entity"
+      },
+      {
+        "id": 7,
+        "original_id": "388f60fb-220d-55e8-ae9c-3ac93cead308",
+        "text": "organization",
+        "type": "EntityType"
+      },
+      {
+        "id": 8,
+        "original_id": "1bb3739b-890f-5024-9e9c-cffdddcdd89a",
+        "text": "2010 major league baseball draft",
+        "type": "Entity"
+      },
+      {
+        "id": 9,
+        "original_id": "214abcd9-9adf-5c8a-bb35-1e729f2d68c3",
+        "text": "event",
+        "type": "EntityType"
+      },
+      {
+        "id": 10,
+        "original_id": "65b4f977-c4ee-54f6-bc08-98d84304f205",
+        "text": "high school",
+        "type": "Entity"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 5,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "great_grandfather_of"
+      },
+      {
+        "source": 6,
+        "target": 5,
+        "type": "drafted"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "plays_for"
+      },
+      {
+        "source": 1,
+        "target": 6,
+        "type": "contains"
+      },
+      {
+        "source": 6,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 10,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 5,
+        "target": 8,
+        "type": "selected_in"
+      },
+      {
+        "source": 1,
+        "target": 8,
+        "type": "contains"
+      },
+      {
+        "source": 8,
+        "target": 9,
+        "type": "is_a"
+      },
+      {
+        "source": 5,
+        "target": 10,
+        "type": "drafted_out_of"
+      },
+      {
+        "source": 1,
+        "target": 10,
+        "type": "contains"
+      }
+    ]
+  }
+}

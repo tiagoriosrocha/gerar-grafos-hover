@@ -1,0 +1,415 @@
+{
+  "dataset": "hover",
+  "id": "62243500-a5c9-4b97-a2c9-d39e994f1cb8",
+  "split": "train",
+  "claim": "Willie Geist frequently serves as fill-in anchor on \"Today\" for a tv journalist that was the host of \"PM Magazine\" from 1980-86.",
+  "evidencia": "Page: Willie Geist. Sentence: Geist also frequently serves as fill-in anchor on \"Today\" for Matt Lauer.\nPage: Matt Lauer. Sentence: He was also host of \"PM Magazine\" (or \"Evening Magazine\" 1980–86).",
+  "evidence_text": "Page: Willie Geist. Sentence: Geist also frequently serves as fill-in anchor on \"Today\" for Matt Lauer.\nPage: Matt Lauer. Sentence: He was also host of \"PM Magazine\" (or \"Evening Magazine\" 1980–86).",
+  "label": "SUPPORTED",
+  "num_hops": 2,
+  "hover_metadata": {
+    "supporting_facts": [
+      [
+        "Willie Geist",
+        2
+      ],
+      [
+        "Matt Lauer",
+        3
+      ]
+    ],
+    "num_hops": 2,
+    "evidence_annotation_id": [
+      0
+    ],
+    "evidence_id": [
+      "Willie Geist::sentence::2",
+      "Matt Lauer::sentence::3"
+    ],
+    "evidence_wiki_url": [
+      "https://en.wikipedia.org/wiki/Willie_Geist",
+      "https://en.wikipedia.org/wiki/Matt_Lauer"
+    ],
+    "evidence_sentence_id": [
+      "Willie Geist::sentence::2",
+      "Matt Lauer::sentence::3"
+    ]
+  },
+  "grafo_claim": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "bd2d530c-d133-592f-a88c-53d00b9a6046",
+        "text": "This chunk is about:\n- People: Willie Geist, Bryant Gumbel\n- TV Programs: Today, PM Magazine\n- Roles: Fill-in anchor, host\n\nFacts:\n- Bryant Gumbel hosted \"PM Magazine\" from 1980 to 1986.\n- Willie Geist frequently serves as a fill-in anchor on \"Today\" for Bryant Gumbel.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "cad85691-0276-5ba6-a380-8ba320f391b4",
+        "text": "Willie Geist frequently serves as fill-in anchor on \"Today\" for a tv journalist that was the host of \"PM Magazine\" from 1980-86.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "3f6fb14e-ae43-500f-81f9-0c3a685e4b4c",
+        "text": "text_900bdfa53cd173145f84c67029d65f03",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "478c4a21-14b8-5e23-89ca-1f5513421a9c",
+        "text": "willie geist",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "77bf4e6b-0d53-55fe-a049-c978ac1f5aad",
+        "text": "today",
+        "type": "Entity"
+      },
+      {
+        "id": 5,
+        "original_id": "5263a535-1b4b-5925-be3e-310d03cd303b",
+        "text": "work",
+        "type": "EntityType"
+      },
+      {
+        "id": 6,
+        "original_id": "685434a9-d417-5f42-afd7-abbe87eaa9ac",
+        "text": "tv journalist",
+        "type": "Entity"
+      },
+      {
+        "id": 7,
+        "original_id": "0392fc24-5500-513d-b6c9-deb3203c20f6",
+        "text": "pm magazine",
+        "type": "Entity"
+      },
+      {
+        "id": 8,
+        "original_id": "0f4fd0b2-fe7d-55ad-9354-6f20b613f9ba",
+        "text": "1980",
+        "type": "Entity"
+      },
+      {
+        "id": 9,
+        "original_id": "b19433ae-558c-5aaf-95ac-6231f2a4be0e",
+        "text": "date",
+        "type": "EntityType"
+      },
+      {
+        "id": 10,
+        "original_id": "6ba1afd5-fed2-5c67-8f7d-ad0b76e9a9b6",
+        "text": "1986",
+        "type": "Entity"
+      },
+      {
+        "id": 11,
+        "original_id": "99a82eec-bb35-5bb5-9ed2-e73fc7a756de",
+        "text": "person",
+        "type": "EntityType"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "serves_as_fill_in_anchor_on"
+      },
+      {
+        "source": 1,
+        "target": 4,
+        "type": "contains"
+      },
+      {
+        "source": 4,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 7,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 6,
+        "type": "fills_in_for"
+      },
+      {
+        "source": 1,
+        "target": 6,
+        "type": "contains"
+      },
+      {
+        "source": 6,
+        "target": 7,
+        "type": "hosted"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      },
+      {
+        "source": 7,
+        "target": 8,
+        "type": "hosting_started_in"
+      },
+      {
+        "source": 1,
+        "target": 8,
+        "type": "contains"
+      },
+      {
+        "source": 8,
+        "target": 9,
+        "type": "is_a"
+      },
+      {
+        "source": 10,
+        "target": 9,
+        "type": "is_a"
+      },
+      {
+        "source": 7,
+        "target": 10,
+        "type": "hosting_ended_in"
+      },
+      {
+        "source": 1,
+        "target": 10,
+        "type": "contains"
+      },
+      {
+        "source": 6,
+        "target": 11,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 11,
+        "type": "is_a"
+      }
+    ]
+  },
+  "grafo_evidencia": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "7e1efbeb-5308-5311-b9cd-5f4b7ab1eb8e",
+        "text": "This chunk is about:\n- People: Willie Geist, Matt Lauer\n- Roles: fill-in anchor, host\n- Programs: Today, PM Magazine, Evening Magazine\n\nFacts:\n- From 1980 to 1986, Matt Lauer was the host of PM Magazine or Evening Magazine.\n- Willie Geist frequently serves as a fill-in anchor on Today for Matt Lauer.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "800f2323-af49-593d-9760-8ff1cb672367",
+        "text": "Page: Willie Geist. Sentence: Geist also frequently serves as fill-in anchor on \"Today\" for Matt Lauer.\nPage: Matt Lauer. Sentence: He was also host of \"PM Magazine\" (or \"Evening Magazine\" 1980–86).",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "24885331-9b7c-5491-87bd-42a5613328ad",
+        "text": "text_d547b1925f770cbbf82ed4e4a934d2c4",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "478c4a21-14b8-5e23-89ca-1f5513421a9c",
+        "text": "willie geist",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "77bf4e6b-0d53-55fe-a049-c978ac1f5aad",
+        "text": "today",
+        "type": "Entity"
+      },
+      {
+        "id": 5,
+        "original_id": "5263a535-1b4b-5925-be3e-310d03cd303b",
+        "text": "work",
+        "type": "EntityType"
+      },
+      {
+        "id": 6,
+        "original_id": "52cbab41-9298-59cd-b6c2-b34cdb604de3",
+        "text": "matt lauer",
+        "type": "Entity"
+      },
+      {
+        "id": 7,
+        "original_id": "0392fc24-5500-513d-b6c9-deb3203c20f6",
+        "text": "pm magazine",
+        "type": "Entity"
+      },
+      {
+        "id": 8,
+        "original_id": "0f4fd0b2-fe7d-55ad-9354-6f20b613f9ba",
+        "text": "1980",
+        "type": "Entity"
+      },
+      {
+        "id": 9,
+        "original_id": "b19433ae-558c-5aaf-95ac-6231f2a4be0e",
+        "text": "date",
+        "type": "EntityType"
+      },
+      {
+        "id": 10,
+        "original_id": "6ba1afd5-fed2-5c67-8f7d-ad0b76e9a9b6",
+        "text": "1986",
+        "type": "Entity"
+      },
+      {
+        "id": 11,
+        "original_id": "0cc53d2a-43f2-59d0-94dd-ddca0c6c3384",
+        "text": "evening magazine",
+        "type": "Entity"
+      },
+      {
+        "id": 12,
+        "original_id": "99a82eec-bb35-5bb5-9ed2-e73fc7a756de",
+        "text": "person",
+        "type": "EntityType"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "fill_in_anchor_on"
+      },
+      {
+        "source": 1,
+        "target": 4,
+        "type": "contains"
+      },
+      {
+        "source": 4,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 7,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 11,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 6,
+        "type": "fills_in_for"
+      },
+      {
+        "source": 1,
+        "target": 6,
+        "type": "contains"
+      },
+      {
+        "source": 6,
+        "target": 7,
+        "type": "hosted"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      },
+      {
+        "source": 7,
+        "target": 8,
+        "type": "started_in"
+      },
+      {
+        "source": 11,
+        "target": 8,
+        "type": "started_in"
+      },
+      {
+        "source": 1,
+        "target": 8,
+        "type": "contains"
+      },
+      {
+        "source": 8,
+        "target": 9,
+        "type": "is_a"
+      },
+      {
+        "source": 10,
+        "target": 9,
+        "type": "is_a"
+      },
+      {
+        "source": 7,
+        "target": 10,
+        "type": "ended_in"
+      },
+      {
+        "source": 11,
+        "target": 10,
+        "type": "ended_in"
+      },
+      {
+        "source": 1,
+        "target": 10,
+        "type": "contains"
+      },
+      {
+        "source": 6,
+        "target": 11,
+        "type": "hosted"
+      },
+      {
+        "source": 1,
+        "target": 11,
+        "type": "contains"
+      },
+      {
+        "source": 6,
+        "target": 12,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 12,
+        "type": "is_a"
+      }
+    ]
+  }
+}

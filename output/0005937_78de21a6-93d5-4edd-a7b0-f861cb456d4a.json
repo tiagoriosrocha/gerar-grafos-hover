@@ -1,0 +1,476 @@
+{
+  "dataset": "hover",
+  "id": "78de21a6-93d5-4edd-a7b0-f861cb456d4a",
+  "split": "train",
+  "claim": "Pinnacle Airlines Flight 3701 was headed to a freight airport when it crashed. That airport is farther east than Cheyenne Regional Airport.",
+  "evidencia": "Page: Minneapolis–Saint Paul International Airport. Sentence: Minneapolis–Saint Paul International Airport (IATA: MSP, ICAO: KMSP, FAA LID: MSP) , also known as Wold–Chamberlain Field, is a joint civil-military public use international airport.\nPage: Cheyenne Regional Airport. Sentence: Cheyenne Regional Airport (IATA: CYS, ICAO: KCYS, FAA LID: CYS) (Jerry Olson Field) is a civil-military airport a mile north of downtown Cheyenne, in Laramie County, Wyoming.\nPage: Pinnacle Airlines Flight 3701. Sentence: It was an overnight repositioning flight with no passengers from Little Rock, Arkansas, U.S. to Minneapolis–Saint Paul International Airport, U.S. Both crew members were killed.",
+  "evidence_text": "Page: Minneapolis–Saint Paul International Airport. Sentence: Minneapolis–Saint Paul International Airport (IATA: MSP, ICAO: KMSP, FAA LID: MSP) , also known as Wold–Chamberlain Field, is a joint civil-military public use international airport.\nPage: Cheyenne Regional Airport. Sentence: Cheyenne Regional Airport (IATA: CYS, ICAO: KCYS, FAA LID: CYS) (Jerry Olson Field) is a civil-military airport a mile north of downtown Cheyenne, in Laramie County, Wyoming.\nPage: Pinnacle Airlines Flight 3701. Sentence: It was an overnight repositioning flight with no passengers from Little Rock, Arkansas, U.S. to Minneapolis–Saint Paul International Airport, U.S. Both crew members were killed.",
+  "label": "NOT_SUPPORTED",
+  "num_hops": 3,
+  "hover_metadata": {
+    "supporting_facts": [
+      [
+        "Minneapolis–Saint Paul International Airport",
+        0
+      ],
+      [
+        "Cheyenne Regional Airport",
+        0
+      ],
+      [
+        "Pinnacle Airlines Flight 3701",
+        1
+      ]
+    ],
+    "num_hops": 3,
+    "evidence_annotation_id": [
+      0
+    ],
+    "evidence_id": [
+      "Minneapolis–Saint Paul International Airport::sentence::0",
+      "Cheyenne Regional Airport::sentence::0",
+      "Pinnacle Airlines Flight 3701::sentence::1"
+    ],
+    "evidence_wiki_url": [
+      "https://en.wikipedia.org/wiki/Minneapolis%E2%80%93Saint_Paul_International_Airport",
+      "https://en.wikipedia.org/wiki/Cheyenne_Regional_Airport",
+      "https://en.wikipedia.org/wiki/Pinnacle_Airlines_Flight_3701"
+    ],
+    "evidence_sentence_id": [
+      "Minneapolis–Saint Paul International Airport::sentence::0",
+      "Cheyenne Regional Airport::sentence::0",
+      "Pinnacle Airlines Flight 3701::sentence::1"
+    ]
+  },
+  "grafo_claim": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "9c88386b-5f82-538c-89e8-e17343956d8b",
+        "text": "This chunk is about:\n- Events: Pinnacle Airlines Flight 3701 crash\n- Places: freight airport, Cheyenne Regional Airport\n\nFacts:\n- Pinnacle Airlines Flight 3701 was headed to a freight airport when it crashed.\n- The freight airport that Pinnacle Airlines Flight 3701 was headed to is farther east than Cheyenne Regional Airport.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "a1543051-ce58-5812-9b66-6e72fb475838",
+        "text": "Pinnacle Airlines Flight 3701 was headed to a freight airport when it crashed. That airport is farther east than Cheyenne Regional Airport.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "2ede311f-fe6d-59b8-9beb-e24f2e19f7d1",
+        "text": "text_3987223a9772699fae4a39e31f3db140",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "9222b29b-13e7-50fe-8f2f-2b1af6dfac31",
+        "text": "pinnacle airlines flight 3701",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "e926ed85-16e6-582c-aa54-86a3a1670ede",
+        "text": "freight airport",
+        "type": "Entity"
+      },
+      {
+        "id": 5,
+        "original_id": "cebdf4a3-259d-52e0-b666-d4bad54f5ff6",
+        "text": "cheyenne regional airport",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "50596f1a-2d8a-5de7-96b5-ba7068791784",
+        "text": "airport",
+        "type": "EntityType"
+      },
+      {
+        "id": 7,
+        "original_id": "beb84493-8108-5fa4-8040-56cdf2b2ed86",
+        "text": "flight",
+        "type": "EntityType"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "was_headed_to"
+      },
+      {
+        "source": 1,
+        "target": 4,
+        "type": "contains"
+      },
+      {
+        "source": 4,
+        "target": 5,
+        "type": "is_farther_east_than"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 4,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 7,
+        "type": "is_a"
+      }
+    ]
+  },
+  "grafo_evidencia": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "1ee768da-0d1b-5a99-869f-125eff973bf9",
+        "text": "This chunk is about:\n- Places: Minneapolis–Saint Paul International Airport, Cheyenne Regional Airport, Little Rock, Cheyenne, Laramie County, Wyoming\n- Products: Pinnacle Airlines Flight 3701\n- Concepts: civil-military airports, international airports, repositioning flights\n\nFacts:\n- Minneapolis–Saint Paul International Airport has the identifiers IATA MSP, ICAO KMSP, and FAA LID MSP.\n- Minneapolis–Saint Paul International Airport is also known as Wold–Chamberlain Field and is a joint civil-military public use international airport.\n- Cheyenne Regional Airport has the identifiers IATA CYS, ICAO KCYS, and FAA LID CYS.\n- Cheyenne Regional Airport, also called Jerry Olson Field, is a civil-military airport located one mile north of downtown Cheyenne in Laramie County, Wyoming.\n- Pinnacle Airlines Flight 3701 was an overnight repositioning flight with no passengers from Little Rock, Arkansas, to Minneapolis–Saint Paul International Airport.\n- Both crew members on Pinnacle Airlines Flight 3701 were killed.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "72ecadb2-3058-5cd2-88c7-145ec47308f0",
+        "text": "Page: Minneapolis–Saint Paul International Airport. Sentence: Minneapolis–Saint Paul International Airport (IATA: MSP, ICAO: KMSP, FAA LID: MSP) , also known as Wold–Chamberlain Field, is a joint civil-military public use international airport.\nPage: Cheyenne Regional Airport. Sentence: Cheyenne Regional Airport (IATA: CYS, ICAO: KCYS, FAA LID: CYS) (Jerry Olson Field) is a civil-military airport a mile north of downtown Cheyenne, in Laramie County, Wyoming.\nPage: Pinnacle Airlines Flight 3701. Sentence: It was an overnight repositioning flight with no passengers from Little Rock, Arkansas, U.S. to Minneapolis–Saint Paul International Airport, U.S. Both crew members were killed.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "d237af2a-fe51-55e0-9d50-e3759c6f1068",
+        "text": "text_f346260051bca8a9e1f0d6a8f60b5c1d",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "333dc084-64db-50c1-a5b9-96d0dd165e7e",
+        "text": "minneapolis–saint paul international airport",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "2f3bad94-4351-5f41-be94-90598a1e375c",
+        "text": "msp",
+        "type": "Entity"
+      },
+      {
+        "id": 5,
+        "original_id": "2c23f4f7-2223-5c53-a5f6-1bd0114fcd6a",
+        "text": "code",
+        "type": "EntityType"
+      },
+      {
+        "id": 6,
+        "original_id": "f1a82f35-9f45-5c29-a706-daa977ded929",
+        "text": "kmsp",
+        "type": "Entity"
+      },
+      {
+        "id": 7,
+        "original_id": "dff5fe8e-9fd2-5b74-8f3c-317da3f5396d",
+        "text": "wold–chamberlain field",
+        "type": "Entity"
+      },
+      {
+        "id": 8,
+        "original_id": "39575085-0710-527d-bd54-019de7b00429",
+        "text": "name",
+        "type": "EntityType"
+      },
+      {
+        "id": 9,
+        "original_id": "50596f1a-2d8a-5de7-96b5-ba7068791784",
+        "text": "airport",
+        "type": "EntityType"
+      },
+      {
+        "id": 10,
+        "original_id": "cebdf4a3-259d-52e0-b666-d4bad54f5ff6",
+        "text": "cheyenne regional airport",
+        "type": "Entity"
+      },
+      {
+        "id": 11,
+        "original_id": "23cc6d39-8444-5e59-947a-f7bd1c00fc89",
+        "text": "cys",
+        "type": "Entity"
+      },
+      {
+        "id": 12,
+        "original_id": "f1ed7c7d-110a-56a3-bb06-1ca20b1e2b09",
+        "text": "kcys",
+        "type": "Entity"
+      },
+      {
+        "id": 13,
+        "original_id": "5e14e6ce-4fa4-50d6-bef3-151ef4e38483",
+        "text": "jerry olson field",
+        "type": "Entity"
+      },
+      {
+        "id": 14,
+        "original_id": "e1d168ec-e6a4-5607-ae57-a8e85ae52416",
+        "text": "downtown cheyenne",
+        "type": "Entity"
+      },
+      {
+        "id": 15,
+        "original_id": "5f394058-b2a0-5ba8-8466-ba2a18cfcf4e",
+        "text": "place",
+        "type": "EntityType"
+      },
+      {
+        "id": 16,
+        "original_id": "97d1e295-cd94-5047-98da-38bcd5b4846f",
+        "text": "laramie county",
+        "type": "Entity"
+      },
+      {
+        "id": 17,
+        "original_id": "005b0bc0-a9ad-53cb-9f57-c006268b3d38",
+        "text": "wyoming",
+        "type": "Entity"
+      },
+      {
+        "id": 18,
+        "original_id": "9222b29b-13e7-50fe-8f2f-2b1af6dfac31",
+        "text": "pinnacle airlines flight 3701",
+        "type": "Entity"
+      },
+      {
+        "id": 19,
+        "original_id": "e0ba8782-074a-5209-b6ed-5d854df21ece",
+        "text": "little rock, arkansas, u.s.",
+        "type": "Entity"
+      },
+      {
+        "id": 20,
+        "original_id": "beb84493-8108-5fa4-8040-56cdf2b2ed86",
+        "text": "flight",
+        "type": "EntityType"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 18,
+        "target": 3,
+        "type": "arrived_at"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "has_iata_code"
+      },
+      {
+        "source": 1,
+        "target": 4,
+        "type": "contains"
+      },
+      {
+        "source": 4,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 6,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 11,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 12,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 6,
+        "type": "has_icao_code"
+      },
+      {
+        "source": 1,
+        "target": 6,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 7,
+        "type": "also_known_as"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      },
+      {
+        "source": 7,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 13,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 9,
+        "type": "is_a"
+      },
+      {
+        "source": 10,
+        "target": 9,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 10,
+        "type": "contains"
+      },
+      {
+        "source": 10,
+        "target": 11,
+        "type": "has_iata_code"
+      },
+      {
+        "source": 1,
+        "target": 11,
+        "type": "contains"
+      },
+      {
+        "source": 10,
+        "target": 12,
+        "type": "has_icao_code"
+      },
+      {
+        "source": 1,
+        "target": 12,
+        "type": "contains"
+      },
+      {
+        "source": 10,
+        "target": 13,
+        "type": "also_known_as"
+      },
+      {
+        "source": 1,
+        "target": 13,
+        "type": "contains"
+      },
+      {
+        "source": 10,
+        "target": 14,
+        "type": "located_north_of"
+      },
+      {
+        "source": 1,
+        "target": 14,
+        "type": "contains"
+      },
+      {
+        "source": 14,
+        "target": 15,
+        "type": "is_a"
+      },
+      {
+        "source": 17,
+        "target": 15,
+        "type": "is_a"
+      },
+      {
+        "source": 16,
+        "target": 15,
+        "type": "is_a"
+      },
+      {
+        "source": 19,
+        "target": 15,
+        "type": "is_a"
+      },
+      {
+        "source": 10,
+        "target": 16,
+        "type": "located_in"
+      },
+      {
+        "source": 1,
+        "target": 16,
+        "type": "contains"
+      },
+      {
+        "source": 16,
+        "target": 17,
+        "type": "located_in"
+      },
+      {
+        "source": 1,
+        "target": 17,
+        "type": "contains"
+      },
+      {
+        "source": 1,
+        "target": 18,
+        "type": "contains"
+      },
+      {
+        "source": 18,
+        "target": 19,
+        "type": "departed_from"
+      },
+      {
+        "source": 1,
+        "target": 19,
+        "type": "contains"
+      },
+      {
+        "source": 18,
+        "target": 20,
+        "type": "is_a"
+      }
+    ]
+  }
+}

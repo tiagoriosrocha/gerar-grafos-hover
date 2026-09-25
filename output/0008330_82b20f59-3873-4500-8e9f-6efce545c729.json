@@ -1,0 +1,424 @@
+{
+  "dataset": "hover",
+  "id": "82b20f59-3873-4500-8e9f-6efce545c729",
+  "split": "train",
+  "claim": "Michael Winner was a comedy film director. The filmmaker who directed and edited The Raid 2 is also a director.",
+  "evidencia": "Page: Gareth Evans (director). Sentence: Gareth Huw Evans (born 1980) is a Welsh film director, screenwriter, film editor and action choreographer.\nPage: Michael Winner. Sentence: Robert Michael Winner (30 October 1935 – 21 January 2013) was an English film director and producer, and a restaurant critic for \"The Sunday Times\".\nPage: The Raid 2. Sentence: It is the sequel to his 2011 film \"The Raid\".",
+  "evidence_text": "Page: Gareth Evans (director). Sentence: Gareth Huw Evans (born 1980) is a Welsh film director, screenwriter, film editor and action choreographer.\nPage: Michael Winner. Sentence: Robert Michael Winner (30 October 1935 – 21 January 2013) was an English film director and producer, and a restaurant critic for \"The Sunday Times\".\nPage: The Raid 2. Sentence: It is the sequel to his 2011 film \"The Raid\".",
+  "label": "NOT_SUPPORTED",
+  "num_hops": 3,
+  "hover_metadata": {
+    "supporting_facts": [
+      [
+        "Gareth Evans (director)",
+        0
+      ],
+      [
+        "Michael Winner",
+        0
+      ],
+      [
+        "The Raid 2",
+        1
+      ]
+    ],
+    "num_hops": 3,
+    "evidence_annotation_id": [
+      0
+    ],
+    "evidence_id": [
+      "Gareth Evans (director)::sentence::0",
+      "Michael Winner::sentence::0",
+      "The Raid 2::sentence::1"
+    ],
+    "evidence_wiki_url": [
+      "https://en.wikipedia.org/wiki/Gareth_Evans_%28director%29",
+      "https://en.wikipedia.org/wiki/Michael_Winner",
+      "https://en.wikipedia.org/wiki/The_Raid_2"
+    ],
+    "evidence_sentence_id": [
+      "Gareth Evans (director)::sentence::0",
+      "Michael Winner::sentence::0",
+      "The Raid 2::sentence::1"
+    ]
+  },
+  "grafo_claim": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "7c4b9fe7-0bfe-5eb9-a541-16e21617c798",
+        "text": "This chunk is about:\n- People: Michael Winner, Gareth Evans\n- Roles: comedy film director, director, editor\n- Works: The Raid 2\n\nFacts:\n- Michael Winner was a comedy film director.\n- Gareth Evans directed and edited The Raid 2.\n- Gareth Evans is also a director.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "ae0e36a0-72b5-503f-82a5-48c381bb2fff",
+        "text": "Michael Winner was a comedy film director. The filmmaker who directed and edited The Raid 2 is also a director.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "1b4c0521-9ffb-562e-ad6e-f822ad53aca7",
+        "text": "text_35a3fdca8fb4000630ac385f3eba0814",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "949f7db3-7339-5814-9a2b-2209dab01139",
+        "text": "michael winner",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "99a82eec-bb35-5bb5-9ed2-e73fc7a756de",
+        "text": "person",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "e430b7bb-0b8d-5da9-b8ea-7650a10333f1",
+        "text": "the raid 2",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "5263a535-1b4b-5925-be3e-310d03cd303b",
+        "text": "work",
+        "type": "EntityType"
+      },
+      {
+        "id": 7,
+        "original_id": "0938f152-30ee-5419-91f8-ea13b16d71e7",
+        "text": "the filmmaker who directed and edited the raid 2",
+        "type": "Entity"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 7,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 7,
+        "target": 5,
+        "type": "directed"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      }
+    ]
+  },
+  "grafo_evidencia": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "08be7224-3281-580e-8cc3-b76359857294",
+        "text": "This chunk is about:\n- People: Gareth Evans, Michael Winner\n- Works: The Raid, The Raid 2\n- Roles: film director, screenwriter, film editor, action choreographer, producer, restaurant critic\n- Places: Wales, England\n\nFacts:\n- Michael Winner was born on 30 October 1935 and died on 21 January 2013.\n- Gareth Huw Evans was born in 1980.\n- Gareth Evans is a Welsh film director, screenwriter, film editor, and action choreographer.\n- Michael Winner was an English film director and producer, and he was a restaurant critic for The Sunday Times.\n- The Raid was released in 2011.\n- The Raid 2 is the sequel to Gareth Evans's 2011 film The Raid.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "865f5784-1b79-557b-a397-1d62558f6694",
+        "text": "Page: Gareth Evans (director). Sentence: Gareth Huw Evans (born 1980) is a Welsh film director, screenwriter, film editor and action choreographer.\nPage: Michael Winner. Sentence: Robert Michael Winner (30 October 1935 – 21 January 2013) was an English film director and producer, and a restaurant critic for \"The Sunday Times\".\nPage: The Raid 2. Sentence: It is the sequel to his 2011 film \"The Raid\".",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "c0336a08-91ac-58bd-a7ab-739b5d28559e",
+        "text": "text_08a7a55f2f39718645359d92314910ba",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "e761f0c9-0a9b-538f-b186-1ade44c2b0cc",
+        "text": "gareth huw evans",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "99a82eec-bb35-5bb5-9ed2-e73fc7a756de",
+        "text": "person",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "0f4fd0b2-fe7d-55ad-9354-6f20b613f9ba",
+        "text": "1980",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "b19433ae-558c-5aaf-95ac-6231f2a4be0e",
+        "text": "date",
+        "type": "EntityType"
+      },
+      {
+        "id": 7,
+        "original_id": "666ed7ee-2b42-5070-96dc-4f671543ad24",
+        "text": "wales",
+        "type": "Entity"
+      },
+      {
+        "id": 8,
+        "original_id": "5f394058-b2a0-5ba8-8466-ba2a18cfcf4e",
+        "text": "place",
+        "type": "EntityType"
+      },
+      {
+        "id": 9,
+        "original_id": "949f7db3-7339-5814-9a2b-2209dab01139",
+        "text": "michael winner",
+        "type": "Entity"
+      },
+      {
+        "id": 10,
+        "original_id": "d129d871-04d0-5861-8080-e4c6ccfd5860",
+        "text": "1935-10-30",
+        "type": "Entity"
+      },
+      {
+        "id": 11,
+        "original_id": "afe540bb-43e4-56fe-ba31-3df60ad02e96",
+        "text": "2013-01-21",
+        "type": "Entity"
+      },
+      {
+        "id": 12,
+        "original_id": "27f0656f-762c-54f0-8ed5-c4b27557219f",
+        "text": "england",
+        "type": "Entity"
+      },
+      {
+        "id": 13,
+        "original_id": "518a13e6-9d85-5cf8-821c-5b8618a8d8ae",
+        "text": "the sunday times",
+        "type": "Entity"
+      },
+      {
+        "id": 14,
+        "original_id": "388f60fb-220d-55e8-ae9c-3ac93cead308",
+        "text": "organization",
+        "type": "EntityType"
+      },
+      {
+        "id": 15,
+        "original_id": "e430b7bb-0b8d-5da9-b8ea-7650a10333f1",
+        "text": "the raid 2",
+        "type": "Entity"
+      },
+      {
+        "id": 16,
+        "original_id": "5263a535-1b4b-5925-be3e-310d03cd303b",
+        "text": "work",
+        "type": "EntityType"
+      },
+      {
+        "id": 17,
+        "original_id": "9301dad3-6bfb-5dfb-9367-d6699b440c62",
+        "text": "the raid",
+        "type": "Entity"
+      },
+      {
+        "id": 18,
+        "original_id": "f54e52eb-db61-5cc3-aa32-5c78e42891d1",
+        "text": "2011",
+        "type": "Entity"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 9,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "born_in"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 10,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 11,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 18,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 7,
+        "type": "associated_with"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      },
+      {
+        "source": 7,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 12,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 9,
+        "type": "contains"
+      },
+      {
+        "source": 9,
+        "target": 10,
+        "type": "born_on"
+      },
+      {
+        "source": 1,
+        "target": 10,
+        "type": "contains"
+      },
+      {
+        "source": 9,
+        "target": 11,
+        "type": "died_on"
+      },
+      {
+        "source": 1,
+        "target": 11,
+        "type": "contains"
+      },
+      {
+        "source": 9,
+        "target": 12,
+        "type": "associated_with"
+      },
+      {
+        "source": 1,
+        "target": 12,
+        "type": "contains"
+      },
+      {
+        "source": 9,
+        "target": 13,
+        "type": "critic_for"
+      },
+      {
+        "source": 1,
+        "target": 13,
+        "type": "contains"
+      },
+      {
+        "source": 13,
+        "target": 14,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 15,
+        "type": "contains"
+      },
+      {
+        "source": 15,
+        "target": 16,
+        "type": "is_a"
+      },
+      {
+        "source": 17,
+        "target": 16,
+        "type": "is_a"
+      },
+      {
+        "source": 15,
+        "target": 17,
+        "type": "sequel_to"
+      },
+      {
+        "source": 1,
+        "target": 17,
+        "type": "contains"
+      },
+      {
+        "source": 17,
+        "target": 18,
+        "type": "released_in"
+      },
+      {
+        "source": 1,
+        "target": 18,
+        "type": "contains"
+      }
+    ]
+  }
+}

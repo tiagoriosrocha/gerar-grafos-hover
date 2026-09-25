@@ -1,0 +1,347 @@
+{
+  "dataset": "hover",
+  "id": "95469dbd-bd69-42a1-a36d-c237732b4d30",
+  "split": "train",
+  "claim": "Daburiyya is 8km east of a city where 30.9% of its citizens are German.",
+  "evidencia": "Page: Daburiyya. Sentence: Daburiyya (Arabic: دبورية‎ ‎ ; Hebrew: דַבּוּרִיָּה‎ ), also \"Deburieh\" or \"Dabburieh\", is an Arab village ca. 8 km.\nPage: Daburiyya. Sentence: east of Nazareth in Israel's Northern District.\nPage: Nazareth. Sentence: Nazareth ( ; Hebrew: נָצְרַת‎ , \"Natzrat\"; Arabic: النَّاصِرَة‎ ‎ , \"an-Nāṣira\"; Aramaic: ܢܨܪܬ‎ ‎ , \"Naṣrath\") is the capital and the largest city in the Northern District of Israel.\nPage: Nazareth. Sentence: The inhabitants are predominantly Arab citizens of Israel, of whom 69% are Muslim and 30.9% Christian.",
+  "evidence_text": "Page: Daburiyya. Sentence: Daburiyya (Arabic: دبورية‎ ‎ ; Hebrew: דַבּוּרִיָּה‎ ), also \"Deburieh\" or \"Dabburieh\", is an Arab village ca. 8 km.\nPage: Daburiyya. Sentence: east of Nazareth in Israel's Northern District.\nPage: Nazareth. Sentence: Nazareth ( ; Hebrew: נָצְרַת‎ , \"Natzrat\"; Arabic: النَّاصِرَة‎ ‎ , \"an-Nāṣira\"; Aramaic: ܢܨܪܬ‎ ‎ , \"Naṣrath\") is the capital and the largest city in the Northern District of Israel.\nPage: Nazareth. Sentence: The inhabitants are predominantly Arab citizens of Israel, of whom 69% are Muslim and 30.9% Christian.",
+  "label": "NOT_SUPPORTED",
+  "num_hops": 2,
+  "hover_metadata": {
+    "supporting_facts": [
+      [
+        "Daburiyya",
+        0
+      ],
+      [
+        "Daburiyya",
+        1
+      ],
+      [
+        "Nazareth",
+        0
+      ],
+      [
+        "Nazareth",
+        3
+      ]
+    ],
+    "num_hops": 2,
+    "evidence_annotation_id": [
+      0
+    ],
+    "evidence_id": [
+      "Daburiyya::sentence::0",
+      "Daburiyya::sentence::1",
+      "Nazareth::sentence::0",
+      "Nazareth::sentence::3"
+    ],
+    "evidence_wiki_url": [
+      "https://en.wikipedia.org/wiki/Daburiyya",
+      "https://en.wikipedia.org/wiki/Nazareth"
+    ],
+    "evidence_sentence_id": [
+      "Daburiyya::sentence::0",
+      "Daburiyya::sentence::1",
+      "Nazareth::sentence::0",
+      "Nazareth::sentence::3"
+    ]
+  },
+  "grafo_claim": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "23842b54-5891-5104-b446-7285ba866ed0",
+        "text": "This chunk is about:\n- Places: Daburiyya, Nazareth\n- Topics: Location, Demographics\n\nFacts:\n- Daburiyya is located 8 kilometers east of Nazareth.\n- Nazareth is a city where 30.9% of the citizens are German.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "c74e7f89-0803-5725-967c-142d6c545864",
+        "text": "Daburiyya is 8km east of a city where 30.9% of its citizens are German.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "7bfc74cc-e781-50eb-a0b0-13b0d3567ca9",
+        "text": "text_0ee3fca5311bc91283304436baceb715",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "a8f7ca9a-a0d6-5447-9804-fb15d62b3163",
+        "text": "daburiyya",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "5c1cb01b-c84a-511a-b879-6cdd33fa4d74",
+        "text": "the city",
+        "type": "Entity"
+      },
+      {
+        "id": 5,
+        "original_id": "5274a330-2667-5b14-9f91-72fb2b032066",
+        "text": "german",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "98ed3a15-eaa2-57c6-8de5-e1dabaf57f77",
+        "text": "group",
+        "type": "EntityType"
+      },
+      {
+        "id": 7,
+        "original_id": "5f394058-b2a0-5ba8-8466-ba2a18cfcf4e",
+        "text": "place",
+        "type": "EntityType"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "located_east_of"
+      },
+      {
+        "source": 1,
+        "target": 4,
+        "type": "contains"
+      },
+      {
+        "source": 4,
+        "target": 5,
+        "type": "has_citizen_percentage"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 4,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 7,
+        "type": "is_a"
+      }
+    ]
+  },
+  "grafo_evidencia": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "896cf3c6-796b-5959-b4e7-23e3b9c64574",
+        "text": "This chunk is about:\n- Places: Daburiyya, Nazareth, Israel's Northern District, Israel\n- Topics: names and transliterations, location, population demographics\n\nFacts:\n- Daburiyya is an Arab village about 8 km east of Nazareth in Israel's Northern District.\n- Daburiyya is also spelled Deburieh or Dabburieh, and its name is given in Arabic and Hebrew.\n- Nazareth is the capital and largest city in the Northern District of Israel.\n- Nazareth is also named in Hebrew, Arabic, and Aramaic transliterations.\n- The inhabitants of Nazareth are predominantly Arab citizens of Israel.\n- In Nazareth, 69% of the inhabitants are Muslim and 30.9% are Christian.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "92def672-82ea-5905-84c6-a1e7e0ae77e6",
+        "text": "Page: Daburiyya. Sentence: Daburiyya (Arabic: دبورية‎ ‎ ; Hebrew: דַבּוּרִיָּה‎ ), also \"Deburieh\" or \"Dabburieh\", is an Arab village ca. 8 km.\nPage: Daburiyya. Sentence: east of Nazareth in Israel's Northern District.\nPage: Nazareth. Sentence: Nazareth ( ; Hebrew: נָצְרַת‎ , \"Natzrat\"; Arabic: النَّاصِرَة‎ ‎ , \"an-Nāṣira\"; Aramaic: ܢܨܪܬ‎ ‎ , \"Naṣrath\") is the capital and the largest city in the Northern District of Israel.\nPage: Nazareth. Sentence: The inhabitants are predominantly Arab citizens of Israel, of whom 69% are Muslim and 30.9% Christian.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "96a92e26-6518-5090-85e0-287e43644e94",
+        "text": "text_eb2a0b3d0a28c75d976feaffdfc9dd95",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "a8f7ca9a-a0d6-5447-9804-fb15d62b3163",
+        "text": "daburiyya",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "108da590-8aad-5319-a192-e2c28a6eac25",
+        "text": "nazareth",
+        "type": "Entity"
+      },
+      {
+        "id": 5,
+        "original_id": "d8254eb6-df86-5675-867b-d3643e23d43f",
+        "text": "northern district",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "787553fa-15f8-58c1-97eb-75eeb59517e8",
+        "text": "israel",
+        "type": "Entity"
+      },
+      {
+        "id": 7,
+        "original_id": "5f394058-b2a0-5ba8-8466-ba2a18cfcf4e",
+        "text": "place",
+        "type": "EntityType"
+      },
+      {
+        "id": 8,
+        "original_id": "fd50770d-f631-5185-8b85-c30a300b5e14",
+        "text": "arab citizens of israel",
+        "type": "Entity"
+      },
+      {
+        "id": 9,
+        "original_id": "b640329c-d544-5636-a42a-10a62ff42336",
+        "text": "muslim",
+        "type": "Entity"
+      },
+      {
+        "id": 10,
+        "original_id": "98ed3a15-eaa2-57c6-8de5-e1dabaf57f77",
+        "text": "group",
+        "type": "EntityType"
+      },
+      {
+        "id": 11,
+        "original_id": "71d01ab4-5b9c-5378-bf32-23d82ad382ff",
+        "text": "christian",
+        "type": "Entity"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "located_east_of"
+      },
+      {
+        "source": 1,
+        "target": 4,
+        "type": "contains"
+      },
+      {
+        "source": 4,
+        "target": 5,
+        "type": "located_in"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "located_in"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "part_of"
+      },
+      {
+        "source": 1,
+        "target": 6,
+        "type": "contains"
+      },
+      {
+        "source": 6,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 5,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 4,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 4,
+        "target": 8,
+        "type": "inhabited_by"
+      },
+      {
+        "source": 1,
+        "target": 8,
+        "type": "contains"
+      },
+      {
+        "source": 8,
+        "target": 9,
+        "type": "includes_percentage"
+      },
+      {
+        "source": 1,
+        "target": 9,
+        "type": "contains"
+      },
+      {
+        "source": 9,
+        "target": 10,
+        "type": "is_a"
+      },
+      {
+        "source": 11,
+        "target": 10,
+        "type": "is_a"
+      },
+      {
+        "source": 8,
+        "target": 10,
+        "type": "is_a"
+      },
+      {
+        "source": 8,
+        "target": 11,
+        "type": "includes_percentage"
+      },
+      {
+        "source": 1,
+        "target": 11,
+        "type": "contains"
+      }
+    ]
+  }
+}

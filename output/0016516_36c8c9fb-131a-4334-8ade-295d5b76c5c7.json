@@ -1,0 +1,336 @@
+{
+  "dataset": "hover",
+  "id": "36c8c9fb-131a-4334-8ade-295d5b76c5c7",
+  "split": "train",
+  "claim": "The population as of the 2010 census of the city where the Elston Hall is located is 66,135.",
+  "evidencia": "Page: Elston Hall. Sentence: Elston Hall, formerly the Hotel Van Curler, is located on Washington Street in the city of Schenectady, New York, United States.\nPage: Schenectady, New York. Sentence: As of the 2010 census, the city had a population of 66,135.",
+  "evidence_text": "Page: Elston Hall. Sentence: Elston Hall, formerly the Hotel Van Curler, is located on Washington Street in the city of Schenectady, New York, United States.\nPage: Schenectady, New York. Sentence: As of the 2010 census, the city had a population of 66,135.",
+  "label": "SUPPORTED",
+  "num_hops": 2,
+  "hover_metadata": {
+    "supporting_facts": [
+      [
+        "Elston Hall",
+        0
+      ],
+      [
+        "Schenectady, New York",
+        1
+      ]
+    ],
+    "num_hops": 2,
+    "evidence_annotation_id": [
+      0
+    ],
+    "evidence_id": [
+      "Elston Hall::sentence::0",
+      "Schenectady, New York::sentence::1"
+    ],
+    "evidence_wiki_url": [
+      "https://en.wikipedia.org/wiki/Elston_Hall",
+      "https://en.wikipedia.org/wiki/Schenectady%2C_New_York"
+    ],
+    "evidence_sentence_id": [
+      "Elston Hall::sentence::0",
+      "Schenectady, New York::sentence::1"
+    ]
+  },
+  "grafo_claim": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "74c94946-05f0-5226-8377-e1b28fd110e9",
+        "text": "This chunk is about:\n- Places: Elston Hall, the city where Elston Hall is located\n- Topics: 2010 census, population\n\nFacts:\n- As of the 2010 census, the city where Elston Hall is located had a population of 66,135.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "c528b410-186b-5f98-961c-891536710764",
+        "text": "The population as of the 2010 census of the city where the Elston Hall is located is 66,135.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "ebcb5f43-020b-5e6c-9ad0-9c1a0f96f2be",
+        "text": "text_667d5a32c46f3c75be0b08dddeef4c35",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "8d640e82-13fb-5fd5-9ab0-2c4c8a1cd120",
+        "text": "elston hall",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "5f394058-b2a0-5ba8-8466-ba2a18cfcf4e",
+        "text": "place",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "5dab3d0c-ecf8-5a81-9096-13310dc54e3b",
+        "text": "66,135",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "5c1097ca-fab8-54d5-b57f-5dca4b0e2507",
+        "text": "number",
+        "type": "EntityType"
+      },
+      {
+        "id": 7,
+        "original_id": "4cb6ada6-82d5-5a31-83fe-5bd97fc4f3b0",
+        "text": "2010 census",
+        "type": "Entity"
+      },
+      {
+        "id": 8,
+        "original_id": "b19433ae-558c-5aaf-95ac-6231f2a4be0e",
+        "text": "date",
+        "type": "EntityType"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "located_in_city_with_population"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 5,
+        "target": 7,
+        "type": "as_of"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      },
+      {
+        "source": 7,
+        "target": 8,
+        "type": "is_a"
+      }
+    ]
+  },
+  "grafo_evidencia": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "503b7b7e-e6b9-54e5-935c-4c632aff1ae7",
+        "text": "This chunk is about:\n- Places: Elston Hall, Washington Street, Schenectady, New York, United States\n- Buildings: Hotel Van Curler\n\nFacts:\n- Elston Hall, formerly the Hotel Van Curler, is located on Washington Street in Schenectady, New York, United States.\n- As of the 2010 census, Schenectady had a population of 66,135.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "35d1bae3-6a5c-58db-ac69-56109252ede2",
+        "text": "Page: Elston Hall. Sentence: Elston Hall, formerly the Hotel Van Curler, is located on Washington Street in the city of Schenectady, New York, United States.\nPage: Schenectady, New York. Sentence: As of the 2010 census, the city had a population of 66,135.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "12dbd570-2efe-541f-aa48-83b4563563b2",
+        "text": "text_50baf4ff6eeb46da3c1b389de2f4697b",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "8d640e82-13fb-5fd5-9ab0-2c4c8a1cd120",
+        "text": "elston hall",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "5f394058-b2a0-5ba8-8466-ba2a18cfcf4e",
+        "text": "place",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "849c586d-d82a-5200-9235-96a3ace9997e",
+        "text": "hotel van curler",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "850f8b29-4559-58b6-9e45-182c016e592c",
+        "text": "washington street",
+        "type": "Entity"
+      },
+      {
+        "id": 7,
+        "original_id": "c20ac4c6-28d7-5282-85c6-31f09d97e458",
+        "text": "schenectady",
+        "type": "Entity"
+      },
+      {
+        "id": 8,
+        "original_id": "a7852d00-db75-55e2-bd9a-468ada762d39",
+        "text": "new york",
+        "type": "Entity"
+      },
+      {
+        "id": 9,
+        "original_id": "874a51da-34ea-5037-be47-d87785d43c37",
+        "text": "united states",
+        "type": "Entity"
+      },
+      {
+        "id": 10,
+        "original_id": "4cb6ada6-82d5-5a31-83fe-5bd97fc4f3b0",
+        "text": "2010 census",
+        "type": "Entity"
+      },
+      {
+        "id": 11,
+        "original_id": "b19433ae-558c-5aaf-95ac-6231f2a4be0e",
+        "text": "date",
+        "type": "EntityType"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 5,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 6,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 7,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 8,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 9,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "formerly_named"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 6,
+        "type": "located_on"
+      },
+      {
+        "source": 1,
+        "target": 6,
+        "type": "contains"
+      },
+      {
+        "source": 6,
+        "target": 7,
+        "type": "located_in"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      },
+      {
+        "source": 7,
+        "target": 8,
+        "type": "located_in"
+      },
+      {
+        "source": 1,
+        "target": 8,
+        "type": "contains"
+      },
+      {
+        "source": 8,
+        "target": 9,
+        "type": "located_in"
+      },
+      {
+        "source": 1,
+        "target": 9,
+        "type": "contains"
+      },
+      {
+        "source": 7,
+        "target": 10,
+        "type": "population_as_of"
+      },
+      {
+        "source": 1,
+        "target": 10,
+        "type": "contains"
+      },
+      {
+        "source": 10,
+        "target": 11,
+        "type": "is_a"
+      }
+    ]
+  }
+}

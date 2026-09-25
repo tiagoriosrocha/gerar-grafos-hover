@@ -1,0 +1,537 @@
+{
+  "dataset": "hover",
+  "id": "3efe227b-099d-4005-b4de-3b8bc79b0799",
+  "split": "train",
+  "claim": "Thomas Tull produced the comedy movie The Hangover, which was based in Las Vegas.",
+  "evidencia": "Page: Thomas Tull. Sentence: Thomas Tull (born 1970) is an American businessman and film producer.\nPage: The Hangover. Sentence: The Hangover is a 2009 American comedy film directed by Todd Phillips, co-produced with Daniel Goldberg, and written by Jon Lucas and Scott Moore.\nPage: The Hangover. Sentence: It tells the story of Phil Wenneck, Stu Price, Alan Garner, and Doug Billings, who travel to Las Vegas for a bachelor party to celebrate Doug's impending marriage.",
+  "evidence_text": "Page: Thomas Tull. Sentence: Thomas Tull (born 1970) is an American businessman and film producer.\nPage: The Hangover. Sentence: The Hangover is a 2009 American comedy film directed by Todd Phillips, co-produced with Daniel Goldberg, and written by Jon Lucas and Scott Moore.\nPage: The Hangover. Sentence: It tells the story of Phil Wenneck, Stu Price, Alan Garner, and Doug Billings, who travel to Las Vegas for a bachelor party to celebrate Doug's impending marriage.",
+  "label": "SUPPORTED",
+  "num_hops": 2,
+  "hover_metadata": {
+    "supporting_facts": [
+      [
+        "Thomas Tull",
+        0
+      ],
+      [
+        "The Hangover",
+        0
+      ],
+      [
+        "The Hangover",
+        3
+      ]
+    ],
+    "num_hops": 2,
+    "evidence_annotation_id": [
+      0
+    ],
+    "evidence_id": [
+      "Thomas Tull::sentence::0",
+      "The Hangover::sentence::0",
+      "The Hangover::sentence::3"
+    ],
+    "evidence_wiki_url": [
+      "https://en.wikipedia.org/wiki/Thomas_Tull",
+      "https://en.wikipedia.org/wiki/The_Hangover"
+    ],
+    "evidence_sentence_id": [
+      "Thomas Tull::sentence::0",
+      "The Hangover::sentence::0",
+      "The Hangover::sentence::3"
+    ]
+  },
+  "grafo_claim": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "135e9690-49af-5be5-b7c4-021c0b9f0346",
+        "text": "This chunk is about:\n- People: Thomas Tull\n- Products: The Hangover\n- Places: Las Vegas\n\nFacts:\n- Thomas Tull produced the comedy movie The Hangover.\n- The Hangover is based in Las Vegas.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "513528bd-116c-5034-89a2-7420e7d716a7",
+        "text": "Thomas Tull produced the comedy movie The Hangover, which was based in Las Vegas.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "819b7ca3-7f63-544f-80f3-0521410cc891",
+        "text": "text_da6d7ec6d23b56c492325ec4dd913fa3",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "80f830d7-f5d1-576d-9f30-ee7fa27e86a1",
+        "text": "thomas tull",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "99a82eec-bb35-5bb5-9ed2-e73fc7a756de",
+        "text": "person",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "878f2235-afe6-5089-a0ee-735fb50e64fa",
+        "text": "the hangover",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "1155038a-04d1-5d6a-9c60-e4f499a6913c",
+        "text": "movie",
+        "type": "EntityType"
+      },
+      {
+        "id": 7,
+        "original_id": "2768ffee-4734-5551-9369-d2097b287276",
+        "text": "las vegas",
+        "type": "Entity"
+      },
+      {
+        "id": 8,
+        "original_id": "5f394058-b2a0-5ba8-8466-ba2a18cfcf4e",
+        "text": "place",
+        "type": "EntityType"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "produced"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 5,
+        "target": 7,
+        "type": "based_in"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      },
+      {
+        "source": 7,
+        "target": 8,
+        "type": "is_a"
+      }
+    ]
+  },
+  "grafo_evidencia": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "d42b9707-becf-5845-8f1a-6e73b71bb625",
+        "text": "This chunk is about:\n- People: Thomas Tull, Todd Phillips, Daniel Goldberg, Jon Lucas, Scott Moore, Phil Wenneck, Stu Price, Alan Garner, Doug Billings\n- Products: The Hangover\n- Topics: film production, comedy films, bachelor parties, Las Vegas\n\nFacts:\n- Thomas Tull was born in 1970 and is an American businessman and film producer.\n- The Hangover is a 2009 American comedy film directed by Todd Phillips, co-produced with Daniel Goldberg, and written by Jon Lucas and Scott Moore.\n- The Hangover tells the story of Phil Wenneck, Stu Price, Alan Garner, and Doug Billings traveling to Las Vegas for a bachelor party celebrating Doug Billings's impending marriage.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "04b6b3f0-d8f7-5b3d-b3ba-b32f55717417",
+        "text": "Page: Thomas Tull. Sentence: Thomas Tull (born 1970) is an American businessman and film producer.\nPage: The Hangover. Sentence: The Hangover is a 2009 American comedy film directed by Todd Phillips, co-produced with Daniel Goldberg, and written by Jon Lucas and Scott Moore.\nPage: The Hangover. Sentence: It tells the story of Phil Wenneck, Stu Price, Alan Garner, and Doug Billings, who travel to Las Vegas for a bachelor party to celebrate Doug's impending marriage.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "49cf8950-9069-5970-ad58-67c434a1fc67",
+        "text": "text_7793b00be45215f2c2757c65228686f1",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "80f830d7-f5d1-576d-9f30-ee7fa27e86a1",
+        "text": "thomas tull",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "99a82eec-bb35-5bb5-9ed2-e73fc7a756de",
+        "text": "person",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "355cf8f5-d714-5717-85b1-e6823bb908b0",
+        "text": "1970",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "b19433ae-558c-5aaf-95ac-6231f2a4be0e",
+        "text": "date",
+        "type": "EntityType"
+      },
+      {
+        "id": 7,
+        "original_id": "878f2235-afe6-5089-a0ee-735fb50e64fa",
+        "text": "the hangover",
+        "type": "Entity"
+      },
+      {
+        "id": 8,
+        "original_id": "5263a535-1b4b-5925-be3e-310d03cd303b",
+        "text": "work",
+        "type": "EntityType"
+      },
+      {
+        "id": 9,
+        "original_id": "cd2a3377-b1e5-59d1-aeee-d36cdb97efe0",
+        "text": "2009",
+        "type": "Entity"
+      },
+      {
+        "id": 10,
+        "original_id": "30d9b249-73c2-5371-9e70-88c2937e3d80",
+        "text": "todd phillips",
+        "type": "Entity"
+      },
+      {
+        "id": 11,
+        "original_id": "96d9667c-8827-5936-9187-a221172df5cc",
+        "text": "daniel goldberg",
+        "type": "Entity"
+      },
+      {
+        "id": 12,
+        "original_id": "6b513169-edd9-5a80-a7cf-fad13595c68e",
+        "text": "jon lucas",
+        "type": "Entity"
+      },
+      {
+        "id": 13,
+        "original_id": "7f5a4fba-6d3d-5a32-b483-28537eac8f8f",
+        "text": "scott moore",
+        "type": "Entity"
+      },
+      {
+        "id": 14,
+        "original_id": "9eebe30e-fabf-5338-9287-baf070c80369",
+        "text": "phil wenneck",
+        "type": "Entity"
+      },
+      {
+        "id": 15,
+        "original_id": "2768ffee-4734-5551-9369-d2097b287276",
+        "text": "las vegas",
+        "type": "Entity"
+      },
+      {
+        "id": 16,
+        "original_id": "5f394058-b2a0-5ba8-8466-ba2a18cfcf4e",
+        "text": "place",
+        "type": "EntityType"
+      },
+      {
+        "id": 17,
+        "original_id": "8ee2d6af-5e94-5ff3-9776-67014d3c1afa",
+        "text": "bachelor party",
+        "type": "Entity"
+      },
+      {
+        "id": 18,
+        "original_id": "214abcd9-9adf-5c8a-bb35-1e729f2d68c3",
+        "text": "event",
+        "type": "EntityType"
+      },
+      {
+        "id": 19,
+        "original_id": "05bb895e-0239-5353-9bfa-313faab97ba5",
+        "text": "stu price",
+        "type": "Entity"
+      },
+      {
+        "id": 20,
+        "original_id": "d64dc7c0-e81f-5635-ad16-dcb7a4b312eb",
+        "text": "alan garner",
+        "type": "Entity"
+      },
+      {
+        "id": 21,
+        "original_id": "528e3ac4-76b8-5d77-9ce4-af4adb8c31c2",
+        "text": "doug billings",
+        "type": "Entity"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 10,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 11,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 12,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 13,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 14,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 19,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 20,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 21,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "born_in"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 9,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      },
+      {
+        "source": 7,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 7,
+        "target": 9,
+        "type": "released_in"
+      },
+      {
+        "source": 1,
+        "target": 9,
+        "type": "contains"
+      },
+      {
+        "source": 7,
+        "target": 10,
+        "type": "directed_by"
+      },
+      {
+        "source": 1,
+        "target": 10,
+        "type": "contains"
+      },
+      {
+        "source": 7,
+        "target": 11,
+        "type": "co_produced_by"
+      },
+      {
+        "source": 1,
+        "target": 11,
+        "type": "contains"
+      },
+      {
+        "source": 7,
+        "target": 12,
+        "type": "written_by"
+      },
+      {
+        "source": 1,
+        "target": 12,
+        "type": "contains"
+      },
+      {
+        "source": 7,
+        "target": 13,
+        "type": "written_by"
+      },
+      {
+        "source": 1,
+        "target": 13,
+        "type": "contains"
+      },
+      {
+        "source": 7,
+        "target": 14,
+        "type": "features_character"
+      },
+      {
+        "source": 1,
+        "target": 14,
+        "type": "contains"
+      },
+      {
+        "source": 14,
+        "target": 15,
+        "type": "travels_to"
+      },
+      {
+        "source": 17,
+        "target": 15,
+        "type": "takes_place_in"
+      },
+      {
+        "source": 19,
+        "target": 15,
+        "type": "travels_to"
+      },
+      {
+        "source": 20,
+        "target": 15,
+        "type": "travels_to"
+      },
+      {
+        "source": 21,
+        "target": 15,
+        "type": "travels_to"
+      },
+      {
+        "source": 1,
+        "target": 15,
+        "type": "contains"
+      },
+      {
+        "source": 15,
+        "target": 16,
+        "type": "is_a"
+      },
+      {
+        "source": 14,
+        "target": 17,
+        "type": "attends"
+      },
+      {
+        "source": 19,
+        "target": 17,
+        "type": "attends"
+      },
+      {
+        "source": 20,
+        "target": 17,
+        "type": "attends"
+      },
+      {
+        "source": 21,
+        "target": 17,
+        "type": "celebrated_by"
+      },
+      {
+        "source": 1,
+        "target": 17,
+        "type": "contains"
+      },
+      {
+        "source": 17,
+        "target": 18,
+        "type": "is_a"
+      },
+      {
+        "source": 7,
+        "target": 19,
+        "type": "features_character"
+      },
+      {
+        "source": 1,
+        "target": 19,
+        "type": "contains"
+      },
+      {
+        "source": 7,
+        "target": 20,
+        "type": "features_character"
+      },
+      {
+        "source": 1,
+        "target": 20,
+        "type": "contains"
+      },
+      {
+        "source": 7,
+        "target": 21,
+        "type": "features_character"
+      },
+      {
+        "source": 1,
+        "target": 21,
+        "type": "contains"
+      }
+    ]
+  }
+}

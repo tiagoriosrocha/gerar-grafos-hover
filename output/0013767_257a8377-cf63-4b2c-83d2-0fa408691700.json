@@ -1,0 +1,351 @@
+{
+  "dataset": "hover",
+  "id": "257a8377-cf63-4b2c-83d2-0fa408691700",
+  "split": "train",
+  "claim": "EasyJet Switzerland the Swiss low-cost airline flies out of the airport that is also connected to by a British express coach service.",
+  "evidencia": "Page: EasyBus. Sentence: EasyBus is a British express coach operator connecting the city centres of London and Manchester with their respective main airports as well providing services from Geneva Airport (where EasyJet Switzerland is based) to nearby communities.\nPage: EasyJet Switzerland. Sentence: EasyJet Switzerland SA, styled as easyJet, is a Swiss low-cost airline based in Meyrin, Geneva.",
+  "evidence_text": "Page: EasyBus. Sentence: EasyBus is a British express coach operator connecting the city centres of London and Manchester with their respective main airports as well providing services from Geneva Airport (where EasyJet Switzerland is based) to nearby communities.\nPage: EasyJet Switzerland. Sentence: EasyJet Switzerland SA, styled as easyJet, is a Swiss low-cost airline based in Meyrin, Geneva.",
+  "label": "SUPPORTED",
+  "num_hops": 2,
+  "hover_metadata": {
+    "supporting_facts": [
+      [
+        "EasyBus",
+        0
+      ],
+      [
+        "EasyJet Switzerland",
+        0
+      ]
+    ],
+    "num_hops": 2,
+    "evidence_annotation_id": [
+      0
+    ],
+    "evidence_id": [
+      "EasyBus::sentence::0",
+      "EasyJet Switzerland::sentence::0"
+    ],
+    "evidence_wiki_url": [
+      "https://en.wikipedia.org/wiki/EasyBus",
+      "https://en.wikipedia.org/wiki/EasyJet_Switzerland"
+    ],
+    "evidence_sentence_id": [
+      "EasyBus::sentence::0",
+      "EasyJet Switzerland::sentence::0"
+    ]
+  },
+  "grafo_claim": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "1696a5da-6f57-5fb6-ac33-1f601a748c44",
+        "text": "This chunk is about:\n- Companies: EasyJet Switzerland, National Express\n- Places: Geneva Airport\n- Topics: Airline operations, Airport ground transport\n\nFacts:\n- EasyJet Switzerland is a Swiss low-cost airline.\n- EasyJet Switzerland flies out of Geneva Airport.\n- Geneva Airport is also connected to by National Express, a British express coach service.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "17f0ad11-9acc-58a8-8d9f-e22a4ef449c2",
+        "text": "EasyJet Switzerland the Swiss low-cost airline flies out of the airport that is also connected to by a British express coach service.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "d3d35912-3ccc-5836-b87d-99871e06b4c4",
+        "text": "text_c9e5037ddfc1978f84200debed19989b",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "de2be1bc-6e89-5ba9-865d-a7bf1304074f",
+        "text": "easyjet switzerland",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "388f60fb-220d-55e8-ae9c-3ac93cead308",
+        "text": "organization",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "407d2a7f-7562-59fb-a556-934cd90a0107",
+        "text": "switzerland",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "5f394058-b2a0-5ba8-8466-ba2a18cfcf4e",
+        "text": "place",
+        "type": "EntityType"
+      },
+      {
+        "id": 7,
+        "original_id": "4f934275-9ea6-5dda-bc40-2e92cf38a1bb",
+        "text": "airport",
+        "type": "Entity"
+      },
+      {
+        "id": 8,
+        "original_id": "2dba5a8e-e64c-53ca-94e0-952a456d940c",
+        "text": "british express coach service",
+        "type": "Entity"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 8,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "located_in"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 7,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 7,
+        "type": "flies_out_of"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      },
+      {
+        "source": 8,
+        "target": 7,
+        "type": "connected_to"
+      },
+      {
+        "source": 1,
+        "target": 8,
+        "type": "contains"
+      }
+    ]
+  },
+  "grafo_evidencia": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "18efb1d8-37fe-5453-b602-4d9b641d981c",
+        "text": "This chunk is about:\n- Companies: EasyBus, EasyJet Switzerland\n- Places: London, Manchester, Geneva Airport, Meyrin, Geneva\n- Topics: express coach services, low-cost airlines\n\nFacts:\n- EasyBus is a British express coach operator.\n- EasyBus connects the city centres of London and Manchester with their respective main airports.\n- EasyBus also provides services from Geneva Airport to nearby communities.\n- EasyJet Switzerland is based at Geneva Airport.\n- EasyJet Switzerland SA, styled as easyJet, is a Swiss low-cost airline based in Meyrin, Geneva.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "ea7cd5b2-0531-5d1b-bb4a-9498945aa241",
+        "text": "Page: EasyBus. Sentence: EasyBus is a British express coach operator connecting the city centres of London and Manchester with their respective main airports as well providing services from Geneva Airport (where EasyJet Switzerland is based) to nearby communities.\nPage: EasyJet Switzerland. Sentence: EasyJet Switzerland SA, styled as easyJet, is a Swiss low-cost airline based in Meyrin, Geneva.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "7f62b854-9397-5fa5-b19c-33324654aa50",
+        "text": "text_8eef01fa2cba0a7610044e15b31522fd",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "a07fc232-4470-5cd6-b795-b73f37be00af",
+        "text": "easybus",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "388f60fb-220d-55e8-ae9c-3ac93cead308",
+        "text": "organization",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "29402dc0-a0ae-5d8e-8034-e62d821db121",
+        "text": "london",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "5f394058-b2a0-5ba8-8466-ba2a18cfcf4e",
+        "text": "place",
+        "type": "EntityType"
+      },
+      {
+        "id": 7,
+        "original_id": "07b01e42-6a81-5fcb-af7f-85f36dcfd338",
+        "text": "manchester",
+        "type": "Entity"
+      },
+      {
+        "id": 8,
+        "original_id": "11f89eb1-3f95-5304-8b17-7da1add5c48e",
+        "text": "geneva airport",
+        "type": "Entity"
+      },
+      {
+        "id": 9,
+        "original_id": "de2be1bc-6e89-5ba9-865d-a7bf1304074f",
+        "text": "easyjet switzerland",
+        "type": "Entity"
+      },
+      {
+        "id": 10,
+        "original_id": "3da1488f-a2f3-59a4-a2f3-3c0d584c8be6",
+        "text": "meyrin",
+        "type": "Entity"
+      },
+      {
+        "id": 11,
+        "original_id": "4bee6ca9-7cbf-54dc-9c46-dffeffa44cfa",
+        "text": "geneva",
+        "type": "Entity"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 9,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "connects_city_centre_of"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 7,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 8,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 10,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 11,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 7,
+        "type": "connects_city_centre_of"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 8,
+        "type": "provides_services_from"
+      },
+      {
+        "source": 1,
+        "target": 8,
+        "type": "contains"
+      },
+      {
+        "source": 9,
+        "target": 8,
+        "type": "is_based_at"
+      },
+      {
+        "source": 1,
+        "target": 9,
+        "type": "contains"
+      },
+      {
+        "source": 9,
+        "target": 10,
+        "type": "is_based_in"
+      },
+      {
+        "source": 1,
+        "target": 10,
+        "type": "contains"
+      },
+      {
+        "source": 10,
+        "target": 11,
+        "type": "located_in"
+      },
+      {
+        "source": 1,
+        "target": 11,
+        "type": "contains"
+      }
+    ]
+  }
+}

@@ -1,0 +1,461 @@
+{
+  "dataset": "hover",
+  "id": "dd59c389-880c-499b-9330-183f550454c3",
+  "split": "train",
+  "claim": "The residence at 200 West Street is taller than the one at the location of Pershing Square Capital Management.",
+  "evidencia": "Page: 888 7th Avenue. Sentence: 888 7th Avenue is a 628 ft (191m) tall modern-style office skyscraper in Midtown Manhattan which was completed in 1969 and has 46 floors.\nPage: 200 West Street. Sentence: 200 West Street is the global headquarters of the Goldman Sachs investment banking firm.\nPage: 200 West Street. Sentence: The building is a 749 ft , 44-story building located on West Street, between Vesey and Murray Streets in Lower Manhattan.\nPage: Pershing Square Capital Management. Sentence: Pershing Square Capital Management is an American hedge fund management company founded and run by Bill Ackman, located at 888 7th Avenue in New York.",
+  "evidence_text": "Page: 888 7th Avenue. Sentence: 888 7th Avenue is a 628 ft (191m) tall modern-style office skyscraper in Midtown Manhattan which was completed in 1969 and has 46 floors.\nPage: 200 West Street. Sentence: 200 West Street is the global headquarters of the Goldman Sachs investment banking firm.\nPage: 200 West Street. Sentence: The building is a 749 ft , 44-story building located on West Street, between Vesey and Murray Streets in Lower Manhattan.\nPage: Pershing Square Capital Management. Sentence: Pershing Square Capital Management is an American hedge fund management company founded and run by Bill Ackman, located at 888 7th Avenue in New York.",
+  "label": "NOT_SUPPORTED",
+  "num_hops": 3,
+  "hover_metadata": {
+    "supporting_facts": [
+      [
+        "888 7th Avenue",
+        0
+      ],
+      [
+        "200 West Street",
+        0
+      ],
+      [
+        "200 West Street",
+        1
+      ],
+      [
+        "Pershing Square Capital Management",
+        0
+      ]
+    ],
+    "num_hops": 3,
+    "evidence_annotation_id": [
+      0
+    ],
+    "evidence_id": [
+      "888 7th Avenue::sentence::0",
+      "200 West Street::sentence::0",
+      "200 West Street::sentence::1",
+      "Pershing Square Capital Management::sentence::0"
+    ],
+    "evidence_wiki_url": [
+      "https://en.wikipedia.org/wiki/888_7th_Avenue",
+      "https://en.wikipedia.org/wiki/200_West_Street",
+      "https://en.wikipedia.org/wiki/Pershing_Square_Capital_Management"
+    ],
+    "evidence_sentence_id": [
+      "888 7th Avenue::sentence::0",
+      "200 West Street::sentence::0",
+      "200 West Street::sentence::1",
+      "Pershing Square Capital Management::sentence::0"
+    ]
+  },
+  "grafo_claim": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "5e8414cb-6fb1-57c3-99fb-2e80a05a4aa8",
+        "text": "This chunk is about:\n- Places: 200 West Street\n- Organizations: Pershing Square Capital Management\n\nFacts:\n- The residence at 200 West Street is taller than the residence at the location of Pershing Square Capital Management.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "79360b5f-13ea-56cd-8424-6ee902b0970a",
+        "text": "The residence at 200 West Street is taller than the one at the location of Pershing Square Capital Management.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "ef6ec7ab-f23d-5ba7-a754-beda522938d9",
+        "text": "text_6ea9f7baa34547021decc3e5b763bfe7",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "980bd79e-a6e1-5abe-b1fd-9e632b0b51ec",
+        "text": "200 west street",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "5023586d-88a2-53f9-ad15-7e2ebd75eb4c",
+        "text": "location",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "3ac71296-03cd-5cf2-9c79-f60f6d1e0749",
+        "text": "residence at pershing square capital management location",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "cc5b8e34-015e-54b1-8d3e-2478961ee13c",
+        "text": "pershing square capital management",
+        "type": "Entity"
+      },
+      {
+        "id": 7,
+        "original_id": "388f60fb-220d-55e8-ae9c-3ac93cead308",
+        "text": "organization",
+        "type": "EntityType"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 5,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "taller_than"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "located_at"
+      },
+      {
+        "source": 1,
+        "target": 6,
+        "type": "contains"
+      },
+      {
+        "source": 6,
+        "target": 7,
+        "type": "is_a"
+      }
+    ]
+  },
+  "grafo_evidencia": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "e7d961f6-d00d-5ca1-9559-421b35bbd663",
+        "text": "This chunk is about:\n- Places: 888 7th Avenue, 200 West Street, Midtown Manhattan, Lower Manhattan, New York\n- Companies: Goldman Sachs, Pershing Square Capital Management\n- People: Bill Ackman\n- Topics: office skyscrapers, headquarters, hedge fund management\n\nFacts:\n- 888 7th Avenue was completed in 1969 as a modern-style office skyscraper in Midtown Manhattan.\n- 888 7th Avenue is 628 feet tall, 46 floors high, and located in Midtown Manhattan.\n- 200 West Street is a 749-foot, 44-story building on West Street between Vesey Street and Murray Street in Lower Manhattan.\n- 200 West Street serves as the global headquarters of Goldman Sachs.\n- Pershing Square Capital Management is an American hedge fund management company founded and run by Bill Ackman.\n- Pershing Square Capital Management is located at 888 7th Avenue in New York.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "1f864d7d-6823-550f-821f-d5ae348985ae",
+        "text": "Page: 888 7th Avenue. Sentence: 888 7th Avenue is a 628 ft (191m) tall modern-style office skyscraper in Midtown Manhattan which was completed in 1969 and has 46 floors.\nPage: 200 West Street. Sentence: 200 West Street is the global headquarters of the Goldman Sachs investment banking firm.\nPage: 200 West Street. Sentence: The building is a 749 ft , 44-story building located on West Street, between Vesey and Murray Streets in Lower Manhattan.\nPage: Pershing Square Capital Management. Sentence: Pershing Square Capital Management is an American hedge fund management company founded and run by Bill Ackman, located at 888 7th Avenue in New York.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "e73fbfe3-b2a7-5110-b0e9-27ef6f6063b1",
+        "text": "text_e021f44c3d64ded2d12c6edf7233d5f3",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "916665b3-2893-5b72-8df0-e434f96f41bd",
+        "text": "888 7th avenue",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "b011d686-ca3a-5398-b03c-f44518808ad9",
+        "text": "building",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "a6ba10d2-2c66-5882-a184-52258047bde1",
+        "text": "midtown manhattan",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "5f394058-b2a0-5ba8-8466-ba2a18cfcf4e",
+        "text": "place",
+        "type": "EntityType"
+      },
+      {
+        "id": 7,
+        "original_id": "5debc034-fa71-585e-97a1-ef8f6cf6fa47",
+        "text": "1969",
+        "type": "Entity"
+      },
+      {
+        "id": 8,
+        "original_id": "b19433ae-558c-5aaf-95ac-6231f2a4be0e",
+        "text": "date",
+        "type": "EntityType"
+      },
+      {
+        "id": 9,
+        "original_id": "980bd79e-a6e1-5abe-b1fd-9e632b0b51ec",
+        "text": "200 west street",
+        "type": "Entity"
+      },
+      {
+        "id": 10,
+        "original_id": "90331f33-a9d0-5d1e-b709-74bfe5c71790",
+        "text": "goldman sachs",
+        "type": "Entity"
+      },
+      {
+        "id": 11,
+        "original_id": "388f60fb-220d-55e8-ae9c-3ac93cead308",
+        "text": "organization",
+        "type": "EntityType"
+      },
+      {
+        "id": 12,
+        "original_id": "abc3eab4-7978-5558-ac8d-99d4d9ea77b9",
+        "text": "west street",
+        "type": "Entity"
+      },
+      {
+        "id": 13,
+        "original_id": "96fbb166-9661-5ddc-b701-be160f4a4eec",
+        "text": "vesey street",
+        "type": "Entity"
+      },
+      {
+        "id": 14,
+        "original_id": "e62d6f59-66ec-5f80-8aa5-619eec4b3ba1",
+        "text": "murray street",
+        "type": "Entity"
+      },
+      {
+        "id": 15,
+        "original_id": "1e4179ab-86da-53ff-8e4d-098224a41af5",
+        "text": "lower manhattan",
+        "type": "Entity"
+      },
+      {
+        "id": 16,
+        "original_id": "cc5b8e34-015e-54b1-8d3e-2478961ee13c",
+        "text": "pershing square capital management",
+        "type": "Entity"
+      },
+      {
+        "id": 17,
+        "original_id": "2fd5e7a3-4d71-5efe-b200-1ade76bc362e",
+        "text": "bill ackman",
+        "type": "Entity"
+      },
+      {
+        "id": 18,
+        "original_id": "99a82eec-bb35-5bb5-9ed2-e73fc7a756de",
+        "text": "person",
+        "type": "EntityType"
+      },
+      {
+        "id": 19,
+        "original_id": "a7852d00-db75-55e2-bd9a-468ada762d39",
+        "text": "new york",
+        "type": "Entity"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 16,
+        "target": 3,
+        "type": "located_at"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 9,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "located_in"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 12,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 13,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 14,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 15,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 19,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 7,
+        "type": "completed_in"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      },
+      {
+        "source": 7,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 9,
+        "type": "contains"
+      },
+      {
+        "source": 9,
+        "target": 10,
+        "type": "global_headquarters_of"
+      },
+      {
+        "source": 1,
+        "target": 10,
+        "type": "contains"
+      },
+      {
+        "source": 10,
+        "target": 11,
+        "type": "is_a"
+      },
+      {
+        "source": 16,
+        "target": 11,
+        "type": "is_a"
+      },
+      {
+        "source": 9,
+        "target": 12,
+        "type": "located_on"
+      },
+      {
+        "source": 1,
+        "target": 12,
+        "type": "contains"
+      },
+      {
+        "source": 9,
+        "target": 13,
+        "type": "between"
+      },
+      {
+        "source": 1,
+        "target": 13,
+        "type": "contains"
+      },
+      {
+        "source": 9,
+        "target": 14,
+        "type": "between"
+      },
+      {
+        "source": 1,
+        "target": 14,
+        "type": "contains"
+      },
+      {
+        "source": 9,
+        "target": 15,
+        "type": "located_in"
+      },
+      {
+        "source": 1,
+        "target": 15,
+        "type": "contains"
+      },
+      {
+        "source": 1,
+        "target": 16,
+        "type": "contains"
+      },
+      {
+        "source": 16,
+        "target": 17,
+        "type": "founded_by"
+      },
+      {
+        "source": 1,
+        "target": 17,
+        "type": "contains"
+      },
+      {
+        "source": 17,
+        "target": 18,
+        "type": "is_a"
+      },
+      {
+        "source": 16,
+        "target": 19,
+        "type": "located_in"
+      },
+      {
+        "source": 1,
+        "target": 19,
+        "type": "contains"
+      }
+    ]
+  }
+}

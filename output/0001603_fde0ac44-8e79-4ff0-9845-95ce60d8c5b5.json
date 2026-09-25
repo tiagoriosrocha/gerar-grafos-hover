@@ -1,0 +1,335 @@
+{
+  "dataset": "hover",
+  "id": "fde0ac44-8e79-4ff0-9845-95ce60d8c5b5",
+  "split": "train",
+  "claim": "The Porsche 968 was the last in a line of front-engined sports cars following the 944 and the 924.",
+  "evidencia": "Page: Porsche 968. Sentence: It was the final evolution of a line of water-cooled front-engined rear wheel drive models begun almost 20 years earlier with the 924, taking over the entry-level position in the company lineup from the 944 with which it shared about 20% of its parts.\nPage: Porsche 944. Sentence: A front-engined, rear-wheel drive mid-level model based on the 924 platform, the 944 was available in coupé or cabriolet body styles, with either naturally aspirated or turbocharged engines",
+  "evidence_text": "Page: Porsche 968. Sentence: It was the final evolution of a line of water-cooled front-engined rear wheel drive models begun almost 20 years earlier with the 924, taking over the entry-level position in the company lineup from the 944 with which it shared about 20% of its parts.\nPage: Porsche 944. Sentence: A front-engined, rear-wheel drive mid-level model based on the 924 platform, the 944 was available in coupé or cabriolet body styles, with either naturally aspirated or turbocharged engines",
+  "label": "SUPPORTED",
+  "num_hops": 2,
+  "hover_metadata": {
+    "supporting_facts": [
+      [
+        "Porsche 968",
+        1
+      ],
+      [
+        "Porsche 944",
+        1
+      ]
+    ],
+    "num_hops": 2,
+    "evidence_annotation_id": [
+      0
+    ],
+    "evidence_id": [
+      "Porsche 968::sentence::1",
+      "Porsche 944::sentence::1"
+    ],
+    "evidence_wiki_url": [
+      "https://en.wikipedia.org/wiki/Porsche_968",
+      "https://en.wikipedia.org/wiki/Porsche_944"
+    ],
+    "evidence_sentence_id": [
+      "Porsche 968::sentence::1",
+      "Porsche 944::sentence::1"
+    ]
+  },
+  "grafo_claim": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "36b2dc26-4d4b-511f-aab7-5b4fe53c2b91",
+        "text": "This chunk is about:\n- Products: Porsche 968, Porsche 944, Porsche 924\n- Topics: Front-engined sports cars\n\nFacts:\n- The Porsche 924 was followed by the Porsche 944 in Porsche's line of front-engined sports cars.\n- The Porsche 968 followed the Porsche 944 and was the last model in that line of front-engined sports cars.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "ef89c053-3b30-5bf3-b7eb-aa2a4161e9f7",
+        "text": "The Porsche 968 was the last in a line of front-engined sports cars following the 944 and the 924.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "e362dc39-f6f8-5182-ae6b-fc5bebf14c58",
+        "text": "text_516a081f7bb0fb14e9fea3f35cfcd6ad",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "3f89c399-2984-5757-86b1-336eb0a985da",
+        "text": "porsche 968",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "287d3989-15a3-5f4b-bf52-4b1fd2b4057f",
+        "text": "line of front-engined sports cars",
+        "type": "Entity"
+      },
+      {
+        "id": 5,
+        "original_id": "d2a381fa-3658-5ca6-ada9-2109cfc9331d",
+        "text": "concept",
+        "type": "EntityType"
+      },
+      {
+        "id": 6,
+        "original_id": "b15fc618-bf92-5642-9c03-34b3c36ca1a9",
+        "text": "porsche 944",
+        "type": "Entity"
+      },
+      {
+        "id": 7,
+        "original_id": "f76d57aa-4740-5218-9539-0e0978cbf183",
+        "text": "product",
+        "type": "EntityType"
+      },
+      {
+        "id": 8,
+        "original_id": "2a3d6e51-db3e-5bc8-96a4-f7dce5f978d6",
+        "text": "porsche 924",
+        "type": "Entity"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_last_in"
+      },
+      {
+        "source": 6,
+        "target": 4,
+        "type": "is_in"
+      },
+      {
+        "source": 8,
+        "target": 4,
+        "type": "is_in"
+      },
+      {
+        "source": 1,
+        "target": 4,
+        "type": "contains"
+      },
+      {
+        "source": 4,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 6,
+        "type": "follows"
+      },
+      {
+        "source": 1,
+        "target": 6,
+        "type": "contains"
+      },
+      {
+        "source": 6,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 8,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 8,
+        "type": "follows"
+      },
+      {
+        "source": 1,
+        "target": 8,
+        "type": "contains"
+      }
+    ]
+  },
+  "grafo_evidencia": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "f191b5ce-65cc-51bf-af96-dbc7073e1d46",
+        "text": "This chunk is about:\n- Products: Porsche 968, Porsche 944, Porsche 924\n- Companies: Porsche\n- Concepts: water-cooled front-engined rear-wheel-drive models, entry-level position, mid-level model, body styles, engine types\n\nFacts:\n- Porsche began a line of water-cooled front-engined rear-wheel-drive models with the Porsche 924 almost 20 years before the Porsche 968.\n- The Porsche 944 was a front-engined, rear-wheel-drive mid-level model based on the Porsche 924 platform.\n- The Porsche 944 was available as a coupé or cabriolet with either naturally aspirated or turbocharged engines.\n- The Porsche 968 was the final evolution of Porsche's water-cooled front-engined rear-wheel-drive line.\n- The Porsche 968 took over the entry-level position in Porsche's lineup from the Porsche 944.\n- The Porsche 968 shared about 20% of its parts with the Porsche 944.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "423bede1-7f0f-5f21-93b0-0dda88adcc4e",
+        "text": "Page: Porsche 968. Sentence: It was the final evolution of a line of water-cooled front-engined rear wheel drive models begun almost 20 years earlier with the 924, taking over the entry-level position in the company lineup from the 944 with which it shared about 20% of its parts.\nPage: Porsche 944. Sentence: A front-engined, rear-wheel drive mid-level model based on the 924 platform, the 944 was available in coupé or cabriolet body styles, with either naturally aspirated or turbocharged engines",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "629ca615-7565-5572-8e1e-f7ddc10acb24",
+        "text": "text_b9e31a26792a0594e0702056a91346aa",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "3f89c399-2984-5757-86b1-336eb0a985da",
+        "text": "porsche 968",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "2a3d6e51-db3e-5bc8-96a4-f7dce5f978d6",
+        "text": "porsche 924",
+        "type": "Entity"
+      },
+      {
+        "id": 5,
+        "original_id": "f76d57aa-4740-5218-9539-0e0978cbf183",
+        "text": "product",
+        "type": "EntityType"
+      },
+      {
+        "id": 6,
+        "original_id": "b15fc618-bf92-5642-9c03-34b3c36ca1a9",
+        "text": "porsche 944",
+        "type": "Entity"
+      },
+      {
+        "id": 7,
+        "original_id": "7c463cdc-eb3c-5991-b1da-74222ae88cc6",
+        "text": "924 platform",
+        "type": "Entity"
+      },
+      {
+        "id": 8,
+        "original_id": "295ffe32-51cd-5bbd-b775-06bbb0cca1ed",
+        "text": "platform",
+        "type": "EntityType"
+      },
+      {
+        "id": 9,
+        "original_id": "d2cf8be6-5c34-505f-b4e6-cb2da5789c78",
+        "text": "porsche",
+        "type": "Entity"
+      },
+      {
+        "id": 10,
+        "original_id": "388f60fb-220d-55e8-ae9c-3ac93cead308",
+        "text": "organization",
+        "type": "EntityType"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "final_evolution_of_line_begun_with"
+      },
+      {
+        "source": 6,
+        "target": 4,
+        "type": "mid_level_model_based_on_platform_of"
+      },
+      {
+        "source": 1,
+        "target": 4,
+        "type": "contains"
+      },
+      {
+        "source": 4,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 6,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 6,
+        "type": "took_entry_level_position_from"
+      },
+      {
+        "source": 1,
+        "target": 6,
+        "type": "contains"
+      },
+      {
+        "source": 6,
+        "target": 7,
+        "type": "based_on"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      },
+      {
+        "source": 7,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 6,
+        "target": 9,
+        "type": "in_lineup_of"
+      },
+      {
+        "source": 3,
+        "target": 9,
+        "type": "in_lineup_of"
+      },
+      {
+        "source": 1,
+        "target": 9,
+        "type": "contains"
+      },
+      {
+        "source": 9,
+        "target": 10,
+        "type": "is_a"
+      }
+    ]
+  }
+}

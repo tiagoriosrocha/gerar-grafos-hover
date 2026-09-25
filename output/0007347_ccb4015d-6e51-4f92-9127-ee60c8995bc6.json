@@ -1,0 +1,624 @@
+{
+  "dataset": "hover",
+  "id": "ccb4015d-6e51-4f92-9127-ee60c8995bc6",
+  "split": "train",
+  "claim": "Mountain Dew is owned by Mountain Dew's. So is the producer of orange juice founded by Anthony T. Rossi.",
+  "evidencia": "Page: Tropicana Products. Sentence: Since 1998, it has been owned by PepsiCo.\nPage: Mountain Dew. Sentence: In August 1964, the Mountain Dew brand and production rights were acquired from Tip by the Pepsi-Cola company, at which point distribution expanded more widely across the United States and Canada.\nPage: Anthony T. Rossi. Sentence: Anthony Talamo Rossi (September 13, 1900 – January 24, 1993) was an Italian immigrant who founded Tropicana Products, a producer of orange juice founded in 1947 in Bradenton, Florida in the United States which grew from 50 employees to over 8,000 in 2004, expanding into multiple product lines and became one of the world's largest producers and marketers of citrus juice.",
+  "evidence_text": "Page: Tropicana Products. Sentence: Since 1998, it has been owned by PepsiCo.\nPage: Mountain Dew. Sentence: In August 1964, the Mountain Dew brand and production rights were acquired from Tip by the Pepsi-Cola company, at which point distribution expanded more widely across the United States and Canada.\nPage: Anthony T. Rossi. Sentence: Anthony Talamo Rossi (September 13, 1900 – January 24, 1993) was an Italian immigrant who founded Tropicana Products, a producer of orange juice founded in 1947 in Bradenton, Florida in the United States which grew from 50 employees to over 8,000 in 2004, expanding into multiple product lines and became one of the world's largest producers and marketers of citrus juice.",
+  "label": "SUPPORTED",
+  "num_hops": 3,
+  "hover_metadata": {
+    "supporting_facts": [
+      [
+        "Tropicana Products",
+        2
+      ],
+      [
+        "Mountain Dew",
+        5
+      ],
+      [
+        "Anthony T. Rossi",
+        0
+      ]
+    ],
+    "num_hops": 3,
+    "evidence_annotation_id": [
+      0
+    ],
+    "evidence_id": [
+      "Tropicana Products::sentence::2",
+      "Mountain Dew::sentence::5",
+      "Anthony T. Rossi::sentence::0"
+    ],
+    "evidence_wiki_url": [
+      "https://en.wikipedia.org/wiki/Tropicana_Products",
+      "https://en.wikipedia.org/wiki/Mountain_Dew",
+      "https://en.wikipedia.org/wiki/Anthony_T._Rossi"
+    ],
+    "evidence_sentence_id": [
+      "Tropicana Products::sentence::2",
+      "Mountain Dew::sentence::5",
+      "Anthony T. Rossi::sentence::0"
+    ]
+  },
+  "grafo_claim": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "a708bc53-72d5-5592-9059-306694614d86",
+        "text": "This chunk is about:\n- Companies: Mountain Dew, Tropicana Products, Mountain Dew's\n- People: Anthony T. Rossi\n- Products: orange juice\n\nFacts:\n- Anthony T. Rossi founded Tropicana Products as a producer of orange juice.\n- Mountain Dew is owned by Mountain Dew's.\n- Tropicana Products is also owned by Mountain Dew's.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "43f6e0ee-5f18-5af9-8723-aa92a05c434a",
+        "text": "Mountain Dew is owned by Mountain Dew's. So is the producer of orange juice founded by Anthony T. Rossi.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "0bc6ab78-dad0-53b4-bbdb-22b44a215a37",
+        "text": "text_0ee4a010b2a7f2e956a586be89841d57",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "1841c340-5cf7-5b59-8846-064cd8c9bb5f",
+        "text": "mountain dew",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "f76d57aa-4740-5218-9539-0e0978cbf183",
+        "text": "product",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "c678e9b9-99d2-5ece-8ea6-da7694500875",
+        "text": "mountain dews",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "94b1878e-3cc6-5805-ad72-8f84fd5c1bd2",
+        "text": "producer of orange juice",
+        "type": "Entity"
+      },
+      {
+        "id": 7,
+        "original_id": "388f60fb-220d-55e8-ae9c-3ac93cead308",
+        "text": "organization",
+        "type": "EntityType"
+      },
+      {
+        "id": 8,
+        "original_id": "435f27b0-3b7d-5e94-a9b9-3c7c6749f0fb",
+        "text": "anthony t. rossi",
+        "type": "Entity"
+      },
+      {
+        "id": 9,
+        "original_id": "99a82eec-bb35-5bb5-9ed2-e73fc7a756de",
+        "text": "person",
+        "type": "EntityType"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 3,
+        "type": "owns"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "owns"
+      },
+      {
+        "source": 1,
+        "target": 6,
+        "type": "contains"
+      },
+      {
+        "source": 8,
+        "target": 6,
+        "type": "founded"
+      },
+      {
+        "source": 6,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 5,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 8,
+        "type": "contains"
+      },
+      {
+        "source": 8,
+        "target": 9,
+        "type": "is_a"
+      }
+    ]
+  },
+  "grafo_evidencia": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "35608110-0892-5767-a6c1-32538223356e",
+        "text": "This chunk is about:\n- Companies: Tropicana Products, PepsiCo, Pepsi-Cola Company\n- Brands: Mountain Dew\n- People: Anthony T. Rossi\n- Places: Bradenton, Florida, United States, Canada\n- Topics: acquisitions, ownership, founding, expansion\n\nFacts:\n- Anthony T. Rossi was an Italian immigrant born on September 13, 1900, and he founded Tropicana Products in 1947 in Bradenton, Florida, in the United States.\n- Tropicana Products was founded as a producer of orange juice and later expanded into multiple product lines.\n- In August 1964, the Pepsi-Cola Company acquired the Mountain Dew brand and production rights from Tip.\n- After the August 1964 acquisition, Mountain Dew distribution expanded more widely across the United States and Canada.\n- Since 1998, Tropicana Products has been owned by PepsiCo.\n- Tropicana Products grew from 50 employees to over 8,000 in 2004 and became one of the world's largest producers and marketers of citrus juice.\n- Anthony T. Rossi died on January 24, 1993.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "1f9f5bd9-5ad5-5821-932e-3a7039a279e4",
+        "text": "Page: Tropicana Products. Sentence: Since 1998, it has been owned by PepsiCo.\nPage: Mountain Dew. Sentence: In August 1964, the Mountain Dew brand and production rights were acquired from Tip by the Pepsi-Cola company, at which point distribution expanded more widely across the United States and Canada.\nPage: Anthony T. Rossi. Sentence: Anthony Talamo Rossi (September 13, 1900 – January 24, 1993) was an Italian immigrant who founded Tropicana Products, a producer of orange juice founded in 1947 in Bradenton, Florida in the United States which grew from 50 employees to over 8,000 in 2004, expanding into multiple product lines and became one of the world's largest producers and marketers of citrus juice.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "7b8691d8-f5f8-54a6-9dc4-f9f2a0d799bd",
+        "text": "text_5e391d8898ecbcc0b46668cad1751a55",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "c1af5b85-1adf-5d34-8eeb-98004cb4a11d",
+        "text": "tropicana products",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "afa189e7-975d-54f3-9693-64d7785d0ff8",
+        "text": "1947",
+        "type": "Entity"
+      },
+      {
+        "id": 5,
+        "original_id": "b19433ae-558c-5aaf-95ac-6231f2a4be0e",
+        "text": "date",
+        "type": "EntityType"
+      },
+      {
+        "id": 6,
+        "original_id": "d6ba8179-f6f8-51fe-92c8-00ecf4c3b568",
+        "text": "bradenton, florida",
+        "type": "Entity"
+      },
+      {
+        "id": 7,
+        "original_id": "874a51da-34ea-5037-be47-d87785d43c37",
+        "text": "united states",
+        "type": "Entity"
+      },
+      {
+        "id": 8,
+        "original_id": "5f394058-b2a0-5ba8-8466-ba2a18cfcf4e",
+        "text": "place",
+        "type": "EntityType"
+      },
+      {
+        "id": 9,
+        "original_id": "17733c13-34ff-5c94-9fed-f31034919ce8",
+        "text": "orange juice",
+        "type": "Entity"
+      },
+      {
+        "id": 10,
+        "original_id": "f76d57aa-4740-5218-9539-0e0978cbf183",
+        "text": "product",
+        "type": "EntityType"
+      },
+      {
+        "id": 11,
+        "original_id": "559b7176-da84-5102-a855-b896617a9c3b",
+        "text": "2004",
+        "type": "Entity"
+      },
+      {
+        "id": 12,
+        "original_id": "559584f8-c87a-5ef0-b8f1-0140a71aa655",
+        "text": "citrus juice",
+        "type": "Entity"
+      },
+      {
+        "id": 13,
+        "original_id": "388f60fb-220d-55e8-ae9c-3ac93cead308",
+        "text": "organization",
+        "type": "EntityType"
+      },
+      {
+        "id": 14,
+        "original_id": "ba727ee2-a1b1-5476-8969-bb4e5777a495",
+        "text": "pepsico",
+        "type": "Entity"
+      },
+      {
+        "id": 15,
+        "original_id": "111f07f3-2527-5bbf-827f-7a18bb37f150",
+        "text": "1998",
+        "type": "Entity"
+      },
+      {
+        "id": 16,
+        "original_id": "1841c340-5cf7-5b59-8846-064cd8c9bb5f",
+        "text": "mountain dew",
+        "type": "Entity"
+      },
+      {
+        "id": 17,
+        "original_id": "bbedb15c-e733-5a11-9f07-ae16faad96f0",
+        "text": "canada",
+        "type": "Entity"
+      },
+      {
+        "id": 18,
+        "original_id": "643a9c3d-45cf-53f2-963f-23af328a5f08",
+        "text": "1964-08",
+        "type": "Entity"
+      },
+      {
+        "id": 19,
+        "original_id": "b5a12ce9-1674-5143-926f-a90457e2845f",
+        "text": "tip",
+        "type": "Entity"
+      },
+      {
+        "id": 20,
+        "original_id": "913f9f9e-5afd-5dd5-9fd2-ab23069272cb",
+        "text": "pepsi-cola company",
+        "type": "Entity"
+      },
+      {
+        "id": 21,
+        "original_id": "07bee36b-84aa-5bb3-9708-4b8dd6399bbc",
+        "text": "anthony talamo rossi",
+        "type": "Entity"
+      },
+      {
+        "id": 22,
+        "original_id": "e2cdbe6c-9428-56c0-91ff-a16b80905d91",
+        "text": "1900-09-13",
+        "type": "Entity"
+      },
+      {
+        "id": 23,
+        "original_id": "c6e6e3b2-829b-5a6e-b5ee-54caf5c59966",
+        "text": "1993-01-24",
+        "type": "Entity"
+      },
+      {
+        "id": 24,
+        "original_id": "ea9ba5a0-b62f-58b2-a553-fec58ef57527",
+        "text": "italian immigrant",
+        "type": "Entity"
+      },
+      {
+        "id": 25,
+        "original_id": "d2a381fa-3658-5ca6-ada9-2109cfc9331d",
+        "text": "concept",
+        "type": "EntityType"
+      },
+      {
+        "id": 26,
+        "original_id": "99a82eec-bb35-5bb5-9ed2-e73fc7a756de",
+        "text": "person",
+        "type": "EntityType"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 14,
+        "target": 3,
+        "type": "owns"
+      },
+      {
+        "source": 21,
+        "target": 3,
+        "type": "founded"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "founded_in"
+      },
+      {
+        "source": 1,
+        "target": 4,
+        "type": "contains"
+      },
+      {
+        "source": 4,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 11,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 15,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 18,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 22,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 23,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 6,
+        "type": "founded_in_place"
+      },
+      {
+        "source": 1,
+        "target": 6,
+        "type": "contains"
+      },
+      {
+        "source": 6,
+        "target": 7,
+        "type": "located_in"
+      },
+      {
+        "source": 16,
+        "target": 7,
+        "type": "distribution_expanded_in"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      },
+      {
+        "source": 7,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 6,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 17,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 9,
+        "type": "producer_of"
+      },
+      {
+        "source": 1,
+        "target": 9,
+        "type": "contains"
+      },
+      {
+        "source": 9,
+        "target": 10,
+        "type": "is_a"
+      },
+      {
+        "source": 12,
+        "target": 10,
+        "type": "is_a"
+      },
+      {
+        "source": 16,
+        "target": 10,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 11,
+        "type": "had_over_8000_employees_in"
+      },
+      {
+        "source": 1,
+        "target": 11,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 12,
+        "type": "producer_and_marketer_of"
+      },
+      {
+        "source": 1,
+        "target": 12,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 13,
+        "type": "is_a"
+      },
+      {
+        "source": 14,
+        "target": 13,
+        "type": "is_a"
+      },
+      {
+        "source": 19,
+        "target": 13,
+        "type": "is_a"
+      },
+      {
+        "source": 20,
+        "target": 13,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 14,
+        "type": "contains"
+      },
+      {
+        "source": 14,
+        "target": 15,
+        "type": "ownership_since"
+      },
+      {
+        "source": 1,
+        "target": 15,
+        "type": "contains"
+      },
+      {
+        "source": 1,
+        "target": 16,
+        "type": "contains"
+      },
+      {
+        "source": 19,
+        "target": 16,
+        "type": "previous_holder_of_rights"
+      },
+      {
+        "source": 20,
+        "target": 16,
+        "type": "acquired"
+      },
+      {
+        "source": 16,
+        "target": 17,
+        "type": "distribution_expanded_in"
+      },
+      {
+        "source": 1,
+        "target": 17,
+        "type": "contains"
+      },
+      {
+        "source": 1,
+        "target": 18,
+        "type": "contains"
+      },
+      {
+        "source": 20,
+        "target": 18,
+        "type": "acquired_in"
+      },
+      {
+        "source": 1,
+        "target": 19,
+        "type": "contains"
+      },
+      {
+        "source": 20,
+        "target": 19,
+        "type": "acquired_from"
+      },
+      {
+        "source": 1,
+        "target": 20,
+        "type": "contains"
+      },
+      {
+        "source": 1,
+        "target": 21,
+        "type": "contains"
+      },
+      {
+        "source": 21,
+        "target": 22,
+        "type": "born_on"
+      },
+      {
+        "source": 1,
+        "target": 22,
+        "type": "contains"
+      },
+      {
+        "source": 21,
+        "target": 23,
+        "type": "died_on"
+      },
+      {
+        "source": 1,
+        "target": 23,
+        "type": "contains"
+      },
+      {
+        "source": 21,
+        "target": 24,
+        "type": "is_described_as"
+      },
+      {
+        "source": 1,
+        "target": 24,
+        "type": "contains"
+      },
+      {
+        "source": 24,
+        "target": 25,
+        "type": "is_a"
+      },
+      {
+        "source": 21,
+        "target": 26,
+        "type": "is_a"
+      }
+    ]
+  }
+}

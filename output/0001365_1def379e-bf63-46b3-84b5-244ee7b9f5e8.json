@@ -1,0 +1,516 @@
+{
+  "dataset": "hover",
+  "id": "1def379e-bf63-46b3-84b5-244ee7b9f5e8",
+  "split": "train",
+  "claim": "The skyscraper 8 Spruce Street has more traffic than the SNCI Tower.",
+  "evidencia": "Page: SNCI Tower. Sentence: The building is planned to rise 289.6 metres (950 ft) in the city's TriBeCa district, with 57 floors.\nPage: 8 Spruce Street. Sentence: 8 Spruce Street, originally known as Beekman Tower and currently marketed as New York by Gehry, is a 76-story skyscraper designed by architect Frank Gehry in the New York City borough of Manhattan at 8 Spruce Street, between William and Nassau Streets, in Lower Manhattan, just south of City Hall Park and the Brooklyn Bridge.",
+  "evidence_text": "Page: SNCI Tower. Sentence: The building is planned to rise 289.6 metres (950 ft) in the city's TriBeCa district, with 57 floors.\nPage: 8 Spruce Street. Sentence: 8 Spruce Street, originally known as Beekman Tower and currently marketed as New York by Gehry, is a 76-story skyscraper designed by architect Frank Gehry in the New York City borough of Manhattan at 8 Spruce Street, between William and Nassau Streets, in Lower Manhattan, just south of City Hall Park and the Brooklyn Bridge.",
+  "label": "NOT_SUPPORTED",
+  "num_hops": 2,
+  "hover_metadata": {
+    "supporting_facts": [
+      [
+        "SNCI Tower",
+        1
+      ],
+      [
+        "8 Spruce Street",
+        0
+      ]
+    ],
+    "num_hops": 2,
+    "evidence_annotation_id": [
+      0
+    ],
+    "evidence_id": [
+      "SNCI Tower::sentence::1",
+      "8 Spruce Street::sentence::0"
+    ],
+    "evidence_wiki_url": [
+      "https://en.wikipedia.org/wiki/SNCI_Tower",
+      "https://en.wikipedia.org/wiki/8_Spruce_Street"
+    ],
+    "evidence_sentence_id": [
+      "SNCI Tower::sentence::1",
+      "8 Spruce Street::sentence::0"
+    ]
+  },
+  "grafo_claim": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "5a1f9999-789c-57ae-82d8-655658dd7fee",
+        "text": "This chunk is about:\n- Places: 8 Spruce Street, SNCI Tower\n- Concepts: traffic, comparison\n\nFacts:\n- 8 Spruce Street has more traffic than SNCI Tower.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "19ff3233-0f6d-553b-842e-5f7bb3eedd4b",
+        "text": "The skyscraper 8 Spruce Street has more traffic than the SNCI Tower.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "0564af49-f84b-56f4-bd77-a6be963a0737",
+        "text": "text_c1a2812595b223dcf7045176ed2a44dc",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "f93a0e4b-a1b6-58cb-9689-77d1dcd2057e",
+        "text": "8 spruce street",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "ccaacd2c-2941-52de-9612-cd2444136433",
+        "text": "snci tower",
+        "type": "Entity"
+      },
+      {
+        "id": 5,
+        "original_id": "6e063e41-daf7-578e-8691-d159bb095e51",
+        "text": "traffic",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "d2a381fa-3658-5ca6-ada9-2109cfc9331d",
+        "text": "concept",
+        "type": "EntityType"
+      },
+      {
+        "id": 7,
+        "original_id": "b011d686-ca3a-5398-b03c-f44518808ad9",
+        "text": "building",
+        "type": "EntityType"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "has_more_traffic_than"
+      },
+      {
+        "source": 1,
+        "target": 4,
+        "type": "contains"
+      },
+      {
+        "source": 4,
+        "target": 5,
+        "type": "has_attribute"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "has_attribute"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 4,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 7,
+        "type": "is_a"
+      }
+    ]
+  },
+  "grafo_evidencia": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "7358fe02-57c3-532c-8fd8-299059ccca3a",
+        "text": "This chunk is about:\n- Places: TriBeCa, Manhattan, Lower Manhattan, New York City\n- Buildings: SNCI Tower, 8 Spruce Street, Beekman Tower, New York by Gehry\n- People: Frank Gehry\n\nFacts:\n- SNCI Tower is planned to rise 289.6 metres (950 ft) and have 57 floors in New York City's TriBeCa district.\n- 8 Spruce Street was originally known as Beekman Tower and is currently marketed as New York by Gehry.\n- 8 Spruce Street is a 76-story skyscraper in Manhattan at 8 Spruce Street, between William Street and Nassau Street, in Lower Manhattan just south of City Hall Park and the Brooklyn Bridge.\n- Architect Frank Gehry designed 8 Spruce Street.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "e1a0fb46-f001-5787-b396-c11d5c79d2d3",
+        "text": "Page: SNCI Tower. Sentence: The building is planned to rise 289.6 metres (950 ft) in the city's TriBeCa district, with 57 floors.\nPage: 8 Spruce Street. Sentence: 8 Spruce Street, originally known as Beekman Tower and currently marketed as New York by Gehry, is a 76-story skyscraper designed by architect Frank Gehry in the New York City borough of Manhattan at 8 Spruce Street, between William and Nassau Streets, in Lower Manhattan, just south of City Hall Park and the Brooklyn Bridge.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "24690ac7-f234-5acf-a32f-a2dcc0720b66",
+        "text": "text_fc20d644833edc9bd83b301ed0544d0a",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "ccaacd2c-2941-52de-9612-cd2444136433",
+        "text": "snci tower",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "32498c7d-37df-5872-8758-ee4390cc8b22",
+        "text": "tribeca",
+        "type": "Entity"
+      },
+      {
+        "id": 5,
+        "original_id": "5f394058-b2a0-5ba8-8466-ba2a18cfcf4e",
+        "text": "place",
+        "type": "EntityType"
+      },
+      {
+        "id": 6,
+        "original_id": "e45b2125-9aa2-59b7-ade9-088658340c17",
+        "text": "289.6 metres",
+        "type": "Entity"
+      },
+      {
+        "id": 7,
+        "original_id": "12d5521e-a878-542e-bebc-84ff79179d8e",
+        "text": "measurement",
+        "type": "EntityType"
+      },
+      {
+        "id": 8,
+        "original_id": "f41ee5dd-da64-5da9-bcae-14d666d7d4f8",
+        "text": "57 floors",
+        "type": "Entity"
+      },
+      {
+        "id": 9,
+        "original_id": "b011d686-ca3a-5398-b03c-f44518808ad9",
+        "text": "building",
+        "type": "EntityType"
+      },
+      {
+        "id": 10,
+        "original_id": "f93a0e4b-a1b6-58cb-9689-77d1dcd2057e",
+        "text": "8 spruce street",
+        "type": "Entity"
+      },
+      {
+        "id": 11,
+        "original_id": "c8e05701-273f-5687-9172-f1ef374ec603",
+        "text": "beekman tower",
+        "type": "Entity"
+      },
+      {
+        "id": 12,
+        "original_id": "39575085-0710-527d-bd54-019de7b00429",
+        "text": "name",
+        "type": "EntityType"
+      },
+      {
+        "id": 13,
+        "original_id": "aee49448-1f86-570f-a032-751ea4d865c9",
+        "text": "new york by gehry",
+        "type": "Entity"
+      },
+      {
+        "id": 14,
+        "original_id": "5d409f84-2ca2-5b96-979f-be75503df724",
+        "text": "frank gehry",
+        "type": "Entity"
+      },
+      {
+        "id": 15,
+        "original_id": "99a82eec-bb35-5bb5-9ed2-e73fc7a756de",
+        "text": "person",
+        "type": "EntityType"
+      },
+      {
+        "id": 16,
+        "original_id": "c65245b2-435b-5786-be1c-050c01adb0a5",
+        "text": "manhattan",
+        "type": "Entity"
+      },
+      {
+        "id": 17,
+        "original_id": "3d41a39a-e9b6-55e5-abbd-6be8ba78998b",
+        "text": "76 stories",
+        "type": "Entity"
+      },
+      {
+        "id": 18,
+        "original_id": "a0cd095d-3ba4-56d5-bc4a-c9843482e5e3",
+        "text": "william street",
+        "type": "Entity"
+      },
+      {
+        "id": 19,
+        "original_id": "053aa376-1012-5d23-876f-b548a766ac22",
+        "text": "nassau street",
+        "type": "Entity"
+      },
+      {
+        "id": 20,
+        "original_id": "1e4179ab-86da-53ff-8e4d-098224a41af5",
+        "text": "lower manhattan",
+        "type": "Entity"
+      },
+      {
+        "id": 21,
+        "original_id": "b938b312-4e3a-56e3-b66d-0a382d5a40dd",
+        "text": "city hall park",
+        "type": "Entity"
+      },
+      {
+        "id": 22,
+        "original_id": "939cda64-e819-5269-9b97-edac0015e048",
+        "text": "brooklyn bridge",
+        "type": "Entity"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "planned_in"
+      },
+      {
+        "source": 1,
+        "target": 4,
+        "type": "contains"
+      },
+      {
+        "source": 4,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 16,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 18,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 19,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 20,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 21,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 22,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 6,
+        "type": "planned_height"
+      },
+      {
+        "source": 1,
+        "target": 6,
+        "type": "contains"
+      },
+      {
+        "source": 6,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 8,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 17,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 8,
+        "type": "has_floor_count"
+      },
+      {
+        "source": 1,
+        "target": 8,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 9,
+        "type": "is_a"
+      },
+      {
+        "source": 10,
+        "target": 9,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 10,
+        "type": "contains"
+      },
+      {
+        "source": 10,
+        "target": 11,
+        "type": "originally_known_as"
+      },
+      {
+        "source": 1,
+        "target": 11,
+        "type": "contains"
+      },
+      {
+        "source": 11,
+        "target": 12,
+        "type": "is_a"
+      },
+      {
+        "source": 13,
+        "target": 12,
+        "type": "is_a"
+      },
+      {
+        "source": 10,
+        "target": 13,
+        "type": "marketed_as"
+      },
+      {
+        "source": 1,
+        "target": 13,
+        "type": "contains"
+      },
+      {
+        "source": 10,
+        "target": 14,
+        "type": "designed_by"
+      },
+      {
+        "source": 1,
+        "target": 14,
+        "type": "contains"
+      },
+      {
+        "source": 14,
+        "target": 15,
+        "type": "is_a"
+      },
+      {
+        "source": 10,
+        "target": 16,
+        "type": "located_in"
+      },
+      {
+        "source": 1,
+        "target": 16,
+        "type": "contains"
+      },
+      {
+        "source": 10,
+        "target": 17,
+        "type": "has_story_count"
+      },
+      {
+        "source": 1,
+        "target": 17,
+        "type": "contains"
+      },
+      {
+        "source": 10,
+        "target": 18,
+        "type": "between"
+      },
+      {
+        "source": 1,
+        "target": 18,
+        "type": "contains"
+      },
+      {
+        "source": 10,
+        "target": 19,
+        "type": "between"
+      },
+      {
+        "source": 1,
+        "target": 19,
+        "type": "contains"
+      },
+      {
+        "source": 10,
+        "target": 20,
+        "type": "located_in"
+      },
+      {
+        "source": 1,
+        "target": 20,
+        "type": "contains"
+      },
+      {
+        "source": 10,
+        "target": 21,
+        "type": "south_of"
+      },
+      {
+        "source": 1,
+        "target": 21,
+        "type": "contains"
+      },
+      {
+        "source": 10,
+        "target": 22,
+        "type": "south_of"
+      },
+      {
+        "source": 1,
+        "target": 22,
+        "type": "contains"
+      }
+    ]
+  }
+}

@@ -1,0 +1,485 @@
+{
+  "dataset": "hover",
+  "id": "320147a5-72f4-44d3-a5db-818f2d6a5f34",
+  "split": "train",
+  "claim": "The director of the silent film The Italian Straw Hat, also wrote the film. The writer and director was born before Emilio Fernández.",
+  "evidencia": "Page: René Clair. Sentence: René Clair (11 November 1898 – 15 March 1981) born René-Lucien Chomette, was a French filmmaker and writer.\nPage: Emilio Fernández. Sentence: Emilio \"El Indio\" Fernández (born Emilio Fernández Romo, ] ; March 26, 1904 – August 6, 1986) was a Mexican film director, actor and screenwriter.\nPage: The Italian Straw Hat (film). Sentence: The Italian Straw Hat (French: Un chapeau de paille d'Italie ) is a 1928 French silent film comedy written and directed by René Clair, in his feature debut, based on the 1851 play \"Un chapeau de paille d'Italie\", by Eugène Marin Labiche and Marc-Michel.",
+  "evidence_text": "Page: René Clair. Sentence: René Clair (11 November 1898 – 15 March 1981) born René-Lucien Chomette, was a French filmmaker and writer.\nPage: Emilio Fernández. Sentence: Emilio \"El Indio\" Fernández (born Emilio Fernández Romo, ] ; March 26, 1904 – August 6, 1986) was a Mexican film director, actor and screenwriter.\nPage: The Italian Straw Hat (film). Sentence: The Italian Straw Hat (French: Un chapeau de paille d'Italie ) is a 1928 French silent film comedy written and directed by René Clair, in his feature debut, based on the 1851 play \"Un chapeau de paille d'Italie\", by Eugène Marin Labiche and Marc-Michel.",
+  "label": "SUPPORTED",
+  "num_hops": 3,
+  "hover_metadata": {
+    "supporting_facts": [
+      [
+        "René Clair",
+        0
+      ],
+      [
+        "Emilio Fernández",
+        0
+      ],
+      [
+        "The Italian Straw Hat (film)",
+        0
+      ]
+    ],
+    "num_hops": 3,
+    "evidence_annotation_id": [
+      0
+    ],
+    "evidence_id": [
+      "René Clair::sentence::0",
+      "Emilio Fernández::sentence::0",
+      "The Italian Straw Hat (film)::sentence::0"
+    ],
+    "evidence_wiki_url": [
+      "https://en.wikipedia.org/wiki/Ren%C3%A9_Clair",
+      "https://en.wikipedia.org/wiki/Emilio_Fern%C3%A1ndez",
+      "https://en.wikipedia.org/wiki/The_Italian_Straw_Hat_%28film%29"
+    ],
+    "evidence_sentence_id": [
+      "René Clair::sentence::0",
+      "Emilio Fernández::sentence::0",
+      "The Italian Straw Hat (film)::sentence::0"
+    ]
+  },
+  "grafo_claim": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "11f57138-3b50-5174-b6f2-c061bbbf436d",
+        "text": "This chunk is about:\n- People: René Clair, Emilio Fernández\n- Works: The Italian Straw Hat\n- Roles: director, writer\n\nFacts:\n- René Clair was the director of the silent film The Italian Straw Hat.\n- René Clair also wrote The Italian Straw Hat.\n- Emilio Fernández was born after René Clair.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "8b603a79-f611-5b1d-a6e3-3f7d9c0493fd",
+        "text": "The director of the silent film The Italian Straw Hat, also wrote the film. The writer and director was born before Emilio Fernández.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "0e1d0a3b-b9f3-5ffa-a95d-878340102ce4",
+        "text": "text_13568f23f1f2b890ba7333fe310fccaf",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "01133f38-1cc0-501e-9842-2a5acb00a905",
+        "text": "the italian straw hat",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "5263a535-1b4b-5925-be3e-310d03cd303b",
+        "text": "work",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "e782ed01-256d-5d2c-b70f-0ad6d68600c6",
+        "text": "writer and director of the italian straw hat",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "cbf00db2-3f45-50e7-9ede-89485d001d31",
+        "text": "emilio fernández",
+        "type": "Entity"
+      },
+      {
+        "id": 7,
+        "original_id": "99a82eec-bb35-5bb5-9ed2-e73fc7a756de",
+        "text": "person",
+        "type": "EntityType"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 3,
+        "type": "directed"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "born_before"
+      },
+      {
+        "source": 1,
+        "target": 6,
+        "type": "contains"
+      },
+      {
+        "source": 6,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 5,
+        "target": 7,
+        "type": "is_a"
+      }
+    ]
+  },
+  "grafo_evidencia": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "1839b018-c9a6-58da-bc86-d3fcfaae8ba9",
+        "text": "This chunk is about:\n- People: René Clair, Emilio Fernández, Eugène Marin Labiche, Marc-Michel\n- Works: The Italian Straw Hat, Un chapeau de paille d'Italie\n- Roles: filmmaker, writer, film director, actor, screenwriter\n- Topics: French cinema, Mexican cinema, silent film comedy, feature debut, adaptation\n\nFacts:\n- René Clair was born René-Lucien Chomette on 11 November 1898 and became a French filmmaker and writer.\n- Emilio Fernández was born Emilio Fernández Romo on 26 March 1904 and became a Mexican film director, actor, and screenwriter.\n- The play Un chapeau de paille d'Italie was written in 1851 by Eugène Marin Labiche and Marc-Michel.\n- The Italian Straw Hat is a 1928 French silent film comedy.\n- René Clair wrote and directed The Italian Straw Hat as his feature debut.\n- The Italian Straw Hat was based on the 1851 play Un chapeau de paille d'Italie.\n- René Clair died on 15 March 1981.\n- Emilio Fernández died on 6 August 1986.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "fecde1bc-67e6-5576-a164-24d36be5a121",
+        "text": "Page: René Clair. Sentence: René Clair (11 November 1898 – 15 March 1981) born René-Lucien Chomette, was a French filmmaker and writer.\nPage: Emilio Fernández. Sentence: Emilio \"El Indio\" Fernández (born Emilio Fernández Romo, ] ; March 26, 1904 – August 6, 1986) was a Mexican film director, actor and screenwriter.\nPage: The Italian Straw Hat (film). Sentence: The Italian Straw Hat (French: Un chapeau de paille d'Italie ) is a 1928 French silent film comedy written and directed by René Clair, in his feature debut, based on the 1851 play \"Un chapeau de paille d'Italie\", by Eugène Marin Labiche and Marc-Michel.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "2cc69c4f-3c6e-5f82-a517-671ab64a518e",
+        "text": "text_2119692acb75edb164455b4a4aaa40c1",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "801a8fc7-21ca-5cc8-8dcb-eb8e0b3fff3b",
+        "text": "rené clair",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "2499ca94-edbb-5015-a782-163e29ac8d98",
+        "text": "1898-11-11",
+        "type": "Entity"
+      },
+      {
+        "id": 5,
+        "original_id": "b19433ae-558c-5aaf-95ac-6231f2a4be0e",
+        "text": "date",
+        "type": "EntityType"
+      },
+      {
+        "id": 6,
+        "original_id": "8ef19238-6d6c-5ed1-805d-4e8ccb56b455",
+        "text": "1981-03-15",
+        "type": "Entity"
+      },
+      {
+        "id": 7,
+        "original_id": "68f1dd1b-aede-5501-bea6-faf3c115244e",
+        "text": "rené-lucien chomette",
+        "type": "Entity"
+      },
+      {
+        "id": 8,
+        "original_id": "99a82eec-bb35-5bb5-9ed2-e73fc7a756de",
+        "text": "person",
+        "type": "EntityType"
+      },
+      {
+        "id": 9,
+        "original_id": "cbf00db2-3f45-50e7-9ede-89485d001d31",
+        "text": "emilio fernández",
+        "type": "Entity"
+      },
+      {
+        "id": 10,
+        "original_id": "26e04559-ac5f-5579-86aa-53aabf5f57cb",
+        "text": "1904-03-26",
+        "type": "Entity"
+      },
+      {
+        "id": 11,
+        "original_id": "f70ab550-66d4-5866-82d3-fea01ece794a",
+        "text": "1986-08-06",
+        "type": "Entity"
+      },
+      {
+        "id": 12,
+        "original_id": "0e8352be-cfc6-5f7a-9efe-f03c2995ba8c",
+        "text": "emilio fernández romo",
+        "type": "Entity"
+      },
+      {
+        "id": 13,
+        "original_id": "01133f38-1cc0-501e-9842-2a5acb00a905",
+        "text": "the italian straw hat",
+        "type": "Entity"
+      },
+      {
+        "id": 14,
+        "original_id": "9658e763-767b-5d03-9583-ae8f78235add",
+        "text": "1928",
+        "type": "Entity"
+      },
+      {
+        "id": 15,
+        "original_id": "eb51829c-3a19-5f49-b4e8-c4b711bfd429",
+        "text": "un chapeau de paille ditalie",
+        "type": "Entity"
+      },
+      {
+        "id": 16,
+        "original_id": "a023efbc-e37b-5e1a-af78-24dd184a550e",
+        "text": "1851",
+        "type": "Entity"
+      },
+      {
+        "id": 17,
+        "original_id": "5f3e7638-5eac-59a9-83e8-467e82db71cd",
+        "text": "eugène marin labiche",
+        "type": "Entity"
+      },
+      {
+        "id": 18,
+        "original_id": "c0df0eee-9bc4-5ba6-96b6-4dfbec90a6d8",
+        "text": "marc-michel",
+        "type": "Entity"
+      },
+      {
+        "id": 19,
+        "original_id": "5263a535-1b4b-5925-be3e-310d03cd303b",
+        "text": "work",
+        "type": "EntityType"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 13,
+        "target": 3,
+        "type": "written_by"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "born_on"
+      },
+      {
+        "source": 1,
+        "target": 4,
+        "type": "contains"
+      },
+      {
+        "source": 4,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 6,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 10,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 11,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 14,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 16,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 6,
+        "type": "died_on"
+      },
+      {
+        "source": 1,
+        "target": 6,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 7,
+        "type": "born_as"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      },
+      {
+        "source": 7,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 12,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 9,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 17,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 18,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 9,
+        "type": "contains"
+      },
+      {
+        "source": 9,
+        "target": 10,
+        "type": "born_on"
+      },
+      {
+        "source": 1,
+        "target": 10,
+        "type": "contains"
+      },
+      {
+        "source": 9,
+        "target": 11,
+        "type": "died_on"
+      },
+      {
+        "source": 1,
+        "target": 11,
+        "type": "contains"
+      },
+      {
+        "source": 9,
+        "target": 12,
+        "type": "born_as"
+      },
+      {
+        "source": 1,
+        "target": 12,
+        "type": "contains"
+      },
+      {
+        "source": 1,
+        "target": 13,
+        "type": "contains"
+      },
+      {
+        "source": 13,
+        "target": 14,
+        "type": "released_in"
+      },
+      {
+        "source": 1,
+        "target": 14,
+        "type": "contains"
+      },
+      {
+        "source": 13,
+        "target": 15,
+        "type": "has_french_title"
+      },
+      {
+        "source": 1,
+        "target": 15,
+        "type": "contains"
+      },
+      {
+        "source": 15,
+        "target": 16,
+        "type": "created_in"
+      },
+      {
+        "source": 1,
+        "target": 16,
+        "type": "contains"
+      },
+      {
+        "source": 15,
+        "target": 17,
+        "type": "written_by"
+      },
+      {
+        "source": 1,
+        "target": 17,
+        "type": "contains"
+      },
+      {
+        "source": 15,
+        "target": 18,
+        "type": "written_by"
+      },
+      {
+        "source": 1,
+        "target": 18,
+        "type": "contains"
+      },
+      {
+        "source": 15,
+        "target": 19,
+        "type": "is_a"
+      },
+      {
+        "source": 13,
+        "target": 19,
+        "type": "is_a"
+      }
+    ]
+  }
+}

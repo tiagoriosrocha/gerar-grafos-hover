@@ -1,0 +1,439 @@
+{
+  "dataset": "hover",
+  "id": "10ff43d8-8552-448c-b33f-7934e60ce1c9",
+  "split": "train",
+  "claim": "Roving Mars was released later than the sequel Now You See Him, Now You Don't.",
+  "evidencia": "Page: The Strongest Man in the World. Sentence: The Strongest Man in the World is a 1975 Disney film starring Kurt Russell, still a student in the fictional Medfield College.\nPage: Roving Mars. Sentence: Roving Mars is an IMAX documentary film about the development, launch, and operation of the Mars Exploration Rovers, Spirit and Opportunity.\nPage: Now You See Him, Now You Don't. Sentence: It is the sequel to the 1969 film \"The Computer Wore Tennis Shoes\" and was followed by 1975's \"The Strongest Man in the World\".",
+  "evidence_text": "Page: The Strongest Man in the World. Sentence: The Strongest Man in the World is a 1975 Disney film starring Kurt Russell, still a student in the fictional Medfield College.\nPage: Roving Mars. Sentence: Roving Mars is an IMAX documentary film about the development, launch, and operation of the Mars Exploration Rovers, Spirit and Opportunity.\nPage: Now You See Him, Now You Don't. Sentence: It is the sequel to the 1969 film \"The Computer Wore Tennis Shoes\" and was followed by 1975's \"The Strongest Man in the World\".",
+  "label": "SUPPORTED",
+  "num_hops": 3,
+  "hover_metadata": {
+    "supporting_facts": [
+      [
+        "The Strongest Man in the World",
+        0
+      ],
+      [
+        "Roving Mars",
+        0
+      ],
+      [
+        "Now You See Him, Now You Don't",
+        1
+      ]
+    ],
+    "num_hops": 3,
+    "evidence_annotation_id": [
+      0
+    ],
+    "evidence_id": [
+      "The Strongest Man in the World::sentence::0",
+      "Roving Mars::sentence::0",
+      "Now You See Him, Now You Don't::sentence::1"
+    ],
+    "evidence_wiki_url": [
+      "https://en.wikipedia.org/wiki/The_Strongest_Man_in_the_World",
+      "https://en.wikipedia.org/wiki/Roving_Mars",
+      "https://en.wikipedia.org/wiki/Now_You_See_Him%2C_Now_You_Don%27t"
+    ],
+    "evidence_sentence_id": [
+      "The Strongest Man in the World::sentence::0",
+      "Roving Mars::sentence::0",
+      "Now You See Him, Now You Don't::sentence::1"
+    ]
+  },
+  "grafo_claim": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "55c878bd-bb23-5890-a06c-ce29152552c5",
+        "text": "This chunk is about:\n- Products: Roving Mars, Now You See Him, Now You Don't\n- Topics: release order\n\nFacts:\n- Now You See Him, Now You Don't was released before Roving Mars.\n- Roving Mars was released later than Now You See Him, Now You Don't.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "dffc5429-1b3e-53b7-880f-5d6d4539aa7d",
+        "text": "Roving Mars was released later than the sequel Now You See Him, Now You Don't.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "67541484-159b-56ca-9690-7955962a2cc9",
+        "text": "text_f33c5d2cc4fe1339517e1a018a7972fa",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "1a12f02b-d736-5cb8-a396-eb3e10478e15",
+        "text": "roving mars",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "00178ae2-2193-521c-be62-8453773cab6c",
+        "text": "now you see him, now you dont",
+        "type": "Entity"
+      },
+      {
+        "id": 5,
+        "original_id": "5263a535-1b4b-5925-be3e-310d03cd303b",
+        "text": "work",
+        "type": "EntityType"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "released_later_than"
+      },
+      {
+        "source": 1,
+        "target": 4,
+        "type": "contains"
+      },
+      {
+        "source": 4,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "is_a"
+      }
+    ]
+  },
+  "grafo_evidencia": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "ae4ebe36-37aa-52cd-bfac-05d2803e7c07",
+        "text": "This chunk is about:\n- Products: The Strongest Man in the World, Roving Mars, Now You See Him, Now You Don't, The Computer Wore Tennis Shoes\n- People: Kurt Russell\n- Organizations: Disney\n- Places: Medfield College, Mars\n- Systems: Mars Exploration Rovers, Spirit, Opportunity\n- Topics: film sequels, documentary filmmaking\n\nFacts:\n- \"The Computer Wore Tennis Shoes\" is a 1969 film.\n- \"Now You See Him, Now You Don't\" is a sequel to the 1969 film \"The Computer Wore Tennis Shoes\".\n- \"The Strongest Man in the World\" is a 1975 Disney film starring Kurt Russell.\n- In \"The Strongest Man in the World,\" Kurt Russell plays a student at the fictional Medfield College.\n- \"Now You See Him, Now You Don't\" was followed by the 1975 film \"The Strongest Man in the World\".\n- \"Roving Mars\" is an IMAX documentary film about the development, launch, and operation of the Mars Exploration Rovers.\n- The Mars Exploration Rovers in \"Roving Mars\" are Spirit and Opportunity.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "cc17f516-0335-5848-a4f1-851be2a0cb4e",
+        "text": "Page: The Strongest Man in the World. Sentence: The Strongest Man in the World is a 1975 Disney film starring Kurt Russell, still a student in the fictional Medfield College.\nPage: Roving Mars. Sentence: Roving Mars is an IMAX documentary film about the development, launch, and operation of the Mars Exploration Rovers, Spirit and Opportunity.\nPage: Now You See Him, Now You Don't. Sentence: It is the sequel to the 1969 film \"The Computer Wore Tennis Shoes\" and was followed by 1975's \"The Strongest Man in the World\".",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "2f90640e-94e7-558e-853c-a766417ba3f0",
+        "text": "text_d32572caba44b9c3095070ff58fe4008",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "d2f54ad6-1b5d-5f01-bb0c-0f0bbf37f840",
+        "text": "the strongest man in the world",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "a4195203-3de0-526e-9b3c-29c2a929ad16",
+        "text": "1975",
+        "type": "Entity"
+      },
+      {
+        "id": 5,
+        "original_id": "b19433ae-558c-5aaf-95ac-6231f2a4be0e",
+        "text": "date",
+        "type": "EntityType"
+      },
+      {
+        "id": 6,
+        "original_id": "abc41f17-bac5-5884-9202-f7493941fc27",
+        "text": "disney",
+        "type": "Entity"
+      },
+      {
+        "id": 7,
+        "original_id": "388f60fb-220d-55e8-ae9c-3ac93cead308",
+        "text": "organization",
+        "type": "EntityType"
+      },
+      {
+        "id": 8,
+        "original_id": "e5244e34-ce71-524c-8048-dc164d7bfa4e",
+        "text": "kurt russell",
+        "type": "Entity"
+      },
+      {
+        "id": 9,
+        "original_id": "edf1c3f9-bada-596d-a74a-5ae95bc25dc7",
+        "text": "medfield college",
+        "type": "Entity"
+      },
+      {
+        "id": 10,
+        "original_id": "99a82eec-bb35-5bb5-9ed2-e73fc7a756de",
+        "text": "person",
+        "type": "EntityType"
+      },
+      {
+        "id": 11,
+        "original_id": "00178ae2-2193-521c-be62-8453773cab6c",
+        "text": "now you see him, now you dont",
+        "type": "Entity"
+      },
+      {
+        "id": 12,
+        "original_id": "71bd6641-ff9d-5396-821d-c1c370ce258c",
+        "text": "the computer wore tennis shoes",
+        "type": "Entity"
+      },
+      {
+        "id": 13,
+        "original_id": "5debc034-fa71-585e-97a1-ef8f6cf6fa47",
+        "text": "1969",
+        "type": "Entity"
+      },
+      {
+        "id": 14,
+        "original_id": "d320c8df-fd51-56e6-b577-e01a688fe6fc",
+        "text": "film",
+        "type": "EntityType"
+      },
+      {
+        "id": 15,
+        "original_id": "1a12f02b-d736-5cb8-a396-eb3e10478e15",
+        "text": "roving mars",
+        "type": "Entity"
+      },
+      {
+        "id": 16,
+        "original_id": "efae89dc-4c42-50b7-b6e4-7d885429f79e",
+        "text": "mars exploration rovers",
+        "type": "Entity"
+      },
+      {
+        "id": 17,
+        "original_id": "52396e4d-4643-553b-9f84-63b8f60e8087",
+        "text": "spirit",
+        "type": "Entity"
+      },
+      {
+        "id": 18,
+        "original_id": "5e7cbda1-d6b2-5124-9bad-288dc849a4e3",
+        "text": "object",
+        "type": "EntityType"
+      },
+      {
+        "id": 19,
+        "original_id": "706140b1-ee58-5f04-a7ca-c67a3f6d2979",
+        "text": "opportunity",
+        "type": "Entity"
+      },
+      {
+        "id": 20,
+        "original_id": "b9de479d-3b6c-5c24-bceb-12f43e184239",
+        "text": "program",
+        "type": "EntityType"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 11,
+        "target": 3,
+        "type": "followed_by"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "released_in"
+      },
+      {
+        "source": 1,
+        "target": 4,
+        "type": "contains"
+      },
+      {
+        "source": 4,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 13,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 6,
+        "type": "produced_by"
+      },
+      {
+        "source": 1,
+        "target": 6,
+        "type": "contains"
+      },
+      {
+        "source": 6,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 9,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 8,
+        "type": "stars"
+      },
+      {
+        "source": 1,
+        "target": 8,
+        "type": "contains"
+      },
+      {
+        "source": 8,
+        "target": 9,
+        "type": "student_at"
+      },
+      {
+        "source": 1,
+        "target": 9,
+        "type": "contains"
+      },
+      {
+        "source": 8,
+        "target": 10,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 11,
+        "type": "follows"
+      },
+      {
+        "source": 1,
+        "target": 11,
+        "type": "contains"
+      },
+      {
+        "source": 11,
+        "target": 12,
+        "type": "sequel_to"
+      },
+      {
+        "source": 1,
+        "target": 12,
+        "type": "contains"
+      },
+      {
+        "source": 12,
+        "target": 13,
+        "type": "released_in"
+      },
+      {
+        "source": 1,
+        "target": 13,
+        "type": "contains"
+      },
+      {
+        "source": 12,
+        "target": 14,
+        "type": "is_a"
+      },
+      {
+        "source": 11,
+        "target": 14,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 14,
+        "type": "is_a"
+      },
+      {
+        "source": 15,
+        "target": 14,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 15,
+        "type": "contains"
+      },
+      {
+        "source": 15,
+        "target": 16,
+        "type": "about"
+      },
+      {
+        "source": 1,
+        "target": 16,
+        "type": "contains"
+      },
+      {
+        "source": 16,
+        "target": 17,
+        "type": "includes"
+      },
+      {
+        "source": 1,
+        "target": 17,
+        "type": "contains"
+      },
+      {
+        "source": 17,
+        "target": 18,
+        "type": "is_a"
+      },
+      {
+        "source": 19,
+        "target": 18,
+        "type": "is_a"
+      },
+      {
+        "source": 16,
+        "target": 19,
+        "type": "includes"
+      },
+      {
+        "source": 1,
+        "target": 19,
+        "type": "contains"
+      },
+      {
+        "source": 16,
+        "target": 20,
+        "type": "is_a"
+      }
+    ]
+  }
+}

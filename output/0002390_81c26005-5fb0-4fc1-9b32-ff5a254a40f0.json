@@ -1,0 +1,532 @@
+{
+  "dataset": "hover",
+  "id": "81c26005-5fb0-4fc1-9b32-ff5a254a40f0",
+  "split": "train",
+  "claim": "Bob Johnson played for The club, which was founded in 1928.",
+  "evidencia": "Page: Bob Johnson (footballer, born 1905). Sentence: He also played in Ireland for Derry City, was on the books of Barnsley, without playing for them in the League, and played non-league football for clubs including Ushaw Moor, Moor Ends Thorne, Firbeck Colliery, Spennymoor United, Thorne Colliery, Eden Colliery and Walker Celtic.\nPage: Derry City F.C.. Sentence: The club, founded in 1928, initially played in the Irish League, the domestic league in Northern Ireland, and won a title in 1964–65.",
+  "evidence_text": "Page: Bob Johnson (footballer, born 1905). Sentence: He also played in Ireland for Derry City, was on the books of Barnsley, without playing for them in the League, and played non-league football for clubs including Ushaw Moor, Moor Ends Thorne, Firbeck Colliery, Spennymoor United, Thorne Colliery, Eden Colliery and Walker Celtic.\nPage: Derry City F.C.. Sentence: The club, founded in 1928, initially played in the Irish League, the domestic league in Northern Ireland, and won a title in 1964–65.",
+  "label": "SUPPORTED",
+  "num_hops": 2,
+  "hover_metadata": {
+    "supporting_facts": [
+      [
+        "Bob Johnson (footballer, born 1905)",
+        1
+      ],
+      [
+        "Derry City F.C.",
+        0
+      ]
+    ],
+    "num_hops": 2,
+    "evidence_annotation_id": [
+      0
+    ],
+    "evidence_id": [
+      "Bob Johnson (footballer, born 1905)::sentence::1",
+      "Derry City F.C.::sentence::0"
+    ],
+    "evidence_wiki_url": [
+      "https://en.wikipedia.org/wiki/Bob_Johnson_%28footballer%2C_born_1905%29",
+      "https://en.wikipedia.org/wiki/Derry_City_F.C."
+    ],
+    "evidence_sentence_id": [
+      "Bob Johnson (footballer, born 1905)::sentence::1",
+      "Derry City F.C.::sentence::0"
+    ]
+  },
+  "grafo_claim": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "dc02b4b9-dcdb-5efd-ada3-7c50e361f11c",
+        "text": "This chunk is about:\n- People: Bob Johnson\n- Organizations: The club\n- Events: founding\n\nFacts:\n- The club was founded in 1928.\n- Bob Johnson played for The club.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "41969a73-3b27-52fc-8b89-48a15daf313f",
+        "text": "Bob Johnson played for The club, which was founded in 1928.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "5490295f-4a2c-55b7-85f8-e5530801892e",
+        "text": "text_c2b2c944f972b0328e66b33196f454e8",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "ffc65b13-98ce-5717-a2bc-7d3f100ef805",
+        "text": "bob johnson",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "71d8b457-ed8c-515e-99d2-bd707faa7a59",
+        "text": "the club",
+        "type": "Entity"
+      },
+      {
+        "id": 5,
+        "original_id": "9658e763-767b-5d03-9583-ae8f78235add",
+        "text": "1928",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "b19433ae-558c-5aaf-95ac-6231f2a4be0e",
+        "text": "date",
+        "type": "EntityType"
+      },
+      {
+        "id": 7,
+        "original_id": "388f60fb-220d-55e8-ae9c-3ac93cead308",
+        "text": "organization",
+        "type": "EntityType"
+      },
+      {
+        "id": 8,
+        "original_id": "99a82eec-bb35-5bb5-9ed2-e73fc7a756de",
+        "text": "person",
+        "type": "EntityType"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "played_for"
+      },
+      {
+        "source": 1,
+        "target": 4,
+        "type": "contains"
+      },
+      {
+        "source": 4,
+        "target": 5,
+        "type": "founded_in"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 4,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 8,
+        "type": "is_a"
+      }
+    ]
+  },
+  "grafo_evidencia": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "8db6340a-6c61-56ac-94e8-918777f3211b",
+        "text": "This chunk is about:\n- People: Bob Johnson\n- Organizations: Derry City F.C., Barnsley\n- Places: Ireland, Northern Ireland\n- Topics: Non-league football, Irish League\n\nFacts:\n- Derry City F.C. was founded in 1928.\n- Derry City F.C. initially played in the Irish League, the domestic league in Northern Ireland.\n- Bob Johnson played in Ireland for Derry City.\n- Bob Johnson was on the books of Barnsley but did not play for the club in the League.\n- Bob Johnson played non-league football for Ushaw Moor, Moor Ends Thorne, Firbeck Colliery, Spennymoor United, Thorne Colliery, Eden Colliery, and Walker Celtic.\n- Derry City F.C. won the Irish League title in 1964–65.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "8bb0f334-1a32-543a-9c16-223ae325d00a",
+        "text": "Page: Bob Johnson (footballer, born 1905). Sentence: He also played in Ireland for Derry City, was on the books of Barnsley, without playing for them in the League, and played non-league football for clubs including Ushaw Moor, Moor Ends Thorne, Firbeck Colliery, Spennymoor United, Thorne Colliery, Eden Colliery and Walker Celtic.\nPage: Derry City F.C.. Sentence: The club, founded in 1928, initially played in the Irish League, the domestic league in Northern Ireland, and won a title in 1964–65.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "304d4ad6-14bd-5a53-9c43-6a6ebfaf71b0",
+        "text": "text_6fae2853513523d092427e0b30522a85",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "ffc65b13-98ce-5717-a2bc-7d3f100ef805",
+        "text": "bob johnson",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "0e1cce57-6271-5f10-ae03-a4ddd979d263",
+        "text": "derry city",
+        "type": "Entity"
+      },
+      {
+        "id": 5,
+        "original_id": "8d89e8e3-3c7e-58b7-b102-ef57de092b66",
+        "text": "ireland",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "5f394058-b2a0-5ba8-8466-ba2a18cfcf4e",
+        "text": "place",
+        "type": "EntityType"
+      },
+      {
+        "id": 7,
+        "original_id": "388f60fb-220d-55e8-ae9c-3ac93cead308",
+        "text": "organization",
+        "type": "EntityType"
+      },
+      {
+        "id": 8,
+        "original_id": "a9071980-53fd-5dcf-8e21-b61216a7aec6",
+        "text": "barnsley",
+        "type": "Entity"
+      },
+      {
+        "id": 9,
+        "original_id": "b33b15cf-30ab-569b-87ec-e63aad37ece5",
+        "text": "ushaw moor",
+        "type": "Entity"
+      },
+      {
+        "id": 10,
+        "original_id": "33f21b8d-8241-5b88-a9d1-6d9f288262b2",
+        "text": "moor ends thorne",
+        "type": "Entity"
+      },
+      {
+        "id": 11,
+        "original_id": "146d2321-b325-5141-88a6-d32de0d639a0",
+        "text": "firbeck colliery",
+        "type": "Entity"
+      },
+      {
+        "id": 12,
+        "original_id": "3df5d70f-5296-53e1-9cb8-f2b45f069699",
+        "text": "spennymoor united",
+        "type": "Entity"
+      },
+      {
+        "id": 13,
+        "original_id": "dfca7afc-f972-5513-a454-6f0be14f7b0c",
+        "text": "thorne colliery",
+        "type": "Entity"
+      },
+      {
+        "id": 14,
+        "original_id": "4f4db81a-4521-59a0-a4eb-eed45efa91eb",
+        "text": "eden colliery",
+        "type": "Entity"
+      },
+      {
+        "id": 15,
+        "original_id": "c5dbd76f-2996-5c73-9f70-08699a48e007",
+        "text": "walker celtic",
+        "type": "Entity"
+      },
+      {
+        "id": 16,
+        "original_id": "99a82eec-bb35-5bb5-9ed2-e73fc7a756de",
+        "text": "person",
+        "type": "EntityType"
+      },
+      {
+        "id": 17,
+        "original_id": "a012deb8-d7a3-5698-8d25-bbfef10bf24f",
+        "text": "derry city f.c.",
+        "type": "Entity"
+      },
+      {
+        "id": 18,
+        "original_id": "9658e763-767b-5d03-9583-ae8f78235add",
+        "text": "1928",
+        "type": "Entity"
+      },
+      {
+        "id": 19,
+        "original_id": "b19433ae-558c-5aaf-95ac-6231f2a4be0e",
+        "text": "date",
+        "type": "EntityType"
+      },
+      {
+        "id": 20,
+        "original_id": "922dabe4-43ce-51b2-8352-86d60d39a0a4",
+        "text": "irish league",
+        "type": "Entity"
+      },
+      {
+        "id": 21,
+        "original_id": "be81c227-3850-5e06-ba0b-a2beb072d8b2",
+        "text": "northern ireland",
+        "type": "Entity"
+      },
+      {
+        "id": 22,
+        "original_id": "ef153e77-a067-5b14-a09e-8bee1deda296",
+        "text": "1964–65",
+        "type": "Entity"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "played_for"
+      },
+      {
+        "source": 1,
+        "target": 4,
+        "type": "contains"
+      },
+      {
+        "source": 4,
+        "target": 5,
+        "type": "located_in"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 21,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 4,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 8,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 9,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 10,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 11,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 12,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 13,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 14,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 15,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 20,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 17,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 8,
+        "type": "was_on_the_books_of"
+      },
+      {
+        "source": 1,
+        "target": 8,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 9,
+        "type": "played_for"
+      },
+      {
+        "source": 1,
+        "target": 9,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 10,
+        "type": "played_for"
+      },
+      {
+        "source": 1,
+        "target": 10,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 11,
+        "type": "played_for"
+      },
+      {
+        "source": 1,
+        "target": 11,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 12,
+        "type": "played_for"
+      },
+      {
+        "source": 1,
+        "target": 12,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 13,
+        "type": "played_for"
+      },
+      {
+        "source": 1,
+        "target": 13,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 14,
+        "type": "played_for"
+      },
+      {
+        "source": 1,
+        "target": 14,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 15,
+        "type": "played_for"
+      },
+      {
+        "source": 1,
+        "target": 15,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 16,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 17,
+        "type": "contains"
+      },
+      {
+        "source": 17,
+        "target": 18,
+        "type": "founded_in"
+      },
+      {
+        "source": 1,
+        "target": 18,
+        "type": "contains"
+      },
+      {
+        "source": 18,
+        "target": 19,
+        "type": "is_a"
+      },
+      {
+        "source": 22,
+        "target": 19,
+        "type": "is_a"
+      },
+      {
+        "source": 17,
+        "target": 20,
+        "type": "initially_played_in"
+      },
+      {
+        "source": 1,
+        "target": 20,
+        "type": "contains"
+      },
+      {
+        "source": 20,
+        "target": 21,
+        "type": "domestic_league_in"
+      },
+      {
+        "source": 1,
+        "target": 21,
+        "type": "contains"
+      },
+      {
+        "source": 17,
+        "target": 22,
+        "type": "won_title_in"
+      },
+      {
+        "source": 1,
+        "target": 22,
+        "type": "contains"
+      }
+    ]
+  }
+}

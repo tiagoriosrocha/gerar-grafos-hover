@@ -1,0 +1,640 @@
+{
+  "dataset": "hover",
+  "id": "7df6c89f-2623-4cbf-8b69-d5f62aa3de13",
+  "split": "train",
+  "claim": "The Exochorda has more variety between individual plants than the Lime.",
+  "evidencia": "Page: Exochorda. Sentence: Exochorda is a small genus of flowering plants in the family Rosaceae, native to China and central Asia (Turkestan).\nPage: Exochorda. Sentence: Numerous species have been described on the basis of differing appearance and geographical separation, but a systematic study revealed that the different types are closely related and probably all descended from a single species that formerly had a wide distribution that has been fragmented by habitat loss.\nPage: Lime (fruit). Sentence: A lime (from French \"lime\", from Arabic \"līma\", from Persian \"līmū\", \"lemon\") is a hybrid citrus fruit, which is typically round, lime green, 3 – in diameter, and contains acidic juice vesicles.",
+  "evidence_text": "Page: Exochorda. Sentence: Exochorda is a small genus of flowering plants in the family Rosaceae, native to China and central Asia (Turkestan).\nPage: Exochorda. Sentence: Numerous species have been described on the basis of differing appearance and geographical separation, but a systematic study revealed that the different types are closely related and probably all descended from a single species that formerly had a wide distribution that has been fragmented by habitat loss.\nPage: Lime (fruit). Sentence: A lime (from French \"lime\", from Arabic \"līma\", from Persian \"līmū\", \"lemon\") is a hybrid citrus fruit, which is typically round, lime green, 3 – in diameter, and contains acidic juice vesicles.",
+  "label": "SUPPORTED",
+  "num_hops": 2,
+  "hover_metadata": {
+    "supporting_facts": [
+      [
+        "Exochorda",
+        0
+      ],
+      [
+        "Exochorda",
+        2
+      ],
+      [
+        "Lime (fruit)",
+        0
+      ]
+    ],
+    "num_hops": 2,
+    "evidence_annotation_id": [
+      0
+    ],
+    "evidence_id": [
+      "Exochorda::sentence::0",
+      "Exochorda::sentence::2",
+      "Lime (fruit)::sentence::0"
+    ],
+    "evidence_wiki_url": [
+      "https://en.wikipedia.org/wiki/Exochorda",
+      "https://en.wikipedia.org/wiki/Lime_%28fruit%29"
+    ],
+    "evidence_sentence_id": [
+      "Exochorda::sentence::0",
+      "Exochorda::sentence::2",
+      "Lime (fruit)::sentence::0"
+    ]
+  },
+  "grafo_claim": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "1da59171-0b72-54f0-9f60-b1d004e119c6",
+        "text": "This chunk is about:\n- Products: Exochorda, Lime\n- Concepts: plant variety\n\nFacts:\n- Exochorda has more variety between individual plants than Lime.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "10d53c76-baf2-56d9-9eaf-eb58cbe4504f",
+        "text": "The Exochorda has more variety between individual plants than the Lime.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "7a4f095e-c2d9-578f-824d-c305580f0926",
+        "text": "text_1366b0fb3c5b3d20d187ced7809bfdd9",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "c2baa35e-d700-5deb-8cdd-6d585d721254",
+        "text": "exochorda",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "2df43048-b175-54c2-b72b-0ff24f41e4f1",
+        "text": "plant",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "24476f42-2af5-5553-bac1-f19fb4d776fa",
+        "text": "variety between individual plants",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "d2a381fa-3658-5ca6-ada9-2109cfc9331d",
+        "text": "concept",
+        "type": "EntityType"
+      },
+      {
+        "id": 7,
+        "original_id": "338e9726-383e-54da-94ac-904ba0f7dc0b",
+        "text": "lime",
+        "type": "Entity"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 7,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "has_more_of_than_lime"
+      },
+      {
+        "source": 7,
+        "target": 5,
+        "type": "has_less_of_than_exochorda"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      }
+    ]
+  },
+  "grafo_evidencia": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "fc4f5128-a5a1-5ecd-a25e-b7fa8603869e",
+        "text": "This chunk is about:\n- Plants: Exochorda, lime\n- Families: Rosaceae, citrus\n- Places: China, Central Asia, Turkestan\n- Concepts: taxonomy, hybridization, habitat loss, geographic separation\n\nFacts:\n- Exochorda is a small genus of flowering plants in the family Rosaceae that is native to China and Central Asia, including Turkestan.\n- Exochorda has had numerous species described based on differences in appearance and geographic separation.\n- A systematic study of Exochorda found that the different types are closely related and probably descended from a single formerly widespread species whose range was fragmented by habitat loss.\n- A lime is a hybrid citrus fruit.\n- The word lime came into English through French from Arabic līma and ultimately from Persian līmū, meaning lemon.\n- A lime is typically round, lime green, about 3 inches in diameter, and contains acidic juice vesicles.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "663408e4-c5c3-50e2-967c-4403a9424627",
+        "text": "Page: Exochorda. Sentence: Exochorda is a small genus of flowering plants in the family Rosaceae, native to China and central Asia (Turkestan).\nPage: Exochorda. Sentence: Numerous species have been described on the basis of differing appearance and geographical separation, but a systematic study revealed that the different types are closely related and probably all descended from a single species that formerly had a wide distribution that has been fragmented by habitat loss.\nPage: Lime (fruit). Sentence: A lime (from French \"lime\", from Arabic \"līma\", from Persian \"līmū\", \"lemon\") is a hybrid citrus fruit, which is typically round, lime green, 3 – in diameter, and contains acidic juice vesicles.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "6dda36ad-d67b-5f9d-a024-541c42d2c93f",
+        "text": "text_9c4cde5eb622ccea3314eb26cfec60d2",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "c2baa35e-d700-5deb-8cdd-6d585d721254",
+        "text": "exochorda",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "2df43048-b175-54c2-b72b-0ff24f41e4f1",
+        "text": "plant",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "1b8ef2c8-bcb3-5236-8e90-c9a1f7c6788d",
+        "text": "rosaceae",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "030da7f2-9df8-5253-8cfc-609957d4e333",
+        "text": "family",
+        "type": "EntityType"
+      },
+      {
+        "id": 7,
+        "original_id": "ae6c10f3-68c2-5caa-8683-d9c2c112ed34",
+        "text": "china",
+        "type": "Entity"
+      },
+      {
+        "id": 8,
+        "original_id": "5f394058-b2a0-5ba8-8466-ba2a18cfcf4e",
+        "text": "place",
+        "type": "EntityType"
+      },
+      {
+        "id": 9,
+        "original_id": "bc306ef4-a845-57c0-92b8-7836fd683309",
+        "text": "central asia",
+        "type": "Entity"
+      },
+      {
+        "id": 10,
+        "original_id": "537b4274-7c57-52d8-b322-656f08a19ab0",
+        "text": "turkestan",
+        "type": "Entity"
+      },
+      {
+        "id": 11,
+        "original_id": "8337fe25-ac9e-547a-baf5-38cd3699c452",
+        "text": "exochorda species",
+        "type": "Entity"
+      },
+      {
+        "id": 12,
+        "original_id": "53dd07d1-3ca0-50a2-83e6-3bf61acda0f8",
+        "text": "single ancestral species of exochorda",
+        "type": "Entity"
+      },
+      {
+        "id": 13,
+        "original_id": "bdc98654-89e9-53f6-9b69-b08ce08d53a9",
+        "text": "habitat loss",
+        "type": "Entity"
+      },
+      {
+        "id": 14,
+        "original_id": "d2a381fa-3658-5ca6-ada9-2109cfc9331d",
+        "text": "concept",
+        "type": "EntityType"
+      },
+      {
+        "id": 15,
+        "original_id": "338e9726-383e-54da-94ac-904ba0f7dc0b",
+        "text": "lime",
+        "type": "Entity"
+      },
+      {
+        "id": 16,
+        "original_id": "66f4c27c-1a16-5cb3-a7df-db1caf2fcf07",
+        "text": "fruit",
+        "type": "EntityType"
+      },
+      {
+        "id": 17,
+        "original_id": "d658ac80-8f8c-54a7-bebe-ef1ed6b41edf",
+        "text": "citrus fruit",
+        "type": "Entity"
+      },
+      {
+        "id": 18,
+        "original_id": "0862f6aa-515d-59c5-870d-2a13d5ea1823",
+        "text": "round",
+        "type": "Entity"
+      },
+      {
+        "id": 19,
+        "original_id": "1ad5081c-6228-5ac7-aaf5-0b54dfaf14d6",
+        "text": "lime green",
+        "type": "Entity"
+      },
+      {
+        "id": 20,
+        "original_id": "19da7ca5-2b18-596a-a6bd-305915ef079d",
+        "text": "color",
+        "type": "EntityType"
+      },
+      {
+        "id": 21,
+        "original_id": "b3d4c3ae-a742-5c7d-8c3a-db81b42027e5",
+        "text": "acidic juice vesicles",
+        "type": "Entity"
+      },
+      {
+        "id": 22,
+        "original_id": "d6623d90-eda4-5858-9696-60692d6bcc9b",
+        "text": "lime",
+        "type": "Entity"
+      },
+      {
+        "id": 23,
+        "original_id": "2c8738ad-1e27-5778-83d9-1a57e1b45a51",
+        "text": "word",
+        "type": "EntityType"
+      },
+      {
+        "id": 24,
+        "original_id": "eb9d7b11-73cb-5d01-83e1-c53a66608ef3",
+        "text": "french",
+        "type": "Entity"
+      },
+      {
+        "id": 25,
+        "original_id": "68024490-0b05-56a0-8dee-c3fcc0d06d48",
+        "text": "language",
+        "type": "EntityType"
+      },
+      {
+        "id": 26,
+        "original_id": "570e9882-eb70-5269-a159-ff3f4f9e3ea3",
+        "text": "līma",
+        "type": "Entity"
+      },
+      {
+        "id": 27,
+        "original_id": "9777b47b-7dfb-5cbb-bc4d-7a700fb69950",
+        "text": "arabic",
+        "type": "Entity"
+      },
+      {
+        "id": 28,
+        "original_id": "42fa4023-7966-5832-bf89-582fbfe46ac8",
+        "text": "līmū",
+        "type": "Entity"
+      },
+      {
+        "id": 29,
+        "original_id": "83ef28b8-4d98-5664-abda-362986290a09",
+        "text": "persian",
+        "type": "Entity"
+      },
+      {
+        "id": 30,
+        "original_id": "57b818cd-a681-5f3f-accf-5a69d86975e3",
+        "text": "lemon",
+        "type": "Entity"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 11,
+        "target": 3,
+        "type": "belongs_to_genus"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 11,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 12,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 17,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "in_family"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 7,
+        "type": "native_to"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      },
+      {
+        "source": 7,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 9,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 10,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 9,
+        "type": "native_to"
+      },
+      {
+        "source": 1,
+        "target": 9,
+        "type": "contains"
+      },
+      {
+        "source": 9,
+        "target": 10,
+        "type": "identified_as"
+      },
+      {
+        "source": 1,
+        "target": 10,
+        "type": "contains"
+      },
+      {
+        "source": 1,
+        "target": 11,
+        "type": "contains"
+      },
+      {
+        "source": 11,
+        "target": 12,
+        "type": "probably_descended_from"
+      },
+      {
+        "source": 1,
+        "target": 12,
+        "type": "contains"
+      },
+      {
+        "source": 12,
+        "target": 13,
+        "type": "distribution_fragmented_by"
+      },
+      {
+        "source": 1,
+        "target": 13,
+        "type": "contains"
+      },
+      {
+        "source": 13,
+        "target": 14,
+        "type": "is_a"
+      },
+      {
+        "source": 18,
+        "target": 14,
+        "type": "is_a"
+      },
+      {
+        "source": 21,
+        "target": 14,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 15,
+        "type": "contains"
+      },
+      {
+        "source": 15,
+        "target": 16,
+        "type": "is_a"
+      },
+      {
+        "source": 15,
+        "target": 17,
+        "type": "instance_of"
+      },
+      {
+        "source": 1,
+        "target": 17,
+        "type": "contains"
+      },
+      {
+        "source": 15,
+        "target": 18,
+        "type": "typically_has_shape"
+      },
+      {
+        "source": 1,
+        "target": 18,
+        "type": "contains"
+      },
+      {
+        "source": 15,
+        "target": 19,
+        "type": "typically_has_color"
+      },
+      {
+        "source": 1,
+        "target": 19,
+        "type": "contains"
+      },
+      {
+        "source": 19,
+        "target": 20,
+        "type": "is_a"
+      },
+      {
+        "source": 15,
+        "target": 21,
+        "type": "contains"
+      },
+      {
+        "source": 1,
+        "target": 21,
+        "type": "contains"
+      },
+      {
+        "source": 15,
+        "target": 22,
+        "type": "word_derived_from"
+      },
+      {
+        "source": 1,
+        "target": 22,
+        "type": "contains"
+      },
+      {
+        "source": 22,
+        "target": 23,
+        "type": "is_a"
+      },
+      {
+        "source": 26,
+        "target": 23,
+        "type": "is_a"
+      },
+      {
+        "source": 28,
+        "target": 23,
+        "type": "is_a"
+      },
+      {
+        "source": 30,
+        "target": 23,
+        "type": "is_a"
+      },
+      {
+        "source": 22,
+        "target": 24,
+        "type": "in_language"
+      },
+      {
+        "source": 1,
+        "target": 24,
+        "type": "contains"
+      },
+      {
+        "source": 24,
+        "target": 25,
+        "type": "is_a"
+      },
+      {
+        "source": 27,
+        "target": 25,
+        "type": "is_a"
+      },
+      {
+        "source": 29,
+        "target": 25,
+        "type": "is_a"
+      },
+      {
+        "source": 22,
+        "target": 26,
+        "type": "derived_from"
+      },
+      {
+        "source": 1,
+        "target": 26,
+        "type": "contains"
+      },
+      {
+        "source": 26,
+        "target": 27,
+        "type": "in_language"
+      },
+      {
+        "source": 1,
+        "target": 27,
+        "type": "contains"
+      },
+      {
+        "source": 26,
+        "target": 28,
+        "type": "derived_from"
+      },
+      {
+        "source": 1,
+        "target": 28,
+        "type": "contains"
+      },
+      {
+        "source": 28,
+        "target": 29,
+        "type": "in_language"
+      },
+      {
+        "source": 1,
+        "target": 29,
+        "type": "contains"
+      },
+      {
+        "source": 28,
+        "target": 30,
+        "type": "glossed_as"
+      },
+      {
+        "source": 1,
+        "target": 30,
+        "type": "contains"
+      }
+    ]
+  }
+}

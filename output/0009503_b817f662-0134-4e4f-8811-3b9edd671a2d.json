@@ -1,0 +1,442 @@
+{
+  "dataset": "hover",
+  "id": "b817f662-0134-4e4f-8811-3b9edd671a2d",
+  "split": "train",
+  "claim": "The Atlantic Club Casino Hotel closed before Trump Plaza Hotel and Casino.",
+  "evidencia": "Page: The Atlantic Club Casino Hotel. Sentence: The Atlantic Club Casino Hotel, formerly known as Golden Nugget, Bally's Grand, Atlantic City Hilton and ACH, is a closed casino and hotel located at the southern end of the boardwalk in Atlantic City, New Jersey, owned and operated by Colony Capital.\nPage: The Atlantic Club Casino Hotel. Sentence: The Atlantic Club permanently closed on January 13, 2014, at 12:01 AM.\nPage: Trump Plaza Hotel and Casino. Sentence: Designed by architect Martin Stern, Jr., it operated from May 15, 1984 until September 16, 2014.",
+  "evidence_text": "Page: The Atlantic Club Casino Hotel. Sentence: The Atlantic Club Casino Hotel, formerly known as Golden Nugget, Bally's Grand, Atlantic City Hilton and ACH, is a closed casino and hotel located at the southern end of the boardwalk in Atlantic City, New Jersey, owned and operated by Colony Capital.\nPage: The Atlantic Club Casino Hotel. Sentence: The Atlantic Club permanently closed on January 13, 2014, at 12:01 AM.\nPage: Trump Plaza Hotel and Casino. Sentence: Designed by architect Martin Stern, Jr., it operated from May 15, 1984 until September 16, 2014.",
+  "label": "SUPPORTED",
+  "num_hops": 2,
+  "hover_metadata": {
+    "supporting_facts": [
+      [
+        "The Atlantic Club Casino Hotel",
+        0
+      ],
+      [
+        "The Atlantic Club Casino Hotel",
+        2
+      ],
+      [
+        "Trump Plaza Hotel and Casino",
+        1
+      ]
+    ],
+    "num_hops": 2,
+    "evidence_annotation_id": [
+      0
+    ],
+    "evidence_id": [
+      "The Atlantic Club Casino Hotel::sentence::0",
+      "The Atlantic Club Casino Hotel::sentence::2",
+      "Trump Plaza Hotel and Casino::sentence::1"
+    ],
+    "evidence_wiki_url": [
+      "https://en.wikipedia.org/wiki/The_Atlantic_Club_Casino_Hotel",
+      "https://en.wikipedia.org/wiki/Trump_Plaza_Hotel_and_Casino"
+    ],
+    "evidence_sentence_id": [
+      "The Atlantic Club Casino Hotel::sentence::0",
+      "The Atlantic Club Casino Hotel::sentence::2",
+      "Trump Plaza Hotel and Casino::sentence::1"
+    ]
+  },
+  "grafo_claim": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "3d885411-e52d-5969-8de1-f72eae50ebab",
+        "text": "This chunk is about:\n- Companies: Atlantic Club Casino Hotel, Trump Plaza Hotel and Casino\n- Places: Atlantic City\n\nFacts:\n- The Atlantic Club Casino Hotel and Trump Plaza Hotel and Casino were casino hotels in Atlantic City.\n- The Atlantic Club Casino Hotel closed before the Trump Plaza Hotel and Casino closed.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "6b7ff6dd-c5b2-5867-bfc4-36e08e970789",
+        "text": "The Atlantic Club Casino Hotel closed before Trump Plaza Hotel and Casino.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "da0a0189-a98c-5ee5-bc74-03af79210b0a",
+        "text": "text_41be9293d7ab07fc89d41a327f75ac70",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "66712f46-1b0e-5b61-95e7-4d1a320ecbf2",
+        "text": "atlantic club casino hotel",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "5f394058-b2a0-5ba8-8466-ba2a18cfcf4e",
+        "text": "place",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "d645d71d-c282-5757-84b1-1e3d35df19ce",
+        "text": "trump plaza hotel and casino",
+        "type": "Entity"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 5,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "closed_before"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      }
+    ]
+  },
+  "grafo_evidencia": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "620fbc88-9421-5ab1-922f-f84d6bfad808",
+        "text": "This chunk is about:\n- Places: Atlantic City, New Jersey\n- Companies: Colony Capital\n- Products: The Atlantic Club Casino Hotel, Golden Nugget, Bally's Grand, Atlantic City Hilton, ACH, Trump Plaza Hotel and Casino\n- People: Martin Stern, Jr.\n\nFacts:\n- The Atlantic Club Casino Hotel is a closed casino and hotel at the southern end of the boardwalk in Atlantic City, New Jersey.\n- The Atlantic Club Casino Hotel was formerly known as Golden Nugget, Bally's Grand, Atlantic City Hilton, and ACH.\n- The Atlantic Club Casino Hotel was owned and operated by Colony Capital.\n- Trump Plaza Hotel and Casino was designed by architect Martin Stern, Jr.\n- Trump Plaza Hotel and Casino operated from May 15, 1984 until September 16, 2014.\n- The Atlantic Club Casino Hotel permanently closed on January 13, 2014, at 12:01 AM.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "be05abfd-e0a5-57bf-8c9d-6738bd81ab27",
+        "text": "Page: The Atlantic Club Casino Hotel. Sentence: The Atlantic Club Casino Hotel, formerly known as Golden Nugget, Bally's Grand, Atlantic City Hilton and ACH, is a closed casino and hotel located at the southern end of the boardwalk in Atlantic City, New Jersey, owned and operated by Colony Capital.\nPage: The Atlantic Club Casino Hotel. Sentence: The Atlantic Club permanently closed on January 13, 2014, at 12:01 AM.\nPage: Trump Plaza Hotel and Casino. Sentence: Designed by architect Martin Stern, Jr., it operated from May 15, 1984 until September 16, 2014.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "bb064161-0da6-553a-bcdb-a691ae66ec2f",
+        "text": "text_4f0ccc7f15542662f43b6a279ee345ff",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "75abceb1-1213-5836-82f9-a4506a17bb47",
+        "text": "the atlantic club casino hotel",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "5f394058-b2a0-5ba8-8466-ba2a18cfcf4e",
+        "text": "place",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "b0372f9c-0e3c-5ec9-abd6-be5b45d15d8f",
+        "text": "golden nugget",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "e18f2efb-0e1f-5b18-bf5f-8831c80331e8",
+        "text": "ballys grand",
+        "type": "Entity"
+      },
+      {
+        "id": 7,
+        "original_id": "2ac81b82-8bc5-59bc-8ebf-3184aaae4349",
+        "text": "atlantic city hilton",
+        "type": "Entity"
+      },
+      {
+        "id": 8,
+        "original_id": "355e604f-25f0-5e38-983a-21bf3dd32439",
+        "text": "ach",
+        "type": "Entity"
+      },
+      {
+        "id": 9,
+        "original_id": "866f5443-94f4-5a51-a7eb-6193fddcdebe",
+        "text": "atlantic city",
+        "type": "Entity"
+      },
+      {
+        "id": 10,
+        "original_id": "9e009832-3cca-5a9f-949f-073e455c61d3",
+        "text": "new jersey",
+        "type": "Entity"
+      },
+      {
+        "id": 11,
+        "original_id": "9d9a632b-c307-5357-b85a-ed0c424b703b",
+        "text": "colony capital",
+        "type": "Entity"
+      },
+      {
+        "id": 12,
+        "original_id": "388f60fb-220d-55e8-ae9c-3ac93cead308",
+        "text": "organization",
+        "type": "EntityType"
+      },
+      {
+        "id": 13,
+        "original_id": "7d818d0d-8c26-5bd8-ae7c-a7ad23c33d39",
+        "text": "2014-01-13",
+        "type": "Entity"
+      },
+      {
+        "id": 14,
+        "original_id": "b19433ae-558c-5aaf-95ac-6231f2a4be0e",
+        "text": "date",
+        "type": "EntityType"
+      },
+      {
+        "id": 15,
+        "original_id": "d645d71d-c282-5757-84b1-1e3d35df19ce",
+        "text": "trump plaza hotel and casino",
+        "type": "Entity"
+      },
+      {
+        "id": 16,
+        "original_id": "15ed778e-b4ad-5579-9c49-e6a3579f2635",
+        "text": "martin stern, jr.",
+        "type": "Entity"
+      },
+      {
+        "id": 17,
+        "original_id": "99a82eec-bb35-5bb5-9ed2-e73fc7a756de",
+        "text": "person",
+        "type": "EntityType"
+      },
+      {
+        "id": 18,
+        "original_id": "7bc3c98e-74bc-59e6-8a8f-55afa610c003",
+        "text": "1984-05-15",
+        "type": "Entity"
+      },
+      {
+        "id": 19,
+        "original_id": "c15dae25-0010-54ce-af24-2d9858f58392",
+        "text": "2014-09-16",
+        "type": "Entity"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 5,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 6,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 7,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 8,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 9,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 10,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 15,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "formerly_known_as"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 6,
+        "type": "formerly_known_as"
+      },
+      {
+        "source": 1,
+        "target": 6,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 7,
+        "type": "formerly_known_as"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 8,
+        "type": "formerly_known_as"
+      },
+      {
+        "source": 1,
+        "target": 8,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 9,
+        "type": "located_in"
+      },
+      {
+        "source": 1,
+        "target": 9,
+        "type": "contains"
+      },
+      {
+        "source": 9,
+        "target": 10,
+        "type": "located_in"
+      },
+      {
+        "source": 1,
+        "target": 10,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 11,
+        "type": "owned_by"
+      },
+      {
+        "source": 1,
+        "target": 11,
+        "type": "contains"
+      },
+      {
+        "source": 11,
+        "target": 12,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 13,
+        "type": "permanently_closed_on"
+      },
+      {
+        "source": 1,
+        "target": 13,
+        "type": "contains"
+      },
+      {
+        "source": 13,
+        "target": 14,
+        "type": "is_a"
+      },
+      {
+        "source": 18,
+        "target": 14,
+        "type": "is_a"
+      },
+      {
+        "source": 19,
+        "target": 14,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 15,
+        "type": "contains"
+      },
+      {
+        "source": 15,
+        "target": 16,
+        "type": "designed_by"
+      },
+      {
+        "source": 1,
+        "target": 16,
+        "type": "contains"
+      },
+      {
+        "source": 16,
+        "target": 17,
+        "type": "is_a"
+      },
+      {
+        "source": 15,
+        "target": 18,
+        "type": "began_operating_on"
+      },
+      {
+        "source": 1,
+        "target": 18,
+        "type": "contains"
+      },
+      {
+        "source": 15,
+        "target": 19,
+        "type": "stopped_operating_on"
+      },
+      {
+        "source": 1,
+        "target": 19,
+        "type": "contains"
+      }
+    ]
+  }
+}

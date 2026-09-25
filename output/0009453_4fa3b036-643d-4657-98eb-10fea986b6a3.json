@@ -1,0 +1,368 @@
+{
+  "dataset": "hover",
+  "id": "4fa3b036-643d-4657-98eb-10fea986b6a3",
+  "split": "train",
+  "claim": "The Butt Memorial Bridge goes over a canal in Georgia. That canal and the New Orleans Outfall Canals are the same length.",
+  "evidencia": "Page: Augusta Canal. Sentence: The canal is fed by the Savannah River and passes through three levels (approximately 13 miles total) in suburban and urban Augusta before the water returns to the river at various locations.\nPage: New Orleans Outfall Canals. Sentence: There are 13 mi of levees and floodwalls that line the sides of the canals.\nPage: Butt Memorial Bridge. Sentence: The Butt Memorial Bridge is a road bridge in Augusta, Georgia that carries 15th Street over the Augusta Canal.",
+  "evidence_text": "Page: Augusta Canal. Sentence: The canal is fed by the Savannah River and passes through three levels (approximately 13 miles total) in suburban and urban Augusta before the water returns to the river at various locations.\nPage: New Orleans Outfall Canals. Sentence: There are 13 mi of levees and floodwalls that line the sides of the canals.\nPage: Butt Memorial Bridge. Sentence: The Butt Memorial Bridge is a road bridge in Augusta, Georgia that carries 15th Street over the Augusta Canal.",
+  "label": "SUPPORTED",
+  "num_hops": 3,
+  "hover_metadata": {
+    "supporting_facts": [
+      [
+        "Augusta Canal",
+        1
+      ],
+      [
+        "New Orleans Outfall Canals",
+        2
+      ],
+      [
+        "Butt Memorial Bridge",
+        0
+      ]
+    ],
+    "num_hops": 3,
+    "evidence_annotation_id": [
+      0
+    ],
+    "evidence_id": [
+      "Augusta Canal::sentence::1",
+      "New Orleans Outfall Canals::sentence::2",
+      "Butt Memorial Bridge::sentence::0"
+    ],
+    "evidence_wiki_url": [
+      "https://en.wikipedia.org/wiki/Augusta_Canal",
+      "https://en.wikipedia.org/wiki/New_Orleans_Outfall_Canals",
+      "https://en.wikipedia.org/wiki/Butt_Memorial_Bridge"
+    ],
+    "evidence_sentence_id": [
+      "Augusta Canal::sentence::1",
+      "New Orleans Outfall Canals::sentence::2",
+      "Butt Memorial Bridge::sentence::0"
+    ]
+  },
+  "grafo_claim": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "b27c5711-a1e5-59ca-928d-a876e1253da4",
+        "text": "This chunk is about:\n- Places: Georgia, New Orleans\n- Structures: Butt Memorial Bridge, New Orleans Outfall Canals\n- Waterways: a canal in Georgia\n\nFacts:\n- The Butt Memorial Bridge goes over a canal in Georgia.\n- The canal in Georgia under the Butt Memorial Bridge is the same length as the New Orleans Outfall Canals.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "60ac079f-0d4b-5e6b-8b8a-6d0b6e8bcbbd",
+        "text": "The Butt Memorial Bridge goes over a canal in Georgia. That canal and the New Orleans Outfall Canals are the same length.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "3b84df4f-9b38-5392-8f52-520a254a4217",
+        "text": "text_91d17fbda3055379e69e301100b3bd10",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "670d5e42-0d05-53d4-9470-c85f780d9ba9",
+        "text": "butt memorial bridge",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "5f394058-b2a0-5ba8-8466-ba2a18cfcf4e",
+        "text": "place",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "9b376a2e-9b96-597b-95f2-b8ce97f8cdea",
+        "text": "canal in georgia under butt memorial bridge",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "1a8a1dae-ccdc-5bd1-a5aa-9c308020ebd6",
+        "text": "georgia",
+        "type": "Entity"
+      },
+      {
+        "id": 7,
+        "original_id": "10baebb4-0582-5caa-ba2c-d0ed34a65ae3",
+        "text": "new orleans outfall canals",
+        "type": "Entity"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 5,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 6,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 7,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "goes_over"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "located_in"
+      },
+      {
+        "source": 1,
+        "target": 6,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 7,
+        "type": "same_length_as"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      }
+    ]
+  },
+  "grafo_evidencia": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "6a8cbb30-c118-59b0-a326-0cbfc885353b",
+        "text": "This chunk is about:\n- Places: Augusta Canal, Savannah River, Augusta, New Orleans\n- Systems: New Orleans Outfall Canals, levees, floodwalls\n- Infrastructure: Butt Memorial Bridge, 15th Street\n\nFacts:\n- The Augusta Canal is fed by the Savannah River.\n- The Augusta Canal passes through three levels across approximately 13 miles in suburban and urban Augusta before its water returns to the river at various locations.\n- The New Orleans Outfall Canals have 13 miles of levees and floodwalls lining their sides.\n- The Butt Memorial Bridge is a road bridge in Augusta, Georgia that carries 15th Street over the Augusta Canal.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "a1afa19f-3487-55c2-bc3a-d86bb88cd18c",
+        "text": "Page: Augusta Canal. Sentence: The canal is fed by the Savannah River and passes through three levels (approximately 13 miles total) in suburban and urban Augusta before the water returns to the river at various locations.\nPage: New Orleans Outfall Canals. Sentence: There are 13 mi of levees and floodwalls that line the sides of the canals.\nPage: Butt Memorial Bridge. Sentence: The Butt Memorial Bridge is a road bridge in Augusta, Georgia that carries 15th Street over the Augusta Canal.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "dc82cbf9-d3ef-5b76-8ffe-34150c26e865",
+        "text": "text_16a10601b1c0c6af6dc20fa36740d407",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "d3bb6670-40b5-5cf1-bfa2-dde748ffda91",
+        "text": "augusta canal",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "5f394058-b2a0-5ba8-8466-ba2a18cfcf4e",
+        "text": "place",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "5b721bf0-365f-5947-b4e0-58c8c21ee74d",
+        "text": "savannah river",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "08516ede-d221-5ada-8b31-4859f30e81b1",
+        "text": "augusta",
+        "type": "Entity"
+      },
+      {
+        "id": 7,
+        "original_id": "10baebb4-0582-5caa-ba2c-d0ed34a65ae3",
+        "text": "new orleans outfall canals",
+        "type": "Entity"
+      },
+      {
+        "id": 8,
+        "original_id": "a6683510-fd73-5ee2-bbbd-32b3d934c751",
+        "text": "levees and floodwalls",
+        "type": "Entity"
+      },
+      {
+        "id": 9,
+        "original_id": "f52a988d-e6a2-51a0-8c2a-890426be6230",
+        "text": "structure",
+        "type": "EntityType"
+      },
+      {
+        "id": 10,
+        "original_id": "670d5e42-0d05-53d4-9470-c85f780d9ba9",
+        "text": "butt memorial bridge",
+        "type": "Entity"
+      },
+      {
+        "id": 11,
+        "original_id": "b029da97-0473-5596-adc4-a87b4a82dd60",
+        "text": "15th street",
+        "type": "Entity"
+      },
+      {
+        "id": 12,
+        "original_id": "f64ef37a-c32b-5f3f-9a3a-da7bc84d052d",
+        "text": "augusta, georgia",
+        "type": "Entity"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 10,
+        "target": 3,
+        "type": "crosses_over"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 5,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 6,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 7,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 11,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 12,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "is_fed_by"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 6,
+        "type": "passes_through"
+      },
+      {
+        "source": 1,
+        "target": 6,
+        "type": "contains"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      },
+      {
+        "source": 8,
+        "target": 7,
+        "type": "line_sides_of"
+      },
+      {
+        "source": 1,
+        "target": 8,
+        "type": "contains"
+      },
+      {
+        "source": 8,
+        "target": 9,
+        "type": "is_a"
+      },
+      {
+        "source": 10,
+        "target": 9,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 10,
+        "type": "contains"
+      },
+      {
+        "source": 10,
+        "target": 11,
+        "type": "carries"
+      },
+      {
+        "source": 1,
+        "target": 11,
+        "type": "contains"
+      },
+      {
+        "source": 10,
+        "target": 12,
+        "type": "located_in"
+      },
+      {
+        "source": 1,
+        "target": 12,
+        "type": "contains"
+      }
+    ]
+  }
+}

@@ -1,0 +1,365 @@
+{
+  "dataset": "hover",
+  "id": "d7ee906d-613e-42db-81bd-437f126dfc14",
+  "split": "train",
+  "claim": "The director of \"My Beautiful Laundrette\" and Jan Švankmajer are not from Spain.",
+  "evidencia": "Page: Stephen Frears. Sentence: Stephen Arthur Frears (born 20 June 1941) is an English film director.\nPage: Jan Švankmajer. Sentence: Jan Švankmajer (] ; born 4 September 1934) is a Czech filmmaker and artist whose work spans several media.\nPage: My Beautiful Laundrette. Sentence: My Beautiful Laundrette is a 1985 British comedy-drama film directed by Stephen Frears from a screenplay by Hanif Kureishi.",
+  "evidence_text": "Page: Stephen Frears. Sentence: Stephen Arthur Frears (born 20 June 1941) is an English film director.\nPage: Jan Švankmajer. Sentence: Jan Švankmajer (] ; born 4 September 1934) is a Czech filmmaker and artist whose work spans several media.\nPage: My Beautiful Laundrette. Sentence: My Beautiful Laundrette is a 1985 British comedy-drama film directed by Stephen Frears from a screenplay by Hanif Kureishi.",
+  "label": "NOT_SUPPORTED",
+  "num_hops": 3,
+  "hover_metadata": {
+    "supporting_facts": [
+      [
+        "Stephen Frears",
+        0
+      ],
+      [
+        "Jan Švankmajer",
+        0
+      ],
+      [
+        "My Beautiful Laundrette",
+        0
+      ]
+    ],
+    "num_hops": 3,
+    "evidence_annotation_id": [
+      0
+    ],
+    "evidence_id": [
+      "Stephen Frears::sentence::0",
+      "Jan Švankmajer::sentence::0",
+      "My Beautiful Laundrette::sentence::0"
+    ],
+    "evidence_wiki_url": [
+      "https://en.wikipedia.org/wiki/Stephen_Frears",
+      "https://en.wikipedia.org/wiki/Jan_%C5%A0vankmajer",
+      "https://en.wikipedia.org/wiki/My_Beautiful_Laundrette"
+    ],
+    "evidence_sentence_id": [
+      "Stephen Frears::sentence::0",
+      "Jan Švankmajer::sentence::0",
+      "My Beautiful Laundrette::sentence::0"
+    ]
+  },
+  "grafo_claim": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "d70ede39-2b03-56fe-90b7-7f9c16f957da",
+        "text": "This chunk is about:\n- People: Stephen Frears, Jan Švankmajer\n- Places: Spain\n- Works: My Beautiful Laundrette\n- Topics: Nationality\n\nFacts:\n- Stephen Frears directed My Beautiful Laundrette.\n- Stephen Frears is not from Spain.\n- Jan Švankmajer is not from Spain.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "060b79a0-1738-5961-a975-15c0e1b0255f",
+        "text": "The director of \"My Beautiful Laundrette\" and Jan Švankmajer are not from Spain.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "322756b8-cb17-569d-b3f6-b320a7ea4ac6",
+        "text": "text_df6176ee11780e1feb8b7d180a72b2eb",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "fcecfd6a-da43-5685-afe7-930ab80248bb",
+        "text": "my beautiful laundrette",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "5263a535-1b4b-5925-be3e-310d03cd303b",
+        "text": "work",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "d0a90b42-4bfe-5603-9d38-5d3497fdfd7c",
+        "text": "director of my beautiful laundrette",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "99a82eec-bb35-5bb5-9ed2-e73fc7a756de",
+        "text": "person",
+        "type": "EntityType"
+      },
+      {
+        "id": 7,
+        "original_id": "f2ae3fab-b1f6-5e66-b573-047fb78e1603",
+        "text": "spain",
+        "type": "Entity"
+      },
+      {
+        "id": 8,
+        "original_id": "5f394058-b2a0-5ba8-8466-ba2a18cfcf4e",
+        "text": "place",
+        "type": "EntityType"
+      },
+      {
+        "id": 9,
+        "original_id": "d69e14c3-0dc4-5e27-9be6-c5edb0b73ca6",
+        "text": "jan švankmajer",
+        "type": "Entity"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 3,
+        "type": "directed"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 9,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 5,
+        "target": 7,
+        "type": "not_from"
+      },
+      {
+        "source": 9,
+        "target": 7,
+        "type": "not_from"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      },
+      {
+        "source": 7,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 9,
+        "type": "contains"
+      }
+    ]
+  },
+  "grafo_evidencia": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "0f9d3b4f-13c8-5833-8bbe-a458bf0fc5d5",
+        "text": "This chunk is about:\n- People: Stephen Frears, Jan Švankmajer, Hanif Kureishi\n- Works: My Beautiful Laundrette\n- Roles: film director, filmmaker, artist, screenwriter\n- Topics: British film, Czech media arts\n\nFacts:\n- Jan Švankmajer was born on 4 September 1934.\n- Stephen Frears was born on 20 June 1941.\n- Jan Švankmajer is a Czech filmmaker and artist whose work spans several media.\n- Stephen Frears is an English film director.\n- My Beautiful Laundrette is a 1985 British comedy-drama film.\n- My Beautiful Laundrette was directed by Stephen Frears.\n- My Beautiful Laundrette was written by Hanif Kureishi.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "c4ff3d9f-650f-5abd-afad-92d25ca15051",
+        "text": "Page: Stephen Frears. Sentence: Stephen Arthur Frears (born 20 June 1941) is an English film director.\nPage: Jan Švankmajer. Sentence: Jan Švankmajer (] ; born 4 September 1934) is a Czech filmmaker and artist whose work spans several media.\nPage: My Beautiful Laundrette. Sentence: My Beautiful Laundrette is a 1985 British comedy-drama film directed by Stephen Frears from a screenplay by Hanif Kureishi.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "09e00579-4c4d-5802-83c1-1a985910a739",
+        "text": "text_50171faa9b4cbcfc99ec3b87e725d68b",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "4facbdea-e116-58fb-8e83-9174753efc4b",
+        "text": "stephen arthur frears",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "99a82eec-bb35-5bb5-9ed2-e73fc7a756de",
+        "text": "person",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "2c27b701-3df8-51a3-a49c-8bcc76aace05",
+        "text": "1941-06-20",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "b19433ae-558c-5aaf-95ac-6231f2a4be0e",
+        "text": "date",
+        "type": "EntityType"
+      },
+      {
+        "id": 7,
+        "original_id": "d69e14c3-0dc4-5e27-9be6-c5edb0b73ca6",
+        "text": "jan švankmajer",
+        "type": "Entity"
+      },
+      {
+        "id": 8,
+        "original_id": "b41cde91-6248-577f-aa22-ed28c4dad503",
+        "text": "1934-09-04",
+        "type": "Entity"
+      },
+      {
+        "id": 9,
+        "original_id": "fcecfd6a-da43-5685-afe7-930ab80248bb",
+        "text": "my beautiful laundrette",
+        "type": "Entity"
+      },
+      {
+        "id": 10,
+        "original_id": "5263a535-1b4b-5925-be3e-310d03cd303b",
+        "text": "work",
+        "type": "EntityType"
+      },
+      {
+        "id": 11,
+        "original_id": "1d4a2b20-2673-5f69-bc5b-e7a61d1e017e",
+        "text": "hanif kureishi",
+        "type": "Entity"
+      },
+      {
+        "id": 12,
+        "original_id": "6bd8ee84-df5b-547d-ad6e-de3a4c833f59",
+        "text": "1985",
+        "type": "Entity"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 9,
+        "target": 3,
+        "type": "directed_by"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 7,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 11,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "born_on"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 8,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 12,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      },
+      {
+        "source": 7,
+        "target": 8,
+        "type": "born_on"
+      },
+      {
+        "source": 1,
+        "target": 8,
+        "type": "contains"
+      },
+      {
+        "source": 1,
+        "target": 9,
+        "type": "contains"
+      },
+      {
+        "source": 9,
+        "target": 10,
+        "type": "is_a"
+      },
+      {
+        "source": 9,
+        "target": 11,
+        "type": "written_by"
+      },
+      {
+        "source": 1,
+        "target": 11,
+        "type": "contains"
+      },
+      {
+        "source": 9,
+        "target": 12,
+        "type": "released_in"
+      },
+      {
+        "source": 1,
+        "target": 12,
+        "type": "contains"
+      }
+    ]
+  }
+}

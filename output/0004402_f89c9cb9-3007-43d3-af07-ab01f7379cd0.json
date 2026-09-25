@@ -1,0 +1,547 @@
+{
+  "dataset": "hover",
+  "id": "f89c9cb9-3007-43d3-af07-ab01f7379cd0",
+  "split": "train",
+  "claim": "The closest relative to the whale is located in sub-Saharan Africa.",
+  "evidencia": "Page: Whale. Sentence: They are an informal grouping within the infraorder Cetacea, usually excluding dolphins and porpoises. Whales, dolphins and porpoises belong to the order Cetartiodactyla with even-toed ungulates and their closest living relatives are the hippopotamuses, having diverged about 40 million years ago.\nPage: Hippopotamus. Sentence: The common hippopotamus (\"Hippopotamus amphibius\"), or hippo, is a large, mostly herbivorous and aggressive mammal in sub-Saharan Africa, and one of only two extant species in the family Hippopotamidae, the other being the pygmy hippopotamus (\"Choeropsis liberiensis\" or \"Hexaprotodon liberiensis\").",
+  "evidence_text": "Page: Whale. Sentence: They are an informal grouping within the infraorder Cetacea, usually excluding dolphins and porpoises. Whales, dolphins and porpoises belong to the order Cetartiodactyla with even-toed ungulates and their closest living relatives are the hippopotamuses, having diverged about 40 million years ago.\nPage: Hippopotamus. Sentence: The common hippopotamus (\"Hippopotamus amphibius\"), or hippo, is a large, mostly herbivorous and aggressive mammal in sub-Saharan Africa, and one of only two extant species in the family Hippopotamidae, the other being the pygmy hippopotamus (\"Choeropsis liberiensis\" or \"Hexaprotodon liberiensis\").",
+  "label": "SUPPORTED",
+  "num_hops": 2,
+  "hover_metadata": {
+    "supporting_facts": [
+      [
+        "Whale",
+        1
+      ],
+      [
+        "Hippopotamus",
+        0
+      ]
+    ],
+    "num_hops": 2,
+    "evidence_annotation_id": [
+      0
+    ],
+    "evidence_id": [
+      "Whale::sentence::1",
+      "Hippopotamus::sentence::0"
+    ],
+    "evidence_wiki_url": [
+      "https://en.wikipedia.org/wiki/Whale",
+      "https://en.wikipedia.org/wiki/Hippopotamus"
+    ],
+    "evidence_sentence_id": [
+      "Whale::sentence::1",
+      "Hippopotamus::sentence::0"
+    ]
+  },
+  "grafo_claim": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "f3d26826-8441-568d-a77d-d0b647b4d19c",
+        "text": "This chunk is about:\n- Animals: whales\n- Places: sub-Saharan Africa\n- Concepts: evolutionary relationships\n\nFacts:\n- The closest relative to the whale is located in sub-Saharan Africa.\n- The chunk states an evolutionary relationship involving whales and a location in sub-Saharan Africa.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "e3e166f9-2f05-570d-bbf7-e6a52d25316d",
+        "text": "The closest relative to the whale is located in sub-Saharan Africa.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "58788654-9ba1-5d3c-9637-39ebec4571ee",
+        "text": "text_05c1b8e6ce91ca1f2527e60eec114423",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "a32b1a2a-5380-5d8e-8546-6a0c9bdbf00d",
+        "text": "whale",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "5d76eb72-04ef-5580-b2ea-161f8429437a",
+        "text": "animal",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "050dde8d-194d-54cf-b6d6-198af50cd490",
+        "text": "sub-saharan africa",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "5f394058-b2a0-5ba8-8466-ba2a18cfcf4e",
+        "text": "place",
+        "type": "EntityType"
+      },
+      {
+        "id": 7,
+        "original_id": "4c5668e4-2eab-5612-b196-f1896c29a854",
+        "text": "closest relative to the whale",
+        "type": "Entity"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 7,
+        "target": 3,
+        "type": "is_closest_relative_to"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 7,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 7,
+        "target": 5,
+        "type": "is_located_in"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      }
+    ]
+  },
+  "grafo_evidencia": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "ca4008e0-e0f3-5673-aa8e-428d2032f282",
+        "text": "This chunk is about:\n- Animals: whales, dolphins, porpoises, hippopotamuses, common hippopotamus, pygmy hippopotamus\n- Taxonomy: Cetacea, Cetartiodactyla, Hippopotamidae\n- Places: sub-Saharan Africa\n\nFacts:\n- Whales are an informal grouping within the infraorder Cetacea and usually exclude dolphins and porpoises.\n- Whales, dolphins, and porpoises belong to the order Cetartiodactyla with the even-toed ungulates.\n- Hippopotamuses are the closest living relatives of whales, dolphins, and porpoises, and their lineages diverged about 40 million years ago.\n- The common hippopotamus, Hippopotamus amphibius, is a large, mostly herbivorous, aggressive mammal in sub-Saharan Africa.\n- The family Hippopotamidae has two extant species: the common hippopotamus and the pygmy hippopotamus, Choeropsis liberiensis or Hexaprotodon liberiensis.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "e194e75b-efef-5a2b-ba4a-7fa3bef31676",
+        "text": "Page: Whale. Sentence: They are an informal grouping within the infraorder Cetacea, usually excluding dolphins and porpoises. Whales, dolphins and porpoises belong to the order Cetartiodactyla with even-toed ungulates and their closest living relatives are the hippopotamuses, having diverged about 40 million years ago.\nPage: Hippopotamus. Sentence: The common hippopotamus (\"Hippopotamus amphibius\"), or hippo, is a large, mostly herbivorous and aggressive mammal in sub-Saharan Africa, and one of only two extant species in the family Hippopotamidae, the other being the pygmy hippopotamus (\"Choeropsis liberiensis\" or \"Hexaprotodon liberiensis\").",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "325c0c86-3c7e-524c-a5f6-d0391eb140f0",
+        "text": "text_8b76f06efafca48143b1da16a5f714a4",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "c4cf3bea-b839-5519-86bf-8ce42e6a2dcf",
+        "text": "whales",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "251c0b29-fe4b-59fb-9c4e-7b6c01fac435",
+        "text": "cetacea",
+        "type": "Entity"
+      },
+      {
+        "id": 5,
+        "original_id": "f7b4540f-d32c-51b3-8970-f282fffab519",
+        "text": "taxon",
+        "type": "EntityType"
+      },
+      {
+        "id": 6,
+        "original_id": "784de6f7-da2e-52c2-9000-547144709708",
+        "text": "dolphins",
+        "type": "Entity"
+      },
+      {
+        "id": 7,
+        "original_id": "162ae328-6c93-5b86-b66b-87c4a1ed7875",
+        "text": "cetartiodactyla",
+        "type": "Entity"
+      },
+      {
+        "id": 8,
+        "original_id": "547ea8db-628c-577f-b888-c863ffb3a47f",
+        "text": "hippopotamuses",
+        "type": "Entity"
+      },
+      {
+        "id": 9,
+        "original_id": "d5d2beb7-2164-5811-af77-04289daba2bc",
+        "text": "animal group",
+        "type": "EntityType"
+      },
+      {
+        "id": 10,
+        "original_id": "2646b1b5-2a98-58a0-80b7-397860a803b2",
+        "text": "40 million years ago",
+        "type": "Entity"
+      },
+      {
+        "id": 11,
+        "original_id": "b19433ae-558c-5aaf-95ac-6231f2a4be0e",
+        "text": "date",
+        "type": "EntityType"
+      },
+      {
+        "id": 12,
+        "original_id": "7d5ff536-bf87-5cbb-9210-87c7cf4ea75e",
+        "text": "porpoises",
+        "type": "Entity"
+      },
+      {
+        "id": 13,
+        "original_id": "f439d7ce-1ee3-5c91-9efa-cb38680303b7",
+        "text": "even-toed ungulates",
+        "type": "Entity"
+      },
+      {
+        "id": 14,
+        "original_id": "8585b692-6de9-5bbd-8327-ee59772291c0",
+        "text": "common hippopotamus",
+        "type": "Entity"
+      },
+      {
+        "id": 15,
+        "original_id": "84c8f159-b2c8-59e3-b1ac-3e99d3c159bd",
+        "text": "hippopotamus amphibius",
+        "type": "Entity"
+      },
+      {
+        "id": 16,
+        "original_id": "f23a15ce-c0de-5c57-9205-8c9d01026b05",
+        "text": "species",
+        "type": "EntityType"
+      },
+      {
+        "id": 17,
+        "original_id": "050dde8d-194d-54cf-b6d6-198af50cd490",
+        "text": "sub-saharan africa",
+        "type": "Entity"
+      },
+      {
+        "id": 18,
+        "original_id": "5f394058-b2a0-5ba8-8466-ba2a18cfcf4e",
+        "text": "place",
+        "type": "EntityType"
+      },
+      {
+        "id": 19,
+        "original_id": "b0870b96-43ea-5eea-b829-e3a0ed92ccf3",
+        "text": "hippopotamidae",
+        "type": "Entity"
+      },
+      {
+        "id": 20,
+        "original_id": "5d76eb72-04ef-5580-b2ea-161f8429437a",
+        "text": "animal",
+        "type": "EntityType"
+      },
+      {
+        "id": 21,
+        "original_id": "31687f29-0205-5f28-8701-1b453f426076",
+        "text": "pygmy hippopotamus",
+        "type": "Entity"
+      },
+      {
+        "id": 22,
+        "original_id": "bfe18b71-166d-5907-bf0b-a1a63a17669a",
+        "text": "choeropsis liberiensis",
+        "type": "Entity"
+      },
+      {
+        "id": 23,
+        "original_id": "69309a0f-9948-5e1c-a910-1339080a7ced",
+        "text": "hexaprotodon liberiensis",
+        "type": "Entity"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "within_infraorder"
+      },
+      {
+        "source": 1,
+        "target": 4,
+        "type": "contains"
+      },
+      {
+        "source": 4,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 7,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 19,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 6,
+        "type": "usually_excludes"
+      },
+      {
+        "source": 1,
+        "target": 6,
+        "type": "contains"
+      },
+      {
+        "source": 6,
+        "target": 7,
+        "type": "belongs_to_order"
+      },
+      {
+        "source": 12,
+        "target": 7,
+        "type": "belongs_to_order"
+      },
+      {
+        "source": 3,
+        "target": 7,
+        "type": "belongs_to_order"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      },
+      {
+        "source": 13,
+        "target": 7,
+        "type": "belongs_to_order"
+      },
+      {
+        "source": 6,
+        "target": 8,
+        "type": "closest_living_relatives_are"
+      },
+      {
+        "source": 12,
+        "target": 8,
+        "type": "closest_living_relatives_are"
+      },
+      {
+        "source": 3,
+        "target": 8,
+        "type": "closest_living_relatives_are"
+      },
+      {
+        "source": 1,
+        "target": 8,
+        "type": "contains"
+      },
+      {
+        "source": 8,
+        "target": 9,
+        "type": "is_a"
+      },
+      {
+        "source": 6,
+        "target": 9,
+        "type": "is_a"
+      },
+      {
+        "source": 12,
+        "target": 9,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 9,
+        "type": "is_a"
+      },
+      {
+        "source": 13,
+        "target": 9,
+        "type": "is_a"
+      },
+      {
+        "source": 6,
+        "target": 10,
+        "type": "diverged_about"
+      },
+      {
+        "source": 12,
+        "target": 10,
+        "type": "diverged_about"
+      },
+      {
+        "source": 3,
+        "target": 10,
+        "type": "diverged_about"
+      },
+      {
+        "source": 1,
+        "target": 10,
+        "type": "contains"
+      },
+      {
+        "source": 10,
+        "target": 11,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 12,
+        "type": "usually_excludes"
+      },
+      {
+        "source": 1,
+        "target": 12,
+        "type": "contains"
+      },
+      {
+        "source": 1,
+        "target": 13,
+        "type": "contains"
+      },
+      {
+        "source": 1,
+        "target": 14,
+        "type": "contains"
+      },
+      {
+        "source": 14,
+        "target": 15,
+        "type": "has_scientific_name"
+      },
+      {
+        "source": 1,
+        "target": 15,
+        "type": "contains"
+      },
+      {
+        "source": 15,
+        "target": 16,
+        "type": "is_a"
+      },
+      {
+        "source": 22,
+        "target": 16,
+        "type": "is_a"
+      },
+      {
+        "source": 23,
+        "target": 16,
+        "type": "is_a"
+      },
+      {
+        "source": 14,
+        "target": 17,
+        "type": "lives_in"
+      },
+      {
+        "source": 1,
+        "target": 17,
+        "type": "contains"
+      },
+      {
+        "source": 17,
+        "target": 18,
+        "type": "is_a"
+      },
+      {
+        "source": 14,
+        "target": 19,
+        "type": "is_extant_species_in_family"
+      },
+      {
+        "source": 1,
+        "target": 19,
+        "type": "contains"
+      },
+      {
+        "source": 21,
+        "target": 19,
+        "type": "is_extant_species_in_family"
+      },
+      {
+        "source": 14,
+        "target": 20,
+        "type": "is_a"
+      },
+      {
+        "source": 21,
+        "target": 20,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 21,
+        "type": "contains"
+      },
+      {
+        "source": 21,
+        "target": 22,
+        "type": "has_scientific_name"
+      },
+      {
+        "source": 1,
+        "target": 22,
+        "type": "contains"
+      },
+      {
+        "source": 21,
+        "target": 23,
+        "type": "has_alternative_scientific_name"
+      },
+      {
+        "source": 1,
+        "target": 23,
+        "type": "contains"
+      }
+    ]
+  }
+}

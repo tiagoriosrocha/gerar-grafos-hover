@@ -1,0 +1,478 @@
+{
+  "dataset": "hover",
+  "id": "399963aa-ca5d-4370-aebc-499d87726e9e",
+  "split": "train",
+  "claim": "Carlina is a flowering plant. The species named after the Scottish botanist and plant collector, who was employed by Veitch Nurseries, is also a flowering plant.",
+  "evidencia": "Page: Dieffenbachia. Sentence: Dieffenbachia is a genus of tropical flowering plants in the family Araceae.\nPage: Carlina. Sentence: Carlina is a genus of flowering plants in the aster family, Asteraceae.\nPage: David Bowman (botanist). Sentence: The species \"Dieffenbachia bowmanii\" is named after him.\nPage: Veitch Nurseries. Sentence: Famous plant hunters in the Victorian period employed by the Veitch family include the brothers Thomas Lobb and William Lobb from Cornwall and the Scottish plant collector David Bowman.",
+  "evidence_text": "Page: Dieffenbachia. Sentence: Dieffenbachia is a genus of tropical flowering plants in the family Araceae.\nPage: Carlina. Sentence: Carlina is a genus of flowering plants in the aster family, Asteraceae.\nPage: David Bowman (botanist). Sentence: The species \"Dieffenbachia bowmanii\" is named after him.\nPage: Veitch Nurseries. Sentence: Famous plant hunters in the Victorian period employed by the Veitch family include the brothers Thomas Lobb and William Lobb from Cornwall and the Scottish plant collector David Bowman.",
+  "label": "SUPPORTED",
+  "num_hops": 4,
+  "hover_metadata": {
+    "supporting_facts": [
+      [
+        "Dieffenbachia",
+        0
+      ],
+      [
+        "Carlina",
+        0
+      ],
+      [
+        "David Bowman (botanist)",
+        1
+      ],
+      [
+        "Veitch Nurseries",
+        2
+      ]
+    ],
+    "num_hops": 4,
+    "evidence_annotation_id": [
+      0
+    ],
+    "evidence_id": [
+      "Dieffenbachia::sentence::0",
+      "Carlina::sentence::0",
+      "David Bowman (botanist)::sentence::1",
+      "Veitch Nurseries::sentence::2"
+    ],
+    "evidence_wiki_url": [
+      "https://en.wikipedia.org/wiki/Dieffenbachia",
+      "https://en.wikipedia.org/wiki/Carlina",
+      "https://en.wikipedia.org/wiki/David_Bowman_%28botanist%29",
+      "https://en.wikipedia.org/wiki/Veitch_Nurseries"
+    ],
+    "evidence_sentence_id": [
+      "Dieffenbachia::sentence::0",
+      "Carlina::sentence::0",
+      "David Bowman (botanist)::sentence::1",
+      "Veitch Nurseries::sentence::2"
+    ]
+  },
+  "grafo_claim": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "e12e8c6c-02c6-50d0-8fb3-87953782ee28",
+        "text": "This chunk is about:\n- Plants: Carlina, the flowering plant species named after a Scottish botanist and plant collector\n- People: the Scottish botanist and plant collector employed by Veitch Nurseries\n- Companies: Veitch Nurseries\n\nFacts:\n- Carlina is a flowering plant.\n- The species named after the Scottish botanist and plant collector is a flowering plant.\n- The Scottish botanist and plant collector was employed by Veitch Nurseries.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "a2c8f6b9-cd5a-5c50-afae-1c7ecab7cdc6",
+        "text": "Carlina is a flowering plant. The species named after the Scottish botanist and plant collector, who was employed by Veitch Nurseries, is also a flowering plant.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "feba30fc-aa2c-5013-b451-a99939f1c6f7",
+        "text": "text_6d1efd03f47d983ce470d7812905ccf0",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "a7b532a6-eb7c-558c-bd6c-84ef01fee940",
+        "text": "carlina",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "2da90e41-eebf-5978-95ae-b11aa0f846c6",
+        "text": "species named after the scottish botanist and plant collector",
+        "type": "Entity"
+      },
+      {
+        "id": 5,
+        "original_id": "fa6502c7-3003-5ad0-baa6-fd3e19c2d010",
+        "text": "scottish botanist and plant collector",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "c4e62f9f-3187-5983-b0a1-cfd69985489e",
+        "text": "veitch nurseries",
+        "type": "Entity"
+      },
+      {
+        "id": 7,
+        "original_id": "388f60fb-220d-55e8-ae9c-3ac93cead308",
+        "text": "organization",
+        "type": "EntityType"
+      },
+      {
+        "id": 8,
+        "original_id": "99a82eec-bb35-5bb5-9ed2-e73fc7a756de",
+        "text": "person",
+        "type": "EntityType"
+      },
+      {
+        "id": 9,
+        "original_id": "2df43048-b175-54c2-b72b-0ff24f41e4f1",
+        "text": "plant",
+        "type": "EntityType"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "same_type_as"
+      },
+      {
+        "source": 1,
+        "target": 4,
+        "type": "contains"
+      },
+      {
+        "source": 4,
+        "target": 5,
+        "type": "named_after"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "employed_by"
+      },
+      {
+        "source": 1,
+        "target": 6,
+        "type": "contains"
+      },
+      {
+        "source": 6,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 5,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 4,
+        "target": 9,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 9,
+        "type": "is_a"
+      }
+    ]
+  },
+  "grafo_evidencia": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "a6b53245-3b4f-55ee-bc8f-90e6129c6cc1",
+        "text": "This chunk is about:\n- Plants: Dieffenbachia, Carlina, Dieffenbachia bowmanii\n- People: David Bowman, Thomas Lobb, William Lobb\n- Companies: Veitch Nurseries\n- Topics: plant taxonomy, Victorian plant hunting\n\nFacts:\n- Dieffenbachia is a genus of tropical flowering plants in the family Araceae.\n- Carlina is a genus of flowering plants in the family Asteraceae.\n- In the Victorian period, Veitch Nurseries employed plant hunters including Thomas Lobb, William Lobb, and David Bowman.\n- Dieffenbachia bowmanii is a species named after David Bowman.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "00dcedf0-959b-534c-8e20-c3bb803df5ba",
+        "text": "Page: Dieffenbachia. Sentence: Dieffenbachia is a genus of tropical flowering plants in the family Araceae.\nPage: Carlina. Sentence: Carlina is a genus of flowering plants in the aster family, Asteraceae.\nPage: David Bowman (botanist). Sentence: The species \"Dieffenbachia bowmanii\" is named after him.\nPage: Veitch Nurseries. Sentence: Famous plant hunters in the Victorian period employed by the Veitch family include the brothers Thomas Lobb and William Lobb from Cornwall and the Scottish plant collector David Bowman.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "64c97092-8135-55aa-a65f-e15ce1ab04c1",
+        "text": "text_a17b77830c147e8a9c736ee2c9fb281f",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "335ec451-bf82-59f7-927c-17de2304fdc4",
+        "text": "dieffenbachia",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "493c3a74-6bed-5c70-af14-b1c4f2dfab2e",
+        "text": "araceae",
+        "type": "Entity"
+      },
+      {
+        "id": 5,
+        "original_id": "f7b4540f-d32c-51b3-8970-f282fffab519",
+        "text": "taxon",
+        "type": "EntityType"
+      },
+      {
+        "id": 6,
+        "original_id": "a7b532a6-eb7c-558c-bd6c-84ef01fee940",
+        "text": "carlina",
+        "type": "Entity"
+      },
+      {
+        "id": 7,
+        "original_id": "4fe42319-5e66-5637-90ae-d1f515fccb4b",
+        "text": "asteraceae",
+        "type": "Entity"
+      },
+      {
+        "id": 8,
+        "original_id": "6c5c617d-8ce2-5018-8522-0ddec8f2bcb0",
+        "text": "david bowman",
+        "type": "Entity"
+      },
+      {
+        "id": 9,
+        "original_id": "4e1f6d98-9d51-5e16-a3bb-056ce8ac9035",
+        "text": "veitch family",
+        "type": "Entity"
+      },
+      {
+        "id": 10,
+        "original_id": "388f60fb-220d-55e8-ae9c-3ac93cead308",
+        "text": "organization",
+        "type": "EntityType"
+      },
+      {
+        "id": 11,
+        "original_id": "b4c8ffe8-1591-5151-9c35-369c2045be1f",
+        "text": "victorian period",
+        "type": "Entity"
+      },
+      {
+        "id": 12,
+        "original_id": "4044c0c6-00ca-5b87-b0cf-cbddc90c7912",
+        "text": "period",
+        "type": "EntityType"
+      },
+      {
+        "id": 13,
+        "original_id": "99a82eec-bb35-5bb5-9ed2-e73fc7a756de",
+        "text": "person",
+        "type": "EntityType"
+      },
+      {
+        "id": 14,
+        "original_id": "c21eccc3-8371-5de5-ba28-5546fb81ca8e",
+        "text": "dieffenbachia bowmanii",
+        "type": "Entity"
+      },
+      {
+        "id": 15,
+        "original_id": "facb2caa-ae14-580e-b235-2cd74134d8bf",
+        "text": "thomas lobb",
+        "type": "Entity"
+      },
+      {
+        "id": 16,
+        "original_id": "31c003a3-194c-559f-962c-d992b004b515",
+        "text": "cornwall",
+        "type": "Entity"
+      },
+      {
+        "id": 17,
+        "original_id": "5f394058-b2a0-5ba8-8466-ba2a18cfcf4e",
+        "text": "place",
+        "type": "EntityType"
+      },
+      {
+        "id": 18,
+        "original_id": "5aa83c6c-149f-5157-acbe-b2cecedfccb5",
+        "text": "william lobb",
+        "type": "Entity"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "in_family"
+      },
+      {
+        "source": 1,
+        "target": 4,
+        "type": "contains"
+      },
+      {
+        "source": 4,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 7,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 6,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 14,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 6,
+        "type": "contains"
+      },
+      {
+        "source": 6,
+        "target": 7,
+        "type": "in_family"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      },
+      {
+        "source": 1,
+        "target": 8,
+        "type": "contains"
+      },
+      {
+        "source": 14,
+        "target": 8,
+        "type": "named_after"
+      },
+      {
+        "source": 8,
+        "target": 9,
+        "type": "employed_by"
+      },
+      {
+        "source": 1,
+        "target": 9,
+        "type": "contains"
+      },
+      {
+        "source": 15,
+        "target": 9,
+        "type": "employed_by"
+      },
+      {
+        "source": 18,
+        "target": 9,
+        "type": "employed_by"
+      },
+      {
+        "source": 9,
+        "target": 10,
+        "type": "is_a"
+      },
+      {
+        "source": 8,
+        "target": 11,
+        "type": "active_in_period"
+      },
+      {
+        "source": 15,
+        "target": 11,
+        "type": "active_in_period"
+      },
+      {
+        "source": 18,
+        "target": 11,
+        "type": "active_in_period"
+      },
+      {
+        "source": 1,
+        "target": 11,
+        "type": "contains"
+      },
+      {
+        "source": 11,
+        "target": 12,
+        "type": "is_a"
+      },
+      {
+        "source": 8,
+        "target": 13,
+        "type": "is_a"
+      },
+      {
+        "source": 15,
+        "target": 13,
+        "type": "is_a"
+      },
+      {
+        "source": 18,
+        "target": 13,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 14,
+        "type": "contains"
+      },
+      {
+        "source": 1,
+        "target": 15,
+        "type": "contains"
+      },
+      {
+        "source": 15,
+        "target": 16,
+        "type": "from"
+      },
+      {
+        "source": 18,
+        "target": 16,
+        "type": "from"
+      },
+      {
+        "source": 1,
+        "target": 16,
+        "type": "contains"
+      },
+      {
+        "source": 16,
+        "target": 17,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 18,
+        "type": "contains"
+      }
+    ]
+  }
+}

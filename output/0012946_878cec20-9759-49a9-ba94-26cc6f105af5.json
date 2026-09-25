@@ -1,0 +1,406 @@
+{
+  "dataset": "hover",
+  "id": "878cec20-9759-49a9-ba94-26cc6f105af5",
+  "split": "train",
+  "claim": "The daughter of the founder of Tesco is a politician by profession.",
+  "evidencia": "Page: Shirley Porter. Sentence: Dame Shirley Porter, Lady Porter DBE (\"née\" Cohen; born 29 November 1930) is a British former politician who led Westminster City Council in London representing the Conservative Party.\nPage: Jack Cohen (businessman). Sentence: Sir John Edward Cohen (6 October 1898 – 24 March 1979), born Jacob Edward Kohen and commonly known as Sir Jack Cohen, was an English grocer who founded the Tesco supermarket chain.",
+  "evidence_text": "Page: Shirley Porter. Sentence: Dame Shirley Porter, Lady Porter DBE (\"née\" Cohen; born 29 November 1930) is a British former politician who led Westminster City Council in London representing the Conservative Party.\nPage: Jack Cohen (businessman). Sentence: Sir John Edward Cohen (6 October 1898 – 24 March 1979), born Jacob Edward Kohen and commonly known as Sir Jack Cohen, was an English grocer who founded the Tesco supermarket chain.",
+  "label": "SUPPORTED",
+  "num_hops": 2,
+  "hover_metadata": {
+    "supporting_facts": [
+      [
+        "Shirley Porter",
+        0
+      ],
+      [
+        "Jack Cohen (businessman)",
+        0
+      ]
+    ],
+    "num_hops": 2,
+    "evidence_annotation_id": [
+      0
+    ],
+    "evidence_id": [
+      "Shirley Porter::sentence::0",
+      "Jack Cohen (businessman)::sentence::0"
+    ],
+    "evidence_wiki_url": [
+      "https://en.wikipedia.org/wiki/Shirley_Porter",
+      "https://en.wikipedia.org/wiki/Jack_Cohen_%28businessman%29"
+    ],
+    "evidence_sentence_id": [
+      "Shirley Porter::sentence::0",
+      "Jack Cohen (businessman)::sentence::0"
+    ]
+  },
+  "grafo_claim": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "b0c06aa8-4023-5fcd-8344-d2819d6642db",
+        "text": "This chunk is about:\n- People: founder of Tesco, founder's daughter\n- Companies: Tesco\n- Roles: politician\n\nFacts:\n- The founder of Tesco has a daughter.\n- The daughter of the founder of Tesco is a politician by profession.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "fc7b8bc4-16d7-5efe-b303-f4e5c8b59e33",
+        "text": "The daughter of the founder of Tesco is a politician by profession.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "27561868-5280-50d1-ac60-b833a637f4d3",
+        "text": "text_112fbd376e96f994c99895475dc384f1",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "a19a983c-09b5-543f-8224-f4e055dcc524",
+        "text": "tesco",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "388f60fb-220d-55e8-ae9c-3ac93cead308",
+        "text": "organization",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "9afb88df-f5a1-5d7c-872c-4b5ecac79d74",
+        "text": "founder of tesco",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "99a82eec-bb35-5bb5-9ed2-e73fc7a756de",
+        "text": "person",
+        "type": "EntityType"
+      },
+      {
+        "id": 7,
+        "original_id": "32c86169-1447-5fc6-83aa-e8d78aef9899",
+        "text": "daughter of the founder of tesco",
+        "type": "Entity"
+      },
+      {
+        "id": 8,
+        "original_id": "b142c3ba-e003-5a4b-8369-17be50195e31",
+        "text": "politician",
+        "type": "Entity"
+      },
+      {
+        "id": 9,
+        "original_id": "9d80eb43-32fa-561c-9371-91f180ebcb6c",
+        "text": "profession",
+        "type": "EntityType"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 3,
+        "type": "founded"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 7,
+        "target": 5,
+        "type": "daughter_of"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 7,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      },
+      {
+        "source": 7,
+        "target": 8,
+        "type": "has_profession"
+      },
+      {
+        "source": 1,
+        "target": 8,
+        "type": "contains"
+      },
+      {
+        "source": 8,
+        "target": 9,
+        "type": "is_a"
+      }
+    ]
+  },
+  "grafo_evidencia": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "e565258e-5fc3-5334-9e73-98d88ccc64ea",
+        "text": "This chunk is about:\n- People: Shirley Porter, Jack Cohen\n- Roles: politician, businessman, grocer, founder\n- Organizations: Westminster City Council, Conservative Party, Tesco\n- Places: London, Britain, England\n\nFacts:\n- Jack Cohen was born Jacob Edward Kohen on 6 October 1898 and was commonly known as Sir Jack Cohen.\n- Jack Cohen was an English grocer who founded the Tesco supermarket chain.\n- Shirley Porter was born as Shirley Cohen on 29 November 1930.\n- Shirley Porter is a British former politician who led Westminster City Council in London and represented the Conservative Party.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "7b20d10d-806f-54c4-9e1d-4278c74ceadd",
+        "text": "Page: Shirley Porter. Sentence: Dame Shirley Porter, Lady Porter DBE (\"née\" Cohen; born 29 November 1930) is a British former politician who led Westminster City Council in London representing the Conservative Party.\nPage: Jack Cohen (businessman). Sentence: Sir John Edward Cohen (6 October 1898 – 24 March 1979), born Jacob Edward Kohen and commonly known as Sir Jack Cohen, was an English grocer who founded the Tesco supermarket chain.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "ba92c873-94e8-55f8-b965-24fe1f07f91e",
+        "text": "text_bf17c2fd0f2e260664c82901dd4a984d",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "03e6251a-5388-5e20-8c54-a73ea95207c1",
+        "text": "shirley porter",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "99a82eec-bb35-5bb5-9ed2-e73fc7a756de",
+        "text": "person",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "d5fc1c5e-6d48-5ab5-b965-f92418656400",
+        "text": "1930-11-29",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "b19433ae-558c-5aaf-95ac-6231f2a4be0e",
+        "text": "date",
+        "type": "EntityType"
+      },
+      {
+        "id": 7,
+        "original_id": "6ca3269e-0a17-5345-a807-3162feac6c49",
+        "text": "westminster city council",
+        "type": "Entity"
+      },
+      {
+        "id": 8,
+        "original_id": "388f60fb-220d-55e8-ae9c-3ac93cead308",
+        "text": "organization",
+        "type": "EntityType"
+      },
+      {
+        "id": 9,
+        "original_id": "29402dc0-a0ae-5d8e-8034-e62d821db121",
+        "text": "london",
+        "type": "Entity"
+      },
+      {
+        "id": 10,
+        "original_id": "5f394058-b2a0-5ba8-8466-ba2a18cfcf4e",
+        "text": "place",
+        "type": "EntityType"
+      },
+      {
+        "id": 11,
+        "original_id": "0563a708-2b1b-523e-b9a3-f2bb913d2311",
+        "text": "conservative party",
+        "type": "Entity"
+      },
+      {
+        "id": 12,
+        "original_id": "694f4b87-f28e-5e15-996e-a14538e76775",
+        "text": "sir jack cohen",
+        "type": "Entity"
+      },
+      {
+        "id": 13,
+        "original_id": "ec31ab5d-7c95-5adf-bf48-73d8980678e2",
+        "text": "1898-10-06",
+        "type": "Entity"
+      },
+      {
+        "id": 14,
+        "original_id": "71456265-4c45-5f5f-b58a-ce2981e90e4b",
+        "text": "1979-03-24",
+        "type": "Entity"
+      },
+      {
+        "id": 15,
+        "original_id": "a19a983c-09b5-543f-8224-f4e055dcc524",
+        "text": "tesco",
+        "type": "Entity"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 12,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "born_on"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 13,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 14,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 7,
+        "type": "led"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      },
+      {
+        "source": 7,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 11,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 15,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 7,
+        "target": 9,
+        "type": "located_in"
+      },
+      {
+        "source": 1,
+        "target": 9,
+        "type": "contains"
+      },
+      {
+        "source": 9,
+        "target": 10,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 11,
+        "type": "represented"
+      },
+      {
+        "source": 1,
+        "target": 11,
+        "type": "contains"
+      },
+      {
+        "source": 1,
+        "target": 12,
+        "type": "contains"
+      },
+      {
+        "source": 12,
+        "target": 13,
+        "type": "born_on"
+      },
+      {
+        "source": 1,
+        "target": 13,
+        "type": "contains"
+      },
+      {
+        "source": 12,
+        "target": 14,
+        "type": "died_on"
+      },
+      {
+        "source": 1,
+        "target": 14,
+        "type": "contains"
+      },
+      {
+        "source": 12,
+        "target": 15,
+        "type": "founded"
+      },
+      {
+        "source": 1,
+        "target": 15,
+        "type": "contains"
+      }
+    ]
+  }
+}

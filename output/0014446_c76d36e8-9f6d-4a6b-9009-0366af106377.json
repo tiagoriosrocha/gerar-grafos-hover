@@ -1,0 +1,351 @@
+{
+  "dataset": "hover",
+  "id": "c76d36e8-9f6d-4a6b-9009-0366af106377",
+  "split": "train",
+  "claim": "The casino that Summer Nights takes place in is at the Las Vegas Strip in Paradise, Nevada.",
+  "evidencia": "Page: Summer Nights (residency show). Sentence: The show takes place in the Donny & Marie Showroom, at the Flamingo Las Vegas.\nPage: Flamingo Las Vegas. Sentence: Flamingo Las Vegas (formerly The Fabulous Flamingo and Flamingo Hilton Las Vegas) is a hotel and casino located on the Las Vegas Strip in Paradise, Nevada.",
+  "evidence_text": "Page: Summer Nights (residency show). Sentence: The show takes place in the Donny & Marie Showroom, at the Flamingo Las Vegas.\nPage: Flamingo Las Vegas. Sentence: Flamingo Las Vegas (formerly The Fabulous Flamingo and Flamingo Hilton Las Vegas) is a hotel and casino located on the Las Vegas Strip in Paradise, Nevada.",
+  "label": "SUPPORTED",
+  "num_hops": 2,
+  "hover_metadata": {
+    "supporting_facts": [
+      [
+        "Summer Nights (residency show)",
+        1
+      ],
+      [
+        "Flamingo Las Vegas",
+        0
+      ]
+    ],
+    "num_hops": 2,
+    "evidence_annotation_id": [
+      0
+    ],
+    "evidence_id": [
+      "Summer Nights (residency show)::sentence::1",
+      "Flamingo Las Vegas::sentence::0"
+    ],
+    "evidence_wiki_url": [
+      "https://en.wikipedia.org/wiki/Summer_Nights_%28residency_show%29",
+      "https://en.wikipedia.org/wiki/Flamingo_Las_Vegas"
+    ],
+    "evidence_sentence_id": [
+      "Summer Nights (residency show)::sentence::1",
+      "Flamingo Las Vegas::sentence::0"
+    ]
+  },
+  "grafo_claim": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "11877199-129f-5c37-90d5-6515e7c59390",
+        "text": "This chunk is about:\n- Places: Las Vegas Strip, Paradise, Nevada\n- Works: Summer Nights\n\nFacts:\n- Summer Nights takes place in a casino on the Las Vegas Strip in Paradise, Nevada.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "c461b780-c545-5009-9dfe-a9d76a7f34cc",
+        "text": "The casino that Summer Nights takes place in is at the Las Vegas Strip in Paradise, Nevada.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "54c97616-47f9-5e6b-8ff3-15f0059ae01a",
+        "text": "text_14a465aec1b8e9a0913ef5de1853e761",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "ffb3bb7b-c895-5581-8f14-e3c7bb9f9263",
+        "text": "summer nights",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "5263a535-1b4b-5925-be3e-310d03cd303b",
+        "text": "work",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "a331ce4d-445a-5c94-b206-3aa2b505040d",
+        "text": "casino in summer nights",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "5f394058-b2a0-5ba8-8466-ba2a18cfcf4e",
+        "text": "place",
+        "type": "EntityType"
+      },
+      {
+        "id": 7,
+        "original_id": "60152a3c-19f4-5b80-8305-51c3a57f8052",
+        "text": "las vegas strip",
+        "type": "Entity"
+      },
+      {
+        "id": 8,
+        "original_id": "a9bf4f79-c7b3-5485-8ce9-c8c5b4f6e1df",
+        "text": "paradise, nevada",
+        "type": "Entity"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "takes_place_in"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 7,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 8,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 5,
+        "target": 7,
+        "type": "located_at"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      },
+      {
+        "source": 7,
+        "target": 8,
+        "type": "located_in"
+      },
+      {
+        "source": 1,
+        "target": 8,
+        "type": "contains"
+      }
+    ]
+  },
+  "grafo_evidencia": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "9abf65d2-56fc-561f-a949-df73c526a450",
+        "text": "This chunk is about:\n- Projects: Summer Nights (residency show)\n- Places: Donny & Marie Showroom, Flamingo Las Vegas, Las Vegas Strip, Paradise, Nevada\n- Companies: Flamingo Las Vegas\n\nFacts:\n- Summer Nights is a residency show that takes place in the Donny & Marie Showroom at Flamingo Las Vegas.\n- Flamingo Las Vegas was formerly named The Fabulous Flamingo and Flamingo Hilton Las Vegas.\n- Flamingo Las Vegas is a hotel and casino located on the Las Vegas Strip in Paradise, Nevada.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "b9c7df55-d6f4-5136-8423-a743078e76fa",
+        "text": "Page: Summer Nights (residency show). Sentence: The show takes place in the Donny & Marie Showroom, at the Flamingo Las Vegas.\nPage: Flamingo Las Vegas. Sentence: Flamingo Las Vegas (formerly The Fabulous Flamingo and Flamingo Hilton Las Vegas) is a hotel and casino located on the Las Vegas Strip in Paradise, Nevada.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "5765bd02-ddc6-533d-9333-95917043c83b",
+        "text": "text_21ab06988bf2e27fcbb729e2ea3c00e4",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "ffb3bb7b-c895-5581-8f14-e3c7bb9f9263",
+        "text": "summer nights",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "791447f5-cbfa-529d-9920-e3fddb465e03",
+        "text": "show",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "ec76cc54-a78c-5feb-9649-63fc2651a3c2",
+        "text": "donny & marie showroom",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "5f394058-b2a0-5ba8-8466-ba2a18cfcf4e",
+        "text": "place",
+        "type": "EntityType"
+      },
+      {
+        "id": 7,
+        "original_id": "454a2df8-c495-5276-bebe-56d4a4ac4206",
+        "text": "flamingo las vegas",
+        "type": "Entity"
+      },
+      {
+        "id": 8,
+        "original_id": "93293e7c-c3ac-57f9-b47c-ad9f41c38d06",
+        "text": "las vegas strip",
+        "type": "Entity"
+      },
+      {
+        "id": 9,
+        "original_id": "a9bf4f79-c7b3-5485-8ce9-c8c5b4f6e1df",
+        "text": "paradise, nevada",
+        "type": "Entity"
+      },
+      {
+        "id": 10,
+        "original_id": "422204ed-5d67-5442-9e18-7b5e31911fc4",
+        "text": "the fabulous flamingo",
+        "type": "Entity"
+      },
+      {
+        "id": 11,
+        "original_id": "3080c4c6-d9ad-51fa-84ea-41c59e860a4f",
+        "text": "flamingo hilton las vegas",
+        "type": "Entity"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "takes_place_in"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 7,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 8,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 9,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 10,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 11,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 5,
+        "target": 7,
+        "type": "located_in"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      },
+      {
+        "source": 7,
+        "target": 8,
+        "type": "located_on"
+      },
+      {
+        "source": 1,
+        "target": 8,
+        "type": "contains"
+      },
+      {
+        "source": 7,
+        "target": 9,
+        "type": "located_in"
+      },
+      {
+        "source": 1,
+        "target": 9,
+        "type": "contains"
+      },
+      {
+        "source": 7,
+        "target": 10,
+        "type": "formerly_named"
+      },
+      {
+        "source": 1,
+        "target": 10,
+        "type": "contains"
+      },
+      {
+        "source": 7,
+        "target": 11,
+        "type": "formerly_named"
+      },
+      {
+        "source": 1,
+        "target": 11,
+        "type": "contains"
+      }
+    ]
+  }
+}

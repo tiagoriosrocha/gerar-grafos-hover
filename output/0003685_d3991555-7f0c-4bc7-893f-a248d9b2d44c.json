@@ -1,0 +1,491 @@
+{
+  "dataset": "hover",
+  "id": "d3991555-7f0c-4bc7-893f-a248d9b2d44c",
+  "split": "train",
+  "claim": "Bauneg Beg Mountain is taller than the mountain region covers the town of Ogunquit. It is a summer resort whose name means \"beautiful place by the sea\".",
+  "evidencia": "Page: Agamenticus. Sentence: The Mount Agamenticus region covers nearly 30,000 acres (121 km²) in the southern Maine towns of Eliot, Ogunquit, South Berwick, Wells and York.\nPage: Ogunquit. Sentence: The summer resort's name means \"beautiful place by the sea\".\nPage: Bauneg Beg Mountain. Sentence: Bauneg Beg Mountain is taller than Mount Agamenticus, and has been used by mariners to navigate the Maine Coast.",
+  "evidence_text": "Page: Agamenticus. Sentence: The Mount Agamenticus region covers nearly 30,000 acres (121 km²) in the southern Maine towns of Eliot, Ogunquit, South Berwick, Wells and York.\nPage: Ogunquit. Sentence: The summer resort's name means \"beautiful place by the sea\".\nPage: Bauneg Beg Mountain. Sentence: Bauneg Beg Mountain is taller than Mount Agamenticus, and has been used by mariners to navigate the Maine Coast.",
+  "label": "SUPPORTED",
+  "num_hops": 3,
+  "hover_metadata": {
+    "supporting_facts": [
+      [
+        "Agamenticus",
+        0
+      ],
+      [
+        "Ogunquit",
+        2
+      ],
+      [
+        "Bauneg Beg Mountain",
+        2
+      ]
+    ],
+    "num_hops": 3,
+    "evidence_annotation_id": [
+      0
+    ],
+    "evidence_id": [
+      "Agamenticus::sentence::0",
+      "Ogunquit::sentence::2",
+      "Bauneg Beg Mountain::sentence::2"
+    ],
+    "evidence_wiki_url": [
+      "https://en.wikipedia.org/wiki/Agamenticus",
+      "https://en.wikipedia.org/wiki/Ogunquit",
+      "https://en.wikipedia.org/wiki/Bauneg_Beg_Mountain"
+    ],
+    "evidence_sentence_id": [
+      "Agamenticus::sentence::0",
+      "Ogunquit::sentence::2",
+      "Bauneg Beg Mountain::sentence::2"
+    ]
+  },
+  "grafo_claim": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "92a397ea-9a39-563c-9db7-02a6234a3ae5",
+        "text": "This chunk is about:\n- Places: Bauneg Beg Mountain, Ogunquit\n- Topics: place names, geography, tourism\n\nFacts:\n- Bauneg Beg Mountain is taller than the mountain region that covers the town of Ogunquit.\n- Ogunquit is a summer resort.\n- The name Ogunquit means \"beautiful place by the sea.\"",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "28e7ff16-23dd-5580-80a5-2abfffa99c1c",
+        "text": "Bauneg Beg Mountain is taller than the mountain region covers the town of Ogunquit. It is a summer resort whose name means \"beautiful place by the sea\".",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "b104c5d2-d93f-577a-97bc-cd4089992133",
+        "text": "text_6d978f58c36185315d0f69b9fa94f1b0",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "a47696ab-eb3e-5ad3-96a5-05a81e1a9447",
+        "text": "bauneg beg mountain",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "34e1d460-67a0-5da1-a941-e921bae721ec",
+        "text": "ogunquit",
+        "type": "Entity"
+      },
+      {
+        "id": 5,
+        "original_id": "a1dd9f47-5b9b-5bc1-953e-7e51c116eca1",
+        "text": "beautiful place by the sea",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "d2a381fa-3658-5ca6-ada9-2109cfc9331d",
+        "text": "concept",
+        "type": "EntityType"
+      },
+      {
+        "id": 7,
+        "original_id": "5f394058-b2a0-5ba8-8466-ba2a18cfcf4e",
+        "text": "place",
+        "type": "EntityType"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_taller_than_mountain_region_covering"
+      },
+      {
+        "source": 1,
+        "target": 4,
+        "type": "contains"
+      },
+      {
+        "source": 4,
+        "target": 5,
+        "type": "name_means"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 4,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 7,
+        "type": "is_a"
+      }
+    ]
+  },
+  "grafo_evidencia": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "55680f5b-a8e7-5f1f-8eaf-69cba7393d02",
+        "text": "This chunk is about:\n- Places: Mount Agamenticus region, southern Maine, Eliot, Ogunquit, South Berwick, Wells, York, Bauneg Beg Mountain, Maine Coast\n- Topics: place names, geography, navigation\n\nFacts:\n- The Mount Agamenticus region covers nearly 30,000 acres (121 km²) in the southern Maine towns of Eliot, Ogunquit, South Berwick, Wells, and York.\n- Ogunquit is a summer resort whose name means \"beautiful place by the sea.\"\n- Bauneg Beg Mountain is taller than Mount Agamenticus.\n- Mariners have used Bauneg Beg Mountain to navigate the Maine Coast.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "5d8866d9-d5d2-5d44-abd0-211016218323",
+        "text": "Page: Agamenticus. Sentence: The Mount Agamenticus region covers nearly 30,000 acres (121 km²) in the southern Maine towns of Eliot, Ogunquit, South Berwick, Wells and York.\nPage: Ogunquit. Sentence: The summer resort's name means \"beautiful place by the sea\".\nPage: Bauneg Beg Mountain. Sentence: Bauneg Beg Mountain is taller than Mount Agamenticus, and has been used by mariners to navigate the Maine Coast.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "cb16705a-64ae-525f-a495-e7f816a79474",
+        "text": "text_bb098005f65cbcca948cd6e35505c99e",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "5eeb3875-d00b-50f6-9885-df2d796fd8eb",
+        "text": "mount agamenticus region",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "6ce18d20-0fe9-59a9-9059-ab702ad13fdc",
+        "text": "30,000 acres",
+        "type": "Entity"
+      },
+      {
+        "id": 5,
+        "original_id": "7a7a0687-e490-5167-ad5a-0e39d9055dee",
+        "text": "quantity",
+        "type": "EntityType"
+      },
+      {
+        "id": 6,
+        "original_id": "003ee7a4-b31c-56a4-926e-d8df49409862",
+        "text": "121 km²",
+        "type": "Entity"
+      },
+      {
+        "id": 7,
+        "original_id": "7c6d254f-abe0-5f26-98ce-57fe8d39991a",
+        "text": "southern maine",
+        "type": "Entity"
+      },
+      {
+        "id": 8,
+        "original_id": "5f394058-b2a0-5ba8-8466-ba2a18cfcf4e",
+        "text": "place",
+        "type": "EntityType"
+      },
+      {
+        "id": 9,
+        "original_id": "bbaee492-8b54-5bab-9a36-ac40fbe99f50",
+        "text": "eliot",
+        "type": "Entity"
+      },
+      {
+        "id": 10,
+        "original_id": "34e1d460-67a0-5da1-a941-e921bae721ec",
+        "text": "ogunquit",
+        "type": "Entity"
+      },
+      {
+        "id": 11,
+        "original_id": "a1dd9f47-5b9b-5bc1-953e-7e51c116eca1",
+        "text": "beautiful place by the sea",
+        "type": "Entity"
+      },
+      {
+        "id": 12,
+        "original_id": "d2a381fa-3658-5ca6-ada9-2109cfc9331d",
+        "text": "concept",
+        "type": "EntityType"
+      },
+      {
+        "id": 13,
+        "original_id": "d706d273-8c85-5d44-98c5-76010d97277b",
+        "text": "south berwick",
+        "type": "Entity"
+      },
+      {
+        "id": 14,
+        "original_id": "6261fd00-8e0b-561b-bed8-f2fe3dddfc3d",
+        "text": "wells",
+        "type": "Entity"
+      },
+      {
+        "id": 15,
+        "original_id": "e25d544c-796e-5c6f-8819-6d7507c77721",
+        "text": "york",
+        "type": "Entity"
+      },
+      {
+        "id": 16,
+        "original_id": "a47696ab-eb3e-5ad3-96a5-05a81e1a9447",
+        "text": "bauneg beg mountain",
+        "type": "Entity"
+      },
+      {
+        "id": 17,
+        "original_id": "91284b5a-08e9-5088-8d6f-2f61274cce74",
+        "text": "mount agamenticus",
+        "type": "Entity"
+      },
+      {
+        "id": 18,
+        "original_id": "d80aca8a-d49b-5fd0-a71b-a504b7afda91",
+        "text": "maine coast",
+        "type": "Entity"
+      },
+      {
+        "id": 19,
+        "original_id": "83c63152-47fe-5a8c-943d-122df6082887",
+        "text": "mariners",
+        "type": "Entity"
+      },
+      {
+        "id": 20,
+        "original_id": "99a82eec-bb35-5bb5-9ed2-e73fc7a756de",
+        "text": "person",
+        "type": "EntityType"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "covers_area_of"
+      },
+      {
+        "source": 1,
+        "target": 4,
+        "type": "contains"
+      },
+      {
+        "source": 4,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 6,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 6,
+        "type": "covers_area_of"
+      },
+      {
+        "source": 1,
+        "target": 6,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 7,
+        "type": "located_in"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      },
+      {
+        "source": 7,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 9,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 10,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 13,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 14,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 15,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 17,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 18,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 16,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 9,
+        "type": "covers_town"
+      },
+      {
+        "source": 1,
+        "target": 9,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 10,
+        "type": "covers_town"
+      },
+      {
+        "source": 1,
+        "target": 10,
+        "type": "contains"
+      },
+      {
+        "source": 10,
+        "target": 11,
+        "type": "name_means"
+      },
+      {
+        "source": 1,
+        "target": 11,
+        "type": "contains"
+      },
+      {
+        "source": 11,
+        "target": 12,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 13,
+        "type": "covers_town"
+      },
+      {
+        "source": 1,
+        "target": 13,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 14,
+        "type": "covers_town"
+      },
+      {
+        "source": 1,
+        "target": 14,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 15,
+        "type": "covers_town"
+      },
+      {
+        "source": 1,
+        "target": 15,
+        "type": "contains"
+      },
+      {
+        "source": 1,
+        "target": 16,
+        "type": "contains"
+      },
+      {
+        "source": 19,
+        "target": 16,
+        "type": "used_for_navigation"
+      },
+      {
+        "source": 16,
+        "target": 17,
+        "type": "taller_than"
+      },
+      {
+        "source": 1,
+        "target": 17,
+        "type": "contains"
+      },
+      {
+        "source": 16,
+        "target": 18,
+        "type": "used_to_navigate"
+      },
+      {
+        "source": 1,
+        "target": 18,
+        "type": "contains"
+      },
+      {
+        "source": 1,
+        "target": 19,
+        "type": "contains"
+      },
+      {
+        "source": 19,
+        "target": 20,
+        "type": "is_a"
+      }
+    ]
+  }
+}

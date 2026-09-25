@@ -1,0 +1,371 @@
+{
+  "dataset": "hover",
+  "id": "5297ac4d-e457-45fa-b6be-f18e6c0cc0dc",
+  "split": "train",
+  "claim": "The O'Hara Watercolor School was burned down during fires that killed 16 people.",
+  "evidencia": "Page: Goose Rocks. Sentence: Goose Rocks Beach was the site of the O'Hara Watercolor School run by American watercolor painter Eliot O'Hara from 1930 to 1947.\nPage: Goose Rocks. Sentence: The school and many other buildings burned down in the Great Fires of 1947.\nPage: Great Fires of 1947. Sentence: Collectively, the fires killed a total of 16 people.",
+  "evidence_text": "Page: Goose Rocks. Sentence: Goose Rocks Beach was the site of the O'Hara Watercolor School run by American watercolor painter Eliot O'Hara from 1930 to 1947.\nPage: Goose Rocks. Sentence: The school and many other buildings burned down in the Great Fires of 1947.\nPage: Great Fires of 1947. Sentence: Collectively, the fires killed a total of 16 people.",
+  "label": "SUPPORTED",
+  "num_hops": 2,
+  "hover_metadata": {
+    "supporting_facts": [
+      [
+        "Goose Rocks",
+        6
+      ],
+      [
+        "Goose Rocks",
+        7
+      ],
+      [
+        "Great Fires of 1947",
+        1
+      ]
+    ],
+    "num_hops": 2,
+    "evidence_annotation_id": [
+      0
+    ],
+    "evidence_id": [
+      "Goose Rocks::sentence::6",
+      "Goose Rocks::sentence::7",
+      "Great Fires of 1947::sentence::1"
+    ],
+    "evidence_wiki_url": [
+      "https://en.wikipedia.org/wiki/Goose_Rocks",
+      "https://en.wikipedia.org/wiki/Great_Fires_of_1947"
+    ],
+    "evidence_sentence_id": [
+      "Goose Rocks::sentence::6",
+      "Goose Rocks::sentence::7",
+      "Great Fires of 1947::sentence::1"
+    ]
+  },
+  "grafo_claim": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "16dbe402-97f4-5b80-a6f1-c35c413145cb",
+        "text": "This chunk is about:\n- Organizations: O'Hara Watercolor School\n- Events: fires\n- Topics: fatalities\n\nFacts:\n- Fires killed 16 people.\n- The O'Hara Watercolor School was burned down during the fires.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "e94beb69-ce75-50a6-af87-3976f7783239",
+        "text": "The O'Hara Watercolor School was burned down during fires that killed 16 people.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "838c878a-0e58-51af-bbcc-d9889bfac5be",
+        "text": "text_4c6c1c85f619854c79918d8168374caa",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "6779b8a4-52a8-5571-bc89-56b38d122b03",
+        "text": "ohara watercolor school",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "388f60fb-220d-55e8-ae9c-3ac93cead308",
+        "text": "organization",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "7b313a96-605c-5fc2-bdc8-ad10c394b1e6",
+        "text": "fires",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "55bc1a94-063e-5b53-902d-93eab32561b6",
+        "text": "16 people",
+        "type": "Entity"
+      },
+      {
+        "id": 7,
+        "original_id": "99a82eec-bb35-5bb5-9ed2-e73fc7a756de",
+        "text": "person",
+        "type": "EntityType"
+      },
+      {
+        "id": 8,
+        "original_id": "214abcd9-9adf-5c8a-bb35-1e729f2d68c3",
+        "text": "event",
+        "type": "EntityType"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 3,
+        "type": "burned_down"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "killed"
+      },
+      {
+        "source": 1,
+        "target": 6,
+        "type": "contains"
+      },
+      {
+        "source": 6,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 5,
+        "target": 8,
+        "type": "is_a"
+      }
+    ]
+  },
+  "grafo_evidencia": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "20e57698-98bb-54a6-acca-f8e54afeefc0",
+        "text": "This chunk is about:\n- Places: Goose Rocks Beach\n- People: Eliot O'Hara\n- Organizations: O'Hara Watercolor School\n- Events: Great Fires of 1947\n\nFacts:\n- From 1930 to 1947, the O'Hara Watercolor School operated at Goose Rocks Beach under American watercolor painter Eliot O'Hara.\n- In 1947, the Great Fires of 1947 burned down the O'Hara Watercolor School and many other buildings at Goose Rocks Beach.\n- In 1947, the Great Fires of 1947 collectively killed 16 people.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "8d8aafea-60a7-5fc4-83e5-67adaddd3ade",
+        "text": "Page: Goose Rocks. Sentence: Goose Rocks Beach was the site of the O'Hara Watercolor School run by American watercolor painter Eliot O'Hara from 1930 to 1947.\nPage: Goose Rocks. Sentence: The school and many other buildings burned down in the Great Fires of 1947.\nPage: Great Fires of 1947. Sentence: Collectively, the fires killed a total of 16 people.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "f6ed2529-20c7-536f-8e11-d11bbb51999d",
+        "text": "text_9e0b4834b7b94601444086fbf7e934ae",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "3f1a9408-b261-5670-9104-d78efac018f0",
+        "text": "goose rocks beach",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "5f394058-b2a0-5ba8-8466-ba2a18cfcf4e",
+        "text": "place",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "6779b8a4-52a8-5571-bc89-56b38d122b03",
+        "text": "ohara watercolor school",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "388f60fb-220d-55e8-ae9c-3ac93cead308",
+        "text": "organization",
+        "type": "EntityType"
+      },
+      {
+        "id": 7,
+        "original_id": "00cd2357-0725-5223-aba9-0e4d013648f8",
+        "text": "eliot ohara",
+        "type": "Entity"
+      },
+      {
+        "id": 8,
+        "original_id": "a4e72600-6ee3-5941-a649-c6c9ce1a65cc",
+        "text": "1930",
+        "type": "Entity"
+      },
+      {
+        "id": 9,
+        "original_id": "b19433ae-558c-5aaf-95ac-6231f2a4be0e",
+        "text": "date",
+        "type": "EntityType"
+      },
+      {
+        "id": 10,
+        "original_id": "afa189e7-975d-54f3-9693-64d7785d0ff8",
+        "text": "1947",
+        "type": "Entity"
+      },
+      {
+        "id": 11,
+        "original_id": "99a82eec-bb35-5bb5-9ed2-e73fc7a756de",
+        "text": "person",
+        "type": "EntityType"
+      },
+      {
+        "id": 12,
+        "original_id": "d91e998e-723c-5a6a-81cf-877037c0c0ab",
+        "text": "great fires of 1947",
+        "type": "Entity"
+      },
+      {
+        "id": 13,
+        "original_id": "90fb54a8-d5cb-5a68-b463-4266cde38121",
+        "text": "16",
+        "type": "Entity"
+      },
+      {
+        "id": 14,
+        "original_id": "5c1097ca-fab8-54d5-b57f-5dca4b0e2507",
+        "text": "number",
+        "type": "EntityType"
+      },
+      {
+        "id": 15,
+        "original_id": "214abcd9-9adf-5c8a-bb35-1e729f2d68c3",
+        "text": "event",
+        "type": "EntityType"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 3,
+        "type": "located_at"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 7,
+        "target": 5,
+        "type": "ran"
+      },
+      {
+        "source": 12,
+        "target": 5,
+        "type": "burned_down"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      },
+      {
+        "source": 7,
+        "target": 8,
+        "type": "began_running_in"
+      },
+      {
+        "source": 1,
+        "target": 8,
+        "type": "contains"
+      },
+      {
+        "source": 8,
+        "target": 9,
+        "type": "is_a"
+      },
+      {
+        "source": 10,
+        "target": 9,
+        "type": "is_a"
+      },
+      {
+        "source": 7,
+        "target": 10,
+        "type": "stopped_running_in"
+      },
+      {
+        "source": 1,
+        "target": 10,
+        "type": "contains"
+      },
+      {
+        "source": 12,
+        "target": 10,
+        "type": "occurred_in"
+      },
+      {
+        "source": 7,
+        "target": 11,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 12,
+        "type": "contains"
+      },
+      {
+        "source": 12,
+        "target": 13,
+        "type": "killed_total"
+      },
+      {
+        "source": 1,
+        "target": 13,
+        "type": "contains"
+      },
+      {
+        "source": 13,
+        "target": 14,
+        "type": "is_a"
+      },
+      {
+        "source": 12,
+        "target": 15,
+        "type": "is_a"
+      }
+    ]
+  }
+}

@@ -1,0 +1,514 @@
+{
+  "dataset": "hover",
+  "id": "180806ba-8df5-464c-9d83-ff509672e79f",
+  "split": "train",
+  "claim": "Pam Shriver and the player Loic Courteau coached were not both alive in 1968.",
+  "evidencia": "Page: Amélie Mauresmo. Sentence: Amélie Simone Mauresmo ] (born 5 July 1979) is a French former professional tennis player, and a former world No. 1.\nPage: Pam Shriver. Sentence: Pamela Howard Shriver (born July 4, 1962) is an American former professional tennis player known primarily as a doubles specialist with success also as a singles player.\nPage: Loïc Courteau. Sentence: Courteau has coached the French Fed Cup team in years past, and has been the coach of Amélie Mauresmo, the winner of two Grand Slams, since 2002.",
+  "evidence_text": "Page: Amélie Mauresmo. Sentence: Amélie Simone Mauresmo ] (born 5 July 1979) is a French former professional tennis player, and a former world No. 1.\nPage: Pam Shriver. Sentence: Pamela Howard Shriver (born July 4, 1962) is an American former professional tennis player known primarily as a doubles specialist with success also as a singles player.\nPage: Loïc Courteau. Sentence: Courteau has coached the French Fed Cup team in years past, and has been the coach of Amélie Mauresmo, the winner of two Grand Slams, since 2002.",
+  "label": "NOT_SUPPORTED",
+  "num_hops": 3,
+  "hover_metadata": {
+    "supporting_facts": [
+      [
+        "Amélie Mauresmo",
+        0
+      ],
+      [
+        "Pam Shriver",
+        0
+      ],
+      [
+        "Loïc Courteau",
+        1
+      ]
+    ],
+    "num_hops": 3,
+    "evidence_annotation_id": [
+      0
+    ],
+    "evidence_id": [
+      "Amélie Mauresmo::sentence::0",
+      "Pam Shriver::sentence::0",
+      "Loïc Courteau::sentence::1"
+    ],
+    "evidence_wiki_url": [
+      "https://en.wikipedia.org/wiki/Am%C3%A9lie_Mauresmo",
+      "https://en.wikipedia.org/wiki/Pam_Shriver",
+      "https://en.wikipedia.org/wiki/Lo%C3%AFc_Courteau"
+    ],
+    "evidence_sentence_id": [
+      "Amélie Mauresmo::sentence::0",
+      "Pam Shriver::sentence::0",
+      "Loïc Courteau::sentence::1"
+    ]
+  },
+  "grafo_claim": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "ba7fd4ce-6356-59e5-8968-0333e8920aea",
+        "text": "This chunk is about:\n- People: Pam Shriver, Loic Courteau\n- Roles: tennis coach, player\n\nFacts:\n- Pam Shriver was alive in 1968.\n- The player Loic Courteau coached was not alive in 1968.\n- Pam Shriver and the player Loic Courteau coached were not both alive in 1968.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "42a1a76a-879f-5a9d-b60f-716ef25af77e",
+        "text": "Pam Shriver and the player Loic Courteau coached were not both alive in 1968.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "af8664a6-691f-5740-9b14-8519678c0a12",
+        "text": "text_3d37b3cbbad0034df33cad6b516bf767",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "bea18321-09a5-5c54-b593-141a4c9dc6ea",
+        "text": "pam shriver",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "99a82eec-bb35-5bb5-9ed2-e73fc7a756de",
+        "text": "person",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "909831ea-3dcb-5f8b-b7f8-ae1ea716f0fa",
+        "text": "1968",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "b19433ae-558c-5aaf-95ac-6231f2a4be0e",
+        "text": "date",
+        "type": "EntityType"
+      },
+      {
+        "id": 7,
+        "original_id": "f1857e08-f72e-51b0-b0eb-87d8d69725fb",
+        "text": "loic courteau",
+        "type": "Entity"
+      },
+      {
+        "id": 8,
+        "original_id": "93ee348b-e158-5b2a-aebc-28b4081ff283",
+        "text": "the player loic courteau coached",
+        "type": "Entity"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 7,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 8,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "not_both_alive_in"
+      },
+      {
+        "source": 8,
+        "target": 5,
+        "type": "not_both_alive_in"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      },
+      {
+        "source": 7,
+        "target": 8,
+        "type": "coached"
+      },
+      {
+        "source": 1,
+        "target": 8,
+        "type": "contains"
+      }
+    ]
+  },
+  "grafo_evidencia": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "9a9f6515-26a1-5ad6-9200-ec6170968815",
+        "text": "This chunk is about:\n- People: Amélie Mauresmo, Pam Shriver, Loïc Courteau\n- Roles: former professional tennis players, coach, doubles specialist, singles player, world No. 1\n- Organizations: French Fed Cup team\n- Events: Grand Slam titles\n\nFacts:\n- Pam Shriver was born on July 4, 1962, and she is an American former professional tennis player known primarily as a doubles specialist who also succeeded in singles.\n- Amélie Mauresmo was born on July 5, 1979, and she is a French former professional tennis player and former world No. 1.\n- Since 2002, Loïc Courteau has coached Amélie Mauresmo, who won two Grand Slam titles.\n- Loïc Courteau has also coached the French Fed Cup team in past years.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "1c0585b4-bba2-5cbf-8089-916db1d4f721",
+        "text": "Page: Amélie Mauresmo. Sentence: Amélie Simone Mauresmo ] (born 5 July 1979) is a French former professional tennis player, and a former world No. 1.\nPage: Pam Shriver. Sentence: Pamela Howard Shriver (born July 4, 1962) is an American former professional tennis player known primarily as a doubles specialist with success also as a singles player.\nPage: Loïc Courteau. Sentence: Courteau has coached the French Fed Cup team in years past, and has been the coach of Amélie Mauresmo, the winner of two Grand Slams, since 2002.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "1fa58442-3a9f-5b9e-8a44-9d7737702ebd",
+        "text": "text_8160b53f1afdf9626581c5722bc08654",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "9cd94384-6a1a-5ef1-921d-570210e694c6",
+        "text": "amélie mauresmo",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "99a82eec-bb35-5bb5-9ed2-e73fc7a756de",
+        "text": "person",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "3d33c3f5-6933-575e-b8a9-8cf76fc8aa00",
+        "text": "1979-07-05",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "b19433ae-558c-5aaf-95ac-6231f2a4be0e",
+        "text": "date",
+        "type": "EntityType"
+      },
+      {
+        "id": 7,
+        "original_id": "c529785c-647b-5d0f-88d0-151b1fff337c",
+        "text": "france",
+        "type": "Entity"
+      },
+      {
+        "id": 8,
+        "original_id": "5f394058-b2a0-5ba8-8466-ba2a18cfcf4e",
+        "text": "place",
+        "type": "EntityType"
+      },
+      {
+        "id": 9,
+        "original_id": "a9cbb533-354c-5c61-b0d6-87d34048f49c",
+        "text": "world no. 1",
+        "type": "Entity"
+      },
+      {
+        "id": 10,
+        "original_id": "d21b58c8-9007-5eb5-bc0a-b86709d9a44b",
+        "text": "rank",
+        "type": "EntityType"
+      },
+      {
+        "id": 11,
+        "original_id": "7396cfa8-5379-59d7-9afd-e273a29df1ec",
+        "text": "two grand slams",
+        "type": "Entity"
+      },
+      {
+        "id": 12,
+        "original_id": "ce6e6c9b-c312-5428-b634-2ea5480d2d42",
+        "text": "achievement",
+        "type": "EntityType"
+      },
+      {
+        "id": 13,
+        "original_id": "bea18321-09a5-5c54-b593-141a4c9dc6ea",
+        "text": "pam shriver",
+        "type": "Entity"
+      },
+      {
+        "id": 14,
+        "original_id": "03155c6b-5e68-5bc4-9e17-07af135c0038",
+        "text": "1962-07-04",
+        "type": "Entity"
+      },
+      {
+        "id": 15,
+        "original_id": "874a51da-34ea-5037-be47-d87785d43c37",
+        "text": "united states",
+        "type": "Entity"
+      },
+      {
+        "id": 16,
+        "original_id": "ec3b7ff7-51a2-58be-ab7d-925b8d59d28a",
+        "text": "doubles specialist",
+        "type": "Entity"
+      },
+      {
+        "id": 17,
+        "original_id": "c37fc488-fc9a-5b35-8e54-a50ae1721557",
+        "text": "role",
+        "type": "EntityType"
+      },
+      {
+        "id": 18,
+        "original_id": "ff5a2b05-863e-5364-8f63-94683939d9ea",
+        "text": "singles player",
+        "type": "Entity"
+      },
+      {
+        "id": 19,
+        "original_id": "ed33f537-f3e1-5473-9c3e-6cef0f420508",
+        "text": "loïc courteau",
+        "type": "Entity"
+      },
+      {
+        "id": 20,
+        "original_id": "6146f784-38ec-511a-9e52-d87f4838f9f6",
+        "text": "french fed cup team",
+        "type": "Entity"
+      },
+      {
+        "id": 21,
+        "original_id": "388f60fb-220d-55e8-ae9c-3ac93cead308",
+        "text": "organization",
+        "type": "EntityType"
+      },
+      {
+        "id": 22,
+        "original_id": "d4028376-9599-5def-be60-886e367316ac",
+        "text": "2002",
+        "type": "Entity"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 19,
+        "target": 3,
+        "type": "coached"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 13,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 19,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "born_on"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 14,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 22,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 7,
+        "type": "has_nationality"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      },
+      {
+        "source": 20,
+        "target": 7,
+        "type": "associated_with"
+      },
+      {
+        "source": 7,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 15,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 9,
+        "type": "held_rank"
+      },
+      {
+        "source": 1,
+        "target": 9,
+        "type": "contains"
+      },
+      {
+        "source": 9,
+        "target": 10,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 11,
+        "type": "won"
+      },
+      {
+        "source": 1,
+        "target": 11,
+        "type": "contains"
+      },
+      {
+        "source": 11,
+        "target": 12,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 13,
+        "type": "contains"
+      },
+      {
+        "source": 13,
+        "target": 14,
+        "type": "born_on"
+      },
+      {
+        "source": 1,
+        "target": 14,
+        "type": "contains"
+      },
+      {
+        "source": 13,
+        "target": 15,
+        "type": "has_nationality"
+      },
+      {
+        "source": 1,
+        "target": 15,
+        "type": "contains"
+      },
+      {
+        "source": 13,
+        "target": 16,
+        "type": "known_as"
+      },
+      {
+        "source": 1,
+        "target": 16,
+        "type": "contains"
+      },
+      {
+        "source": 16,
+        "target": 17,
+        "type": "is_a"
+      },
+      {
+        "source": 18,
+        "target": 17,
+        "type": "is_a"
+      },
+      {
+        "source": 13,
+        "target": 18,
+        "type": "successful_as"
+      },
+      {
+        "source": 1,
+        "target": 18,
+        "type": "contains"
+      },
+      {
+        "source": 1,
+        "target": 19,
+        "type": "contains"
+      },
+      {
+        "source": 19,
+        "target": 20,
+        "type": "coached"
+      },
+      {
+        "source": 1,
+        "target": 20,
+        "type": "contains"
+      },
+      {
+        "source": 20,
+        "target": 21,
+        "type": "is_a"
+      },
+      {
+        "source": 19,
+        "target": 22,
+        "type": "since"
+      },
+      {
+        "source": 1,
+        "target": 22,
+        "type": "contains"
+      }
+    ]
+  }
+}

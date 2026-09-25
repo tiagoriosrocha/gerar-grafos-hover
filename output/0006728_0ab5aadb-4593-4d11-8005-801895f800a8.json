@@ -1,0 +1,514 @@
+{
+  "dataset": "hover",
+  "id": "0ab5aadb-4593-4d11-8005-801895f800a8",
+  "split": "train",
+  "claim": "The actress who portrayed Maude Findlay starred in \"The Golden Girls\".",
+  "evidencia": "Page: Dorothy Zbornak. Sentence: Dorothy Zbornak (née Petrillo) is a fictional character from the TV series \"The Golden Girls\", portrayed by Bea Arthur for 7 years and 183 episodes.\nPage: Bea Arthur. Sentence: Beatrice \"Bea\" Arthur (born Bernice Frankel; May 13, 1922 – April 25, 2009) was an American actress, comedian, singer, and animal rights activist.\nPage: Maude Findlay. Sentence: She was portrayed by the Emmy-winning actress Bea Arthur.",
+  "evidence_text": "Page: Dorothy Zbornak. Sentence: Dorothy Zbornak (née Petrillo) is a fictional character from the TV series \"The Golden Girls\", portrayed by Bea Arthur for 7 years and 183 episodes.\nPage: Bea Arthur. Sentence: Beatrice \"Bea\" Arthur (born Bernice Frankel; May 13, 1922 – April 25, 2009) was an American actress, comedian, singer, and animal rights activist.\nPage: Maude Findlay. Sentence: She was portrayed by the Emmy-winning actress Bea Arthur.",
+  "label": "SUPPORTED",
+  "num_hops": 3,
+  "hover_metadata": {
+    "supporting_facts": [
+      [
+        "Dorothy Zbornak",
+        0
+      ],
+      [
+        "Bea Arthur",
+        0
+      ],
+      [
+        "Maude Findlay",
+        1
+      ]
+    ],
+    "num_hops": 3,
+    "evidence_annotation_id": [
+      0
+    ],
+    "evidence_id": [
+      "Dorothy Zbornak::sentence::0",
+      "Bea Arthur::sentence::0",
+      "Maude Findlay::sentence::1"
+    ],
+    "evidence_wiki_url": [
+      "https://en.wikipedia.org/wiki/Dorothy_Zbornak",
+      "https://en.wikipedia.org/wiki/Bea_Arthur",
+      "https://en.wikipedia.org/wiki/Maude_Findlay"
+    ],
+    "evidence_sentence_id": [
+      "Dorothy Zbornak::sentence::0",
+      "Bea Arthur::sentence::0",
+      "Maude Findlay::sentence::1"
+    ]
+  },
+  "grafo_claim": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "7ba3a420-ee15-592d-a20d-6f91c3033f24",
+        "text": "This chunk is about:\n- People: Bea Arthur, Maude Findlay\n- TV Shows: Maude, The Golden Girls\n\nFacts:\n- Bea Arthur portrayed Maude Findlay in the television show \"Maude.\"\n- Bea Arthur starred in the television show \"The Golden Girls.\"",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "f0b9c17f-1f97-5711-a80f-0d3590f8e608",
+        "text": "The actress who portrayed Maude Findlay starred in \"The Golden Girls\".",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "e55d9556-9a5b-5157-9ed3-ea14b2e7e4fd",
+        "text": "text_a15f09a9435b3b7b7caa34c5b7eca81d",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "0d5c3c63-0893-58c4-beb0-0f166db0b2f6",
+        "text": "bea arthur",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "d8744c12-efd8-5c0f-8eb3-d3569e21cad6",
+        "text": "maude findlay",
+        "type": "Entity"
+      },
+      {
+        "id": 5,
+        "original_id": "99a82eec-bb35-5bb5-9ed2-e73fc7a756de",
+        "text": "person",
+        "type": "EntityType"
+      },
+      {
+        "id": 6,
+        "original_id": "0f3a7b00-c057-5879-9959-1962784c56e9",
+        "text": "the golden girls",
+        "type": "Entity"
+      },
+      {
+        "id": 7,
+        "original_id": "5263a535-1b4b-5925-be3e-310d03cd303b",
+        "text": "work",
+        "type": "EntityType"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "portrayed"
+      },
+      {
+        "source": 1,
+        "target": 4,
+        "type": "contains"
+      },
+      {
+        "source": 4,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 6,
+        "type": "starred_in"
+      },
+      {
+        "source": 1,
+        "target": 6,
+        "type": "contains"
+      },
+      {
+        "source": 6,
+        "target": 7,
+        "type": "is_a"
+      }
+    ]
+  },
+  "grafo_evidencia": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "ae7da2cb-b60f-5604-ac43-5c08578bb51f",
+        "text": "This chunk is about:\n- People: Dorothy Zbornak, Bea Arthur, Maude Findlay\n- Products: The Golden Girls\n- Concepts: fictional characters, acting roles\n\nFacts:\n- Bea Arthur was born as Bernice Frankel on May 13, 1922, and she was an American actress, comedian, singer, and animal rights activist.\n- Dorothy Zbornak, née Petrillo, is a fictional character from the television series The Golden Girls.\n- Bea Arthur portrayed Dorothy Zbornak for 7 years across 183 episodes of The Golden Girls.\n- Maude Findlay was portrayed by Emmy-winning actress Bea Arthur.\n- Bea Arthur died on April 25, 2009.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "5aa4e3ce-d4c8-5866-99a0-4b30cb335b50",
+        "text": "Page: Dorothy Zbornak. Sentence: Dorothy Zbornak (née Petrillo) is a fictional character from the TV series \"The Golden Girls\", portrayed by Bea Arthur for 7 years and 183 episodes.\nPage: Bea Arthur. Sentence: Beatrice \"Bea\" Arthur (born Bernice Frankel; May 13, 1922 – April 25, 2009) was an American actress, comedian, singer, and animal rights activist.\nPage: Maude Findlay. Sentence: She was portrayed by the Emmy-winning actress Bea Arthur.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "81e749f0-f379-5690-b67d-a1bb7b79eebe",
+        "text": "text_4c62d687922a12495f2aa3f61221b909",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "38cc8daa-8237-52ad-b608-fd353ca94560",
+        "text": "dorothy zbornak",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "ec9803e5-d8d8-5f98-80a5-1d7393c3ef32",
+        "text": "petrillo",
+        "type": "Entity"
+      },
+      {
+        "id": 5,
+        "original_id": "39575085-0710-527d-bd54-019de7b00429",
+        "text": "name",
+        "type": "EntityType"
+      },
+      {
+        "id": 6,
+        "original_id": "0f3a7b00-c057-5879-9959-1962784c56e9",
+        "text": "the golden girls",
+        "type": "Entity"
+      },
+      {
+        "id": 7,
+        "original_id": "297a592b-9dd2-5517-ae2f-680c13c8a20e",
+        "text": "tv series",
+        "type": "EntityType"
+      },
+      {
+        "id": 8,
+        "original_id": "0d5c3c63-0893-58c4-beb0-0f166db0b2f6",
+        "text": "bea arthur",
+        "type": "Entity"
+      },
+      {
+        "id": 9,
+        "original_id": "7b6901c9-ad97-5214-95c1-7ead1d7006ca",
+        "text": "beatrice bea arthur",
+        "type": "Entity"
+      },
+      {
+        "id": 10,
+        "original_id": "2ad06fd9-e187-58d7-a813-3dd9f7183226",
+        "text": "bernice frankel",
+        "type": "Entity"
+      },
+      {
+        "id": 11,
+        "original_id": "609a28b8-2a9f-5865-a1be-5eff861c8db8",
+        "text": "1922-05-13",
+        "type": "Entity"
+      },
+      {
+        "id": 12,
+        "original_id": "b19433ae-558c-5aaf-95ac-6231f2a4be0e",
+        "text": "date",
+        "type": "EntityType"
+      },
+      {
+        "id": 13,
+        "original_id": "18dcb9a6-e9ea-5169-8837-fc3efc4b7661",
+        "text": "2009-04-25",
+        "type": "Entity"
+      },
+      {
+        "id": 14,
+        "original_id": "32e5ea46-cca9-5920-8b2d-77357f10ce8d",
+        "text": "american",
+        "type": "Entity"
+      },
+      {
+        "id": 15,
+        "original_id": "7d08f409-7e55-5a66-935f-7c5c06f9111f",
+        "text": "nationality",
+        "type": "EntityType"
+      },
+      {
+        "id": 16,
+        "original_id": "be064bd7-d09a-5d92-8597-34373f35ef55",
+        "text": "actress",
+        "type": "Entity"
+      },
+      {
+        "id": 17,
+        "original_id": "9d80eb43-32fa-561c-9371-91f180ebcb6c",
+        "text": "profession",
+        "type": "EntityType"
+      },
+      {
+        "id": 18,
+        "original_id": "fbe70e94-a36f-5659-881b-5180169addc8",
+        "text": "comedian",
+        "type": "Entity"
+      },
+      {
+        "id": 19,
+        "original_id": "eab5737a-cd7b-5a0b-b6f7-660bb3ed3495",
+        "text": "singer",
+        "type": "Entity"
+      },
+      {
+        "id": 20,
+        "original_id": "4c29a29c-53fe-51f4-beb1-35e9245a2bfa",
+        "text": "animal rights activist",
+        "type": "Entity"
+      },
+      {
+        "id": 21,
+        "original_id": "99a82eec-bb35-5bb5-9ed2-e73fc7a756de",
+        "text": "person",
+        "type": "EntityType"
+      },
+      {
+        "id": 22,
+        "original_id": "d3db161f-3fd9-5366-919b-ad9f9a1ba392",
+        "text": "character",
+        "type": "EntityType"
+      },
+      {
+        "id": 23,
+        "original_id": "d8744c12-efd8-5c0f-8eb3-d3569e21cad6",
+        "text": "maude findlay",
+        "type": "Entity"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "née"
+      },
+      {
+        "source": 1,
+        "target": 4,
+        "type": "contains"
+      },
+      {
+        "source": 4,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 9,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 10,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 6,
+        "type": "appears_in"
+      },
+      {
+        "source": 1,
+        "target": 6,
+        "type": "contains"
+      },
+      {
+        "source": 6,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 8,
+        "type": "portrayed_by"
+      },
+      {
+        "source": 1,
+        "target": 8,
+        "type": "contains"
+      },
+      {
+        "source": 23,
+        "target": 8,
+        "type": "portrayed_by"
+      },
+      {
+        "source": 8,
+        "target": 9,
+        "type": "has_name"
+      },
+      {
+        "source": 1,
+        "target": 9,
+        "type": "contains"
+      },
+      {
+        "source": 8,
+        "target": 10,
+        "type": "born_as"
+      },
+      {
+        "source": 1,
+        "target": 10,
+        "type": "contains"
+      },
+      {
+        "source": 8,
+        "target": 11,
+        "type": "born_on"
+      },
+      {
+        "source": 1,
+        "target": 11,
+        "type": "contains"
+      },
+      {
+        "source": 11,
+        "target": 12,
+        "type": "is_a"
+      },
+      {
+        "source": 13,
+        "target": 12,
+        "type": "is_a"
+      },
+      {
+        "source": 8,
+        "target": 13,
+        "type": "died_on"
+      },
+      {
+        "source": 1,
+        "target": 13,
+        "type": "contains"
+      },
+      {
+        "source": 8,
+        "target": 14,
+        "type": "has_nationality"
+      },
+      {
+        "source": 1,
+        "target": 14,
+        "type": "contains"
+      },
+      {
+        "source": 14,
+        "target": 15,
+        "type": "is_a"
+      },
+      {
+        "source": 8,
+        "target": 16,
+        "type": "has_profession"
+      },
+      {
+        "source": 1,
+        "target": 16,
+        "type": "contains"
+      },
+      {
+        "source": 16,
+        "target": 17,
+        "type": "is_a"
+      },
+      {
+        "source": 18,
+        "target": 17,
+        "type": "is_a"
+      },
+      {
+        "source": 19,
+        "target": 17,
+        "type": "is_a"
+      },
+      {
+        "source": 20,
+        "target": 17,
+        "type": "is_a"
+      },
+      {
+        "source": 8,
+        "target": 18,
+        "type": "has_profession"
+      },
+      {
+        "source": 1,
+        "target": 18,
+        "type": "contains"
+      },
+      {
+        "source": 8,
+        "target": 19,
+        "type": "has_profession"
+      },
+      {
+        "source": 1,
+        "target": 19,
+        "type": "contains"
+      },
+      {
+        "source": 8,
+        "target": 20,
+        "type": "has_profession"
+      },
+      {
+        "source": 1,
+        "target": 20,
+        "type": "contains"
+      },
+      {
+        "source": 8,
+        "target": 21,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 22,
+        "type": "is_a"
+      },
+      {
+        "source": 23,
+        "target": 22,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 23,
+        "type": "contains"
+      }
+    ]
+  }
+}

@@ -1,0 +1,538 @@
+{
+  "dataset": "hover",
+  "id": "c58ff03a-ab96-44fa-9c65-d5241e85cf09",
+  "split": "train",
+  "claim": "Terrace on the Park is a banquet hall located in this amenity. The borough where this amenity is situated had a bigger population than Staten Island in the 2016 census.",
+  "evidencia": "Page: Queens. Sentence: Coterminous with Queens County since 1899, the borough of Queens is the second-largest in population (after Brooklyn), with a census-estimated 2,333,054 residents in 2016, approximately 48% of them foreign-born.\nPage: Staten Island. Sentence: With a 2016 Census-estimated population of 476,015, Staten Island is the least populated of the boroughs but is the third-largest in area at 58 sqmi .\nPage: Flushing Meadows–Corona Park. Sentence: Located in the borough of Queens, it is between I-678 (Van Wyck Expressway) and the Grand Central Parkway and stretches from Flushing Bay, at the southern edge of LaGuardia Airport, to Union Turnpike.\nPage: Terrace on the Park. Sentence: Terrace on the Park is a banquet hall in Flushing Meadows–Corona Park.",
+  "evidence_text": "Page: Queens. Sentence: Coterminous with Queens County since 1899, the borough of Queens is the second-largest in population (after Brooklyn), with a census-estimated 2,333,054 residents in 2016, approximately 48% of them foreign-born.\nPage: Staten Island. Sentence: With a 2016 Census-estimated population of 476,015, Staten Island is the least populated of the boroughs but is the third-largest in area at 58 sqmi .\nPage: Flushing Meadows–Corona Park. Sentence: Located in the borough of Queens, it is between I-678 (Van Wyck Expressway) and the Grand Central Parkway and stretches from Flushing Bay, at the southern edge of LaGuardia Airport, to Union Turnpike.\nPage: Terrace on the Park. Sentence: Terrace on the Park is a banquet hall in Flushing Meadows–Corona Park.",
+  "label": "SUPPORTED",
+  "num_hops": 4,
+  "hover_metadata": {
+    "supporting_facts": [
+      [
+        "Queens",
+        2
+      ],
+      [
+        "Staten Island",
+        3
+      ],
+      [
+        "Flushing Meadows–Corona Park",
+        1
+      ],
+      [
+        "Terrace on the Park",
+        0
+      ]
+    ],
+    "num_hops": 4,
+    "evidence_annotation_id": [
+      0
+    ],
+    "evidence_id": [
+      "Queens::sentence::2",
+      "Staten Island::sentence::3",
+      "Flushing Meadows–Corona Park::sentence::1",
+      "Terrace on the Park::sentence::0"
+    ],
+    "evidence_wiki_url": [
+      "https://en.wikipedia.org/wiki/Queens",
+      "https://en.wikipedia.org/wiki/Staten_Island",
+      "https://en.wikipedia.org/wiki/Flushing_Meadows%E2%80%93Corona_Park",
+      "https://en.wikipedia.org/wiki/Terrace_on_the_Park"
+    ],
+    "evidence_sentence_id": [
+      "Queens::sentence::2",
+      "Staten Island::sentence::3",
+      "Flushing Meadows–Corona Park::sentence::1",
+      "Terrace on the Park::sentence::0"
+    ]
+  },
+  "grafo_claim": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "ec1cf73c-399d-5f6b-af8b-6091e6fec1b8",
+        "text": "This chunk is about:\n- Places: Terrace on the Park, Flushing Meadows–Corona Park, Queens, Staten Island\n- Topics: banquet halls, borough populations\n\nFacts:\n- Terrace on the Park is a banquet hall located in Flushing Meadows–Corona Park.\n- Flushing Meadows–Corona Park is situated in Queens.\n- In the 2016 census, Queens had a larger population than Staten Island.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "4e294a9e-40b5-57e9-96ff-66d2b49194fd",
+        "text": "Terrace on the Park is a banquet hall located in this amenity. The borough where this amenity is situated had a bigger population than Staten Island in the 2016 census.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "9ccdd897-ccbd-59f5-81fa-1ca1f6d332ca",
+        "text": "text_209393ff9f608cc27828ffd7ebf93702",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "12dcaa70-d542-5bd0-85db-8e38d6b4ea11",
+        "text": "terrace on the park",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "5f394058-b2a0-5ba8-8466-ba2a18cfcf4e",
+        "text": "place",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "11c2a8f2-ceb5-5adc-8d89-a7188173316e",
+        "text": "flushing meadows–corona park",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "6ccad39f-45d0-5fa7-81d4-4b31a43bf715",
+        "text": "queens",
+        "type": "Entity"
+      },
+      {
+        "id": 7,
+        "original_id": "d7343678-1efb-5816-ab29-65f5ef2b63bc",
+        "text": "staten island",
+        "type": "Entity"
+      },
+      {
+        "id": 8,
+        "original_id": "e4b4371b-a3be-58ef-8db1-07e189dc56ac",
+        "text": "2016",
+        "type": "Entity"
+      },
+      {
+        "id": 9,
+        "original_id": "b19433ae-558c-5aaf-95ac-6231f2a4be0e",
+        "text": "date",
+        "type": "EntityType"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 5,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 6,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 7,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "located_in"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "situated_in"
+      },
+      {
+        "source": 1,
+        "target": 6,
+        "type": "contains"
+      },
+      {
+        "source": 6,
+        "target": 7,
+        "type": "had_bigger_population_than"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      },
+      {
+        "source": 7,
+        "target": 8,
+        "type": "population_comparison_in"
+      },
+      {
+        "source": 6,
+        "target": 8,
+        "type": "population_comparison_in"
+      },
+      {
+        "source": 1,
+        "target": 8,
+        "type": "contains"
+      },
+      {
+        "source": 8,
+        "target": 9,
+        "type": "is_a"
+      }
+    ]
+  },
+  "grafo_evidencia": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "8206589b-bcb7-59ec-aa83-556be5e5cde2",
+        "text": "This chunk is about:\n- Places: Queens, Staten Island, Flushing Meadows–Corona Park\n- Products: Terrace on the Park\n- Systems: I-678 (Van Wyck Expressway), Grand Central Parkway\n- Places: Flushing Bay, LaGuardia Airport, Union Turnpike\n\nFacts:\n- Since 1899, the borough of Queens has been coterminous with Queens County.\n- In 2016, Queens had a census-estimated population of 2,333,054, making it the second-largest New York City borough by population after Brooklyn.\n- In 2016, approximately 48% of Queens residents were foreign-born.\n- In 2016, Staten Island had a census-estimated population of 476,015, making it the least populated New York City borough.\n- Staten Island is the third-largest New York City borough by area at 58 square miles.\n- Flushing Meadows–Corona Park is located in Queens between I-678 (Van Wyck Expressway) and the Grand Central Parkway.\n- Flushing Meadows–Corona Park stretches from Flushing Bay at the southern edge of LaGuardia Airport to Union Turnpike.\n- Terrace on the Park is a banquet hall in Flushing Meadows–Corona Park.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "501740fa-871a-5940-9233-0460ab703a99",
+        "text": "Page: Queens. Sentence: Coterminous with Queens County since 1899, the borough of Queens is the second-largest in population (after Brooklyn), with a census-estimated 2,333,054 residents in 2016, approximately 48% of them foreign-born.\nPage: Staten Island. Sentence: With a 2016 Census-estimated population of 476,015, Staten Island is the least populated of the boroughs but is the third-largest in area at 58 sqmi .\nPage: Flushing Meadows–Corona Park. Sentence: Located in the borough of Queens, it is between I-678 (Van Wyck Expressway) and the Grand Central Parkway and stretches from Flushing Bay, at the southern edge of LaGuardia Airport, to Union Turnpike.\nPage: Terrace on the Park. Sentence: Terrace on the Park is a banquet hall in Flushing Meadows–Corona Park.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "574e449b-38b2-53bb-9402-dcf5988780c9",
+        "text": "text_6cb80c0932a774c2cccdd3aee341a55a",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "6ccad39f-45d0-5fa7-81d4-4b31a43bf715",
+        "text": "queens",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "5f394058-b2a0-5ba8-8466-ba2a18cfcf4e",
+        "text": "place",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "384b00cd-94aa-5932-876e-9945244330d3",
+        "text": "queens county",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "8ebbb74e-5388-5fe7-8fb0-2746d14b39ab",
+        "text": "1899",
+        "type": "Entity"
+      },
+      {
+        "id": 7,
+        "original_id": "b19433ae-558c-5aaf-95ac-6231f2a4be0e",
+        "text": "date",
+        "type": "EntityType"
+      },
+      {
+        "id": 8,
+        "original_id": "b79ea049-8482-54e7-87c6-6bb7e80bdca9",
+        "text": "brooklyn",
+        "type": "Entity"
+      },
+      {
+        "id": 9,
+        "original_id": "e4b4371b-a3be-58ef-8db1-07e189dc56ac",
+        "text": "2016",
+        "type": "Entity"
+      },
+      {
+        "id": 10,
+        "original_id": "d7343678-1efb-5816-ab29-65f5ef2b63bc",
+        "text": "staten island",
+        "type": "Entity"
+      },
+      {
+        "id": 11,
+        "original_id": "11c2a8f2-ceb5-5adc-8d89-a7188173316e",
+        "text": "flushing meadows–corona park",
+        "type": "Entity"
+      },
+      {
+        "id": 12,
+        "original_id": "c4e9842f-bc74-5bbc-a33c-2c492767d061",
+        "text": "i-678",
+        "type": "Entity"
+      },
+      {
+        "id": 13,
+        "original_id": "a101398c-5aae-583c-b265-048ee7c5580d",
+        "text": "van wyck expressway",
+        "type": "Entity"
+      },
+      {
+        "id": 14,
+        "original_id": "c0e3c694-0217-576c-9b9a-e891c6ab08c0",
+        "text": "grand central parkway",
+        "type": "Entity"
+      },
+      {
+        "id": 15,
+        "original_id": "e4f3e97e-de3a-52dd-b608-57a894de5504",
+        "text": "flushing bay",
+        "type": "Entity"
+      },
+      {
+        "id": 16,
+        "original_id": "93f542a6-c91a-5b10-a3f6-6c8f49eda3b6",
+        "text": "laguardia airport",
+        "type": "Entity"
+      },
+      {
+        "id": 17,
+        "original_id": "b3098e76-0815-5b18-968a-8d99f7494336",
+        "text": "union turnpike",
+        "type": "Entity"
+      },
+      {
+        "id": 18,
+        "original_id": "12dcaa70-d542-5bd0-85db-8e38d6b4ea11",
+        "text": "terrace on the park",
+        "type": "Entity"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 11,
+        "target": 3,
+        "type": "located_in"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 5,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 8,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 10,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 11,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 12,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 13,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 14,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 15,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 16,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 17,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 18,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "coterminous_with"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 6,
+        "type": "became_coterminous_in"
+      },
+      {
+        "source": 1,
+        "target": 6,
+        "type": "contains"
+      },
+      {
+        "source": 6,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 9,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 8,
+        "type": "has_smaller_population_than"
+      },
+      {
+        "source": 1,
+        "target": 8,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 9,
+        "type": "has_population_estimate_in"
+      },
+      {
+        "source": 1,
+        "target": 9,
+        "type": "contains"
+      },
+      {
+        "source": 10,
+        "target": 9,
+        "type": "has_population_estimate_in"
+      },
+      {
+        "source": 1,
+        "target": 10,
+        "type": "contains"
+      },
+      {
+        "source": 1,
+        "target": 11,
+        "type": "contains"
+      },
+      {
+        "source": 18,
+        "target": 11,
+        "type": "located_in"
+      },
+      {
+        "source": 11,
+        "target": 12,
+        "type": "located_between"
+      },
+      {
+        "source": 1,
+        "target": 12,
+        "type": "contains"
+      },
+      {
+        "source": 12,
+        "target": 13,
+        "type": "also_called"
+      },
+      {
+        "source": 1,
+        "target": 13,
+        "type": "contains"
+      },
+      {
+        "source": 11,
+        "target": 14,
+        "type": "located_between"
+      },
+      {
+        "source": 1,
+        "target": 14,
+        "type": "contains"
+      },
+      {
+        "source": 11,
+        "target": 15,
+        "type": "stretches_from"
+      },
+      {
+        "source": 1,
+        "target": 15,
+        "type": "contains"
+      },
+      {
+        "source": 15,
+        "target": 16,
+        "type": "at_southern_edge_of"
+      },
+      {
+        "source": 1,
+        "target": 16,
+        "type": "contains"
+      },
+      {
+        "source": 11,
+        "target": 17,
+        "type": "stretches_to"
+      },
+      {
+        "source": 1,
+        "target": 17,
+        "type": "contains"
+      },
+      {
+        "source": 1,
+        "target": 18,
+        "type": "contains"
+      }
+    ]
+  }
+}

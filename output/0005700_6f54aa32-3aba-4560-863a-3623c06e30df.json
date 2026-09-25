@@ -1,0 +1,381 @@
+{
+  "dataset": "hover",
+  "id": "6f54aa32-3aba-4560-863a-3623c06e30df",
+  "split": "train",
+  "claim": "The West Virginia Highway, US 60,  gives access to Zilpo Road, and is also known as Midland Trail.",
+  "evidencia": "Page: Zilpo Road. Sentence: The nine mile byway starts south of Morehead, Kentucky and can be accessed by U.S. Highway 60.\nPage: Morehead, Kentucky. Sentence: Morehead is a home rule-class city located along US 60 (the historic Midland Trail) and Interstate 64 in Rowan County, Kentucky, in the United States.",
+  "evidence_text": "Page: Zilpo Road. Sentence: The nine mile byway starts south of Morehead, Kentucky and can be accessed by U.S. Highway 60.\nPage: Morehead, Kentucky. Sentence: Morehead is a home rule-class city located along US 60 (the historic Midland Trail) and Interstate 64 in Rowan County, Kentucky, in the United States.",
+  "label": "NOT_SUPPORTED",
+  "num_hops": 2,
+  "hover_metadata": {
+    "supporting_facts": [
+      [
+        "Zilpo Road",
+        1
+      ],
+      [
+        "Morehead, Kentucky",
+        0
+      ]
+    ],
+    "num_hops": 2,
+    "evidence_annotation_id": [
+      0
+    ],
+    "evidence_id": [
+      "Zilpo Road::sentence::1",
+      "Morehead, Kentucky::sentence::0"
+    ],
+    "evidence_wiki_url": [
+      "https://en.wikipedia.org/wiki/Zilpo_Road",
+      "https://en.wikipedia.org/wiki/Morehead%2C_Kentucky"
+    ],
+    "evidence_sentence_id": [
+      "Zilpo Road::sentence::1",
+      "Morehead, Kentucky::sentence::0"
+    ]
+  },
+  "grafo_claim": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "adf88b83-5c36-5fc5-8d4b-1dff9926c2e9",
+        "text": "This chunk is about:\n- Places: West Virginia, Zilpo Road\n- Roads: US 60, Midland Trail\n\nFacts:\n- US 60 is a highway in West Virginia.\n- US 60 provides access to Zilpo Road.\n- US 60 is also known as Midland Trail.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "4deb74b1-a52c-5d5d-818c-11b71386efa2",
+        "text": "The West Virginia Highway, US 60,  gives access to Zilpo Road, and is also known as Midland Trail.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "64b52b34-d48c-5d81-8cfb-7efed36cdd41",
+        "text": "text_a3f0162f2e8e86859c92294bea1fe793",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "1578fb67-3daf-59c9-9cdb-f1885cb0bcfb",
+        "text": "u.s. route 60",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "cb453677-74c8-54c7-83de-f4be77651152",
+        "text": "zilpo road",
+        "type": "Entity"
+      },
+      {
+        "id": 5,
+        "original_id": "5e52d312-a248-534f-a58b-25c5426a89ad",
+        "text": "road",
+        "type": "EntityType"
+      },
+      {
+        "id": 6,
+        "original_id": "6cfe623c-2169-5376-97f4-96099f02bc7b",
+        "text": "midland trail",
+        "type": "Entity"
+      },
+      {
+        "id": 7,
+        "original_id": "40f5a816-dbad-5f98-85c0-fede67f36289",
+        "text": "west virginia",
+        "type": "Entity"
+      },
+      {
+        "id": 8,
+        "original_id": "5f394058-b2a0-5ba8-8466-ba2a18cfcf4e",
+        "text": "place",
+        "type": "EntityType"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "gives_access_to"
+      },
+      {
+        "source": 1,
+        "target": 4,
+        "type": "contains"
+      },
+      {
+        "source": 4,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 6,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 6,
+        "type": "also_known_as"
+      },
+      {
+        "source": 1,
+        "target": 6,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 7,
+        "type": "located_in"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      },
+      {
+        "source": 7,
+        "target": 8,
+        "type": "is_a"
+      }
+    ]
+  },
+  "grafo_evidencia": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "12301f65-16f3-565d-8865-b087c605cb89",
+        "text": "This chunk is about:\n- Places: Zilpo Road, Morehead, Kentucky, Rowan County, Kentucky, United States\n- Roads: U.S. Highway 60, US 60, Interstate 64, Midland Trail\n- Topics: byway access, city location\n\nFacts:\n- Morehead is a home rule-class city in Rowan County, Kentucky, in the United States.\n- Morehead is located along US 60, which is the historic Midland Trail, and Interstate 64.\n- Zilpo Road is a nine-mile byway that starts south of Morehead, Kentucky.\n- Zilpo Road can be accessed by U.S. Highway 60.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "c5203e50-c298-56d1-bf85-f583d0a5d820",
+        "text": "Page: Zilpo Road. Sentence: The nine mile byway starts south of Morehead, Kentucky and can be accessed by U.S. Highway 60.\nPage: Morehead, Kentucky. Sentence: Morehead is a home rule-class city located along US 60 (the historic Midland Trail) and Interstate 64 in Rowan County, Kentucky, in the United States.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "145568b8-945a-5655-ab74-780962845045",
+        "text": "text_d96846a8900c9017cd4e901f9aa89cfa",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "cb453677-74c8-54c7-83de-f4be77651152",
+        "text": "zilpo road",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "bb34dc79-4e18-5ad9-8ea0-652266f81c48",
+        "text": "morehead, kentucky",
+        "type": "Entity"
+      },
+      {
+        "id": 5,
+        "original_id": "89f6e017-42fb-59b9-93a4-9e38271fc84c",
+        "text": "u.s. highway 60",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "6cfe623c-2169-5376-97f4-96099f02bc7b",
+        "text": "midland trail",
+        "type": "Entity"
+      },
+      {
+        "id": 7,
+        "original_id": "5f394058-b2a0-5ba8-8466-ba2a18cfcf4e",
+        "text": "place",
+        "type": "EntityType"
+      },
+      {
+        "id": 8,
+        "original_id": "5a0fe3b4-bec2-5bbc-9b53-29756e110e0e",
+        "text": "interstate 64",
+        "type": "Entity"
+      },
+      {
+        "id": 9,
+        "original_id": "6c362b2a-67f6-54b3-b54e-76a047bfc69d",
+        "text": "rowan county, kentucky",
+        "type": "Entity"
+      },
+      {
+        "id": 10,
+        "original_id": "d3a0feda-4497-5663-bcb5-8634a56e698b",
+        "text": "kentucky",
+        "type": "Entity"
+      },
+      {
+        "id": 11,
+        "original_id": "874a51da-34ea-5037-be47-d87785d43c37",
+        "text": "united states",
+        "type": "Entity"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "starts_south_of"
+      },
+      {
+        "source": 1,
+        "target": 4,
+        "type": "contains"
+      },
+      {
+        "source": 4,
+        "target": 5,
+        "type": "located_along"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "can_be_accessed_by"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "historically_identified_as"
+      },
+      {
+        "source": 1,
+        "target": 6,
+        "type": "contains"
+      },
+      {
+        "source": 6,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 5,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 8,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 11,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 10,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 9,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 4,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 4,
+        "target": 8,
+        "type": "located_along"
+      },
+      {
+        "source": 1,
+        "target": 8,
+        "type": "contains"
+      },
+      {
+        "source": 4,
+        "target": 9,
+        "type": "located_in"
+      },
+      {
+        "source": 1,
+        "target": 9,
+        "type": "contains"
+      },
+      {
+        "source": 9,
+        "target": 10,
+        "type": "located_in"
+      },
+      {
+        "source": 4,
+        "target": 10,
+        "type": "located_in"
+      },
+      {
+        "source": 1,
+        "target": 10,
+        "type": "contains"
+      },
+      {
+        "source": 10,
+        "target": 11,
+        "type": "located_in"
+      },
+      {
+        "source": 4,
+        "target": 11,
+        "type": "located_in"
+      },
+      {
+        "source": 1,
+        "target": 11,
+        "type": "contains"
+      }
+    ]
+  }
+}

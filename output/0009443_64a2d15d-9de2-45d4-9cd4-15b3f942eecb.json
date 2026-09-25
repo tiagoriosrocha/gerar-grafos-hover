@@ -1,0 +1,326 @@
+{
+  "dataset": "hover",
+  "id": "64a2d15d-9de2-45d4-9cd4-15b3f942eecb",
+  "split": "train",
+  "claim": "The population of the city where the Roman Catholic Hospital is located was 325,858 in 2011.",
+  "evidencia": "Page: Roman Catholic Hospital. Sentence: The Roman Catholic Hospital is a private hospital in Windhoek, Namibia run by the Roman Catholic Church.\nPage: Windhoek. Sentence: The population of Windhoek in 2011 was 325,858, growing continually due to an influx from all over Namibia.",
+  "evidence_text": "Page: Roman Catholic Hospital. Sentence: The Roman Catholic Hospital is a private hospital in Windhoek, Namibia run by the Roman Catholic Church.\nPage: Windhoek. Sentence: The population of Windhoek in 2011 was 325,858, growing continually due to an influx from all over Namibia.",
+  "label": "SUPPORTED",
+  "num_hops": 2,
+  "hover_metadata": {
+    "supporting_facts": [
+      [
+        "Roman Catholic Hospital",
+        0
+      ],
+      [
+        "Windhoek",
+        2
+      ]
+    ],
+    "num_hops": 2,
+    "evidence_annotation_id": [
+      0
+    ],
+    "evidence_id": [
+      "Roman Catholic Hospital::sentence::0",
+      "Windhoek::sentence::2"
+    ],
+    "evidence_wiki_url": [
+      "https://en.wikipedia.org/wiki/Roman_Catholic_Hospital",
+      "https://en.wikipedia.org/wiki/Windhoek"
+    ],
+    "evidence_sentence_id": [
+      "Roman Catholic Hospital::sentence::0",
+      "Windhoek::sentence::2"
+    ]
+  },
+  "grafo_claim": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "41e074e4-358c-5759-8125-e83042aa8dfb",
+        "text": "This chunk is about:\n- Places: the city where the Roman Catholic Hospital is located\n- Organizations: Roman Catholic Hospital\n\nFacts:\n- In 2011, the city where the Roman Catholic Hospital is located had a population of 325,858.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "86f5521f-eb18-5ac9-b35d-2e8b20a8c901",
+        "text": "The population of the city where the Roman Catholic Hospital is located was 325,858 in 2011.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "06ef70ad-2cad-5205-ba55-21a8d238c827",
+        "text": "text_1a8cc2d0517195785754db34888938b0",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "e7dde28c-55b7-5b14-b19f-09f8944c4454",
+        "text": "roman catholic hospital",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "5f394058-b2a0-5ba8-8466-ba2a18cfcf4e",
+        "text": "place",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "8a1ec4a4-2b6e-5fec-82a9-6befd398d607",
+        "text": "the city where the roman catholic hospital is located",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "30418d1c-cb86-55e6-9657-88f175309551",
+        "text": "325,858",
+        "type": "Entity"
+      },
+      {
+        "id": 7,
+        "original_id": "5c1097ca-fab8-54d5-b57f-5dca4b0e2507",
+        "text": "number",
+        "type": "EntityType"
+      },
+      {
+        "id": 8,
+        "original_id": "f54e52eb-db61-5cc3-aa32-5c78e42891d1",
+        "text": "2011",
+        "type": "Entity"
+      },
+      {
+        "id": 9,
+        "original_id": "b19433ae-558c-5aaf-95ac-6231f2a4be0e",
+        "text": "date",
+        "type": "EntityType"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 5,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "located_in"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "had_population"
+      },
+      {
+        "source": 1,
+        "target": 6,
+        "type": "contains"
+      },
+      {
+        "source": 6,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 5,
+        "target": 8,
+        "type": "population_recorded_in"
+      },
+      {
+        "source": 1,
+        "target": 8,
+        "type": "contains"
+      },
+      {
+        "source": 8,
+        "target": 9,
+        "type": "is_a"
+      }
+    ]
+  },
+  "grafo_evidencia": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "77d91157-b515-5d06-8821-455b9a8b8f52",
+        "text": "This chunk is about:\n- Places: Windhoek, Namibia\n- Organizations: Roman Catholic Church\n- Systems: Roman Catholic Hospital\n- Topics: population growth\n\nFacts:\n- In 2011, Windhoek had a population of 325,858.\n- Windhoek has been growing continually due to an influx of people from all over Namibia.\n- The Roman Catholic Hospital is a private hospital in Windhoek, Namibia.\n- The Roman Catholic Church runs the Roman Catholic Hospital.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "0d79a0ff-a659-5505-8a38-cb3310fa5162",
+        "text": "Page: Roman Catholic Hospital. Sentence: The Roman Catholic Hospital is a private hospital in Windhoek, Namibia run by the Roman Catholic Church.\nPage: Windhoek. Sentence: The population of Windhoek in 2011 was 325,858, growing continually due to an influx from all over Namibia.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "9d8cf121-dbb9-5a6d-a59e-4195633df0ab",
+        "text": "text_97f343ac0bbd62daf3b0f0647d1049fb",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "e7dde28c-55b7-5b14-b19f-09f8944c4454",
+        "text": "roman catholic hospital",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "388f60fb-220d-55e8-ae9c-3ac93cead308",
+        "text": "organization",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "8bfe4fe7-1f80-50b8-9bb8-32777b096aff",
+        "text": "windhoek",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "5f394058-b2a0-5ba8-8466-ba2a18cfcf4e",
+        "text": "place",
+        "type": "EntityType"
+      },
+      {
+        "id": 7,
+        "original_id": "05787ac9-9d68-5325-9469-3498f0db94e3",
+        "text": "namibia",
+        "type": "Entity"
+      },
+      {
+        "id": 8,
+        "original_id": "f54e52eb-db61-5cc3-aa32-5c78e42891d1",
+        "text": "2011",
+        "type": "Entity"
+      },
+      {
+        "id": 9,
+        "original_id": "b19433ae-558c-5aaf-95ac-6231f2a4be0e",
+        "text": "date",
+        "type": "EntityType"
+      },
+      {
+        "id": 10,
+        "original_id": "00d4cc7e-55d4-583b-b2fb-30d087ae2df5",
+        "text": "roman catholic church",
+        "type": "Entity"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 10,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "located_in"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 7,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 5,
+        "target": 7,
+        "type": "located_in"
+      },
+      {
+        "source": 3,
+        "target": 7,
+        "type": "located_in"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 8,
+        "type": "population_recorded_in"
+      },
+      {
+        "source": 1,
+        "target": 8,
+        "type": "contains"
+      },
+      {
+        "source": 8,
+        "target": 9,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 10,
+        "type": "run_by"
+      },
+      {
+        "source": 1,
+        "target": 10,
+        "type": "contains"
+      }
+    ]
+  }
+}

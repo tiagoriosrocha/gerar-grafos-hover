@@ -1,0 +1,377 @@
+{
+  "dataset": "hover",
+  "id": "faebc06b-2def-4220-88b1-1ef0d3bcc989",
+  "split": "train",
+  "claim": "The Laboratory's 60,000 square-foot, shore-based campus was located in Maine, United States.",
+  "evidencia": "Page: Bigelow Laboratory for Ocean Sciences. Sentence: The Laboratory's 60,000 square-foot, shore-based campus is located in East Boothbay, Maine, on the Damariscotta River estuary.\nPage: Boothbay Harbor, Maine. Sentence: Boothbay Harbor is a town in Lincoln County, Maine, United States.",
+  "evidence_text": "Page: Bigelow Laboratory for Ocean Sciences. Sentence: The Laboratory's 60,000 square-foot, shore-based campus is located in East Boothbay, Maine, on the Damariscotta River estuary.\nPage: Boothbay Harbor, Maine. Sentence: Boothbay Harbor is a town in Lincoln County, Maine, United States.",
+  "label": "SUPPORTED",
+  "num_hops": 2,
+  "hover_metadata": {
+    "supporting_facts": [
+      [
+        "Bigelow Laboratory for Ocean Sciences",
+        2
+      ],
+      [
+        "Boothbay Harbor, Maine",
+        0
+      ]
+    ],
+    "num_hops": 2,
+    "evidence_annotation_id": [
+      0
+    ],
+    "evidence_id": [
+      "Bigelow Laboratory for Ocean Sciences::sentence::2",
+      "Boothbay Harbor, Maine::sentence::0"
+    ],
+    "evidence_wiki_url": [
+      "https://en.wikipedia.org/wiki/Bigelow_Laboratory_for_Ocean_Sciences",
+      "https://en.wikipedia.org/wiki/Boothbay_Harbor%2C_Maine"
+    ],
+    "evidence_sentence_id": [
+      "Bigelow Laboratory for Ocean Sciences::sentence::2",
+      "Boothbay Harbor, Maine::sentence::0"
+    ]
+  },
+  "grafo_claim": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "74679cd5-1b02-598f-a1eb-714348ca73a3",
+        "text": "This chunk is about:\n- Organizations: The Laboratory\n- Places: Maine, United States\n- Facilities: shore-based campus\n\nFacts:\n- The Laboratory had a 60,000 square-foot shore-based campus.\n- The Laboratory's shore-based campus was located in Maine, United States.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "9d82b34e-79ee-5cf1-b0e5-e98ae1705fd4",
+        "text": "The Laboratory's 60,000 square-foot, shore-based campus was located in Maine, United States.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "55496e31-b88e-5103-b9ab-bf92bc7be9d1",
+        "text": "text_9f27f2d55fff679823b12a880be2d4cb",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "7c46f75c-1dc4-53aa-bfcd-5c225c310e35",
+        "text": "the laboratory",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "388f60fb-220d-55e8-ae9c-3ac93cead308",
+        "text": "organization",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "494ab725-a799-5db7-9110-7c3df26401f0",
+        "text": "the laboratory campus",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "5f394058-b2a0-5ba8-8466-ba2a18cfcf4e",
+        "text": "place",
+        "type": "EntityType"
+      },
+      {
+        "id": 7,
+        "original_id": "639fdde7-7841-5347-96e3-67ffadb56002",
+        "text": "maine",
+        "type": "Entity"
+      },
+      {
+        "id": 8,
+        "original_id": "874a51da-34ea-5037-be47-d87785d43c37",
+        "text": "united states",
+        "type": "Entity"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "has_campus"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 7,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 8,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 5,
+        "target": 7,
+        "type": "located_in"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      },
+      {
+        "source": 7,
+        "target": 8,
+        "type": "located_in"
+      },
+      {
+        "source": 1,
+        "target": 8,
+        "type": "contains"
+      }
+    ]
+  },
+  "grafo_evidencia": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "763f719e-9c18-56cb-9518-52bf093b216c",
+        "text": "This chunk is about:\n- Organizations: Bigelow Laboratory for Ocean Sciences\n- Places: East Boothbay, Maine; Damariscotta River estuary; Boothbay Harbor; Lincoln County, Maine; United States\n\nFacts:\n- Bigelow Laboratory for Ocean Sciences has a 60,000 square-foot shore-based campus in East Boothbay, Maine, on the Damariscotta River estuary.\n- Boothbay Harbor is a town in Lincoln County, Maine, United States.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "8c8bab6b-6bb9-5fd3-a1f0-76591a08d240",
+        "text": "Page: Bigelow Laboratory for Ocean Sciences. Sentence: The Laboratory's 60,000 square-foot, shore-based campus is located in East Boothbay, Maine, on the Damariscotta River estuary.\nPage: Boothbay Harbor, Maine. Sentence: Boothbay Harbor is a town in Lincoln County, Maine, United States.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "b9944c46-85ca-5ec3-9a25-a389901ad058",
+        "text": "text_9f40ea7cfe8b36748709c2dd12a14a5c",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "0b6ac4d4-d52d-5154-84c5-2baf05ce1706",
+        "text": "bigelow laboratory for ocean sciences",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "388f60fb-220d-55e8-ae9c-3ac93cead308",
+        "text": "organization",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "62abc8d7-e3bc-5eb4-8e49-d8fe5af9679b",
+        "text": "bigelow laboratory campus",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "5f394058-b2a0-5ba8-8466-ba2a18cfcf4e",
+        "text": "place",
+        "type": "EntityType"
+      },
+      {
+        "id": 7,
+        "original_id": "e7906a16-04a2-554b-83f4-0ffef40cff31",
+        "text": "east boothbay, maine",
+        "type": "Entity"
+      },
+      {
+        "id": 8,
+        "original_id": "c095b19f-dc2e-5eef-a346-ebf454053f16",
+        "text": "damariscotta river estuary",
+        "type": "Entity"
+      },
+      {
+        "id": 9,
+        "original_id": "e4a2fce0-f6df-5f9c-ad0c-400be32b1c6a",
+        "text": "boothbay harbor, maine",
+        "type": "Entity"
+      },
+      {
+        "id": 10,
+        "original_id": "b88dc68a-a705-5178-9952-e1af9a248dec",
+        "text": "lincoln county, maine",
+        "type": "Entity"
+      },
+      {
+        "id": 11,
+        "original_id": "639fdde7-7841-5347-96e3-67ffadb56002",
+        "text": "maine",
+        "type": "Entity"
+      },
+      {
+        "id": 12,
+        "original_id": "874a51da-34ea-5037-be47-d87785d43c37",
+        "text": "united states",
+        "type": "Entity"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 3,
+        "type": "campus_of"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 7,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 8,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 9,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 10,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 11,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 12,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 5,
+        "target": 7,
+        "type": "located_in"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 8,
+        "type": "located_on"
+      },
+      {
+        "source": 1,
+        "target": 8,
+        "type": "contains"
+      },
+      {
+        "source": 1,
+        "target": 9,
+        "type": "contains"
+      },
+      {
+        "source": 9,
+        "target": 10,
+        "type": "located_in"
+      },
+      {
+        "source": 1,
+        "target": 10,
+        "type": "contains"
+      },
+      {
+        "source": 10,
+        "target": 11,
+        "type": "located_in"
+      },
+      {
+        "source": 9,
+        "target": 11,
+        "type": "located_in"
+      },
+      {
+        "source": 1,
+        "target": 11,
+        "type": "contains"
+      },
+      {
+        "source": 11,
+        "target": 12,
+        "type": "located_in"
+      },
+      {
+        "source": 9,
+        "target": 12,
+        "type": "located_in"
+      },
+      {
+        "source": 1,
+        "target": 12,
+        "type": "contains"
+      }
+    ]
+  }
+}

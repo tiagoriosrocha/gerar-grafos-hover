@@ -1,0 +1,476 @@
+{
+  "dataset": "hover",
+  "id": "48a9aa4a-8811-4e6e-8eb6-5b659951e0d3",
+  "split": "train",
+  "claim": "The broadcaster for The St Louis Cardinals team is the father of the broadcaster of The 2010 Major League Baseball All-Star Game.",
+  "evidencia": "Page: Bob Buck. Sentence: He was the younger brother of late St. Louis Cardinals radio broadcaster Jack Buck, and was the uncle of national television sportscaster Joe Buck.\nPage: Joe Buck. Sentence: Joseph Francis \"Joe\" Buck (born April 25, 1969) is an American sportscaster and the son of sportscaster Jack Buck.\nPage: 2010 Major League Baseball All-Star Game. Sentence: The game was held on July 13, 2010, at Angel Stadium of Anaheim, the home of the American League Los Angeles Angels of Anaheim, and was telecast by Fox Sports in the USA, with Joe Buck and Tim McCarver in the broadcast booth.",
+  "evidence_text": "Page: Bob Buck. Sentence: He was the younger brother of late St. Louis Cardinals radio broadcaster Jack Buck, and was the uncle of national television sportscaster Joe Buck.\nPage: Joe Buck. Sentence: Joseph Francis \"Joe\" Buck (born April 25, 1969) is an American sportscaster and the son of sportscaster Jack Buck.\nPage: 2010 Major League Baseball All-Star Game. Sentence: The game was held on July 13, 2010, at Angel Stadium of Anaheim, the home of the American League Los Angeles Angels of Anaheim, and was telecast by Fox Sports in the USA, with Joe Buck and Tim McCarver in the broadcast booth.",
+  "label": "SUPPORTED",
+  "num_hops": 3,
+  "hover_metadata": {
+    "supporting_facts": [
+      [
+        "Bob Buck",
+        1
+      ],
+      [
+        "Joe Buck",
+        0
+      ],
+      [
+        "2010 Major League Baseball All-Star Game",
+        1
+      ]
+    ],
+    "num_hops": 3,
+    "evidence_annotation_id": [
+      0
+    ],
+    "evidence_id": [
+      "Bob Buck::sentence::1",
+      "Joe Buck::sentence::0",
+      "2010 Major League Baseball All-Star Game::sentence::1"
+    ],
+    "evidence_wiki_url": [
+      "https://en.wikipedia.org/wiki/Bob_Buck",
+      "https://en.wikipedia.org/wiki/Joe_Buck",
+      "https://en.wikipedia.org/wiki/2010_Major_League_Baseball_All-Star_Game"
+    ],
+    "evidence_sentence_id": [
+      "Bob Buck::sentence::1",
+      "Joe Buck::sentence::0",
+      "2010 Major League Baseball All-Star Game::sentence::1"
+    ]
+  },
+  "grafo_claim": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "04b6d85d-6823-5c35-8c39-938d63ad6e5f",
+        "text": "This chunk is about:\n- Organizations: St. Louis Cardinals, 2010 Major League Baseball All-Star Game\n- People: Jack Buck, Joe Buck\n- Roles: Broadcasters\n\nFacts:\n- Jack Buck was a broadcaster for the St. Louis Cardinals.\n- Joe Buck was a broadcaster of the 2010 Major League Baseball All-Star Game.\n- Jack Buck was the father of Joe Buck.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "90efebd1-be17-5d30-92e9-65a3238e1d39",
+        "text": "The broadcaster for The St Louis Cardinals team is the father of the broadcaster of The 2010 Major League Baseball All-Star Game.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "bb01fe47-8458-504d-bf3c-2e621cf79028",
+        "text": "text_2495cd735360f1c191eff077d8ffe5e3",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "b9d0372a-929d-5253-8d6e-403496816fb6",
+        "text": "st. louis cardinals",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "388f60fb-220d-55e8-ae9c-3ac93cead308",
+        "text": "organization",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "b607e3eb-4f19-504f-9aaf-4c706a30a2a3",
+        "text": "2010 major league baseball all-star game",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "214abcd9-9adf-5c8a-bb35-1e729f2d68c3",
+        "text": "event",
+        "type": "EntityType"
+      },
+      {
+        "id": 7,
+        "original_id": "5237ba3c-0a41-5edf-a82c-397d9d58b5ad",
+        "text": "the broadcaster for st. louis cardinals",
+        "type": "Entity"
+      },
+      {
+        "id": 8,
+        "original_id": "99a82eec-bb35-5bb5-9ed2-e73fc7a756de",
+        "text": "person",
+        "type": "EntityType"
+      },
+      {
+        "id": 9,
+        "original_id": "1b94f589-c0d2-551a-ae46-da6c955511b3",
+        "text": "the broadcaster of 2010 major league baseball all-star game",
+        "type": "Entity"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 7,
+        "target": 3,
+        "type": "broadcaster_for"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 9,
+        "target": 5,
+        "type": "broadcaster_of"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      },
+      {
+        "source": 7,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 9,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 7,
+        "target": 9,
+        "type": "father_of"
+      },
+      {
+        "source": 1,
+        "target": 9,
+        "type": "contains"
+      }
+    ]
+  },
+  "grafo_evidencia": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "bc72b7c6-767b-55da-86eb-0bab6f086a8a",
+        "text": "This chunk is about:\n- People: Bob Buck, Jack Buck, Joe Buck, Tim McCarver\n- Organizations: St. Louis Cardinals, Fox Sports, Los Angeles Angels of Anaheim\n- Events: 2010 Major League Baseball All-Star Game\n- Places: Angel Stadium of Anaheim\n- Roles: radio broadcaster, sportscaster\n\nFacts:\n- Jack Buck was a radio broadcaster for the St. Louis Cardinals.\n- Bob Buck was the younger brother of Jack Buck.\n- Joe Buck, born on April 25, 1969, is an American sportscaster and the son of Jack Buck.\n- Bob Buck was the uncle of Joe Buck.\n- The 2010 Major League Baseball All-Star Game was held on July 13, 2010, at Angel Stadium of Anaheim, the home of the Los Angeles Angels of Anaheim.\n- Fox Sports televised the 2010 Major League Baseball All-Star Game in the United States.\n- Joe Buck and Tim McCarver worked in the broadcast booth for Fox Sports during the 2010 Major League Baseball All-Star Game.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "34b647a6-3efc-5136-b24c-f598a1bcaf49",
+        "text": "Page: Bob Buck. Sentence: He was the younger brother of late St. Louis Cardinals radio broadcaster Jack Buck, and was the uncle of national television sportscaster Joe Buck.\nPage: Joe Buck. Sentence: Joseph Francis \"Joe\" Buck (born April 25, 1969) is an American sportscaster and the son of sportscaster Jack Buck.\nPage: 2010 Major League Baseball All-Star Game. Sentence: The game was held on July 13, 2010, at Angel Stadium of Anaheim, the home of the American League Los Angeles Angels of Anaheim, and was telecast by Fox Sports in the USA, with Joe Buck and Tim McCarver in the broadcast booth.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "be62e26a-bf72-515e-8b22-64adf473c427",
+        "text": "text_fb0e69151e9d89b1673f2e0264ce20ce",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "271d6cec-8cea-52ff-92b6-6a144a5e7ae2",
+        "text": "bob buck",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "99a82eec-bb35-5bb5-9ed2-e73fc7a756de",
+        "text": "person",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "f4c19a7e-aeb3-54b1-8939-cf63fc6ac9ce",
+        "text": "jack buck",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "b9d0372a-929d-5253-8d6e-403496816fb6",
+        "text": "st. louis cardinals",
+        "type": "Entity"
+      },
+      {
+        "id": 7,
+        "original_id": "388f60fb-220d-55e8-ae9c-3ac93cead308",
+        "text": "organization",
+        "type": "EntityType"
+      },
+      {
+        "id": 8,
+        "original_id": "8d6115de-6b4a-5944-a1c6-237a439b7934",
+        "text": "joe buck",
+        "type": "Entity"
+      },
+      {
+        "id": 9,
+        "original_id": "adcf6704-24a2-5698-aa2a-02fcab435ed3",
+        "text": "1969-04-25",
+        "type": "Entity"
+      },
+      {
+        "id": 10,
+        "original_id": "b19433ae-558c-5aaf-95ac-6231f2a4be0e",
+        "text": "date",
+        "type": "EntityType"
+      },
+      {
+        "id": 11,
+        "original_id": "c64e788a-93c8-5685-a1b4-a7623f47f155",
+        "text": "tim mccarver",
+        "type": "Entity"
+      },
+      {
+        "id": 12,
+        "original_id": "b607e3eb-4f19-504f-9aaf-4c706a30a2a3",
+        "text": "2010 major league baseball all-star game",
+        "type": "Entity"
+      },
+      {
+        "id": 13,
+        "original_id": "214abcd9-9adf-5c8a-bb35-1e729f2d68c3",
+        "text": "event",
+        "type": "EntityType"
+      },
+      {
+        "id": 14,
+        "original_id": "7b395015-6809-5f8b-a4d5-1ad32b7c0fc0",
+        "text": "2010-07-13",
+        "type": "Entity"
+      },
+      {
+        "id": 15,
+        "original_id": "ff961114-cb77-59e6-8800-7834d96b1289",
+        "text": "angel stadium of anaheim",
+        "type": "Entity"
+      },
+      {
+        "id": 16,
+        "original_id": "5f394058-b2a0-5ba8-8466-ba2a18cfcf4e",
+        "text": "place",
+        "type": "EntityType"
+      },
+      {
+        "id": 17,
+        "original_id": "58c85590-e2c1-5f5d-b69c-5f0179a11ef8",
+        "text": "los angeles angels of anaheim",
+        "type": "Entity"
+      },
+      {
+        "id": 18,
+        "original_id": "f3d09e61-0eed-5d9b-adee-ff3cc254a3db",
+        "text": "fox sports",
+        "type": "Entity"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 5,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 8,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 11,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "sibling_of"
+      },
+      {
+        "source": 8,
+        "target": 5,
+        "type": "son_of"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "broadcast_for"
+      },
+      {
+        "source": 1,
+        "target": 6,
+        "type": "contains"
+      },
+      {
+        "source": 6,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 17,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 18,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 8,
+        "type": "uncle_of"
+      },
+      {
+        "source": 1,
+        "target": 8,
+        "type": "contains"
+      },
+      {
+        "source": 12,
+        "target": 8,
+        "type": "broadcast_with"
+      },
+      {
+        "source": 8,
+        "target": 9,
+        "type": "born_on"
+      },
+      {
+        "source": 1,
+        "target": 9,
+        "type": "contains"
+      },
+      {
+        "source": 9,
+        "target": 10,
+        "type": "is_a"
+      },
+      {
+        "source": 14,
+        "target": 10,
+        "type": "is_a"
+      },
+      {
+        "source": 8,
+        "target": 11,
+        "type": "broadcast_with"
+      },
+      {
+        "source": 12,
+        "target": 11,
+        "type": "broadcast_with"
+      },
+      {
+        "source": 1,
+        "target": 11,
+        "type": "contains"
+      },
+      {
+        "source": 1,
+        "target": 12,
+        "type": "contains"
+      },
+      {
+        "source": 12,
+        "target": 13,
+        "type": "is_a"
+      },
+      {
+        "source": 12,
+        "target": 14,
+        "type": "held_on"
+      },
+      {
+        "source": 1,
+        "target": 14,
+        "type": "contains"
+      },
+      {
+        "source": 12,
+        "target": 15,
+        "type": "held_at"
+      },
+      {
+        "source": 1,
+        "target": 15,
+        "type": "contains"
+      },
+      {
+        "source": 15,
+        "target": 16,
+        "type": "is_a"
+      },
+      {
+        "source": 15,
+        "target": 17,
+        "type": "home_of"
+      },
+      {
+        "source": 1,
+        "target": 17,
+        "type": "contains"
+      },
+      {
+        "source": 12,
+        "target": 18,
+        "type": "telecast_by"
+      },
+      {
+        "source": 1,
+        "target": 18,
+        "type": "contains"
+      }
+    ]
+  }
+}

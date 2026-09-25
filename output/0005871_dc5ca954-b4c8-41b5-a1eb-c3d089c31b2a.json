@@ -1,0 +1,479 @@
+{
+  "dataset": "hover",
+  "id": "dc5ca954-b4c8-41b5-a1eb-c3d089c31b2a",
+  "split": "train",
+  "claim": "The area the Oregon Portage Railroad ran to is located farther West than Lake Worth Lagoon.",
+  "evidencia": "Page: Cascade Locks and Canal. Sentence: The Cascade Locks and Canal was a navigation project on the Columbia River between the U.S. states of Oregon and Washington, completed in 1896.\nPage: Lake Worth Lagoon. Sentence: The Lake Worth Lagoon is a lagoon located in Palm Beach County, Florida.\nPage: Oregon Portage Railroad. Sentence: It ran from Tanner Creek (near where Bonneville Dam was later built) to the Cascade Locks, which were under construction in the later years of the railroad's operation.",
+  "evidence_text": "Page: Cascade Locks and Canal. Sentence: The Cascade Locks and Canal was a navigation project on the Columbia River between the U.S. states of Oregon and Washington, completed in 1896.\nPage: Lake Worth Lagoon. Sentence: The Lake Worth Lagoon is a lagoon located in Palm Beach County, Florida.\nPage: Oregon Portage Railroad. Sentence: It ran from Tanner Creek (near where Bonneville Dam was later built) to the Cascade Locks, which were under construction in the later years of the railroad's operation.",
+  "label": "SUPPORTED",
+  "num_hops": 3,
+  "hover_metadata": {
+    "supporting_facts": [
+      [
+        "Cascade Locks and Canal",
+        0
+      ],
+      [
+        "Lake Worth Lagoon",
+        0
+      ],
+      [
+        "Oregon Portage Railroad",
+        3
+      ]
+    ],
+    "num_hops": 3,
+    "evidence_annotation_id": [
+      0
+    ],
+    "evidence_id": [
+      "Cascade Locks and Canal::sentence::0",
+      "Lake Worth Lagoon::sentence::0",
+      "Oregon Portage Railroad::sentence::3"
+    ],
+    "evidence_wiki_url": [
+      "https://en.wikipedia.org/wiki/Cascade_Locks_and_Canal",
+      "https://en.wikipedia.org/wiki/Lake_Worth_Lagoon",
+      "https://en.wikipedia.org/wiki/Oregon_Portage_Railroad"
+    ],
+    "evidence_sentence_id": [
+      "Cascade Locks and Canal::sentence::0",
+      "Lake Worth Lagoon::sentence::0",
+      "Oregon Portage Railroad::sentence::3"
+    ]
+  },
+  "grafo_claim": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "adf91995-ffe8-5099-8abc-544cb3c45e57",
+        "text": "This chunk is about:\n- Places: Oregon Portage Railroad area, Lake Worth Lagoon\n- Topics: Relative geographic location\n\nFacts:\n- The area the Oregon Portage Railroad ran to is located farther west than Lake Worth Lagoon.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "531b1c54-03fb-560f-812f-8058e485f938",
+        "text": "The area the Oregon Portage Railroad ran to is located farther West than Lake Worth Lagoon.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "26bcc00e-2989-55ad-8a70-224285e9537a",
+        "text": "text_18a7c178a07a2d71aeaaf5ad22717954",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "91a91053-f3ef-5b74-817d-582ba644efd0",
+        "text": "oregon portage railroad",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "760ca73b-a068-5c00-ae7c-dc0ab0c173b1",
+        "text": "area the oregon portage railroad ran to",
+        "type": "Entity"
+      },
+      {
+        "id": 5,
+        "original_id": "1dce5d6b-8a01-5b58-acf7-24878bcff167",
+        "text": "lake worth lagoon",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "5f394058-b2a0-5ba8-8466-ba2a18cfcf4e",
+        "text": "place",
+        "type": "EntityType"
+      },
+      {
+        "id": 7,
+        "original_id": "388f60fb-220d-55e8-ae9c-3ac93cead308",
+        "text": "organization",
+        "type": "EntityType"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "ran_to"
+      },
+      {
+        "source": 1,
+        "target": 4,
+        "type": "contains"
+      },
+      {
+        "source": 4,
+        "target": 5,
+        "type": "located_farther_west_than"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 4,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 7,
+        "type": "is_a"
+      }
+    ]
+  },
+  "grafo_evidencia": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "4b2423c2-e062-5397-8d02-a020cef95eae",
+        "text": "This chunk is about:\n- Projects: Cascade Locks and Canal, Oregon Portage Railroad\n- Places: Columbia River, Oregon, Washington, Palm Beach County, Florida, Lake Worth Lagoon, Tanner Creek, Bonneville Dam\n\nFacts:\n- The Cascade Locks and Canal was a navigation project on the Columbia River between the U.S. states of Oregon and Washington, and it was completed in 1896.\n- During the later years of the Oregon Portage Railroad's operation, the Cascade Locks were under construction.\n- The Oregon Portage Railroad ran from Tanner Creek, near where Bonneville Dam was later built, to the Cascade Locks.\n- Lake Worth Lagoon is a lagoon located in Palm Beach County, Florida.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "fc8b909e-a0e2-5b1f-a104-5fc3805168f3",
+        "text": "Page: Cascade Locks and Canal. Sentence: The Cascade Locks and Canal was a navigation project on the Columbia River between the U.S. states of Oregon and Washington, completed in 1896.\nPage: Lake Worth Lagoon. Sentence: The Lake Worth Lagoon is a lagoon located in Palm Beach County, Florida.\nPage: Oregon Portage Railroad. Sentence: It ran from Tanner Creek (near where Bonneville Dam was later built) to the Cascade Locks, which were under construction in the later years of the railroad's operation.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "ef86f023-fd40-5251-bb0b-71bd1e10fdbb",
+        "text": "text_66da2d94f17ae79dcf76151ba65b1de6",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "cb9fafb9-cf19-5a0d-b60a-033b0083ff41",
+        "text": "cascade locks and canal",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "16dae3b1-d3bc-55b6-809c-66b7ef0227b5",
+        "text": "columbia river",
+        "type": "Entity"
+      },
+      {
+        "id": 5,
+        "original_id": "68afbccf-cae9-529b-9142-2a538b8ed79d",
+        "text": "river",
+        "type": "EntityType"
+      },
+      {
+        "id": 6,
+        "original_id": "f7515f39-0536-54e2-904a-b2063b9c5007",
+        "text": "oregon",
+        "type": "Entity"
+      },
+      {
+        "id": 7,
+        "original_id": "a316c419-8c58-59be-9a73-344c9422df64",
+        "text": "state",
+        "type": "EntityType"
+      },
+      {
+        "id": 8,
+        "original_id": "95142d38-e261-5f7d-8c2e-e06e59777e93",
+        "text": "washington",
+        "type": "Entity"
+      },
+      {
+        "id": 9,
+        "original_id": "2514479a-04c0-53f1-b332-93b47e34c973",
+        "text": "1896",
+        "type": "Entity"
+      },
+      {
+        "id": 10,
+        "original_id": "b19433ae-558c-5aaf-95ac-6231f2a4be0e",
+        "text": "date",
+        "type": "EntityType"
+      },
+      {
+        "id": 11,
+        "original_id": "ed098e70-7598-5ee9-a836-d175d95aae72",
+        "text": "project",
+        "type": "EntityType"
+      },
+      {
+        "id": 12,
+        "original_id": "1dce5d6b-8a01-5b58-acf7-24878bcff167",
+        "text": "lake worth lagoon",
+        "type": "Entity"
+      },
+      {
+        "id": 13,
+        "original_id": "d67658cc-c6f3-5bda-95ed-35113b5e2578",
+        "text": "palm beach county",
+        "type": "Entity"
+      },
+      {
+        "id": 14,
+        "original_id": "cc742fd7-ba65-509e-bb61-ba57c283d7d0",
+        "text": "florida",
+        "type": "Entity"
+      },
+      {
+        "id": 15,
+        "original_id": "672f305c-4f1a-5b7d-aeea-4c0a8e9d37c3",
+        "text": "county",
+        "type": "EntityType"
+      },
+      {
+        "id": 16,
+        "original_id": "f61ccb3a-7b8d-5f74-9ba0-212d2ee2ac60",
+        "text": "lagoon",
+        "type": "EntityType"
+      },
+      {
+        "id": 17,
+        "original_id": "91a91053-f3ef-5b74-817d-582ba644efd0",
+        "text": "oregon portage railroad",
+        "type": "Entity"
+      },
+      {
+        "id": 18,
+        "original_id": "d9b73293-7389-560e-85c0-8016773ea58b",
+        "text": "tanner creek",
+        "type": "Entity"
+      },
+      {
+        "id": 19,
+        "original_id": "41459478-7bdf-500a-8e40-c404f1ea7588",
+        "text": "bonneville dam",
+        "type": "Entity"
+      },
+      {
+        "id": 20,
+        "original_id": "c7390a0a-960e-56a6-b2be-9c43bfc9097e",
+        "text": "dam",
+        "type": "EntityType"
+      },
+      {
+        "id": 21,
+        "original_id": "5f394058-b2a0-5ba8-8466-ba2a18cfcf4e",
+        "text": "place",
+        "type": "EntityType"
+      },
+      {
+        "id": 22,
+        "original_id": "44ff44b4-08a7-570e-a5d2-bcf777dc1c47",
+        "text": "cascade locks",
+        "type": "Entity"
+      },
+      {
+        "id": 23,
+        "original_id": "12404454-02d9-5156-bb38-4e95ec781cbf",
+        "text": "railroad",
+        "type": "EntityType"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "located_on"
+      },
+      {
+        "source": 1,
+        "target": 4,
+        "type": "contains"
+      },
+      {
+        "source": 4,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 6,
+        "type": "between_states"
+      },
+      {
+        "source": 1,
+        "target": 6,
+        "type": "contains"
+      },
+      {
+        "source": 6,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 8,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 14,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 8,
+        "type": "between_states"
+      },
+      {
+        "source": 1,
+        "target": 8,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 9,
+        "type": "completed_in"
+      },
+      {
+        "source": 1,
+        "target": 9,
+        "type": "contains"
+      },
+      {
+        "source": 9,
+        "target": 10,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 11,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 12,
+        "type": "contains"
+      },
+      {
+        "source": 12,
+        "target": 13,
+        "type": "located_in"
+      },
+      {
+        "source": 1,
+        "target": 13,
+        "type": "contains"
+      },
+      {
+        "source": 13,
+        "target": 14,
+        "type": "located_in"
+      },
+      {
+        "source": 1,
+        "target": 14,
+        "type": "contains"
+      },
+      {
+        "source": 13,
+        "target": 15,
+        "type": "is_a"
+      },
+      {
+        "source": 12,
+        "target": 16,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 17,
+        "type": "contains"
+      },
+      {
+        "source": 22,
+        "target": 17,
+        "type": "under_construction_during"
+      },
+      {
+        "source": 17,
+        "target": 18,
+        "type": "ran_from"
+      },
+      {
+        "source": 1,
+        "target": 18,
+        "type": "contains"
+      },
+      {
+        "source": 18,
+        "target": 19,
+        "type": "near"
+      },
+      {
+        "source": 1,
+        "target": 19,
+        "type": "contains"
+      },
+      {
+        "source": 19,
+        "target": 20,
+        "type": "is_a"
+      },
+      {
+        "source": 18,
+        "target": 21,
+        "type": "is_a"
+      },
+      {
+        "source": 22,
+        "target": 21,
+        "type": "is_a"
+      },
+      {
+        "source": 17,
+        "target": 22,
+        "type": "ran_to"
+      },
+      {
+        "source": 1,
+        "target": 22,
+        "type": "contains"
+      },
+      {
+        "source": 17,
+        "target": 23,
+        "type": "is_a"
+      }
+    ]
+  }
+}

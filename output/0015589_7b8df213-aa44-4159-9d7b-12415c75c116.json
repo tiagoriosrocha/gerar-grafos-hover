@@ -1,0 +1,375 @@
+{
+  "dataset": "hover",
+  "id": "7b8df213-aa44-4159-9d7b-12415c75c116",
+  "split": "train",
+  "claim": "The population of the town that starts with the letter \"B\" that is connected by State Route 582 to Las Vegas is 15,023.",
+  "evidencia": "Page: Nevada State Route 582. Sentence: State Route 582 (SR 582) is a major 16.688 mi highway in the Las Vegas Valley.\nPage: Nevada State Route 582. Sentence: It connects Downtown Las Vegas with Henderson and (indirectly) Boulder City to the southeast.\nPage: Boulder City, Nevada. Sentence: As of the 2010 census, the population of Boulder City was 15,023.",
+  "evidence_text": "Page: Nevada State Route 582. Sentence: State Route 582 (SR 582) is a major 16.688 mi highway in the Las Vegas Valley.\nPage: Nevada State Route 582. Sentence: It connects Downtown Las Vegas with Henderson and (indirectly) Boulder City to the southeast.\nPage: Boulder City, Nevada. Sentence: As of the 2010 census, the population of Boulder City was 15,023.",
+  "label": "SUPPORTED",
+  "num_hops": 2,
+  "hover_metadata": {
+    "supporting_facts": [
+      [
+        "Nevada State Route 582",
+        0
+      ],
+      [
+        "Nevada State Route 582",
+        2
+      ],
+      [
+        "Boulder City, Nevada",
+        2
+      ]
+    ],
+    "num_hops": 2,
+    "evidence_annotation_id": [
+      0
+    ],
+    "evidence_id": [
+      "Nevada State Route 582::sentence::0",
+      "Nevada State Route 582::sentence::2",
+      "Boulder City, Nevada::sentence::2"
+    ],
+    "evidence_wiki_url": [
+      "https://en.wikipedia.org/wiki/Nevada_State_Route_582",
+      "https://en.wikipedia.org/wiki/Boulder_City%2C_Nevada"
+    ],
+    "evidence_sentence_id": [
+      "Nevada State Route 582::sentence::0",
+      "Nevada State Route 582::sentence::2",
+      "Boulder City, Nevada::sentence::2"
+    ]
+  },
+  "grafo_claim": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "63d7367e-e077-5dc9-bd9a-ecf31bd86496",
+        "text": "This chunk is about:\n- Places: Las Vegas, Boulder City\n- Roads: State Route 582\n- Topics: population\n\nFacts:\n- State Route 582 connects Las Vegas to Boulder City.\n- Boulder City is the town that starts with the letter \"B\" connected by State Route 582 to Las Vegas.\n- Boulder City has a population of 15,023.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "b22b087e-d4e5-59d5-bac6-5dbd2fec5b57",
+        "text": "The population of the town that starts with the letter \"B\" that is connected by State Route 582 to Las Vegas is 15,023.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "6c27d715-23ce-5279-8242-9601a3b52435",
+        "text": "text_beff9f61caa527f0fa289113f22fa8d9",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "51deab3b-478b-5692-8f75-7a7a779d7b35",
+        "text": "state route 582",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "5e52d312-a248-534f-a58b-25c5426a89ad",
+        "text": "road",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "2768ffee-4734-5551-9369-d2097b287276",
+        "text": "las vegas",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "5f394058-b2a0-5ba8-8466-ba2a18cfcf4e",
+        "text": "place",
+        "type": "EntityType"
+      },
+      {
+        "id": 7,
+        "original_id": "35d96102-c60e-5626-b0f7-3ea2485db511",
+        "text": "boulder city",
+        "type": "Entity"
+      },
+      {
+        "id": 8,
+        "original_id": "0f9974df-a570-5d5c-8a5b-87452a16703b",
+        "text": "15,023",
+        "type": "Entity"
+      },
+      {
+        "id": 9,
+        "original_id": "5c1097ca-fab8-54d5-b57f-5dca4b0e2507",
+        "text": "number",
+        "type": "EntityType"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "connects_to"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 7,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 7,
+        "type": "connects_to"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      },
+      {
+        "source": 7,
+        "target": 8,
+        "type": "has_population"
+      },
+      {
+        "source": 1,
+        "target": 8,
+        "type": "contains"
+      },
+      {
+        "source": 8,
+        "target": 9,
+        "type": "is_a"
+      }
+    ]
+  },
+  "grafo_evidencia": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "a3fc4b0c-ce3b-5bac-9ad7-6eae005463ff",
+        "text": "This chunk is about:\n- Places: Las Vegas Valley, Downtown Las Vegas, Henderson, Boulder City, Nevada\n- Systems: Nevada State Route 582\n\nFacts:\n- State Route 582 is a major 16.688-mile highway in the Las Vegas Valley.\n- State Route 582 connects Downtown Las Vegas with Henderson and indirectly with Boulder City to the southeast.\n- Boulder City, Nevada, had a population of 15,023 as of the 2010 census.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "7841f6a9-033c-5b87-97d8-d7dc1ebb4704",
+        "text": "Page: Nevada State Route 582. Sentence: State Route 582 (SR 582) is a major 16.688 mi highway in the Las Vegas Valley.\nPage: Nevada State Route 582. Sentence: It connects Downtown Las Vegas with Henderson and (indirectly) Boulder City to the southeast.\nPage: Boulder City, Nevada. Sentence: As of the 2010 census, the population of Boulder City was 15,023.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "ecf58e73-edba-5cc1-a19e-1c29ba4361d9",
+        "text": "text_020eec4f86e330fbebec2b61a6f65d26",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "1094c1f5-ef09-571a-b512-f33fbebb8118",
+        "text": "nevada state route 582",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "5e52d312-a248-534f-a58b-25c5426a89ad",
+        "text": "road",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "31f53c23-3062-5a9a-8a39-94a9702ca5e8",
+        "text": "las vegas valley",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "5f394058-b2a0-5ba8-8466-ba2a18cfcf4e",
+        "text": "place",
+        "type": "EntityType"
+      },
+      {
+        "id": 7,
+        "original_id": "b66f2067-49b4-58bb-9f06-bd587881e70d",
+        "text": "downtown las vegas",
+        "type": "Entity"
+      },
+      {
+        "id": 8,
+        "original_id": "55bf458c-4792-5d0f-a8fe-93cc1ef02092",
+        "text": "henderson",
+        "type": "Entity"
+      },
+      {
+        "id": 9,
+        "original_id": "35d96102-c60e-5626-b0f7-3ea2485db511",
+        "text": "boulder city",
+        "type": "Entity"
+      },
+      {
+        "id": 10,
+        "original_id": "cb1dc1af-5253-5fa4-877e-246a7629f489",
+        "text": "2010",
+        "type": "Entity"
+      },
+      {
+        "id": 11,
+        "original_id": "b19433ae-558c-5aaf-95ac-6231f2a4be0e",
+        "text": "date",
+        "type": "EntityType"
+      },
+      {
+        "id": 12,
+        "original_id": "7673dd31-b714-51ee-9871-20b77651d599",
+        "text": "15,023",
+        "type": "Entity"
+      },
+      {
+        "id": 13,
+        "original_id": "5c1097ca-fab8-54d5-b57f-5dca4b0e2507",
+        "text": "number",
+        "type": "EntityType"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "located_in"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 7,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 8,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 9,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 7,
+        "type": "connects_with"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 8,
+        "type": "connects_with"
+      },
+      {
+        "source": 1,
+        "target": 8,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 9,
+        "type": "indirectly_connects_with"
+      },
+      {
+        "source": 1,
+        "target": 9,
+        "type": "contains"
+      },
+      {
+        "source": 9,
+        "target": 10,
+        "type": "population_as_of"
+      },
+      {
+        "source": 1,
+        "target": 10,
+        "type": "contains"
+      },
+      {
+        "source": 10,
+        "target": 11,
+        "type": "is_a"
+      },
+      {
+        "source": 9,
+        "target": 12,
+        "type": "has_population"
+      },
+      {
+        "source": 1,
+        "target": 12,
+        "type": "contains"
+      },
+      {
+        "source": 12,
+        "target": 13,
+        "type": "is_a"
+      }
+    ]
+  }
+}

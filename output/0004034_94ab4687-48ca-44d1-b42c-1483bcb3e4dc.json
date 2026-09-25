@@ -1,0 +1,342 @@
+{
+  "dataset": "hover",
+  "id": "94ab4687-48ca-44d1-b42c-1483bcb3e4dc",
+  "split": "train",
+  "claim": "The highway that the closest town to Montague Island is located on is Princes Highway.",
+  "evidencia": "Page: Montague Island (Australia). Sentence: The nearest town located onshore from the 81 ha reserve and island is Narooma , situated approximately 9 km to the northwest.\nPage: Narooma, New South Wales. Sentence: The town is on the Princes Highway and the name Narooma is said to be derived from the Aboriginal word meaning ‘clear blue waters’.",
+  "evidence_text": "Page: Montague Island (Australia). Sentence: The nearest town located onshore from the 81 ha reserve and island is Narooma , situated approximately 9 km to the northwest.\nPage: Narooma, New South Wales. Sentence: The town is on the Princes Highway and the name Narooma is said to be derived from the Aboriginal word meaning ‘clear blue waters’.",
+  "label": "SUPPORTED",
+  "num_hops": 2,
+  "hover_metadata": {
+    "supporting_facts": [
+      [
+        "Montague Island (Australia)",
+        1
+      ],
+      [
+        "Narooma, New South Wales",
+        1
+      ]
+    ],
+    "num_hops": 2,
+    "evidence_annotation_id": [
+      0
+    ],
+    "evidence_id": [
+      "Montague Island (Australia)::sentence::1",
+      "Narooma, New South Wales::sentence::1"
+    ],
+    "evidence_wiki_url": [
+      "https://en.wikipedia.org/wiki/Montague_Island_%28Australia%29",
+      "https://en.wikipedia.org/wiki/Narooma%2C_New_South_Wales"
+    ],
+    "evidence_sentence_id": [
+      "Montague Island (Australia)::sentence::1",
+      "Narooma, New South Wales::sentence::1"
+    ]
+  },
+  "grafo_claim": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "035d01ad-1bfa-5f62-bb96-b35999aefbc5",
+        "text": "This chunk is about:\n- Places: Montague Island, nearest town\n- Infrastructure: Princes Highway\n\nFacts:\n- The nearest town to Montague Island is located on Princes Highway.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "b0666e60-ab04-5517-b70e-5eff01d2ea35",
+        "text": "The highway that the closest town to Montague Island is located on is Princes Highway.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "9457a8b7-5853-57ad-aafd-3d776eadeb87",
+        "text": "text_f82f8abc7d8546fd8f3bacf07d781fdb",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "5b0bad5e-aaa7-51b6-b6d8-63fd3d67a30a",
+        "text": "montague island",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "5f394058-b2a0-5ba8-8466-ba2a18cfcf4e",
+        "text": "place",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "9ae79995-6e31-5f4c-a62f-541a82c65e80",
+        "text": "closest town to montague island",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "c28a5483-9a62-5aea-9360-9f1ce2d1b2b1",
+        "text": "princes highway",
+        "type": "Entity"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 3,
+        "type": "is_closest_town_to"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 6,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 5,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "is_located_on"
+      },
+      {
+        "source": 1,
+        "target": 6,
+        "type": "contains"
+      }
+    ]
+  },
+  "grafo_evidencia": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "e2e4ecfb-ba4c-5ba1-9624-5721448f29a4",
+        "text": "This chunk is about:\n- Places: Montague Island, Narooma, New South Wales\n- Topics: geography, place names\n\nFacts:\n- Montague Island is an 81 ha reserve and island located about 9 km southeast of Narooma.\n- Narooma is the nearest onshore town to Montague Island.\n- Narooma is located on the Princes Highway in New South Wales.\n- The name Narooma is said to come from an Aboriginal word meaning “clear blue waters.”",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "5c0dc214-bc0a-59ab-936e-f20952725614",
+        "text": "Page: Montague Island (Australia). Sentence: The nearest town located onshore from the 81 ha reserve and island is Narooma , situated approximately 9 km to the northwest.\nPage: Narooma, New South Wales. Sentence: The town is on the Princes Highway and the name Narooma is said to be derived from the Aboriginal word meaning ‘clear blue waters’.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "879ad8be-bef8-5333-a9c6-7cb3ed8f1915",
+        "text": "text_367b994fa27ce14dc80a700170df3b3f",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "13c45d5b-4a77-57f1-a42b-a5e76b8cff93",
+        "text": "montague island (australia)",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "5f394058-b2a0-5ba8-8466-ba2a18cfcf4e",
+        "text": "place",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "386d6db5-7284-5e1b-aeca-94edefbe9743",
+        "text": "narooma",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "613777e0-a8cd-5bad-801a-384100d94078",
+        "text": "9 km",
+        "type": "Entity"
+      },
+      {
+        "id": 7,
+        "original_id": "bd894e75-2ada-52d7-b9f5-78c708abdef7",
+        "text": "distance",
+        "type": "EntityType"
+      },
+      {
+        "id": 8,
+        "original_id": "70a1c493-96e2-5028-995c-b736947f2963",
+        "text": "northwest",
+        "type": "Entity"
+      },
+      {
+        "id": 9,
+        "original_id": "8f1f1de3-5983-5c46-83d3-65a1cf691b06",
+        "text": "direction",
+        "type": "EntityType"
+      },
+      {
+        "id": 10,
+        "original_id": "c28a5483-9a62-5aea-9360-9f1ce2d1b2b1",
+        "text": "princes highway",
+        "type": "Entity"
+      },
+      {
+        "id": 11,
+        "original_id": "729cbb39-e062-5479-b9ba-49d1f6860765",
+        "text": "aboriginal word",
+        "type": "Entity"
+      },
+      {
+        "id": 12,
+        "original_id": "68024490-0b05-56a0-8dee-c3fcc0d06d48",
+        "text": "language",
+        "type": "EntityType"
+      },
+      {
+        "id": 13,
+        "original_id": "7209bb8a-3430-5f8e-9f04-39e29d13e72a",
+        "text": "clear blue waters",
+        "type": "Entity"
+      },
+      {
+        "id": 14,
+        "original_id": "d2a381fa-3658-5ca6-ada9-2109cfc9331d",
+        "text": "concept",
+        "type": "EntityType"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 3,
+        "type": "is_nearest_onshore_town_to"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 10,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 5,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "has_approximate_distance"
+      },
+      {
+        "source": 1,
+        "target": 6,
+        "type": "contains"
+      },
+      {
+        "source": 6,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 5,
+        "target": 8,
+        "type": "is_situated_to_the"
+      },
+      {
+        "source": 1,
+        "target": 8,
+        "type": "contains"
+      },
+      {
+        "source": 8,
+        "target": 9,
+        "type": "is_a"
+      },
+      {
+        "source": 5,
+        "target": 10,
+        "type": "is_on"
+      },
+      {
+        "source": 1,
+        "target": 10,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 11,
+        "type": "name_is_said_to_be_derived_from"
+      },
+      {
+        "source": 1,
+        "target": 11,
+        "type": "contains"
+      },
+      {
+        "source": 11,
+        "target": 12,
+        "type": "is_a"
+      },
+      {
+        "source": 5,
+        "target": 13,
+        "type": "name_means"
+      },
+      {
+        "source": 1,
+        "target": 13,
+        "type": "contains"
+      },
+      {
+        "source": 13,
+        "target": 14,
+        "type": "is_a"
+      }
+    ]
+  }
+}

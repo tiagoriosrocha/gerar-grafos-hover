@@ -1,0 +1,488 @@
+{
+  "dataset": "hover",
+  "id": "d991fcd1-3ed8-40b6-9933-2fe3d027cc01",
+  "split": "train",
+  "claim": "The magazine for which James P. Comer has written more than 150 articles, and Madame Figaro are published in the same country.",
+  "evidencia": "Page: Parents (magazine). Sentence: Parents, published by Meredith Corporation, is an American mass circulation monthly magazine that features scientific information on child development geared to help parents in raising their children.\nPage: Madame Figaro. Sentence: Madame Figaro is a French magazine supplement to the Saturday edition of the daily newspaper \"Le Figaro\", focusing on and catering to women.\nPage: James P. Comer. Sentence: He has also written more than 150 articles for Parents (magazine) and more than 300 articles on children's health and development and race relations.",
+  "evidence_text": "Page: Parents (magazine). Sentence: Parents, published by Meredith Corporation, is an American mass circulation monthly magazine that features scientific information on child development geared to help parents in raising their children.\nPage: Madame Figaro. Sentence: Madame Figaro is a French magazine supplement to the Saturday edition of the daily newspaper \"Le Figaro\", focusing on and catering to women.\nPage: James P. Comer. Sentence: He has also written more than 150 articles for Parents (magazine) and more than 300 articles on children's health and development and race relations.",
+  "label": "NOT_SUPPORTED",
+  "num_hops": 3,
+  "hover_metadata": {
+    "supporting_facts": [
+      [
+        "Parents (magazine)",
+        0
+      ],
+      [
+        "Madame Figaro",
+        0
+      ],
+      [
+        "James P. Comer",
+        5
+      ]
+    ],
+    "num_hops": 3,
+    "evidence_annotation_id": [
+      0
+    ],
+    "evidence_id": [
+      "Parents (magazine)::sentence::0",
+      "Madame Figaro::sentence::0",
+      "James P. Comer::sentence::5"
+    ],
+    "evidence_wiki_url": [
+      "https://en.wikipedia.org/wiki/Parents_%28magazine%29",
+      "https://en.wikipedia.org/wiki/Madame_Figaro",
+      "https://en.wikipedia.org/wiki/James_P._Comer"
+    ],
+    "evidence_sentence_id": [
+      "Parents (magazine)::sentence::0",
+      "Madame Figaro::sentence::0",
+      "James P. Comer::sentence::5"
+    ]
+  },
+  "grafo_claim": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "7dbb1a0f-a95a-5d76-9e49-a6791a1a6678",
+        "text": "This chunk is about:\n- People: James P. Comer\n- Publications: Madame Figaro, Redbook\n- Places: United States, France\n\nFacts:\n- James P. Comer has written more than 150 articles for Redbook.\n- Redbook is published in the United States.\n- Madame Figaro is published in France.\n- Redbook and Madame Figaro are not published in the same country.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "d26362e7-8fef-5348-a62d-5407f8dcc625",
+        "text": "The magazine for which James P. Comer has written more than 150 articles, and Madame Figaro are published in the same country.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "bd41b6bf-ecee-5f9a-bcc2-7fd036c2c50c",
+        "text": "text_2f7a64ee27afce9c596c399968a31f28",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "434d1f33-ed5a-5b52-94b2-530769fee87f",
+        "text": "james p. comer",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "08099d3b-b426-507e-a22e-92f1fa2ef2a3",
+        "text": "the magazine for which james p. comer has written more than 150 articles",
+        "type": "Entity"
+      },
+      {
+        "id": 5,
+        "original_id": "c16bf83b-60b1-58fa-b821-f1f2ea2ce2f8",
+        "text": "the same country",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "35e29ad1-17b7-507a-a205-d7851a5e7102",
+        "text": "country",
+        "type": "EntityType"
+      },
+      {
+        "id": 7,
+        "original_id": "5927653a-08d8-574b-a326-de69c430c119",
+        "text": "magazine",
+        "type": "EntityType"
+      },
+      {
+        "id": 8,
+        "original_id": "99a82eec-bb35-5bb5-9ed2-e73fc7a756de",
+        "text": "person",
+        "type": "EntityType"
+      },
+      {
+        "id": 9,
+        "original_id": "728feb61-2be3-5776-8eb7-9dee8c2703bf",
+        "text": "madame figaro",
+        "type": "Entity"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "has_written_for"
+      },
+      {
+        "source": 1,
+        "target": 4,
+        "type": "contains"
+      },
+      {
+        "source": 4,
+        "target": 5,
+        "type": "published_in"
+      },
+      {
+        "source": 9,
+        "target": 5,
+        "type": "published_in"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 4,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 9,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 9,
+        "type": "contains"
+      }
+    ]
+  },
+  "grafo_evidencia": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "f716866e-cab1-5ff3-9e6c-0c3700fa7b5b",
+        "text": "This chunk is about:\n- Products: Parents (magazine), Madame Figaro\n- Companies: Meredith Corporation, Le Figaro\n- People: James P. Comer\n- Topics: child development, children's health, race relations, women's media\n\nFacts:\n- Parents is an American mass-circulation monthly magazine published by Meredith Corporation.\n- Parents features scientific information on child development intended to help parents raise their children.\n- Madame Figaro is a French magazine supplement to the Saturday edition of the daily newspaper Le Figaro.\n- Madame Figaro focuses on and caters to women.\n- James P. Comer has written more than 150 articles for Parents.\n- James P. Comer has also written more than 300 articles on children's health and development and race relations.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "00e6bbad-f155-5d96-ad11-ac949a5d822c",
+        "text": "Page: Parents (magazine). Sentence: Parents, published by Meredith Corporation, is an American mass circulation monthly magazine that features scientific information on child development geared to help parents in raising their children.\nPage: Madame Figaro. Sentence: Madame Figaro is a French magazine supplement to the Saturday edition of the daily newspaper \"Le Figaro\", focusing on and catering to women.\nPage: James P. Comer. Sentence: He has also written more than 150 articles for Parents (magazine) and more than 300 articles on children's health and development and race relations.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "d7bbae58-cc2f-5885-94f1-0b291829eba0",
+        "text": "text_ed6a0dfc69f755d065e114f147850f7e",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "66063bf5-ffaf-5354-a374-bcc2a8e4f086",
+        "text": "parents (magazine)",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "32e5ea46-cca9-5920-8b2d-77357f10ce8d",
+        "text": "american",
+        "type": "Entity"
+      },
+      {
+        "id": 5,
+        "original_id": "d2a381fa-3658-5ca6-ada9-2109cfc9331d",
+        "text": "concept",
+        "type": "EntityType"
+      },
+      {
+        "id": 6,
+        "original_id": "b66e6c9a-5b66-5f0c-902b-b6176e54d045",
+        "text": "child development",
+        "type": "Entity"
+      },
+      {
+        "id": 7,
+        "original_id": "5927653a-08d8-574b-a326-de69c430c119",
+        "text": "magazine",
+        "type": "EntityType"
+      },
+      {
+        "id": 8,
+        "original_id": "8fe89778-d73d-5572-b1f2-51ada7793973",
+        "text": "meredith corporation",
+        "type": "Entity"
+      },
+      {
+        "id": 9,
+        "original_id": "388f60fb-220d-55e8-ae9c-3ac93cead308",
+        "text": "organization",
+        "type": "EntityType"
+      },
+      {
+        "id": 10,
+        "original_id": "728feb61-2be3-5776-8eb7-9dee8c2703bf",
+        "text": "madame figaro",
+        "type": "Entity"
+      },
+      {
+        "id": 11,
+        "original_id": "eb9d7b11-73cb-5d01-83e1-c53a66608ef3",
+        "text": "french",
+        "type": "Entity"
+      },
+      {
+        "id": 12,
+        "original_id": "7b3d173c-0206-563c-8930-644e137f5a0b",
+        "text": "saturday edition of le figaro",
+        "type": "Entity"
+      },
+      {
+        "id": 13,
+        "original_id": "ce604632-6e7c-545c-8972-42b05fac9fd9",
+        "text": "le figaro",
+        "type": "Entity"
+      },
+      {
+        "id": 14,
+        "original_id": "54cfc3a5-96fa-527d-b96d-b39a0967f1d5",
+        "text": "newspaper",
+        "type": "EntityType"
+      },
+      {
+        "id": 15,
+        "original_id": "116f7e5a-b2e1-59db-a42f-fdaf43712464",
+        "text": "publication",
+        "type": "EntityType"
+      },
+      {
+        "id": 16,
+        "original_id": "c2cb740b-80e9-537d-b736-4270ae33feca",
+        "text": "women",
+        "type": "Entity"
+      },
+      {
+        "id": 17,
+        "original_id": "434d1f33-ed5a-5b52-94b2-530769fee87f",
+        "text": "james p. comer",
+        "type": "Entity"
+      },
+      {
+        "id": 18,
+        "original_id": "e3d5c1e5-6537-523f-a65b-e8f5ad726b1c",
+        "text": "childrens health and development",
+        "type": "Entity"
+      },
+      {
+        "id": 19,
+        "original_id": "2ca06991-b0a4-5a59-8052-f261de52f1af",
+        "text": "race relations",
+        "type": "Entity"
+      },
+      {
+        "id": 20,
+        "original_id": "99a82eec-bb35-5bb5-9ed2-e73fc7a756de",
+        "text": "person",
+        "type": "EntityType"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 8,
+        "target": 3,
+        "type": "publishes"
+      },
+      {
+        "source": 17,
+        "target": 3,
+        "type": "wrote_articles_for"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "has_national_descriptor"
+      },
+      {
+        "source": 1,
+        "target": 4,
+        "type": "contains"
+      },
+      {
+        "source": 4,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 6,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 11,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 16,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 18,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 19,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 6,
+        "type": "features_information_on"
+      },
+      {
+        "source": 1,
+        "target": 6,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 10,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 8,
+        "type": "contains"
+      },
+      {
+        "source": 8,
+        "target": 9,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 10,
+        "type": "contains"
+      },
+      {
+        "source": 10,
+        "target": 11,
+        "type": "has_national_descriptor"
+      },
+      {
+        "source": 1,
+        "target": 11,
+        "type": "contains"
+      },
+      {
+        "source": 10,
+        "target": 12,
+        "type": "is_supplement_to"
+      },
+      {
+        "source": 1,
+        "target": 12,
+        "type": "contains"
+      },
+      {
+        "source": 12,
+        "target": 13,
+        "type": "edition_of"
+      },
+      {
+        "source": 1,
+        "target": 13,
+        "type": "contains"
+      },
+      {
+        "source": 13,
+        "target": 14,
+        "type": "is_a"
+      },
+      {
+        "source": 12,
+        "target": 15,
+        "type": "is_a"
+      },
+      {
+        "source": 10,
+        "target": 16,
+        "type": "caters_to"
+      },
+      {
+        "source": 1,
+        "target": 16,
+        "type": "contains"
+      },
+      {
+        "source": 1,
+        "target": 17,
+        "type": "contains"
+      },
+      {
+        "source": 17,
+        "target": 18,
+        "type": "wrote_articles_on"
+      },
+      {
+        "source": 1,
+        "target": 18,
+        "type": "contains"
+      },
+      {
+        "source": 17,
+        "target": 19,
+        "type": "wrote_articles_on"
+      },
+      {
+        "source": 1,
+        "target": 19,
+        "type": "contains"
+      },
+      {
+        "source": 17,
+        "target": 20,
+        "type": "is_a"
+      }
+    ]
+  }
+}

@@ -1,0 +1,614 @@
+{
+  "dataset": "hover",
+  "id": "9d4ee56d-5927-431d-bd97-d3e7375be60a",
+  "split": "train",
+  "claim": "Pennsylvania State University was founded before the the university hospital that Laurence S. Baskin is one of the chief doctors ad.",
+  "evidencia": "Page: University of California, San Francisco. Sentence: The University of California, San Francisco (UCSF), is a research university located in San Francisco, California and part of the University of California system.\nPage: University of California, San Francisco. Sentence: It was founded as Toland Medical College in 1864, and in 1873 it became affiliated with the University of California.\nPage: Pennsylvania State University. Sentence: The Pennsylvania State University (commonly referred to as Penn State or PSU) is a state-related, land-grant, doctoral university with campuses and facilities throughout Pennsylvania.\nPage: Pennsylvania State University. Sentence: Founded in 1855, the university has a stated threefold mission of teaching, research, and public service.\nPage: Laurence S. Baskin. Sentence: Laurence S. Baskin is a professor of pediatrics and chief of pediatric urology at University of California, San Francisco (UCSF).",
+  "evidence_text": "Page: University of California, San Francisco. Sentence: The University of California, San Francisco (UCSF), is a research university located in San Francisco, California and part of the University of California system.\nPage: University of California, San Francisco. Sentence: It was founded as Toland Medical College in 1864, and in 1873 it became affiliated with the University of California.\nPage: Pennsylvania State University. Sentence: The Pennsylvania State University (commonly referred to as Penn State or PSU) is a state-related, land-grant, doctoral university with campuses and facilities throughout Pennsylvania.\nPage: Pennsylvania State University. Sentence: Founded in 1855, the university has a stated threefold mission of teaching, research, and public service.\nPage: Laurence S. Baskin. Sentence: Laurence S. Baskin is a professor of pediatrics and chief of pediatric urology at University of California, San Francisco (UCSF).",
+  "label": "NOT_SUPPORTED",
+  "num_hops": 3,
+  "hover_metadata": {
+    "supporting_facts": [
+      [
+        "University of California, San Francisco",
+        0
+      ],
+      [
+        "University of California, San Francisco",
+        2
+      ],
+      [
+        "Pennsylvania State University",
+        0
+      ],
+      [
+        "Pennsylvania State University",
+        1
+      ],
+      [
+        "Laurence S. Baskin",
+        0
+      ]
+    ],
+    "num_hops": 3,
+    "evidence_annotation_id": [
+      0
+    ],
+    "evidence_id": [
+      "University of California, San Francisco::sentence::0",
+      "University of California, San Francisco::sentence::2",
+      "Pennsylvania State University::sentence::0",
+      "Pennsylvania State University::sentence::1",
+      "Laurence S. Baskin::sentence::0"
+    ],
+    "evidence_wiki_url": [
+      "https://en.wikipedia.org/wiki/University_of_California%2C_San_Francisco",
+      "https://en.wikipedia.org/wiki/Pennsylvania_State_University",
+      "https://en.wikipedia.org/wiki/Laurence_S._Baskin"
+    ],
+    "evidence_sentence_id": [
+      "University of California, San Francisco::sentence::0",
+      "University of California, San Francisco::sentence::2",
+      "Pennsylvania State University::sentence::0",
+      "Pennsylvania State University::sentence::1",
+      "Laurence S. Baskin::sentence::0"
+    ]
+  },
+  "grafo_claim": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "893bec58-cb54-597a-b8b9-2383ee0e59e2",
+        "text": "This chunk is about:\n- Organizations: Pennsylvania State University, university hospital\n- People: Laurence S. Baskin\n- Roles: chief doctors\n\nFacts:\n- Pennsylvania State University was founded before the university hospital.\n- Laurence S. Baskin is one of the chief doctors at the university hospital.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "79301c07-b443-54a0-b2a2-e71eead12a14",
+        "text": "Pennsylvania State University was founded before the the university hospital that Laurence S. Baskin is one of the chief doctors ad.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "e06e330a-58b3-59d7-a76a-abe8da644559",
+        "text": "text_5f27b2b608bf1359ef918fc50cd2f2bf",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "a55e72e8-5b40-5890-a610-0ac4dab1f1ea",
+        "text": "pennsylvania state university",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "208fbf38-b757-5f00-8ac0-0463bd76d6cd",
+        "text": "university hospital",
+        "type": "Entity"
+      },
+      {
+        "id": 5,
+        "original_id": "388f60fb-220d-55e8-ae9c-3ac93cead308",
+        "text": "organization",
+        "type": "EntityType"
+      },
+      {
+        "id": 6,
+        "original_id": "21dfc23b-0490-5509-918e-7a97bf4fbf81",
+        "text": "laurence s. baskin",
+        "type": "Entity"
+      },
+      {
+        "id": 7,
+        "original_id": "99a82eec-bb35-5bb5-9ed2-e73fc7a756de",
+        "text": "person",
+        "type": "EntityType"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "founded_before"
+      },
+      {
+        "source": 1,
+        "target": 4,
+        "type": "contains"
+      },
+      {
+        "source": 6,
+        "target": 4,
+        "type": "is_one_of_the_chief_doctors_at"
+      },
+      {
+        "source": 4,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 6,
+        "type": "contains"
+      },
+      {
+        "source": 6,
+        "target": 7,
+        "type": "is_a"
+      }
+    ]
+  },
+  "grafo_evidencia": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "48cedc9d-88e2-5a0e-924b-f752f2063945",
+        "text": "This chunk is about:\n- Organizations: University of California, San Francisco; Pennsylvania State University; University of California system\n- People: Laurence S. Baskin\n- Places: San Francisco, California; Pennsylvania\n- Roles: professor of pediatrics; chief of pediatric urology\n\nFacts:\n- Pennsylvania State University was founded in 1855.\n- The University of California, San Francisco was founded as Toland Medical College in 1864.\n- The University of California, San Francisco became affiliated with the University of California in 1873.\n- Pennsylvania State University is a state-related, land-grant, doctoral university with campuses and facilities throughout Pennsylvania.\n- Pennsylvania State University has a stated threefold mission of teaching, research, and public service.\n- The University of California, San Francisco is a research university located in San Francisco, California, and it is part of the University of California system.\n- Laurence S. Baskin is a professor of pediatrics and chief of pediatric urology at the University of California, San Francisco.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "2e0a7fd2-1e28-559b-8a4d-447d9ddbb10f",
+        "text": "Page: University of California, San Francisco. Sentence: The University of California, San Francisco (UCSF), is a research university located in San Francisco, California and part of the University of California system.\nPage: University of California, San Francisco. Sentence: It was founded as Toland Medical College in 1864, and in 1873 it became affiliated with the University of California.\nPage: Pennsylvania State University. Sentence: The Pennsylvania State University (commonly referred to as Penn State or PSU) is a state-related, land-grant, doctoral university with campuses and facilities throughout Pennsylvania.\nPage: Pennsylvania State University. Sentence: Founded in 1855, the university has a stated threefold mission of teaching, research, and public service.\nPage: Laurence S. Baskin. Sentence: Laurence S. Baskin is a professor of pediatrics and chief of pediatric urology at University of California, San Francisco (UCSF).",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "fefcc53d-8208-548b-b515-9b1f180b78de",
+        "text": "text_4671bbf8307361531622cab223b51c68",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "23413438-190c-559b-a44e-faae28f154df",
+        "text": "university of california, san francisco",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "c5cd5d21-f77e-5060-8b46-ea85a9c7a0ad",
+        "text": "san francisco, california",
+        "type": "Entity"
+      },
+      {
+        "id": 5,
+        "original_id": "5f394058-b2a0-5ba8-8466-ba2a18cfcf4e",
+        "text": "place",
+        "type": "EntityType"
+      },
+      {
+        "id": 6,
+        "original_id": "ebe7eb91-869e-5e7e-b727-d8d6574f3f87",
+        "text": "university of california system",
+        "type": "Entity"
+      },
+      {
+        "id": 7,
+        "original_id": "388f60fb-220d-55e8-ae9c-3ac93cead308",
+        "text": "organization",
+        "type": "EntityType"
+      },
+      {
+        "id": 8,
+        "original_id": "06bd7bfb-85d1-5df7-ab6f-160a3789958d",
+        "text": "toland medical college",
+        "type": "Entity"
+      },
+      {
+        "id": 9,
+        "original_id": "a3888bca-ba60-5672-a4c6-6a3262aed921",
+        "text": "1864",
+        "type": "Entity"
+      },
+      {
+        "id": 10,
+        "original_id": "b19433ae-558c-5aaf-95ac-6231f2a4be0e",
+        "text": "date",
+        "type": "EntityType"
+      },
+      {
+        "id": 11,
+        "original_id": "bd623fb6-26f4-5f2d-a395-07f0fe8396d2",
+        "text": "university of california",
+        "type": "Entity"
+      },
+      {
+        "id": 12,
+        "original_id": "649376ab-6900-5105-8d24-862b4ad76c5d",
+        "text": "1873",
+        "type": "Entity"
+      },
+      {
+        "id": 13,
+        "original_id": "280b0c4a-89a1-586a-9662-8e880059ab97",
+        "text": "ucsf",
+        "type": "Entity"
+      },
+      {
+        "id": 14,
+        "original_id": "a55e72e8-5b40-5890-a610-0ac4dab1f1ea",
+        "text": "pennsylvania state university",
+        "type": "Entity"
+      },
+      {
+        "id": 15,
+        "original_id": "6fa14bac-67c5-524c-8d9d-ef87a3f08dd1",
+        "text": "pennsylvania",
+        "type": "Entity"
+      },
+      {
+        "id": 16,
+        "original_id": "baf435bc-9bba-54b1-a681-68ab294a2fa8",
+        "text": "1855",
+        "type": "Entity"
+      },
+      {
+        "id": 17,
+        "original_id": "f909412f-6154-5a38-bd27-d86f6739b203",
+        "text": "teaching",
+        "type": "Entity"
+      },
+      {
+        "id": 18,
+        "original_id": "d2a381fa-3658-5ca6-ada9-2109cfc9331d",
+        "text": "concept",
+        "type": "EntityType"
+      },
+      {
+        "id": 19,
+        "original_id": "922b64f4-e71c-5d9e-bbd6-458112def56e",
+        "text": "research",
+        "type": "Entity"
+      },
+      {
+        "id": 20,
+        "original_id": "a796b870-75f4-5dfd-adde-ffa429d158b6",
+        "text": "public service",
+        "type": "Entity"
+      },
+      {
+        "id": 21,
+        "original_id": "c640b8b9-8a0a-5519-8d32-28a1623c5ab7",
+        "text": "penn state",
+        "type": "Entity"
+      },
+      {
+        "id": 22,
+        "original_id": "7aa7cdc1-e618-5430-ac97-806f3ab7fc12",
+        "text": "psu",
+        "type": "Entity"
+      },
+      {
+        "id": 23,
+        "original_id": "21dfc23b-0490-5509-918e-7a97bf4fbf81",
+        "text": "laurence s. baskin",
+        "type": "Entity"
+      },
+      {
+        "id": 24,
+        "original_id": "0ceaad0e-bf1e-573a-b9ff-711e96d089ab",
+        "text": "pediatrics",
+        "type": "Entity"
+      },
+      {
+        "id": 25,
+        "original_id": "5b44e04c-7569-5c43-98c5-8b275896921a",
+        "text": "pediatric urology",
+        "type": "Entity"
+      },
+      {
+        "id": 26,
+        "original_id": "99a82eec-bb35-5bb5-9ed2-e73fc7a756de",
+        "text": "person",
+        "type": "EntityType"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 13,
+        "target": 3,
+        "type": "abbreviation_for"
+      },
+      {
+        "source": 23,
+        "target": 3,
+        "type": "works_at"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "located_in"
+      },
+      {
+        "source": 1,
+        "target": 4,
+        "type": "contains"
+      },
+      {
+        "source": 4,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 15,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 6,
+        "type": "part_of"
+      },
+      {
+        "source": 1,
+        "target": 6,
+        "type": "contains"
+      },
+      {
+        "source": 6,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 8,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 11,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 13,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 14,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 21,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 22,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 8,
+        "type": "founded_as"
+      },
+      {
+        "source": 1,
+        "target": 8,
+        "type": "contains"
+      },
+      {
+        "source": 8,
+        "target": 9,
+        "type": "founded_in"
+      },
+      {
+        "source": 1,
+        "target": 9,
+        "type": "contains"
+      },
+      {
+        "source": 9,
+        "target": 10,
+        "type": "is_a"
+      },
+      {
+        "source": 12,
+        "target": 10,
+        "type": "is_a"
+      },
+      {
+        "source": 16,
+        "target": 10,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 11,
+        "type": "became_affiliated_with"
+      },
+      {
+        "source": 1,
+        "target": 11,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 12,
+        "type": "became_affiliated_in"
+      },
+      {
+        "source": 1,
+        "target": 12,
+        "type": "contains"
+      },
+      {
+        "source": 1,
+        "target": 13,
+        "type": "contains"
+      },
+      {
+        "source": 1,
+        "target": 14,
+        "type": "contains"
+      },
+      {
+        "source": 21,
+        "target": 14,
+        "type": "alternate_name_for"
+      },
+      {
+        "source": 22,
+        "target": 14,
+        "type": "abbreviation_for"
+      },
+      {
+        "source": 14,
+        "target": 15,
+        "type": "has_campuses_and_facilities_throughout"
+      },
+      {
+        "source": 1,
+        "target": 15,
+        "type": "contains"
+      },
+      {
+        "source": 14,
+        "target": 16,
+        "type": "founded_in"
+      },
+      {
+        "source": 1,
+        "target": 16,
+        "type": "contains"
+      },
+      {
+        "source": 14,
+        "target": 17,
+        "type": "has_stated_mission"
+      },
+      {
+        "source": 1,
+        "target": 17,
+        "type": "contains"
+      },
+      {
+        "source": 17,
+        "target": 18,
+        "type": "is_a"
+      },
+      {
+        "source": 19,
+        "target": 18,
+        "type": "is_a"
+      },
+      {
+        "source": 20,
+        "target": 18,
+        "type": "is_a"
+      },
+      {
+        "source": 24,
+        "target": 18,
+        "type": "is_a"
+      },
+      {
+        "source": 25,
+        "target": 18,
+        "type": "is_a"
+      },
+      {
+        "source": 14,
+        "target": 19,
+        "type": "has_stated_mission"
+      },
+      {
+        "source": 1,
+        "target": 19,
+        "type": "contains"
+      },
+      {
+        "source": 14,
+        "target": 20,
+        "type": "has_stated_mission"
+      },
+      {
+        "source": 1,
+        "target": 20,
+        "type": "contains"
+      },
+      {
+        "source": 1,
+        "target": 21,
+        "type": "contains"
+      },
+      {
+        "source": 1,
+        "target": 22,
+        "type": "contains"
+      },
+      {
+        "source": 1,
+        "target": 23,
+        "type": "contains"
+      },
+      {
+        "source": 23,
+        "target": 24,
+        "type": "professor_of"
+      },
+      {
+        "source": 1,
+        "target": 24,
+        "type": "contains"
+      },
+      {
+        "source": 23,
+        "target": 25,
+        "type": "chief_of"
+      },
+      {
+        "source": 1,
+        "target": 25,
+        "type": "contains"
+      },
+      {
+        "source": 23,
+        "target": 26,
+        "type": "is_a"
+      }
+    ]
+  }
+}

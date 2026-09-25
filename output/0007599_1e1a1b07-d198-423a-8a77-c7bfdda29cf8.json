@@ -1,0 +1,421 @@
+{
+  "dataset": "hover",
+  "id": "1e1a1b07-d198-423a-8a77-c7bfdda29cf8",
+  "split": "train",
+  "claim": "PDQ Chocolate is a registered trademark of Associated British Foods.",
+  "evidencia": "Page: PDQ Chocolate. Sentence: PDQ Chocolate was a popular drink mix in the 1960s and 1970s.\nPage: PDQ Chocolate. Sentence: It was manufactured by Ovaltine.\nPage: Ovaltine. Sentence: Ovaltine, a registered trademark of Associated British Foods, is made by Wander AG, a subsidiary of Twinings which acquired the brand from Novartis in 2002, except in the United States where Nestlé acquired the rights separately from Novartis later on.",
+  "evidence_text": "Page: PDQ Chocolate. Sentence: PDQ Chocolate was a popular drink mix in the 1960s and 1970s.\nPage: PDQ Chocolate. Sentence: It was manufactured by Ovaltine.\nPage: Ovaltine. Sentence: Ovaltine, a registered trademark of Associated British Foods, is made by Wander AG, a subsidiary of Twinings which acquired the brand from Novartis in 2002, except in the United States where Nestlé acquired the rights separately from Novartis later on.",
+  "label": "SUPPORTED",
+  "num_hops": 2,
+  "hover_metadata": {
+    "supporting_facts": [
+      [
+        "PDQ Chocolate",
+        0
+      ],
+      [
+        "PDQ Chocolate",
+        1
+      ],
+      [
+        "Ovaltine",
+        2
+      ]
+    ],
+    "num_hops": 2,
+    "evidence_annotation_id": [
+      0
+    ],
+    "evidence_id": [
+      "PDQ Chocolate::sentence::0",
+      "PDQ Chocolate::sentence::1",
+      "Ovaltine::sentence::2"
+    ],
+    "evidence_wiki_url": [
+      "https://en.wikipedia.org/wiki/PDQ_Chocolate",
+      "https://en.wikipedia.org/wiki/Ovaltine"
+    ],
+    "evidence_sentence_id": [
+      "PDQ Chocolate::sentence::0",
+      "PDQ Chocolate::sentence::1",
+      "Ovaltine::sentence::2"
+    ]
+  },
+  "grafo_claim": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "047ab325-36ac-5ae1-b0ca-75aa06eceb75",
+        "text": "This chunk is about:\n- Companies: PDQ Chocolate, Associated British Foods\n- Concepts: registered trademarks\n\nFacts:\n- PDQ Chocolate is a registered trademark.\n- Associated British Foods owns the registered trademark for PDQ Chocolate.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "f44e568a-da91-52d2-a968-cd891d2ab8f0",
+        "text": "PDQ Chocolate is a registered trademark of Associated British Foods.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "8db71cce-419f-5f6e-af9b-fd8b90a39bb7",
+        "text": "text_c23c2ae08be7d81320754be8b4ef2563",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "7f5e5432-90cd-5815-9950-1e47546c0dc3",
+        "text": "pdq chocolate",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "e156b691-1206-5141-a059-bd26237110a6",
+        "text": "associated british foods",
+        "type": "Entity"
+      },
+      {
+        "id": 5,
+        "original_id": "388f60fb-220d-55e8-ae9c-3ac93cead308",
+        "text": "organization",
+        "type": "EntityType"
+      },
+      {
+        "id": 6,
+        "original_id": "f76d57aa-4740-5218-9539-0e0978cbf183",
+        "text": "product",
+        "type": "EntityType"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_registered_trademark_of"
+      },
+      {
+        "source": 1,
+        "target": 4,
+        "type": "contains"
+      },
+      {
+        "source": 4,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 6,
+        "type": "is_a"
+      }
+    ]
+  },
+  "grafo_evidencia": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "c5669481-8d4a-5fb6-aedc-f0359cc36568",
+        "text": "This chunk is about:\n- Products: PDQ Chocolate, Ovaltine\n- Companies: Associated British Foods, Wander AG, Twinings, Novartis, Nestlé\n\nFacts:\n- PDQ Chocolate was a popular drink mix in the 1960s and 1970s.\n- PDQ Chocolate was manufactured by Ovaltine.\n- In 2002, Twinings acquired the Ovaltine brand from Novartis.\n- Ovaltine is a registered trademark of Associated British Foods.\n- Ovaltine is made by Wander AG, which is a subsidiary of Twinings.\n- In the United States, Nestlé later acquired Ovaltine rights separately from Novartis.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "3b09ef75-9038-59bb-9825-c5e8b4c076e2",
+        "text": "Page: PDQ Chocolate. Sentence: PDQ Chocolate was a popular drink mix in the 1960s and 1970s.\nPage: PDQ Chocolate. Sentence: It was manufactured by Ovaltine.\nPage: Ovaltine. Sentence: Ovaltine, a registered trademark of Associated British Foods, is made by Wander AG, a subsidiary of Twinings which acquired the brand from Novartis in 2002, except in the United States where Nestlé acquired the rights separately from Novartis later on.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "dc79fda5-c6d6-5a7e-9671-e6a79db8b2ae",
+        "text": "text_bed29ad4d2a521c07f98345b03607553",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "7f5e5432-90cd-5815-9950-1e47546c0dc3",
+        "text": "pdq chocolate",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "8a2a9d64-1518-5cac-b84d-b2ce02f12ffa",
+        "text": "1960s",
+        "type": "Entity"
+      },
+      {
+        "id": 5,
+        "original_id": "b19433ae-558c-5aaf-95ac-6231f2a4be0e",
+        "text": "date",
+        "type": "EntityType"
+      },
+      {
+        "id": 6,
+        "original_id": "317fb254-703e-5f5f-a0ec-e7bacb191092",
+        "text": "1970s",
+        "type": "Entity"
+      },
+      {
+        "id": 7,
+        "original_id": "a4310e38-d457-5848-8731-ebc5f0427cb4",
+        "text": "ovaltine",
+        "type": "Entity"
+      },
+      {
+        "id": 8,
+        "original_id": "e156b691-1206-5141-a059-bd26237110a6",
+        "text": "associated british foods",
+        "type": "Entity"
+      },
+      {
+        "id": 9,
+        "original_id": "388f60fb-220d-55e8-ae9c-3ac93cead308",
+        "text": "organization",
+        "type": "EntityType"
+      },
+      {
+        "id": 10,
+        "original_id": "58586d62-75d1-59e7-9273-881b9adaecd4",
+        "text": "wander ag",
+        "type": "Entity"
+      },
+      {
+        "id": 11,
+        "original_id": "b37eba72-1663-57b7-8ec4-c75ff8719159",
+        "text": "twinings",
+        "type": "Entity"
+      },
+      {
+        "id": 12,
+        "original_id": "9a2690c7-9d3c-56f9-aef3-bcdf63835faa",
+        "text": "novartis",
+        "type": "Entity"
+      },
+      {
+        "id": 13,
+        "original_id": "d4028376-9599-5def-be60-886e367316ac",
+        "text": "2002",
+        "type": "Entity"
+      },
+      {
+        "id": 14,
+        "original_id": "f76d57aa-4740-5218-9539-0e0978cbf183",
+        "text": "product",
+        "type": "EntityType"
+      },
+      {
+        "id": 15,
+        "original_id": "874a51da-34ea-5037-be47-d87785d43c37",
+        "text": "united states",
+        "type": "Entity"
+      },
+      {
+        "id": 16,
+        "original_id": "5f394058-b2a0-5ba8-8466-ba2a18cfcf4e",
+        "text": "place",
+        "type": "EntityType"
+      },
+      {
+        "id": 17,
+        "original_id": "3acc04d8-444d-5c4f-9def-ba5997a804db",
+        "text": "nestlé",
+        "type": "Entity"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "popular_in"
+      },
+      {
+        "source": 1,
+        "target": 4,
+        "type": "contains"
+      },
+      {
+        "source": 4,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 6,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 13,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 6,
+        "type": "popular_in"
+      },
+      {
+        "source": 1,
+        "target": 6,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 7,
+        "type": "manufactured_by"
+      },
+      {
+        "source": 11,
+        "target": 7,
+        "type": "acquired_brand"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      },
+      {
+        "source": 17,
+        "target": 7,
+        "type": "acquired_rights_to"
+      },
+      {
+        "source": 7,
+        "target": 8,
+        "type": "registered_trademark_of"
+      },
+      {
+        "source": 1,
+        "target": 8,
+        "type": "contains"
+      },
+      {
+        "source": 8,
+        "target": 9,
+        "type": "is_a"
+      },
+      {
+        "source": 12,
+        "target": 9,
+        "type": "is_a"
+      },
+      {
+        "source": 11,
+        "target": 9,
+        "type": "is_a"
+      },
+      {
+        "source": 10,
+        "target": 9,
+        "type": "is_a"
+      },
+      {
+        "source": 17,
+        "target": 9,
+        "type": "is_a"
+      },
+      {
+        "source": 7,
+        "target": 10,
+        "type": "made_by"
+      },
+      {
+        "source": 1,
+        "target": 10,
+        "type": "contains"
+      },
+      {
+        "source": 10,
+        "target": 11,
+        "type": "subsidiary_of"
+      },
+      {
+        "source": 1,
+        "target": 11,
+        "type": "contains"
+      },
+      {
+        "source": 11,
+        "target": 12,
+        "type": "acquired_brand_from"
+      },
+      {
+        "source": 1,
+        "target": 12,
+        "type": "contains"
+      },
+      {
+        "source": 17,
+        "target": 12,
+        "type": "acquired_rights_from"
+      },
+      {
+        "source": 11,
+        "target": 13,
+        "type": "acquired_in"
+      },
+      {
+        "source": 1,
+        "target": 13,
+        "type": "contains"
+      },
+      {
+        "source": 7,
+        "target": 14,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 14,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 15,
+        "type": "contains"
+      },
+      {
+        "source": 17,
+        "target": 15,
+        "type": "acquired_rights_in"
+      },
+      {
+        "source": 15,
+        "target": 16,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 17,
+        "type": "contains"
+      }
+    ]
+  }
+}

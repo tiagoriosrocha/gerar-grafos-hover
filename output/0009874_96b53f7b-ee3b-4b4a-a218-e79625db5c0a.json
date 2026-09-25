@@ -1,0 +1,448 @@
+{
+  "dataset": "hover",
+  "id": "96b53f7b-ee3b-4b4a-a218-e79625db5c0a",
+  "split": "train",
+  "claim": "Mark Dayton s the current governor of the state where former wrestler Stephen Cepello painted the Governor's Mansion.",
+  "evidencia": "Page: Stephen Cepello. Sentence: After retiring from wrestling to focus on his art career, he was selected to paint the official Governor's Mansion and Minnesota State Capitol portraits of former wrestler and Governor of Minnesota Jesse Ventura.\nPage: Governor of Minnesota. Sentence: The current governor of Minnesota is Mark Dayton of the Democratic-Farmer-Labor Party (DFL).",
+  "evidence_text": "Page: Stephen Cepello. Sentence: After retiring from wrestling to focus on his art career, he was selected to paint the official Governor's Mansion and Minnesota State Capitol portraits of former wrestler and Governor of Minnesota Jesse Ventura.\nPage: Governor of Minnesota. Sentence: The current governor of Minnesota is Mark Dayton of the Democratic-Farmer-Labor Party (DFL).",
+  "label": "SUPPORTED",
+  "num_hops": 2,
+  "hover_metadata": {
+    "supporting_facts": [
+      [
+        "Stephen Cepello",
+        2
+      ],
+      [
+        "Governor of Minnesota",
+        4
+      ]
+    ],
+    "num_hops": 2,
+    "evidence_annotation_id": [
+      0
+    ],
+    "evidence_id": [
+      "Stephen Cepello::sentence::2",
+      "Governor of Minnesota::sentence::4"
+    ],
+    "evidence_wiki_url": [
+      "https://en.wikipedia.org/wiki/Stephen_Cepello",
+      "https://en.wikipedia.org/wiki/Governor_of_Minnesota"
+    ],
+    "evidence_sentence_id": [
+      "Stephen Cepello::sentence::2",
+      "Governor of Minnesota::sentence::4"
+    ]
+  },
+  "grafo_claim": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "ae6ccdf8-94cd-5a43-9ef7-89784722e183",
+        "text": "This chunk is about:\n- People: Mark Dayton, Stephen Cepello\n- Places: Governor's Mansion, Minnesota\n- Roles: Governor\n\nFacts:\n- Stephen Cepello is a former wrestler who painted the Governor's Mansion.\n- The Governor's Mansion is in Minnesota.\n- Mark Dayton is the current governor of Minnesota.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "a185f4f7-e686-5a7b-81c0-d667071b6e09",
+        "text": "Mark Dayton s the current governor of the state where former wrestler Stephen Cepello painted the Governor's Mansion.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "0537c434-e95d-5324-95e8-2d86d5f14f21",
+        "text": "text_941b2521175da0c13f3c000ffab6fafd",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "1adb35d5-33d1-5137-946c-e4ec6e5f9e4a",
+        "text": "mark dayton",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "99a82eec-bb35-5bb5-9ed2-e73fc7a756de",
+        "text": "person",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "d43dd56d-da6d-5ba4-85d7-a39fd436be27",
+        "text": "state",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "5f394058-b2a0-5ba8-8466-ba2a18cfcf4e",
+        "text": "place",
+        "type": "EntityType"
+      },
+      {
+        "id": 7,
+        "original_id": "b8cc6e8e-4ba3-5813-a472-f778fbbe5c06",
+        "text": "stephen cepello",
+        "type": "Entity"
+      },
+      {
+        "id": 8,
+        "original_id": "f9a297d0-abc9-513d-9d49-6d748a2d5274",
+        "text": "governors mansion",
+        "type": "Entity"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 7,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "governor_of"
+      },
+      {
+        "source": 8,
+        "target": 5,
+        "type": "located_in"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 8,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      },
+      {
+        "source": 7,
+        "target": 8,
+        "type": "painted"
+      },
+      {
+        "source": 1,
+        "target": 8,
+        "type": "contains"
+      }
+    ]
+  },
+  "grafo_evidencia": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "50794eb1-06ab-5e2e-a760-2c59322a0668",
+        "text": "This chunk is about:\n- People: Stephen Cepello, Jesse Ventura, Mark Dayton\n- Roles: Governor of Minnesota, wrestler, artist\n- Places: Minnesota, Governor's Mansion, Minnesota State Capitol\n- Organizations: Democratic-Farmer-Labor Party\n\nFacts:\n- After retiring from wrestling to focus on his art career, Stephen Cepello was selected to paint the official Governor's Mansion and Minnesota State Capitol portraits of Jesse Ventura.\n- Jesse Ventura was a former wrestler and Governor of Minnesota.\n- Mark Dayton of the Democratic-Farmer-Labor Party was the current governor of Minnesota.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "a4e17e06-b2e7-58b2-8b3b-73ecc4761275",
+        "text": "Page: Stephen Cepello. Sentence: After retiring from wrestling to focus on his art career, he was selected to paint the official Governor's Mansion and Minnesota State Capitol portraits of former wrestler and Governor of Minnesota Jesse Ventura.\nPage: Governor of Minnesota. Sentence: The current governor of Minnesota is Mark Dayton of the Democratic-Farmer-Labor Party (DFL).",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "5e122d70-973d-5880-ad5a-804169585309",
+        "text": "text_d87cf01808a40ab93d93aa00bff75581",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "b8cc6e8e-4ba3-5813-a472-f778fbbe5c06",
+        "text": "stephen cepello",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "99a82eec-bb35-5bb5-9ed2-e73fc7a756de",
+        "text": "person",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "5ca8a4f3-125d-5c59-8067-127d89d1367c",
+        "text": "wrestling",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "d2a381fa-3658-5ca6-ada9-2109cfc9331d",
+        "text": "concept",
+        "type": "EntityType"
+      },
+      {
+        "id": 7,
+        "original_id": "8d41028f-0def-54b5-8022-52a345d10d72",
+        "text": "art career",
+        "type": "Entity"
+      },
+      {
+        "id": 8,
+        "original_id": "0b6bb5de-629b-549e-a439-ad885678f932",
+        "text": "governors mansion portrait of jesse ventura",
+        "type": "Entity"
+      },
+      {
+        "id": 9,
+        "original_id": "5263a535-1b4b-5925-be3e-310d03cd303b",
+        "text": "work",
+        "type": "EntityType"
+      },
+      {
+        "id": 10,
+        "original_id": "5f8e8393-3a68-5634-948c-529579111aea",
+        "text": "jesse ventura",
+        "type": "Entity"
+      },
+      {
+        "id": 11,
+        "original_id": "4d91e198-9457-5ea5-9feb-e5771c50267a",
+        "text": "governor of minnesota",
+        "type": "Entity"
+      },
+      {
+        "id": 12,
+        "original_id": "c37fc488-fc9a-5b35-8e54-a50ae1721557",
+        "text": "role",
+        "type": "EntityType"
+      },
+      {
+        "id": 13,
+        "original_id": "59df55ad-59fd-5073-8d20-14709fe52f32",
+        "text": "minnesota",
+        "type": "Entity"
+      },
+      {
+        "id": 14,
+        "original_id": "5f394058-b2a0-5ba8-8466-ba2a18cfcf4e",
+        "text": "place",
+        "type": "EntityType"
+      },
+      {
+        "id": 15,
+        "original_id": "3f2b3004-7b7f-5673-9855-6a9137b9a157",
+        "text": "minnesota state capitol portrait of jesse ventura",
+        "type": "Entity"
+      },
+      {
+        "id": 16,
+        "original_id": "1adb35d5-33d1-5137-946c-e4ec6e5f9e4a",
+        "text": "mark dayton",
+        "type": "Entity"
+      },
+      {
+        "id": 17,
+        "original_id": "18edacfd-9cc7-524a-9836-04a0b00180ca",
+        "text": "democratic-farmer-labor party",
+        "type": "Entity"
+      },
+      {
+        "id": 18,
+        "original_id": "388f60fb-220d-55e8-ae9c-3ac93cead308",
+        "text": "organization",
+        "type": "EntityType"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 10,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 16,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "retired_from"
+      },
+      {
+        "source": 10,
+        "target": 5,
+        "type": "former_wrestler_in"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 7,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 7,
+        "type": "focused_on"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 8,
+        "type": "painted"
+      },
+      {
+        "source": 1,
+        "target": 8,
+        "type": "contains"
+      },
+      {
+        "source": 8,
+        "target": 9,
+        "type": "is_a"
+      },
+      {
+        "source": 15,
+        "target": 9,
+        "type": "is_a"
+      },
+      {
+        "source": 8,
+        "target": 10,
+        "type": "portrays"
+      },
+      {
+        "source": 15,
+        "target": 10,
+        "type": "portrays"
+      },
+      {
+        "source": 1,
+        "target": 10,
+        "type": "contains"
+      },
+      {
+        "source": 10,
+        "target": 11,
+        "type": "held_role"
+      },
+      {
+        "source": 1,
+        "target": 11,
+        "type": "contains"
+      },
+      {
+        "source": 16,
+        "target": 11,
+        "type": "holds_role"
+      },
+      {
+        "source": 11,
+        "target": 12,
+        "type": "is_a"
+      },
+      {
+        "source": 11,
+        "target": 13,
+        "type": "office_of"
+      },
+      {
+        "source": 1,
+        "target": 13,
+        "type": "contains"
+      },
+      {
+        "source": 13,
+        "target": 14,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 15,
+        "type": "painted"
+      },
+      {
+        "source": 1,
+        "target": 15,
+        "type": "contains"
+      },
+      {
+        "source": 1,
+        "target": 16,
+        "type": "contains"
+      },
+      {
+        "source": 16,
+        "target": 17,
+        "type": "member_of"
+      },
+      {
+        "source": 1,
+        "target": 17,
+        "type": "contains"
+      },
+      {
+        "source": 17,
+        "target": 18,
+        "type": "is_a"
+      }
+    ]
+  }
+}

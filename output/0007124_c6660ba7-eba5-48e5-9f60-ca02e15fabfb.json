@@ -1,0 +1,428 @@
+{
+  "dataset": "hover",
+  "id": "c6660ba7-eba5-48e5-9f60-ca02e15fabfb",
+  "split": "train",
+  "claim": "Hot Coffee, Mississippi sometimes shares a zipcode with a nearby city with a population of 2,586 at the 2010 census.",
+  "evidencia": "Page: Hot Coffee, Mississippi. Sentence: Hot Coffee is a locale in Covington County, Mississippi, celebrated in local Mississippi lore.\nPage: Hot Coffee, Mississippi. Sentence: It is sometimes assigned the same zipcode as nearby Collins.\nPage: Collins, Mississippi. Sentence: Collins is a city in Covington County, Mississippi, United States.\nPage: Collins, Mississippi. Sentence: The population was 2,586 at the 2010 census.",
+  "evidence_text": "Page: Hot Coffee, Mississippi. Sentence: Hot Coffee is a locale in Covington County, Mississippi, celebrated in local Mississippi lore.\nPage: Hot Coffee, Mississippi. Sentence: It is sometimes assigned the same zipcode as nearby Collins.\nPage: Collins, Mississippi. Sentence: Collins is a city in Covington County, Mississippi, United States.\nPage: Collins, Mississippi. Sentence: The population was 2,586 at the 2010 census.",
+  "label": "SUPPORTED",
+  "num_hops": 2,
+  "hover_metadata": {
+    "supporting_facts": [
+      [
+        "Hot Coffee, Mississippi",
+        0
+      ],
+      [
+        "Hot Coffee, Mississippi",
+        1
+      ],
+      [
+        "Collins, Mississippi",
+        0
+      ],
+      [
+        "Collins, Mississippi",
+        1
+      ]
+    ],
+    "num_hops": 2,
+    "evidence_annotation_id": [
+      0
+    ],
+    "evidence_id": [
+      "Hot Coffee, Mississippi::sentence::0",
+      "Hot Coffee, Mississippi::sentence::1",
+      "Collins, Mississippi::sentence::0",
+      "Collins, Mississippi::sentence::1"
+    ],
+    "evidence_wiki_url": [
+      "https://en.wikipedia.org/wiki/Hot_Coffee%2C_Mississippi",
+      "https://en.wikipedia.org/wiki/Collins%2C_Mississippi"
+    ],
+    "evidence_sentence_id": [
+      "Hot Coffee, Mississippi::sentence::0",
+      "Hot Coffee, Mississippi::sentence::1",
+      "Collins, Mississippi::sentence::0",
+      "Collins, Mississippi::sentence::1"
+    ]
+  },
+  "grafo_claim": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "c15e53fa-f564-51e4-a318-dc410d6ffd9c",
+        "text": "This chunk is about:\n- Places: Hot Coffee, Mississippi; nearby city\n- Topics: ZIP code sharing; 2010 census population\n\nFacts:\n- Hot Coffee, Mississippi sometimes shares a ZIP code with a nearby city.\n- The nearby city had a population of 2,586 at the 2010 census.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "9231374a-074a-5039-88ee-68111c19c4cf",
+        "text": "Hot Coffee, Mississippi sometimes shares a zipcode with a nearby city with a population of 2,586 at the 2010 census.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "25822c10-e0c0-57b7-bcd9-823da2320656",
+        "text": "text_30dd2a1ae2c5a8d07b61ef49c9fd322b",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "fd1df030-5c94-5d2c-afc2-dd1b85f3b4bf",
+        "text": "hot coffee, mississippi",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "4c464206-882c-5daf-9aae-8aabc5482572",
+        "text": "nearby city",
+        "type": "Entity"
+      },
+      {
+        "id": 5,
+        "original_id": "714171cd-b472-51b1-a79b-09f00f533c7a",
+        "text": "2,586",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "cb1dc1af-5253-5fa4-877e-246a7629f489",
+        "text": "2010",
+        "type": "Entity"
+      },
+      {
+        "id": 7,
+        "original_id": "b19433ae-558c-5aaf-95ac-6231f2a4be0e",
+        "text": "date",
+        "type": "EntityType"
+      },
+      {
+        "id": 8,
+        "original_id": "5c1097ca-fab8-54d5-b57f-5dca4b0e2507",
+        "text": "number",
+        "type": "EntityType"
+      },
+      {
+        "id": 9,
+        "original_id": "5f394058-b2a0-5ba8-8466-ba2a18cfcf4e",
+        "text": "place",
+        "type": "EntityType"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "sometimes_shares_zip_code_with"
+      },
+      {
+        "source": 1,
+        "target": 4,
+        "type": "contains"
+      },
+      {
+        "source": 4,
+        "target": 5,
+        "type": "had_population"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "measured_at"
+      },
+      {
+        "source": 1,
+        "target": 6,
+        "type": "contains"
+      },
+      {
+        "source": 6,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 5,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 4,
+        "target": 9,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 9,
+        "type": "is_a"
+      }
+    ]
+  },
+  "grafo_evidencia": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "d197035a-9123-5d32-a5e9-d142217a942f",
+        "text": "This chunk is about:\n- Places: Hot Coffee, Collins, Covington County, Mississippi\n- Topics: local Mississippi lore, ZIP codes, population\n\nFacts:\n- Hot Coffee is a locale in Covington County, Mississippi.\n- Hot Coffee is celebrated in local Mississippi lore.\n- Hot Coffee is sometimes assigned the same ZIP code as nearby Collins.\n- Collins is a city in Covington County, Mississippi, United States.\n- Collins had a population of 2,586 in the 2010 census.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "34bd4b37-7827-5f86-bea9-325d1f6edf82",
+        "text": "Page: Hot Coffee, Mississippi. Sentence: Hot Coffee is a locale in Covington County, Mississippi, celebrated in local Mississippi lore.\nPage: Hot Coffee, Mississippi. Sentence: It is sometimes assigned the same zipcode as nearby Collins.\nPage: Collins, Mississippi. Sentence: Collins is a city in Covington County, Mississippi, United States.\nPage: Collins, Mississippi. Sentence: The population was 2,586 at the 2010 census.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "19416d64-c4a4-5815-a1b6-eaaa06c68cdf",
+        "text": "text_38a96267059fa4f4186745f02f0c5f22",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "6e3c4d82-26d0-563d-95f1-48f5d86e83c8",
+        "text": "hot coffee",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "c4682536-c383-5771-b893-aa1036bef1dd",
+        "text": "covington county",
+        "type": "Entity"
+      },
+      {
+        "id": 5,
+        "original_id": "467eee1a-bf94-5882-9c20-b817120311d5",
+        "text": "mississippi",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "5f394058-b2a0-5ba8-8466-ba2a18cfcf4e",
+        "text": "place",
+        "type": "EntityType"
+      },
+      {
+        "id": 7,
+        "original_id": "37f9ae47-bca9-559b-bff1-df4d9aa03f87",
+        "text": "mississippi lore",
+        "type": "Entity"
+      },
+      {
+        "id": 8,
+        "original_id": "d2a381fa-3658-5ca6-ada9-2109cfc9331d",
+        "text": "concept",
+        "type": "EntityType"
+      },
+      {
+        "id": 9,
+        "original_id": "c5d1f2e2-3356-50c9-9e38-0c3b9decb931",
+        "text": "zipcode of collins",
+        "type": "Entity"
+      },
+      {
+        "id": 10,
+        "original_id": "493f76a5-ca57-5a3a-9906-d82f105a945d",
+        "text": "collins",
+        "type": "Entity"
+      },
+      {
+        "id": 11,
+        "original_id": "874a51da-34ea-5037-be47-d87785d43c37",
+        "text": "united states",
+        "type": "Entity"
+      },
+      {
+        "id": 12,
+        "original_id": "faf0f78c-26a3-5d38-bf65-e2e1147b5f83",
+        "text": "2,586",
+        "type": "Entity"
+      },
+      {
+        "id": 13,
+        "original_id": "cb1dc1af-5253-5fa4-877e-246a7629f489",
+        "text": "2010",
+        "type": "Entity"
+      },
+      {
+        "id": 14,
+        "original_id": "b19433ae-558c-5aaf-95ac-6231f2a4be0e",
+        "text": "date",
+        "type": "EntityType"
+      },
+      {
+        "id": 15,
+        "original_id": "5c1097ca-fab8-54d5-b57f-5dca4b0e2507",
+        "text": "number",
+        "type": "EntityType"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "located_in"
+      },
+      {
+        "source": 1,
+        "target": 4,
+        "type": "contains"
+      },
+      {
+        "source": 10,
+        "target": 4,
+        "type": "located_in"
+      },
+      {
+        "source": 4,
+        "target": 5,
+        "type": "located_in"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 10,
+        "target": 5,
+        "type": "located_in"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 4,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 11,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 10,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 7,
+        "type": "celebrated_in"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      },
+      {
+        "source": 7,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 9,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 9,
+        "type": "sometimes_assigned"
+      },
+      {
+        "source": 1,
+        "target": 9,
+        "type": "contains"
+      },
+      {
+        "source": 1,
+        "target": 10,
+        "type": "contains"
+      },
+      {
+        "source": 10,
+        "target": 11,
+        "type": "located_in"
+      },
+      {
+        "source": 1,
+        "target": 11,
+        "type": "contains"
+      },
+      {
+        "source": 10,
+        "target": 12,
+        "type": "had_population"
+      },
+      {
+        "source": 1,
+        "target": 12,
+        "type": "contains"
+      },
+      {
+        "source": 12,
+        "target": 13,
+        "type": "recorded_at"
+      },
+      {
+        "source": 1,
+        "target": 13,
+        "type": "contains"
+      },
+      {
+        "source": 13,
+        "target": 14,
+        "type": "is_a"
+      },
+      {
+        "source": 12,
+        "target": 15,
+        "type": "is_a"
+      }
+    ]
+  }
+}

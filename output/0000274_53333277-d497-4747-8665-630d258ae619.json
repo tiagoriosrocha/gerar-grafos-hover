@@ -1,0 +1,307 @@
+{
+  "dataset": "hover",
+  "id": "53333277-d497-4747-8665-630d258ae619",
+  "split": "train",
+  "claim": "The Hôtel de Crillon is located on The Place de la Concorde in Paris.",
+  "evidencia": "Page: Hôtel de Crillon. Sentence: Located at the foot of the Champs-Élysées, the Crillon along with the Hotel de la Marine is one of two identical stone palaces on the Place de la Concorde.\nPage: Place de la Concorde. Sentence: The Place de la Concorde (] ) is one of the major public squares in Paris, France.",
+  "evidence_text": "Page: Hôtel de Crillon. Sentence: Located at the foot of the Champs-Élysées, the Crillon along with the Hotel de la Marine is one of two identical stone palaces on the Place de la Concorde.\nPage: Place de la Concorde. Sentence: The Place de la Concorde (] ) is one of the major public squares in Paris, France.",
+  "label": "SUPPORTED",
+  "num_hops": 2,
+  "hover_metadata": {
+    "supporting_facts": [
+      [
+        "Hôtel de Crillon",
+        1
+      ],
+      [
+        "Place de la Concorde",
+        0
+      ]
+    ],
+    "num_hops": 2,
+    "evidence_annotation_id": [
+      0
+    ],
+    "evidence_id": [
+      "Hôtel de Crillon::sentence::1",
+      "Place de la Concorde::sentence::0"
+    ],
+    "evidence_wiki_url": [
+      "https://en.wikipedia.org/wiki/H%C3%B4tel_de_Crillon",
+      "https://en.wikipedia.org/wiki/Place_de_la_Concorde"
+    ],
+    "evidence_sentence_id": [
+      "Hôtel de Crillon::sentence::1",
+      "Place de la Concorde::sentence::0"
+    ]
+  },
+  "grafo_claim": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "eedf94ae-d1a9-5fc7-bdc9-57e527bb8cac",
+        "text": "This chunk is about:\n- Places: Hôtel de Crillon, Place de la Concorde, Paris\n\nFacts:\n- The Hôtel de Crillon is located on the Place de la Concorde in Paris.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "19a557df-badb-5e0c-80be-4bf1d6b1eca0",
+        "text": "The Hôtel de Crillon is located on The Place de la Concorde in Paris.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "d9ee8017-cdef-5ccf-967c-88b556d4745b",
+        "text": "text_93336751b2905c7a6bba3f828b9a9b96",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "9f031967-9b24-56c8-a61c-fe01116a9021",
+        "text": "hôtel de crillon",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "086b7f2c-ba39-5ede-92f0-dd6bcfa9ce0f",
+        "text": "place de la concorde",
+        "type": "Entity"
+      },
+      {
+        "id": 5,
+        "original_id": "27d985ea-055a-54fb-bcc4-f29d9d892867",
+        "text": "paris",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "5f394058-b2a0-5ba8-8466-ba2a18cfcf4e",
+        "text": "place",
+        "type": "EntityType"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "located_on"
+      },
+      {
+        "source": 1,
+        "target": 4,
+        "type": "contains"
+      },
+      {
+        "source": 4,
+        "target": 5,
+        "type": "located_in"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "located_in"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 4,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 6,
+        "type": "is_a"
+      }
+    ]
+  },
+  "grafo_evidencia": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "4292e1a6-6bc7-556f-89ae-4d0368c5b7e1",
+        "text": "This chunk is about:\n- Places: Hôtel de Crillon, Place de la Concorde, Champs-Élysées, Paris, France\n- Buildings: Hotel de la Marine, stone palaces\n\nFacts:\n- Place de la Concorde is one of the major public squares in Paris, France.\n- Hôtel de Crillon is located at the foot of the Champs-Élysées on Place de la Concorde.\n- Hôtel de Crillon and Hotel de la Marine are the two identical stone palaces on Place de la Concorde.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "0f8c09bc-68bc-5862-9534-8db0f1793588",
+        "text": "Page: Hôtel de Crillon. Sentence: Located at the foot of the Champs-Élysées, the Crillon along with the Hotel de la Marine is one of two identical stone palaces on the Place de la Concorde.\nPage: Place de la Concorde. Sentence: The Place de la Concorde (] ) is one of the major public squares in Paris, France.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "599a8c68-c9c6-5d6e-9c09-9a1ff7e1f59d",
+        "text": "text_50911b82ba6ddc679f4b36960761a876",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "9f031967-9b24-56c8-a61c-fe01116a9021",
+        "text": "hôtel de crillon",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "22aeacb3-f60d-56d5-814d-5e22547c4497",
+        "text": "champs-élysées",
+        "type": "Entity"
+      },
+      {
+        "id": 5,
+        "original_id": "5f394058-b2a0-5ba8-8466-ba2a18cfcf4e",
+        "text": "place",
+        "type": "EntityType"
+      },
+      {
+        "id": 6,
+        "original_id": "086b7f2c-ba39-5ede-92f0-dd6bcfa9ce0f",
+        "text": "place de la concorde",
+        "type": "Entity"
+      },
+      {
+        "id": 7,
+        "original_id": "27d985ea-055a-54fb-bcc4-f29d9d892867",
+        "text": "paris",
+        "type": "Entity"
+      },
+      {
+        "id": 8,
+        "original_id": "c529785c-647b-5d0f-88d0-151b1fff337c",
+        "text": "france",
+        "type": "Entity"
+      },
+      {
+        "id": 9,
+        "original_id": "b5a1f60b-3df7-5e2b-ad70-8fc0534d2163",
+        "text": "hôtel de la marine",
+        "type": "Entity"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "located_at_foot_of"
+      },
+      {
+        "source": 1,
+        "target": 4,
+        "type": "contains"
+      },
+      {
+        "source": 4,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 8,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 7,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 6,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 9,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 6,
+        "type": "located_on"
+      },
+      {
+        "source": 9,
+        "target": 6,
+        "type": "located_on"
+      },
+      {
+        "source": 1,
+        "target": 6,
+        "type": "contains"
+      },
+      {
+        "source": 6,
+        "target": 7,
+        "type": "located_in"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      },
+      {
+        "source": 7,
+        "target": 8,
+        "type": "located_in"
+      },
+      {
+        "source": 1,
+        "target": 8,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 9,
+        "type": "identical_to"
+      },
+      {
+        "source": 1,
+        "target": 9,
+        "type": "contains"
+      }
+    ]
+  }
+}

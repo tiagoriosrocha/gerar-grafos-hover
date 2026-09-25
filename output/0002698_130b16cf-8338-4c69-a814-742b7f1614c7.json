@@ -1,0 +1,412 @@
+{
+  "dataset": "hover",
+  "id": "130b16cf-8338-4c69-a814-742b7f1614c7",
+  "split": "train",
+  "claim": "Michel Butor had a longer lifespan than the author of \"The Way the Crow Flies\".",
+  "evidencia": "Page: Ann-Marie MacDonald. Sentence: Ann-Marie MacDonald (born October 29, 1958) is a Canadian playwright, novelist, actress and broadcast host who lives in Toronto, Ontario, Canada.\nPage: Michel Butor. Sentence: Michel Butor (] ; 14 September 1926 – 24 August 2016) was a French writer.\nPage: The Way the Crow Flies. Sentence: The Way the Crow Flies is a novel by Canadian writer Ann-Marie MacDonald.",
+  "evidence_text": "Page: Ann-Marie MacDonald. Sentence: Ann-Marie MacDonald (born October 29, 1958) is a Canadian playwright, novelist, actress and broadcast host who lives in Toronto, Ontario, Canada.\nPage: Michel Butor. Sentence: Michel Butor (] ; 14 September 1926 – 24 August 2016) was a French writer.\nPage: The Way the Crow Flies. Sentence: The Way the Crow Flies is a novel by Canadian writer Ann-Marie MacDonald.",
+  "label": "SUPPORTED",
+  "num_hops": 3,
+  "hover_metadata": {
+    "supporting_facts": [
+      [
+        "Ann-Marie MacDonald",
+        0
+      ],
+      [
+        "Michel Butor",
+        0
+      ],
+      [
+        "The Way the Crow Flies",
+        0
+      ]
+    ],
+    "num_hops": 3,
+    "evidence_annotation_id": [
+      0
+    ],
+    "evidence_id": [
+      "Ann-Marie MacDonald::sentence::0",
+      "Michel Butor::sentence::0",
+      "The Way the Crow Flies::sentence::0"
+    ],
+    "evidence_wiki_url": [
+      "https://en.wikipedia.org/wiki/Ann-Marie_MacDonald",
+      "https://en.wikipedia.org/wiki/Michel_Butor",
+      "https://en.wikipedia.org/wiki/The_Way_the_Crow_Flies"
+    ],
+    "evidence_sentence_id": [
+      "Ann-Marie MacDonald::sentence::0",
+      "Michel Butor::sentence::0",
+      "The Way the Crow Flies::sentence::0"
+    ]
+  },
+  "grafo_claim": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "de216ed6-4bf8-5185-8610-1f1046b21a3a",
+        "text": "This chunk is about:\n- People: Michel Butor, Ann-Marie MacDonald\n- Works: The Way the Crow Flies\n- Concepts: Lifespan comparison\n\nFacts:\n- Michel Butor was a person whose lifespan is being compared with another author.\n- Ann-Marie MacDonald is the author of \"The Way the Crow Flies.\"\n- The chunk states that Michel Butor had a longer lifespan than Ann-Marie MacDonald.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "f2795bbe-9448-59c8-ae3f-941ebeb87b83",
+        "text": "Michel Butor had a longer lifespan than the author of \"The Way the Crow Flies\".",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "499a3ea8-eef2-510e-9bcf-5d627730b059",
+        "text": "text_3d63994fe98badb3fdbb4abde7efa81a",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "63e71e6e-c597-58e7-ae6e-df0cc60ae8ff",
+        "text": "michel butor",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "f8045a67-abaf-5d84-bb1e-c408969ce6f3",
+        "text": "author of the way the crow flies",
+        "type": "Entity"
+      },
+      {
+        "id": 5,
+        "original_id": "6fe2b00e-6caf-573f-bfa4-f3ed8db71329",
+        "text": "the way the crow flies",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "5263a535-1b4b-5925-be3e-310d03cd303b",
+        "text": "work",
+        "type": "EntityType"
+      },
+      {
+        "id": 7,
+        "original_id": "99a82eec-bb35-5bb5-9ed2-e73fc7a756de",
+        "text": "person",
+        "type": "EntityType"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "had_longer_lifespan_than"
+      },
+      {
+        "source": 1,
+        "target": 4,
+        "type": "contains"
+      },
+      {
+        "source": 4,
+        "target": 5,
+        "type": "authored"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 4,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 7,
+        "type": "is_a"
+      }
+    ]
+  },
+  "grafo_evidencia": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "231e7fb1-e966-5dd9-b84d-f9591157d836",
+        "text": "This chunk is about:\n- People: Ann-Marie MacDonald, Michel Butor\n- Works: The Way the Crow Flies\n- Places: Toronto, Ontario, Canada\n- Roles: playwright, novelist, actress, broadcast host, writer\n\nFacts:\n- Michel Butor was born on 14 September 1926 and was a French writer.\n- Ann-Marie MacDonald was born on October 29, 1958 and is a Canadian playwright, novelist, actress, and broadcast host.\n- Ann-Marie MacDonald lives in Toronto, Ontario, Canada.\n- The Way the Crow Flies is a novel by Canadian writer Ann-Marie MacDonald.\n- Michel Butor died on 24 August 2016.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "d6f32e72-a661-5ecc-b0b7-bc15c9aab3b7",
+        "text": "Page: Ann-Marie MacDonald. Sentence: Ann-Marie MacDonald (born October 29, 1958) is a Canadian playwright, novelist, actress and broadcast host who lives in Toronto, Ontario, Canada.\nPage: Michel Butor. Sentence: Michel Butor (] ; 14 September 1926 – 24 August 2016) was a French writer.\nPage: The Way the Crow Flies. Sentence: The Way the Crow Flies is a novel by Canadian writer Ann-Marie MacDonald.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "6b68da96-9166-5bfa-8944-76ce959afae7",
+        "text": "text_9f96dfbdca4bcb2af3cc8f3a4ae55b24",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "a676ca08-85bf-5362-b0ee-5e7c3b5e6ab6",
+        "text": "ann-marie macdonald",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "7cfdb907-f4ee-523c-bf60-6acc4bc88054",
+        "text": "1958-10-29",
+        "type": "Entity"
+      },
+      {
+        "id": 5,
+        "original_id": "b19433ae-558c-5aaf-95ac-6231f2a4be0e",
+        "text": "date",
+        "type": "EntityType"
+      },
+      {
+        "id": 6,
+        "original_id": "bbedb15c-e733-5a11-9f07-ae16faad96f0",
+        "text": "canada",
+        "type": "Entity"
+      },
+      {
+        "id": 7,
+        "original_id": "5f394058-b2a0-5ba8-8466-ba2a18cfcf4e",
+        "text": "place",
+        "type": "EntityType"
+      },
+      {
+        "id": 8,
+        "original_id": "947b6192-6828-5f19-b685-faa7540f6057",
+        "text": "toronto",
+        "type": "Entity"
+      },
+      {
+        "id": 9,
+        "original_id": "5ef6336e-c49f-5d44-acac-247c25b5933c",
+        "text": "ontario",
+        "type": "Entity"
+      },
+      {
+        "id": 10,
+        "original_id": "99a82eec-bb35-5bb5-9ed2-e73fc7a756de",
+        "text": "person",
+        "type": "EntityType"
+      },
+      {
+        "id": 11,
+        "original_id": "63e71e6e-c597-58e7-ae6e-df0cc60ae8ff",
+        "text": "michel butor",
+        "type": "Entity"
+      },
+      {
+        "id": 12,
+        "original_id": "02d82009-8c09-530f-92fb-90a03b277203",
+        "text": "1926-09-14",
+        "type": "Entity"
+      },
+      {
+        "id": 13,
+        "original_id": "146be523-91a9-5e18-8dde-f9d74041b443",
+        "text": "2016-08-24",
+        "type": "Entity"
+      },
+      {
+        "id": 14,
+        "original_id": "c529785c-647b-5d0f-88d0-151b1fff337c",
+        "text": "france",
+        "type": "Entity"
+      },
+      {
+        "id": 15,
+        "original_id": "6fe2b00e-6caf-573f-bfa4-f3ed8db71329",
+        "text": "the way the crow flies",
+        "type": "Entity"
+      },
+      {
+        "id": 16,
+        "original_id": "3faed6ef-3d90-5ffd-9229-cfb62eb68140",
+        "text": "book",
+        "type": "EntityType"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 15,
+        "target": 3,
+        "type": "written_by"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "born_on"
+      },
+      {
+        "source": 1,
+        "target": 4,
+        "type": "contains"
+      },
+      {
+        "source": 4,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 12,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 13,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 6,
+        "type": "has_nationality"
+      },
+      {
+        "source": 9,
+        "target": 6,
+        "type": "located_in"
+      },
+      {
+        "source": 1,
+        "target": 6,
+        "type": "contains"
+      },
+      {
+        "source": 6,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 9,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 8,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 14,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 8,
+        "type": "lives_in"
+      },
+      {
+        "source": 1,
+        "target": 8,
+        "type": "contains"
+      },
+      {
+        "source": 8,
+        "target": 9,
+        "type": "located_in"
+      },
+      {
+        "source": 1,
+        "target": 9,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 10,
+        "type": "is_a"
+      },
+      {
+        "source": 11,
+        "target": 10,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 11,
+        "type": "contains"
+      },
+      {
+        "source": 11,
+        "target": 12,
+        "type": "born_on"
+      },
+      {
+        "source": 1,
+        "target": 12,
+        "type": "contains"
+      },
+      {
+        "source": 11,
+        "target": 13,
+        "type": "died_on"
+      },
+      {
+        "source": 1,
+        "target": 13,
+        "type": "contains"
+      },
+      {
+        "source": 11,
+        "target": 14,
+        "type": "has_nationality"
+      },
+      {
+        "source": 1,
+        "target": 14,
+        "type": "contains"
+      },
+      {
+        "source": 1,
+        "target": 15,
+        "type": "contains"
+      },
+      {
+        "source": 15,
+        "target": 16,
+        "type": "is_a"
+      }
+    ]
+  }
+}

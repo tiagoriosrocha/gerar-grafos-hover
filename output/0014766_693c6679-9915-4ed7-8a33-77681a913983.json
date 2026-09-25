@@ -1,0 +1,446 @@
+{
+  "dataset": "hover",
+  "id": "693c6679-9915-4ed7-8a33-77681a913983",
+  "split": "train",
+  "claim": "This plant, to which Verticordia habrantha is related, and Vanilla are derived from the same species.",
+  "evidencia": "Page: Chamelaucium. Sentence: Chamelaucium, also known as waxflower, is a genus of shrubs endemic to south western Western Australia.\nPage: Chamelaucium. Sentence: They belong to the myrtle family Myrtaceae and have flowers similar to those of the tea-trees (\"Leptospermum\").\nPage: Vanilla. Sentence: Vanilla is a flavoring derived from orchids of the genus \"Vanilla\", primarily from the Mexican species, flat-leaved vanilla (\"V. planifolia\").\nPage: Verticordia habrantha. Sentence: Its hairy sepals are mostly hidden by the round, unfringed petals, and as a result, the plant looks like shrubs in the genus \"Chamelaucium\", to which it is closely related.",
+  "evidence_text": "Page: Chamelaucium. Sentence: Chamelaucium, also known as waxflower, is a genus of shrubs endemic to south western Western Australia.\nPage: Chamelaucium. Sentence: They belong to the myrtle family Myrtaceae and have flowers similar to those of the tea-trees (\"Leptospermum\").\nPage: Vanilla. Sentence: Vanilla is a flavoring derived from orchids of the genus \"Vanilla\", primarily from the Mexican species, flat-leaved vanilla (\"V. planifolia\").\nPage: Verticordia habrantha. Sentence: Its hairy sepals are mostly hidden by the round, unfringed petals, and as a result, the plant looks like shrubs in the genus \"Chamelaucium\", to which it is closely related.",
+  "label": "SUPPORTED",
+  "num_hops": 3,
+  "hover_metadata": {
+    "supporting_facts": [
+      [
+        "Chamelaucium",
+        0
+      ],
+      [
+        "Chamelaucium",
+        1
+      ],
+      [
+        "Vanilla",
+        0
+      ],
+      [
+        "Verticordia habrantha",
+        2
+      ]
+    ],
+    "num_hops": 3,
+    "evidence_annotation_id": [
+      0
+    ],
+    "evidence_id": [
+      "Chamelaucium::sentence::0",
+      "Chamelaucium::sentence::1",
+      "Vanilla::sentence::0",
+      "Verticordia habrantha::sentence::2"
+    ],
+    "evidence_wiki_url": [
+      "https://en.wikipedia.org/wiki/Chamelaucium",
+      "https://en.wikipedia.org/wiki/Vanilla",
+      "https://en.wikipedia.org/wiki/Verticordia_habrantha"
+    ],
+    "evidence_sentence_id": [
+      "Chamelaucium::sentence::0",
+      "Chamelaucium::sentence::1",
+      "Vanilla::sentence::0",
+      "Verticordia habrantha::sentence::2"
+    ]
+  },
+  "grafo_claim": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "cf2d39c3-46f3-5cca-a504-0b57e215438d",
+        "text": "This chunk is about:\n- Plants: Verticordia habrantha, Vanilla\n- Concepts: common ancestry, species relationships\n\nFacts:\n- Verticordia habrantha is related to another plant referenced in the chunk.\n- Vanilla and the referenced plant are stated to be derived from the same species.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "b8b5373f-2005-5bce-9691-e895e719d528",
+        "text": "This plant, to which Verticordia habrantha is related, and Vanilla are derived from the same species.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "9f2ea5e7-d300-54d5-8ec2-97f4f5be2a21",
+        "text": "text_8912b8dd43a0595f56e7bc6767b40cbd",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "9c7d107e-f699-5612-9106-8c6681a1ee4f",
+        "text": "verticordia habrantha",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "2df43048-b175-54c2-b72b-0ff24f41e4f1",
+        "text": "plant",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "ac27b931-f3c6-5995-b58a-bddb0e6e2027",
+        "text": "this plant",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "94265528-b4a5-5770-8964-0b706c16d381",
+        "text": "same species",
+        "type": "Entity"
+      },
+      {
+        "id": 7,
+        "original_id": "f23a15ce-c0de-5c57-9205-8c9d01026b05",
+        "text": "species",
+        "type": "EntityType"
+      },
+      {
+        "id": 8,
+        "original_id": "980009ab-8735-5476-8295-c447dd21ac17",
+        "text": "vanilla",
+        "type": "Entity"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 5,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 8,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "is_related_to"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "is_derived_from"
+      },
+      {
+        "source": 8,
+        "target": 6,
+        "type": "is_derived_from"
+      },
+      {
+        "source": 1,
+        "target": 6,
+        "type": "contains"
+      },
+      {
+        "source": 6,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 8,
+        "type": "contains"
+      }
+    ]
+  },
+  "grafo_evidencia": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "f985310b-d59a-5e42-a66c-5b556a4a6d1a",
+        "text": "This chunk is about:\n- Plants: Chamelaucium, Vanilla, Verticordia habrantha\n- Taxonomy: Myrtaceae, Leptospermum, orchids\n- Places: south western Western Australia, Mexico\n- Products: vanilla flavoring\n\nFacts:\n- Chamelaucium, also known as waxflower, is a genus of shrubs endemic to south western Western Australia.\n- Chamelaucium belongs to the myrtle family Myrtaceae and has flowers similar to those of tea-trees in the genus Leptospermum.\n- Vanilla is a flavoring derived from orchids in the genus Vanilla, primarily from the Mexican species Vanilla planifolia.\n- Verticordia habrantha has hairy sepals mostly hidden by round, unfringed petals, so it resembles shrubs in the closely related genus Chamelaucium.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "9f6f41bd-2892-562d-ba6f-c6f0c00f0457",
+        "text": "Page: Chamelaucium. Sentence: Chamelaucium, also known as waxflower, is a genus of shrubs endemic to south western Western Australia.\nPage: Chamelaucium. Sentence: They belong to the myrtle family Myrtaceae and have flowers similar to those of the tea-trees (\"Leptospermum\").\nPage: Vanilla. Sentence: Vanilla is a flavoring derived from orchids of the genus \"Vanilla\", primarily from the Mexican species, flat-leaved vanilla (\"V. planifolia\").\nPage: Verticordia habrantha. Sentence: Its hairy sepals are mostly hidden by the round, unfringed petals, and as a result, the plant looks like shrubs in the genus \"Chamelaucium\", to which it is closely related.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "67f4bcb6-3b57-53bd-a00b-a4879e67fa52",
+        "text": "text_bc263cf4cd7cce24b542c85324347caf",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "9a733569-34ec-5138-a52e-410e5a50deee",
+        "text": "chamelaucium",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "58ce8914-8a9e-5302-9b2d-0d97006e12d3",
+        "text": "genus",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "112ede62-fa1d-5674-b4ec-da8cee8750ee",
+        "text": "waxflower",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "39575085-0710-527d-bd54-019de7b00429",
+        "text": "name",
+        "type": "EntityType"
+      },
+      {
+        "id": 7,
+        "original_id": "823d2657-6bef-58be-8f4d-e04df037ddc6",
+        "text": "south western western australia",
+        "type": "Entity"
+      },
+      {
+        "id": 8,
+        "original_id": "5f394058-b2a0-5ba8-8466-ba2a18cfcf4e",
+        "text": "place",
+        "type": "EntityType"
+      },
+      {
+        "id": 9,
+        "original_id": "3c3038e1-ade6-502d-8251-aa80637e47ca",
+        "text": "myrtaceae",
+        "type": "Entity"
+      },
+      {
+        "id": 10,
+        "original_id": "030da7f2-9df8-5253-8cfc-609957d4e333",
+        "text": "family",
+        "type": "EntityType"
+      },
+      {
+        "id": 11,
+        "original_id": "93d732a9-eb8c-519e-92f1-4b2f5b6f5fa4",
+        "text": "leptospermum",
+        "type": "Entity"
+      },
+      {
+        "id": 12,
+        "original_id": "980009ab-8735-5476-8295-c447dd21ac17",
+        "text": "vanilla",
+        "type": "Entity"
+      },
+      {
+        "id": 13,
+        "original_id": "00b07086-9989-5513-9129-74dcb18e639a",
+        "text": "flavoring",
+        "type": "EntityType"
+      },
+      {
+        "id": 14,
+        "original_id": "27cc809f-599e-57c0-905b-d79ef4250f12",
+        "text": "vanilla",
+        "type": "Entity"
+      },
+      {
+        "id": 15,
+        "original_id": "1cc3ef78-065d-5c9c-8ee3-cc9d5c5d2928",
+        "text": "v. planifolia",
+        "type": "Entity"
+      },
+      {
+        "id": 16,
+        "original_id": "f23a15ce-c0de-5c57-9205-8c9d01026b05",
+        "text": "species",
+        "type": "EntityType"
+      },
+      {
+        "id": 17,
+        "original_id": "cf7d42b5-76f2-568d-9972-0d0264af1b93",
+        "text": "mexico",
+        "type": "Entity"
+      },
+      {
+        "id": 18,
+        "original_id": "9c7d107e-f699-5612-9106-8c6681a1ee4f",
+        "text": "verticordia habrantha",
+        "type": "Entity"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 18,
+        "target": 3,
+        "type": "looks_like"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 11,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 14,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "also_known_as"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 7,
+        "type": "endemic_to"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      },
+      {
+        "source": 7,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 17,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 9,
+        "type": "belongs_to"
+      },
+      {
+        "source": 1,
+        "target": 9,
+        "type": "contains"
+      },
+      {
+        "source": 9,
+        "target": 10,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 11,
+        "type": "has_flowers_similar_to"
+      },
+      {
+        "source": 1,
+        "target": 11,
+        "type": "contains"
+      },
+      {
+        "source": 1,
+        "target": 12,
+        "type": "contains"
+      },
+      {
+        "source": 12,
+        "target": 13,
+        "type": "is_a"
+      },
+      {
+        "source": 12,
+        "target": 14,
+        "type": "derived_from"
+      },
+      {
+        "source": 1,
+        "target": 14,
+        "type": "contains"
+      },
+      {
+        "source": 12,
+        "target": 15,
+        "type": "primarily_derived_from"
+      },
+      {
+        "source": 1,
+        "target": 15,
+        "type": "contains"
+      },
+      {
+        "source": 15,
+        "target": 16,
+        "type": "is_a"
+      },
+      {
+        "source": 18,
+        "target": 16,
+        "type": "is_a"
+      },
+      {
+        "source": 15,
+        "target": 17,
+        "type": "associated_with"
+      },
+      {
+        "source": 1,
+        "target": 17,
+        "type": "contains"
+      },
+      {
+        "source": 1,
+        "target": 18,
+        "type": "contains"
+      }
+    ]
+  }
+}

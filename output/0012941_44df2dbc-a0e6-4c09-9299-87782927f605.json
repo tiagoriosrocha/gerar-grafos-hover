@@ -1,0 +1,272 @@
+{
+  "dataset": "hover",
+  "id": "44df2dbc-a0e6-4c09-9299-87782927f605",
+  "split": "train",
+  "claim": "Ferrari 360 was replaced by the sports car that debuted at the event 2004 Paris Motor Show.",
+  "evidencia": "Page: Ferrari 360. Sentence: It succeeded the Ferrari F355 and was replaced by the Ferrari F430.\nPage: Ferrari F430. Sentence: A successor to the Ferrari 360, it debuted at the 2004 Paris Motor Show.",
+  "evidence_text": "Page: Ferrari 360. Sentence: It succeeded the Ferrari F355 and was replaced by the Ferrari F430.\nPage: Ferrari F430. Sentence: A successor to the Ferrari 360, it debuted at the 2004 Paris Motor Show.",
+  "label": "SUPPORTED",
+  "num_hops": 2,
+  "hover_metadata": {
+    "supporting_facts": [
+      [
+        "Ferrari 360",
+        1
+      ],
+      [
+        "Ferrari F430",
+        1
+      ]
+    ],
+    "num_hops": 2,
+    "evidence_annotation_id": [
+      0
+    ],
+    "evidence_id": [
+      "Ferrari 360::sentence::1",
+      "Ferrari F430::sentence::1"
+    ],
+    "evidence_wiki_url": [
+      "https://en.wikipedia.org/wiki/Ferrari_360",
+      "https://en.wikipedia.org/wiki/Ferrari_F430"
+    ],
+    "evidence_sentence_id": [
+      "Ferrari 360::sentence::1",
+      "Ferrari F430::sentence::1"
+    ]
+  },
+  "grafo_claim": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "84930501-f3e0-5898-9a68-1b3387be22e7",
+        "text": "This chunk is about:\n- Products: Ferrari 360, Ferrari F430\n- Events: 2004 Paris Motor Show\n\nFacts:\n- The Ferrari F430 debuted at the 2004 Paris Motor Show.\n- The Ferrari F430 replaced the Ferrari 360.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "45a17aa9-e326-5cde-b5da-2557c7ea9061",
+        "text": "Ferrari 360 was replaced by the sports car that debuted at the event 2004 Paris Motor Show.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "97d1397a-ec9f-583b-8671-d90c78a76424",
+        "text": "text_d8a87bfef3921d29faf1c2d847a4172f",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "48dcc5ef-e7ee-5fbc-978b-b9da41fef4a9",
+        "text": "ferrari 360",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "f76d57aa-4740-5218-9539-0e0978cbf183",
+        "text": "product",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "55b7e22d-2a6f-5b8b-bd5f-5aefa93ab7c5",
+        "text": "2004 paris motor show",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "214abcd9-9adf-5c8a-bb35-1e729f2d68c3",
+        "text": "event",
+        "type": "EntityType"
+      },
+      {
+        "id": 7,
+        "original_id": "6c8f11e3-2396-5082-a2e4-84c8dc2e90f5",
+        "text": "the sports car",
+        "type": "Entity"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 7,
+        "target": 3,
+        "type": "replaced"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 7,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 7,
+        "target": 5,
+        "type": "debuted_at"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      }
+    ]
+  },
+  "grafo_evidencia": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "c4c35cd4-fb7d-541a-9608-067e7d705a22",
+        "text": "This chunk is about:\n- Products: Ferrari 360, Ferrari F355, Ferrari F430\n- Events: 2004 Paris Motor Show\n\nFacts:\n- The Ferrari 360 succeeded the Ferrari F355.\n- The Ferrari F430 debuted at the 2004 Paris Motor Show.\n- The Ferrari F430 was the successor to the Ferrari 360.\n- The Ferrari 360 was replaced by the Ferrari F430.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "bf18199f-2e42-569c-8d29-a2ffb792038f",
+        "text": "Page: Ferrari 360. Sentence: It succeeded the Ferrari F355 and was replaced by the Ferrari F430.\nPage: Ferrari F430. Sentence: A successor to the Ferrari 360, it debuted at the 2004 Paris Motor Show.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "cbb175b2-63fc-5eb6-9c5f-152f87aaf9ef",
+        "text": "text_b37b4c5490d6ccd7a6738f056e5c3ec9",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "48dcc5ef-e7ee-5fbc-978b-b9da41fef4a9",
+        "text": "ferrari 360",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "f76d57aa-4740-5218-9539-0e0978cbf183",
+        "text": "product",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "9962e703-25af-5dac-a5f7-9d944cc9ec8d",
+        "text": "ferrari f355",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "0fed5d55-a538-5a14-a5cc-1382e9051fe3",
+        "text": "ferrari f430",
+        "type": "Entity"
+      },
+      {
+        "id": 7,
+        "original_id": "55b7e22d-2a6f-5b8b-bd5f-5aefa93ab7c5",
+        "text": "2004 paris motor show",
+        "type": "Entity"
+      },
+      {
+        "id": 8,
+        "original_id": "214abcd9-9adf-5c8a-bb35-1e729f2d68c3",
+        "text": "event",
+        "type": "EntityType"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 6,
+        "target": 3,
+        "type": "succeeded"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 5,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 6,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "succeeded"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 6,
+        "type": "was_replaced_by"
+      },
+      {
+        "source": 1,
+        "target": 6,
+        "type": "contains"
+      },
+      {
+        "source": 6,
+        "target": 7,
+        "type": "debuted_at"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      },
+      {
+        "source": 7,
+        "target": 8,
+        "type": "is_a"
+      }
+    ]
+  }
+}

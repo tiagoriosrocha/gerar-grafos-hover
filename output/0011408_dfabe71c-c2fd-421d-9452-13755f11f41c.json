@@ -1,0 +1,333 @@
+{
+  "dataset": "hover",
+  "id": "dfabe71c-c2fd-421d-9452-13755f11f41c",
+  "split": "train",
+  "claim": "The founder of the Orchestra which debuted on January 1, 1988 is of Dutch ethnicity.",
+  "evidencia": "Page: André Rieu. Sentence: André Léon Marie Nicolas Rieu (born 1 October 1949) is a Dutch violinist and conductor best known for creating the waltz-playing Johann Strauss Orchestra.\nPage: Johann Strauss Orchestra. Sentence: The Johann Strauss Orchestra was founded by André Rieu in 1987.\nPage: Johann Strauss Orchestra. Sentence: At the time of its first concert on January 1, 1988, the orchestra consisted of 12 musicians.",
+  "evidence_text": "Page: André Rieu. Sentence: André Léon Marie Nicolas Rieu (born 1 October 1949) is a Dutch violinist and conductor best known for creating the waltz-playing Johann Strauss Orchestra.\nPage: Johann Strauss Orchestra. Sentence: The Johann Strauss Orchestra was founded by André Rieu in 1987.\nPage: Johann Strauss Orchestra. Sentence: At the time of its first concert on January 1, 1988, the orchestra consisted of 12 musicians.",
+  "label": "SUPPORTED",
+  "num_hops": 2,
+  "hover_metadata": {
+    "supporting_facts": [
+      [
+        "André Rieu",
+        0
+      ],
+      [
+        "Johann Strauss Orchestra",
+        0
+      ],
+      [
+        "Johann Strauss Orchestra",
+        1
+      ]
+    ],
+    "num_hops": 2,
+    "evidence_annotation_id": [
+      0
+    ],
+    "evidence_id": [
+      "André Rieu::sentence::0",
+      "Johann Strauss Orchestra::sentence::0",
+      "Johann Strauss Orchestra::sentence::1"
+    ],
+    "evidence_wiki_url": [
+      "https://en.wikipedia.org/wiki/Andr%C3%A9_Rieu",
+      "https://en.wikipedia.org/wiki/Johann_Strauss_Orchestra"
+    ],
+    "evidence_sentence_id": [
+      "André Rieu::sentence::0",
+      "Johann Strauss Orchestra::sentence::0",
+      "Johann Strauss Orchestra::sentence::1"
+    ]
+  },
+  "grafo_claim": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "218d4f0d-ae32-5e15-b5d9-1bf943cdaf29",
+        "text": "This chunk is about:\n- Organizations: an orchestra\n- People: the orchestra's founder\n- Topics: debut dates, ethnicity\n\nFacts:\n- An orchestra debuted on January 1, 1988.\n- The founder of that orchestra is of Dutch ethnicity.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "b330d86c-ac6f-5324-bf60-dbcf3c9fb6f3",
+        "text": "The founder of the Orchestra which debuted on January 1, 1988 is of Dutch ethnicity.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "fbc8c115-aba5-5499-b30e-8d7ebe7c499d",
+        "text": "text_55098880b73eff2a5ed14b42fc125406",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "d116ce91-6594-53a4-9dae-a15216fabcb7",
+        "text": "orchestra",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "388f60fb-220d-55e8-ae9c-3ac93cead308",
+        "text": "organization",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "0bd5b73a-c92a-5a9b-b655-afce724551ac",
+        "text": "1988-01-01",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "b19433ae-558c-5aaf-95ac-6231f2a4be0e",
+        "text": "date",
+        "type": "EntityType"
+      },
+      {
+        "id": 7,
+        "original_id": "0c82118e-36d3-5e74-b572-c4792f5a0226",
+        "text": "founder of orchestra",
+        "type": "Entity"
+      },
+      {
+        "id": 8,
+        "original_id": "99a82eec-bb35-5bb5-9ed2-e73fc7a756de",
+        "text": "person",
+        "type": "EntityType"
+      },
+      {
+        "id": 9,
+        "original_id": "1de68f22-227e-5675-8a77-050c146632fe",
+        "text": "dutch ethnicity",
+        "type": "Entity"
+      },
+      {
+        "id": 10,
+        "original_id": "6691bbd3-7717-515d-bec6-950449e2ee26",
+        "text": "ethnicity",
+        "type": "EntityType"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 7,
+        "target": 3,
+        "type": "founded"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "debuted_on"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      },
+      {
+        "source": 7,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 7,
+        "target": 9,
+        "type": "has_ethnicity"
+      },
+      {
+        "source": 1,
+        "target": 9,
+        "type": "contains"
+      },
+      {
+        "source": 9,
+        "target": 10,
+        "type": "is_a"
+      }
+    ]
+  },
+  "grafo_evidencia": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "2a5b81ee-759c-583a-91af-c8769ea90776",
+        "text": "This chunk is about:\n- People: André Rieu\n- Organizations: Johann Strauss Orchestra\n- Roles: Violinist, conductor\n\nFacts:\n- André Rieu was born on 1 October 1949.\n- André Rieu is a Dutch violinist and conductor.\n- André Rieu created the Johann Strauss Orchestra.\n- The Johann Strauss Orchestra was founded by André Rieu in 1987.\n- At its first concert on 1 January 1988, the Johann Strauss Orchestra consisted of 12 musicians.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "3790a3a0-bbcf-5303-87fe-06a36ebdea42",
+        "text": "Page: André Rieu. Sentence: André Léon Marie Nicolas Rieu (born 1 October 1949) is a Dutch violinist and conductor best known for creating the waltz-playing Johann Strauss Orchestra.\nPage: Johann Strauss Orchestra. Sentence: The Johann Strauss Orchestra was founded by André Rieu in 1987.\nPage: Johann Strauss Orchestra. Sentence: At the time of its first concert on January 1, 1988, the orchestra consisted of 12 musicians.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "4e9d833a-b0b7-512a-b167-aebf6bf05b9f",
+        "text": "text_66deffb30f224eabcdec53b45c9cdfb1",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "083438c2-49c8-5424-ba21-7d5c7cec50cc",
+        "text": "andré rieu",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "99a82eec-bb35-5bb5-9ed2-e73fc7a756de",
+        "text": "person",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "10f46d39-b898-596d-b46c-be52b8376d60",
+        "text": "1949-10-01",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "b19433ae-558c-5aaf-95ac-6231f2a4be0e",
+        "text": "date",
+        "type": "EntityType"
+      },
+      {
+        "id": 7,
+        "original_id": "40a719a7-2212-58a1-9960-9fcb01c5e4fc",
+        "text": "johann strauss orchestra",
+        "type": "Entity"
+      },
+      {
+        "id": 8,
+        "original_id": "388f60fb-220d-55e8-ae9c-3ac93cead308",
+        "text": "organization",
+        "type": "EntityType"
+      },
+      {
+        "id": 9,
+        "original_id": "19e766a6-2146-5019-b62d-75b94a79d2b8",
+        "text": "1987",
+        "type": "Entity"
+      },
+      {
+        "id": 10,
+        "original_id": "0bd5b73a-c92a-5a9b-b655-afce724551ac",
+        "text": "1988-01-01",
+        "type": "Entity"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "born_on"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 9,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 10,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 7,
+        "type": "created"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      },
+      {
+        "source": 7,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 7,
+        "target": 9,
+        "type": "founded_on"
+      },
+      {
+        "source": 1,
+        "target": 9,
+        "type": "contains"
+      },
+      {
+        "source": 7,
+        "target": 10,
+        "type": "held_first_concert_on"
+      },
+      {
+        "source": 1,
+        "target": 10,
+        "type": "contains"
+      }
+    ]
+  }
+}

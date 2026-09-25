@@ -1,0 +1,480 @@
+{
+  "dataset": "hover",
+  "id": "ee6897a1-97d5-435f-a4d4-863a58c2f9b9",
+  "split": "train",
+  "claim": "\"Rikki-Tikki-Tavi\" is a short story by an author that died in 1936.",
+  "evidencia": "Page: Rikki-Tikki-Tavi. Sentence: \"Rikki-Tikki-Tavi\" is a short story in the 1894 anthology \"The Jungle Book\" by Rudyard Kipling about the adventures of a valiant young mongoose.\nPage: Rudyard Kipling. Sentence: Joseph Rudyard Kipling ( ; 30 December 1865 – 18 January 1936) was an English journalist, short-story writer, poet, and novelist.",
+  "evidence_text": "Page: Rikki-Tikki-Tavi. Sentence: \"Rikki-Tikki-Tavi\" is a short story in the 1894 anthology \"The Jungle Book\" by Rudyard Kipling about the adventures of a valiant young mongoose.\nPage: Rudyard Kipling. Sentence: Joseph Rudyard Kipling ( ; 30 December 1865 – 18 January 1936) was an English journalist, short-story writer, poet, and novelist.",
+  "label": "SUPPORTED",
+  "num_hops": 2,
+  "hover_metadata": {
+    "supporting_facts": [
+      [
+        "Rikki-Tikki-Tavi",
+        0
+      ],
+      [
+        "Rudyard Kipling",
+        0
+      ]
+    ],
+    "num_hops": 2,
+    "evidence_annotation_id": [
+      0
+    ],
+    "evidence_id": [
+      "Rikki-Tikki-Tavi::sentence::0",
+      "Rudyard Kipling::sentence::0"
+    ],
+    "evidence_wiki_url": [
+      "https://en.wikipedia.org/wiki/Rikki-Tikki-Tavi",
+      "https://en.wikipedia.org/wiki/Rudyard_Kipling"
+    ],
+    "evidence_sentence_id": [
+      "Rikki-Tikki-Tavi::sentence::0",
+      "Rudyard Kipling::sentence::0"
+    ]
+  },
+  "grafo_claim": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "bf47581d-85a6-56ca-95c6-4ffaa7e280c9",
+        "text": "This chunk is about:\n- Works: Rikki-Tikki-Tavi\n- People: Rudyard Kipling\n\nFacts:\n- Rudyard Kipling was the author of the short story \"Rikki-Tikki-Tavi.\"\n- Rudyard Kipling died in 1936.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "1751254f-95e2-55ec-bb87-2370d418a019",
+        "text": "\"Rikki-Tikki-Tavi\" is a short story by an author that died in 1936.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "40297b49-9e1a-5c0a-98fa-81714dc98c79",
+        "text": "text_ecbad02893954b2c8fccb8da019f7890",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "14f969ce-9fb6-55f8-8c39-3451b5addf35",
+        "text": "rikki-tikki-tavi",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "5263a535-1b4b-5925-be3e-310d03cd303b",
+        "text": "work",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "c1936932-da5c-58e0-953d-6db6a2fe14dd",
+        "text": "rudyard kipling",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "99a82eec-bb35-5bb5-9ed2-e73fc7a756de",
+        "text": "person",
+        "type": "EntityType"
+      },
+      {
+        "id": 7,
+        "original_id": "0ee0e31c-cb08-5100-85ec-f5ceb8edcf6f",
+        "text": "1936",
+        "type": "Entity"
+      },
+      {
+        "id": 8,
+        "original_id": "b19433ae-558c-5aaf-95ac-6231f2a4be0e",
+        "text": "date",
+        "type": "EntityType"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 3,
+        "type": "authored"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 5,
+        "target": 7,
+        "type": "died_in"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      },
+      {
+        "source": 7,
+        "target": 8,
+        "type": "is_a"
+      }
+    ]
+  },
+  "grafo_evidencia": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "96c41698-8f30-5e7a-9719-48c4903f26c2",
+        "text": "This chunk is about:\n- Works: \"Rikki-Tikki-Tavi\", \"The Jungle Book\"\n- People: Rudyard Kipling\n- Topics: short stories, anthologies, mongooses, literature\n\nFacts:\n- Rudyard Kipling was born on 30 December 1865 and died on 18 January 1936.\n- Rudyard Kipling was an English journalist, short-story writer, poet, and novelist.\n- \"The Jungle Book\" was an anthology published in 1894.\n- \"Rikki-Tikki-Tavi\" is a short story in the 1894 anthology \"The Jungle Book\" by Rudyard Kipling.\n- \"Rikki-Tikki-Tavi\" is about the adventures of a valiant young mongoose.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "ab76e70e-5546-5b60-b241-438575495854",
+        "text": "Page: Rikki-Tikki-Tavi. Sentence: \"Rikki-Tikki-Tavi\" is a short story in the 1894 anthology \"The Jungle Book\" by Rudyard Kipling about the adventures of a valiant young mongoose.\nPage: Rudyard Kipling. Sentence: Joseph Rudyard Kipling ( ; 30 December 1865 – 18 January 1936) was an English journalist, short-story writer, poet, and novelist.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "67b5c53b-18f6-562d-9e3f-526e96edb855",
+        "text": "text_4b938a424f6cbb3202e89d0c190d83fc",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "14f969ce-9fb6-55f8-8c39-3451b5addf35",
+        "text": "rikki-tikki-tavi",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "5263a535-1b4b-5925-be3e-310d03cd303b",
+        "text": "work",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "f8817020-9f86-5935-8e9a-d48e21da6cbf",
+        "text": "the jungle book",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "d1daf4e6-0a7f-57aa-90fa-34295c8db5d0",
+        "text": "1894",
+        "type": "Entity"
+      },
+      {
+        "id": 7,
+        "original_id": "b19433ae-558c-5aaf-95ac-6231f2a4be0e",
+        "text": "date",
+        "type": "EntityType"
+      },
+      {
+        "id": 8,
+        "original_id": "c1936932-da5c-58e0-953d-6db6a2fe14dd",
+        "text": "rudyard kipling",
+        "type": "Entity"
+      },
+      {
+        "id": 9,
+        "original_id": "99a82eec-bb35-5bb5-9ed2-e73fc7a756de",
+        "text": "person",
+        "type": "EntityType"
+      },
+      {
+        "id": 10,
+        "original_id": "7d6ad839-6c95-5e17-8233-316f196742db",
+        "text": "joseph rudyard kipling",
+        "type": "Entity"
+      },
+      {
+        "id": 11,
+        "original_id": "8e46d1b3-b603-5b44-841a-69b352a057e3",
+        "text": "1865-12-30",
+        "type": "Entity"
+      },
+      {
+        "id": 12,
+        "original_id": "2b65c220-a3a5-5718-8e68-631c9c289ddf",
+        "text": "1936-01-18",
+        "type": "Entity"
+      },
+      {
+        "id": 13,
+        "original_id": "d1185f20-d428-5d1b-9400-16fa3def3ef6",
+        "text": "english",
+        "type": "Entity"
+      },
+      {
+        "id": 14,
+        "original_id": "d2a381fa-3658-5ca6-ada9-2109cfc9331d",
+        "text": "concept",
+        "type": "EntityType"
+      },
+      {
+        "id": 15,
+        "original_id": "61e09d92-f1de-5bd4-b50a-ac80a749b70e",
+        "text": "journalist",
+        "type": "Entity"
+      },
+      {
+        "id": 16,
+        "original_id": "a4adbc90-0af8-5a91-b684-072253ba862b",
+        "text": "short-story writer",
+        "type": "Entity"
+      },
+      {
+        "id": 17,
+        "original_id": "6cc6ea23-b942-55f4-a67e-b1911275e80d",
+        "text": "poet",
+        "type": "Entity"
+      },
+      {
+        "id": 18,
+        "original_id": "f2a6b14f-965e-5c39-8c85-23c651fa4fcd",
+        "text": "novelist",
+        "type": "Entity"
+      },
+      {
+        "id": 19,
+        "original_id": "9f0ac33e-8bec-5b83-9136-68415d6c2590",
+        "text": "young mongoose",
+        "type": "Entity"
+      },
+      {
+        "id": 20,
+        "original_id": "5d76eb72-04ef-5580-b2ea-161f8429437a",
+        "text": "animal",
+        "type": "EntityType"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 5,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "included_in"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "published_in_year"
+      },
+      {
+        "source": 1,
+        "target": 6,
+        "type": "contains"
+      },
+      {
+        "source": 6,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 11,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 12,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 8,
+        "type": "written_by"
+      },
+      {
+        "source": 1,
+        "target": 8,
+        "type": "contains"
+      },
+      {
+        "source": 8,
+        "target": 9,
+        "type": "is_a"
+      },
+      {
+        "source": 10,
+        "target": 9,
+        "type": "is_a"
+      },
+      {
+        "source": 8,
+        "target": 10,
+        "type": "same_as"
+      },
+      {
+        "source": 1,
+        "target": 10,
+        "type": "contains"
+      },
+      {
+        "source": 10,
+        "target": 11,
+        "type": "born_on"
+      },
+      {
+        "source": 1,
+        "target": 11,
+        "type": "contains"
+      },
+      {
+        "source": 10,
+        "target": 12,
+        "type": "died_on"
+      },
+      {
+        "source": 1,
+        "target": 12,
+        "type": "contains"
+      },
+      {
+        "source": 10,
+        "target": 13,
+        "type": "has_nationality"
+      },
+      {
+        "source": 1,
+        "target": 13,
+        "type": "contains"
+      },
+      {
+        "source": 13,
+        "target": 14,
+        "type": "is_a"
+      },
+      {
+        "source": 15,
+        "target": 14,
+        "type": "is_a"
+      },
+      {
+        "source": 16,
+        "target": 14,
+        "type": "is_a"
+      },
+      {
+        "source": 17,
+        "target": 14,
+        "type": "is_a"
+      },
+      {
+        "source": 18,
+        "target": 14,
+        "type": "is_a"
+      },
+      {
+        "source": 10,
+        "target": 15,
+        "type": "has_profession"
+      },
+      {
+        "source": 1,
+        "target": 15,
+        "type": "contains"
+      },
+      {
+        "source": 10,
+        "target": 16,
+        "type": "has_profession"
+      },
+      {
+        "source": 1,
+        "target": 16,
+        "type": "contains"
+      },
+      {
+        "source": 10,
+        "target": 17,
+        "type": "has_profession"
+      },
+      {
+        "source": 1,
+        "target": 17,
+        "type": "contains"
+      },
+      {
+        "source": 10,
+        "target": 18,
+        "type": "has_profession"
+      },
+      {
+        "source": 1,
+        "target": 18,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 19,
+        "type": "about"
+      },
+      {
+        "source": 1,
+        "target": 19,
+        "type": "contains"
+      },
+      {
+        "source": 19,
+        "target": 20,
+        "type": "is_a"
+      }
+    ]
+  }
+}

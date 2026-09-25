@@ -1,0 +1,538 @@
+{
+  "dataset": "hover",
+  "id": "b23c2d0e-6665-4b49-982c-f945f5163950",
+  "split": "train",
+  "claim": "A mountain near Tomichi Dome was named in honor of an explorer who died in 1812.",
+  "evidencia": "Page: Mount Gunnison. Sentence: The mountain is named in honor of John Williams Gunnison who explored the area.\nPage: John Williams Gunnison. Sentence: John Williams Gunnison (November 11, 1812 – October 26, 1853) was an American military officer and explorer.\nPage: Tomichi Dome. Sentence: Other laccoliths of the Gunnison Country are Mount Crested Butte, Gothic Mountain, Whetstone Mountain, Mount Axtel, Anthracite Range, Round Mountain, Carbon Peak, Beckwith Mountain, Marcellina Mountain and Mount Gunnison.",
+  "evidence_text": "Page: Mount Gunnison. Sentence: The mountain is named in honor of John Williams Gunnison who explored the area.\nPage: John Williams Gunnison. Sentence: John Williams Gunnison (November 11, 1812 – October 26, 1853) was an American military officer and explorer.\nPage: Tomichi Dome. Sentence: Other laccoliths of the Gunnison Country are Mount Crested Butte, Gothic Mountain, Whetstone Mountain, Mount Axtel, Anthracite Range, Round Mountain, Carbon Peak, Beckwith Mountain, Marcellina Mountain and Mount Gunnison.",
+  "label": "NOT_SUPPORTED",
+  "num_hops": 3,
+  "hover_metadata": {
+    "supporting_facts": [
+      [
+        "Mount Gunnison",
+        2
+      ],
+      [
+        "John Williams Gunnison",
+        0
+      ],
+      [
+        "Tomichi Dome",
+        3
+      ]
+    ],
+    "num_hops": 3,
+    "evidence_annotation_id": [
+      0
+    ],
+    "evidence_id": [
+      "Mount Gunnison::sentence::2",
+      "John Williams Gunnison::sentence::0",
+      "Tomichi Dome::sentence::3"
+    ],
+    "evidence_wiki_url": [
+      "https://en.wikipedia.org/wiki/Mount_Gunnison",
+      "https://en.wikipedia.org/wiki/John_Williams_Gunnison",
+      "https://en.wikipedia.org/wiki/Tomichi_Dome"
+    ],
+    "evidence_sentence_id": [
+      "Mount Gunnison::sentence::2",
+      "John Williams Gunnison::sentence::0",
+      "Tomichi Dome::sentence::3"
+    ]
+  },
+  "grafo_claim": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "d5adc1e7-6ae1-5f0f-8ba5-6659fb26f5d0",
+        "text": "This chunk is about:\n- Places: Tomichi Dome, a nearby mountain\n- People: an explorer who died in 1812\n\nFacts:\n- A mountain near Tomichi Dome was named in honor of an explorer who died in 1812.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "faa1cdff-081a-50a7-a44f-03c93549ba4b",
+        "text": "A mountain near Tomichi Dome was named in honor of an explorer who died in 1812.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "ab88ba55-c889-50dc-87d0-cfc092829c9d",
+        "text": "text_d682f30189af5275e768a78bce065c4b",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "552c1c6c-acf1-5d49-97d4-a27f7ef4cb1d",
+        "text": "tomichi dome",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "5f394058-b2a0-5ba8-8466-ba2a18cfcf4e",
+        "text": "place",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "dd23fe6e-0bb9-57d0-a22b-158f3a30a88a",
+        "text": "mountain near tomichi dome",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "fd8b8077-c382-590f-b384-62c785a17e7f",
+        "text": "explorer who died in 1812",
+        "type": "Entity"
+      },
+      {
+        "id": 7,
+        "original_id": "29e8af94-832e-5bc2-8e43-82150698b818",
+        "text": "1812",
+        "type": "Entity"
+      },
+      {
+        "id": 8,
+        "original_id": "b19433ae-558c-5aaf-95ac-6231f2a4be0e",
+        "text": "date",
+        "type": "EntityType"
+      },
+      {
+        "id": 9,
+        "original_id": "99a82eec-bb35-5bb5-9ed2-e73fc7a756de",
+        "text": "person",
+        "type": "EntityType"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 3,
+        "type": "located_near"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 5,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "named_in_honor_of"
+      },
+      {
+        "source": 1,
+        "target": 6,
+        "type": "contains"
+      },
+      {
+        "source": 6,
+        "target": 7,
+        "type": "died_in"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      },
+      {
+        "source": 7,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 6,
+        "target": 9,
+        "type": "is_a"
+      }
+    ]
+  },
+  "grafo_evidencia": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "8ff945ec-0675-5c9c-b6a6-dd6e399f1719",
+        "text": "This chunk is about:\n- People: John Williams Gunnison\n- Places: Mount Gunnison, Tomichi Dome, Mount Crested Butte, Gothic Mountain, Whetstone Mountain, Mount Axtel, Anthracite Range, Round Mountain, Carbon Peak, Beckwith Mountain, Marcellina Mountain\n- Topics: Gunnison Country, laccoliths\n\nFacts:\n- John Williams Gunnison was born on November 11, 1812, and died on October 26, 1853.\n- John Williams Gunnison was an American military officer and explorer.\n- Mount Gunnison is named in honor of John Williams Gunnison, who explored the area.\n- Tomichi Dome is associated with other laccoliths of the Gunnison Country.\n- The laccoliths of the Gunnison Country include Mount Crested Butte, Gothic Mountain, Whetstone Mountain, Mount Axtel, Anthracite Range, Round Mountain, Carbon Peak, Beckwith Mountain, Marcellina Mountain, and Mount Gunnison.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "9eab7494-e1a6-5f66-b754-9e354b8caef7",
+        "text": "Page: Mount Gunnison. Sentence: The mountain is named in honor of John Williams Gunnison who explored the area.\nPage: John Williams Gunnison. Sentence: John Williams Gunnison (November 11, 1812 – October 26, 1853) was an American military officer and explorer.\nPage: Tomichi Dome. Sentence: Other laccoliths of the Gunnison Country are Mount Crested Butte, Gothic Mountain, Whetstone Mountain, Mount Axtel, Anthracite Range, Round Mountain, Carbon Peak, Beckwith Mountain, Marcellina Mountain and Mount Gunnison.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "677ce215-f99e-5d8e-8436-3e6e0c4c9143",
+        "text": "text_1b99aea49c4c71af973ed46e402a9a80",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "301bbd99-ddfb-5877-80b3-fbf4d1eca3df",
+        "text": "mount gunnison",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "cd8ba9e1-9099-59e6-9a49-7b1dc6dd9fe5",
+        "text": "john williams gunnison",
+        "type": "Entity"
+      },
+      {
+        "id": 5,
+        "original_id": "71d3e526-a998-5ca8-bc91-d351de00b584",
+        "text": "1812-11-11",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "b19433ae-558c-5aaf-95ac-6231f2a4be0e",
+        "text": "date",
+        "type": "EntityType"
+      },
+      {
+        "id": 7,
+        "original_id": "dcd42d54-b4f8-5016-a327-4ba9016cb6d9",
+        "text": "1853-10-26",
+        "type": "Entity"
+      },
+      {
+        "id": 8,
+        "original_id": "070502df-682f-5fe4-bf28-e2f6831ba644",
+        "text": "gunnison country",
+        "type": "Entity"
+      },
+      {
+        "id": 9,
+        "original_id": "5f394058-b2a0-5ba8-8466-ba2a18cfcf4e",
+        "text": "place",
+        "type": "EntityType"
+      },
+      {
+        "id": 10,
+        "original_id": "99a82eec-bb35-5bb5-9ed2-e73fc7a756de",
+        "text": "person",
+        "type": "EntityType"
+      },
+      {
+        "id": 11,
+        "original_id": "552c1c6c-acf1-5d49-97d4-a27f7ef4cb1d",
+        "text": "tomichi dome",
+        "type": "Entity"
+      },
+      {
+        "id": 12,
+        "original_id": "ad1a2730-7496-5fb9-a8be-93b6a1f29d12",
+        "text": "mount crested butte",
+        "type": "Entity"
+      },
+      {
+        "id": 13,
+        "original_id": "74d398cb-19a8-58b4-a8a9-8ab346b1d12a",
+        "text": "gothic mountain",
+        "type": "Entity"
+      },
+      {
+        "id": 14,
+        "original_id": "53bf2864-0d7d-5da4-9f79-e60ff78e494a",
+        "text": "whetstone mountain",
+        "type": "Entity"
+      },
+      {
+        "id": 15,
+        "original_id": "d70a6cca-15f8-56f6-a8ca-b027c75e859d",
+        "text": "mount axtel",
+        "type": "Entity"
+      },
+      {
+        "id": 16,
+        "original_id": "0a3e028f-747d-5c55-b753-c050a5b6cf31",
+        "text": "anthracite range",
+        "type": "Entity"
+      },
+      {
+        "id": 17,
+        "original_id": "1b07d8d8-812b-5ccd-8a2a-2effa43ea67f",
+        "text": "round mountain",
+        "type": "Entity"
+      },
+      {
+        "id": 18,
+        "original_id": "734641dd-2178-5373-8cb0-6ab2e21e7d84",
+        "text": "carbon peak",
+        "type": "Entity"
+      },
+      {
+        "id": 19,
+        "original_id": "82dcaa83-3d4f-5112-9d05-a0525626a3b8",
+        "text": "beckwith mountain",
+        "type": "Entity"
+      },
+      {
+        "id": 20,
+        "original_id": "06039574-5ac0-59db-9c90-813fb9f7afea",
+        "text": "marcellina mountain",
+        "type": "Entity"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "named_in_honor_of"
+      },
+      {
+        "source": 1,
+        "target": 4,
+        "type": "contains"
+      },
+      {
+        "source": 4,
+        "target": 5,
+        "type": "born_on"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 7,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 4,
+        "target": 7,
+        "type": "died_on"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      },
+      {
+        "source": 4,
+        "target": 8,
+        "type": "explored"
+      },
+      {
+        "source": 3,
+        "target": 8,
+        "type": "is_laccolith_of"
+      },
+      {
+        "source": 1,
+        "target": 8,
+        "type": "contains"
+      },
+      {
+        "source": 12,
+        "target": 8,
+        "type": "is_laccolith_of"
+      },
+      {
+        "source": 13,
+        "target": 8,
+        "type": "is_laccolith_of"
+      },
+      {
+        "source": 14,
+        "target": 8,
+        "type": "is_laccolith_of"
+      },
+      {
+        "source": 15,
+        "target": 8,
+        "type": "is_laccolith_of"
+      },
+      {
+        "source": 16,
+        "target": 8,
+        "type": "is_laccolith_of"
+      },
+      {
+        "source": 17,
+        "target": 8,
+        "type": "is_laccolith_of"
+      },
+      {
+        "source": 18,
+        "target": 8,
+        "type": "is_laccolith_of"
+      },
+      {
+        "source": 19,
+        "target": 8,
+        "type": "is_laccolith_of"
+      },
+      {
+        "source": 20,
+        "target": 8,
+        "type": "is_laccolith_of"
+      },
+      {
+        "source": 8,
+        "target": 9,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 9,
+        "type": "is_a"
+      },
+      {
+        "source": 11,
+        "target": 9,
+        "type": "is_a"
+      },
+      {
+        "source": 12,
+        "target": 9,
+        "type": "is_a"
+      },
+      {
+        "source": 13,
+        "target": 9,
+        "type": "is_a"
+      },
+      {
+        "source": 14,
+        "target": 9,
+        "type": "is_a"
+      },
+      {
+        "source": 15,
+        "target": 9,
+        "type": "is_a"
+      },
+      {
+        "source": 16,
+        "target": 9,
+        "type": "is_a"
+      },
+      {
+        "source": 17,
+        "target": 9,
+        "type": "is_a"
+      },
+      {
+        "source": 18,
+        "target": 9,
+        "type": "is_a"
+      },
+      {
+        "source": 19,
+        "target": 9,
+        "type": "is_a"
+      },
+      {
+        "source": 20,
+        "target": 9,
+        "type": "is_a"
+      },
+      {
+        "source": 4,
+        "target": 10,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 11,
+        "type": "contains"
+      },
+      {
+        "source": 1,
+        "target": 12,
+        "type": "contains"
+      },
+      {
+        "source": 1,
+        "target": 13,
+        "type": "contains"
+      },
+      {
+        "source": 1,
+        "target": 14,
+        "type": "contains"
+      },
+      {
+        "source": 1,
+        "target": 15,
+        "type": "contains"
+      },
+      {
+        "source": 1,
+        "target": 16,
+        "type": "contains"
+      },
+      {
+        "source": 1,
+        "target": 17,
+        "type": "contains"
+      },
+      {
+        "source": 1,
+        "target": 18,
+        "type": "contains"
+      },
+      {
+        "source": 1,
+        "target": 19,
+        "type": "contains"
+      },
+      {
+        "source": 1,
+        "target": 20,
+        "type": "contains"
+      }
+    ]
+  }
+}

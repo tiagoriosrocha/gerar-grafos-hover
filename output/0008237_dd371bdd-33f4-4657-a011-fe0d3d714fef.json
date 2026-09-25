@@ -1,0 +1,470 @@
+{
+  "dataset": "hover",
+  "id": "dd371bdd-33f4-4657-a011-fe0d3d714fef",
+  "split": "train",
+  "claim": "The river where the shikara is found is further south than Waterton Lake.",
+  "evidencia": "Page: Dal Lake. Sentence: Dal is a lake in Srinagar (Dal Lake is a misnomer as Dal in Kashmiri means lake), the summer capital of Jammu and Kashmir.\nPage: Waterton Lake. Sentence: Waterton Lake is a mountain lake in southern Alberta, Canada and northern Montana, United States.\nPage: Shikara. Sentence: The shikara is a type of wooden boat found on Dal Lake and other water bodies of Srinagar, Jammu & Kashmir, India.",
+  "evidence_text": "Page: Dal Lake. Sentence: Dal is a lake in Srinagar (Dal Lake is a misnomer as Dal in Kashmiri means lake), the summer capital of Jammu and Kashmir.\nPage: Waterton Lake. Sentence: Waterton Lake is a mountain lake in southern Alberta, Canada and northern Montana, United States.\nPage: Shikara. Sentence: The shikara is a type of wooden boat found on Dal Lake and other water bodies of Srinagar, Jammu & Kashmir, India.",
+  "label": "NOT_SUPPORTED",
+  "num_hops": 3,
+  "hover_metadata": {
+    "supporting_facts": [
+      [
+        "Dal Lake",
+        0
+      ],
+      [
+        "Waterton Lake",
+        0
+      ],
+      [
+        "Shikara",
+        0
+      ]
+    ],
+    "num_hops": 3,
+    "evidence_annotation_id": [
+      0
+    ],
+    "evidence_id": [
+      "Dal Lake::sentence::0",
+      "Waterton Lake::sentence::0",
+      "Shikara::sentence::0"
+    ],
+    "evidence_wiki_url": [
+      "https://en.wikipedia.org/wiki/Dal_Lake",
+      "https://en.wikipedia.org/wiki/Waterton_Lake",
+      "https://en.wikipedia.org/wiki/Shikara"
+    ],
+    "evidence_sentence_id": [
+      "Dal Lake::sentence::0",
+      "Waterton Lake::sentence::0",
+      "Shikara::sentence::0"
+    ]
+  },
+  "grafo_claim": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "81b7d98a-43aa-5435-a6a9-6e0a312c8cd5",
+        "text": "This chunk is about:\n- Places: the river where the shikara is found, Waterton Lake\n- Products: shikara\n\nFacts:\n- The shikara is found on a river.\n- The river where the shikara is found is located farther south than Waterton Lake.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "4dbe8d2c-2fd0-5b49-bf05-1571a2b9f0c6",
+        "text": "The river where the shikara is found is further south than Waterton Lake.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "6c023383-d5dd-5f86-a2aa-023367b3fe67",
+        "text": "text_2781e37110c7f878a7fb98eb1b4a395d",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "6be84330-e9e2-56b2-98e6-866c87378d98",
+        "text": "shikara",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "d2a381fa-3658-5ca6-ada9-2109cfc9331d",
+        "text": "concept",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "7de5c6db-21bd-5baa-a20c-5d361193e9be",
+        "text": "river",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "5f394058-b2a0-5ba8-8466-ba2a18cfcf4e",
+        "text": "place",
+        "type": "EntityType"
+      },
+      {
+        "id": 7,
+        "original_id": "eacc52db-fa2d-5d54-9a79-f61ee473e2df",
+        "text": "waterton lake",
+        "type": "Entity"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "found_in"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 7,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 5,
+        "target": 7,
+        "type": "further_south_than"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      }
+    ]
+  },
+  "grafo_evidencia": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "586f0aaf-c9ba-5e11-8205-8b1c598f18a0",
+        "text": "This chunk is about:\n- Places: Dal Lake, Srinagar, Jammu and Kashmir, Waterton Lake, Alberta, Montana, Canada, United States\n- Products: Shikara\n- Concepts: mountain lakes, naming/misnomers\n\nFacts:\n- Dal is a lake in Srinagar, the summer capital of Jammu and Kashmir.\n- In Kashmiri, the term \"Dal Lake\" is a misnomer because \"Dal\" means lake.\n- Waterton Lake is a mountain lake in southern Alberta, Canada, and northern Montana, United States.\n- A shikara is a type of wooden boat found on Dal Lake and other water bodies of Srinagar, Jammu and Kashmir, India.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "bd001d47-3eee-5e3d-96a6-eaeef185aeef",
+        "text": "Page: Dal Lake. Sentence: Dal is a lake in Srinagar (Dal Lake is a misnomer as Dal in Kashmiri means lake), the summer capital of Jammu and Kashmir.\nPage: Waterton Lake. Sentence: Waterton Lake is a mountain lake in southern Alberta, Canada and northern Montana, United States.\nPage: Shikara. Sentence: The shikara is a type of wooden boat found on Dal Lake and other water bodies of Srinagar, Jammu & Kashmir, India.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "517e2bb7-510f-5d1b-afe6-5e0c3594ebeb",
+        "text": "text_bf2cf617493688ee72d9260bb57a983c",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "d52438cf-1c96-5471-a29a-0084044dd0e1",
+        "text": "dal lake",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "5f394058-b2a0-5ba8-8466-ba2a18cfcf4e",
+        "text": "place",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "8d6bc87f-f5cc-5858-b045-4e6a5b3ac76f",
+        "text": "srinagar",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "431d47f6-91e5-549f-97ba-cfccd524ca71",
+        "text": "jammu and kashmir",
+        "type": "Entity"
+      },
+      {
+        "id": 7,
+        "original_id": "20e4745c-2e0c-5a62-bd6e-d7ae760774fe",
+        "text": "india",
+        "type": "Entity"
+      },
+      {
+        "id": 8,
+        "original_id": "7f895e25-2d60-5f55-8c24-cc3df33b0d4d",
+        "text": "kashmiri",
+        "type": "Entity"
+      },
+      {
+        "id": 9,
+        "original_id": "68024490-0b05-56a0-8dee-c3fcc0d06d48",
+        "text": "language",
+        "type": "EntityType"
+      },
+      {
+        "id": 10,
+        "original_id": "6370640a-9e77-57c7-9283-797d615bb978",
+        "text": "lake",
+        "type": "Entity"
+      },
+      {
+        "id": 11,
+        "original_id": "d2a381fa-3658-5ca6-ada9-2109cfc9331d",
+        "text": "concept",
+        "type": "EntityType"
+      },
+      {
+        "id": 12,
+        "original_id": "eacc52db-fa2d-5d54-9a79-f61ee473e2df",
+        "text": "waterton lake",
+        "type": "Entity"
+      },
+      {
+        "id": 13,
+        "original_id": "eed4f39d-5e82-55c8-9fe6-dfe7d059e077",
+        "text": "alberta",
+        "type": "Entity"
+      },
+      {
+        "id": 14,
+        "original_id": "bbedb15c-e733-5a11-9f07-ae16faad96f0",
+        "text": "canada",
+        "type": "Entity"
+      },
+      {
+        "id": 15,
+        "original_id": "b3ec8a52-2aa4-5673-b7de-d035ddba7b30",
+        "text": "montana",
+        "type": "Entity"
+      },
+      {
+        "id": 16,
+        "original_id": "874a51da-34ea-5037-be47-d87785d43c37",
+        "text": "united states",
+        "type": "Entity"
+      },
+      {
+        "id": 17,
+        "original_id": "6be84330-e9e2-56b2-98e6-866c87378d98",
+        "text": "shikara",
+        "type": "Entity"
+      },
+      {
+        "id": 18,
+        "original_id": "5e7cbda1-d6b2-5124-9bad-288dc849a4e3",
+        "text": "object",
+        "type": "EntityType"
+      },
+      {
+        "id": 19,
+        "original_id": "5e9a01a6-45af-5536-9111-de101c268b8c",
+        "text": "wooden boat",
+        "type": "Entity"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 17,
+        "target": 3,
+        "type": "found_on"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 5,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 6,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 7,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 12,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 13,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 14,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 15,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 16,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "located_in"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 17,
+        "target": 5,
+        "type": "found_in_water_bodies_of"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "summer_capital_of"
+      },
+      {
+        "source": 1,
+        "target": 6,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 7,
+        "type": "located_in"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      },
+      {
+        "source": 1,
+        "target": 8,
+        "type": "contains"
+      },
+      {
+        "source": 8,
+        "target": 9,
+        "type": "is_a"
+      },
+      {
+        "source": 8,
+        "target": 10,
+        "type": "uses_word_for"
+      },
+      {
+        "source": 1,
+        "target": 10,
+        "type": "contains"
+      },
+      {
+        "source": 10,
+        "target": 11,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 12,
+        "type": "contains"
+      },
+      {
+        "source": 12,
+        "target": 13,
+        "type": "located_in"
+      },
+      {
+        "source": 1,
+        "target": 13,
+        "type": "contains"
+      },
+      {
+        "source": 13,
+        "target": 14,
+        "type": "located_in"
+      },
+      {
+        "source": 1,
+        "target": 14,
+        "type": "contains"
+      },
+      {
+        "source": 12,
+        "target": 15,
+        "type": "located_in"
+      },
+      {
+        "source": 1,
+        "target": 15,
+        "type": "contains"
+      },
+      {
+        "source": 15,
+        "target": 16,
+        "type": "located_in"
+      },
+      {
+        "source": 1,
+        "target": 16,
+        "type": "contains"
+      },
+      {
+        "source": 1,
+        "target": 17,
+        "type": "contains"
+      },
+      {
+        "source": 17,
+        "target": 18,
+        "type": "is_a"
+      },
+      {
+        "source": 19,
+        "target": 18,
+        "type": "is_a"
+      },
+      {
+        "source": 17,
+        "target": 19,
+        "type": "is_a_type_of"
+      },
+      {
+        "source": 1,
+        "target": 19,
+        "type": "contains"
+      }
+    ]
+  }
+}

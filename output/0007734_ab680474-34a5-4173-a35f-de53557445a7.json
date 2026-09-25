@@ -1,0 +1,356 @@
+{
+  "dataset": "hover",
+  "id": "ab680474-34a5-4173-a35f-de53557445a7",
+  "split": "train",
+  "claim": "The shopping mall located in the tallest completed office building in Nevada is 500000 square feet.",
+  "evidencia": "Page: Grand Canal Shoppes. Sentence: The Grand Canal Shoppes is a 500000 sqft upscale shopping mall inside The Venetian Hotel & Casino and The Palazzo on the Las Vegas Strip in Paradise, Nevada.\nPage: The Palazzo. Sentence: The Palazzo is a luxury hotel and casino resort located on the Las Vegas Strip in Paradise, Nevada.\nPage: The Palazzo. Sentence: It is the tallest completed building in Nevada.",
+  "evidence_text": "Page: Grand Canal Shoppes. Sentence: The Grand Canal Shoppes is a 500000 sqft upscale shopping mall inside The Venetian Hotel & Casino and The Palazzo on the Las Vegas Strip in Paradise, Nevada.\nPage: The Palazzo. Sentence: The Palazzo is a luxury hotel and casino resort located on the Las Vegas Strip in Paradise, Nevada.\nPage: The Palazzo. Sentence: It is the tallest completed building in Nevada.",
+  "label": "NOT_SUPPORTED",
+  "num_hops": 2,
+  "hover_metadata": {
+    "supporting_facts": [
+      [
+        "Grand Canal Shoppes",
+        0
+      ],
+      [
+        "The Palazzo",
+        0
+      ],
+      [
+        "The Palazzo",
+        1
+      ]
+    ],
+    "num_hops": 2,
+    "evidence_annotation_id": [
+      0
+    ],
+    "evidence_id": [
+      "Grand Canal Shoppes::sentence::0",
+      "The Palazzo::sentence::0",
+      "The Palazzo::sentence::1"
+    ],
+    "evidence_wiki_url": [
+      "https://en.wikipedia.org/wiki/Grand_Canal_Shoppes",
+      "https://en.wikipedia.org/wiki/The_Palazzo"
+    ],
+    "evidence_sentence_id": [
+      "Grand Canal Shoppes::sentence::0",
+      "The Palazzo::sentence::0",
+      "The Palazzo::sentence::1"
+    ]
+  },
+  "grafo_claim": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "3970290c-741b-5742-9239-80891eadc2ef",
+        "text": "This chunk is about:\n- Places: Nevada\n- Buildings: the tallest completed office building in Nevada\n- Properties: shopping mall size\n\nFacts:\n- The tallest completed office building in Nevada contains a shopping mall.\n- The shopping mall in the tallest completed office building in Nevada has an area of 500,000 square feet.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "32acac72-054f-51ee-859e-20f202981b54",
+        "text": "The shopping mall located in the tallest completed office building in Nevada is 500000 square feet.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "092850d8-9c72-5e5a-9964-0deb839e852e",
+        "text": "text_179c8184b25cd76d5a41c0171c0f288d",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "cca9924d-3e69-59c5-be62-5ec26c26b0db",
+        "text": "nevada",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "5f394058-b2a0-5ba8-8466-ba2a18cfcf4e",
+        "text": "place",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "835d1ba9-950d-5778-bc2a-8824090edd4e",
+        "text": "tallest completed office building in nevada",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "b011d686-ca3a-5398-b03c-f44518808ad9",
+        "text": "building",
+        "type": "EntityType"
+      },
+      {
+        "id": 7,
+        "original_id": "d1c3225b-edd4-538b-9171-9d50bb837180",
+        "text": "shopping mall in the tallest completed office building in nevada",
+        "type": "Entity"
+      },
+      {
+        "id": 8,
+        "original_id": "b54e002c-e335-57b6-ab6f-71530ea553f8",
+        "text": "500000 square feet",
+        "type": "Entity"
+      },
+      {
+        "id": 9,
+        "original_id": "12d5521e-a878-542e-bebc-84ff79179d8e",
+        "text": "measurement",
+        "type": "EntityType"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 3,
+        "type": "located_in"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 7,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 7,
+        "target": 5,
+        "type": "located_in"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      },
+      {
+        "source": 7,
+        "target": 8,
+        "type": "has_area"
+      },
+      {
+        "source": 1,
+        "target": 8,
+        "type": "contains"
+      },
+      {
+        "source": 8,
+        "target": 9,
+        "type": "is_a"
+      }
+    ]
+  },
+  "grafo_evidencia": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "b1cf1eda-c962-5d7b-baca-3965717fec8e",
+        "text": "This chunk is about:\n- Places: Las Vegas Strip, Paradise, Nevada\n- Organizations: The Venetian Hotel & Casino, The Palazzo, Grand Canal Shoppes\n- Topics: shopping malls, hotel and casino resorts, building height\n\nFacts:\n- The Grand Canal Shoppes is a 500,000-square-foot upscale shopping mall inside The Venetian Hotel & Casino and The Palazzo on the Las Vegas Strip in Paradise, Nevada.\n- The Palazzo is a luxury hotel and casino resort located on the Las Vegas Strip in Paradise, Nevada.\n- The Palazzo is the tallest completed building in Nevada.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "b856a6ff-69ff-523c-8f90-3e35a96e1189",
+        "text": "Page: Grand Canal Shoppes. Sentence: The Grand Canal Shoppes is a 500000 sqft upscale shopping mall inside The Venetian Hotel & Casino and The Palazzo on the Las Vegas Strip in Paradise, Nevada.\nPage: The Palazzo. Sentence: The Palazzo is a luxury hotel and casino resort located on the Las Vegas Strip in Paradise, Nevada.\nPage: The Palazzo. Sentence: It is the tallest completed building in Nevada.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "2a8559c2-d8d2-55f6-9fa3-1b9a9913cdcc",
+        "text": "text_16ff1e1371f524d0d1bd8d59c11578c8",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "6be72f0d-ead4-5b45-a67c-14a9e5ff39a5",
+        "text": "grand canal shoppes",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "5f394058-b2a0-5ba8-8466-ba2a18cfcf4e",
+        "text": "place",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "9489a318-f8b9-5b78-89ff-993b2d3b1512",
+        "text": "the venetian hotel & casino",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "2e59d3b6-f1a4-528a-a8c1-092656900f04",
+        "text": "the palazzo",
+        "type": "Entity"
+      },
+      {
+        "id": 7,
+        "original_id": "60152a3c-19f4-5b80-8305-51c3a57f8052",
+        "text": "las vegas strip",
+        "type": "Entity"
+      },
+      {
+        "id": 8,
+        "original_id": "a9bf4f79-c7b3-5485-8ce9-c8c5b4f6e1df",
+        "text": "paradise, nevada",
+        "type": "Entity"
+      },
+      {
+        "id": 9,
+        "original_id": "cca9924d-3e69-59c5-be62-5ec26c26b0db",
+        "text": "nevada",
+        "type": "Entity"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 5,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 6,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 7,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 8,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 9,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "located_inside"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 6,
+        "type": "located_inside"
+      },
+      {
+        "source": 1,
+        "target": 6,
+        "type": "contains"
+      },
+      {
+        "source": 6,
+        "target": 7,
+        "type": "located_on"
+      },
+      {
+        "source": 3,
+        "target": 7,
+        "type": "located_on"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      },
+      {
+        "source": 7,
+        "target": 8,
+        "type": "located_in"
+      },
+      {
+        "source": 6,
+        "target": 8,
+        "type": "located_in"
+      },
+      {
+        "source": 3,
+        "target": 8,
+        "type": "located_in"
+      },
+      {
+        "source": 1,
+        "target": 8,
+        "type": "contains"
+      },
+      {
+        "source": 8,
+        "target": 9,
+        "type": "located_in"
+      },
+      {
+        "source": 6,
+        "target": 9,
+        "type": "tallest_completed_building_in"
+      },
+      {
+        "source": 1,
+        "target": 9,
+        "type": "contains"
+      }
+    ]
+  }
+}

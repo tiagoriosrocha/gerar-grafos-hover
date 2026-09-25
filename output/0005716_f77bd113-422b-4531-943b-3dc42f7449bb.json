@@ -1,0 +1,413 @@
+{
+  "dataset": "hover",
+  "id": "f77bd113-422b-4531-943b-3dc42f7449bb",
+  "split": "train",
+  "claim": "A board member of the Nantucket Film Festival holds the current state party chair in a political party. This political party D. Bruce Poole was the former Chairman of.",
+  "evidencia": "Page: Maryland Democratic Party. Sentence: The current state party chair is Kathleen Matthews.\nPage: Kathleen Matthews. Sentence: She is the current chair for the Maryland Democratic Party.\nPage: Bruce Poole. Sentence: D. Bruce Poole is the former Chairman of the Maryland Democratic Party.\nPage: Nantucket Film Festival. Sentence: Board members include Donick Cary, Nancy Dubac, Chris Matthews, Kathleen Matthews, Ben Stiller, and Tom Scott.",
+  "evidence_text": "Page: Maryland Democratic Party. Sentence: The current state party chair is Kathleen Matthews.\nPage: Kathleen Matthews. Sentence: She is the current chair for the Maryland Democratic Party.\nPage: Bruce Poole. Sentence: D. Bruce Poole is the former Chairman of the Maryland Democratic Party.\nPage: Nantucket Film Festival. Sentence: Board members include Donick Cary, Nancy Dubac, Chris Matthews, Kathleen Matthews, Ben Stiller, and Tom Scott.",
+  "label": "SUPPORTED",
+  "num_hops": 4,
+  "hover_metadata": {
+    "supporting_facts": [
+      [
+        "Maryland Democratic Party",
+        1
+      ],
+      [
+        "Kathleen Matthews",
+        3
+      ],
+      [
+        "Bruce Poole",
+        0
+      ],
+      [
+        "Nantucket Film Festival",
+        1
+      ]
+    ],
+    "num_hops": 4,
+    "evidence_annotation_id": [
+      0
+    ],
+    "evidence_id": [
+      "Maryland Democratic Party::sentence::1",
+      "Kathleen Matthews::sentence::3",
+      "Bruce Poole::sentence::0",
+      "Nantucket Film Festival::sentence::1"
+    ],
+    "evidence_wiki_url": [
+      "https://en.wikipedia.org/wiki/Maryland_Democratic_Party",
+      "https://en.wikipedia.org/wiki/Kathleen_Matthews",
+      "https://en.wikipedia.org/wiki/Bruce_Poole",
+      "https://en.wikipedia.org/wiki/Nantucket_Film_Festival"
+    ],
+    "evidence_sentence_id": [
+      "Maryland Democratic Party::sentence::1",
+      "Kathleen Matthews::sentence::3",
+      "Bruce Poole::sentence::0",
+      "Nantucket Film Festival::sentence::1"
+    ]
+  },
+  "grafo_claim": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "1a412f6d-eadc-5156-94ba-c3dd2c2690b7",
+        "text": "This chunk is about:\n- Organizations: Nantucket Film Festival, a political party\n- People: a board member of the Nantucket Film Festival, the current state party chair, D. Bruce Poole\n- Roles: board member, current state party chair, former Chairman\n\nFacts:\n- A board member of the Nantucket Film Festival also holds the role of current state party chair in a political party.\n- D. Bruce Poole was a former Chairman of that same political party.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "f4004570-ef88-5be8-93d2-6cfe57cf00de",
+        "text": "A board member of the Nantucket Film Festival holds the current state party chair in a political party. This political party D. Bruce Poole was the former Chairman of.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "3b72f6e7-cdbc-5c69-8cd8-c8f3c8964e2c",
+        "text": "text_7f492c4497427af2b2576275df415824",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "9de6a6bb-9c1e-5088-94b8-a7bc5e04249e",
+        "text": "nantucket film festival",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "fbc73b00-0312-5ba3-bede-91ef71db2f32",
+        "text": "current state party chair",
+        "type": "Entity"
+      },
+      {
+        "id": 5,
+        "original_id": "b87c9a8d-7295-572d-8f3e-c94822bc4243",
+        "text": "political party",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "388f60fb-220d-55e8-ae9c-3ac93cead308",
+        "text": "organization",
+        "type": "EntityType"
+      },
+      {
+        "id": 7,
+        "original_id": "c37fc488-fc9a-5b35-8e54-a50ae1721557",
+        "text": "role",
+        "type": "EntityType"
+      },
+      {
+        "id": 8,
+        "original_id": "7ce2919d-e7f5-5ad6-ab63-f7f1ad09ccc3",
+        "text": "d. bruce poole",
+        "type": "Entity"
+      },
+      {
+        "id": 9,
+        "original_id": "99a82eec-bb35-5bb5-9ed2-e73fc7a756de",
+        "text": "person",
+        "type": "EntityType"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "has_board_member_who_holds"
+      },
+      {
+        "source": 1,
+        "target": 4,
+        "type": "contains"
+      },
+      {
+        "source": 4,
+        "target": 5,
+        "type": "chair_of"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 8,
+        "target": 5,
+        "type": "former_chairman_of"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 4,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 8,
+        "type": "contains"
+      },
+      {
+        "source": 8,
+        "target": 9,
+        "type": "is_a"
+      }
+    ]
+  },
+  "grafo_evidencia": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "0ccffd84-79b8-5f8c-87fb-63e3f30b27a8",
+        "text": "This chunk is about:\n- Organizations: Maryland Democratic Party, Nantucket Film Festival\n- People: Kathleen Matthews, D. Bruce Poole, Donick Cary, Nancy Dubac, Chris Matthews, Ben Stiller, Tom Scott\n- Roles: state party chair, former chairman, board member\n\nFacts:\n- D. Bruce Poole is the former chairman of the Maryland Democratic Party.\n- Kathleen Matthews is the current state party chair of the Maryland Democratic Party.\n- Kathleen Matthews is the current chair of the Maryland Democratic Party.\n- Donick Cary, Nancy Dubac, Chris Matthews, Kathleen Matthews, Ben Stiller, and Tom Scott are board members of the Nantucket Film Festival.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "7f019674-71dc-5512-a972-b1aef55ca7e0",
+        "text": "Page: Maryland Democratic Party. Sentence: The current state party chair is Kathleen Matthews.\nPage: Kathleen Matthews. Sentence: She is the current chair for the Maryland Democratic Party.\nPage: Bruce Poole. Sentence: D. Bruce Poole is the former Chairman of the Maryland Democratic Party.\nPage: Nantucket Film Festival. Sentence: Board members include Donick Cary, Nancy Dubac, Chris Matthews, Kathleen Matthews, Ben Stiller, and Tom Scott.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "61a0ecd6-831e-595c-8931-f6bc5a426cf9",
+        "text": "text_beddcb3fc0da2d2e5048ee690fa00964",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "0292e2db-eaf7-54a8-b0c2-6b64732f81a3",
+        "text": "maryland democratic party",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "388f60fb-220d-55e8-ae9c-3ac93cead308",
+        "text": "organization",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "6e74ce7d-0662-5d83-84ba-fe38ea67b927",
+        "text": "kathleen matthews",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "9de6a6bb-9c1e-5088-94b8-a7bc5e04249e",
+        "text": "nantucket film festival",
+        "type": "Entity"
+      },
+      {
+        "id": 7,
+        "original_id": "99a82eec-bb35-5bb5-9ed2-e73fc7a756de",
+        "text": "person",
+        "type": "EntityType"
+      },
+      {
+        "id": 8,
+        "original_id": "7ce2919d-e7f5-5ad6-ab63-f7f1ad09ccc3",
+        "text": "d. bruce poole",
+        "type": "Entity"
+      },
+      {
+        "id": 9,
+        "original_id": "14789527-67d1-5cea-91d2-e1a3353cb3c7",
+        "text": "donick cary",
+        "type": "Entity"
+      },
+      {
+        "id": 10,
+        "original_id": "1e6160e0-9d1a-5c77-8783-5ec96d55cda9",
+        "text": "nancy dubac",
+        "type": "Entity"
+      },
+      {
+        "id": 11,
+        "original_id": "7e51101b-0bdc-5895-8b82-82ff6c2c8c91",
+        "text": "chris matthews",
+        "type": "Entity"
+      },
+      {
+        "id": 12,
+        "original_id": "c3ab9cec-a22f-53dc-b2ef-68b2ee29aa7a",
+        "text": "ben stiller",
+        "type": "Entity"
+      },
+      {
+        "id": 13,
+        "original_id": "7d1c3cb2-4c04-5a1d-a731-d85c39605ba1",
+        "text": "tom scott",
+        "type": "Entity"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 3,
+        "type": "chairs"
+      },
+      {
+        "source": 8,
+        "target": 3,
+        "type": "formerly_chaired"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 6,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "board_member_of"
+      },
+      {
+        "source": 1,
+        "target": 6,
+        "type": "contains"
+      },
+      {
+        "source": 9,
+        "target": 6,
+        "type": "board_member_of"
+      },
+      {
+        "source": 10,
+        "target": 6,
+        "type": "board_member_of"
+      },
+      {
+        "source": 11,
+        "target": 6,
+        "type": "board_member_of"
+      },
+      {
+        "source": 12,
+        "target": 6,
+        "type": "board_member_of"
+      },
+      {
+        "source": 13,
+        "target": 6,
+        "type": "board_member_of"
+      },
+      {
+        "source": 5,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 8,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 9,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 10,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 11,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 12,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 13,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 8,
+        "type": "contains"
+      },
+      {
+        "source": 1,
+        "target": 9,
+        "type": "contains"
+      },
+      {
+        "source": 1,
+        "target": 10,
+        "type": "contains"
+      },
+      {
+        "source": 1,
+        "target": 11,
+        "type": "contains"
+      },
+      {
+        "source": 1,
+        "target": 12,
+        "type": "contains"
+      },
+      {
+        "source": 1,
+        "target": 13,
+        "type": "contains"
+      }
+    ]
+  }
+}

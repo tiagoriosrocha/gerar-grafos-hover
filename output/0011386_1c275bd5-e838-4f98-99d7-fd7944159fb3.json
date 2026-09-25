@@ -1,0 +1,460 @@
+{
+  "dataset": "hover",
+  "id": "1c275bd5-e838-4f98-99d7-fd7944159fb3",
+  "split": "train",
+  "claim": "This film released on 15 August 2003 was worked on by an English actor and film director.",
+  "evidencia": "Page: Mark Strange. Sentence: Mark William Strange (born 8 October 1973) is an English actor, film producer and martial arts action performer.\nPage: The Medallion. Sentence: The film was theatrically released on 15 August 2003 in Hong Kong and 22 August 2003 in the United States by TriStar Pictures.",
+  "evidence_text": "Page: Mark Strange. Sentence: Mark William Strange (born 8 October 1973) is an English actor, film producer and martial arts action performer.\nPage: The Medallion. Sentence: The film was theatrically released on 15 August 2003 in Hong Kong and 22 August 2003 in the United States by TriStar Pictures.",
+  "label": "SUPPORTED",
+  "num_hops": 2,
+  "hover_metadata": {
+    "supporting_facts": [
+      [
+        "Mark Strange",
+        0
+      ],
+      [
+        "The Medallion",
+        2
+      ]
+    ],
+    "num_hops": 2,
+    "evidence_annotation_id": [
+      0
+    ],
+    "evidence_id": [
+      "Mark Strange::sentence::0",
+      "The Medallion::sentence::2"
+    ],
+    "evidence_wiki_url": [
+      "https://en.wikipedia.org/wiki/Mark_Strange",
+      "https://en.wikipedia.org/wiki/The_Medallion"
+    ],
+    "evidence_sentence_id": [
+      "Mark Strange::sentence::0",
+      "The Medallion::sentence::2"
+    ]
+  },
+  "grafo_claim": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "ff99788a-f1d1-5f9b-bf14-21d6c03706c7",
+        "text": "This chunk is about:\n- People: an English actor and film director\n- Events: a film release on 15 August 2003\n\nFacts:\n- A film was released on 15 August 2003.\n- An English actor and film director worked on that film.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "25da1176-f374-5634-be0f-ff7933b775e5",
+        "text": "This film released on 15 August 2003 was worked on by an English actor and film director.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "ac094a14-00ef-52d1-8ab2-4208b44bfce1",
+        "text": "text_d7436a963d9902de7b8d91a065c39b30",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "d822dccf-6c98-513d-8415-de5ec68fc449",
+        "text": "this film",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "d320c8df-fd51-56e6-b577-e01a688fe6fc",
+        "text": "film",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "26f3fac2-53cd-5279-bfcf-119488285b7f",
+        "text": "2003-08-15",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "b19433ae-558c-5aaf-95ac-6231f2a4be0e",
+        "text": "date",
+        "type": "EntityType"
+      },
+      {
+        "id": 7,
+        "original_id": "734d0005-36c3-57b0-9b5e-7b31e0d1ed0e",
+        "text": "english actor and film director",
+        "type": "Entity"
+      },
+      {
+        "id": 8,
+        "original_id": "99a82eec-bb35-5bb5-9ed2-e73fc7a756de",
+        "text": "person",
+        "type": "EntityType"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 7,
+        "target": 3,
+        "type": "worked_on"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "released_on"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      },
+      {
+        "source": 7,
+        "target": 8,
+        "type": "is_a"
+      }
+    ]
+  },
+  "grafo_evidencia": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "5068ed67-99cb-5295-b502-3c1426d7980a",
+        "text": "This chunk is about:\n- People: Mark Strange\n- Films: The Medallion\n- Companies: TriStar Pictures\n- Topics: film releases, acting, film production, martial arts performance\n\nFacts:\n- Mark Strange was born on 8 October 1973.\n- Mark Strange is an English actor, film producer, and martial arts action performer.\n- The Medallion was theatrically released in Hong Kong on 15 August 2003.\n- The Medallion was theatrically released in the United States on 22 August 2003 by TriStar Pictures.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "20be31bc-4c60-5285-a3e7-b004242be3a5",
+        "text": "Page: Mark Strange. Sentence: Mark William Strange (born 8 October 1973) is an English actor, film producer and martial arts action performer.\nPage: The Medallion. Sentence: The film was theatrically released on 15 August 2003 in Hong Kong and 22 August 2003 in the United States by TriStar Pictures.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "d0e1cdbb-c3ad-5e63-bb22-c19a6ddde3b3",
+        "text": "text_af210127d59cf43210c7d223b5058af7",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "87cbfe2e-ff3c-52b7-b9db-acb3de9a6c28",
+        "text": "mark william strange",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "99a82eec-bb35-5bb5-9ed2-e73fc7a756de",
+        "text": "person",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "6c7db6cc-474a-5c54-a7c6-3288b126308b",
+        "text": "1973-10-08",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "b19433ae-558c-5aaf-95ac-6231f2a4be0e",
+        "text": "date",
+        "type": "EntityType"
+      },
+      {
+        "id": 7,
+        "original_id": "27f0656f-762c-54f0-8ed5-c4b27557219f",
+        "text": "england",
+        "type": "Entity"
+      },
+      {
+        "id": 8,
+        "original_id": "5f394058-b2a0-5ba8-8466-ba2a18cfcf4e",
+        "text": "place",
+        "type": "EntityType"
+      },
+      {
+        "id": 9,
+        "original_id": "a8ff7c3e-ce8b-5fbb-b5ba-24a49cbc08a9",
+        "text": "actor",
+        "type": "Entity"
+      },
+      {
+        "id": 10,
+        "original_id": "d2a381fa-3658-5ca6-ada9-2109cfc9331d",
+        "text": "concept",
+        "type": "EntityType"
+      },
+      {
+        "id": 11,
+        "original_id": "e7a2663f-dff3-5d01-a4de-0ad146e3b5d5",
+        "text": "film producer",
+        "type": "Entity"
+      },
+      {
+        "id": 12,
+        "original_id": "1905af23-796f-59dc-be98-244be08278b7",
+        "text": "martial arts action performer",
+        "type": "Entity"
+      },
+      {
+        "id": 13,
+        "original_id": "2a70177f-fc51-5256-8757-afe16723fd48",
+        "text": "the medallion",
+        "type": "Entity"
+      },
+      {
+        "id": 14,
+        "original_id": "5263a535-1b4b-5925-be3e-310d03cd303b",
+        "text": "work",
+        "type": "EntityType"
+      },
+      {
+        "id": 15,
+        "original_id": "26f3fac2-53cd-5279-bfcf-119488285b7f",
+        "text": "2003-08-15",
+        "type": "Entity"
+      },
+      {
+        "id": 16,
+        "original_id": "2f1ebd4c-24ba-5453-92b3-7c21bf3f65a8",
+        "text": "hong kong",
+        "type": "Entity"
+      },
+      {
+        "id": 17,
+        "original_id": "afd682ef-1696-5c07-b1bc-1ae844d87e60",
+        "text": "2003-08-22",
+        "type": "Entity"
+      },
+      {
+        "id": 18,
+        "original_id": "874a51da-34ea-5037-be47-d87785d43c37",
+        "text": "united states",
+        "type": "Entity"
+      },
+      {
+        "id": 19,
+        "original_id": "ac898128-c420-5cbd-b37b-ae14fe8dfdb9",
+        "text": "tristar pictures",
+        "type": "Entity"
+      },
+      {
+        "id": 20,
+        "original_id": "388f60fb-220d-55e8-ae9c-3ac93cead308",
+        "text": "organization",
+        "type": "EntityType"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "born_on"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 15,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 17,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 7,
+        "type": "has_nationality"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      },
+      {
+        "source": 7,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 16,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 18,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 9,
+        "type": "has_profession"
+      },
+      {
+        "source": 1,
+        "target": 9,
+        "type": "contains"
+      },
+      {
+        "source": 9,
+        "target": 10,
+        "type": "is_a"
+      },
+      {
+        "source": 11,
+        "target": 10,
+        "type": "is_a"
+      },
+      {
+        "source": 12,
+        "target": 10,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 11,
+        "type": "has_profession"
+      },
+      {
+        "source": 1,
+        "target": 11,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 12,
+        "type": "has_profession"
+      },
+      {
+        "source": 1,
+        "target": 12,
+        "type": "contains"
+      },
+      {
+        "source": 1,
+        "target": 13,
+        "type": "contains"
+      },
+      {
+        "source": 19,
+        "target": 13,
+        "type": "released"
+      },
+      {
+        "source": 13,
+        "target": 14,
+        "type": "is_a"
+      },
+      {
+        "source": 13,
+        "target": 15,
+        "type": "theatrically_released_on"
+      },
+      {
+        "source": 1,
+        "target": 15,
+        "type": "contains"
+      },
+      {
+        "source": 13,
+        "target": 16,
+        "type": "theatrically_released_in"
+      },
+      {
+        "source": 1,
+        "target": 16,
+        "type": "contains"
+      },
+      {
+        "source": 13,
+        "target": 17,
+        "type": "theatrically_released_on"
+      },
+      {
+        "source": 1,
+        "target": 17,
+        "type": "contains"
+      },
+      {
+        "source": 13,
+        "target": 18,
+        "type": "theatrically_released_in"
+      },
+      {
+        "source": 1,
+        "target": 18,
+        "type": "contains"
+      },
+      {
+        "source": 1,
+        "target": 19,
+        "type": "contains"
+      },
+      {
+        "source": 19,
+        "target": 20,
+        "type": "is_a"
+      }
+    ]
+  }
+}

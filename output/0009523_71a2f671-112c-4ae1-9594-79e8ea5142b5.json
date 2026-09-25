@@ -1,0 +1,445 @@
+{
+  "dataset": "hover",
+  "id": "71a2f671-112c-4ae1-9594-79e8ea5142b5",
+  "split": "train",
+  "claim": "This man and Steve Dildarian are not both art dealers. He currently owns the Nathaniel L. McCready House.",
+  "evidencia": "Page: Larry Gagosian. Sentence: Lawrence Gilbert \"Larry\" Gagosian (born April 19, 1945) is an Armenian American art dealer who owns the Gagosian Gallery chain of art galleries.\nPage: Steve Dildarian. Sentence: Steve Dildarian (born November 3, 1969) is an American former advertising copywriter who is the creator, writer, producer and voice of Tim in the HBO animated television series \"The Life & Times of Tim\" (2008-2012).\nPage: Nathaniel L. McCready House. Sentence: In 2011, the home was purchased by Larry Gagosian, who demolished the mansion's interior.",
+  "evidence_text": "Page: Larry Gagosian. Sentence: Lawrence Gilbert \"Larry\" Gagosian (born April 19, 1945) is an Armenian American art dealer who owns the Gagosian Gallery chain of art galleries.\nPage: Steve Dildarian. Sentence: Steve Dildarian (born November 3, 1969) is an American former advertising copywriter who is the creator, writer, producer and voice of Tim in the HBO animated television series \"The Life & Times of Tim\" (2008-2012).\nPage: Nathaniel L. McCready House. Sentence: In 2011, the home was purchased by Larry Gagosian, who demolished the mansion's interior.",
+  "label": "SUPPORTED",
+  "num_hops": 3,
+  "hover_metadata": {
+    "supporting_facts": [
+      [
+        "Larry Gagosian",
+        0
+      ],
+      [
+        "Steve Dildarian",
+        0
+      ],
+      [
+        "Nathaniel L. McCready House",
+        2
+      ]
+    ],
+    "num_hops": 3,
+    "evidence_annotation_id": [
+      0
+    ],
+    "evidence_id": [
+      "Larry Gagosian::sentence::0",
+      "Steve Dildarian::sentence::0",
+      "Nathaniel L. McCready House::sentence::2"
+    ],
+    "evidence_wiki_url": [
+      "https://en.wikipedia.org/wiki/Larry_Gagosian",
+      "https://en.wikipedia.org/wiki/Steve_Dildarian",
+      "https://en.wikipedia.org/wiki/Nathaniel_L._McCready_House"
+    ],
+    "evidence_sentence_id": [
+      "Larry Gagosian::sentence::0",
+      "Steve Dildarian::sentence::0",
+      "Nathaniel L. McCready House::sentence::2"
+    ]
+  },
+  "grafo_claim": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "83fad2e1-0b81-5f79-a72c-7043cb1a8d1d",
+        "text": "This chunk is about:\n- People: Steve Dildarian, unnamed man\n- Roles: art dealers\n- Places: Nathaniel L. McCready House\n\nFacts:\n- Steve Dildarian and the unnamed man are not both art dealers.\n- The unnamed man currently owns the Nathaniel L. McCready House.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "fa33b0b7-9587-557d-933a-072a1f4de11c",
+        "text": "This man and Steve Dildarian are not both art dealers. He currently owns the Nathaniel L. McCready House.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "6ba87fbc-01c0-52d5-b038-e212a8e9720c",
+        "text": "text_7a627bdcf8781ccabd375dca169aa1e1",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "5f44028c-a6ca-57c9-8db4-2a6a4133af4f",
+        "text": "steve dildarian",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "99a82eec-bb35-5bb5-9ed2-e73fc7a756de",
+        "text": "person",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "898bcab2-b9d8-5277-be2d-1bf3704e1861",
+        "text": "nathaniel l. mccready house",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "5f394058-b2a0-5ba8-8466-ba2a18cfcf4e",
+        "text": "place",
+        "type": "EntityType"
+      },
+      {
+        "id": 7,
+        "original_id": "a2d98e17-fcf5-50ed-b3fe-6a5e81157e82",
+        "text": "unidentified man",
+        "type": "Entity"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 7,
+        "target": 3,
+        "type": "not_both_art_dealers_with"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 7,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 7,
+        "target": 5,
+        "type": "owns"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      }
+    ]
+  },
+  "grafo_evidencia": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "138bd9ff-c513-5719-b3fb-1801628cab30",
+        "text": "This chunk is about:\n- People: Larry Gagosian, Steve Dildarian\n- Organizations: Gagosian Gallery, HBO\n- Products: The Life & Times of Tim\n- Places: Nathaniel L. McCready House\n\nFacts:\n- Larry Gagosian was born on April 19, 1945.\n- Larry Gagosian is an Armenian American art dealer.\n- Larry Gagosian owns the Gagosian Gallery chain of art galleries.\n- Steve Dildarian was born on November 3, 1969.\n- Steve Dildarian is an American former advertising copywriter.\n- From 2008 to 2012, Steve Dildarian was the creator, writer, producer, and voice of Tim in HBO's animated television series The Life & Times of Tim.\n- In 2011, Larry Gagosian purchased the Nathaniel L. McCready House and demolished the mansion's interior.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "2eecc595-ac52-5610-b6a2-6b124ad3c38f",
+        "text": "Page: Larry Gagosian. Sentence: Lawrence Gilbert \"Larry\" Gagosian (born April 19, 1945) is an Armenian American art dealer who owns the Gagosian Gallery chain of art galleries.\nPage: Steve Dildarian. Sentence: Steve Dildarian (born November 3, 1969) is an American former advertising copywriter who is the creator, writer, producer and voice of Tim in the HBO animated television series \"The Life & Times of Tim\" (2008-2012).\nPage: Nathaniel L. McCready House. Sentence: In 2011, the home was purchased by Larry Gagosian, who demolished the mansion's interior.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "8f6101da-69c6-5257-a710-a61505a2c4bc",
+        "text": "text_aa5af410c65fe8579400283dcfa548fb",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "4397c297-a3eb-59b9-bee4-4584d3692d43",
+        "text": "larry gagosian",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "99a82eec-bb35-5bb5-9ed2-e73fc7a756de",
+        "text": "person",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "8ad86de8-8aa9-5b51-ba16-c23fbb796c28",
+        "text": "1945-04-19",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "b19433ae-558c-5aaf-95ac-6231f2a4be0e",
+        "text": "date",
+        "type": "EntityType"
+      },
+      {
+        "id": 7,
+        "original_id": "ddb93a13-1e92-572e-a4ee-ac083ff6a8cd",
+        "text": "gagosian gallery",
+        "type": "Entity"
+      },
+      {
+        "id": 8,
+        "original_id": "388f60fb-220d-55e8-ae9c-3ac93cead308",
+        "text": "organization",
+        "type": "EntityType"
+      },
+      {
+        "id": 9,
+        "original_id": "898bcab2-b9d8-5277-be2d-1bf3704e1861",
+        "text": "nathaniel l. mccready house",
+        "type": "Entity"
+      },
+      {
+        "id": 10,
+        "original_id": "5f394058-b2a0-5ba8-8466-ba2a18cfcf4e",
+        "text": "place",
+        "type": "EntityType"
+      },
+      {
+        "id": 11,
+        "original_id": "f54e52eb-db61-5cc3-aa32-5c78e42891d1",
+        "text": "2011",
+        "type": "Entity"
+      },
+      {
+        "id": 12,
+        "original_id": "5f44028c-a6ca-57c9-8db4-2a6a4133af4f",
+        "text": "steve dildarian",
+        "type": "Entity"
+      },
+      {
+        "id": 13,
+        "original_id": "304354f8-8751-57c8-a166-5d296f86b0c8",
+        "text": "1969-11-03",
+        "type": "Entity"
+      },
+      {
+        "id": 14,
+        "original_id": "e1a9fc52-1b53-579f-90ef-3a6555c2a1d7",
+        "text": "the life & times of tim",
+        "type": "Entity"
+      },
+      {
+        "id": 15,
+        "original_id": "5263a535-1b4b-5925-be3e-310d03cd303b",
+        "text": "work",
+        "type": "EntityType"
+      },
+      {
+        "id": 16,
+        "original_id": "bb91a3b7-7918-5ca7-973e-342dc472e263",
+        "text": "2008",
+        "type": "Entity"
+      },
+      {
+        "id": 17,
+        "original_id": "43e69636-c134-5dc8-b21a-52ba284d9418",
+        "text": "2012",
+        "type": "Entity"
+      },
+      {
+        "id": 18,
+        "original_id": "690cc230-97ca-585e-8379-c7c1df8151fb",
+        "text": "tim",
+        "type": "Entity"
+      },
+      {
+        "id": 19,
+        "original_id": "d3db161f-3fd9-5366-919b-ad9f9a1ba392",
+        "text": "character",
+        "type": "EntityType"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 12,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "born_on"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 11,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 13,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 16,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 17,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 7,
+        "type": "owns"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      },
+      {
+        "source": 7,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 9,
+        "type": "purchased"
+      },
+      {
+        "source": 1,
+        "target": 9,
+        "type": "contains"
+      },
+      {
+        "source": 9,
+        "target": 10,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 11,
+        "type": "purchased_in"
+      },
+      {
+        "source": 1,
+        "target": 11,
+        "type": "contains"
+      },
+      {
+        "source": 1,
+        "target": 12,
+        "type": "contains"
+      },
+      {
+        "source": 12,
+        "target": 13,
+        "type": "born_on"
+      },
+      {
+        "source": 1,
+        "target": 13,
+        "type": "contains"
+      },
+      {
+        "source": 12,
+        "target": 14,
+        "type": "created"
+      },
+      {
+        "source": 18,
+        "target": 14,
+        "type": "appears_in"
+      },
+      {
+        "source": 1,
+        "target": 14,
+        "type": "contains"
+      },
+      {
+        "source": 14,
+        "target": 15,
+        "type": "is_a"
+      },
+      {
+        "source": 14,
+        "target": 16,
+        "type": "started_in"
+      },
+      {
+        "source": 1,
+        "target": 16,
+        "type": "contains"
+      },
+      {
+        "source": 14,
+        "target": 17,
+        "type": "ended_in"
+      },
+      {
+        "source": 1,
+        "target": 17,
+        "type": "contains"
+      },
+      {
+        "source": 12,
+        "target": 18,
+        "type": "voices"
+      },
+      {
+        "source": 1,
+        "target": 18,
+        "type": "contains"
+      },
+      {
+        "source": 18,
+        "target": 19,
+        "type": "is_a"
+      }
+    ]
+  }
+}

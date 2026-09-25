@@ -1,0 +1,419 @@
+{
+  "dataset": "hover",
+  "id": "7c328d7f-7ea3-485c-b6c5-66551716ac8c",
+  "split": "train",
+  "claim": "John Wayne Airport is further west than Muskegon County Airport.",
+  "evidencia": "Page: Muskegon County Airport. Sentence: Muskegon County Airport (IATA: MKG, ICAO: KMKG, FAA LID: MKG) is a county owned, public use airport in Muskegon County, Michigan, United States.\nPage: John Wayne Airport. Sentence: John Wayne Airport (IATA: SNA, ICAO: KSNA, FAA LID: SNA) is an international airport in Orange County, California, United States, with its mailing address in the city of Santa Ana, hence the IATA airport code.",
+  "evidence_text": "Page: Muskegon County Airport. Sentence: Muskegon County Airport (IATA: MKG, ICAO: KMKG, FAA LID: MKG) is a county owned, public use airport in Muskegon County, Michigan, United States.\nPage: John Wayne Airport. Sentence: John Wayne Airport (IATA: SNA, ICAO: KSNA, FAA LID: SNA) is an international airport in Orange County, California, United States, with its mailing address in the city of Santa Ana, hence the IATA airport code.",
+  "label": "SUPPORTED",
+  "num_hops": 2,
+  "hover_metadata": {
+    "supporting_facts": [
+      [
+        "Muskegon County Airport",
+        0
+      ],
+      [
+        "John Wayne Airport",
+        0
+      ]
+    ],
+    "num_hops": 2,
+    "evidence_annotation_id": [
+      0
+    ],
+    "evidence_id": [
+      "Muskegon County Airport::sentence::0",
+      "John Wayne Airport::sentence::0"
+    ],
+    "evidence_wiki_url": [
+      "https://en.wikipedia.org/wiki/Muskegon_County_Airport",
+      "https://en.wikipedia.org/wiki/John_Wayne_Airport"
+    ],
+    "evidence_sentence_id": [
+      "Muskegon County Airport::sentence::0",
+      "John Wayne Airport::sentence::0"
+    ]
+  },
+  "grafo_claim": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "ef04cd20-83c5-5f46-bc16-2e9b4d389761",
+        "text": "This chunk is about:\n- Places: John Wayne Airport, Muskegon County Airport\n- Topics: Relative geographic position\n\nFacts:\n- John Wayne Airport is further west than Muskegon County Airport.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "8e148244-5066-502c-a962-ff190e1d44ba",
+        "text": "John Wayne Airport is further west than Muskegon County Airport.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "3f3eff12-bdf5-5d8d-9b51-b3c9d8318fab",
+        "text": "text_37ff338b2adc693beec5da9fbddacf11",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "d3c312aa-c546-5a92-aa41-8f626327c9d3",
+        "text": "john wayne airport",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "d585533d-9bdb-50e6-a219-cf2803f156bf",
+        "text": "muskegon county airport",
+        "type": "Entity"
+      },
+      {
+        "id": 5,
+        "original_id": "5f394058-b2a0-5ba8-8466-ba2a18cfcf4e",
+        "text": "place",
+        "type": "EntityType"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_further_west_than"
+      },
+      {
+        "source": 1,
+        "target": 4,
+        "type": "contains"
+      },
+      {
+        "source": 4,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "is_a"
+      }
+    ]
+  },
+  "grafo_evidencia": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "1f3f730a-6eea-5af7-adf4-54920989bca3",
+        "text": "This chunk is about:\n- Places: Muskegon County, Michigan, Orange County, California, Santa Ana, United States\n- Organizations: Muskegon County Airport, John Wayne Airport\n- Codes: MKG, KMKG, SNA, KSNA\n\nFacts:\n- Muskegon County Airport has IATA code MKG, ICAO code KMKG, and FAA LID MKG.\n- Muskegon County Airport is a county-owned public-use airport in Muskegon County, Michigan, United States.\n- John Wayne Airport has IATA code SNA, ICAO code KSNA, and FAA LID SNA.\n- John Wayne Airport is an international airport in Orange County, California, United States.\n- John Wayne Airport has its mailing address in Santa Ana, which is why its IATA code is SNA.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "b2aacdd0-42bf-59fc-9f0c-8b6a83bdb270",
+        "text": "Page: Muskegon County Airport. Sentence: Muskegon County Airport (IATA: MKG, ICAO: KMKG, FAA LID: MKG) is a county owned, public use airport in Muskegon County, Michigan, United States.\nPage: John Wayne Airport. Sentence: John Wayne Airport (IATA: SNA, ICAO: KSNA, FAA LID: SNA) is an international airport in Orange County, California, United States, with its mailing address in the city of Santa Ana, hence the IATA airport code.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "106ed435-16f6-513e-8cf6-81a376322741",
+        "text": "text_69891f68fe9e0747005057b9cc318aff",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "d585533d-9bdb-50e6-a219-cf2803f156bf",
+        "text": "muskegon county airport",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "08e3dd34-aca4-5b85-8c1e-7b5797d0fd98",
+        "text": "mkg",
+        "type": "Entity"
+      },
+      {
+        "id": 5,
+        "original_id": "2c23f4f7-2223-5c53-a5f6-1bd0114fcd6a",
+        "text": "code",
+        "type": "EntityType"
+      },
+      {
+        "id": 6,
+        "original_id": "247b00e8-079c-54ee-a710-99829485a0d0",
+        "text": "kmkg",
+        "type": "Entity"
+      },
+      {
+        "id": 7,
+        "original_id": "f3d022ac-452c-5743-85dc-76657eb71797",
+        "text": "muskegon county",
+        "type": "Entity"
+      },
+      {
+        "id": 8,
+        "original_id": "2a04dbe3-217e-53af-95e9-82f50cdcf4d4",
+        "text": "michigan",
+        "type": "Entity"
+      },
+      {
+        "id": 9,
+        "original_id": "874a51da-34ea-5037-be47-d87785d43c37",
+        "text": "united states",
+        "type": "Entity"
+      },
+      {
+        "id": 10,
+        "original_id": "5f394058-b2a0-5ba8-8466-ba2a18cfcf4e",
+        "text": "place",
+        "type": "EntityType"
+      },
+      {
+        "id": 11,
+        "original_id": "50596f1a-2d8a-5de7-96b5-ba7068791784",
+        "text": "airport",
+        "type": "EntityType"
+      },
+      {
+        "id": 12,
+        "original_id": "d3c312aa-c546-5a92-aa41-8f626327c9d3",
+        "text": "john wayne airport",
+        "type": "Entity"
+      },
+      {
+        "id": 13,
+        "original_id": "be38f521-bbee-5f30-91a7-6403c4200943",
+        "text": "sna",
+        "type": "Entity"
+      },
+      {
+        "id": 14,
+        "original_id": "cf476a2d-b67e-5532-860b-732e57b58934",
+        "text": "santa ana",
+        "type": "Entity"
+      },
+      {
+        "id": 15,
+        "original_id": "69dc045d-af0f-5b93-83cd-2fd6a5defbb5",
+        "text": "ksna",
+        "type": "Entity"
+      },
+      {
+        "id": 16,
+        "original_id": "3483bdd4-adeb-5b17-9e96-dd0ee8930573",
+        "text": "orange county",
+        "type": "Entity"
+      },
+      {
+        "id": 17,
+        "original_id": "8294cd6a-6968-5d3a-b0c8-57e08c745c8d",
+        "text": "california",
+        "type": "Entity"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "has_iata_code"
+      },
+      {
+        "source": 1,
+        "target": 4,
+        "type": "contains"
+      },
+      {
+        "source": 4,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 6,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 13,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 15,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 6,
+        "type": "has_icao_code"
+      },
+      {
+        "source": 1,
+        "target": 6,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 7,
+        "type": "located_in"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      },
+      {
+        "source": 7,
+        "target": 8,
+        "type": "located_in"
+      },
+      {
+        "source": 1,
+        "target": 8,
+        "type": "contains"
+      },
+      {
+        "source": 8,
+        "target": 9,
+        "type": "located_in"
+      },
+      {
+        "source": 1,
+        "target": 9,
+        "type": "contains"
+      },
+      {
+        "source": 17,
+        "target": 9,
+        "type": "located_in"
+      },
+      {
+        "source": 9,
+        "target": 10,
+        "type": "is_a"
+      },
+      {
+        "source": 8,
+        "target": 10,
+        "type": "is_a"
+      },
+      {
+        "source": 7,
+        "target": 10,
+        "type": "is_a"
+      },
+      {
+        "source": 14,
+        "target": 10,
+        "type": "is_a"
+      },
+      {
+        "source": 17,
+        "target": 10,
+        "type": "is_a"
+      },
+      {
+        "source": 16,
+        "target": 10,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 11,
+        "type": "is_a"
+      },
+      {
+        "source": 12,
+        "target": 11,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 12,
+        "type": "contains"
+      },
+      {
+        "source": 12,
+        "target": 13,
+        "type": "has_iata_code"
+      },
+      {
+        "source": 1,
+        "target": 13,
+        "type": "contains"
+      },
+      {
+        "source": 13,
+        "target": 14,
+        "type": "derived_from_name"
+      },
+      {
+        "source": 12,
+        "target": 14,
+        "type": "has_mailing_address_in"
+      },
+      {
+        "source": 1,
+        "target": 14,
+        "type": "contains"
+      },
+      {
+        "source": 12,
+        "target": 15,
+        "type": "has_icao_code"
+      },
+      {
+        "source": 1,
+        "target": 15,
+        "type": "contains"
+      },
+      {
+        "source": 12,
+        "target": 16,
+        "type": "located_in"
+      },
+      {
+        "source": 1,
+        "target": 16,
+        "type": "contains"
+      },
+      {
+        "source": 16,
+        "target": 17,
+        "type": "located_in"
+      },
+      {
+        "source": 1,
+        "target": 17,
+        "type": "contains"
+      }
+    ]
+  }
+}

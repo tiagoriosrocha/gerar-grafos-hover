@@ -1,0 +1,408 @@
+{
+  "dataset": "hover",
+  "id": "1fbb75d1-e502-4eb6-8956-68a53679c171",
+  "split": "train",
+  "claim": "Windermere, Cumbria is the name of the town linked by rail to Kendal, named after a lake of the same name.",
+  "evidencia": "Page: Windermere Hotel (Lake District). Sentence: Windermere Hotel , originally The Riggs Windermere, is a hotel in Windermere, Cumbria, England, located near Windermere railway station.\nPage: Windermere Hotel (Lake District). Sentence: The hotel opened at the time that the railway link with Kendal was established in 1847.\nPage: Windermere, Cumbria (town). Sentence: Although the town Windermere does not touch the lake (it took the name of the lake when the railway line was built in 1847 and the station was called \"Windermere\"), it has now grown together with the older lakeside town of Bowness-on-Windermere, though the two retain distinguishable town centres.",
+  "evidence_text": "Page: Windermere Hotel (Lake District). Sentence: Windermere Hotel , originally The Riggs Windermere, is a hotel in Windermere, Cumbria, England, located near Windermere railway station.\nPage: Windermere Hotel (Lake District). Sentence: The hotel opened at the time that the railway link with Kendal was established in 1847.\nPage: Windermere, Cumbria (town). Sentence: Although the town Windermere does not touch the lake (it took the name of the lake when the railway line was built in 1847 and the station was called \"Windermere\"), it has now grown together with the older lakeside town of Bowness-on-Windermere, though the two retain distinguishable town centres.",
+  "label": "SUPPORTED",
+  "num_hops": 2,
+  "hover_metadata": {
+    "supporting_facts": [
+      [
+        "Windermere Hotel (Lake District)",
+        0
+      ],
+      [
+        "Windermere Hotel (Lake District)",
+        1
+      ],
+      [
+        "Windermere, Cumbria (town)",
+        2
+      ]
+    ],
+    "num_hops": 2,
+    "evidence_annotation_id": [
+      0
+    ],
+    "evidence_id": [
+      "Windermere Hotel (Lake District)::sentence::0",
+      "Windermere Hotel (Lake District)::sentence::1",
+      "Windermere, Cumbria (town)::sentence::2"
+    ],
+    "evidence_wiki_url": [
+      "https://en.wikipedia.org/wiki/Windermere_Hotel_%28Lake_District%29",
+      "https://en.wikipedia.org/wiki/Windermere%2C_Cumbria_%28town%29"
+    ],
+    "evidence_sentence_id": [
+      "Windermere Hotel (Lake District)::sentence::0",
+      "Windermere Hotel (Lake District)::sentence::1",
+      "Windermere, Cumbria (town)::sentence::2"
+    ]
+  },
+  "grafo_claim": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "a7692267-4185-5ee7-85f0-b46a324a2c23",
+        "text": "This chunk is about:\n- Places: Windermere, Cumbria; Kendal\n- Topics: Rail links; place naming\n\nFacts:\n- Windermere, Cumbria is a town.\n- Windermere, Cumbria is linked by rail to Kendal.\n- Windermere, Cumbria is named after a lake with the same name.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "2c986c83-4c3b-5a96-b354-e4c9ba821d29",
+        "text": "Windermere, Cumbria is the name of the town linked by rail to Kendal, named after a lake of the same name.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "7720150d-51b7-5ad6-88d1-f3fd40c5d5e1",
+        "text": "text_6ce5b731fe9b89ff240ac632766fd9ea",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "1365452d-a4ab-5635-beee-5de5898cd06e",
+        "text": "windermere, cumbria",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "5f394058-b2a0-5ba8-8466-ba2a18cfcf4e",
+        "text": "place",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "0fd07692-f154-51d7-91f4-2568e1605fa2",
+        "text": "kendal",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "88afc894-67a6-53d2-8499-c37e4ef40345",
+        "text": "windermere",
+        "type": "Entity"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 5,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 6,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "linked_by_rail_to"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 6,
+        "type": "named_after"
+      },
+      {
+        "source": 1,
+        "target": 6,
+        "type": "contains"
+      }
+    ]
+  },
+  "grafo_evidencia": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "1d607b01-0502-5a78-baca-e07f2e533cdc",
+        "text": "This chunk is about:\n- Places: Windermere, Cumbria; Bowness-on-Windermere; England\n- Organizations: Windermere Hotel\n- Topics: Windermere railway station; railway link with Kendal\n\nFacts:\n- In 1847, the railway link with Kendal was established.\n- In 1847, the town of Windermere took the name of the lake when the railway line was built and the station was called \"Windermere.\"\n- In 1847, Windermere Hotel, originally called The Riggs Windermere, opened near Windermere railway station in Windermere, Cumbria, England.\n- The town of Windermere does not touch the lake named Windermere.\n- Windermere has grown together with the older lakeside town of Bowness-on-Windermere, but the two towns still have distinguishable town centres.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "8cb748be-7053-5c5e-99ae-7968cbb22555",
+        "text": "Page: Windermere Hotel (Lake District). Sentence: Windermere Hotel , originally The Riggs Windermere, is a hotel in Windermere, Cumbria, England, located near Windermere railway station.\nPage: Windermere Hotel (Lake District). Sentence: The hotel opened at the time that the railway link with Kendal was established in 1847.\nPage: Windermere, Cumbria (town). Sentence: Although the town Windermere does not touch the lake (it took the name of the lake when the railway line was built in 1847 and the station was called \"Windermere\"), it has now grown together with the older lakeside town of Bowness-on-Windermere, though the two retain distinguishable town centres.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "102a572b-c543-5ea1-ac72-5ba4dc68a20f",
+        "text": "text_76670f6a2a49bbc85ee5fc764effc614",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "0b634f10-0b55-5f64-8e56-ebc489475a51",
+        "text": "windermere hotel",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "5f394058-b2a0-5ba8-8466-ba2a18cfcf4e",
+        "text": "place",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "aeb0e748-654b-5b17-be61-11b8cd87d08e",
+        "text": "the riggs windermere",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "88afc894-67a6-53d2-8499-c37e4ef40345",
+        "text": "windermere",
+        "type": "Entity"
+      },
+      {
+        "id": 7,
+        "original_id": "4fc23b3d-9033-53e6-beaf-5469a5cd3a00",
+        "text": "cumbria",
+        "type": "Entity"
+      },
+      {
+        "id": 8,
+        "original_id": "27f0656f-762c-54f0-8ed5-c4b27557219f",
+        "text": "england",
+        "type": "Entity"
+      },
+      {
+        "id": 9,
+        "original_id": "07620664-453a-5bb7-84e4-de58330acc1e",
+        "text": "lake windermere",
+        "type": "Entity"
+      },
+      {
+        "id": 10,
+        "original_id": "4148fdeb-f69a-5518-bc92-49be485ab069",
+        "text": "windermere railway station",
+        "type": "Entity"
+      },
+      {
+        "id": 11,
+        "original_id": "0fd07692-f154-51d7-91f4-2568e1605fa2",
+        "text": "kendal",
+        "type": "Entity"
+      },
+      {
+        "id": 12,
+        "original_id": "7e84cb49-6a9c-5699-bc24-f2d6f0513cc0",
+        "text": "1847",
+        "type": "Entity"
+      },
+      {
+        "id": 13,
+        "original_id": "b19433ae-558c-5aaf-95ac-6231f2a4be0e",
+        "text": "date",
+        "type": "EntityType"
+      },
+      {
+        "id": 14,
+        "original_id": "623e4732-1f07-5019-baca-98da42c5f46b",
+        "text": "bowness-on-windermere",
+        "type": "Entity"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 5,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 6,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 7,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 8,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 9,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 10,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 11,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 14,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "originally_named"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 6,
+        "type": "located_in"
+      },
+      {
+        "source": 1,
+        "target": 6,
+        "type": "contains"
+      },
+      {
+        "source": 6,
+        "target": 7,
+        "type": "located_in"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      },
+      {
+        "source": 7,
+        "target": 8,
+        "type": "located_in"
+      },
+      {
+        "source": 1,
+        "target": 8,
+        "type": "contains"
+      },
+      {
+        "source": 6,
+        "target": 9,
+        "type": "took_name_from"
+      },
+      {
+        "source": 1,
+        "target": 9,
+        "type": "contains"
+      },
+      {
+        "source": 6,
+        "target": 10,
+        "type": "named_after_station"
+      },
+      {
+        "source": 3,
+        "target": 10,
+        "type": "located_near"
+      },
+      {
+        "source": 1,
+        "target": 10,
+        "type": "contains"
+      },
+      {
+        "source": 10,
+        "target": 11,
+        "type": "connected_by_rail_link_to"
+      },
+      {
+        "source": 1,
+        "target": 11,
+        "type": "contains"
+      },
+      {
+        "source": 10,
+        "target": 12,
+        "type": "established_in"
+      },
+      {
+        "source": 6,
+        "target": 12,
+        "type": "renamed_in"
+      },
+      {
+        "source": 3,
+        "target": 12,
+        "type": "opened_in"
+      },
+      {
+        "source": 1,
+        "target": 12,
+        "type": "contains"
+      },
+      {
+        "source": 12,
+        "target": 13,
+        "type": "is_a"
+      },
+      {
+        "source": 6,
+        "target": 14,
+        "type": "has_grown_together_with"
+      },
+      {
+        "source": 1,
+        "target": 14,
+        "type": "contains"
+      }
+    ]
+  }
+}

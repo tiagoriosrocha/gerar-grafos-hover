@@ -1,0 +1,349 @@
+{
+  "dataset": "hover",
+  "id": "2d182c17-2620-456f-8dc6-7dd166176c5f",
+  "split": "train",
+  "claim": "Nuclear weapons were the instrument of war used by the President of the United States who wasn't born in the birthplace of Kid Durbin.",
+  "evidencia": "Page: Lamar, Missouri. Sentence: Lamar is well known as the birthplace of President Harry S. Truman.\nPage: Harry S. Truman. Sentence: He is also the only world leader to have ever used nuclear weapons in war, desegregated the U.S. Armed Forces, supported a newly independent Israel, and was a founder of the United Nations.\nPage: Kid Durbin. Sentence: He was born in Lamar, Missouri.",
+  "evidence_text": "Page: Lamar, Missouri. Sentence: Lamar is well known as the birthplace of President Harry S. Truman.\nPage: Harry S. Truman. Sentence: He is also the only world leader to have ever used nuclear weapons in war, desegregated the U.S. Armed Forces, supported a newly independent Israel, and was a founder of the United Nations.\nPage: Kid Durbin. Sentence: He was born in Lamar, Missouri.",
+  "label": "NOT_SUPPORTED",
+  "num_hops": 3,
+  "hover_metadata": {
+    "supporting_facts": [
+      [
+        "Lamar, Missouri",
+        2
+      ],
+      [
+        "Harry S. Truman",
+        4
+      ],
+      [
+        "Kid Durbin",
+        1
+      ]
+    ],
+    "num_hops": 3,
+    "evidence_annotation_id": [
+      0
+    ],
+    "evidence_id": [
+      "Lamar, Missouri::sentence::2",
+      "Harry S. Truman::sentence::4",
+      "Kid Durbin::sentence::1"
+    ],
+    "evidence_wiki_url": [
+      "https://en.wikipedia.org/wiki/Lamar%2C_Missouri",
+      "https://en.wikipedia.org/wiki/Harry_S._Truman",
+      "https://en.wikipedia.org/wiki/Kid_Durbin"
+    ],
+    "evidence_sentence_id": [
+      "Lamar, Missouri::sentence::2",
+      "Harry S. Truman::sentence::4",
+      "Kid Durbin::sentence::1"
+    ]
+  },
+  "grafo_claim": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "31223067-89be-56db-a3e0-e5b1ff1d58a9",
+        "text": "This chunk is about:\n- People: President of the United States, Kid Durbin\n- Places: birthplace of Kid Durbin\n- Topics: nuclear weapons, war\n\nFacts:\n- Kid Durbin had a birthplace that was not the birthplace of the President of the United States referenced in the chunk.\n- The President of the United States referenced in the chunk used nuclear weapons as an instrument of war.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "565f39c9-6d2a-5955-b109-de241abe09c8",
+        "text": "Nuclear weapons were the instrument of war used by the President of the United States who wasn't born in the birthplace of Kid Durbin.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "82026716-847c-5720-8c9b-562b4c0e1b37",
+        "text": "text_4540545da379f5226aabdd100bf9cb7e",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "faae311e-0e9d-57cc-b9d0-6e2dd646dca8",
+        "text": "nuclear weapons",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "d2a381fa-3658-5ca6-ada9-2109cfc9331d",
+        "text": "concept",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "c4962b19-7fa4-5fac-91c6-42173f89d182",
+        "text": "president of the united states",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "99a82eec-bb35-5bb5-9ed2-e73fc7a756de",
+        "text": "person",
+        "type": "EntityType"
+      },
+      {
+        "id": 7,
+        "original_id": "9561c0f0-6d98-5bf1-b8e0-91498cf16401",
+        "text": "kid durbin birthplace",
+        "type": "Entity"
+      },
+      {
+        "id": 8,
+        "original_id": "5f394058-b2a0-5ba8-8466-ba2a18cfcf4e",
+        "text": "place",
+        "type": "EntityType"
+      },
+      {
+        "id": 9,
+        "original_id": "492ad597-ab9a-50c5-b751-e9ddafdc252d",
+        "text": "kid durbin",
+        "type": "Entity"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 3,
+        "type": "used_as_instrument_of_war"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 9,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 5,
+        "target": 7,
+        "type": "was_not_born_in"
+      },
+      {
+        "source": 9,
+        "target": 7,
+        "type": "was_born_in"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      },
+      {
+        "source": 7,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 9,
+        "type": "contains"
+      }
+    ]
+  },
+  "grafo_evidencia": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "3d249834-bd9d-5bdc-878b-8fc073fda687",
+        "text": "This chunk is about:\n- People: Harry S. Truman, Kid Durbin\n- Places: Lamar, Missouri\n- Organizations: United Nations, U.S. Armed Forces, Israel\n- Topics: nuclear weapons, desegregation\n\nFacts:\n- Harry S. Truman was born in Lamar, Missouri.\n- Lamar, Missouri is well known as the birthplace of President Harry S. Truman.\n- Kid Durbin was born in Lamar, Missouri.\n- Harry S. Truman was the only world leader to have used nuclear weapons in war.\n- Harry S. Truman desegregated the U.S. Armed Forces.\n- Harry S. Truman supported the newly independent Israel.\n- Harry S. Truman was a founder of the United Nations.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "86fccd07-fbaf-56d8-8ece-37dba4ea0709",
+        "text": "Page: Lamar, Missouri. Sentence: Lamar is well known as the birthplace of President Harry S. Truman.\nPage: Harry S. Truman. Sentence: He is also the only world leader to have ever used nuclear weapons in war, desegregated the U.S. Armed Forces, supported a newly independent Israel, and was a founder of the United Nations.\nPage: Kid Durbin. Sentence: He was born in Lamar, Missouri.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "fc5c18e0-2733-5a79-91b8-be18b46a784b",
+        "text": "text_1255f58be41fbbf443ffadd3d7347342",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "6a203acb-6a33-5692-a7e4-53ff733e67ef",
+        "text": "lamar, missouri",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "5f394058-b2a0-5ba8-8466-ba2a18cfcf4e",
+        "text": "place",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "3547aff5-ba59-5aa9-ba65-45b34e74584f",
+        "text": "harry s. truman",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "99a82eec-bb35-5bb5-9ed2-e73fc7a756de",
+        "text": "person",
+        "type": "EntityType"
+      },
+      {
+        "id": 7,
+        "original_id": "e6a71969-0010-533d-bd44-3c56bf60ecc1",
+        "text": "u.s. armed forces",
+        "type": "Entity"
+      },
+      {
+        "id": 8,
+        "original_id": "388f60fb-220d-55e8-ae9c-3ac93cead308",
+        "text": "organization",
+        "type": "EntityType"
+      },
+      {
+        "id": 9,
+        "original_id": "787553fa-15f8-58c1-97eb-75eeb59517e8",
+        "text": "israel",
+        "type": "Entity"
+      },
+      {
+        "id": 10,
+        "original_id": "7dbc6526-fad4-5933-8134-372716625913",
+        "text": "united nations",
+        "type": "Entity"
+      },
+      {
+        "id": 11,
+        "original_id": "492ad597-ab9a-50c5-b751-e9ddafdc252d",
+        "text": "kid durbin",
+        "type": "Entity"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 3,
+        "type": "born_in"
+      },
+      {
+        "source": 11,
+        "target": 3,
+        "type": "born_in"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 9,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 11,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 5,
+        "target": 7,
+        "type": "desegregated"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      },
+      {
+        "source": 7,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 10,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 5,
+        "target": 9,
+        "type": "supported"
+      },
+      {
+        "source": 1,
+        "target": 9,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 10,
+        "type": "founder_of"
+      },
+      {
+        "source": 1,
+        "target": 10,
+        "type": "contains"
+      },
+      {
+        "source": 1,
+        "target": 11,
+        "type": "contains"
+      }
+    ]
+  }
+}

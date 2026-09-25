@@ -1,0 +1,485 @@
+{
+  "dataset": "hover",
+  "id": "b5bf9757-747c-4457-a3cd-01aa574fb25f",
+  "split": "train",
+  "claim": "Panthera pardus is the Latin name for one of the five \"big cats\" that the word \"Panther\" may refer to when outside of the Americas.",
+  "evidencia": "Page: White panther. Sentence: \"Panther\" is used in some parts of North America to mean the Cougar (\"Puma concolor\"), in South America to mean the Jaguar (\"Panthera onca\") and elsewhere it refers to the Leopard (\"Panthera pardus\").\nPage: Leopard. Sentence: The leopard (\"Panthera pardus\") is one of the five \"big cats\" in the genus \"Panthera\".",
+  "evidence_text": "Page: White panther. Sentence: \"Panther\" is used in some parts of North America to mean the Cougar (\"Puma concolor\"), in South America to mean the Jaguar (\"Panthera onca\") and elsewhere it refers to the Leopard (\"Panthera pardus\").\nPage: Leopard. Sentence: The leopard (\"Panthera pardus\") is one of the five \"big cats\" in the genus \"Panthera\".",
+  "label": "SUPPORTED",
+  "num_hops": 2,
+  "hover_metadata": {
+    "supporting_facts": [
+      [
+        "White panther",
+        1
+      ],
+      [
+        "Leopard",
+        0
+      ]
+    ],
+    "num_hops": 2,
+    "evidence_annotation_id": [
+      0
+    ],
+    "evidence_id": [
+      "White panther::sentence::1",
+      "Leopard::sentence::0"
+    ],
+    "evidence_wiki_url": [
+      "https://en.wikipedia.org/wiki/White_panther",
+      "https://en.wikipedia.org/wiki/Leopard"
+    ],
+    "evidence_sentence_id": [
+      "White panther::sentence::1",
+      "Leopard::sentence::0"
+    ]
+  },
+  "grafo_claim": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "e9d55f8b-9f2c-5eaa-8ac1-64aeff8b7715",
+        "text": "This chunk is about:\n- Concepts: Panther, Panthera pardus\n- Topics: big cats, naming\n\nFacts:\n- Panthera pardus is the Latin name for one of the five big cats.\n- Outside of the Americas, the word Panther may refer to Panthera pardus.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "aa3cdbed-87f5-5adf-9426-a4b1a046bba0",
+        "text": "Panthera pardus is the Latin name for one of the five \"big cats\" that the word \"Panther\" may refer to when outside of the Americas.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "6c024288-0f20-5aba-96be-bc8979fa21b1",
+        "text": "text_29371c55fc63b18be2e201708a58b23d",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "55800db2-f76e-5944-af49-23758e4cc6a2",
+        "text": "panthera pardus",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "f23a15ce-c0de-5c57-9205-8c9d01026b05",
+        "text": "species",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "4b166137-627e-5ec4-a9cb-683a553b53b4",
+        "text": "big cats",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "98ed3a15-eaa2-57c6-8de5-e1dabaf57f77",
+        "text": "group",
+        "type": "EntityType"
+      },
+      {
+        "id": 7,
+        "original_id": "f35f6ddd-8c17-500a-9fa4-3f8b1889ae78",
+        "text": "panther",
+        "type": "Entity"
+      },
+      {
+        "id": 8,
+        "original_id": "2c8738ad-1e27-5778-83d9-1a57e1b45a51",
+        "text": "word",
+        "type": "EntityType"
+      },
+      {
+        "id": 9,
+        "original_id": "e0c37d05-6b77-59af-8850-f1a31863242c",
+        "text": "the americas",
+        "type": "Entity"
+      },
+      {
+        "id": 10,
+        "original_id": "5f394058-b2a0-5ba8-8466-ba2a18cfcf4e",
+        "text": "place",
+        "type": "EntityType"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 7,
+        "target": 3,
+        "type": "may_refer_to"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "is_one_of"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      },
+      {
+        "source": 7,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 7,
+        "target": 9,
+        "type": "usage_context_outside_of"
+      },
+      {
+        "source": 1,
+        "target": 9,
+        "type": "contains"
+      },
+      {
+        "source": 9,
+        "target": 10,
+        "type": "is_a"
+      }
+    ]
+  },
+  "grafo_evidencia": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "2c19cf5d-583f-5e5b-a1dd-81a696917ef6",
+        "text": "This chunk is about:\n- Topics: Panther terminology\n- Animals: Cougar, Jaguar, Leopard\n- Taxonomy: Panthera, big cats\n\nFacts:\n- In some parts of North America, the term \"panther\" is used to mean the Cougar (Puma concolor).\n- In South America, the term \"panther\" is used to mean the Jaguar (Panthera onca).\n- Elsewhere, the term \"panther\" refers to the Leopard (Panthera pardus).\n- The Leopard (Panthera pardus) is one of the five big cats in the genus Panthera.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "d6dd5b4d-9f49-5bbf-a0fc-d909b2b0eaea",
+        "text": "Page: White panther. Sentence: \"Panther\" is used in some parts of North America to mean the Cougar (\"Puma concolor\"), in South America to mean the Jaguar (\"Panthera onca\") and elsewhere it refers to the Leopard (\"Panthera pardus\").\nPage: Leopard. Sentence: The leopard (\"Panthera pardus\") is one of the five \"big cats\" in the genus \"Panthera\".",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "48c6ee4d-4b18-51c3-848c-3f805a78fbf5",
+        "text": "text_dc1d3082f7da0ab27f2d53344c7c2e11",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "f35f6ddd-8c17-500a-9fa4-3f8b1889ae78",
+        "text": "panther",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "d2a381fa-3658-5ca6-ada9-2109cfc9331d",
+        "text": "concept",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "36a9ac1e-1f24-590d-9cbd-614e47bd4e02",
+        "text": "cougar",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "5d76eb72-04ef-5580-b2ea-161f8429437a",
+        "text": "animal",
+        "type": "EntityType"
+      },
+      {
+        "id": 7,
+        "original_id": "bcf3f676-deaa-5a01-84f8-1b61f43e9fb7",
+        "text": "puma concolor",
+        "type": "Entity"
+      },
+      {
+        "id": 8,
+        "original_id": "7bfd7320-7015-5d33-be1e-fbdc9c0b5b79",
+        "text": "north america",
+        "type": "Entity"
+      },
+      {
+        "id": 9,
+        "original_id": "5f394058-b2a0-5ba8-8466-ba2a18cfcf4e",
+        "text": "place",
+        "type": "EntityType"
+      },
+      {
+        "id": 10,
+        "original_id": "f5924352-8e2b-5afb-8bc9-14d5c67ee912",
+        "text": "jaguar",
+        "type": "Entity"
+      },
+      {
+        "id": 11,
+        "original_id": "bba74ecd-e018-5876-8f04-463cdcabbcf8",
+        "text": "panthera onca",
+        "type": "Entity"
+      },
+      {
+        "id": 12,
+        "original_id": "3e507ae8-a14b-53d0-bc7a-70df9fd4b560",
+        "text": "south america",
+        "type": "Entity"
+      },
+      {
+        "id": 13,
+        "original_id": "649b9a5a-a052-5f56-a9f6-7a7c3f47ab79",
+        "text": "leopard",
+        "type": "Entity"
+      },
+      {
+        "id": 14,
+        "original_id": "55800db2-f76e-5944-af49-23758e4cc6a2",
+        "text": "panthera pardus",
+        "type": "Entity"
+      },
+      {
+        "id": 15,
+        "original_id": "4b166137-627e-5ec4-a9cb-683a553b53b4",
+        "text": "big cats",
+        "type": "Entity"
+      },
+      {
+        "id": 16,
+        "original_id": "d2be2ef9-c5d3-5d23-8af0-7e0b128eedf0",
+        "text": "panthera",
+        "type": "Entity"
+      },
+      {
+        "id": 17,
+        "original_id": "f7b4540f-d32c-51b3-8970-f282fffab519",
+        "text": "taxon",
+        "type": "EntityType"
+      },
+      {
+        "id": 18,
+        "original_id": "a5eac7a2-e781-5d06-8db8-d01bf5472a3e",
+        "text": "elsewhere",
+        "type": "Entity"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 15,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "means_in_region"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 7,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 10,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 11,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 13,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 14,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 5,
+        "target": 7,
+        "type": "has_scientific_name"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 8,
+        "type": "used_in_region"
+      },
+      {
+        "source": 1,
+        "target": 8,
+        "type": "contains"
+      },
+      {
+        "source": 8,
+        "target": 9,
+        "type": "is_a"
+      },
+      {
+        "source": 12,
+        "target": 9,
+        "type": "is_a"
+      },
+      {
+        "source": 18,
+        "target": 9,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 10,
+        "type": "means_in_region"
+      },
+      {
+        "source": 1,
+        "target": 10,
+        "type": "contains"
+      },
+      {
+        "source": 10,
+        "target": 11,
+        "type": "has_scientific_name"
+      },
+      {
+        "source": 1,
+        "target": 11,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 12,
+        "type": "used_in_region"
+      },
+      {
+        "source": 1,
+        "target": 12,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 13,
+        "type": "refers_to_in_region"
+      },
+      {
+        "source": 14,
+        "target": 13,
+        "type": "scientific_name_of"
+      },
+      {
+        "source": 1,
+        "target": 13,
+        "type": "contains"
+      },
+      {
+        "source": 13,
+        "target": 14,
+        "type": "has_scientific_name"
+      },
+      {
+        "source": 1,
+        "target": 14,
+        "type": "contains"
+      },
+      {
+        "source": 13,
+        "target": 15,
+        "type": "is_one_of"
+      },
+      {
+        "source": 1,
+        "target": 15,
+        "type": "contains"
+      },
+      {
+        "source": 13,
+        "target": 16,
+        "type": "in_genus"
+      },
+      {
+        "source": 1,
+        "target": 16,
+        "type": "contains"
+      },
+      {
+        "source": 16,
+        "target": 17,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 18,
+        "type": "used_in_region"
+      },
+      {
+        "source": 1,
+        "target": 18,
+        "type": "contains"
+      }
+    ]
+  }
+}

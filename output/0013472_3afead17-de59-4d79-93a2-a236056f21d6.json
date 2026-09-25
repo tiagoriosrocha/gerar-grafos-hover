@@ -1,0 +1,375 @@
+{
+  "dataset": "hover",
+  "id": "3afead17-de59-4d79-93a2-a236056f21d6",
+  "split": "train",
+  "claim": "Aeroflot Russian Airlines was a monopoly with a hub at Sheremetyevo International Airport.",
+  "evidencia": "Page: Babyflot. Sentence: Babyflot is the informal name given to any airline in the former Soviet Union created from the dissolution of the Soviet airline monopoly Aeroflot in the early 1990s, at the time of the breakup of the Soviet Union.\nPage: Aeroflot. Sentence: PJSC AeroflotRussian Airlines (Russian: ПАО \"Аэрофло́т-Росси́йские авиали́нии\" , \"ПAO Aeroflot-Rossiyskiye avialinii\" ) (), commonly known as Aeroflot ( or ) (Russian: Аэрофлот , English translation: \"air fleet\", ] ), is the flag carrier and largest airline of the Russian Federation.\nPage: Aeroflot. Sentence: The carrier is an open joint stock company that operates domestic and international passenger and services, mainly from its hub at Sheremetyevo International Airport.",
+  "evidence_text": "Page: Babyflot. Sentence: Babyflot is the informal name given to any airline in the former Soviet Union created from the dissolution of the Soviet airline monopoly Aeroflot in the early 1990s, at the time of the breakup of the Soviet Union.\nPage: Aeroflot. Sentence: PJSC AeroflotRussian Airlines (Russian: ПАО \"Аэрофло́т-Росси́йские авиали́нии\" , \"ПAO Aeroflot-Rossiyskiye avialinii\" ) (), commonly known as Aeroflot ( or ) (Russian: Аэрофлот , English translation: \"air fleet\", ] ), is the flag carrier and largest airline of the Russian Federation.\nPage: Aeroflot. Sentence: The carrier is an open joint stock company that operates domestic and international passenger and services, mainly from its hub at Sheremetyevo International Airport.",
+  "label": "SUPPORTED",
+  "num_hops": 2,
+  "hover_metadata": {
+    "supporting_facts": [
+      [
+        "Babyflot",
+        0
+      ],
+      [
+        "Aeroflot",
+        0
+      ],
+      [
+        "Aeroflot",
+        1
+      ]
+    ],
+    "num_hops": 2,
+    "evidence_annotation_id": [
+      0
+    ],
+    "evidence_id": [
+      "Babyflot::sentence::0",
+      "Aeroflot::sentence::0",
+      "Aeroflot::sentence::1"
+    ],
+    "evidence_wiki_url": [
+      "https://en.wikipedia.org/wiki/Babyflot",
+      "https://en.wikipedia.org/wiki/Aeroflot"
+    ],
+    "evidence_sentence_id": [
+      "Babyflot::sentence::0",
+      "Aeroflot::sentence::0",
+      "Aeroflot::sentence::1"
+    ]
+  },
+  "grafo_claim": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "4b48f208-59c0-5a28-a193-b06302b302b9",
+        "text": "This chunk is about:\n- Companies: Aeroflot Russian Airlines\n- Places: Sheremetyevo International Airport\n- Concepts: monopoly, airline hub\n\nFacts:\n- Aeroflot Russian Airlines was a monopoly.\n- Aeroflot Russian Airlines had a hub at Sheremetyevo International Airport.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "f836987f-69a9-50e7-928c-a82e5a45cd5e",
+        "text": "Aeroflot Russian Airlines was a monopoly with a hub at Sheremetyevo International Airport.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "3a8ceeae-999d-5bfc-81f8-a393f8ec0e80",
+        "text": "text_b483315bfc0ff0257aad061376b2b620",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "21a1e255-9f40-5b17-90d5-900e1aab55eb",
+        "text": "aeroflot russian airlines",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "388f60fb-220d-55e8-ae9c-3ac93cead308",
+        "text": "organization",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "7c401af3-53b4-5144-b514-49e0f8fbaddc",
+        "text": "sheremetyevo international airport",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "5f394058-b2a0-5ba8-8466-ba2a18cfcf4e",
+        "text": "place",
+        "type": "EntityType"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "has_hub_at"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "is_a"
+      }
+    ]
+  },
+  "grafo_evidencia": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "74d65683-a9ac-506b-8653-d6643f74599f",
+        "text": "This chunk is about:\n- Companies: Aeroflot, Babyflot airlines\n- Places: Soviet Union, Russian Federation, Sheremetyevo International Airport\n- Concepts: dissolution of Aeroflot monopoly, breakup of the Soviet Union\n\nFacts:\n- In the early 1990s, during the breakup of the Soviet Union, “Babyflot” became the informal name for any airline in the former Soviet Union created from the dissolution of the Soviet airline monopoly Aeroflot.\n- Aeroflot, formally PJSC Aeroflot–Russian Airlines, is commonly known as Aeroflot.\n- Aeroflot is the flag carrier and largest airline of the Russian Federation.\n- Aeroflot is an open joint stock company.\n- Aeroflot operates domestic and international passenger services mainly from its hub at Sheremetyevo International Airport.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "41a1a9ce-fc3b-5ef9-aa8e-047ed6c64f9c",
+        "text": "Page: Babyflot. Sentence: Babyflot is the informal name given to any airline in the former Soviet Union created from the dissolution of the Soviet airline monopoly Aeroflot in the early 1990s, at the time of the breakup of the Soviet Union.\nPage: Aeroflot. Sentence: PJSC AeroflotRussian Airlines (Russian: ПАО \"Аэрофло́т-Росси́йские авиали́нии\" , \"ПAO Aeroflot-Rossiyskiye avialinii\" ) (), commonly known as Aeroflot ( or ) (Russian: Аэрофлот , English translation: \"air fleet\", ] ), is the flag carrier and largest airline of the Russian Federation.\nPage: Aeroflot. Sentence: The carrier is an open joint stock company that operates domestic and international passenger and services, mainly from its hub at Sheremetyevo International Airport.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "c3421d10-d3b0-592a-8ae1-a5380894afb9",
+        "text": "text_2cbac344dafa75ba12093798df07050e",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "14a78af2-ece7-5f37-8757-6a31b6bc04c5",
+        "text": "babyflot",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "d2a381fa-3658-5ca6-ada9-2109cfc9331d",
+        "text": "concept",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "4fd5b268-931e-5fd5-8654-c0a3db704fb1",
+        "text": "former soviet union",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "5f394058-b2a0-5ba8-8466-ba2a18cfcf4e",
+        "text": "place",
+        "type": "EntityType"
+      },
+      {
+        "id": 7,
+        "original_id": "e4b58668-a6f8-531f-a4f5-d4d62dccb7f0",
+        "text": "aeroflot",
+        "type": "Entity"
+      },
+      {
+        "id": 8,
+        "original_id": "388f60fb-220d-55e8-ae9c-3ac93cead308",
+        "text": "organization",
+        "type": "EntityType"
+      },
+      {
+        "id": 9,
+        "original_id": "e343ae37-b3bc-5076-bf36-b54419fbc3d7",
+        "text": "russian federation",
+        "type": "Entity"
+      },
+      {
+        "id": 10,
+        "original_id": "76dac5d9-80ed-5406-ae54-a236a2dec370",
+        "text": "open joint stock company",
+        "type": "Entity"
+      },
+      {
+        "id": 11,
+        "original_id": "944ba9ff-d12a-504e-9f49-78d3ab6b9288",
+        "text": "domestic and international passenger and services",
+        "type": "Entity"
+      },
+      {
+        "id": 12,
+        "original_id": "7c401af3-53b4-5144-b514-49e0f8fbaddc",
+        "text": "sheremetyevo international airport",
+        "type": "Entity"
+      },
+      {
+        "id": 13,
+        "original_id": "559578d1-bc02-5c4c-8a84-35413829511b",
+        "text": "early 1990s",
+        "type": "Entity"
+      },
+      {
+        "id": 14,
+        "original_id": "b19433ae-558c-5aaf-95ac-6231f2a4be0e",
+        "text": "date",
+        "type": "EntityType"
+      },
+      {
+        "id": 15,
+        "original_id": "4e4608f9-b1ab-58a1-86de-1b6cb2a7c0ce",
+        "text": "breakup of the soviet union",
+        "type": "Entity"
+      },
+      {
+        "id": 16,
+        "original_id": "214abcd9-9adf-5c8a-bb35-1e729f2d68c3",
+        "text": "event",
+        "type": "EntityType"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 10,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 11,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "applies_to_airlines_in"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 9,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 12,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 7,
+        "type": "created_from_dissolution_of"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      },
+      {
+        "source": 7,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 7,
+        "target": 9,
+        "type": "is_flag_carrier_of"
+      },
+      {
+        "source": 1,
+        "target": 9,
+        "type": "contains"
+      },
+      {
+        "source": 7,
+        "target": 10,
+        "type": "has_corporate_form"
+      },
+      {
+        "source": 1,
+        "target": 10,
+        "type": "contains"
+      },
+      {
+        "source": 7,
+        "target": 11,
+        "type": "operates"
+      },
+      {
+        "source": 1,
+        "target": 11,
+        "type": "contains"
+      },
+      {
+        "source": 7,
+        "target": 12,
+        "type": "has_hub_at"
+      },
+      {
+        "source": 1,
+        "target": 12,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 13,
+        "type": "originated_in"
+      },
+      {
+        "source": 1,
+        "target": 13,
+        "type": "contains"
+      },
+      {
+        "source": 13,
+        "target": 14,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 15,
+        "type": "created_during"
+      },
+      {
+        "source": 1,
+        "target": 15,
+        "type": "contains"
+      },
+      {
+        "source": 15,
+        "target": 16,
+        "type": "is_a"
+      }
+    ]
+  }
+}

@@ -1,0 +1,461 @@
+{
+  "dataset": "hover",
+  "id": "380850fe-1da9-4b3f-90e1-9f8bcac19b4f",
+  "split": "train",
+  "claim": "Chad Smith and another artist are American. This other singer released the song \"Stone Cold Gentleman\".",
+  "evidencia": "Page: Ralph Tresvant. Sentence: Ralph Edward Tresvant Sr. (born May 16, 1968), also known as Rizz and Rizzo, is an American contemporary R&B singer best known as the lead singer of R&B/pop group New Edition.\nPage: Chad Smith. Sentence: Chadwick Gaylord Smith (born October 25, 1961) is an American musician and the current drummer of the Red Hot Chili Peppers, which he joined in 1988.\nPage: Stone Cold Gentleman. Sentence: \"Stone Cold Gentleman\" is a song performed by American contemporary R&B singer Ralph Tresvant, issued as the second single from his eponymous debut album.",
+  "evidence_text": "Page: Ralph Tresvant. Sentence: Ralph Edward Tresvant Sr. (born May 16, 1968), also known as Rizz and Rizzo, is an American contemporary R&B singer best known as the lead singer of R&B/pop group New Edition.\nPage: Chad Smith. Sentence: Chadwick Gaylord Smith (born October 25, 1961) is an American musician and the current drummer of the Red Hot Chili Peppers, which he joined in 1988.\nPage: Stone Cold Gentleman. Sentence: \"Stone Cold Gentleman\" is a song performed by American contemporary R&B singer Ralph Tresvant, issued as the second single from his eponymous debut album.",
+  "label": "SUPPORTED",
+  "num_hops": 3,
+  "hover_metadata": {
+    "supporting_facts": [
+      [
+        "Ralph Tresvant",
+        0
+      ],
+      [
+        "Chad Smith",
+        0
+      ],
+      [
+        "Stone Cold Gentleman",
+        0
+      ]
+    ],
+    "num_hops": 3,
+    "evidence_annotation_id": [
+      0
+    ],
+    "evidence_id": [
+      "Ralph Tresvant::sentence::0",
+      "Chad Smith::sentence::0",
+      "Stone Cold Gentleman::sentence::0"
+    ],
+    "evidence_wiki_url": [
+      "https://en.wikipedia.org/wiki/Ralph_Tresvant",
+      "https://en.wikipedia.org/wiki/Chad_Smith",
+      "https://en.wikipedia.org/wiki/Stone_Cold_Gentleman"
+    ],
+    "evidence_sentence_id": [
+      "Ralph Tresvant::sentence::0",
+      "Chad Smith::sentence::0",
+      "Stone Cold Gentleman::sentence::0"
+    ]
+  },
+  "grafo_claim": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "43b30a31-a256-5b02-b442-276c4312c408",
+        "text": "This chunk is about:\n- People: Chad Smith, unnamed singer\n- Songs: \"Stone Cold Gentleman\"\n- Topics: nationality\n\nFacts:\n- Chad Smith is American.\n- An unnamed singer is American.\n- The unnamed singer released the song \"Stone Cold Gentleman\".",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "933d81d4-89de-5963-ba38-23f884f0e99c",
+        "text": "Chad Smith and another artist are American. This other singer released the song \"Stone Cold Gentleman\".",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "122b5f3b-abf5-5c96-9984-10a9a81972b6",
+        "text": "text_c11474b8b147280083bd3424eb686d33",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "2d586137-5a7e-557d-b678-f4aa4a5b76f8",
+        "text": "chad smith",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "32e5ea46-cca9-5920-8b2d-77357f10ce8d",
+        "text": "american",
+        "type": "Entity"
+      },
+      {
+        "id": 5,
+        "original_id": "7d08f409-7e55-5a66-935f-7c5c06f9111f",
+        "text": "nationality",
+        "type": "EntityType"
+      },
+      {
+        "id": 6,
+        "original_id": "99a82eec-bb35-5bb5-9ed2-e73fc7a756de",
+        "text": "person",
+        "type": "EntityType"
+      },
+      {
+        "id": 7,
+        "original_id": "83a9dd9a-82fe-52ea-8e2c-d5bd3d9aac5d",
+        "text": "unknown singer",
+        "type": "Entity"
+      },
+      {
+        "id": 8,
+        "original_id": "14bcbd7a-a300-52e8-b5f2-de1a08023c74",
+        "text": "stone cold gentleman",
+        "type": "Entity"
+      },
+      {
+        "id": 9,
+        "original_id": "6056b392-f12e-5150-8c0b-ac7545dc2fdf",
+        "text": "song",
+        "type": "EntityType"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "has_nationality"
+      },
+      {
+        "source": 7,
+        "target": 4,
+        "type": "has_nationality"
+      },
+      {
+        "source": 1,
+        "target": 4,
+        "type": "contains"
+      },
+      {
+        "source": 4,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 7,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      },
+      {
+        "source": 7,
+        "target": 8,
+        "type": "released"
+      },
+      {
+        "source": 1,
+        "target": 8,
+        "type": "contains"
+      },
+      {
+        "source": 8,
+        "target": 9,
+        "type": "is_a"
+      }
+    ]
+  },
+  "grafo_evidencia": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "979b1baf-6d70-5003-bf4c-8c85b14fee41",
+        "text": "This chunk is about:\n- People: Ralph Tresvant, Chad Smith\n- Roles: lead singer, drummer, musician\n- Groups: New Edition, Red Hot Chili Peppers\n- Songs: \"Stone Cold Gentleman\"\n- Albums: Ralph Tresvant\n\nFacts:\n- Chad Smith was born on October 25, 1961.\n- Ralph Tresvant was born on May 16, 1968.\n- Chad Smith is an American musician and became the drummer of the Red Hot Chili Peppers in 1988.\n- Ralph Tresvant, also known as Rizz and Rizzo, is an American contemporary R&B singer best known as the lead singer of New Edition.\n- \"Stone Cold Gentleman\" is a song performed by Ralph Tresvant.\n- \"Stone Cold Gentleman\" was issued as the second single from Ralph Tresvant's eponymous debut album.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "e0000f2c-9e27-559c-b318-2f5404e4dafd",
+        "text": "Page: Ralph Tresvant. Sentence: Ralph Edward Tresvant Sr. (born May 16, 1968), also known as Rizz and Rizzo, is an American contemporary R&B singer best known as the lead singer of R&B/pop group New Edition.\nPage: Chad Smith. Sentence: Chadwick Gaylord Smith (born October 25, 1961) is an American musician and the current drummer of the Red Hot Chili Peppers, which he joined in 1988.\nPage: Stone Cold Gentleman. Sentence: \"Stone Cold Gentleman\" is a song performed by American contemporary R&B singer Ralph Tresvant, issued as the second single from his eponymous debut album.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "7b4f7c81-1941-5856-ab1e-6230f76655fb",
+        "text": "text_2a12eac694e52465514d648ee86cc9fc",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "47fb17c9-ef73-56c9-bd82-39eedfbaf539",
+        "text": "ralph edward tresvant sr.",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "593b1c00-d717-5135-8bf0-6d6539b6802e",
+        "text": "1968-05-16",
+        "type": "Entity"
+      },
+      {
+        "id": 5,
+        "original_id": "b19433ae-558c-5aaf-95ac-6231f2a4be0e",
+        "text": "date",
+        "type": "EntityType"
+      },
+      {
+        "id": 6,
+        "original_id": "0f8a108b-e8b2-595b-9b93-461b259f4582",
+        "text": "rizz",
+        "type": "Entity"
+      },
+      {
+        "id": 7,
+        "original_id": "39575085-0710-527d-bd54-019de7b00429",
+        "text": "name",
+        "type": "EntityType"
+      },
+      {
+        "id": 8,
+        "original_id": "bd9929b7-cff8-5ae9-a323-99cb825da5db",
+        "text": "rizzo",
+        "type": "Entity"
+      },
+      {
+        "id": 9,
+        "original_id": "4c9ff3ea-d931-5b00-8cc2-3bb9e3b0a102",
+        "text": "new edition",
+        "type": "Entity"
+      },
+      {
+        "id": 10,
+        "original_id": "388f60fb-220d-55e8-ae9c-3ac93cead308",
+        "text": "organization",
+        "type": "EntityType"
+      },
+      {
+        "id": 11,
+        "original_id": "99a82eec-bb35-5bb5-9ed2-e73fc7a756de",
+        "text": "person",
+        "type": "EntityType"
+      },
+      {
+        "id": 12,
+        "original_id": "33d5bf86-382a-530c-8d8a-03ae2a9734ac",
+        "text": "chadwick gaylord smith",
+        "type": "Entity"
+      },
+      {
+        "id": 13,
+        "original_id": "515865f4-a8bb-578f-b803-39f61f2acb28",
+        "text": "1961-10-25",
+        "type": "Entity"
+      },
+      {
+        "id": 14,
+        "original_id": "e7144dbb-6872-541f-a86c-e311f1b31716",
+        "text": "red hot chili peppers",
+        "type": "Entity"
+      },
+      {
+        "id": 15,
+        "original_id": "8c7fdeea-a7d3-5c37-888a-a00392b1f5ad",
+        "text": "1988",
+        "type": "Entity"
+      },
+      {
+        "id": 16,
+        "original_id": "14bcbd7a-a300-52e8-b5f2-de1a08023c74",
+        "text": "stone cold gentleman",
+        "type": "Entity"
+      },
+      {
+        "id": 17,
+        "original_id": "ae77c230-3723-5899-97cc-8726bb92e30c",
+        "text": "ralph tresvant",
+        "type": "Entity"
+      },
+      {
+        "id": 18,
+        "original_id": "5263a535-1b4b-5925-be3e-310d03cd303b",
+        "text": "work",
+        "type": "EntityType"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 16,
+        "target": 3,
+        "type": "performed_by"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "born_on"
+      },
+      {
+        "source": 1,
+        "target": 4,
+        "type": "contains"
+      },
+      {
+        "source": 4,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 13,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 15,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 6,
+        "type": "also_known_as"
+      },
+      {
+        "source": 1,
+        "target": 6,
+        "type": "contains"
+      },
+      {
+        "source": 6,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 8,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 8,
+        "type": "also_known_as"
+      },
+      {
+        "source": 1,
+        "target": 8,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 9,
+        "type": "lead_singer_of"
+      },
+      {
+        "source": 1,
+        "target": 9,
+        "type": "contains"
+      },
+      {
+        "source": 9,
+        "target": 10,
+        "type": "is_a"
+      },
+      {
+        "source": 14,
+        "target": 10,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 11,
+        "type": "is_a"
+      },
+      {
+        "source": 12,
+        "target": 11,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 12,
+        "type": "contains"
+      },
+      {
+        "source": 12,
+        "target": 13,
+        "type": "born_on"
+      },
+      {
+        "source": 1,
+        "target": 13,
+        "type": "contains"
+      },
+      {
+        "source": 12,
+        "target": 14,
+        "type": "drummer_of"
+      },
+      {
+        "source": 1,
+        "target": 14,
+        "type": "contains"
+      },
+      {
+        "source": 12,
+        "target": 15,
+        "type": "joined_in"
+      },
+      {
+        "source": 1,
+        "target": 15,
+        "type": "contains"
+      },
+      {
+        "source": 1,
+        "target": 16,
+        "type": "contains"
+      },
+      {
+        "source": 16,
+        "target": 17,
+        "type": "second_single_from"
+      },
+      {
+        "source": 1,
+        "target": 17,
+        "type": "contains"
+      },
+      {
+        "source": 17,
+        "target": 18,
+        "type": "is_a"
+      },
+      {
+        "source": 16,
+        "target": 18,
+        "type": "is_a"
+      }
+    ]
+  }
+}

@@ -1,0 +1,396 @@
+{
+  "dataset": "hover",
+  "id": "17a6cf2b-1645-4d32-8f6e-b873ce27263f",
+  "split": "train",
+  "claim": "The movie that was the directorial debut of Jonathan Glazer included the musical piece Lujon, another movie that includes this piece, and that has the letter \"B\" in it, is The Big Lebowski.",
+  "evidencia": "Page: Lujon. Sentence: It was included in the soundtracks for the films \"The Big Lebowski\", \"Sexy Beast\", \"W.E.\", and \"Two Lovers\".\nPage: Sexy Beast. Sentence: Sexy Beast is a 2000 British crime film and the directorial debut of Jonathan Glazer.",
+  "evidence_text": "Page: Lujon. Sentence: It was included in the soundtracks for the films \"The Big Lebowski\", \"Sexy Beast\", \"W.E.\", and \"Two Lovers\".\nPage: Sexy Beast. Sentence: Sexy Beast is a 2000 British crime film and the directorial debut of Jonathan Glazer.",
+  "label": "SUPPORTED",
+  "num_hops": 2,
+  "hover_metadata": {
+    "supporting_facts": [
+      [
+        "Lujon",
+        2
+      ],
+      [
+        "Sexy Beast",
+        0
+      ]
+    ],
+    "num_hops": 2,
+    "evidence_annotation_id": [
+      0
+    ],
+    "evidence_id": [
+      "Lujon::sentence::2",
+      "Sexy Beast::sentence::0"
+    ],
+    "evidence_wiki_url": [
+      "https://en.wikipedia.org/wiki/Lujon",
+      "https://en.wikipedia.org/wiki/Sexy_Beast"
+    ],
+    "evidence_sentence_id": [
+      "Lujon::sentence::2",
+      "Sexy Beast::sentence::0"
+    ]
+  },
+  "grafo_claim": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "c1047a5b-ce77-54ea-a055-4d8662c5d611",
+        "text": "This chunk is about:\n- People: Jonathan Glazer\n- Works: The Big Lebowski, Lujon\n- Topics: directorial debut, film music\n\nFacts:\n- Jonathan Glazer's directorial debut was a movie that included the musical piece \"Lujon.\"\n- \"The Big Lebowski\" is another movie that includes the musical piece \"Lujon.\"\n- \"The Big Lebowski\" contains the letter \"B\" in its title.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "c7366155-e5dc-5219-a897-03d9b1ebf384",
+        "text": "The movie that was the directorial debut of Jonathan Glazer included the musical piece Lujon, another movie that includes this piece, and that has the letter \"B\" in it, is The Big Lebowski.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "b4c28a80-acdd-5d7d-b073-4f6b4a2d9454",
+        "text": "text_e12681b63296cdd8d5da934d7ab242d2",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "84841937-c11d-5ab5-a577-4e834d8deadb",
+        "text": "jonathan glazer",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "99a82eec-bb35-5bb5-9ed2-e73fc7a756de",
+        "text": "person",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "92a3477e-aeac-536d-aa72-d84d1997700d",
+        "text": "sexy beast",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "1155038a-04d1-5d6a-9c60-e4f499a6913c",
+        "text": "movie",
+        "type": "EntityType"
+      },
+      {
+        "id": 7,
+        "original_id": "2c83e296-370d-5ecb-918a-c37c3761c47c",
+        "text": "lujon",
+        "type": "Entity"
+      },
+      {
+        "id": 8,
+        "original_id": "cf851d16-8088-5095-9d53-c0ab61087d8a",
+        "text": "musical piece",
+        "type": "EntityType"
+      },
+      {
+        "id": 9,
+        "original_id": "0cb54da9-7621-535d-b608-afb1fa28ba48",
+        "text": "the big lebowski",
+        "type": "Entity"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "made_directorial_debut_with"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 9,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 5,
+        "target": 7,
+        "type": "includes"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      },
+      {
+        "source": 9,
+        "target": 7,
+        "type": "includes"
+      },
+      {
+        "source": 7,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 9,
+        "type": "contains"
+      }
+    ]
+  },
+  "grafo_evidencia": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "7b2e0c94-00c5-551e-b62a-759930f11f4f",
+        "text": "This chunk is about:\n- Works: Lujon, Sexy Beast, The Big Lebowski, W.E., Two Lovers\n- People: Jonathan Glazer\n- Topics: film soundtracks, directorial debuts\n\nFacts:\n- Sexy Beast is a 2000 British crime film.\n- Sexy Beast was the directorial debut of Jonathan Glazer.\n- Lujon was included in the soundtrack for the film The Big Lebowski.\n- Lujon was included in the soundtrack for the film Sexy Beast.\n- Lujon was included in the soundtrack for the film W.E..\n- Lujon was included in the soundtrack for the film Two Lovers.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "b09f4105-9330-55c0-a492-191948f96597",
+        "text": "Page: Lujon. Sentence: It was included in the soundtracks for the films \"The Big Lebowski\", \"Sexy Beast\", \"W.E.\", and \"Two Lovers\".\nPage: Sexy Beast. Sentence: Sexy Beast is a 2000 British crime film and the directorial debut of Jonathan Glazer.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "3207757d-7ac3-5534-90d0-84434d6d642a",
+        "text": "text_3f8dde07805e749f4a93b9d3dc41f95f",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "2c83e296-370d-5ecb-918a-c37c3761c47c",
+        "text": "lujon",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "5263a535-1b4b-5925-be3e-310d03cd303b",
+        "text": "work",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "0cb54da9-7621-535d-b608-afb1fa28ba48",
+        "text": "the big lebowski",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "d320c8df-fd51-56e6-b577-e01a688fe6fc",
+        "text": "film",
+        "type": "EntityType"
+      },
+      {
+        "id": 7,
+        "original_id": "92a3477e-aeac-536d-aa72-d84d1997700d",
+        "text": "sexy beast",
+        "type": "Entity"
+      },
+      {
+        "id": 8,
+        "original_id": "84841937-c11d-5ab5-a577-4e834d8deadb",
+        "text": "jonathan glazer",
+        "type": "Entity"
+      },
+      {
+        "id": 9,
+        "original_id": "99a82eec-bb35-5bb5-9ed2-e73fc7a756de",
+        "text": "person",
+        "type": "EntityType"
+      },
+      {
+        "id": 10,
+        "original_id": "d1c22bf3-b08d-531b-a0cc-a04132cf6c6f",
+        "text": "2000",
+        "type": "Entity"
+      },
+      {
+        "id": 11,
+        "original_id": "b19433ae-558c-5aaf-95ac-6231f2a4be0e",
+        "text": "date",
+        "type": "EntityType"
+      },
+      {
+        "id": 12,
+        "original_id": "d6ac0c54-ca3e-519f-b5c1-76c26c826249",
+        "text": "british crime film",
+        "type": "Entity"
+      },
+      {
+        "id": 13,
+        "original_id": "d2a381fa-3658-5ca6-ada9-2109cfc9331d",
+        "text": "concept",
+        "type": "EntityType"
+      },
+      {
+        "id": 14,
+        "original_id": "daedc0a8-8995-54e8-baba-28edacc9dafb",
+        "text": "w.e.",
+        "type": "Entity"
+      },
+      {
+        "id": 15,
+        "original_id": "939c9d15-cc32-526e-9d78-721d0e12f982",
+        "text": "two lovers",
+        "type": "Entity"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "included_in_soundtrack_of"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 7,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 14,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 15,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 7,
+        "type": "included_in_soundtrack_of"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      },
+      {
+        "source": 7,
+        "target": 8,
+        "type": "directed_by"
+      },
+      {
+        "source": 1,
+        "target": 8,
+        "type": "contains"
+      },
+      {
+        "source": 8,
+        "target": 9,
+        "type": "is_a"
+      },
+      {
+        "source": 7,
+        "target": 10,
+        "type": "released_in"
+      },
+      {
+        "source": 1,
+        "target": 10,
+        "type": "contains"
+      },
+      {
+        "source": 10,
+        "target": 11,
+        "type": "is_a"
+      },
+      {
+        "source": 7,
+        "target": 12,
+        "type": "instance_of"
+      },
+      {
+        "source": 1,
+        "target": 12,
+        "type": "contains"
+      },
+      {
+        "source": 12,
+        "target": 13,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 14,
+        "type": "included_in_soundtrack_of"
+      },
+      {
+        "source": 1,
+        "target": 14,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 15,
+        "type": "included_in_soundtrack_of"
+      },
+      {
+        "source": 1,
+        "target": 15,
+        "type": "contains"
+      }
+    ]
+  }
+}

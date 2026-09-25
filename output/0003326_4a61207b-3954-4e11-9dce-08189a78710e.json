@@ -1,0 +1,336 @@
+{
+  "dataset": "hover",
+  "id": "4a61207b-3954-4e11-9dce-08189a78710e",
+  "split": "train",
+  "claim": "The population according to the 2010 census of the Ohio town the Connor-Bovie House is located is 6,735.",
+  "evidencia": "Page: Connor-Bovie House. Sentence: The Connor-Bovie House is a historic house at 22 Summit Street in Fairfield, Maine.\nPage: Fairfield, Maine. Sentence: The population was 6,735 at the 2010 census.",
+  "evidence_text": "Page: Connor-Bovie House. Sentence: The Connor-Bovie House is a historic house at 22 Summit Street in Fairfield, Maine.\nPage: Fairfield, Maine. Sentence: The population was 6,735 at the 2010 census.",
+  "label": "NOT_SUPPORTED",
+  "num_hops": 2,
+  "hover_metadata": {
+    "supporting_facts": [
+      [
+        "Connor-Bovie House",
+        0
+      ],
+      [
+        "Fairfield, Maine",
+        1
+      ]
+    ],
+    "num_hops": 2,
+    "evidence_annotation_id": [
+      0
+    ],
+    "evidence_id": [
+      "Connor-Bovie House::sentence::0",
+      "Fairfield, Maine::sentence::1"
+    ],
+    "evidence_wiki_url": [
+      "https://en.wikipedia.org/wiki/Connor-Bovie_House",
+      "https://en.wikipedia.org/wiki/Fairfield%2C_Maine"
+    ],
+    "evidence_sentence_id": [
+      "Connor-Bovie House::sentence::0",
+      "Fairfield, Maine::sentence::1"
+    ]
+  },
+  "grafo_claim": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "3393d443-fcbc-5e2e-a24d-f060a29ac7d5",
+        "text": "This chunk is about:\n- Places: Ohio, the town where the Connor-Bovie House is located\n- Buildings: Connor-Bovie House\n- Topics: 2010 census, population\n\nFacts:\n- The Connor-Bovie House is located in a town in Ohio.\n- The 2010 census recorded the population of the Ohio town where the Connor-Bovie House is located as 6,735.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "e2344337-9ecd-5e75-9d73-2232c7399eee",
+        "text": "The population according to the 2010 census of the Ohio town the Connor-Bovie House is located is 6,735.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "d155819e-e399-51c2-b52a-7e3d8355a4a1",
+        "text": "text_25b606a10ea951ba8bfe8f755ca9966d",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "ca675c0b-7f21-599d-8a02-382f2b5661e1",
+        "text": "connor-bovie house",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "f1edc668-b2a5-51eb-ba5f-65b217ff2f15",
+        "text": "ohio town where connor-bovie house is located",
+        "type": "Entity"
+      },
+      {
+        "id": 5,
+        "original_id": "81af0218-5b85-5efc-9990-492a78a7e0fc",
+        "text": "ohio",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "5f394058-b2a0-5ba8-8466-ba2a18cfcf4e",
+        "text": "place",
+        "type": "EntityType"
+      },
+      {
+        "id": 7,
+        "original_id": "0a4766bd-ea07-5c3b-bd81-488a067bc874",
+        "text": "6,735",
+        "type": "Entity"
+      },
+      {
+        "id": 8,
+        "original_id": "4cb6ada6-82d5-5a31-83fe-5bd97fc4f3b0",
+        "text": "2010 census",
+        "type": "Entity"
+      },
+      {
+        "id": 9,
+        "original_id": "b19433ae-558c-5aaf-95ac-6231f2a4be0e",
+        "text": "date",
+        "type": "EntityType"
+      },
+      {
+        "id": 10,
+        "original_id": "5c1097ca-fab8-54d5-b57f-5dca4b0e2507",
+        "text": "number",
+        "type": "EntityType"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "located_in"
+      },
+      {
+        "source": 1,
+        "target": 4,
+        "type": "contains"
+      },
+      {
+        "source": 4,
+        "target": 5,
+        "type": "located_in"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 4,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 4,
+        "target": 7,
+        "type": "has_population"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      },
+      {
+        "source": 7,
+        "target": 8,
+        "type": "according_to"
+      },
+      {
+        "source": 1,
+        "target": 8,
+        "type": "contains"
+      },
+      {
+        "source": 8,
+        "target": 9,
+        "type": "is_a"
+      },
+      {
+        "source": 7,
+        "target": 10,
+        "type": "is_a"
+      }
+    ]
+  },
+  "grafo_evidencia": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "a9344c5e-5877-5f57-b7d5-f6b66efe0f5a",
+        "text": "This chunk is about:\n- Places: Fairfield, Maine; 22 Summit Street\n- Buildings: Connor-Bovie House\n\nFacts:\n- The Connor-Bovie House is a historic house at 22 Summit Street in Fairfield, Maine.\n- Fairfield, Maine, had a population of 6,735 at the 2010 census.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "5932de74-31a9-5133-a23c-ec9a9599699c",
+        "text": "Page: Connor-Bovie House. Sentence: The Connor-Bovie House is a historic house at 22 Summit Street in Fairfield, Maine.\nPage: Fairfield, Maine. Sentence: The population was 6,735 at the 2010 census.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "ffedb1a0-8c94-5301-8e1f-b0a4db0a59cb",
+        "text": "text_702569889d83d0d3afa52f72b08bdeca",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "ca675c0b-7f21-599d-8a02-382f2b5661e1",
+        "text": "connor-bovie house",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "3a78bda9-2b1c-5e67-a5d0-dfb08919f4b5",
+        "text": "22 summit street",
+        "type": "Entity"
+      },
+      {
+        "id": 5,
+        "original_id": "5f394058-b2a0-5ba8-8466-ba2a18cfcf4e",
+        "text": "place",
+        "type": "EntityType"
+      },
+      {
+        "id": 6,
+        "original_id": "f7c56875-b5a4-5551-b98e-45d19d4cd45f",
+        "text": "fairfield, maine",
+        "type": "Entity"
+      },
+      {
+        "id": 7,
+        "original_id": "639fdde7-7841-5347-96e3-67ffadb56002",
+        "text": "maine",
+        "type": "Entity"
+      },
+      {
+        "id": 8,
+        "original_id": "cb1dc1af-5253-5fa4-877e-246a7629f489",
+        "text": "2010",
+        "type": "Entity"
+      },
+      {
+        "id": 9,
+        "original_id": "b19433ae-558c-5aaf-95ac-6231f2a4be0e",
+        "text": "date",
+        "type": "EntityType"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "located_at"
+      },
+      {
+        "source": 1,
+        "target": 4,
+        "type": "contains"
+      },
+      {
+        "source": 4,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 7,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 6,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 6,
+        "type": "located_in"
+      },
+      {
+        "source": 1,
+        "target": 6,
+        "type": "contains"
+      },
+      {
+        "source": 6,
+        "target": 7,
+        "type": "located_in"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      },
+      {
+        "source": 6,
+        "target": 8,
+        "type": "had_population_at"
+      },
+      {
+        "source": 1,
+        "target": 8,
+        "type": "contains"
+      },
+      {
+        "source": 8,
+        "target": 9,
+        "type": "is_a"
+      }
+    ]
+  }
+}

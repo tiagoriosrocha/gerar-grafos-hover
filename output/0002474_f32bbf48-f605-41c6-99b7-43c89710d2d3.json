@@ -1,0 +1,428 @@
+{
+  "dataset": "hover",
+  "id": "f32bbf48-f605-41c6-99b7-43c89710d2d3",
+  "split": "train",
+  "claim": "Appenzeller Sennenhund dog is based in Switzerland, not the Drentse Patrijshond.",
+  "evidencia": "Page: Appenzeller Sennenhund. Sentence: The Appenzeller Sennenhund is a medium-size breed of dog, one of the four regional breeds of Sennenhund-type dogs from the Swiss Alps.\nPage: Appenzeller Sennenhund. Sentence: The name Sennenhund refers to people called \"Senn\", herders in the Appenzell region of Switzerland.\nPage: Drentse Patrijshond. Sentence: The Drentsche Patrijshond is a versatile spaniel-type hunting dog from the Dutch province of Drenthe.",
+  "evidence_text": "Page: Appenzeller Sennenhund. Sentence: The Appenzeller Sennenhund is a medium-size breed of dog, one of the four regional breeds of Sennenhund-type dogs from the Swiss Alps.\nPage: Appenzeller Sennenhund. Sentence: The name Sennenhund refers to people called \"Senn\", herders in the Appenzell region of Switzerland.\nPage: Drentse Patrijshond. Sentence: The Drentsche Patrijshond is a versatile spaniel-type hunting dog from the Dutch province of Drenthe.",
+  "label": "SUPPORTED",
+  "num_hops": 2,
+  "hover_metadata": {
+    "supporting_facts": [
+      [
+        "Appenzeller Sennenhund",
+        0
+      ],
+      [
+        "Appenzeller Sennenhund",
+        1
+      ],
+      [
+        "Drentse Patrijshond",
+        0
+      ]
+    ],
+    "num_hops": 2,
+    "evidence_annotation_id": [
+      0
+    ],
+    "evidence_id": [
+      "Appenzeller Sennenhund::sentence::0",
+      "Appenzeller Sennenhund::sentence::1",
+      "Drentse Patrijshond::sentence::0"
+    ],
+    "evidence_wiki_url": [
+      "https://en.wikipedia.org/wiki/Appenzeller_Sennenhund",
+      "https://en.wikipedia.org/wiki/Drentse_Patrijshond"
+    ],
+    "evidence_sentence_id": [
+      "Appenzeller Sennenhund::sentence::0",
+      "Appenzeller Sennenhund::sentence::1",
+      "Drentse Patrijshond::sentence::0"
+    ]
+  },
+  "grafo_claim": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "f54831e9-a726-5142-9e24-cefecfc8587d",
+        "text": "This chunk is about:\n- Breeds: Appenzeller Sennenhund, Drentse Patrijshond\n- Places: Switzerland\n\nFacts:\n- The Appenzeller Sennenhund dog breed is based in Switzerland.\n- The Drentse Patrijshond is not the dog breed that is based in Switzerland in this comparison.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "698195c9-1b4d-5244-8d2e-2f7543f1d580",
+        "text": "Appenzeller Sennenhund dog is based in Switzerland, not the Drentse Patrijshond.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "52188877-861e-5412-9ab0-e4db597434c8",
+        "text": "text_7c11542051629dc84e491a5134b5b69b",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "aced6df2-0081-5611-b82f-e4c711a4be71",
+        "text": "appenzeller sennenhund",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "407d2a7f-7562-59fb-a556-934cd90a0107",
+        "text": "switzerland",
+        "type": "Entity"
+      },
+      {
+        "id": 5,
+        "original_id": "5f394058-b2a0-5ba8-8466-ba2a18cfcf4e",
+        "text": "place",
+        "type": "EntityType"
+      },
+      {
+        "id": 6,
+        "original_id": "29eda40d-66d5-59be-b17c-7c4969f51367",
+        "text": "dog breed",
+        "type": "EntityType"
+      },
+      {
+        "id": 7,
+        "original_id": "a0cbaa8b-ff4c-576a-a52c-b8ce6636eb18",
+        "text": "drentse patrijshond",
+        "type": "Entity"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "based_in"
+      },
+      {
+        "source": 1,
+        "target": 4,
+        "type": "contains"
+      },
+      {
+        "source": 7,
+        "target": 4,
+        "type": "not_based_in"
+      },
+      {
+        "source": 4,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 7,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      }
+    ]
+  },
+  "grafo_evidencia": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "dc0c8a2b-9e09-5cc5-bc27-791bb6062f05",
+        "text": "This chunk is about:\n- Products: Appenzeller Sennenhund, Drentsche Patrijshond\n- Places: Swiss Alps, Appenzell region of Switzerland, Drenthe\n- Concepts: Sennenhund, Senn\n\nFacts:\n- The Appenzeller Sennenhund is a medium-size dog breed and one of four regional breeds of Sennenhund-type dogs from the Swiss Alps.\n- The term Sennenhund refers to people called Senn, who are herders in the Appenzell region of Switzerland.\n- The Drentsche Patrijshond is a versatile spaniel-type hunting dog from the Dutch province of Drenthe.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "51086a19-bd54-5799-bc82-015f663c057e",
+        "text": "Page: Appenzeller Sennenhund. Sentence: The Appenzeller Sennenhund is a medium-size breed of dog, one of the four regional breeds of Sennenhund-type dogs from the Swiss Alps.\nPage: Appenzeller Sennenhund. Sentence: The name Sennenhund refers to people called \"Senn\", herders in the Appenzell region of Switzerland.\nPage: Drentse Patrijshond. Sentence: The Drentsche Patrijshond is a versatile spaniel-type hunting dog from the Dutch province of Drenthe.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "8b8245ea-9cc5-5edb-ba47-28cf3d53d456",
+        "text": "text_e85c54d8d5a40cd7efc2ec5d526aa5a6",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "aced6df2-0081-5611-b82f-e4c711a4be71",
+        "text": "appenzeller sennenhund",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "0f3768f2-b177-5536-98d9-e2f191420fb2",
+        "text": "sennenhund-type dogs",
+        "type": "Entity"
+      },
+      {
+        "id": 5,
+        "original_id": "ac262951-8ea8-53a5-8ab4-f569008a7f81",
+        "text": "swiss alps",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "5f394058-b2a0-5ba8-8466-ba2a18cfcf4e",
+        "text": "place",
+        "type": "EntityType"
+      },
+      {
+        "id": 7,
+        "original_id": "7451aec4-93a5-5f80-9c22-adadf456e9d9",
+        "text": "dog type",
+        "type": "EntityType"
+      },
+      {
+        "id": 8,
+        "original_id": "29eda40d-66d5-59be-b17c-7c4969f51367",
+        "text": "dog breed",
+        "type": "EntityType"
+      },
+      {
+        "id": 9,
+        "original_id": "afa138af-305a-5619-ad3c-1d497cc163ff",
+        "text": "sennenhund",
+        "type": "Entity"
+      },
+      {
+        "id": 10,
+        "original_id": "86e01d4c-a0ae-5ef7-9739-917f9f955e93",
+        "text": "senn",
+        "type": "Entity"
+      },
+      {
+        "id": 11,
+        "original_id": "531e3f71-6cc2-5934-a53d-f060197ec31d",
+        "text": "appenzell region",
+        "type": "Entity"
+      },
+      {
+        "id": 12,
+        "original_id": "407d2a7f-7562-59fb-a556-934cd90a0107",
+        "text": "switzerland",
+        "type": "Entity"
+      },
+      {
+        "id": 13,
+        "original_id": "99a82eec-bb35-5bb5-9ed2-e73fc7a756de",
+        "text": "person",
+        "type": "EntityType"
+      },
+      {
+        "id": 14,
+        "original_id": "88890250-2a2b-5428-94a8-d3b645fc52cf",
+        "text": "term",
+        "type": "EntityType"
+      },
+      {
+        "id": 15,
+        "original_id": "abbbf70d-5db0-5278-a3ff-03a8e1851292",
+        "text": "drentsche patrijshond",
+        "type": "Entity"
+      },
+      {
+        "id": 16,
+        "original_id": "598e2e49-7837-56fd-a5c1-2ae4f5ec5e6e",
+        "text": "spaniel-type hunting dog",
+        "type": "Entity"
+      },
+      {
+        "id": 17,
+        "original_id": "bc37de58-3a7a-5b20-8ea0-46bd58cd7986",
+        "text": "drenthe",
+        "type": "Entity"
+      },
+      {
+        "id": 18,
+        "original_id": "4acb4ccc-9b22-5ecd-ac26-9fa3616919c3",
+        "text": "netherlands",
+        "type": "Entity"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_one_of"
+      },
+      {
+        "source": 1,
+        "target": 4,
+        "type": "contains"
+      },
+      {
+        "source": 4,
+        "target": 5,
+        "type": "originates_from"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 12,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 11,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 18,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 17,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 4,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 16,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 15,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 9,
+        "type": "contains"
+      },
+      {
+        "source": 9,
+        "target": 10,
+        "type": "refers_to"
+      },
+      {
+        "source": 1,
+        "target": 10,
+        "type": "contains"
+      },
+      {
+        "source": 10,
+        "target": 11,
+        "type": "herds_in"
+      },
+      {
+        "source": 1,
+        "target": 11,
+        "type": "contains"
+      },
+      {
+        "source": 11,
+        "target": 12,
+        "type": "located_in"
+      },
+      {
+        "source": 1,
+        "target": 12,
+        "type": "contains"
+      },
+      {
+        "source": 10,
+        "target": 13,
+        "type": "is_a"
+      },
+      {
+        "source": 9,
+        "target": 14,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 15,
+        "type": "contains"
+      },
+      {
+        "source": 15,
+        "target": 16,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 16,
+        "type": "contains"
+      },
+      {
+        "source": 15,
+        "target": 17,
+        "type": "originates_from"
+      },
+      {
+        "source": 1,
+        "target": 17,
+        "type": "contains"
+      },
+      {
+        "source": 17,
+        "target": 18,
+        "type": "located_in"
+      },
+      {
+        "source": 1,
+        "target": 18,
+        "type": "contains"
+      }
+    ]
+  }
+}

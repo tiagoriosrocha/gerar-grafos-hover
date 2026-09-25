@@ -1,0 +1,460 @@
+{
+  "dataset": "hover",
+  "id": "795b923a-1e44-44cb-8324-adb5e35922bb",
+  "split": "train",
+  "claim": "Robert Johnson Tenner played collegiate ball for a university. That university and Baylor College of Medicine are not located in the same state.",
+  "evidencia": "Page: University of Minnesota. Sentence: The University of Minnesota, Twin Cities (often referred to as The University of Minnesota, Minnesota, the U of M, UMN, or simply the U) is a public research university in Minneapolis and Saint Paul, Minnesota.\nPage: Baylor College of Medicine. Sentence: Baylor College of Medicine (BCM), located in the Texas Medical Center in Houston, Texas, US, is a health sciences university.\nPage: Bob Tenner. Sentence: Tenner played collegiate ball for the University of Minnesota and played professionally for 1 season, in 1935.",
+  "evidence_text": "Page: University of Minnesota. Sentence: The University of Minnesota, Twin Cities (often referred to as The University of Minnesota, Minnesota, the U of M, UMN, or simply the U) is a public research university in Minneapolis and Saint Paul, Minnesota.\nPage: Baylor College of Medicine. Sentence: Baylor College of Medicine (BCM), located in the Texas Medical Center in Houston, Texas, US, is a health sciences university.\nPage: Bob Tenner. Sentence: Tenner played collegiate ball for the University of Minnesota and played professionally for 1 season, in 1935.",
+  "label": "SUPPORTED",
+  "num_hops": 3,
+  "hover_metadata": {
+    "supporting_facts": [
+      [
+        "University of Minnesota",
+        0
+      ],
+      [
+        "Baylor College of Medicine",
+        0
+      ],
+      [
+        "Bob Tenner",
+        1
+      ]
+    ],
+    "num_hops": 3,
+    "evidence_annotation_id": [
+      0
+    ],
+    "evidence_id": [
+      "University of Minnesota::sentence::0",
+      "Baylor College of Medicine::sentence::0",
+      "Bob Tenner::sentence::1"
+    ],
+    "evidence_wiki_url": [
+      "https://en.wikipedia.org/wiki/University_of_Minnesota",
+      "https://en.wikipedia.org/wiki/Baylor_College_of_Medicine",
+      "https://en.wikipedia.org/wiki/Bob_Tenner"
+    ],
+    "evidence_sentence_id": [
+      "University of Minnesota::sentence::0",
+      "Baylor College of Medicine::sentence::0",
+      "Bob Tenner::sentence::1"
+    ]
+  },
+  "grafo_claim": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "d1f30179-5bf6-5b62-ab9f-2677e2ba2c02",
+        "text": "This chunk is about:\n- People: Robert Johnson Tenner\n- Organizations: Baylor College of Medicine\n- Places: States, university\n\nFacts:\n- Robert Johnson Tenner played collegiate ball for a university.\n- The university where Robert Johnson Tenner played collegiate ball and Baylor College of Medicine are located in different states.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "ca75665d-d71f-5413-bd60-c615dbe2cf6c",
+        "text": "Robert Johnson Tenner played collegiate ball for a university. That university and Baylor College of Medicine are not located in the same state.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "6137be9b-ac1c-59a4-a8ab-645f713a9ccf",
+        "text": "text_fd10239515a73539f762483d970611dd",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "af2aaeb0-d14e-5634-adac-206dfa7c6b04",
+        "text": "robert johnson tenner",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "99a82eec-bb35-5bb5-9ed2-e73fc7a756de",
+        "text": "person",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "4cef5620-8b2a-5ef3-bca8-b27252a745d9",
+        "text": "university",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "388f60fb-220d-55e8-ae9c-3ac93cead308",
+        "text": "organization",
+        "type": "EntityType"
+      },
+      {
+        "id": 7,
+        "original_id": "d43dd56d-da6d-5ba4-85d7-a39fd436be27",
+        "text": "state",
+        "type": "Entity"
+      },
+      {
+        "id": 8,
+        "original_id": "5023586d-88a2-53f9-ad15-7e2ebd75eb4c",
+        "text": "location",
+        "type": "EntityType"
+      },
+      {
+        "id": 9,
+        "original_id": "7311b6db-c5dd-5724-9fe0-df057f9f63d7",
+        "text": "baylor college of medicine",
+        "type": "Entity"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "played_collegiate_ball_for"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 9,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 5,
+        "target": 7,
+        "type": "located_in"
+      },
+      {
+        "source": 9,
+        "target": 7,
+        "type": "not_located_in_same_state_as_university"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      },
+      {
+        "source": 7,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 9,
+        "type": "contains"
+      }
+    ]
+  },
+  "grafo_evidencia": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "a8bbf85f-49ec-5a61-bc5c-73bd513f648c",
+        "text": "This chunk is about:\n- Organizations: University of Minnesota, Baylor College of Medicine\n- Places: Minneapolis, Saint Paul, Minnesota, Houston, Texas, Texas Medical Center\n- People: Bob Tenner\n- Topics: higher education, collegiate athletics, professional sports\n\nFacts:\n- The University of Minnesota, Twin Cities is a public research university in Minneapolis and Saint Paul, Minnesota.\n- The University of Minnesota, Twin Cities is also referred to as the University of Minnesota, Minnesota, the U of M, UMN, and the U.\n- In 1935, Bob Tenner played professionally for one season.\n- Bob Tenner played collegiate ball for the University of Minnesota.\n- Baylor College of Medicine is a health sciences university in the Texas Medical Center in Houston, Texas, United States.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "1899ce61-2db9-5ce2-bbb8-a4f0b3e9fbc6",
+        "text": "Page: University of Minnesota. Sentence: The University of Minnesota, Twin Cities (often referred to as The University of Minnesota, Minnesota, the U of M, UMN, or simply the U) is a public research university in Minneapolis and Saint Paul, Minnesota.\nPage: Baylor College of Medicine. Sentence: Baylor College of Medicine (BCM), located in the Texas Medical Center in Houston, Texas, US, is a health sciences university.\nPage: Bob Tenner. Sentence: Tenner played collegiate ball for the University of Minnesota and played professionally for 1 season, in 1935.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "a9e24651-e2fd-56a1-8803-dfda85204af1",
+        "text": "text_faca33e4d9cc269622966d257cdfd6c1",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "d1d0f21d-1814-5775-bcc5-a1dabb64f18f",
+        "text": "university of minnesota, twin cities",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "388f60fb-220d-55e8-ae9c-3ac93cead308",
+        "text": "organization",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "ef0e8aa5-ba00-55f6-ae87-2732ec1be40b",
+        "text": "minneapolis",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "5f394058-b2a0-5ba8-8466-ba2a18cfcf4e",
+        "text": "place",
+        "type": "EntityType"
+      },
+      {
+        "id": 7,
+        "original_id": "59df55ad-59fd-5073-8d20-14709fe52f32",
+        "text": "minnesota",
+        "type": "Entity"
+      },
+      {
+        "id": 8,
+        "original_id": "f094d241-3010-5911-afcc-82e8cce20c09",
+        "text": "saint paul",
+        "type": "Entity"
+      },
+      {
+        "id": 9,
+        "original_id": "7311b6db-c5dd-5724-9fe0-df057f9f63d7",
+        "text": "baylor college of medicine",
+        "type": "Entity"
+      },
+      {
+        "id": 10,
+        "original_id": "3cdb0060-1876-5cf4-a051-4f4d1bf6baf7",
+        "text": "texas medical center",
+        "type": "Entity"
+      },
+      {
+        "id": 11,
+        "original_id": "a946c0ea-cc8f-55b8-93b2-544e6bc21d4e",
+        "text": "houston",
+        "type": "Entity"
+      },
+      {
+        "id": 12,
+        "original_id": "5b5c9733-5661-5cc8-814f-2796b46669fa",
+        "text": "texas",
+        "type": "Entity"
+      },
+      {
+        "id": 13,
+        "original_id": "874a51da-34ea-5037-be47-d87785d43c37",
+        "text": "united states",
+        "type": "Entity"
+      },
+      {
+        "id": 14,
+        "original_id": "69c775cf-4e50-5cb5-a904-bb4e1cc77dbd",
+        "text": "bob tenner",
+        "type": "Entity"
+      },
+      {
+        "id": 15,
+        "original_id": "99a82eec-bb35-5bb5-9ed2-e73fc7a756de",
+        "text": "person",
+        "type": "EntityType"
+      },
+      {
+        "id": 16,
+        "original_id": "24e8d79f-4385-5e53-aeb6-1974f6eba228",
+        "text": "1935",
+        "type": "Entity"
+      },
+      {
+        "id": 17,
+        "original_id": "b19433ae-558c-5aaf-95ac-6231f2a4be0e",
+        "text": "date",
+        "type": "EntityType"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 14,
+        "target": 3,
+        "type": "played_collegiately_for"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 9,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "located_in"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 7,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 8,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 10,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 11,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 12,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 13,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 5,
+        "target": 7,
+        "type": "located_in"
+      },
+      {
+        "source": 8,
+        "target": 7,
+        "type": "located_in"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 8,
+        "type": "located_in"
+      },
+      {
+        "source": 1,
+        "target": 8,
+        "type": "contains"
+      },
+      {
+        "source": 1,
+        "target": 9,
+        "type": "contains"
+      },
+      {
+        "source": 9,
+        "target": 10,
+        "type": "located_in"
+      },
+      {
+        "source": 1,
+        "target": 10,
+        "type": "contains"
+      },
+      {
+        "source": 10,
+        "target": 11,
+        "type": "located_in"
+      },
+      {
+        "source": 1,
+        "target": 11,
+        "type": "contains"
+      },
+      {
+        "source": 11,
+        "target": 12,
+        "type": "located_in"
+      },
+      {
+        "source": 1,
+        "target": 12,
+        "type": "contains"
+      },
+      {
+        "source": 12,
+        "target": 13,
+        "type": "located_in"
+      },
+      {
+        "source": 1,
+        "target": 13,
+        "type": "contains"
+      },
+      {
+        "source": 1,
+        "target": 14,
+        "type": "contains"
+      },
+      {
+        "source": 14,
+        "target": 15,
+        "type": "is_a"
+      },
+      {
+        "source": 14,
+        "target": 16,
+        "type": "played_professionally_in"
+      },
+      {
+        "source": 1,
+        "target": 16,
+        "type": "contains"
+      },
+      {
+        "source": 16,
+        "target": 17,
+        "type": "is_a"
+      }
+    ]
+  }
+}

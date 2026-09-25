@@ -1,0 +1,583 @@
+{
+  "dataset": "hover",
+  "id": "42468204-97cc-4f33-83e3-861ef7ab9a9e",
+  "split": "train",
+  "claim": "Ronnie Van Zant and Mick Jones were both lead singers of a band.",
+  "evidencia": "Page: Ronnie Van Zant. Sentence: Ronald Wayne Van Zant (January 15, 1948 – October 20, 1977) was an American lead vocalist, primary lyricist, and a founding member of the Southern rock band Lynyrd Skynyrd.\nPage: Mick Jones (The Clash guitarist). Sentence: Michael Geoffrey \"Mick\" Jones (born 26 June 1955) is a British musician, singer and songwriter best known as the lead guitarist, co-lead vocalist, cofounder and songwriter for The Clash until his dismissal in 1983.",
+  "evidence_text": "Page: Ronnie Van Zant. Sentence: Ronald Wayne Van Zant (January 15, 1948 – October 20, 1977) was an American lead vocalist, primary lyricist, and a founding member of the Southern rock band Lynyrd Skynyrd.\nPage: Mick Jones (The Clash guitarist). Sentence: Michael Geoffrey \"Mick\" Jones (born 26 June 1955) is a British musician, singer and songwriter best known as the lead guitarist, co-lead vocalist, cofounder and songwriter for The Clash until his dismissal in 1983.",
+  "label": "SUPPORTED",
+  "num_hops": 2,
+  "hover_metadata": {
+    "supporting_facts": [
+      [
+        "Ronnie Van Zant",
+        0
+      ],
+      [
+        "Mick Jones (The Clash guitarist)",
+        0
+      ]
+    ],
+    "num_hops": 2,
+    "evidence_annotation_id": [
+      0
+    ],
+    "evidence_id": [
+      "Ronnie Van Zant::sentence::0",
+      "Mick Jones (The Clash guitarist)::sentence::0"
+    ],
+    "evidence_wiki_url": [
+      "https://en.wikipedia.org/wiki/Ronnie_Van_Zant",
+      "https://en.wikipedia.org/wiki/Mick_Jones_%28The_Clash_guitarist%29"
+    ],
+    "evidence_sentence_id": [
+      "Ronnie Van Zant::sentence::0",
+      "Mick Jones (The Clash guitarist)::sentence::0"
+    ]
+  },
+  "grafo_claim": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "0e24e4f6-fd62-5a61-87f9-bc1f46a00606",
+        "text": "This chunk is about:\n- People: Ronnie Van Zant, Mick Jones\n- Roles: lead singers\n- Topics: bands\n\nFacts:\n- Ronnie Van Zant was a lead singer of a band.\n- Mick Jones was a lead singer of a band.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "1de5d558-5f49-5c9b-b288-b4c700f76b33",
+        "text": "Ronnie Van Zant and Mick Jones were both lead singers of a band.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "e6e2a3af-6d86-5ac5-9f46-71f8dbbda8a0",
+        "text": "text_338120fa748997e5d5728047f2ae3c75",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "2559b5fc-98e7-5965-9af4-cfe0832cd799",
+        "text": "ronnie van zant",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "99a82eec-bb35-5bb5-9ed2-e73fc7a756de",
+        "text": "person",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "1683024a-4d96-57ac-9432-cd1ce9164c55",
+        "text": "band",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "388f60fb-220d-55e8-ae9c-3ac93cead308",
+        "text": "organization",
+        "type": "EntityType"
+      },
+      {
+        "id": 7,
+        "original_id": "6bf2d263-fc4e-5221-bcfa-6921625cb114",
+        "text": "mick jones",
+        "type": "Entity"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 7,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "lead_singer_of"
+      },
+      {
+        "source": 7,
+        "target": 5,
+        "type": "lead_singer_of"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      }
+    ]
+  },
+  "grafo_evidencia": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "cb7fe5a8-b7f0-5a97-9682-b8b8dea802a8",
+        "text": "This chunk is about:\n- People: Ronnie Van Zant, Mick Jones\n- Organizations: Lynyrd Skynyrd, The Clash\n- Roles: lead vocalist, lyricist, founding member, lead guitarist, co-lead vocalist, songwriter\n\nFacts:\n- Ronald Wayne Van Zant was born on January 15, 1948, and died on October 20, 1977.\n- Ronnie Van Zant was an American lead vocalist, primary lyricist, and founding member of Lynyrd Skynyrd.\n- Mick Jones was born on 26 June 1955.\n- Mick Jones is a British musician, singer, and songwriter.\n- Mick Jones was the lead guitarist, co-lead vocalist, cofounder, and songwriter for The Clash until his dismissal in 1983.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "9c38da76-89db-5626-be32-7e7a898b2887",
+        "text": "Page: Ronnie Van Zant. Sentence: Ronald Wayne Van Zant (January 15, 1948 – October 20, 1977) was an American lead vocalist, primary lyricist, and a founding member of the Southern rock band Lynyrd Skynyrd.\nPage: Mick Jones (The Clash guitarist). Sentence: Michael Geoffrey \"Mick\" Jones (born 26 June 1955) is a British musician, singer and songwriter best known as the lead guitarist, co-lead vocalist, cofounder and songwriter for The Clash until his dismissal in 1983.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "def268b4-5322-5d12-b8eb-ad22151f74ed",
+        "text": "text_445096336c7b964a19236733971a1ad8",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "3c610ee8-e5e9-5e8f-bbfe-fbac5a6beaa5",
+        "text": "ronald wayne van zant",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "99a82eec-bb35-5bb5-9ed2-e73fc7a756de",
+        "text": "person",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "30802aaa-38b4-5f5d-9003-4761ccdadc00",
+        "text": "1948-01-15",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "b19433ae-558c-5aaf-95ac-6231f2a4be0e",
+        "text": "date",
+        "type": "EntityType"
+      },
+      {
+        "id": 7,
+        "original_id": "5532a2ad-1a76-542e-91cc-c8d70daa5f33",
+        "text": "1977-10-20",
+        "type": "Entity"
+      },
+      {
+        "id": 8,
+        "original_id": "32e5ea46-cca9-5920-8b2d-77357f10ce8d",
+        "text": "american",
+        "type": "Entity"
+      },
+      {
+        "id": 9,
+        "original_id": "d2a381fa-3658-5ca6-ada9-2109cfc9331d",
+        "text": "concept",
+        "type": "EntityType"
+      },
+      {
+        "id": 10,
+        "original_id": "94c410f2-12ac-5e69-8299-ac20b658527c",
+        "text": "lead vocalist",
+        "type": "Entity"
+      },
+      {
+        "id": 11,
+        "original_id": "0c2a17c0-ef02-598c-98ac-04b081f6e719",
+        "text": "primary lyricist",
+        "type": "Entity"
+      },
+      {
+        "id": 12,
+        "original_id": "644bdcca-6cd3-5b64-851e-d83c0527d8aa",
+        "text": "lynyrd skynyrd",
+        "type": "Entity"
+      },
+      {
+        "id": 13,
+        "original_id": "388f60fb-220d-55e8-ae9c-3ac93cead308",
+        "text": "organization",
+        "type": "EntityType"
+      },
+      {
+        "id": 14,
+        "original_id": "d2f73a00-42ed-51c0-a56f-05caf9cb51ef",
+        "text": "michael geoffrey jones",
+        "type": "Entity"
+      },
+      {
+        "id": 15,
+        "original_id": "9558a8e9-62f8-5d77-b63a-e45b31384b68",
+        "text": "1955-06-26",
+        "type": "Entity"
+      },
+      {
+        "id": 16,
+        "original_id": "ce9e5991-4c7e-5bdf-811c-b73197252a19",
+        "text": "british",
+        "type": "Entity"
+      },
+      {
+        "id": 17,
+        "original_id": "908ed0da-fad6-5486-b4e9-3b48b62c7116",
+        "text": "musician",
+        "type": "Entity"
+      },
+      {
+        "id": 18,
+        "original_id": "eab5737a-cd7b-5a0b-b6f7-660bb3ed3495",
+        "text": "singer",
+        "type": "Entity"
+      },
+      {
+        "id": 19,
+        "original_id": "a5b80735-888a-5911-916c-11c46c78456d",
+        "text": "songwriter",
+        "type": "Entity"
+      },
+      {
+        "id": 20,
+        "original_id": "16f530ed-0265-5a26-8a11-9740eb2b0abf",
+        "text": "the clash",
+        "type": "Entity"
+      },
+      {
+        "id": 21,
+        "original_id": "3c0215ee-b605-50ca-9446-679776fa6623",
+        "text": "1983",
+        "type": "Entity"
+      },
+      {
+        "id": 22,
+        "original_id": "0244f692-766f-58dc-bd0a-7e010fe71b0d",
+        "text": "lead guitarist",
+        "type": "Entity"
+      },
+      {
+        "id": 23,
+        "original_id": "e12d33dd-b0b6-5a17-aa37-d223b9a47027",
+        "text": "co-lead vocalist",
+        "type": "Entity"
+      },
+      {
+        "id": 24,
+        "original_id": "a36e7c5c-d31a-5d03-a2ae-3ce6ab21de43",
+        "text": "cofounder",
+        "type": "Entity"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 14,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "born_on"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 7,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 15,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 21,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 7,
+        "type": "died_on"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 8,
+        "type": "has_nationality"
+      },
+      {
+        "source": 1,
+        "target": 8,
+        "type": "contains"
+      },
+      {
+        "source": 8,
+        "target": 9,
+        "type": "is_a"
+      },
+      {
+        "source": 10,
+        "target": 9,
+        "type": "is_a"
+      },
+      {
+        "source": 11,
+        "target": 9,
+        "type": "is_a"
+      },
+      {
+        "source": 16,
+        "target": 9,
+        "type": "is_a"
+      },
+      {
+        "source": 17,
+        "target": 9,
+        "type": "is_a"
+      },
+      {
+        "source": 18,
+        "target": 9,
+        "type": "is_a"
+      },
+      {
+        "source": 19,
+        "target": 9,
+        "type": "is_a"
+      },
+      {
+        "source": 22,
+        "target": 9,
+        "type": "is_a"
+      },
+      {
+        "source": 23,
+        "target": 9,
+        "type": "is_a"
+      },
+      {
+        "source": 24,
+        "target": 9,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 10,
+        "type": "has_role"
+      },
+      {
+        "source": 12,
+        "target": 10,
+        "type": "has_member_in_role"
+      },
+      {
+        "source": 1,
+        "target": 10,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 11,
+        "type": "has_role"
+      },
+      {
+        "source": 12,
+        "target": 11,
+        "type": "has_member_in_role"
+      },
+      {
+        "source": 1,
+        "target": 11,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 12,
+        "type": "founding_member_of"
+      },
+      {
+        "source": 1,
+        "target": 12,
+        "type": "contains"
+      },
+      {
+        "source": 12,
+        "target": 13,
+        "type": "is_a"
+      },
+      {
+        "source": 20,
+        "target": 13,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 14,
+        "type": "contains"
+      },
+      {
+        "source": 14,
+        "target": 15,
+        "type": "born_on"
+      },
+      {
+        "source": 1,
+        "target": 15,
+        "type": "contains"
+      },
+      {
+        "source": 14,
+        "target": 16,
+        "type": "has_nationality"
+      },
+      {
+        "source": 1,
+        "target": 16,
+        "type": "contains"
+      },
+      {
+        "source": 14,
+        "target": 17,
+        "type": "has_profession"
+      },
+      {
+        "source": 1,
+        "target": 17,
+        "type": "contains"
+      },
+      {
+        "source": 14,
+        "target": 18,
+        "type": "has_profession"
+      },
+      {
+        "source": 1,
+        "target": 18,
+        "type": "contains"
+      },
+      {
+        "source": 14,
+        "target": 19,
+        "type": "has_profession"
+      },
+      {
+        "source": 1,
+        "target": 19,
+        "type": "contains"
+      },
+      {
+        "source": 14,
+        "target": 20,
+        "type": "lead_guitarist_for"
+      },
+      {
+        "source": 1,
+        "target": 20,
+        "type": "contains"
+      },
+      {
+        "source": 20,
+        "target": 21,
+        "type": "dismissed_michael_geoffrey_jones_in"
+      },
+      {
+        "source": 14,
+        "target": 21,
+        "type": "dismissed_in"
+      },
+      {
+        "source": 1,
+        "target": 21,
+        "type": "contains"
+      },
+      {
+        "source": 14,
+        "target": 22,
+        "type": "has_role"
+      },
+      {
+        "source": 1,
+        "target": 22,
+        "type": "contains"
+      },
+      {
+        "source": 14,
+        "target": 23,
+        "type": "has_role"
+      },
+      {
+        "source": 1,
+        "target": 23,
+        "type": "contains"
+      },
+      {
+        "source": 14,
+        "target": 24,
+        "type": "has_role"
+      },
+      {
+        "source": 1,
+        "target": 24,
+        "type": "contains"
+      }
+    ]
+  }
+}

@@ -1,0 +1,388 @@
+{
+  "dataset": "hover",
+  "id": "8a3d7423-9b02-4f94-9d03-733a244c40a3",
+  "split": "train",
+  "claim": "Kait Parker fills in occasionally for the meteorologist who replaced Ginger Zee.",
+  "evidencia": "Page: Kait Parker. Sentence: Kait Parker is an atmospheric scientist who currently works for weather.com and The Weather Channel app.\nPage: Kait Parker. Sentence: She can also occasionally be seen on \"Good Morning America\" where she fills-in for meteorologist Rob Marciano on weekends.\nPage: Rob Marciano. Sentence: Marciano is ABC's, and currently provides forecasts for the weekend editions of \"Good Morning America\", a position Ginger Zee vacated when she was chosen to succeed Champion on the daily editions of \"GMA\".",
+  "evidence_text": "Page: Kait Parker. Sentence: Kait Parker is an atmospheric scientist who currently works for weather.com and The Weather Channel app.\nPage: Kait Parker. Sentence: She can also occasionally be seen on \"Good Morning America\" where she fills-in for meteorologist Rob Marciano on weekends.\nPage: Rob Marciano. Sentence: Marciano is ABC's, and currently provides forecasts for the weekend editions of \"Good Morning America\", a position Ginger Zee vacated when she was chosen to succeed Champion on the daily editions of \"GMA\".",
+  "label": "SUPPORTED",
+  "num_hops": 2,
+  "hover_metadata": {
+    "supporting_facts": [
+      [
+        "Kait Parker",
+        0
+      ],
+      [
+        "Kait Parker",
+        1
+      ],
+      [
+        "Rob Marciano",
+        1
+      ]
+    ],
+    "num_hops": 2,
+    "evidence_annotation_id": [
+      0
+    ],
+    "evidence_id": [
+      "Kait Parker::sentence::0",
+      "Kait Parker::sentence::1",
+      "Rob Marciano::sentence::1"
+    ],
+    "evidence_wiki_url": [
+      "https://en.wikipedia.org/wiki/Kait_Parker",
+      "https://en.wikipedia.org/wiki/Rob_Marciano"
+    ],
+    "evidence_sentence_id": [
+      "Kait Parker::sentence::0",
+      "Kait Parker::sentence::1",
+      "Rob Marciano::sentence::1"
+    ]
+  },
+  "grafo_claim": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "de2be8f9-00da-5648-93ea-4fbedf327dc3",
+        "text": "This chunk is about:\n- People: Kait Parker, Ginger Zee\n- Roles: meteorologist\n\nFacts:\n- Ginger Zee was replaced by another meteorologist.\n- Kait Parker occasionally fills in for the meteorologist who replaced Ginger Zee.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "bd7a1b99-590f-536c-9b51-32a16f619f70",
+        "text": "Kait Parker fills in occasionally for the meteorologist who replaced Ginger Zee.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "f6ec0c56-79bb-5ea4-8431-9723567b2c60",
+        "text": "kait parker",
+        "type": "Entity"
+      },
+      {
+        "id": 3,
+        "original_id": "982ff98a-25d5-5aa5-a361-6cdff45a1f73",
+        "text": "unnamed meteorologist",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "f008edf5-5bd4-5207-8519-ffabe8a3f912",
+        "text": "ginger zee",
+        "type": "Entity"
+      },
+      {
+        "id": 5,
+        "original_id": "99a82eec-bb35-5bb5-9ed2-e73fc7a756de",
+        "text": "person",
+        "type": "EntityType"
+      },
+      {
+        "id": 6,
+        "original_id": "c4a1994c-e2d2-575d-bff3-90de24625dcc",
+        "text": "text_58551ff66d60d51d6dd14f792f4eac4e",
+        "type": "TextDocument"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "contains"
+      },
+      {
+        "source": 2,
+        "target": 3,
+        "type": "fills_in_for"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "replaced"
+      },
+      {
+        "source": 1,
+        "target": 4,
+        "type": "contains"
+      },
+      {
+        "source": 4,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 2,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 6,
+        "type": "is_part_of"
+      }
+    ]
+  },
+  "grafo_evidencia": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "f00b5c0b-4a97-52f0-a24f-3b7d38af0d84",
+        "text": "This chunk is about:\n- People: Kait Parker, Rob Marciano, Ginger Zee, Champion\n- Organizations: weather.com, The Weather Channel, ABC\n- Products: The Weather Channel app\n- Programs: Good Morning America\n- Roles: atmospheric scientist, meteorologist\n\nFacts:\n- Kait Parker is an atmospheric scientist who currently works for weather.com and The Weather Channel app.\n- Kait Parker occasionally appears on Good Morning America as a fill-in meteorologist for Rob Marciano on weekends.\n- Rob Marciano currently provides weather forecasts for the weekend editions of Good Morning America on ABC.\n- Ginger Zee vacated the weekend Good Morning America forecasting position when she was chosen to succeed Champion on the daily editions of Good Morning America.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "681ce546-674c-5461-9fc2-fab9aa816fc5",
+        "text": "Page: Kait Parker. Sentence: Kait Parker is an atmospheric scientist who currently works for weather.com and The Weather Channel app.\nPage: Kait Parker. Sentence: She can also occasionally be seen on \"Good Morning America\" where she fills-in for meteorologist Rob Marciano on weekends.\nPage: Rob Marciano. Sentence: Marciano is ABC's, and currently provides forecasts for the weekend editions of \"Good Morning America\", a position Ginger Zee vacated when she was chosen to succeed Champion on the daily editions of \"GMA\".",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "f6ec0c56-79bb-5ea4-8431-9723567b2c60",
+        "text": "kait parker",
+        "type": "Entity"
+      },
+      {
+        "id": 3,
+        "original_id": "d91d0da5-71ac-54cf-a07c-e27bc09c514c",
+        "text": "weather.com",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "388f60fb-220d-55e8-ae9c-3ac93cead308",
+        "text": "organization",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "4e74a5c0-b055-5c98-91c8-3e8943e749ea",
+        "text": "the weather channel app",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "f76d57aa-4740-5218-9539-0e0978cbf183",
+        "text": "product",
+        "type": "EntityType"
+      },
+      {
+        "id": 7,
+        "original_id": "b2f84656-011f-5112-b4d0-397419fbf5d8",
+        "text": "good morning america",
+        "type": "Entity"
+      },
+      {
+        "id": 8,
+        "original_id": "63d4fcac-eaf3-5488-ba23-8e0e3a5e6df9",
+        "text": "weekend editions of good morning america",
+        "type": "Entity"
+      },
+      {
+        "id": 9,
+        "original_id": "36387591-0b06-5452-9637-f508643b8507",
+        "text": "daily editions of gma",
+        "type": "Entity"
+      },
+      {
+        "id": 10,
+        "original_id": "0f671ed7-d4e9-581f-81d1-88d4da4c351b",
+        "text": "rob marciano",
+        "type": "Entity"
+      },
+      {
+        "id": 11,
+        "original_id": "cf7d5902-15f2-5199-835c-55bbc5d985cd",
+        "text": "abc",
+        "type": "Entity"
+      },
+      {
+        "id": 12,
+        "original_id": "99a82eec-bb35-5bb5-9ed2-e73fc7a756de",
+        "text": "person",
+        "type": "EntityType"
+      },
+      {
+        "id": 13,
+        "original_id": "f008edf5-5bd4-5207-8519-ffabe8a3f912",
+        "text": "ginger zee",
+        "type": "Entity"
+      },
+      {
+        "id": 14,
+        "original_id": "876ecb97-4441-5716-ae89-36ce00d71640",
+        "text": "text_314f33e83d566127de8b73df087728bb",
+        "type": "TextDocument"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "contains"
+      },
+      {
+        "source": 2,
+        "target": 3,
+        "type": "works_for"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 8,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 9,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 7,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 11,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 2,
+        "target": 5,
+        "type": "works_for"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 2,
+        "target": 7,
+        "type": "appears_on"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      },
+      {
+        "source": 7,
+        "target": 8,
+        "type": "has_edition"
+      },
+      {
+        "source": 10,
+        "target": 8,
+        "type": "provides_forecasts_for"
+      },
+      {
+        "source": 13,
+        "target": 8,
+        "type": "vacated_position_on"
+      },
+      {
+        "source": 1,
+        "target": 8,
+        "type": "contains"
+      },
+      {
+        "source": 7,
+        "target": 9,
+        "type": "has_edition"
+      },
+      {
+        "source": 13,
+        "target": 9,
+        "type": "was_chosen_for"
+      },
+      {
+        "source": 1,
+        "target": 9,
+        "type": "contains"
+      },
+      {
+        "source": 2,
+        "target": 10,
+        "type": "fills_in_for"
+      },
+      {
+        "source": 1,
+        "target": 10,
+        "type": "contains"
+      },
+      {
+        "source": 10,
+        "target": 11,
+        "type": "associated_with"
+      },
+      {
+        "source": 1,
+        "target": 11,
+        "type": "contains"
+      },
+      {
+        "source": 10,
+        "target": 12,
+        "type": "is_a"
+      },
+      {
+        "source": 2,
+        "target": 12,
+        "type": "is_a"
+      },
+      {
+        "source": 13,
+        "target": 12,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 13,
+        "type": "contains"
+      },
+      {
+        "source": 1,
+        "target": 14,
+        "type": "is_part_of"
+      }
+    ]
+  }
+}

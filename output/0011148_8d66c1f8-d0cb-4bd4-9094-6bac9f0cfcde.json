@@ -1,0 +1,411 @@
+{
+  "dataset": "hover",
+  "id": "8d66c1f8-d0cb-4bd4-9094-6bac9f0cfcde",
+  "split": "train",
+  "claim": "Bill McCollum took a leadership role in the Senate trial that began on December 19, 1998.",
+  "evidencia": "Page: Bill McCollum. Sentence: He voted to impeach President Bill Clinton and subsequently took a leadership role in managing Clinton's trial in the Senate, which ended in acquittal.\nPage: Impeachment of Bill Clinton. Sentence: The impeachment process of Bill Clinton was initiated by the House of Representatives on December 19, 1998, against Bill Clinton, the 42nd President of the United States, on two charges, one of perjury and one of obstruction of justice.",
+  "evidence_text": "Page: Bill McCollum. Sentence: He voted to impeach President Bill Clinton and subsequently took a leadership role in managing Clinton's trial in the Senate, which ended in acquittal.\nPage: Impeachment of Bill Clinton. Sentence: The impeachment process of Bill Clinton was initiated by the House of Representatives on December 19, 1998, against Bill Clinton, the 42nd President of the United States, on two charges, one of perjury and one of obstruction of justice.",
+  "label": "SUPPORTED",
+  "num_hops": 2,
+  "hover_metadata": {
+    "supporting_facts": [
+      [
+        "Bill McCollum",
+        3
+      ],
+      [
+        "Impeachment of Bill Clinton",
+        0
+      ]
+    ],
+    "num_hops": 2,
+    "evidence_annotation_id": [
+      0
+    ],
+    "evidence_id": [
+      "Bill McCollum::sentence::3",
+      "Impeachment of Bill Clinton::sentence::0"
+    ],
+    "evidence_wiki_url": [
+      "https://en.wikipedia.org/wiki/Bill_McCollum",
+      "https://en.wikipedia.org/wiki/Impeachment_of_Bill_Clinton"
+    ],
+    "evidence_sentence_id": [
+      "Bill McCollum::sentence::3",
+      "Impeachment of Bill Clinton::sentence::0"
+    ]
+  },
+  "grafo_claim": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "8cc43759-acd9-5fdf-80a4-90f6831fc870",
+        "text": "This chunk is about:\n- People: Bill McCollum\n- Events: Senate trial\n\nFacts:\n- The Senate trial began on December 19, 1998.\n- Bill McCollum took a leadership role in the Senate trial.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "f1a1e375-1bae-5839-b21c-b70004c7394e",
+        "text": "Bill McCollum took a leadership role in the Senate trial that began on December 19, 1998.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "474c9c4d-6cd6-5682-8651-df66bbd283fc",
+        "text": "text_2db177fee91d4c17c98e50c7d3af8506",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "b1c40875-11c4-5988-9054-775cc9a2042c",
+        "text": "bill mccollum",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "99a82eec-bb35-5bb5-9ed2-e73fc7a756de",
+        "text": "person",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "1e825f6e-52f3-5d2e-acdd-89e3a81430cc",
+        "text": "senate trial",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "214abcd9-9adf-5c8a-bb35-1e729f2d68c3",
+        "text": "event",
+        "type": "EntityType"
+      },
+      {
+        "id": 7,
+        "original_id": "8ff98d4a-868a-577e-992a-a4749806bda4",
+        "text": "1998-12-19",
+        "type": "Entity"
+      },
+      {
+        "id": 8,
+        "original_id": "b19433ae-558c-5aaf-95ac-6231f2a4be0e",
+        "text": "date",
+        "type": "EntityType"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "took_leadership_role_in"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 5,
+        "target": 7,
+        "type": "began_on"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      },
+      {
+        "source": 7,
+        "target": 8,
+        "type": "is_a"
+      }
+    ]
+  },
+  "grafo_evidencia": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "e8ff7b10-c2f9-556f-8d92-f5cdd00b5379",
+        "text": "This chunk is about:\n- People: Bill McCollum, Bill Clinton\n- Events: Impeachment of Bill Clinton, Clinton Senate trial\n- Organizations: U.S. House of Representatives, U.S. Senate\n- Roles: President of the United States\n\nFacts:\n- On December 19, 1998, the U.S. House of Representatives initiated the impeachment of Bill Clinton, the 42nd President of the United States, on charges of perjury and obstruction of justice.\n- Bill McCollum voted to impeach President Bill Clinton.\n- Bill McCollum subsequently took a leadership role in managing Bill Clinton's trial in the U.S. Senate.\n- Bill Clinton's Senate trial ended in acquittal.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "38bb6072-0658-5198-a799-3c17135d6e8c",
+        "text": "Page: Bill McCollum. Sentence: He voted to impeach President Bill Clinton and subsequently took a leadership role in managing Clinton's trial in the Senate, which ended in acquittal.\nPage: Impeachment of Bill Clinton. Sentence: The impeachment process of Bill Clinton was initiated by the House of Representatives on December 19, 1998, against Bill Clinton, the 42nd President of the United States, on two charges, one of perjury and one of obstruction of justice.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "cb6965ae-a74b-5325-bbcd-09ea69ff65ad",
+        "text": "text_23f3542f9dcd7f55ef1904d9080ef603",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "b1c40875-11c4-5988-9054-775cc9a2042c",
+        "text": "bill mccollum",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "99a82eec-bb35-5bb5-9ed2-e73fc7a756de",
+        "text": "person",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "cd985905-7d39-50ee-b185-ea326990a8b7",
+        "text": "bill clinton",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "308b10c4-7d9a-5d08-8ca5-f2f3b1d124dc",
+        "text": "acquittal of bill clinton",
+        "type": "Entity"
+      },
+      {
+        "id": 7,
+        "original_id": "214abcd9-9adf-5c8a-bb35-1e729f2d68c3",
+        "text": "event",
+        "type": "EntityType"
+      },
+      {
+        "id": 8,
+        "original_id": "257f0896-8199-56bf-9a6f-b99ed308cdc2",
+        "text": "perjury",
+        "type": "Entity"
+      },
+      {
+        "id": 9,
+        "original_id": "d2a381fa-3658-5ca6-ada9-2109cfc9331d",
+        "text": "concept",
+        "type": "EntityType"
+      },
+      {
+        "id": 10,
+        "original_id": "c32bb01a-8a0e-5dd2-930f-42ed6342e817",
+        "text": "obstruction of justice",
+        "type": "Entity"
+      },
+      {
+        "id": 11,
+        "original_id": "ad186c71-cad6-561a-8d8b-09ae8fa43980",
+        "text": "united states senate",
+        "type": "Entity"
+      },
+      {
+        "id": 12,
+        "original_id": "388f60fb-220d-55e8-ae9c-3ac93cead308",
+        "text": "organization",
+        "type": "EntityType"
+      },
+      {
+        "id": 13,
+        "original_id": "ded75d65-7711-55b0-943c-4d5a1998568a",
+        "text": "united states house of representatives",
+        "type": "Entity"
+      },
+      {
+        "id": 14,
+        "original_id": "5980eb8f-d59c-5a79-8385-754cb03c6af0",
+        "text": "impeachment of bill clinton",
+        "type": "Entity"
+      },
+      {
+        "id": 15,
+        "original_id": "8ff98d4a-868a-577e-992a-a4749806bda4",
+        "text": "1998-12-19",
+        "type": "Entity"
+      },
+      {
+        "id": 16,
+        "original_id": "b19433ae-558c-5aaf-95ac-6231f2a4be0e",
+        "text": "date",
+        "type": "EntityType"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 5,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "voted_to_impeach"
+      },
+      {
+        "source": 11,
+        "target": 5,
+        "type": "tried"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 14,
+        "target": 5,
+        "type": "was_against"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "was_acquitted_in"
+      },
+      {
+        "source": 1,
+        "target": 6,
+        "type": "contains"
+      },
+      {
+        "source": 6,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 14,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 5,
+        "target": 8,
+        "type": "was_charged_with"
+      },
+      {
+        "source": 14,
+        "target": 8,
+        "type": "included_charge_of"
+      },
+      {
+        "source": 1,
+        "target": 8,
+        "type": "contains"
+      },
+      {
+        "source": 8,
+        "target": 9,
+        "type": "is_a"
+      },
+      {
+        "source": 10,
+        "target": 9,
+        "type": "is_a"
+      },
+      {
+        "source": 5,
+        "target": 10,
+        "type": "was_charged_with"
+      },
+      {
+        "source": 14,
+        "target": 10,
+        "type": "included_charge_of"
+      },
+      {
+        "source": 1,
+        "target": 10,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 11,
+        "type": "took_leadership_role_in_managing_trial_in"
+      },
+      {
+        "source": 1,
+        "target": 11,
+        "type": "contains"
+      },
+      {
+        "source": 11,
+        "target": 12,
+        "type": "is_a"
+      },
+      {
+        "source": 13,
+        "target": 12,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 13,
+        "type": "contains"
+      },
+      {
+        "source": 13,
+        "target": 14,
+        "type": "initiated"
+      },
+      {
+        "source": 1,
+        "target": 14,
+        "type": "contains"
+      },
+      {
+        "source": 14,
+        "target": 15,
+        "type": "started_on"
+      },
+      {
+        "source": 1,
+        "target": 15,
+        "type": "contains"
+      },
+      {
+        "source": 15,
+        "target": 16,
+        "type": "is_a"
+      }
+    ]
+  }
+}

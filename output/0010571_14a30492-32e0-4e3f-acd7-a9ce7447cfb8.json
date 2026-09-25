@@ -1,0 +1,461 @@
+{
+  "dataset": "hover",
+  "id": "14a30492-32e0-4e3f-acd7-a9ce7447cfb8",
+  "split": "train",
+  "claim": "The 1985 film, of which Wild Search is a pseudo-remake, and Pamela Wallace have the country American in common.",
+  "evidencia": "Page: Witness (1985 film). Sentence: Witness is a 1985 American crime thriller film directed by Peter Weir and starring Harrison Ford and Kelly McGillis.\nPage: Pamela Wallace. Sentence: Pamela Wallace (born 1949 in Exeter, California) is an American screenwriter and author.\nPage: Wild Search. Sentence: The film is a pseudo-remake of the 1985 film \"Witness\" and deals with Hong Kong cops and Mainland criminals.",
+  "evidence_text": "Page: Witness (1985 film). Sentence: Witness is a 1985 American crime thriller film directed by Peter Weir and starring Harrison Ford and Kelly McGillis.\nPage: Pamela Wallace. Sentence: Pamela Wallace (born 1949 in Exeter, California) is an American screenwriter and author.\nPage: Wild Search. Sentence: The film is a pseudo-remake of the 1985 film \"Witness\" and deals with Hong Kong cops and Mainland criminals.",
+  "label": "SUPPORTED",
+  "num_hops": 3,
+  "hover_metadata": {
+    "supporting_facts": [
+      [
+        "Witness (1985 film)",
+        0
+      ],
+      [
+        "Pamela Wallace",
+        0
+      ],
+      [
+        "Wild Search",
+        1
+      ]
+    ],
+    "num_hops": 3,
+    "evidence_annotation_id": [
+      0
+    ],
+    "evidence_id": [
+      "Witness (1985 film)::sentence::0",
+      "Pamela Wallace::sentence::0",
+      "Wild Search::sentence::1"
+    ],
+    "evidence_wiki_url": [
+      "https://en.wikipedia.org/wiki/Witness_%281985_film%29",
+      "https://en.wikipedia.org/wiki/Pamela_Wallace",
+      "https://en.wikipedia.org/wiki/Wild_Search"
+    ],
+    "evidence_sentence_id": [
+      "Witness (1985 film)::sentence::0",
+      "Pamela Wallace::sentence::0",
+      "Wild Search::sentence::1"
+    ]
+  },
+  "grafo_claim": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "d9873f5a-9fe8-5429-969a-ea3e028c38f6",
+        "text": "This chunk is about:\n- Films: Wild Search, the 1985 film\n- People: Pamela Wallace\n- Topics: country associations\n\nFacts:\n- Wild Search is a pseudo-remake of a 1985 film.\n- Pamela Wallace has the country association American.\n- The 1985 film and Pamela Wallace have American in common as a country association.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "3cc3a6f2-4291-5209-b540-d12476e68a9e",
+        "text": "The 1985 film, of which Wild Search is a pseudo-remake, and Pamela Wallace have the country American in common.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "89d75c39-df46-53d0-bb80-722b48498d3f",
+        "text": "text_ab6a8d60f701fac2fb5e7347c97e21bc",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "eeaa6250-a8c6-5b6e-98ed-764ea325c149",
+        "text": "wild search",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "d320c8df-fd51-56e6-b577-e01a688fe6fc",
+        "text": "film",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "6c4ea605-acee-50c7-9492-2b5d9405581b",
+        "text": "1985 film",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "32e5ea46-cca9-5920-8b2d-77357f10ce8d",
+        "text": "american",
+        "type": "Entity"
+      },
+      {
+        "id": 7,
+        "original_id": "35e29ad1-17b7-507a-a205-d7851a5e7102",
+        "text": "country",
+        "type": "EntityType"
+      },
+      {
+        "id": 8,
+        "original_id": "80a41898-5286-5f6c-b7f2-997726749111",
+        "text": "pamela wallace",
+        "type": "Entity"
+      },
+      {
+        "id": 9,
+        "original_id": "99a82eec-bb35-5bb5-9ed2-e73fc7a756de",
+        "text": "person",
+        "type": "EntityType"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 5,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "pseudo_remake_of"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "has_country"
+      },
+      {
+        "source": 8,
+        "target": 6,
+        "type": "has_country"
+      },
+      {
+        "source": 1,
+        "target": 6,
+        "type": "contains"
+      },
+      {
+        "source": 6,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 8,
+        "type": "contains"
+      },
+      {
+        "source": 8,
+        "target": 9,
+        "type": "is_a"
+      }
+    ]
+  },
+  "grafo_evidencia": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "0728edb0-cb25-5c7b-bf5d-b5ce31c573b7",
+        "text": "This chunk is about:\n- Films: Witness, Wild Search\n- People: Peter Weir, Harrison Ford, Kelly McGillis, Pamela Wallace\n- Topics: crime thriller films, screenwriting, pseudo-remakes\n\nFacts:\n- Witness is a 1985 American crime thriller film directed by Peter Weir and starring Harrison Ford and Kelly McGillis.\n- Pamela Wallace was born in 1949 in Exeter, California, and she is an American screenwriter and author.\n- Wild Search is a pseudo-remake of the 1985 film Witness, and it deals with Hong Kong cops and Mainland criminals.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "2981034c-301b-5734-9756-1e9c0af1972f",
+        "text": "Page: Witness (1985 film). Sentence: Witness is a 1985 American crime thriller film directed by Peter Weir and starring Harrison Ford and Kelly McGillis.\nPage: Pamela Wallace. Sentence: Pamela Wallace (born 1949 in Exeter, California) is an American screenwriter and author.\nPage: Wild Search. Sentence: The film is a pseudo-remake of the 1985 film \"Witness\" and deals with Hong Kong cops and Mainland criminals.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "6400b091-1969-5afd-8c63-08a46713a094",
+        "text": "text_4d8179fc608b058c6ee1da6bc4c32c90",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "a5b03504-f3f3-5c79-97df-86c7367a9d55",
+        "text": "witness",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "d320c8df-fd51-56e6-b577-e01a688fe6fc",
+        "text": "film",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "6bd8ee84-df5b-547d-ad6e-de3a4c833f59",
+        "text": "1985",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "b19433ae-558c-5aaf-95ac-6231f2a4be0e",
+        "text": "date",
+        "type": "EntityType"
+      },
+      {
+        "id": 7,
+        "original_id": "6700e1a6-b543-548e-bd6f-8bac65e117b4",
+        "text": "peter weir",
+        "type": "Entity"
+      },
+      {
+        "id": 8,
+        "original_id": "99a82eec-bb35-5bb5-9ed2-e73fc7a756de",
+        "text": "person",
+        "type": "EntityType"
+      },
+      {
+        "id": 9,
+        "original_id": "d5dbf144-135b-568b-98c8-39d7cbc596a0",
+        "text": "harrison ford",
+        "type": "Entity"
+      },
+      {
+        "id": 10,
+        "original_id": "a10a741b-5f63-5d24-9ceb-a9fc146e5b44",
+        "text": "kelly mcgillis",
+        "type": "Entity"
+      },
+      {
+        "id": 11,
+        "original_id": "80a41898-5286-5f6c-b7f2-997726749111",
+        "text": "pamela wallace",
+        "type": "Entity"
+      },
+      {
+        "id": 12,
+        "original_id": "978f6875-0d74-5a85-85a6-ffea5090c49c",
+        "text": "1949",
+        "type": "Entity"
+      },
+      {
+        "id": 13,
+        "original_id": "1995f0ed-7e26-5cb1-81b7-8c0aa214caff",
+        "text": "exeter, california",
+        "type": "Entity"
+      },
+      {
+        "id": 14,
+        "original_id": "5f394058-b2a0-5ba8-8466-ba2a18cfcf4e",
+        "text": "place",
+        "type": "EntityType"
+      },
+      {
+        "id": 15,
+        "original_id": "eeaa6250-a8c6-5b6e-98ed-764ea325c149",
+        "text": "wild search",
+        "type": "Entity"
+      },
+      {
+        "id": 16,
+        "original_id": "cfe7c19e-5ab7-590a-97b6-99af21175224",
+        "text": "hong kong cops",
+        "type": "Entity"
+      },
+      {
+        "id": 17,
+        "original_id": "98ed3a15-eaa2-57c6-8de5-e1dabaf57f77",
+        "text": "group",
+        "type": "EntityType"
+      },
+      {
+        "id": 18,
+        "original_id": "301dc905-64f4-5aeb-921d-b5ae001c6fdd",
+        "text": "mainland criminals",
+        "type": "Entity"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 15,
+        "target": 3,
+        "type": "pseudo_remake_of"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 15,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "released_in"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 12,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 7,
+        "type": "directed_by"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      },
+      {
+        "source": 7,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 9,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 10,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 11,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 9,
+        "type": "starred"
+      },
+      {
+        "source": 1,
+        "target": 9,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 10,
+        "type": "starred"
+      },
+      {
+        "source": 1,
+        "target": 10,
+        "type": "contains"
+      },
+      {
+        "source": 1,
+        "target": 11,
+        "type": "contains"
+      },
+      {
+        "source": 11,
+        "target": 12,
+        "type": "born_in"
+      },
+      {
+        "source": 1,
+        "target": 12,
+        "type": "contains"
+      },
+      {
+        "source": 11,
+        "target": 13,
+        "type": "born_in"
+      },
+      {
+        "source": 1,
+        "target": 13,
+        "type": "contains"
+      },
+      {
+        "source": 13,
+        "target": 14,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 15,
+        "type": "contains"
+      },
+      {
+        "source": 15,
+        "target": 16,
+        "type": "deals_with"
+      },
+      {
+        "source": 1,
+        "target": 16,
+        "type": "contains"
+      },
+      {
+        "source": 16,
+        "target": 17,
+        "type": "is_a"
+      },
+      {
+        "source": 18,
+        "target": 17,
+        "type": "is_a"
+      },
+      {
+        "source": 15,
+        "target": 18,
+        "type": "deals_with"
+      },
+      {
+        "source": 1,
+        "target": 18,
+        "type": "contains"
+      }
+    ]
+  }
+}

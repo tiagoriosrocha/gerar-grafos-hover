@@ -1,0 +1,383 @@
+{
+  "dataset": "hover",
+  "id": "5f66376b-e277-4657-94ca-a8954deb5045",
+  "split": "train",
+  "claim": "According to the 2010 census, the population of the town loacted approcimately seven miles south of Cave Rock Tunnel was 842.",
+  "evidencia": "Page: Cave Rock Tunnel. Sentence: The Cave Rock Tunnel is a dual bore highway tunnel on U.S. Route 50 (US 50) along the eastern shore of Lake Tahoe approximately seven miles (11.4 km) north of Stateline, in Douglas County, Nevada, United States.\nPage: Stateline, Nevada. Sentence: The population was 842 at the 2010 census.",
+  "evidence_text": "Page: Cave Rock Tunnel. Sentence: The Cave Rock Tunnel is a dual bore highway tunnel on U.S. Route 50 (US 50) along the eastern shore of Lake Tahoe approximately seven miles (11.4 km) north of Stateline, in Douglas County, Nevada, United States.\nPage: Stateline, Nevada. Sentence: The population was 842 at the 2010 census.",
+  "label": "SUPPORTED",
+  "num_hops": 2,
+  "hover_metadata": {
+    "supporting_facts": [
+      [
+        "Cave Rock Tunnel",
+        0
+      ],
+      [
+        "Stateline, Nevada",
+        1
+      ]
+    ],
+    "num_hops": 2,
+    "evidence_annotation_id": [
+      0
+    ],
+    "evidence_id": [
+      "Cave Rock Tunnel::sentence::0",
+      "Stateline, Nevada::sentence::1"
+    ],
+    "evidence_wiki_url": [
+      "https://en.wikipedia.org/wiki/Cave_Rock_Tunnel",
+      "https://en.wikipedia.org/wiki/Stateline%2C_Nevada"
+    ],
+    "evidence_sentence_id": [
+      "Cave Rock Tunnel::sentence::0",
+      "Stateline, Nevada::sentence::1"
+    ]
+  },
+  "grafo_claim": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "abc1ff3b-15b4-5c7f-b638-5b2cc3fa7f4e",
+        "text": "This chunk is about:\n- Places: Cave Rock Tunnel, the town approximately seven miles south of Cave Rock Tunnel\n- Topics: 2010 census, population\n\nFacts:\n- According to the 2010 census, the town located approximately seven miles south of Cave Rock Tunnel had a population of 842.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "2b1af1b7-49c8-5bb9-8679-c5d453c8fbf3",
+        "text": "According to the 2010 census, the population of the town loacted approcimately seven miles south of Cave Rock Tunnel was 842.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "8a3da0db-86d9-5c2c-8707-39383c8011f2",
+        "text": "text_e8714e062fd8f4894dddc69dac520188",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "4cb6ada6-82d5-5a31-83fe-5bd97fc4f3b0",
+        "text": "2010 census",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "214abcd9-9adf-5c8a-bb35-1e729f2d68c3",
+        "text": "event",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "47ac7765-f043-5dcc-836f-35967bf1c225",
+        "text": "cave rock tunnel",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "5f394058-b2a0-5ba8-8466-ba2a18cfcf4e",
+        "text": "place",
+        "type": "EntityType"
+      },
+      {
+        "id": 7,
+        "original_id": "13965d29-61be-5206-8976-383db9ddaeb0",
+        "text": "town approximately seven miles south of cave rock tunnel",
+        "type": "Entity"
+      },
+      {
+        "id": 8,
+        "original_id": "8f5054b2-95ad-518a-a401-001b3aa37eb9",
+        "text": "842",
+        "type": "Entity"
+      },
+      {
+        "id": 9,
+        "original_id": "5c1097ca-fab8-54d5-b57f-5dca4b0e2507",
+        "text": "number",
+        "type": "EntityType"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 8,
+        "target": 3,
+        "type": "reported_in"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 7,
+        "target": 5,
+        "type": "located_south_of"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 7,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      },
+      {
+        "source": 7,
+        "target": 8,
+        "type": "has_population"
+      },
+      {
+        "source": 1,
+        "target": 8,
+        "type": "contains"
+      },
+      {
+        "source": 8,
+        "target": 9,
+        "type": "is_a"
+      }
+    ]
+  },
+  "grafo_evidencia": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "bb01fc23-8991-523a-95b5-d5d37037bd14",
+        "text": "This chunk is about:\n- Places: Cave Rock Tunnel, Lake Tahoe, Stateline, Douglas County, Nevada, United States\n- Systems: U.S. Route 50\n\nFacts:\n- Cave Rock Tunnel is a dual-bore highway tunnel on U.S. Route 50 along the eastern shore of Lake Tahoe in Douglas County, Nevada, United States.\n- Cave Rock Tunnel is approximately seven miles north of Stateline.\n- Stateline, Nevada, had a population of 842 at the 2010 census.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "80a9e608-711d-5cad-b0bb-510d75fcc43a",
+        "text": "Page: Cave Rock Tunnel. Sentence: The Cave Rock Tunnel is a dual bore highway tunnel on U.S. Route 50 (US 50) along the eastern shore of Lake Tahoe approximately seven miles (11.4 km) north of Stateline, in Douglas County, Nevada, United States.\nPage: Stateline, Nevada. Sentence: The population was 842 at the 2010 census.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "ce3fc4df-9896-5877-8308-da7a6e9f920a",
+        "text": "text_eb6271f74208ace72af1ef5b6a8185d3",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "47ac7765-f043-5dcc-836f-35967bf1c225",
+        "text": "cave rock tunnel",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "9e45e649-bc31-5794-bf25-5c269625d88f",
+        "text": "u.s. route 50",
+        "type": "Entity"
+      },
+      {
+        "id": 5,
+        "original_id": "5f394058-b2a0-5ba8-8466-ba2a18cfcf4e",
+        "text": "place",
+        "type": "EntityType"
+      },
+      {
+        "id": 6,
+        "original_id": "77072f42-4ffb-53b6-a740-1d5fb6eb14b4",
+        "text": "lake tahoe",
+        "type": "Entity"
+      },
+      {
+        "id": 7,
+        "original_id": "2b56bf8b-6fe1-5a92-b72b-b833f853067a",
+        "text": "stateline",
+        "type": "Entity"
+      },
+      {
+        "id": 8,
+        "original_id": "cca9924d-3e69-59c5-be62-5ec26c26b0db",
+        "text": "nevada",
+        "type": "Entity"
+      },
+      {
+        "id": 9,
+        "original_id": "874a51da-34ea-5037-be47-d87785d43c37",
+        "text": "united states",
+        "type": "Entity"
+      },
+      {
+        "id": 10,
+        "original_id": "4cb6ada6-82d5-5a31-83fe-5bd97fc4f3b0",
+        "text": "2010 census",
+        "type": "Entity"
+      },
+      {
+        "id": 11,
+        "original_id": "b19433ae-558c-5aaf-95ac-6231f2a4be0e",
+        "text": "date",
+        "type": "EntityType"
+      },
+      {
+        "id": 12,
+        "original_id": "05369049-ba76-58bc-9faa-6fbf2b15bf9e",
+        "text": "douglas county",
+        "type": "Entity"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "located_on"
+      },
+      {
+        "source": 1,
+        "target": 4,
+        "type": "contains"
+      },
+      {
+        "source": 4,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 6,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 9,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 8,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 7,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 12,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 6,
+        "type": "located_along"
+      },
+      {
+        "source": 1,
+        "target": 6,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 7,
+        "type": "located_north_of"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      },
+      {
+        "source": 7,
+        "target": 8,
+        "type": "located_in"
+      },
+      {
+        "source": 12,
+        "target": 8,
+        "type": "located_in"
+      },
+      {
+        "source": 1,
+        "target": 8,
+        "type": "contains"
+      },
+      {
+        "source": 8,
+        "target": 9,
+        "type": "located_in"
+      },
+      {
+        "source": 1,
+        "target": 9,
+        "type": "contains"
+      },
+      {
+        "source": 7,
+        "target": 10,
+        "type": "population_at"
+      },
+      {
+        "source": 1,
+        "target": 10,
+        "type": "contains"
+      },
+      {
+        "source": 10,
+        "target": 11,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 12,
+        "type": "located_in"
+      },
+      {
+        "source": 1,
+        "target": 12,
+        "type": "contains"
+      }
+    ]
+  }
+}

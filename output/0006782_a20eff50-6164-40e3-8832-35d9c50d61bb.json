@@ -1,0 +1,380 @@
+{
+  "dataset": "hover",
+  "id": "a20eff50-6164-40e3-8832-35d9c50d61bb",
+  "split": "train",
+  "claim": "Gretchen Gotay graduated from the University of Georgia, an American public research university, which is located 72 miles northeast of Atlanta.",
+  "evidencia": "Page: Gretchen Gotay. Sentence: She is a member of Athens Bulldogs Swim Club under her personal coach Harvey Humphries, and a graduate with a master's degree in sports management at the University of Georgia in Athens.\nPage: University of Georgia. Sentence: The University of Georgia, also referred to as UGA or simply Georgia, is an American public research university.\nPage: University of Georgia. Sentence: Its main 762 acres campus is located in Athens, Georgia, approximately 72 mile northeast of Atlanta.",
+  "evidence_text": "Page: Gretchen Gotay. Sentence: She is a member of Athens Bulldogs Swim Club under her personal coach Harvey Humphries, and a graduate with a master's degree in sports management at the University of Georgia in Athens.\nPage: University of Georgia. Sentence: The University of Georgia, also referred to as UGA or simply Georgia, is an American public research university.\nPage: University of Georgia. Sentence: Its main 762 acres campus is located in Athens, Georgia, approximately 72 mile northeast of Atlanta.",
+  "label": "SUPPORTED",
+  "num_hops": 2,
+  "hover_metadata": {
+    "supporting_facts": [
+      [
+        "Gretchen Gotay",
+        2
+      ],
+      [
+        "University of Georgia",
+        0
+      ],
+      [
+        "University of Georgia",
+        1
+      ]
+    ],
+    "num_hops": 2,
+    "evidence_annotation_id": [
+      0
+    ],
+    "evidence_id": [
+      "Gretchen Gotay::sentence::2",
+      "University of Georgia::sentence::0",
+      "University of Georgia::sentence::1"
+    ],
+    "evidence_wiki_url": [
+      "https://en.wikipedia.org/wiki/Gretchen_Gotay",
+      "https://en.wikipedia.org/wiki/University_of_Georgia"
+    ],
+    "evidence_sentence_id": [
+      "Gretchen Gotay::sentence::2",
+      "University of Georgia::sentence::0",
+      "University of Georgia::sentence::1"
+    ]
+  },
+  "grafo_claim": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "ae8e5241-90c7-536e-a5d2-09174bbf2255",
+        "text": "This chunk is about:\n- People: Gretchen Gotay\n- Organizations: University of Georgia\n- Places: Atlanta\n\nFacts:\n- Gretchen Gotay graduated from the University of Georgia.\n- The University of Georgia is an American public research university.\n- The University of Georgia is located 72 miles northeast of Atlanta.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "6fbac06c-af45-5a38-88b3-9c3950c1bb6c",
+        "text": "Gretchen Gotay graduated from the University of Georgia, an American public research university, which is located 72 miles northeast of Atlanta.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "babc6620-7906-58de-9599-fb33130edeac",
+        "text": "text_17191c36f91bf82f71fcadef2c52c3df",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "d3c5e3c9-d6eb-5662-8fe7-e0c819a67b2f",
+        "text": "gretchen gotay",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "4de59ab4-a6be-50e9-9598-af43c0c67a9c",
+        "text": "university of georgia",
+        "type": "Entity"
+      },
+      {
+        "id": 5,
+        "original_id": "4aa199bf-ca95-5409-bbe5-ab916a752491",
+        "text": "atlanta",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "5f394058-b2a0-5ba8-8466-ba2a18cfcf4e",
+        "text": "place",
+        "type": "EntityType"
+      },
+      {
+        "id": 7,
+        "original_id": "388f60fb-220d-55e8-ae9c-3ac93cead308",
+        "text": "organization",
+        "type": "EntityType"
+      },
+      {
+        "id": 8,
+        "original_id": "99a82eec-bb35-5bb5-9ed2-e73fc7a756de",
+        "text": "person",
+        "type": "EntityType"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "graduated_from"
+      },
+      {
+        "source": 1,
+        "target": 4,
+        "type": "contains"
+      },
+      {
+        "source": 4,
+        "target": 5,
+        "type": "located_northeast_of"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 4,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 8,
+        "type": "is_a"
+      }
+    ]
+  },
+  "grafo_evidencia": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "274758fd-4740-5d27-aaeb-4216e6feebc1",
+        "text": "This chunk is about:\n- People: Gretchen Gotay, Harvey Humphries\n- Organizations: Athens Bulldogs Swim Club, University of Georgia\n- Places: Athens, Georgia, Atlanta\n- Topics: sports management\n\nFacts:\n- The University of Georgia, also called UGA or Georgia, is an American public research university.\n- The University of Georgia has a main 762-acre campus in Athens, Georgia, about 72 miles northeast of Atlanta.\n- Gretchen Gotay is a member of Athens Bulldogs Swim Club and is coached there by Harvey Humphries.\n- Gretchen Gotay graduated from the University of Georgia in Athens with a master's degree in sports management.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "e4b39a21-2c92-52c2-8b48-b83785f85694",
+        "text": "Page: Gretchen Gotay. Sentence: She is a member of Athens Bulldogs Swim Club under her personal coach Harvey Humphries, and a graduate with a master's degree in sports management at the University of Georgia in Athens.\nPage: University of Georgia. Sentence: The University of Georgia, also referred to as UGA or simply Georgia, is an American public research university.\nPage: University of Georgia. Sentence: Its main 762 acres campus is located in Athens, Georgia, approximately 72 mile northeast of Atlanta.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "c1651772-97c0-5ed8-8b3b-73f8856058e7",
+        "text": "text_db102b5b970b0e28610ed82424143e9a",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "d3c5e3c9-d6eb-5662-8fe7-e0c819a67b2f",
+        "text": "gretchen gotay",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "3af3d2a6-68b3-5a29-9a8c-d06755dbd773",
+        "text": "athens bulldogs swim club",
+        "type": "Entity"
+      },
+      {
+        "id": 5,
+        "original_id": "388f60fb-220d-55e8-ae9c-3ac93cead308",
+        "text": "organization",
+        "type": "EntityType"
+      },
+      {
+        "id": 6,
+        "original_id": "7ceb6adb-d8bf-5cc2-b41d-1cfdb4760aa1",
+        "text": "harvey humphries",
+        "type": "Entity"
+      },
+      {
+        "id": 7,
+        "original_id": "99a82eec-bb35-5bb5-9ed2-e73fc7a756de",
+        "text": "person",
+        "type": "EntityType"
+      },
+      {
+        "id": 8,
+        "original_id": "4de59ab4-a6be-50e9-9598-af43c0c67a9c",
+        "text": "university of georgia",
+        "type": "Entity"
+      },
+      {
+        "id": 9,
+        "original_id": "8be62331-6c98-5f2e-8276-09d8d464221b",
+        "text": "athens",
+        "type": "Entity"
+      },
+      {
+        "id": 10,
+        "original_id": "1a8a1dae-ccdc-5bd1-a5aa-9c308020ebd6",
+        "text": "georgia",
+        "type": "Entity"
+      },
+      {
+        "id": 11,
+        "original_id": "5f394058-b2a0-5ba8-8466-ba2a18cfcf4e",
+        "text": "place",
+        "type": "EntityType"
+      },
+      {
+        "id": 12,
+        "original_id": "4aa199bf-ca95-5409-bbe5-ab916a752491",
+        "text": "atlanta",
+        "type": "Entity"
+      },
+      {
+        "id": 13,
+        "original_id": "eb9623bc-161e-5525-a93c-f162066aa3ab",
+        "text": "masters degree in sports management",
+        "type": "Entity"
+      },
+      {
+        "id": 14,
+        "original_id": "705c80b3-553d-5a09-9da4-8667d62997ae",
+        "text": "degree",
+        "type": "EntityType"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "member_of"
+      },
+      {
+        "source": 1,
+        "target": 4,
+        "type": "contains"
+      },
+      {
+        "source": 4,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 8,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 6,
+        "type": "coached_by"
+      },
+      {
+        "source": 1,
+        "target": 6,
+        "type": "contains"
+      },
+      {
+        "source": 6,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 8,
+        "type": "graduated_from"
+      },
+      {
+        "source": 13,
+        "target": 8,
+        "type": "awarded_by"
+      },
+      {
+        "source": 1,
+        "target": 8,
+        "type": "contains"
+      },
+      {
+        "source": 8,
+        "target": 9,
+        "type": "located_in"
+      },
+      {
+        "source": 1,
+        "target": 9,
+        "type": "contains"
+      },
+      {
+        "source": 9,
+        "target": 10,
+        "type": "located_in"
+      },
+      {
+        "source": 1,
+        "target": 10,
+        "type": "contains"
+      },
+      {
+        "source": 10,
+        "target": 11,
+        "type": "is_a"
+      },
+      {
+        "source": 9,
+        "target": 11,
+        "type": "is_a"
+      },
+      {
+        "source": 12,
+        "target": 11,
+        "type": "is_a"
+      },
+      {
+        "source": 8,
+        "target": 12,
+        "type": "located_northeast_of"
+      },
+      {
+        "source": 1,
+        "target": 12,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 13,
+        "type": "earned_degree"
+      },
+      {
+        "source": 1,
+        "target": 13,
+        "type": "contains"
+      },
+      {
+        "source": 13,
+        "target": 14,
+        "type": "is_a"
+      }
+    ]
+  }
+}

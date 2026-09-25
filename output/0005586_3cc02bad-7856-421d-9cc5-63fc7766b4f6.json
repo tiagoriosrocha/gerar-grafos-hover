@@ -1,0 +1,328 @@
+{
+  "dataset": "hover",
+  "id": "3cc02bad-7856-421d-9cc5-63fc7766b4f6",
+  "split": "train",
+  "claim": "Peter Straub is a novelist. The author of The Playmaker is also a novelist.",
+  "evidencia": "Page: Thomas Keneally. Sentence: Thomas Michael Keneally, AO (born 7 October 1935) is a prolific Australian novelist, playwright, and essayist.\nPage: Peter Straub. Sentence: Peter Francis Straub (born March 2, 1943) is an American novelist and poet.\nPage: The Playmaker. Sentence: The Playmaker is a novel based in Australia written by the Australian author Thomas Keneally.",
+  "evidence_text": "Page: Thomas Keneally. Sentence: Thomas Michael Keneally, AO (born 7 October 1935) is a prolific Australian novelist, playwright, and essayist.\nPage: Peter Straub. Sentence: Peter Francis Straub (born March 2, 1943) is an American novelist and poet.\nPage: The Playmaker. Sentence: The Playmaker is a novel based in Australia written by the Australian author Thomas Keneally.",
+  "label": "SUPPORTED",
+  "num_hops": 3,
+  "hover_metadata": {
+    "supporting_facts": [
+      [
+        "Thomas Keneally",
+        0
+      ],
+      [
+        "Peter Straub",
+        0
+      ],
+      [
+        "The Playmaker",
+        0
+      ]
+    ],
+    "num_hops": 3,
+    "evidence_annotation_id": [
+      0
+    ],
+    "evidence_id": [
+      "Thomas Keneally::sentence::0",
+      "Peter Straub::sentence::0",
+      "The Playmaker::sentence::0"
+    ],
+    "evidence_wiki_url": [
+      "https://en.wikipedia.org/wiki/Thomas_Keneally",
+      "https://en.wikipedia.org/wiki/Peter_Straub",
+      "https://en.wikipedia.org/wiki/The_Playmaker"
+    ],
+    "evidence_sentence_id": [
+      "Thomas Keneally::sentence::0",
+      "Peter Straub::sentence::0",
+      "The Playmaker::sentence::0"
+    ]
+  },
+  "grafo_claim": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "cf46d81c-fcd5-5910-9bdb-51645b333936",
+        "text": "This chunk is about:\n- People: Peter Straub\n- Works: The Playmaker\n- Roles: Novelist, Author\n\nFacts:\n- Peter Straub is a novelist.\n- The author of The Playmaker is a novelist.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "ea104e35-cb28-5123-9f49-0bebd3ab52bf",
+        "text": "Peter Straub is a novelist. The author of The Playmaker is also a novelist.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "8fc81bdc-6127-55c3-81f4-f0ad9ddeb7ce",
+        "text": "text_7b61bfe08eabf0d692b27e5744ba5dea",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "05f25cd2-231a-50f6-a84e-87ab56aab044",
+        "text": "peter straub",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "d06ca855-29a6-50c7-bdcf-0b29a27027b1",
+        "text": "the playmaker",
+        "type": "Entity"
+      },
+      {
+        "id": 5,
+        "original_id": "5263a535-1b4b-5925-be3e-310d03cd303b",
+        "text": "work",
+        "type": "EntityType"
+      },
+      {
+        "id": 6,
+        "original_id": "99a82eec-bb35-5bb5-9ed2-e73fc7a756de",
+        "text": "person",
+        "type": "EntityType"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "author_of"
+      },
+      {
+        "source": 1,
+        "target": 4,
+        "type": "contains"
+      },
+      {
+        "source": 4,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 6,
+        "type": "is_a"
+      }
+    ]
+  },
+  "grafo_evidencia": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "05ff05ba-7062-52b2-bc5b-e45dc24c52ea",
+        "text": "This chunk is about:\n- People: Thomas Keneally, Peter Straub\n- Works: The Playmaker\n- Roles: Novelist, playwright, essayist, poet\n- Places: Australia\n\nFacts:\n- Thomas Keneally was born on 7 October 1935.\n- Thomas Keneally is an Australian novelist, playwright, and essayist.\n- Peter Straub was born on March 2, 1943.\n- Peter Straub is an American novelist and poet.\n- The Playmaker is a novel set in Australia.\n- The Playmaker was written by the Australian author Thomas Keneally.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "a54631f0-7ec4-57b4-a42c-98f2440c13e8",
+        "text": "Page: Thomas Keneally. Sentence: Thomas Michael Keneally, AO (born 7 October 1935) is a prolific Australian novelist, playwright, and essayist.\nPage: Peter Straub. Sentence: Peter Francis Straub (born March 2, 1943) is an American novelist and poet.\nPage: The Playmaker. Sentence: The Playmaker is a novel based in Australia written by the Australian author Thomas Keneally.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "26ffd350-b54b-51f0-b189-9b03d447aa50",
+        "text": "text_3c172fe584b6a1ebb606477dd52db248",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "8896b9f3-d8d8-5cdc-b638-9a1fffb6feb8",
+        "text": "thomas michael keneally",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "b18ce35c-1651-5aca-9944-f97a9e7635ec",
+        "text": "1935-10-07",
+        "type": "Entity"
+      },
+      {
+        "id": 5,
+        "original_id": "b19433ae-558c-5aaf-95ac-6231f2a4be0e",
+        "text": "date",
+        "type": "EntityType"
+      },
+      {
+        "id": 6,
+        "original_id": "02448d73-884d-50c7-a919-b94177f1cf43",
+        "text": "australia",
+        "type": "Entity"
+      },
+      {
+        "id": 7,
+        "original_id": "5f394058-b2a0-5ba8-8466-ba2a18cfcf4e",
+        "text": "place",
+        "type": "EntityType"
+      },
+      {
+        "id": 8,
+        "original_id": "99a82eec-bb35-5bb5-9ed2-e73fc7a756de",
+        "text": "person",
+        "type": "EntityType"
+      },
+      {
+        "id": 9,
+        "original_id": "03e20f12-b725-501a-9ea9-c36c8af454d4",
+        "text": "peter francis straub",
+        "type": "Entity"
+      },
+      {
+        "id": 10,
+        "original_id": "a1c14f88-9eef-5484-bb7b-ac7cfd86dadc",
+        "text": "1943-03-02",
+        "type": "Entity"
+      },
+      {
+        "id": 11,
+        "original_id": "874a51da-34ea-5037-be47-d87785d43c37",
+        "text": "united states",
+        "type": "Entity"
+      },
+      {
+        "id": 12,
+        "original_id": "d06ca855-29a6-50c7-bdcf-0b29a27027b1",
+        "text": "the playmaker",
+        "type": "Entity"
+      },
+      {
+        "id": 13,
+        "original_id": "5263a535-1b4b-5925-be3e-310d03cd303b",
+        "text": "work",
+        "type": "EntityType"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 12,
+        "target": 3,
+        "type": "written_by"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "born_on"
+      },
+      {
+        "source": 1,
+        "target": 4,
+        "type": "contains"
+      },
+      {
+        "source": 4,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 10,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 6,
+        "type": "has_nationality"
+      },
+      {
+        "source": 1,
+        "target": 6,
+        "type": "contains"
+      },
+      {
+        "source": 12,
+        "target": 6,
+        "type": "set_in"
+      },
+      {
+        "source": 6,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 11,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 9,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 9,
+        "type": "contains"
+      },
+      {
+        "source": 9,
+        "target": 10,
+        "type": "born_on"
+      },
+      {
+        "source": 1,
+        "target": 10,
+        "type": "contains"
+      },
+      {
+        "source": 9,
+        "target": 11,
+        "type": "has_nationality"
+      },
+      {
+        "source": 1,
+        "target": 11,
+        "type": "contains"
+      },
+      {
+        "source": 1,
+        "target": 12,
+        "type": "contains"
+      },
+      {
+        "source": 12,
+        "target": 13,
+        "type": "is_a"
+      }
+    ]
+  }
+}

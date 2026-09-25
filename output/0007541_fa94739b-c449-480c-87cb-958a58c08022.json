@@ -1,0 +1,345 @@
+{
+  "dataset": "hover",
+  "id": "fa94739b-c449-480c-87cb-958a58c08022",
+  "split": "train",
+  "claim": "Teide National Park, not Cabañeros, is the national park located in Tenerife.",
+  "evidencia": "Page: Teide National Park. Sentence: Teide National Park (Spanish: \"Parque nacional del Teide\" , ] ) is a national park located in Tenerife (Canary Islands, Spain).\nPage: Cabañeros National Park. Sentence: Cabañeros National Park (in Spanish: \"Parque Nacional de Cabañeros\") is a national park in the Montes de Toledo, Spain.",
+  "evidence_text": "Page: Teide National Park. Sentence: Teide National Park (Spanish: \"Parque nacional del Teide\" , ] ) is a national park located in Tenerife (Canary Islands, Spain).\nPage: Cabañeros National Park. Sentence: Cabañeros National Park (in Spanish: \"Parque Nacional de Cabañeros\") is a national park in the Montes de Toledo, Spain.",
+  "label": "SUPPORTED",
+  "num_hops": 2,
+  "hover_metadata": {
+    "supporting_facts": [
+      [
+        "Teide National Park",
+        0
+      ],
+      [
+        "Cabañeros National Park",
+        0
+      ]
+    ],
+    "num_hops": 2,
+    "evidence_annotation_id": [
+      0
+    ],
+    "evidence_id": [
+      "Teide National Park::sentence::0",
+      "Cabañeros National Park::sentence::0"
+    ],
+    "evidence_wiki_url": [
+      "https://en.wikipedia.org/wiki/Teide_National_Park",
+      "https://en.wikipedia.org/wiki/Caba%C3%B1eros_National_Park"
+    ],
+    "evidence_sentence_id": [
+      "Teide National Park::sentence::0",
+      "Cabañeros National Park::sentence::0"
+    ]
+  },
+  "grafo_claim": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "579ac3d6-9796-5e8d-97b6-dbc50d0f5a29",
+        "text": "This chunk is about:\n- Places: Teide National Park, Cabañeros National Park, Tenerife\n- Topics: National park location correction\n\nFacts:\n- Teide National Park is the national park located in Tenerife.\n- Cabañeros National Park is not the national park located in Tenerife.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "3af9968e-0efe-5710-abfd-530784d5c1e8",
+        "text": "Teide National Park, not Cabañeros, is the national park located in Tenerife.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "1f998c92-24e6-5083-aa26-84b72b7180fe",
+        "text": "text_5c81f480ee8bd77a9aeca632448e5a57",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "db9f1193-f29f-5abc-af56-dc7d6f1680cb",
+        "text": "teide national park",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "af309061-b421-5f9a-87cb-6acc2c89e8d0",
+        "text": "tenerife",
+        "type": "Entity"
+      },
+      {
+        "id": 5,
+        "original_id": "5f394058-b2a0-5ba8-8466-ba2a18cfcf4e",
+        "text": "place",
+        "type": "EntityType"
+      },
+      {
+        "id": 6,
+        "original_id": "850ce54f-2f2c-5472-b24c-0ccb26f31fdd",
+        "text": "cabañeros",
+        "type": "Entity"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "located_in"
+      },
+      {
+        "source": 6,
+        "target": 4,
+        "type": "not_located_in"
+      },
+      {
+        "source": 1,
+        "target": 4,
+        "type": "contains"
+      },
+      {
+        "source": 4,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 6,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 6,
+        "type": "contains"
+      }
+    ]
+  },
+  "grafo_evidencia": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "96ebcc36-2ff4-5cb8-9106-0436cd7365d2",
+        "text": "This chunk is about:\n- Places: Teide National Park, Cabañeros National Park, Tenerife, Canary Islands, Spain, Montes de Toledo\n- Topics: national parks\n\nFacts:\n- Teide National Park is a national park located in Tenerife in the Canary Islands of Spain.\n- Cabañeros National Park is a national park located in the Montes de Toledo in Spain.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "abc655ca-2e01-5a5a-97ee-743b9c173f82",
+        "text": "Page: Teide National Park. Sentence: Teide National Park (Spanish: \"Parque nacional del Teide\" , ] ) is a national park located in Tenerife (Canary Islands, Spain).\nPage: Cabañeros National Park. Sentence: Cabañeros National Park (in Spanish: \"Parque Nacional de Cabañeros\") is a national park in the Montes de Toledo, Spain.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "c59cabf5-36c7-5789-8fcb-f18935441403",
+        "text": "text_cb4a3faf5b6fbaaf9ed2df1b7b37a19d",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "db9f1193-f29f-5abc-af56-dc7d6f1680cb",
+        "text": "teide national park",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "f98f609f-ce17-5d57-b788-a411f96f41ef",
+        "text": "parque nacional del teide",
+        "type": "Entity"
+      },
+      {
+        "id": 5,
+        "original_id": "39575085-0710-527d-bd54-019de7b00429",
+        "text": "name",
+        "type": "EntityType"
+      },
+      {
+        "id": 6,
+        "original_id": "af309061-b421-5f9a-87cb-6acc2c89e8d0",
+        "text": "tenerife",
+        "type": "Entity"
+      },
+      {
+        "id": 7,
+        "original_id": "5a965bf2-1a4d-5fe6-9a8a-cc8d6a628287",
+        "text": "canary islands",
+        "type": "Entity"
+      },
+      {
+        "id": 8,
+        "original_id": "f2ae3fab-b1f6-5e66-b573-047fb78e1603",
+        "text": "spain",
+        "type": "Entity"
+      },
+      {
+        "id": 9,
+        "original_id": "5f394058-b2a0-5ba8-8466-ba2a18cfcf4e",
+        "text": "place",
+        "type": "EntityType"
+      },
+      {
+        "id": 10,
+        "original_id": "dea8b282-77ec-5c02-abff-3e556fcd56b5",
+        "text": "cabañeros national park",
+        "type": "Entity"
+      },
+      {
+        "id": 11,
+        "original_id": "4153c44d-41b6-5704-9b9d-a798270634e6",
+        "text": "parque nacional de cabañeros",
+        "type": "Entity"
+      },
+      {
+        "id": 12,
+        "original_id": "55f85ac5-e879-5016-ab36-cb42be1f9b33",
+        "text": "montes de toledo",
+        "type": "Entity"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "has_spanish_name"
+      },
+      {
+        "source": 1,
+        "target": 4,
+        "type": "contains"
+      },
+      {
+        "source": 4,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 11,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 6,
+        "type": "located_in"
+      },
+      {
+        "source": 1,
+        "target": 6,
+        "type": "contains"
+      },
+      {
+        "source": 6,
+        "target": 7,
+        "type": "located_in"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      },
+      {
+        "source": 7,
+        "target": 8,
+        "type": "located_in"
+      },
+      {
+        "source": 1,
+        "target": 8,
+        "type": "contains"
+      },
+      {
+        "source": 12,
+        "target": 8,
+        "type": "located_in"
+      },
+      {
+        "source": 8,
+        "target": 9,
+        "type": "is_a"
+      },
+      {
+        "source": 7,
+        "target": 9,
+        "type": "is_a"
+      },
+      {
+        "source": 6,
+        "target": 9,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 9,
+        "type": "is_a"
+      },
+      {
+        "source": 12,
+        "target": 9,
+        "type": "is_a"
+      },
+      {
+        "source": 10,
+        "target": 9,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 10,
+        "type": "contains"
+      },
+      {
+        "source": 10,
+        "target": 11,
+        "type": "has_spanish_name"
+      },
+      {
+        "source": 1,
+        "target": 11,
+        "type": "contains"
+      },
+      {
+        "source": 10,
+        "target": 12,
+        "type": "located_in"
+      },
+      {
+        "source": 1,
+        "target": 12,
+        "type": "contains"
+      }
+    ]
+  }
+}

@@ -1,0 +1,576 @@
+{
+  "dataset": "hover",
+  "id": "7089f49f-4e61-4a94-9e6c-4da1ccae7912",
+  "split": "train",
+  "claim": "An Italian director lived longer than the man who directed Penalty Phase. This older director also directed Wanted (1967 film).",
+  "evidencia": "Page: Tony Richardson. Sentence: Cecil Antonio \"Tony\" Richardson (5 June 1928 – 14 November 1991) was an English theatre and film director and producer whose career spanned five decades.\nPage: Giorgio Ferroni. Sentence: Giorgio Ferroni (April 12, 1908 - August 17, 1981), sometimes credited as Calvin Jackson Padget or Calvin J. Padget, was an Italian film director, film editor and a screenwriter.\nPage: Penalty Phase. Sentence: Penalty Phase is a 1986 American television thriller-drama film directed by Tony Richardson and starring Peter Strauss.\nPage: Wanted (1967 film). Sentence: It was directed by Giorgio Ferroni and starring Giuliano Gemma, Teresa Gimpera, and Nello Pazzafini.",
+  "evidence_text": "Page: Tony Richardson. Sentence: Cecil Antonio \"Tony\" Richardson (5 June 1928 – 14 November 1991) was an English theatre and film director and producer whose career spanned five decades.\nPage: Giorgio Ferroni. Sentence: Giorgio Ferroni (April 12, 1908 - August 17, 1981), sometimes credited as Calvin Jackson Padget or Calvin J. Padget, was an Italian film director, film editor and a screenwriter.\nPage: Penalty Phase. Sentence: Penalty Phase is a 1986 American television thriller-drama film directed by Tony Richardson and starring Peter Strauss.\nPage: Wanted (1967 film). Sentence: It was directed by Giorgio Ferroni and starring Giuliano Gemma, Teresa Gimpera, and Nello Pazzafini.",
+  "label": "SUPPORTED",
+  "num_hops": 4,
+  "hover_metadata": {
+    "supporting_facts": [
+      [
+        "Tony Richardson",
+        0
+      ],
+      [
+        "Giorgio Ferroni",
+        0
+      ],
+      [
+        "Penalty Phase",
+        0
+      ],
+      [
+        "Wanted (1967 film)",
+        1
+      ]
+    ],
+    "num_hops": 4,
+    "evidence_annotation_id": [
+      0
+    ],
+    "evidence_id": [
+      "Tony Richardson::sentence::0",
+      "Giorgio Ferroni::sentence::0",
+      "Penalty Phase::sentence::0",
+      "Wanted (1967 film)::sentence::1"
+    ],
+    "evidence_wiki_url": [
+      "https://en.wikipedia.org/wiki/Tony_Richardson",
+      "https://en.wikipedia.org/wiki/Giorgio_Ferroni",
+      "https://en.wikipedia.org/wiki/Penalty_Phase",
+      "https://en.wikipedia.org/wiki/Wanted_%281967_film%29"
+    ],
+    "evidence_sentence_id": [
+      "Tony Richardson::sentence::0",
+      "Giorgio Ferroni::sentence::0",
+      "Penalty Phase::sentence::0",
+      "Wanted (1967 film)::sentence::1"
+    ]
+  },
+  "grafo_claim": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "7b2ab99d-3472-50f2-b692-c33f7eb23708",
+        "text": "This chunk is about:\n- People: Giulio Petroni, Tonino Ricci\n- Films: Wanted (1967 film), Penalty Phase\n- Topics: film directors, lifespan comparison\n\nFacts:\n- Giulio Petroni was an Italian director who directed Wanted (1967 film).\n- Tonino Ricci directed Penalty Phase.\n- Giulio Petroni lived longer than Tonino Ricci.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "ea08e784-33bd-5482-b096-b4f4648e961a",
+        "text": "An Italian director lived longer than the man who directed Penalty Phase. This older director also directed Wanted (1967 film).",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "43fcdbc1-d42b-5913-998e-27c2d0e3eeaa",
+        "text": "text_5c5152bf71d50adae5f1794d2e66a31e",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "14c7bd72-7fdb-5c5c-a929-b8e54138d381",
+        "text": "penalty phase",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "d320c8df-fd51-56e6-b577-e01a688fe6fc",
+        "text": "film",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "6f223420-6847-5771-a157-cba2527c00d1",
+        "text": "wanted (1967 film)",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "26721070-70d9-5361-a675-e93d7e47b513",
+        "text": "the man who directed penalty phase",
+        "type": "Entity"
+      },
+      {
+        "id": 7,
+        "original_id": "99a82eec-bb35-5bb5-9ed2-e73fc7a756de",
+        "text": "person",
+        "type": "EntityType"
+      },
+      {
+        "id": 8,
+        "original_id": "2741d9b4-0174-583b-a6eb-818431334d75",
+        "text": "the older italian director",
+        "type": "Entity"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 6,
+        "target": 3,
+        "type": "directed"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 5,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 8,
+        "target": 5,
+        "type": "directed"
+      },
+      {
+        "source": 1,
+        "target": 6,
+        "type": "contains"
+      },
+      {
+        "source": 8,
+        "target": 6,
+        "type": "lived_longer_than"
+      },
+      {
+        "source": 6,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 8,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 8,
+        "type": "contains"
+      }
+    ]
+  },
+  "grafo_evidencia": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "07a3a53e-c832-545e-9dda-58e3ec13bed2",
+        "text": "This chunk is about:\n- People: Tony Richardson, Giorgio Ferroni, Peter Strauss, Giuliano Gemma, Teresa Gimpera, Nello Pazzafini\n- Films: Penalty Phase, Wanted\n- Roles: film director, producer, theatre director, film editor, screenwriter\n\nFacts:\n- Giorgio Ferroni was born on April 12, 1908, and died on August 17, 1981.\n- Giorgio Ferroni was an Italian film director, film editor, and screenwriter who was sometimes credited as Calvin Jackson Padget or Calvin J. Padget.\n- Tony Richardson was born on 5 June 1928 and died on 14 November 1991.\n- Tony Richardson was an English theatre and film director and producer whose career spanned five decades.\n- Wanted is a 1967 film directed by Giorgio Ferroni and starring Giuliano Gemma, Teresa Gimpera, and Nello Pazzafini.\n- Penalty Phase is a 1986 American television thriller-drama film directed by Tony Richardson and starring Peter Strauss.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "9e59f0d6-2eb6-5ff0-90fd-d851e4e5ed95",
+        "text": "Page: Tony Richardson. Sentence: Cecil Antonio \"Tony\" Richardson (5 June 1928 – 14 November 1991) was an English theatre and film director and producer whose career spanned five decades.\nPage: Giorgio Ferroni. Sentence: Giorgio Ferroni (April 12, 1908 - August 17, 1981), sometimes credited as Calvin Jackson Padget or Calvin J. Padget, was an Italian film director, film editor and a screenwriter.\nPage: Penalty Phase. Sentence: Penalty Phase is a 1986 American television thriller-drama film directed by Tony Richardson and starring Peter Strauss.\nPage: Wanted (1967 film). Sentence: It was directed by Giorgio Ferroni and starring Giuliano Gemma, Teresa Gimpera, and Nello Pazzafini.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "24f9a392-49ed-5b26-aa90-a61c0618b3f5",
+        "text": "text_4d7973a159975bb3e8d3370da5c5d5cc",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "01464528-f1a1-58e9-9116-c5616e3761ea",
+        "text": "tony richardson",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "99a82eec-bb35-5bb5-9ed2-e73fc7a756de",
+        "text": "person",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "67e5ad5a-9675-5190-80b1-e6e307ab2435",
+        "text": "cecil antonio richardson",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "216d1933-6ec3-577f-b9d1-f6b947488062",
+        "text": "1928-06-05",
+        "type": "Entity"
+      },
+      {
+        "id": 7,
+        "original_id": "b19433ae-558c-5aaf-95ac-6231f2a4be0e",
+        "text": "date",
+        "type": "EntityType"
+      },
+      {
+        "id": 8,
+        "original_id": "569ca51d-661b-547c-a4df-37e59b95df99",
+        "text": "1991-11-14",
+        "type": "Entity"
+      },
+      {
+        "id": 9,
+        "original_id": "6792058a-27ae-5ddf-a4d5-08c20c420b58",
+        "text": "giorgio ferroni",
+        "type": "Entity"
+      },
+      {
+        "id": 10,
+        "original_id": "a033aafb-7301-5ee7-a02a-ef15e8c77745",
+        "text": "1908-04-12",
+        "type": "Entity"
+      },
+      {
+        "id": 11,
+        "original_id": "f9751778-910d-5341-b550-5948ba4f2a87",
+        "text": "1981-08-17",
+        "type": "Entity"
+      },
+      {
+        "id": 12,
+        "original_id": "6ec5f309-7803-5658-892b-906d3626e4ae",
+        "text": "calvin jackson padget",
+        "type": "Entity"
+      },
+      {
+        "id": 13,
+        "original_id": "e77d40b0-7551-5e5e-bbe0-e017f299ce33",
+        "text": "calvin j. padget",
+        "type": "Entity"
+      },
+      {
+        "id": 14,
+        "original_id": "14c7bd72-7fdb-5c5c-a929-b8e54138d381",
+        "text": "penalty phase",
+        "type": "Entity"
+      },
+      {
+        "id": 15,
+        "original_id": "5263a535-1b4b-5925-be3e-310d03cd303b",
+        "text": "work",
+        "type": "EntityType"
+      },
+      {
+        "id": 16,
+        "original_id": "6ba1afd5-fed2-5c67-8f7d-ad0b76e9a9b6",
+        "text": "1986",
+        "type": "Entity"
+      },
+      {
+        "id": 17,
+        "original_id": "94966a86-bdfc-5694-b44e-13110a166339",
+        "text": "peter strauss",
+        "type": "Entity"
+      },
+      {
+        "id": 18,
+        "original_id": "6f223420-6847-5771-a157-cba2527c00d1",
+        "text": "wanted (1967 film)",
+        "type": "Entity"
+      },
+      {
+        "id": 19,
+        "original_id": "f9e4a9ec-682c-5341-862a-1783ba768a49",
+        "text": "1967",
+        "type": "Entity"
+      },
+      {
+        "id": 20,
+        "original_id": "7af8045c-772f-5aea-9281-ef0b689c643c",
+        "text": "giuliano gemma",
+        "type": "Entity"
+      },
+      {
+        "id": 21,
+        "original_id": "71482c9d-305a-539e-967b-5dd7680f1728",
+        "text": "teresa gimpera",
+        "type": "Entity"
+      },
+      {
+        "id": 22,
+        "original_id": "d301f4c0-6c57-5214-bee4-0c37d47cf70f",
+        "text": "nello pazzafini",
+        "type": "Entity"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 14,
+        "target": 3,
+        "type": "directed_by"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 5,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 9,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 12,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 13,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 17,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 20,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 21,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 22,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "has_birth_name"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 6,
+        "type": "born_on"
+      },
+      {
+        "source": 1,
+        "target": 6,
+        "type": "contains"
+      },
+      {
+        "source": 6,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 8,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 10,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 11,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 16,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 19,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 8,
+        "type": "died_on"
+      },
+      {
+        "source": 1,
+        "target": 8,
+        "type": "contains"
+      },
+      {
+        "source": 1,
+        "target": 9,
+        "type": "contains"
+      },
+      {
+        "source": 18,
+        "target": 9,
+        "type": "directed_by"
+      },
+      {
+        "source": 9,
+        "target": 10,
+        "type": "born_on"
+      },
+      {
+        "source": 1,
+        "target": 10,
+        "type": "contains"
+      },
+      {
+        "source": 9,
+        "target": 11,
+        "type": "died_on"
+      },
+      {
+        "source": 1,
+        "target": 11,
+        "type": "contains"
+      },
+      {
+        "source": 9,
+        "target": 12,
+        "type": "credited_as"
+      },
+      {
+        "source": 1,
+        "target": 12,
+        "type": "contains"
+      },
+      {
+        "source": 9,
+        "target": 13,
+        "type": "credited_as"
+      },
+      {
+        "source": 1,
+        "target": 13,
+        "type": "contains"
+      },
+      {
+        "source": 1,
+        "target": 14,
+        "type": "contains"
+      },
+      {
+        "source": 14,
+        "target": 15,
+        "type": "is_a"
+      },
+      {
+        "source": 18,
+        "target": 15,
+        "type": "is_a"
+      },
+      {
+        "source": 14,
+        "target": 16,
+        "type": "released_in"
+      },
+      {
+        "source": 1,
+        "target": 16,
+        "type": "contains"
+      },
+      {
+        "source": 14,
+        "target": 17,
+        "type": "stars"
+      },
+      {
+        "source": 1,
+        "target": 17,
+        "type": "contains"
+      },
+      {
+        "source": 1,
+        "target": 18,
+        "type": "contains"
+      },
+      {
+        "source": 18,
+        "target": 19,
+        "type": "released_in"
+      },
+      {
+        "source": 1,
+        "target": 19,
+        "type": "contains"
+      },
+      {
+        "source": 18,
+        "target": 20,
+        "type": "stars"
+      },
+      {
+        "source": 1,
+        "target": 20,
+        "type": "contains"
+      },
+      {
+        "source": 18,
+        "target": 21,
+        "type": "stars"
+      },
+      {
+        "source": 1,
+        "target": 21,
+        "type": "contains"
+      },
+      {
+        "source": 18,
+        "target": 22,
+        "type": "stars"
+      },
+      {
+        "source": 1,
+        "target": 22,
+        "type": "contains"
+      }
+    ]
+  }
+}

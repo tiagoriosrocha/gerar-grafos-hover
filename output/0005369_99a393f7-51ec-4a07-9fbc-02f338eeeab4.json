@@ -1,0 +1,316 @@
+{
+  "dataset": "hover",
+  "id": "99a393f7-51ec-4a07-9fbc-02f338eeeab4",
+  "split": "train",
+  "claim": "Sia heavily sampled the Sergei Prokofiev song that Party Like a Russian samples, which was not classical music written by a Russian composer.",
+  "evidencia": "Page: Taken for Granted. Sentence: It was written by Sia and produced by Nigel Corsbie and heavily samples from Sergei Prokofiev's 'Montagues and Capulets'\nPage: Montagues and Capulets. Sentence: Montagues and Capulets is a work of classical music written by Russian composer Sergei Prokofiev.\nPage: Party Like a Russian. Sentence: The chorus of the song samples Sergei Prokofiev's \"Montagues and Capulets\".",
+  "evidence_text": "Page: Taken for Granted. Sentence: It was written by Sia and produced by Nigel Corsbie and heavily samples from Sergei Prokofiev's 'Montagues and Capulets'\nPage: Montagues and Capulets. Sentence: Montagues and Capulets is a work of classical music written by Russian composer Sergei Prokofiev.\nPage: Party Like a Russian. Sentence: The chorus of the song samples Sergei Prokofiev's \"Montagues and Capulets\".",
+  "label": "NOT_SUPPORTED",
+  "num_hops": 3,
+  "hover_metadata": {
+    "supporting_facts": [
+      [
+        "Taken for Granted",
+        4
+      ],
+      [
+        "Montagues and Capulets",
+        0
+      ],
+      [
+        "Party Like a Russian",
+        3
+      ]
+    ],
+    "num_hops": 3,
+    "evidence_annotation_id": [
+      0
+    ],
+    "evidence_id": [
+      "Taken for Granted::sentence::4",
+      "Montagues and Capulets::sentence::0",
+      "Party Like a Russian::sentence::3"
+    ],
+    "evidence_wiki_url": [
+      "https://en.wikipedia.org/wiki/Taken_for_Granted",
+      "https://en.wikipedia.org/wiki/Montagues_and_Capulets",
+      "https://en.wikipedia.org/wiki/Party_Like_a_Russian"
+    ],
+    "evidence_sentence_id": [
+      "Taken for Granted::sentence::4",
+      "Montagues and Capulets::sentence::0",
+      "Party Like a Russian::sentence::3"
+    ]
+  },
+  "grafo_claim": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "e3f05693-ff3d-5586-9930-92cf6cd89939",
+        "text": "This chunk is about:\n- People: Sia, Sergei Prokofiev\n- Songs: \"Party Like a Russian\"\n- Topics: sampling, classical music, Russian composers\n\nFacts:\n- Sergei Prokofiev was a Russian composer.\n- \"Party Like a Russian\" samples a Sergei Prokofiev composition.\n- The statement says Sia heavily sampled the same Sergei Prokofiev song that \"Party Like a Russian\" samples.\n- The statement claims that the sampled song was not classical music, despite being written by Russian composer Sergei Prokofiev.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "20f7457c-9948-502a-812b-3602383eb404",
+        "text": "Sia heavily sampled the Sergei Prokofiev song that Party Like a Russian samples, which was not classical music written by a Russian composer.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "61fb3a14-a29a-509d-9c5c-e53c96cf0061",
+        "text": "text_0e687af41d89e53d13aa9a981e0d2e6d",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "57d6abf6-c092-546e-ad19-6502a68bba32",
+        "text": "sia",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "197bcdbc-63de-5e7b-a160-51757b0122f5",
+        "text": "party like a russian",
+        "type": "Entity"
+      },
+      {
+        "id": 5,
+        "original_id": "ec9f990b-f6de-5c6e-ad49-95d6a0dec3ef",
+        "text": "sergei prokofiev",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "99a82eec-bb35-5bb5-9ed2-e73fc7a756de",
+        "text": "person",
+        "type": "EntityType"
+      },
+      {
+        "id": 7,
+        "original_id": "5263a535-1b4b-5925-be3e-310d03cd303b",
+        "text": "work",
+        "type": "EntityType"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "heavily_sampled_song_sampled_by"
+      },
+      {
+        "source": 1,
+        "target": 4,
+        "type": "contains"
+      },
+      {
+        "source": 4,
+        "target": 5,
+        "type": "samples_song_by"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 4,
+        "target": 7,
+        "type": "is_a"
+      }
+    ]
+  },
+  "grafo_evidencia": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "5a13e05d-d72a-5026-981d-2cfedae888b4",
+        "text": "This chunk is about:\n- Songs: Taken for Granted, Party Like a Russian\n- People: Sia, Nigel Corsbie, Sergei Prokofiev\n- Works: Montagues and Capulets\n- Topics: songwriting, production, sampling\n\nFacts:\n- Sergei Prokofiev wrote the classical music work \"Montagues and Capulets\".\n- Sia wrote the song \"Taken for Granted\".\n- Nigel Corsbie produced the song \"Taken for Granted\".\n- The song \"Taken for Granted\" heavily samples Sergei Prokofiev's \"Montagues and Capulets\".\n- The chorus of the song \"Party Like a Russian\" samples Sergei Prokofiev's \"Montagues and Capulets\".",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "a7216de1-79e1-563d-8c6b-e0726c7116a0",
+        "text": "Page: Taken for Granted. Sentence: It was written by Sia and produced by Nigel Corsbie and heavily samples from Sergei Prokofiev's 'Montagues and Capulets'\nPage: Montagues and Capulets. Sentence: Montagues and Capulets is a work of classical music written by Russian composer Sergei Prokofiev.\nPage: Party Like a Russian. Sentence: The chorus of the song samples Sergei Prokofiev's \"Montagues and Capulets\".",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "c56013ad-92bc-5a3e-b147-75429d0a3444",
+        "text": "text_1440113a37d447faf1db4ae17024bd8e",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "d7ba5027-11a5-53b3-979f-21d52bb254ba",
+        "text": "taken for granted",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "79d18b69-4055-508b-9428-b4123cd2444b",
+        "text": "montagues and capulets",
+        "type": "Entity"
+      },
+      {
+        "id": 5,
+        "original_id": "5263a535-1b4b-5925-be3e-310d03cd303b",
+        "text": "work",
+        "type": "EntityType"
+      },
+      {
+        "id": 6,
+        "original_id": "57d6abf6-c092-546e-ad19-6502a68bba32",
+        "text": "sia",
+        "type": "Entity"
+      },
+      {
+        "id": 7,
+        "original_id": "99a82eec-bb35-5bb5-9ed2-e73fc7a756de",
+        "text": "person",
+        "type": "EntityType"
+      },
+      {
+        "id": 8,
+        "original_id": "eaa44590-1bd7-5989-8cbb-440c811cb89c",
+        "text": "nigel corsbie",
+        "type": "Entity"
+      },
+      {
+        "id": 9,
+        "original_id": "ec9f990b-f6de-5c6e-ad49-95d6a0dec3ef",
+        "text": "sergei prokofiev",
+        "type": "Entity"
+      },
+      {
+        "id": 10,
+        "original_id": "197bcdbc-63de-5e7b-a160-51757b0122f5",
+        "text": "party like a russian",
+        "type": "Entity"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 6,
+        "target": 3,
+        "type": "wrote"
+      },
+      {
+        "source": 8,
+        "target": 3,
+        "type": "produced"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "samples"
+      },
+      {
+        "source": 1,
+        "target": 4,
+        "type": "contains"
+      },
+      {
+        "source": 9,
+        "target": 4,
+        "type": "wrote"
+      },
+      {
+        "source": 10,
+        "target": 4,
+        "type": "samples"
+      },
+      {
+        "source": 4,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 10,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 6,
+        "type": "contains"
+      },
+      {
+        "source": 6,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 8,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 9,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 8,
+        "type": "contains"
+      },
+      {
+        "source": 1,
+        "target": 9,
+        "type": "contains"
+      },
+      {
+        "source": 1,
+        "target": 10,
+        "type": "contains"
+      }
+    ]
+  }
+}

@@ -1,0 +1,612 @@
+{
+  "dataset": "hover",
+  "id": "656fd681-552a-4b55-a1ae-138d44d9d071",
+  "split": "train",
+  "claim": "Samuel Ray Delany Jr. has writing which covered more topics than Alan Dean Foster.",
+  "evidencia": "Page: Alan Dean Foster. Sentence: Alan Dean Foster (born November 18, 1946) is an American writer of fantasy and science fiction, a prolific creator of and contributor to book series as well as the author of more than 20 standalone novels.\nPage: Alan Dean Foster. Sentence: He is especially prolific in his novelizations of film scripts.\nPage: Samuel R. Delany. Sentence: Samuel Ray Delany Jr. ( ; born April 1, 1942), Chip Delany to his friends, is an American author, professor and literary critic.\nPage: Samuel R. Delany. Sentence: His work includes fiction (especially science fiction), memoir, criticism, and essays on sexuality and society.",
+  "evidence_text": "Page: Alan Dean Foster. Sentence: Alan Dean Foster (born November 18, 1946) is an American writer of fantasy and science fiction, a prolific creator of and contributor to book series as well as the author of more than 20 standalone novels.\nPage: Alan Dean Foster. Sentence: He is especially prolific in his novelizations of film scripts.\nPage: Samuel R. Delany. Sentence: Samuel Ray Delany Jr. ( ; born April 1, 1942), Chip Delany to his friends, is an American author, professor and literary critic.\nPage: Samuel R. Delany. Sentence: His work includes fiction (especially science fiction), memoir, criticism, and essays on sexuality and society.",
+  "label": "SUPPORTED",
+  "num_hops": 2,
+  "hover_metadata": {
+    "supporting_facts": [
+      [
+        "Alan Dean Foster",
+        0
+      ],
+      [
+        "Alan Dean Foster",
+        1
+      ],
+      [
+        "Samuel R. Delany",
+        0
+      ],
+      [
+        "Samuel R. Delany",
+        1
+      ]
+    ],
+    "num_hops": 2,
+    "evidence_annotation_id": [
+      0
+    ],
+    "evidence_id": [
+      "Alan Dean Foster::sentence::0",
+      "Alan Dean Foster::sentence::1",
+      "Samuel R. Delany::sentence::0",
+      "Samuel R. Delany::sentence::1"
+    ],
+    "evidence_wiki_url": [
+      "https://en.wikipedia.org/wiki/Alan_Dean_Foster",
+      "https://en.wikipedia.org/wiki/Samuel_R._Delany"
+    ],
+    "evidence_sentence_id": [
+      "Alan Dean Foster::sentence::0",
+      "Alan Dean Foster::sentence::1",
+      "Samuel R. Delany::sentence::0",
+      "Samuel R. Delany::sentence::1"
+    ]
+  },
+  "grafo_claim": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "a23b6030-c79b-5633-8ded-f954d40ca44a",
+        "text": "This chunk is about:\n- People: Samuel Ray Delany Jr., Alan Dean Foster\n- Topics: Writing breadth, topic coverage\n\nFacts:\n- Samuel Ray Delany Jr. is a person whose writing covered more topics than Alan Dean Foster's writing.\n- Alan Dean Foster is a person whose writing covered fewer topics than Samuel Ray Delany Jr.'s writing.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "b7928c91-bb31-58bb-b14e-47566eb66c33",
+        "text": "Samuel Ray Delany Jr. has writing which covered more topics than Alan Dean Foster.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "3c70582b-5030-5e74-a757-3fb663cd8862",
+        "text": "text_c1c7b0f319c403a8a1415068040f9618",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "e436aeee-667b-5629-8fd3-40330d4348f6",
+        "text": "samuel ray delany jr.",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "b91614ba-b656-5b2b-8888-cf5100c293c5",
+        "text": "writing of samuel ray delany jr.",
+        "type": "Entity"
+      },
+      {
+        "id": 5,
+        "original_id": "03826e4b-4661-5c40-ab23-423069ffce58",
+        "text": "writing of alan dean foster",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "5263a535-1b4b-5925-be3e-310d03cd303b",
+        "text": "work",
+        "type": "EntityType"
+      },
+      {
+        "id": 7,
+        "original_id": "99a82eec-bb35-5bb5-9ed2-e73fc7a756de",
+        "text": "person",
+        "type": "EntityType"
+      },
+      {
+        "id": 8,
+        "original_id": "a15bf9a3-251e-5383-a77c-5793418898c3",
+        "text": "alan dean foster",
+        "type": "Entity"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "created"
+      },
+      {
+        "source": 1,
+        "target": 4,
+        "type": "contains"
+      },
+      {
+        "source": 4,
+        "target": 5,
+        "type": "covered_more_topics_than"
+      },
+      {
+        "source": 8,
+        "target": 5,
+        "type": "created"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 4,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 8,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 8,
+        "type": "contains"
+      }
+    ]
+  },
+  "grafo_evidencia": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "699d5487-2f0f-5117-9a13-55d99229b6f1",
+        "text": "This chunk is about:\n- People: Alan Dean Foster; Samuel R. Delany\n- Roles: writer; author; professor; literary critic\n- Genres: fantasy; science fiction\n- Topics: novelizations; memoir; criticism; essays on sexuality and society\n\nFacts:\n- Samuel R. Delany was born on April 1, 1942, and is an American author, professor, and literary critic.\n- Alan Dean Foster was born on November 18, 1946, and is an American writer of fantasy and science fiction.\n- Samuel R. Delany's work includes fiction, especially science fiction, as well as memoir, criticism, and essays on sexuality and society.\n- Alan Dean Foster is a prolific creator of and contributor to book series and the author of more than 20 standalone novels.\n- Alan Dean Foster is especially prolific in writing novelizations of film scripts.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "683665c0-5ba0-5700-9211-112f4cdca013",
+        "text": "Page: Alan Dean Foster. Sentence: Alan Dean Foster (born November 18, 1946) is an American writer of fantasy and science fiction, a prolific creator of and contributor to book series as well as the author of more than 20 standalone novels.\nPage: Alan Dean Foster. Sentence: He is especially prolific in his novelizations of film scripts.\nPage: Samuel R. Delany. Sentence: Samuel Ray Delany Jr. ( ; born April 1, 1942), Chip Delany to his friends, is an American author, professor and literary critic.\nPage: Samuel R. Delany. Sentence: His work includes fiction (especially science fiction), memoir, criticism, and essays on sexuality and society.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "064ba925-a80e-5f88-a161-ab820a6c3aab",
+        "text": "text_5c045a06090d17e0f874bdbc8f4ff9a1",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "a15bf9a3-251e-5383-a77c-5793418898c3",
+        "text": "alan dean foster",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "02c2a22b-f3d5-5551-a8b3-23c329bfd94c",
+        "text": "1946-11-18",
+        "type": "Entity"
+      },
+      {
+        "id": 5,
+        "original_id": "b19433ae-558c-5aaf-95ac-6231f2a4be0e",
+        "text": "date",
+        "type": "EntityType"
+      },
+      {
+        "id": 6,
+        "original_id": "206f21f6-94c8-576c-85d8-8966cca92205",
+        "text": "fantasy",
+        "type": "Entity"
+      },
+      {
+        "id": 7,
+        "original_id": "d8d36cdc-ccf4-5249-921a-ab373f0fb82a",
+        "text": "genre",
+        "type": "EntityType"
+      },
+      {
+        "id": 8,
+        "original_id": "8ff12afb-c05a-58a3-ae54-5612adec9d53",
+        "text": "science fiction",
+        "type": "Entity"
+      },
+      {
+        "id": 9,
+        "original_id": "27c328a2-1bf5-5cd2-833c-47aade5383c1",
+        "text": "book series",
+        "type": "Entity"
+      },
+      {
+        "id": 10,
+        "original_id": "5263a535-1b4b-5925-be3e-310d03cd303b",
+        "text": "work",
+        "type": "EntityType"
+      },
+      {
+        "id": 11,
+        "original_id": "aea63e35-d8e8-5924-acae-1557dad3f79a",
+        "text": "standalone novels",
+        "type": "Entity"
+      },
+      {
+        "id": 12,
+        "original_id": "57201b99-caef-5934-a38c-f2d0689d978b",
+        "text": "novelizations",
+        "type": "Entity"
+      },
+      {
+        "id": 13,
+        "original_id": "6e9dc7dc-e097-5b45-afbd-857587e5659b",
+        "text": "film scripts",
+        "type": "Entity"
+      },
+      {
+        "id": 14,
+        "original_id": "99a82eec-bb35-5bb5-9ed2-e73fc7a756de",
+        "text": "person",
+        "type": "EntityType"
+      },
+      {
+        "id": 15,
+        "original_id": "e436aeee-667b-5629-8fd3-40330d4348f6",
+        "text": "samuel ray delany jr.",
+        "type": "Entity"
+      },
+      {
+        "id": 16,
+        "original_id": "82a6d980-4fe0-5d5f-8262-283f7568573f",
+        "text": "1942-04-01",
+        "type": "Entity"
+      },
+      {
+        "id": 17,
+        "original_id": "b7647639-8aff-5408-b60a-14b62b4253f0",
+        "text": "chip delany",
+        "type": "Entity"
+      },
+      {
+        "id": 18,
+        "original_id": "a91c6b1d-a9af-51f5-be3a-ff03e1776cd0",
+        "text": "author",
+        "type": "Entity"
+      },
+      {
+        "id": 19,
+        "original_id": "9d80eb43-32fa-561c-9371-91f180ebcb6c",
+        "text": "profession",
+        "type": "EntityType"
+      },
+      {
+        "id": 20,
+        "original_id": "03c4a93c-ab56-5f0a-bf6a-753077eead25",
+        "text": "professor",
+        "type": "Entity"
+      },
+      {
+        "id": 21,
+        "original_id": "b71455cd-6205-5f57-b481-a288717330f4",
+        "text": "literary critic",
+        "type": "Entity"
+      },
+      {
+        "id": 22,
+        "original_id": "b5cd237b-f829-51d9-bdda-856ffaf0048c",
+        "text": "fiction",
+        "type": "Entity"
+      },
+      {
+        "id": 23,
+        "original_id": "7f2146b0-7bea-51e1-a58e-1766a71435c8",
+        "text": "memoir",
+        "type": "Entity"
+      },
+      {
+        "id": 24,
+        "original_id": "3c51450d-56bb-53a2-b0af-b0257cd33a26",
+        "text": "criticism",
+        "type": "Entity"
+      },
+      {
+        "id": 25,
+        "original_id": "42f54d96-3da3-56d0-ac84-f0fc3dacd490",
+        "text": "essays on sexuality and society",
+        "type": "Entity"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "born_on"
+      },
+      {
+        "source": 1,
+        "target": 4,
+        "type": "contains"
+      },
+      {
+        "source": 4,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 16,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 6,
+        "type": "writes_in"
+      },
+      {
+        "source": 1,
+        "target": 6,
+        "type": "contains"
+      },
+      {
+        "source": 6,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 8,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 22,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 23,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 24,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 8,
+        "type": "writes_in"
+      },
+      {
+        "source": 1,
+        "target": 8,
+        "type": "contains"
+      },
+      {
+        "source": 22,
+        "target": 8,
+        "type": "especially_includes"
+      },
+      {
+        "source": 3,
+        "target": 9,
+        "type": "creates_and_contributes_to"
+      },
+      {
+        "source": 1,
+        "target": 9,
+        "type": "contains"
+      },
+      {
+        "source": 9,
+        "target": 10,
+        "type": "is_a"
+      },
+      {
+        "source": 11,
+        "target": 10,
+        "type": "is_a"
+      },
+      {
+        "source": 13,
+        "target": 10,
+        "type": "is_a"
+      },
+      {
+        "source": 12,
+        "target": 10,
+        "type": "is_a"
+      },
+      {
+        "source": 25,
+        "target": 10,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 11,
+        "type": "author_of"
+      },
+      {
+        "source": 1,
+        "target": 11,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 12,
+        "type": "prolific_in"
+      },
+      {
+        "source": 1,
+        "target": 12,
+        "type": "contains"
+      },
+      {
+        "source": 12,
+        "target": 13,
+        "type": "based_on"
+      },
+      {
+        "source": 1,
+        "target": 13,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 14,
+        "type": "is_a"
+      },
+      {
+        "source": 17,
+        "target": 14,
+        "type": "is_a"
+      },
+      {
+        "source": 15,
+        "target": 14,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 15,
+        "type": "contains"
+      },
+      {
+        "source": 15,
+        "target": 16,
+        "type": "born_on"
+      },
+      {
+        "source": 1,
+        "target": 16,
+        "type": "contains"
+      },
+      {
+        "source": 15,
+        "target": 17,
+        "type": "known_as"
+      },
+      {
+        "source": 1,
+        "target": 17,
+        "type": "contains"
+      },
+      {
+        "source": 15,
+        "target": 18,
+        "type": "has_profession"
+      },
+      {
+        "source": 1,
+        "target": 18,
+        "type": "contains"
+      },
+      {
+        "source": 18,
+        "target": 19,
+        "type": "is_a"
+      },
+      {
+        "source": 20,
+        "target": 19,
+        "type": "is_a"
+      },
+      {
+        "source": 21,
+        "target": 19,
+        "type": "is_a"
+      },
+      {
+        "source": 15,
+        "target": 20,
+        "type": "has_profession"
+      },
+      {
+        "source": 1,
+        "target": 20,
+        "type": "contains"
+      },
+      {
+        "source": 15,
+        "target": 21,
+        "type": "has_profession"
+      },
+      {
+        "source": 1,
+        "target": 21,
+        "type": "contains"
+      },
+      {
+        "source": 15,
+        "target": 22,
+        "type": "works_include"
+      },
+      {
+        "source": 1,
+        "target": 22,
+        "type": "contains"
+      },
+      {
+        "source": 15,
+        "target": 23,
+        "type": "works_include"
+      },
+      {
+        "source": 1,
+        "target": 23,
+        "type": "contains"
+      },
+      {
+        "source": 15,
+        "target": 24,
+        "type": "works_include"
+      },
+      {
+        "source": 1,
+        "target": 24,
+        "type": "contains"
+      },
+      {
+        "source": 15,
+        "target": 25,
+        "type": "works_include"
+      },
+      {
+        "source": 1,
+        "target": 25,
+        "type": "contains"
+      }
+    ]
+  }
+}

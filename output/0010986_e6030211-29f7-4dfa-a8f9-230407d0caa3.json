@@ -1,0 +1,483 @@
+{
+  "dataset": "hover",
+  "id": "e6030211-29f7-4dfa-a8f9-230407d0caa3",
+  "split": "train",
+  "claim": "The series that Trouble Under Oz is a sequel to was published by a company. The company is headquartered in New York City.",
+  "evidencia": "Page: The Emerald Wand of Oz. Sentence: The book is illustrated by William Stout and published by Harper Collins.\nPage: HarperCollins. Sentence: The company is headquartered in New York City and is a subsidiary of News Corp.\nPage: Trouble Under Oz. Sentence: It is a sequel to Smith's 2005 novel \"The Emerald Wand of Oz\" which is a further continuation of the Oz series originally started by L. Frank Baum in 1900.",
+  "evidence_text": "Page: The Emerald Wand of Oz. Sentence: The book is illustrated by William Stout and published by Harper Collins.\nPage: HarperCollins. Sentence: The company is headquartered in New York City and is a subsidiary of News Corp.\nPage: Trouble Under Oz. Sentence: It is a sequel to Smith's 2005 novel \"The Emerald Wand of Oz\" which is a further continuation of the Oz series originally started by L. Frank Baum in 1900.",
+  "label": "SUPPORTED",
+  "num_hops": 3,
+  "hover_metadata": {
+    "supporting_facts": [
+      [
+        "The Emerald Wand of Oz",
+        1
+      ],
+      [
+        "HarperCollins",
+        1
+      ],
+      [
+        "Trouble Under Oz",
+        1
+      ]
+    ],
+    "num_hops": 3,
+    "evidence_annotation_id": [
+      0
+    ],
+    "evidence_id": [
+      "The Emerald Wand of Oz::sentence::1",
+      "HarperCollins::sentence::1",
+      "Trouble Under Oz::sentence::1"
+    ],
+    "evidence_wiki_url": [
+      "https://en.wikipedia.org/wiki/The_Emerald_Wand_of_Oz",
+      "https://en.wikipedia.org/wiki/HarperCollins",
+      "https://en.wikipedia.org/wiki/Trouble_Under_Oz"
+    ],
+    "evidence_sentence_id": [
+      "The Emerald Wand of Oz::sentence::1",
+      "HarperCollins::sentence::1",
+      "Trouble Under Oz::sentence::1"
+    ]
+  },
+  "grafo_claim": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "2bd24fd2-586d-58b0-bf82-d0950fba7c4f",
+        "text": "This chunk is about:\n- Works: Trouble Under Oz, the sequel series\n- Companies: the New York City-headquartered publisher\n\nFacts:\n- Trouble Under Oz is a sequel to a series.\n- The company that published the original series is headquartered in New York City.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "e6042ac9-3658-533e-b5f5-56b93bfe1789",
+        "text": "The series that Trouble Under Oz is a sequel to was published by a company. The company is headquartered in New York City.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "bf0c4328-28f9-5086-a614-c69451e97b7d",
+        "text": "text_3d92843f1696c6587727328c6921897b",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "fbd70c17-0796-5e69-88c8-2003b85639ea",
+        "text": "trouble under oz",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "3faed6ef-3d90-5ffd-9229-cfb62eb68140",
+        "text": "book",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "2a0ee8f4-7bf0-51da-a7ca-cac9c2f9b79d",
+        "text": "the wonderful wizard of oz series",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "57d1c012-ab9f-5a63-9de4-a5bb6d9cf44c",
+        "text": "series",
+        "type": "EntityType"
+      },
+      {
+        "id": 7,
+        "original_id": "f6e60ceb-686d-55f8-bf54-ecd55a8496b2",
+        "text": "company headquartered in new york city",
+        "type": "Entity"
+      },
+      {
+        "id": 8,
+        "original_id": "82bfc922-4fcd-56b0-b353-7b550b51389d",
+        "text": "company",
+        "type": "EntityType"
+      },
+      {
+        "id": 9,
+        "original_id": "62912d92-4218-52f7-a1a6-776a04889442",
+        "text": "new york city",
+        "type": "Entity"
+      },
+      {
+        "id": 10,
+        "original_id": "5f394058-b2a0-5ba8-8466-ba2a18cfcf4e",
+        "text": "place",
+        "type": "EntityType"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "is_sequel_to"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 5,
+        "target": 7,
+        "type": "published_by"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      },
+      {
+        "source": 7,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 7,
+        "target": 9,
+        "type": "headquartered_in"
+      },
+      {
+        "source": 1,
+        "target": 9,
+        "type": "contains"
+      },
+      {
+        "source": 9,
+        "target": 10,
+        "type": "is_a"
+      }
+    ]
+  },
+  "grafo_evidencia": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "e80cb780-5c87-5042-a770-c53a73dbc1c7",
+        "text": "This chunk is about:\n- Products: The Emerald Wand of Oz, Trouble Under Oz\n- People: William Stout, Eric Shanower, L. Frank Baum\n- Companies: HarperCollins, News Corp\n- Places: New York City\n- Concepts: Oz series\n\nFacts:\n- In 1900, L. Frank Baum originally started the Oz series.\n- In 2005, The Emerald Wand of Oz was published as a continuation of the Oz series.\n- The Emerald Wand of Oz is illustrated by William Stout.\n- HarperCollins published The Emerald Wand of Oz.\n- Trouble Under Oz is a sequel to the 2005 novel The Emerald Wand of Oz.\n- Trouble Under Oz is a further continuation of the Oz series.\n- HarperCollins is headquartered in New York City.\n- HarperCollins is a subsidiary of News Corp.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "3aa8d7d4-8cb5-5bbb-99e2-6b5e697956c0",
+        "text": "Page: The Emerald Wand of Oz. Sentence: The book is illustrated by William Stout and published by Harper Collins.\nPage: HarperCollins. Sentence: The company is headquartered in New York City and is a subsidiary of News Corp.\nPage: Trouble Under Oz. Sentence: It is a sequel to Smith's 2005 novel \"The Emerald Wand of Oz\" which is a further continuation of the Oz series originally started by L. Frank Baum in 1900.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "f16c4980-b2c6-5aa3-a1bc-698ed79cbb64",
+        "text": "text_81d997d4f9813f5da454c794f5f52493",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "2be1c34b-cc15-5346-abe3-bd178942387b",
+        "text": "the emerald wand of oz",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "3faed6ef-3d90-5ffd-9229-cfb62eb68140",
+        "text": "book",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "ca1dc031-b01b-54f9-bab6-4e050c9e87d1",
+        "text": "william stout",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "99a82eec-bb35-5bb5-9ed2-e73fc7a756de",
+        "text": "person",
+        "type": "EntityType"
+      },
+      {
+        "id": 7,
+        "original_id": "0356591a-1840-5891-8b9c-c4e475fb0e38",
+        "text": "harper collins",
+        "type": "Entity"
+      },
+      {
+        "id": 8,
+        "original_id": "388f60fb-220d-55e8-ae9c-3ac93cead308",
+        "text": "organization",
+        "type": "EntityType"
+      },
+      {
+        "id": 9,
+        "original_id": "62912d92-4218-52f7-a1a6-776a04889442",
+        "text": "new york city",
+        "type": "Entity"
+      },
+      {
+        "id": 10,
+        "original_id": "5f394058-b2a0-5ba8-8466-ba2a18cfcf4e",
+        "text": "place",
+        "type": "EntityType"
+      },
+      {
+        "id": 11,
+        "original_id": "39868174-4efa-58a9-8aed-ef1283de9d23",
+        "text": "news corp",
+        "type": "Entity"
+      },
+      {
+        "id": 12,
+        "original_id": "c134b9c3-6b55-5a5a-b8ca-c2f1a633a648",
+        "text": "2005",
+        "type": "Entity"
+      },
+      {
+        "id": 13,
+        "original_id": "b19433ae-558c-5aaf-95ac-6231f2a4be0e",
+        "text": "date",
+        "type": "EntityType"
+      },
+      {
+        "id": 14,
+        "original_id": "78425493-df12-58ff-a5ab-9f58c7215e61",
+        "text": "oz series",
+        "type": "Entity"
+      },
+      {
+        "id": 15,
+        "original_id": "57d1c012-ab9f-5a63-9de4-a5bb6d9cf44c",
+        "text": "series",
+        "type": "EntityType"
+      },
+      {
+        "id": 16,
+        "original_id": "47d8cf88-7d5d-5b1f-80bd-ca8610615a94",
+        "text": "l. frank baum",
+        "type": "Entity"
+      },
+      {
+        "id": 17,
+        "original_id": "343ed072-57b8-5cba-9e92-6078d5d692f2",
+        "text": "1900",
+        "type": "Entity"
+      },
+      {
+        "id": 18,
+        "original_id": "a581f146-695e-566a-85d4-0d499c41217f",
+        "text": "smith",
+        "type": "Entity"
+      },
+      {
+        "id": 19,
+        "original_id": "fbd70c17-0796-5e69-88c8-2003b85639ea",
+        "text": "trouble under oz",
+        "type": "Entity"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 19,
+        "target": 3,
+        "type": "sequel_to"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 19,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "illustrated_by"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 16,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 18,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 7,
+        "type": "published_by"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      },
+      {
+        "source": 7,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 11,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 7,
+        "target": 9,
+        "type": "headquartered_in"
+      },
+      {
+        "source": 1,
+        "target": 9,
+        "type": "contains"
+      },
+      {
+        "source": 9,
+        "target": 10,
+        "type": "is_a"
+      },
+      {
+        "source": 7,
+        "target": 11,
+        "type": "subsidiary_of"
+      },
+      {
+        "source": 1,
+        "target": 11,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 12,
+        "type": "published_in"
+      },
+      {
+        "source": 1,
+        "target": 12,
+        "type": "contains"
+      },
+      {
+        "source": 12,
+        "target": 13,
+        "type": "is_a"
+      },
+      {
+        "source": 17,
+        "target": 13,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 14,
+        "type": "continuation_of"
+      },
+      {
+        "source": 1,
+        "target": 14,
+        "type": "contains"
+      },
+      {
+        "source": 14,
+        "target": 15,
+        "type": "is_a"
+      },
+      {
+        "source": 14,
+        "target": 16,
+        "type": "started_by"
+      },
+      {
+        "source": 1,
+        "target": 16,
+        "type": "contains"
+      },
+      {
+        "source": 14,
+        "target": 17,
+        "type": "started_in"
+      },
+      {
+        "source": 1,
+        "target": 17,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 18,
+        "type": "written_by"
+      },
+      {
+        "source": 19,
+        "target": 18,
+        "type": "written_by"
+      },
+      {
+        "source": 1,
+        "target": 18,
+        "type": "contains"
+      },
+      {
+        "source": 1,
+        "target": 19,
+        "type": "contains"
+      }
+    ]
+  }
+}

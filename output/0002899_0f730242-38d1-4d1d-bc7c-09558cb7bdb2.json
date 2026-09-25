@@ -1,0 +1,422 @@
+{
+  "dataset": "hover",
+  "id": "0f730242-38d1-4d1d-bc7c-09558cb7bdb2",
+  "split": "train",
+  "claim": "The Campanula and another flowering plant did not come from the same family genus. Dierama pendulum was once placed in the genus of this other plant.",
+  "evidencia": "Page: Sparaxis. Sentence: Sparaxis (harlequin flower) is a genus in the family Iridaceae with about 13 species endemic to Cape Province, South Africa.\nPage: Campanula. Sentence: Campanula is one of several genera in the family Campanulaceae with the common name bellflower.\nPage: Dierama pendulum. Sentence: Before that the plant had been placed in various genera including \"Ixia\", \"Sparaxis\" and \"Watsonia\".",
+  "evidence_text": "Page: Sparaxis. Sentence: Sparaxis (harlequin flower) is a genus in the family Iridaceae with about 13 species endemic to Cape Province, South Africa.\nPage: Campanula. Sentence: Campanula is one of several genera in the family Campanulaceae with the common name bellflower.\nPage: Dierama pendulum. Sentence: Before that the plant had been placed in various genera including \"Ixia\", \"Sparaxis\" and \"Watsonia\".",
+  "label": "NOT_SUPPORTED",
+  "num_hops": 3,
+  "hover_metadata": {
+    "supporting_facts": [
+      [
+        "Sparaxis",
+        0
+      ],
+      [
+        "Campanula",
+        0
+      ],
+      [
+        "Dierama pendulum",
+        2
+      ]
+    ],
+    "num_hops": 3,
+    "evidence_annotation_id": [
+      0
+    ],
+    "evidence_id": [
+      "Sparaxis::sentence::0",
+      "Campanula::sentence::0",
+      "Dierama pendulum::sentence::2"
+    ],
+    "evidence_wiki_url": [
+      "https://en.wikipedia.org/wiki/Sparaxis",
+      "https://en.wikipedia.org/wiki/Campanula",
+      "https://en.wikipedia.org/wiki/Dierama_pendulum"
+    ],
+    "evidence_sentence_id": [
+      "Sparaxis::sentence::0",
+      "Campanula::sentence::0",
+      "Dierama pendulum::sentence::2"
+    ]
+  },
+  "grafo_claim": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "c6f512b7-f879-50b3-b89f-2a749d8709b0",
+        "text": "This chunk is about:\n- Products: Campanula, Dierama pendulum\n- Concepts: plant families, genera, taxonomic classification\n\nFacts:\n- Campanula and the other flowering plant were not classified in the same family genus.\n- Dierama pendulum was formerly placed in the genus of the other flowering plant.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "5daef7ea-0396-5218-9459-0368122b7175",
+        "text": "The Campanula and another flowering plant did not come from the same family genus. Dierama pendulum was once placed in the genus of this other plant.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "91fda471-c419-5c88-ad9b-7cbf8224c928",
+        "text": "text_b696dc9f450033e408c8bdaded0680ff",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "c806d7f3-51e5-5225-8540-bccf5f296bdc",
+        "text": "campanula",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "8587a918-78c0-51d7-aa12-89bd8890a8f1",
+        "text": "other flowering plant genus",
+        "type": "Entity"
+      },
+      {
+        "id": 5,
+        "original_id": "e0d1a4bf-20a4-5a9e-961a-dcc4d58f964d",
+        "text": "plant genus",
+        "type": "EntityType"
+      },
+      {
+        "id": 6,
+        "original_id": "b3d9c266-77a2-5d0b-aa4e-3ae5aed7ff11",
+        "text": "dierama pendulum",
+        "type": "Entity"
+      },
+      {
+        "id": 7,
+        "original_id": "2df43048-b175-54c2-b72b-0ff24f41e4f1",
+        "text": "plant",
+        "type": "EntityType"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_not_same_genus_as"
+      },
+      {
+        "source": 6,
+        "target": 4,
+        "type": "was_once_placed_in"
+      },
+      {
+        "source": 1,
+        "target": 4,
+        "type": "contains"
+      },
+      {
+        "source": 4,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 6,
+        "type": "contains"
+      },
+      {
+        "source": 6,
+        "target": 7,
+        "type": "is_a"
+      }
+    ]
+  },
+  "grafo_evidencia": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "986b1dad-7ac6-5267-9ed9-8a5e48510dc2",
+        "text": "This chunk is about:\n- Plants: Sparaxis, Campanula, Dierama pendulum\n- Taxonomy: Iridaceae, Campanulaceae, genera, species\n- Places: Cape Province, South Africa\n\nFacts:\n- Sparaxis, also called harlequin flower, is a genus in the family Iridaceae with about 13 species endemic to Cape Province, South Africa.\n- Campanula is one of several genera in the family Campanulaceae that share the common name bellflower.\n- Before its current placement, Dierama pendulum had been placed in various genera, including Ixia, Sparaxis, and Watsonia.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "8ba79922-36a9-50d1-87ef-06a21dc9b654",
+        "text": "Page: Sparaxis. Sentence: Sparaxis (harlequin flower) is a genus in the family Iridaceae with about 13 species endemic to Cape Province, South Africa.\nPage: Campanula. Sentence: Campanula is one of several genera in the family Campanulaceae with the common name bellflower.\nPage: Dierama pendulum. Sentence: Before that the plant had been placed in various genera including \"Ixia\", \"Sparaxis\" and \"Watsonia\".",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "0de55162-21ef-5364-89d7-4b53593f8155",
+        "text": "text_3e7eb7de4829512053b6d662be4d6965",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "d1c24ec2-b10a-5652-b2a7-5705f12b1857",
+        "text": "sparaxis",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "331d455f-917d-5c34-b678-e2ad18e7427e",
+        "text": "harlequin flower",
+        "type": "Entity"
+      },
+      {
+        "id": 5,
+        "original_id": "d2a381fa-3658-5ca6-ada9-2109cfc9331d",
+        "text": "concept",
+        "type": "EntityType"
+      },
+      {
+        "id": 6,
+        "original_id": "2c5a7b9d-ccca-5159-9c06-192a878815b6",
+        "text": "iridaceae",
+        "type": "Entity"
+      },
+      {
+        "id": 7,
+        "original_id": "2df43048-b175-54c2-b72b-0ff24f41e4f1",
+        "text": "plant",
+        "type": "EntityType"
+      },
+      {
+        "id": 8,
+        "original_id": "e7ace971-1ab1-506f-9947-3600699bfd11",
+        "text": "cape province",
+        "type": "Entity"
+      },
+      {
+        "id": 9,
+        "original_id": "c0e3c705-bfd9-53eb-a62c-38a7737b4e93",
+        "text": "south africa",
+        "type": "Entity"
+      },
+      {
+        "id": 10,
+        "original_id": "5f394058-b2a0-5ba8-8466-ba2a18cfcf4e",
+        "text": "place",
+        "type": "EntityType"
+      },
+      {
+        "id": 11,
+        "original_id": "c806d7f3-51e5-5225-8540-bccf5f296bdc",
+        "text": "campanula",
+        "type": "Entity"
+      },
+      {
+        "id": 12,
+        "original_id": "e87ed22b-0b4c-5a88-aa8b-c480ec9bd24b",
+        "text": "campanulaceae",
+        "type": "Entity"
+      },
+      {
+        "id": 13,
+        "original_id": "899f086c-576b-5920-ad6e-d8406efa60a8",
+        "text": "bellflower",
+        "type": "Entity"
+      },
+      {
+        "id": 14,
+        "original_id": "b3d9c266-77a2-5d0b-aa4e-3ae5aed7ff11",
+        "text": "dierama pendulum",
+        "type": "Entity"
+      },
+      {
+        "id": 15,
+        "original_id": "68f12f6e-751e-5c51-9094-eaaa214dedb7",
+        "text": "ixia",
+        "type": "Entity"
+      },
+      {
+        "id": 16,
+        "original_id": "fbffa8f4-2add-506b-a235-f484ef2ae895",
+        "text": "watsonia",
+        "type": "Entity"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 14,
+        "target": 3,
+        "type": "was_previously_placed_in"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "has_common_name"
+      },
+      {
+        "source": 1,
+        "target": 4,
+        "type": "contains"
+      },
+      {
+        "source": 4,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 13,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 6,
+        "type": "is_in_family"
+      },
+      {
+        "source": 1,
+        "target": 6,
+        "type": "contains"
+      },
+      {
+        "source": 6,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 12,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 11,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 15,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 16,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 14,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 8,
+        "type": "is_endemic_to"
+      },
+      {
+        "source": 1,
+        "target": 8,
+        "type": "contains"
+      },
+      {
+        "source": 8,
+        "target": 9,
+        "type": "is_in"
+      },
+      {
+        "source": 1,
+        "target": 9,
+        "type": "contains"
+      },
+      {
+        "source": 9,
+        "target": 10,
+        "type": "is_a"
+      },
+      {
+        "source": 8,
+        "target": 10,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 11,
+        "type": "contains"
+      },
+      {
+        "source": 11,
+        "target": 12,
+        "type": "is_in_family"
+      },
+      {
+        "source": 1,
+        "target": 12,
+        "type": "contains"
+      },
+      {
+        "source": 11,
+        "target": 13,
+        "type": "has_common_name"
+      },
+      {
+        "source": 1,
+        "target": 13,
+        "type": "contains"
+      },
+      {
+        "source": 1,
+        "target": 14,
+        "type": "contains"
+      },
+      {
+        "source": 14,
+        "target": 15,
+        "type": "was_previously_placed_in"
+      },
+      {
+        "source": 1,
+        "target": 15,
+        "type": "contains"
+      },
+      {
+        "source": 14,
+        "target": 16,
+        "type": "was_previously_placed_in"
+      },
+      {
+        "source": 1,
+        "target": 16,
+        "type": "contains"
+      }
+    ]
+  }
+}

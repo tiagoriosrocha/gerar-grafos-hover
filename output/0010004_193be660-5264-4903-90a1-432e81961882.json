@@ -1,0 +1,508 @@
+{
+  "dataset": "hover",
+  "id": "193be660-5264-4903-90a1-432e81961882",
+  "split": "train",
+  "claim": "The Lincoln Memorial was dedicated in 1922. The name of the architect who designed it is the same architect who designed Perry Memorial Arch.",
+  "evidencia": "Page: Henry Bacon. Sentence: Henry Bacon (November 28, 1866 – February 16, 1924) was an American Beaux-Arts architect who is best remembered for the Lincoln Memorial in Washington, D.C. (built 1915–22), which was his final project.\nPage: Lincoln Memorial. Sentence: The Lincoln Memorial is an American national monument built to honor the 16th President of the United States, Abraham Lincoln.\nPage: Lincoln Memorial. Sentence: Dedicated in 1922, it is one of several monuments built to honor an American president.\nPage: Perry Memorial Arch. Sentence: It was built in 1918 and designed by architect Henry Bacon.",
+  "evidence_text": "Page: Henry Bacon. Sentence: Henry Bacon (November 28, 1866 – February 16, 1924) was an American Beaux-Arts architect who is best remembered for the Lincoln Memorial in Washington, D.C. (built 1915–22), which was his final project.\nPage: Lincoln Memorial. Sentence: The Lincoln Memorial is an American national monument built to honor the 16th President of the United States, Abraham Lincoln.\nPage: Lincoln Memorial. Sentence: Dedicated in 1922, it is one of several monuments built to honor an American president.\nPage: Perry Memorial Arch. Sentence: It was built in 1918 and designed by architect Henry Bacon.",
+  "label": "SUPPORTED",
+  "num_hops": 3,
+  "hover_metadata": {
+    "supporting_facts": [
+      [
+        "Henry Bacon",
+        0
+      ],
+      [
+        "Lincoln Memorial",
+        0
+      ],
+      [
+        "Lincoln Memorial",
+        3
+      ],
+      [
+        "Perry Memorial Arch",
+        1
+      ]
+    ],
+    "num_hops": 3,
+    "evidence_annotation_id": [
+      0
+    ],
+    "evidence_id": [
+      "Henry Bacon::sentence::0",
+      "Lincoln Memorial::sentence::0",
+      "Lincoln Memorial::sentence::3",
+      "Perry Memorial Arch::sentence::1"
+    ],
+    "evidence_wiki_url": [
+      "https://en.wikipedia.org/wiki/Henry_Bacon",
+      "https://en.wikipedia.org/wiki/Lincoln_Memorial",
+      "https://en.wikipedia.org/wiki/Perry_Memorial_Arch"
+    ],
+    "evidence_sentence_id": [
+      "Henry Bacon::sentence::0",
+      "Lincoln Memorial::sentence::0",
+      "Lincoln Memorial::sentence::3",
+      "Perry Memorial Arch::sentence::1"
+    ]
+  },
+  "grafo_claim": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "2f9fe7a1-e4d1-5127-8d54-bca5a2bafd97",
+        "text": "This chunk is about:\n- Places: Lincoln Memorial, Perry Memorial Arch\n- People: Henry Bacon\n- Topics: architecture, memorial design\n\nFacts:\n- The Lincoln Memorial was dedicated in 1922.\n- Henry Bacon designed the Lincoln Memorial.\n- Henry Bacon also designed the Perry Memorial Arch.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "acd70c67-1a65-5ef1-83bd-cb6b05f8db61",
+        "text": "The Lincoln Memorial was dedicated in 1922. The name of the architect who designed it is the same architect who designed Perry Memorial Arch.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "231c43eb-eacf-5e21-aeea-cae4e5ffed3c",
+        "text": "text_73df1bf979e85c87c766e512a3160027",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "07b5720b-1093-53df-8aa6-69e16c3fd01a",
+        "text": "lincoln memorial",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "5f394058-b2a0-5ba8-8466-ba2a18cfcf4e",
+        "text": "place",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "5a4417f7-418a-55d6-bba2-981d57395a78",
+        "text": "1922",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "b19433ae-558c-5aaf-95ac-6231f2a4be0e",
+        "text": "date",
+        "type": "EntityType"
+      },
+      {
+        "id": 7,
+        "original_id": "9e1130a0-afcf-5945-9da5-351bbf6abb28",
+        "text": "henry bacon",
+        "type": "Entity"
+      },
+      {
+        "id": 8,
+        "original_id": "99a82eec-bb35-5bb5-9ed2-e73fc7a756de",
+        "text": "person",
+        "type": "EntityType"
+      },
+      {
+        "id": 9,
+        "original_id": "ca802e24-12a2-5b3e-b3af-032754f90581",
+        "text": "perry memorial arch",
+        "type": "Entity"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 7,
+        "target": 3,
+        "type": "designed"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 9,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "dedicated_in"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      },
+      {
+        "source": 7,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 7,
+        "target": 9,
+        "type": "designed"
+      },
+      {
+        "source": 1,
+        "target": 9,
+        "type": "contains"
+      }
+    ]
+  },
+  "grafo_evidencia": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "8dd97237-5dd1-554d-a36f-de64e782d32c",
+        "text": "This chunk is about:\n- People: Henry Bacon, Abraham Lincoln\n- Places: Washington, D.C.\n- Projects: Lincoln Memorial, Perry Memorial Arch\n- Topics: American national monuments, Beaux-Arts architecture\n\nFacts:\n- Henry Bacon was an American Beaux-Arts architect born on November 28, 1866.\n- Henry Bacon designed the Lincoln Memorial in Washington, D.C., which was built from 1915 to 1922.\n- Henry Bacon designed the Perry Memorial Arch, which was built in 1918.\n- The Lincoln Memorial is an American national monument that honors Abraham Lincoln, the 16th President of the United States.\n- The Lincoln Memorial was dedicated in 1922 and is one of several monuments built to honor an American president.\n- The Lincoln Memorial was Henry Bacon's final project.\n- Henry Bacon died on February 16, 1924.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "c7e6b278-8d53-57c0-bf71-f439e8b4b425",
+        "text": "Page: Henry Bacon. Sentence: Henry Bacon (November 28, 1866 – February 16, 1924) was an American Beaux-Arts architect who is best remembered for the Lincoln Memorial in Washington, D.C. (built 1915–22), which was his final project.\nPage: Lincoln Memorial. Sentence: The Lincoln Memorial is an American national monument built to honor the 16th President of the United States, Abraham Lincoln.\nPage: Lincoln Memorial. Sentence: Dedicated in 1922, it is one of several monuments built to honor an American president.\nPage: Perry Memorial Arch. Sentence: It was built in 1918 and designed by architect Henry Bacon.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "911121ca-41e2-544c-b66d-ee48c01bb06b",
+        "text": "text_2c7099db7be67fadcf704f2bdb8b76c4",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "9e1130a0-afcf-5945-9da5-351bbf6abb28",
+        "text": "henry bacon",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "99a82eec-bb35-5bb5-9ed2-e73fc7a756de",
+        "text": "person",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "51ad03f0-88ab-5338-97ce-36bd2112bc03",
+        "text": "1866-11-28",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "b19433ae-558c-5aaf-95ac-6231f2a4be0e",
+        "text": "date",
+        "type": "EntityType"
+      },
+      {
+        "id": 7,
+        "original_id": "9a5fb776-17b9-52f1-a211-5397f95b0940",
+        "text": "1924-02-16",
+        "type": "Entity"
+      },
+      {
+        "id": 8,
+        "original_id": "8d2b08f0-651f-56b2-bccd-73048fae1c69",
+        "text": "beaux-arts architect",
+        "type": "Entity"
+      },
+      {
+        "id": 9,
+        "original_id": "d2a381fa-3658-5ca6-ada9-2109cfc9331d",
+        "text": "concept",
+        "type": "EntityType"
+      },
+      {
+        "id": 10,
+        "original_id": "07b5720b-1093-53df-8aa6-69e16c3fd01a",
+        "text": "lincoln memorial",
+        "type": "Entity"
+      },
+      {
+        "id": 11,
+        "original_id": "5f394058-b2a0-5ba8-8466-ba2a18cfcf4e",
+        "text": "place",
+        "type": "EntityType"
+      },
+      {
+        "id": 12,
+        "original_id": "193a9885-0f59-521c-a4b2-e6d5a15561ed",
+        "text": "washington, d.c.",
+        "type": "Entity"
+      },
+      {
+        "id": 13,
+        "original_id": "a5b1551a-34c6-57a0-aa7d-58efdb0f6a98",
+        "text": "abraham lincoln",
+        "type": "Entity"
+      },
+      {
+        "id": 14,
+        "original_id": "14304485-cdb6-5fba-af17-d40bd15b8a12",
+        "text": "16th president of the united states",
+        "type": "Entity"
+      },
+      {
+        "id": 15,
+        "original_id": "60fcfda5-ea24-5543-8795-7dc149c656a1",
+        "text": "1915",
+        "type": "Entity"
+      },
+      {
+        "id": 16,
+        "original_id": "5a4417f7-418a-55d6-bba2-981d57395a78",
+        "text": "1922",
+        "type": "Entity"
+      },
+      {
+        "id": 17,
+        "original_id": "532d5007-5a03-5a32-a90c-fa73af6060e8",
+        "text": "american national monument",
+        "type": "Entity"
+      },
+      {
+        "id": 18,
+        "original_id": "ca802e24-12a2-5b3e-b3af-032754f90581",
+        "text": "perry memorial arch",
+        "type": "Entity"
+      },
+      {
+        "id": 19,
+        "original_id": "7c4d6867-a931-55ce-afcb-1742249072f5",
+        "text": "1918",
+        "type": "Entity"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 18,
+        "target": 3,
+        "type": "designed_by"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 13,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "born_on"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 7,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 15,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 16,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 19,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 7,
+        "type": "died_on"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 8,
+        "type": "has_profession"
+      },
+      {
+        "source": 1,
+        "target": 8,
+        "type": "contains"
+      },
+      {
+        "source": 8,
+        "target": 9,
+        "type": "is_a"
+      },
+      {
+        "source": 14,
+        "target": 9,
+        "type": "is_a"
+      },
+      {
+        "source": 17,
+        "target": 9,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 10,
+        "type": "designed"
+      },
+      {
+        "source": 1,
+        "target": 10,
+        "type": "contains"
+      },
+      {
+        "source": 10,
+        "target": 11,
+        "type": "is_a"
+      },
+      {
+        "source": 12,
+        "target": 11,
+        "type": "is_a"
+      },
+      {
+        "source": 18,
+        "target": 11,
+        "type": "is_a"
+      },
+      {
+        "source": 10,
+        "target": 12,
+        "type": "located_in"
+      },
+      {
+        "source": 1,
+        "target": 12,
+        "type": "contains"
+      },
+      {
+        "source": 10,
+        "target": 13,
+        "type": "built_to_honor"
+      },
+      {
+        "source": 1,
+        "target": 13,
+        "type": "contains"
+      },
+      {
+        "source": 13,
+        "target": 14,
+        "type": "held_office"
+      },
+      {
+        "source": 1,
+        "target": 14,
+        "type": "contains"
+      },
+      {
+        "source": 10,
+        "target": 15,
+        "type": "construction_started_in"
+      },
+      {
+        "source": 1,
+        "target": 15,
+        "type": "contains"
+      },
+      {
+        "source": 10,
+        "target": 16,
+        "type": "construction_completed_in"
+      },
+      {
+        "source": 1,
+        "target": 16,
+        "type": "contains"
+      },
+      {
+        "source": 10,
+        "target": 17,
+        "type": "instance_of"
+      },
+      {
+        "source": 1,
+        "target": 17,
+        "type": "contains"
+      },
+      {
+        "source": 1,
+        "target": 18,
+        "type": "contains"
+      },
+      {
+        "source": 18,
+        "target": 19,
+        "type": "built_in"
+      },
+      {
+        "source": 1,
+        "target": 19,
+        "type": "contains"
+      }
+    ]
+  }
+}

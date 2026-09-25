@@ -1,0 +1,682 @@
+{
+  "dataset": "hover",
+  "id": "55c97a65-e8ae-4389-8b94-2b8237e9df5c",
+  "split": "train",
+  "claim": "Pelle Almqvist is younger than the saxophonist who played synthesizers on the track \"Got a Hold on Me\".",
+  "evidencia": "Page: Steve Winwood. Sentence: Stephen Lawrence \"Steve\" Winwood (born 12 May 1948) is an English musician whose genres include rock, blue-eyed soul, rhythm and blues, blues rock, pop rock, and jazz.\nPage: Pelle Almqvist. Sentence: Per \"Pelle\" Almqvist (born 29 May 1978), also known as Howlin' Pelle Almqvist, is a Swedish singer and songwriter.\nPage: Got a Hold on Me. Sentence: Synthesizers on the track were played by Steve Winwood, while the guitars were played by Todd Sharp (the song's co-writer) and McVie's Fleetwood Mac bandmate Lindsey Buckingham.",
+  "evidence_text": "Page: Steve Winwood. Sentence: Stephen Lawrence \"Steve\" Winwood (born 12 May 1948) is an English musician whose genres include rock, blue-eyed soul, rhythm and blues, blues rock, pop rock, and jazz.\nPage: Pelle Almqvist. Sentence: Per \"Pelle\" Almqvist (born 29 May 1978), also known as Howlin' Pelle Almqvist, is a Swedish singer and songwriter.\nPage: Got a Hold on Me. Sentence: Synthesizers on the track were played by Steve Winwood, while the guitars were played by Todd Sharp (the song's co-writer) and McVie's Fleetwood Mac bandmate Lindsey Buckingham.",
+  "label": "NOT_SUPPORTED",
+  "num_hops": 3,
+  "hover_metadata": {
+    "supporting_facts": [
+      [
+        "Steve Winwood",
+        0
+      ],
+      [
+        "Pelle Almqvist",
+        0
+      ],
+      [
+        "Got a Hold on Me",
+        3
+      ]
+    ],
+    "num_hops": 3,
+    "evidence_annotation_id": [
+      0
+    ],
+    "evidence_id": [
+      "Steve Winwood::sentence::0",
+      "Pelle Almqvist::sentence::0",
+      "Got a Hold on Me::sentence::3"
+    ],
+    "evidence_wiki_url": [
+      "https://en.wikipedia.org/wiki/Steve_Winwood",
+      "https://en.wikipedia.org/wiki/Pelle_Almqvist",
+      "https://en.wikipedia.org/wiki/Got_a_Hold_on_Me"
+    ],
+    "evidence_sentence_id": [
+      "Steve Winwood::sentence::0",
+      "Pelle Almqvist::sentence::0",
+      "Got a Hold on Me::sentence::3"
+    ]
+  },
+  "grafo_claim": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "94fd9e96-475b-5edc-8ef3-923d184b8620",
+        "text": "This chunk is about:\n- People: Pelle Almqvist, unnamed saxophonist\n- Songs: \"Got a Hold on Me\"\n- Roles: saxophonist, synthesizer player\n\nFacts:\n- An unnamed saxophonist played synthesizers on the track \"Got a Hold on Me\".\n- Pelle Almqvist is younger than the unnamed saxophonist who played synthesizers on the track \"Got a Hold on Me\".",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "ee083488-797b-5622-9909-96100e0f010d",
+        "text": "Pelle Almqvist is younger than the saxophonist who played synthesizers on the track \"Got a Hold on Me\".",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "e8c9d5bd-723d-555f-b8dc-ff9de078b5a1",
+        "text": "text_69503f13ad1bd4ef0e9dc9bd56c968c6",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "642955e6-5bd6-5d9f-867e-deeb85333108",
+        "text": "pelle almqvist",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "99a82eec-bb35-5bb5-9ed2-e73fc7a756de",
+        "text": "person",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "9b2bc954-359c-5ab8-98ab-b7b915f62a29",
+        "text": "saxophonist who played synthesizers on got a hold on me",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "e78ff251-bd00-5975-ae37-416a2d460103",
+        "text": "got a hold on me",
+        "type": "Entity"
+      },
+      {
+        "id": 7,
+        "original_id": "5263a535-1b4b-5925-be3e-310d03cd303b",
+        "text": "work",
+        "type": "EntityType"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 3,
+        "type": "older_than"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 5,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "played_synthesizers_on"
+      },
+      {
+        "source": 1,
+        "target": 6,
+        "type": "contains"
+      },
+      {
+        "source": 6,
+        "target": 7,
+        "type": "is_a"
+      }
+    ]
+  },
+  "grafo_evidencia": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "2987e981-13e2-563f-9c84-9bbde199b4c0",
+        "text": "This chunk is about:\n- People: Steve Winwood, Pelle Almqvist, Todd Sharp, Lindsey Buckingham\n- Songs: \"Got a Hold on Me\"\n- Bands: Fleetwood Mac\n- Roles: musicians, singer-songwriters, guitarists, synthesizer players\n- Topics: music genres\n\nFacts:\n- Steve Winwood was born on 12 May 1948 and is an English musician.\n- Steve Winwood's genres include rock, blue-eyed soul, rhythm and blues, blues rock, pop rock, and jazz.\n- Pelle Almqvist was born on 29 May 1978 and is a Swedish singer and songwriter.\n- Pelle Almqvist is also known as Howlin' Pelle Almqvist.\n- On the song \"Got a Hold on Me,\" Steve Winwood played synthesizers.\n- Todd Sharp was a co-writer of \"Got a Hold on Me\" and played guitar on the track.\n- Lindsey Buckingham, a bandmate of McVie in Fleetwood Mac, played guitar on \"Got a Hold on Me\".",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "b92ca15b-bc41-56ca-9cd2-1858fffabbc5",
+        "text": "Page: Steve Winwood. Sentence: Stephen Lawrence \"Steve\" Winwood (born 12 May 1948) is an English musician whose genres include rock, blue-eyed soul, rhythm and blues, blues rock, pop rock, and jazz.\nPage: Pelle Almqvist. Sentence: Per \"Pelle\" Almqvist (born 29 May 1978), also known as Howlin' Pelle Almqvist, is a Swedish singer and songwriter.\nPage: Got a Hold on Me. Sentence: Synthesizers on the track were played by Steve Winwood, while the guitars were played by Todd Sharp (the song's co-writer) and McVie's Fleetwood Mac bandmate Lindsey Buckingham.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "af80f9de-fc71-53d8-ad50-22f61d6c82e9",
+        "text": "text_9c17f1956d9ea94fa23cfbb7a9bd5b02",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "530a57fd-5a9a-510c-b879-0e1c33740da3",
+        "text": "steve winwood",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "06a8ef81-b220-5e79-bc9d-243fed8c58ec",
+        "text": "1948-05-12",
+        "type": "Entity"
+      },
+      {
+        "id": 5,
+        "original_id": "b19433ae-558c-5aaf-95ac-6231f2a4be0e",
+        "text": "date",
+        "type": "EntityType"
+      },
+      {
+        "id": 6,
+        "original_id": "d1185f20-d428-5d1b-9400-16fa3def3ef6",
+        "text": "english",
+        "type": "Entity"
+      },
+      {
+        "id": 7,
+        "original_id": "7d08f409-7e55-5a66-935f-7c5c06f9111f",
+        "text": "nationality",
+        "type": "EntityType"
+      },
+      {
+        "id": 8,
+        "original_id": "908ed0da-fad6-5486-b4e9-3b48b62c7116",
+        "text": "musician",
+        "type": "Entity"
+      },
+      {
+        "id": 9,
+        "original_id": "9d80eb43-32fa-561c-9371-91f180ebcb6c",
+        "text": "profession",
+        "type": "EntityType"
+      },
+      {
+        "id": 10,
+        "original_id": "65e97ac8-fdf2-567a-a50f-919d0463a4e0",
+        "text": "rock",
+        "type": "Entity"
+      },
+      {
+        "id": 11,
+        "original_id": "d8d36cdc-ccf4-5249-921a-ab373f0fb82a",
+        "text": "genre",
+        "type": "EntityType"
+      },
+      {
+        "id": 12,
+        "original_id": "c7a23309-999a-5e3d-ab30-53ea2fbd85a1",
+        "text": "blue-eyed soul",
+        "type": "Entity"
+      },
+      {
+        "id": 13,
+        "original_id": "7d937aa2-7c0e-5470-9ae3-6e0e6842e163",
+        "text": "rhythm and blues",
+        "type": "Entity"
+      },
+      {
+        "id": 14,
+        "original_id": "238bc36f-4fa9-54af-9580-6702cdd2620f",
+        "text": "blues rock",
+        "type": "Entity"
+      },
+      {
+        "id": 15,
+        "original_id": "93f049fd-62d7-541a-99d2-235049bf1a8b",
+        "text": "pop rock",
+        "type": "Entity"
+      },
+      {
+        "id": 16,
+        "original_id": "ee8368d0-29bc-5567-87f0-bbaa41a8c8c9",
+        "text": "jazz",
+        "type": "Entity"
+      },
+      {
+        "id": 17,
+        "original_id": "e78ff251-bd00-5975-ae37-416a2d460103",
+        "text": "got a hold on me",
+        "type": "Entity"
+      },
+      {
+        "id": 18,
+        "original_id": "6056b392-f12e-5150-8c0b-ac7545dc2fdf",
+        "text": "song",
+        "type": "EntityType"
+      },
+      {
+        "id": 19,
+        "original_id": "99a82eec-bb35-5bb5-9ed2-e73fc7a756de",
+        "text": "person",
+        "type": "EntityType"
+      },
+      {
+        "id": 20,
+        "original_id": "642955e6-5bd6-5d9f-867e-deeb85333108",
+        "text": "pelle almqvist",
+        "type": "Entity"
+      },
+      {
+        "id": 21,
+        "original_id": "8ff31e3d-848c-55b1-bdec-2eb66b88192c",
+        "text": "1978-05-29",
+        "type": "Entity"
+      },
+      {
+        "id": 22,
+        "original_id": "f22d25b4-9171-5a1d-88d7-96dafb62e504",
+        "text": "swedish",
+        "type": "Entity"
+      },
+      {
+        "id": 23,
+        "original_id": "eab5737a-cd7b-5a0b-b6f7-660bb3ed3495",
+        "text": "singer",
+        "type": "Entity"
+      },
+      {
+        "id": 24,
+        "original_id": "a5b80735-888a-5911-916c-11c46c78456d",
+        "text": "songwriter",
+        "type": "Entity"
+      },
+      {
+        "id": 25,
+        "original_id": "46cc2a37-d10e-54cd-8b2e-ac55e66db4c4",
+        "text": "howlin pelle almqvist",
+        "type": "Entity"
+      },
+      {
+        "id": 26,
+        "original_id": "5beec723-0017-5c05-a87d-a474d52248b6",
+        "text": "per pelle almqvist",
+        "type": "Entity"
+      },
+      {
+        "id": 27,
+        "original_id": "bb4b9596-4d39-56df-9016-4de79c09d02a",
+        "text": "todd sharp",
+        "type": "Entity"
+      },
+      {
+        "id": 28,
+        "original_id": "c131b2c0-b691-5e40-9ce2-1cc951cb2472",
+        "text": "lindsey buckingham",
+        "type": "Entity"
+      },
+      {
+        "id": 29,
+        "original_id": "b8e0abfc-e6b3-5107-87e3-087ab8eccb4b",
+        "text": "christine mcvie",
+        "type": "Entity"
+      },
+      {
+        "id": 30,
+        "original_id": "0127c31f-ea1d-53e9-a177-57e066807d18",
+        "text": "fleetwood mac",
+        "type": "Entity"
+      },
+      {
+        "id": 31,
+        "original_id": "a69bcce0-8153-57d6-96fd-6d36e286fb20",
+        "text": "band",
+        "type": "EntityType"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "born_on"
+      },
+      {
+        "source": 1,
+        "target": 4,
+        "type": "contains"
+      },
+      {
+        "source": 4,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 21,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 6,
+        "type": "has_nationality"
+      },
+      {
+        "source": 1,
+        "target": 6,
+        "type": "contains"
+      },
+      {
+        "source": 6,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 22,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 8,
+        "type": "has_profession"
+      },
+      {
+        "source": 1,
+        "target": 8,
+        "type": "contains"
+      },
+      {
+        "source": 8,
+        "target": 9,
+        "type": "is_a"
+      },
+      {
+        "source": 23,
+        "target": 9,
+        "type": "is_a"
+      },
+      {
+        "source": 24,
+        "target": 9,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 10,
+        "type": "has_genre"
+      },
+      {
+        "source": 1,
+        "target": 10,
+        "type": "contains"
+      },
+      {
+        "source": 10,
+        "target": 11,
+        "type": "is_a"
+      },
+      {
+        "source": 12,
+        "target": 11,
+        "type": "is_a"
+      },
+      {
+        "source": 13,
+        "target": 11,
+        "type": "is_a"
+      },
+      {
+        "source": 14,
+        "target": 11,
+        "type": "is_a"
+      },
+      {
+        "source": 15,
+        "target": 11,
+        "type": "is_a"
+      },
+      {
+        "source": 16,
+        "target": 11,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 12,
+        "type": "has_genre"
+      },
+      {
+        "source": 1,
+        "target": 12,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 13,
+        "type": "has_genre"
+      },
+      {
+        "source": 1,
+        "target": 13,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 14,
+        "type": "has_genre"
+      },
+      {
+        "source": 1,
+        "target": 14,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 15,
+        "type": "has_genre"
+      },
+      {
+        "source": 1,
+        "target": 15,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 16,
+        "type": "has_genre"
+      },
+      {
+        "source": 1,
+        "target": 16,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 17,
+        "type": "played_synthesizers_on"
+      },
+      {
+        "source": 1,
+        "target": 17,
+        "type": "contains"
+      },
+      {
+        "source": 27,
+        "target": 17,
+        "type": "played_guitars_on"
+      },
+      {
+        "source": 28,
+        "target": 17,
+        "type": "played_guitars_on"
+      },
+      {
+        "source": 17,
+        "target": 18,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 19,
+        "type": "is_a"
+      },
+      {
+        "source": 25,
+        "target": 19,
+        "type": "is_a"
+      },
+      {
+        "source": 26,
+        "target": 19,
+        "type": "is_a"
+      },
+      {
+        "source": 20,
+        "target": 19,
+        "type": "is_a"
+      },
+      {
+        "source": 27,
+        "target": 19,
+        "type": "is_a"
+      },
+      {
+        "source": 29,
+        "target": 19,
+        "type": "is_a"
+      },
+      {
+        "source": 28,
+        "target": 19,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 20,
+        "type": "contains"
+      },
+      {
+        "source": 20,
+        "target": 21,
+        "type": "born_on"
+      },
+      {
+        "source": 1,
+        "target": 21,
+        "type": "contains"
+      },
+      {
+        "source": 20,
+        "target": 22,
+        "type": "has_nationality"
+      },
+      {
+        "source": 1,
+        "target": 22,
+        "type": "contains"
+      },
+      {
+        "source": 20,
+        "target": 23,
+        "type": "has_profession"
+      },
+      {
+        "source": 1,
+        "target": 23,
+        "type": "contains"
+      },
+      {
+        "source": 20,
+        "target": 24,
+        "type": "has_profession"
+      },
+      {
+        "source": 1,
+        "target": 24,
+        "type": "contains"
+      },
+      {
+        "source": 20,
+        "target": 25,
+        "type": "also_known_as"
+      },
+      {
+        "source": 1,
+        "target": 25,
+        "type": "contains"
+      },
+      {
+        "source": 20,
+        "target": 26,
+        "type": "full_name"
+      },
+      {
+        "source": 1,
+        "target": 26,
+        "type": "contains"
+      },
+      {
+        "source": 1,
+        "target": 27,
+        "type": "contains"
+      },
+      {
+        "source": 1,
+        "target": 28,
+        "type": "contains"
+      },
+      {
+        "source": 28,
+        "target": 29,
+        "type": "bandmate_of"
+      },
+      {
+        "source": 1,
+        "target": 29,
+        "type": "contains"
+      },
+      {
+        "source": 29,
+        "target": 30,
+        "type": "member_of"
+      },
+      {
+        "source": 28,
+        "target": 30,
+        "type": "member_of"
+      },
+      {
+        "source": 1,
+        "target": 30,
+        "type": "contains"
+      },
+      {
+        "source": 30,
+        "target": 31,
+        "type": "is_a"
+      }
+    ]
+  }
+}

@@ -1,0 +1,483 @@
+{
+  "dataset": "hover",
+  "id": "7f100325-b3c7-455d-9e05-07280afb18f0",
+  "split": "train",
+  "claim": "An American rock band released My Animal. This band has more studio albums than the American band whose second album is Rispah.",
+  "evidencia": "Page: Boy Hits Car. Sentence: Boy Hits Car released their 5th studio album \"All That Led Us Here\" in May 2014 and are following it up with a European tour.\nPage: The Invisible (band). Sentence: Their self-titled debut album, released on 9 March 2009, was nominated for the Mercury Prize and selected as critics choice for iTunes album of the year.\nPage: My Animal. Sentence: My Animal (1998) is the debut album by American rock band Boy Hits Car.\nPage: Rispah. Sentence: Rispah is the second album by the English band The Invisible.",
+  "evidence_text": "Page: Boy Hits Car. Sentence: Boy Hits Car released their 5th studio album \"All That Led Us Here\" in May 2014 and are following it up with a European tour.\nPage: The Invisible (band). Sentence: Their self-titled debut album, released on 9 March 2009, was nominated for the Mercury Prize and selected as critics choice for iTunes album of the year.\nPage: My Animal. Sentence: My Animal (1998) is the debut album by American rock band Boy Hits Car.\nPage: Rispah. Sentence: Rispah is the second album by the English band The Invisible.",
+  "label": "SUPPORTED",
+  "num_hops": 4,
+  "hover_metadata": {
+    "supporting_facts": [
+      [
+        "Boy Hits Car",
+        6
+      ],
+      [
+        "The Invisible (band)",
+        2
+      ],
+      [
+        "My Animal",
+        0
+      ],
+      [
+        "Rispah",
+        0
+      ]
+    ],
+    "num_hops": 4,
+    "evidence_annotation_id": [
+      0
+    ],
+    "evidence_id": [
+      "Boy Hits Car::sentence::6",
+      "The Invisible (band)::sentence::2",
+      "My Animal::sentence::0",
+      "Rispah::sentence::0"
+    ],
+    "evidence_wiki_url": [
+      "https://en.wikipedia.org/wiki/Boy_Hits_Car",
+      "https://en.wikipedia.org/wiki/The_Invisible_%28band%29",
+      "https://en.wikipedia.org/wiki/My_Animal",
+      "https://en.wikipedia.org/wiki/Rispah"
+    ],
+    "evidence_sentence_id": [
+      "Boy Hits Car::sentence::6",
+      "The Invisible (band)::sentence::2",
+      "My Animal::sentence::0",
+      "Rispah::sentence::0"
+    ]
+  },
+  "grafo_claim": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "c3de6a41-ba45-51f0-8c40-85cfb32dc229",
+        "text": "This chunk is about:\n- Companies: American rock band\n- Products: My Animal, Rispah\n- Topics: studio album counts\n\nFacts:\n- An American rock band released My Animal.\n- Another American band has Rispah as its second album.\n- The American rock band that released My Animal has more studio albums than the American band whose second album is Rispah.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "114a4814-aa6a-5bd9-ad2d-3eecf9ecd657",
+        "text": "An American rock band released My Animal. This band has more studio albums than the American band whose second album is Rispah.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "41c9ff0a-0662-5bc3-99a4-bea7208b3d5e",
+        "text": "text_9f9e027a4bfa74ecfc1514aaef8b0d53",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "eef8875a-8fc9-53ce-9822-3f301060cd76",
+        "text": "my animal",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "5263a535-1b4b-5925-be3e-310d03cd303b",
+        "text": "work",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "53de6460-92fc-5679-be16-a89d3e67e0c9",
+        "text": "rispah",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "0868ef9f-4f3b-592a-a0ae-6d622efb6b0d",
+        "text": "american rock band that released my animal",
+        "type": "Entity"
+      },
+      {
+        "id": 7,
+        "original_id": "539ccc6a-ed9b-5fcd-a794-ae47482f5454",
+        "text": "american band whose second album is rispah",
+        "type": "Entity"
+      },
+      {
+        "id": 8,
+        "original_id": "388f60fb-220d-55e8-ae9c-3ac93cead308",
+        "text": "organization",
+        "type": "EntityType"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 6,
+        "target": 3,
+        "type": "released"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 5,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 7,
+        "target": 5,
+        "type": "has_second_album"
+      },
+      {
+        "source": 1,
+        "target": 6,
+        "type": "contains"
+      },
+      {
+        "source": 6,
+        "target": 7,
+        "type": "has_more_studio_albums_than"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      },
+      {
+        "source": 7,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 6,
+        "target": 8,
+        "type": "is_a"
+      }
+    ]
+  },
+  "grafo_evidencia": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "b6040d48-ac76-54f4-a00a-a9d3198743bb",
+        "text": "This chunk is about:\n- Bands: Boy Hits Car, The Invisible\n- Albums: All That Led Us Here, The Invisible, My Animal, Rispah\n- Events: album releases, European tour, Mercury Prize nomination, iTunes critics choice\n\nFacts:\n- Boy Hits Car released their debut album, My Animal, in 1998.\n- The Invisible released their self-titled debut album, The Invisible, on 9 March 2009.\n- The Invisible's debut album, The Invisible, was nominated for the Mercury Prize and was selected as iTunes critics choice for album of the year.\n- Rispah is the second album by the English band The Invisible.\n- Boy Hits Car released their fifth studio album, All That Led Us Here, in May 2014.\n- After releasing All That Led Us Here in May 2014, Boy Hits Car followed it with a European tour.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "9e3dd223-47df-5733-80bc-f865e4e98b79",
+        "text": "Page: Boy Hits Car. Sentence: Boy Hits Car released their 5th studio album \"All That Led Us Here\" in May 2014 and are following it up with a European tour.\nPage: The Invisible (band). Sentence: Their self-titled debut album, released on 9 March 2009, was nominated for the Mercury Prize and selected as critics choice for iTunes album of the year.\nPage: My Animal. Sentence: My Animal (1998) is the debut album by American rock band Boy Hits Car.\nPage: Rispah. Sentence: Rispah is the second album by the English band The Invisible.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "1e18ed60-bbc1-5b06-8cc9-a654f93d9804",
+        "text": "text_b4138de7427e4e6dd10a5ef2de429320",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "f008243d-3b79-5364-9d12-4aabc4c4397c",
+        "text": "boy hits car",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "825631f3-1e6f-5d10-9aad-d445fc46a102",
+        "text": "all that led us here",
+        "type": "Entity"
+      },
+      {
+        "id": 5,
+        "original_id": "7525fc60-a663-5c74-938e-5145647b8cb2",
+        "text": "2014-05",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "b19433ae-558c-5aaf-95ac-6231f2a4be0e",
+        "text": "date",
+        "type": "EntityType"
+      },
+      {
+        "id": 7,
+        "original_id": "213321b1-cf32-59df-847a-8b293b41cf9c",
+        "text": "album",
+        "type": "EntityType"
+      },
+      {
+        "id": 8,
+        "original_id": "8ccf2387-6070-5ccf-afbf-a9573e3ab0ff",
+        "text": "european tour",
+        "type": "Entity"
+      },
+      {
+        "id": 9,
+        "original_id": "2a54f77a-c8f8-5f05-a811-8574809f21df",
+        "text": "tour",
+        "type": "EntityType"
+      },
+      {
+        "id": 10,
+        "original_id": "eef8875a-8fc9-53ce-9822-3f301060cd76",
+        "text": "my animal",
+        "type": "Entity"
+      },
+      {
+        "id": 11,
+        "original_id": "111f07f3-2527-5bbf-827f-7a18bb37f150",
+        "text": "1998",
+        "type": "Entity"
+      },
+      {
+        "id": 12,
+        "original_id": "a69bcce0-8153-57d6-96fd-6d36e286fb20",
+        "text": "band",
+        "type": "EntityType"
+      },
+      {
+        "id": 13,
+        "original_id": "3232ca36-b2c0-5334-84bc-7dedc1c694e2",
+        "text": "the invisible",
+        "type": "Entity"
+      },
+      {
+        "id": 14,
+        "original_id": "b802e65b-0656-5c93-beb6-68b8433260f5",
+        "text": "the invisible",
+        "type": "Entity"
+      },
+      {
+        "id": 15,
+        "original_id": "f5bd2d56-e704-5316-ac96-091f2b49adc2",
+        "text": "2009-03-09",
+        "type": "Entity"
+      },
+      {
+        "id": 16,
+        "original_id": "be3446f7-966a-5936-ab52-1f073b595f15",
+        "text": "mercury prize",
+        "type": "Entity"
+      },
+      {
+        "id": 17,
+        "original_id": "38e42125-31f4-5cd6-993c-dbbc06a88910",
+        "text": "award",
+        "type": "EntityType"
+      },
+      {
+        "id": 18,
+        "original_id": "36c9fa79-ac5d-582e-8c6f-bdd6315bc919",
+        "text": "itunes album of the year",
+        "type": "Entity"
+      },
+      {
+        "id": 19,
+        "original_id": "53de6460-92fc-5679-be16-a89d3e67e0c9",
+        "text": "rispah",
+        "type": "Entity"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "released"
+      },
+      {
+        "source": 1,
+        "target": 4,
+        "type": "contains"
+      },
+      {
+        "source": 4,
+        "target": 5,
+        "type": "released_in"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 11,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 15,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 4,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 10,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 14,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 19,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 8,
+        "type": "followed_with"
+      },
+      {
+        "source": 1,
+        "target": 8,
+        "type": "contains"
+      },
+      {
+        "source": 8,
+        "target": 9,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 10,
+        "type": "released"
+      },
+      {
+        "source": 1,
+        "target": 10,
+        "type": "contains"
+      },
+      {
+        "source": 10,
+        "target": 11,
+        "type": "released_in"
+      },
+      {
+        "source": 1,
+        "target": 11,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 12,
+        "type": "is_a"
+      },
+      {
+        "source": 13,
+        "target": 12,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 13,
+        "type": "contains"
+      },
+      {
+        "source": 13,
+        "target": 14,
+        "type": "released"
+      },
+      {
+        "source": 1,
+        "target": 14,
+        "type": "contains"
+      },
+      {
+        "source": 14,
+        "target": 15,
+        "type": "released_on"
+      },
+      {
+        "source": 1,
+        "target": 15,
+        "type": "contains"
+      },
+      {
+        "source": 14,
+        "target": 16,
+        "type": "nominated_for"
+      },
+      {
+        "source": 1,
+        "target": 16,
+        "type": "contains"
+      },
+      {
+        "source": 16,
+        "target": 17,
+        "type": "is_a"
+      },
+      {
+        "source": 18,
+        "target": 17,
+        "type": "is_a"
+      },
+      {
+        "source": 14,
+        "target": 18,
+        "type": "selected_as"
+      },
+      {
+        "source": 1,
+        "target": 18,
+        "type": "contains"
+      },
+      {
+        "source": 13,
+        "target": 19,
+        "type": "released"
+      },
+      {
+        "source": 1,
+        "target": 19,
+        "type": "contains"
+      }
+    ]
+  }
+}

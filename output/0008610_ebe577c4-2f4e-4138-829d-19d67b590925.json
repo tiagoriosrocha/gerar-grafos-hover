@@ -1,0 +1,400 @@
+{
+  "dataset": "hover",
+  "id": "ebe577c4-2f4e-4138-829d-19d67b590925",
+  "split": "train",
+  "claim": "The Fort Worth Zoo was rated as one of the top zoos by a magazine published in Birmingham Alabama.",
+  "evidencia": "Page: Fort Worth Zoo. Sentence: The zoo now is home to 5,000 native and exotic animals and has been named as a top zoo in the nation by \"Family Life\" magazine, the \"Los Angeles Times\" and \"USA Today\", as well as one of the top zoos in the South by \"Southern Living\" Reader's Choice Awards.\nPage: Southern Living. Sentence: It is published by Birmingham, Alabama–based Southern Progress Corporation, a unit of Time Inc.",
+  "evidence_text": "Page: Fort Worth Zoo. Sentence: The zoo now is home to 5,000 native and exotic animals and has been named as a top zoo in the nation by \"Family Life\" magazine, the \"Los Angeles Times\" and \"USA Today\", as well as one of the top zoos in the South by \"Southern Living\" Reader's Choice Awards.\nPage: Southern Living. Sentence: It is published by Birmingham, Alabama–based Southern Progress Corporation, a unit of Time Inc.",
+  "label": "SUPPORTED",
+  "num_hops": 2,
+  "hover_metadata": {
+    "supporting_facts": [
+      [
+        "Fort Worth Zoo",
+        1
+      ],
+      [
+        "Southern Living",
+        1
+      ]
+    ],
+    "num_hops": 2,
+    "evidence_annotation_id": [
+      0
+    ],
+    "evidence_id": [
+      "Fort Worth Zoo::sentence::1",
+      "Southern Living::sentence::1"
+    ],
+    "evidence_wiki_url": [
+      "https://en.wikipedia.org/wiki/Fort_Worth_Zoo",
+      "https://en.wikipedia.org/wiki/Southern_Living"
+    ],
+    "evidence_sentence_id": [
+      "Fort Worth Zoo::sentence::1",
+      "Southern Living::sentence::1"
+    ]
+  },
+  "grafo_claim": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "d69513ca-8f6d-5d4a-a2b8-8afec4e98e40",
+        "text": "This chunk is about:\n- Organizations: Fort Worth Zoo\n- Places: Birmingham, Alabama\n- Topics: Zoo rankings, magazines\n\nFacts:\n- The Fort Worth Zoo was rated as one of the top zoos by a magazine.\n- The magazine that rated the Fort Worth Zoo was published in Birmingham, Alabama.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "bf3e5be0-2676-5e37-b90b-b787c63f3e65",
+        "text": "The Fort Worth Zoo was rated as one of the top zoos by a magazine published in Birmingham Alabama.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "f029a2e7-1091-5303-af20-17a0defbaf42",
+        "text": "text_5b82be1924098161fc4671203bb16f84",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "7262a0df-9d2c-5c2d-9f71-1b0af8e6e0ab",
+        "text": "fort worth zoo",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "388f60fb-220d-55e8-ae9c-3ac93cead308",
+        "text": "organization",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "2c5ba551-9d09-5a05-8dcb-1fc7706d4a6c",
+        "text": "birmingham, alabama",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "5f394058-b2a0-5ba8-8466-ba2a18cfcf4e",
+        "text": "place",
+        "type": "EntityType"
+      },
+      {
+        "id": 7,
+        "original_id": "b00fc67a-15ee-5dd6-acf3-ddfd27dc3511",
+        "text": "the magazine",
+        "type": "Entity"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 7,
+        "target": 3,
+        "type": "rated_as_top_zoo"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 7,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 7,
+        "target": 5,
+        "type": "published_in"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      }
+    ]
+  },
+  "grafo_evidencia": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "89b3b64c-ebea-5fed-b7b2-e94e1a0b3fc5",
+        "text": "This chunk is about:\n- Organizations: Fort Worth Zoo, Southern Progress Corporation, Time Inc.\n- Publications: Family Life, Los Angeles Times, USA Today, Southern Living, Southern Living Reader's Choice Awards\n- Places: Fort Worth, Birmingham, Alabama, the South\n\nFacts:\n- Fort Worth Zoo is home to 5,000 native and exotic animals.\n- Fort Worth Zoo has been named a top zoo in the nation by Family Life, the Los Angeles Times, and USA Today.\n- Fort Worth Zoo has been named one of the top zoos in the South by the Southern Living Reader's Choice Awards.\n- Southern Living is published by Birmingham, Alabama-based Southern Progress Corporation.\n- Southern Progress Corporation is a unit of Time Inc.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "5e833add-77a5-5c73-bbd3-ef8d7ee41f6a",
+        "text": "Page: Fort Worth Zoo. Sentence: The zoo now is home to 5,000 native and exotic animals and has been named as a top zoo in the nation by \"Family Life\" magazine, the \"Los Angeles Times\" and \"USA Today\", as well as one of the top zoos in the South by \"Southern Living\" Reader's Choice Awards.\nPage: Southern Living. Sentence: It is published by Birmingham, Alabama–based Southern Progress Corporation, a unit of Time Inc.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "d004148b-050f-5750-8b19-264171b0830c",
+        "text": "text_814e2c4947a2aa9e868e386c2daab876",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "7262a0df-9d2c-5c2d-9f71-1b0af8e6e0ab",
+        "text": "fort worth zoo",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "388f60fb-220d-55e8-ae9c-3ac93cead308",
+        "text": "organization",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "fcaf7644-4f1e-55dc-94ec-25bff8b61403",
+        "text": "5,000",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "5c1097ca-fab8-54d5-b57f-5dca4b0e2507",
+        "text": "number",
+        "type": "EntityType"
+      },
+      {
+        "id": 7,
+        "original_id": "355c84ea-0287-5d60-a160-c9d10de29654",
+        "text": "family life",
+        "type": "Entity"
+      },
+      {
+        "id": 8,
+        "original_id": "4f18db6a-59c0-5b26-bd7f-1cb9787d283f",
+        "text": "los angeles times",
+        "type": "Entity"
+      },
+      {
+        "id": 9,
+        "original_id": "cf8cfd78-7521-5af9-ad4c-38d49d94e4ff",
+        "text": "usa today",
+        "type": "Entity"
+      },
+      {
+        "id": 10,
+        "original_id": "3b6d8aae-d6b9-5571-92c1-b6570fdcc0bb",
+        "text": "southern living readers choice awards",
+        "type": "Entity"
+      },
+      {
+        "id": 11,
+        "original_id": "38e42125-31f4-5cd6-993c-dbbc06a88910",
+        "text": "award",
+        "type": "EntityType"
+      },
+      {
+        "id": 12,
+        "original_id": "7b68764f-bca0-5c92-9a71-a2bd94a85326",
+        "text": "southern living",
+        "type": "Entity"
+      },
+      {
+        "id": 13,
+        "original_id": "569dca79-65c5-5f4c-a25f-1b37a51fd13f",
+        "text": "southern progress corporation",
+        "type": "Entity"
+      },
+      {
+        "id": 14,
+        "original_id": "2c5ba551-9d09-5a05-8dcb-1fc7706d4a6c",
+        "text": "birmingham, alabama",
+        "type": "Entity"
+      },
+      {
+        "id": 15,
+        "original_id": "5f394058-b2a0-5ba8-8466-ba2a18cfcf4e",
+        "text": "place",
+        "type": "EntityType"
+      },
+      {
+        "id": 16,
+        "original_id": "05b1a5d0-d87e-5cd7-8c5b-1e7cbf8a1845",
+        "text": "time inc.",
+        "type": "Entity"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 7,
+        "target": 3,
+        "type": "named_as_top_zoo_in_nation"
+      },
+      {
+        "source": 8,
+        "target": 3,
+        "type": "named_as_top_zoo_in_nation"
+      },
+      {
+        "source": 9,
+        "target": 3,
+        "type": "named_as_top_zoo_in_nation"
+      },
+      {
+        "source": 10,
+        "target": 3,
+        "type": "recognized_as_top_zoo_in_south"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 7,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 8,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 9,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 12,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 13,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 16,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "is_home_to_animal_count"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      },
+      {
+        "source": 1,
+        "target": 8,
+        "type": "contains"
+      },
+      {
+        "source": 1,
+        "target": 9,
+        "type": "contains"
+      },
+      {
+        "source": 1,
+        "target": 10,
+        "type": "contains"
+      },
+      {
+        "source": 10,
+        "target": 11,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 12,
+        "type": "contains"
+      },
+      {
+        "source": 13,
+        "target": 12,
+        "type": "publishes"
+      },
+      {
+        "source": 1,
+        "target": 13,
+        "type": "contains"
+      },
+      {
+        "source": 13,
+        "target": 14,
+        "type": "is_based_in"
+      },
+      {
+        "source": 1,
+        "target": 14,
+        "type": "contains"
+      },
+      {
+        "source": 14,
+        "target": 15,
+        "type": "is_a"
+      },
+      {
+        "source": 13,
+        "target": 16,
+        "type": "is_unit_of"
+      },
+      {
+        "source": 1,
+        "target": 16,
+        "type": "contains"
+      }
+    ]
+  }
+}

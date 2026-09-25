@@ -1,0 +1,506 @@
+{
+  "dataset": "hover",
+  "id": "2a0034a1-0b3a-4cd1-b383-14cb20a00d82",
+  "split": "train",
+  "claim": "He was the brother of David Rockefeller chief executive of Chase Manhattan Corporation. Blanchette Ferry Rockefeller is the wife of this businessman.",
+  "evidencia": "Page: John D. Rockefeller III. Sentence: He was the eldest son of philanthropists John D. Rockefeller Jr. and Abby Aldrich Rockefeller.\nPage: David Rockefeller. Sentence: David Rockefeller (June 12, 1915 – March 20, 2017) was an American banker who was chairman and chief executive of Chase Manhattan Corporation.\nPage: David Rockefeller. Sentence: Rockefeller was a son of John D. Rockefeller Jr. and Abby Aldrich Rockefeller, and a grandson of John D. Rockefeller and Laura Spelman Rockefeller.\nPage: Blanchette Ferry Rockefeller. Sentence: Blanchette Ferry Hooker (October 2, 1909 – November 29, 1992) was the wife of John D. Rockefeller III and mother of Jay Rockefeller.",
+  "evidence_text": "Page: John D. Rockefeller III. Sentence: He was the eldest son of philanthropists John D. Rockefeller Jr. and Abby Aldrich Rockefeller.\nPage: David Rockefeller. Sentence: David Rockefeller (June 12, 1915 – March 20, 2017) was an American banker who was chairman and chief executive of Chase Manhattan Corporation.\nPage: David Rockefeller. Sentence: Rockefeller was a son of John D. Rockefeller Jr. and Abby Aldrich Rockefeller, and a grandson of John D. Rockefeller and Laura Spelman Rockefeller.\nPage: Blanchette Ferry Rockefeller. Sentence: Blanchette Ferry Hooker (October 2, 1909 – November 29, 1992) was the wife of John D. Rockefeller III and mother of Jay Rockefeller.",
+  "label": "SUPPORTED",
+  "num_hops": 3,
+  "hover_metadata": {
+    "supporting_facts": [
+      [
+        "John D. Rockefeller III",
+        1
+      ],
+      [
+        "David Rockefeller",
+        0
+      ],
+      [
+        "David Rockefeller",
+        2
+      ],
+      [
+        "Blanchette Ferry Rockefeller",
+        0
+      ]
+    ],
+    "num_hops": 3,
+    "evidence_annotation_id": [
+      0
+    ],
+    "evidence_id": [
+      "John D. Rockefeller III::sentence::1",
+      "David Rockefeller::sentence::0",
+      "David Rockefeller::sentence::2",
+      "Blanchette Ferry Rockefeller::sentence::0"
+    ],
+    "evidence_wiki_url": [
+      "https://en.wikipedia.org/wiki/John_D._Rockefeller_III",
+      "https://en.wikipedia.org/wiki/David_Rockefeller",
+      "https://en.wikipedia.org/wiki/Blanchette_Ferry_Rockefeller"
+    ],
+    "evidence_sentence_id": [
+      "John D. Rockefeller III::sentence::1",
+      "David Rockefeller::sentence::0",
+      "David Rockefeller::sentence::2",
+      "Blanchette Ferry Rockefeller::sentence::0"
+    ]
+  },
+  "grafo_claim": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "2484d77f-4d68-504c-b51c-8c98d14d77ce",
+        "text": "This chunk is about:\n- People: David Rockefeller, Blanchette Ferry Rockefeller\n- Roles: chief executive, businessman, wife, brother\n\nFacts:\n- David Rockefeller was the chief executive of Chase Manhattan Corporation.\n- The unnamed businessman was the brother of David Rockefeller.\n- Blanchette Ferry Rockefeller was the wife of the unnamed businessman.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "3b121ade-ca22-59f7-97eb-efc775c9abad",
+        "text": "He was the brother of David Rockefeller chief executive of Chase Manhattan Corporation. Blanchette Ferry Rockefeller is the wife of this businessman.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "a9d9cd92-2fea-5b09-901b-48ebdd19cf91",
+        "text": "text_fb5906be22165da36c69cbde10eb5d73",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "504fc8d5-a83a-573f-b859-2beebb0452a2",
+        "text": "david rockefeller",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "99a82eec-bb35-5bb5-9ed2-e73fc7a756de",
+        "text": "person",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "7f51cd76-ef93-5fc1-9ca1-ebd39930d3c0",
+        "text": "chase manhattan corporation",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "388f60fb-220d-55e8-ae9c-3ac93cead308",
+        "text": "organization",
+        "type": "EntityType"
+      },
+      {
+        "id": 7,
+        "original_id": "a8d3a28f-96d3-5e16-b8a5-d2a1452a43be",
+        "text": "this businessman",
+        "type": "Entity"
+      },
+      {
+        "id": 8,
+        "original_id": "8bd8eb5f-522c-564f-a697-842540768b4b",
+        "text": "blanchette ferry rockefeller",
+        "type": "Entity"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 7,
+        "target": 3,
+        "type": "brother_of"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 7,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 8,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "chief_executive_of"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      },
+      {
+        "source": 8,
+        "target": 7,
+        "type": "wife_of"
+      },
+      {
+        "source": 1,
+        "target": 8,
+        "type": "contains"
+      }
+    ]
+  },
+  "grafo_evidencia": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "3366d255-0ba8-5812-ac52-60d56a2978d2",
+        "text": "This chunk is about:\n- People: John D. Rockefeller III, David Rockefeller, Blanchette Ferry Hooker, John D. Rockefeller Jr., Abby Aldrich Rockefeller, John D. Rockefeller, Laura Spelman Rockefeller, Jay Rockefeller\n- Roles: philanthropists, banker, chairman, chief executive, wife, mother, son, grandson\n\nFacts:\n- Blanchette Ferry Hooker was born on October 2, 1909, and died on November 29, 1992.\n- David Rockefeller was born on June 12, 1915, and died on March 20, 2017.\n- John D. Rockefeller III was the eldest son of philanthropists John D. Rockefeller Jr. and Abby Aldrich Rockefeller.\n- David Rockefeller was a son of John D. Rockefeller Jr. and Abby Aldrich Rockefeller.\n- David Rockefeller was a grandson of John D. Rockefeller and Laura Spelman Rockefeller.\n- David Rockefeller was an American banker who was chairman and chief executive of Chase Manhattan Corporation.\n- Blanchette Ferry Hooker was the wife of John D. Rockefeller III and the mother of Jay Rockefeller.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "53ba29a4-7eb5-53a2-98b3-57ff2692d687",
+        "text": "Page: John D. Rockefeller III. Sentence: He was the eldest son of philanthropists John D. Rockefeller Jr. and Abby Aldrich Rockefeller.\nPage: David Rockefeller. Sentence: David Rockefeller (June 12, 1915 – March 20, 2017) was an American banker who was chairman and chief executive of Chase Manhattan Corporation.\nPage: David Rockefeller. Sentence: Rockefeller was a son of John D. Rockefeller Jr. and Abby Aldrich Rockefeller, and a grandson of John D. Rockefeller and Laura Spelman Rockefeller.\nPage: Blanchette Ferry Rockefeller. Sentence: Blanchette Ferry Hooker (October 2, 1909 – November 29, 1992) was the wife of John D. Rockefeller III and mother of Jay Rockefeller.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "4e417944-9851-5648-a89e-d2c89eb50368",
+        "text": "text_de17e921134941eb4651365b683830eb",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "e9281baa-87b6-5be0-887d-253e8e3d7d48",
+        "text": "john d. rockefeller iii",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "99a82eec-bb35-5bb5-9ed2-e73fc7a756de",
+        "text": "person",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "e4168988-1b98-51e2-88ee-87fb6407b893",
+        "text": "john d. rockefeller jr.",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "985cb1ac-a321-5ee7-8af8-b3518b5484d4",
+        "text": "abby aldrich rockefeller",
+        "type": "Entity"
+      },
+      {
+        "id": 7,
+        "original_id": "52b7d5bf-65cb-531b-aa4e-f61a26dc47af",
+        "text": "jay rockefeller",
+        "type": "Entity"
+      },
+      {
+        "id": 8,
+        "original_id": "504fc8d5-a83a-573f-b859-2beebb0452a2",
+        "text": "david rockefeller",
+        "type": "Entity"
+      },
+      {
+        "id": 9,
+        "original_id": "68d94741-197d-5c7d-9d57-31b53eeedf21",
+        "text": "1915-06-12",
+        "type": "Entity"
+      },
+      {
+        "id": 10,
+        "original_id": "b19433ae-558c-5aaf-95ac-6231f2a4be0e",
+        "text": "date",
+        "type": "EntityType"
+      },
+      {
+        "id": 11,
+        "original_id": "4b7d8c70-4cfb-5b57-a635-6c3022d1a896",
+        "text": "2017-03-20",
+        "type": "Entity"
+      },
+      {
+        "id": 12,
+        "original_id": "7f51cd76-ef93-5fc1-9ca1-ebd39930d3c0",
+        "text": "chase manhattan corporation",
+        "type": "Entity"
+      },
+      {
+        "id": 13,
+        "original_id": "388f60fb-220d-55e8-ae9c-3ac93cead308",
+        "text": "organization",
+        "type": "EntityType"
+      },
+      {
+        "id": 14,
+        "original_id": "a7d06cf2-191e-5b5a-bd51-b496cf13de2f",
+        "text": "john d. rockefeller",
+        "type": "Entity"
+      },
+      {
+        "id": 15,
+        "original_id": "c9d4ff07-4d83-5151-8f49-fec162372370",
+        "text": "laura spelman rockefeller",
+        "type": "Entity"
+      },
+      {
+        "id": 16,
+        "original_id": "c9ce6feb-4cf9-5ba0-a150-770e2d3d14c1",
+        "text": "blanchette ferry hooker",
+        "type": "Entity"
+      },
+      {
+        "id": 17,
+        "original_id": "d5fb917f-5471-529b-9730-663f5ec11f5d",
+        "text": "1909-10-02",
+        "type": "Entity"
+      },
+      {
+        "id": 18,
+        "original_id": "cea947c8-f3b0-5cda-8992-4bc298424694",
+        "text": "1992-11-29",
+        "type": "Entity"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 16,
+        "target": 3,
+        "type": "spouse_of"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 5,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 6,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 7,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 8,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 14,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 15,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 16,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "child_of"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 8,
+        "target": 5,
+        "type": "child_of"
+      },
+      {
+        "source": 3,
+        "target": 6,
+        "type": "child_of"
+      },
+      {
+        "source": 1,
+        "target": 6,
+        "type": "contains"
+      },
+      {
+        "source": 8,
+        "target": 6,
+        "type": "child_of"
+      },
+      {
+        "source": 3,
+        "target": 7,
+        "type": "parent_of"
+      },
+      {
+        "source": 16,
+        "target": 7,
+        "type": "parent_of"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      },
+      {
+        "source": 1,
+        "target": 8,
+        "type": "contains"
+      },
+      {
+        "source": 8,
+        "target": 9,
+        "type": "born_on"
+      },
+      {
+        "source": 1,
+        "target": 9,
+        "type": "contains"
+      },
+      {
+        "source": 9,
+        "target": 10,
+        "type": "is_a"
+      },
+      {
+        "source": 11,
+        "target": 10,
+        "type": "is_a"
+      },
+      {
+        "source": 17,
+        "target": 10,
+        "type": "is_a"
+      },
+      {
+        "source": 18,
+        "target": 10,
+        "type": "is_a"
+      },
+      {
+        "source": 8,
+        "target": 11,
+        "type": "died_on"
+      },
+      {
+        "source": 1,
+        "target": 11,
+        "type": "contains"
+      },
+      {
+        "source": 8,
+        "target": 12,
+        "type": "served_as_chairman_and_chief_executive_of"
+      },
+      {
+        "source": 1,
+        "target": 12,
+        "type": "contains"
+      },
+      {
+        "source": 12,
+        "target": 13,
+        "type": "is_a"
+      },
+      {
+        "source": 8,
+        "target": 14,
+        "type": "grandchild_of"
+      },
+      {
+        "source": 1,
+        "target": 14,
+        "type": "contains"
+      },
+      {
+        "source": 8,
+        "target": 15,
+        "type": "grandchild_of"
+      },
+      {
+        "source": 1,
+        "target": 15,
+        "type": "contains"
+      },
+      {
+        "source": 1,
+        "target": 16,
+        "type": "contains"
+      },
+      {
+        "source": 16,
+        "target": 17,
+        "type": "born_on"
+      },
+      {
+        "source": 1,
+        "target": 17,
+        "type": "contains"
+      },
+      {
+        "source": 16,
+        "target": 18,
+        "type": "died_on"
+      },
+      {
+        "source": 1,
+        "target": 18,
+        "type": "contains"
+      }
+    ]
+  }
+}

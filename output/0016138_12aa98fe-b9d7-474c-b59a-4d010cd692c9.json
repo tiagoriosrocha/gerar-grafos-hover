@@ -1,0 +1,433 @@
+{
+  "dataset": "hover",
+  "id": "12aa98fe-b9d7-474c-b59a-4d010cd692c9",
+  "split": "train",
+  "claim": "The Portsmouth team, managed by a man who is also and advisor to Central Coast Mariners, won the 2008 FA Cup.",
+  "evidencia": "Page: 1994–95 FA Cup. Sentence: This tournament was the 50th to be officially held since the six year suspension due to World War II.\nPage: 1994–95 FA Cup. Sentence: Everton's Joe Royle would be the last English-born manager to lift the FA Cup until Harry Redknapp managed Portsmouth to the 2008 victory.\nPage: Harry Redknapp. Sentence: Redknapp is also an advisor to Central Coast Mariners and a director at Southern Football League club Wimborne Town.",
+  "evidence_text": "Page: 1994–95 FA Cup. Sentence: This tournament was the 50th to be officially held since the six year suspension due to World War II.\nPage: 1994–95 FA Cup. Sentence: Everton's Joe Royle would be the last English-born manager to lift the FA Cup until Harry Redknapp managed Portsmouth to the 2008 victory.\nPage: Harry Redknapp. Sentence: Redknapp is also an advisor to Central Coast Mariners and a director at Southern Football League club Wimborne Town.",
+  "label": "SUPPORTED",
+  "num_hops": 2,
+  "hover_metadata": {
+    "supporting_facts": [
+      [
+        "1994–95 FA Cup",
+        2
+      ],
+      [
+        "1994–95 FA Cup",
+        3
+      ],
+      [
+        "Harry Redknapp",
+        1
+      ]
+    ],
+    "num_hops": 2,
+    "evidence_annotation_id": [
+      0
+    ],
+    "evidence_id": [
+      "1994–95 FA Cup::sentence::2",
+      "1994–95 FA Cup::sentence::3",
+      "Harry Redknapp::sentence::1"
+    ],
+    "evidence_wiki_url": [
+      "https://en.wikipedia.org/wiki/1994%E2%80%9395_FA_Cup",
+      "https://en.wikipedia.org/wiki/Harry_Redknapp"
+    ],
+    "evidence_sentence_id": [
+      "1994–95 FA Cup::sentence::2",
+      "1994–95 FA Cup::sentence::3",
+      "Harry Redknapp::sentence::1"
+    ]
+  },
+  "grafo_claim": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "a8732e32-97f4-56ea-867f-63964c9b1d0c",
+        "text": "This chunk is about:\n- Organizations: Portsmouth, Central Coast Mariners\n- Events: 2008 FA Cup\n- Roles: manager, advisor\n\nFacts:\n- Portsmouth won the 2008 FA Cup.\n- The Portsmouth manager was also an advisor to Central Coast Mariners.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "c029516b-808c-5085-9957-9d65cbc35435",
+        "text": "The Portsmouth team, managed by a man who is also and advisor to Central Coast Mariners, won the 2008 FA Cup.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "a4f08848-0586-5c8b-8c69-6202f86bfef5",
+        "text": "text_e32830191ec84b65d8b3bf4dd7b2b111",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "d7781e36-59a3-5ecb-8a66-02ada64a13a8",
+        "text": "portsmouth team",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "388f60fb-220d-55e8-ae9c-3ac93cead308",
+        "text": "organization",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "0d53b338-8bf5-5ed5-a8ec-d1384e65c7e5",
+        "text": "2008 fa cup",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "214abcd9-9adf-5c8a-bb35-1e729f2d68c3",
+        "text": "event",
+        "type": "EntityType"
+      },
+      {
+        "id": 7,
+        "original_id": "b93c0c64-95d0-52bf-84a1-d057660b7453",
+        "text": "central coast mariners",
+        "type": "Entity"
+      },
+      {
+        "id": 8,
+        "original_id": "d4c210dd-7817-5c85-a216-e2ad4f11a71e",
+        "text": "manager of portsmouth team",
+        "type": "Entity"
+      },
+      {
+        "id": 9,
+        "original_id": "99a82eec-bb35-5bb5-9ed2-e73fc7a756de",
+        "text": "person",
+        "type": "EntityType"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 8,
+        "target": 3,
+        "type": "manages"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 7,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "won"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      },
+      {
+        "source": 8,
+        "target": 7,
+        "type": "advises"
+      },
+      {
+        "source": 1,
+        "target": 8,
+        "type": "contains"
+      },
+      {
+        "source": 8,
+        "target": 9,
+        "type": "is_a"
+      }
+    ]
+  },
+  "grafo_evidencia": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "7b01ea6f-9c16-5a18-aa04-9a06346ca48e",
+        "text": "This chunk is about:\n- Events: 1994–95 FA Cup, 2008 FA Cup victory\n- People: Joe Royle, Harry Redknapp\n- Organizations: Everton, Portsmouth, Central Coast Mariners, Wimborne Town, Southern Football League\n- Roles: manager, advisor, director\n\nFacts:\n- The 1994–95 FA Cup was the 50th FA Cup officially held since the six-year suspension caused by World War II.\n- Everton manager Joe Royle won the 1994–95 FA Cup and was the last English-born manager to lift the FA Cup until 2008.\n- Harry Redknapp managed Portsmouth to the 2008 FA Cup victory, ending the gap since Joe Royle's win with Everton.\n- Harry Redknapp is an advisor to Central Coast Mariners.\n- Harry Redknapp is a director at Southern Football League club Wimborne Town.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "92afafc6-83c3-56ab-803b-71731d4ec9be",
+        "text": "Page: 1994–95 FA Cup. Sentence: This tournament was the 50th to be officially held since the six year suspension due to World War II.\nPage: 1994–95 FA Cup. Sentence: Everton's Joe Royle would be the last English-born manager to lift the FA Cup until Harry Redknapp managed Portsmouth to the 2008 victory.\nPage: Harry Redknapp. Sentence: Redknapp is also an advisor to Central Coast Mariners and a director at Southern Football League club Wimborne Town.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "69701087-0c83-50ea-9b2e-bc6d02da70b2",
+        "text": "text_db11882c18433e20f8ca2b7543f26fdc",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "9a399e46-9f1b-5d07-8560-025c68228041",
+        "text": "1994–95 fa cup",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "214abcd9-9adf-5c8a-bb35-1e729f2d68c3",
+        "text": "event",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "307234d1-8757-51ab-8eb8-40aae3d498a1",
+        "text": "world war ii",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "75162ab1-dde4-5089-8b77-dad0fd83ca7e",
+        "text": "joe royle",
+        "type": "Entity"
+      },
+      {
+        "id": 7,
+        "original_id": "99a82eec-bb35-5bb5-9ed2-e73fc7a756de",
+        "text": "person",
+        "type": "EntityType"
+      },
+      {
+        "id": 8,
+        "original_id": "12e16a00-7ac9-5bf0-a071-4ce2db193c8d",
+        "text": "everton",
+        "type": "Entity"
+      },
+      {
+        "id": 9,
+        "original_id": "388f60fb-220d-55e8-ae9c-3ac93cead308",
+        "text": "organization",
+        "type": "EntityType"
+      },
+      {
+        "id": 10,
+        "original_id": "e1f5f910-21df-5ce3-9f53-ded8671a2114",
+        "text": "harry redknapp",
+        "type": "Entity"
+      },
+      {
+        "id": 11,
+        "original_id": "0f42b2bd-d025-5451-ad1e-e11586f76396",
+        "text": "portsmouth",
+        "type": "Entity"
+      },
+      {
+        "id": 12,
+        "original_id": "bb91a3b7-7918-5ca7-973e-342dc472e263",
+        "text": "2008",
+        "type": "Entity"
+      },
+      {
+        "id": 13,
+        "original_id": "b19433ae-558c-5aaf-95ac-6231f2a4be0e",
+        "text": "date",
+        "type": "EntityType"
+      },
+      {
+        "id": 14,
+        "original_id": "b93c0c64-95d0-52bf-84a1-d057660b7453",
+        "text": "central coast mariners",
+        "type": "Entity"
+      },
+      {
+        "id": 15,
+        "original_id": "46e44246-7efb-5eec-8925-839a618cf093",
+        "text": "wimborne town",
+        "type": "Entity"
+      },
+      {
+        "id": 16,
+        "original_id": "7b74579a-bd41-59f4-a5b7-bb48f054fef1",
+        "text": "southern football league",
+        "type": "Entity"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 6,
+        "target": 3,
+        "type": "lifted"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 5,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "held_since_suspension_due_to"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 1,
+        "target": 6,
+        "type": "contains"
+      },
+      {
+        "source": 6,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 10,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 6,
+        "target": 8,
+        "type": "managed"
+      },
+      {
+        "source": 1,
+        "target": 8,
+        "type": "contains"
+      },
+      {
+        "source": 8,
+        "target": 9,
+        "type": "is_a"
+      },
+      {
+        "source": 11,
+        "target": 9,
+        "type": "is_a"
+      },
+      {
+        "source": 14,
+        "target": 9,
+        "type": "is_a"
+      },
+      {
+        "source": 15,
+        "target": 9,
+        "type": "is_a"
+      },
+      {
+        "source": 16,
+        "target": 9,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 10,
+        "type": "contains"
+      },
+      {
+        "source": 10,
+        "target": 11,
+        "type": "managed"
+      },
+      {
+        "source": 1,
+        "target": 11,
+        "type": "contains"
+      },
+      {
+        "source": 11,
+        "target": 12,
+        "type": "won_in"
+      },
+      {
+        "source": 1,
+        "target": 12,
+        "type": "contains"
+      },
+      {
+        "source": 12,
+        "target": 13,
+        "type": "is_a"
+      },
+      {
+        "source": 10,
+        "target": 14,
+        "type": "advisor_to"
+      },
+      {
+        "source": 1,
+        "target": 14,
+        "type": "contains"
+      },
+      {
+        "source": 10,
+        "target": 15,
+        "type": "director_at"
+      },
+      {
+        "source": 1,
+        "target": 15,
+        "type": "contains"
+      },
+      {
+        "source": 15,
+        "target": 16,
+        "type": "club_in"
+      },
+      {
+        "source": 1,
+        "target": 16,
+        "type": "contains"
+      }
+    ]
+  }
+}

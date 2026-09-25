@@ -1,0 +1,379 @@
+{
+  "dataset": "hover",
+  "id": "49af0725-af7d-4bca-b18c-bd72eb1e891b",
+  "split": "train",
+  "claim": "The royal anthem is changed from \"Long live our noble Queen\" to \"long live our noble Duke\".",
+  "evidencia": "Page: Long live our noble Duke. Sentence: The anthem still uses the same lyrics and instrumental tune, but the second line \"Long live our noble Queen\" is changed to \"Long live our noble Duke\" out of respect to the reigning monarch in their capacity as the Duke of Lancaster.\nPage: God Save the Queen. Sentence: \"God Save the Queen\" (alternatively \"God Save the King\", depending on the gender of the reigning monarch) is the national or royal anthem in a number of Commonwealth realms, their territories, and the British Crown Dependencies.",
+  "evidence_text": "Page: Long live our noble Duke. Sentence: The anthem still uses the same lyrics and instrumental tune, but the second line \"Long live our noble Queen\" is changed to \"Long live our noble Duke\" out of respect to the reigning monarch in their capacity as the Duke of Lancaster.\nPage: God Save the Queen. Sentence: \"God Save the Queen\" (alternatively \"God Save the King\", depending on the gender of the reigning monarch) is the national or royal anthem in a number of Commonwealth realms, their territories, and the British Crown Dependencies.",
+  "label": "SUPPORTED",
+  "num_hops": 2,
+  "hover_metadata": {
+    "supporting_facts": [
+      [
+        "Long live our noble Duke",
+        1
+      ],
+      [
+        "God Save the Queen",
+        0
+      ]
+    ],
+    "num_hops": 2,
+    "evidence_annotation_id": [
+      0
+    ],
+    "evidence_id": [
+      "Long live our noble Duke::sentence::1",
+      "God Save the Queen::sentence::0"
+    ],
+    "evidence_wiki_url": [
+      "https://en.wikipedia.org/wiki/Long_live_our_noble_Duke",
+      "https://en.wikipedia.org/wiki/God_Save_the_Queen"
+    ],
+    "evidence_sentence_id": [
+      "Long live our noble Duke::sentence::1",
+      "God Save the Queen::sentence::0"
+    ]
+  },
+  "grafo_claim": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "624e8339-f928-5191-ad42-c42d62b2e547",
+        "text": "This chunk is about:\n- Topics: royal anthem changes\n- Roles: Queen, Duke\n\nFacts:\n- The royal anthem wording is changed from \"Long live our noble Queen\" to \"Long live our noble Duke\".",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "cb69b3bc-4e9e-5c43-99ce-6cd9e7ec83cf",
+        "text": "The royal anthem is changed from \"Long live our noble Queen\" to \"long live our noble Duke\".",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "ce0cc544-7a37-5b52-9d8d-2e215ecaf291",
+        "text": "text_09f6d446cc08e58c2105bd78ce5269be",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "cd41b588-14ad-5803-a111-e6e693f8b7ba",
+        "text": "royal anthem",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "d2a381fa-3658-5ca6-ada9-2109cfc9331d",
+        "text": "concept",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "9b1faf23-3aaf-56d8-b682-9c7acff08878",
+        "text": "long live our noble queen",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "fc189838-32de-5a5b-9c63-45a6695d789e",
+        "text": "long live our noble duke",
+        "type": "Entity"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 5,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 6,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "changed_from"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 6,
+        "type": "changed_to"
+      },
+      {
+        "source": 1,
+        "target": 6,
+        "type": "contains"
+      }
+    ]
+  },
+  "grafo_evidencia": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "4f2e71b9-129d-5cc5-b13a-de865797e2c6",
+        "text": "This chunk is about:\n- Products: “God Save the Queen”, “God Save the King”\n- Places: Commonwealth realms, British Crown Dependencies, Lancaster\n- Roles: reigning monarch, Duke of Lancaster\n- Topics: national anthem, royal anthem, lyrics changes\n\nFacts:\n- “God Save the Queen”, alternatively “God Save the King” depending on the gender of the reigning monarch, is the national or royal anthem in a number of Commonwealth realms, their territories, and the British Crown Dependencies.\n- The anthem uses the same lyrics and instrumental tune in the referenced variant, but changes the second line from “Long live our noble Queen” to “Long live our noble Duke” out of respect to the reigning monarch in their capacity as the Duke of Lancaster.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "8c9ed1ff-363b-5c97-b45d-1a241d751527",
+        "text": "Page: Long live our noble Duke. Sentence: The anthem still uses the same lyrics and instrumental tune, but the second line \"Long live our noble Queen\" is changed to \"Long live our noble Duke\" out of respect to the reigning monarch in their capacity as the Duke of Lancaster.\nPage: God Save the Queen. Sentence: \"God Save the Queen\" (alternatively \"God Save the King\", depending on the gender of the reigning monarch) is the national or royal anthem in a number of Commonwealth realms, their territories, and the British Crown Dependencies.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "ad40ef46-f657-56e3-93bc-8d2e1a4b9731",
+        "text": "text_e1b2c205586df00987ee5abc4bc93170",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "fc189838-32de-5a5b-9c63-45a6695d789e",
+        "text": "long live our noble duke",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "2591e6c3-3984-522c-b1fe-9147109c363f",
+        "text": "phrase",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "9b1faf23-3aaf-56d8-b682-9c7acff08878",
+        "text": "long live our noble queen",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "e81d901b-97d8-5371-bf65-610acb1390f2",
+        "text": "reigning monarch",
+        "type": "Entity"
+      },
+      {
+        "id": 7,
+        "original_id": "99a82eec-bb35-5bb5-9ed2-e73fc7a756de",
+        "text": "person",
+        "type": "EntityType"
+      },
+      {
+        "id": 8,
+        "original_id": "74aa5544-f2de-52a2-a605-504f763244d9",
+        "text": "duke of lancaster",
+        "type": "Entity"
+      },
+      {
+        "id": 9,
+        "original_id": "4fb639a0-083a-5b92-8c23-a04b01bc6b29",
+        "text": "title",
+        "type": "EntityType"
+      },
+      {
+        "id": 10,
+        "original_id": "296c68f9-2ac4-5e58-9bf0-36fde948b4b8",
+        "text": "god save the queen",
+        "type": "Entity"
+      },
+      {
+        "id": 11,
+        "original_id": "5263a535-1b4b-5925-be3e-310d03cd303b",
+        "text": "work",
+        "type": "EntityType"
+      },
+      {
+        "id": 12,
+        "original_id": "8b699e0e-4c30-5184-a89b-2644d6d0a9f9",
+        "text": "commonwealth realms",
+        "type": "Entity"
+      },
+      {
+        "id": 13,
+        "original_id": "5f394058-b2a0-5ba8-8466-ba2a18cfcf4e",
+        "text": "place",
+        "type": "EntityType"
+      },
+      {
+        "id": 14,
+        "original_id": "093e11d1-a495-5884-8222-f86c082bcd0e",
+        "text": "their territories",
+        "type": "Entity"
+      },
+      {
+        "id": 15,
+        "original_id": "16ba1d61-6035-5bc0-bf06-63ec62793e79",
+        "text": "british crown dependencies",
+        "type": "Entity"
+      },
+      {
+        "id": 16,
+        "original_id": "c26f829b-d5b6-56f4-aae5-a19e32235126",
+        "text": "god save the king",
+        "type": "Entity"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 5,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "changed_from"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 6,
+        "type": "shows_respect_to"
+      },
+      {
+        "source": 1,
+        "target": 6,
+        "type": "contains"
+      },
+      {
+        "source": 6,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 6,
+        "target": 8,
+        "type": "has_capacity_as"
+      },
+      {
+        "source": 1,
+        "target": 8,
+        "type": "contains"
+      },
+      {
+        "source": 8,
+        "target": 9,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 10,
+        "type": "contains"
+      },
+      {
+        "source": 16,
+        "target": 10,
+        "type": "alternative_form_of"
+      },
+      {
+        "source": 10,
+        "target": 11,
+        "type": "is_a"
+      },
+      {
+        "source": 16,
+        "target": 11,
+        "type": "is_a"
+      },
+      {
+        "source": 10,
+        "target": 12,
+        "type": "is_anthem_in"
+      },
+      {
+        "source": 1,
+        "target": 12,
+        "type": "contains"
+      },
+      {
+        "source": 12,
+        "target": 13,
+        "type": "is_a"
+      },
+      {
+        "source": 14,
+        "target": 13,
+        "type": "is_a"
+      },
+      {
+        "source": 15,
+        "target": 13,
+        "type": "is_a"
+      },
+      {
+        "source": 10,
+        "target": 14,
+        "type": "is_anthem_in"
+      },
+      {
+        "source": 1,
+        "target": 14,
+        "type": "contains"
+      },
+      {
+        "source": 10,
+        "target": 15,
+        "type": "is_anthem_in"
+      },
+      {
+        "source": 1,
+        "target": 15,
+        "type": "contains"
+      },
+      {
+        "source": 1,
+        "target": 16,
+        "type": "contains"
+      }
+    ]
+  }
+}

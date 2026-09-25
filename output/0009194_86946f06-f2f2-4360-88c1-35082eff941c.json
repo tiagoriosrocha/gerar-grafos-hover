@@ -1,0 +1,587 @@
+{
+  "dataset": "hover",
+  "id": "86946f06-f2f2-4360-88c1-35082eff941c",
+  "split": "train",
+  "claim": "Oklahoma city located south of a wilderness area spanning over 5000 acres has the population ranking of fifth-largest.",
+  "evidencia": "Page: Charon Gardens Wilderness Area. Sentence: The Charon's Garden Wilderness Area is part of the Wichita Mountains Wildlife Refuge in southwestern Oklahoma and is managed by the US Fish & Wildlife Service.\nPage: Charon Gardens Wilderness Area. Sentence: It is located to the west of Medicine Park, Oklahoma and north of Lawton, Oklahoma.\nPage: Charon Gardens Wilderness Area. Sentence: The wilderness area, dominated by rugged granite mountains, oak forests, and mixed grass prairies, covers 5723 acre in the western portion of the Refuge.\nPage: Lawton, Oklahoma. Sentence: The city of Lawton is the county seat of Comanche County, in the State of Oklahoma.\nPage: Lawton, Oklahoma. Sentence: According to the 2010 census, Lawton's population was 96,867, making it the fifth-largest city in the state.",
+  "evidence_text": "Page: Charon Gardens Wilderness Area. Sentence: The Charon's Garden Wilderness Area is part of the Wichita Mountains Wildlife Refuge in southwestern Oklahoma and is managed by the US Fish & Wildlife Service.\nPage: Charon Gardens Wilderness Area. Sentence: It is located to the west of Medicine Park, Oklahoma and north of Lawton, Oklahoma.\nPage: Charon Gardens Wilderness Area. Sentence: The wilderness area, dominated by rugged granite mountains, oak forests, and mixed grass prairies, covers 5723 acre in the western portion of the Refuge.\nPage: Lawton, Oklahoma. Sentence: The city of Lawton is the county seat of Comanche County, in the State of Oklahoma.\nPage: Lawton, Oklahoma. Sentence: According to the 2010 census, Lawton's population was 96,867, making it the fifth-largest city in the state.",
+  "label": "SUPPORTED",
+  "num_hops": 2,
+  "hover_metadata": {
+    "supporting_facts": [
+      [
+        "Charon Gardens Wilderness Area",
+        0
+      ],
+      [
+        "Charon Gardens Wilderness Area",
+        1
+      ],
+      [
+        "Charon Gardens Wilderness Area",
+        2
+      ],
+      [
+        "Lawton, Oklahoma",
+        0
+      ],
+      [
+        "Lawton, Oklahoma",
+        2
+      ]
+    ],
+    "num_hops": 2,
+    "evidence_annotation_id": [
+      0
+    ],
+    "evidence_id": [
+      "Charon Gardens Wilderness Area::sentence::0",
+      "Charon Gardens Wilderness Area::sentence::1",
+      "Charon Gardens Wilderness Area::sentence::2",
+      "Lawton, Oklahoma::sentence::0",
+      "Lawton, Oklahoma::sentence::2"
+    ],
+    "evidence_wiki_url": [
+      "https://en.wikipedia.org/wiki/Charon_Gardens_Wilderness_Area",
+      "https://en.wikipedia.org/wiki/Lawton%2C_Oklahoma"
+    ],
+    "evidence_sentence_id": [
+      "Charon Gardens Wilderness Area::sentence::0",
+      "Charon Gardens Wilderness Area::sentence::1",
+      "Charon Gardens Wilderness Area::sentence::2",
+      "Lawton, Oklahoma::sentence::0",
+      "Lawton, Oklahoma::sentence::2"
+    ]
+  },
+  "grafo_claim": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "62b60036-2c40-578a-b1c7-e1e6ea8213a7",
+        "text": "This chunk is about:\n- Places: Oklahoma City, a wilderness area\n- Topics: population ranking\n\nFacts:\n- Oklahoma City is located south of a wilderness area spanning over 5,000 acres.\n- Oklahoma City has a population ranking as the fifth-largest.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "7d7e28aa-4db7-5f23-854c-9a9bda38cc90",
+        "text": "Oklahoma city located south of a wilderness area spanning over 5000 acres has the population ranking of fifth-largest.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "07cd0bf4-48bd-5a16-9fad-4e797278cf61",
+        "text": "text_52226701ffcd8d2166b30cd3449daf36",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "e367f892-33aa-5f1c-8a8b-e33d7f8af29c",
+        "text": "oklahoma city",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "5f394058-b2a0-5ba8-8466-ba2a18cfcf4e",
+        "text": "place",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "e90cdb92-cc96-5a9f-81ed-14903b6c549b",
+        "text": "wilderness area",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "deda2d7b-0579-5050-9530-114c7fdb1ed0",
+        "text": "fifth-largest",
+        "type": "Entity"
+      },
+      {
+        "id": 7,
+        "original_id": "d2a381fa-3658-5ca6-ada9-2109cfc9331d",
+        "text": "concept",
+        "type": "EntityType"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 5,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "located_south_of"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 6,
+        "type": "has_population_ranking"
+      },
+      {
+        "source": 1,
+        "target": 6,
+        "type": "contains"
+      },
+      {
+        "source": 6,
+        "target": 7,
+        "type": "is_a"
+      }
+    ]
+  },
+  "grafo_evidencia": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "a160943c-1dd7-5b23-ac50-298981f10469",
+        "text": "This chunk is about:\n- Places: Charon Gardens Wilderness Area, Wichita Mountains Wildlife Refuge, Medicine Park, Lawton, Comanche County, Oklahoma\n- Organizations: U.S. Fish & Wildlife Service\n- Topics: geography, administration, population\n\nFacts:\n- Charon Gardens Wilderness Area is part of the Wichita Mountains Wildlife Refuge in southwestern Oklahoma.\n- Charon Gardens Wilderness Area is managed by the U.S. Fish & Wildlife Service.\n- Charon Gardens Wilderness Area lies west of Medicine Park, Oklahoma, and north of Lawton, Oklahoma.\n- Charon Gardens Wilderness Area covers 5,723 acres in the western portion of the Wichita Mountains Wildlife Refuge.\n- Charon Gardens Wilderness Area is dominated by rugged granite mountains, oak forests, and mixed grass prairies.\n- Lawton is the county seat of Comanche County in Oklahoma.\n- According to the 2010 census, Lawton had a population of 96,867 and was the fifth-largest city in Oklahoma.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "770a3595-62c4-55b6-9926-4bab54df500a",
+        "text": "Page: Charon Gardens Wilderness Area. Sentence: The Charon's Garden Wilderness Area is part of the Wichita Mountains Wildlife Refuge in southwestern Oklahoma and is managed by the US Fish & Wildlife Service.\nPage: Charon Gardens Wilderness Area. Sentence: It is located to the west of Medicine Park, Oklahoma and north of Lawton, Oklahoma.\nPage: Charon Gardens Wilderness Area. Sentence: The wilderness area, dominated by rugged granite mountains, oak forests, and mixed grass prairies, covers 5723 acre in the western portion of the Refuge.\nPage: Lawton, Oklahoma. Sentence: The city of Lawton is the county seat of Comanche County, in the State of Oklahoma.\nPage: Lawton, Oklahoma. Sentence: According to the 2010 census, Lawton's population was 96,867, making it the fifth-largest city in the state.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "cccab329-f84a-5b1a-9b46-0a5868acbdee",
+        "text": "text_ac29e8a0afacd56b065e5d61f7bf2924",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "666e3c0f-0195-52c4-9260-43067767998d",
+        "text": "charons garden wilderness area",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "5f394058-b2a0-5ba8-8466-ba2a18cfcf4e",
+        "text": "place",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "2642a67d-4365-5e5a-aa9c-129064c9561c",
+        "text": "wichita mountains wildlife refuge",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "7ecdce73-b34c-5641-a4aa-d5e8a3830e95",
+        "text": "southwestern oklahoma",
+        "type": "Entity"
+      },
+      {
+        "id": 7,
+        "original_id": "6ec56e54-00ce-5272-9695-f6e3ee8e4573",
+        "text": "us fish & wildlife service",
+        "type": "Entity"
+      },
+      {
+        "id": 8,
+        "original_id": "388f60fb-220d-55e8-ae9c-3ac93cead308",
+        "text": "organization",
+        "type": "EntityType"
+      },
+      {
+        "id": 9,
+        "original_id": "fee78f4e-0d11-5d3c-bba9-403fe4c4e728",
+        "text": "medicine park, oklahoma",
+        "type": "Entity"
+      },
+      {
+        "id": 10,
+        "original_id": "aac6022c-ac1d-5b53-b4d4-8725caaf4645",
+        "text": "lawton, oklahoma",
+        "type": "Entity"
+      },
+      {
+        "id": 11,
+        "original_id": "037f9b89-a2b3-5470-810f-b459881c6d14",
+        "text": "comanche county",
+        "type": "Entity"
+      },
+      {
+        "id": 12,
+        "original_id": "c154a2b4-f471-56e3-902f-35959b82340b",
+        "text": "oklahoma",
+        "type": "Entity"
+      },
+      {
+        "id": 13,
+        "original_id": "cb1dc1af-5253-5fa4-877e-246a7629f489",
+        "text": "2010",
+        "type": "Entity"
+      },
+      {
+        "id": 14,
+        "original_id": "b19433ae-558c-5aaf-95ac-6231f2a4be0e",
+        "text": "date",
+        "type": "EntityType"
+      },
+      {
+        "id": 15,
+        "original_id": "b98481c1-b864-5eb4-8de3-96dfcee0a57a",
+        "text": "96,867",
+        "type": "Entity"
+      },
+      {
+        "id": 16,
+        "original_id": "7a7a0687-e490-5167-ad5a-0e39d9055dee",
+        "text": "quantity",
+        "type": "EntityType"
+      },
+      {
+        "id": 17,
+        "original_id": "dc40bb95-a7cc-5e15-bec9-e228137cfdcd",
+        "text": "fifth-largest city in the state",
+        "type": "Entity"
+      },
+      {
+        "id": 18,
+        "original_id": "d2a381fa-3658-5ca6-ada9-2109cfc9331d",
+        "text": "concept",
+        "type": "EntityType"
+      },
+      {
+        "id": 19,
+        "original_id": "1804cdb9-832d-577f-aff2-a82660bf6c7f",
+        "text": "5723 acre",
+        "type": "Entity"
+      },
+      {
+        "id": 20,
+        "original_id": "05ac0523-d55a-5ba4-954f-f086125d1716",
+        "text": "western portion of the refuge",
+        "type": "Entity"
+      },
+      {
+        "id": 21,
+        "original_id": "0dc00ea6-d423-5544-9abc-238b91ad2e16",
+        "text": "rugged granite mountains",
+        "type": "Entity"
+      },
+      {
+        "id": 22,
+        "original_id": "61eef8bf-e4d9-5775-b2f2-7381d94e3203",
+        "text": "landform",
+        "type": "EntityType"
+      },
+      {
+        "id": 23,
+        "original_id": "1ebf7d5a-80ef-51a3-b15b-ccff0b535fd8",
+        "text": "oak forests",
+        "type": "Entity"
+      },
+      {
+        "id": 24,
+        "original_id": "73f52c0f-e943-572d-a0b5-78b59710976c",
+        "text": "biome",
+        "type": "EntityType"
+      },
+      {
+        "id": 25,
+        "original_id": "56e67063-c709-5412-9f12-6491c30c757f",
+        "text": "mixed grass prairies",
+        "type": "Entity"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 5,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 6,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 9,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 10,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 11,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 12,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 20,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "part_of"
+      },
+      {
+        "source": 20,
+        "target": 5,
+        "type": "part_of"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 6,
+        "type": "located_in"
+      },
+      {
+        "source": 1,
+        "target": 6,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 7,
+        "type": "managed_by"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      },
+      {
+        "source": 7,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 9,
+        "type": "west_of"
+      },
+      {
+        "source": 1,
+        "target": 9,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 10,
+        "type": "north_of"
+      },
+      {
+        "source": 1,
+        "target": 10,
+        "type": "contains"
+      },
+      {
+        "source": 10,
+        "target": 11,
+        "type": "county_seat_of"
+      },
+      {
+        "source": 1,
+        "target": 11,
+        "type": "contains"
+      },
+      {
+        "source": 11,
+        "target": 12,
+        "type": "located_in"
+      },
+      {
+        "source": 10,
+        "target": 12,
+        "type": "located_in"
+      },
+      {
+        "source": 17,
+        "target": 12,
+        "type": "within"
+      },
+      {
+        "source": 1,
+        "target": 12,
+        "type": "contains"
+      },
+      {
+        "source": 10,
+        "target": 13,
+        "type": "population_as_of"
+      },
+      {
+        "source": 15,
+        "target": 13,
+        "type": "as_of"
+      },
+      {
+        "source": 1,
+        "target": 13,
+        "type": "contains"
+      },
+      {
+        "source": 13,
+        "target": 14,
+        "type": "is_a"
+      },
+      {
+        "source": 10,
+        "target": 15,
+        "type": "has_population"
+      },
+      {
+        "source": 1,
+        "target": 15,
+        "type": "contains"
+      },
+      {
+        "source": 15,
+        "target": 16,
+        "type": "is_a"
+      },
+      {
+        "source": 19,
+        "target": 16,
+        "type": "is_a"
+      },
+      {
+        "source": 10,
+        "target": 17,
+        "type": "ranked_as"
+      },
+      {
+        "source": 1,
+        "target": 17,
+        "type": "contains"
+      },
+      {
+        "source": 17,
+        "target": 18,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 19,
+        "type": "covers_area"
+      },
+      {
+        "source": 1,
+        "target": 19,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 20,
+        "type": "located_in"
+      },
+      {
+        "source": 1,
+        "target": 20,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 21,
+        "type": "dominated_by"
+      },
+      {
+        "source": 1,
+        "target": 21,
+        "type": "contains"
+      },
+      {
+        "source": 21,
+        "target": 22,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 23,
+        "type": "dominated_by"
+      },
+      {
+        "source": 1,
+        "target": 23,
+        "type": "contains"
+      },
+      {
+        "source": 23,
+        "target": 24,
+        "type": "is_a"
+      },
+      {
+        "source": 25,
+        "target": 24,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 25,
+        "type": "dominated_by"
+      },
+      {
+        "source": 1,
+        "target": 25,
+        "type": "contains"
+      }
+    ]
+  }
+}

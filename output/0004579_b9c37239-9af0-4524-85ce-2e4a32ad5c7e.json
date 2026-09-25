@@ -1,0 +1,475 @@
+{
+  "dataset": "hover",
+  "id": "b9c37239-9af0-4524-85ce-2e4a32ad5c7e",
+  "split": "train",
+  "claim": "The 1989 Eurovision Song Contest took place in a city situated on the shores of Lake Geneva after the first intended location was changed due to vote rigging.",
+  "evidencia": "Page: Belgium in the Eurovision Song Contest 1989. Sentence: Belgium was represented by Ingeborg, with the song '\"Door de wind\", at the 1989 Eurovision Song Contest, which took place in Lausanne, Switzerland on 6 May.\nPage: Lausanne. Sentence: The city is situated on the shores of Lake Geneva (French: \"Lac Léman\" , or simply \"Le Léman\").",
+  "evidence_text": "Page: Belgium in the Eurovision Song Contest 1989. Sentence: Belgium was represented by Ingeborg, with the song '\"Door de wind\", at the 1989 Eurovision Song Contest, which took place in Lausanne, Switzerland on 6 May.\nPage: Lausanne. Sentence: The city is situated on the shores of Lake Geneva (French: \"Lac Léman\" , or simply \"Le Léman\").",
+  "label": "NOT_SUPPORTED",
+  "num_hops": 2,
+  "hover_metadata": {
+    "supporting_facts": [
+      [
+        "Belgium in the Eurovision Song Contest 1989",
+        0
+      ],
+      [
+        "Lausanne",
+        1
+      ]
+    ],
+    "num_hops": 2,
+    "evidence_annotation_id": [
+      0
+    ],
+    "evidence_id": [
+      "Belgium in the Eurovision Song Contest 1989::sentence::0",
+      "Lausanne::sentence::1"
+    ],
+    "evidence_wiki_url": [
+      "https://en.wikipedia.org/wiki/Belgium_in_the_Eurovision_Song_Contest_1989",
+      "https://en.wikipedia.org/wiki/Lausanne"
+    ],
+    "evidence_sentence_id": [
+      "Belgium in the Eurovision Song Contest 1989::sentence::0",
+      "Lausanne::sentence::1"
+    ]
+  },
+  "grafo_claim": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "89a117f3-3e26-5208-b0d1-d367b468074b",
+        "text": "This chunk is about:\n- Events: 1989 Eurovision Song Contest\n- Places: Lake Geneva, intended host city\n- Topics: host city change, vote rigging\n\nFacts:\n- The 1989 Eurovision Song Contest took place in a city on the shores of Lake Geneva.\n- The first intended host location for the 1989 Eurovision Song Contest was changed because of vote rigging.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "3eebc555-15d3-56a3-8628-c2fddd77b4a3",
+        "text": "The 1989 Eurovision Song Contest took place in a city situated on the shores of Lake Geneva after the first intended location was changed due to vote rigging.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "f9188c77-1bef-5957-bcc3-571a95b5f328",
+        "text": "text_715478a6fb9e4385eaa6a598cf872fa9",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "b09b7dd6-925d-5230-81fb-c5ef05da6917",
+        "text": "1989 eurovision song contest",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "ad6d4944-6a2b-50c3-bd1c-28404a35a515",
+        "text": "host city",
+        "type": "Entity"
+      },
+      {
+        "id": 5,
+        "original_id": "5e834ccb-96dc-5410-a0d6-07b0a08f0b4a",
+        "text": "lake geneva",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "5f394058-b2a0-5ba8-8466-ba2a18cfcf4e",
+        "text": "place",
+        "type": "EntityType"
+      },
+      {
+        "id": 7,
+        "original_id": "8fbda413-6e8d-5e4c-8e87-4d75e5680525",
+        "text": "first intended location",
+        "type": "Entity"
+      },
+      {
+        "id": 8,
+        "original_id": "6cf28d62-1163-5499-8055-3cfe2b2d04d5",
+        "text": "vote rigging",
+        "type": "Entity"
+      },
+      {
+        "id": 9,
+        "original_id": "d2a381fa-3658-5ca6-ada9-2109cfc9331d",
+        "text": "concept",
+        "type": "EntityType"
+      },
+      {
+        "id": 10,
+        "original_id": "214abcd9-9adf-5c8a-bb35-1e729f2d68c3",
+        "text": "event",
+        "type": "EntityType"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "took_place_in"
+      },
+      {
+        "source": 1,
+        "target": 4,
+        "type": "contains"
+      },
+      {
+        "source": 4,
+        "target": 5,
+        "type": "situated_on_shores_of"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 4,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 7,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 7,
+        "type": "initially_planned_for"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      },
+      {
+        "source": 7,
+        "target": 8,
+        "type": "changed_due_to"
+      },
+      {
+        "source": 1,
+        "target": 8,
+        "type": "contains"
+      },
+      {
+        "source": 8,
+        "target": 9,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 10,
+        "type": "is_a"
+      }
+    ]
+  },
+  "grafo_evidencia": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "99e5f9ca-bd1d-5d7d-9f7c-d6b2fe187b95",
+        "text": "This chunk is about:\n- Places: Belgium, Lausanne, Switzerland, Lake Geneva\n- People: Ingeborg\n- Events: Eurovision Song Contest 1989\n- Products: \"Door de wind\"\n\nFacts:\n- On 6 May 1989, the 1989 Eurovision Song Contest took place in Lausanne, Switzerland.\n- At the 1989 Eurovision Song Contest, Belgium was represented by Ingeborg with the song \"Door de wind\".\n- Lausanne is situated on the shores of Lake Geneva.\n- Lake Geneva is called \"Lac Léman\" in French and is also simply called \"Le Léman\".",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "c176f6c4-d577-5f8e-97e8-9ebeb5d08255",
+        "text": "Page: Belgium in the Eurovision Song Contest 1989. Sentence: Belgium was represented by Ingeborg, with the song '\"Door de wind\", at the 1989 Eurovision Song Contest, which took place in Lausanne, Switzerland on 6 May.\nPage: Lausanne. Sentence: The city is situated on the shores of Lake Geneva (French: \"Lac Léman\" , or simply \"Le Léman\").",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "f12c3e33-f46f-574b-a1b9-1c1336c84835",
+        "text": "text_96e6c4c79850046230519e26530eaad5",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "a90c6645-c993-58aa-850e-bfd55897a969",
+        "text": "belgium",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "8993bcc8-2ba2-5a3d-9a44-88b9a9291741",
+        "text": "ingeborg",
+        "type": "Entity"
+      },
+      {
+        "id": 5,
+        "original_id": "99e2ac79-2ced-5b33-9216-d43420d42d16",
+        "text": "door de wind",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "b09b7dd6-925d-5230-81fb-c5ef05da6917",
+        "text": "1989 eurovision song contest",
+        "type": "Entity"
+      },
+      {
+        "id": 7,
+        "original_id": "2479e29d-2ea4-5fa5-a27e-f071035a37f9",
+        "text": "lausanne",
+        "type": "Entity"
+      },
+      {
+        "id": 8,
+        "original_id": "407d2a7f-7562-59fb-a556-934cd90a0107",
+        "text": "switzerland",
+        "type": "Entity"
+      },
+      {
+        "id": 9,
+        "original_id": "5f394058-b2a0-5ba8-8466-ba2a18cfcf4e",
+        "text": "place",
+        "type": "EntityType"
+      },
+      {
+        "id": 10,
+        "original_id": "5e834ccb-96dc-5410-a0d6-07b0a08f0b4a",
+        "text": "lake geneva",
+        "type": "Entity"
+      },
+      {
+        "id": 11,
+        "original_id": "0bdcad90-a4a3-5143-8f5c-2784ce44e60c",
+        "text": "1989-05-06",
+        "type": "Entity"
+      },
+      {
+        "id": 12,
+        "original_id": "b19433ae-558c-5aaf-95ac-6231f2a4be0e",
+        "text": "date",
+        "type": "EntityType"
+      },
+      {
+        "id": 13,
+        "original_id": "214abcd9-9adf-5c8a-bb35-1e729f2d68c3",
+        "text": "event",
+        "type": "EntityType"
+      },
+      {
+        "id": 14,
+        "original_id": "5263a535-1b4b-5925-be3e-310d03cd303b",
+        "text": "work",
+        "type": "EntityType"
+      },
+      {
+        "id": 15,
+        "original_id": "99a82eec-bb35-5bb5-9ed2-e73fc7a756de",
+        "text": "person",
+        "type": "EntityType"
+      },
+      {
+        "id": 16,
+        "original_id": "73ec4489-f3ae-524a-86e1-247502a5050d",
+        "text": "lac léman",
+        "type": "Entity"
+      },
+      {
+        "id": 17,
+        "original_id": "39575085-0710-527d-bd54-019de7b00429",
+        "text": "name",
+        "type": "EntityType"
+      },
+      {
+        "id": 18,
+        "original_id": "10b312bd-a067-541c-ba0a-3e410ad450dd",
+        "text": "le léman",
+        "type": "Entity"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "was_represented_by"
+      },
+      {
+        "source": 1,
+        "target": 4,
+        "type": "contains"
+      },
+      {
+        "source": 4,
+        "target": 5,
+        "type": "performed"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "was_entry_in"
+      },
+      {
+        "source": 4,
+        "target": 6,
+        "type": "participated_in"
+      },
+      {
+        "source": 1,
+        "target": 6,
+        "type": "contains"
+      },
+      {
+        "source": 6,
+        "target": 7,
+        "type": "took_place_in"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      },
+      {
+        "source": 7,
+        "target": 8,
+        "type": "is_in"
+      },
+      {
+        "source": 6,
+        "target": 8,
+        "type": "took_place_in"
+      },
+      {
+        "source": 1,
+        "target": 8,
+        "type": "contains"
+      },
+      {
+        "source": 8,
+        "target": 9,
+        "type": "is_a"
+      },
+      {
+        "source": 10,
+        "target": 9,
+        "type": "is_a"
+      },
+      {
+        "source": 7,
+        "target": 9,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 9,
+        "type": "is_a"
+      },
+      {
+        "source": 7,
+        "target": 10,
+        "type": "is_situated_on_the_shores_of"
+      },
+      {
+        "source": 1,
+        "target": 10,
+        "type": "contains"
+      },
+      {
+        "source": 16,
+        "target": 10,
+        "type": "is_french_name_for"
+      },
+      {
+        "source": 18,
+        "target": 10,
+        "type": "is_alternative_french_name_for"
+      },
+      {
+        "source": 6,
+        "target": 11,
+        "type": "took_place_on"
+      },
+      {
+        "source": 1,
+        "target": 11,
+        "type": "contains"
+      },
+      {
+        "source": 11,
+        "target": 12,
+        "type": "is_a"
+      },
+      {
+        "source": 6,
+        "target": 13,
+        "type": "is_a"
+      },
+      {
+        "source": 5,
+        "target": 14,
+        "type": "is_a"
+      },
+      {
+        "source": 4,
+        "target": 15,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 16,
+        "type": "contains"
+      },
+      {
+        "source": 16,
+        "target": 17,
+        "type": "is_a"
+      },
+      {
+        "source": 18,
+        "target": 17,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 18,
+        "type": "contains"
+      }
+    ]
+  }
+}

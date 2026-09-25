@@ -1,0 +1,377 @@
+{
+  "dataset": "hover",
+  "id": "c2fccf53-e33e-4252-b6b1-4f7715a7f0b4",
+  "split": "train",
+  "claim": "Rawlins Park is a small public park in a neighborhood that got its name due to its riverside location.",
+  "evidencia": "Page: General John A. Rawlins. Sentence: The statue is a focal point of Rawlins Park, a small public park in the Foggy Bottom neighborhood of Washington, D.C. It was installed in 1874, but relocated several times between 1880 and 1931.\nPage: Foggy Bottom. Sentence: Foggy Bottom is thought to have received its name due to its riverside location, which made it susceptible to concentrations of fog and industrial smoke, an atmospheric quirk.",
+  "evidence_text": "Page: General John A. Rawlins. Sentence: The statue is a focal point of Rawlins Park, a small public park in the Foggy Bottom neighborhood of Washington, D.C. It was installed in 1874, but relocated several times between 1880 and 1931.\nPage: Foggy Bottom. Sentence: Foggy Bottom is thought to have received its name due to its riverside location, which made it susceptible to concentrations of fog and industrial smoke, an atmospheric quirk.",
+  "label": "SUPPORTED",
+  "num_hops": 2,
+  "hover_metadata": {
+    "supporting_facts": [
+      [
+        "General John A. Rawlins",
+        1
+      ],
+      [
+        "Foggy Bottom",
+        2
+      ]
+    ],
+    "num_hops": 2,
+    "evidence_annotation_id": [
+      0
+    ],
+    "evidence_id": [
+      "General John A. Rawlins::sentence::1",
+      "Foggy Bottom::sentence::2"
+    ],
+    "evidence_wiki_url": [
+      "https://en.wikipedia.org/wiki/General_John_A._Rawlins",
+      "https://en.wikipedia.org/wiki/Foggy_Bottom"
+    ],
+    "evidence_sentence_id": [
+      "General John A. Rawlins::sentence::1",
+      "Foggy Bottom::sentence::2"
+    ]
+  },
+  "grafo_claim": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "102c302e-2734-5b12-a681-ec93278aa4e5",
+        "text": "This chunk is about:\n- Places: Rawlins Park\n- Topics: neighborhood naming\n\nFacts:\n- Rawlins Park is a small public park.\n- Rawlins Park is located in a neighborhood that got its name from its riverside location.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "f609e50b-245c-5c4c-99cf-505ad7c22d18",
+        "text": "Rawlins Park is a small public park in a neighborhood that got its name due to its riverside location.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "83b5cac8-4ecf-576d-a6ca-cc9637d91594",
+        "text": "text_8efcf2b4798c207882aa838b1f81dd4e",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "1b3c09e8-d4c6-5480-8073-38638a1535db",
+        "text": "rawlins park",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "ddd5abd7-23c9-5927-9e79-bef6fba84527",
+        "text": "neighborhood",
+        "type": "Entity"
+      },
+      {
+        "id": 5,
+        "original_id": "eefd61a7-b0ec-5b34-9601-caf89595616d",
+        "text": "riverside location",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "5f394058-b2a0-5ba8-8466-ba2a18cfcf4e",
+        "text": "place",
+        "type": "EntityType"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "located_in"
+      },
+      {
+        "source": 1,
+        "target": 4,
+        "type": "contains"
+      },
+      {
+        "source": 4,
+        "target": 5,
+        "type": "named_due_to"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 4,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 6,
+        "type": "is_a"
+      }
+    ]
+  },
+  "grafo_evidencia": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "de60331a-1803-5c76-8bb5-e39ab4c3de18",
+        "text": "This chunk is about:\n- Places: Rawlins Park, Foggy Bottom, Washington, D.C.\n- People: General John A. Rawlins\n- Monuments: statue of General John A. Rawlins\n- Topics: place names, relocation history\n\nFacts:\n- The statue of General John A. Rawlins is a focal point of Rawlins Park, a small public park in the Foggy Bottom neighborhood of Washington, D.C.\n- The statue of General John A. Rawlins was installed in 1874.\n- The statue of General John A. Rawlins was relocated several times between 1880 and 1931.\n- Foggy Bottom is thought to have received its name from its riverside location, which made the area susceptible to fog and industrial smoke.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "e6a163c6-afd8-5ebc-948f-637dc2ccfbec",
+        "text": "Page: General John A. Rawlins. Sentence: The statue is a focal point of Rawlins Park, a small public park in the Foggy Bottom neighborhood of Washington, D.C. It was installed in 1874, but relocated several times between 1880 and 1931.\nPage: Foggy Bottom. Sentence: Foggy Bottom is thought to have received its name due to its riverside location, which made it susceptible to concentrations of fog and industrial smoke, an atmospheric quirk.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "a96b53fd-8898-5bc1-96d7-9a392bdf04d4",
+        "text": "text_d030b31801a9e6cbb2efb43aa253a141",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "13a48046-b372-5bca-ba8e-219048e5ddc8",
+        "text": "general john a. rawlins statue",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "1b3c09e8-d4c6-5480-8073-38638a1535db",
+        "text": "rawlins park",
+        "type": "Entity"
+      },
+      {
+        "id": 5,
+        "original_id": "6a2967c8-180e-5ba3-b29c-6823f4e4d5bf",
+        "text": "foggy bottom",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "193a9885-0f59-521c-a4b2-e6d5a15561ed",
+        "text": "washington, d.c.",
+        "type": "Entity"
+      },
+      {
+        "id": 7,
+        "original_id": "5f394058-b2a0-5ba8-8466-ba2a18cfcf4e",
+        "text": "place",
+        "type": "EntityType"
+      },
+      {
+        "id": 8,
+        "original_id": "eefd61a7-b0ec-5b34-9601-caf89595616d",
+        "text": "riverside location",
+        "type": "Entity"
+      },
+      {
+        "id": 9,
+        "original_id": "8bb48397-ca80-5808-a81f-c6614221f045",
+        "text": "concentrations of fog and industrial smoke",
+        "type": "Entity"
+      },
+      {
+        "id": 10,
+        "original_id": "d2a381fa-3658-5ca6-ada9-2109cfc9331d",
+        "text": "concept",
+        "type": "EntityType"
+      },
+      {
+        "id": 11,
+        "original_id": "a340a7e4-0280-5e6f-80b5-189a72ea0848",
+        "text": "1874",
+        "type": "Entity"
+      },
+      {
+        "id": 12,
+        "original_id": "b19433ae-558c-5aaf-95ac-6231f2a4be0e",
+        "text": "date",
+        "type": "EntityType"
+      },
+      {
+        "id": 13,
+        "original_id": "0add5333-2c99-5b27-a19a-b554d33b9d37",
+        "text": "1880",
+        "type": "Entity"
+      },
+      {
+        "id": 14,
+        "original_id": "bfe2d1c5-e7be-5bce-ba30-9589ffdee3a2",
+        "text": "1931",
+        "type": "Entity"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_focal_point_of"
+      },
+      {
+        "source": 1,
+        "target": 4,
+        "type": "contains"
+      },
+      {
+        "source": 4,
+        "target": 5,
+        "type": "located_in"
+      },
+      {
+        "source": 9,
+        "target": 5,
+        "type": "contributed_to_name"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "located_in"
+      },
+      {
+        "source": 1,
+        "target": 6,
+        "type": "contains"
+      },
+      {
+        "source": 6,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 5,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 4,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 5,
+        "target": 8,
+        "type": "name_attributed_to"
+      },
+      {
+        "source": 1,
+        "target": 8,
+        "type": "contains"
+      },
+      {
+        "source": 8,
+        "target": 9,
+        "type": "made_susceptible_to"
+      },
+      {
+        "source": 1,
+        "target": 9,
+        "type": "contains"
+      },
+      {
+        "source": 9,
+        "target": 10,
+        "type": "is_a"
+      },
+      {
+        "source": 8,
+        "target": 10,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 11,
+        "type": "installed_in"
+      },
+      {
+        "source": 1,
+        "target": 11,
+        "type": "contains"
+      },
+      {
+        "source": 11,
+        "target": 12,
+        "type": "is_a"
+      },
+      {
+        "source": 13,
+        "target": 12,
+        "type": "is_a"
+      },
+      {
+        "source": 14,
+        "target": 12,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 13,
+        "type": "relocation_period_started_in"
+      },
+      {
+        "source": 1,
+        "target": 13,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 14,
+        "type": "relocation_period_ended_in"
+      },
+      {
+        "source": 1,
+        "target": 14,
+        "type": "contains"
+      }
+    ]
+  }
+}

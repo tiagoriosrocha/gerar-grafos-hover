@@ -1,0 +1,455 @@
+{
+  "dataset": "hover",
+  "id": "84df28d6-ff01-40a0-a848-493d7aacf4b5",
+  "split": "train",
+  "claim": "The Missouri attorney general election of 2012 ended in a loss for attorney and CNN contributor Edward Robert Martin Jr.",
+  "evidencia": "Page: Missouri attorney general election, 2012. Sentence: The current Missouri Attorney General Chris Koster, a Democrat, won re-election for a second full term against Republican attorney Ed Martin.\nPage: Ed Martin (Missouri politician). Sentence: Edward Robert Martin Jr. is an American politician and attorney from the state of Missouri.\nPage: Ed Martin (Missouri politician). Sentence: He is president of Phyllis Schlafly Eagles, and a CNN contributor.",
+  "evidence_text": "Page: Missouri attorney general election, 2012. Sentence: The current Missouri Attorney General Chris Koster, a Democrat, won re-election for a second full term against Republican attorney Ed Martin.\nPage: Ed Martin (Missouri politician). Sentence: Edward Robert Martin Jr. is an American politician and attorney from the state of Missouri.\nPage: Ed Martin (Missouri politician). Sentence: He is president of Phyllis Schlafly Eagles, and a CNN contributor.",
+  "label": "SUPPORTED",
+  "num_hops": 2,
+  "hover_metadata": {
+    "supporting_facts": [
+      [
+        "Missouri attorney general election, 2012",
+        1
+      ],
+      [
+        "Ed Martin (Missouri politician)",
+        0
+      ],
+      [
+        "Ed Martin (Missouri politician)",
+        1
+      ]
+    ],
+    "num_hops": 2,
+    "evidence_annotation_id": [
+      0
+    ],
+    "evidence_id": [
+      "Missouri attorney general election, 2012::sentence::1",
+      "Ed Martin (Missouri politician)::sentence::0",
+      "Ed Martin (Missouri politician)::sentence::1"
+    ],
+    "evidence_wiki_url": [
+      "https://en.wikipedia.org/wiki/Missouri_attorney_general_election%2C_2012",
+      "https://en.wikipedia.org/wiki/Ed_Martin_%28Missouri_politician%29"
+    ],
+    "evidence_sentence_id": [
+      "Missouri attorney general election, 2012::sentence::1",
+      "Ed Martin (Missouri politician)::sentence::0",
+      "Ed Martin (Missouri politician)::sentence::1"
+    ]
+  },
+  "grafo_claim": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "b0b2cfee-5447-5168-9c9c-91aeeb8d9980",
+        "text": "This chunk is about:\n- People: Edward Robert Martin Jr.\n- Events: 2012 Missouri attorney general election\n- Roles: attorney, CNN contributor\n\nFacts:\n- In 2012, Edward Robert Martin Jr. lost the Missouri attorney general election.\n- Edward Robert Martin Jr. is an attorney and a CNN contributor.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "6559a9af-f135-5245-a7c1-0571e510a323",
+        "text": "The Missouri attorney general election of 2012 ended in a loss for attorney and CNN contributor Edward Robert Martin Jr.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "c0030504-f24d-5c8f-beac-3f31e9b7c78f",
+        "text": "text_241972f4c71fb9c2c479c4fb3ee9a082",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "5ff065cd-8232-58bf-bdd3-0fcb9c6db73d",
+        "text": "missouri attorney general election of 2012",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "214abcd9-9adf-5c8a-bb35-1e729f2d68c3",
+        "text": "event",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "1dc51fb9-de65-5c0f-86be-2b4fb17a5a29",
+        "text": "edward robert martin jr.",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "99a82eec-bb35-5bb5-9ed2-e73fc7a756de",
+        "text": "person",
+        "type": "EntityType"
+      },
+      {
+        "id": 7,
+        "original_id": "bec8a3fb-44cc-5028-988e-205101cecbdc",
+        "text": "attorney",
+        "type": "Entity"
+      },
+      {
+        "id": 8,
+        "original_id": "9d80eb43-32fa-561c-9371-91f180ebcb6c",
+        "text": "profession",
+        "type": "EntityType"
+      },
+      {
+        "id": 9,
+        "original_id": "77a251f0-ef0a-5d44-b162-c69f5addfa4c",
+        "text": "cnn",
+        "type": "Entity"
+      },
+      {
+        "id": 10,
+        "original_id": "388f60fb-220d-55e8-ae9c-3ac93cead308",
+        "text": "organization",
+        "type": "EntityType"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 3,
+        "type": "lost_in"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 5,
+        "target": 7,
+        "type": "has_profession"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      },
+      {
+        "source": 7,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 5,
+        "target": 9,
+        "type": "contributor_to"
+      },
+      {
+        "source": 1,
+        "target": 9,
+        "type": "contains"
+      },
+      {
+        "source": 9,
+        "target": 10,
+        "type": "is_a"
+      }
+    ]
+  },
+  "grafo_evidencia": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "f9008c3f-3593-5bb3-8213-5a2d9b120a90",
+        "text": "This chunk is about:\n- People: Chris Koster, Ed Martin, Edward Robert Martin Jr., Phyllis Schlafly\n- Roles: Missouri Attorney General, attorney, politician, president, CNN contributor\n- Organizations: Phyllis Schlafly Eagles, CNN\n- Events: Missouri attorney general election, 2012\n\nFacts:\n- In the 2012 Missouri attorney general election, incumbent Missouri Attorney General Chris Koster, a Democrat, won re-election to a second full term.\n- In the 2012 Missouri attorney general election, Chris Koster defeated Republican attorney Ed Martin.\n- Edward Robert Martin Jr. is an American politician and attorney from Missouri.\n- Ed Martin serves as president of Phyllis Schlafly Eagles.\n- Ed Martin is a CNN contributor.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "383a49b6-245f-5bbe-8217-f98241abf4ae",
+        "text": "Page: Missouri attorney general election, 2012. Sentence: The current Missouri Attorney General Chris Koster, a Democrat, won re-election for a second full term against Republican attorney Ed Martin.\nPage: Ed Martin (Missouri politician). Sentence: Edward Robert Martin Jr. is an American politician and attorney from the state of Missouri.\nPage: Ed Martin (Missouri politician). Sentence: He is president of Phyllis Schlafly Eagles, and a CNN contributor.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "1f785994-7baf-587e-b0e1-bcbe46a8e1ea",
+        "text": "text_e787749a8307c74e5b15e45aee5d00ee",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "d8691a9b-81fb-5417-acea-3ead22c253b2",
+        "text": "chris koster",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "99a82eec-bb35-5bb5-9ed2-e73fc7a756de",
+        "text": "person",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "7d02018a-8037-5c40-aa45-8246dd93c1e5",
+        "text": "missouri attorney general",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "c37fc488-fc9a-5b35-8e54-a50ae1721557",
+        "text": "role",
+        "type": "EntityType"
+      },
+      {
+        "id": 7,
+        "original_id": "23d8f430-c274-5cf6-8ece-dc0f8625c45e",
+        "text": "democratic party",
+        "type": "Entity"
+      },
+      {
+        "id": 8,
+        "original_id": "388f60fb-220d-55e8-ae9c-3ac93cead308",
+        "text": "organization",
+        "type": "EntityType"
+      },
+      {
+        "id": 9,
+        "original_id": "71810437-7857-5e6f-b22d-0570107b8dbd",
+        "text": "2012 missouri attorney general election",
+        "type": "Entity"
+      },
+      {
+        "id": 10,
+        "original_id": "214abcd9-9adf-5c8a-bb35-1e729f2d68c3",
+        "text": "event",
+        "type": "EntityType"
+      },
+      {
+        "id": 11,
+        "original_id": "3c3f7811-7cb8-5e37-9590-e6fda161d5d5",
+        "text": "ed martin",
+        "type": "Entity"
+      },
+      {
+        "id": 12,
+        "original_id": "7963f8a9-7ad6-5c55-8b9b-e296b751f39e",
+        "text": "republican party",
+        "type": "Entity"
+      },
+      {
+        "id": 13,
+        "original_id": "770c0d3a-496c-5abe-bdee-a879b42fba93",
+        "text": "missouri",
+        "type": "Entity"
+      },
+      {
+        "id": 14,
+        "original_id": "5f394058-b2a0-5ba8-8466-ba2a18cfcf4e",
+        "text": "place",
+        "type": "EntityType"
+      },
+      {
+        "id": 15,
+        "original_id": "970bc32e-79f4-598b-92bb-ea462fedbc73",
+        "text": "phyllis schlafly eagles",
+        "type": "Entity"
+      },
+      {
+        "id": 16,
+        "original_id": "77a251f0-ef0a-5d44-b162-c69f5addfa4c",
+        "text": "cnn",
+        "type": "Entity"
+      },
+      {
+        "id": 17,
+        "original_id": "1dc51fb9-de65-5c0f-86be-2b4fb17a5a29",
+        "text": "edward robert martin jr.",
+        "type": "Entity"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 11,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 17,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "holds_role"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 7,
+        "type": "member_of"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      },
+      {
+        "source": 7,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 12,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 15,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 16,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 9,
+        "type": "won"
+      },
+      {
+        "source": 11,
+        "target": 9,
+        "type": "candidate_in"
+      },
+      {
+        "source": 1,
+        "target": 9,
+        "type": "contains"
+      },
+      {
+        "source": 9,
+        "target": 10,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 11,
+        "type": "defeated"
+      },
+      {
+        "source": 1,
+        "target": 11,
+        "type": "contains"
+      },
+      {
+        "source": 17,
+        "target": 11,
+        "type": "same_as"
+      },
+      {
+        "source": 11,
+        "target": 12,
+        "type": "member_of"
+      },
+      {
+        "source": 1,
+        "target": 12,
+        "type": "contains"
+      },
+      {
+        "source": 11,
+        "target": 13,
+        "type": "from"
+      },
+      {
+        "source": 1,
+        "target": 13,
+        "type": "contains"
+      },
+      {
+        "source": 13,
+        "target": 14,
+        "type": "is_a"
+      },
+      {
+        "source": 11,
+        "target": 15,
+        "type": "president_of"
+      },
+      {
+        "source": 1,
+        "target": 15,
+        "type": "contains"
+      },
+      {
+        "source": 11,
+        "target": 16,
+        "type": "contributor_to"
+      },
+      {
+        "source": 1,
+        "target": 16,
+        "type": "contains"
+      },
+      {
+        "source": 1,
+        "target": 17,
+        "type": "contains"
+      }
+    ]
+  }
+}

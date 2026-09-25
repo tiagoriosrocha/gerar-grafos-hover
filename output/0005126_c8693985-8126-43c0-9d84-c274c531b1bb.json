@@ -1,0 +1,418 @@
+{
+  "dataset": "hover",
+  "id": "c8693985-8126-43c0-9d84-c274c531b1bb",
+  "split": "train",
+  "claim": "The director of the 1923 film April Showers is American. Arturo Ripstein is not American.",
+  "evidencia": "Page: Tom Forman (actor). Sentence: Tom Forman (February 22, 1893 – November 7, 1926) was an American motion picture actor, director, writer, and producer of the early 1920s.\nPage: Arturo Ripstein. Sentence: Arturo Ripstein y Rosen (born December 13, 1943) is a Mexican film director.\nPage: April Showers (1923 film). Sentence: April Showers is a 1923 American silent romantic film directed by Tom Forman starring Colleen Moore.",
+  "evidence_text": "Page: Tom Forman (actor). Sentence: Tom Forman (February 22, 1893 – November 7, 1926) was an American motion picture actor, director, writer, and producer of the early 1920s.\nPage: Arturo Ripstein. Sentence: Arturo Ripstein y Rosen (born December 13, 1943) is a Mexican film director.\nPage: April Showers (1923 film). Sentence: April Showers is a 1923 American silent romantic film directed by Tom Forman starring Colleen Moore.",
+  "label": "SUPPORTED",
+  "num_hops": 3,
+  "hover_metadata": {
+    "supporting_facts": [
+      [
+        "Tom Forman (actor)",
+        0
+      ],
+      [
+        "Arturo Ripstein",
+        0
+      ],
+      [
+        "April Showers (1923 film)",
+        0
+      ]
+    ],
+    "num_hops": 3,
+    "evidence_annotation_id": [
+      0
+    ],
+    "evidence_id": [
+      "Tom Forman (actor)::sentence::0",
+      "Arturo Ripstein::sentence::0",
+      "April Showers (1923 film)::sentence::0"
+    ],
+    "evidence_wiki_url": [
+      "https://en.wikipedia.org/wiki/Tom_Forman_%28actor%29",
+      "https://en.wikipedia.org/wiki/Arturo_Ripstein",
+      "https://en.wikipedia.org/wiki/April_Showers_%281923_film%29"
+    ],
+    "evidence_sentence_id": [
+      "Tom Forman (actor)::sentence::0",
+      "Arturo Ripstein::sentence::0",
+      "April Showers (1923 film)::sentence::0"
+    ]
+  },
+  "grafo_claim": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "0b5dbaae-fa9f-50b6-ad0d-0b4a2d07fa54",
+        "text": "This chunk is about:\n- People: the director of the 1923 film April Showers, Arturo Ripstein\n- Works: April Showers\n- Concepts: nationality\n\nFacts:\n- The director of the 1923 film April Showers is American.\n- Arturo Ripstein is not American.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "7addbc08-8982-5476-8f74-a33d6fd647c0",
+        "text": "The director of the 1923 film April Showers is American. Arturo Ripstein is not American.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "33608ad7-2ac2-5154-8a44-8e21391288d3",
+        "text": "text_453f5d23fd50d88d7653751090ded06b",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "249742f8-8c13-5eab-9a72-07c053aa70be",
+        "text": "april showers (1923 film)",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "32e5ea46-cca9-5920-8b2d-77357f10ce8d",
+        "text": "american",
+        "type": "Entity"
+      },
+      {
+        "id": 5,
+        "original_id": "7d08f409-7e55-5a66-935f-7c5c06f9111f",
+        "text": "nationality",
+        "type": "EntityType"
+      },
+      {
+        "id": 6,
+        "original_id": "d320c8df-fd51-56e6-b577-e01a688fe6fc",
+        "text": "film",
+        "type": "EntityType"
+      },
+      {
+        "id": 7,
+        "original_id": "c2b54b77-b2b8-5128-b72f-0928bfb5ab28",
+        "text": "arturo ripstein",
+        "type": "Entity"
+      },
+      {
+        "id": 8,
+        "original_id": "99a82eec-bb35-5bb5-9ed2-e73fc7a756de",
+        "text": "person",
+        "type": "EntityType"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "director_has_nationality"
+      },
+      {
+        "source": 1,
+        "target": 4,
+        "type": "contains"
+      },
+      {
+        "source": 7,
+        "target": 4,
+        "type": "not_has_nationality"
+      },
+      {
+        "source": 4,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      },
+      {
+        "source": 7,
+        "target": 8,
+        "type": "is_a"
+      }
+    ]
+  },
+  "grafo_evidencia": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "35e13f49-ff04-56f7-bb75-7e72608b61cd",
+        "text": "This chunk is about:\n- People: Tom Forman, Arturo Ripstein, Colleen Moore\n- Works: April Showers (1923 film)\n- Roles: actor, director, writer, producer\n- Topics: American silent romantic films, Mexican film directors\n\nFacts:\n- Tom Forman was born on February 22, 1893.\n- Tom Forman was an American motion picture actor, director, writer, and producer of the early 1920s.\n- April Showers is a 1923 American silent romantic film directed by Tom Forman and starring Colleen Moore.\n- Tom Forman died on November 7, 1926.\n- Arturo Ripstein y Rosen was born on December 13, 1943.\n- Arturo Ripstein y Rosen is a Mexican film director.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "21f987e4-13bf-5001-ad0e-d79d7b7a42e7",
+        "text": "Page: Tom Forman (actor). Sentence: Tom Forman (February 22, 1893 – November 7, 1926) was an American motion picture actor, director, writer, and producer of the early 1920s.\nPage: Arturo Ripstein. Sentence: Arturo Ripstein y Rosen (born December 13, 1943) is a Mexican film director.\nPage: April Showers (1923 film). Sentence: April Showers is a 1923 American silent romantic film directed by Tom Forman starring Colleen Moore.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "3050f5a2-8ba5-5fdb-b77e-e3f0e4864a51",
+        "text": "text_f639a85cd85701a2d59acb4ab66fad7e",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "93dba44e-a5d5-5d23-bdbe-24c9dde6c956",
+        "text": "tom forman",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "d3deaa33-54d4-599e-af15-1fabefd7c704",
+        "text": "1893-02-22",
+        "type": "Entity"
+      },
+      {
+        "id": 5,
+        "original_id": "b19433ae-558c-5aaf-95ac-6231f2a4be0e",
+        "text": "date",
+        "type": "EntityType"
+      },
+      {
+        "id": 6,
+        "original_id": "dc22d29a-02a6-5af0-a3dd-10e3a547a09e",
+        "text": "1926-11-07",
+        "type": "Entity"
+      },
+      {
+        "id": 7,
+        "original_id": "874a51da-34ea-5037-be47-d87785d43c37",
+        "text": "united states",
+        "type": "Entity"
+      },
+      {
+        "id": 8,
+        "original_id": "5f394058-b2a0-5ba8-8466-ba2a18cfcf4e",
+        "text": "place",
+        "type": "EntityType"
+      },
+      {
+        "id": 9,
+        "original_id": "99a82eec-bb35-5bb5-9ed2-e73fc7a756de",
+        "text": "person",
+        "type": "EntityType"
+      },
+      {
+        "id": 10,
+        "original_id": "06894549-f093-5b0c-9f68-f4b0f6afef7a",
+        "text": "arturo ripstein y rosen",
+        "type": "Entity"
+      },
+      {
+        "id": 11,
+        "original_id": "0f630e44-d87f-5894-99c4-f3b3b525b719",
+        "text": "1943-12-13",
+        "type": "Entity"
+      },
+      {
+        "id": 12,
+        "original_id": "cf7d42b5-76f2-568d-9972-0d0264af1b93",
+        "text": "mexico",
+        "type": "Entity"
+      },
+      {
+        "id": 13,
+        "original_id": "3b8ca7e5-7544-5cb2-93e0-c75ce8dc1174",
+        "text": "april showers",
+        "type": "Entity"
+      },
+      {
+        "id": 14,
+        "original_id": "4623663d-c9f8-5aa1-8704-a3d8a2663725",
+        "text": "1923",
+        "type": "Entity"
+      },
+      {
+        "id": 15,
+        "original_id": "8001ef6e-85d7-591c-9ee4-259fc0a19024",
+        "text": "colleen moore",
+        "type": "Entity"
+      },
+      {
+        "id": 16,
+        "original_id": "d320c8df-fd51-56e6-b577-e01a688fe6fc",
+        "text": "film",
+        "type": "EntityType"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 13,
+        "target": 3,
+        "type": "directed_by"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "born_on"
+      },
+      {
+        "source": 1,
+        "target": 4,
+        "type": "contains"
+      },
+      {
+        "source": 4,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 6,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 11,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 14,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 6,
+        "type": "died_on"
+      },
+      {
+        "source": 1,
+        "target": 6,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 7,
+        "type": "has_nationality"
+      },
+      {
+        "source": 13,
+        "target": 7,
+        "type": "country_of_origin"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      },
+      {
+        "source": 7,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 12,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 9,
+        "type": "is_a"
+      },
+      {
+        "source": 10,
+        "target": 9,
+        "type": "is_a"
+      },
+      {
+        "source": 15,
+        "target": 9,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 10,
+        "type": "contains"
+      },
+      {
+        "source": 10,
+        "target": 11,
+        "type": "born_on"
+      },
+      {
+        "source": 1,
+        "target": 11,
+        "type": "contains"
+      },
+      {
+        "source": 10,
+        "target": 12,
+        "type": "has_nationality"
+      },
+      {
+        "source": 1,
+        "target": 12,
+        "type": "contains"
+      },
+      {
+        "source": 1,
+        "target": 13,
+        "type": "contains"
+      },
+      {
+        "source": 13,
+        "target": 14,
+        "type": "released_in"
+      },
+      {
+        "source": 1,
+        "target": 14,
+        "type": "contains"
+      },
+      {
+        "source": 13,
+        "target": 15,
+        "type": "stars"
+      },
+      {
+        "source": 1,
+        "target": 15,
+        "type": "contains"
+      },
+      {
+        "source": 13,
+        "target": 16,
+        "type": "is_a"
+      }
+    ]
+  }
+}

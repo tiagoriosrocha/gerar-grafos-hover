@@ -1,0 +1,561 @@
+{
+  "dataset": "hover",
+  "id": "6cd42df6-7d65-4bbd-81a9-c7ef287c0f73",
+  "split": "train",
+  "claim": "Northwestern University or Johns Hopkins University has a campus outside of the United States territories with other campuses located in Chicago and Doha, Qatar.",
+  "evidencia": "Page: Johns Hopkins University. Sentence: The Johns Hopkins University (commonly referred to as Johns Hopkins, JHU, or simply Hopkins) is an American private research university in Baltimore, Maryland.\nPage: Northwestern University. Sentence: Northwestern University (NU) is a private research university based in Evanston, Illinois, with other campuses located in Chicago and Doha, Qatar, and academic programs and facilities in Washington, D.C., and San Francisco, California.",
+  "evidence_text": "Page: Johns Hopkins University. Sentence: The Johns Hopkins University (commonly referred to as Johns Hopkins, JHU, or simply Hopkins) is an American private research university in Baltimore, Maryland.\nPage: Northwestern University. Sentence: Northwestern University (NU) is a private research university based in Evanston, Illinois, with other campuses located in Chicago and Doha, Qatar, and academic programs and facilities in Washington, D.C., and San Francisco, California.",
+  "label": "SUPPORTED",
+  "num_hops": 2,
+  "hover_metadata": {
+    "supporting_facts": [
+      [
+        "Johns Hopkins University",
+        0
+      ],
+      [
+        "Northwestern University",
+        0
+      ]
+    ],
+    "num_hops": 2,
+    "evidence_annotation_id": [
+      0
+    ],
+    "evidence_id": [
+      "Johns Hopkins University::sentence::0",
+      "Northwestern University::sentence::0"
+    ],
+    "evidence_wiki_url": [
+      "https://en.wikipedia.org/wiki/Johns_Hopkins_University",
+      "https://en.wikipedia.org/wiki/Northwestern_University"
+    ],
+    "evidence_sentence_id": [
+      "Johns Hopkins University::sentence::0",
+      "Northwestern University::sentence::0"
+    ]
+  },
+  "grafo_claim": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "5b85dd6b-b2db-584a-8358-4ad4d958461b",
+        "text": "This chunk is about:\n- Organizations: Northwestern University, Johns Hopkins University\n- Places: Chicago, Doha, Qatar, United States territories\n\nFacts:\n- Northwestern University has campuses in Chicago and Doha, Qatar.\n- Northwestern University has a campus outside the United States territories.\n- The statement contrasts Northwestern University with Johns Hopkins University as the university fitting this description.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "882979be-4529-5123-9c60-c58a6420492f",
+        "text": "Northwestern University or Johns Hopkins University has a campus outside of the United States territories with other campuses located in Chicago and Doha, Qatar.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "6cf62154-0ba3-51bc-800c-350b87d8f5c4",
+        "text": "text_bba6977d132364de582f89600a244206",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "7abc6eea-e195-5091-8d63-93613284e809",
+        "text": "northwestern university",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "388f60fb-220d-55e8-ae9c-3ac93cead308",
+        "text": "organization",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "ec047af9-0db4-5349-a274-c803926fd58c",
+        "text": "chicago",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "5f394058-b2a0-5ba8-8466-ba2a18cfcf4e",
+        "text": "place",
+        "type": "EntityType"
+      },
+      {
+        "id": 7,
+        "original_id": "ed4c34cc-f145-58e6-9c84-7a514aa189f3",
+        "text": "doha, qatar",
+        "type": "Entity"
+      },
+      {
+        "id": 8,
+        "original_id": "ecb18acc-83db-54b4-8d09-cbb473e4ab57",
+        "text": "united states territories",
+        "type": "Entity"
+      },
+      {
+        "id": 9,
+        "original_id": "495457d6-3031-5160-ac0d-f9cd92124ddc",
+        "text": "johns hopkins university",
+        "type": "Entity"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 9,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "has_campus_in"
+      },
+      {
+        "source": 9,
+        "target": 5,
+        "type": "possible_has_campus_in"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 7,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 8,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 7,
+        "type": "has_campus_in"
+      },
+      {
+        "source": 9,
+        "target": 7,
+        "type": "possible_has_campus_in"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      },
+      {
+        "source": 7,
+        "target": 8,
+        "type": "is_outside_of"
+      },
+      {
+        "source": 1,
+        "target": 8,
+        "type": "contains"
+      },
+      {
+        "source": 1,
+        "target": 9,
+        "type": "contains"
+      }
+    ]
+  },
+  "grafo_evidencia": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "b0d08bce-ed36-5d9e-931e-a145b6b22044",
+        "text": "This chunk is about:\n- Organizations: Johns Hopkins University, Northwestern University\n- Places: Baltimore, Maryland, Evanston, Illinois, Chicago, Doha, Qatar, Washington, D.C., San Francisco, California\n- Concepts: Private research universities\n\nFacts:\n- Johns Hopkins University is an American private research university in Baltimore, Maryland.\n- Johns Hopkins University is commonly referred to as Johns Hopkins, JHU, or Hopkins.\n- Northwestern University is a private research university based in Evanston, Illinois.\n- Northwestern University has other campuses in Chicago and Doha, Qatar.\n- Northwestern University has academic programs and facilities in Washington, D.C., and San Francisco, California.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "38737bca-9bc0-52e5-889e-21947bf31cd0",
+        "text": "Page: Johns Hopkins University. Sentence: The Johns Hopkins University (commonly referred to as Johns Hopkins, JHU, or simply Hopkins) is an American private research university in Baltimore, Maryland.\nPage: Northwestern University. Sentence: Northwestern University (NU) is a private research university based in Evanston, Illinois, with other campuses located in Chicago and Doha, Qatar, and academic programs and facilities in Washington, D.C., and San Francisco, California.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "b0b90f7a-1f67-565e-991c-728fb1ae7d2c",
+        "text": "text_668b18d64546cada1705959ee9b55f53",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "495457d6-3031-5160-ac0d-f9cd92124ddc",
+        "text": "johns hopkins university",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "388f60fb-220d-55e8-ae9c-3ac93cead308",
+        "text": "organization",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "9c2fcda0-3e05-5fb5-8623-d207a5f0aa89",
+        "text": "baltimore",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "5f394058-b2a0-5ba8-8466-ba2a18cfcf4e",
+        "text": "place",
+        "type": "EntityType"
+      },
+      {
+        "id": 7,
+        "original_id": "5d645bb7-11bb-59dd-ab58-a1203a173cac",
+        "text": "maryland",
+        "type": "Entity"
+      },
+      {
+        "id": 8,
+        "original_id": "5fd0c508-7891-5ebc-8c4c-59aaced301c6",
+        "text": "johns hopkins",
+        "type": "Entity"
+      },
+      {
+        "id": 9,
+        "original_id": "c98b6200-6202-57e6-a127-689b4837ac9c",
+        "text": "jhu",
+        "type": "Entity"
+      },
+      {
+        "id": 10,
+        "original_id": "200dcdb6-8e60-5323-9fb3-08f14ba9a51f",
+        "text": "hopkins",
+        "type": "Entity"
+      },
+      {
+        "id": 11,
+        "original_id": "7abc6eea-e195-5091-8d63-93613284e809",
+        "text": "northwestern university",
+        "type": "Entity"
+      },
+      {
+        "id": 12,
+        "original_id": "05bcf158-ef26-53e7-b817-b4716c19c07b",
+        "text": "evanston",
+        "type": "Entity"
+      },
+      {
+        "id": 13,
+        "original_id": "02e5e923-e975-5c9f-b0e7-3e3b4b37c531",
+        "text": "illinois",
+        "type": "Entity"
+      },
+      {
+        "id": 14,
+        "original_id": "ec047af9-0db4-5349-a274-c803926fd58c",
+        "text": "chicago",
+        "type": "Entity"
+      },
+      {
+        "id": 15,
+        "original_id": "fae69624-2800-554b-9977-3089ba9eae4b",
+        "text": "doha",
+        "type": "Entity"
+      },
+      {
+        "id": 16,
+        "original_id": "2a9602b7-6000-516d-be2d-00df56f3db49",
+        "text": "qatar",
+        "type": "Entity"
+      },
+      {
+        "id": 17,
+        "original_id": "193a9885-0f59-521c-a4b2-e6d5a15561ed",
+        "text": "washington, d.c.",
+        "type": "Entity"
+      },
+      {
+        "id": 18,
+        "original_id": "ef432684-2d90-5950-95e7-984103a1d211",
+        "text": "san francisco",
+        "type": "Entity"
+      },
+      {
+        "id": 19,
+        "original_id": "8294cd6a-6968-5d3a-b0c8-57e08c745c8d",
+        "text": "california",
+        "type": "Entity"
+      },
+      {
+        "id": 20,
+        "original_id": "5147c168-0a0a-544b-a13e-d66c8e4ce4d0",
+        "text": "nu",
+        "type": "Entity"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 8,
+        "target": 3,
+        "type": "refers_to"
+      },
+      {
+        "source": 9,
+        "target": 3,
+        "type": "refers_to"
+      },
+      {
+        "source": 10,
+        "target": 3,
+        "type": "refers_to"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 8,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 9,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 10,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 11,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 20,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "located_in"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 7,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 12,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 13,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 14,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 15,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 16,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 17,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 18,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 19,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 5,
+        "target": 7,
+        "type": "located_in"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      },
+      {
+        "source": 1,
+        "target": 8,
+        "type": "contains"
+      },
+      {
+        "source": 1,
+        "target": 9,
+        "type": "contains"
+      },
+      {
+        "source": 1,
+        "target": 10,
+        "type": "contains"
+      },
+      {
+        "source": 1,
+        "target": 11,
+        "type": "contains"
+      },
+      {
+        "source": 20,
+        "target": 11,
+        "type": "refers_to"
+      },
+      {
+        "source": 11,
+        "target": 12,
+        "type": "based_in"
+      },
+      {
+        "source": 1,
+        "target": 12,
+        "type": "contains"
+      },
+      {
+        "source": 12,
+        "target": 13,
+        "type": "located_in"
+      },
+      {
+        "source": 1,
+        "target": 13,
+        "type": "contains"
+      },
+      {
+        "source": 11,
+        "target": 14,
+        "type": "has_campus_in"
+      },
+      {
+        "source": 1,
+        "target": 14,
+        "type": "contains"
+      },
+      {
+        "source": 11,
+        "target": 15,
+        "type": "has_campus_in"
+      },
+      {
+        "source": 1,
+        "target": 15,
+        "type": "contains"
+      },
+      {
+        "source": 15,
+        "target": 16,
+        "type": "located_in"
+      },
+      {
+        "source": 1,
+        "target": 16,
+        "type": "contains"
+      },
+      {
+        "source": 11,
+        "target": 17,
+        "type": "has_academic_programs_and_facilities_in"
+      },
+      {
+        "source": 1,
+        "target": 17,
+        "type": "contains"
+      },
+      {
+        "source": 11,
+        "target": 18,
+        "type": "has_academic_programs_and_facilities_in"
+      },
+      {
+        "source": 1,
+        "target": 18,
+        "type": "contains"
+      },
+      {
+        "source": 18,
+        "target": 19,
+        "type": "located_in"
+      },
+      {
+        "source": 1,
+        "target": 19,
+        "type": "contains"
+      },
+      {
+        "source": 1,
+        "target": 20,
+        "type": "contains"
+      }
+    ]
+  }
+}

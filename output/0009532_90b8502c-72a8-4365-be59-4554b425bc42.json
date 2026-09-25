@@ -1,0 +1,359 @@
+{
+  "dataset": "hover",
+  "id": "90b8502c-72a8-4365-be59-4554b425bc42",
+  "split": "train",
+  "claim": "The opera that mentions \"Marzemino\" and Cardillac are not both operas with three acts.",
+  "evidencia": "Page: Don Giovanni. Sentence: Don Giovanni (] ; K. 527; complete title: \"Il dissoluto punito, ossia il Don Giovanni\" , literally \"The Rake Punished, namely Don Giovanni\" or \"The Libertine Punished\") is an opera in two acts with music by Wolfgang Amadeus Mozart and Italian libretto by Lorenzo Da Ponte.\nPage: Cardillac. Sentence: Cardillac is an opera by Paul Hindemith in three acts and four scenes.\nPage: Marzemino. Sentence: The wine is most noted for its mention in the opera \"Don Giovanni\" of Wolfgang Amadeus Mozart (\"Versa il vino!",
+  "evidence_text": "Page: Don Giovanni. Sentence: Don Giovanni (] ; K. 527; complete title: \"Il dissoluto punito, ossia il Don Giovanni\" , literally \"The Rake Punished, namely Don Giovanni\" or \"The Libertine Punished\") is an opera in two acts with music by Wolfgang Amadeus Mozart and Italian libretto by Lorenzo Da Ponte.\nPage: Cardillac. Sentence: Cardillac is an opera by Paul Hindemith in three acts and four scenes.\nPage: Marzemino. Sentence: The wine is most noted for its mention in the opera \"Don Giovanni\" of Wolfgang Amadeus Mozart (\"Versa il vino!",
+  "label": "SUPPORTED",
+  "num_hops": 3,
+  "hover_metadata": {
+    "supporting_facts": [
+      [
+        "Don Giovanni",
+        0
+      ],
+      [
+        "Cardillac",
+        0
+      ],
+      [
+        "Marzemino",
+        1
+      ]
+    ],
+    "num_hops": 3,
+    "evidence_annotation_id": [
+      0
+    ],
+    "evidence_id": [
+      "Don Giovanni::sentence::0",
+      "Cardillac::sentence::0",
+      "Marzemino::sentence::1"
+    ],
+    "evidence_wiki_url": [
+      "https://en.wikipedia.org/wiki/Don_Giovanni",
+      "https://en.wikipedia.org/wiki/Cardillac",
+      "https://en.wikipedia.org/wiki/Marzemino"
+    ],
+    "evidence_sentence_id": [
+      "Don Giovanni::sentence::0",
+      "Cardillac::sentence::0",
+      "Marzemino::sentence::1"
+    ]
+  },
+  "grafo_claim": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "6b1008a9-88c2-54f3-9346-aeb9958bb2ad",
+        "text": "This chunk is about:\n- Works: Don Giovanni, Cardillac\n- Concepts: Opera structure, Act counts\n\nFacts:\n- Don Giovanni is an opera that mentions \"Marzemino.\"\n- Cardillac is an opera.\n- Don Giovanni and Cardillac do not both have three acts.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "e1244040-8586-53c4-ae09-9c99b749e5f7",
+        "text": "The opera that mentions \"Marzemino\" and Cardillac are not both operas with three acts.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "8cd784d1-a12c-5c74-b2b8-669e64354ace",
+        "text": "text_7f48028854cf5974921b30d826fb6be1",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "98dded33-a102-5434-bab4-b11415db647f",
+        "text": "the opera that mentions marzemino",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "4eb9afeb-98f0-51bd-8563-a75a23e8d4f0",
+        "text": "opera",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "46729053-63af-5b59-ad04-1503b941912f",
+        "text": "marzemino",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "d2a381fa-3658-5ca6-ada9-2109cfc9331d",
+        "text": "concept",
+        "type": "EntityType"
+      },
+      {
+        "id": 7,
+        "original_id": "7a2f4dd9-9e7f-5755-a16c-a8ec10186f3a",
+        "text": "three acts",
+        "type": "Entity"
+      },
+      {
+        "id": 8,
+        "original_id": "0bd76a98-bf38-5391-b530-689b4a03a540",
+        "text": "cardillac",
+        "type": "Entity"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 8,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "mentions"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 7,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 7,
+        "type": "not_both_with"
+      },
+      {
+        "source": 8,
+        "target": 7,
+        "type": "not_both_with"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      },
+      {
+        "source": 1,
+        "target": 8,
+        "type": "contains"
+      }
+    ]
+  },
+  "grafo_evidencia": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "d3de4dda-afed-5949-8386-3f6c37d8ca12",
+        "text": "This chunk is about:\n- Works: Don Giovanni, Cardillac\n- People: Wolfgang Amadeus Mozart, Lorenzo Da Ponte, Paul Hindemith\n- Products: Marzemino\n\nFacts:\n- Don Giovanni is an opera in two acts with music by Wolfgang Amadeus Mozart and an Italian libretto by Lorenzo Da Ponte.\n- Don Giovanni has the complete title \"Il dissoluto punito, ossia il Don Giovanni,\" which literally means \"The Rake Punished, namely Don Giovanni\" or \"The Libertine Punished.\"\n- Cardillac is an opera by Paul Hindemith in three acts and four scenes.\n- Marzemino is a wine most noted for being mentioned in Wolfgang Amadeus Mozart's opera Don Giovanni in the line \"Versa il vino!\".",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "b7431aa0-c44a-53f9-bd2b-ac649e81dc9d",
+        "text": "Page: Don Giovanni. Sentence: Don Giovanni (] ; K. 527; complete title: \"Il dissoluto punito, ossia il Don Giovanni\" , literally \"The Rake Punished, namely Don Giovanni\" or \"The Libertine Punished\") is an opera in two acts with music by Wolfgang Amadeus Mozart and Italian libretto by Lorenzo Da Ponte.\nPage: Cardillac. Sentence: Cardillac is an opera by Paul Hindemith in three acts and four scenes.\nPage: Marzemino. Sentence: The wine is most noted for its mention in the opera \"Don Giovanni\" of Wolfgang Amadeus Mozart (\"Versa il vino!",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "053d6d47-4c87-5c43-ab08-4eba72a015a4",
+        "text": "text_1479c380ad0d80b951324519c060ead0",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "076bf848-f8e7-5dea-94dd-a5e4251f57f5",
+        "text": "don giovanni",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "5263a535-1b4b-5925-be3e-310d03cd303b",
+        "text": "work",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "b6983c96-0c8b-5d9a-a990-5ca59de5144a",
+        "text": "il dissoluto punito, ossia il don giovanni",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "2dcf09c3-1a26-5428-ac0b-fef40044c44f",
+        "text": "wolfgang amadeus mozart",
+        "type": "Entity"
+      },
+      {
+        "id": 7,
+        "original_id": "99a82eec-bb35-5bb5-9ed2-e73fc7a756de",
+        "text": "person",
+        "type": "EntityType"
+      },
+      {
+        "id": 8,
+        "original_id": "5c9ad732-3456-5580-9d13-a84f01aace61",
+        "text": "lorenzo da ponte",
+        "type": "Entity"
+      },
+      {
+        "id": 9,
+        "original_id": "0bd76a98-bf38-5391-b530-689b4a03a540",
+        "text": "cardillac",
+        "type": "Entity"
+      },
+      {
+        "id": 10,
+        "original_id": "f705f5de-8ebe-532b-b178-d99b82476013",
+        "text": "paul hindemith",
+        "type": "Entity"
+      },
+      {
+        "id": 11,
+        "original_id": "46729053-63af-5b59-ad04-1503b941912f",
+        "text": "marzemino",
+        "type": "Entity"
+      },
+      {
+        "id": 12,
+        "original_id": "1b7c3ad9-e154-56b4-908d-043ea548b500",
+        "text": "thing",
+        "type": "EntityType"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 11,
+        "target": 3,
+        "type": "mentioned_in"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 5,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 9,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "has_complete_title"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 6,
+        "type": "has_music_by"
+      },
+      {
+        "source": 1,
+        "target": 6,
+        "type": "contains"
+      },
+      {
+        "source": 6,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 8,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 10,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 8,
+        "type": "has_libretto_by"
+      },
+      {
+        "source": 1,
+        "target": 8,
+        "type": "contains"
+      },
+      {
+        "source": 1,
+        "target": 9,
+        "type": "contains"
+      },
+      {
+        "source": 9,
+        "target": 10,
+        "type": "created_by"
+      },
+      {
+        "source": 1,
+        "target": 10,
+        "type": "contains"
+      },
+      {
+        "source": 1,
+        "target": 11,
+        "type": "contains"
+      },
+      {
+        "source": 11,
+        "target": 12,
+        "type": "is_a"
+      }
+    ]
+  }
+}

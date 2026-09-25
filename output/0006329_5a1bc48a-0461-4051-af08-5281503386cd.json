@@ -1,0 +1,391 @@
+{
+  "dataset": "hover",
+  "id": "5a1bc48a-0461-4051-af08-5281503386cd",
+  "split": "train",
+  "claim": "Krakatau park replaced American's first waterpark designed by the creator of seaworld.",
+  "evidencia": "Page: Volcano Bay. Sentence: The park, themed around a 200 ft volcano named \"Krakatau,\" opened on May 25, 2017.\nPage: Wet 'n Wild Orlando. Sentence: It was founded in 1977 by SeaWorld creator George Millay and is considered America's first water park.",
+  "evidence_text": "Page: Volcano Bay. Sentence: The park, themed around a 200 ft volcano named \"Krakatau,\" opened on May 25, 2017.\nPage: Wet 'n Wild Orlando. Sentence: It was founded in 1977 by SeaWorld creator George Millay and is considered America's first water park.",
+  "label": "SUPPORTED",
+  "num_hops": 2,
+  "hover_metadata": {
+    "supporting_facts": [
+      [
+        "Volcano Bay",
+        2
+      ],
+      [
+        "Wet 'n Wild Orlando",
+        1
+      ]
+    ],
+    "num_hops": 2,
+    "evidence_annotation_id": [
+      0
+    ],
+    "evidence_id": [
+      "Volcano Bay::sentence::2",
+      "Wet 'n Wild Orlando::sentence::1"
+    ],
+    "evidence_wiki_url": [
+      "https://en.wikipedia.org/wiki/Volcano_Bay",
+      "https://en.wikipedia.org/wiki/Wet_%27n_Wild_Orlando"
+    ],
+    "evidence_sentence_id": [
+      "Volcano Bay::sentence::2",
+      "Wet 'n Wild Orlando::sentence::1"
+    ]
+  },
+  "grafo_claim": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "f5529665-80f7-501c-ab2d-58abb18b4e92",
+        "text": "This chunk is about:\n- Places: Krakatau park\n- Topics: American's first waterpark, waterpark design, SeaWorld creator\n\nFacts:\n- Krakatau park replaced American's first waterpark.\n- American's first waterpark was designed by the creator of SeaWorld.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "3d74dec0-3d16-5480-85ad-f7b2834543d4",
+        "text": "Krakatau park replaced American's first waterpark designed by the creator of seaworld.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "e06ab2ec-d496-5d32-b0df-22571f886c96",
+        "text": "text_1e814d9e674a8174bd3c158e5f640665",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "2daac6f8-737c-54aa-9b8d-f15135daa6a0",
+        "text": "krakatau park",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "c3c67c3f-2c0c-5929-99fa-aa299991ba04",
+        "text": "americans first waterpark",
+        "type": "Entity"
+      },
+      {
+        "id": 5,
+        "original_id": "59ff0530-5fe2-5aff-a859-190b3417ede8",
+        "text": "creator of seaworld",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "042f55c6-2b3a-5171-b4fa-c9024696cdc2",
+        "text": "seaworld",
+        "type": "Entity"
+      },
+      {
+        "id": 7,
+        "original_id": "388f60fb-220d-55e8-ae9c-3ac93cead308",
+        "text": "organization",
+        "type": "EntityType"
+      },
+      {
+        "id": 8,
+        "original_id": "99a82eec-bb35-5bb5-9ed2-e73fc7a756de",
+        "text": "person",
+        "type": "EntityType"
+      },
+      {
+        "id": 9,
+        "original_id": "5f394058-b2a0-5ba8-8466-ba2a18cfcf4e",
+        "text": "place",
+        "type": "EntityType"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "replaced"
+      },
+      {
+        "source": 1,
+        "target": 4,
+        "type": "contains"
+      },
+      {
+        "source": 4,
+        "target": 5,
+        "type": "designed_by"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "created"
+      },
+      {
+        "source": 1,
+        "target": 6,
+        "type": "contains"
+      },
+      {
+        "source": 6,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 5,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 4,
+        "target": 9,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 9,
+        "type": "is_a"
+      }
+    ]
+  },
+  "grafo_evidencia": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "9434fc15-d1eb-540d-b21b-b8c75086fac5",
+        "text": "This chunk is about:\n- Places: Volcano Bay, Wet 'n Wild Orlando\n- Concepts: Water parks, themed attractions\n- People: George Millay\n\nFacts:\n- Wet 'n Wild Orlando was founded in 1977 by SeaWorld creator George Millay.\n- Wet 'n Wild Orlando is considered America's first water park.\n- Volcano Bay opened on May 25, 2017.\n- Volcano Bay is themed around a 200-foot volcano named Krakatau.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "fa9a1e20-3856-56c0-8832-f7c1c19750a5",
+        "text": "Page: Volcano Bay. Sentence: The park, themed around a 200 ft volcano named \"Krakatau,\" opened on May 25, 2017.\nPage: Wet 'n Wild Orlando. Sentence: It was founded in 1977 by SeaWorld creator George Millay and is considered America's first water park.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "bfa6ecd0-0707-5e78-ad79-8bcc900f2c1b",
+        "text": "text_f47d51bfd3304e8819ac05cea234efd4",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "20b36b2e-aa68-548e-a130-f17efc07352c",
+        "text": "volcano bay",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "3397cc9e-30e2-51cd-9084-25ae9caa5999",
+        "text": "krakatau",
+        "type": "Entity"
+      },
+      {
+        "id": 5,
+        "original_id": "5f394058-b2a0-5ba8-8466-ba2a18cfcf4e",
+        "text": "place",
+        "type": "EntityType"
+      },
+      {
+        "id": 6,
+        "original_id": "011c2737-c248-580a-8602-1297c1dcedde",
+        "text": "2017-05-25",
+        "type": "Entity"
+      },
+      {
+        "id": 7,
+        "original_id": "b19433ae-558c-5aaf-95ac-6231f2a4be0e",
+        "text": "date",
+        "type": "EntityType"
+      },
+      {
+        "id": 8,
+        "original_id": "e9051758-4385-59af-b35b-60b5cb8e7e33",
+        "text": "wet n wild orlando",
+        "type": "Entity"
+      },
+      {
+        "id": 9,
+        "original_id": "8770aa76-d776-510e-a21c-4a9c1d2af56d",
+        "text": "1977",
+        "type": "Entity"
+      },
+      {
+        "id": 10,
+        "original_id": "dfdff2f7-00fe-5455-97c4-cdb496eb3a23",
+        "text": "americas first water park",
+        "type": "Entity"
+      },
+      {
+        "id": 11,
+        "original_id": "d2a381fa-3658-5ca6-ada9-2109cfc9331d",
+        "text": "concept",
+        "type": "EntityType"
+      },
+      {
+        "id": 12,
+        "original_id": "f36c9624-9f6b-54dc-856b-71213ca3addc",
+        "text": "george millay",
+        "type": "Entity"
+      },
+      {
+        "id": 13,
+        "original_id": "042f55c6-2b3a-5171-b4fa-c9024696cdc2",
+        "text": "seaworld",
+        "type": "Entity"
+      },
+      {
+        "id": 14,
+        "original_id": "388f60fb-220d-55e8-ae9c-3ac93cead308",
+        "text": "organization",
+        "type": "EntityType"
+      },
+      {
+        "id": 15,
+        "original_id": "99a82eec-bb35-5bb5-9ed2-e73fc7a756de",
+        "text": "person",
+        "type": "EntityType"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "themed_around"
+      },
+      {
+        "source": 1,
+        "target": 4,
+        "type": "contains"
+      },
+      {
+        "source": 4,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 8,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 6,
+        "type": "opened_on"
+      },
+      {
+        "source": 1,
+        "target": 6,
+        "type": "contains"
+      },
+      {
+        "source": 6,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 9,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 8,
+        "type": "contains"
+      },
+      {
+        "source": 12,
+        "target": 8,
+        "type": "founded"
+      },
+      {
+        "source": 8,
+        "target": 9,
+        "type": "founded_in"
+      },
+      {
+        "source": 1,
+        "target": 9,
+        "type": "contains"
+      },
+      {
+        "source": 8,
+        "target": 10,
+        "type": "is_considered"
+      },
+      {
+        "source": 1,
+        "target": 10,
+        "type": "contains"
+      },
+      {
+        "source": 10,
+        "target": 11,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 12,
+        "type": "contains"
+      },
+      {
+        "source": 12,
+        "target": 13,
+        "type": "creator_of"
+      },
+      {
+        "source": 1,
+        "target": 13,
+        "type": "contains"
+      },
+      {
+        "source": 13,
+        "target": 14,
+        "type": "is_a"
+      },
+      {
+        "source": 12,
+        "target": 15,
+        "type": "is_a"
+      }
+    ]
+  }
+}

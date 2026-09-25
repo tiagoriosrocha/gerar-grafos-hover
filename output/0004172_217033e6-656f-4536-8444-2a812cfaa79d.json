@@ -1,0 +1,745 @@
+{
+  "dataset": "hover",
+  "id": "217033e6-656f-4536-8444-2a812cfaa79d",
+  "split": "train",
+  "claim": "Lord of the Rings actor Elijah Wood starred alongside Paul Hogan in a movie that features Jessica Wesson is a supporting role.",
+  "evidencia": "Page: Flipper (1996 film). Sentence: Flipper is a 1996 adventure film remake of the 1963 film of the same name (which in turn begat a TV series that ran from 1964 to 1967), starring Paul Hogan and Elijah Wood.\nPage: Elijah Wood. Sentence: He is best known for his high-profile leading role as Frodo Baggins in Peter Jackson's epic film trilogy \"The Lord of the Rings\" (2001–03).\nPage: Jessica Wesson. Sentence: She is best known for her recurring role as Jennifer Sudarsky, Brad's (Zachery Ty Bryan) first girlfriend on the sitcom \"Home Improvement\", and having supporting roles in the Universal films \"Casper\" and \"Flipper\" in the 1990s.",
+  "evidence_text": "Page: Flipper (1996 film). Sentence: Flipper is a 1996 adventure film remake of the 1963 film of the same name (which in turn begat a TV series that ran from 1964 to 1967), starring Paul Hogan and Elijah Wood.\nPage: Elijah Wood. Sentence: He is best known for his high-profile leading role as Frodo Baggins in Peter Jackson's epic film trilogy \"The Lord of the Rings\" (2001–03).\nPage: Jessica Wesson. Sentence: She is best known for her recurring role as Jennifer Sudarsky, Brad's (Zachery Ty Bryan) first girlfriend on the sitcom \"Home Improvement\", and having supporting roles in the Universal films \"Casper\" and \"Flipper\" in the 1990s.",
+  "label": "SUPPORTED",
+  "num_hops": 3,
+  "hover_metadata": {
+    "supporting_facts": [
+      [
+        "Flipper (1996 film)",
+        0
+      ],
+      [
+        "Elijah Wood",
+        1
+      ],
+      [
+        "Jessica Wesson",
+        1
+      ]
+    ],
+    "num_hops": 3,
+    "evidence_annotation_id": [
+      0
+    ],
+    "evidence_id": [
+      "Flipper (1996 film)::sentence::0",
+      "Elijah Wood::sentence::1",
+      "Jessica Wesson::sentence::1"
+    ],
+    "evidence_wiki_url": [
+      "https://en.wikipedia.org/wiki/Flipper_%281996_film%29",
+      "https://en.wikipedia.org/wiki/Elijah_Wood",
+      "https://en.wikipedia.org/wiki/Jessica_Wesson"
+    ],
+    "evidence_sentence_id": [
+      "Flipper (1996 film)::sentence::0",
+      "Elijah Wood::sentence::1",
+      "Jessica Wesson::sentence::1"
+    ]
+  },
+  "grafo_claim": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "c815c51b-1403-503a-a486-3ca63b5fc391",
+        "text": "This chunk is about:\n- People: Elijah Wood, Paul Hogan, Jessica Wesson\n- Works: a film starring Elijah Wood and Paul Hogan\n\nFacts:\n- Elijah Wood is a Lord of the Rings actor.\n- Elijah Wood starred alongside Paul Hogan in a film.\n- Jessica Wesson had a supporting role in the same film as Elijah Wood and Paul Hogan.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "46d759ed-03ed-5813-8bf8-043364b31893",
+        "text": "Lord of the Rings actor Elijah Wood starred alongside Paul Hogan in a movie that features Jessica Wesson is a supporting role.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "6ee20142-b0d2-56b5-9fa6-7bffc9da0db1",
+        "text": "text_ac7172d691e23eecce914c8d634eee96",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "4d897d98-2cdf-53ef-9628-7b470176f108",
+        "text": "elijah wood",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "4085d521-7aad-523e-a92e-84cfa9a51107",
+        "text": "flipper",
+        "type": "Entity"
+      },
+      {
+        "id": 5,
+        "original_id": "1155038a-04d1-5d6a-9c60-e4f499a6913c",
+        "text": "movie",
+        "type": "EntityType"
+      },
+      {
+        "id": 6,
+        "original_id": "8af43709-cb26-50e3-9258-54aa6c63854f",
+        "text": "paul hogan",
+        "type": "Entity"
+      },
+      {
+        "id": 7,
+        "original_id": "99a82eec-bb35-5bb5-9ed2-e73fc7a756de",
+        "text": "person",
+        "type": "EntityType"
+      },
+      {
+        "id": 8,
+        "original_id": "c9c44ac7-7c50-504b-9b24-d25df433c0dc",
+        "text": "jessica wesson",
+        "type": "Entity"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "acted_in"
+      },
+      {
+        "source": 6,
+        "target": 4,
+        "type": "acted_in"
+      },
+      {
+        "source": 8,
+        "target": 4,
+        "type": "acted_in"
+      },
+      {
+        "source": 1,
+        "target": 4,
+        "type": "contains"
+      },
+      {
+        "source": 4,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 6,
+        "type": "starred_alongside"
+      },
+      {
+        "source": 1,
+        "target": 6,
+        "type": "contains"
+      },
+      {
+        "source": 6,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 8,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 8,
+        "type": "contains"
+      }
+    ]
+  },
+  "grafo_evidencia": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "bd4c0c45-5338-58da-9a54-a317a1b9a623",
+        "text": "This chunk is about:\n- Films: Flipper (1996), Flipper (1963), Casper, The Lord of the Rings film trilogy\n- Television: Flipper TV series, Home Improvement\n- People: Paul Hogan, Elijah Wood, Jessica Wesson, Peter Jackson, Zachery Ty Bryan\n- Characters/Roles: Frodo Baggins, Jennifer Sudarsky, Brad\n\nFacts:\n- The 1963 film Flipper later led to the Flipper television series, which ran from 1964 to 1967.\n- Flipper is a 1996 adventure film remake of the 1963 film Flipper.\n- The 1996 film Flipper stars Paul Hogan and Elijah Wood.\n- Peter Jackson's The Lord of the Rings film trilogy was released from 2001 to 2003.\n- Elijah Wood is best known for playing Frodo Baggins in Peter Jackson's The Lord of the Rings film trilogy.\n- In the 1990s, Jessica Wesson had supporting roles in the Universal films Casper and Flipper.\n- Jessica Wesson is also known for her recurring role as Jennifer Sudarsky, Brad's first girlfriend, on the sitcom Home Improvement.\n- Brad on Home Improvement was played by Zachery Ty Bryan.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "e50430a6-baea-5036-875d-b3c325eca7d9",
+        "text": "Page: Flipper (1996 film). Sentence: Flipper is a 1996 adventure film remake of the 1963 film of the same name (which in turn begat a TV series that ran from 1964 to 1967), starring Paul Hogan and Elijah Wood.\nPage: Elijah Wood. Sentence: He is best known for his high-profile leading role as Frodo Baggins in Peter Jackson's epic film trilogy \"The Lord of the Rings\" (2001–03).\nPage: Jessica Wesson. Sentence: She is best known for her recurring role as Jennifer Sudarsky, Brad's (Zachery Ty Bryan) first girlfriend on the sitcom \"Home Improvement\", and having supporting roles in the Universal films \"Casper\" and \"Flipper\" in the 1990s.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "11ab6cfb-a62b-57eb-a664-b9b4a6547a9d",
+        "text": "text_e2f87edbd60d1ebe0a498afa82686f99",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "b134d512-8818-550c-9507-04e4e698b375",
+        "text": "flipper (1996 film)",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "03508744-888e-5e4b-9a29-9ff87ae8d3b3",
+        "text": "1996",
+        "type": "Entity"
+      },
+      {
+        "id": 5,
+        "original_id": "b19433ae-558c-5aaf-95ac-6231f2a4be0e",
+        "text": "date",
+        "type": "EntityType"
+      },
+      {
+        "id": 6,
+        "original_id": "44e6d21f-8c9a-5493-a0c1-d7a5a6d6c4e9",
+        "text": "adventure film",
+        "type": "Entity"
+      },
+      {
+        "id": 7,
+        "original_id": "d8d36cdc-ccf4-5249-921a-ab373f0fb82a",
+        "text": "genre",
+        "type": "EntityType"
+      },
+      {
+        "id": 8,
+        "original_id": "badd6eee-d47b-519c-86e1-909890c7c9ed",
+        "text": "flipper (1963 film)",
+        "type": "Entity"
+      },
+      {
+        "id": 9,
+        "original_id": "1d57c19e-94e1-5bf9-aba5-5b5ce6aaa176",
+        "text": "1963",
+        "type": "Entity"
+      },
+      {
+        "id": 10,
+        "original_id": "e437b520-4402-504b-8235-46bec8d9c2a5",
+        "text": "flipper (tv series)",
+        "type": "Entity"
+      },
+      {
+        "id": 11,
+        "original_id": "f84b53f0-d68a-5f9c-b437-b5b836eed4d3",
+        "text": "1964",
+        "type": "Entity"
+      },
+      {
+        "id": 12,
+        "original_id": "f9e4a9ec-682c-5341-862a-1783ba768a49",
+        "text": "1967",
+        "type": "Entity"
+      },
+      {
+        "id": 13,
+        "original_id": "297a592b-9dd2-5517-ae2f-680c13c8a20e",
+        "text": "tv series",
+        "type": "EntityType"
+      },
+      {
+        "id": 14,
+        "original_id": "d320c8df-fd51-56e6-b577-e01a688fe6fc",
+        "text": "film",
+        "type": "EntityType"
+      },
+      {
+        "id": 15,
+        "original_id": "8af43709-cb26-50e3-9258-54aa6c63854f",
+        "text": "paul hogan",
+        "type": "Entity"
+      },
+      {
+        "id": 16,
+        "original_id": "99a82eec-bb35-5bb5-9ed2-e73fc7a756de",
+        "text": "person",
+        "type": "EntityType"
+      },
+      {
+        "id": 17,
+        "original_id": "4d897d98-2cdf-53ef-9628-7b470176f108",
+        "text": "elijah wood",
+        "type": "Entity"
+      },
+      {
+        "id": 18,
+        "original_id": "3e049d1f-6cd8-5662-8823-f4cc66d99ad7",
+        "text": "frodo baggins",
+        "type": "Entity"
+      },
+      {
+        "id": 19,
+        "original_id": "d3db161f-3fd9-5366-919b-ad9f9a1ba392",
+        "text": "character",
+        "type": "EntityType"
+      },
+      {
+        "id": 20,
+        "original_id": "28be02b9-9d24-5ca1-8bb1-a1f4cd8f48d7",
+        "text": "the lord of the rings film trilogy",
+        "type": "Entity"
+      },
+      {
+        "id": 21,
+        "original_id": "fb71d76e-bcc4-5eed-bfd8-54bcab071297",
+        "text": "peter jackson",
+        "type": "Entity"
+      },
+      {
+        "id": 22,
+        "original_id": "7bd3af1d-2fce-5267-8017-1300d5a6e9f4",
+        "text": "2001",
+        "type": "Entity"
+      },
+      {
+        "id": 23,
+        "original_id": "e243b5c4-48fe-5f0b-9d10-673d4ca025e7",
+        "text": "2003",
+        "type": "Entity"
+      },
+      {
+        "id": 24,
+        "original_id": "7cfe8b44-b28a-5568-9558-f06a2324b9f6",
+        "text": "film series",
+        "type": "EntityType"
+      },
+      {
+        "id": 25,
+        "original_id": "d0a0ea05-e0da-56de-b712-d4305fb2930a",
+        "text": "universal",
+        "type": "Entity"
+      },
+      {
+        "id": 26,
+        "original_id": "388f60fb-220d-55e8-ae9c-3ac93cead308",
+        "text": "organization",
+        "type": "EntityType"
+      },
+      {
+        "id": 27,
+        "original_id": "c9c44ac7-7c50-504b-9b24-d25df433c0dc",
+        "text": "jessica wesson",
+        "type": "Entity"
+      },
+      {
+        "id": 28,
+        "original_id": "6eaf66ea-5988-53ae-a570-9b8d7cdf0767",
+        "text": "jennifer sudarsky",
+        "type": "Entity"
+      },
+      {
+        "id": 29,
+        "original_id": "dd42168a-293c-596b-8cc6-6c8b281e4235",
+        "text": "home improvement",
+        "type": "Entity"
+      },
+      {
+        "id": 30,
+        "original_id": "40f5411e-7cea-53eb-9ecd-74202baa27c0",
+        "text": "brad",
+        "type": "Entity"
+      },
+      {
+        "id": 31,
+        "original_id": "210482e2-8b6a-5dd4-8ec9-922ab3c87292",
+        "text": "zachery ty bryan",
+        "type": "Entity"
+      },
+      {
+        "id": 32,
+        "original_id": "abd51bd0-d52a-5553-9152-761249ade037",
+        "text": "casper",
+        "type": "Entity"
+      },
+      {
+        "id": 33,
+        "original_id": "58482f88-ca6a-5c02-9088-4dbb1598f8f4",
+        "text": "1990s",
+        "type": "Entity"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 27,
+        "target": 3,
+        "type": "had_supporting_role_in"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "released_in"
+      },
+      {
+        "source": 1,
+        "target": 4,
+        "type": "contains"
+      },
+      {
+        "source": 4,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 9,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 11,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 12,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 22,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 23,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 33,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 6,
+        "type": "has_genre"
+      },
+      {
+        "source": 1,
+        "target": 6,
+        "type": "contains"
+      },
+      {
+        "source": 6,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 8,
+        "type": "remake_of"
+      },
+      {
+        "source": 1,
+        "target": 8,
+        "type": "contains"
+      },
+      {
+        "source": 8,
+        "target": 9,
+        "type": "released_in"
+      },
+      {
+        "source": 1,
+        "target": 9,
+        "type": "contains"
+      },
+      {
+        "source": 8,
+        "target": 10,
+        "type": "begat"
+      },
+      {
+        "source": 1,
+        "target": 10,
+        "type": "contains"
+      },
+      {
+        "source": 10,
+        "target": 11,
+        "type": "started_in"
+      },
+      {
+        "source": 1,
+        "target": 11,
+        "type": "contains"
+      },
+      {
+        "source": 10,
+        "target": 12,
+        "type": "ended_in"
+      },
+      {
+        "source": 1,
+        "target": 12,
+        "type": "contains"
+      },
+      {
+        "source": 10,
+        "target": 13,
+        "type": "is_a"
+      },
+      {
+        "source": 29,
+        "target": 13,
+        "type": "is_a"
+      },
+      {
+        "source": 8,
+        "target": 14,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 14,
+        "type": "is_a"
+      },
+      {
+        "source": 32,
+        "target": 14,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 15,
+        "type": "stars"
+      },
+      {
+        "source": 1,
+        "target": 15,
+        "type": "contains"
+      },
+      {
+        "source": 15,
+        "target": 16,
+        "type": "is_a"
+      },
+      {
+        "source": 21,
+        "target": 16,
+        "type": "is_a"
+      },
+      {
+        "source": 17,
+        "target": 16,
+        "type": "is_a"
+      },
+      {
+        "source": 31,
+        "target": 16,
+        "type": "is_a"
+      },
+      {
+        "source": 27,
+        "target": 16,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 17,
+        "type": "stars"
+      },
+      {
+        "source": 1,
+        "target": 17,
+        "type": "contains"
+      },
+      {
+        "source": 17,
+        "target": 18,
+        "type": "played"
+      },
+      {
+        "source": 1,
+        "target": 18,
+        "type": "contains"
+      },
+      {
+        "source": 18,
+        "target": 19,
+        "type": "is_a"
+      },
+      {
+        "source": 30,
+        "target": 19,
+        "type": "is_a"
+      },
+      {
+        "source": 28,
+        "target": 19,
+        "type": "is_a"
+      },
+      {
+        "source": 17,
+        "target": 20,
+        "type": "starred_in"
+      },
+      {
+        "source": 1,
+        "target": 20,
+        "type": "contains"
+      },
+      {
+        "source": 20,
+        "target": 21,
+        "type": "associated_with"
+      },
+      {
+        "source": 1,
+        "target": 21,
+        "type": "contains"
+      },
+      {
+        "source": 20,
+        "target": 22,
+        "type": "started_in"
+      },
+      {
+        "source": 1,
+        "target": 22,
+        "type": "contains"
+      },
+      {
+        "source": 20,
+        "target": 23,
+        "type": "ended_in"
+      },
+      {
+        "source": 1,
+        "target": 23,
+        "type": "contains"
+      },
+      {
+        "source": 20,
+        "target": 24,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 25,
+        "type": "released_by"
+      },
+      {
+        "source": 32,
+        "target": 25,
+        "type": "released_by"
+      },
+      {
+        "source": 1,
+        "target": 25,
+        "type": "contains"
+      },
+      {
+        "source": 25,
+        "target": 26,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 27,
+        "type": "contains"
+      },
+      {
+        "source": 27,
+        "target": 28,
+        "type": "played"
+      },
+      {
+        "source": 1,
+        "target": 28,
+        "type": "contains"
+      },
+      {
+        "source": 28,
+        "target": 29,
+        "type": "appears_in"
+      },
+      {
+        "source": 27,
+        "target": 29,
+        "type": "had_recurring_role_in"
+      },
+      {
+        "source": 1,
+        "target": 29,
+        "type": "contains"
+      },
+      {
+        "source": 28,
+        "target": 30,
+        "type": "first_girlfriend_of"
+      },
+      {
+        "source": 1,
+        "target": 30,
+        "type": "contains"
+      },
+      {
+        "source": 30,
+        "target": 31,
+        "type": "played_by"
+      },
+      {
+        "source": 1,
+        "target": 31,
+        "type": "contains"
+      },
+      {
+        "source": 27,
+        "target": 32,
+        "type": "had_supporting_role_in"
+      },
+      {
+        "source": 1,
+        "target": 32,
+        "type": "contains"
+      },
+      {
+        "source": 27,
+        "target": 33,
+        "type": "had_supporting_roles_in_during"
+      },
+      {
+        "source": 1,
+        "target": 33,
+        "type": "contains"
+      }
+    ]
+  }
+}

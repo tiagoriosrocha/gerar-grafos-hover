@@ -1,0 +1,295 @@
+{
+  "dataset": "hover",
+  "id": "bc7a5d86-3ce6-41ff-8d23-eb2c34e7dff6",
+  "split": "train",
+  "claim": "The Chien-gris is now extinct, while the Chinese Crested Dog is not.",
+  "evidencia": "Page: Chinese Crested Dog. Sentence: The Chinese crested dog is a hairless breed of dog.\nPage: Chinese Crested Dog. Sentence: Like most hairless dog breeds, the Chinese crested comes in two varieties, with and without fur, which are born in the same litter: the Powderpuff and the Hairless.\nPage: Chien-gris. Sentence: The Chien-gris a.k.a. Gris de Saint-Louis (\"Grey St. Louis Hound\") was a breed of dog, now extinct, which originated in Medieval times.",
+  "evidence_text": "Page: Chinese Crested Dog. Sentence: The Chinese crested dog is a hairless breed of dog.\nPage: Chinese Crested Dog. Sentence: Like most hairless dog breeds, the Chinese crested comes in two varieties, with and without fur, which are born in the same litter: the Powderpuff and the Hairless.\nPage: Chien-gris. Sentence: The Chien-gris a.k.a. Gris de Saint-Louis (\"Grey St. Louis Hound\") was a breed of dog, now extinct, which originated in Medieval times.",
+  "label": "SUPPORTED",
+  "num_hops": 2,
+  "hover_metadata": {
+    "supporting_facts": [
+      [
+        "Chinese Crested Dog",
+        0
+      ],
+      [
+        "Chinese Crested Dog",
+        1
+      ],
+      [
+        "Chien-gris",
+        0
+      ]
+    ],
+    "num_hops": 2,
+    "evidence_annotation_id": [
+      0
+    ],
+    "evidence_id": [
+      "Chinese Crested Dog::sentence::0",
+      "Chinese Crested Dog::sentence::1",
+      "Chien-gris::sentence::0"
+    ],
+    "evidence_wiki_url": [
+      "https://en.wikipedia.org/wiki/Chinese_Crested_Dog",
+      "https://en.wikipedia.org/wiki/Chien-gris"
+    ],
+    "evidence_sentence_id": [
+      "Chinese Crested Dog::sentence::0",
+      "Chinese Crested Dog::sentence::1",
+      "Chien-gris::sentence::0"
+    ]
+  },
+  "grafo_claim": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "a1ecf23e-c072-59d4-a6bc-4cbfb32f3f92",
+        "text": "This chunk is about:\n- Products: Chien-gris, Chinese Crested Dog\n- Concepts: Extinction status\n\nFacts:\n- The Chien-gris is extinct.\n- The Chinese Crested Dog is not extinct.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "b761ab57-738c-579a-8fb2-12aeb8d49210",
+        "text": "The Chien-gris is now extinct, while the Chinese Crested Dog is not.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "0d406221-609b-5ec7-ac94-9fd0febe0d0b",
+        "text": "text_b7a08e5d4746801bd5da2c0f91dfff56",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "77aebcb0-829c-5ec9-8adf-b54882f25ab8",
+        "text": "chien-gris",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "687b14b1-0232-50a7-9d8c-6469f64293f2",
+        "text": "chinese crested dog",
+        "type": "Entity"
+      },
+      {
+        "id": 5,
+        "original_id": "5d76eb72-04ef-5580-b2ea-161f8429437a",
+        "text": "animal",
+        "type": "EntityType"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "extinction_status_differs_from"
+      },
+      {
+        "source": 1,
+        "target": 4,
+        "type": "contains"
+      },
+      {
+        "source": 4,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "is_a"
+      }
+    ]
+  },
+  "grafo_evidencia": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "de84a56d-7c18-5bd2-a09d-a7492de69641",
+        "text": "This chunk is about:\n- Products: Chinese Crested Dog, Chien-gris\n- Concepts: hairless dog breeds, dog varieties, extinct breeds\n\nFacts:\n- The Chien-gris, also called Gris de Saint-Louis, was a dog breed that originated in Medieval times and is now extinct.\n- The Chinese Crested Dog is a hairless breed of dog.\n- The Chinese Crested Dog, like most hairless dog breeds, has two varieties born in the same litter: the Powderpuff and the Hairless.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "5d81c8ec-99f1-546e-b8d1-a1b2c1f2735d",
+        "text": "Page: Chinese Crested Dog. Sentence: The Chinese crested dog is a hairless breed of dog.\nPage: Chinese Crested Dog. Sentence: Like most hairless dog breeds, the Chinese crested comes in two varieties, with and without fur, which are born in the same litter: the Powderpuff and the Hairless.\nPage: Chien-gris. Sentence: The Chien-gris a.k.a. Gris de Saint-Louis (\"Grey St. Louis Hound\") was a breed of dog, now extinct, which originated in Medieval times.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "4cc25500-8a9b-5f5c-8de8-b59273138131",
+        "text": "text_b7ed49295b7c9e302bc294de03121ff0",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "687b14b1-0232-50a7-9d8c-6469f64293f2",
+        "text": "chinese crested dog",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "846a4057-9948-524e-b05f-99626c3556f9",
+        "text": "powderpuff",
+        "type": "Entity"
+      },
+      {
+        "id": 5,
+        "original_id": "eaa0997c-19ec-508f-a317-3a0a1d46dc6b",
+        "text": "dog variety",
+        "type": "EntityType"
+      },
+      {
+        "id": 6,
+        "original_id": "d6f294f2-0787-588b-8137-8ff21af95df1",
+        "text": "hairless",
+        "type": "Entity"
+      },
+      {
+        "id": 7,
+        "original_id": "29eda40d-66d5-59be-b17c-7c4969f51367",
+        "text": "dog breed",
+        "type": "EntityType"
+      },
+      {
+        "id": 8,
+        "original_id": "77aebcb0-829c-5ec9-8adf-b54882f25ab8",
+        "text": "chien-gris",
+        "type": "Entity"
+      },
+      {
+        "id": 9,
+        "original_id": "e5b04c71-46ba-5126-a311-c25bd7f028bd",
+        "text": "gris de saint-louis",
+        "type": "Entity"
+      },
+      {
+        "id": 10,
+        "original_id": "39575085-0710-527d-bd54-019de7b00429",
+        "text": "name",
+        "type": "EntityType"
+      },
+      {
+        "id": 11,
+        "original_id": "f160b87f-e92b-5ac4-a7ac-9bef6f1bde73",
+        "text": "medieval times",
+        "type": "Entity"
+      },
+      {
+        "id": 12,
+        "original_id": "006c260a-6b32-550b-a527-54cbc2e25601",
+        "text": "time period",
+        "type": "EntityType"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "has_variety"
+      },
+      {
+        "source": 1,
+        "target": 4,
+        "type": "contains"
+      },
+      {
+        "source": 4,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 6,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 6,
+        "type": "has_variety"
+      },
+      {
+        "source": 1,
+        "target": 6,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 8,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 8,
+        "type": "contains"
+      },
+      {
+        "source": 8,
+        "target": 9,
+        "type": "also_known_as"
+      },
+      {
+        "source": 1,
+        "target": 9,
+        "type": "contains"
+      },
+      {
+        "source": 9,
+        "target": 10,
+        "type": "is_a"
+      },
+      {
+        "source": 8,
+        "target": 11,
+        "type": "originated_in"
+      },
+      {
+        "source": 1,
+        "target": 11,
+        "type": "contains"
+      },
+      {
+        "source": 11,
+        "target": 12,
+        "type": "is_a"
+      }
+    ]
+  }
+}

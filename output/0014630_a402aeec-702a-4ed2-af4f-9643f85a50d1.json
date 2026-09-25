@@ -1,0 +1,316 @@
+{
+  "dataset": "hover",
+  "id": "a402aeec-702a-4ed2-af4f-9643f85a50d1",
+  "split": "train",
+  "claim": "This 55-year old company operates flights to Lufthansa destinations, on behalf of Lufthansa. Its headquarters are 4 km from the city center.",
+  "evidencia": "Page: PrivatAir. Sentence: PrivatAir is a Swiss airline operating business jets, headquartered at Geneva Airport in Meyrin.\nPage: Geneva Airport. Sentence: It is located 4 km northwest of the city centre.\nPage: Lufthansa destinations. Sentence: Flights operated on behalf of Lufthansa by PrivatAir are also listed.",
+  "evidence_text": "Page: PrivatAir. Sentence: PrivatAir is a Swiss airline operating business jets, headquartered at Geneva Airport in Meyrin.\nPage: Geneva Airport. Sentence: It is located 4 km northwest of the city centre.\nPage: Lufthansa destinations. Sentence: Flights operated on behalf of Lufthansa by PrivatAir are also listed.",
+  "label": "NOT_SUPPORTED",
+  "num_hops": 3,
+  "hover_metadata": {
+    "supporting_facts": [
+      [
+        "PrivatAir",
+        0
+      ],
+      [
+        "Geneva Airport",
+        1
+      ],
+      [
+        "Lufthansa destinations",
+        1
+      ]
+    ],
+    "num_hops": 3,
+    "evidence_annotation_id": [
+      0
+    ],
+    "evidence_id": [
+      "PrivatAir::sentence::0",
+      "Geneva Airport::sentence::1",
+      "Lufthansa destinations::sentence::1"
+    ],
+    "evidence_wiki_url": [
+      "https://en.wikipedia.org/wiki/PrivatAir",
+      "https://en.wikipedia.org/wiki/Geneva_Airport",
+      "https://en.wikipedia.org/wiki/Lufthansa_destinations"
+    ],
+    "evidence_sentence_id": [
+      "PrivatAir::sentence::0",
+      "Geneva Airport::sentence::1",
+      "Lufthansa destinations::sentence::1"
+    ]
+  },
+  "grafo_claim": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "ba8d37d3-9547-5cb6-a1b9-6c59b181fd94",
+        "text": "This chunk is about:\n- Companies: Lufthansa CityLine, Lufthansa\n- Places: Munich\n\nFacts:\n- Lufthansa CityLine is a 55-year-old company.\n- Lufthansa CityLine operates flights to Lufthansa destinations on behalf of Lufthansa.\n- Lufthansa CityLine has its headquarters in Munich.\n- Lufthansa CityLine's headquarters are 4 kilometers from Munich city center.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "09e37a7a-1ad6-55b9-9b28-a20ec4cf43f2",
+        "text": "This 55-year old company operates flights to Lufthansa destinations, on behalf of Lufthansa. Its headquarters are 4 km from the city center.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "96ec93e2-65b0-5ce9-9216-d92e02b1175b",
+        "text": "text_471de76ff80da89f72b01070715b03ff",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "2d3d9e4f-3a6c-582b-9cd6-41e12ba9189d",
+        "text": "lufthansa",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "388f60fb-220d-55e8-ae9c-3ac93cead308",
+        "text": "organization",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "b1e63f2e-c20a-538e-a106-977d3946f2ff",
+        "text": "55-year old company",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "cd9ec231-49c0-5444-8bd2-d3933d304ff9",
+        "text": "4 km from the city center",
+        "type": "Entity"
+      },
+      {
+        "id": 7,
+        "original_id": "5023586d-88a2-53f9-ad15-7e2ebd75eb4c",
+        "text": "location",
+        "type": "EntityType"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 3,
+        "type": "operates_flights_to_destinations_for"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 5,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "has_headquarters_at"
+      },
+      {
+        "source": 1,
+        "target": 6,
+        "type": "contains"
+      },
+      {
+        "source": 6,
+        "target": 7,
+        "type": "is_a"
+      }
+    ]
+  },
+  "grafo_evidencia": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "893b9995-2110-5d2c-af26-e00badf2c68e",
+        "text": "This chunk is about:\n- Companies: PrivatAir, Lufthansa\n- Places: Geneva Airport, Meyrin, Geneva city centre\n- Topics: Lufthansa destinations\n\nFacts:\n- PrivatAir is a Swiss airline that operates business jets.\n- PrivatAir is headquartered at Geneva Airport in Meyrin.\n- Geneva Airport is located 4 km northwest of Geneva city centre.\n- Flights operated by PrivatAir on behalf of Lufthansa are included in Lufthansa destinations.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "0eb4be13-e4cc-58dd-9e19-0ee134596e81",
+        "text": "Page: PrivatAir. Sentence: PrivatAir is a Swiss airline operating business jets, headquartered at Geneva Airport in Meyrin.\nPage: Geneva Airport. Sentence: It is located 4 km northwest of the city centre.\nPage: Lufthansa destinations. Sentence: Flights operated on behalf of Lufthansa by PrivatAir are also listed.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "b883c6b2-0c0d-5f57-96bd-7c153fd5af39",
+        "text": "text_50c955b4074f56533e0836cb313567b6",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "80bab9bb-3a88-5af5-8187-902c39ef4afb",
+        "text": "privatair",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "388f60fb-220d-55e8-ae9c-3ac93cead308",
+        "text": "organization",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "407d2a7f-7562-59fb-a556-934cd90a0107",
+        "text": "switzerland",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "5f394058-b2a0-5ba8-8466-ba2a18cfcf4e",
+        "text": "place",
+        "type": "EntityType"
+      },
+      {
+        "id": 7,
+        "original_id": "11f89eb1-3f95-5304-8b17-7da1add5c48e",
+        "text": "geneva airport",
+        "type": "Entity"
+      },
+      {
+        "id": 8,
+        "original_id": "3da1488f-a2f3-59a4-a2f3-3c0d584c8be6",
+        "text": "meyrin",
+        "type": "Entity"
+      },
+      {
+        "id": 9,
+        "original_id": "327cf0cb-13d6-53fe-b158-169c4b30daa2",
+        "text": "geneva city centre",
+        "type": "Entity"
+      },
+      {
+        "id": 10,
+        "original_id": "2d3d9e4f-3a6c-582b-9cd6-41e12ba9189d",
+        "text": "lufthansa",
+        "type": "Entity"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 10,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "based_in"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 7,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 8,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 9,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 7,
+        "type": "headquartered_at"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      },
+      {
+        "source": 7,
+        "target": 8,
+        "type": "located_in"
+      },
+      {
+        "source": 1,
+        "target": 8,
+        "type": "contains"
+      },
+      {
+        "source": 7,
+        "target": 9,
+        "type": "located_northwest_of"
+      },
+      {
+        "source": 1,
+        "target": 9,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 10,
+        "type": "operated_flights_on_behalf_of"
+      },
+      {
+        "source": 1,
+        "target": 10,
+        "type": "contains"
+      }
+    ]
+  }
+}

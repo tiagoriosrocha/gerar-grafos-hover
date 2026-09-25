@@ -1,0 +1,443 @@
+{
+  "dataset": "hover",
+  "id": "2d584d4f-f8f0-45a0-bf39-8520f0467eab",
+  "split": "train",
+  "claim": "The movie Sacred Planet came out after another film. Award winning actor Damion Poitier had a role in this other film.",
+  "evidencia": "Page: Snow Dogs. Sentence: Snow Dogs is a 2002 American Northern adventure comedy film directed by Brian Levant, and starring Cuba Gooding Jr. and James Coburn.\nPage: Sacred Planet. Sentence: Sacred Planet is a 2004 documentary directed by Jon Long and Hairul Salleh Askor.\nPage: Damion Poitier. Sentence: He has also had roles in \"\", \"Star Trek\", \"Jarhead\", and \"Snow Dogs\".",
+  "evidence_text": "Page: Snow Dogs. Sentence: Snow Dogs is a 2002 American Northern adventure comedy film directed by Brian Levant, and starring Cuba Gooding Jr. and James Coburn.\nPage: Sacred Planet. Sentence: Sacred Planet is a 2004 documentary directed by Jon Long and Hairul Salleh Askor.\nPage: Damion Poitier. Sentence: He has also had roles in \"\", \"Star Trek\", \"Jarhead\", and \"Snow Dogs\".",
+  "label": "NOT_SUPPORTED",
+  "num_hops": 3,
+  "hover_metadata": {
+    "supporting_facts": [
+      [
+        "Snow Dogs",
+        0
+      ],
+      [
+        "Sacred Planet",
+        0
+      ],
+      [
+        "Damion Poitier",
+        2
+      ]
+    ],
+    "num_hops": 3,
+    "evidence_annotation_id": [
+      0
+    ],
+    "evidence_id": [
+      "Snow Dogs::sentence::0",
+      "Sacred Planet::sentence::0",
+      "Damion Poitier::sentence::2"
+    ],
+    "evidence_wiki_url": [
+      "https://en.wikipedia.org/wiki/Snow_Dogs",
+      "https://en.wikipedia.org/wiki/Sacred_Planet",
+      "https://en.wikipedia.org/wiki/Damion_Poitier"
+    ],
+    "evidence_sentence_id": [
+      "Snow Dogs::sentence::0",
+      "Sacred Planet::sentence::0",
+      "Damion Poitier::sentence::2"
+    ]
+  },
+  "grafo_claim": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "75df9792-7fc3-5103-ab1b-016a0ff236cd",
+        "text": "This chunk is about:\n- Products: Sacred Planet\n- People: Damion Poitier\n- Topics: film release order, film cast\n\nFacts:\n- Sacred Planet was released after another film.\n- Damion Poitier had a role in the other film that was released before Sacred Planet.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "a78dea4b-2bf4-5204-83fc-a4d240c84ab8",
+        "text": "The movie Sacred Planet came out after another film. Award winning actor Damion Poitier had a role in this other film.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "a43ed3c0-ca77-56a0-95fe-a51106309cc3",
+        "text": "text_9a905b60ed979cf9a8c2e6e03108243c",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "b4bc1709-4f89-5858-bd21-b5b01aa702aa",
+        "text": "sacred planet",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "84a12336-6b0b-51ad-bb39-b3866ab822af",
+        "text": "other film",
+        "type": "Entity"
+      },
+      {
+        "id": 5,
+        "original_id": "1155038a-04d1-5d6a-9c60-e4f499a6913c",
+        "text": "movie",
+        "type": "EntityType"
+      },
+      {
+        "id": 6,
+        "original_id": "360d6224-3383-516b-a028-ca3c8493c26f",
+        "text": "damion poitier",
+        "type": "Entity"
+      },
+      {
+        "id": 7,
+        "original_id": "99a82eec-bb35-5bb5-9ed2-e73fc7a756de",
+        "text": "person",
+        "type": "EntityType"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "came_out_after"
+      },
+      {
+        "source": 6,
+        "target": 4,
+        "type": "had_role_in"
+      },
+      {
+        "source": 1,
+        "target": 4,
+        "type": "contains"
+      },
+      {
+        "source": 4,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 6,
+        "type": "contains"
+      },
+      {
+        "source": 6,
+        "target": 7,
+        "type": "is_a"
+      }
+    ]
+  },
+  "grafo_evidencia": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "57c971c9-f95e-558a-b21b-ad047beeae01",
+        "text": "This chunk is about:\n- Products: Snow Dogs, Sacred Planet\n- People: Brian Levant, Cuba Gooding Jr., James Coburn, Jon Long, Hairul Salleh Askor, Damion Poitier\n- Topics: film roles, film directing\n\nFacts:\n- Snow Dogs is a 2002 American Northern adventure comedy film directed by Brian Levant and starring Cuba Gooding Jr. and James Coburn.\n- Sacred Planet is a 2004 documentary directed by Jon Long and Hairul Salleh Askor.\n- Damion Poitier has had a role in Snow Dogs.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "6fe81edc-81f7-5d4f-9f5e-a3ed2bbe898c",
+        "text": "Page: Snow Dogs. Sentence: Snow Dogs is a 2002 American Northern adventure comedy film directed by Brian Levant, and starring Cuba Gooding Jr. and James Coburn.\nPage: Sacred Planet. Sentence: Sacred Planet is a 2004 documentary directed by Jon Long and Hairul Salleh Askor.\nPage: Damion Poitier. Sentence: He has also had roles in \"\", \"Star Trek\", \"Jarhead\", and \"Snow Dogs\".",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "7e0ee48c-4cf4-5a71-9d46-4cbec8cdacd6",
+        "text": "text_868431c7dc6ce197f00e287b08f34231",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "e60f13d4-8cfa-5216-aa6b-3e1fccba39c1",
+        "text": "snow dogs",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "d4028376-9599-5def-be60-886e367316ac",
+        "text": "2002",
+        "type": "Entity"
+      },
+      {
+        "id": 5,
+        "original_id": "b19433ae-558c-5aaf-95ac-6231f2a4be0e",
+        "text": "date",
+        "type": "EntityType"
+      },
+      {
+        "id": 6,
+        "original_id": "f55492fd-2d90-5fc6-80da-db9790b7e49d",
+        "text": "brian levant",
+        "type": "Entity"
+      },
+      {
+        "id": 7,
+        "original_id": "99a82eec-bb35-5bb5-9ed2-e73fc7a756de",
+        "text": "person",
+        "type": "EntityType"
+      },
+      {
+        "id": 8,
+        "original_id": "a36a23f7-e643-5a60-bf9f-ac03c476d4af",
+        "text": "cuba gooding jr.",
+        "type": "Entity"
+      },
+      {
+        "id": 9,
+        "original_id": "a935a05b-d647-5e46-9db3-1d567936cb28",
+        "text": "james coburn",
+        "type": "Entity"
+      },
+      {
+        "id": 10,
+        "original_id": "5263a535-1b4b-5925-be3e-310d03cd303b",
+        "text": "work",
+        "type": "EntityType"
+      },
+      {
+        "id": 11,
+        "original_id": "b4bc1709-4f89-5858-bd21-b5b01aa702aa",
+        "text": "sacred planet",
+        "type": "Entity"
+      },
+      {
+        "id": 12,
+        "original_id": "559b7176-da84-5102-a855-b896617a9c3b",
+        "text": "2004",
+        "type": "Entity"
+      },
+      {
+        "id": 13,
+        "original_id": "67254830-df0c-53bf-ad39-628bbbed9046",
+        "text": "jon long",
+        "type": "Entity"
+      },
+      {
+        "id": 14,
+        "original_id": "4b3d6c29-0a7c-5fd7-9cc6-a0e6ad95e83f",
+        "text": "hairul salleh askor",
+        "type": "Entity"
+      },
+      {
+        "id": 15,
+        "original_id": "360d6224-3383-516b-a028-ca3c8493c26f",
+        "text": "damion poitier",
+        "type": "Entity"
+      },
+      {
+        "id": 16,
+        "original_id": "6c3c47e0-7771-5d09-839b-f0243e88d1b5",
+        "text": "star trek",
+        "type": "Entity"
+      },
+      {
+        "id": 17,
+        "original_id": "e468f8c4-eb5b-5fd7-9689-fe0cced79e4b",
+        "text": "jarhead",
+        "type": "Entity"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 15,
+        "target": 3,
+        "type": "acted_in"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "released_in"
+      },
+      {
+        "source": 1,
+        "target": 4,
+        "type": "contains"
+      },
+      {
+        "source": 4,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 12,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 6,
+        "type": "directed_by"
+      },
+      {
+        "source": 1,
+        "target": 6,
+        "type": "contains"
+      },
+      {
+        "source": 6,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 8,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 9,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 13,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 14,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 15,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 8,
+        "type": "starred_actor"
+      },
+      {
+        "source": 1,
+        "target": 8,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 9,
+        "type": "starred_actor"
+      },
+      {
+        "source": 1,
+        "target": 9,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 10,
+        "type": "is_a"
+      },
+      {
+        "source": 11,
+        "target": 10,
+        "type": "is_a"
+      },
+      {
+        "source": 16,
+        "target": 10,
+        "type": "is_a"
+      },
+      {
+        "source": 17,
+        "target": 10,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 11,
+        "type": "contains"
+      },
+      {
+        "source": 11,
+        "target": 12,
+        "type": "released_in"
+      },
+      {
+        "source": 1,
+        "target": 12,
+        "type": "contains"
+      },
+      {
+        "source": 11,
+        "target": 13,
+        "type": "directed_by"
+      },
+      {
+        "source": 1,
+        "target": 13,
+        "type": "contains"
+      },
+      {
+        "source": 11,
+        "target": 14,
+        "type": "directed_by"
+      },
+      {
+        "source": 1,
+        "target": 14,
+        "type": "contains"
+      },
+      {
+        "source": 1,
+        "target": 15,
+        "type": "contains"
+      },
+      {
+        "source": 15,
+        "target": 16,
+        "type": "acted_in"
+      },
+      {
+        "source": 1,
+        "target": 16,
+        "type": "contains"
+      },
+      {
+        "source": 15,
+        "target": 17,
+        "type": "acted_in"
+      },
+      {
+        "source": 1,
+        "target": 17,
+        "type": "contains"
+      }
+    ]
+  }
+}

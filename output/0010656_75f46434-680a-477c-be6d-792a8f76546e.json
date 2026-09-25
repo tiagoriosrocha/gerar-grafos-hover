@@ -1,0 +1,617 @@
+{
+  "dataset": "hover",
+  "id": "75f46434-680a-477c-be6d-792a8f76546e",
+  "split": "train",
+  "claim": "The American Pre-Code comedy film featuring an American actress, dancer, and singer, widely known for performing in films and RKO's musical films, was released in 1932.",
+  "evidencia": "Page: Hat Check Girl. Sentence: Hat Check Girl is a 1932 American Pre-Code comedy film directed by Sidney Lanfield and written by Barry Conners and Philip Klein.\nPage: Hat Check Girl. Sentence: The film stars Sally Eilers, Ben Lyon, Ginger Rogers and Monroe Owsley.\nPage: Ginger Rogers. Sentence: Ginger Rogers (born Virginia Katherine McMath; July 16, 1911 – April 25, 1995) was an American actress, dancer, and singer, widely known for performing in films and RKO's musical films, partnered with Fred Astaire.",
+  "evidence_text": "Page: Hat Check Girl. Sentence: Hat Check Girl is a 1932 American Pre-Code comedy film directed by Sidney Lanfield and written by Barry Conners and Philip Klein.\nPage: Hat Check Girl. Sentence: The film stars Sally Eilers, Ben Lyon, Ginger Rogers and Monroe Owsley.\nPage: Ginger Rogers. Sentence: Ginger Rogers (born Virginia Katherine McMath; July 16, 1911 – April 25, 1995) was an American actress, dancer, and singer, widely known for performing in films and RKO's musical films, partnered with Fred Astaire.",
+  "label": "SUPPORTED",
+  "num_hops": 2,
+  "hover_metadata": {
+    "supporting_facts": [
+      [
+        "Hat Check Girl",
+        0
+      ],
+      [
+        "Hat Check Girl",
+        1
+      ],
+      [
+        "Ginger Rogers",
+        0
+      ]
+    ],
+    "num_hops": 2,
+    "evidence_annotation_id": [
+      0
+    ],
+    "evidence_id": [
+      "Hat Check Girl::sentence::0",
+      "Hat Check Girl::sentence::1",
+      "Ginger Rogers::sentence::0"
+    ],
+    "evidence_wiki_url": [
+      "https://en.wikipedia.org/wiki/Hat_Check_Girl",
+      "https://en.wikipedia.org/wiki/Ginger_Rogers"
+    ],
+    "evidence_sentence_id": [
+      "Hat Check Girl::sentence::0",
+      "Hat Check Girl::sentence::1",
+      "Ginger Rogers::sentence::0"
+    ]
+  },
+  "grafo_claim": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "21446c98-d6cc-54db-8f32-2264adf6bd93",
+        "text": "This chunk is about:\n- People: Ginger Rogers\n- Films: 1932 American pre-Code comedy film\n- Companies: RKO\n\nFacts:\n- Ginger Rogers was an American actress, dancer, and singer.\n- Ginger Rogers was widely known for performing in films and in RKO's musical films.\n- The American pre-Code comedy film featuring Ginger Rogers was released in 1932.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "2b6d0fbe-a68d-5c39-8066-e6c7fb36db9b",
+        "text": "The American Pre-Code comedy film featuring an American actress, dancer, and singer, widely known for performing in films and RKO's musical films, was released in 1932.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "4fdb72dd-e53a-5ebd-955e-8528ce5606cb",
+        "text": "text_9ab9b68953ea06a783616abf5fad3482",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "3ea7b2af-6f3e-50b9-a1d9-b44fd729c55c",
+        "text": "american pre-code comedy film",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "5263a535-1b4b-5925-be3e-310d03cd303b",
+        "text": "work",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "f16228b4-4939-543d-a024-20d778303f39",
+        "text": "1932",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "b19433ae-558c-5aaf-95ac-6231f2a4be0e",
+        "text": "date",
+        "type": "EntityType"
+      },
+      {
+        "id": 7,
+        "original_id": "d34e3b92-f38a-562f-826e-5307326cb013",
+        "text": "american actress, dancer, and singer",
+        "type": "Entity"
+      },
+      {
+        "id": 8,
+        "original_id": "99a82eec-bb35-5bb5-9ed2-e73fc7a756de",
+        "text": "person",
+        "type": "EntityType"
+      },
+      {
+        "id": 9,
+        "original_id": "0f75af87-ce71-5237-9a96-0208ac27137d",
+        "text": "rkos musical films",
+        "type": "Entity"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 9,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "released_in"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 7,
+        "type": "features"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      },
+      {
+        "source": 7,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 7,
+        "target": 9,
+        "type": "known_for_performing_in"
+      },
+      {
+        "source": 1,
+        "target": 9,
+        "type": "contains"
+      }
+    ]
+  },
+  "grafo_evidencia": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "7ac3127d-f6dc-5e22-9bd1-b6f8ae875801",
+        "text": "This chunk is about:\n- Works: Hat Check Girl\n- People: Sidney Lanfield, Barry Conners, Philip Klein, Sally Eilers, Ben Lyon, Ginger Rogers, Monroe Owsley, Fred Astaire\n- Concepts: American Pre-Code comedy films, RKO musical films\n\nFacts:\n- Ginger Rogers was born as Virginia Katherine McMath on July 16, 1911, and she died on April 25, 1995.\n- Hat Check Girl is a 1932 American Pre-Code comedy film.\n- Hat Check Girl was directed by Sidney Lanfield and written by Barry Conners and Philip Klein.\n- Hat Check Girl stars Sally Eilers, Ben Lyon, Ginger Rogers, and Monroe Owsley.\n- Ginger Rogers was an American actress, dancer, and singer.\n- Ginger Rogers was widely known for performing in films and in RKO musical films with Fred Astaire.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "f926a8c7-a76d-56ba-91e3-eee114eccf4d",
+        "text": "Page: Hat Check Girl. Sentence: Hat Check Girl is a 1932 American Pre-Code comedy film directed by Sidney Lanfield and written by Barry Conners and Philip Klein.\nPage: Hat Check Girl. Sentence: The film stars Sally Eilers, Ben Lyon, Ginger Rogers and Monroe Owsley.\nPage: Ginger Rogers. Sentence: Ginger Rogers (born Virginia Katherine McMath; July 16, 1911 – April 25, 1995) was an American actress, dancer, and singer, widely known for performing in films and RKO's musical films, partnered with Fred Astaire.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "497d48e6-bd9b-5ab7-b67b-3fa47d96c112",
+        "text": "text_bfa7ca8b4e0f42f2e8e8ed120c358be3",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "212820e8-60c2-5c90-b3b4-81cb59309610",
+        "text": "hat check girl",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "d320c8df-fd51-56e6-b577-e01a688fe6fc",
+        "text": "film",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "f16228b4-4939-543d-a024-20d778303f39",
+        "text": "1932",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "b19433ae-558c-5aaf-95ac-6231f2a4be0e",
+        "text": "date",
+        "type": "EntityType"
+      },
+      {
+        "id": 7,
+        "original_id": "32e5ea46-cca9-5920-8b2d-77357f10ce8d",
+        "text": "american",
+        "type": "Entity"
+      },
+      {
+        "id": 8,
+        "original_id": "d2a381fa-3658-5ca6-ada9-2109cfc9331d",
+        "text": "concept",
+        "type": "EntityType"
+      },
+      {
+        "id": 9,
+        "original_id": "69cc4cfc-0a3b-5753-948a-8955779eb6e1",
+        "text": "sidney lanfield",
+        "type": "Entity"
+      },
+      {
+        "id": 10,
+        "original_id": "99a82eec-bb35-5bb5-9ed2-e73fc7a756de",
+        "text": "person",
+        "type": "EntityType"
+      },
+      {
+        "id": 11,
+        "original_id": "ba272b7e-8a09-507d-b965-42d976fff42b",
+        "text": "barry conners",
+        "type": "Entity"
+      },
+      {
+        "id": 12,
+        "original_id": "db902813-3255-53fe-8c7b-cfea901e070a",
+        "text": "philip klein",
+        "type": "Entity"
+      },
+      {
+        "id": 13,
+        "original_id": "b20af729-871d-5d26-875a-08e2cd23ea9a",
+        "text": "sally eilers",
+        "type": "Entity"
+      },
+      {
+        "id": 14,
+        "original_id": "b76d47f7-fbeb-5ea6-9cb8-65772b12803b",
+        "text": "ben lyon",
+        "type": "Entity"
+      },
+      {
+        "id": 15,
+        "original_id": "be82352c-66db-503d-b25d-5e414f110bc6",
+        "text": "ginger rogers",
+        "type": "Entity"
+      },
+      {
+        "id": 16,
+        "original_id": "98fe7add-354d-5958-97d7-b9068b8b9b8a",
+        "text": "virginia katherine mcmath",
+        "type": "Entity"
+      },
+      {
+        "id": 17,
+        "original_id": "f4743e52-6e46-5be7-a671-8ffc4e9f200a",
+        "text": "1911-07-16",
+        "type": "Entity"
+      },
+      {
+        "id": 18,
+        "original_id": "ec1f7f80-e1f4-5a43-ac22-889f61bdbb96",
+        "text": "1995-04-25",
+        "type": "Entity"
+      },
+      {
+        "id": 19,
+        "original_id": "be064bd7-d09a-5d92-8597-34373f35ef55",
+        "text": "actress",
+        "type": "Entity"
+      },
+      {
+        "id": 20,
+        "original_id": "da0f6550-4a15-5575-b7eb-cea128789e7f",
+        "text": "dancer",
+        "type": "Entity"
+      },
+      {
+        "id": 21,
+        "original_id": "eab5737a-cd7b-5a0b-b6f7-660bb3ed3495",
+        "text": "singer",
+        "type": "Entity"
+      },
+      {
+        "id": 22,
+        "original_id": "9ef59dd1-29c1-551b-b44e-b64ed9e0029e",
+        "text": "fred astaire",
+        "type": "Entity"
+      },
+      {
+        "id": 23,
+        "original_id": "0f75af87-ce71-5237-9a96-0208ac27137d",
+        "text": "rkos musical films",
+        "type": "Entity"
+      },
+      {
+        "id": 24,
+        "original_id": "5263a535-1b4b-5925-be3e-310d03cd303b",
+        "text": "work",
+        "type": "EntityType"
+      },
+      {
+        "id": 25,
+        "original_id": "8f727306-618e-5ab8-80b3-660b22a182eb",
+        "text": "monroe owsley",
+        "type": "Entity"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "released_in"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 17,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 18,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 7,
+        "type": "has_nationality"
+      },
+      {
+        "source": 15,
+        "target": 7,
+        "type": "has_nationality"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      },
+      {
+        "source": 7,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 19,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 20,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 21,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 9,
+        "type": "directed_by"
+      },
+      {
+        "source": 1,
+        "target": 9,
+        "type": "contains"
+      },
+      {
+        "source": 9,
+        "target": 10,
+        "type": "is_a"
+      },
+      {
+        "source": 11,
+        "target": 10,
+        "type": "is_a"
+      },
+      {
+        "source": 12,
+        "target": 10,
+        "type": "is_a"
+      },
+      {
+        "source": 13,
+        "target": 10,
+        "type": "is_a"
+      },
+      {
+        "source": 14,
+        "target": 10,
+        "type": "is_a"
+      },
+      {
+        "source": 15,
+        "target": 10,
+        "type": "is_a"
+      },
+      {
+        "source": 16,
+        "target": 10,
+        "type": "is_a"
+      },
+      {
+        "source": 22,
+        "target": 10,
+        "type": "is_a"
+      },
+      {
+        "source": 25,
+        "target": 10,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 11,
+        "type": "written_by"
+      },
+      {
+        "source": 1,
+        "target": 11,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 12,
+        "type": "written_by"
+      },
+      {
+        "source": 1,
+        "target": 12,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 13,
+        "type": "stars"
+      },
+      {
+        "source": 1,
+        "target": 13,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 14,
+        "type": "stars"
+      },
+      {
+        "source": 1,
+        "target": 14,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 15,
+        "type": "stars"
+      },
+      {
+        "source": 1,
+        "target": 15,
+        "type": "contains"
+      },
+      {
+        "source": 15,
+        "target": 16,
+        "type": "born_as"
+      },
+      {
+        "source": 1,
+        "target": 16,
+        "type": "contains"
+      },
+      {
+        "source": 15,
+        "target": 17,
+        "type": "born_on"
+      },
+      {
+        "source": 1,
+        "target": 17,
+        "type": "contains"
+      },
+      {
+        "source": 15,
+        "target": 18,
+        "type": "died_on"
+      },
+      {
+        "source": 1,
+        "target": 18,
+        "type": "contains"
+      },
+      {
+        "source": 15,
+        "target": 19,
+        "type": "has_profession"
+      },
+      {
+        "source": 1,
+        "target": 19,
+        "type": "contains"
+      },
+      {
+        "source": 15,
+        "target": 20,
+        "type": "has_profession"
+      },
+      {
+        "source": 1,
+        "target": 20,
+        "type": "contains"
+      },
+      {
+        "source": 15,
+        "target": 21,
+        "type": "has_profession"
+      },
+      {
+        "source": 1,
+        "target": 21,
+        "type": "contains"
+      },
+      {
+        "source": 15,
+        "target": 22,
+        "type": "partnered_with"
+      },
+      {
+        "source": 1,
+        "target": 22,
+        "type": "contains"
+      },
+      {
+        "source": 15,
+        "target": 23,
+        "type": "performed_in"
+      },
+      {
+        "source": 1,
+        "target": 23,
+        "type": "contains"
+      },
+      {
+        "source": 23,
+        "target": 24,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 25,
+        "type": "stars"
+      },
+      {
+        "source": 1,
+        "target": 25,
+        "type": "contains"
+      }
+    ]
+  }
+}

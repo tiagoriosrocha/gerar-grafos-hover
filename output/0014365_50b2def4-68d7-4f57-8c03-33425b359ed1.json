@@ -1,0 +1,355 @@
+{
+  "dataset": "hover",
+  "id": "50b2def4-68d7-4f57-8c03-33425b359ed1",
+  "split": "train",
+  "claim": "The kind of company that this group, whose headquarters are in the former Furama Hong Kong Hotel, is a pan-Asian life insurance group.",
+  "evidencia": "Page: AIA Central. Sentence: The AIA Central (), formerly called AIG Tower (), in Hong Kong is a 185-metre (607 ft.), 37-storey skyscraper that was completed in 2005 and serves as the headquarters of AIA Group.\nPage: AIA Group. Sentence: known as AIA () is the largest independent public listed pan-Asian life insurance group.\nPage: Furama Hong Kong Hotel. Sentence: The site is now occupied by the AIA Central office building.",
+  "evidence_text": "Page: AIA Central. Sentence: The AIA Central (), formerly called AIG Tower (), in Hong Kong is a 185-metre (607 ft.), 37-storey skyscraper that was completed in 2005 and serves as the headquarters of AIA Group.\nPage: AIA Group. Sentence: known as AIA () is the largest independent public listed pan-Asian life insurance group.\nPage: Furama Hong Kong Hotel. Sentence: The site is now occupied by the AIA Central office building.",
+  "label": "SUPPORTED",
+  "num_hops": 3,
+  "hover_metadata": {
+    "supporting_facts": [
+      [
+        "AIA Central",
+        0
+      ],
+      [
+        "AIA Group",
+        0
+      ],
+      [
+        "Furama Hong Kong Hotel",
+        2
+      ]
+    ],
+    "num_hops": 3,
+    "evidence_annotation_id": [
+      0
+    ],
+    "evidence_id": [
+      "AIA Central::sentence::0",
+      "AIA Group::sentence::0",
+      "Furama Hong Kong Hotel::sentence::2"
+    ],
+    "evidence_wiki_url": [
+      "https://en.wikipedia.org/wiki/AIA_Central",
+      "https://en.wikipedia.org/wiki/AIA_Group",
+      "https://en.wikipedia.org/wiki/Furama_Hong_Kong_Hotel"
+    ],
+    "evidence_sentence_id": [
+      "AIA Central::sentence::0",
+      "AIA Group::sentence::0",
+      "Furama Hong Kong Hotel::sentence::2"
+    ]
+  },
+  "grafo_claim": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "58031c2b-4490-5474-a1e6-b5f1e7490905",
+        "text": "This chunk is about:\n- Companies: Furama Hotels International, AIA Group\n- Places: Furama Hong Kong Hotel\n\nFacts:\n- Furama Hotels International was headquartered in the former Furama Hong Kong Hotel.\n- AIA Group is a pan-Asian life insurance group.\n- The group headquartered in the former Furama Hong Kong Hotel is AIA Group.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "18088d09-7002-5966-8b5e-2ebc34e52d9c",
+        "text": "The kind of company that this group, whose headquarters are in the former Furama Hong Kong Hotel, is a pan-Asian life insurance group.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "3bd024ec-b1e8-58cf-b550-3e2fb0ba2a4d",
+        "text": "text_365a2f4ca7b2b1a61ea4e53421c1879b",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "e660dbbe-fb5e-5907-93db-7d6fe7e0beb5",
+        "text": "this group",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "82bfc922-4fcd-56b0-b353-7b550b51389d",
+        "text": "company",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "aa612b24-c706-5723-9c20-d6b8fdafafb5",
+        "text": "former furama hong kong hotel",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "5f394058-b2a0-5ba8-8466-ba2a18cfcf4e",
+        "text": "place",
+        "type": "EntityType"
+      },
+      {
+        "id": 7,
+        "original_id": "5d087c0c-f4e2-5050-9415-e8f8f8423559",
+        "text": "pan-asian life insurance group",
+        "type": "Entity"
+      },
+      {
+        "id": 8,
+        "original_id": "d2a381fa-3658-5ca6-ada9-2109cfc9331d",
+        "text": "concept",
+        "type": "EntityType"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "has_headquarters_in"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      },
+      {
+        "source": 7,
+        "target": 8,
+        "type": "is_a"
+      }
+    ]
+  },
+  "grafo_evidencia": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "1fe68416-4d63-534a-a250-b042e5949c25",
+        "text": "This chunk is about:\n- Places: Hong Kong\n- Buildings: AIA Central, AIG Tower, Furama Hong Kong Hotel\n- Companies: AIA Group\n\nFacts:\n- In 2005, AIA Central in Hong Kong was completed as a 185-metre, 37-storey skyscraper.\n- AIA Central in Hong Kong was formerly called AIG Tower.\n- AIA Central serves as the headquarters of AIA Group.\n- AIA Group is the largest independent publicly listed pan-Asian life insurance group.\n- The site of the former Furama Hong Kong Hotel is now occupied by the AIA Central office building.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "578d6db7-81bf-5bdd-8f6f-a813cb693bab",
+        "text": "Page: AIA Central. Sentence: The AIA Central (), formerly called AIG Tower (), in Hong Kong is a 185-metre (607 ft.), 37-storey skyscraper that was completed in 2005 and serves as the headquarters of AIA Group.\nPage: AIA Group. Sentence: known as AIA () is the largest independent public listed pan-Asian life insurance group.\nPage: Furama Hong Kong Hotel. Sentence: The site is now occupied by the AIA Central office building.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "ba1b19d9-6514-50bc-bdaf-f962fb53915a",
+        "text": "text_7bb3feb8102290586e9ecdf2bd5906e7",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "3c1bd37f-3ce5-5256-a2f4-90324550a87d",
+        "text": "aia central",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "b011d686-ca3a-5398-b03c-f44518808ad9",
+        "text": "building",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "670a90d8-24f1-5644-8dae-b205b1f87053",
+        "text": "aig tower",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "2f1ebd4c-24ba-5453-92b3-7c21bf3f65a8",
+        "text": "hong kong",
+        "type": "Entity"
+      },
+      {
+        "id": 7,
+        "original_id": "5f394058-b2a0-5ba8-8466-ba2a18cfcf4e",
+        "text": "place",
+        "type": "EntityType"
+      },
+      {
+        "id": 8,
+        "original_id": "c134b9c3-6b55-5a5a-b8ca-c2f1a633a648",
+        "text": "2005",
+        "type": "Entity"
+      },
+      {
+        "id": 9,
+        "original_id": "b19433ae-558c-5aaf-95ac-6231f2a4be0e",
+        "text": "date",
+        "type": "EntityType"
+      },
+      {
+        "id": 10,
+        "original_id": "c52cd0b9-613d-5b2d-9e37-bc77c3320108",
+        "text": "aia group",
+        "type": "Entity"
+      },
+      {
+        "id": 11,
+        "original_id": "388f60fb-220d-55e8-ae9c-3ac93cead308",
+        "text": "organization",
+        "type": "EntityType"
+      },
+      {
+        "id": 12,
+        "original_id": "08354735-7545-5590-acc6-587c1693a530",
+        "text": "aia",
+        "type": "Entity"
+      },
+      {
+        "id": 13,
+        "original_id": "5ce69290-42a5-5fbe-b9a3-edbe0e7cb438",
+        "text": "furama hong kong hotel site",
+        "type": "Entity"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 5,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "formerly_called"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 6,
+        "type": "located_in"
+      },
+      {
+        "source": 1,
+        "target": 6,
+        "type": "contains"
+      },
+      {
+        "source": 6,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 13,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 8,
+        "type": "completed_in"
+      },
+      {
+        "source": 1,
+        "target": 8,
+        "type": "contains"
+      },
+      {
+        "source": 8,
+        "target": 9,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 10,
+        "type": "serves_as_headquarters_of"
+      },
+      {
+        "source": 1,
+        "target": 10,
+        "type": "contains"
+      },
+      {
+        "source": 10,
+        "target": 11,
+        "type": "is_a"
+      },
+      {
+        "source": 12,
+        "target": 11,
+        "type": "is_a"
+      },
+      {
+        "source": 10,
+        "target": 12,
+        "type": "known_as"
+      },
+      {
+        "source": 1,
+        "target": 12,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 13,
+        "type": "occupies_site"
+      },
+      {
+        "source": 1,
+        "target": 13,
+        "type": "contains"
+      }
+    ]
+  }
+}

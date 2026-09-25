@@ -1,0 +1,412 @@
+{
+  "dataset": "hover",
+  "id": "09f87f55-8462-4df4-a574-13434a6c17eb",
+  "split": "train",
+  "claim": "Nick Bantock and James Jones are both authors.",
+  "evidencia": "Page: Nick Bantock. Sentence: Nick Bantock (born 14 July 1949) is a British artist and author based in Saltspring Island, British Columbia, known for his series, \"The Griffin and Sabine Trilogy\".\nPage: James Jones (author). Sentence: James Ramon Jones (November 6, 1921 – May 9, 1977) was an American novelist known for his explorations of World War II and its aftermath.",
+  "evidence_text": "Page: Nick Bantock. Sentence: Nick Bantock (born 14 July 1949) is a British artist and author based in Saltspring Island, British Columbia, known for his series, \"The Griffin and Sabine Trilogy\".\nPage: James Jones (author). Sentence: James Ramon Jones (November 6, 1921 – May 9, 1977) was an American novelist known for his explorations of World War II and its aftermath.",
+  "label": "SUPPORTED",
+  "num_hops": 2,
+  "hover_metadata": {
+    "supporting_facts": [
+      [
+        "Nick Bantock",
+        0
+      ],
+      [
+        "James Jones (author)",
+        0
+      ]
+    ],
+    "num_hops": 2,
+    "evidence_annotation_id": [
+      0
+    ],
+    "evidence_id": [
+      "Nick Bantock::sentence::0",
+      "James Jones (author)::sentence::0"
+    ],
+    "evidence_wiki_url": [
+      "https://en.wikipedia.org/wiki/Nick_Bantock",
+      "https://en.wikipedia.org/wiki/James_Jones_%28author%29"
+    ],
+    "evidence_sentence_id": [
+      "Nick Bantock::sentence::0",
+      "James Jones (author)::sentence::0"
+    ]
+  },
+  "grafo_claim": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "c1b6edfc-ff4e-54e7-8051-ea50746136b6",
+        "text": "This chunk is about:\n- People: Nick Bantock, James Jones\n- Roles: Authors\n\nFacts:\n- Nick Bantock is an author.\n- James Jones is an author.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "bf3b6263-5189-53d1-b32a-52313f4fe4be",
+        "text": "Nick Bantock and James Jones are both authors.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "a197c20f-65d0-5b6e-b31a-6c7112dd9adc",
+        "text": "text_2f85d61a6c33147031d0f610224af789",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "e99a71e2-e980-5e13-af8e-502d16b7e039",
+        "text": "nick bantock",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "99a82eec-bb35-5bb5-9ed2-e73fc7a756de",
+        "text": "person",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "a91c6b1d-a9af-51f5-be3a-ff03e1776cd0",
+        "text": "author",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "d2a381fa-3658-5ca6-ada9-2109cfc9331d",
+        "text": "concept",
+        "type": "EntityType"
+      },
+      {
+        "id": 7,
+        "original_id": "249366f3-bb65-562f-936d-053c04cdb71f",
+        "text": "james jones",
+        "type": "Entity"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 7,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "has_profession"
+      },
+      {
+        "source": 7,
+        "target": 5,
+        "type": "has_profession"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      }
+    ]
+  },
+  "grafo_evidencia": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "bb7f6b6d-8234-5b08-ae57-f31c1e883c68",
+        "text": "This chunk is about:\n- People: Nick Bantock, James Jones\n- Places: Saltspring Island, British Columbia\n- Works: The Griffin and Sabine Trilogy\n- Topics: World War II and its aftermath\n\nFacts:\n- James Ramon Jones was born on November 6, 1921, and he became an American novelist known for exploring World War II and its aftermath.\n- Nick Bantock was born on July 14, 1949, and he is a British artist and author based on Saltspring Island, British Columbia.\n- Nick Bantock is known for his series \"The Griffin and Sabine Trilogy.\"\n- James Ramon Jones died on May 9, 1977.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "d5d9d751-3858-53ce-8a1f-8a4b2bcd6c39",
+        "text": "Page: Nick Bantock. Sentence: Nick Bantock (born 14 July 1949) is a British artist and author based in Saltspring Island, British Columbia, known for his series, \"The Griffin and Sabine Trilogy\".\nPage: James Jones (author). Sentence: James Ramon Jones (November 6, 1921 – May 9, 1977) was an American novelist known for his explorations of World War II and its aftermath.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "21b33c50-1bb5-55c5-8b81-a0c6e6dd8207",
+        "text": "text_74c291ffc093eeceafa80fbdcdf63508",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "e99a71e2-e980-5e13-af8e-502d16b7e039",
+        "text": "nick bantock",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "99a82eec-bb35-5bb5-9ed2-e73fc7a756de",
+        "text": "person",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "22ee6984-37d8-5faf-a477-0b13f858b627",
+        "text": "1949-07-14",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "b19433ae-558c-5aaf-95ac-6231f2a4be0e",
+        "text": "date",
+        "type": "EntityType"
+      },
+      {
+        "id": 7,
+        "original_id": "5ad18cd2-5628-591a-b75e-4c398300d4b0",
+        "text": "saltspring island",
+        "type": "Entity"
+      },
+      {
+        "id": 8,
+        "original_id": "5f394058-b2a0-5ba8-8466-ba2a18cfcf4e",
+        "text": "place",
+        "type": "EntityType"
+      },
+      {
+        "id": 9,
+        "original_id": "cfe018d6-a4e1-544f-8c8f-20f7eff93738",
+        "text": "british columbia",
+        "type": "Entity"
+      },
+      {
+        "id": 10,
+        "original_id": "3eb6dee2-0e01-5902-af1c-625d492c1b2b",
+        "text": "the griffin and sabine trilogy",
+        "type": "Entity"
+      },
+      {
+        "id": 11,
+        "original_id": "5263a535-1b4b-5925-be3e-310d03cd303b",
+        "text": "work",
+        "type": "EntityType"
+      },
+      {
+        "id": 12,
+        "original_id": "a90dccc1-fea4-5512-b169-bc0d4df06fc7",
+        "text": "james ramon jones",
+        "type": "Entity"
+      },
+      {
+        "id": 13,
+        "original_id": "a97e2c62-7347-51e7-86c3-1671713376e4",
+        "text": "1921-11-06",
+        "type": "Entity"
+      },
+      {
+        "id": 14,
+        "original_id": "dfa5654f-f398-5e25-a42f-bbf818e7dea6",
+        "text": "1977-05-09",
+        "type": "Entity"
+      },
+      {
+        "id": 15,
+        "original_id": "307234d1-8757-51ab-8eb8-40aae3d498a1",
+        "text": "world war ii",
+        "type": "Entity"
+      },
+      {
+        "id": 16,
+        "original_id": "214abcd9-9adf-5c8a-bb35-1e729f2d68c3",
+        "text": "event",
+        "type": "EntityType"
+      },
+      {
+        "id": 17,
+        "original_id": "c43317d3-1e9d-5046-8365-3f600e681caf",
+        "text": "its aftermath",
+        "type": "Entity"
+      },
+      {
+        "id": 18,
+        "original_id": "d2a381fa-3658-5ca6-ada9-2109cfc9331d",
+        "text": "concept",
+        "type": "EntityType"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 12,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "born_on"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 13,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 14,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 7,
+        "type": "based_in"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      },
+      {
+        "source": 7,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 9,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 7,
+        "target": 9,
+        "type": "located_in"
+      },
+      {
+        "source": 1,
+        "target": 9,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 10,
+        "type": "known_for"
+      },
+      {
+        "source": 1,
+        "target": 10,
+        "type": "contains"
+      },
+      {
+        "source": 10,
+        "target": 11,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 12,
+        "type": "contains"
+      },
+      {
+        "source": 12,
+        "target": 13,
+        "type": "born_on"
+      },
+      {
+        "source": 1,
+        "target": 13,
+        "type": "contains"
+      },
+      {
+        "source": 12,
+        "target": 14,
+        "type": "died_on"
+      },
+      {
+        "source": 1,
+        "target": 14,
+        "type": "contains"
+      },
+      {
+        "source": 12,
+        "target": 15,
+        "type": "explored_in_work"
+      },
+      {
+        "source": 1,
+        "target": 15,
+        "type": "contains"
+      },
+      {
+        "source": 15,
+        "target": 16,
+        "type": "is_a"
+      },
+      {
+        "source": 12,
+        "target": 17,
+        "type": "explored_in_work"
+      },
+      {
+        "source": 1,
+        "target": 17,
+        "type": "contains"
+      },
+      {
+        "source": 17,
+        "target": 18,
+        "type": "is_a"
+      }
+    ]
+  }
+}

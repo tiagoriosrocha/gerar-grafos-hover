@@ -1,0 +1,659 @@
+{
+  "dataset": "hover",
+  "id": "f174f153-c127-4903-8ff3-e3d42aabe02c",
+  "split": "train",
+  "claim": "Composer Franz Schreker was also a high school teacher but the composer, who American Violinist Tim Fain is best known for working with, was not.",
+  "evidencia": "Page: Philip Glass. Sentence: Philip Morris Glass (born January 31, 1937) is an American composer.\nPage: Franz Schreker. Sentence: Franz Schreker (originally \"Schrecker\"; 23 March 1878, Monaco – 21 March 1934, Berlin) was an Austrian composer, conductor, teacher and administrator.\nPage: Tim Fain. Sentence: Tim Fain is an American violinist, perhaps best known for his performances in the movie \"Black Swan\" and his work with American composer Philip Glass.",
+  "evidence_text": "Page: Philip Glass. Sentence: Philip Morris Glass (born January 31, 1937) is an American composer.\nPage: Franz Schreker. Sentence: Franz Schreker (originally \"Schrecker\"; 23 March 1878, Monaco – 21 March 1934, Berlin) was an Austrian composer, conductor, teacher and administrator.\nPage: Tim Fain. Sentence: Tim Fain is an American violinist, perhaps best known for his performances in the movie \"Black Swan\" and his work with American composer Philip Glass.",
+  "label": "NOT_SUPPORTED",
+  "num_hops": 3,
+  "hover_metadata": {
+    "supporting_facts": [
+      [
+        "Philip Glass",
+        0
+      ],
+      [
+        "Franz Schreker",
+        0
+      ],
+      [
+        "Tim Fain",
+        0
+      ]
+    ],
+    "num_hops": 3,
+    "evidence_annotation_id": [
+      0
+    ],
+    "evidence_id": [
+      "Philip Glass::sentence::0",
+      "Franz Schreker::sentence::0",
+      "Tim Fain::sentence::0"
+    ],
+    "evidence_wiki_url": [
+      "https://en.wikipedia.org/wiki/Philip_Glass",
+      "https://en.wikipedia.org/wiki/Franz_Schreker",
+      "https://en.wikipedia.org/wiki/Tim_Fain"
+    ],
+    "evidence_sentence_id": [
+      "Philip Glass::sentence::0",
+      "Franz Schreker::sentence::0",
+      "Tim Fain::sentence::0"
+    ]
+  },
+  "grafo_claim": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "00eb2c88-47a7-5def-b01d-b6465e9face2",
+        "text": "This chunk is about:\n- People: Franz Schreker, Tim Fain\n- Roles: composer, high school teacher, violinist\n\nFacts:\n- Franz Schreker was a composer.\n- Franz Schreker was also a high school teacher.\n- Tim Fain is an American violinist.\n- The composer Tim Fain is best known for working with was not a high school teacher.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "54dd58d0-e8f5-5fa2-b4ad-8e8b17788d06",
+        "text": "Composer Franz Schreker was also a high school teacher but the composer, who American Violinist Tim Fain is best known for working with, was not.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "1440d495-1f51-500d-a76f-5195594cbaea",
+        "text": "text_013d484f63cfb8647590b6d531e1781f",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "3ba5d20e-3e78-5009-a920-a9db4ac5b00a",
+        "text": "franz schreker",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "01148e41-b28b-5b7b-8db5-0784ff5a61d1",
+        "text": "composer",
+        "type": "Entity"
+      },
+      {
+        "id": 5,
+        "original_id": "9d80eb43-32fa-561c-9371-91f180ebcb6c",
+        "text": "profession",
+        "type": "EntityType"
+      },
+      {
+        "id": 6,
+        "original_id": "61affb24-fbae-5482-a3fe-e583bb4b2b7f",
+        "text": "high school teacher",
+        "type": "Entity"
+      },
+      {
+        "id": 7,
+        "original_id": "99a82eec-bb35-5bb5-9ed2-e73fc7a756de",
+        "text": "person",
+        "type": "EntityType"
+      },
+      {
+        "id": 8,
+        "original_id": "7027022d-0640-504c-a075-ce879366a45b",
+        "text": "tim fain",
+        "type": "Entity"
+      },
+      {
+        "id": 9,
+        "original_id": "577a63f0-b19a-509e-887b-cef5f5495a32",
+        "text": "american violinist",
+        "type": "Entity"
+      },
+      {
+        "id": 10,
+        "original_id": "50b50a38-e315-5d69-8f5a-548957273f21",
+        "text": "composer worked with by tim fain",
+        "type": "Entity"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "has_profession"
+      },
+      {
+        "source": 10,
+        "target": 4,
+        "type": "has_profession"
+      },
+      {
+        "source": 1,
+        "target": 4,
+        "type": "contains"
+      },
+      {
+        "source": 4,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 6,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 9,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 6,
+        "type": "has_profession"
+      },
+      {
+        "source": 10,
+        "target": 6,
+        "type": "not_has_profession"
+      },
+      {
+        "source": 1,
+        "target": 6,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 10,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 8,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 8,
+        "type": "contains"
+      },
+      {
+        "source": 8,
+        "target": 9,
+        "type": "has_profession"
+      },
+      {
+        "source": 1,
+        "target": 9,
+        "type": "contains"
+      },
+      {
+        "source": 8,
+        "target": 10,
+        "type": "worked_with"
+      },
+      {
+        "source": 1,
+        "target": 10,
+        "type": "contains"
+      }
+    ]
+  },
+  "grafo_evidencia": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "d42e4219-411e-5460-b16c-2287c49e5128",
+        "text": "This chunk is about:\n- People: Philip Glass, Franz Schreker, Tim Fain\n- Roles: composer, conductor, teacher, administrator, violinist\n- Places: Monaco, Berlin\n- Products: Black Swan\n\nFacts:\n- Franz Schreker was born as Franz Schrecker on 23 March 1878 in Monaco.\n- Philip Glass was born as Philip Morris Glass on January 31, 1937.\n- Franz Schreker died on 21 March 1934 in Berlin.\n- Franz Schreker was an Austrian composer, conductor, teacher, and administrator.\n- Philip Glass is an American composer.\n- Tim Fain is an American violinist.\n- Tim Fain is known for his performances in the film Black Swan.\n- Tim Fain has worked with American composer Philip Glass.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "c9e37ae2-1cf2-584d-9403-8900088e8e12",
+        "text": "Page: Philip Glass. Sentence: Philip Morris Glass (born January 31, 1937) is an American composer.\nPage: Franz Schreker. Sentence: Franz Schreker (originally \"Schrecker\"; 23 March 1878, Monaco – 21 March 1934, Berlin) was an Austrian composer, conductor, teacher and administrator.\nPage: Tim Fain. Sentence: Tim Fain is an American violinist, perhaps best known for his performances in the movie \"Black Swan\" and his work with American composer Philip Glass.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "018dddde-fd72-53e6-96bd-7b69078619e7",
+        "text": "text_96e60e2185ffa353c3e5adc3479b6a3c",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "7d01ef29-37bd-5e42-86f3-e71481542b4c",
+        "text": "philip glass",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "d6f663a1-d65e-51c3-8273-9dccbc0e6c6b",
+        "text": "philip morris glass",
+        "type": "Entity"
+      },
+      {
+        "id": 5,
+        "original_id": "096262fc-76b6-53d7-952f-5ece2989de69",
+        "text": "1937-01-31",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "b19433ae-558c-5aaf-95ac-6231f2a4be0e",
+        "text": "date",
+        "type": "EntityType"
+      },
+      {
+        "id": 7,
+        "original_id": "874a51da-34ea-5037-be47-d87785d43c37",
+        "text": "united states",
+        "type": "Entity"
+      },
+      {
+        "id": 8,
+        "original_id": "5f394058-b2a0-5ba8-8466-ba2a18cfcf4e",
+        "text": "place",
+        "type": "EntityType"
+      },
+      {
+        "id": 9,
+        "original_id": "01148e41-b28b-5b7b-8db5-0784ff5a61d1",
+        "text": "composer",
+        "type": "Entity"
+      },
+      {
+        "id": 10,
+        "original_id": "d2a381fa-3658-5ca6-ada9-2109cfc9331d",
+        "text": "concept",
+        "type": "EntityType"
+      },
+      {
+        "id": 11,
+        "original_id": "99a82eec-bb35-5bb5-9ed2-e73fc7a756de",
+        "text": "person",
+        "type": "EntityType"
+      },
+      {
+        "id": 12,
+        "original_id": "3ba5d20e-3e78-5009-a920-a9db4ac5b00a",
+        "text": "franz schreker",
+        "type": "Entity"
+      },
+      {
+        "id": 13,
+        "original_id": "835578dc-eca8-52eb-ae2f-6df59e36a3d3",
+        "text": "schrecker",
+        "type": "Entity"
+      },
+      {
+        "id": 14,
+        "original_id": "d7173f5d-5f5f-5733-affd-49754530cf4f",
+        "text": "1878-03-23",
+        "type": "Entity"
+      },
+      {
+        "id": 15,
+        "original_id": "92efbb77-5741-5b2c-96fe-53d09d6402e5",
+        "text": "1934-03-21",
+        "type": "Entity"
+      },
+      {
+        "id": 16,
+        "original_id": "65bf35cc-00b0-5acd-a7d6-e8b2f465b868",
+        "text": "monaco",
+        "type": "Entity"
+      },
+      {
+        "id": 17,
+        "original_id": "0aa5a634-829a-5222-8568-d7631357800d",
+        "text": "berlin",
+        "type": "Entity"
+      },
+      {
+        "id": 18,
+        "original_id": "0c13cdaa-3617-51ab-aee9-e72623265f8f",
+        "text": "austria",
+        "type": "Entity"
+      },
+      {
+        "id": 19,
+        "original_id": "87de7aa6-5da5-56f5-8afa-b6098e580678",
+        "text": "conductor",
+        "type": "Entity"
+      },
+      {
+        "id": 20,
+        "original_id": "90e7674b-e259-50b8-b2bf-c091d46abfa7",
+        "text": "teacher",
+        "type": "Entity"
+      },
+      {
+        "id": 21,
+        "original_id": "6a55714d-8078-5e68-bc39-c427a02e5217",
+        "text": "administrator",
+        "type": "Entity"
+      },
+      {
+        "id": 22,
+        "original_id": "7027022d-0640-504c-a075-ce879366a45b",
+        "text": "tim fain",
+        "type": "Entity"
+      },
+      {
+        "id": 23,
+        "original_id": "0231296e-149e-5115-bf23-d8e4a3382a66",
+        "text": "violinist",
+        "type": "Entity"
+      },
+      {
+        "id": 24,
+        "original_id": "569c5ff8-e667-5b22-bbb0-78138d7c5e73",
+        "text": "black swan",
+        "type": "Entity"
+      },
+      {
+        "id": 25,
+        "original_id": "5263a535-1b4b-5925-be3e-310d03cd303b",
+        "text": "work",
+        "type": "EntityType"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 22,
+        "target": 3,
+        "type": "worked_with"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "same_as"
+      },
+      {
+        "source": 1,
+        "target": 4,
+        "type": "contains"
+      },
+      {
+        "source": 4,
+        "target": 5,
+        "type": "born_on"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 14,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 15,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 4,
+        "target": 7,
+        "type": "associated_with_nationality"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      },
+      {
+        "source": 22,
+        "target": 7,
+        "type": "associated_with_nationality"
+      },
+      {
+        "source": 7,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 16,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 17,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 18,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 4,
+        "target": 9,
+        "type": "has_profession"
+      },
+      {
+        "source": 1,
+        "target": 9,
+        "type": "contains"
+      },
+      {
+        "source": 12,
+        "target": 9,
+        "type": "has_profession"
+      },
+      {
+        "source": 9,
+        "target": 10,
+        "type": "is_a"
+      },
+      {
+        "source": 19,
+        "target": 10,
+        "type": "is_a"
+      },
+      {
+        "source": 20,
+        "target": 10,
+        "type": "is_a"
+      },
+      {
+        "source": 21,
+        "target": 10,
+        "type": "is_a"
+      },
+      {
+        "source": 23,
+        "target": 10,
+        "type": "is_a"
+      },
+      {
+        "source": 4,
+        "target": 11,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 11,
+        "type": "is_a"
+      },
+      {
+        "source": 13,
+        "target": 11,
+        "type": "is_a"
+      },
+      {
+        "source": 12,
+        "target": 11,
+        "type": "is_a"
+      },
+      {
+        "source": 22,
+        "target": 11,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 12,
+        "type": "contains"
+      },
+      {
+        "source": 12,
+        "target": 13,
+        "type": "originally_named"
+      },
+      {
+        "source": 1,
+        "target": 13,
+        "type": "contains"
+      },
+      {
+        "source": 12,
+        "target": 14,
+        "type": "born_on"
+      },
+      {
+        "source": 1,
+        "target": 14,
+        "type": "contains"
+      },
+      {
+        "source": 12,
+        "target": 15,
+        "type": "died_on"
+      },
+      {
+        "source": 1,
+        "target": 15,
+        "type": "contains"
+      },
+      {
+        "source": 12,
+        "target": 16,
+        "type": "born_in"
+      },
+      {
+        "source": 1,
+        "target": 16,
+        "type": "contains"
+      },
+      {
+        "source": 12,
+        "target": 17,
+        "type": "died_in"
+      },
+      {
+        "source": 1,
+        "target": 17,
+        "type": "contains"
+      },
+      {
+        "source": 12,
+        "target": 18,
+        "type": "associated_with_nationality"
+      },
+      {
+        "source": 1,
+        "target": 18,
+        "type": "contains"
+      },
+      {
+        "source": 12,
+        "target": 19,
+        "type": "has_profession"
+      },
+      {
+        "source": 1,
+        "target": 19,
+        "type": "contains"
+      },
+      {
+        "source": 12,
+        "target": 20,
+        "type": "has_profession"
+      },
+      {
+        "source": 1,
+        "target": 20,
+        "type": "contains"
+      },
+      {
+        "source": 12,
+        "target": 21,
+        "type": "has_profession"
+      },
+      {
+        "source": 1,
+        "target": 21,
+        "type": "contains"
+      },
+      {
+        "source": 1,
+        "target": 22,
+        "type": "contains"
+      },
+      {
+        "source": 22,
+        "target": 23,
+        "type": "has_profession"
+      },
+      {
+        "source": 1,
+        "target": 23,
+        "type": "contains"
+      },
+      {
+        "source": 22,
+        "target": 24,
+        "type": "performed_in"
+      },
+      {
+        "source": 1,
+        "target": 24,
+        "type": "contains"
+      },
+      {
+        "source": 24,
+        "target": 25,
+        "type": "is_a"
+      }
+    ]
+  }
+}

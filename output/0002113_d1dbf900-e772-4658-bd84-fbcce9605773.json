@@ -1,0 +1,379 @@
+{
+  "dataset": "hover",
+  "id": "d1dbf900-e772-4658-bd84-fbcce9605773",
+  "split": "train",
+  "claim": "Say Yes is the 12th episode of the television series shown on AMC.",
+  "evidencia": "Page: Say Yes (The Walking Dead). Sentence: \"Say Yes\" is the twelfth episode of the seventh season and 95th episode overall of the post-apocalyptic horror television series \"The Walking Dead\", which aired on AMC on March 5, 2017.\nPage: The Walking Dead (season 7). Sentence: The seventh season of \"The Walking Dead\", an American post-apocalyptic horror television series on AMC, premiered on October 23, 2016, and concluded on April 2, 2017, consisting of 16 episodes.",
+  "evidence_text": "Page: Say Yes (The Walking Dead). Sentence: \"Say Yes\" is the twelfth episode of the seventh season and 95th episode overall of the post-apocalyptic horror television series \"The Walking Dead\", which aired on AMC on March 5, 2017.\nPage: The Walking Dead (season 7). Sentence: The seventh season of \"The Walking Dead\", an American post-apocalyptic horror television series on AMC, premiered on October 23, 2016, and concluded on April 2, 2017, consisting of 16 episodes.",
+  "label": "SUPPORTED",
+  "num_hops": 2,
+  "hover_metadata": {
+    "supporting_facts": [
+      [
+        "Say Yes (The Walking Dead)",
+        0
+      ],
+      [
+        "The Walking Dead (season 7)",
+        0
+      ]
+    ],
+    "num_hops": 2,
+    "evidence_annotation_id": [
+      0
+    ],
+    "evidence_id": [
+      "Say Yes (The Walking Dead)::sentence::0",
+      "The Walking Dead (season 7)::sentence::0"
+    ],
+    "evidence_wiki_url": [
+      "https://en.wikipedia.org/wiki/Say_Yes_%28The_Walking_Dead%29",
+      "https://en.wikipedia.org/wiki/The_Walking_Dead_%28season_7%29"
+    ],
+    "evidence_sentence_id": [
+      "Say Yes (The Walking Dead)::sentence::0",
+      "The Walking Dead (season 7)::sentence::0"
+    ]
+  },
+  "grafo_claim": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "b69e6a1b-936d-5f7d-85c2-44b13f07aaf7",
+        "text": "This chunk is about:\n- Products: Say Yes\n- Organizations: AMC\n- Concepts: Television episodes, television series\n\nFacts:\n- Say Yes is the 12th episode of a television series.\n- The television series is shown on AMC.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "7c43116d-6c86-5044-951a-3fd486b2768c",
+        "text": "Say Yes is the 12th episode of the television series shown on AMC.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "788669a4-f745-5576-82a6-759993407236",
+        "text": "text_e105b4d40f776f1f844358ef667fe667",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "9f0adf55-616b-593d-ba2d-d4d1a9cec4d2",
+        "text": "say yes",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "a94f4e5a-94a4-5595-b97a-3b05f996b6d6",
+        "text": "12",
+        "type": "Entity"
+      },
+      {
+        "id": 5,
+        "original_id": "5c1097ca-fab8-54d5-b57f-5dca4b0e2507",
+        "text": "number",
+        "type": "EntityType"
+      },
+      {
+        "id": 6,
+        "original_id": "de44ff61-e6d8-5f5e-aa0f-596a3ad8e7de",
+        "text": "television series",
+        "type": "Entity"
+      },
+      {
+        "id": 7,
+        "original_id": "bf00b070-b8b0-532e-8924-3798ea26758d",
+        "text": "amc",
+        "type": "Entity"
+      },
+      {
+        "id": 8,
+        "original_id": "388f60fb-220d-55e8-ae9c-3ac93cead308",
+        "text": "organization",
+        "type": "EntityType"
+      },
+      {
+        "id": 9,
+        "original_id": "5263a535-1b4b-5925-be3e-310d03cd303b",
+        "text": "work",
+        "type": "EntityType"
+      },
+      {
+        "id": 10,
+        "original_id": "464699f9-25e7-5f67-8bf1-1d4784d12ce5",
+        "text": "episode",
+        "type": "EntityType"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "has_episode_number"
+      },
+      {
+        "source": 1,
+        "target": 4,
+        "type": "contains"
+      },
+      {
+        "source": 4,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 6,
+        "type": "episode_of"
+      },
+      {
+        "source": 1,
+        "target": 6,
+        "type": "contains"
+      },
+      {
+        "source": 6,
+        "target": 7,
+        "type": "shown_on"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      },
+      {
+        "source": 7,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 6,
+        "target": 9,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 10,
+        "type": "is_a"
+      }
+    ]
+  },
+  "grafo_evidencia": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "a654e6d2-c1cf-57dc-b7e1-6beb539d2a48",
+        "text": "This chunk is about:\n- Products: The Walking Dead, The Walking Dead season 7, \"Say Yes\"\n- Companies: AMC\n- Concepts: television episodes, television seasons, post-apocalyptic horror television series\n\nFacts:\n- The seventh season of The Walking Dead premiered on AMC on October 23, 2016.\n- The seventh season of The Walking Dead consisted of 16 episodes and concluded on April 2, 2017.\n- \"Say Yes\" aired on AMC on March 5, 2017.\n- \"Say Yes\" was the twelfth episode of The Walking Dead season 7 and the 95th episode overall of The Walking Dead.\n- The Walking Dead is an American post-apocalyptic horror television series.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "36ed3aac-7584-5eeb-aa58-8377ab4f7a86",
+        "text": "Page: Say Yes (The Walking Dead). Sentence: \"Say Yes\" is the twelfth episode of the seventh season and 95th episode overall of the post-apocalyptic horror television series \"The Walking Dead\", which aired on AMC on March 5, 2017.\nPage: The Walking Dead (season 7). Sentence: The seventh season of \"The Walking Dead\", an American post-apocalyptic horror television series on AMC, premiered on October 23, 2016, and concluded on April 2, 2017, consisting of 16 episodes.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "bba28a2e-8a5e-5ca4-a894-e03e8dd71e57",
+        "text": "text_e05725502c5f925ef2410ffebc649a44",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "9f0adf55-616b-593d-ba2d-d4d1a9cec4d2",
+        "text": "say yes",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "0a59d137-2b9e-58ce-928b-d6d6c9334b6a",
+        "text": "the walking dead (season 7)",
+        "type": "Entity"
+      },
+      {
+        "id": 5,
+        "original_id": "8cdba8d3-7f63-5b89-ac32-ca37e73e0054",
+        "text": "the walking dead",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "bf00b070-b8b0-532e-8924-3798ea26758d",
+        "text": "amc",
+        "type": "Entity"
+      },
+      {
+        "id": 7,
+        "original_id": "388f60fb-220d-55e8-ae9c-3ac93cead308",
+        "text": "organization",
+        "type": "EntityType"
+      },
+      {
+        "id": 8,
+        "original_id": "79acf5fa-2add-5fac-a4c5-aa733a78a8b4",
+        "text": "creativework",
+        "type": "EntityType"
+      },
+      {
+        "id": 9,
+        "original_id": "e751cb27-eda9-5af1-b476-ee7a957dd84a",
+        "text": "2016-10-23",
+        "type": "Entity"
+      },
+      {
+        "id": 10,
+        "original_id": "b19433ae-558c-5aaf-95ac-6231f2a4be0e",
+        "text": "date",
+        "type": "EntityType"
+      },
+      {
+        "id": 11,
+        "original_id": "eff253d6-bdcb-5623-b31a-7745e5e2df71",
+        "text": "2017-04-02",
+        "type": "Entity"
+      },
+      {
+        "id": 12,
+        "original_id": "8547a0c6-e130-5603-bdec-85f99c93b73c",
+        "text": "2017-03-05",
+        "type": "Entity"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "part_of"
+      },
+      {
+        "source": 1,
+        "target": 4,
+        "type": "contains"
+      },
+      {
+        "source": 4,
+        "target": 5,
+        "type": "season_of"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "episode_of"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "aired_on"
+      },
+      {
+        "source": 3,
+        "target": 6,
+        "type": "aired_on"
+      },
+      {
+        "source": 1,
+        "target": 6,
+        "type": "contains"
+      },
+      {
+        "source": 6,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 5,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 4,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 4,
+        "target": 9,
+        "type": "premiered_on"
+      },
+      {
+        "source": 1,
+        "target": 9,
+        "type": "contains"
+      },
+      {
+        "source": 9,
+        "target": 10,
+        "type": "is_a"
+      },
+      {
+        "source": 11,
+        "target": 10,
+        "type": "is_a"
+      },
+      {
+        "source": 12,
+        "target": 10,
+        "type": "is_a"
+      },
+      {
+        "source": 4,
+        "target": 11,
+        "type": "concluded_on"
+      },
+      {
+        "source": 1,
+        "target": 11,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 12,
+        "type": "aired_on_date"
+      },
+      {
+        "source": 1,
+        "target": 12,
+        "type": "contains"
+      }
+    ]
+  }
+}

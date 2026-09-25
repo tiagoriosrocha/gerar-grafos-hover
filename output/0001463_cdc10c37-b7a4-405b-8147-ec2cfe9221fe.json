@@ -1,0 +1,555 @@
+{
+  "dataset": "hover",
+  "id": "cdc10c37-b7a4-405b-8147-ec2cfe9221fe",
+  "split": "train",
+  "claim": "Ann Reinking starred in a 1969 Tony Award winning Broadway production. The music for this production was by a man born in April 6, 1929.",
+  "evidencia": "Page: Coco (musical). Sentence: Coco was a 1969 Broadway musical with a book and lyrics by Alan Jay Lerner and music by André Previn, inspired by the life of Coco Chanel.\nPage: André Previn. Sentence: André George Previn, KBE ( ; born Andreas Ludwig Priwin; April 6, 1929) is a German-American pianist, conductor, and composer.\nPage: Ann Reinking. Sentence: Her extensive work in musical theater includes starring in Broadway productions of \"Coco\" (1969), \"Over Here!",
+  "evidence_text": "Page: Coco (musical). Sentence: Coco was a 1969 Broadway musical with a book and lyrics by Alan Jay Lerner and music by André Previn, inspired by the life of Coco Chanel.\nPage: André Previn. Sentence: André George Previn, KBE ( ; born Andreas Ludwig Priwin; April 6, 1929) is a German-American pianist, conductor, and composer.\nPage: Ann Reinking. Sentence: Her extensive work in musical theater includes starring in Broadway productions of \"Coco\" (1969), \"Over Here!",
+  "label": "NOT_SUPPORTED",
+  "num_hops": 3,
+  "hover_metadata": {
+    "supporting_facts": [
+      [
+        "Coco (musical)",
+        0
+      ],
+      [
+        "André Previn",
+        0
+      ],
+      [
+        "Ann Reinking",
+        1
+      ]
+    ],
+    "num_hops": 3,
+    "evidence_annotation_id": [
+      0
+    ],
+    "evidence_id": [
+      "Coco (musical)::sentence::0",
+      "André Previn::sentence::0",
+      "Ann Reinking::sentence::1"
+    ],
+    "evidence_wiki_url": [
+      "https://en.wikipedia.org/wiki/Coco_%28musical%29",
+      "https://en.wikipedia.org/wiki/Andr%C3%A9_Previn",
+      "https://en.wikipedia.org/wiki/Ann_Reinking"
+    ],
+    "evidence_sentence_id": [
+      "Coco (musical)::sentence::0",
+      "André Previn::sentence::0",
+      "Ann Reinking::sentence::1"
+    ]
+  },
+  "grafo_claim": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "bf938e74-464a-5fa4-95bf-758ccb8dc2ee",
+        "text": "This chunk is about:\n- People: Ann Reinking, Jerry Herman\n- Events: 1969 Tony Award-winning Broadway production\n- Works: the Broadway production\n\nFacts:\n- Ann Reinking starred in a Broadway production that won a Tony Award in 1969.\n- Jerry Herman, who wrote the music for that production, was born on April 6, 1929.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "622016d7-28d6-5137-b5b6-ea03420f252d",
+        "text": "Ann Reinking starred in a 1969 Tony Award winning Broadway production. The music for this production was by a man born in April 6, 1929.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "9906970d-6551-5e12-9e1c-f7beb6b69123",
+        "text": "text_8b328bb8707a9b4e968e2ac59992ec4b",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "f4c24da6-0ff0-562c-8bb8-e16c15e78676",
+        "text": "ann reinking",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "2098c739-5573-53eb-87c3-86a10b020e0d",
+        "text": "1969 tony award winning broadway production",
+        "type": "Entity"
+      },
+      {
+        "id": 5,
+        "original_id": "e59d1373-be57-56c7-bfb3-7f9c07e8fa97",
+        "text": "production",
+        "type": "EntityType"
+      },
+      {
+        "id": 6,
+        "original_id": "99a82eec-bb35-5bb5-9ed2-e73fc7a756de",
+        "text": "person",
+        "type": "EntityType"
+      },
+      {
+        "id": 7,
+        "original_id": "7dd6b2a6-2da3-5448-9e2c-385f24a7bf33",
+        "text": "man born on 1929-04-06",
+        "type": "Entity"
+      },
+      {
+        "id": 8,
+        "original_id": "da2a0634-559a-5211-96d5-ea7a9a65b8bf",
+        "text": "1929-04-06",
+        "type": "Entity"
+      },
+      {
+        "id": 9,
+        "original_id": "b19433ae-558c-5aaf-95ac-6231f2a4be0e",
+        "text": "date",
+        "type": "EntityType"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "starred_in"
+      },
+      {
+        "source": 1,
+        "target": 4,
+        "type": "contains"
+      },
+      {
+        "source": 7,
+        "target": 4,
+        "type": "wrote_music_for"
+      },
+      {
+        "source": 4,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 7,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      },
+      {
+        "source": 7,
+        "target": 8,
+        "type": "born_on"
+      },
+      {
+        "source": 1,
+        "target": 8,
+        "type": "contains"
+      },
+      {
+        "source": 8,
+        "target": 9,
+        "type": "is_a"
+      }
+    ]
+  },
+  "grafo_evidencia": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "593b2429-f8c1-562f-a433-a2a284d352a9",
+        "text": "This chunk is about:\n- Works: Coco\n- People: Alan Jay Lerner, André Previn, Coco Chanel, Ann Reinking\n- Topics: Broadway musicals, musical theater\n\nFacts:\n- In 1969, \"Coco\" was a Broadway musical inspired by the life of Coco Chanel.\n- \"Coco\" had a book and lyrics by Alan Jay Lerner and music by André Previn.\n- André Previn, born Andreas Ludwig Priwin on April 6, 1929, was a German-American pianist, conductor, and composer.\n- Ann Reinking's musical theater work included starring in the 1969 Broadway production of \"Coco\".",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "0a23698f-e232-5f28-8935-4af142f03a43",
+        "text": "Page: Coco (musical). Sentence: Coco was a 1969 Broadway musical with a book and lyrics by Alan Jay Lerner and music by André Previn, inspired by the life of Coco Chanel.\nPage: André Previn. Sentence: André George Previn, KBE ( ; born Andreas Ludwig Priwin; April 6, 1929) is a German-American pianist, conductor, and composer.\nPage: Ann Reinking. Sentence: Her extensive work in musical theater includes starring in Broadway productions of \"Coco\" (1969), \"Over Here!",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "b25eee62-638a-5f74-b94b-37427bce775a",
+        "text": "text_e0a6ea8b4c368b6651ac0d81c1fd46cb",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "09ddcaa8-e424-5138-9169-468956d63f15",
+        "text": "coco",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "5debc034-fa71-585e-97a1-ef8f6cf6fa47",
+        "text": "1969",
+        "type": "Entity"
+      },
+      {
+        "id": 5,
+        "original_id": "b19433ae-558c-5aaf-95ac-6231f2a4be0e",
+        "text": "date",
+        "type": "EntityType"
+      },
+      {
+        "id": 6,
+        "original_id": "c53eccd3-029a-57a8-bb6b-ba08f312f92e",
+        "text": "broadway",
+        "type": "Entity"
+      },
+      {
+        "id": 7,
+        "original_id": "5f394058-b2a0-5ba8-8466-ba2a18cfcf4e",
+        "text": "place",
+        "type": "EntityType"
+      },
+      {
+        "id": 8,
+        "original_id": "c06d30b2-5e20-54cc-843d-8cf9bd03ac3f",
+        "text": "coco chanel",
+        "type": "Entity"
+      },
+      {
+        "id": 9,
+        "original_id": "99a82eec-bb35-5bb5-9ed2-e73fc7a756de",
+        "text": "person",
+        "type": "EntityType"
+      },
+      {
+        "id": 10,
+        "original_id": "5263a535-1b4b-5925-be3e-310d03cd303b",
+        "text": "work",
+        "type": "EntityType"
+      },
+      {
+        "id": 11,
+        "original_id": "0230f1e9-4937-51d7-bc74-8a6f4829cb52",
+        "text": "alan jay lerner",
+        "type": "Entity"
+      },
+      {
+        "id": 12,
+        "original_id": "e66f3f27-ec7b-52f5-94be-54b61452cba8",
+        "text": "andré previn",
+        "type": "Entity"
+      },
+      {
+        "id": 13,
+        "original_id": "b04ff4a9-5a6a-5b94-b4d2-5bef63d25391",
+        "text": "andré george previn",
+        "type": "Entity"
+      },
+      {
+        "id": 14,
+        "original_id": "81ba9843-5c0f-5db4-9434-7d1b192bd3e4",
+        "text": "andreas ludwig priwin",
+        "type": "Entity"
+      },
+      {
+        "id": 15,
+        "original_id": "da2a0634-559a-5211-96d5-ea7a9a65b8bf",
+        "text": "1929-04-06",
+        "type": "Entity"
+      },
+      {
+        "id": 16,
+        "original_id": "f30f124b-1bc0-595d-b0c0-aa20029c2bb4",
+        "text": "germany",
+        "type": "Entity"
+      },
+      {
+        "id": 17,
+        "original_id": "874a51da-34ea-5037-be47-d87785d43c37",
+        "text": "united states",
+        "type": "Entity"
+      },
+      {
+        "id": 18,
+        "original_id": "57d6420b-b0b0-54b9-8742-0730919e2303",
+        "text": "pianist",
+        "type": "Entity"
+      },
+      {
+        "id": 19,
+        "original_id": "d2a381fa-3658-5ca6-ada9-2109cfc9331d",
+        "text": "concept",
+        "type": "EntityType"
+      },
+      {
+        "id": 20,
+        "original_id": "87de7aa6-5da5-56f5-8afa-b6098e580678",
+        "text": "conductor",
+        "type": "Entity"
+      },
+      {
+        "id": 21,
+        "original_id": "01148e41-b28b-5b7b-8db5-0784ff5a61d1",
+        "text": "composer",
+        "type": "Entity"
+      },
+      {
+        "id": 22,
+        "original_id": "f4c24da6-0ff0-562c-8bb8-e16c15e78676",
+        "text": "ann reinking",
+        "type": "Entity"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 11,
+        "target": 3,
+        "type": "wrote_book_for"
+      },
+      {
+        "source": 12,
+        "target": 3,
+        "type": "wrote_music_for"
+      },
+      {
+        "source": 22,
+        "target": 3,
+        "type": "starred_in"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "was_created_in"
+      },
+      {
+        "source": 1,
+        "target": 4,
+        "type": "contains"
+      },
+      {
+        "source": 4,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 15,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 6,
+        "type": "was_produced_on"
+      },
+      {
+        "source": 1,
+        "target": 6,
+        "type": "contains"
+      },
+      {
+        "source": 22,
+        "target": 6,
+        "type": "performed_on"
+      },
+      {
+        "source": 6,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 16,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 17,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 8,
+        "type": "inspired_by_life_of"
+      },
+      {
+        "source": 1,
+        "target": 8,
+        "type": "contains"
+      },
+      {
+        "source": 8,
+        "target": 9,
+        "type": "is_a"
+      },
+      {
+        "source": 11,
+        "target": 9,
+        "type": "is_a"
+      },
+      {
+        "source": 14,
+        "target": 9,
+        "type": "is_a"
+      },
+      {
+        "source": 13,
+        "target": 9,
+        "type": "is_a"
+      },
+      {
+        "source": 12,
+        "target": 9,
+        "type": "is_a"
+      },
+      {
+        "source": 22,
+        "target": 9,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 10,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 11,
+        "type": "contains"
+      },
+      {
+        "source": 1,
+        "target": 12,
+        "type": "contains"
+      },
+      {
+        "source": 12,
+        "target": 13,
+        "type": "is_same_as"
+      },
+      {
+        "source": 1,
+        "target": 13,
+        "type": "contains"
+      },
+      {
+        "source": 13,
+        "target": 14,
+        "type": "born_as"
+      },
+      {
+        "source": 1,
+        "target": 14,
+        "type": "contains"
+      },
+      {
+        "source": 13,
+        "target": 15,
+        "type": "born_on"
+      },
+      {
+        "source": 1,
+        "target": 15,
+        "type": "contains"
+      },
+      {
+        "source": 13,
+        "target": 16,
+        "type": "has_national_association"
+      },
+      {
+        "source": 1,
+        "target": 16,
+        "type": "contains"
+      },
+      {
+        "source": 13,
+        "target": 17,
+        "type": "has_national_association"
+      },
+      {
+        "source": 1,
+        "target": 17,
+        "type": "contains"
+      },
+      {
+        "source": 13,
+        "target": 18,
+        "type": "has_profession"
+      },
+      {
+        "source": 1,
+        "target": 18,
+        "type": "contains"
+      },
+      {
+        "source": 18,
+        "target": 19,
+        "type": "is_a"
+      },
+      {
+        "source": 20,
+        "target": 19,
+        "type": "is_a"
+      },
+      {
+        "source": 21,
+        "target": 19,
+        "type": "is_a"
+      },
+      {
+        "source": 13,
+        "target": 20,
+        "type": "has_profession"
+      },
+      {
+        "source": 1,
+        "target": 20,
+        "type": "contains"
+      },
+      {
+        "source": 13,
+        "target": 21,
+        "type": "has_profession"
+      },
+      {
+        "source": 1,
+        "target": 21,
+        "type": "contains"
+      },
+      {
+        "source": 1,
+        "target": 22,
+        "type": "contains"
+      }
+    ]
+  }
+}

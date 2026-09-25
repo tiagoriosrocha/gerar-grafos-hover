@@ -1,0 +1,321 @@
+{
+  "dataset": "hover",
+  "id": "6c01fcce-94c4-4c06-8e46-c0f058ebb5c0",
+  "split": "train",
+  "claim": "The manufacturer that owns the company that currently produced and marketed Skittles is headquartered in the US state Virginia.",
+  "evidencia": "Page: Skittles (confectionery). Sentence: Skittles is a brand of fruit-flavoured sweets, currently produced and marketed by the Wrigley Company, a division of Mars, Inc..\nPage: Mars, Incorporated. Sentence: Headquartered in McLean, unincorporated Fairfax County, Virginia, US, the company is entirely owned by the Mars family.",
+  "evidence_text": "Page: Skittles (confectionery). Sentence: Skittles is a brand of fruit-flavoured sweets, currently produced and marketed by the Wrigley Company, a division of Mars, Inc..\nPage: Mars, Incorporated. Sentence: Headquartered in McLean, unincorporated Fairfax County, Virginia, US, the company is entirely owned by the Mars family.",
+  "label": "SUPPORTED",
+  "num_hops": 2,
+  "hover_metadata": {
+    "supporting_facts": [
+      [
+        "Skittles (confectionery)",
+        0
+      ],
+      [
+        "Mars, Incorporated",
+        1
+      ]
+    ],
+    "num_hops": 2,
+    "evidence_annotation_id": [
+      0
+    ],
+    "evidence_id": [
+      "Skittles (confectionery)::sentence::0",
+      "Mars, Incorporated::sentence::1"
+    ],
+    "evidence_wiki_url": [
+      "https://en.wikipedia.org/wiki/Skittles_%28confectionery%29",
+      "https://en.wikipedia.org/wiki/Mars%2C_Incorporated"
+    ],
+    "evidence_sentence_id": [
+      "Skittles (confectionery)::sentence::0",
+      "Mars, Incorporated::sentence::1"
+    ]
+  },
+  "grafo_claim": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "43fea05a-5d46-5d55-a23e-14b238b3d8a7",
+        "text": "This chunk is about:\n- Companies: Skittles, Wrigley Company, Mars, Incorporated\n- Places: Virginia\n\nFacts:\n- Skittles is currently produced and marketed by the Wrigley Company.\n- The manufacturer that owns the Wrigley Company is Mars, Incorporated.\n- Mars, Incorporated is headquartered in the U.S. state of Virginia.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "b067f3e5-5070-52f1-a5bb-cda349bf6abb",
+        "text": "The manufacturer that owns the company that currently produced and marketed Skittles is headquartered in the US state Virginia.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "ab8311ff-4241-5227-ae87-bbc5e004d102",
+        "text": "text_e4950c7496b6f31b69db1704a04e0e00",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "7c1c6de6-9cb2-5bcf-85d6-608a457bb314",
+        "text": "skittles",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "f76d57aa-4740-5218-9539-0e0978cbf183",
+        "text": "product",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "81e24dfe-1def-567f-9164-44e50948987f",
+        "text": "mars, incorporated",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "82bfc922-4fcd-56b0-b353-7b550b51389d",
+        "text": "company",
+        "type": "EntityType"
+      },
+      {
+        "id": 7,
+        "original_id": "5d91b4e7-8b73-5e03-b96f-c7cb30567b67",
+        "text": "manufacturer owning mars, incorporated",
+        "type": "Entity"
+      },
+      {
+        "id": 8,
+        "original_id": "843daa7c-23fc-5336-8066-bb004c7567bb",
+        "text": "virginia",
+        "type": "Entity"
+      },
+      {
+        "id": 9,
+        "original_id": "5f394058-b2a0-5ba8-8466-ba2a18cfcf4e",
+        "text": "place",
+        "type": "EntityType"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 3,
+        "type": "produces_and_markets"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 7,
+        "target": 5,
+        "type": "owns"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 7,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      },
+      {
+        "source": 7,
+        "target": 8,
+        "type": "headquartered_in"
+      },
+      {
+        "source": 1,
+        "target": 8,
+        "type": "contains"
+      },
+      {
+        "source": 8,
+        "target": 9,
+        "type": "is_a"
+      }
+    ]
+  },
+  "grafo_evidencia": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "523cb15b-5ba7-587d-9e5e-5aa78bb1e938",
+        "text": "This chunk is about:\n- Products: Skittles\n- Companies: Wrigley Company, Mars, Incorporated\n- Places: McLean, Fairfax County, Virginia, United States\n- People: Mars family\n\nFacts:\n- Skittles is a brand of fruit-flavoured sweets.\n- Skittles is currently produced and marketed by the Wrigley Company.\n- The Wrigley Company is a division of Mars, Incorporated.\n- Mars, Incorporated is headquartered in McLean, in unincorporated Fairfax County, Virginia, United States.\n- Mars, Incorporated is entirely owned by the Mars family.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "71b3bf6f-e83f-5577-ab64-bf2686ba9405",
+        "text": "Page: Skittles (confectionery). Sentence: Skittles is a brand of fruit-flavoured sweets, currently produced and marketed by the Wrigley Company, a division of Mars, Inc..\nPage: Mars, Incorporated. Sentence: Headquartered in McLean, unincorporated Fairfax County, Virginia, US, the company is entirely owned by the Mars family.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "642b0d94-4223-5f72-b219-2e13defe4a25",
+        "text": "text_905345dbcbcd4226fa1b2f6308bbebcc",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "7c1c6de6-9cb2-5bcf-85d6-608a457bb314",
+        "text": "skittles",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "f76d57aa-4740-5218-9539-0e0978cbf183",
+        "text": "product",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "6841ad9b-5da9-5a5a-a19b-e4712460ad36",
+        "text": "wrigley company",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "388f60fb-220d-55e8-ae9c-3ac93cead308",
+        "text": "organization",
+        "type": "EntityType"
+      },
+      {
+        "id": 7,
+        "original_id": "58a0e81b-e6d5-5393-8b8a-777b44f8120a",
+        "text": "mars, inc.",
+        "type": "Entity"
+      },
+      {
+        "id": 8,
+        "original_id": "afbbb738-c749-51e2-a0bd-f809ef67e605",
+        "text": "mars family",
+        "type": "Entity"
+      },
+      {
+        "id": 9,
+        "original_id": "efed16c6-3e3d-55e7-9fbc-8c9b0a79aa33",
+        "text": "mclean, unincorporated fairfax county, virginia, us",
+        "type": "Entity"
+      },
+      {
+        "id": 10,
+        "original_id": "5f394058-b2a0-5ba8-8466-ba2a18cfcf4e",
+        "text": "place",
+        "type": "EntityType"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "produced_and_marketed_by"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 7,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 8,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 5,
+        "target": 7,
+        "type": "division_of"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      },
+      {
+        "source": 7,
+        "target": 8,
+        "type": "entirely_owned_by"
+      },
+      {
+        "source": 1,
+        "target": 8,
+        "type": "contains"
+      },
+      {
+        "source": 7,
+        "target": 9,
+        "type": "headquartered_in"
+      },
+      {
+        "source": 1,
+        "target": 9,
+        "type": "contains"
+      },
+      {
+        "source": 9,
+        "target": 10,
+        "type": "is_a"
+      }
+    ]
+  }
+}

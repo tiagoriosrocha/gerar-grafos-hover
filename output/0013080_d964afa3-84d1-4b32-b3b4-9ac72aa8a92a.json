@@ -1,0 +1,399 @@
+{
+  "dataset": "hover",
+  "id": "d964afa3-84d1-4b32-b3b4-9ac72aa8a92a",
+  "split": "train",
+  "claim": "Igor Naming Agency named a resort located on the Las Vegas Strip.",
+  "evidencia": "Page: Igor Naming Agency. Sentence: Among others, the company has named Gogo Inflight, \"Cutthroat Kitchen\", TruTV, the Aria Resort, and consumer products for The North Face and Target, among others.\nPage: Aria Resort and Casino. Sentence: Aria Resort and Casino is a luxury resort and casino, part of the CityCenter complex on the Las Vegas Strip in Paradise, Nevada.",
+  "evidence_text": "Page: Igor Naming Agency. Sentence: Among others, the company has named Gogo Inflight, \"Cutthroat Kitchen\", TruTV, the Aria Resort, and consumer products for The North Face and Target, among others.\nPage: Aria Resort and Casino. Sentence: Aria Resort and Casino is a luxury resort and casino, part of the CityCenter complex on the Las Vegas Strip in Paradise, Nevada.",
+  "label": "SUPPORTED",
+  "num_hops": 2,
+  "hover_metadata": {
+    "supporting_facts": [
+      [
+        "Igor Naming Agency",
+        2
+      ],
+      [
+        "Aria Resort and Casino",
+        0
+      ]
+    ],
+    "num_hops": 2,
+    "evidence_annotation_id": [
+      0
+    ],
+    "evidence_id": [
+      "Igor Naming Agency::sentence::2",
+      "Aria Resort and Casino::sentence::0"
+    ],
+    "evidence_wiki_url": [
+      "https://en.wikipedia.org/wiki/Igor_Naming_Agency",
+      "https://en.wikipedia.org/wiki/Aria_Resort_and_Casino"
+    ],
+    "evidence_sentence_id": [
+      "Igor Naming Agency::sentence::2",
+      "Aria Resort and Casino::sentence::0"
+    ]
+  },
+  "grafo_claim": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "bbb5f69f-ef07-5650-8956-870f6b58be0b",
+        "text": "This chunk is about:\n- Companies: Igor Naming Agency\n- Places: Las Vegas Strip, a resort\n\nFacts:\n- Igor Naming Agency named a resort located on the Las Vegas Strip.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "3495c2ee-fb37-58bf-93fc-7f2a06d2a7b5",
+        "text": "Igor Naming Agency named a resort located on the Las Vegas Strip.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "fab31779-31c4-53aa-b4f5-c2d25ebbdbe8",
+        "text": "text_9ac7971ac8e186c1040d31cc0471b972",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "d1d15e87-837b-5c31-aa4c-3db4f408e2b3",
+        "text": "igor naming agency",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "388f60fb-220d-55e8-ae9c-3ac93cead308",
+        "text": "organization",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "42896a26-393e-5670-872a-d9b627d6e2fe",
+        "text": "resort",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "5f394058-b2a0-5ba8-8466-ba2a18cfcf4e",
+        "text": "place",
+        "type": "EntityType"
+      },
+      {
+        "id": 7,
+        "original_id": "60152a3c-19f4-5b80-8305-51c3a57f8052",
+        "text": "las vegas strip",
+        "type": "Entity"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "named"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 7,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 5,
+        "target": 7,
+        "type": "located_on"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      }
+    ]
+  },
+  "grafo_evidencia": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "06a83fcc-3d13-589a-80be-16dfc51b6193",
+        "text": "This chunk is about:\n- Companies: Igor Naming Agency, Gogo Inflight, TruTV, The North Face, Target\n- Products: consumer products\n- Projects: Cutthroat Kitchen, Aria Resort and Casino, CityCenter\n- Places: Las Vegas Strip, Paradise, Nevada\n\nFacts:\n- Igor Naming Agency named Gogo Inflight, Cutthroat Kitchen, TruTV, and consumer products for The North Face and Target.\n- Igor Naming Agency also named Aria Resort and Casino.\n- Aria Resort and Casino is a luxury resort and casino in the CityCenter complex on the Las Vegas Strip in Paradise, Nevada.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "39aafcfe-57ce-5291-a467-c5f7ab2103c1",
+        "text": "Page: Igor Naming Agency. Sentence: Among others, the company has named Gogo Inflight, \"Cutthroat Kitchen\", TruTV, the Aria Resort, and consumer products for The North Face and Target, among others.\nPage: Aria Resort and Casino. Sentence: Aria Resort and Casino is a luxury resort and casino, part of the CityCenter complex on the Las Vegas Strip in Paradise, Nevada.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "792de8d3-84eb-55e4-88c7-614c4c46ae1e",
+        "text": "text_e53d1ce34b89e241d3ce9975c0e0d085",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "d1d15e87-837b-5c31-aa4c-3db4f408e2b3",
+        "text": "igor naming agency",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "388f60fb-220d-55e8-ae9c-3ac93cead308",
+        "text": "organization",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "617b757a-2f9d-5e3b-9088-9b8ff463e069",
+        "text": "gogo inflight",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "40ba144c-dc46-5d77-b813-94179d4ce34f",
+        "text": "cutthroat kitchen",
+        "type": "Entity"
+      },
+      {
+        "id": 7,
+        "original_id": "5263a535-1b4b-5925-be3e-310d03cd303b",
+        "text": "work",
+        "type": "EntityType"
+      },
+      {
+        "id": 8,
+        "original_id": "600337e1-76df-5d03-b61a-d01304383547",
+        "text": "trutv",
+        "type": "Entity"
+      },
+      {
+        "id": 9,
+        "original_id": "35a39ee3-aa58-5b72-b40f-7682b8deffb9",
+        "text": "aria resort and casino",
+        "type": "Entity"
+      },
+      {
+        "id": 10,
+        "original_id": "5f394058-b2a0-5ba8-8466-ba2a18cfcf4e",
+        "text": "place",
+        "type": "EntityType"
+      },
+      {
+        "id": 11,
+        "original_id": "10e5d6c5-1381-5b70-b182-0d6928066561",
+        "text": "citycenter",
+        "type": "Entity"
+      },
+      {
+        "id": 12,
+        "original_id": "60152a3c-19f4-5b80-8305-51c3a57f8052",
+        "text": "las vegas strip",
+        "type": "Entity"
+      },
+      {
+        "id": 13,
+        "original_id": "a9bf4f79-c7b3-5485-8ce9-c8c5b4f6e1df",
+        "text": "paradise, nevada",
+        "type": "Entity"
+      },
+      {
+        "id": 14,
+        "original_id": "2073bfd2-4f5c-5f1a-8847-0b3252d4ec35",
+        "text": "the north face",
+        "type": "Entity"
+      },
+      {
+        "id": 15,
+        "original_id": "18117f76-8cd9-5348-8d30-86b9c088bed3",
+        "text": "target",
+        "type": "Entity"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 5,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 8,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 14,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 15,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "named"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 6,
+        "type": "named"
+      },
+      {
+        "source": 1,
+        "target": 6,
+        "type": "contains"
+      },
+      {
+        "source": 6,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 8,
+        "type": "named"
+      },
+      {
+        "source": 1,
+        "target": 8,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 9,
+        "type": "named"
+      },
+      {
+        "source": 1,
+        "target": 9,
+        "type": "contains"
+      },
+      {
+        "source": 9,
+        "target": 10,
+        "type": "is_a"
+      },
+      {
+        "source": 11,
+        "target": 10,
+        "type": "is_a"
+      },
+      {
+        "source": 12,
+        "target": 10,
+        "type": "is_a"
+      },
+      {
+        "source": 13,
+        "target": 10,
+        "type": "is_a"
+      },
+      {
+        "source": 9,
+        "target": 11,
+        "type": "part_of"
+      },
+      {
+        "source": 1,
+        "target": 11,
+        "type": "contains"
+      },
+      {
+        "source": 11,
+        "target": 12,
+        "type": "located_on"
+      },
+      {
+        "source": 1,
+        "target": 12,
+        "type": "contains"
+      },
+      {
+        "source": 12,
+        "target": 13,
+        "type": "located_in"
+      },
+      {
+        "source": 1,
+        "target": 13,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 14,
+        "type": "named_consumer_products_for"
+      },
+      {
+        "source": 1,
+        "target": 14,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 15,
+        "type": "named_consumer_products_for"
+      },
+      {
+        "source": 1,
+        "target": 15,
+        "type": "contains"
+      }
+    ]
+  }
+}

@@ -1,0 +1,255 @@
+{
+  "dataset": "hover",
+  "id": "0ed30e8a-d144-40da-a3f3-898b0b24745b",
+  "split": "train",
+  "claim": "Lupin Mine and Lost Lemon Mine are not both places that can be located on a map.",
+  "evidencia": "Page: Lupin Mine. Sentence: Lupin Mine was a gold mine in Nunavut Territory, Canada.\nPage: Lost Lemon Mine. Sentence: The Lost Lemon Mine is a legendary lost mine said to be located in the Canadian Province of Alberta.",
+  "evidence_text": "Page: Lupin Mine. Sentence: Lupin Mine was a gold mine in Nunavut Territory, Canada.\nPage: Lost Lemon Mine. Sentence: The Lost Lemon Mine is a legendary lost mine said to be located in the Canadian Province of Alberta.",
+  "label": "SUPPORTED",
+  "num_hops": 2,
+  "hover_metadata": {
+    "supporting_facts": [
+      [
+        "Lupin Mine",
+        0
+      ],
+      [
+        "Lost Lemon Mine",
+        0
+      ]
+    ],
+    "num_hops": 2,
+    "evidence_annotation_id": [
+      0
+    ],
+    "evidence_id": [
+      "Lupin Mine::sentence::0",
+      "Lost Lemon Mine::sentence::0"
+    ],
+    "evidence_wiki_url": [
+      "https://en.wikipedia.org/wiki/Lupin_Mine",
+      "https://en.wikipedia.org/wiki/Lost_Lemon_Mine"
+    ],
+    "evidence_sentence_id": [
+      "Lupin Mine::sentence::0",
+      "Lost Lemon Mine::sentence::0"
+    ]
+  },
+  "grafo_claim": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "64025c51-71c4-51a2-808d-28e6839ce5f8",
+        "text": "This chunk is about:\n- Places: Lupin Mine\n- Concepts: Lost Lemon Mine, mappable places\n\nFacts:\n- Lupin Mine is a place that can be located on a map.\n- Lost Lemon Mine is not a place that can be located on a map.\n- Lupin Mine and Lost Lemon Mine are not both places that can be located on a map.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "14e32373-d60f-5d5f-b0fc-9521ba94612a",
+        "text": "Lupin Mine and Lost Lemon Mine are not both places that can be located on a map.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "5a4f6c65-62af-54ab-99a2-832fff4b6589",
+        "text": "text_13f9092957037c8f65f2f4f344366b2f",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "95c46432-f3b4-5114-b5aa-ebe8c76dfa24",
+        "text": "lupin mine",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "10a1b44d-c497-559d-9a02-3d6d6606060a",
+        "text": "lost lemon mine",
+        "type": "Entity"
+      },
+      {
+        "id": 5,
+        "original_id": "5f394058-b2a0-5ba8-8466-ba2a18cfcf4e",
+        "text": "place",
+        "type": "EntityType"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "not_both_locatable_on_map"
+      },
+      {
+        "source": 1,
+        "target": 4,
+        "type": "contains"
+      },
+      {
+        "source": 4,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "is_a"
+      }
+    ]
+  },
+  "grafo_evidencia": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "44b736b6-31e7-563d-b261-d98fa4602595",
+        "text": "This chunk is about:\n- Places: Nunavut Territory, Canada, Alberta\n- Projects: Lupin Mine, Lost Lemon Mine\n- Topics: gold mines, lost mines, legendary mines\n\nFacts:\n- Lupin Mine was a gold mine in Nunavut Territory, Canada.\n- Lost Lemon Mine is a legendary lost mine said to be located in Alberta, Canada.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "a6fb0fca-3bba-56ec-b921-00b4003cb29c",
+        "text": "Page: Lupin Mine. Sentence: Lupin Mine was a gold mine in Nunavut Territory, Canada.\nPage: Lost Lemon Mine. Sentence: The Lost Lemon Mine is a legendary lost mine said to be located in the Canadian Province of Alberta.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "79ea976a-42c5-5001-aa48-60cc5a3808f0",
+        "text": "text_c2d4c4ac977dfdf3b90aaa5d890486de",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "95c46432-f3b4-5114-b5aa-ebe8c76dfa24",
+        "text": "lupin mine",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "52657fc2-820a-5700-91ce-177a9fb660e3",
+        "text": "nunavut territory",
+        "type": "Entity"
+      },
+      {
+        "id": 5,
+        "original_id": "bbedb15c-e733-5a11-9f07-ae16faad96f0",
+        "text": "canada",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "5f394058-b2a0-5ba8-8466-ba2a18cfcf4e",
+        "text": "place",
+        "type": "EntityType"
+      },
+      {
+        "id": 7,
+        "original_id": "10a1b44d-c497-559d-9a02-3d6d6606060a",
+        "text": "lost lemon mine",
+        "type": "Entity"
+      },
+      {
+        "id": 8,
+        "original_id": "eed4f39d-5e82-55c8-9fe6-dfe7d059e077",
+        "text": "alberta",
+        "type": "Entity"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "located_in"
+      },
+      {
+        "source": 1,
+        "target": 4,
+        "type": "contains"
+      },
+      {
+        "source": 4,
+        "target": 5,
+        "type": "located_in"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 8,
+        "target": 5,
+        "type": "located_in"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 4,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 8,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 7,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      },
+      {
+        "source": 7,
+        "target": 8,
+        "type": "located_in"
+      },
+      {
+        "source": 1,
+        "target": 8,
+        "type": "contains"
+      }
+    ]
+  }
+}

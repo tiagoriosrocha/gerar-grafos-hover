@@ -1,0 +1,336 @@
+{
+  "dataset": "hover",
+  "id": "782d927b-7484-4890-b2d2-d058cfbdf50d",
+  "split": "train",
+  "claim": "A vehicle that uses hydrogen as its onboard fuel for motive power is considered a Bi-fuel vehicle rather than a Flex-fuel vehicle.",
+  "evidencia": "Page: Flexible-fuel vehicle. Sentence: Flex-fuel vehicles are distinguished from bi-fuel vehicles, where two fuels are stored in separate tanks and the engine runs on one fuel at a time, for example, compressed natural gas (CNG), liquefied petroleum gas (LPG), or hydrogen.\nPage: Hydrogen vehicle. Sentence: A hydrogen vehicle is a vehicle that uses hydrogen as its onboard fuel for motive power.",
+  "evidence_text": "Page: Flexible-fuel vehicle. Sentence: Flex-fuel vehicles are distinguished from bi-fuel vehicles, where two fuels are stored in separate tanks and the engine runs on one fuel at a time, for example, compressed natural gas (CNG), liquefied petroleum gas (LPG), or hydrogen.\nPage: Hydrogen vehicle. Sentence: A hydrogen vehicle is a vehicle that uses hydrogen as its onboard fuel for motive power.",
+  "label": "SUPPORTED",
+  "num_hops": 2,
+  "hover_metadata": {
+    "supporting_facts": [
+      [
+        "Flexible-fuel vehicle",
+        2
+      ],
+      [
+        "Hydrogen vehicle",
+        0
+      ]
+    ],
+    "num_hops": 2,
+    "evidence_annotation_id": [
+      0
+    ],
+    "evidence_id": [
+      "Flexible-fuel vehicle::sentence::2",
+      "Hydrogen vehicle::sentence::0"
+    ],
+    "evidence_wiki_url": [
+      "https://en.wikipedia.org/wiki/Flexible-fuel_vehicle",
+      "https://en.wikipedia.org/wiki/Hydrogen_vehicle"
+    ],
+    "evidence_sentence_id": [
+      "Flexible-fuel vehicle::sentence::2",
+      "Hydrogen vehicle::sentence::0"
+    ]
+  },
+  "grafo_claim": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "61d2a6e4-4d6c-540a-9ad4-04c58d244ac4",
+        "text": "This chunk is about:\n- Products: bi-fuel vehicles, flex-fuel vehicles\n- Concepts: hydrogen as onboard fuel, vehicle fuel classification\n\nFacts:\n- A vehicle that uses hydrogen as its onboard fuel for motive power is classified as a bi-fuel vehicle.\n- A vehicle that uses hydrogen as its onboard fuel for motive power is not classified as a flex-fuel vehicle.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "8d0b8e81-f93d-556e-9143-dedb81821ee1",
+        "text": "A vehicle that uses hydrogen as its onboard fuel for motive power is considered a Bi-fuel vehicle rather than a Flex-fuel vehicle.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "ad883412-c90e-58ce-a37e-659a9d5692c0",
+        "text": "text_3d91a75a5a7b59a79ce2db918e0cf40c",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "4872d698-078b-5331-98a9-f7cbcd8489ce",
+        "text": "hydrogen-fueled vehicle",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "201a3a9e-37c5-5e81-b46d-a59fdb5c218e",
+        "text": "hydrogen",
+        "type": "Entity"
+      },
+      {
+        "id": 5,
+        "original_id": "1bc2edae-b65f-569e-861c-05b4e87066fa",
+        "text": "fuel",
+        "type": "EntityType"
+      },
+      {
+        "id": 6,
+        "original_id": "c757a196-2c43-5890-bd88-cd14f3bc2eaa",
+        "text": "bi-fuel vehicle",
+        "type": "Entity"
+      },
+      {
+        "id": 7,
+        "original_id": "99b1c9d5-e8b8-5487-bc98-a8580c9fb066",
+        "text": "vehicle type",
+        "type": "EntityType"
+      },
+      {
+        "id": 8,
+        "original_id": "aa8f0c75-c350-5361-ac60-bc7c0c8fec4e",
+        "text": "flex-fuel vehicle",
+        "type": "Entity"
+      },
+      {
+        "id": 9,
+        "original_id": "0f5ec78d-c353-540c-b8bd-bce84eac0af4",
+        "text": "vehicle",
+        "type": "EntityType"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "uses_fuel"
+      },
+      {
+        "source": 1,
+        "target": 4,
+        "type": "contains"
+      },
+      {
+        "source": 4,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 6,
+        "type": "is_considered"
+      },
+      {
+        "source": 1,
+        "target": 6,
+        "type": "contains"
+      },
+      {
+        "source": 6,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 8,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 8,
+        "type": "is_not_considered"
+      },
+      {
+        "source": 1,
+        "target": 8,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 9,
+        "type": "is_a"
+      }
+    ]
+  },
+  "grafo_evidencia": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "4d2789ef-202a-5a18-b1be-ae20d8c5ff13",
+        "text": "This chunk is about:\n- Products: Flexible-fuel vehicles, bi-fuel vehicles, hydrogen vehicles\n- Concepts: Fuel storage, onboard fuel, motive power, CNG, LPG, hydrogen\n\nFacts:\n- Flexible-fuel vehicles are different from bi-fuel vehicles.\n- Bi-fuel vehicles store two fuels in separate tanks and run the engine on one fuel at a time.\n- Examples of fuels used in bi-fuel vehicles include compressed natural gas (CNG), liquefied petroleum gas (LPG), and hydrogen.\n- A hydrogen vehicle is a vehicle that uses hydrogen as its onboard fuel for motive power.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "ca7ecf85-a552-5919-a97e-7545f38febf2",
+        "text": "Page: Flexible-fuel vehicle. Sentence: Flex-fuel vehicles are distinguished from bi-fuel vehicles, where two fuels are stored in separate tanks and the engine runs on one fuel at a time, for example, compressed natural gas (CNG), liquefied petroleum gas (LPG), or hydrogen.\nPage: Hydrogen vehicle. Sentence: A hydrogen vehicle is a vehicle that uses hydrogen as its onboard fuel for motive power.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "ed0f0f06-5bdf-5a2f-b946-d6cd8ced5537",
+        "text": "text_ba496839e8e6d488b89cb918afa4b139",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "50348355-abff-53f7-9aa7-168389d9c010",
+        "text": "flexible-fuel vehicle",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "c757a196-2c43-5890-bd88-cd14f3bc2eaa",
+        "text": "bi-fuel vehicle",
+        "type": "Entity"
+      },
+      {
+        "id": 5,
+        "original_id": "1ed8d0e6-51e0-5e3f-aef8-d32b16436758",
+        "text": "compressed natural gas",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "1bc2edae-b65f-569e-861c-05b4e87066fa",
+        "text": "fuel",
+        "type": "EntityType"
+      },
+      {
+        "id": 7,
+        "original_id": "2b842927-048b-5554-b1bd-4a13ca27667f",
+        "text": "liquefied petroleum gas",
+        "type": "Entity"
+      },
+      {
+        "id": 8,
+        "original_id": "201a3a9e-37c5-5e81-b46d-a59fdb5c218e",
+        "text": "hydrogen",
+        "type": "Entity"
+      },
+      {
+        "id": 9,
+        "original_id": "0f5ec78d-c353-540c-b8bd-bce84eac0af4",
+        "text": "vehicle",
+        "type": "EntityType"
+      },
+      {
+        "id": 10,
+        "original_id": "acf0f6a2-9b68-5520-98e0-bdde880f4f57",
+        "text": "hydrogen vehicle",
+        "type": "Entity"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "distinguished_from"
+      },
+      {
+        "source": 1,
+        "target": 4,
+        "type": "contains"
+      },
+      {
+        "source": 4,
+        "target": 5,
+        "type": "uses_fuel_example"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 7,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 8,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 4,
+        "target": 7,
+        "type": "uses_fuel_example"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      },
+      {
+        "source": 4,
+        "target": 8,
+        "type": "uses_fuel_example"
+      },
+      {
+        "source": 1,
+        "target": 8,
+        "type": "contains"
+      },
+      {
+        "source": 10,
+        "target": 8,
+        "type": "uses_fuel"
+      },
+      {
+        "source": 4,
+        "target": 9,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 9,
+        "type": "is_a"
+      },
+      {
+        "source": 10,
+        "target": 9,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 10,
+        "type": "contains"
+      }
+    ]
+  }
+}

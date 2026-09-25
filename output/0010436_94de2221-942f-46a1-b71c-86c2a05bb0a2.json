@@ -1,0 +1,470 @@
+{
+  "dataset": "hover",
+  "id": "94de2221-942f-46a1-b71c-86c2a05bb0a2",
+  "split": "train",
+  "claim": "The brother-in-law of Victoria Ocampo and James Norman Hall are not both Argentinian authors.",
+  "evidencia": "Page: Adolfo Bioy Casares. Sentence: Adolfo Bioy Casares (] ; September 15, 1914 – March 8, 1999) was an Argentine fiction writer, journalist, and translator.\nPage: James Norman Hall. Sentence: James Norman Hall (22 April 1887 – 5 July 1951) was an American author best known for the novel \"Mutiny on the Bounty\" with co-author Charles Nordhoff.\nPage: Victoria Ocampo. Sentence: Her sister, Silvina Ocampo, also a writer, was married to Adolfo Bioy Casares.",
+  "evidence_text": "Page: Adolfo Bioy Casares. Sentence: Adolfo Bioy Casares (] ; September 15, 1914 – March 8, 1999) was an Argentine fiction writer, journalist, and translator.\nPage: James Norman Hall. Sentence: James Norman Hall (22 April 1887 – 5 July 1951) was an American author best known for the novel \"Mutiny on the Bounty\" with co-author Charles Nordhoff.\nPage: Victoria Ocampo. Sentence: Her sister, Silvina Ocampo, also a writer, was married to Adolfo Bioy Casares.",
+  "label": "SUPPORTED",
+  "num_hops": 3,
+  "hover_metadata": {
+    "supporting_facts": [
+      [
+        "Adolfo Bioy Casares",
+        0
+      ],
+      [
+        "James Norman Hall",
+        0
+      ],
+      [
+        "Victoria Ocampo",
+        2
+      ]
+    ],
+    "num_hops": 3,
+    "evidence_annotation_id": [
+      0
+    ],
+    "evidence_id": [
+      "Adolfo Bioy Casares::sentence::0",
+      "James Norman Hall::sentence::0",
+      "Victoria Ocampo::sentence::2"
+    ],
+    "evidence_wiki_url": [
+      "https://en.wikipedia.org/wiki/Adolfo_Bioy_Casares",
+      "https://en.wikipedia.org/wiki/James_Norman_Hall",
+      "https://en.wikipedia.org/wiki/Victoria_Ocampo"
+    ],
+    "evidence_sentence_id": [
+      "Adolfo Bioy Casares::sentence::0",
+      "James Norman Hall::sentence::0",
+      "Victoria Ocampo::sentence::2"
+    ]
+  },
+  "grafo_claim": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "e2a807f1-84d5-5201-9a77-17e4cff21d80",
+        "text": "This chunk is about:\n- People: Victoria Ocampo, James Norman Hall\n- Roles: authors, family relationships, nationality\n\nFacts:\n- Victoria Ocampo was an Argentinian author.\n- James Norman Hall was an author.\n- The brother-in-law of Victoria Ocampo and James Norman Hall are not both Argentinian authors.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "81a58491-58a1-5d26-8550-b0fdc842a063",
+        "text": "The brother-in-law of Victoria Ocampo and James Norman Hall are not both Argentinian authors.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "f0e3bfc4-9d83-5be3-89d7-bb6c2a5ca10e",
+        "text": "text_82c75e092b2665f07099b32b8b59b777",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "2c563c92-5ef4-57da-ad4a-0f7ba7f2d2ca",
+        "text": "victoria ocampo",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "99a82eec-bb35-5bb5-9ed2-e73fc7a756de",
+        "text": "person",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "ddc735b5-e31f-5d69-b258-7e68193020ee",
+        "text": "james norman hall",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "2322ea83-29ce-55cf-bc70-12e207f1774f",
+        "text": "argentinian authors",
+        "type": "Entity"
+      },
+      {
+        "id": 7,
+        "original_id": "d2a381fa-3658-5ca6-ada9-2109cfc9331d",
+        "text": "concept",
+        "type": "EntityType"
+      },
+      {
+        "id": 8,
+        "original_id": "f0169e63-d1e3-519d-91a9-22553d1a7649",
+        "text": "victoria ocampos brother-in-law",
+        "type": "Entity"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 8,
+        "target": 3,
+        "type": "brother_in_law_of"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 5,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 8,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "not_both_are_members_with"
+      },
+      {
+        "source": 1,
+        "target": 6,
+        "type": "contains"
+      },
+      {
+        "source": 8,
+        "target": 6,
+        "type": "not_both_are_members_with"
+      },
+      {
+        "source": 6,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 8,
+        "type": "contains"
+      }
+    ]
+  },
+  "grafo_evidencia": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "ff0348bd-92f6-5574-8557-80abc0ad2975",
+        "text": "This chunk is about:\n- People: Adolfo Bioy Casares, James Norman Hall, Victoria Ocampo, Silvina Ocampo, Charles Nordhoff\n- Roles: fiction writer, journalist, translator, author\n- Works: Mutiny on the Bounty\n\nFacts:\n- James Norman Hall was born on April 22, 1887, and died on July 5, 1951.\n- Adolfo Bioy Casares was born on September 15, 1914, and died on March 8, 1999.\n- James Norman Hall was an American author best known for the novel \"Mutiny on the Bounty,\" which he wrote with Charles Nordhoff.\n- Adolfo Bioy Casares was an Argentine fiction writer, journalist, and translator.\n- Silvina Ocampo was a writer and the sister of Victoria Ocampo.\n- Silvina Ocampo was married to Adolfo Bioy Casares.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "38fd7002-a988-5258-9d59-1ac78534b1f3",
+        "text": "Page: Adolfo Bioy Casares. Sentence: Adolfo Bioy Casares (] ; September 15, 1914 – March 8, 1999) was an Argentine fiction writer, journalist, and translator.\nPage: James Norman Hall. Sentence: James Norman Hall (22 April 1887 – 5 July 1951) was an American author best known for the novel \"Mutiny on the Bounty\" with co-author Charles Nordhoff.\nPage: Victoria Ocampo. Sentence: Her sister, Silvina Ocampo, also a writer, was married to Adolfo Bioy Casares.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "f2c44bea-86f5-5132-922d-72ca76c5f269",
+        "text": "text_f5e2054a629a40e9b0b73b7055d446ae",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "80f85fc9-5f41-54f3-9f70-15d7ab00cee0",
+        "text": "adolfo bioy casares",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "99a82eec-bb35-5bb5-9ed2-e73fc7a756de",
+        "text": "person",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "b5089de8-4e4a-59c0-8dc5-0c3b166b5365",
+        "text": "1914-09-15",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "b19433ae-558c-5aaf-95ac-6231f2a4be0e",
+        "text": "date",
+        "type": "EntityType"
+      },
+      {
+        "id": 7,
+        "original_id": "4716e684-7997-5cf6-ab4a-269857515b4c",
+        "text": "1999-03-08",
+        "type": "Entity"
+      },
+      {
+        "id": 8,
+        "original_id": "694de660-ea6a-5818-b8c7-989cd1882530",
+        "text": "argentina",
+        "type": "Entity"
+      },
+      {
+        "id": 9,
+        "original_id": "5f394058-b2a0-5ba8-8466-ba2a18cfcf4e",
+        "text": "place",
+        "type": "EntityType"
+      },
+      {
+        "id": 10,
+        "original_id": "ddc735b5-e31f-5d69-b258-7e68193020ee",
+        "text": "james norman hall",
+        "type": "Entity"
+      },
+      {
+        "id": 11,
+        "original_id": "441a16c2-57b8-58bc-9ebe-01b3b98bc5c1",
+        "text": "1887-04-22",
+        "type": "Entity"
+      },
+      {
+        "id": 12,
+        "original_id": "432d6441-da68-5f35-a51e-4c93419bcc20",
+        "text": "1951-07-05",
+        "type": "Entity"
+      },
+      {
+        "id": 13,
+        "original_id": "874a51da-34ea-5037-be47-d87785d43c37",
+        "text": "united states",
+        "type": "Entity"
+      },
+      {
+        "id": 14,
+        "original_id": "a8199898-9a1f-5f5f-8872-5a48b92ca021",
+        "text": "mutiny on the bounty",
+        "type": "Entity"
+      },
+      {
+        "id": 15,
+        "original_id": "5263a535-1b4b-5925-be3e-310d03cd303b",
+        "text": "work",
+        "type": "EntityType"
+      },
+      {
+        "id": 16,
+        "original_id": "d1eb67e2-249c-5c63-a90e-35c8e1ce09f1",
+        "text": "charles nordhoff",
+        "type": "Entity"
+      },
+      {
+        "id": 17,
+        "original_id": "2c563c92-5ef4-57da-ad4a-0f7ba7f2d2ca",
+        "text": "victoria ocampo",
+        "type": "Entity"
+      },
+      {
+        "id": 18,
+        "original_id": "42c55dc5-5e74-546b-9e50-c23ecfcecd8b",
+        "text": "silvina ocampo",
+        "type": "Entity"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 18,
+        "target": 3,
+        "type": "married_to"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 10,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 16,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 17,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 18,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "born_on"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 7,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 11,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 12,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 7,
+        "type": "died_on"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 8,
+        "type": "has_nationality"
+      },
+      {
+        "source": 1,
+        "target": 8,
+        "type": "contains"
+      },
+      {
+        "source": 8,
+        "target": 9,
+        "type": "is_a"
+      },
+      {
+        "source": 13,
+        "target": 9,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 10,
+        "type": "contains"
+      },
+      {
+        "source": 10,
+        "target": 11,
+        "type": "born_on"
+      },
+      {
+        "source": 1,
+        "target": 11,
+        "type": "contains"
+      },
+      {
+        "source": 10,
+        "target": 12,
+        "type": "died_on"
+      },
+      {
+        "source": 1,
+        "target": 12,
+        "type": "contains"
+      },
+      {
+        "source": 10,
+        "target": 13,
+        "type": "has_nationality"
+      },
+      {
+        "source": 1,
+        "target": 13,
+        "type": "contains"
+      },
+      {
+        "source": 10,
+        "target": 14,
+        "type": "best_known_for"
+      },
+      {
+        "source": 1,
+        "target": 14,
+        "type": "contains"
+      },
+      {
+        "source": 14,
+        "target": 15,
+        "type": "is_a"
+      },
+      {
+        "source": 10,
+        "target": 16,
+        "type": "co_authored_with"
+      },
+      {
+        "source": 1,
+        "target": 16,
+        "type": "contains"
+      },
+      {
+        "source": 1,
+        "target": 17,
+        "type": "contains"
+      },
+      {
+        "source": 18,
+        "target": 17,
+        "type": "sibling_of"
+      },
+      {
+        "source": 1,
+        "target": 18,
+        "type": "contains"
+      }
+    ]
+  }
+}

@@ -1,0 +1,354 @@
+{
+  "dataset": "hover",
+  "id": "f32429d8-6841-4b33-819b-d4e30aa2f851",
+  "split": "train",
+  "claim": "200,000 people go through the airport where Darwin Airline's headquarters are located.",
+  "evidencia": "Page: Lugano Airport. Sentence: Around 200,000 passengers use the airport each year, using some 2,400 flights.\nPage: Lugano Airport. Sentence: The headquarters of Darwin Airline are located at the airport.\nPage: Darwin Airline. Sentence: Darwin Airline SA is a Swiss regional airline with its head office in Bioggio, Lugano flying under the brand name Adria Airways Switzerland.",
+  "evidence_text": "Page: Lugano Airport. Sentence: Around 200,000 passengers use the airport each year, using some 2,400 flights.\nPage: Lugano Airport. Sentence: The headquarters of Darwin Airline are located at the airport.\nPage: Darwin Airline. Sentence: Darwin Airline SA is a Swiss regional airline with its head office in Bioggio, Lugano flying under the brand name Adria Airways Switzerland.",
+  "label": "SUPPORTED",
+  "num_hops": 2,
+  "hover_metadata": {
+    "supporting_facts": [
+      [
+        "Lugano Airport",
+        2
+      ],
+      [
+        "Lugano Airport",
+        4
+      ],
+      [
+        "Darwin Airline",
+        0
+      ]
+    ],
+    "num_hops": 2,
+    "evidence_annotation_id": [
+      0
+    ],
+    "evidence_id": [
+      "Lugano Airport::sentence::2",
+      "Lugano Airport::sentence::4",
+      "Darwin Airline::sentence::0"
+    ],
+    "evidence_wiki_url": [
+      "https://en.wikipedia.org/wiki/Lugano_Airport",
+      "https://en.wikipedia.org/wiki/Darwin_Airline"
+    ],
+    "evidence_sentence_id": [
+      "Lugano Airport::sentence::2",
+      "Lugano Airport::sentence::4",
+      "Darwin Airline::sentence::0"
+    ]
+  },
+  "grafo_claim": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "8cb64516-ccbe-5430-be8c-f19d0c1c51f5",
+        "text": "This chunk is about:\n- Companies: Darwin Airline\n- Places: the airport where Darwin Airline's headquarters are located\n- Topics: airport passenger traffic\n\nFacts:\n- The airport where Darwin Airline's headquarters are located handles 200,000 people.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "45d48528-90e4-56db-8946-e2399bd8c732",
+        "text": "200,000 people go through the airport where Darwin Airline's headquarters are located.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "b2ea3b6b-6ef5-5e78-8316-a7ae9a971c8e",
+        "text": "text_95c91e27fbc9e9e7038b9358e3e4a61a",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "aea6a340-e7cd-5bc9-bfb0-e5c9d1be92ca",
+        "text": "darwin airline",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "388f60fb-220d-55e8-ae9c-3ac93cead308",
+        "text": "organization",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "c42f8918-de38-53fd-9cb8-cd892971704d",
+        "text": "airport of darwin airline headquarters",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "5f394058-b2a0-5ba8-8466-ba2a18cfcf4e",
+        "text": "place",
+        "type": "EntityType"
+      },
+      {
+        "id": 7,
+        "original_id": "21d330cc-4285-5e4c-a5ea-bf96bea20848",
+        "text": "200,000 people",
+        "type": "Entity"
+      },
+      {
+        "id": 8,
+        "original_id": "7a7a0687-e490-5167-ad5a-0e39d9055dee",
+        "text": "quantity",
+        "type": "EntityType"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "has_headquarters_at"
+      },
+      {
+        "source": 7,
+        "target": 5,
+        "type": "go_through"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      },
+      {
+        "source": 7,
+        "target": 8,
+        "type": "is_a"
+      }
+    ]
+  },
+  "grafo_evidencia": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "c7a64b67-a4ad-5ea9-926b-c3538f1398b7",
+        "text": "This chunk is about:\n- Places: Lugano Airport, Bioggio, Lugano\n- Companies: Darwin Airline, Adria Airways Switzerland\n- Topics: Passenger traffic, Flight volume, Headquarters location\n\nFacts:\n- Lugano Airport handles around 200,000 passengers each year.\n- Lugano Airport sees about 2,400 flights each year.\n- The headquarters of Darwin Airline are located at Lugano Airport.\n- Darwin Airline SA is a Swiss regional airline.\n- Darwin Airline SA has its head office in Bioggio, Lugano.\n- Darwin Airline flies under the brand name Adria Airways Switzerland.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "5e5fd94a-d8c2-5344-aa78-646b80b43606",
+        "text": "Page: Lugano Airport. Sentence: Around 200,000 passengers use the airport each year, using some 2,400 flights.\nPage: Lugano Airport. Sentence: The headquarters of Darwin Airline are located at the airport.\nPage: Darwin Airline. Sentence: Darwin Airline SA is a Swiss regional airline with its head office in Bioggio, Lugano flying under the brand name Adria Airways Switzerland.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "a5f4bbf7-7e12-5af6-8991-5ed9a3f88508",
+        "text": "text_706157a34f30765e0ccb5f074f2cc2d6",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "b260f444-b713-5449-8644-d251e263972e",
+        "text": "lugano airport",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "5f394058-b2a0-5ba8-8466-ba2a18cfcf4e",
+        "text": "place",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "6d45a2e9-e43a-5ceb-acf6-bc42554928d5",
+        "text": "200,000 passengers per year",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "7a7a0687-e490-5167-ad5a-0e39d9055dee",
+        "text": "quantity",
+        "type": "EntityType"
+      },
+      {
+        "id": 7,
+        "original_id": "b5572d65-adac-50f0-97eb-11080bc94c00",
+        "text": "2,400 flights per year",
+        "type": "Entity"
+      },
+      {
+        "id": 8,
+        "original_id": "aea6a340-e7cd-5bc9-bfb0-e5c9d1be92ca",
+        "text": "darwin airline",
+        "type": "Entity"
+      },
+      {
+        "id": 9,
+        "original_id": "388f60fb-220d-55e8-ae9c-3ac93cead308",
+        "text": "organization",
+        "type": "EntityType"
+      },
+      {
+        "id": 10,
+        "original_id": "d6bdc411-db45-5c8f-818a-5e44e3dcc7af",
+        "text": "bioggio, lugano",
+        "type": "Entity"
+      },
+      {
+        "id": 11,
+        "original_id": "160aeece-54ce-5708-8096-e2ffc89b36e6",
+        "text": "adria airways switzerland",
+        "type": "Entity"
+      },
+      {
+        "id": 12,
+        "original_id": "e4485ca8-d661-5f9b-b14f-24f3ea14cb05",
+        "text": "swiss",
+        "type": "Entity"
+      },
+      {
+        "id": 13,
+        "original_id": "d2a381fa-3658-5ca6-ada9-2109cfc9331d",
+        "text": "concept",
+        "type": "EntityType"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 8,
+        "target": 3,
+        "type": "has_headquarters_at"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 10,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "has_annual_passenger_usage"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 7,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 7,
+        "type": "has_annual_flights"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      },
+      {
+        "source": 1,
+        "target": 8,
+        "type": "contains"
+      },
+      {
+        "source": 8,
+        "target": 9,
+        "type": "is_a"
+      },
+      {
+        "source": 11,
+        "target": 9,
+        "type": "is_a"
+      },
+      {
+        "source": 8,
+        "target": 10,
+        "type": "has_head_office_in"
+      },
+      {
+        "source": 1,
+        "target": 10,
+        "type": "contains"
+      },
+      {
+        "source": 8,
+        "target": 11,
+        "type": "flies_under_brand_name"
+      },
+      {
+        "source": 1,
+        "target": 11,
+        "type": "contains"
+      },
+      {
+        "source": 8,
+        "target": 12,
+        "type": "has_national_designation"
+      },
+      {
+        "source": 1,
+        "target": 12,
+        "type": "contains"
+      },
+      {
+        "source": 12,
+        "target": 13,
+        "type": "is_a"
+      }
+    ]
+  }
+}

@@ -1,0 +1,524 @@
+{
+  "dataset": "hover",
+  "id": "242a713c-7d6e-4831-afd7-54ac3ffc9cd5",
+  "split": "train",
+  "claim": "A highway replaced by another highway has a junction at Cairo Junction. It is 1286 miles long. Streatorland is the area east of the other highway.",
+  "evidencia": "Page: Cairo Junction, Illinois. Sentence: Cairo Junction is located at the junction of U.S. Route 51, Illinois Route 3, and Illinois Route 37 north of Cairo.\nPage: U.S. Route 51. Sentence: U.S. Route 51 is a south-north United States highway that runs for 1286 mi from the western suburbs of New Orleans, Louisiana to within 100 ft of the Wisconsin–Michigan border.\nPage: Interstate 39. Sentence: I-39 was designed to replace U.S. Route 51 (US 51), which in the early 1980s was one of the busiest two-lane highways in the United States.\nPage: Streatorland. Sentence: It can be more broadly defined as the area east of Interstate 39, west of Interstate 55, and south of the Illinois River.",
+  "evidence_text": "Page: Cairo Junction, Illinois. Sentence: Cairo Junction is located at the junction of U.S. Route 51, Illinois Route 3, and Illinois Route 37 north of Cairo.\nPage: U.S. Route 51. Sentence: U.S. Route 51 is a south-north United States highway that runs for 1286 mi from the western suburbs of New Orleans, Louisiana to within 100 ft of the Wisconsin–Michigan border.\nPage: Interstate 39. Sentence: I-39 was designed to replace U.S. Route 51 (US 51), which in the early 1980s was one of the busiest two-lane highways in the United States.\nPage: Streatorland. Sentence: It can be more broadly defined as the area east of Interstate 39, west of Interstate 55, and south of the Illinois River.",
+  "label": "SUPPORTED",
+  "num_hops": 4,
+  "hover_metadata": {
+    "supporting_facts": [
+      [
+        "Cairo Junction, Illinois",
+        1
+      ],
+      [
+        "U.S. Route 51",
+        0
+      ],
+      [
+        "Interstate 39",
+        2
+      ],
+      [
+        "Streatorland",
+        2
+      ]
+    ],
+    "num_hops": 4,
+    "evidence_annotation_id": [
+      0
+    ],
+    "evidence_id": [
+      "Cairo Junction, Illinois::sentence::1",
+      "U.S. Route 51::sentence::0",
+      "Interstate 39::sentence::2",
+      "Streatorland::sentence::2"
+    ],
+    "evidence_wiki_url": [
+      "https://en.wikipedia.org/wiki/Cairo_Junction%2C_Illinois",
+      "https://en.wikipedia.org/wiki/U.S._Route_51",
+      "https://en.wikipedia.org/wiki/Interstate_39",
+      "https://en.wikipedia.org/wiki/Streatorland"
+    ],
+    "evidence_sentence_id": [
+      "Cairo Junction, Illinois::sentence::1",
+      "U.S. Route 51::sentence::0",
+      "Interstate 39::sentence::2",
+      "Streatorland::sentence::2"
+    ]
+  },
+  "grafo_claim": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "3c62e235-091a-503a-b384-e5547571d90f",
+        "text": "This chunk is about:\n- Places: Cairo Junction, Streatorland\n- Systems: highways\n\nFacts:\n- A highway that was replaced by another highway has a junction at Cairo Junction.\n- The replaced highway is 1286 miles long.\n- Streatorland is the area east of the other highway.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "9a6f6b78-e15f-5411-bd99-76ff117df1c8",
+        "text": "A highway replaced by another highway has a junction at Cairo Junction. It is 1286 miles long. Streatorland is the area east of the other highway.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "eae1472b-f70a-547c-bdd5-e57debd7397f",
+        "text": "text_885a4f2bf78d59b0d28cd1228696ca59",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "b3e2a5b2-d2f2-5539-8840-91b76f8af549",
+        "text": "the other highway",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "5e52d312-a248-534f-a58b-25c5426a89ad",
+        "text": "road",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "449c7648-1f90-50c3-abdf-9011250dbbe7",
+        "text": "cairo junction",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "5f394058-b2a0-5ba8-8466-ba2a18cfcf4e",
+        "text": "place",
+        "type": "EntityType"
+      },
+      {
+        "id": 7,
+        "original_id": "aa06a2d7-cd3c-5db1-a884-c9fcf33ec4d4",
+        "text": "1286 miles",
+        "type": "Entity"
+      },
+      {
+        "id": 8,
+        "original_id": "12d5521e-a878-542e-bebc-84ff79179d8e",
+        "text": "measurement",
+        "type": "EntityType"
+      },
+      {
+        "id": 9,
+        "original_id": "c642a9ee-e65a-5cfd-a187-6154ba94a38e",
+        "text": "streatorland",
+        "type": "Entity"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 9,
+        "target": 3,
+        "type": "is_east_of"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "has_junction_at"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 9,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 7,
+        "type": "has_length"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      },
+      {
+        "source": 7,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 9,
+        "type": "contains"
+      }
+    ]
+  },
+  "grafo_evidencia": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "e4489063-39fd-527e-a5ba-177a0ec5c567",
+        "text": "This chunk is about:\n- Places: Cairo Junction, Illinois; Streatorland; Cairo; Illinois River\n- Roads: U.S. Route 51; Illinois Route 3; Illinois Route 37; Interstate 39; Interstate 55\n- Topics: highway location; route extent; highway replacement; regional boundaries\n\nFacts:\n- U.S. Route 51 is a south-north United States highway that runs 1,286 miles from the western suburbs of New Orleans, Louisiana, to within 100 feet of the Wisconsin–Michigan border.\n- In the early 1980s, U.S. Route 51 was one of the busiest two-lane highways in the United States.\n- Interstate 39 was designed to replace U.S. Route 51.\n- Cairo Junction, Illinois, is located at the junction of U.S. Route 51, Illinois Route 3, and Illinois Route 37 north of Cairo.\n- Streatorland can be more broadly defined as the area east of Interstate 39, west of Interstate 55, and south of the Illinois River.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "29cb869c-f86f-53f2-86e6-88a7f885ee9b",
+        "text": "Page: Cairo Junction, Illinois. Sentence: Cairo Junction is located at the junction of U.S. Route 51, Illinois Route 3, and Illinois Route 37 north of Cairo.\nPage: U.S. Route 51. Sentence: U.S. Route 51 is a south-north United States highway that runs for 1286 mi from the western suburbs of New Orleans, Louisiana to within 100 ft of the Wisconsin–Michigan border.\nPage: Interstate 39. Sentence: I-39 was designed to replace U.S. Route 51 (US 51), which in the early 1980s was one of the busiest two-lane highways in the United States.\nPage: Streatorland. Sentence: It can be more broadly defined as the area east of Interstate 39, west of Interstate 55, and south of the Illinois River.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "50f71dbc-28e7-5039-ae9a-cca9d367ab5a",
+        "text": "text_f51988388b9e2a71c4a7b227f1913983",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "449c7648-1f90-50c3-abdf-9011250dbbe7",
+        "text": "cairo junction",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "5f394058-b2a0-5ba8-8466-ba2a18cfcf4e",
+        "text": "place",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "eeeaf84e-51f7-5494-8968-b93779999e72",
+        "text": "u.s. route 51",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "292ffa87-988c-5f2c-8e57-75c073be8e43",
+        "text": "route",
+        "type": "EntityType"
+      },
+      {
+        "id": 7,
+        "original_id": "874a51da-34ea-5037-be47-d87785d43c37",
+        "text": "united states",
+        "type": "Entity"
+      },
+      {
+        "id": 8,
+        "original_id": "34c3ae9c-6662-5005-993b-8dd036a24e42",
+        "text": "new orleans, louisiana",
+        "type": "Entity"
+      },
+      {
+        "id": 9,
+        "original_id": "5c165f4a-83b2-5049-850b-ab0fa941b623",
+        "text": "wisconsin–michigan border",
+        "type": "Entity"
+      },
+      {
+        "id": 10,
+        "original_id": "5d69e19b-2187-5724-8953-9b23022543ff",
+        "text": "early 1980s",
+        "type": "Entity"
+      },
+      {
+        "id": 11,
+        "original_id": "b19433ae-558c-5aaf-95ac-6231f2a4be0e",
+        "text": "date",
+        "type": "EntityType"
+      },
+      {
+        "id": 12,
+        "original_id": "c93a9be8-bf5a-5424-ad85-703068ab993b",
+        "text": "illinois route 3",
+        "type": "Entity"
+      },
+      {
+        "id": 13,
+        "original_id": "816f6132-0a5d-5a2d-8846-20447f0c86ec",
+        "text": "illinois route 37",
+        "type": "Entity"
+      },
+      {
+        "id": 14,
+        "original_id": "12f2bf5d-8c01-59ba-9ad0-c57112ee4b42",
+        "text": "cairo",
+        "type": "Entity"
+      },
+      {
+        "id": 15,
+        "original_id": "02e5e923-e975-5c9f-b0e7-3e3b4b37c531",
+        "text": "illinois",
+        "type": "Entity"
+      },
+      {
+        "id": 16,
+        "original_id": "9acf019d-a60b-5ab4-9861-14b45e29d6b8",
+        "text": "interstate 39",
+        "type": "Entity"
+      },
+      {
+        "id": 17,
+        "original_id": "70b5d295-b9b1-5364-b7c1-684ff0a8482b",
+        "text": "interstate 55",
+        "type": "Entity"
+      },
+      {
+        "id": 18,
+        "original_id": "ec5df574-105d-51bf-a33d-1e3407542b98",
+        "text": "illinois river",
+        "type": "Entity"
+      },
+      {
+        "id": 19,
+        "original_id": "c642a9ee-e65a-5cfd-a187-6154ba94a38e",
+        "text": "streatorland",
+        "type": "Entity"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 7,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 8,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 9,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 14,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 15,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 18,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 19,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "located_at_junction_of"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 16,
+        "target": 5,
+        "type": "was_designed_to_replace"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 12,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 13,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 16,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 17,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 5,
+        "target": 7,
+        "type": "is_highway_in"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 8,
+        "type": "runs_from"
+      },
+      {
+        "source": 1,
+        "target": 8,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 9,
+        "type": "runs_to"
+      },
+      {
+        "source": 1,
+        "target": 9,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 10,
+        "type": "was_busiest_two_lane_highway_in_period"
+      },
+      {
+        "source": 1,
+        "target": 10,
+        "type": "contains"
+      },
+      {
+        "source": 10,
+        "target": 11,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 12,
+        "type": "located_at_junction_of"
+      },
+      {
+        "source": 1,
+        "target": 12,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 13,
+        "type": "located_at_junction_of"
+      },
+      {
+        "source": 1,
+        "target": 13,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 14,
+        "type": "north_of"
+      },
+      {
+        "source": 1,
+        "target": 14,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 15,
+        "type": "located_in"
+      },
+      {
+        "source": 1,
+        "target": 15,
+        "type": "contains"
+      },
+      {
+        "source": 1,
+        "target": 16,
+        "type": "contains"
+      },
+      {
+        "source": 19,
+        "target": 16,
+        "type": "east_of"
+      },
+      {
+        "source": 1,
+        "target": 17,
+        "type": "contains"
+      },
+      {
+        "source": 19,
+        "target": 17,
+        "type": "west_of"
+      },
+      {
+        "source": 1,
+        "target": 18,
+        "type": "contains"
+      },
+      {
+        "source": 19,
+        "target": 18,
+        "type": "south_of"
+      },
+      {
+        "source": 1,
+        "target": 19,
+        "type": "contains"
+      }
+    ]
+  }
+}

@@ -1,0 +1,427 @@
+{
+  "dataset": "hover",
+  "id": "ce7079ae-b690-4a01-bd61-370a7d87821c",
+  "split": "train",
+  "claim": "During the period 1995 to 2012 the sedan variant of the Volvo V50 car was manufactured.",
+  "evidencia": "Page: Volvo V50. Sentence: Volvo Cars introduced the Volvo V50 at the 2003 Bologna Motor Show as the station wagon version of the Volvo S40 small family car — manufacturing both models at their facility in Ghent, Belgium.\nPage: Volvo S40. Sentence: The Volvo S40 is a compact luxury car marketed and produced by the Swedish manufacturer Volvo Cars from 1995 to 2012 across two generations.",
+  "evidence_text": "Page: Volvo V50. Sentence: Volvo Cars introduced the Volvo V50 at the 2003 Bologna Motor Show as the station wagon version of the Volvo S40 small family car — manufacturing both models at their facility in Ghent, Belgium.\nPage: Volvo S40. Sentence: The Volvo S40 is a compact luxury car marketed and produced by the Swedish manufacturer Volvo Cars from 1995 to 2012 across two generations.",
+  "label": "SUPPORTED",
+  "num_hops": 2,
+  "hover_metadata": {
+    "supporting_facts": [
+      [
+        "Volvo V50",
+        0
+      ],
+      [
+        "Volvo S40",
+        0
+      ]
+    ],
+    "num_hops": 2,
+    "evidence_annotation_id": [
+      0
+    ],
+    "evidence_id": [
+      "Volvo V50::sentence::0",
+      "Volvo S40::sentence::0"
+    ],
+    "evidence_wiki_url": [
+      "https://en.wikipedia.org/wiki/Volvo_V50",
+      "https://en.wikipedia.org/wiki/Volvo_S40"
+    ],
+    "evidence_sentence_id": [
+      "Volvo V50::sentence::0",
+      "Volvo S40::sentence::0"
+    ]
+  },
+  "grafo_claim": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "e25c5070-e364-597c-9899-856dcdda99b4",
+        "text": "This chunk is about:\n- Products: Volvo V50, sedan variant\n- Topics: manufacturing period\n\nFacts:\n- From 1995 to 2012, the sedan variant of the Volvo V50 was manufactured.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "b1e1bceb-3bf3-5c6f-a63c-ad210abdbd17",
+        "text": "During the period 1995 to 2012 the sedan variant of the Volvo V50 car was manufactured.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "06d177db-4012-5994-90c2-8c7538f21ac3",
+        "text": "text_ec982af4b72f75478b41d2064585590c",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "58099c4a-71ae-5b8d-b406-032d7a014b7b",
+        "text": "volvo v50",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "f76d57aa-4740-5218-9539-0e0978cbf183",
+        "text": "product",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "069c0f07-019f-5c22-9660-53d6d1a95879",
+        "text": "sedan variant of the volvo v50",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "ee5ab8c2-0240-5792-985d-a9d5064b1b91",
+        "text": "1995",
+        "type": "Entity"
+      },
+      {
+        "id": 7,
+        "original_id": "b19433ae-558c-5aaf-95ac-6231f2a4be0e",
+        "text": "date",
+        "type": "EntityType"
+      },
+      {
+        "id": 8,
+        "original_id": "43e69636-c134-5dc8-b21a-52ba284d9418",
+        "text": "2012",
+        "type": "Entity"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 3,
+        "type": "variant_of"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 5,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "manufactured_from"
+      },
+      {
+        "source": 1,
+        "target": 6,
+        "type": "contains"
+      },
+      {
+        "source": 6,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 8,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 5,
+        "target": 8,
+        "type": "manufactured_until"
+      },
+      {
+        "source": 1,
+        "target": 8,
+        "type": "contains"
+      }
+    ]
+  },
+  "grafo_evidencia": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "1216d2ad-2359-54fa-b6cb-e090e10586bc",
+        "text": "This chunk is about:\n- Companies: Volvo Cars\n- Products: Volvo V50, Volvo S40\n- Places: Bologna Motor Show, Ghent, Belgium\n- Concepts: station wagon, compact luxury car, small family car, two generations\n\nFacts:\n- Volvo Cars marketed and produced the Volvo S40, a compact luxury car, from 1995 to 2012 across two generations.\n- Volvo Cars introduced the Volvo V50 at the 2003 Bologna Motor Show as the station wagon version of the Volvo S40 small family car.\n- Volvo Cars manufactured both the Volvo V50 and the Volvo S40 at its facility in Ghent, Belgium.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "46d840cd-1ab0-558c-93ca-7b003c0da3f9",
+        "text": "Page: Volvo V50. Sentence: Volvo Cars introduced the Volvo V50 at the 2003 Bologna Motor Show as the station wagon version of the Volvo S40 small family car — manufacturing both models at their facility in Ghent, Belgium.\nPage: Volvo S40. Sentence: The Volvo S40 is a compact luxury car marketed and produced by the Swedish manufacturer Volvo Cars from 1995 to 2012 across two generations.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "b59c1d38-84c6-59c0-9a64-240d078b267d",
+        "text": "text_703c20603e96ef02a75cb006a4294c04",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "bf02f29d-aeea-50bf-9b58-2a6d5a13279b",
+        "text": "volvo cars",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "58099c4a-71ae-5b8d-b406-032d7a014b7b",
+        "text": "volvo v50",
+        "type": "Entity"
+      },
+      {
+        "id": 5,
+        "original_id": "c7082b71-21a5-56a9-92e0-9ada33e139ad",
+        "text": "2003 bologna motor show",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "214abcd9-9adf-5c8a-bb35-1e729f2d68c3",
+        "text": "event",
+        "type": "EntityType"
+      },
+      {
+        "id": 7,
+        "original_id": "35bbc39c-6f17-5e77-b8e2-1af6c8eb440a",
+        "text": "volvo s40",
+        "type": "Entity"
+      },
+      {
+        "id": 8,
+        "original_id": "ee5ab8c2-0240-5792-985d-a9d5064b1b91",
+        "text": "1995",
+        "type": "Entity"
+      },
+      {
+        "id": 9,
+        "original_id": "b19433ae-558c-5aaf-95ac-6231f2a4be0e",
+        "text": "date",
+        "type": "EntityType"
+      },
+      {
+        "id": 10,
+        "original_id": "43e69636-c134-5dc8-b21a-52ba284d9418",
+        "text": "2012",
+        "type": "Entity"
+      },
+      {
+        "id": 11,
+        "original_id": "5c055804-ee31-5a50-b74f-a4e456712231",
+        "text": "two generations",
+        "type": "Entity"
+      },
+      {
+        "id": 12,
+        "original_id": "d2a381fa-3658-5ca6-ada9-2109cfc9331d",
+        "text": "concept",
+        "type": "EntityType"
+      },
+      {
+        "id": 13,
+        "original_id": "f76d57aa-4740-5218-9539-0e0978cbf183",
+        "text": "product",
+        "type": "EntityType"
+      },
+      {
+        "id": 14,
+        "original_id": "e25d38b0-aa57-5eef-91c0-8783811f0af1",
+        "text": "ghent facility",
+        "type": "Entity"
+      },
+      {
+        "id": 15,
+        "original_id": "d8e36cff-a97c-5cc0-a40e-665249b60ecc",
+        "text": "ghent, belgium",
+        "type": "Entity"
+      },
+      {
+        "id": 16,
+        "original_id": "5f394058-b2a0-5ba8-8466-ba2a18cfcf4e",
+        "text": "place",
+        "type": "EntityType"
+      },
+      {
+        "id": 17,
+        "original_id": "388f60fb-220d-55e8-ae9c-3ac93cead308",
+        "text": "organization",
+        "type": "EntityType"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 7,
+        "target": 3,
+        "type": "marketed_by"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "introduced"
+      },
+      {
+        "source": 1,
+        "target": 4,
+        "type": "contains"
+      },
+      {
+        "source": 4,
+        "target": 5,
+        "type": "introduced_at"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 4,
+        "target": 7,
+        "type": "is_station_wagon_version_of"
+      },
+      {
+        "source": 3,
+        "target": 7,
+        "type": "manufactured"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      },
+      {
+        "source": 7,
+        "target": 8,
+        "type": "marketing_and_production_started_in"
+      },
+      {
+        "source": 1,
+        "target": 8,
+        "type": "contains"
+      },
+      {
+        "source": 8,
+        "target": 9,
+        "type": "is_a"
+      },
+      {
+        "source": 10,
+        "target": 9,
+        "type": "is_a"
+      },
+      {
+        "source": 7,
+        "target": 10,
+        "type": "marketing_and_production_ended_in"
+      },
+      {
+        "source": 1,
+        "target": 10,
+        "type": "contains"
+      },
+      {
+        "source": 7,
+        "target": 11,
+        "type": "spanned"
+      },
+      {
+        "source": 1,
+        "target": 11,
+        "type": "contains"
+      },
+      {
+        "source": 11,
+        "target": 12,
+        "type": "is_a"
+      },
+      {
+        "source": 7,
+        "target": 13,
+        "type": "is_a"
+      },
+      {
+        "source": 4,
+        "target": 13,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 14,
+        "type": "has_facility"
+      },
+      {
+        "source": 1,
+        "target": 14,
+        "type": "contains"
+      },
+      {
+        "source": 14,
+        "target": 15,
+        "type": "located_in"
+      },
+      {
+        "source": 1,
+        "target": 15,
+        "type": "contains"
+      },
+      {
+        "source": 15,
+        "target": 16,
+        "type": "is_a"
+      },
+      {
+        "source": 14,
+        "target": 16,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 17,
+        "type": "is_a"
+      }
+    ]
+  }
+}

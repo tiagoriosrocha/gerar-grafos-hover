@@ -1,0 +1,426 @@
+{
+  "dataset": "hover",
+  "id": "c527a437-c01f-448c-abee-a6ea91717b32",
+  "split": "train",
+  "claim": "ORO VAMTAC is the vehicle made by UROVESA that is most like the four-wheel drive military light truck produced by AM General.",
+  "evidencia": "Page: UROVESA. Sentence: URO, Vehículos Especiales, S.A. (UROVESA) is a Spanish heavy vehicle manufacturer based in Santiago de Compostela, Galicia.\nPage: UROVESA. Sentence: It is best known for the production of the URO VAMTAC, a Humvee-like four-wheel drive motor vehicle, and URO trucks.\nPage: Humvee. Sentence: The High Mobility Multipurpose Wheeled Vehicle (HMMWV), commonly known as the Humvee, is a four-wheel drive military light truck produced by AM General.",
+  "evidence_text": "Page: UROVESA. Sentence: URO, Vehículos Especiales, S.A. (UROVESA) is a Spanish heavy vehicle manufacturer based in Santiago de Compostela, Galicia.\nPage: UROVESA. Sentence: It is best known for the production of the URO VAMTAC, a Humvee-like four-wheel drive motor vehicle, and URO trucks.\nPage: Humvee. Sentence: The High Mobility Multipurpose Wheeled Vehicle (HMMWV), commonly known as the Humvee, is a four-wheel drive military light truck produced by AM General.",
+  "label": "SUPPORTED",
+  "num_hops": 2,
+  "hover_metadata": {
+    "supporting_facts": [
+      [
+        "UROVESA",
+        0
+      ],
+      [
+        "UROVESA",
+        1
+      ],
+      [
+        "Humvee",
+        0
+      ]
+    ],
+    "num_hops": 2,
+    "evidence_annotation_id": [
+      0
+    ],
+    "evidence_id": [
+      "UROVESA::sentence::0",
+      "UROVESA::sentence::1",
+      "Humvee::sentence::0"
+    ],
+    "evidence_wiki_url": [
+      "https://en.wikipedia.org/wiki/UROVESA",
+      "https://en.wikipedia.org/wiki/Humvee"
+    ],
+    "evidence_sentence_id": [
+      "UROVESA::sentence::0",
+      "UROVESA::sentence::1",
+      "Humvee::sentence::0"
+    ]
+  },
+  "grafo_claim": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "6efe765d-42d6-5397-a7c9-94a8cd677b37",
+        "text": "This chunk is about:\n- Companies: UROVESA, AM General\n- Products: ORO VAMTAC, four-wheel drive military light truck\n\nFacts:\n- AM General produced a four-wheel drive military light truck.\n- UROVESA makes the ORO VAMTAC.\n- The ORO VAMTAC is the UROVESA vehicle most similar to AM General's four-wheel drive military light truck.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "e72ffdd7-5445-50f4-aaf8-42a77caec03c",
+        "text": "ORO VAMTAC is the vehicle made by UROVESA that is most like the four-wheel drive military light truck produced by AM General.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "625a4eaf-c13c-5716-8282-4648db732a20",
+        "text": "text_8c86e2129cd627a2a6c6d26014b70f9b",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "1dd81017-a245-583b-a05f-f1ba8d89332c",
+        "text": "oro vamtac",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "de57bcba-d35a-5c42-a387-f7e6000e5415",
+        "text": "four-wheel drive military light truck",
+        "type": "Entity"
+      },
+      {
+        "id": 5,
+        "original_id": "0f5ec78d-c353-540c-b8bd-bce84eac0af4",
+        "text": "vehicle",
+        "type": "EntityType"
+      },
+      {
+        "id": 6,
+        "original_id": "5072f890-7700-5b1f-a29c-47d458e6ad09",
+        "text": "urovesa",
+        "type": "Entity"
+      },
+      {
+        "id": 7,
+        "original_id": "388f60fb-220d-55e8-ae9c-3ac93cead308",
+        "text": "organization",
+        "type": "EntityType"
+      },
+      {
+        "id": 8,
+        "original_id": "98d0f699-0d92-5f8b-a19d-a8771d882464",
+        "text": "am general",
+        "type": "Entity"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 6,
+        "target": 3,
+        "type": "makes"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_most_like"
+      },
+      {
+        "source": 8,
+        "target": 4,
+        "type": "produces"
+      },
+      {
+        "source": 1,
+        "target": 4,
+        "type": "contains"
+      },
+      {
+        "source": 4,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 6,
+        "type": "contains"
+      },
+      {
+        "source": 6,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 8,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 8,
+        "type": "contains"
+      }
+    ]
+  },
+  "grafo_evidencia": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "fd94d4e2-80ec-5863-a2db-42f685931631",
+        "text": "This chunk is about:\n- Companies: UROVESA, AM General\n- Products: URO VAMTAC, URO trucks, Humvee, HMMWV\n- Places: Santiago de Compostela, Galicia\n- Concepts: four-wheel drive military vehicles\n\nFacts:\n- URO, Vehículos Especiales, S.A. (UROVESA) is a Spanish heavy vehicle manufacturer based in Santiago de Compostela, Galicia.\n- UROVESA is best known for producing the URO VAMTAC and URO trucks.\n- The URO VAMTAC is a Humvee-like four-wheel drive motor vehicle.\n- The High Mobility Multipurpose Wheeled Vehicle (HMMWV), commonly known as the Humvee, is a four-wheel drive military light truck produced by AM General.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "080bd6a0-0062-5954-a07b-f2c4f42ff26c",
+        "text": "Page: UROVESA. Sentence: URO, Vehículos Especiales, S.A. (UROVESA) is a Spanish heavy vehicle manufacturer based in Santiago de Compostela, Galicia.\nPage: UROVESA. Sentence: It is best known for the production of the URO VAMTAC, a Humvee-like four-wheel drive motor vehicle, and URO trucks.\nPage: Humvee. Sentence: The High Mobility Multipurpose Wheeled Vehicle (HMMWV), commonly known as the Humvee, is a four-wheel drive military light truck produced by AM General.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "35fc7319-c11d-5d65-bf89-af8e7eb33ef5",
+        "text": "text_f40694ddbbc0f99ebd350d9690c7d1df",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "6e2cf23c-eb36-5d49-9ce2-98ffb65de92f",
+        "text": "uro, vehículos especiales, s.a.",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "dec7193e-ea5e-5acf-9107-8c01dba8082f",
+        "text": "santiago de compostela",
+        "type": "Entity"
+      },
+      {
+        "id": 5,
+        "original_id": "f7819cb9-e20b-5fe0-ad74-a2671d7fd00e",
+        "text": "galicia",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "5f394058-b2a0-5ba8-8466-ba2a18cfcf4e",
+        "text": "place",
+        "type": "EntityType"
+      },
+      {
+        "id": 7,
+        "original_id": "e44243ef-8b0e-5cee-8399-f39ddf9437e2",
+        "text": "uro vamtac",
+        "type": "Entity"
+      },
+      {
+        "id": 8,
+        "original_id": "6749ed74-6048-5222-9c15-e73282870226",
+        "text": "humvee",
+        "type": "Entity"
+      },
+      {
+        "id": 9,
+        "original_id": "06ac7019-467b-5ad3-bd42-d50b803a1d14",
+        "text": "high mobility multipurpose wheeled vehicle",
+        "type": "Entity"
+      },
+      {
+        "id": 10,
+        "original_id": "0f5ec78d-c353-540c-b8bd-bce84eac0af4",
+        "text": "vehicle",
+        "type": "EntityType"
+      },
+      {
+        "id": 11,
+        "original_id": "ecbc4b62-0ac7-5927-ba31-475dfc81547e",
+        "text": "uro trucks",
+        "type": "Entity"
+      },
+      {
+        "id": 12,
+        "original_id": "388f60fb-220d-55e8-ae9c-3ac93cead308",
+        "text": "organization",
+        "type": "EntityType"
+      },
+      {
+        "id": 13,
+        "original_id": "5072f890-7700-5b1f-a29c-47d458e6ad09",
+        "text": "urovesa",
+        "type": "Entity"
+      },
+      {
+        "id": 14,
+        "original_id": "2a7a1857-9cd7-5f12-9624-7ccd708ee353",
+        "text": "hmmwv",
+        "type": "Entity"
+      },
+      {
+        "id": 15,
+        "original_id": "98d0f699-0d92-5f8b-a19d-a8771d882464",
+        "text": "am general",
+        "type": "Entity"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 13,
+        "target": 3,
+        "type": "abbreviation_for"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "based_in"
+      },
+      {
+        "source": 1,
+        "target": 4,
+        "type": "contains"
+      },
+      {
+        "source": 4,
+        "target": 5,
+        "type": "located_in"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 4,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 7,
+        "type": "produces"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      },
+      {
+        "source": 7,
+        "target": 8,
+        "type": "similar_to"
+      },
+      {
+        "source": 1,
+        "target": 8,
+        "type": "contains"
+      },
+      {
+        "source": 8,
+        "target": 9,
+        "type": "common_name_for"
+      },
+      {
+        "source": 1,
+        "target": 9,
+        "type": "contains"
+      },
+      {
+        "source": 14,
+        "target": 9,
+        "type": "abbreviation_for"
+      },
+      {
+        "source": 15,
+        "target": 9,
+        "type": "produces"
+      },
+      {
+        "source": 9,
+        "target": 10,
+        "type": "is_a"
+      },
+      {
+        "source": 8,
+        "target": 10,
+        "type": "is_a"
+      },
+      {
+        "source": 7,
+        "target": 10,
+        "type": "is_a"
+      },
+      {
+        "source": 11,
+        "target": 10,
+        "type": "is_a"
+      },
+      {
+        "source": 14,
+        "target": 10,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 11,
+        "type": "produces"
+      },
+      {
+        "source": 1,
+        "target": 11,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 12,
+        "type": "is_a"
+      },
+      {
+        "source": 13,
+        "target": 12,
+        "type": "is_a"
+      },
+      {
+        "source": 15,
+        "target": 12,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 13,
+        "type": "contains"
+      },
+      {
+        "source": 1,
+        "target": 14,
+        "type": "contains"
+      },
+      {
+        "source": 1,
+        "target": 15,
+        "type": "contains"
+      }
+    ]
+  }
+}

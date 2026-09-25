@@ -1,0 +1,446 @@
+{
+  "dataset": "hover",
+  "id": "f6585837-3eff-4101-ade0-a9b4154f8cf1",
+  "split": "train",
+  "claim": "Witch Alder, Fothergilla gardenii,  is one of two species in its genus. Plants are the type of vegetation that that genus and Clerodendrum have in common.",
+  "evidencia": "Page: Fothergilla. Sentence: Fothergilla (witch alder) is a genus of two or three species of flowering plants in the family Hamamelidaceae, native to woodland and swamps of the southeastern United States.\nPage: Clerodendrum. Sentence: Clerodendrum is a genus of flowering plants in the family Lamiaceae.\nPage: Fothergilla gardenii. Sentence: It is one of two species in the genus \"Fothergilla.\"",
+  "evidence_text": "Page: Fothergilla. Sentence: Fothergilla (witch alder) is a genus of two or three species of flowering plants in the family Hamamelidaceae, native to woodland and swamps of the southeastern United States.\nPage: Clerodendrum. Sentence: Clerodendrum is a genus of flowering plants in the family Lamiaceae.\nPage: Fothergilla gardenii. Sentence: It is one of two species in the genus \"Fothergilla.\"",
+  "label": "SUPPORTED",
+  "num_hops": 3,
+  "hover_metadata": {
+    "supporting_facts": [
+      [
+        "Fothergilla",
+        0
+      ],
+      [
+        "Clerodendrum",
+        0
+      ],
+      [
+        "Fothergilla gardenii",
+        1
+      ]
+    ],
+    "num_hops": 3,
+    "evidence_annotation_id": [
+      0
+    ],
+    "evidence_id": [
+      "Fothergilla::sentence::0",
+      "Clerodendrum::sentence::0",
+      "Fothergilla gardenii::sentence::1"
+    ],
+    "evidence_wiki_url": [
+      "https://en.wikipedia.org/wiki/Fothergilla",
+      "https://en.wikipedia.org/wiki/Clerodendrum",
+      "https://en.wikipedia.org/wiki/Fothergilla_gardenii"
+    ],
+    "evidence_sentence_id": [
+      "Fothergilla::sentence::0",
+      "Clerodendrum::sentence::0",
+      "Fothergilla gardenii::sentence::1"
+    ]
+  },
+  "grafo_claim": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "799ca393-1db7-53ef-8010-68913d27a670",
+        "text": "This chunk is about:\n- Plants: Witch Alder, Fothergilla gardenii\n- Genera: Fothergilla, Clerodendrum\n- Concepts: vegetation, taxonomy\n\nFacts:\n- Witch Alder is Fothergilla gardenii.\n- Fothergilla gardenii is one of two species in the genus Fothergilla.\n- Plants are the type of vegetation that the genera Fothergilla and Clerodendrum have in common.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "8263d9d3-ad05-5621-b636-42c7af286c82",
+        "text": "Witch Alder, Fothergilla gardenii,  is one of two species in its genus. Plants are the type of vegetation that that genus and Clerodendrum have in common.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "ea83e486-6152-5417-a3fc-a6a85f7c2afd",
+        "text": "text_286d2ff45a4fe0df42847b527920fe91",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "ecf70d6e-c60a-5c00-85bc-621baf23368a",
+        "text": "witch alder",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "8d94f3eb-3053-59a3-ba98-67bcafa03df9",
+        "text": "fothergilla gardenii",
+        "type": "Entity"
+      },
+      {
+        "id": 5,
+        "original_id": "69456824-cf1d-5de2-8dad-dff1aa19aea5",
+        "text": "fothergilla",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "517e6a50-2ee6-52df-846d-be6b1a0005ba",
+        "text": "plant",
+        "type": "Entity"
+      },
+      {
+        "id": 7,
+        "original_id": "bdc60a3c-6411-5515-ab99-972e9f669d79",
+        "text": "type",
+        "type": "EntityType"
+      },
+      {
+        "id": 8,
+        "original_id": "58ce8914-8a9e-5302-9b2d-0d97006e12d3",
+        "text": "genus",
+        "type": "EntityType"
+      },
+      {
+        "id": 9,
+        "original_id": "2df43048-b175-54c2-b72b-0ff24f41e4f1",
+        "text": "plant",
+        "type": "EntityType"
+      },
+      {
+        "id": 10,
+        "original_id": "412686d3-1724-5259-9d97-93c08d2582ca",
+        "text": "clerodendrum",
+        "type": "Entity"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_common_name_for"
+      },
+      {
+        "source": 1,
+        "target": 4,
+        "type": "contains"
+      },
+      {
+        "source": 4,
+        "target": 5,
+        "type": "belongs_to_genus"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "has_vegetation_type"
+      },
+      {
+        "source": 1,
+        "target": 6,
+        "type": "contains"
+      },
+      {
+        "source": 10,
+        "target": 6,
+        "type": "has_vegetation_type"
+      },
+      {
+        "source": 6,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 5,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 10,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 4,
+        "target": 9,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 9,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 10,
+        "type": "contains"
+      }
+    ]
+  },
+  "grafo_evidencia": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "413a9078-7635-52e8-88e7-57fe000cc959",
+        "text": "This chunk is about:\n- Plants: Fothergilla, Fothergilla gardenii, Clerodendrum\n- Taxonomy: genera, species, flowering plants, Hamamelidaceae, Lamiaceae\n- Places: southeastern United States\n\nFacts:\n- Fothergilla is a genus of two or three species of flowering plants in the family Hamamelidaceae.\n- Fothergilla is native to woodlands and swamps of the southeastern United States.\n- Clerodendrum is a genus of flowering plants in the family Lamiaceae.\n- Fothergilla gardenii is one of two species in the genus Fothergilla.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "b0e5d4bb-ab68-50df-ac86-fde8e728a574",
+        "text": "Page: Fothergilla. Sentence: Fothergilla (witch alder) is a genus of two or three species of flowering plants in the family Hamamelidaceae, native to woodland and swamps of the southeastern United States.\nPage: Clerodendrum. Sentence: Clerodendrum is a genus of flowering plants in the family Lamiaceae.\nPage: Fothergilla gardenii. Sentence: It is one of two species in the genus \"Fothergilla.\"",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "2b3a4c35-c297-5167-b939-e1b43ed8bc32",
+        "text": "text_1f73bf2b9048bcf27473e6b135c10745",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "69456824-cf1d-5de2-8dad-dff1aa19aea5",
+        "text": "fothergilla",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "ecf70d6e-c60a-5c00-85bc-621baf23368a",
+        "text": "witch alder",
+        "type": "Entity"
+      },
+      {
+        "id": 5,
+        "original_id": "39575085-0710-527d-bd54-019de7b00429",
+        "text": "name",
+        "type": "EntityType"
+      },
+      {
+        "id": 6,
+        "original_id": "3f829baa-8aaf-553d-a159-81399d67a925",
+        "text": "hamamelidaceae",
+        "type": "Entity"
+      },
+      {
+        "id": 7,
+        "original_id": "030da7f2-9df8-5253-8cfc-609957d4e333",
+        "text": "family",
+        "type": "EntityType"
+      },
+      {
+        "id": 8,
+        "original_id": "3a425b5a-4532-5424-a5de-ae282cc6d69b",
+        "text": "southeastern united states",
+        "type": "Entity"
+      },
+      {
+        "id": 9,
+        "original_id": "5f394058-b2a0-5ba8-8466-ba2a18cfcf4e",
+        "text": "place",
+        "type": "EntityType"
+      },
+      {
+        "id": 10,
+        "original_id": "ca211773-7920-5af1-ac55-97744f2fd559",
+        "text": "woodland",
+        "type": "Entity"
+      },
+      {
+        "id": 11,
+        "original_id": "4fabdc0b-8e9a-5e7a-970d-db700b89bbbe",
+        "text": "habitat",
+        "type": "EntityType"
+      },
+      {
+        "id": 12,
+        "original_id": "4f7bccdf-5200-5d11-adf1-bdec6b15d5c8",
+        "text": "swamps",
+        "type": "Entity"
+      },
+      {
+        "id": 13,
+        "original_id": "58ce8914-8a9e-5302-9b2d-0d97006e12d3",
+        "text": "genus",
+        "type": "EntityType"
+      },
+      {
+        "id": 14,
+        "original_id": "412686d3-1724-5259-9d97-93c08d2582ca",
+        "text": "clerodendrum",
+        "type": "Entity"
+      },
+      {
+        "id": 15,
+        "original_id": "b35de2ca-c5bf-5da5-953a-3a7cd2a80f58",
+        "text": "lamiaceae",
+        "type": "Entity"
+      },
+      {
+        "id": 16,
+        "original_id": "8d94f3eb-3053-59a3-ba98-67bcafa03df9",
+        "text": "fothergilla gardenii",
+        "type": "Entity"
+      },
+      {
+        "id": 17,
+        "original_id": "f23a15ce-c0de-5c57-9205-8c9d01026b05",
+        "text": "species",
+        "type": "EntityType"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 16,
+        "target": 3,
+        "type": "in_genus"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "also_called"
+      },
+      {
+        "source": 1,
+        "target": 4,
+        "type": "contains"
+      },
+      {
+        "source": 4,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 6,
+        "type": "in_family"
+      },
+      {
+        "source": 1,
+        "target": 6,
+        "type": "contains"
+      },
+      {
+        "source": 6,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 15,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 8,
+        "type": "native_to"
+      },
+      {
+        "source": 1,
+        "target": 8,
+        "type": "contains"
+      },
+      {
+        "source": 8,
+        "target": 9,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 10,
+        "type": "native_to_habitat"
+      },
+      {
+        "source": 1,
+        "target": 10,
+        "type": "contains"
+      },
+      {
+        "source": 10,
+        "target": 11,
+        "type": "is_a"
+      },
+      {
+        "source": 12,
+        "target": 11,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 12,
+        "type": "native_to_habitat"
+      },
+      {
+        "source": 1,
+        "target": 12,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 13,
+        "type": "is_a"
+      },
+      {
+        "source": 14,
+        "target": 13,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 14,
+        "type": "contains"
+      },
+      {
+        "source": 14,
+        "target": 15,
+        "type": "in_family"
+      },
+      {
+        "source": 1,
+        "target": 15,
+        "type": "contains"
+      },
+      {
+        "source": 1,
+        "target": 16,
+        "type": "contains"
+      },
+      {
+        "source": 16,
+        "target": 17,
+        "type": "is_a"
+      }
+    ]
+  }
+}

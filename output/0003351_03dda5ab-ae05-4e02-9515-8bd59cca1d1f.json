@@ -1,0 +1,560 @@
+{
+  "dataset": "hover",
+  "id": "03dda5ab-ae05-4e02-9515-8bd59cca1d1f",
+  "split": "train",
+  "claim": "Jeremy Renner acted in the film Arrival and has been nominated for the Academy Award for Best Supporting Actor for the film `The Town'.",
+  "evidencia": "Page: Arrival (film). Sentence: Arrival is a 2016 American science fiction film directed by Denis Villeneuve and written by Eric Heisserer, based on the 1998 short story \"Story of Your Life\" by Ted Chiang.\nPage: Arrival (film). Sentence: It stars Amy Adams, Jeremy Renner, and Forest Whitaker, and follows linguist Louise Banks, who is enlisted by the U.S. Army to help translate communications from one of several extraterrestrial craft that have appeared across the world.\nPage: Jeremy Renner. Sentence: He was nominated for the Academy Award for Best Supporting Actor for his much-praised performance in \"The Town\" (2010).",
+  "evidence_text": "Page: Arrival (film). Sentence: Arrival is a 2016 American science fiction film directed by Denis Villeneuve and written by Eric Heisserer, based on the 1998 short story \"Story of Your Life\" by Ted Chiang.\nPage: Arrival (film). Sentence: It stars Amy Adams, Jeremy Renner, and Forest Whitaker, and follows linguist Louise Banks, who is enlisted by the U.S. Army to help translate communications from one of several extraterrestrial craft that have appeared across the world.\nPage: Jeremy Renner. Sentence: He was nominated for the Academy Award for Best Supporting Actor for his much-praised performance in \"The Town\" (2010).",
+  "label": "SUPPORTED",
+  "num_hops": 2,
+  "hover_metadata": {
+    "supporting_facts": [
+      [
+        "Arrival (film)",
+        0
+      ],
+      [
+        "Arrival (film)",
+        1
+      ],
+      [
+        "Jeremy Renner",
+        3
+      ]
+    ],
+    "num_hops": 2,
+    "evidence_annotation_id": [
+      0
+    ],
+    "evidence_id": [
+      "Arrival (film)::sentence::0",
+      "Arrival (film)::sentence::1",
+      "Jeremy Renner::sentence::3"
+    ],
+    "evidence_wiki_url": [
+      "https://en.wikipedia.org/wiki/Arrival_%28film%29",
+      "https://en.wikipedia.org/wiki/Jeremy_Renner"
+    ],
+    "evidence_sentence_id": [
+      "Arrival (film)::sentence::0",
+      "Arrival (film)::sentence::1",
+      "Jeremy Renner::sentence::3"
+    ]
+  },
+  "grafo_claim": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "e8cb8dd1-73fd-5049-ae47-d9a0c480c5b0",
+        "text": "This chunk is about:\n- People: Jeremy Renner\n- Films: Arrival, The Town\n- Awards: Academy Award for Best Supporting Actor\n\nFacts:\n- Jeremy Renner acted in the film Arrival.\n- Jeremy Renner was nominated for the Academy Award for Best Supporting Actor for the film The Town.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "e7d530c1-8c0b-523c-a9b3-5f4a44e22b46",
+        "text": "Jeremy Renner acted in the film Arrival and has been nominated for the Academy Award for Best Supporting Actor for the film `The Town'.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "e0e88461-fac1-5988-930e-964c1afc1146",
+        "text": "text_5f1be11d0eca8fafded5601979e5de00",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "b010bd52-3e4c-5e71-ae48-597b19c40295",
+        "text": "jeremy renner",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "53563d68-51d3-5311-a306-361012db8409",
+        "text": "arrival",
+        "type": "Entity"
+      },
+      {
+        "id": 5,
+        "original_id": "d320c8df-fd51-56e6-b577-e01a688fe6fc",
+        "text": "film",
+        "type": "EntityType"
+      },
+      {
+        "id": 6,
+        "original_id": "c2ff9473-1c02-5a80-96d5-0ba115418003",
+        "text": "academy award for best supporting actor",
+        "type": "Entity"
+      },
+      {
+        "id": 7,
+        "original_id": "e9ec1124-55cd-5e09-be24-ddf75310e6d8",
+        "text": "the town",
+        "type": "Entity"
+      },
+      {
+        "id": 8,
+        "original_id": "38e42125-31f4-5cd6-993c-dbbc06a88910",
+        "text": "award",
+        "type": "EntityType"
+      },
+      {
+        "id": 9,
+        "original_id": "99a82eec-bb35-5bb5-9ed2-e73fc7a756de",
+        "text": "person",
+        "type": "EntityType"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "acted_in"
+      },
+      {
+        "source": 1,
+        "target": 4,
+        "type": "contains"
+      },
+      {
+        "source": 4,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 7,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 6,
+        "type": "nominated_for"
+      },
+      {
+        "source": 1,
+        "target": 6,
+        "type": "contains"
+      },
+      {
+        "source": 6,
+        "target": 7,
+        "type": "for_film"
+      },
+      {
+        "source": 3,
+        "target": 7,
+        "type": "nominated_for_for_film"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      },
+      {
+        "source": 6,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 9,
+        "type": "is_a"
+      }
+    ]
+  },
+  "grafo_evidencia": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "1ed65684-03a2-51db-a043-238401ccd99c",
+        "text": "This chunk is about:\n- People: Denis Villeneuve, Eric Heisserer, Ted Chiang, Amy Adams, Jeremy Renner, Forest Whitaker, Louise Banks\n- Works: Arrival, Story of Your Life, The Town\n- Organizations: U.S. Army, Academy Awards\n- Topics: film adaptation, science fiction films, acting nominations\n\nFacts:\n- Ted Chiang wrote the short story \"Story of Your Life\" in 1998.\n- Jeremy Renner was nominated for the Academy Award for Best Supporting Actor for his performance in \"The Town\" in 2010.\n- \"Arrival\" is a 2016 American science fiction film directed by Denis Villeneuve and written by Eric Heisserer.\n- \"Arrival\" is based on Ted Chiang's 1998 short story \"Story of Your Life.\"\n- \"Arrival\" stars Amy Adams, Jeremy Renner, and Forest Whitaker.\n- In \"Arrival,\" Louise Banks is a linguist enlisted by the U.S. Army to help translate communications from one of several extraterrestrial craft that appeared around the world.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "3711aaf5-7ea3-576c-9ac3-22b6d9f80afe",
+        "text": "Page: Arrival (film). Sentence: Arrival is a 2016 American science fiction film directed by Denis Villeneuve and written by Eric Heisserer, based on the 1998 short story \"Story of Your Life\" by Ted Chiang.\nPage: Arrival (film). Sentence: It stars Amy Adams, Jeremy Renner, and Forest Whitaker, and follows linguist Louise Banks, who is enlisted by the U.S. Army to help translate communications from one of several extraterrestrial craft that have appeared across the world.\nPage: Jeremy Renner. Sentence: He was nominated for the Academy Award for Best Supporting Actor for his much-praised performance in \"The Town\" (2010).",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "843aaa47-e8f6-59ad-9d04-8cee916289b2",
+        "text": "text_d1841b2d04d285f96fcda3267447e887",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "53563d68-51d3-5311-a306-361012db8409",
+        "text": "arrival",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "e4b4371b-a3be-58ef-8db1-07e189dc56ac",
+        "text": "2016",
+        "type": "Entity"
+      },
+      {
+        "id": 5,
+        "original_id": "b19433ae-558c-5aaf-95ac-6231f2a4be0e",
+        "text": "date",
+        "type": "EntityType"
+      },
+      {
+        "id": 6,
+        "original_id": "949d2dce-ff7e-5ff7-a6f8-191cdfb68b6c",
+        "text": "denis villeneuve",
+        "type": "Entity"
+      },
+      {
+        "id": 7,
+        "original_id": "99a82eec-bb35-5bb5-9ed2-e73fc7a756de",
+        "text": "person",
+        "type": "EntityType"
+      },
+      {
+        "id": 8,
+        "original_id": "f920a9ba-aef4-5186-82a4-9dd6177caac8",
+        "text": "eric heisserer",
+        "type": "Entity"
+      },
+      {
+        "id": 9,
+        "original_id": "b4d13ab3-d9e6-53b2-9f6f-aaa6d8a29fbb",
+        "text": "story of your life",
+        "type": "Entity"
+      },
+      {
+        "id": 10,
+        "original_id": "111f07f3-2527-5bbf-827f-7a18bb37f150",
+        "text": "1998",
+        "type": "Entity"
+      },
+      {
+        "id": 11,
+        "original_id": "4b4d5f33-a0af-5543-9f43-49ee2774c35d",
+        "text": "ted chiang",
+        "type": "Entity"
+      },
+      {
+        "id": 12,
+        "original_id": "5263a535-1b4b-5925-be3e-310d03cd303b",
+        "text": "work",
+        "type": "EntityType"
+      },
+      {
+        "id": 13,
+        "original_id": "3047bf39-7b03-5360-9ba3-68d680664e28",
+        "text": "amy adams",
+        "type": "Entity"
+      },
+      {
+        "id": 14,
+        "original_id": "b010bd52-3e4c-5e71-ae48-597b19c40295",
+        "text": "jeremy renner",
+        "type": "Entity"
+      },
+      {
+        "id": 15,
+        "original_id": "c2ff9473-1c02-5a80-96d5-0ba115418003",
+        "text": "academy award for best supporting actor",
+        "type": "Entity"
+      },
+      {
+        "id": 16,
+        "original_id": "38e42125-31f4-5cd6-993c-dbbc06a88910",
+        "text": "award",
+        "type": "EntityType"
+      },
+      {
+        "id": 17,
+        "original_id": "e9ec1124-55cd-5e09-be24-ddf75310e6d8",
+        "text": "the town",
+        "type": "Entity"
+      },
+      {
+        "id": 18,
+        "original_id": "cb1dc1af-5253-5fa4-877e-246a7629f489",
+        "text": "2010",
+        "type": "Entity"
+      },
+      {
+        "id": 19,
+        "original_id": "5c27dafd-1139-5ebf-bc1e-af6283424dfa",
+        "text": "forest whitaker",
+        "type": "Entity"
+      },
+      {
+        "id": 20,
+        "original_id": "06a27392-c1c0-574f-95e9-58a27ba7847a",
+        "text": "louise banks",
+        "type": "Entity"
+      },
+      {
+        "id": 21,
+        "original_id": "a99b1db0-bd5a-52aa-82d6-a8fa197311a0",
+        "text": "u.s. army",
+        "type": "Entity"
+      },
+      {
+        "id": 22,
+        "original_id": "388f60fb-220d-55e8-ae9c-3ac93cead308",
+        "text": "organization",
+        "type": "EntityType"
+      },
+      {
+        "id": 23,
+        "original_id": "d320c8df-fd51-56e6-b577-e01a688fe6fc",
+        "text": "film",
+        "type": "EntityType"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "released_in"
+      },
+      {
+        "source": 1,
+        "target": 4,
+        "type": "contains"
+      },
+      {
+        "source": 4,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 10,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 18,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 6,
+        "type": "directed_by"
+      },
+      {
+        "source": 1,
+        "target": 6,
+        "type": "contains"
+      },
+      {
+        "source": 6,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 8,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 11,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 13,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 14,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 19,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 20,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 8,
+        "type": "written_by"
+      },
+      {
+        "source": 1,
+        "target": 8,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 9,
+        "type": "based_on"
+      },
+      {
+        "source": 1,
+        "target": 9,
+        "type": "contains"
+      },
+      {
+        "source": 9,
+        "target": 10,
+        "type": "published_in"
+      },
+      {
+        "source": 1,
+        "target": 10,
+        "type": "contains"
+      },
+      {
+        "source": 9,
+        "target": 11,
+        "type": "written_by"
+      },
+      {
+        "source": 1,
+        "target": 11,
+        "type": "contains"
+      },
+      {
+        "source": 9,
+        "target": 12,
+        "type": "is_a"
+      },
+      {
+        "source": 17,
+        "target": 12,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 13,
+        "type": "stars"
+      },
+      {
+        "source": 1,
+        "target": 13,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 14,
+        "type": "stars"
+      },
+      {
+        "source": 1,
+        "target": 14,
+        "type": "contains"
+      },
+      {
+        "source": 14,
+        "target": 15,
+        "type": "nominated_for"
+      },
+      {
+        "source": 1,
+        "target": 15,
+        "type": "contains"
+      },
+      {
+        "source": 15,
+        "target": 16,
+        "type": "is_a"
+      },
+      {
+        "source": 14,
+        "target": 17,
+        "type": "performed_in"
+      },
+      {
+        "source": 1,
+        "target": 17,
+        "type": "contains"
+      },
+      {
+        "source": 17,
+        "target": 18,
+        "type": "released_in"
+      },
+      {
+        "source": 1,
+        "target": 18,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 19,
+        "type": "stars"
+      },
+      {
+        "source": 1,
+        "target": 19,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 20,
+        "type": "follows"
+      },
+      {
+        "source": 1,
+        "target": 20,
+        "type": "contains"
+      },
+      {
+        "source": 20,
+        "target": 21,
+        "type": "enlisted_by"
+      },
+      {
+        "source": 1,
+        "target": 21,
+        "type": "contains"
+      },
+      {
+        "source": 21,
+        "target": 22,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 23,
+        "type": "is_a"
+      }
+    ]
+  }
+}

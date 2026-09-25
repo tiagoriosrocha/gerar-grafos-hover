@@ -1,0 +1,483 @@
+{
+  "dataset": "hover",
+  "id": "c10748df-d46e-422a-b57f-02be85584d1f",
+  "split": "train",
+  "claim": "The group Hawaiian lobelioids are a part of and another plant did not come from the same family genus. Dierama pendulum was once placed in the genus of this other plant.",
+  "evidencia": "Page: Sparaxis. Sentence: Sparaxis (harlequin flower) is a genus in the family Iridaceae with about 13 species endemic to Cape Province, South Africa.\nPage: Campanula. Sentence: Campanula is one of several genera in the family Campanulaceae with the common name bellflower.\nPage: Dierama pendulum. Sentence: Before that the plant had been placed in various genera including \"Ixia\", \"Sparaxis\" and \"Watsonia\".\nPage: Hawaiian lobelioids. Sentence: The Hawaiian lobelioids are a group of flowering plants in the bellflower family, Campanulaceae, all of which are endemic to the Hawaiian Islands.",
+  "evidence_text": "Page: Sparaxis. Sentence: Sparaxis (harlequin flower) is a genus in the family Iridaceae with about 13 species endemic to Cape Province, South Africa.\nPage: Campanula. Sentence: Campanula is one of several genera in the family Campanulaceae with the common name bellflower.\nPage: Dierama pendulum. Sentence: Before that the plant had been placed in various genera including \"Ixia\", \"Sparaxis\" and \"Watsonia\".\nPage: Hawaiian lobelioids. Sentence: The Hawaiian lobelioids are a group of flowering plants in the bellflower family, Campanulaceae, all of which are endemic to the Hawaiian Islands.",
+  "label": "SUPPORTED",
+  "num_hops": 4,
+  "hover_metadata": {
+    "supporting_facts": [
+      [
+        "Sparaxis",
+        0
+      ],
+      [
+        "Campanula",
+        0
+      ],
+      [
+        "Dierama pendulum",
+        2
+      ],
+      [
+        "Hawaiian lobelioids",
+        0
+      ]
+    ],
+    "num_hops": 4,
+    "evidence_annotation_id": [
+      0
+    ],
+    "evidence_id": [
+      "Sparaxis::sentence::0",
+      "Campanula::sentence::0",
+      "Dierama pendulum::sentence::2",
+      "Hawaiian lobelioids::sentence::0"
+    ],
+    "evidence_wiki_url": [
+      "https://en.wikipedia.org/wiki/Sparaxis",
+      "https://en.wikipedia.org/wiki/Campanula",
+      "https://en.wikipedia.org/wiki/Dierama_pendulum",
+      "https://en.wikipedia.org/wiki/Hawaiian_lobelioids"
+    ],
+    "evidence_sentence_id": [
+      "Sparaxis::sentence::0",
+      "Campanula::sentence::0",
+      "Dierama pendulum::sentence::2",
+      "Hawaiian lobelioids::sentence::0"
+    ]
+  },
+  "grafo_claim": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "7ee1d2ea-c531-57e6-b271-45b7647552ad",
+        "text": "This chunk is about:\n- Plants: Hawaiian lobelioids, Dierama pendulum, the other plant\n- Taxonomy: family, genus\n\nFacts:\n- Hawaiian lobelioids are part of a particular plant family and genus grouping.\n- The other plant does not belong to the same family or genus as Hawaiian lobelioids.\n- Dierama pendulum was formerly placed in the genus of the other plant.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "dda313a6-847b-53bf-ad19-5dad824ddd07",
+        "text": "The group Hawaiian lobelioids are a part of and another plant did not come from the same family genus. Dierama pendulum was once placed in the genus of this other plant.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "49572a52-75f2-5952-9785-feb69b9d32e7",
+        "text": "text_aff231e8c7b3369df914ec59b4295d76",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "37731620-39d4-5cb4-be94-b587373cc65c",
+        "text": "hawaiian lobelioids",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "e87ed22b-0b4c-5a88-aa8b-c480ec9bd24b",
+        "text": "campanulaceae",
+        "type": "Entity"
+      },
+      {
+        "id": 5,
+        "original_id": "f7b4540f-d32c-51b3-8970-f282fffab519",
+        "text": "taxon",
+        "type": "EntityType"
+      },
+      {
+        "id": 6,
+        "original_id": "667d097a-b7b9-5a66-a896-3efc9fe171e2",
+        "text": "plant group",
+        "type": "EntityType"
+      },
+      {
+        "id": 7,
+        "original_id": "b3d9c266-77a2-5d0b-aa4e-3ae5aed7ff11",
+        "text": "dierama pendulum",
+        "type": "Entity"
+      },
+      {
+        "id": 8,
+        "original_id": "3623337f-e065-5e2a-a1f9-65d62e782525",
+        "text": "other plant",
+        "type": "Entity"
+      },
+      {
+        "id": 9,
+        "original_id": "2df43048-b175-54c2-b72b-0ff24f41e4f1",
+        "text": "plant",
+        "type": "EntityType"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "part_of"
+      },
+      {
+        "source": 1,
+        "target": 4,
+        "type": "contains"
+      },
+      {
+        "source": 8,
+        "target": 4,
+        "type": "not_from_same_family_genus_as"
+      },
+      {
+        "source": 4,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      },
+      {
+        "source": 7,
+        "target": 8,
+        "type": "once_placed_in_genus_of"
+      },
+      {
+        "source": 1,
+        "target": 8,
+        "type": "contains"
+      },
+      {
+        "source": 8,
+        "target": 9,
+        "type": "is_a"
+      },
+      {
+        "source": 7,
+        "target": 9,
+        "type": "is_a"
+      }
+    ]
+  },
+  "grafo_evidencia": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "ba696b6b-1036-574e-96ed-08c506322cb0",
+        "text": "This chunk is about:\n- Plants: Sparaxis, Campanula, Dierama pendulum, Hawaiian lobelioids\n- Plant families: Iridaceae, Campanulaceae\n- Places: Cape Province, South Africa, Hawaiian Islands\n\nFacts:\n- Sparaxis is a genus in the family Iridaceae with about 13 species endemic to Cape Province, South Africa.\n- Campanula is one of several genera in the family Campanulaceae that share the common name bellflower.\n- Before its current classification, Dierama pendulum had been placed in the genera Ixia, Sparaxis, and Watsonia.\n- The Hawaiian lobelioids are a group of flowering plants in the family Campanulaceae that are endemic to the Hawaiian Islands.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "f4ab4dfc-c8df-5b7f-9460-8f22986e4ec5",
+        "text": "Page: Sparaxis. Sentence: Sparaxis (harlequin flower) is a genus in the family Iridaceae with about 13 species endemic to Cape Province, South Africa.\nPage: Campanula. Sentence: Campanula is one of several genera in the family Campanulaceae with the common name bellflower.\nPage: Dierama pendulum. Sentence: Before that the plant had been placed in various genera including \"Ixia\", \"Sparaxis\" and \"Watsonia\".\nPage: Hawaiian lobelioids. Sentence: The Hawaiian lobelioids are a group of flowering plants in the bellflower family, Campanulaceae, all of which are endemic to the Hawaiian Islands.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "d3b2c240-aa50-50b4-82bd-c911f262243b",
+        "text": "text_d44eec6621b2d663ae4c7cfa9bb68096",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "d1c24ec2-b10a-5652-b2a7-5705f12b1857",
+        "text": "sparaxis",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "2c5a7b9d-ccca-5159-9c06-192a878815b6",
+        "text": "iridaceae",
+        "type": "Entity"
+      },
+      {
+        "id": 5,
+        "original_id": "7f48090e-51ab-5147-97a2-f613d046ddca",
+        "text": "plantfamily",
+        "type": "EntityType"
+      },
+      {
+        "id": 6,
+        "original_id": "e7ace971-1ab1-506f-9947-3600699bfd11",
+        "text": "cape province",
+        "type": "Entity"
+      },
+      {
+        "id": 7,
+        "original_id": "c0e3c705-bfd9-53eb-a62c-38a7737b4e93",
+        "text": "south africa",
+        "type": "Entity"
+      },
+      {
+        "id": 8,
+        "original_id": "5f394058-b2a0-5ba8-8466-ba2a18cfcf4e",
+        "text": "place",
+        "type": "EntityType"
+      },
+      {
+        "id": 9,
+        "original_id": "2df43048-b175-54c2-b72b-0ff24f41e4f1",
+        "text": "plant",
+        "type": "EntityType"
+      },
+      {
+        "id": 10,
+        "original_id": "c806d7f3-51e5-5225-8540-bccf5f296bdc",
+        "text": "campanula",
+        "type": "Entity"
+      },
+      {
+        "id": 11,
+        "original_id": "e87ed22b-0b4c-5a88-aa8b-c480ec9bd24b",
+        "text": "campanulaceae",
+        "type": "Entity"
+      },
+      {
+        "id": 12,
+        "original_id": "899f086c-576b-5920-ad6e-d8406efa60a8",
+        "text": "bellflower",
+        "type": "Entity"
+      },
+      {
+        "id": 13,
+        "original_id": "e3b38143-5dd6-5555-b76b-e8224ae7e330",
+        "text": "commonname",
+        "type": "EntityType"
+      },
+      {
+        "id": 14,
+        "original_id": "b3d9c266-77a2-5d0b-aa4e-3ae5aed7ff11",
+        "text": "dierama pendulum",
+        "type": "Entity"
+      },
+      {
+        "id": 15,
+        "original_id": "68f12f6e-751e-5c51-9094-eaaa214dedb7",
+        "text": "ixia",
+        "type": "Entity"
+      },
+      {
+        "id": 16,
+        "original_id": "fbffa8f4-2add-506b-a235-f484ef2ae895",
+        "text": "watsonia",
+        "type": "Entity"
+      },
+      {
+        "id": 17,
+        "original_id": "37731620-39d4-5cb4-be94-b587373cc65c",
+        "text": "hawaiian lobelioids",
+        "type": "Entity"
+      },
+      {
+        "id": 18,
+        "original_id": "965fe7f8-6488-5113-adb9-dde648dbb950",
+        "text": "hawaiian islands",
+        "type": "Entity"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 14,
+        "target": 3,
+        "type": "was_previously_placed_in"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_in_family"
+      },
+      {
+        "source": 1,
+        "target": 4,
+        "type": "contains"
+      },
+      {
+        "source": 4,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 11,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 6,
+        "type": "is_endemic_to"
+      },
+      {
+        "source": 1,
+        "target": 6,
+        "type": "contains"
+      },
+      {
+        "source": 6,
+        "target": 7,
+        "type": "is_in"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      },
+      {
+        "source": 7,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 6,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 18,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 9,
+        "type": "is_a"
+      },
+      {
+        "source": 10,
+        "target": 9,
+        "type": "is_a"
+      },
+      {
+        "source": 15,
+        "target": 9,
+        "type": "is_a"
+      },
+      {
+        "source": 16,
+        "target": 9,
+        "type": "is_a"
+      },
+      {
+        "source": 14,
+        "target": 9,
+        "type": "is_a"
+      },
+      {
+        "source": 17,
+        "target": 9,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 10,
+        "type": "contains"
+      },
+      {
+        "source": 10,
+        "target": 11,
+        "type": "is_in_family"
+      },
+      {
+        "source": 1,
+        "target": 11,
+        "type": "contains"
+      },
+      {
+        "source": 17,
+        "target": 11,
+        "type": "is_in_family"
+      },
+      {
+        "source": 10,
+        "target": 12,
+        "type": "has_common_name"
+      },
+      {
+        "source": 1,
+        "target": 12,
+        "type": "contains"
+      },
+      {
+        "source": 12,
+        "target": 13,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 14,
+        "type": "contains"
+      },
+      {
+        "source": 14,
+        "target": 15,
+        "type": "was_previously_placed_in"
+      },
+      {
+        "source": 1,
+        "target": 15,
+        "type": "contains"
+      },
+      {
+        "source": 14,
+        "target": 16,
+        "type": "was_previously_placed_in"
+      },
+      {
+        "source": 1,
+        "target": 16,
+        "type": "contains"
+      },
+      {
+        "source": 1,
+        "target": 17,
+        "type": "contains"
+      },
+      {
+        "source": 17,
+        "target": 18,
+        "type": "is_endemic_to"
+      },
+      {
+        "source": 1,
+        "target": 18,
+        "type": "contains"
+      }
+    ]
+  }
+}

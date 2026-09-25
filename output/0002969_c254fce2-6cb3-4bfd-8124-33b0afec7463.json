@@ -1,0 +1,415 @@
+{
+  "dataset": "hover",
+  "id": "c254fce2-6cb3-4bfd-8124-33b0afec7463",
+  "split": "train",
+  "claim": "Route 146, Interstate 890 and the I-90 are Highways that run through Schenectady, New York.",
+  "evidencia": "Page: Fort Hunter, Albany County, New York. Sentence: Fort Hunter lies along New York Route 146 near the Albany-Schenectady county line.\nPage: Interstate 890. Sentence: Interstate 890 (I-890) is a 9.45 mi long auxiliary Interstate Highway in the vicinity of Schenectady, New York, in the United States.\nPage: Interstate 890. Sentence: The highway runs southeast–northwest from an interchange with the New York State Thruway (I-90) northwest of Schenectady to another junction with the Thruway south of the city and passes through Downtown Schenectady along the way.",
+  "evidence_text": "Page: Fort Hunter, Albany County, New York. Sentence: Fort Hunter lies along New York Route 146 near the Albany-Schenectady county line.\nPage: Interstate 890. Sentence: Interstate 890 (I-890) is a 9.45 mi long auxiliary Interstate Highway in the vicinity of Schenectady, New York, in the United States.\nPage: Interstate 890. Sentence: The highway runs southeast–northwest from an interchange with the New York State Thruway (I-90) northwest of Schenectady to another junction with the Thruway south of the city and passes through Downtown Schenectady along the way.",
+  "label": "SUPPORTED",
+  "num_hops": 2,
+  "hover_metadata": {
+    "supporting_facts": [
+      [
+        "Fort Hunter, Albany County, New York",
+        1
+      ],
+      [
+        "Interstate 890",
+        0
+      ],
+      [
+        "Interstate 890",
+        1
+      ]
+    ],
+    "num_hops": 2,
+    "evidence_annotation_id": [
+      0
+    ],
+    "evidence_id": [
+      "Fort Hunter, Albany County, New York::sentence::1",
+      "Interstate 890::sentence::0",
+      "Interstate 890::sentence::1"
+    ],
+    "evidence_wiki_url": [
+      "https://en.wikipedia.org/wiki/Fort_Hunter%2C_Albany_County%2C_New_York",
+      "https://en.wikipedia.org/wiki/Interstate_890"
+    ],
+    "evidence_sentence_id": [
+      "Fort Hunter, Albany County, New York::sentence::1",
+      "Interstate 890::sentence::0",
+      "Interstate 890::sentence::1"
+    ]
+  },
+  "grafo_claim": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "77105d5e-cba0-5324-ba3c-4de615e84ef8",
+        "text": "This chunk is about:\n- Places: Schenectady, New York\n- Systems: Route 146, Interstate 890, Interstate 90\n\nFacts:\n- Route 146 runs through Schenectady, New York.\n- Interstate 890 runs through Schenectady, New York.\n- Interstate 90 runs through Schenectady, New York.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "8ea93d15-55da-5a04-8209-2cfbd89c5ad5",
+        "text": "Route 146, Interstate 890 and the I-90 are Highways that run through Schenectady, New York.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "34a3f62d-805b-52bf-be9b-2768d4b89099",
+        "text": "text_8a005c012e946e97fe80a82d77d30874",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "ed306abf-e67f-5cb3-8012-d2ba32844e17",
+        "text": "route 146",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "bfe470c0-ef47-5b7d-b81f-e5180ef9640f",
+        "text": "schenectady, new york",
+        "type": "Entity"
+      },
+      {
+        "id": 5,
+        "original_id": "5f394058-b2a0-5ba8-8466-ba2a18cfcf4e",
+        "text": "place",
+        "type": "EntityType"
+      },
+      {
+        "id": 6,
+        "original_id": "ac6e4ca3-93a7-5a68-a378-e686b17763d3",
+        "text": "highway",
+        "type": "EntityType"
+      },
+      {
+        "id": 7,
+        "original_id": "3f8c0e4e-ce66-50ad-83ef-055b32ccfd18",
+        "text": "interstate 890",
+        "type": "Entity"
+      },
+      {
+        "id": 8,
+        "original_id": "642517b2-f521-54c1-a191-ca33e30e1842",
+        "text": "i-90",
+        "type": "Entity"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "runs_through"
+      },
+      {
+        "source": 7,
+        "target": 4,
+        "type": "runs_through"
+      },
+      {
+        "source": 8,
+        "target": 4,
+        "type": "runs_through"
+      },
+      {
+        "source": 1,
+        "target": 4,
+        "type": "contains"
+      },
+      {
+        "source": 4,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 7,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 8,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      },
+      {
+        "source": 1,
+        "target": 8,
+        "type": "contains"
+      }
+    ]
+  },
+  "grafo_evidencia": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "fe6461bb-c2b7-598a-9b01-a074672535fd",
+        "text": "This chunk is about:\n- Places: Fort Hunter, Albany County, Schenectady, New York\n- Systems: New York Route 146, Interstate 890, Interstate 90, New York State Thruway\n\nFacts:\n- Fort Hunter lies along New York Route 146 near the Albany–Schenectady county line in New York.\n- Interstate 890 is a 9.45-mile auxiliary Interstate Highway in the vicinity of Schenectady, New York.\n- Interstate 890 runs southeast–northwest from an interchange with the New York State Thruway (Interstate 90) northwest of Schenectady to another junction with the Thruway south of the city.\n- Interstate 890 passes through Downtown Schenectady along its route.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "5d23e73e-1981-5f46-93b3-d57e32b8994a",
+        "text": "Page: Fort Hunter, Albany County, New York. Sentence: Fort Hunter lies along New York Route 146 near the Albany-Schenectady county line.\nPage: Interstate 890. Sentence: Interstate 890 (I-890) is a 9.45 mi long auxiliary Interstate Highway in the vicinity of Schenectady, New York, in the United States.\nPage: Interstate 890. Sentence: The highway runs southeast–northwest from an interchange with the New York State Thruway (I-90) northwest of Schenectady to another junction with the Thruway south of the city and passes through Downtown Schenectady along the way.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "a1e89403-b5d1-57c9-a74b-3f12b212e660",
+        "text": "text_c4fcdd24a0b071d15f127f32d8edf00a",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "925629c0-3e06-5546-b983-87dc4c795b22",
+        "text": "fort hunter",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "211a433f-3916-538a-8d53-8481108784c7",
+        "text": "new york route 146",
+        "type": "Entity"
+      },
+      {
+        "id": 5,
+        "original_id": "5e52d312-a248-534f-a58b-25c5426a89ad",
+        "text": "road",
+        "type": "EntityType"
+      },
+      {
+        "id": 6,
+        "original_id": "c18adc76-10ba-573b-8a45-397c759c5cc7",
+        "text": "albany-schenectady county line",
+        "type": "Entity"
+      },
+      {
+        "id": 7,
+        "original_id": "5f394058-b2a0-5ba8-8466-ba2a18cfcf4e",
+        "text": "place",
+        "type": "EntityType"
+      },
+      {
+        "id": 8,
+        "original_id": "416f9644-9990-5abc-bc04-db308fe68d5e",
+        "text": "albany county, new york",
+        "type": "Entity"
+      },
+      {
+        "id": 9,
+        "original_id": "3f8c0e4e-ce66-50ad-83ef-055b32ccfd18",
+        "text": "interstate 890",
+        "type": "Entity"
+      },
+      {
+        "id": 10,
+        "original_id": "bfe470c0-ef47-5b7d-b81f-e5180ef9640f",
+        "text": "schenectady, new york",
+        "type": "Entity"
+      },
+      {
+        "id": 11,
+        "original_id": "874a51da-34ea-5037-be47-d87785d43c37",
+        "text": "united states",
+        "type": "Entity"
+      },
+      {
+        "id": 12,
+        "original_id": "5ee51883-1888-509b-bfee-5e55dcea2eb1",
+        "text": "new york state thruway",
+        "type": "Entity"
+      },
+      {
+        "id": 13,
+        "original_id": "39cafe8b-d677-54e3-be87-2ea2a9b988e8",
+        "text": "interstate 90",
+        "type": "Entity"
+      },
+      {
+        "id": 14,
+        "original_id": "e5a50aa1-888f-5135-8317-04dcafafc06d",
+        "text": "downtown schenectady",
+        "type": "Entity"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "lies_along"
+      },
+      {
+        "source": 1,
+        "target": 4,
+        "type": "contains"
+      },
+      {
+        "source": 4,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 13,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 12,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 9,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 6,
+        "type": "near"
+      },
+      {
+        "source": 1,
+        "target": 6,
+        "type": "contains"
+      },
+      {
+        "source": 6,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 8,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 10,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 11,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 14,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 8,
+        "type": "located_in"
+      },
+      {
+        "source": 1,
+        "target": 8,
+        "type": "contains"
+      },
+      {
+        "source": 1,
+        "target": 9,
+        "type": "contains"
+      },
+      {
+        "source": 9,
+        "target": 10,
+        "type": "in_vicinity_of"
+      },
+      {
+        "source": 1,
+        "target": 10,
+        "type": "contains"
+      },
+      {
+        "source": 9,
+        "target": 11,
+        "type": "located_in"
+      },
+      {
+        "source": 1,
+        "target": 11,
+        "type": "contains"
+      },
+      {
+        "source": 9,
+        "target": 12,
+        "type": "runs_from_interchange_with"
+      },
+      {
+        "source": 1,
+        "target": 12,
+        "type": "contains"
+      },
+      {
+        "source": 12,
+        "target": 13,
+        "type": "designated_as"
+      },
+      {
+        "source": 1,
+        "target": 13,
+        "type": "contains"
+      },
+      {
+        "source": 9,
+        "target": 14,
+        "type": "passes_through"
+      },
+      {
+        "source": 1,
+        "target": 14,
+        "type": "contains"
+      }
+    ]
+  }
+}

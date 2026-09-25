@@ -1,0 +1,758 @@
+{
+  "dataset": "hover",
+  "id": "d4d2953e-0e0f-4b95-95f7-b9e298195d0f",
+  "split": "train",
+  "claim": "The 19th-century Riverside Canal does not run through the 4th ward. The canal to the east on the boundary of Filmore, New Orleans does.",
+  "evidencia": "Page: London Avenue Canal. Sentence: The London Avenue Canal is a drainage canal in New Orleans, Louisiana, used for pumping rain water into Lake Pontchartrain.\nPage: London Avenue Canal. Sentence: The Canal runs through the 7th Ward of New Orleans from the Gentilly area to the Lakefront.\nPage: London Avenue Canal. Sentence: The London Avenue Canal's flood walls built atop earthen levees breached on both sides during Hurricane Katrina in 2005.\nPage: Riverside Canal (El Paso). Sentence: The canal and diversion dam is the southernmost system on an irrigation project extending along the Rio Grande in New Mexico and Texas.\nPage: Filmore, New Orleans. Sentence: A subdistrict of the Gentilly District Area, its boundaries as defined by the City Planning Commission are: Robert E. Lee Boulevard to the north, London Avenue Canal to the east, Press Drive, Paris Avenue and Harrison Avenue to the south and Bayou St. John to the west.",
+  "evidence_text": "Page: London Avenue Canal. Sentence: The London Avenue Canal is a drainage canal in New Orleans, Louisiana, used for pumping rain water into Lake Pontchartrain.\nPage: London Avenue Canal. Sentence: The Canal runs through the 7th Ward of New Orleans from the Gentilly area to the Lakefront.\nPage: London Avenue Canal. Sentence: The London Avenue Canal's flood walls built atop earthen levees breached on both sides during Hurricane Katrina in 2005.\nPage: Riverside Canal (El Paso). Sentence: The canal and diversion dam is the southernmost system on an irrigation project extending along the Rio Grande in New Mexico and Texas.\nPage: Filmore, New Orleans. Sentence: A subdistrict of the Gentilly District Area, its boundaries as defined by the City Planning Commission are: Robert E. Lee Boulevard to the north, London Avenue Canal to the east, Press Drive, Paris Avenue and Harrison Avenue to the south and Bayou St. John to the west.",
+  "label": "NOT_SUPPORTED",
+  "num_hops": 3,
+  "hover_metadata": {
+    "supporting_facts": [
+      [
+        "London Avenue Canal",
+        0
+      ],
+      [
+        "London Avenue Canal",
+        1
+      ],
+      [
+        "London Avenue Canal",
+        3
+      ],
+      [
+        "Riverside Canal (El Paso)",
+        5
+      ],
+      [
+        "Filmore, New Orleans",
+        1
+      ]
+    ],
+    "num_hops": 3,
+    "evidence_annotation_id": [
+      0
+    ],
+    "evidence_id": [
+      "London Avenue Canal::sentence::0",
+      "London Avenue Canal::sentence::1",
+      "London Avenue Canal::sentence::3",
+      "Riverside Canal (El Paso)::sentence::5",
+      "Filmore, New Orleans::sentence::1"
+    ],
+    "evidence_wiki_url": [
+      "https://en.wikipedia.org/wiki/London_Avenue_Canal",
+      "https://en.wikipedia.org/wiki/Riverside_Canal_%28El_Paso%29",
+      "https://en.wikipedia.org/wiki/Filmore%2C_New_Orleans"
+    ],
+    "evidence_sentence_id": [
+      "London Avenue Canal::sentence::0",
+      "London Avenue Canal::sentence::1",
+      "London Avenue Canal::sentence::3",
+      "Riverside Canal (El Paso)::sentence::5",
+      "Filmore, New Orleans::sentence::1"
+    ]
+  },
+  "grafo_claim": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "b58f4f9e-ce97-5194-9a3e-a5452ff8e323",
+        "text": "This chunk is about:\n- Places: Riverside Canal, 4th ward, Filmore, New Orleans\n- Topics: canal routes, geographic boundaries\n\nFacts:\n- The 19th-century Riverside Canal does not run through the 4th ward.\n- A canal east on the boundary of Filmore, New Orleans runs through that area instead.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "97a49e9f-2661-5498-9ec9-54626f84cb0e",
+        "text": "The 19th-century Riverside Canal does not run through the 4th ward. The canal to the east on the boundary of Filmore, New Orleans does.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "92ed8e12-ec9e-5a91-8b70-e23f3f0284d3",
+        "text": "text_e1485a5e9f592e0fb759d9e2c2147db7",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "58a48141-20c2-52e6-9311-614da1060ade",
+        "text": "riverside canal",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "1683acc5-7866-5df3-ade1-ea77930292bd",
+        "text": "4th ward",
+        "type": "Entity"
+      },
+      {
+        "id": 5,
+        "original_id": "5f394058-b2a0-5ba8-8466-ba2a18cfcf4e",
+        "text": "place",
+        "type": "EntityType"
+      },
+      {
+        "id": 6,
+        "original_id": "3751f84b-89ab-577b-903b-b6109d3feb4e",
+        "text": "filmore",
+        "type": "Entity"
+      },
+      {
+        "id": 7,
+        "original_id": "d8a17dc1-2722-5fa6-8437-1d52a50370bd",
+        "text": "new orleans",
+        "type": "Entity"
+      },
+      {
+        "id": 8,
+        "original_id": "2b1a0b97-26e7-5000-a6b0-93c33437755a",
+        "text": "the canal to the east",
+        "type": "Entity"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "does_not_run_through"
+      },
+      {
+        "source": 1,
+        "target": 4,
+        "type": "contains"
+      },
+      {
+        "source": 8,
+        "target": 4,
+        "type": "runs_through"
+      },
+      {
+        "source": 4,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 7,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 6,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 8,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 6,
+        "type": "contains"
+      },
+      {
+        "source": 8,
+        "target": 6,
+        "type": "is_on_boundary_of"
+      },
+      {
+        "source": 6,
+        "target": 7,
+        "type": "located_in"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      },
+      {
+        "source": 1,
+        "target": 8,
+        "type": "contains"
+      }
+    ]
+  },
+  "grafo_evidencia": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "9025d403-73b8-55b4-aebb-210c32c5dfaf",
+        "text": "This chunk is about:\n- Places: London Avenue Canal, New Orleans, Louisiana, Lake Pontchartrain, 7th Ward, Gentilly, Lakefront, El Paso, New Mexico, Texas, Rio Grande, Filmore, Bayou St. John\n- Systems: Riverside Canal, diversion dam, irrigation project, drainage canal, flood walls, earthen levees\n- Events: Hurricane Katrina\n- Organizations: City Planning Commission\n\nFacts:\n- The London Avenue Canal is a drainage canal in New Orleans, Louisiana, that pumps rainwater into Lake Pontchartrain.\n- The London Avenue Canal runs through the 7th Ward of New Orleans from the Gentilly area to the Lakefront.\n- In 2005, the London Avenue Canal's flood walls, built atop earthen levees, breached on both sides during Hurricane Katrina.\n- The Riverside Canal and its diversion dam are the southernmost system on an irrigation project extending along the Rio Grande in New Mexico and Texas.\n- The City Planning Commission defines Filmore, a subdistrict of the Gentilly District Area, as bounded by Robert E. Lee Boulevard to the north, the London Avenue Canal to the east, Press Drive, Paris Avenue, and Harrison Avenue to the south, and Bayou St. John to the west.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "73f5fb2d-edd7-53b7-82f9-2e566c4d07de",
+        "text": "Page: London Avenue Canal. Sentence: The London Avenue Canal is a drainage canal in New Orleans, Louisiana, used for pumping rain water into Lake Pontchartrain.\nPage: London Avenue Canal. Sentence: The Canal runs through the 7th Ward of New Orleans from the Gentilly area to the Lakefront.\nPage: London Avenue Canal. Sentence: The London Avenue Canal's flood walls built atop earthen levees breached on both sides during Hurricane Katrina in 2005.\nPage: Riverside Canal (El Paso). Sentence: The canal and diversion dam is the southernmost system on an irrigation project extending along the Rio Grande in New Mexico and Texas.\nPage: Filmore, New Orleans. Sentence: A subdistrict of the Gentilly District Area, its boundaries as defined by the City Planning Commission are: Robert E. Lee Boulevard to the north, London Avenue Canal to the east, Press Drive, Paris Avenue and Harrison Avenue to the south and Bayou St. John to the west.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "6adacb02-e26f-5417-b952-d459963bf23e",
+        "text": "text_12b3de19c6894738ae34d19e2a990170",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "d0bcfbc6-a440-5d17-97d0-d866c07a4aca",
+        "text": "london avenue canal",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "d8a17dc1-2722-5fa6-8437-1d52a50370bd",
+        "text": "new orleans",
+        "type": "Entity"
+      },
+      {
+        "id": 5,
+        "original_id": "ef272d4d-8009-5013-b8b2-c869ae6141af",
+        "text": "louisiana",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "5f394058-b2a0-5ba8-8466-ba2a18cfcf4e",
+        "text": "place",
+        "type": "EntityType"
+      },
+      {
+        "id": 7,
+        "original_id": "582394d5-6ca7-5a9e-8860-57e673766015",
+        "text": "lake pontchartrain",
+        "type": "Entity"
+      },
+      {
+        "id": 8,
+        "original_id": "33219a57-2295-52f5-8e3b-219a1adeea45",
+        "text": "lake",
+        "type": "EntityType"
+      },
+      {
+        "id": 9,
+        "original_id": "5e893659-6d9b-5b79-aa19-707eef32a565",
+        "text": "7th ward of new orleans",
+        "type": "Entity"
+      },
+      {
+        "id": 10,
+        "original_id": "916cab94-5969-5a7e-95b7-7dfe3e45ca61",
+        "text": "gentilly area",
+        "type": "Entity"
+      },
+      {
+        "id": 11,
+        "original_id": "942724ba-3c5a-5f88-9ed7-b19c063b20ab",
+        "text": "lakefront",
+        "type": "Entity"
+      },
+      {
+        "id": 12,
+        "original_id": "8862001e-e9c5-5745-8d60-fbbfec40702d",
+        "text": "hurricane katrina",
+        "type": "Entity"
+      },
+      {
+        "id": 13,
+        "original_id": "c134b9c3-6b55-5a5a-b8ca-c2f1a633a648",
+        "text": "2005",
+        "type": "Entity"
+      },
+      {
+        "id": 14,
+        "original_id": "b19433ae-558c-5aaf-95ac-6231f2a4be0e",
+        "text": "date",
+        "type": "EntityType"
+      },
+      {
+        "id": 15,
+        "original_id": "214abcd9-9adf-5c8a-bb35-1e729f2d68c3",
+        "text": "event",
+        "type": "EntityType"
+      },
+      {
+        "id": 16,
+        "original_id": "c6210b29-7e64-5fda-938f-e2350afbeb1d",
+        "text": "canal",
+        "type": "EntityType"
+      },
+      {
+        "id": 17,
+        "original_id": "700acfd5-7773-5773-8ae5-2cdb3e5c47c6",
+        "text": "riverside canal (el paso)",
+        "type": "Entity"
+      },
+      {
+        "id": 18,
+        "original_id": "8e05045b-406e-57a8-84e4-6b3c45244494",
+        "text": "diversion dam",
+        "type": "Entity"
+      },
+      {
+        "id": 19,
+        "original_id": "f52a988d-e6a2-51a0-8c2a-890426be6230",
+        "text": "structure",
+        "type": "EntityType"
+      },
+      {
+        "id": 20,
+        "original_id": "45f8c6fd-34ba-545d-8cf6-9a58f03057b5",
+        "text": "irrigation project",
+        "type": "Entity"
+      },
+      {
+        "id": 21,
+        "original_id": "a85dba67-4c5e-5f3d-b806-6f9c51dc89dc",
+        "text": "rio grande",
+        "type": "Entity"
+      },
+      {
+        "id": 22,
+        "original_id": "68afbccf-cae9-529b-9142-2a538b8ed79d",
+        "text": "river",
+        "type": "EntityType"
+      },
+      {
+        "id": 23,
+        "original_id": "2a819754-4a78-5478-9d6b-eb2cf088608c",
+        "text": "new mexico",
+        "type": "Entity"
+      },
+      {
+        "id": 24,
+        "original_id": "5b5c9733-5661-5cc8-814f-2796b46669fa",
+        "text": "texas",
+        "type": "Entity"
+      },
+      {
+        "id": 25,
+        "original_id": "ed098e70-7598-5ee9-a836-d175d95aae72",
+        "text": "project",
+        "type": "EntityType"
+      },
+      {
+        "id": 26,
+        "original_id": "a1df6dd8-bfd5-536e-b6f8-f983d0c04bf1",
+        "text": "filmore, new orleans",
+        "type": "Entity"
+      },
+      {
+        "id": 27,
+        "original_id": "2b24dd3f-67d0-5d3b-9cbc-b40caf869b7f",
+        "text": "gentilly district area",
+        "type": "Entity"
+      },
+      {
+        "id": 28,
+        "original_id": "76d8f84f-849b-5462-8d0f-5622cc8c3aea",
+        "text": "city planning commission",
+        "type": "Entity"
+      },
+      {
+        "id": 29,
+        "original_id": "388f60fb-220d-55e8-ae9c-3ac93cead308",
+        "text": "organization",
+        "type": "EntityType"
+      },
+      {
+        "id": 30,
+        "original_id": "3272991b-8a78-5484-a02f-9c4e8bfea481",
+        "text": "robert e. lee boulevard",
+        "type": "Entity"
+      },
+      {
+        "id": 31,
+        "original_id": "9d0658d7-9d9e-56b4-8c81-5e7f138ff939",
+        "text": "press drive",
+        "type": "Entity"
+      },
+      {
+        "id": 32,
+        "original_id": "ae3a823a-4ed7-52b8-83f6-a6c111eb4995",
+        "text": "paris avenue",
+        "type": "Entity"
+      },
+      {
+        "id": 33,
+        "original_id": "f73fcea5-5ae0-5368-a063-9b661d594d12",
+        "text": "harrison avenue",
+        "type": "Entity"
+      },
+      {
+        "id": 34,
+        "original_id": "8e84861c-715b-5987-8f4e-aa06e8b0f0dd",
+        "text": "bayou st. john",
+        "type": "Entity"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 26,
+        "target": 3,
+        "type": "bounded_on_east_by"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "located_in"
+      },
+      {
+        "source": 1,
+        "target": 4,
+        "type": "contains"
+      },
+      {
+        "source": 4,
+        "target": 5,
+        "type": "located_in"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 4,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 9,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 10,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 11,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 23,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 24,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 27,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 30,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 31,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 32,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 33,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 34,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 26,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 7,
+        "type": "pumps_rain_water_into"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      },
+      {
+        "source": 7,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 9,
+        "type": "runs_through"
+      },
+      {
+        "source": 1,
+        "target": 9,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 10,
+        "type": "runs_from"
+      },
+      {
+        "source": 1,
+        "target": 10,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 11,
+        "type": "runs_to"
+      },
+      {
+        "source": 1,
+        "target": 11,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 12,
+        "type": "breached_during"
+      },
+      {
+        "source": 1,
+        "target": 12,
+        "type": "contains"
+      },
+      {
+        "source": 12,
+        "target": 13,
+        "type": "occurred_in"
+      },
+      {
+        "source": 1,
+        "target": 13,
+        "type": "contains"
+      },
+      {
+        "source": 13,
+        "target": 14,
+        "type": "is_a"
+      },
+      {
+        "source": 12,
+        "target": 15,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 16,
+        "type": "is_a"
+      },
+      {
+        "source": 17,
+        "target": 16,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 17,
+        "type": "contains"
+      },
+      {
+        "source": 17,
+        "target": 18,
+        "type": "part_of_system_with"
+      },
+      {
+        "source": 1,
+        "target": 18,
+        "type": "contains"
+      },
+      {
+        "source": 18,
+        "target": 19,
+        "type": "is_a"
+      },
+      {
+        "source": 17,
+        "target": 20,
+        "type": "is_southernmost_system_on"
+      },
+      {
+        "source": 1,
+        "target": 20,
+        "type": "contains"
+      },
+      {
+        "source": 20,
+        "target": 21,
+        "type": "extends_along"
+      },
+      {
+        "source": 1,
+        "target": 21,
+        "type": "contains"
+      },
+      {
+        "source": 21,
+        "target": 22,
+        "type": "is_a"
+      },
+      {
+        "source": 20,
+        "target": 23,
+        "type": "extends_in"
+      },
+      {
+        "source": 1,
+        "target": 23,
+        "type": "contains"
+      },
+      {
+        "source": 20,
+        "target": 24,
+        "type": "extends_in"
+      },
+      {
+        "source": 1,
+        "target": 24,
+        "type": "contains"
+      },
+      {
+        "source": 20,
+        "target": 25,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 26,
+        "type": "contains"
+      },
+      {
+        "source": 26,
+        "target": 27,
+        "type": "subdistrict_of"
+      },
+      {
+        "source": 1,
+        "target": 27,
+        "type": "contains"
+      },
+      {
+        "source": 26,
+        "target": 28,
+        "type": "boundaries_defined_by"
+      },
+      {
+        "source": 1,
+        "target": 28,
+        "type": "contains"
+      },
+      {
+        "source": 28,
+        "target": 29,
+        "type": "is_a"
+      },
+      {
+        "source": 26,
+        "target": 30,
+        "type": "bounded_on_north_by"
+      },
+      {
+        "source": 1,
+        "target": 30,
+        "type": "contains"
+      },
+      {
+        "source": 26,
+        "target": 31,
+        "type": "bounded_on_south_by"
+      },
+      {
+        "source": 1,
+        "target": 31,
+        "type": "contains"
+      },
+      {
+        "source": 26,
+        "target": 32,
+        "type": "bounded_on_south_by"
+      },
+      {
+        "source": 1,
+        "target": 32,
+        "type": "contains"
+      },
+      {
+        "source": 26,
+        "target": 33,
+        "type": "bounded_on_south_by"
+      },
+      {
+        "source": 1,
+        "target": 33,
+        "type": "contains"
+      },
+      {
+        "source": 26,
+        "target": 34,
+        "type": "bounded_on_west_by"
+      },
+      {
+        "source": 1,
+        "target": 34,
+        "type": "contains"
+      }
+    ]
+  }
+}

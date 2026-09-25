@@ -1,0 +1,310 @@
+{
+  "dataset": "hover",
+  "id": "582e88af-07bc-4bca-b8b8-439eaf683349",
+  "split": "train",
+  "claim": "Juan Carlos Ferrero and Stan Wawrinka, are both professional tennis players.",
+  "evidencia": "Page: Juan Carlos Ferrero. Sentence: Juan Carlos Ferrero Donat (] ; born 12 February 1980) is a retired professional tennis player, and a former world No. 1 player, from Spain.\nPage: Stan Wawrinka. Sentence: Stanislas Wawrinka (] ; born 28 March 1985) is a Swiss professional tennis player.",
+  "evidence_text": "Page: Juan Carlos Ferrero. Sentence: Juan Carlos Ferrero Donat (] ; born 12 February 1980) is a retired professional tennis player, and a former world No. 1 player, from Spain.\nPage: Stan Wawrinka. Sentence: Stanislas Wawrinka (] ; born 28 March 1985) is a Swiss professional tennis player.",
+  "label": "SUPPORTED",
+  "num_hops": 2,
+  "hover_metadata": {
+    "supporting_facts": [
+      [
+        "Juan Carlos Ferrero",
+        0
+      ],
+      [
+        "Stan Wawrinka",
+        0
+      ]
+    ],
+    "num_hops": 2,
+    "evidence_annotation_id": [
+      0
+    ],
+    "evidence_id": [
+      "Juan Carlos Ferrero::sentence::0",
+      "Stan Wawrinka::sentence::0"
+    ],
+    "evidence_wiki_url": [
+      "https://en.wikipedia.org/wiki/Juan_Carlos_Ferrero",
+      "https://en.wikipedia.org/wiki/Stan_Wawrinka"
+    ],
+    "evidence_sentence_id": [
+      "Juan Carlos Ferrero::sentence::0",
+      "Stan Wawrinka::sentence::0"
+    ]
+  },
+  "grafo_claim": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "3f2ba5d3-7ec7-5b2f-bda7-a511a6352426",
+        "text": "This chunk is about:\n- People: Juan Carlos Ferrero, Stan Wawrinka\n- Roles: professional tennis players\n\nFacts:\n- Juan Carlos Ferrero is a professional tennis player.\n- Stan Wawrinka is a professional tennis player.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "fa28f9e3-0703-5650-8d30-18f7e6c578b3",
+        "text": "Juan Carlos Ferrero and Stan Wawrinka, are both professional tennis players.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "bfef9b0b-38e7-5a2b-ad56-f4aad4116172",
+        "text": "text_ef1e6590ffde4aa76b6dd82935e06138",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "20ea6802-c684-57f5-b37e-4e6b710329f3",
+        "text": "juan carlos ferrero",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "99a82eec-bb35-5bb5-9ed2-e73fc7a756de",
+        "text": "person",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "0e7b272d-0374-5716-96e0-29187a43cfe4",
+        "text": "professional tennis player",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "9d80eb43-32fa-561c-9371-91f180ebcb6c",
+        "text": "profession",
+        "type": "EntityType"
+      },
+      {
+        "id": 7,
+        "original_id": "3969f4bc-c2f5-5e12-a0e7-d29562850106",
+        "text": "stan wawrinka",
+        "type": "Entity"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 7,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "has_profession"
+      },
+      {
+        "source": 7,
+        "target": 5,
+        "type": "has_profession"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      }
+    ]
+  },
+  "grafo_evidencia": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "72101c1e-e23e-5e1f-ae0d-de01d85a8bc9",
+        "text": "This chunk is about:\n- People: Juan Carlos Ferrero Donat, Stanislas Wawrinka\n- Roles: professional tennis players, former world No. 1 player\n- Places: Spain, Switzerland\n\nFacts:\n- Juan Carlos Ferrero Donat was born on 12 February 1980.\n- Juan Carlos Ferrero Donat is a retired professional tennis player from Spain.\n- Juan Carlos Ferrero Donat was a former world No. 1 tennis player.\n- Stanislas Wawrinka was born on 28 March 1985.\n- Stanislas Wawrinka is a Swiss professional tennis player.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "a07640b7-aca9-5e7c-9f94-0addb7a1df33",
+        "text": "Page: Juan Carlos Ferrero. Sentence: Juan Carlos Ferrero Donat (] ; born 12 February 1980) is a retired professional tennis player, and a former world No. 1 player, from Spain.\nPage: Stan Wawrinka. Sentence: Stanislas Wawrinka (] ; born 28 March 1985) is a Swiss professional tennis player.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "2882029e-ad7b-5d0d-bdaa-7e4ecf9caf73",
+        "text": "text_c6412cd44f1d2a592096362dd38893c0",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "e9e1a816-5067-593d-91d9-00838b507878",
+        "text": "juan carlos ferrero donat",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "99a82eec-bb35-5bb5-9ed2-e73fc7a756de",
+        "text": "person",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "c9ff4bdf-c959-5706-9e7c-e3ddd01bdedf",
+        "text": "1980-02-12",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "b19433ae-558c-5aaf-95ac-6231f2a4be0e",
+        "text": "date",
+        "type": "EntityType"
+      },
+      {
+        "id": 7,
+        "original_id": "f2ae3fab-b1f6-5e66-b573-047fb78e1603",
+        "text": "spain",
+        "type": "Entity"
+      },
+      {
+        "id": 8,
+        "original_id": "5f394058-b2a0-5ba8-8466-ba2a18cfcf4e",
+        "text": "place",
+        "type": "EntityType"
+      },
+      {
+        "id": 9,
+        "original_id": "cab0616b-e23c-5ef5-abc8-c36e6192af8b",
+        "text": "stanislas wawrinka",
+        "type": "Entity"
+      },
+      {
+        "id": 10,
+        "original_id": "5c7de079-ecd5-58f8-82ef-44b7b47f8266",
+        "text": "1985-03-28",
+        "type": "Entity"
+      },
+      {
+        "id": 11,
+        "original_id": "407d2a7f-7562-59fb-a556-934cd90a0107",
+        "text": "switzerland",
+        "type": "Entity"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 9,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "born_on"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 10,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 7,
+        "type": "from"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      },
+      {
+        "source": 7,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 11,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 9,
+        "type": "contains"
+      },
+      {
+        "source": 9,
+        "target": 10,
+        "type": "born_on"
+      },
+      {
+        "source": 1,
+        "target": 10,
+        "type": "contains"
+      },
+      {
+        "source": 9,
+        "target": 11,
+        "type": "from"
+      },
+      {
+        "source": 1,
+        "target": 11,
+        "type": "contains"
+      }
+    ]
+  }
+}

@@ -1,0 +1,747 @@
+{
+  "dataset": "hover",
+  "id": "63b70521-bcbd-47dd-9945-f0ec49d3ab28",
+  "split": "train",
+  "claim": "Ken Kwapis and John Woo both were working on films in the 1980's.",
+  "evidencia": "Page: Ken Kwapis. Sentence: Kenneth William \"Ken\" Kwapis (born August 17, 1957) is an American film and television director and screenwriter.\nPage: Ken Kwapis. Sentence: He specialized in the single-camera sitcom in the 1990s and 2000s and has directed feature films such as \"Sesame Street Presents Follow That Bird\" (1985), \"The Sisterhood of the Traveling Pants\" (2005), and \"He's Just Not That into You\" (2009).\nPage: John Woo. Sentence: Woo has directed several notable Hong Kong action films, among them, \"A Better Tomorrow\" (1986), \"The Killer\" (1989), \"Hard Boiled\" (1992), and \"Red Cliff\" (2008/2009).",
+  "evidence_text": "Page: Ken Kwapis. Sentence: Kenneth William \"Ken\" Kwapis (born August 17, 1957) is an American film and television director and screenwriter.\nPage: Ken Kwapis. Sentence: He specialized in the single-camera sitcom in the 1990s and 2000s and has directed feature films such as \"Sesame Street Presents Follow That Bird\" (1985), \"The Sisterhood of the Traveling Pants\" (2005), and \"He's Just Not That into You\" (2009).\nPage: John Woo. Sentence: Woo has directed several notable Hong Kong action films, among them, \"A Better Tomorrow\" (1986), \"The Killer\" (1989), \"Hard Boiled\" (1992), and \"Red Cliff\" (2008/2009).",
+  "label": "SUPPORTED",
+  "num_hops": 2,
+  "hover_metadata": {
+    "supporting_facts": [
+      [
+        "Ken Kwapis",
+        0
+      ],
+      [
+        "Ken Kwapis",
+        1
+      ],
+      [
+        "John Woo",
+        3
+      ]
+    ],
+    "num_hops": 2,
+    "evidence_annotation_id": [
+      0
+    ],
+    "evidence_id": [
+      "Ken Kwapis::sentence::0",
+      "Ken Kwapis::sentence::1",
+      "John Woo::sentence::3"
+    ],
+    "evidence_wiki_url": [
+      "https://en.wikipedia.org/wiki/Ken_Kwapis",
+      "https://en.wikipedia.org/wiki/John_Woo"
+    ],
+    "evidence_sentence_id": [
+      "Ken Kwapis::sentence::0",
+      "Ken Kwapis::sentence::1",
+      "John Woo::sentence::3"
+    ]
+  },
+  "grafo_claim": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "d92c9ba7-8ef8-5946-a876-6265a4e0bd40",
+        "text": "This chunk is about:\n- People: Ken Kwapis, John Woo\n- Topics: Film work in the 1980s\n\nFacts:\n- Ken Kwapis was working on films in the 1980s.\n- John Woo was working on films in the 1980s.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "dd32e32b-65ad-579b-867d-6d15a170c152",
+        "text": "Ken Kwapis and John Woo both were working on films in the 1980's.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "477aa7e8-23bf-58a8-a470-d2d4b087c8b8",
+        "text": "text_f7e10557001572e91dc2d3eabe706438",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "ec71208a-570b-5a97-bd97-7881c3ec024b",
+        "text": "ken kwapis",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "8a5d9373-d465-5c01-ad16-30891d9f10f8",
+        "text": "films",
+        "type": "Entity"
+      },
+      {
+        "id": 5,
+        "original_id": "d2a381fa-3658-5ca6-ada9-2109cfc9331d",
+        "text": "concept",
+        "type": "EntityType"
+      },
+      {
+        "id": 6,
+        "original_id": "656814d1-33cb-5b41-9eec-aae09b484d7d",
+        "text": "1980s",
+        "type": "Entity"
+      },
+      {
+        "id": 7,
+        "original_id": "b19433ae-558c-5aaf-95ac-6231f2a4be0e",
+        "text": "date",
+        "type": "EntityType"
+      },
+      {
+        "id": 8,
+        "original_id": "99a82eec-bb35-5bb5-9ed2-e73fc7a756de",
+        "text": "person",
+        "type": "EntityType"
+      },
+      {
+        "id": 9,
+        "original_id": "61482f20-60af-599e-b719-354e70cef9b2",
+        "text": "john woo",
+        "type": "Entity"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "worked_on"
+      },
+      {
+        "source": 9,
+        "target": 4,
+        "type": "worked_on"
+      },
+      {
+        "source": 1,
+        "target": 4,
+        "type": "contains"
+      },
+      {
+        "source": 4,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 6,
+        "type": "worked_in"
+      },
+      {
+        "source": 9,
+        "target": 6,
+        "type": "worked_in"
+      },
+      {
+        "source": 1,
+        "target": 6,
+        "type": "contains"
+      },
+      {
+        "source": 6,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 9,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 9,
+        "type": "contains"
+      }
+    ]
+  },
+  "grafo_evidencia": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "10d175c9-fd46-58ef-a85f-940d0478e621",
+        "text": "This chunk is about:\n- People: Ken Kwapis, John Woo\n- Roles: film director, television director, screenwriter\n- Topics: single-camera sitcom\n- Works: Sesame Street Presents Follow That Bird, A Better Tomorrow, The Killer, Hard Boiled, The Sisterhood of the Traveling Pants, Red Cliff, He's Just Not That into You\n\nFacts:\n- Ken Kwapis was born on August 17, 1957, and he is an American film and television director and screenwriter.\n- Ken Kwapis directed the feature film \"Sesame Street Presents Follow That Bird\" in 1985.\n- John Woo directed the Hong Kong action film \"A Better Tomorrow\" in 1986.\n- John Woo directed the Hong Kong action film \"The Killer\" in 1989.\n- John Woo directed the Hong Kong action film \"Hard Boiled\" in 1992.\n- Ken Kwapis specialized in the single-camera sitcom in the 1990s and 2000s.\n- Ken Kwapis directed the feature film \"The Sisterhood of the Traveling Pants\" in 2005.\n- John Woo directed the Hong Kong action film \"Red Cliff\" in 2008 and 2009.\n- Ken Kwapis directed the feature film \"He's Just Not That into You\" in 2009.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "e388febd-398b-5c49-a6a4-072e68f767f7",
+        "text": "Page: Ken Kwapis. Sentence: Kenneth William \"Ken\" Kwapis (born August 17, 1957) is an American film and television director and screenwriter.\nPage: Ken Kwapis. Sentence: He specialized in the single-camera sitcom in the 1990s and 2000s and has directed feature films such as \"Sesame Street Presents Follow That Bird\" (1985), \"The Sisterhood of the Traveling Pants\" (2005), and \"He's Just Not That into You\" (2009).\nPage: John Woo. Sentence: Woo has directed several notable Hong Kong action films, among them, \"A Better Tomorrow\" (1986), \"The Killer\" (1989), \"Hard Boiled\" (1992), and \"Red Cliff\" (2008/2009).",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "4a4f3b39-9b47-5dce-8b1a-75e5217e3483",
+        "text": "text_8cdea8fb9d211eb1bed375cf440a7cf0",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "d4ecbc65-3574-5ac3-8adc-e935466ee202",
+        "text": "kenneth william ken kwapis",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "361e4fab-e9a8-53cc-92fc-2d85269dd200",
+        "text": "1957-08-17",
+        "type": "Entity"
+      },
+      {
+        "id": 5,
+        "original_id": "b19433ae-558c-5aaf-95ac-6231f2a4be0e",
+        "text": "date",
+        "type": "EntityType"
+      },
+      {
+        "id": 6,
+        "original_id": "ce6695c9-dbad-591a-8411-369eb0441260",
+        "text": "film director",
+        "type": "Entity"
+      },
+      {
+        "id": 7,
+        "original_id": "d2a381fa-3658-5ca6-ada9-2109cfc9331d",
+        "text": "concept",
+        "type": "EntityType"
+      },
+      {
+        "id": 8,
+        "original_id": "47fb084e-55a5-59b0-892f-8e2ddd0cdf09",
+        "text": "television director",
+        "type": "Entity"
+      },
+      {
+        "id": 9,
+        "original_id": "8e7b2f7b-bb03-564f-a168-a48df4aaf988",
+        "text": "screenwriter",
+        "type": "Entity"
+      },
+      {
+        "id": 10,
+        "original_id": "32718b16-7ead-5e9f-8bb9-c4a341f79259",
+        "text": "single-camera sitcom",
+        "type": "Entity"
+      },
+      {
+        "id": 11,
+        "original_id": "58482f88-ca6a-5c02-9088-4dbb1598f8f4",
+        "text": "1990s",
+        "type": "Entity"
+      },
+      {
+        "id": 12,
+        "original_id": "7740710e-554a-5c23-bb8c-eebc0b15ee49",
+        "text": "2000s",
+        "type": "Entity"
+      },
+      {
+        "id": 13,
+        "original_id": "46456451-012b-5483-810c-83099d4222ee",
+        "text": "sesame street presents follow that bird",
+        "type": "Entity"
+      },
+      {
+        "id": 14,
+        "original_id": "6bd8ee84-df5b-547d-ad6e-de3a4c833f59",
+        "text": "1985",
+        "type": "Entity"
+      },
+      {
+        "id": 15,
+        "original_id": "5263a535-1b4b-5925-be3e-310d03cd303b",
+        "text": "work",
+        "type": "EntityType"
+      },
+      {
+        "id": 16,
+        "original_id": "ced4ae9c-5541-5cd2-8d5c-5c6b4bbc770f",
+        "text": "the sisterhood of the traveling pants",
+        "type": "Entity"
+      },
+      {
+        "id": 17,
+        "original_id": "c134b9c3-6b55-5a5a-b8ca-c2f1a633a648",
+        "text": "2005",
+        "type": "Entity"
+      },
+      {
+        "id": 18,
+        "original_id": "2e0c569c-a62e-5920-bf14-a7621b38db7b",
+        "text": "hes just not that into you",
+        "type": "Entity"
+      },
+      {
+        "id": 19,
+        "original_id": "cd2a3377-b1e5-59d1-aeee-d36cdb97efe0",
+        "text": "2009",
+        "type": "Entity"
+      },
+      {
+        "id": 20,
+        "original_id": "99a82eec-bb35-5bb5-9ed2-e73fc7a756de",
+        "text": "person",
+        "type": "EntityType"
+      },
+      {
+        "id": 21,
+        "original_id": "61482f20-60af-599e-b719-354e70cef9b2",
+        "text": "john woo",
+        "type": "Entity"
+      },
+      {
+        "id": 22,
+        "original_id": "cdb6fafb-161d-5923-83cb-c360ffb66e16",
+        "text": "a better tomorrow",
+        "type": "Entity"
+      },
+      {
+        "id": 23,
+        "original_id": "fe2b3467-a997-5326-a53e-64ca12f10109",
+        "text": "hong kong action film",
+        "type": "Entity"
+      },
+      {
+        "id": 24,
+        "original_id": "6ba1afd5-fed2-5c67-8f7d-ad0b76e9a9b6",
+        "text": "1986",
+        "type": "Entity"
+      },
+      {
+        "id": 25,
+        "original_id": "d8483d24-f63f-5212-bd0b-7011b064f68d",
+        "text": "the killer",
+        "type": "Entity"
+      },
+      {
+        "id": 26,
+        "original_id": "a8284cdd-dc3d-598c-ab45-6e38bcd96a48",
+        "text": "1989",
+        "type": "Entity"
+      },
+      {
+        "id": 27,
+        "original_id": "04b3e788-9f51-5630-93fb-26ac587d7f05",
+        "text": "hard boiled",
+        "type": "Entity"
+      },
+      {
+        "id": 28,
+        "original_id": "959b7eb2-55b9-5195-8ef5-802570f87d3c",
+        "text": "1992",
+        "type": "Entity"
+      },
+      {
+        "id": 29,
+        "original_id": "040508cf-b0ab-5eb6-9a03-b11128cf8bab",
+        "text": "red cliff",
+        "type": "Entity"
+      },
+      {
+        "id": 30,
+        "original_id": "bb91a3b7-7918-5ca7-973e-342dc472e263",
+        "text": "2008",
+        "type": "Entity"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "born_on"
+      },
+      {
+        "source": 1,
+        "target": 4,
+        "type": "contains"
+      },
+      {
+        "source": 4,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 11,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 12,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 14,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 17,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 19,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 24,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 26,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 28,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 30,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 6,
+        "type": "has_profession"
+      },
+      {
+        "source": 1,
+        "target": 6,
+        "type": "contains"
+      },
+      {
+        "source": 6,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 8,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 9,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 10,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 23,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 8,
+        "type": "has_profession"
+      },
+      {
+        "source": 1,
+        "target": 8,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 9,
+        "type": "has_profession"
+      },
+      {
+        "source": 1,
+        "target": 9,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 10,
+        "type": "specialized_in"
+      },
+      {
+        "source": 1,
+        "target": 10,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 11,
+        "type": "specialized_in_during"
+      },
+      {
+        "source": 1,
+        "target": 11,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 12,
+        "type": "specialized_in_during"
+      },
+      {
+        "source": 1,
+        "target": 12,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 13,
+        "type": "directed"
+      },
+      {
+        "source": 1,
+        "target": 13,
+        "type": "contains"
+      },
+      {
+        "source": 13,
+        "target": 14,
+        "type": "released_in"
+      },
+      {
+        "source": 1,
+        "target": 14,
+        "type": "contains"
+      },
+      {
+        "source": 13,
+        "target": 15,
+        "type": "is_a"
+      },
+      {
+        "source": 16,
+        "target": 15,
+        "type": "is_a"
+      },
+      {
+        "source": 18,
+        "target": 15,
+        "type": "is_a"
+      },
+      {
+        "source": 22,
+        "target": 15,
+        "type": "is_a"
+      },
+      {
+        "source": 25,
+        "target": 15,
+        "type": "is_a"
+      },
+      {
+        "source": 27,
+        "target": 15,
+        "type": "is_a"
+      },
+      {
+        "source": 29,
+        "target": 15,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 16,
+        "type": "directed"
+      },
+      {
+        "source": 1,
+        "target": 16,
+        "type": "contains"
+      },
+      {
+        "source": 16,
+        "target": 17,
+        "type": "released_in"
+      },
+      {
+        "source": 1,
+        "target": 17,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 18,
+        "type": "directed"
+      },
+      {
+        "source": 1,
+        "target": 18,
+        "type": "contains"
+      },
+      {
+        "source": 18,
+        "target": 19,
+        "type": "released_in"
+      },
+      {
+        "source": 1,
+        "target": 19,
+        "type": "contains"
+      },
+      {
+        "source": 29,
+        "target": 19,
+        "type": "released_in"
+      },
+      {
+        "source": 3,
+        "target": 20,
+        "type": "is_a"
+      },
+      {
+        "source": 21,
+        "target": 20,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 21,
+        "type": "contains"
+      },
+      {
+        "source": 21,
+        "target": 22,
+        "type": "directed"
+      },
+      {
+        "source": 1,
+        "target": 22,
+        "type": "contains"
+      },
+      {
+        "source": 22,
+        "target": 23,
+        "type": "is_a"
+      },
+      {
+        "source": 25,
+        "target": 23,
+        "type": "is_a"
+      },
+      {
+        "source": 27,
+        "target": 23,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 23,
+        "type": "contains"
+      },
+      {
+        "source": 22,
+        "target": 24,
+        "type": "released_in"
+      },
+      {
+        "source": 1,
+        "target": 24,
+        "type": "contains"
+      },
+      {
+        "source": 21,
+        "target": 25,
+        "type": "directed"
+      },
+      {
+        "source": 1,
+        "target": 25,
+        "type": "contains"
+      },
+      {
+        "source": 25,
+        "target": 26,
+        "type": "released_in"
+      },
+      {
+        "source": 1,
+        "target": 26,
+        "type": "contains"
+      },
+      {
+        "source": 21,
+        "target": 27,
+        "type": "directed"
+      },
+      {
+        "source": 1,
+        "target": 27,
+        "type": "contains"
+      },
+      {
+        "source": 27,
+        "target": 28,
+        "type": "released_in"
+      },
+      {
+        "source": 1,
+        "target": 28,
+        "type": "contains"
+      },
+      {
+        "source": 21,
+        "target": 29,
+        "type": "directed"
+      },
+      {
+        "source": 1,
+        "target": 29,
+        "type": "contains"
+      },
+      {
+        "source": 29,
+        "target": 30,
+        "type": "released_in"
+      },
+      {
+        "source": 1,
+        "target": 30,
+        "type": "contains"
+      }
+    ]
+  }
+}

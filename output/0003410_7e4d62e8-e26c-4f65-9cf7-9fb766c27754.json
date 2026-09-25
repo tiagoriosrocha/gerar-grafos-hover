@@ -1,0 +1,567 @@
+{
+  "dataset": "hover",
+  "id": "7e4d62e8-e26c-4f65-9cf7-9fb766c27754",
+  "split": "train",
+  "claim": "Riviera Partners' clientele Zappos is located in Las Vegas, Nevada and was incorporated in 1985.",
+  "evidencia": "Page: Riviera Partners. Sentence: Riviera Partners' clientele includes, among others, ServiceNow, Xoom, One Kings Lane, Uber, Path, Okta, Pure Storage, Twitter, LinkedIn, Dropbox, Pinterest, and Zappos.\nPage: Zappos. Sentence: Zappos.com is an online shoe and clothing shop based in Las Vegas, Nevada.",
+  "evidence_text": "Page: Riviera Partners. Sentence: Riviera Partners' clientele includes, among others, ServiceNow, Xoom, One Kings Lane, Uber, Path, Okta, Pure Storage, Twitter, LinkedIn, Dropbox, Pinterest, and Zappos.\nPage: Zappos. Sentence: Zappos.com is an online shoe and clothing shop based in Las Vegas, Nevada.",
+  "label": "NOT_SUPPORTED",
+  "num_hops": 2,
+  "hover_metadata": {
+    "supporting_facts": [
+      [
+        "Riviera Partners",
+        2
+      ],
+      [
+        "Zappos",
+        0
+      ]
+    ],
+    "num_hops": 2,
+    "evidence_annotation_id": [
+      0
+    ],
+    "evidence_id": [
+      "Riviera Partners::sentence::2",
+      "Zappos::sentence::0"
+    ],
+    "evidence_wiki_url": [
+      "https://en.wikipedia.org/wiki/Riviera_Partners",
+      "https://en.wikipedia.org/wiki/Zappos"
+    ],
+    "evidence_sentence_id": [
+      "Riviera Partners::sentence::2",
+      "Zappos::sentence::0"
+    ]
+  },
+  "grafo_claim": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "256c0f57-95b2-5b3d-851f-9575874c5e99",
+        "text": "This chunk is about:\n- Companies: Riviera Partners, Zappos\n- Places: Las Vegas, Nevada\n\nFacts:\n- Zappos was incorporated in 1985.\n- Zappos is located in Las Vegas, Nevada.\n- Riviera Partners has Zappos as a client.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "ef2cf67a-864b-567f-b36f-0612e7513e8e",
+        "text": "Riviera Partners' clientele Zappos is located in Las Vegas, Nevada and was incorporated in 1985.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "362cb2e0-8341-5042-91c0-a2745f0d4e3e",
+        "text": "text_bc0868fa0163e76af809c000e9a1056b",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "98a9c995-5c7d-53bc-9c69-661cdcb9c4a8",
+        "text": "riviera partners",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "1d84cc54-4395-5e6c-8812-0c7b5056ea39",
+        "text": "zappos",
+        "type": "Entity"
+      },
+      {
+        "id": 5,
+        "original_id": "2768ffee-4734-5551-9369-d2097b287276",
+        "text": "las vegas",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "cca9924d-3e69-59c5-be62-5ec26c26b0db",
+        "text": "nevada",
+        "type": "Entity"
+      },
+      {
+        "id": 7,
+        "original_id": "5023586d-88a2-53f9-ad15-7e2ebd75eb4c",
+        "text": "location",
+        "type": "EntityType"
+      },
+      {
+        "id": 8,
+        "original_id": "6bd8ee84-df5b-547d-ad6e-de3a4c833f59",
+        "text": "1985",
+        "type": "Entity"
+      },
+      {
+        "id": 9,
+        "original_id": "b19433ae-558c-5aaf-95ac-6231f2a4be0e",
+        "text": "date",
+        "type": "EntityType"
+      },
+      {
+        "id": 10,
+        "original_id": "388f60fb-220d-55e8-ae9c-3ac93cead308",
+        "text": "organization",
+        "type": "EntityType"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "has_clientele"
+      },
+      {
+        "source": 1,
+        "target": 4,
+        "type": "contains"
+      },
+      {
+        "source": 4,
+        "target": 5,
+        "type": "located_in"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "located_in"
+      },
+      {
+        "source": 1,
+        "target": 6,
+        "type": "contains"
+      },
+      {
+        "source": 6,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 5,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 4,
+        "target": 8,
+        "type": "incorporated_in"
+      },
+      {
+        "source": 1,
+        "target": 8,
+        "type": "contains"
+      },
+      {
+        "source": 8,
+        "target": 9,
+        "type": "is_a"
+      },
+      {
+        "source": 4,
+        "target": 10,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 10,
+        "type": "is_a"
+      }
+    ]
+  },
+  "grafo_evidencia": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "1c87a7c5-7609-53be-8164-9501e80577d5",
+        "text": "This chunk is about:\n- Companies: Riviera Partners, ServiceNow, Xoom, One Kings Lane, Uber, Path, Okta, Pure Storage, Twitter, LinkedIn, Dropbox, Pinterest, Zappos\n- Places: Las Vegas, Nevada\n- Topics: clientele, online retail\n\nFacts:\n- Riviera Partners' clientele includes ServiceNow, Xoom, One Kings Lane, Uber, Path, Okta, Pure Storage, Twitter, LinkedIn, Dropbox, Pinterest, and Zappos.\n- Zappos.com is an online shoe and clothing shop based in Las Vegas, Nevada.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "22629e91-fb85-53c7-9731-ec7b2aa857d2",
+        "text": "Page: Riviera Partners. Sentence: Riviera Partners' clientele includes, among others, ServiceNow, Xoom, One Kings Lane, Uber, Path, Okta, Pure Storage, Twitter, LinkedIn, Dropbox, Pinterest, and Zappos.\nPage: Zappos. Sentence: Zappos.com is an online shoe and clothing shop based in Las Vegas, Nevada.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "c0bc8c89-374a-5631-a53d-e70cbe687452",
+        "text": "text_09bff39ed46f0a6075705442ddbd4a35",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "98a9c995-5c7d-53bc-9c69-661cdcb9c4a8",
+        "text": "riviera partners",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "40ffa407-801e-5083-944d-d748b01c720e",
+        "text": "servicenow",
+        "type": "Entity"
+      },
+      {
+        "id": 5,
+        "original_id": "388f60fb-220d-55e8-ae9c-3ac93cead308",
+        "text": "organization",
+        "type": "EntityType"
+      },
+      {
+        "id": 6,
+        "original_id": "bde20ffe-2ea3-56b0-956d-ab6b70af8536",
+        "text": "xoom",
+        "type": "Entity"
+      },
+      {
+        "id": 7,
+        "original_id": "1aaddfd3-98aa-525a-9304-e01f78f50eae",
+        "text": "one kings lane",
+        "type": "Entity"
+      },
+      {
+        "id": 8,
+        "original_id": "863da7fb-d796-5639-b945-dd39cc1933ee",
+        "text": "uber",
+        "type": "Entity"
+      },
+      {
+        "id": 9,
+        "original_id": "44dad590-8442-51bb-8dbc-bf950d0a18f6",
+        "text": "path",
+        "type": "Entity"
+      },
+      {
+        "id": 10,
+        "original_id": "891509ff-9461-557c-9d0c-961afec39cd2",
+        "text": "okta",
+        "type": "Entity"
+      },
+      {
+        "id": 11,
+        "original_id": "0122615b-9c27-5bb7-b3ca-f15e7114bb20",
+        "text": "pure storage",
+        "type": "Entity"
+      },
+      {
+        "id": 12,
+        "original_id": "30fa71d0-53a6-572f-bd94-ededcf0c864a",
+        "text": "twitter",
+        "type": "Entity"
+      },
+      {
+        "id": 13,
+        "original_id": "f3d3482f-c9ab-51e9-9838-a6009dc501b5",
+        "text": "linkedin",
+        "type": "Entity"
+      },
+      {
+        "id": 14,
+        "original_id": "6d7335cb-a651-566f-b6a0-ab61d49012e0",
+        "text": "dropbox",
+        "type": "Entity"
+      },
+      {
+        "id": 15,
+        "original_id": "3323dcbd-17a6-574b-b041-f81943768185",
+        "text": "pinterest",
+        "type": "Entity"
+      },
+      {
+        "id": 16,
+        "original_id": "1d84cc54-4395-5e6c-8812-0c7b5056ea39",
+        "text": "zappos",
+        "type": "Entity"
+      },
+      {
+        "id": 17,
+        "original_id": "3d8a1412-fe19-5d1d-9c3e-d0b1c3ef0f56",
+        "text": "zappos.com",
+        "type": "Entity"
+      },
+      {
+        "id": 18,
+        "original_id": "2768ffee-4734-5551-9369-d2097b287276",
+        "text": "las vegas",
+        "type": "Entity"
+      },
+      {
+        "id": 19,
+        "original_id": "cca9924d-3e69-59c5-be62-5ec26c26b0db",
+        "text": "nevada",
+        "type": "Entity"
+      },
+      {
+        "id": 20,
+        "original_id": "5f394058-b2a0-5ba8-8466-ba2a18cfcf4e",
+        "text": "place",
+        "type": "EntityType"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "has_client"
+      },
+      {
+        "source": 1,
+        "target": 4,
+        "type": "contains"
+      },
+      {
+        "source": 4,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 6,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 7,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 8,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 9,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 10,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 11,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 12,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 13,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 14,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 15,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 17,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 16,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 6,
+        "type": "has_client"
+      },
+      {
+        "source": 1,
+        "target": 6,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 7,
+        "type": "has_client"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 8,
+        "type": "has_client"
+      },
+      {
+        "source": 1,
+        "target": 8,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 9,
+        "type": "has_client"
+      },
+      {
+        "source": 1,
+        "target": 9,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 10,
+        "type": "has_client"
+      },
+      {
+        "source": 1,
+        "target": 10,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 11,
+        "type": "has_client"
+      },
+      {
+        "source": 1,
+        "target": 11,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 12,
+        "type": "has_client"
+      },
+      {
+        "source": 1,
+        "target": 12,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 13,
+        "type": "has_client"
+      },
+      {
+        "source": 1,
+        "target": 13,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 14,
+        "type": "has_client"
+      },
+      {
+        "source": 1,
+        "target": 14,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 15,
+        "type": "has_client"
+      },
+      {
+        "source": 1,
+        "target": 15,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 16,
+        "type": "has_client"
+      },
+      {
+        "source": 1,
+        "target": 16,
+        "type": "contains"
+      },
+      {
+        "source": 16,
+        "target": 17,
+        "type": "is"
+      },
+      {
+        "source": 1,
+        "target": 17,
+        "type": "contains"
+      },
+      {
+        "source": 17,
+        "target": 18,
+        "type": "based_in"
+      },
+      {
+        "source": 1,
+        "target": 18,
+        "type": "contains"
+      },
+      {
+        "source": 18,
+        "target": 19,
+        "type": "located_in"
+      },
+      {
+        "source": 1,
+        "target": 19,
+        "type": "contains"
+      },
+      {
+        "source": 19,
+        "target": 20,
+        "type": "is_a"
+      },
+      {
+        "source": 18,
+        "target": 20,
+        "type": "is_a"
+      }
+    ]
+  }
+}

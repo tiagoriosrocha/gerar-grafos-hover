@@ -1,0 +1,513 @@
+{
+  "dataset": "hover",
+  "id": "8164f58e-88f5-43f2-8710-1b5902e05301",
+  "split": "train",
+  "claim": "Veljko Čubrilović was involved in the assassination of Franz Ferdinand Carl Ludwig Joseph Maria, heir to the Austro-Hungarian throne.",
+  "evidencia": "Page: Veljko Čubrilović. Sentence: Veljko Čubrilović (Serbian Cyrillic: Вељко Чубриловић; 6 June 1886 – 3 February 1915) was a Bosnian Serb who was involved in the assassination of Archduke Franz Ferdinand of Austria.\nPage: Archduke Franz Ferdinand of Austria. Sentence: Franz Ferdinand Carl Ludwig Joseph Maria (18 December 1863 – 28 June 1914) was an Archduke of Austria-Este, Austro-Hungarian and Royal Prince of Hungary and of Bohemia and, from 1896 until his death, heir presumptive to the Austro-Hungarian throne.",
+  "evidence_text": "Page: Veljko Čubrilović. Sentence: Veljko Čubrilović (Serbian Cyrillic: Вељко Чубриловић; 6 June 1886 – 3 February 1915) was a Bosnian Serb who was involved in the assassination of Archduke Franz Ferdinand of Austria.\nPage: Archduke Franz Ferdinand of Austria. Sentence: Franz Ferdinand Carl Ludwig Joseph Maria (18 December 1863 – 28 June 1914) was an Archduke of Austria-Este, Austro-Hungarian and Royal Prince of Hungary and of Bohemia and, from 1896 until his death, heir presumptive to the Austro-Hungarian throne.",
+  "label": "SUPPORTED",
+  "num_hops": 2,
+  "hover_metadata": {
+    "supporting_facts": [
+      [
+        "Veljko Čubrilović",
+        0
+      ],
+      [
+        "Archduke Franz Ferdinand of Austria",
+        0
+      ]
+    ],
+    "num_hops": 2,
+    "evidence_annotation_id": [
+      0
+    ],
+    "evidence_id": [
+      "Veljko Čubrilović::sentence::0",
+      "Archduke Franz Ferdinand of Austria::sentence::0"
+    ],
+    "evidence_wiki_url": [
+      "https://en.wikipedia.org/wiki/Veljko_%C4%8Cubrilovi%C4%87",
+      "https://en.wikipedia.org/wiki/Archduke_Franz_Ferdinand_of_Austria"
+    ],
+    "evidence_sentence_id": [
+      "Veljko Čubrilović::sentence::0",
+      "Archduke Franz Ferdinand of Austria::sentence::0"
+    ]
+  },
+  "grafo_claim": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "9e5aebfc-de5d-5334-96be-d004028c546b",
+        "text": "This chunk is about:\n- People: Veljko Čubrilović, Franz Ferdinand Carl Ludwig Joseph Maria\n- Events: Assassination of Archduke Franz Ferdinand\n\nFacts:\n- Franz Ferdinand Carl Ludwig Joseph Maria was the heir to the Austro-Hungarian throne.\n- Veljko Čubrilović was involved in the assassination of Franz Ferdinand Carl Ludwig Joseph Maria.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "a92d723d-4d56-5eb7-8408-df8dfe4d6f00",
+        "text": "Veljko Čubrilović was involved in the assassination of Franz Ferdinand Carl Ludwig Joseph Maria, heir to the Austro-Hungarian throne.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "c67945e4-3e62-5289-86c1-ec31adc3234d",
+        "text": "text_e3f321be7cfa4d6ddb1649994ee7ea78",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "435bfcfa-902a-5ac3-a12f-c3a230ef52eb",
+        "text": "veljko čubrilović",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "99a82eec-bb35-5bb5-9ed2-e73fc7a756de",
+        "text": "person",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "68622bbd-20d8-537f-8d13-ce54a3a005a7",
+        "text": "assassination of franz ferdinand carl ludwig joseph maria",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "214abcd9-9adf-5c8a-bb35-1e729f2d68c3",
+        "text": "event",
+        "type": "EntityType"
+      },
+      {
+        "id": 7,
+        "original_id": "6de0150c-064d-5fbe-814e-6012f9606d32",
+        "text": "franz ferdinand carl ludwig joseph maria",
+        "type": "Entity"
+      },
+      {
+        "id": 8,
+        "original_id": "96f5c7a4-e861-5d8c-9c9d-a0b2b9a62453",
+        "text": "austro-hungarian throne",
+        "type": "Entity"
+      },
+      {
+        "id": 9,
+        "original_id": "8789768e-777e-505f-9788-4d23e6b11ee4",
+        "text": "position",
+        "type": "EntityType"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 7,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "was_involved_in"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 5,
+        "target": 7,
+        "type": "targeted"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      },
+      {
+        "source": 7,
+        "target": 8,
+        "type": "is_heir_to"
+      },
+      {
+        "source": 1,
+        "target": 8,
+        "type": "contains"
+      },
+      {
+        "source": 8,
+        "target": 9,
+        "type": "is_a"
+      }
+    ]
+  },
+  "grafo_evidencia": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "afefd23d-e15d-5955-a7ef-fcae57cda2f6",
+        "text": "This chunk is about:\n- People: Veljko Čubrilović, Archduke Franz Ferdinand of Austria\n- Roles: Bosnian Serb, Archduke of Austria-Este, heir presumptive to the Austro-Hungarian throne, Royal Prince of Hungary and of Bohemia\n- Events: Assassination of Archduke Franz Ferdinand of Austria\n\nFacts:\n- Archduke Franz Ferdinand of Austria was born on 18 December 1863.\n- From 1896 until his death, Archduke Franz Ferdinand of Austria was heir presumptive to the Austro-Hungarian throne.\n- Veljko Čubrilović was born on 6 June 1886.\n- Archduke Franz Ferdinand of Austria was an Archduke of Austria-Este and a Royal Prince of Hungary and of Bohemia.\n- Archduke Franz Ferdinand of Austria died on 28 June 1914.\n- Veljko Čubrilović was a Bosnian Serb involved in the assassination of Archduke Franz Ferdinand of Austria.\n- Veljko Čubrilović died on 3 February 1915.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "ff2639d8-c276-5201-ad7e-c7d354d97191",
+        "text": "Page: Veljko Čubrilović. Sentence: Veljko Čubrilović (Serbian Cyrillic: Вељко Чубриловић; 6 June 1886 – 3 February 1915) was a Bosnian Serb who was involved in the assassination of Archduke Franz Ferdinand of Austria.\nPage: Archduke Franz Ferdinand of Austria. Sentence: Franz Ferdinand Carl Ludwig Joseph Maria (18 December 1863 – 28 June 1914) was an Archduke of Austria-Este, Austro-Hungarian and Royal Prince of Hungary and of Bohemia and, from 1896 until his death, heir presumptive to the Austro-Hungarian throne.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "d2a97429-3509-5347-bb80-61c941bf0b04",
+        "text": "text_b7b7c35d69f832e16ce3956563940470",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "435bfcfa-902a-5ac3-a12f-c3a230ef52eb",
+        "text": "veljko čubrilović",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "99a82eec-bb35-5bb5-9ed2-e73fc7a756de",
+        "text": "person",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "851bca47-f252-5341-b966-757d6893598c",
+        "text": "1886-06-06",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "b19433ae-558c-5aaf-95ac-6231f2a4be0e",
+        "text": "date",
+        "type": "EntityType"
+      },
+      {
+        "id": 7,
+        "original_id": "94fff73f-dc74-5308-8fd0-534fa5ee9e12",
+        "text": "1915-02-03",
+        "type": "Entity"
+      },
+      {
+        "id": 8,
+        "original_id": "4853cd40-f967-5597-88a3-a9c7b04a5219",
+        "text": "bosnian serb",
+        "type": "Entity"
+      },
+      {
+        "id": 9,
+        "original_id": "6691bbd3-7717-515d-bec6-950449e2ee26",
+        "text": "ethnicity",
+        "type": "EntityType"
+      },
+      {
+        "id": 10,
+        "original_id": "da87ff82-e711-59d4-bd12-2e1046371058",
+        "text": "assassination of archduke franz ferdinand of austria",
+        "type": "Entity"
+      },
+      {
+        "id": 11,
+        "original_id": "214abcd9-9adf-5c8a-bb35-1e729f2d68c3",
+        "text": "event",
+        "type": "EntityType"
+      },
+      {
+        "id": 12,
+        "original_id": "643cca75-b503-5f9a-9f31-4f150db2708b",
+        "text": "archduke franz ferdinand of austria",
+        "type": "Entity"
+      },
+      {
+        "id": 13,
+        "original_id": "6de0150c-064d-5fbe-814e-6012f9606d32",
+        "text": "franz ferdinand carl ludwig joseph maria",
+        "type": "Entity"
+      },
+      {
+        "id": 14,
+        "original_id": "39575085-0710-527d-bd54-019de7b00429",
+        "text": "name",
+        "type": "EntityType"
+      },
+      {
+        "id": 15,
+        "original_id": "2189a6bd-524b-5961-8967-ee8b141c7c6f",
+        "text": "1863-12-18",
+        "type": "Entity"
+      },
+      {
+        "id": 16,
+        "original_id": "8a4ff114-94a1-53cc-9abf-5e15df210697",
+        "text": "1914-06-28",
+        "type": "Entity"
+      },
+      {
+        "id": 17,
+        "original_id": "7e3e3b63-fde5-5de2-a6d8-8dd8d50cdf31",
+        "text": "archduke of austria-este",
+        "type": "Entity"
+      },
+      {
+        "id": 18,
+        "original_id": "4fb639a0-083a-5b92-8c23-a04b01bc6b29",
+        "text": "title",
+        "type": "EntityType"
+      },
+      {
+        "id": 19,
+        "original_id": "c3edbdf7-4343-579c-a462-9c2c283de666",
+        "text": "royal prince of hungary and of bohemia",
+        "type": "Entity"
+      },
+      {
+        "id": 20,
+        "original_id": "96f5c7a4-e861-5d8c-9c9d-a0b2b9a62453",
+        "text": "austro-hungarian throne",
+        "type": "Entity"
+      },
+      {
+        "id": 21,
+        "original_id": "8789768e-777e-505f-9788-4d23e6b11ee4",
+        "text": "position",
+        "type": "EntityType"
+      },
+      {
+        "id": 22,
+        "original_id": "2514479a-04c0-53f1-b332-93b47e34c973",
+        "text": "1896",
+        "type": "Entity"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 12,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "born_on"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 7,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 15,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 16,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 22,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 7,
+        "type": "died_on"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 8,
+        "type": "has_ethnicity"
+      },
+      {
+        "source": 1,
+        "target": 8,
+        "type": "contains"
+      },
+      {
+        "source": 8,
+        "target": 9,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 10,
+        "type": "involved_in"
+      },
+      {
+        "source": 1,
+        "target": 10,
+        "type": "contains"
+      },
+      {
+        "source": 10,
+        "target": 11,
+        "type": "is_a"
+      },
+      {
+        "source": 10,
+        "target": 12,
+        "type": "targeted"
+      },
+      {
+        "source": 1,
+        "target": 12,
+        "type": "contains"
+      },
+      {
+        "source": 12,
+        "target": 13,
+        "type": "has_full_name"
+      },
+      {
+        "source": 1,
+        "target": 13,
+        "type": "contains"
+      },
+      {
+        "source": 13,
+        "target": 14,
+        "type": "is_a"
+      },
+      {
+        "source": 12,
+        "target": 15,
+        "type": "born_on"
+      },
+      {
+        "source": 1,
+        "target": 15,
+        "type": "contains"
+      },
+      {
+        "source": 12,
+        "target": 16,
+        "type": "died_on"
+      },
+      {
+        "source": 1,
+        "target": 16,
+        "type": "contains"
+      },
+      {
+        "source": 12,
+        "target": 17,
+        "type": "held_title"
+      },
+      {
+        "source": 1,
+        "target": 17,
+        "type": "contains"
+      },
+      {
+        "source": 17,
+        "target": 18,
+        "type": "is_a"
+      },
+      {
+        "source": 19,
+        "target": 18,
+        "type": "is_a"
+      },
+      {
+        "source": 12,
+        "target": 19,
+        "type": "held_title"
+      },
+      {
+        "source": 1,
+        "target": 19,
+        "type": "contains"
+      },
+      {
+        "source": 12,
+        "target": 20,
+        "type": "heir_presumptive_to"
+      },
+      {
+        "source": 1,
+        "target": 20,
+        "type": "contains"
+      },
+      {
+        "source": 20,
+        "target": 21,
+        "type": "is_a"
+      },
+      {
+        "source": 12,
+        "target": 22,
+        "type": "became_heir_presumptive_in"
+      },
+      {
+        "source": 1,
+        "target": 22,
+        "type": "contains"
+      }
+    ]
+  }
+}

@@ -1,0 +1,455 @@
+{
+  "dataset": "hover",
+  "id": "3d80cbe8-4ddf-4e77-8446-2f4f03813dd9",
+  "split": "train",
+  "claim": "A cocktail in a Hurricane glass and Fish House Punch both contain alcohol.",
+  "evidencia": "Page: Singapore Sling. Sentence: The Singapore Sling is a gin-based cocktail from Singapore.\nPage: Fish House Punch. Sentence: Fish House Punch is a strong, rum-based punch containing rum, cognac, and peach brandy.\nPage: Hurricane glass. Sentence: Other drinks served in this glass include the Singapore Sling, June bug, Piña colada and Blue Hawaii.",
+  "evidence_text": "Page: Singapore Sling. Sentence: The Singapore Sling is a gin-based cocktail from Singapore.\nPage: Fish House Punch. Sentence: Fish House Punch is a strong, rum-based punch containing rum, cognac, and peach brandy.\nPage: Hurricane glass. Sentence: Other drinks served in this glass include the Singapore Sling, June bug, Piña colada and Blue Hawaii.",
+  "label": "SUPPORTED",
+  "num_hops": 3,
+  "hover_metadata": {
+    "supporting_facts": [
+      [
+        "Singapore Sling",
+        0
+      ],
+      [
+        "Fish House Punch",
+        0
+      ],
+      [
+        "Hurricane glass",
+        2
+      ]
+    ],
+    "num_hops": 3,
+    "evidence_annotation_id": [
+      0
+    ],
+    "evidence_id": [
+      "Singapore Sling::sentence::0",
+      "Fish House Punch::sentence::0",
+      "Hurricane glass::sentence::2"
+    ],
+    "evidence_wiki_url": [
+      "https://en.wikipedia.org/wiki/Singapore_Sling",
+      "https://en.wikipedia.org/wiki/Fish_House_Punch",
+      "https://en.wikipedia.org/wiki/Hurricane_glass"
+    ],
+    "evidence_sentence_id": [
+      "Singapore Sling::sentence::0",
+      "Fish House Punch::sentence::0",
+      "Hurricane glass::sentence::2"
+    ]
+  },
+  "grafo_claim": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "c18d5ccc-49bd-5a4d-908d-583c1ead23b8",
+        "text": "This chunk is about:\n- Products: cocktail in a Hurricane glass, Fish House Punch\n- Concepts: alcohol\n\nFacts:\n- A cocktail served in a Hurricane glass contains alcohol.\n- Fish House Punch contains alcohol.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "6b195255-491e-5db3-8d4b-5b2ac8065aba",
+        "text": "A cocktail in a Hurricane glass and Fish House Punch both contain alcohol.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "6ae69438-2fd5-5eea-96cb-d2f9d21b93c1",
+        "text": "text_6177a87f130740da01a3465c0716c706",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "5327d4a7-3f83-5b40-bee1-6dd9a02e6a4b",
+        "text": "cocktail",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "58c5636a-bd83-593e-87d0-53a002ba21de",
+        "text": "drink",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "ace1e980-3919-55c5-b52c-2476171dbe2d",
+        "text": "hurricane glass",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "5e7cbda1-d6b2-5124-9bad-288dc849a4e3",
+        "text": "object",
+        "type": "EntityType"
+      },
+      {
+        "id": 7,
+        "original_id": "b3724e55-8b82-5582-b629-b08169b7a0ce",
+        "text": "alcohol",
+        "type": "Entity"
+      },
+      {
+        "id": 8,
+        "original_id": "acff4eca-0ee1-57dd-b95b-d4aff6aa3b61",
+        "text": "substance",
+        "type": "EntityType"
+      },
+      {
+        "id": 9,
+        "original_id": "da616e37-a4ac-57b9-971b-8aeefca9e55c",
+        "text": "fish house punch",
+        "type": "Entity"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 9,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "served_in"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 7,
+        "type": "contains"
+      },
+      {
+        "source": 9,
+        "target": 7,
+        "type": "contains"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      },
+      {
+        "source": 7,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 9,
+        "type": "contains"
+      }
+    ]
+  },
+  "grafo_evidencia": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "d4d22960-98d5-57ce-8642-2a1dfbd20913",
+        "text": "This chunk is about:\n- Products: Singapore Sling, Fish House Punch, Hurricane glass\n- Places: Singapore\n- Concepts: cocktails, punches, glassware\n\nFacts:\n- The Singapore Sling is a gin-based cocktail from Singapore.\n- Fish House Punch is a strong rum-based punch that contains rum, cognac, and peach brandy.\n- A Hurricane glass is used to serve drinks including the Singapore Sling, June bug, Piña colada, and Blue Hawaii.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "312a706a-fca5-5633-a8f6-c3554e2e3d84",
+        "text": "Page: Singapore Sling. Sentence: The Singapore Sling is a gin-based cocktail from Singapore.\nPage: Fish House Punch. Sentence: Fish House Punch is a strong, rum-based punch containing rum, cognac, and peach brandy.\nPage: Hurricane glass. Sentence: Other drinks served in this glass include the Singapore Sling, June bug, Piña colada and Blue Hawaii.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "5121a507-6cac-599e-b1d7-5d9410e45d2a",
+        "text": "text_2f7ea308a8fd7188411c25c2826cfa40",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "798e17dd-6a4f-52aa-bd97-12862117731e",
+        "text": "singapore sling",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "58c5636a-bd83-593e-87d0-53a002ba21de",
+        "text": "drink",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "dabf7a70-ebcb-58ca-a6fd-a2d296c3ff59",
+        "text": "gin",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "de04d8a8-1b78-5a88-bb18-5aa48f533be4",
+        "text": "ingredient",
+        "type": "EntityType"
+      },
+      {
+        "id": 7,
+        "original_id": "7b8ef6cf-3d8c-5f1f-a8b6-0a53e2108f82",
+        "text": "singapore",
+        "type": "Entity"
+      },
+      {
+        "id": 8,
+        "original_id": "5f394058-b2a0-5ba8-8466-ba2a18cfcf4e",
+        "text": "place",
+        "type": "EntityType"
+      },
+      {
+        "id": 9,
+        "original_id": "ace1e980-3919-55c5-b52c-2476171dbe2d",
+        "text": "hurricane glass",
+        "type": "Entity"
+      },
+      {
+        "id": 10,
+        "original_id": "5e7cbda1-d6b2-5124-9bad-288dc849a4e3",
+        "text": "object",
+        "type": "EntityType"
+      },
+      {
+        "id": 11,
+        "original_id": "da616e37-a4ac-57b9-971b-8aeefca9e55c",
+        "text": "fish house punch",
+        "type": "Entity"
+      },
+      {
+        "id": 12,
+        "original_id": "6e00c8eb-da45-5f08-a238-a0def5ff0af3",
+        "text": "rum",
+        "type": "Entity"
+      },
+      {
+        "id": 13,
+        "original_id": "35b8d75e-02cb-593d-a694-a39d10b2ba6e",
+        "text": "cognac",
+        "type": "Entity"
+      },
+      {
+        "id": 14,
+        "original_id": "f9fa8f7a-ddb6-53b1-b9cd-6495d763b81c",
+        "text": "peach brandy",
+        "type": "Entity"
+      },
+      {
+        "id": 15,
+        "original_id": "b243ad53-094c-5629-91af-73169516128b",
+        "text": "june bug",
+        "type": "Entity"
+      },
+      {
+        "id": 16,
+        "original_id": "b06dfe62-fbb0-597b-ac28-4aab707b3bba",
+        "text": "piña colada",
+        "type": "Entity"
+      },
+      {
+        "id": 17,
+        "original_id": "e10fb415-d982-5f8a-8c67-6254d13ec921",
+        "text": "blue hawaii",
+        "type": "Entity"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 11,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 15,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 16,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 17,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "has_base"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 12,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 13,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 14,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 7,
+        "type": "originates_from"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      },
+      {
+        "source": 7,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 9,
+        "type": "served_in"
+      },
+      {
+        "source": 1,
+        "target": 9,
+        "type": "contains"
+      },
+      {
+        "source": 15,
+        "target": 9,
+        "type": "served_in"
+      },
+      {
+        "source": 16,
+        "target": 9,
+        "type": "served_in"
+      },
+      {
+        "source": 17,
+        "target": 9,
+        "type": "served_in"
+      },
+      {
+        "source": 9,
+        "target": 10,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 11,
+        "type": "contains"
+      },
+      {
+        "source": 11,
+        "target": 12,
+        "type": "has_base"
+      },
+      {
+        "source": 1,
+        "target": 12,
+        "type": "contains"
+      },
+      {
+        "source": 11,
+        "target": 13,
+        "type": "contains"
+      },
+      {
+        "source": 1,
+        "target": 13,
+        "type": "contains"
+      },
+      {
+        "source": 11,
+        "target": 14,
+        "type": "contains"
+      },
+      {
+        "source": 1,
+        "target": 14,
+        "type": "contains"
+      },
+      {
+        "source": 1,
+        "target": 15,
+        "type": "contains"
+      },
+      {
+        "source": 1,
+        "target": 16,
+        "type": "contains"
+      },
+      {
+        "source": 1,
+        "target": 17,
+        "type": "contains"
+      }
+    ]
+  }
+}

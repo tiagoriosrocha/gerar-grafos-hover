@@ -1,0 +1,438 @@
+{
+  "dataset": "hover",
+  "id": "d8e56761-1b8d-4cda-b46e-5e0080a32df4",
+  "split": "train",
+  "claim": "A neighborhood, which has more crime than Northside, Paterson, and social networks have Neighbourhood in common",
+  "evidencia": "Page: Wrigley Park. Sentence: Wrigley Park, also called Fourth Ward, is a neighborhood located north of Broadway in Paterson, New Jersey.\nPage: Neighbourhood. Sentence: Researchers have not agreed on an exact definition, but the following may serve as a starting point: \"…Neighbourhood is generally defined spatially as a specific geographic area and functionally as a set of social networks.\nPage: Northside, Paterson. Sentence: It suffers from some of the social problems currently facing the Wrigley Park neighborhood but to a lesser extent.",
+  "evidence_text": "Page: Wrigley Park. Sentence: Wrigley Park, also called Fourth Ward, is a neighborhood located north of Broadway in Paterson, New Jersey.\nPage: Neighbourhood. Sentence: Researchers have not agreed on an exact definition, but the following may serve as a starting point: \"…Neighbourhood is generally defined spatially as a specific geographic area and functionally as a set of social networks.\nPage: Northside, Paterson. Sentence: It suffers from some of the social problems currently facing the Wrigley Park neighborhood but to a lesser extent.",
+  "label": "NOT_SUPPORTED",
+  "num_hops": 3,
+  "hover_metadata": {
+    "supporting_facts": [
+      [
+        "Wrigley Park",
+        0
+      ],
+      [
+        "Neighbourhood",
+        2
+      ],
+      [
+        "Northside, Paterson",
+        2
+      ]
+    ],
+    "num_hops": 3,
+    "evidence_annotation_id": [
+      0
+    ],
+    "evidence_id": [
+      "Wrigley Park::sentence::0",
+      "Neighbourhood::sentence::2",
+      "Northside, Paterson::sentence::2"
+    ],
+    "evidence_wiki_url": [
+      "https://en.wikipedia.org/wiki/Wrigley_Park",
+      "https://en.wikipedia.org/wiki/Neighbourhood",
+      "https://en.wikipedia.org/wiki/Northside%2C_Paterson"
+    ],
+    "evidence_sentence_id": [
+      "Wrigley Park::sentence::0",
+      "Neighbourhood::sentence::2",
+      "Northside, Paterson::sentence::2"
+    ]
+  },
+  "grafo_claim": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "05fe45fe-d9d3-5857-8105-00a8d7f0c840",
+        "text": "This chunk is about:\n- Places: a neighborhood, Northside, Paterson\n- Topics: crime, social networks, shared neighborhood\n\nFacts:\n- A neighborhood is described as having more crime than Northside in Paterson.\n- Social networks are described as having the neighborhood in common.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "4b8ffbb7-3b09-5ac0-9a8b-be4e2f06aed5",
+        "text": "A neighborhood, which has more crime than Northside, Paterson, and social networks have Neighbourhood in common",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "eb854d7f-3f7a-572a-8d44-14c455b281ee",
+        "text": "text_5ec038336549b6d4caadd95745beb359",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "e2839e43-6c09-550a-adb5-c1204b8b67dd",
+        "text": "northside",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "32c7ab3a-58fe-530e-8ef6-ba23da462da2",
+        "text": "neighborhood",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "7f4216bf-bd11-544a-9f73-23e64ae06dfc",
+        "text": "paterson",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "b8167703-9c96-529b-8f66-b7b6d92bc9d6",
+        "text": "neighbourhood",
+        "type": "Entity"
+      },
+      {
+        "id": 7,
+        "original_id": "d2a381fa-3658-5ca6-ada9-2109cfc9331d",
+        "text": "concept",
+        "type": "EntityType"
+      },
+      {
+        "id": 8,
+        "original_id": "5f394058-b2a0-5ba8-8466-ba2a18cfcf4e",
+        "text": "place",
+        "type": "EntityType"
+      },
+      {
+        "id": 9,
+        "original_id": "50e87512-f215-5fd0-bf4e-16c7e47e2fa4",
+        "text": "social networks",
+        "type": "Entity"
+      },
+      {
+        "id": 10,
+        "original_id": "4321aacf-8880-5e34-bf41-66a54ec42da4",
+        "text": "unnamed neighborhood",
+        "type": "Entity"
+      },
+      {
+        "id": 11,
+        "original_id": "a8f21824-2200-5672-8134-c035d298bdb7",
+        "text": "crime",
+        "type": "Entity"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 10,
+        "target": 3,
+        "type": "has_more_crime_than"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 10,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "has_in_common"
+      },
+      {
+        "source": 9,
+        "target": 6,
+        "type": "has_in_common"
+      },
+      {
+        "source": 1,
+        "target": 6,
+        "type": "contains"
+      },
+      {
+        "source": 6,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 9,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 11,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 5,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 9,
+        "type": "contains"
+      },
+      {
+        "source": 1,
+        "target": 10,
+        "type": "contains"
+      },
+      {
+        "source": 10,
+        "target": 11,
+        "type": "has_condition"
+      },
+      {
+        "source": 1,
+        "target": 11,
+        "type": "contains"
+      }
+    ]
+  },
+  "grafo_evidencia": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "48e418eb-f7fe-5243-a6b3-b012eac7ed24",
+        "text": "This chunk is about:\n- Places: Wrigley Park, Fourth Ward, Northside, Paterson, New Jersey\n- Concepts: Neighbourhood, social networks\n\nFacts:\n- Wrigley Park, also called Fourth Ward, is a neighborhood in Paterson, New Jersey, located north of Broadway.\n- Researchers have not agreed on an exact definition of neighbourhood, but a neighbourhood may be defined spatially as a specific geographic area and functionally as a set of social networks.\n- Northside, Paterson, suffers from some of the social problems facing the Wrigley Park neighborhood, but to a lesser extent.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "f7608a25-0b6c-54e4-a58b-d13f6a97d395",
+        "text": "Page: Wrigley Park. Sentence: Wrigley Park, also called Fourth Ward, is a neighborhood located north of Broadway in Paterson, New Jersey.\nPage: Neighbourhood. Sentence: Researchers have not agreed on an exact definition, but the following may serve as a starting point: \"…Neighbourhood is generally defined spatially as a specific geographic area and functionally as a set of social networks.\nPage: Northside, Paterson. Sentence: It suffers from some of the social problems currently facing the Wrigley Park neighborhood but to a lesser extent.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "2887bee4-7d9b-56e1-a42f-871f1952b48d",
+        "text": "text_70f6eb1bd663ed03ce6e263553604529",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "7a746f7a-9779-52d3-9ece-9ca4b1ebf2ef",
+        "text": "wrigley park",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "b9634cae-db6c-51ee-9d5c-261223d9b7b9",
+        "text": "fourth ward",
+        "type": "Entity"
+      },
+      {
+        "id": 5,
+        "original_id": "5f394058-b2a0-5ba8-8466-ba2a18cfcf4e",
+        "text": "place",
+        "type": "EntityType"
+      },
+      {
+        "id": 6,
+        "original_id": "7941c3eb-ad2c-5c65-9a34-9c576c57c616",
+        "text": "paterson, new jersey",
+        "type": "Entity"
+      },
+      {
+        "id": 7,
+        "original_id": "c53eccd3-029a-57a8-bb6b-ba08f312f92e",
+        "text": "broadway",
+        "type": "Entity"
+      },
+      {
+        "id": 8,
+        "original_id": "b8167703-9c96-529b-8f66-b7b6d92bc9d6",
+        "text": "neighbourhood",
+        "type": "Entity"
+      },
+      {
+        "id": 9,
+        "original_id": "919f1587-79f2-5f2a-bad6-0c58426ad74b",
+        "text": "specific geographic area",
+        "type": "Entity"
+      },
+      {
+        "id": 10,
+        "original_id": "d2a381fa-3658-5ca6-ada9-2109cfc9331d",
+        "text": "concept",
+        "type": "EntityType"
+      },
+      {
+        "id": 11,
+        "original_id": "03dee1fb-3285-5b56-8a1b-358f51c93c82",
+        "text": "set of social networks",
+        "type": "Entity"
+      },
+      {
+        "id": 12,
+        "original_id": "4950d262-0d9f-5f03-b557-e425642c2b75",
+        "text": "northside, paterson",
+        "type": "Entity"
+      },
+      {
+        "id": 13,
+        "original_id": "257438ee-ca26-5dcb-82a7-951c90693f2c",
+        "text": "social problems currently facing the wrigley park neighborhood",
+        "type": "Entity"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 13,
+        "target": 3,
+        "type": "facing"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "also_called"
+      },
+      {
+        "source": 1,
+        "target": 4,
+        "type": "contains"
+      },
+      {
+        "source": 4,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 6,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 7,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 12,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 6,
+        "type": "located_in"
+      },
+      {
+        "source": 1,
+        "target": 6,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 7,
+        "type": "located_north_of"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      },
+      {
+        "source": 1,
+        "target": 8,
+        "type": "contains"
+      },
+      {
+        "source": 8,
+        "target": 9,
+        "type": "defined_spatially_as"
+      },
+      {
+        "source": 1,
+        "target": 9,
+        "type": "contains"
+      },
+      {
+        "source": 9,
+        "target": 10,
+        "type": "is_a"
+      },
+      {
+        "source": 11,
+        "target": 10,
+        "type": "is_a"
+      },
+      {
+        "source": 8,
+        "target": 10,
+        "type": "is_a"
+      },
+      {
+        "source": 13,
+        "target": 10,
+        "type": "is_a"
+      },
+      {
+        "source": 8,
+        "target": 11,
+        "type": "defined_functionally_as"
+      },
+      {
+        "source": 1,
+        "target": 11,
+        "type": "contains"
+      },
+      {
+        "source": 1,
+        "target": 12,
+        "type": "contains"
+      },
+      {
+        "source": 12,
+        "target": 13,
+        "type": "suffers_from"
+      },
+      {
+        "source": 1,
+        "target": 13,
+        "type": "contains"
+      }
+    ]
+  }
+}

@@ -1,0 +1,529 @@
+{
+  "dataset": "hover",
+  "id": "dfce2887-3a17-4a87-84ad-c47db6469825",
+  "split": "train",
+  "claim": "Vladimir Vladimirovich Nabokov and the author of \"To Kill a Mockingbird\" are not the same age.",
+  "evidencia": "Page: Vladimir Nabokov. Sentence: Vladimir Vladimirovich Nabokov ( ; Russian: Влади́мир Влади́мирович Набо́ков , ] , also known by the pen name Vladimir Sirin; (April 22nd, 1899 — July 2nd, 1977) was a Russian-American novelist and entomologist.\nPage: Harper Lee. Sentence: Nelle Harper Lee (April 28, 1926February 19, 2016), better known by her pen name Harper Lee, was an American novelist widely known for \"To Kill a Mockingbird\", published in 1960.\nPage: List of To Kill a Mockingbird characters. Sentence: \"To Kill a Mockingbird\" is a novel by Harper Lee published in 1960.",
+  "evidence_text": "Page: Vladimir Nabokov. Sentence: Vladimir Vladimirovich Nabokov ( ; Russian: Влади́мир Влади́мирович Набо́ков , ] , also known by the pen name Vladimir Sirin; (April 22nd, 1899 — July 2nd, 1977) was a Russian-American novelist and entomologist.\nPage: Harper Lee. Sentence: Nelle Harper Lee (April 28, 1926February 19, 2016), better known by her pen name Harper Lee, was an American novelist widely known for \"To Kill a Mockingbird\", published in 1960.\nPage: List of To Kill a Mockingbird characters. Sentence: \"To Kill a Mockingbird\" is a novel by Harper Lee published in 1960.",
+  "label": "SUPPORTED",
+  "num_hops": 3,
+  "hover_metadata": {
+    "supporting_facts": [
+      [
+        "Vladimir Nabokov",
+        0
+      ],
+      [
+        "Harper Lee",
+        0
+      ],
+      [
+        "List of To Kill a Mockingbird characters",
+        0
+      ]
+    ],
+    "num_hops": 3,
+    "evidence_annotation_id": [
+      0
+    ],
+    "evidence_id": [
+      "Vladimir Nabokov::sentence::0",
+      "Harper Lee::sentence::0",
+      "List of To Kill a Mockingbird characters::sentence::0"
+    ],
+    "evidence_wiki_url": [
+      "https://en.wikipedia.org/wiki/Vladimir_Nabokov",
+      "https://en.wikipedia.org/wiki/Harper_Lee",
+      "https://en.wikipedia.org/wiki/List_of_To_Kill_a_Mockingbird_characters"
+    ],
+    "evidence_sentence_id": [
+      "Vladimir Nabokov::sentence::0",
+      "Harper Lee::sentence::0",
+      "List of To Kill a Mockingbird characters::sentence::0"
+    ]
+  },
+  "grafo_claim": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "6673ded2-40fc-57f6-be8d-fb26ad15da41",
+        "text": "This chunk is about:\n- People: Vladimir Vladimirovich Nabokov, Harper Lee\n- Works: To Kill a Mockingbird\n\nFacts:\n- Vladimir Vladimirovich Nabokov and Harper Lee, the author of To Kill a Mockingbird, are not the same age.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "191048aa-476f-5265-ae5e-03b1708bfb1d",
+        "text": "Vladimir Vladimirovich Nabokov and the author of \"To Kill a Mockingbird\" are not the same age.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "6a350680-9178-53be-b723-6c37db8f4802",
+        "text": "text_6a643f3360b43c158d4353a60e15852e",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "22f6422b-d038-553e-b111-efc4cb68cbf1",
+        "text": "vladimir vladimirovich nabokov",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "9a853803-5eea-56ad-aae2-20e43ed00c4c",
+        "text": "author of to kill a mockingbird",
+        "type": "Entity"
+      },
+      {
+        "id": 5,
+        "original_id": "015ef4ac-4e15-5f51-aaa2-94144d8fdbd0",
+        "text": "to kill a mockingbird",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "5263a535-1b4b-5925-be3e-310d03cd303b",
+        "text": "work",
+        "type": "EntityType"
+      },
+      {
+        "id": 7,
+        "original_id": "99a82eec-bb35-5bb5-9ed2-e73fc7a756de",
+        "text": "person",
+        "type": "EntityType"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "not_same_age_as"
+      },
+      {
+        "source": 1,
+        "target": 4,
+        "type": "contains"
+      },
+      {
+        "source": 4,
+        "target": 5,
+        "type": "authored"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 4,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 7,
+        "type": "is_a"
+      }
+    ]
+  },
+  "grafo_evidencia": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "cf101df0-44ae-5e27-97d9-f1d2aee287d0",
+        "text": "This chunk is about:\n- People: Vladimir Nabokov, Harper Lee\n- Works: To Kill a Mockingbird\n- Roles: novelist, entomologist\n\nFacts:\n- Vladimir Nabokov was born on April 22, 1899, and was also known by the pen name Vladimir Sirin.\n- Vladimir Nabokov was a Russian-American novelist and entomologist.\n- Harper Lee was born on April 28, 1926, as Nelle Harper Lee and was better known by the pen name Harper Lee.\n- To Kill a Mockingbird is a novel by Harper Lee that was published in 1960.\n- Harper Lee was an American novelist widely known for To Kill a Mockingbird.\n- Vladimir Nabokov died on July 2, 1977.\n- Harper Lee died on February 19, 2016.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "2f2a7ff5-2b10-54b2-ad0a-73b73ccdbed1",
+        "text": "Page: Vladimir Nabokov. Sentence: Vladimir Vladimirovich Nabokov ( ; Russian: Влади́мир Влади́мирович Набо́ков , ] , also known by the pen name Vladimir Sirin; (April 22nd, 1899 — July 2nd, 1977) was a Russian-American novelist and entomologist.\nPage: Harper Lee. Sentence: Nelle Harper Lee (April 28, 1926February 19, 2016), better known by her pen name Harper Lee, was an American novelist widely known for \"To Kill a Mockingbird\", published in 1960.\nPage: List of To Kill a Mockingbird characters. Sentence: \"To Kill a Mockingbird\" is a novel by Harper Lee published in 1960.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "1a72b78f-4ad3-5e60-b3e3-525df20b4ece",
+        "text": "text_4d31ede56f8f2fc3a8d5db61de8b2680",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "646767e8-1615-5f25-9d31-ec3338606490",
+        "text": "vladimir nabokov",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "22f6422b-d038-553e-b111-efc4cb68cbf1",
+        "text": "vladimir vladimirovich nabokov",
+        "type": "Entity"
+      },
+      {
+        "id": 5,
+        "original_id": "39575085-0710-527d-bd54-019de7b00429",
+        "text": "name",
+        "type": "EntityType"
+      },
+      {
+        "id": 6,
+        "original_id": "4e29ba60-1a83-5669-ac4c-3d1d27d6b0e8",
+        "text": "vladimir sirin",
+        "type": "Entity"
+      },
+      {
+        "id": 7,
+        "original_id": "842ce9f4-695e-540e-82db-a4e589d06f82",
+        "text": "1899-04-22",
+        "type": "Entity"
+      },
+      {
+        "id": 8,
+        "original_id": "b19433ae-558c-5aaf-95ac-6231f2a4be0e",
+        "text": "date",
+        "type": "EntityType"
+      },
+      {
+        "id": 9,
+        "original_id": "1d35d4ec-b3cd-5b03-96d7-bc03d4338128",
+        "text": "1977-07-02",
+        "type": "Entity"
+      },
+      {
+        "id": 10,
+        "original_id": "e8e3bcfb-bb25-5103-a6a0-4da89ae3ca54",
+        "text": "russian-american",
+        "type": "Entity"
+      },
+      {
+        "id": 11,
+        "original_id": "7d08f409-7e55-5a66-935f-7c5c06f9111f",
+        "text": "nationality",
+        "type": "EntityType"
+      },
+      {
+        "id": 12,
+        "original_id": "f2a6b14f-965e-5c39-8c85-23c651fa4fcd",
+        "text": "novelist",
+        "type": "Entity"
+      },
+      {
+        "id": 13,
+        "original_id": "9d80eb43-32fa-561c-9371-91f180ebcb6c",
+        "text": "profession",
+        "type": "EntityType"
+      },
+      {
+        "id": 14,
+        "original_id": "85d6f023-4cf1-5bb3-97c4-e33b7a2c2776",
+        "text": "entomologist",
+        "type": "Entity"
+      },
+      {
+        "id": 15,
+        "original_id": "99a82eec-bb35-5bb5-9ed2-e73fc7a756de",
+        "text": "person",
+        "type": "EntityType"
+      },
+      {
+        "id": 16,
+        "original_id": "17aea265-732a-5d66-bb37-061e43a3badd",
+        "text": "harper lee",
+        "type": "Entity"
+      },
+      {
+        "id": 17,
+        "original_id": "525faff4-ac54-5ecd-a140-72aaf3548475",
+        "text": "nelle harper lee",
+        "type": "Entity"
+      },
+      {
+        "id": 18,
+        "original_id": "c23457a9-7cc8-5826-936e-c509fa78d7c1",
+        "text": "1926-04-28",
+        "type": "Entity"
+      },
+      {
+        "id": 19,
+        "original_id": "f3cce92a-a03c-549f-a976-be684f09e209",
+        "text": "2016-02-19",
+        "type": "Entity"
+      },
+      {
+        "id": 20,
+        "original_id": "32e5ea46-cca9-5920-8b2d-77357f10ce8d",
+        "text": "american",
+        "type": "Entity"
+      },
+      {
+        "id": 21,
+        "original_id": "015ef4ac-4e15-5f51-aaa2-94144d8fdbd0",
+        "text": "to kill a mockingbird",
+        "type": "Entity"
+      },
+      {
+        "id": 22,
+        "original_id": "5b610230-b495-5c46-897d-5b4629ebbbb1",
+        "text": "1960",
+        "type": "Entity"
+      },
+      {
+        "id": 23,
+        "original_id": "5263a535-1b4b-5925-be3e-310d03cd303b",
+        "text": "work",
+        "type": "EntityType"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "has_full_name"
+      },
+      {
+        "source": 1,
+        "target": 4,
+        "type": "contains"
+      },
+      {
+        "source": 4,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 6,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 17,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 6,
+        "type": "has_pen_name"
+      },
+      {
+        "source": 1,
+        "target": 6,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 7,
+        "type": "born_on"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      },
+      {
+        "source": 7,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 9,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 18,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 19,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 22,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 9,
+        "type": "died_on"
+      },
+      {
+        "source": 1,
+        "target": 9,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 10,
+        "type": "has_nationality"
+      },
+      {
+        "source": 1,
+        "target": 10,
+        "type": "contains"
+      },
+      {
+        "source": 10,
+        "target": 11,
+        "type": "is_a"
+      },
+      {
+        "source": 20,
+        "target": 11,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 12,
+        "type": "has_profession"
+      },
+      {
+        "source": 1,
+        "target": 12,
+        "type": "contains"
+      },
+      {
+        "source": 16,
+        "target": 12,
+        "type": "has_profession"
+      },
+      {
+        "source": 12,
+        "target": 13,
+        "type": "is_a"
+      },
+      {
+        "source": 14,
+        "target": 13,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 14,
+        "type": "has_profession"
+      },
+      {
+        "source": 1,
+        "target": 14,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 15,
+        "type": "is_a"
+      },
+      {
+        "source": 16,
+        "target": 15,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 16,
+        "type": "contains"
+      },
+      {
+        "source": 16,
+        "target": 17,
+        "type": "has_full_name"
+      },
+      {
+        "source": 1,
+        "target": 17,
+        "type": "contains"
+      },
+      {
+        "source": 16,
+        "target": 18,
+        "type": "born_on"
+      },
+      {
+        "source": 1,
+        "target": 18,
+        "type": "contains"
+      },
+      {
+        "source": 16,
+        "target": 19,
+        "type": "died_on"
+      },
+      {
+        "source": 1,
+        "target": 19,
+        "type": "contains"
+      },
+      {
+        "source": 16,
+        "target": 20,
+        "type": "has_nationality"
+      },
+      {
+        "source": 1,
+        "target": 20,
+        "type": "contains"
+      },
+      {
+        "source": 16,
+        "target": 21,
+        "type": "wrote"
+      },
+      {
+        "source": 1,
+        "target": 21,
+        "type": "contains"
+      },
+      {
+        "source": 21,
+        "target": 22,
+        "type": "published_in"
+      },
+      {
+        "source": 1,
+        "target": 22,
+        "type": "contains"
+      },
+      {
+        "source": 21,
+        "target": 23,
+        "type": "is_a"
+      }
+    ]
+  }
+}

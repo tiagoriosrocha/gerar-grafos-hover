@@ -1,0 +1,500 @@
+{
+  "dataset": "hover",
+  "id": "e73d4ffd-b3a0-4d4d-ae9b-1e69e7b70eb8",
+  "split": "train",
+  "claim": "The Northern Chamber Orchestra gives concerts at Tatton Park estate owned by the National Trust.",
+  "evidencia": "Page: Northern Chamber Orchestra. Sentence: The Northern Chamber Orchestra (or NCO) is a chamber orchestra based in Manchester, England.\nPage: Northern Chamber Orchestra. Sentence: Established in 1967, the orchestra gives concerts at Heritage Centre, Macclesfield, St Ann's Church, Manchester, as well as Blackburn, Skipton, Lancaster and Tatton Park, Knutsford.\nPage: Tatton Park. Sentence: Tatton Park is an historic estate in Cheshire, England, to the north of the town of Knutsford.\nPage: Tatton Park. Sentence: The estate is owned by the National Trust, who administer it jointly with Cheshire East Council.",
+  "evidence_text": "Page: Northern Chamber Orchestra. Sentence: The Northern Chamber Orchestra (or NCO) is a chamber orchestra based in Manchester, England.\nPage: Northern Chamber Orchestra. Sentence: Established in 1967, the orchestra gives concerts at Heritage Centre, Macclesfield, St Ann's Church, Manchester, as well as Blackburn, Skipton, Lancaster and Tatton Park, Knutsford.\nPage: Tatton Park. Sentence: Tatton Park is an historic estate in Cheshire, England, to the north of the town of Knutsford.\nPage: Tatton Park. Sentence: The estate is owned by the National Trust, who administer it jointly with Cheshire East Council.",
+  "label": "SUPPORTED",
+  "num_hops": 2,
+  "hover_metadata": {
+    "supporting_facts": [
+      [
+        "Northern Chamber Orchestra",
+        0
+      ],
+      [
+        "Northern Chamber Orchestra",
+        1
+      ],
+      [
+        "Tatton Park",
+        0
+      ],
+      [
+        "Tatton Park",
+        3
+      ]
+    ],
+    "num_hops": 2,
+    "evidence_annotation_id": [
+      0
+    ],
+    "evidence_id": [
+      "Northern Chamber Orchestra::sentence::0",
+      "Northern Chamber Orchestra::sentence::1",
+      "Tatton Park::sentence::0",
+      "Tatton Park::sentence::3"
+    ],
+    "evidence_wiki_url": [
+      "https://en.wikipedia.org/wiki/Northern_Chamber_Orchestra",
+      "https://en.wikipedia.org/wiki/Tatton_Park"
+    ],
+    "evidence_sentence_id": [
+      "Northern Chamber Orchestra::sentence::0",
+      "Northern Chamber Orchestra::sentence::1",
+      "Tatton Park::sentence::0",
+      "Tatton Park::sentence::3"
+    ]
+  },
+  "grafo_claim": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "01432cb9-cb14-57ab-80af-5f6c886882b4",
+        "text": "This chunk is about:\n- Organizations: Northern Chamber Orchestra, National Trust\n- Places: Tatton Park estate\n\nFacts:\n- The Northern Chamber Orchestra gives concerts at Tatton Park estate.\n- The National Trust owns Tatton Park estate.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "ee161085-ccb7-57d6-b993-4b2da16852c8",
+        "text": "The Northern Chamber Orchestra gives concerts at Tatton Park estate owned by the National Trust.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "051fcf1d-9de9-5734-a256-93e483d8aae7",
+        "text": "text_bbe8f566ca29fd6559c37fddda7005c0",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "caa041cf-dfc3-5db6-be23-8cc3547e67e4",
+        "text": "northern chamber orchestra",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "59bd3828-4cc8-5cd4-adae-9734bb0a0d42",
+        "text": "tatton park estate",
+        "type": "Entity"
+      },
+      {
+        "id": 5,
+        "original_id": "5f394058-b2a0-5ba8-8466-ba2a18cfcf4e",
+        "text": "place",
+        "type": "EntityType"
+      },
+      {
+        "id": 6,
+        "original_id": "388f60fb-220d-55e8-ae9c-3ac93cead308",
+        "text": "organization",
+        "type": "EntityType"
+      },
+      {
+        "id": 7,
+        "original_id": "6acb930a-7fec-5788-b0f0-efa360c58192",
+        "text": "national trust",
+        "type": "Entity"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "gives_concerts_at"
+      },
+      {
+        "source": 1,
+        "target": 4,
+        "type": "contains"
+      },
+      {
+        "source": 7,
+        "target": 4,
+        "type": "owns"
+      },
+      {
+        "source": 4,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 7,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      }
+    ]
+  },
+  "grafo_evidencia": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "e688e7fb-2007-5ad7-82cd-c18ff5a68f7c",
+        "text": "This chunk is about:\n- Organizations: Northern Chamber Orchestra, National Trust, Cheshire East Council\n- Places: Manchester, England, Heritage Centre, Macclesfield, St Ann's Church, Manchester, Blackburn, Skipton, Lancaster, Tatton Park, Knutsford, Cheshire\n- Topics: chamber orchestra, historic estate\n\nFacts:\n- The Northern Chamber Orchestra is a chamber orchestra based in Manchester, England.\n- The Northern Chamber Orchestra was established in 1967.\n- The Northern Chamber Orchestra gives concerts at Heritage Centre in Macclesfield, St Ann's Church in Manchester, Blackburn, Skipton, Lancaster, and Tatton Park in Knutsford.\n- Tatton Park is a historic estate in Cheshire, England, north of the town of Knutsford.\n- Tatton Park is owned by the National Trust and jointly administered with Cheshire East Council.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "ff796a14-ca91-57a8-8b02-af3179804247",
+        "text": "Page: Northern Chamber Orchestra. Sentence: The Northern Chamber Orchestra (or NCO) is a chamber orchestra based in Manchester, England.\nPage: Northern Chamber Orchestra. Sentence: Established in 1967, the orchestra gives concerts at Heritage Centre, Macclesfield, St Ann's Church, Manchester, as well as Blackburn, Skipton, Lancaster and Tatton Park, Knutsford.\nPage: Tatton Park. Sentence: Tatton Park is an historic estate in Cheshire, England, to the north of the town of Knutsford.\nPage: Tatton Park. Sentence: The estate is owned by the National Trust, who administer it jointly with Cheshire East Council.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "f4da1728-1fb1-5951-a8bd-4c9981f2a08e",
+        "text": "text_fa36fecba48f4ccae1e79d5a68f8ef2d",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "caa041cf-dfc3-5db6-be23-8cc3547e67e4",
+        "text": "northern chamber orchestra",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "07b01e42-6a81-5fcb-af7f-85f36dcfd338",
+        "text": "manchester",
+        "type": "Entity"
+      },
+      {
+        "id": 5,
+        "original_id": "27f0656f-762c-54f0-8ed5-c4b27557219f",
+        "text": "england",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "5f394058-b2a0-5ba8-8466-ba2a18cfcf4e",
+        "text": "place",
+        "type": "EntityType"
+      },
+      {
+        "id": 7,
+        "original_id": "f9e4a9ec-682c-5341-862a-1783ba768a49",
+        "text": "1967",
+        "type": "Entity"
+      },
+      {
+        "id": 8,
+        "original_id": "b19433ae-558c-5aaf-95ac-6231f2a4be0e",
+        "text": "date",
+        "type": "EntityType"
+      },
+      {
+        "id": 9,
+        "original_id": "1584afa8-135c-506e-a81a-6b434010793d",
+        "text": "heritage centre, macclesfield",
+        "type": "Entity"
+      },
+      {
+        "id": 10,
+        "original_id": "a04abc5f-d967-5ef4-abfe-ba4ffe6184a7",
+        "text": "st anns church, manchester",
+        "type": "Entity"
+      },
+      {
+        "id": 11,
+        "original_id": "b4761c90-9d56-5e7f-b515-c4a0b53f6d64",
+        "text": "blackburn",
+        "type": "Entity"
+      },
+      {
+        "id": 12,
+        "original_id": "9b29594d-c9b2-50f0-a4ea-dbce9bd9b3a6",
+        "text": "skipton",
+        "type": "Entity"
+      },
+      {
+        "id": 13,
+        "original_id": "54e8b164-a5d4-5120-96f5-bf30c9d3ead2",
+        "text": "lancaster",
+        "type": "Entity"
+      },
+      {
+        "id": 14,
+        "original_id": "b7dbd2ca-2b3a-5c58-9487-e56edaea2b2d",
+        "text": "tatton park",
+        "type": "Entity"
+      },
+      {
+        "id": 15,
+        "original_id": "606605e6-6dfe-57ce-8038-14cd840572e4",
+        "text": "cheshire",
+        "type": "Entity"
+      },
+      {
+        "id": 16,
+        "original_id": "298004d6-766f-5b8a-8931-4104fc582fd7",
+        "text": "knutsford",
+        "type": "Entity"
+      },
+      {
+        "id": 17,
+        "original_id": "388f60fb-220d-55e8-ae9c-3ac93cead308",
+        "text": "organization",
+        "type": "EntityType"
+      },
+      {
+        "id": 18,
+        "original_id": "6acb930a-7fec-5788-b0f0-efa360c58192",
+        "text": "national trust",
+        "type": "Entity"
+      },
+      {
+        "id": 19,
+        "original_id": "a730fefb-f0e0-54a6-8bf2-a6cd574c5111",
+        "text": "cheshire east council",
+        "type": "Entity"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "based_in"
+      },
+      {
+        "source": 1,
+        "target": 4,
+        "type": "contains"
+      },
+      {
+        "source": 4,
+        "target": 5,
+        "type": "located_in"
+      },
+      {
+        "source": 14,
+        "target": 5,
+        "type": "located_in"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 4,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 9,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 10,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 11,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 12,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 13,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 15,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 16,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 14,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 7,
+        "type": "established_in"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      },
+      {
+        "source": 7,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 9,
+        "type": "gives_concerts_at"
+      },
+      {
+        "source": 1,
+        "target": 9,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 10,
+        "type": "gives_concerts_at"
+      },
+      {
+        "source": 1,
+        "target": 10,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 11,
+        "type": "gives_concerts_in"
+      },
+      {
+        "source": 1,
+        "target": 11,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 12,
+        "type": "gives_concerts_in"
+      },
+      {
+        "source": 1,
+        "target": 12,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 13,
+        "type": "gives_concerts_in"
+      },
+      {
+        "source": 1,
+        "target": 13,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 14,
+        "type": "gives_concerts_at"
+      },
+      {
+        "source": 1,
+        "target": 14,
+        "type": "contains"
+      },
+      {
+        "source": 18,
+        "target": 14,
+        "type": "owns"
+      },
+      {
+        "source": 19,
+        "target": 14,
+        "type": "jointly_administers"
+      },
+      {
+        "source": 14,
+        "target": 15,
+        "type": "located_in"
+      },
+      {
+        "source": 1,
+        "target": 15,
+        "type": "contains"
+      },
+      {
+        "source": 14,
+        "target": 16,
+        "type": "north_of"
+      },
+      {
+        "source": 1,
+        "target": 16,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 17,
+        "type": "is_a"
+      },
+      {
+        "source": 18,
+        "target": 17,
+        "type": "is_a"
+      },
+      {
+        "source": 19,
+        "target": 17,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 18,
+        "type": "contains"
+      },
+      {
+        "source": 1,
+        "target": 19,
+        "type": "contains"
+      }
+    ]
+  }
+}

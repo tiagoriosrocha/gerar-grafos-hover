@@ -1,0 +1,656 @@
+{
+  "dataset": "hover",
+  "id": "252daeb0-aad3-4a40-8481-b2c8846d752e",
+  "split": "train",
+  "claim": "FedEx Express Flight 1406 was a cargo flight from a US airport to Logan International Airport in Boston. That US airport, not Southwest Georgia Regional Airport, is in Tennessee.",
+  "evidencia": "Page: Memphis International Airport. Sentence: Memphis International Airport (IATA: MEM, ICAO: KMEM, FAA LID: MEM) is a civil-military airport seven miles (11.2 km) southeast of downtown Memphis in Shelby County, Tennessee, United States.\nPage: Southwest Georgia Regional Airport. Sentence: Southwest Georgia Regional Airport (IATA: ABY, ICAO: KABY, FAA LID: ABY) is a city owned, public use airport located three nautical miles (6 km) southwest of the central business district of Albany, a city in Dougherty County, Georgia, United States.\nPage: FedEx Express Flight 1406. Sentence: FedEx Express Flight 1406 was a cargo flight from Memphis International Airport, Memphis, Tennessee, to Logan International Airport in Boston, Massachusetts, when it suffered a cargo fire in-flight over New York.",
+  "evidence_text": "Page: Memphis International Airport. Sentence: Memphis International Airport (IATA: MEM, ICAO: KMEM, FAA LID: MEM) is a civil-military airport seven miles (11.2 km) southeast of downtown Memphis in Shelby County, Tennessee, United States.\nPage: Southwest Georgia Regional Airport. Sentence: Southwest Georgia Regional Airport (IATA: ABY, ICAO: KABY, FAA LID: ABY) is a city owned, public use airport located three nautical miles (6 km) southwest of the central business district of Albany, a city in Dougherty County, Georgia, United States.\nPage: FedEx Express Flight 1406. Sentence: FedEx Express Flight 1406 was a cargo flight from Memphis International Airport, Memphis, Tennessee, to Logan International Airport in Boston, Massachusetts, when it suffered a cargo fire in-flight over New York.",
+  "label": "SUPPORTED",
+  "num_hops": 3,
+  "hover_metadata": {
+    "supporting_facts": [
+      [
+        "Memphis International Airport",
+        0
+      ],
+      [
+        "Southwest Georgia Regional Airport",
+        0
+      ],
+      [
+        "FedEx Express Flight 1406",
+        0
+      ]
+    ],
+    "num_hops": 3,
+    "evidence_annotation_id": [
+      0
+    ],
+    "evidence_id": [
+      "Memphis International Airport::sentence::0",
+      "Southwest Georgia Regional Airport::sentence::0",
+      "FedEx Express Flight 1406::sentence::0"
+    ],
+    "evidence_wiki_url": [
+      "https://en.wikipedia.org/wiki/Memphis_International_Airport",
+      "https://en.wikipedia.org/wiki/Southwest_Georgia_Regional_Airport",
+      "https://en.wikipedia.org/wiki/FedEx_Express_Flight_1406"
+    ],
+    "evidence_sentence_id": [
+      "Memphis International Airport::sentence::0",
+      "Southwest Georgia Regional Airport::sentence::0",
+      "FedEx Express Flight 1406::sentence::0"
+    ]
+  },
+  "grafo_claim": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "ec47e650-d66f-591c-9095-8a670d7f884d",
+        "text": "This chunk is about:\n- Events: FedEx Express Flight 1406\n- Places: Logan International Airport, Tennessee, a U.S. origin airport, Southwest Georgia Regional Airport\n\nFacts:\n- FedEx Express Flight 1406 was a cargo flight.\n- FedEx Express Flight 1406 was bound for Logan International Airport in Boston.\n- FedEx Express Flight 1406 departed from a U.S. airport in Tennessee.\n- The origin airport of FedEx Express Flight 1406 was not Southwest Georgia Regional Airport.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "182e69c9-410b-5ee6-9a02-bee6c5d0d593",
+        "text": "FedEx Express Flight 1406 was a cargo flight from a US airport to Logan International Airport in Boston. That US airport, not Southwest Georgia Regional Airport, is in Tennessee.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "2d0c4f27-bfaa-5d30-9444-13ec6c333550",
+        "text": "text_eab26ef9614b1734ea0fbd3a511d603e",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "f9aad8ee-ec26-55cb-8658-b9c6c9e4c209",
+        "text": "fedex express flight 1406",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "bd836051-ebb3-58da-8888-427133dee96b",
+        "text": "logan international airport",
+        "type": "Entity"
+      },
+      {
+        "id": 5,
+        "original_id": "943a5e16-1e4d-5ea8-bc79-d234d76ed06b",
+        "text": "boston",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "5f394058-b2a0-5ba8-8466-ba2a18cfcf4e",
+        "text": "place",
+        "type": "EntityType"
+      },
+      {
+        "id": 7,
+        "original_id": "50596f1a-2d8a-5de7-96b5-ba7068791784",
+        "text": "airport",
+        "type": "EntityType"
+      },
+      {
+        "id": 8,
+        "original_id": "c20d84b1-bf7c-51dc-9c9e-f1a20e49078d",
+        "text": "tennessee",
+        "type": "Entity"
+      },
+      {
+        "id": 9,
+        "original_id": "56a0638f-faa7-5d2d-89cf-c9492509c2e1",
+        "text": "southwest georgia regional airport",
+        "type": "Entity"
+      },
+      {
+        "id": 10,
+        "original_id": "beb84493-8108-5fa4-8040-56cdf2b2ed86",
+        "text": "flight",
+        "type": "EntityType"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "flew_to"
+      },
+      {
+        "source": 1,
+        "target": 4,
+        "type": "contains"
+      },
+      {
+        "source": 4,
+        "target": 5,
+        "type": "located_in"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 8,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 4,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 9,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 8,
+        "type": "originated_from_state"
+      },
+      {
+        "source": 1,
+        "target": 8,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 9,
+        "type": "did_not_depart_from"
+      },
+      {
+        "source": 1,
+        "target": 9,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 10,
+        "type": "is_a"
+      }
+    ]
+  },
+  "grafo_evidencia": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "44b822b9-d6db-506d-a055-3797c37261c1",
+        "text": "This chunk is about:\n- Places: Memphis International Airport, Southwest Georgia Regional Airport, Logan International Airport, Memphis, Albany, Shelby County, Dougherty County, Tennessee, Georgia, New York, Boston, Massachusetts, United States\n- Organizations: FedEx Express\n- Events: FedEx Express Flight 1406\n- Concepts: airport identifiers, civil-military airport, public-use airport, cargo flight, cargo fire\n\nFacts:\n- Memphis International Airport is a civil-military airport located seven miles southeast of downtown Memphis in Shelby County, Tennessee, United States.\n- Memphis International Airport has the airport identifiers IATA MEM, ICAO KMEM, and FAA LID MEM.\n- Southwest Georgia Regional Airport is a city-owned, public-use airport located three nautical miles southwest of the central business district of Albany in Dougherty County, Georgia, United States.\n- Southwest Georgia Regional Airport has the airport identifiers IATA ABY, ICAO KABY, and FAA LID ABY.\n- FedEx Express Flight 1406 was a cargo flight from Memphis International Airport in Memphis, Tennessee, to Logan International Airport in Boston, Massachusetts.\n- FedEx Express Flight 1406 suffered an in-flight cargo fire over New York.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "ef365fc6-8925-5e53-b3e7-73e7974d3c0d",
+        "text": "Page: Memphis International Airport. Sentence: Memphis International Airport (IATA: MEM, ICAO: KMEM, FAA LID: MEM) is a civil-military airport seven miles (11.2 km) southeast of downtown Memphis in Shelby County, Tennessee, United States.\nPage: Southwest Georgia Regional Airport. Sentence: Southwest Georgia Regional Airport (IATA: ABY, ICAO: KABY, FAA LID: ABY) is a city owned, public use airport located three nautical miles (6 km) southwest of the central business district of Albany, a city in Dougherty County, Georgia, United States.\nPage: FedEx Express Flight 1406. Sentence: FedEx Express Flight 1406 was a cargo flight from Memphis International Airport, Memphis, Tennessee, to Logan International Airport in Boston, Massachusetts, when it suffered a cargo fire in-flight over New York.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "69d8c89f-f341-5448-b9cb-4ac0c236217a",
+        "text": "text_c047241c82a5aaa85444a1c7db28991c",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "e64f769a-3f46-5e1d-aa9b-21f2ae972aca",
+        "text": "memphis international airport",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "e468a6a0-70f4-58de-bb67-ebfb5df1a8b1",
+        "text": "mem",
+        "type": "Entity"
+      },
+      {
+        "id": 5,
+        "original_id": "2c23f4f7-2223-5c53-a5f6-1bd0114fcd6a",
+        "text": "code",
+        "type": "EntityType"
+      },
+      {
+        "id": 6,
+        "original_id": "33499755-49c1-57ae-896a-b83113bebca5",
+        "text": "kmem",
+        "type": "Entity"
+      },
+      {
+        "id": 7,
+        "original_id": "71e46776-2ab7-5606-b9d9-d55ed81d035a",
+        "text": "memphis",
+        "type": "Entity"
+      },
+      {
+        "id": 8,
+        "original_id": "4f155b46-e814-58f6-97cf-55d2ac3a572d",
+        "text": "city",
+        "type": "EntityType"
+      },
+      {
+        "id": 9,
+        "original_id": "38d684de-6bc4-571a-92d8-d9e97e8e5f2a",
+        "text": "shelby county",
+        "type": "Entity"
+      },
+      {
+        "id": 10,
+        "original_id": "c20d84b1-bf7c-51dc-9c9e-f1a20e49078d",
+        "text": "tennessee",
+        "type": "Entity"
+      },
+      {
+        "id": 11,
+        "original_id": "874a51da-34ea-5037-be47-d87785d43c37",
+        "text": "united states",
+        "type": "Entity"
+      },
+      {
+        "id": 12,
+        "original_id": "35e29ad1-17b7-507a-a205-d7851a5e7102",
+        "text": "country",
+        "type": "EntityType"
+      },
+      {
+        "id": 13,
+        "original_id": "a316c419-8c58-59be-9a73-344c9422df64",
+        "text": "state",
+        "type": "EntityType"
+      },
+      {
+        "id": 14,
+        "original_id": "672f305c-4f1a-5b7d-aeea-4c0a8e9d37c3",
+        "text": "county",
+        "type": "EntityType"
+      },
+      {
+        "id": 15,
+        "original_id": "50596f1a-2d8a-5de7-96b5-ba7068791784",
+        "text": "airport",
+        "type": "EntityType"
+      },
+      {
+        "id": 16,
+        "original_id": "56a0638f-faa7-5d2d-89cf-c9492509c2e1",
+        "text": "southwest georgia regional airport",
+        "type": "Entity"
+      },
+      {
+        "id": 17,
+        "original_id": "c7033645-bc8d-5547-8010-0ed3c9d24019",
+        "text": "aby",
+        "type": "Entity"
+      },
+      {
+        "id": 18,
+        "original_id": "b50497d1-a26e-5620-9049-5caa0f2ef5fe",
+        "text": "kaby",
+        "type": "Entity"
+      },
+      {
+        "id": 19,
+        "original_id": "3269b922-18a8-56ef-819d-8630889c7330",
+        "text": "albany",
+        "type": "Entity"
+      },
+      {
+        "id": 20,
+        "original_id": "12f3e223-35c7-519a-9ddd-eb96d929df7e",
+        "text": "dougherty county",
+        "type": "Entity"
+      },
+      {
+        "id": 21,
+        "original_id": "1a8a1dae-ccdc-5bd1-a5aa-9c308020ebd6",
+        "text": "georgia",
+        "type": "Entity"
+      },
+      {
+        "id": 22,
+        "original_id": "f9aad8ee-ec26-55cb-8658-b9c6c9e4c209",
+        "text": "fedex express flight 1406",
+        "type": "Entity"
+      },
+      {
+        "id": 23,
+        "original_id": "bd836051-ebb3-58da-8888-427133dee96b",
+        "text": "logan international airport",
+        "type": "Entity"
+      },
+      {
+        "id": 24,
+        "original_id": "943a5e16-1e4d-5ea8-bc79-d234d76ed06b",
+        "text": "boston",
+        "type": "Entity"
+      },
+      {
+        "id": 25,
+        "original_id": "eec21b3c-7649-58b4-9316-43035f0483fd",
+        "text": "massachusetts",
+        "type": "Entity"
+      },
+      {
+        "id": 26,
+        "original_id": "a7852d00-db75-55e2-bd9a-468ada762d39",
+        "text": "new york",
+        "type": "Entity"
+      },
+      {
+        "id": 27,
+        "original_id": "beb84493-8108-5fa4-8040-56cdf2b2ed86",
+        "text": "flight",
+        "type": "EntityType"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 22,
+        "target": 3,
+        "type": "departed_from"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "has_iata_code"
+      },
+      {
+        "source": 1,
+        "target": 4,
+        "type": "contains"
+      },
+      {
+        "source": 4,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 6,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 17,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 18,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 6,
+        "type": "has_icao_code"
+      },
+      {
+        "source": 1,
+        "target": 6,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 7,
+        "type": "located_near"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      },
+      {
+        "source": 7,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 19,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 24,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 9,
+        "type": "located_in"
+      },
+      {
+        "source": 1,
+        "target": 9,
+        "type": "contains"
+      },
+      {
+        "source": 9,
+        "target": 10,
+        "type": "located_in"
+      },
+      {
+        "source": 1,
+        "target": 10,
+        "type": "contains"
+      },
+      {
+        "source": 10,
+        "target": 11,
+        "type": "located_in"
+      },
+      {
+        "source": 1,
+        "target": 11,
+        "type": "contains"
+      },
+      {
+        "source": 21,
+        "target": 11,
+        "type": "located_in"
+      },
+      {
+        "source": 25,
+        "target": 11,
+        "type": "located_in"
+      },
+      {
+        "source": 11,
+        "target": 12,
+        "type": "is_a"
+      },
+      {
+        "source": 10,
+        "target": 13,
+        "type": "is_a"
+      },
+      {
+        "source": 21,
+        "target": 13,
+        "type": "is_a"
+      },
+      {
+        "source": 25,
+        "target": 13,
+        "type": "is_a"
+      },
+      {
+        "source": 26,
+        "target": 13,
+        "type": "is_a"
+      },
+      {
+        "source": 9,
+        "target": 14,
+        "type": "is_a"
+      },
+      {
+        "source": 20,
+        "target": 14,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 15,
+        "type": "is_a"
+      },
+      {
+        "source": 16,
+        "target": 15,
+        "type": "is_a"
+      },
+      {
+        "source": 23,
+        "target": 15,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 16,
+        "type": "contains"
+      },
+      {
+        "source": 16,
+        "target": 17,
+        "type": "has_iata_code"
+      },
+      {
+        "source": 1,
+        "target": 17,
+        "type": "contains"
+      },
+      {
+        "source": 16,
+        "target": 18,
+        "type": "has_icao_code"
+      },
+      {
+        "source": 1,
+        "target": 18,
+        "type": "contains"
+      },
+      {
+        "source": 16,
+        "target": 19,
+        "type": "located_near"
+      },
+      {
+        "source": 1,
+        "target": 19,
+        "type": "contains"
+      },
+      {
+        "source": 19,
+        "target": 20,
+        "type": "located_in"
+      },
+      {
+        "source": 16,
+        "target": 20,
+        "type": "located_in"
+      },
+      {
+        "source": 1,
+        "target": 20,
+        "type": "contains"
+      },
+      {
+        "source": 20,
+        "target": 21,
+        "type": "located_in"
+      },
+      {
+        "source": 1,
+        "target": 21,
+        "type": "contains"
+      },
+      {
+        "source": 1,
+        "target": 22,
+        "type": "contains"
+      },
+      {
+        "source": 22,
+        "target": 23,
+        "type": "destined_for"
+      },
+      {
+        "source": 1,
+        "target": 23,
+        "type": "contains"
+      },
+      {
+        "source": 23,
+        "target": 24,
+        "type": "located_in"
+      },
+      {
+        "source": 1,
+        "target": 24,
+        "type": "contains"
+      },
+      {
+        "source": 24,
+        "target": 25,
+        "type": "located_in"
+      },
+      {
+        "source": 1,
+        "target": 25,
+        "type": "contains"
+      },
+      {
+        "source": 22,
+        "target": 26,
+        "type": "suffered_cargo_fire_over"
+      },
+      {
+        "source": 1,
+        "target": 26,
+        "type": "contains"
+      },
+      {
+        "source": 22,
+        "target": 27,
+        "type": "is_a"
+      }
+    ]
+  }
+}

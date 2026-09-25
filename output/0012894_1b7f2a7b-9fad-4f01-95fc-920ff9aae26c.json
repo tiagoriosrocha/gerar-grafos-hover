@@ -1,0 +1,497 @@
+{
+  "dataset": "hover",
+  "id": "1b7f2a7b-9fad-4f01-95fc-920ff9aae26c",
+  "split": "train",
+  "claim": "César Vallejo was not a Nazi national. Neither was the author of Tales of a Long Night.",
+  "evidencia": "Page: Alfred Döblin. Sentence: Bruno Alfred Döblin (10 August 1878 – 26 June 1957) was a German novelist, essayist, and doctor, best known for his novel \"Berlin Alexanderplatz\" (1929).\nPage: César Vallejo. Sentence: César Abraham Vallejo Mendoza (March 16, 1892 – April 15, 1938) was a Peruvian poet, writer, playwright, and journalist.\nPage: Tales of a Long Night. Sentence: Tales of a Long Night (German: \"Hamlet oder Die lange Nacht nimmt ein Ende\" ) (1956) is the last novel of German author Alfred Döblin.",
+  "evidence_text": "Page: Alfred Döblin. Sentence: Bruno Alfred Döblin (10 August 1878 – 26 June 1957) was a German novelist, essayist, and doctor, best known for his novel \"Berlin Alexanderplatz\" (1929).\nPage: César Vallejo. Sentence: César Abraham Vallejo Mendoza (March 16, 1892 – April 15, 1938) was a Peruvian poet, writer, playwright, and journalist.\nPage: Tales of a Long Night. Sentence: Tales of a Long Night (German: \"Hamlet oder Die lange Nacht nimmt ein Ende\" ) (1956) is the last novel of German author Alfred Döblin.",
+  "label": "NOT_SUPPORTED",
+  "num_hops": 3,
+  "hover_metadata": {
+    "supporting_facts": [
+      [
+        "Alfred Döblin",
+        0
+      ],
+      [
+        "César Vallejo",
+        0
+      ],
+      [
+        "Tales of a Long Night",
+        0
+      ]
+    ],
+    "num_hops": 3,
+    "evidence_annotation_id": [
+      0
+    ],
+    "evidence_id": [
+      "Alfred Döblin::sentence::0",
+      "César Vallejo::sentence::0",
+      "Tales of a Long Night::sentence::0"
+    ],
+    "evidence_wiki_url": [
+      "https://en.wikipedia.org/wiki/Alfred_D%C3%B6blin",
+      "https://en.wikipedia.org/wiki/C%C3%A9sar_Vallejo",
+      "https://en.wikipedia.org/wiki/Tales_of_a_Long_Night"
+    ],
+    "evidence_sentence_id": [
+      "Alfred Döblin::sentence::0",
+      "César Vallejo::sentence::0",
+      "Tales of a Long Night::sentence::0"
+    ]
+  },
+  "grafo_claim": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "932f07ba-a7b9-5f73-8b40-331150225e01",
+        "text": "This chunk is about:\n- People: César Vallejo\n- Works: Tales of a Long Night\n- Concepts: Nationality, Nazi affiliation\n\nFacts:\n- César Vallejo was not a Nazi national.\n- The author of Tales of a Long Night was not a Nazi national.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "7f57762a-7188-50ee-9eee-b77c1d9ce412",
+        "text": "César Vallejo was not a Nazi national. Neither was the author of Tales of a Long Night.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "45f2f044-db49-570f-b687-7fd6d6d471f4",
+        "text": "text_17e6f75ef1aa57d6444590af7f5c00f4",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "13d0352b-98cb-57a1-b732-989f046db612",
+        "text": "césar vallejo",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "99a82eec-bb35-5bb5-9ed2-e73fc7a756de",
+        "text": "person",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "7c3e0640-64c4-5d00-9e3d-e0990d8f30d8",
+        "text": "nazi national",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "d2a381fa-3658-5ca6-ada9-2109cfc9331d",
+        "text": "concept",
+        "type": "EntityType"
+      },
+      {
+        "id": 7,
+        "original_id": "78538433-dc41-5733-853c-5aa9f7c889a7",
+        "text": "tales of a long night",
+        "type": "Entity"
+      },
+      {
+        "id": 8,
+        "original_id": "5263a535-1b4b-5925-be3e-310d03cd303b",
+        "text": "work",
+        "type": "EntityType"
+      },
+      {
+        "id": 9,
+        "original_id": "1ddfca56-9564-5f02-8e43-6af2eebe32ae",
+        "text": "author of tales of a long night",
+        "type": "Entity"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 9,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "is_not"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 9,
+        "target": 5,
+        "type": "is_not"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      },
+      {
+        "source": 9,
+        "target": 7,
+        "type": "author_of"
+      },
+      {
+        "source": 7,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 9,
+        "type": "contains"
+      }
+    ]
+  },
+  "grafo_evidencia": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "577f00bf-f0b9-55e2-b792-69c121c70e80",
+        "text": "This chunk is about:\n- People: Alfred Döblin, César Vallejo\n- Works: Berlin Alexanderplatz, Tales of a Long Night\n- Roles: novelist, essayist, doctor, poet, writer, playwright, journalist\n\nFacts:\n- Alfred Döblin was born on 10 August 1878 and died on 26 June 1957.\n- César Vallejo was born on 16 March 1892 and died on 15 April 1938.\n- Alfred Döblin was a German novelist, essayist, and doctor.\n- César Vallejo was a Peruvian poet, writer, playwright, and journalist.\n- Alfred Döblin is best known for the 1929 novel Berlin Alexanderplatz.\n- Tales of a Long Night, whose German title is Hamlet oder Die lange Nacht nimmt ein Ende, was published in 1956.\n- Tales of a Long Night was the last novel by German author Alfred Döblin.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "22649e7e-6070-5b54-8ddd-4fce929429c5",
+        "text": "Page: Alfred Döblin. Sentence: Bruno Alfred Döblin (10 August 1878 – 26 June 1957) was a German novelist, essayist, and doctor, best known for his novel \"Berlin Alexanderplatz\" (1929).\nPage: César Vallejo. Sentence: César Abraham Vallejo Mendoza (March 16, 1892 – April 15, 1938) was a Peruvian poet, writer, playwright, and journalist.\nPage: Tales of a Long Night. Sentence: Tales of a Long Night (German: \"Hamlet oder Die lange Nacht nimmt ein Ende\" ) (1956) is the last novel of German author Alfred Döblin.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "479cec32-5ef4-508b-bedd-265c018bccbf",
+        "text": "text_642a402bbdb364773d4f331c891a375d",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "f324c1df-1a02-5036-8917-330137b073dc",
+        "text": "alfred döblin",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "99a82eec-bb35-5bb5-9ed2-e73fc7a756de",
+        "text": "person",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "73186f73-9f1d-59ab-b0c3-61476e559a05",
+        "text": "1878-08-10",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "b19433ae-558c-5aaf-95ac-6231f2a4be0e",
+        "text": "date",
+        "type": "EntityType"
+      },
+      {
+        "id": 7,
+        "original_id": "bc9a9352-10d0-51fb-b3b3-1551fbbe79bb",
+        "text": "1957-06-26",
+        "type": "Entity"
+      },
+      {
+        "id": 8,
+        "original_id": "f30f124b-1bc0-595d-b0c0-aa20029c2bb4",
+        "text": "germany",
+        "type": "Entity"
+      },
+      {
+        "id": 9,
+        "original_id": "5f394058-b2a0-5ba8-8466-ba2a18cfcf4e",
+        "text": "place",
+        "type": "EntityType"
+      },
+      {
+        "id": 10,
+        "original_id": "8ad9372a-f07a-519e-ba44-59668f67f589",
+        "text": "berlin alexanderplatz",
+        "type": "Entity"
+      },
+      {
+        "id": 11,
+        "original_id": "5263a535-1b4b-5925-be3e-310d03cd303b",
+        "text": "work",
+        "type": "EntityType"
+      },
+      {
+        "id": 12,
+        "original_id": "fe7418e1-229c-588a-8671-ba8b76d14844",
+        "text": "1929",
+        "type": "Entity"
+      },
+      {
+        "id": 13,
+        "original_id": "78538433-dc41-5733-853c-5aa9f7c889a7",
+        "text": "tales of a long night",
+        "type": "Entity"
+      },
+      {
+        "id": 14,
+        "original_id": "7eab08e3-b120-521e-be80-3a6e09c03565",
+        "text": "hamlet oder die lange nacht nimmt ein ende",
+        "type": "Entity"
+      },
+      {
+        "id": 15,
+        "original_id": "965618d3-f303-5a7a-93db-d600e04f8aea",
+        "text": "1956",
+        "type": "Entity"
+      },
+      {
+        "id": 16,
+        "original_id": "13d0352b-98cb-57a1-b732-989f046db612",
+        "text": "césar vallejo",
+        "type": "Entity"
+      },
+      {
+        "id": 17,
+        "original_id": "1f93d825-ffbb-5f85-8766-ed0330e17d59",
+        "text": "1892-03-16",
+        "type": "Entity"
+      },
+      {
+        "id": 18,
+        "original_id": "a98c9666-b0ba-54fb-8d1d-9ed65063310a",
+        "text": "1938-04-15",
+        "type": "Entity"
+      },
+      {
+        "id": 19,
+        "original_id": "e3af7237-08ca-56f5-90bc-f6ae8f8accdc",
+        "text": "peru",
+        "type": "Entity"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 16,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "born_on"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 7,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 12,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 15,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 17,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 18,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 7,
+        "type": "died_on"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 8,
+        "type": "has_nationality"
+      },
+      {
+        "source": 1,
+        "target": 8,
+        "type": "contains"
+      },
+      {
+        "source": 8,
+        "target": 9,
+        "type": "is_a"
+      },
+      {
+        "source": 19,
+        "target": 9,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 10,
+        "type": "wrote"
+      },
+      {
+        "source": 1,
+        "target": 10,
+        "type": "contains"
+      },
+      {
+        "source": 10,
+        "target": 11,
+        "type": "is_a"
+      },
+      {
+        "source": 13,
+        "target": 11,
+        "type": "is_a"
+      },
+      {
+        "source": 14,
+        "target": 11,
+        "type": "is_a"
+      },
+      {
+        "source": 10,
+        "target": 12,
+        "type": "published_in"
+      },
+      {
+        "source": 1,
+        "target": 12,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 13,
+        "type": "wrote"
+      },
+      {
+        "source": 1,
+        "target": 13,
+        "type": "contains"
+      },
+      {
+        "source": 13,
+        "target": 14,
+        "type": "has_german_title"
+      },
+      {
+        "source": 1,
+        "target": 14,
+        "type": "contains"
+      },
+      {
+        "source": 13,
+        "target": 15,
+        "type": "published_in"
+      },
+      {
+        "source": 1,
+        "target": 15,
+        "type": "contains"
+      },
+      {
+        "source": 1,
+        "target": 16,
+        "type": "contains"
+      },
+      {
+        "source": 16,
+        "target": 17,
+        "type": "born_on"
+      },
+      {
+        "source": 1,
+        "target": 17,
+        "type": "contains"
+      },
+      {
+        "source": 16,
+        "target": 18,
+        "type": "died_on"
+      },
+      {
+        "source": 1,
+        "target": 18,
+        "type": "contains"
+      },
+      {
+        "source": 16,
+        "target": 19,
+        "type": "has_nationality"
+      },
+      {
+        "source": 1,
+        "target": 19,
+        "type": "contains"
+      }
+    ]
+  }
+}

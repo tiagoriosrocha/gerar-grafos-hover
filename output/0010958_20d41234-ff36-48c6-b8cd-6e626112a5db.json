@@ -1,0 +1,370 @@
+{
+  "dataset": "hover",
+  "id": "20d41234-ff36-48c6-b8cd-6e626112a5db",
+  "split": "train",
+  "claim": "An institute that Bernhard Cossmann co-founded had the teacher on-staff who publicly performed work by the composer Brahms.",
+  "evidencia": "Page: Hoch Conservatory. Sentence: Many distinguished have taught there: in the late 19th century, with such teachers as Clara Schumann on the faculty, the Conservatory achieved international renown.\nPage: Clara Schumann. Sentence: She was the first to perform publicly any work by Brahms.\nPage: Bernhard Cossmann. Sentence: However, in 1878, Cossmann helped found the Hoch Conservatory in Frankfurt, where he occupied the post of teacher of cello.",
+  "evidence_text": "Page: Hoch Conservatory. Sentence: Many distinguished have taught there: in the late 19th century, with such teachers as Clara Schumann on the faculty, the Conservatory achieved international renown.\nPage: Clara Schumann. Sentence: She was the first to perform publicly any work by Brahms.\nPage: Bernhard Cossmann. Sentence: However, in 1878, Cossmann helped found the Hoch Conservatory in Frankfurt, where he occupied the post of teacher of cello.",
+  "label": "SUPPORTED",
+  "num_hops": 3,
+  "hover_metadata": {
+    "supporting_facts": [
+      [
+        "Hoch Conservatory",
+        4
+      ],
+      [
+        "Clara Schumann",
+        4
+      ],
+      [
+        "Bernhard Cossmann",
+        4
+      ]
+    ],
+    "num_hops": 3,
+    "evidence_annotation_id": [
+      0
+    ],
+    "evidence_id": [
+      "Hoch Conservatory::sentence::4",
+      "Clara Schumann::sentence::4",
+      "Bernhard Cossmann::sentence::4"
+    ],
+    "evidence_wiki_url": [
+      "https://en.wikipedia.org/wiki/Hoch_Conservatory",
+      "https://en.wikipedia.org/wiki/Clara_Schumann",
+      "https://en.wikipedia.org/wiki/Bernhard_Cossmann"
+    ],
+    "evidence_sentence_id": [
+      "Hoch Conservatory::sentence::4",
+      "Clara Schumann::sentence::4",
+      "Bernhard Cossmann::sentence::4"
+    ]
+  },
+  "grafo_claim": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "46737538-1a64-5707-b836-d1ff8580ba2f",
+        "text": "This chunk is about:\n- People: Bernhard Cossmann, Johannes Brahms\n- Organizations: Dr. Hoch’s Konservatorium\n- Roles: teacher\n- Topics: public performance of Brahms’s work\n\nFacts:\n- Bernhard Cossmann co-founded Dr. Hoch’s Konservatorium.\n- A teacher on the staff of Dr. Hoch’s Konservatorium publicly performed work by Johannes Brahms.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "1745219b-b49b-5997-930e-daa6e937c7e3",
+        "text": "An institute that Bernhard Cossmann co-founded had the teacher on-staff who publicly performed work by the composer Brahms.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "81356da2-e85b-5dd5-a4e6-873841e7dc71",
+        "text": "text_fc6ea50f7de52d05154c9b5e200d8e38",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "68c6fb86-8f17-5990-99b7-0f3582ee74de",
+        "text": "bernhard cossmann",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "99a82eec-bb35-5bb5-9ed2-e73fc7a756de",
+        "text": "person",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "2420a483-2e67-5241-9c96-0a21e7c1e84b",
+        "text": "institute co-founded by bernhard cossmann",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "388f60fb-220d-55e8-ae9c-3ac93cead308",
+        "text": "organization",
+        "type": "EntityType"
+      },
+      {
+        "id": 7,
+        "original_id": "5fc0c117-2b15-55a2-9fde-b3b85b465cbb",
+        "text": "teacher on-staff at institute co-founded by bernhard cossmann",
+        "type": "Entity"
+      },
+      {
+        "id": 8,
+        "original_id": "91c796e7-5463-5bf7-ae5e-92dd23f15bc1",
+        "text": "johannes brahms",
+        "type": "Entity"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 7,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 8,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "co_founded"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 7,
+        "target": 5,
+        "type": "on_staff_at"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      },
+      {
+        "source": 7,
+        "target": 8,
+        "type": "publicly_performed_work_by"
+      },
+      {
+        "source": 1,
+        "target": 8,
+        "type": "contains"
+      }
+    ]
+  },
+  "grafo_evidencia": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "0c2b747f-9173-545d-950d-8400441c44f6",
+        "text": "This chunk is about:\n- People: Clara Schumann, Johannes Brahms, Bernhard Cossmann\n- Organizations: Hoch Conservatory\n- Places: Frankfurt\n- Roles: faculty member, cello teacher\n\nFacts:\n- In 1878, Bernhard Cossmann helped found the Hoch Conservatory in Frankfurt.\n- In 1878, Bernhard Cossmann became a teacher of cello at the Hoch Conservatory.\n- In the late 19th century, Clara Schumann served on the faculty of the Hoch Conservatory.\n- In the late 19th century, the Hoch Conservatory achieved international renown with distinguished teachers such as Clara Schumann.\n- Clara Schumann was the first person to perform publicly any work by Johannes Brahms.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "3f777a9b-b735-51a4-a1b3-0b29b929f06e",
+        "text": "Page: Hoch Conservatory. Sentence: Many distinguished have taught there: in the late 19th century, with such teachers as Clara Schumann on the faculty, the Conservatory achieved international renown.\nPage: Clara Schumann. Sentence: She was the first to perform publicly any work by Brahms.\nPage: Bernhard Cossmann. Sentence: However, in 1878, Cossmann helped found the Hoch Conservatory in Frankfurt, where he occupied the post of teacher of cello.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "8153bdf0-0884-59c8-af29-b194aab32c77",
+        "text": "text_b8d10ee11ba04b4532f6273dd5cea53e",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "a84eb1b5-200e-55dc-974d-e4b9a720f117",
+        "text": "hoch conservatory",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "388f60fb-220d-55e8-ae9c-3ac93cead308",
+        "text": "organization",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "efe31d89-c9e8-515e-8932-fcc8cf151592",
+        "text": "late 19th century",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "b19433ae-558c-5aaf-95ac-6231f2a4be0e",
+        "text": "date",
+        "type": "EntityType"
+      },
+      {
+        "id": 7,
+        "original_id": "e87670c2-8e4f-59db-b9e5-04cb79408add",
+        "text": "frankfurt",
+        "type": "Entity"
+      },
+      {
+        "id": 8,
+        "original_id": "5f394058-b2a0-5ba8-8466-ba2a18cfcf4e",
+        "text": "place",
+        "type": "EntityType"
+      },
+      {
+        "id": 9,
+        "original_id": "21c90583-9ab6-5902-9871-88f0902ac713",
+        "text": "clara schumann",
+        "type": "Entity"
+      },
+      {
+        "id": 10,
+        "original_id": "99a82eec-bb35-5bb5-9ed2-e73fc7a756de",
+        "text": "person",
+        "type": "EntityType"
+      },
+      {
+        "id": 11,
+        "original_id": "91c796e7-5463-5bf7-ae5e-92dd23f15bc1",
+        "text": "johannes brahms",
+        "type": "Entity"
+      },
+      {
+        "id": 12,
+        "original_id": "68c6fb86-8f17-5990-99b7-0f3582ee74de",
+        "text": "bernhard cossmann",
+        "type": "Entity"
+      },
+      {
+        "id": 13,
+        "original_id": "a1e0b433-3b54-5817-825c-eb034367229c",
+        "text": "1878",
+        "type": "Entity"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 9,
+        "target": 3,
+        "type": "served_on_faculty_of"
+      },
+      {
+        "source": 12,
+        "target": 3,
+        "type": "helped_found"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "achieved_international_renown_in"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 13,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 7,
+        "type": "located_in"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      },
+      {
+        "source": 7,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 9,
+        "type": "contains"
+      },
+      {
+        "source": 9,
+        "target": 10,
+        "type": "is_a"
+      },
+      {
+        "source": 11,
+        "target": 10,
+        "type": "is_a"
+      },
+      {
+        "source": 12,
+        "target": 10,
+        "type": "is_a"
+      },
+      {
+        "source": 9,
+        "target": 11,
+        "type": "first_performed_publicly_work_by"
+      },
+      {
+        "source": 1,
+        "target": 11,
+        "type": "contains"
+      },
+      {
+        "source": 1,
+        "target": 12,
+        "type": "contains"
+      },
+      {
+        "source": 12,
+        "target": 13,
+        "type": "helped_found_in"
+      },
+      {
+        "source": 1,
+        "target": 13,
+        "type": "contains"
+      }
+    ]
+  }
+}

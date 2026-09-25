@@ -1,0 +1,365 @@
+{
+  "dataset": "hover",
+  "id": "47ad8ccf-b257-4c51-91da-e5635f24565b",
+  "split": "train",
+  "claim": "The Australian drama film, The Tracker,  was directed and written by this man. He and Joseph M. Newman were not of the same nationality.",
+  "evidencia": "Page: Rolf de Heer. Sentence: Rolf de Heer (born 4 May 1951) is a Dutch Australian film director.\nPage: Joseph M. Newman. Sentence: Joseph M. Newman (August 17, 1909 – January 23, 2006) was an American film director most famous for his 1955 film \"This Island Earth\".\nPage: The Tracker. Sentence: It was directed and written by Rolf de Heer.",
+  "evidence_text": "Page: Rolf de Heer. Sentence: Rolf de Heer (born 4 May 1951) is a Dutch Australian film director.\nPage: Joseph M. Newman. Sentence: Joseph M. Newman (August 17, 1909 – January 23, 2006) was an American film director most famous for his 1955 film \"This Island Earth\".\nPage: The Tracker. Sentence: It was directed and written by Rolf de Heer.",
+  "label": "SUPPORTED",
+  "num_hops": 3,
+  "hover_metadata": {
+    "supporting_facts": [
+      [
+        "Rolf de Heer",
+        0
+      ],
+      [
+        "Joseph M. Newman",
+        0
+      ],
+      [
+        "The Tracker",
+        1
+      ]
+    ],
+    "num_hops": 3,
+    "evidence_annotation_id": [
+      0
+    ],
+    "evidence_id": [
+      "Rolf de Heer::sentence::0",
+      "Joseph M. Newman::sentence::0",
+      "The Tracker::sentence::1"
+    ],
+    "evidence_wiki_url": [
+      "https://en.wikipedia.org/wiki/Rolf_de_Heer",
+      "https://en.wikipedia.org/wiki/Joseph_M._Newman",
+      "https://en.wikipedia.org/wiki/The_Tracker"
+    ],
+    "evidence_sentence_id": [
+      "Rolf de Heer::sentence::0",
+      "Joseph M. Newman::sentence::0",
+      "The Tracker::sentence::1"
+    ]
+  },
+  "grafo_claim": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "d7dbe193-8f06-512a-b7e0-ea17f3597871",
+        "text": "This chunk is about:\n- People: Rolf de Heer, Joseph M. Newman\n- Works: The Tracker\n- Topics: Nationality, directing, writing\n\nFacts:\n- Rolf de Heer directed and wrote the Australian drama film The Tracker.\n- Rolf de Heer and Joseph M. Newman were of different nationalities.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "0d643850-d5b0-53d2-aff0-1691779ab2a6",
+        "text": "The Australian drama film, The Tracker,  was directed and written by this man. He and Joseph M. Newman were not of the same nationality.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "a2310387-e422-52dd-b9fe-1151e795a192",
+        "text": "text_4e25dbc3f1bc3074348413138177747e",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "6e4cde18-b178-5c21-85a5-85bebd603783",
+        "text": "the tracker",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "d320c8df-fd51-56e6-b577-e01a688fe6fc",
+        "text": "film",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "02448d73-884d-50c7-a919-b94177f1cf43",
+        "text": "australia",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "35e29ad1-17b7-507a-a205-d7851a5e7102",
+        "text": "country",
+        "type": "EntityType"
+      },
+      {
+        "id": 7,
+        "original_id": "c70a8c63-8ca3-5949-9ead-86b46142b57c",
+        "text": "rolf de heer",
+        "type": "Entity"
+      },
+      {
+        "id": 8,
+        "original_id": "99a82eec-bb35-5bb5-9ed2-e73fc7a756de",
+        "text": "person",
+        "type": "EntityType"
+      },
+      {
+        "id": 9,
+        "original_id": "41313562-17c9-59a4-9b0a-0771d41aee96",
+        "text": "joseph m. newman",
+        "type": "Entity"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 7,
+        "target": 3,
+        "type": "directed"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "has_national_context"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      },
+      {
+        "source": 7,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 9,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 7,
+        "target": 9,
+        "type": "not_same_nationality_as"
+      },
+      {
+        "source": 1,
+        "target": 9,
+        "type": "contains"
+      }
+    ]
+  },
+  "grafo_evidencia": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "dc36a1e4-b5cf-5558-9e0c-fa723abcd038",
+        "text": "This chunk is about:\n- People: Rolf de Heer, Joseph M. Newman\n- Works: The Tracker, This Island Earth\n- Roles: Film directors, writer\n- Topics: Nationality, film authorship\n\nFacts:\n- Joseph M. Newman was born on August 17, 1909, and he was an American film director.\n- Rolf de Heer was born on May 4, 1951, and he is a Dutch Australian film director.\n- Joseph M. Newman was most famous for the 1955 film This Island Earth.\n- The Tracker was directed and written by Rolf de Heer.\n- Joseph M. Newman died on January 23, 2006.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "d512f8fa-54f2-515d-85de-58de49886fb6",
+        "text": "Page: Rolf de Heer. Sentence: Rolf de Heer (born 4 May 1951) is a Dutch Australian film director.\nPage: Joseph M. Newman. Sentence: Joseph M. Newman (August 17, 1909 – January 23, 2006) was an American film director most famous for his 1955 film \"This Island Earth\".\nPage: The Tracker. Sentence: It was directed and written by Rolf de Heer.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "4899212e-806e-5dca-b4f4-c239bf01bb8c",
+        "text": "text_53ae8228c7c03b17ddce1eefa6c06b88",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "c70a8c63-8ca3-5949-9ead-86b46142b57c",
+        "text": "rolf de heer",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "99a82eec-bb35-5bb5-9ed2-e73fc7a756de",
+        "text": "person",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "013aa8da-02c5-528f-bebb-625b08a120f2",
+        "text": "1951-05-04",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "b19433ae-558c-5aaf-95ac-6231f2a4be0e",
+        "text": "date",
+        "type": "EntityType"
+      },
+      {
+        "id": 7,
+        "original_id": "6e4cde18-b178-5c21-85a5-85bebd603783",
+        "text": "the tracker",
+        "type": "Entity"
+      },
+      {
+        "id": 8,
+        "original_id": "5263a535-1b4b-5925-be3e-310d03cd303b",
+        "text": "work",
+        "type": "EntityType"
+      },
+      {
+        "id": 9,
+        "original_id": "41313562-17c9-59a4-9b0a-0771d41aee96",
+        "text": "joseph m. newman",
+        "type": "Entity"
+      },
+      {
+        "id": 10,
+        "original_id": "35886a49-9e8f-51d4-a42a-069e1efa0833",
+        "text": "1909-08-17",
+        "type": "Entity"
+      },
+      {
+        "id": 11,
+        "original_id": "db2bd560-68ca-581c-b311-6e3a417b88c5",
+        "text": "2006-01-23",
+        "type": "Entity"
+      },
+      {
+        "id": 12,
+        "original_id": "cbeb9204-c34d-5d0e-9265-10af4afeecd0",
+        "text": "this island earth",
+        "type": "Entity"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 9,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "born_on"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 10,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 11,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 7,
+        "type": "directed"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      },
+      {
+        "source": 7,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 12,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 9,
+        "type": "contains"
+      },
+      {
+        "source": 9,
+        "target": 10,
+        "type": "born_on"
+      },
+      {
+        "source": 1,
+        "target": 10,
+        "type": "contains"
+      },
+      {
+        "source": 9,
+        "target": 11,
+        "type": "died_on"
+      },
+      {
+        "source": 1,
+        "target": 11,
+        "type": "contains"
+      },
+      {
+        "source": 9,
+        "target": 12,
+        "type": "most_famous_for"
+      },
+      {
+        "source": 1,
+        "target": 12,
+        "type": "contains"
+      }
+    ]
+  }
+}

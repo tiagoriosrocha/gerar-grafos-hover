@@ -1,0 +1,381 @@
+{
+  "dataset": "hover",
+  "id": "2643f572-62e1-43ca-8550-d23a46c77397",
+  "split": "train",
+  "claim": "KlingStubbins designed the Reno casino that the venue of the 10th IIFA Awards is modeled on.",
+  "evidencia": "Page: The Venetian Macao. Sentence: The 10500000 sqft Venetian Macao is modeled on its sister casino resort The Venetian Las Vegas, and is the seventh-largest building in the world by floor area.\nPage: The Venetian Las Vegas. Sentence: Designed by KlingStubbins, the hotel tower contains 36 stories and rises 475 ft .\nPage: 10th IIFA Awards. Sentence: The ceremony was held in The Venetian Macao, Macau from June 11 to June 13, 2009.",
+  "evidence_text": "Page: The Venetian Macao. Sentence: The 10500000 sqft Venetian Macao is modeled on its sister casino resort The Venetian Las Vegas, and is the seventh-largest building in the world by floor area.\nPage: The Venetian Las Vegas. Sentence: Designed by KlingStubbins, the hotel tower contains 36 stories and rises 475 ft .\nPage: 10th IIFA Awards. Sentence: The ceremony was held in The Venetian Macao, Macau from June 11 to June 13, 2009.",
+  "label": "NOT_SUPPORTED",
+  "num_hops": 3,
+  "hover_metadata": {
+    "supporting_facts": [
+      [
+        "The Venetian Macao",
+        2
+      ],
+      [
+        "The Venetian Las Vegas",
+        1
+      ],
+      [
+        "10th IIFA Awards",
+        1
+      ]
+    ],
+    "num_hops": 3,
+    "evidence_annotation_id": [
+      0
+    ],
+    "evidence_id": [
+      "The Venetian Macao::sentence::2",
+      "The Venetian Las Vegas::sentence::1",
+      "10th IIFA Awards::sentence::1"
+    ],
+    "evidence_wiki_url": [
+      "https://en.wikipedia.org/wiki/The_Venetian_Macao",
+      "https://en.wikipedia.org/wiki/The_Venetian_Las_Vegas",
+      "https://en.wikipedia.org/wiki/10th_IIFA_Awards"
+    ],
+    "evidence_sentence_id": [
+      "The Venetian Macao::sentence::2",
+      "The Venetian Las Vegas::sentence::1",
+      "10th IIFA Awards::sentence::1"
+    ]
+  },
+  "grafo_claim": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "43df282b-7160-5811-a228-9cb6ad9c8413",
+        "text": "This chunk is about:\n- Companies: KlingStubbins\n- Places: Reno\n- Events: 10th IIFA Awards\n- Venues: the awards venue, a Reno casino\n\nFacts:\n- KlingStubbins designed a casino in Reno.\n- The venue of the 10th IIFA Awards is modeled on the Reno casino designed by KlingStubbins.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "51a8cac9-2720-5160-bebf-e96cb43f729d",
+        "text": "KlingStubbins designed the Reno casino that the venue of the 10th IIFA Awards is modeled on.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "36aaf3ed-baab-5dd0-9aac-dcf0d7c27dc1",
+        "text": "text_6f41ee1976acff24f3b8e7e7913898ce",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "afd2aafc-9787-5acd-ad44-b9eba782c30d",
+        "text": "klingstubbins",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "388f60fb-220d-55e8-ae9c-3ac93cead308",
+        "text": "organization",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "a15c5d2b-b6ff-5343-8160-96961b45e020",
+        "text": "reno casino",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "5f394058-b2a0-5ba8-8466-ba2a18cfcf4e",
+        "text": "place",
+        "type": "EntityType"
+      },
+      {
+        "id": 7,
+        "original_id": "875a2120-dc70-5e7d-b732-e111d13f1647",
+        "text": "10th iifa awards venue",
+        "type": "Entity"
+      },
+      {
+        "id": 8,
+        "original_id": "c07a3295-2fd0-59e3-91e6-61e665911172",
+        "text": "10th iifa awards",
+        "type": "Entity"
+      },
+      {
+        "id": 9,
+        "original_id": "214abcd9-9adf-5c8a-bb35-1e729f2d68c3",
+        "text": "event",
+        "type": "EntityType"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "designed"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 7,
+        "target": 5,
+        "type": "modeled_on"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 7,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      },
+      {
+        "source": 7,
+        "target": 8,
+        "type": "venue_of"
+      },
+      {
+        "source": 1,
+        "target": 8,
+        "type": "contains"
+      },
+      {
+        "source": 8,
+        "target": 9,
+        "type": "is_a"
+      }
+    ]
+  },
+  "grafo_evidencia": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "51f5636f-fe8a-5c20-bb27-45b64b1ddf4d",
+        "text": "This chunk is about:\n- Places: The Venetian Macao, The Venetian Las Vegas, Macau\n- Organizations: KlingStubbins, 10th IIFA Awards\n- Buildings: hotel tower\n- Events: 10th IIFA Awards ceremony\n\nFacts:\n- From June 11 to June 13, 2009, the 10th IIFA Awards ceremony was held at The Venetian Macao in Macau.\n- The Venetian Macao has 10,500,000 square feet of floor area.\n- The Venetian Macao is modeled on its sister casino resort, The Venetian Las Vegas.\n- The Venetian Macao is the seventh-largest building in the world by floor area.\n- KlingStubbins designed the hotel tower at The Venetian Las Vegas.\n- The hotel tower at The Venetian Las Vegas contains 36 stories and rises 475 feet.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "925ab50f-d839-51db-b505-75a419620b5d",
+        "text": "Page: The Venetian Macao. Sentence: The 10500000 sqft Venetian Macao is modeled on its sister casino resort The Venetian Las Vegas, and is the seventh-largest building in the world by floor area.\nPage: The Venetian Las Vegas. Sentence: Designed by KlingStubbins, the hotel tower contains 36 stories and rises 475 ft .\nPage: 10th IIFA Awards. Sentence: The ceremony was held in The Venetian Macao, Macau from June 11 to June 13, 2009.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "c17d7f85-fcdd-5365-aab6-3539c673930d",
+        "text": "text_d3f2b15aa97dca76c37bf1331f9d2837",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "dd521074-d735-59ec-ab1c-44fbc1d06053",
+        "text": "the venetian macao",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "5f394058-b2a0-5ba8-8466-ba2a18cfcf4e",
+        "text": "place",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "eb1ccc33-ab1b-59ba-bedf-5d385c873c54",
+        "text": "the venetian las vegas",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "afd2aafc-9787-5acd-ad44-b9eba782c30d",
+        "text": "klingstubbins",
+        "type": "Entity"
+      },
+      {
+        "id": 7,
+        "original_id": "388f60fb-220d-55e8-ae9c-3ac93cead308",
+        "text": "organization",
+        "type": "EntityType"
+      },
+      {
+        "id": 8,
+        "original_id": "ee0dd10a-88a4-5a36-b83a-b953ac7c61f0",
+        "text": "macau",
+        "type": "Entity"
+      },
+      {
+        "id": 9,
+        "original_id": "c07a3295-2fd0-59e3-91e6-61e665911172",
+        "text": "10th iifa awards",
+        "type": "Entity"
+      },
+      {
+        "id": 10,
+        "original_id": "214abcd9-9adf-5c8a-bb35-1e729f2d68c3",
+        "text": "event",
+        "type": "EntityType"
+      },
+      {
+        "id": 11,
+        "original_id": "59476f41-fcf5-5a69-a4ec-2b88cac5ac24",
+        "text": "2009-06-11",
+        "type": "Entity"
+      },
+      {
+        "id": 12,
+        "original_id": "b19433ae-558c-5aaf-95ac-6231f2a4be0e",
+        "text": "date",
+        "type": "EntityType"
+      },
+      {
+        "id": 13,
+        "original_id": "738ba552-62d0-5662-bce5-415762dea488",
+        "text": "2009-06-13",
+        "type": "Entity"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 9,
+        "target": 3,
+        "type": "held_in"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 5,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 8,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "modeled_on"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "designed_by"
+      },
+      {
+        "source": 1,
+        "target": 6,
+        "type": "contains"
+      },
+      {
+        "source": 6,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 8,
+        "type": "located_in"
+      },
+      {
+        "source": 9,
+        "target": 8,
+        "type": "held_in"
+      },
+      {
+        "source": 1,
+        "target": 8,
+        "type": "contains"
+      },
+      {
+        "source": 1,
+        "target": 9,
+        "type": "contains"
+      },
+      {
+        "source": 9,
+        "target": 10,
+        "type": "is_a"
+      },
+      {
+        "source": 9,
+        "target": 11,
+        "type": "start_date"
+      },
+      {
+        "source": 1,
+        "target": 11,
+        "type": "contains"
+      },
+      {
+        "source": 11,
+        "target": 12,
+        "type": "is_a"
+      },
+      {
+        "source": 13,
+        "target": 12,
+        "type": "is_a"
+      },
+      {
+        "source": 9,
+        "target": 13,
+        "type": "end_date"
+      },
+      {
+        "source": 1,
+        "target": 13,
+        "type": "contains"
+      }
+    ]
+  }
+}

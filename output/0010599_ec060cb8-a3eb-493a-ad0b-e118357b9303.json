@@ -1,0 +1,378 @@
+{
+  "dataset": "hover",
+  "id": "ec060cb8-a3eb-493a-ad0b-e118357b9303",
+  "split": "train",
+  "claim": "Harry Doyle is the name of the character in Quantico played by the same actor who starred in Tower Block.",
+  "evidencia": "Page: Tower Block (film). Sentence: The film stars Sheridan Smith, Jack O'Connell, Ralph Brown, and Russell Tovey and entails residents of a block of flats targeted by an unseen sniper after witnessing the murder of a teenager.\nPage: Russell Tovey. Sentence: Currently, he stars as Harry Doyle in the drama-thriller series \"Quantico\" on the ABC network.",
+  "evidence_text": "Page: Tower Block (film). Sentence: The film stars Sheridan Smith, Jack O'Connell, Ralph Brown, and Russell Tovey and entails residents of a block of flats targeted by an unseen sniper after witnessing the murder of a teenager.\nPage: Russell Tovey. Sentence: Currently, he stars as Harry Doyle in the drama-thriller series \"Quantico\" on the ABC network.",
+  "label": "SUPPORTED",
+  "num_hops": 2,
+  "hover_metadata": {
+    "supporting_facts": [
+      [
+        "Tower Block (film)",
+        1
+      ],
+      [
+        "Russell Tovey",
+        3
+      ]
+    ],
+    "num_hops": 2,
+    "evidence_annotation_id": [
+      0
+    ],
+    "evidence_id": [
+      "Tower Block (film)::sentence::1",
+      "Russell Tovey::sentence::3"
+    ],
+    "evidence_wiki_url": [
+      "https://en.wikipedia.org/wiki/Tower_Block_%28film%29",
+      "https://en.wikipedia.org/wiki/Russell_Tovey"
+    ],
+    "evidence_sentence_id": [
+      "Tower Block (film)::sentence::1",
+      "Russell Tovey::sentence::3"
+    ]
+  },
+  "grafo_claim": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "84a32dbb-e424-539c-a04e-94891f7a9f5b",
+        "text": "This chunk is about:\n- People: Harry Doyle, Jack O'Connell\n- Works: Quantico, Tower Block\n- Roles: Character, actor\n\nFacts:\n- Harry Doyle is a character in Quantico.\n- Jack O'Connell played Harry Doyle in Quantico.\n- Jack O'Connell also starred in Tower Block.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "0d9637a7-753f-5ecf-a3cf-acddc38e24ac",
+        "text": "Harry Doyle is the name of the character in Quantico played by the same actor who starred in Tower Block.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "e9914cc0-1478-5e62-8f03-618b147ae452",
+        "text": "text_204a59c690be4dcd6e9842e322f7b972",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "c02bbb0d-c4f0-597b-a253-9d7087e7b50b",
+        "text": "harry doyle",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "99a82eec-bb35-5bb5-9ed2-e73fc7a756de",
+        "text": "person",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "8cc1549a-f360-549f-8d77-e0bf7ed02b94",
+        "text": "quantico",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "5263a535-1b4b-5925-be3e-310d03cd303b",
+        "text": "work",
+        "type": "EntityType"
+      },
+      {
+        "id": 7,
+        "original_id": "1120a811-997c-590c-9803-7541baaaed56",
+        "text": "tower block",
+        "type": "Entity"
+      },
+      {
+        "id": 8,
+        "original_id": "caf13d06-6884-5572-a148-918dea83ff15",
+        "text": "unnamed actor",
+        "type": "Entity"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 8,
+        "target": 3,
+        "type": "played"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 8,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "appears_in"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 7,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      },
+      {
+        "source": 8,
+        "target": 7,
+        "type": "starred_in"
+      },
+      {
+        "source": 1,
+        "target": 8,
+        "type": "contains"
+      }
+    ]
+  },
+  "grafo_evidencia": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "b97b6b21-f0fd-5ce4-ade8-cdb755f20853",
+        "text": "This chunk is about:\n- People: Sheridan Smith, Jack O'Connell, Ralph Brown, Russell Tovey\n- Works: Tower Block, Quantico\n- Roles: Harry Doyle\n- Organizations: ABC\n- Topics: film plot, television casting\n\nFacts:\n- The film \"Tower Block\" stars Sheridan Smith, Jack O'Connell, Ralph Brown, and Russell Tovey.\n- \"Tower Block\" is about residents of a block of flats who are targeted by an unseen sniper after they witness the murder of a teenager.\n- Russell Tovey currently stars as Harry Doyle in the drama-thriller series \"Quantico\" on ABC.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "8321adc6-b115-5cf6-97a4-7e91ab349f78",
+        "text": "Page: Tower Block (film). Sentence: The film stars Sheridan Smith, Jack O'Connell, Ralph Brown, and Russell Tovey and entails residents of a block of flats targeted by an unseen sniper after witnessing the murder of a teenager.\nPage: Russell Tovey. Sentence: Currently, he stars as Harry Doyle in the drama-thriller series \"Quantico\" on the ABC network.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "d17394d8-426d-52c5-bca8-67ef76490353",
+        "text": "text_6d001a812be60808903c8eb7fda97d40",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "1120a811-997c-590c-9803-7541baaaed56",
+        "text": "tower block",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "5263a535-1b4b-5925-be3e-310d03cd303b",
+        "text": "work",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "e7e7dbc1-b71a-588d-b0d0-5812497dd168",
+        "text": "sheridan smith",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "99a82eec-bb35-5bb5-9ed2-e73fc7a756de",
+        "text": "person",
+        "type": "EntityType"
+      },
+      {
+        "id": 7,
+        "original_id": "c87ab194-33ce-5ca0-9b91-cf113fd9b72d",
+        "text": "jack oconnell",
+        "type": "Entity"
+      },
+      {
+        "id": 8,
+        "original_id": "c613da05-68dc-5d33-87e3-c8d74c498ef8",
+        "text": "ralph brown",
+        "type": "Entity"
+      },
+      {
+        "id": 9,
+        "original_id": "9fce05b9-a77e-5a88-a79c-f115a7ce1705",
+        "text": "russell tovey",
+        "type": "Entity"
+      },
+      {
+        "id": 10,
+        "original_id": "c02bbb0d-c4f0-597b-a253-9d7087e7b50b",
+        "text": "harry doyle",
+        "type": "Entity"
+      },
+      {
+        "id": 11,
+        "original_id": "8cc1549a-f360-549f-8d77-e0bf7ed02b94",
+        "text": "quantico",
+        "type": "Entity"
+      },
+      {
+        "id": 12,
+        "original_id": "cf7d5902-15f2-5199-835c-55bbc5d985cd",
+        "text": "abc",
+        "type": "Entity"
+      },
+      {
+        "id": 13,
+        "original_id": "388f60fb-220d-55e8-ae9c-3ac93cead308",
+        "text": "organization",
+        "type": "EntityType"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 3,
+        "type": "starred_in"
+      },
+      {
+        "source": 7,
+        "target": 3,
+        "type": "starred_in"
+      },
+      {
+        "source": 8,
+        "target": 3,
+        "type": "starred_in"
+      },
+      {
+        "source": 9,
+        "target": 3,
+        "type": "starred_in"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 11,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 7,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 8,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 9,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 10,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      },
+      {
+        "source": 1,
+        "target": 8,
+        "type": "contains"
+      },
+      {
+        "source": 1,
+        "target": 9,
+        "type": "contains"
+      },
+      {
+        "source": 9,
+        "target": 10,
+        "type": "plays"
+      },
+      {
+        "source": 1,
+        "target": 10,
+        "type": "contains"
+      },
+      {
+        "source": 10,
+        "target": 11,
+        "type": "appears_in"
+      },
+      {
+        "source": 1,
+        "target": 11,
+        "type": "contains"
+      },
+      {
+        "source": 11,
+        "target": 12,
+        "type": "airs_on"
+      },
+      {
+        "source": 1,
+        "target": 12,
+        "type": "contains"
+      },
+      {
+        "source": 12,
+        "target": 13,
+        "type": "is_a"
+      }
+    ]
+  }
+}

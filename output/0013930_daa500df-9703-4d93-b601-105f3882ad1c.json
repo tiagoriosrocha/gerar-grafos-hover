@@ -1,0 +1,590 @@
+{
+  "dataset": "hover",
+  "id": "daa500df-9703-4d93-b601-105f3882ad1c",
+  "split": "train",
+  "claim": "Jessica Jones is a television series created for Netflix, the second in the series of the shows that lead to \"The Defenders\" miniseries after Daredevil released on Netflix earlier.",
+  "evidencia": "Page: Jessica Jones (TV series). Sentence: Marvel's Jessica Jones, or simply Jessica Jones, is an American web television series created for Netflix by Melissa Rosenberg, based on the Marvel Comics character of the same name.\nPage: Jessica Jones (TV series). Sentence: It is set in the Marvel Cinematic Universe (MCU), sharing continuity with the films of the franchise, and is the second in a series of shows that lead to \"The Defenders\" crossover miniseries.\nPage: The Defenders (miniseries). Sentence: Marvel's The Defenders, or simply The Defenders, is an American web television miniseries created by Douglas Petrie and Marco Ramirez for Netflix, based on the Marvel Comics characters Daredevil, Jessica Jones, Luke Cage and Iron Fist, who form the eponymous superhero team.",
+  "evidence_text": "Page: Jessica Jones (TV series). Sentence: Marvel's Jessica Jones, or simply Jessica Jones, is an American web television series created for Netflix by Melissa Rosenberg, based on the Marvel Comics character of the same name.\nPage: Jessica Jones (TV series). Sentence: It is set in the Marvel Cinematic Universe (MCU), sharing continuity with the films of the franchise, and is the second in a series of shows that lead to \"The Defenders\" crossover miniseries.\nPage: The Defenders (miniseries). Sentence: Marvel's The Defenders, or simply The Defenders, is an American web television miniseries created by Douglas Petrie and Marco Ramirez for Netflix, based on the Marvel Comics characters Daredevil, Jessica Jones, Luke Cage and Iron Fist, who form the eponymous superhero team.",
+  "label": "SUPPORTED",
+  "num_hops": 2,
+  "hover_metadata": {
+    "supporting_facts": [
+      [
+        "Jessica Jones (TV series)",
+        0
+      ],
+      [
+        "Jessica Jones (TV series)",
+        1
+      ],
+      [
+        "The Defenders (miniseries)",
+        0
+      ]
+    ],
+    "num_hops": 2,
+    "evidence_annotation_id": [
+      0
+    ],
+    "evidence_id": [
+      "Jessica Jones (TV series)::sentence::0",
+      "Jessica Jones (TV series)::sentence::1",
+      "The Defenders (miniseries)::sentence::0"
+    ],
+    "evidence_wiki_url": [
+      "https://en.wikipedia.org/wiki/Jessica_Jones_%28TV_series%29",
+      "https://en.wikipedia.org/wiki/The_Defenders_%28miniseries%29"
+    ],
+    "evidence_sentence_id": [
+      "Jessica Jones (TV series)::sentence::0",
+      "Jessica Jones (TV series)::sentence::1",
+      "The Defenders (miniseries)::sentence::0"
+    ]
+  },
+  "grafo_claim": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "4ca7bfbf-dec4-5ac0-87e4-0fc270450726",
+        "text": "This chunk is about:\n- Products: Jessica Jones, Daredevil, The Defenders\n- Companies: Netflix\n- Concepts: television series, miniseries\n\nFacts:\n- Daredevil released on Netflix before Jessica Jones.\n- Jessica Jones is a television series created for Netflix.\n- Jessica Jones is the second show in the series that leads to The Defenders miniseries.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "6b0df386-0b90-5d03-a166-f117301d41d7",
+        "text": "Jessica Jones is a television series created for Netflix, the second in the series of the shows that lead to \"The Defenders\" miniseries after Daredevil released on Netflix earlier.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "a654bc7b-4b02-53ec-b473-8c83dede20cf",
+        "text": "text_a27b5c9a36826e3622075cc43be44097",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "87543ea1-8598-5be9-b223-1d223e5d157f",
+        "text": "jessica jones",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "5263a535-1b4b-5925-be3e-310d03cd303b",
+        "text": "work",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "95e02adb-77e3-53b4-a89c-8fb52b65d28f",
+        "text": "netflix",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "388f60fb-220d-55e8-ae9c-3ac93cead308",
+        "text": "organization",
+        "type": "EntityType"
+      },
+      {
+        "id": 7,
+        "original_id": "c30143b9-a40e-534a-95f1-8d7ec6fe2c88",
+        "text": "the defenders",
+        "type": "Entity"
+      },
+      {
+        "id": 8,
+        "original_id": "2f999659-e660-581b-b8d6-aa83f5115ab1",
+        "text": "daredevil",
+        "type": "Entity"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 7,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 8,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "created_for"
+      },
+      {
+        "source": 8,
+        "target": 5,
+        "type": "released_on"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 7,
+        "type": "leads_to"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 8,
+        "type": "released_after"
+      },
+      {
+        "source": 1,
+        "target": 8,
+        "type": "contains"
+      }
+    ]
+  },
+  "grafo_evidencia": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "e102df7b-7a32-5b1f-ae6e-54f23bd776ad",
+        "text": "This chunk is about:\n- Products: Jessica Jones, The Defenders\n- People: Melissa Rosenberg, Douglas Petrie, Marco Ramirez\n- Companies: Netflix, Marvel Comics\n- Systems: Marvel Cinematic Universe\n- Concepts: continuity, crossover miniseries, superhero team\n\nFacts:\n- Jessica Jones is an American web television series created for Netflix by Melissa Rosenberg and based on the Marvel Comics character Jessica Jones.\n- Jessica Jones is set in the Marvel Cinematic Universe and shares continuity with the franchise's films.\n- Jessica Jones is the second in a series of shows that lead to The Defenders crossover miniseries.\n- The Defenders is an American web television miniseries created for Netflix by Douglas Petrie and Marco Ramirez and based on the Marvel Comics characters Daredevil, Jessica Jones, Luke Cage, and Iron Fist.\n- In The Defenders, Daredevil, Jessica Jones, Luke Cage, and Iron Fist form the superhero team called the Defenders.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "6bd4a9e6-f04d-5231-8db7-d7a04c9ea0f3",
+        "text": "Page: Jessica Jones (TV series). Sentence: Marvel's Jessica Jones, or simply Jessica Jones, is an American web television series created for Netflix by Melissa Rosenberg, based on the Marvel Comics character of the same name.\nPage: Jessica Jones (TV series). Sentence: It is set in the Marvel Cinematic Universe (MCU), sharing continuity with the films of the franchise, and is the second in a series of shows that lead to \"The Defenders\" crossover miniseries.\nPage: The Defenders (miniseries). Sentence: Marvel's The Defenders, or simply The Defenders, is an American web television miniseries created by Douglas Petrie and Marco Ramirez for Netflix, based on the Marvel Comics characters Daredevil, Jessica Jones, Luke Cage and Iron Fist, who form the eponymous superhero team.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "7eae6dc9-4211-539d-a30a-0fc368571464",
+        "text": "text_2b91f10b1fbe2ba50eb0474ad97b0e8b",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "87543ea1-8598-5be9-b223-1d223e5d157f",
+        "text": "jessica jones",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "297a592b-9dd2-5517-ae2f-680c13c8a20e",
+        "text": "tv series",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "95e02adb-77e3-53b4-a89c-8fb52b65d28f",
+        "text": "netflix",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "388f60fb-220d-55e8-ae9c-3ac93cead308",
+        "text": "organization",
+        "type": "EntityType"
+      },
+      {
+        "id": 7,
+        "original_id": "d5f53842-914f-506c-a1ac-31faf4faa9f0",
+        "text": "melissa rosenberg",
+        "type": "Entity"
+      },
+      {
+        "id": 8,
+        "original_id": "99a82eec-bb35-5bb5-9ed2-e73fc7a756de",
+        "text": "person",
+        "type": "EntityType"
+      },
+      {
+        "id": 9,
+        "original_id": "fb2204b9-6215-5163-a875-fddaf2db13a3",
+        "text": "jessica jones",
+        "type": "Entity"
+      },
+      {
+        "id": 10,
+        "original_id": "d3db161f-3fd9-5366-919b-ad9f9a1ba392",
+        "text": "character",
+        "type": "EntityType"
+      },
+      {
+        "id": 11,
+        "original_id": "5d7ad40b-cde8-5ec6-9a3f-12f0ec150cb1",
+        "text": "marvel comics",
+        "type": "Entity"
+      },
+      {
+        "id": 12,
+        "original_id": "46bfb3bc-3827-55c0-9773-189e4bfe7372",
+        "text": "the defenders",
+        "type": "Entity"
+      },
+      {
+        "id": 13,
+        "original_id": "9d4051b8-b411-5bb5-9540-5beff8f829b5",
+        "text": "team",
+        "type": "EntityType"
+      },
+      {
+        "id": 14,
+        "original_id": "dbac2873-b7b4-5394-bf17-f002a865f02b",
+        "text": "marvel cinematic universe",
+        "type": "Entity"
+      },
+      {
+        "id": 15,
+        "original_id": "964afc6a-df7d-5b59-967a-f78c3c9a9820",
+        "text": "franchise",
+        "type": "EntityType"
+      },
+      {
+        "id": 16,
+        "original_id": "31b790eb-14e3-5ed0-ab41-1f11f3bae9cb",
+        "text": "films of the franchise",
+        "type": "Entity"
+      },
+      {
+        "id": 17,
+        "original_id": "7cfe8b44-b28a-5568-9558-f06a2324b9f6",
+        "text": "film series",
+        "type": "EntityType"
+      },
+      {
+        "id": 18,
+        "original_id": "c30143b9-a40e-534a-95f1-8d7ec6fe2c88",
+        "text": "the defenders",
+        "type": "Entity"
+      },
+      {
+        "id": 19,
+        "original_id": "e820f0be-d32b-5f67-b953-72c6f26b9502",
+        "text": "miniseries",
+        "type": "EntityType"
+      },
+      {
+        "id": 20,
+        "original_id": "c3c8b394-ec0c-5f94-a50d-5e14478af68c",
+        "text": "douglas petrie",
+        "type": "Entity"
+      },
+      {
+        "id": 21,
+        "original_id": "f918e961-448d-55ec-8545-f02f2000e780",
+        "text": "marco ramirez",
+        "type": "Entity"
+      },
+      {
+        "id": 22,
+        "original_id": "2f999659-e660-581b-b8d6-aa83f5115ab1",
+        "text": "daredevil",
+        "type": "Entity"
+      },
+      {
+        "id": 23,
+        "original_id": "a83f9e16-d85c-51f5-9f1e-2a726ccae106",
+        "text": "luke cage",
+        "type": "Entity"
+      },
+      {
+        "id": 24,
+        "original_id": "ccc85490-0ce2-5f02-a481-6a844c88b4c3",
+        "text": "iron fist",
+        "type": "Entity"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "created_for"
+      },
+      {
+        "source": 18,
+        "target": 5,
+        "type": "created_for"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 11,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 7,
+        "type": "created_by"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      },
+      {
+        "source": 7,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 20,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 21,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 9,
+        "type": "based_on"
+      },
+      {
+        "source": 18,
+        "target": 9,
+        "type": "based_on"
+      },
+      {
+        "source": 1,
+        "target": 9,
+        "type": "contains"
+      },
+      {
+        "source": 9,
+        "target": 10,
+        "type": "is_a"
+      },
+      {
+        "source": 22,
+        "target": 10,
+        "type": "is_a"
+      },
+      {
+        "source": 23,
+        "target": 10,
+        "type": "is_a"
+      },
+      {
+        "source": 24,
+        "target": 10,
+        "type": "is_a"
+      },
+      {
+        "source": 9,
+        "target": 11,
+        "type": "appears_in"
+      },
+      {
+        "source": 22,
+        "target": 11,
+        "type": "appears_in"
+      },
+      {
+        "source": 23,
+        "target": 11,
+        "type": "appears_in"
+      },
+      {
+        "source": 24,
+        "target": 11,
+        "type": "appears_in"
+      },
+      {
+        "source": 1,
+        "target": 11,
+        "type": "contains"
+      },
+      {
+        "source": 9,
+        "target": 12,
+        "type": "member_of"
+      },
+      {
+        "source": 22,
+        "target": 12,
+        "type": "member_of"
+      },
+      {
+        "source": 23,
+        "target": 12,
+        "type": "member_of"
+      },
+      {
+        "source": 24,
+        "target": 12,
+        "type": "member_of"
+      },
+      {
+        "source": 18,
+        "target": 12,
+        "type": "named_after"
+      },
+      {
+        "source": 1,
+        "target": 12,
+        "type": "contains"
+      },
+      {
+        "source": 12,
+        "target": 13,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 14,
+        "type": "set_in"
+      },
+      {
+        "source": 1,
+        "target": 14,
+        "type": "contains"
+      },
+      {
+        "source": 14,
+        "target": 15,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 16,
+        "type": "shares_continuity_with"
+      },
+      {
+        "source": 1,
+        "target": 16,
+        "type": "contains"
+      },
+      {
+        "source": 16,
+        "target": 17,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 18,
+        "type": "leads_to"
+      },
+      {
+        "source": 1,
+        "target": 18,
+        "type": "contains"
+      },
+      {
+        "source": 18,
+        "target": 19,
+        "type": "is_a"
+      },
+      {
+        "source": 18,
+        "target": 20,
+        "type": "created_by"
+      },
+      {
+        "source": 1,
+        "target": 20,
+        "type": "contains"
+      },
+      {
+        "source": 18,
+        "target": 21,
+        "type": "created_by"
+      },
+      {
+        "source": 1,
+        "target": 21,
+        "type": "contains"
+      },
+      {
+        "source": 18,
+        "target": 22,
+        "type": "based_on"
+      },
+      {
+        "source": 1,
+        "target": 22,
+        "type": "contains"
+      },
+      {
+        "source": 18,
+        "target": 23,
+        "type": "based_on"
+      },
+      {
+        "source": 1,
+        "target": 23,
+        "type": "contains"
+      },
+      {
+        "source": 18,
+        "target": 24,
+        "type": "based_on"
+      },
+      {
+        "source": 1,
+        "target": 24,
+        "type": "contains"
+      }
+    ]
+  }
+}

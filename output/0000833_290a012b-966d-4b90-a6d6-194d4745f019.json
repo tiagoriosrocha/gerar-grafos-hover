@@ -1,0 +1,376 @@
+{
+  "dataset": "hover",
+  "id": "290a012b-966d-4b90-a6d6-194d4745f019",
+  "split": "train",
+  "claim": "The first-seeded winner of the 1980 Lorraine Open was not born before Serena Williams.",
+  "evidencia": "Page: Gene Mayer. Sentence: Gene Mayer (born April 11, 1956) is a former tennis player from the United States who won 14 singles titles during his career.\nPage: Serena Williams. Sentence: Serena Jameka Williams (born September 26, 1981) is an American professional tennis player.\nPage: 1980 Lorraine Open. Sentence: First-seeded Gene Mayer won the singles title.",
+  "evidence_text": "Page: Gene Mayer. Sentence: Gene Mayer (born April 11, 1956) is a former tennis player from the United States who won 14 singles titles during his career.\nPage: Serena Williams. Sentence: Serena Jameka Williams (born September 26, 1981) is an American professional tennis player.\nPage: 1980 Lorraine Open. Sentence: First-seeded Gene Mayer won the singles title.",
+  "label": "NOT_SUPPORTED",
+  "num_hops": 3,
+  "hover_metadata": {
+    "supporting_facts": [
+      [
+        "Gene Mayer",
+        0
+      ],
+      [
+        "Serena Williams",
+        0
+      ],
+      [
+        "1980 Lorraine Open",
+        3
+      ]
+    ],
+    "num_hops": 3,
+    "evidence_annotation_id": [
+      0
+    ],
+    "evidence_id": [
+      "Gene Mayer::sentence::0",
+      "Serena Williams::sentence::0",
+      "1980 Lorraine Open::sentence::3"
+    ],
+    "evidence_wiki_url": [
+      "https://en.wikipedia.org/wiki/Gene_Mayer",
+      "https://en.wikipedia.org/wiki/Serena_Williams",
+      "https://en.wikipedia.org/wiki/1980_Lorraine_Open"
+    ],
+    "evidence_sentence_id": [
+      "Gene Mayer::sentence::0",
+      "Serena Williams::sentence::0",
+      "1980 Lorraine Open::sentence::3"
+    ]
+  },
+  "grafo_claim": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "efff0587-90f9-5090-8c51-fa170f688839",
+        "text": "This chunk is about:\n- Events: 1980 Lorraine Open\n- People: Serena Williams\n- Topics: birth-date comparison, tournament winner seeding\n\nFacts:\n- Serena Williams was born on September 26, 1981.\n- The statement claims that the first-seeded winner of the 1980 Lorraine Open was not born before Serena Williams.\n- Because the 1980 Lorraine Open took place in 1980, any winner of that event would have been born on or before 1980.\n- Therefore, the statement is false, because the first-seeded winner of the 1980 Lorraine Open would have been born before Serena Williams.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "93b29da6-3ff6-52d6-82c4-b9101111acc6",
+        "text": "The first-seeded winner of the 1980 Lorraine Open was not born before Serena Williams.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "653e58de-4581-565e-9a64-d3f73e753172",
+        "text": "text_f078f262cb1bbba805c7558387a8d179",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "91d3056b-0977-5067-8e87-8d200c107360",
+        "text": "1980 lorraine open",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "214abcd9-9adf-5c8a-bb35-1e729f2d68c3",
+        "text": "event",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "23bd1441-b02d-5f08-b3a3-53601dced0a2",
+        "text": "first-seeded winner of the 1980 lorraine open",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "32c3c174-1b92-5bc7-a446-dadd7c49d201",
+        "text": "serena williams",
+        "type": "Entity"
+      },
+      {
+        "id": 7,
+        "original_id": "99a82eec-bb35-5bb5-9ed2-e73fc7a756de",
+        "text": "person",
+        "type": "EntityType"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 3,
+        "type": "won"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "not_born_before"
+      },
+      {
+        "source": 1,
+        "target": 6,
+        "type": "contains"
+      },
+      {
+        "source": 6,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 5,
+        "target": 7,
+        "type": "is_a"
+      }
+    ]
+  },
+  "grafo_evidencia": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "65ea6cc8-a719-5bdc-b165-df7363fd14c1",
+        "text": "This chunk is about:\n- People: Gene Mayer, Serena Williams\n- Events: 1980 Lorraine Open\n- Topics: tennis\n\nFacts:\n- Gene Mayer was born on April 11, 1956.\n- Gene Mayer is a former tennis player from the United States.\n- In his career, Gene Mayer won 14 singles titles.\n- The 1980 Lorraine Open was won in singles by first-seeded Gene Mayer.\n- Serena Jameka Williams was born on September 26, 1981.\n- Serena Jameka Williams is an American professional tennis player.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "b73e4dff-701e-5f68-82b5-9722a3864f86",
+        "text": "Page: Gene Mayer. Sentence: Gene Mayer (born April 11, 1956) is a former tennis player from the United States who won 14 singles titles during his career.\nPage: Serena Williams. Sentence: Serena Jameka Williams (born September 26, 1981) is an American professional tennis player.\nPage: 1980 Lorraine Open. Sentence: First-seeded Gene Mayer won the singles title.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "da64b90c-3fa4-5a1a-bffe-31d5c152526a",
+        "text": "text_dd8db13d0d6202a4b673733700aedf33",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "2c836fe4-7ed8-59ba-8875-c0914a1c96cb",
+        "text": "gene mayer",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "8dd0ef70-81ba-520d-9d69-40a59f7e0d8b",
+        "text": "1956-04-11",
+        "type": "Entity"
+      },
+      {
+        "id": 5,
+        "original_id": "b19433ae-558c-5aaf-95ac-6231f2a4be0e",
+        "text": "date",
+        "type": "EntityType"
+      },
+      {
+        "id": 6,
+        "original_id": "874a51da-34ea-5037-be47-d87785d43c37",
+        "text": "united states",
+        "type": "Entity"
+      },
+      {
+        "id": 7,
+        "original_id": "5f394058-b2a0-5ba8-8466-ba2a18cfcf4e",
+        "text": "place",
+        "type": "EntityType"
+      },
+      {
+        "id": 8,
+        "original_id": "6459a753-8941-5e4a-ba29-cf5bac96e2d2",
+        "text": "14 singles titles",
+        "type": "Entity"
+      },
+      {
+        "id": 9,
+        "original_id": "7a7a0687-e490-5167-ad5a-0e39d9055dee",
+        "text": "quantity",
+        "type": "EntityType"
+      },
+      {
+        "id": 10,
+        "original_id": "91d3056b-0977-5067-8e87-8d200c107360",
+        "text": "1980 lorraine open",
+        "type": "Entity"
+      },
+      {
+        "id": 11,
+        "original_id": "214abcd9-9adf-5c8a-bb35-1e729f2d68c3",
+        "text": "event",
+        "type": "EntityType"
+      },
+      {
+        "id": 12,
+        "original_id": "99a82eec-bb35-5bb5-9ed2-e73fc7a756de",
+        "text": "person",
+        "type": "EntityType"
+      },
+      {
+        "id": 13,
+        "original_id": "32c3c174-1b92-5bc7-a446-dadd7c49d201",
+        "text": "serena williams",
+        "type": "Entity"
+      },
+      {
+        "id": 14,
+        "original_id": "66c67111-1562-5074-9cdb-3092fc67cf3c",
+        "text": "serena jameka williams",
+        "type": "Entity"
+      },
+      {
+        "id": 15,
+        "original_id": "0c693f54-3d62-539d-9d39-c7915c644dc2",
+        "text": "1981-09-26",
+        "type": "Entity"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "born_on"
+      },
+      {
+        "source": 1,
+        "target": 4,
+        "type": "contains"
+      },
+      {
+        "source": 4,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 15,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 6,
+        "type": "from"
+      },
+      {
+        "source": 1,
+        "target": 6,
+        "type": "contains"
+      },
+      {
+        "source": 14,
+        "target": 6,
+        "type": "from"
+      },
+      {
+        "source": 6,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 8,
+        "type": "won"
+      },
+      {
+        "source": 1,
+        "target": 8,
+        "type": "contains"
+      },
+      {
+        "source": 8,
+        "target": 9,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 10,
+        "type": "won_singles_title_at"
+      },
+      {
+        "source": 1,
+        "target": 10,
+        "type": "contains"
+      },
+      {
+        "source": 10,
+        "target": 11,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 12,
+        "type": "is_a"
+      },
+      {
+        "source": 14,
+        "target": 12,
+        "type": "is_a"
+      },
+      {
+        "source": 13,
+        "target": 12,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 13,
+        "type": "contains"
+      },
+      {
+        "source": 13,
+        "target": 14,
+        "type": "has_full_name"
+      },
+      {
+        "source": 1,
+        "target": 14,
+        "type": "contains"
+      },
+      {
+        "source": 14,
+        "target": 15,
+        "type": "born_on"
+      },
+      {
+        "source": 1,
+        "target": 15,
+        "type": "contains"
+      }
+    ]
+  }
+}

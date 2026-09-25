@@ -1,0 +1,372 @@
+{
+  "dataset": "hover",
+  "id": "a2cecf72-2b3c-4f8b-aec6-456e46ccf713",
+  "split": "train",
+  "claim": "Tauern Railway carries traffic for the spa town Bad Gastein in Salzburg.",
+  "evidencia": "Page: Tauern Railway. Sentence: It is part of one of the most important north-south trunk routes (\"Magistrale\") in Europe and also carries tourist traffic for the Gastein Valley.\nPage: Bad Gastein. Sentence: Bad Gastein (formerly \"Badgastein\") is a spa town in the district of St. Johann im Pongau, in the Austrian state of Salzburg.",
+  "evidence_text": "Page: Tauern Railway. Sentence: It is part of one of the most important north-south trunk routes (\"Magistrale\") in Europe and also carries tourist traffic for the Gastein Valley.\nPage: Bad Gastein. Sentence: Bad Gastein (formerly \"Badgastein\") is a spa town in the district of St. Johann im Pongau, in the Austrian state of Salzburg.",
+  "label": "SUPPORTED",
+  "num_hops": 2,
+  "hover_metadata": {
+    "supporting_facts": [
+      [
+        "Tauern Railway",
+        1
+      ],
+      [
+        "Bad Gastein",
+        0
+      ]
+    ],
+    "num_hops": 2,
+    "evidence_annotation_id": [
+      0
+    ],
+    "evidence_id": [
+      "Tauern Railway::sentence::1",
+      "Bad Gastein::sentence::0"
+    ],
+    "evidence_wiki_url": [
+      "https://en.wikipedia.org/wiki/Tauern_Railway",
+      "https://en.wikipedia.org/wiki/Bad_Gastein"
+    ],
+    "evidence_sentence_id": [
+      "Tauern Railway::sentence::1",
+      "Bad Gastein::sentence::0"
+    ]
+  },
+  "grafo_claim": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "fe261187-ee3f-50a0-aa09-9b73e919929f",
+        "text": "This chunk is about:\n- Places: Bad Gastein, Salzburg\n- Systems: Tauern Railway\n\nFacts:\n- The Tauern Railway carries traffic for Bad Gastein.\n- Bad Gastein is a spa town in Salzburg.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "121ad468-9977-580b-8122-9f3fbe3203f8",
+        "text": "Tauern Railway carries traffic for the spa town Bad Gastein in Salzburg.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "e9d01608-c493-56e3-b0c4-bd7ddafedfff",
+        "text": "text_51bb991d281880df92162b53f5893c9a",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "0c45cc49-a90e-570a-b4b7-6a55266b447e",
+        "text": "tauern railway",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "42ea493e-6cdd-566d-b009-3188a685edbe",
+        "text": "bad gastein",
+        "type": "Entity"
+      },
+      {
+        "id": 5,
+        "original_id": "f17a5bcd-11bd-55de-b130-05ec5a0f1c58",
+        "text": "salzburg",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "5f394058-b2a0-5ba8-8466-ba2a18cfcf4e",
+        "text": "place",
+        "type": "EntityType"
+      },
+      {
+        "id": 7,
+        "original_id": "5ed0220f-fea3-5b32-be59-27837a1869e2",
+        "text": "railway",
+        "type": "EntityType"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "carries_traffic_for"
+      },
+      {
+        "source": 1,
+        "target": 4,
+        "type": "contains"
+      },
+      {
+        "source": 4,
+        "target": 5,
+        "type": "located_in"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 4,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 7,
+        "type": "is_a"
+      }
+    ]
+  },
+  "grafo_evidencia": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "72e51f0e-6039-5029-80e5-eb7df2ba71da",
+        "text": "This chunk is about:\n- Places: Bad Gastein, Gastein Valley, St. Johann im Pongau, Salzburg, Europe\n- Systems: Tauern Railway\n- Concepts: north-south trunk routes, tourist traffic, spa towns\n\nFacts:\n- The Tauern Railway is part of one of Europe’s most important north-south trunk routes, known as a “Magistrale.”\n- The Tauern Railway also carries tourist traffic for the Gastein Valley.\n- Bad Gastein, formerly called Badgastein, is a spa town in the district of St. Johann im Pongau in the Austrian state of Salzburg.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "6e6100a5-da50-5b75-822f-37abb084c336",
+        "text": "Page: Tauern Railway. Sentence: It is part of one of the most important north-south trunk routes (\"Magistrale\") in Europe and also carries tourist traffic for the Gastein Valley.\nPage: Bad Gastein. Sentence: Bad Gastein (formerly \"Badgastein\") is a spa town in the district of St. Johann im Pongau, in the Austrian state of Salzburg.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "83197ee3-f53e-5e0d-8d53-ed9bbbd79de8",
+        "text": "text_c0cd68a0fc40126bc1925526f4b630df",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "0c45cc49-a90e-570a-b4b7-6a55266b447e",
+        "text": "tauern railway",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "b2118ffb-ad44-5c11-be08-9016ba94fd65",
+        "text": "north-south trunk route",
+        "type": "Entity"
+      },
+      {
+        "id": 5,
+        "original_id": "d62d98fd-7636-5918-880e-390a00283ca8",
+        "text": "europe",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "5f394058-b2a0-5ba8-8466-ba2a18cfcf4e",
+        "text": "place",
+        "type": "EntityType"
+      },
+      {
+        "id": 7,
+        "original_id": "292ffa87-988c-5f2c-8e57-75c073be8e43",
+        "text": "route",
+        "type": "EntityType"
+      },
+      {
+        "id": 8,
+        "original_id": "525c1caf-289a-5863-a186-283f48fa3f8e",
+        "text": "gastein valley",
+        "type": "Entity"
+      },
+      {
+        "id": 9,
+        "original_id": "42ea493e-6cdd-566d-b009-3188a685edbe",
+        "text": "bad gastein",
+        "type": "Entity"
+      },
+      {
+        "id": 10,
+        "original_id": "62fb3908-4ee3-50f1-ae96-a95dcc328650",
+        "text": "badgastein",
+        "type": "Entity"
+      },
+      {
+        "id": 11,
+        "original_id": "f47d6949-ddae-52f2-b688-12d7988fb3ab",
+        "text": "st. johann im pongau",
+        "type": "Entity"
+      },
+      {
+        "id": 12,
+        "original_id": "f17a5bcd-11bd-55de-b130-05ec5a0f1c58",
+        "text": "salzburg",
+        "type": "Entity"
+      },
+      {
+        "id": 13,
+        "original_id": "0c13cdaa-3617-51ab-aee9-e72623265f8f",
+        "text": "austria",
+        "type": "Entity"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "part_of"
+      },
+      {
+        "source": 1,
+        "target": 4,
+        "type": "contains"
+      },
+      {
+        "source": 4,
+        "target": 5,
+        "type": "located_in"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 8,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 10,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 13,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 12,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 11,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 9,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 4,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 8,
+        "type": "carries_tourist_traffic_for"
+      },
+      {
+        "source": 1,
+        "target": 8,
+        "type": "contains"
+      },
+      {
+        "source": 1,
+        "target": 9,
+        "type": "contains"
+      },
+      {
+        "source": 9,
+        "target": 10,
+        "type": "formerly_named"
+      },
+      {
+        "source": 1,
+        "target": 10,
+        "type": "contains"
+      },
+      {
+        "source": 9,
+        "target": 11,
+        "type": "located_in"
+      },
+      {
+        "source": 1,
+        "target": 11,
+        "type": "contains"
+      },
+      {
+        "source": 11,
+        "target": 12,
+        "type": "located_in"
+      },
+      {
+        "source": 9,
+        "target": 12,
+        "type": "located_in"
+      },
+      {
+        "source": 1,
+        "target": 12,
+        "type": "contains"
+      },
+      {
+        "source": 12,
+        "target": 13,
+        "type": "located_in"
+      },
+      {
+        "source": 1,
+        "target": 13,
+        "type": "contains"
+      }
+    ]
+  }
+}

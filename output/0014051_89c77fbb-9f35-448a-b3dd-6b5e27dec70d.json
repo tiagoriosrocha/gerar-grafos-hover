@@ -1,0 +1,535 @@
+{
+  "dataset": "hover",
+  "id": "89c77fbb-9f35-448a-b3dd-6b5e27dec70d",
+  "split": "train",
+  "claim": "The man that is linked to both Johnny Tremain and Magic Kingdom is Walt Disney.",
+  "evidencia": "Page: Johnny Tremain (film). Sentence: Johnny Tremain is a 1957 film made by Walt Disney Productions, based on the 1944 Newbery Medal-winning children's novel of the same name by Esther Forbes, retelling the story of the years in Boston, Massachusetts prior to the outbreak of the American Revolution.\nPage: Magic Kingdom. Sentence: Initialized by Walt Disney and designed by WED Enterprises, its layout and attractions are based on Disneyland Park in Anaheim, California, and is dedicated to fairy tales and Disney characters.",
+  "evidence_text": "Page: Johnny Tremain (film). Sentence: Johnny Tremain is a 1957 film made by Walt Disney Productions, based on the 1944 Newbery Medal-winning children's novel of the same name by Esther Forbes, retelling the story of the years in Boston, Massachusetts prior to the outbreak of the American Revolution.\nPage: Magic Kingdom. Sentence: Initialized by Walt Disney and designed by WED Enterprises, its layout and attractions are based on Disneyland Park in Anaheim, California, and is dedicated to fairy tales and Disney characters.",
+  "label": "SUPPORTED",
+  "num_hops": 2,
+  "hover_metadata": {
+    "supporting_facts": [
+      [
+        "Johnny Tremain (film)",
+        0
+      ],
+      [
+        "Magic Kingdom",
+        2
+      ]
+    ],
+    "num_hops": 2,
+    "evidence_annotation_id": [
+      0
+    ],
+    "evidence_id": [
+      "Johnny Tremain (film)::sentence::0",
+      "Magic Kingdom::sentence::2"
+    ],
+    "evidence_wiki_url": [
+      "https://en.wikipedia.org/wiki/Johnny_Tremain_%28film%29",
+      "https://en.wikipedia.org/wiki/Magic_Kingdom"
+    ],
+    "evidence_sentence_id": [
+      "Johnny Tremain (film)::sentence::0",
+      "Magic Kingdom::sentence::2"
+    ]
+  },
+  "grafo_claim": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "08120e74-c2e5-5108-b689-d73b6254a7ab",
+        "text": "This chunk is about:\n- People: Walt Disney\n- Products: Johnny Tremain, Magic Kingdom\n\nFacts:\n- Walt Disney is linked to both Johnny Tremain and Magic Kingdom.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "d972bb51-5252-5120-8c54-fb29620d33d9",
+        "text": "The man that is linked to both Johnny Tremain and Magic Kingdom is Walt Disney.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "1cbb2f35-964e-567d-bf09-3ba8ae61a26f",
+        "text": "text_f6b629e3e90d2b9863f6fa9732f659dc",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "a5e99a25-0725-5be3-9cf3-4990386f9ad2",
+        "text": "walt disney",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "99a82eec-bb35-5bb5-9ed2-e73fc7a756de",
+        "text": "person",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "60aba409-18e0-5279-9c83-8e28b36426b5",
+        "text": "johnny tremain",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "5263a535-1b4b-5925-be3e-310d03cd303b",
+        "text": "work",
+        "type": "EntityType"
+      },
+      {
+        "id": 7,
+        "original_id": "f12c3b3c-1b21-5b5f-8d63-e2e7cf638b28",
+        "text": "magic kingdom",
+        "type": "Entity"
+      },
+      {
+        "id": 8,
+        "original_id": "5f394058-b2a0-5ba8-8466-ba2a18cfcf4e",
+        "text": "place",
+        "type": "EntityType"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "linked_to"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 7,
+        "type": "linked_to"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      },
+      {
+        "source": 7,
+        "target": 8,
+        "type": "is_a"
+      }
+    ]
+  },
+  "grafo_evidencia": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "0914df20-88b7-5029-82fb-80b6bdd8e269",
+        "text": "This chunk is about:\n- Companies: Walt Disney Productions, WED Enterprises\n- People: Walt Disney, Esther Forbes\n- Products: Johnny Tremain (film), Magic Kingdom, Disneyland Park\n- Places: Boston, Massachusetts, Anaheim, California\n- Topics: American Revolution, fairy tales, Disney characters\n\nFacts:\n- Esther Forbes wrote the 1944 Newbery Medal-winning children's novel Johnny Tremain.\n- Johnny Tremain is a 1957 film made by Walt Disney Productions and based on Esther Forbes's novel of the same name.\n- Johnny Tremain retells the years in Boston, Massachusetts before the outbreak of the American Revolution.\n- Walt Disney initialized Magic Kingdom, and WED Enterprises designed it.\n- Magic Kingdom's layout and attractions are based on Disneyland Park in Anaheim, California.\n- Magic Kingdom is dedicated to fairy tales and Disney characters.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "78fed6d8-3a25-5a3e-afe6-a0fb2ae0dbfa",
+        "text": "Page: Johnny Tremain (film). Sentence: Johnny Tremain is a 1957 film made by Walt Disney Productions, based on the 1944 Newbery Medal-winning children's novel of the same name by Esther Forbes, retelling the story of the years in Boston, Massachusetts prior to the outbreak of the American Revolution.\nPage: Magic Kingdom. Sentence: Initialized by Walt Disney and designed by WED Enterprises, its layout and attractions are based on Disneyland Park in Anaheim, California, and is dedicated to fairy tales and Disney characters.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "24290135-7195-5107-aa59-b85b2fbd0a1a",
+        "text": "text_c081620719dbd7e1ac4448051a774fb3",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "60aba409-18e0-5279-9c83-8e28b36426b5",
+        "text": "johnny tremain",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "d320c8df-fd51-56e6-b577-e01a688fe6fc",
+        "text": "film",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "e8ebfb27-a139-5715-abfd-78f9cc1cb291",
+        "text": "1957",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "b19433ae-558c-5aaf-95ac-6231f2a4be0e",
+        "text": "date",
+        "type": "EntityType"
+      },
+      {
+        "id": 7,
+        "original_id": "73a9e36d-0715-5221-8250-0e069b503f10",
+        "text": "walt disney productions",
+        "type": "Entity"
+      },
+      {
+        "id": 8,
+        "original_id": "388f60fb-220d-55e8-ae9c-3ac93cead308",
+        "text": "organization",
+        "type": "EntityType"
+      },
+      {
+        "id": 9,
+        "original_id": "23355c55-009d-58a5-b87e-3d84dc0f467c",
+        "text": "johnny tremain",
+        "type": "Entity"
+      },
+      {
+        "id": 10,
+        "original_id": "3faed6ef-3d90-5ffd-9229-cfb62eb68140",
+        "text": "book",
+        "type": "EntityType"
+      },
+      {
+        "id": 11,
+        "original_id": "8dd450b2-2b85-5890-951e-f365a36fcc37",
+        "text": "1944",
+        "type": "Entity"
+      },
+      {
+        "id": 12,
+        "original_id": "27cc2894-f962-52f4-adcf-1981605de4a9",
+        "text": "esther forbes",
+        "type": "Entity"
+      },
+      {
+        "id": 13,
+        "original_id": "99a82eec-bb35-5bb5-9ed2-e73fc7a756de",
+        "text": "person",
+        "type": "EntityType"
+      },
+      {
+        "id": 14,
+        "original_id": "35bdb90c-61fb-5886-be3e-59f33005951d",
+        "text": "boston, massachusetts",
+        "type": "Entity"
+      },
+      {
+        "id": 15,
+        "original_id": "5f394058-b2a0-5ba8-8466-ba2a18cfcf4e",
+        "text": "place",
+        "type": "EntityType"
+      },
+      {
+        "id": 16,
+        "original_id": "56960920-d276-5953-8561-12e775fee7f0",
+        "text": "american revolution",
+        "type": "Entity"
+      },
+      {
+        "id": 17,
+        "original_id": "214abcd9-9adf-5c8a-bb35-1e729f2d68c3",
+        "text": "event",
+        "type": "EntityType"
+      },
+      {
+        "id": 18,
+        "original_id": "f12c3b3c-1b21-5b5f-8d63-e2e7cf638b28",
+        "text": "magic kingdom",
+        "type": "Entity"
+      },
+      {
+        "id": 19,
+        "original_id": "a5e99a25-0725-5be3-9cf3-4990386f9ad2",
+        "text": "walt disney",
+        "type": "Entity"
+      },
+      {
+        "id": 20,
+        "original_id": "b6064e34-ad4e-5550-bde6-de1eb0f0027c",
+        "text": "wed enterprises",
+        "type": "Entity"
+      },
+      {
+        "id": 21,
+        "original_id": "68b41a0c-32b9-570a-b52a-98ff467fd8b2",
+        "text": "disneyland park",
+        "type": "Entity"
+      },
+      {
+        "id": 22,
+        "original_id": "913e2479-d8ad-5901-9dd3-c788401261f4",
+        "text": "anaheim, california",
+        "type": "Entity"
+      },
+      {
+        "id": 23,
+        "original_id": "f0bcb154-126e-585e-988a-5cc702ea9796",
+        "text": "fairy tales",
+        "type": "Entity"
+      },
+      {
+        "id": 24,
+        "original_id": "d2a381fa-3658-5ca6-ada9-2109cfc9331d",
+        "text": "concept",
+        "type": "EntityType"
+      },
+      {
+        "id": 25,
+        "original_id": "453b7ec7-ba09-5f38-b6c5-2fe2a7e3e697",
+        "text": "disney characters",
+        "type": "Entity"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "made_in"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 11,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 7,
+        "type": "made_by"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      },
+      {
+        "source": 7,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 20,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 9,
+        "type": "based_on"
+      },
+      {
+        "source": 1,
+        "target": 9,
+        "type": "contains"
+      },
+      {
+        "source": 9,
+        "target": 10,
+        "type": "is_a"
+      },
+      {
+        "source": 9,
+        "target": 11,
+        "type": "published_in"
+      },
+      {
+        "source": 1,
+        "target": 11,
+        "type": "contains"
+      },
+      {
+        "source": 9,
+        "target": 12,
+        "type": "written_by"
+      },
+      {
+        "source": 1,
+        "target": 12,
+        "type": "contains"
+      },
+      {
+        "source": 12,
+        "target": 13,
+        "type": "is_a"
+      },
+      {
+        "source": 19,
+        "target": 13,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 14,
+        "type": "retells_years_in"
+      },
+      {
+        "source": 1,
+        "target": 14,
+        "type": "contains"
+      },
+      {
+        "source": 14,
+        "target": 15,
+        "type": "is_a"
+      },
+      {
+        "source": 18,
+        "target": 15,
+        "type": "is_a"
+      },
+      {
+        "source": 21,
+        "target": 15,
+        "type": "is_a"
+      },
+      {
+        "source": 22,
+        "target": 15,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 16,
+        "type": "set_prior_to_outbreak_of"
+      },
+      {
+        "source": 1,
+        "target": 16,
+        "type": "contains"
+      },
+      {
+        "source": 16,
+        "target": 17,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 18,
+        "type": "contains"
+      },
+      {
+        "source": 18,
+        "target": 19,
+        "type": "initialized_by"
+      },
+      {
+        "source": 1,
+        "target": 19,
+        "type": "contains"
+      },
+      {
+        "source": 18,
+        "target": 20,
+        "type": "designed_by"
+      },
+      {
+        "source": 1,
+        "target": 20,
+        "type": "contains"
+      },
+      {
+        "source": 18,
+        "target": 21,
+        "type": "based_on_layout_and_attractions_of"
+      },
+      {
+        "source": 1,
+        "target": 21,
+        "type": "contains"
+      },
+      {
+        "source": 21,
+        "target": 22,
+        "type": "located_in"
+      },
+      {
+        "source": 1,
+        "target": 22,
+        "type": "contains"
+      },
+      {
+        "source": 18,
+        "target": 23,
+        "type": "dedicated_to"
+      },
+      {
+        "source": 1,
+        "target": 23,
+        "type": "contains"
+      },
+      {
+        "source": 23,
+        "target": 24,
+        "type": "is_a"
+      },
+      {
+        "source": 25,
+        "target": 24,
+        "type": "is_a"
+      },
+      {
+        "source": 18,
+        "target": 25,
+        "type": "dedicated_to"
+      },
+      {
+        "source": 1,
+        "target": 25,
+        "type": "contains"
+      }
+    ]
+  }
+}

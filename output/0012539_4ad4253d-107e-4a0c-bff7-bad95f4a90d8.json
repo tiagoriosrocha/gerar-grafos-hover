@@ -1,0 +1,382 @@
+{
+  "dataset": "hover",
+  "id": "4ad4253d-107e-4a0c-bff7-bad95f4a90d8",
+  "split": "train",
+  "claim": "Car and Driver is the total circulation of the magazine that called a route that runs through Orbiston, Ohio one of the most scenic highways nationwide.",
+  "evidencia": "Page: Ohio State Route 78. Sentence: State Route 78 (SR 78) is a state highway that runs for 105 miles (169 km) from Nelsonville to Clarington in the U.S. state of Ohio. \"\nPage: Ohio State Route 78. Sentence: Car and Driver\" has called it one of the most scenic highways nationwide.\nPage: Car and Driver. Sentence: Its total circulation is 1.23 million.\nPage: Orbiston, Ohio. Sentence: Orbiston is located along Ohio State Route 78, 1.8 mi north-northeast of Buchtel.",
+  "evidence_text": "Page: Ohio State Route 78. Sentence: State Route 78 (SR 78) is a state highway that runs for 105 miles (169 km) from Nelsonville to Clarington in the U.S. state of Ohio. \"\nPage: Ohio State Route 78. Sentence: Car and Driver\" has called it one of the most scenic highways nationwide.\nPage: Car and Driver. Sentence: Its total circulation is 1.23 million.\nPage: Orbiston, Ohio. Sentence: Orbiston is located along Ohio State Route 78, 1.8 mi north-northeast of Buchtel.",
+  "label": "SUPPORTED",
+  "num_hops": 3,
+  "hover_metadata": {
+    "supporting_facts": [
+      [
+        "Ohio State Route 78",
+        0
+      ],
+      [
+        "Ohio State Route 78",
+        1
+      ],
+      [
+        "Car and Driver",
+        1
+      ],
+      [
+        "Orbiston, Ohio",
+        1
+      ]
+    ],
+    "num_hops": 3,
+    "evidence_annotation_id": [
+      0
+    ],
+    "evidence_id": [
+      "Ohio State Route 78::sentence::0",
+      "Ohio State Route 78::sentence::1",
+      "Car and Driver::sentence::1",
+      "Orbiston, Ohio::sentence::1"
+    ],
+    "evidence_wiki_url": [
+      "https://en.wikipedia.org/wiki/Ohio_State_Route_78",
+      "https://en.wikipedia.org/wiki/Car_and_Driver",
+      "https://en.wikipedia.org/wiki/Orbiston%2C_Ohio"
+    ],
+    "evidence_sentence_id": [
+      "Ohio State Route 78::sentence::0",
+      "Ohio State Route 78::sentence::1",
+      "Car and Driver::sentence::1",
+      "Orbiston, Ohio::sentence::1"
+    ]
+  },
+  "grafo_claim": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "9badb7f6-ae3f-5415-9a16-4e7403c769b7",
+        "text": "This chunk is about:\n- Publications: Car and Driver\n- Places: Orbiston, Ohio\n- Routes: a route described as one of the most scenic highways nationwide\n\nFacts:\n- Car and Driver is a magazine.\n- Car and Driver called a route that runs through Orbiston, Ohio one of the most scenic highways nationwide.\n- The chunk refers to the total circulation of Car and Driver.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "af3a80b9-2806-5e6b-903e-d6643ac0da1a",
+        "text": "Car and Driver is the total circulation of the magazine that called a route that runs through Orbiston, Ohio one of the most scenic highways nationwide.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "7ff5391c-d6d7-597e-b439-1cf606909673",
+        "text": "text_64d8e7b29837ed89e570eb4ef2f4884c",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "838326ce-2895-56cd-880a-dbdffbed3ab6",
+        "text": "car and driver",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "5927653a-08d8-574b-a326-de69c430c119",
+        "text": "magazine",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "33ce2ce4-5035-59e1-a392-b5222fab42d2",
+        "text": "route through orbiston, ohio",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "292ffa87-988c-5f2c-8e57-75c073be8e43",
+        "text": "route",
+        "type": "EntityType"
+      },
+      {
+        "id": 7,
+        "original_id": "905aba20-57ad-5a12-a1e1-ac0fa770a41e",
+        "text": "orbiston, ohio",
+        "type": "Entity"
+      },
+      {
+        "id": 8,
+        "original_id": "5f394058-b2a0-5ba8-8466-ba2a18cfcf4e",
+        "text": "place",
+        "type": "EntityType"
+      },
+      {
+        "id": 9,
+        "original_id": "b892bb9b-e230-58dc-afcd-bdf929c0a312",
+        "text": "total circulation of car and driver",
+        "type": "Entity"
+      },
+      {
+        "id": 10,
+        "original_id": "7a7a0687-e490-5167-ad5a-0e39d9055dee",
+        "text": "quantity",
+        "type": "EntityType"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 9,
+        "target": 3,
+        "type": "is_total_circulation_of"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "called"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 5,
+        "target": 7,
+        "type": "runs_through"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      },
+      {
+        "source": 7,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 9,
+        "type": "contains"
+      },
+      {
+        "source": 9,
+        "target": 10,
+        "type": "is_a"
+      }
+    ]
+  },
+  "grafo_evidencia": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "b9e7700b-df3f-59e0-bcd3-5d9a2478092e",
+        "text": "This chunk is about:\n- Places: Nelsonville, Clarington, Orbiston, Buchtel, Ohio\n- Systems: Ohio State Route 78\n- Organizations: Car and Driver\n- Topics: scenic highways, magazine circulation\n\nFacts:\n- Ohio State Route 78 is a state highway in Ohio that runs 105 miles between Nelsonville and Clarington.\n- Car and Driver has called Ohio State Route 78 one of the most scenic highways in the United States.\n- Orbiston is located along Ohio State Route 78, 1.8 miles north-northeast of Buchtel.\n- Car and Driver has a total circulation of 1.23 million.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "92cc5b9e-a66b-5943-b0ad-6ec1b7152dbc",
+        "text": "Page: Ohio State Route 78. Sentence: State Route 78 (SR 78) is a state highway that runs for 105 miles (169 km) from Nelsonville to Clarington in the U.S. state of Ohio. \"\nPage: Ohio State Route 78. Sentence: Car and Driver\" has called it one of the most scenic highways nationwide.\nPage: Car and Driver. Sentence: Its total circulation is 1.23 million.\nPage: Orbiston, Ohio. Sentence: Orbiston is located along Ohio State Route 78, 1.8 mi north-northeast of Buchtel.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "39c48e73-6f8e-5206-8762-b5236a7b84c2",
+        "text": "text_37db92fdad50e7ce56c916079a60958d",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "bed16706-b967-5d10-a25e-85d46cb4efc1",
+        "text": "ohio state route 78",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "5e52d312-a248-534f-a58b-25c5426a89ad",
+        "text": "road",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "8fab9dd8-eb62-5e26-98d2-fea4623a8bf0",
+        "text": "nelsonville",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "5f394058-b2a0-5ba8-8466-ba2a18cfcf4e",
+        "text": "place",
+        "type": "EntityType"
+      },
+      {
+        "id": 7,
+        "original_id": "ec5f327b-2c53-5b26-a07f-63023a9347ba",
+        "text": "clarington",
+        "type": "Entity"
+      },
+      {
+        "id": 8,
+        "original_id": "81af0218-5b85-5efc-9990-492a78a7e0fc",
+        "text": "ohio",
+        "type": "Entity"
+      },
+      {
+        "id": 9,
+        "original_id": "838326ce-2895-56cd-880a-dbdffbed3ab6",
+        "text": "car and driver",
+        "type": "Entity"
+      },
+      {
+        "id": 10,
+        "original_id": "388f60fb-220d-55e8-ae9c-3ac93cead308",
+        "text": "organization",
+        "type": "EntityType"
+      },
+      {
+        "id": 11,
+        "original_id": "b2ffd5ab-d239-5cda-9c27-0cba2c553bb7",
+        "text": "orbiston",
+        "type": "Entity"
+      },
+      {
+        "id": 12,
+        "original_id": "4404f488-b8f8-5c35-bdad-f911f710a726",
+        "text": "buchtel",
+        "type": "Entity"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 9,
+        "target": 3,
+        "type": "called"
+      },
+      {
+        "source": 11,
+        "target": 3,
+        "type": "located_along"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "starts_at"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 7,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 8,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 11,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 12,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 7,
+        "type": "ends_at"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 8,
+        "type": "located_in"
+      },
+      {
+        "source": 1,
+        "target": 8,
+        "type": "contains"
+      },
+      {
+        "source": 1,
+        "target": 9,
+        "type": "contains"
+      },
+      {
+        "source": 9,
+        "target": 10,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 11,
+        "type": "contains"
+      },
+      {
+        "source": 11,
+        "target": 12,
+        "type": "located_north_northeast_of"
+      },
+      {
+        "source": 1,
+        "target": 12,
+        "type": "contains"
+      }
+    ]
+  }
+}

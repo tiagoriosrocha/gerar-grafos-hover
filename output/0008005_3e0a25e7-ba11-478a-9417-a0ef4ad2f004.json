@@ -1,0 +1,535 @@
+{
+  "dataset": "hover",
+  "id": "3e0a25e7-ba11-478a-9417-a0ef4ad2f004",
+  "split": "train",
+  "claim": "Alex Wolff \"Tim\" Roth gained recognition earlier than  Nat and Alex Wolffs' mother.",
+  "evidencia": "Page: Polly Draper. Sentence: She first gained recognition for her role in the ABC primetime television drama \"Thirtysomething\" (1987–91).\nPage: Tim Roth. Sentence: Timothy Simon \"Tim\" Roth (born 14 May 1961) is an English actor and director.\nPage: Tim Roth. Sentence: He garnered critical acclaim for his role as Myron in the 1984 film \"The Hit\" (1984), for which he was nominated for his first BAFTA Award.\nPage: Nat and Alex Wolff. Sentence: The siblings are known for their work on the Nickelodeon television series \"The Naked Brothers Band\", which was created and produced by their mother, actress Polly Draper.",
+  "evidence_text": "Page: Polly Draper. Sentence: She first gained recognition for her role in the ABC primetime television drama \"Thirtysomething\" (1987–91).\nPage: Tim Roth. Sentence: Timothy Simon \"Tim\" Roth (born 14 May 1961) is an English actor and director.\nPage: Tim Roth. Sentence: He garnered critical acclaim for his role as Myron in the 1984 film \"The Hit\" (1984), for which he was nominated for his first BAFTA Award.\nPage: Nat and Alex Wolff. Sentence: The siblings are known for their work on the Nickelodeon television series \"The Naked Brothers Band\", which was created and produced by their mother, actress Polly Draper.",
+  "label": "SUPPORTED",
+  "num_hops": 3,
+  "hover_metadata": {
+    "supporting_facts": [
+      [
+        "Polly Draper",
+        2
+      ],
+      [
+        "Tim Roth",
+        0
+      ],
+      [
+        "Tim Roth",
+        2
+      ],
+      [
+        "Nat and Alex Wolff",
+        1
+      ]
+    ],
+    "num_hops": 3,
+    "evidence_annotation_id": [
+      0
+    ],
+    "evidence_id": [
+      "Polly Draper::sentence::2",
+      "Tim Roth::sentence::0",
+      "Tim Roth::sentence::2",
+      "Nat and Alex Wolff::sentence::1"
+    ],
+    "evidence_wiki_url": [
+      "https://en.wikipedia.org/wiki/Polly_Draper",
+      "https://en.wikipedia.org/wiki/Tim_Roth",
+      "https://en.wikipedia.org/wiki/Nat_and_Alex_Wolff"
+    ],
+    "evidence_sentence_id": [
+      "Polly Draper::sentence::2",
+      "Tim Roth::sentence::0",
+      "Tim Roth::sentence::2",
+      "Nat and Alex Wolff::sentence::1"
+    ]
+  },
+  "grafo_claim": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "cd6bfc2d-7179-5942-8500-55ae28c8eb61",
+        "text": "This chunk is about:\n- People: Alex Wolff, Tim Roth, Nat Wolff, Polly Draper\n- Roles: actor, mother\n\nFacts:\n- Tim Roth gained recognition earlier than Polly Draper.\n- Polly Draper is the mother of Nat Wolff and Alex Wolff.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "bab28031-da7a-5977-adf9-b902fa2d4f07",
+        "text": "Alex Wolff \"Tim\" Roth gained recognition earlier than  Nat and Alex Wolffs' mother.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "bd8c6268-2fe6-5653-9508-605945dc5ead",
+        "text": "text_dea5ee1606bf342d27dc1124924d6628",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "7b2d7e96-cc22-5c92-9dcc-7e1ca5b2697d",
+        "text": "alex wolff",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "99a82eec-bb35-5bb5-9ed2-e73fc7a756de",
+        "text": "person",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "405b7724-e0d7-58b2-bec9-e622a0072445",
+        "text": "tim roth",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "3dc035cd-25ce-51d9-a1f2-00c44acab709",
+        "text": "recognition",
+        "type": "Entity"
+      },
+      {
+        "id": 7,
+        "original_id": "d2a381fa-3658-5ca6-ada9-2109cfc9331d",
+        "text": "concept",
+        "type": "EntityType"
+      },
+      {
+        "id": 8,
+        "original_id": "de96eb6a-883d-5d5c-b927-6a01cb236ccb",
+        "text": "nat and alex wolffs mother",
+        "type": "Entity"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 8,
+        "target": 3,
+        "type": "is_mother_of"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 5,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 8,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "gained"
+      },
+      {
+        "source": 8,
+        "target": 6,
+        "type": "gained"
+      },
+      {
+        "source": 1,
+        "target": 6,
+        "type": "contains"
+      },
+      {
+        "source": 6,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 8,
+        "type": "contains"
+      }
+    ]
+  },
+  "grafo_evidencia": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "a09f1ba0-a559-554d-9a0c-f76d2ea9b8d5",
+        "text": "This chunk is about:\n- People: Polly Draper, Tim Roth, Nat Wolff, Alex Wolff\n- Works: Thirtysomething, The Hit, The Naked Brothers Band\n- Organizations: ABC, Nickelodeon\n\nFacts:\n- Tim Roth was born on 14 May 1961 and is an English actor and director.\n- Tim Roth gained critical acclaim for playing Myron in the 1984 film The Hit and received his first BAFTA Award nomination for that role.\n- Polly Draper first gained recognition for her role in the ABC primetime television drama Thirtysomething, which ran from 1987 to 1991.\n- Nat Wolff and Alex Wolff are known for their work on the Nickelodeon television series The Naked Brothers Band.\n- Polly Draper created and produced The Naked Brothers Band, and she is the mother of Nat Wolff and Alex Wolff.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "1612ceab-5717-5414-a25b-35535daf6a0d",
+        "text": "Page: Polly Draper. Sentence: She first gained recognition for her role in the ABC primetime television drama \"Thirtysomething\" (1987–91).\nPage: Tim Roth. Sentence: Timothy Simon \"Tim\" Roth (born 14 May 1961) is an English actor and director.\nPage: Tim Roth. Sentence: He garnered critical acclaim for his role as Myron in the 1984 film \"The Hit\" (1984), for which he was nominated for his first BAFTA Award.\nPage: Nat and Alex Wolff. Sentence: The siblings are known for their work on the Nickelodeon television series \"The Naked Brothers Band\", which was created and produced by their mother, actress Polly Draper.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "b9926a26-9295-5ec6-888c-2bb6e5d0d0ae",
+        "text": "text_be37e0036c68c36732dd77d991da1f78",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "973d2837-aa3f-5f92-a2b5-27c4562cc4f6",
+        "text": "polly draper",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "99a82eec-bb35-5bb5-9ed2-e73fc7a756de",
+        "text": "person",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "92232cc6-9b83-52c8-86ec-4770d9fb7b7b",
+        "text": "thirtysomething",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "5263a535-1b4b-5925-be3e-310d03cd303b",
+        "text": "work",
+        "type": "EntityType"
+      },
+      {
+        "id": 7,
+        "original_id": "19e766a6-2146-5019-b62d-75b94a79d2b8",
+        "text": "1987",
+        "type": "Entity"
+      },
+      {
+        "id": 8,
+        "original_id": "b19433ae-558c-5aaf-95ac-6231f2a4be0e",
+        "text": "date",
+        "type": "EntityType"
+      },
+      {
+        "id": 9,
+        "original_id": "720e3f07-c737-5d52-9990-eb6ce06a3479",
+        "text": "1991",
+        "type": "Entity"
+      },
+      {
+        "id": 10,
+        "original_id": "5e7a8668-9514-5e5c-a795-b56820a06899",
+        "text": "the naked brothers band",
+        "type": "Entity"
+      },
+      {
+        "id": 11,
+        "original_id": "5e4e5fdb-76a0-5270-9cc8-fd4098a9c084",
+        "text": "nickelodeon",
+        "type": "Entity"
+      },
+      {
+        "id": 12,
+        "original_id": "388f60fb-220d-55e8-ae9c-3ac93cead308",
+        "text": "organization",
+        "type": "EntityType"
+      },
+      {
+        "id": 13,
+        "original_id": "dee87561-9fe0-57ea-bff1-452d8d391a63",
+        "text": "nat and alex wolff",
+        "type": "Entity"
+      },
+      {
+        "id": 14,
+        "original_id": "405b7724-e0d7-58b2-bec9-e622a0072445",
+        "text": "tim roth",
+        "type": "Entity"
+      },
+      {
+        "id": 15,
+        "original_id": "0a82f374-e047-5bc6-983d-a07f709b2e4b",
+        "text": "1961-05-14",
+        "type": "Entity"
+      },
+      {
+        "id": 16,
+        "original_id": "f7c3728d-0479-5296-b847-af7badc377ab",
+        "text": "timothy simon roth",
+        "type": "Entity"
+      },
+      {
+        "id": 17,
+        "original_id": "c4dfc630-1a6a-5f33-97e5-2781983084b3",
+        "text": "the hit",
+        "type": "Entity"
+      },
+      {
+        "id": 18,
+        "original_id": "36535bda-358d-582c-896d-8489e824d5db",
+        "text": "1984",
+        "type": "Entity"
+      },
+      {
+        "id": 19,
+        "original_id": "55839ba8-e910-5834-beed-0c07ff77eb59",
+        "text": "myron",
+        "type": "Entity"
+      },
+      {
+        "id": 20,
+        "original_id": "d3db161f-3fd9-5366-919b-ad9f9a1ba392",
+        "text": "character",
+        "type": "EntityType"
+      },
+      {
+        "id": 21,
+        "original_id": "0d839efc-7280-5272-b1c8-2ed85b4255cc",
+        "text": "bafta award",
+        "type": "Entity"
+      },
+      {
+        "id": 22,
+        "original_id": "38e42125-31f4-5cd6-993c-dbbc06a88910",
+        "text": "award",
+        "type": "EntityType"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 13,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 14,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 16,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "gained_recognition_for_role_in"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 10,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 17,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 5,
+        "target": 7,
+        "type": "started_in"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      },
+      {
+        "source": 7,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 9,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 15,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 18,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 5,
+        "target": 9,
+        "type": "ended_in"
+      },
+      {
+        "source": 1,
+        "target": 9,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 10,
+        "type": "created"
+      },
+      {
+        "source": 13,
+        "target": 10,
+        "type": "known_for_work_on"
+      },
+      {
+        "source": 1,
+        "target": 10,
+        "type": "contains"
+      },
+      {
+        "source": 10,
+        "target": 11,
+        "type": "aired_on"
+      },
+      {
+        "source": 1,
+        "target": 11,
+        "type": "contains"
+      },
+      {
+        "source": 11,
+        "target": 12,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 13,
+        "type": "mother_of"
+      },
+      {
+        "source": 1,
+        "target": 13,
+        "type": "contains"
+      },
+      {
+        "source": 1,
+        "target": 14,
+        "type": "contains"
+      },
+      {
+        "source": 14,
+        "target": 15,
+        "type": "born_on"
+      },
+      {
+        "source": 1,
+        "target": 15,
+        "type": "contains"
+      },
+      {
+        "source": 14,
+        "target": 16,
+        "type": "has_full_name"
+      },
+      {
+        "source": 1,
+        "target": 16,
+        "type": "contains"
+      },
+      {
+        "source": 14,
+        "target": 17,
+        "type": "garnered_critical_acclaim_for_role_in"
+      },
+      {
+        "source": 1,
+        "target": 17,
+        "type": "contains"
+      },
+      {
+        "source": 17,
+        "target": 18,
+        "type": "released_in"
+      },
+      {
+        "source": 1,
+        "target": 18,
+        "type": "contains"
+      },
+      {
+        "source": 14,
+        "target": 19,
+        "type": "played"
+      },
+      {
+        "source": 1,
+        "target": 19,
+        "type": "contains"
+      },
+      {
+        "source": 19,
+        "target": 20,
+        "type": "is_a"
+      },
+      {
+        "source": 14,
+        "target": 21,
+        "type": "nominated_for"
+      },
+      {
+        "source": 1,
+        "target": 21,
+        "type": "contains"
+      },
+      {
+        "source": 21,
+        "target": 22,
+        "type": "is_a"
+      }
+    ]
+  }
+}

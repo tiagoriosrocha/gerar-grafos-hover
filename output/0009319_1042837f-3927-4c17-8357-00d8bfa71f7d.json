@@ -1,0 +1,322 @@
+{
+  "dataset": "hover",
+  "id": "1042837f-3927-4c17-8357-00d8bfa71f7d",
+  "split": "train",
+  "claim": "The city where radio personality Ye Sha is from has a higher population than Hengyang.",
+  "evidencia": "Page: Shanghai. Sentence: Shanghai is one of the four direct-controlled municipalities of China and the most populous city proper in the world with a population of more than 24 million as of 2014 .\nPage: Hengyang. Sentence: Its built-up (\"or metro\") area made of 4 out of 5 urban districts was home to 1,075,516 inhabitants at the 2010 census.\nPage: Ye Sha. Sentence: Ye Sha (Chinese: 叶 沙, Hanyu Pinyin: \"Yè Shā\") is a radio personality from Shanghai, China.",
+  "evidence_text": "Page: Shanghai. Sentence: Shanghai is one of the four direct-controlled municipalities of China and the most populous city proper in the world with a population of more than 24 million as of 2014 .\nPage: Hengyang. Sentence: Its built-up (\"or metro\") area made of 4 out of 5 urban districts was home to 1,075,516 inhabitants at the 2010 census.\nPage: Ye Sha. Sentence: Ye Sha (Chinese: 叶 沙, Hanyu Pinyin: \"Yè Shā\") is a radio personality from Shanghai, China.",
+  "label": "SUPPORTED",
+  "num_hops": 3,
+  "hover_metadata": {
+    "supporting_facts": [
+      [
+        "Shanghai",
+        0
+      ],
+      [
+        "Hengyang",
+        2
+      ],
+      [
+        "Ye Sha",
+        0
+      ]
+    ],
+    "num_hops": 3,
+    "evidence_annotation_id": [
+      0
+    ],
+    "evidence_id": [
+      "Shanghai::sentence::0",
+      "Hengyang::sentence::2",
+      "Ye Sha::sentence::0"
+    ],
+    "evidence_wiki_url": [
+      "https://en.wikipedia.org/wiki/Shanghai",
+      "https://en.wikipedia.org/wiki/Hengyang",
+      "https://en.wikipedia.org/wiki/Ye_Sha"
+    ],
+    "evidence_sentence_id": [
+      "Shanghai::sentence::0",
+      "Hengyang::sentence::2",
+      "Ye Sha::sentence::0"
+    ]
+  },
+  "grafo_claim": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "9de10c11-7680-5f79-8579-ef045173776b",
+        "text": "This chunk is about:\n- People: Ye Sha\n- Places: Hengyang, Ye Sha's hometown\n- Topics: Population comparison\n\nFacts:\n- Ye Sha is a radio personality.\n- Ye Sha is from a city whose population is higher than the population of Hengyang.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "6e3bc514-9826-5e51-8c14-ce630f65ddb6",
+        "text": "The city where radio personality Ye Sha is from has a higher population than Hengyang.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "14ec6ed8-fc25-54de-91a3-dfaed4f00b72",
+        "text": "text_e304ce4c18a123f260f1d5705232fc76",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "03a007f0-af11-5424-94d3-b5a03ad721ca",
+        "text": "ye sha",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "99a82eec-bb35-5bb5-9ed2-e73fc7a756de",
+        "text": "person",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "09da4ae3-0cc4-5c48-9828-31fcdd6718fd",
+        "text": "ye shas city of origin",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "5f394058-b2a0-5ba8-8466-ba2a18cfcf4e",
+        "text": "place",
+        "type": "EntityType"
+      },
+      {
+        "id": 7,
+        "original_id": "3fb63b1e-798b-5a94-80c4-cdc5450b5028",
+        "text": "hengyang",
+        "type": "Entity"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "is_from"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 7,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 5,
+        "target": 7,
+        "type": "has_higher_population_than"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      }
+    ]
+  },
+  "grafo_evidencia": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "97575aeb-3ec1-562f-bb85-b5c2ba623f8e",
+        "text": "This chunk is about:\n- Places: Shanghai, Hengyang, China\n- People: Ye Sha\n- Roles: radio personality\n- Concepts: direct-controlled municipalities, city proper population, built-up area, 2010 census\n\nFacts:\n- Hengyang's built-up or metro area, consisting of 4 of its 5 urban districts, had 1,075,516 inhabitants at the 2010 census.\n- As of 2014, Shanghai was one of the four direct-controlled municipalities of China.\n- As of 2014, Shanghai was the most populous city proper in the world, with a population of more than 24 million.\n- Ye Sha is a radio personality from Shanghai, China.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "de77340e-62f5-55c0-8cbc-5b0ef4d35581",
+        "text": "Page: Shanghai. Sentence: Shanghai is one of the four direct-controlled municipalities of China and the most populous city proper in the world with a population of more than 24 million as of 2014 .\nPage: Hengyang. Sentence: Its built-up (\"or metro\") area made of 4 out of 5 urban districts was home to 1,075,516 inhabitants at the 2010 census.\nPage: Ye Sha. Sentence: Ye Sha (Chinese: 叶 沙, Hanyu Pinyin: \"Yè Shā\") is a radio personality from Shanghai, China.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "6c5d898b-6b5c-5fc4-9738-e59b68869f61",
+        "text": "text_44a4f3960db6aa5c3a4819d16dcb29cf",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "491e1a33-9f44-5ca5-abd2-9cc72b2eddb3",
+        "text": "shanghai",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "5f394058-b2a0-5ba8-8466-ba2a18cfcf4e",
+        "text": "place",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "ae6c10f3-68c2-5caa-8683-d9c2c112ed34",
+        "text": "china",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "8b81e666-937e-557b-9b2d-fbabf5175591",
+        "text": "2014",
+        "type": "Entity"
+      },
+      {
+        "id": 7,
+        "original_id": "b19433ae-558c-5aaf-95ac-6231f2a4be0e",
+        "text": "date",
+        "type": "EntityType"
+      },
+      {
+        "id": 8,
+        "original_id": "3fb63b1e-798b-5a94-80c4-cdc5450b5028",
+        "text": "hengyang",
+        "type": "Entity"
+      },
+      {
+        "id": 9,
+        "original_id": "cb1dc1af-5253-5fa4-877e-246a7629f489",
+        "text": "2010",
+        "type": "Entity"
+      },
+      {
+        "id": 10,
+        "original_id": "03a007f0-af11-5424-94d3-b5a03ad721ca",
+        "text": "ye sha",
+        "type": "Entity"
+      },
+      {
+        "id": 11,
+        "original_id": "99a82eec-bb35-5bb5-9ed2-e73fc7a756de",
+        "text": "person",
+        "type": "EntityType"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 10,
+        "target": 3,
+        "type": "is_from"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 5,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 8,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "is_direct_controlled_municipality_of"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 10,
+        "target": 5,
+        "type": "is_from"
+      },
+      {
+        "source": 3,
+        "target": 6,
+        "type": "has_population_as_of"
+      },
+      {
+        "source": 1,
+        "target": 6,
+        "type": "contains"
+      },
+      {
+        "source": 6,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 9,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 8,
+        "type": "contains"
+      },
+      {
+        "source": 8,
+        "target": 9,
+        "type": "had_built_up_area_population_at_census"
+      },
+      {
+        "source": 1,
+        "target": 9,
+        "type": "contains"
+      },
+      {
+        "source": 1,
+        "target": 10,
+        "type": "contains"
+      },
+      {
+        "source": 10,
+        "target": 11,
+        "type": "is_a"
+      }
+    ]
+  }
+}

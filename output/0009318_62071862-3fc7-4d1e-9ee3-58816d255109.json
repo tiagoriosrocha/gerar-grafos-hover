@@ -1,0 +1,488 @@
+{
+  "dataset": "hover",
+  "id": "62071862-3fc7-4d1e-9ee3-58816d255109",
+  "split": "train",
+  "claim": "The city where radio personality Ye Sha is from has a higher population than this place. It is where Zhu Shaolian was born.",
+  "evidencia": "Page: Shanghai. Sentence: Shanghai is one of the four direct-controlled municipalities of China and the most populous city proper in the world with a population of more than 24 million as of 2014 .\nPage: Hengyang. Sentence: Its built-up (\"or metro\") area made of 4 out of 5 urban districts was home to 1,075,516 inhabitants at the 2010 census.\nPage: Ye Sha. Sentence: Ye Sha (Chinese: 叶 沙, Hanyu Pinyin: \"Yè Shā\") is a radio personality from Shanghai, China.\nPage: Zhu Shaolian. Sentence: Born in Hengyang, Hunan Province, Zhu joined the Communist Youth League of China in 1921 and the Communist Party of China in February 1922.",
+  "evidence_text": "Page: Shanghai. Sentence: Shanghai is one of the four direct-controlled municipalities of China and the most populous city proper in the world with a population of more than 24 million as of 2014 .\nPage: Hengyang. Sentence: Its built-up (\"or metro\") area made of 4 out of 5 urban districts was home to 1,075,516 inhabitants at the 2010 census.\nPage: Ye Sha. Sentence: Ye Sha (Chinese: 叶 沙, Hanyu Pinyin: \"Yè Shā\") is a radio personality from Shanghai, China.\nPage: Zhu Shaolian. Sentence: Born in Hengyang, Hunan Province, Zhu joined the Communist Youth League of China in 1921 and the Communist Party of China in February 1922.",
+  "label": "SUPPORTED",
+  "num_hops": 4,
+  "hover_metadata": {
+    "supporting_facts": [
+      [
+        "Shanghai",
+        0
+      ],
+      [
+        "Hengyang",
+        2
+      ],
+      [
+        "Ye Sha",
+        0
+      ],
+      [
+        "Zhu Shaolian",
+        1
+      ]
+    ],
+    "num_hops": 4,
+    "evidence_annotation_id": [
+      0
+    ],
+    "evidence_id": [
+      "Shanghai::sentence::0",
+      "Hengyang::sentence::2",
+      "Ye Sha::sentence::0",
+      "Zhu Shaolian::sentence::1"
+    ],
+    "evidence_wiki_url": [
+      "https://en.wikipedia.org/wiki/Shanghai",
+      "https://en.wikipedia.org/wiki/Hengyang",
+      "https://en.wikipedia.org/wiki/Ye_Sha",
+      "https://en.wikipedia.org/wiki/Zhu_Shaolian"
+    ],
+    "evidence_sentence_id": [
+      "Shanghai::sentence::0",
+      "Hengyang::sentence::2",
+      "Ye Sha::sentence::0",
+      "Zhu Shaolian::sentence::1"
+    ]
+  },
+  "grafo_claim": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "5a535d91-64e3-53cd-93d3-0fb51da3f343",
+        "text": "This chunk is about:\n- People: Ye Sha, Zhu Shaolian\n- Places: Ye Sha's home city, Zhu Shaolian's birthplace\n- Topics: population comparison, birthplace identification\n\nFacts:\n- Radio personality Ye Sha is from a city with a larger population than the place where Zhu Shaolian was born.\n- Zhu Shaolian was born in the place being compared against Ye Sha's home city.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "551f06ca-346c-5c5c-8baa-8a4c9ff8f38c",
+        "text": "The city where radio personality Ye Sha is from has a higher population than this place. It is where Zhu Shaolian was born.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "48252018-6c7d-5c5a-9884-0c5d19e36aab",
+        "text": "text_089aa3c3a133e6eae486a4474ed21b2a",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "03a007f0-af11-5424-94d3-b5a03ad721ca",
+        "text": "ye sha",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "99a82eec-bb35-5bb5-9ed2-e73fc7a756de",
+        "text": "person",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "6cc2b21f-b568-51c9-bb8c-afd967ebf9b6",
+        "text": "ye shas city",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "5f394058-b2a0-5ba8-8466-ba2a18cfcf4e",
+        "text": "place",
+        "type": "EntityType"
+      },
+      {
+        "id": 7,
+        "original_id": "3ce92066-ab33-5cf0-9d6b-d8119999bdd2",
+        "text": "zhu shaolians birthplace",
+        "type": "Entity"
+      },
+      {
+        "id": 8,
+        "original_id": "9d0a155c-db27-5933-920c-186797a7bf1c",
+        "text": "zhu shaolian",
+        "type": "Entity"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 8,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "from"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 7,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 5,
+        "target": 7,
+        "type": "has_higher_population_than"
+      },
+      {
+        "source": 8,
+        "target": 7,
+        "type": "born_in"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      },
+      {
+        "source": 1,
+        "target": 8,
+        "type": "contains"
+      }
+    ]
+  },
+  "grafo_evidencia": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "8240d9f5-7cb7-5e7e-ad55-2f7aeabfd6be",
+        "text": "This chunk is about:\n- Places: Shanghai, Hengyang, Hunan Province, China\n- People: Ye Sha, Zhu Shaolian\n- Organizations: Communist Youth League of China, Communist Party of China\n- Roles: radio personality\n- Topics: population, urban area, municipal status\n\nFacts:\n- Zhu Shaolian was born in Hengyang, Hunan Province.\n- Zhu Shaolian joined the Communist Youth League of China in 1921.\n- Zhu Shaolian joined the Communist Party of China in February 1922.\n- Hengyang's built-up or metro area, made of 4 of its 5 urban districts, had 1,075,516 inhabitants in the 2010 census.\n- Shanghai had a population of more than 24 million as of 2014.\n- Shanghai is one of the four direct-controlled municipalities of China.\n- Shanghai is the most populous city proper in the world.\n- Ye Sha is a radio personality from Shanghai, China.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "a323f0d5-f387-5881-9373-e46e7b82bf37",
+        "text": "Page: Shanghai. Sentence: Shanghai is one of the four direct-controlled municipalities of China and the most populous city proper in the world with a population of more than 24 million as of 2014 .\nPage: Hengyang. Sentence: Its built-up (\"or metro\") area made of 4 out of 5 urban districts was home to 1,075,516 inhabitants at the 2010 census.\nPage: Ye Sha. Sentence: Ye Sha (Chinese: 叶 沙, Hanyu Pinyin: \"Yè Shā\") is a radio personality from Shanghai, China.\nPage: Zhu Shaolian. Sentence: Born in Hengyang, Hunan Province, Zhu joined the Communist Youth League of China in 1921 and the Communist Party of China in February 1922.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "95754b96-cfdc-59f0-b5d7-3406038879d4",
+        "text": "text_925131b5f69497aba72090fbed8a2a79",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "491e1a33-9f44-5ca5-abd2-9cc72b2eddb3",
+        "text": "shanghai",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "5f394058-b2a0-5ba8-8466-ba2a18cfcf4e",
+        "text": "place",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "ae6c10f3-68c2-5caa-8683-d9c2c112ed34",
+        "text": "china",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "35e29ad1-17b7-507a-a205-d7851a5e7102",
+        "text": "country",
+        "type": "EntityType"
+      },
+      {
+        "id": 7,
+        "original_id": "8b81e666-937e-557b-9b2d-fbabf5175591",
+        "text": "2014",
+        "type": "Entity"
+      },
+      {
+        "id": 8,
+        "original_id": "b19433ae-558c-5aaf-95ac-6231f2a4be0e",
+        "text": "date",
+        "type": "EntityType"
+      },
+      {
+        "id": 9,
+        "original_id": "3fb63b1e-798b-5a94-80c4-cdc5450b5028",
+        "text": "hengyang",
+        "type": "Entity"
+      },
+      {
+        "id": 10,
+        "original_id": "cb1dc1af-5253-5fa4-877e-246a7629f489",
+        "text": "2010",
+        "type": "Entity"
+      },
+      {
+        "id": 11,
+        "original_id": "c485b354-084a-573e-9efd-519722eef59c",
+        "text": "hunan province",
+        "type": "Entity"
+      },
+      {
+        "id": 12,
+        "original_id": "03a007f0-af11-5424-94d3-b5a03ad721ca",
+        "text": "ye sha",
+        "type": "Entity"
+      },
+      {
+        "id": 13,
+        "original_id": "99a82eec-bb35-5bb5-9ed2-e73fc7a756de",
+        "text": "person",
+        "type": "EntityType"
+      },
+      {
+        "id": 14,
+        "original_id": "9d0a155c-db27-5933-920c-186797a7bf1c",
+        "text": "zhu shaolian",
+        "type": "Entity"
+      },
+      {
+        "id": 15,
+        "original_id": "c9d68e59-6f25-5841-b3bf-deac294f3b39",
+        "text": "communist youth league of china",
+        "type": "Entity"
+      },
+      {
+        "id": 16,
+        "original_id": "388f60fb-220d-55e8-ae9c-3ac93cead308",
+        "text": "organization",
+        "type": "EntityType"
+      },
+      {
+        "id": 17,
+        "original_id": "2038a789-a767-58a6-9103-fc3319a6cdd3",
+        "text": "1921",
+        "type": "Entity"
+      },
+      {
+        "id": 18,
+        "original_id": "46f815a3-9bab-5e99-9a2c-7b0706bb0c4e",
+        "text": "communist party of china",
+        "type": "Entity"
+      },
+      {
+        "id": 19,
+        "original_id": "8e29c304-d350-58f5-82de-fc2a1bb68c79",
+        "text": "1922-02",
+        "type": "Entity"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 12,
+        "target": 3,
+        "type": "is_from"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 9,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 11,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "is_direct_controlled_municipality_of"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 12,
+        "target": 5,
+        "type": "is_from"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 7,
+        "type": "population_as_of"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      },
+      {
+        "source": 7,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 10,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 17,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 19,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 9,
+        "type": "contains"
+      },
+      {
+        "source": 14,
+        "target": 9,
+        "type": "was_born_in"
+      },
+      {
+        "source": 9,
+        "target": 10,
+        "type": "built_up_area_population_at_census"
+      },
+      {
+        "source": 1,
+        "target": 10,
+        "type": "contains"
+      },
+      {
+        "source": 9,
+        "target": 11,
+        "type": "is_in"
+      },
+      {
+        "source": 1,
+        "target": 11,
+        "type": "contains"
+      },
+      {
+        "source": 1,
+        "target": 12,
+        "type": "contains"
+      },
+      {
+        "source": 12,
+        "target": 13,
+        "type": "is_a"
+      },
+      {
+        "source": 14,
+        "target": 13,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 14,
+        "type": "contains"
+      },
+      {
+        "source": 14,
+        "target": 15,
+        "type": "joined"
+      },
+      {
+        "source": 1,
+        "target": 15,
+        "type": "contains"
+      },
+      {
+        "source": 15,
+        "target": 16,
+        "type": "is_a"
+      },
+      {
+        "source": 18,
+        "target": 16,
+        "type": "is_a"
+      },
+      {
+        "source": 14,
+        "target": 17,
+        "type": "joined_in"
+      },
+      {
+        "source": 1,
+        "target": 17,
+        "type": "contains"
+      },
+      {
+        "source": 14,
+        "target": 18,
+        "type": "joined"
+      },
+      {
+        "source": 1,
+        "target": 18,
+        "type": "contains"
+      },
+      {
+        "source": 14,
+        "target": 19,
+        "type": "joined_in"
+      },
+      {
+        "source": 1,
+        "target": 19,
+        "type": "contains"
+      }
+    ]
+  }
+}

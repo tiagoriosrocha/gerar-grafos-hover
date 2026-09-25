@@ -1,0 +1,426 @@
+{
+  "dataset": "hover",
+  "id": "9c3e882f-6d24-4296-a926-896e042c8347",
+  "split": "train",
+  "claim": "The town of Commack with a population of 36,124 at the 2010 census, has the Suffolk County Veterans Memorial Highway on the Jericho Turnpike, 21 miles outside the town centre.",
+  "evidencia": "Page: New York State Route 454. Sentence: It spans from NY 25 (Jericho Turnpike) in Commack to NY 27 (Sunrise Highway) in Holbrook.\nPage: Commack, New York. Sentence: The CDP's population was 36,124 at the 2010 census.",
+  "evidence_text": "Page: New York State Route 454. Sentence: It spans from NY 25 (Jericho Turnpike) in Commack to NY 27 (Sunrise Highway) in Holbrook.\nPage: Commack, New York. Sentence: The CDP's population was 36,124 at the 2010 census.",
+  "label": "NOT_SUPPORTED",
+  "num_hops": 2,
+  "hover_metadata": {
+    "supporting_facts": [
+      [
+        "New York State Route 454",
+        1
+      ],
+      [
+        "Commack, New York",
+        1
+      ]
+    ],
+    "num_hops": 2,
+    "evidence_annotation_id": [
+      0
+    ],
+    "evidence_id": [
+      "New York State Route 454::sentence::1",
+      "Commack, New York::sentence::1"
+    ],
+    "evidence_wiki_url": [
+      "https://en.wikipedia.org/wiki/New_York_State_Route_454",
+      "https://en.wikipedia.org/wiki/Commack%2C_New_York"
+    ],
+    "evidence_sentence_id": [
+      "New York State Route 454::sentence::1",
+      "Commack, New York::sentence::1"
+    ]
+  },
+  "grafo_claim": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "d9423894-0384-57ca-af5a-4e727585543f",
+        "text": "This chunk is about:\n- Places: Commack, Suffolk County Veterans Memorial Highway, Jericho Turnpike\n- Topics: population, location\n\nFacts:\n- At the 2010 census, Commack had a population of 36,124.\n- The Suffolk County Veterans Memorial Highway is on Jericho Turnpike.\n- The Suffolk County Veterans Memorial Highway is 21 miles outside Commack town centre.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "58e3efae-9075-57db-a225-c507aeb4c641",
+        "text": "The town of Commack with a population of 36,124 at the 2010 census, has the Suffolk County Veterans Memorial Highway on the Jericho Turnpike, 21 miles outside the town centre.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "9e6b3c76-8747-599d-abc8-50a5f637771f",
+        "text": "text_a1733c0476caa1fd7d89b69afe74574a",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "1ff73de7-15ff-50dc-950d-a804a9333405",
+        "text": "commack",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "cca7b7c7-6144-5f58-8456-0245ebe49fba",
+        "text": "36,124",
+        "type": "Entity"
+      },
+      {
+        "id": 5,
+        "original_id": "5c1097ca-fab8-54d5-b57f-5dca4b0e2507",
+        "text": "number",
+        "type": "EntityType"
+      },
+      {
+        "id": 6,
+        "original_id": "cb1dc1af-5253-5fa4-877e-246a7629f489",
+        "text": "2010",
+        "type": "Entity"
+      },
+      {
+        "id": 7,
+        "original_id": "b19433ae-558c-5aaf-95ac-6231f2a4be0e",
+        "text": "date",
+        "type": "EntityType"
+      },
+      {
+        "id": 8,
+        "original_id": "5f394058-b2a0-5ba8-8466-ba2a18cfcf4e",
+        "text": "place",
+        "type": "EntityType"
+      },
+      {
+        "id": 9,
+        "original_id": "bc167a01-9438-5019-99f5-cdd422e6555d",
+        "text": "suffolk county veterans memorial highway",
+        "type": "Entity"
+      },
+      {
+        "id": 10,
+        "original_id": "edd12246-f8ca-5d9f-b603-db42c1b1c822",
+        "text": "jericho turnpike",
+        "type": "Entity"
+      },
+      {
+        "id": 11,
+        "original_id": "e4effc93-5b5d-5c4e-bd94-5955c56766c8",
+        "text": "21 miles",
+        "type": "Entity"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 9,
+        "target": 3,
+        "type": "located_outside_town_centre_of"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "has_population"
+      },
+      {
+        "source": 1,
+        "target": 4,
+        "type": "contains"
+      },
+      {
+        "source": 4,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 11,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 6,
+        "type": "population_measured_in"
+      },
+      {
+        "source": 1,
+        "target": 6,
+        "type": "contains"
+      },
+      {
+        "source": 6,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 10,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 9,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 9,
+        "type": "contains"
+      },
+      {
+        "source": 9,
+        "target": 10,
+        "type": "on"
+      },
+      {
+        "source": 1,
+        "target": 10,
+        "type": "contains"
+      },
+      {
+        "source": 9,
+        "target": 11,
+        "type": "has_distance_from_town_centre"
+      },
+      {
+        "source": 1,
+        "target": 11,
+        "type": "contains"
+      }
+    ]
+  },
+  "grafo_evidencia": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "31caf3d2-dd71-5a2d-958f-6c4720d7a886",
+        "text": "This chunk is about:\n- Places: New York State Route 454, Commack, Holbrook\n- Roads: NY 25 (Jericho Turnpike), NY 27 (Sunrise Highway)\n- Topics: route span, population\n\nFacts:\n- New York State Route 454 spans from NY 25 (Jericho Turnpike) in Commack to NY 27 (Sunrise Highway) in Holbrook.\n- Commack had a population of 36,124 at the 2010 census.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "f21340bc-ee9c-538b-ae0b-2043429f893e",
+        "text": "Page: New York State Route 454. Sentence: It spans from NY 25 (Jericho Turnpike) in Commack to NY 27 (Sunrise Highway) in Holbrook.\nPage: Commack, New York. Sentence: The CDP's population was 36,124 at the 2010 census.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "8dba180e-6561-5dea-9d83-7c1cda181752",
+        "text": "text_9fdc65a7296735849ad7084b01f895ec",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "68cc0e63-6f0f-5923-9e1e-ec7d150445c4",
+        "text": "new york state route 454",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "e70e3fe2-1221-57f1-9fe6-7f99eccc73e0",
+        "text": "ny 25",
+        "type": "Entity"
+      },
+      {
+        "id": 5,
+        "original_id": "edd12246-f8ca-5d9f-b603-db42c1b1c822",
+        "text": "jericho turnpike",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "5e52d312-a248-534f-a58b-25c5426a89ad",
+        "text": "road",
+        "type": "EntityType"
+      },
+      {
+        "id": 7,
+        "original_id": "1ff73de7-15ff-50dc-950d-a804a9333405",
+        "text": "commack",
+        "type": "Entity"
+      },
+      {
+        "id": 8,
+        "original_id": "cb1dc1af-5253-5fa4-877e-246a7629f489",
+        "text": "2010",
+        "type": "Entity"
+      },
+      {
+        "id": 9,
+        "original_id": "b19433ae-558c-5aaf-95ac-6231f2a4be0e",
+        "text": "date",
+        "type": "EntityType"
+      },
+      {
+        "id": 10,
+        "original_id": "5f394058-b2a0-5ba8-8466-ba2a18cfcf4e",
+        "text": "place",
+        "type": "EntityType"
+      },
+      {
+        "id": 11,
+        "original_id": "73c3c1ab-3cb7-5172-9ae3-fcdffff2aec4",
+        "text": "ny 27",
+        "type": "Entity"
+      },
+      {
+        "id": 12,
+        "original_id": "8dc894f4-5d59-5241-9605-4caabdc2a85a",
+        "text": "sunrise highway",
+        "type": "Entity"
+      },
+      {
+        "id": 13,
+        "original_id": "c56b3e8d-4d76-5592-9261-bb553c3f56be",
+        "text": "holbrook",
+        "type": "Entity"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "starts_at"
+      },
+      {
+        "source": 1,
+        "target": 4,
+        "type": "contains"
+      },
+      {
+        "source": 4,
+        "target": 5,
+        "type": "also_named"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 4,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 12,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 11,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 7,
+        "type": "starts_in"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      },
+      {
+        "source": 7,
+        "target": 8,
+        "type": "population_at_census"
+      },
+      {
+        "source": 1,
+        "target": 8,
+        "type": "contains"
+      },
+      {
+        "source": 8,
+        "target": 9,
+        "type": "is_a"
+      },
+      {
+        "source": 7,
+        "target": 10,
+        "type": "is_a"
+      },
+      {
+        "source": 13,
+        "target": 10,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 11,
+        "type": "ends_at"
+      },
+      {
+        "source": 1,
+        "target": 11,
+        "type": "contains"
+      },
+      {
+        "source": 11,
+        "target": 12,
+        "type": "also_named"
+      },
+      {
+        "source": 1,
+        "target": 12,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 13,
+        "type": "ends_in"
+      },
+      {
+        "source": 1,
+        "target": 13,
+        "type": "contains"
+      }
+    ]
+  }
+}

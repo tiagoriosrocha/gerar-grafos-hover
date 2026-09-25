@@ -1,0 +1,420 @@
+{
+  "dataset": "hover",
+  "id": "76c9f867-1f92-4676-a936-d12364536e01",
+  "split": "train",
+  "claim": "Lear's and another magazine were not published in the same country. A woman founded this other magazine. This woman was married to Hannes Gebhard.",
+  "evidencia": "Page: Kotiliesi. Sentence: Kotiliesi (meaning \"Fireside\" in English) is a Finnish language bimonthly family and women's magazine published in Helsinki, Finland.\nPage: Lear's. Sentence: The magazine was based in New York City.\nPage: Hedvig Gebhard. Sentence: In 1922 she founded \"Kotiliesi\", a family magazine.\nPage: Hannes Gebhard. Sentence: He was married to Hedvig Gebhard.",
+  "evidence_text": "Page: Kotiliesi. Sentence: Kotiliesi (meaning \"Fireside\" in English) is a Finnish language bimonthly family and women's magazine published in Helsinki, Finland.\nPage: Lear's. Sentence: The magazine was based in New York City.\nPage: Hedvig Gebhard. Sentence: In 1922 she founded \"Kotiliesi\", a family magazine.\nPage: Hannes Gebhard. Sentence: He was married to Hedvig Gebhard.",
+  "label": "SUPPORTED",
+  "num_hops": 4,
+  "hover_metadata": {
+    "supporting_facts": [
+      [
+        "Kotiliesi",
+        0
+      ],
+      [
+        "Lear's",
+        4
+      ],
+      [
+        "Hedvig Gebhard",
+        2
+      ],
+      [
+        "Hannes Gebhard",
+        2
+      ]
+    ],
+    "num_hops": 4,
+    "evidence_annotation_id": [
+      0
+    ],
+    "evidence_id": [
+      "Kotiliesi::sentence::0",
+      "Lear's::sentence::4",
+      "Hedvig Gebhard::sentence::2",
+      "Hannes Gebhard::sentence::2"
+    ],
+    "evidence_wiki_url": [
+      "https://en.wikipedia.org/wiki/Kotiliesi",
+      "https://en.wikipedia.org/wiki/Lear%27s",
+      "https://en.wikipedia.org/wiki/Hedvig_Gebhard",
+      "https://en.wikipedia.org/wiki/Hannes_Gebhard"
+    ],
+    "evidence_sentence_id": [
+      "Kotiliesi::sentence::0",
+      "Lear's::sentence::4",
+      "Hedvig Gebhard::sentence::2",
+      "Hannes Gebhard::sentence::2"
+    ]
+  },
+  "grafo_claim": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "2ba480fd-faea-5be7-be34-6f09ad6b8fa4",
+        "text": "This chunk is about:\n- Products: Lear's, another magazine\n- People: the woman founder, Hannes Gebhard\n- Places: countries\n\nFacts:\n- Lear's and the other magazine were not published in the same country.\n- A woman founded the other magazine.\n- The woman who founded the other magazine was married to Hannes Gebhard.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "46b8e632-9aa8-53ff-bab6-45b24672f8d3",
+        "text": "Lear's and another magazine were not published in the same country. A woman founded this other magazine. This woman was married to Hannes Gebhard.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "2557b22b-f8f0-5273-b833-a6dcf032a0fd",
+        "text": "text_46342695e0ad4c41ca762d626921cbb3",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "a868b75b-cda9-59e1-854a-656d4978106d",
+        "text": "lears",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "5927653a-08d8-574b-a326-de69c430c119",
+        "text": "magazine",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "0b3ef1d2-4339-5135-83b8-c5080fbc8d36",
+        "text": "other magazine",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "fc30518b-9e52-5544-8653-6b0f55fe2417",
+        "text": "woman",
+        "type": "Entity"
+      },
+      {
+        "id": 7,
+        "original_id": "99a82eec-bb35-5bb5-9ed2-e73fc7a756de",
+        "text": "person",
+        "type": "EntityType"
+      },
+      {
+        "id": 8,
+        "original_id": "e1fd7280-0d2c-5cd3-8c2e-dc34d6038fe8",
+        "text": "hannes gebhard",
+        "type": "Entity"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 5,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "not_published_in_same_country_as"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "founded_by"
+      },
+      {
+        "source": 1,
+        "target": 6,
+        "type": "contains"
+      },
+      {
+        "source": 6,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 8,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 6,
+        "target": 8,
+        "type": "married_to"
+      },
+      {
+        "source": 1,
+        "target": 8,
+        "type": "contains"
+      }
+    ]
+  },
+  "grafo_evidencia": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "5f947150-7cb1-5dfa-943e-1968967cd1da",
+        "text": "This chunk is about:\n- People: Hedvig Gebhard, Hannes Gebhard\n- Products: Kotiliesi, Lear's\n- Places: Helsinki, Finland, New York City\n- Topics: magazines, publishing\n\nFacts:\n- Hedvig Gebhard founded Kotiliesi, a family magazine, in 1922.\n- Hannes Gebhard was married to Hedvig Gebhard.\n- Kotiliesi is a Finnish-language bimonthly family and women's magazine published in Helsinki, Finland.\n- The name Kotiliesi means \"Fireside\" in English.\n- Lear's was based in New York City.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "41b4a97b-08fd-5ee5-ba89-8c28c37f7aa3",
+        "text": "Page: Kotiliesi. Sentence: Kotiliesi (meaning \"Fireside\" in English) is a Finnish language bimonthly family and women's magazine published in Helsinki, Finland.\nPage: Lear's. Sentence: The magazine was based in New York City.\nPage: Hedvig Gebhard. Sentence: In 1922 she founded \"Kotiliesi\", a family magazine.\nPage: Hannes Gebhard. Sentence: He was married to Hedvig Gebhard.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "fce4b18d-d073-54a1-bcd8-5040b9e7f474",
+        "text": "text_133c4bc931eb90efc6f0de2563318c39",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "9c810faa-48f6-57f2-8e92-7f34dd622c50",
+        "text": "kotiliesi",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "5927653a-08d8-574b-a326-de69c430c119",
+        "text": "magazine",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "dec0cb61-b17d-5f5e-94e6-7f575c582d0b",
+        "text": "fireside",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "d2a381fa-3658-5ca6-ada9-2109cfc9331d",
+        "text": "concept",
+        "type": "EntityType"
+      },
+      {
+        "id": 7,
+        "original_id": "540859f0-8099-5664-97d6-e0b9a74f0104",
+        "text": "helsinki",
+        "type": "Entity"
+      },
+      {
+        "id": 8,
+        "original_id": "5f394058-b2a0-5ba8-8466-ba2a18cfcf4e",
+        "text": "place",
+        "type": "EntityType"
+      },
+      {
+        "id": 9,
+        "original_id": "f9eb7eff-85cc-54a7-bf09-096476bfce42",
+        "text": "finland",
+        "type": "Entity"
+      },
+      {
+        "id": 10,
+        "original_id": "cf4b233d-1a33-5a72-81ea-6a75e07d26f6",
+        "text": "hedvig gebhard",
+        "type": "Entity"
+      },
+      {
+        "id": 11,
+        "original_id": "99a82eec-bb35-5bb5-9ed2-e73fc7a756de",
+        "text": "person",
+        "type": "EntityType"
+      },
+      {
+        "id": 12,
+        "original_id": "5a4417f7-418a-55d6-bba2-981d57395a78",
+        "text": "1922",
+        "type": "Entity"
+      },
+      {
+        "id": 13,
+        "original_id": "b19433ae-558c-5aaf-95ac-6231f2a4be0e",
+        "text": "date",
+        "type": "EntityType"
+      },
+      {
+        "id": 14,
+        "original_id": "e1fd7280-0d2c-5cd3-8c2e-dc34d6038fe8",
+        "text": "hannes gebhard",
+        "type": "Entity"
+      },
+      {
+        "id": 15,
+        "original_id": "a868b75b-cda9-59e1-854a-656d4978106d",
+        "text": "lears",
+        "type": "Entity"
+      },
+      {
+        "id": 16,
+        "original_id": "62912d92-4218-52f7-a1a6-776a04889442",
+        "text": "new york city",
+        "type": "Entity"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 10,
+        "target": 3,
+        "type": "founded"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 15,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "means_in_english"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 7,
+        "type": "published_in"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      },
+      {
+        "source": 7,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 9,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 16,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 7,
+        "target": 9,
+        "type": "located_in"
+      },
+      {
+        "source": 1,
+        "target": 9,
+        "type": "contains"
+      },
+      {
+        "source": 1,
+        "target": 10,
+        "type": "contains"
+      },
+      {
+        "source": 14,
+        "target": 10,
+        "type": "married_to"
+      },
+      {
+        "source": 10,
+        "target": 11,
+        "type": "is_a"
+      },
+      {
+        "source": 14,
+        "target": 11,
+        "type": "is_a"
+      },
+      {
+        "source": 10,
+        "target": 12,
+        "type": "founded_in"
+      },
+      {
+        "source": 1,
+        "target": 12,
+        "type": "contains"
+      },
+      {
+        "source": 12,
+        "target": 13,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 14,
+        "type": "contains"
+      },
+      {
+        "source": 1,
+        "target": 15,
+        "type": "contains"
+      },
+      {
+        "source": 15,
+        "target": 16,
+        "type": "based_in"
+      },
+      {
+        "source": 1,
+        "target": 16,
+        "type": "contains"
+      }
+    ]
+  }
+}

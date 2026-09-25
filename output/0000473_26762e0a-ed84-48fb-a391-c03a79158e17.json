@@ -1,0 +1,421 @@
+{
+  "dataset": "hover",
+  "id": "26762e0a-ed84-48fb-a391-c03a79158e17",
+  "split": "train",
+  "claim": "A franchise carrier operates aircraft in full British Airways livery and has its main base at OR King Shaka International Airport, Johannesburg. KLM has an 18% stake in this franchise carrier.",
+  "evidencia": "Page: British Airways franchise destinations. Sentence: Together with wholly owned subsidiary BA CityFlyer, franchise carriers Sun Air and Comair operate aircraft in full British Airways livery, offer full BA service and staff wear BA uniform.\nPage: Comair (South Africa). Sentence: Its main base is OR Tambo International Airport, Johannesburg, and has focus cities at Cape Town International Airport and King Shaka International Airport.\nPage: Airlines of Africa. Sentence: For instance, KLM has a 26% stake in Kenya Airways and British Airways has an 18% stake in Comair.",
+  "evidence_text": "Page: British Airways franchise destinations. Sentence: Together with wholly owned subsidiary BA CityFlyer, franchise carriers Sun Air and Comair operate aircraft in full British Airways livery, offer full BA service and staff wear BA uniform.\nPage: Comair (South Africa). Sentence: Its main base is OR Tambo International Airport, Johannesburg, and has focus cities at Cape Town International Airport and King Shaka International Airport.\nPage: Airlines of Africa. Sentence: For instance, KLM has a 26% stake in Kenya Airways and British Airways has an 18% stake in Comair.",
+  "label": "NOT_SUPPORTED",
+  "num_hops": 3,
+  "hover_metadata": {
+    "supporting_facts": [
+      [
+        "British Airways franchise destinations",
+        2
+      ],
+      [
+        "Comair (South Africa)",
+        2
+      ],
+      [
+        "Airlines of Africa",
+        4
+      ]
+    ],
+    "num_hops": 3,
+    "evidence_annotation_id": [
+      0
+    ],
+    "evidence_id": [
+      "British Airways franchise destinations::sentence::2",
+      "Comair (South Africa)::sentence::2",
+      "Airlines of Africa::sentence::4"
+    ],
+    "evidence_wiki_url": [
+      "https://en.wikipedia.org/wiki/British_Airways_franchise_destinations",
+      "https://en.wikipedia.org/wiki/Comair_%28South_Africa%29",
+      "https://en.wikipedia.org/wiki/Airlines_of_Africa"
+    ],
+    "evidence_sentence_id": [
+      "British Airways franchise destinations::sentence::2",
+      "Comair (South Africa)::sentence::2",
+      "Airlines of Africa::sentence::4"
+    ]
+  },
+  "grafo_claim": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "be291911-4a54-5afa-a5ce-94d99ca2f871",
+        "text": "This chunk is about:\n- Companies: British Airways, KLM\n- Organizations: franchise carrier\n- Places: OR King Shaka International Airport, Johannesburg\n\nFacts:\n- The franchise carrier operates aircraft in full British Airways livery.\n- The franchise carrier has its main base at OR King Shaka International Airport, Johannesburg.\n- KLM has an 18% stake in the franchise carrier.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "601be44a-9912-512b-9947-51c316fde43d",
+        "text": "A franchise carrier operates aircraft in full British Airways livery and has its main base at OR King Shaka International Airport, Johannesburg. KLM has an 18% stake in this franchise carrier.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "15c30a84-26e4-5099-b88b-454c34870ee1",
+        "text": "text_5ce1cece7651d41eb43ac4363e89971f",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "cf461f1b-943a-50f1-a7c2-cfe000452057",
+        "text": "franchise carrier",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "540b0ca6-d7f8-510b-b7c0-05c8484679e3",
+        "text": "british airways",
+        "type": "Entity"
+      },
+      {
+        "id": 5,
+        "original_id": "388f60fb-220d-55e8-ae9c-3ac93cead308",
+        "text": "organization",
+        "type": "EntityType"
+      },
+      {
+        "id": 6,
+        "original_id": "2b7944fa-a4f5-5397-94f6-42ccc0b5243c",
+        "text": "or king shaka international airport, johannesburg",
+        "type": "Entity"
+      },
+      {
+        "id": 7,
+        "original_id": "5f394058-b2a0-5ba8-8466-ba2a18cfcf4e",
+        "text": "place",
+        "type": "EntityType"
+      },
+      {
+        "id": 8,
+        "original_id": "6d80e7a8-65b0-5193-b13f-ca8338a88256",
+        "text": "klm",
+        "type": "Entity"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 8,
+        "target": 3,
+        "type": "has_stake_in"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "operates_in_livery_of"
+      },
+      {
+        "source": 1,
+        "target": 4,
+        "type": "contains"
+      },
+      {
+        "source": 4,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 8,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 6,
+        "type": "has_main_base_at"
+      },
+      {
+        "source": 1,
+        "target": 6,
+        "type": "contains"
+      },
+      {
+        "source": 6,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 8,
+        "type": "contains"
+      }
+    ]
+  },
+  "grafo_evidencia": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "198b41bd-fcb0-597d-abed-828d1675e5b1",
+        "text": "This chunk is about:\n- Companies: British Airways, BA CityFlyer, Sun Air, Comair, KLM, Kenya Airways\n- Places: OR Tambo International Airport, Johannesburg, Cape Town International Airport, King Shaka International Airport\n- Topics: franchise operations, airline ownership stakes, airline bases and focus cities\n\nFacts:\n- British Airways franchise carriers Sun Air and Comair operate aircraft in full British Airways livery, offer full British Airways service, and have staff who wear British Airways uniforms alongside wholly owned subsidiary BA CityFlyer.\n- Comair’s main base is OR Tambo International Airport in Johannesburg.\n- Comair has focus cities at Cape Town International Airport and King Shaka International Airport.\n- British Airways has an 18% stake in Comair.\n- KLM has a 26% stake in Kenya Airways.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "0cb47c1b-f41e-50ca-989e-26d83e918de1",
+        "text": "Page: British Airways franchise destinations. Sentence: Together with wholly owned subsidiary BA CityFlyer, franchise carriers Sun Air and Comair operate aircraft in full British Airways livery, offer full BA service and staff wear BA uniform.\nPage: Comair (South Africa). Sentence: Its main base is OR Tambo International Airport, Johannesburg, and has focus cities at Cape Town International Airport and King Shaka International Airport.\nPage: Airlines of Africa. Sentence: For instance, KLM has a 26% stake in Kenya Airways and British Airways has an 18% stake in Comair.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "f1c7e355-c983-5d2b-bb02-bc76303a8512",
+        "text": "text_e8aeac008679041af7c5bf901d90cf3a",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "540b0ca6-d7f8-510b-b7c0-05c8484679e3",
+        "text": "british airways",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "585f1216-11a0-556e-bc05-d3ee7530f643",
+        "text": "comair",
+        "type": "Entity"
+      },
+      {
+        "id": 5,
+        "original_id": "1e355281-4ffc-5160-ad59-0e5c393e88e1",
+        "text": "or tambo international airport",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "4a6283c0-5454-5afc-9302-07b6c309f923",
+        "text": "johannesburg",
+        "type": "Entity"
+      },
+      {
+        "id": 7,
+        "original_id": "5f394058-b2a0-5ba8-8466-ba2a18cfcf4e",
+        "text": "place",
+        "type": "EntityType"
+      },
+      {
+        "id": 8,
+        "original_id": "263b33de-b6f1-5814-b832-ca4c8d400585",
+        "text": "cape town international airport",
+        "type": "Entity"
+      },
+      {
+        "id": 9,
+        "original_id": "441130bb-84bf-5766-9ae3-359474b24c20",
+        "text": "king shaka international airport",
+        "type": "Entity"
+      },
+      {
+        "id": 10,
+        "original_id": "388f60fb-220d-55e8-ae9c-3ac93cead308",
+        "text": "organization",
+        "type": "EntityType"
+      },
+      {
+        "id": 11,
+        "original_id": "a1512199-d175-5430-8c97-781dbe61e70c",
+        "text": "ba cityflyer",
+        "type": "Entity"
+      },
+      {
+        "id": 12,
+        "original_id": "522c4488-2501-56cc-bd61-0f0c42009106",
+        "text": "sun air",
+        "type": "Entity"
+      },
+      {
+        "id": 13,
+        "original_id": "6d80e7a8-65b0-5193-b13f-ca8338a88256",
+        "text": "klm",
+        "type": "Entity"
+      },
+      {
+        "id": 14,
+        "original_id": "0353c5dd-061c-5bc4-b79e-74729e62fcf1",
+        "text": "kenya airways",
+        "type": "Entity"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 4,
+        "target": 3,
+        "type": "franchise_carrier_of"
+      },
+      {
+        "source": 11,
+        "target": 3,
+        "type": "subsidiary_of"
+      },
+      {
+        "source": 12,
+        "target": 3,
+        "type": "franchise_carrier_of"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "has_stake_in"
+      },
+      {
+        "source": 1,
+        "target": 4,
+        "type": "contains"
+      },
+      {
+        "source": 4,
+        "target": 5,
+        "type": "has_main_base_at"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "located_in"
+      },
+      {
+        "source": 1,
+        "target": 6,
+        "type": "contains"
+      },
+      {
+        "source": 6,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 5,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 8,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 9,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 4,
+        "target": 8,
+        "type": "has_focus_city_at"
+      },
+      {
+        "source": 1,
+        "target": 8,
+        "type": "contains"
+      },
+      {
+        "source": 4,
+        "target": 9,
+        "type": "has_focus_city_at"
+      },
+      {
+        "source": 1,
+        "target": 9,
+        "type": "contains"
+      },
+      {
+        "source": 4,
+        "target": 10,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 10,
+        "type": "is_a"
+      },
+      {
+        "source": 11,
+        "target": 10,
+        "type": "is_a"
+      },
+      {
+        "source": 12,
+        "target": 10,
+        "type": "is_a"
+      },
+      {
+        "source": 14,
+        "target": 10,
+        "type": "is_a"
+      },
+      {
+        "source": 13,
+        "target": 10,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 11,
+        "type": "contains"
+      },
+      {
+        "source": 1,
+        "target": 12,
+        "type": "contains"
+      },
+      {
+        "source": 1,
+        "target": 13,
+        "type": "contains"
+      },
+      {
+        "source": 13,
+        "target": 14,
+        "type": "has_stake_in"
+      },
+      {
+        "source": 1,
+        "target": 14,
+        "type": "contains"
+      }
+    ]
+  }
+}

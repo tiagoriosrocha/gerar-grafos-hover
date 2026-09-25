@@ -1,0 +1,459 @@
+{
+  "dataset": "hover",
+  "id": "a421e55c-6cfd-4cc0-8db7-7488c7b1e514",
+  "split": "train",
+  "claim": "Maximilian Büsser was the CEO of a company that produced timepieces from the country Swiss.",
+  "evidencia": "Page: Maximilian Büsser. Sentence: Prior to MB&F he was the CEO of Harry Winston, Inc. Rare Timepieces (1998 - 2005) and a senior manager at Jaeger-LeCoultre (1991 - 1998).\nPage: Harry Winston, Inc.. Sentence: Harry Winston, Inc. is an American luxury jeweler and producer of Swiss timepieces.",
+  "evidence_text": "Page: Maximilian Büsser. Sentence: Prior to MB&F he was the CEO of Harry Winston, Inc. Rare Timepieces (1998 - 2005) and a senior manager at Jaeger-LeCoultre (1991 - 1998).\nPage: Harry Winston, Inc.. Sentence: Harry Winston, Inc. is an American luxury jeweler and producer of Swiss timepieces.",
+  "label": "SUPPORTED",
+  "num_hops": 2,
+  "hover_metadata": {
+    "supporting_facts": [
+      [
+        "Maximilian Büsser",
+        1
+      ],
+      [
+        "Harry Winston, Inc.",
+        0
+      ]
+    ],
+    "num_hops": 2,
+    "evidence_annotation_id": [
+      0
+    ],
+    "evidence_id": [
+      "Maximilian Büsser::sentence::1",
+      "Harry Winston, Inc.::sentence::0"
+    ],
+    "evidence_wiki_url": [
+      "https://en.wikipedia.org/wiki/Maximilian_B%C3%BCsser",
+      "https://en.wikipedia.org/wiki/Harry_Winston%2C_Inc."
+    ],
+    "evidence_sentence_id": [
+      "Maximilian Büsser::sentence::1",
+      "Harry Winston, Inc.::sentence::0"
+    ]
+  },
+  "grafo_claim": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "9949b09c-e83b-5d8f-935c-f346f41496b6",
+        "text": "This chunk is about:\n- People: Maximilian Büsser\n- Roles: CEO\n- Companies: Swiss timepiece company\n- Products: Timepieces\n- Places: Switzerland\n\nFacts:\n- Maximilian Büsser was the CEO of a Swiss company.\n- The Swiss company produced timepieces.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "d4b97691-68af-57c5-b811-df270d571915",
+        "text": "Maximilian Büsser was the CEO of a company that produced timepieces from the country Swiss.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "9bcdae91-ebac-5e59-9254-c787ff0eb30d",
+        "text": "text_e065b32ddeb486ee37627a3d32e1876b",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "44ee61b3-178b-5df5-a54a-9f04e8b47b62",
+        "text": "maximilian büsser",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "99a82eec-bb35-5bb5-9ed2-e73fc7a756de",
+        "text": "person",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "fc2b3f20-7187-531f-9ce6-05bdf1608144",
+        "text": "the company",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "388f60fb-220d-55e8-ae9c-3ac93cead308",
+        "text": "organization",
+        "type": "EntityType"
+      },
+      {
+        "id": 7,
+        "original_id": "9accc7cb-df85-5a10-9844-3ecb6f543a8e",
+        "text": "timepieces",
+        "type": "Entity"
+      },
+      {
+        "id": 8,
+        "original_id": "f76d57aa-4740-5218-9539-0e0978cbf183",
+        "text": "product",
+        "type": "EntityType"
+      },
+      {
+        "id": 9,
+        "original_id": "e4485ca8-d661-5f9b-b14f-24f3ea14cb05",
+        "text": "swiss",
+        "type": "Entity"
+      },
+      {
+        "id": 10,
+        "original_id": "5f394058-b2a0-5ba8-8466-ba2a18cfcf4e",
+        "text": "place",
+        "type": "EntityType"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "was_ceo_of"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 5,
+        "target": 7,
+        "type": "produced"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      },
+      {
+        "source": 7,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 5,
+        "target": 9,
+        "type": "is_from"
+      },
+      {
+        "source": 1,
+        "target": 9,
+        "type": "contains"
+      },
+      {
+        "source": 9,
+        "target": 10,
+        "type": "is_a"
+      }
+    ]
+  },
+  "grafo_evidencia": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "c3a2160e-270b-5ecc-86b4-7d9debe7f85e",
+        "text": "This chunk is about:\n- People: Maximilian Büsser\n- Companies: MB&F, Harry Winston, Inc., Jaeger-LeCoultre\n- Roles: CEO, senior manager\n- Products: Swiss timepieces, luxury jewelry\n\nFacts:\n- From 1991 to 1998, Maximilian Büsser was a senior manager at Jaeger-LeCoultre.\n- From 1998 to 2005, Maximilian Büsser was the CEO of Harry Winston, Inc. Rare Timepieces before MB&F.\n- Harry Winston, Inc. is an American luxury jeweler and a producer of Swiss timepieces.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "2ac304cb-9b69-59fe-979f-8feb89afa78e",
+        "text": "Page: Maximilian Büsser. Sentence: Prior to MB&F he was the CEO of Harry Winston, Inc. Rare Timepieces (1998 - 2005) and a senior manager at Jaeger-LeCoultre (1991 - 1998).\nPage: Harry Winston, Inc.. Sentence: Harry Winston, Inc. is an American luxury jeweler and producer of Swiss timepieces.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "d3b1afe1-95d3-515c-a243-9c77f8678183",
+        "text": "text_b862cf41f0edcae94ccdefafcc100699",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "44ee61b3-178b-5df5-a54a-9f04e8b47b62",
+        "text": "maximilian büsser",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "99a82eec-bb35-5bb5-9ed2-e73fc7a756de",
+        "text": "person",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "cf96d83e-d0e4-536d-88f3-0782dd3431c9",
+        "text": "harry winston, inc. rare timepieces",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "388f60fb-220d-55e8-ae9c-3ac93cead308",
+        "text": "organization",
+        "type": "EntityType"
+      },
+      {
+        "id": 7,
+        "original_id": "d46100a8-3f72-5b66-97bf-2bf61e38365c",
+        "text": "jaeger-lecoultre",
+        "type": "Entity"
+      },
+      {
+        "id": 8,
+        "original_id": "111f07f3-2527-5bbf-827f-7a18bb37f150",
+        "text": "1998",
+        "type": "Entity"
+      },
+      {
+        "id": 9,
+        "original_id": "b19433ae-558c-5aaf-95ac-6231f2a4be0e",
+        "text": "date",
+        "type": "EntityType"
+      },
+      {
+        "id": 10,
+        "original_id": "6ea8d21c-9bec-577b-88ed-652d3922a992",
+        "text": "mb&f",
+        "type": "Entity"
+      },
+      {
+        "id": 11,
+        "original_id": "c134b9c3-6b55-5a5a-b8ca-c2f1a633a648",
+        "text": "2005",
+        "type": "Entity"
+      },
+      {
+        "id": 12,
+        "original_id": "720e3f07-c737-5d52-9990-eb6ce06a3479",
+        "text": "1991",
+        "type": "Entity"
+      },
+      {
+        "id": 13,
+        "original_id": "5c2b3252-16cf-545b-8fbf-445d655345f6",
+        "text": "harry winston, inc.",
+        "type": "Entity"
+      },
+      {
+        "id": 14,
+        "original_id": "32e5ea46-cca9-5920-8b2d-77357f10ce8d",
+        "text": "american",
+        "type": "Entity"
+      },
+      {
+        "id": 15,
+        "original_id": "d2a381fa-3658-5ca6-ada9-2109cfc9331d",
+        "text": "concept",
+        "type": "EntityType"
+      },
+      {
+        "id": 16,
+        "original_id": "a474fe75-2bd5-50ed-8f68-0a4afeab9e52",
+        "text": "luxury jeweler",
+        "type": "Entity"
+      },
+      {
+        "id": 17,
+        "original_id": "e5676020-2451-5398-b761-5e5155186fdb",
+        "text": "producer of swiss timepieces",
+        "type": "Entity"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "served_as_ceo_of"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 7,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 10,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 13,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 7,
+        "type": "was_senior_manager_at"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      },
+      {
+        "source": 7,
+        "target": 8,
+        "type": "role_ended_in"
+      },
+      {
+        "source": 3,
+        "target": 8,
+        "type": "started_ceo_role_in"
+      },
+      {
+        "source": 1,
+        "target": 8,
+        "type": "contains"
+      },
+      {
+        "source": 8,
+        "target": 9,
+        "type": "is_a"
+      },
+      {
+        "source": 11,
+        "target": 9,
+        "type": "is_a"
+      },
+      {
+        "source": 12,
+        "target": 9,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 10,
+        "type": "worked_before_joining"
+      },
+      {
+        "source": 1,
+        "target": 10,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 11,
+        "type": "ended_ceo_role_in"
+      },
+      {
+        "source": 1,
+        "target": 11,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 12,
+        "type": "started_senior_manager_role_in"
+      },
+      {
+        "source": 1,
+        "target": 12,
+        "type": "contains"
+      },
+      {
+        "source": 1,
+        "target": 13,
+        "type": "contains"
+      },
+      {
+        "source": 13,
+        "target": 14,
+        "type": "has_nationality_descriptor"
+      },
+      {
+        "source": 1,
+        "target": 14,
+        "type": "contains"
+      },
+      {
+        "source": 14,
+        "target": 15,
+        "type": "is_a"
+      },
+      {
+        "source": 16,
+        "target": 15,
+        "type": "is_a"
+      },
+      {
+        "source": 17,
+        "target": 15,
+        "type": "is_a"
+      },
+      {
+        "source": 13,
+        "target": 16,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 16,
+        "type": "contains"
+      },
+      {
+        "source": 13,
+        "target": 17,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 17,
+        "type": "contains"
+      }
+    ]
+  }
+}

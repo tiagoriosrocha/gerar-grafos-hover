@@ -1,0 +1,465 @@
+{
+  "dataset": "hover",
+  "id": "e3ff6f15-a843-4095-a02a-f46f8cce6fa4",
+  "split": "train",
+  "claim": "The student body for Ron Johnson's alma mater was 37,776.",
+  "evidencia": "Page: Ron Johnson (wide receiver, born 1958). Sentence: He first enrolled at Monterey Peninsula College before transferring to California State University, Long Beach.\nPage: California State University, Long Beach. Sentence: California State University, Long Beach (CSULB; also known as Long Beach State, Cal State Long Beach, LBSU, or The Beach) is the third largest campus of the 23-school California State University system (CSU) and one of the largest universities in the state of California by enrollment, its student body numbering 37,776 for the Fall 2016 semester.",
+  "evidence_text": "Page: Ron Johnson (wide receiver, born 1958). Sentence: He first enrolled at Monterey Peninsula College before transferring to California State University, Long Beach.\nPage: California State University, Long Beach. Sentence: California State University, Long Beach (CSULB; also known as Long Beach State, Cal State Long Beach, LBSU, or The Beach) is the third largest campus of the 23-school California State University system (CSU) and one of the largest universities in the state of California by enrollment, its student body numbering 37,776 for the Fall 2016 semester.",
+  "label": "SUPPORTED",
+  "num_hops": 2,
+  "hover_metadata": {
+    "supporting_facts": [
+      [
+        "Ron Johnson (wide receiver, born 1958)",
+        2
+      ],
+      [
+        "California State University, Long Beach",
+        0
+      ]
+    ],
+    "num_hops": 2,
+    "evidence_annotation_id": [
+      0
+    ],
+    "evidence_id": [
+      "Ron Johnson (wide receiver, born 1958)::sentence::2",
+      "California State University, Long Beach::sentence::0"
+    ],
+    "evidence_wiki_url": [
+      "https://en.wikipedia.org/wiki/Ron_Johnson_%28wide_receiver%2C_born_1958%29",
+      "https://en.wikipedia.org/wiki/California_State_University%2C_Long_Beach"
+    ],
+    "evidence_sentence_id": [
+      "Ron Johnson (wide receiver, born 1958)::sentence::2",
+      "California State University, Long Beach::sentence::0"
+    ]
+  },
+  "grafo_claim": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "d4f4a0c1-c799-5d1d-a5c6-d4b48fbfc8aa",
+        "text": "This chunk is about:\n- People: Ron Johnson\n- Organizations: Ron Johnson's alma mater\n- Topics: Student body size\n\nFacts:\n- Ron Johnson's alma mater had a student body of 37,776.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "bdf5b088-4e5a-558e-8b21-b39ba582a003",
+        "text": "The student body for Ron Johnson's alma mater was 37,776.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "86d053ee-bbf6-5a2a-b7c1-c2a37078d4b0",
+        "text": "text_89cf435da99dacbe7fa9302884428cf1",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "947b87fd-bd47-5cba-9f38-8565a39689b8",
+        "text": "ron johnson",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "346ec54b-8755-5ccf-8fa1-7f276b0ced59",
+        "text": "ron johnsons alma mater",
+        "type": "Entity"
+      },
+      {
+        "id": 5,
+        "original_id": "31f943ee-a5a7-5149-ad4f-6bbe65536f36",
+        "text": "37,776",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "5c1097ca-fab8-54d5-b57f-5dca4b0e2507",
+        "text": "number",
+        "type": "EntityType"
+      },
+      {
+        "id": 7,
+        "original_id": "388f60fb-220d-55e8-ae9c-3ac93cead308",
+        "text": "organization",
+        "type": "EntityType"
+      },
+      {
+        "id": 8,
+        "original_id": "99a82eec-bb35-5bb5-9ed2-e73fc7a756de",
+        "text": "person",
+        "type": "EntityType"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "alma_mater"
+      },
+      {
+        "source": 1,
+        "target": 4,
+        "type": "contains"
+      },
+      {
+        "source": 4,
+        "target": 5,
+        "type": "has_student_body"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 4,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 8,
+        "type": "is_a"
+      }
+    ]
+  },
+  "grafo_evidencia": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "58e558b0-f229-5686-8e39-a3140e25f16a",
+        "text": "This chunk is about:\n- People: Ron Johnson\n- Organizations: Monterey Peninsula College, California State University system\n- Places: California State University, Long Beach, California\n- Topics: University enrollment, University naming\n\nFacts:\n- Ron Johnson first enrolled at Monterey Peninsula College before transferring to California State University, Long Beach.\n- California State University, Long Beach is also known as CSULB, Long Beach State, Cal State Long Beach, LBSU, and The Beach.\n- California State University, Long Beach is the third largest campus in the 23-school California State University system.\n- In Fall 2016, California State University, Long Beach had 37,776 students enrolled.\n- California State University, Long Beach is one of the largest universities in California by enrollment.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "84e80130-6b32-5c65-b557-ed1fb53ec47d",
+        "text": "Page: Ron Johnson (wide receiver, born 1958). Sentence: He first enrolled at Monterey Peninsula College before transferring to California State University, Long Beach.\nPage: California State University, Long Beach. Sentence: California State University, Long Beach (CSULB; also known as Long Beach State, Cal State Long Beach, LBSU, or The Beach) is the third largest campus of the 23-school California State University system (CSU) and one of the largest universities in the state of California by enrollment, its student body numbering 37,776 for the Fall 2016 semester.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "8a337ff3-2884-51cc-8c0a-c211707984c7",
+        "text": "text_a4659ac3705fceef3c802de6a77acdab",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "947b87fd-bd47-5cba-9f38-8565a39689b8",
+        "text": "ron johnson",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "7173f84b-1e36-515c-b701-eec79129b283",
+        "text": "monterey peninsula college",
+        "type": "Entity"
+      },
+      {
+        "id": 5,
+        "original_id": "388f60fb-220d-55e8-ae9c-3ac93cead308",
+        "text": "organization",
+        "type": "EntityType"
+      },
+      {
+        "id": 6,
+        "original_id": "cd01caeb-d387-5021-9301-9d41b63fb095",
+        "text": "california state university, long beach",
+        "type": "Entity"
+      },
+      {
+        "id": 7,
+        "original_id": "0d5c93a7-38d3-5abe-bb6e-bdce5bf7ffee",
+        "text": "california state university system",
+        "type": "Entity"
+      },
+      {
+        "id": 8,
+        "original_id": "8294cd6a-6968-5d3a-b0c8-57e08c745c8d",
+        "text": "california",
+        "type": "Entity"
+      },
+      {
+        "id": 9,
+        "original_id": "5f394058-b2a0-5ba8-8466-ba2a18cfcf4e",
+        "text": "place",
+        "type": "EntityType"
+      },
+      {
+        "id": 10,
+        "original_id": "2d0b3598-f1a4-54f5-8819-7e535a68ab3b",
+        "text": "fall 2016",
+        "type": "Entity"
+      },
+      {
+        "id": 11,
+        "original_id": "726c28c3-fa05-5450-bef1-b23b6a3031ef",
+        "text": "37,776",
+        "type": "Entity"
+      },
+      {
+        "id": 12,
+        "original_id": "5c1097ca-fab8-54d5-b57f-5dca4b0e2507",
+        "text": "number",
+        "type": "EntityType"
+      },
+      {
+        "id": 13,
+        "original_id": "b19433ae-558c-5aaf-95ac-6231f2a4be0e",
+        "text": "date",
+        "type": "EntityType"
+      },
+      {
+        "id": 14,
+        "original_id": "99a82eec-bb35-5bb5-9ed2-e73fc7a756de",
+        "text": "person",
+        "type": "EntityType"
+      },
+      {
+        "id": 15,
+        "original_id": "784af37d-8342-5c6a-8122-3d3c5eb393f8",
+        "text": "csulb",
+        "type": "Entity"
+      },
+      {
+        "id": 16,
+        "original_id": "d2a381fa-3658-5ca6-ada9-2109cfc9331d",
+        "text": "concept",
+        "type": "EntityType"
+      },
+      {
+        "id": 17,
+        "original_id": "5e601d76-b979-5a4c-99ae-c8fa456f6d43",
+        "text": "long beach state",
+        "type": "Entity"
+      },
+      {
+        "id": 18,
+        "original_id": "3483981a-c6d9-5753-a341-e52f3c5c9077",
+        "text": "cal state long beach",
+        "type": "Entity"
+      },
+      {
+        "id": 19,
+        "original_id": "cc720495-0059-525e-9df7-f9bb811a566d",
+        "text": "lbsu",
+        "type": "Entity"
+      },
+      {
+        "id": 20,
+        "original_id": "92861dc8-8dc7-53fa-91d5-69032f2274aa",
+        "text": "the beach",
+        "type": "Entity"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "enrolled_at"
+      },
+      {
+        "source": 1,
+        "target": 4,
+        "type": "contains"
+      },
+      {
+        "source": 4,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 7,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 6,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 6,
+        "type": "transferred_to"
+      },
+      {
+        "source": 1,
+        "target": 6,
+        "type": "contains"
+      },
+      {
+        "source": 15,
+        "target": 6,
+        "type": "is_alternate_name_for"
+      },
+      {
+        "source": 17,
+        "target": 6,
+        "type": "is_alternate_name_for"
+      },
+      {
+        "source": 18,
+        "target": 6,
+        "type": "is_alternate_name_for"
+      },
+      {
+        "source": 19,
+        "target": 6,
+        "type": "is_alternate_name_for"
+      },
+      {
+        "source": 20,
+        "target": 6,
+        "type": "is_alternate_name_for"
+      },
+      {
+        "source": 6,
+        "target": 7,
+        "type": "is_campus_of"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      },
+      {
+        "source": 6,
+        "target": 8,
+        "type": "located_in"
+      },
+      {
+        "source": 1,
+        "target": 8,
+        "type": "contains"
+      },
+      {
+        "source": 8,
+        "target": 9,
+        "type": "is_a"
+      },
+      {
+        "source": 6,
+        "target": 10,
+        "type": "has_enrollment_for_term"
+      },
+      {
+        "source": 1,
+        "target": 10,
+        "type": "contains"
+      },
+      {
+        "source": 10,
+        "target": 11,
+        "type": "student_body_numbered"
+      },
+      {
+        "source": 1,
+        "target": 11,
+        "type": "contains"
+      },
+      {
+        "source": 11,
+        "target": 12,
+        "type": "is_a"
+      },
+      {
+        "source": 10,
+        "target": 13,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 14,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 15,
+        "type": "contains"
+      },
+      {
+        "source": 15,
+        "target": 16,
+        "type": "is_a"
+      },
+      {
+        "source": 17,
+        "target": 16,
+        "type": "is_a"
+      },
+      {
+        "source": 18,
+        "target": 16,
+        "type": "is_a"
+      },
+      {
+        "source": 19,
+        "target": 16,
+        "type": "is_a"
+      },
+      {
+        "source": 20,
+        "target": 16,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 17,
+        "type": "contains"
+      },
+      {
+        "source": 1,
+        "target": 18,
+        "type": "contains"
+      },
+      {
+        "source": 1,
+        "target": 19,
+        "type": "contains"
+      },
+      {
+        "source": 1,
+        "target": 20,
+        "type": "contains"
+      }
+    ]
+  }
+}

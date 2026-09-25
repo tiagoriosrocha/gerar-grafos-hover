@@ -1,0 +1,465 @@
+{
+  "dataset": "hover",
+  "id": "3e7dffb0-a3a6-48f1-aede-dec553805718",
+  "split": "train",
+  "claim": "Presidente is owned and produced by a company. Both that company and Ambev produce beer.",
+  "evidencia": "Page: Cervecería Nacional Dominicana. Sentence: Cerveceria Nacional Dominicana (CND), is the primary beer producer in the Dominican Republic, the company is owned by AmBev and Grupo León Jimenes.\nPage: AmBev. Sentence: Ambev, formally Companhia de Bebidas das Américas (official English translation: \"Americas' Beverage Company\", hence the name \"Ambev\", formerly styled as \"AmBev\") is a Brazilian brewing company.\nPage: AmBev. Sentence: It was created on July 1, 1999, with the merger of two breweries, Brahma and Antarctica.\nPage: Presidente (beer). Sentence: Presidente is a brand of Pilsner beer that is owned and produced by Cervecería Nacional Dominicana (CND) at several breweries in the Dominican Republic.",
+  "evidence_text": "Page: Cervecería Nacional Dominicana. Sentence: Cerveceria Nacional Dominicana (CND), is the primary beer producer in the Dominican Republic, the company is owned by AmBev and Grupo León Jimenes.\nPage: AmBev. Sentence: Ambev, formally Companhia de Bebidas das Américas (official English translation: \"Americas' Beverage Company\", hence the name \"Ambev\", formerly styled as \"AmBev\") is a Brazilian brewing company.\nPage: AmBev. Sentence: It was created on July 1, 1999, with the merger of two breweries, Brahma and Antarctica.\nPage: Presidente (beer). Sentence: Presidente is a brand of Pilsner beer that is owned and produced by Cervecería Nacional Dominicana (CND) at several breweries in the Dominican Republic.",
+  "label": "SUPPORTED",
+  "num_hops": 3,
+  "hover_metadata": {
+    "supporting_facts": [
+      [
+        "Cervecería Nacional Dominicana",
+        0
+      ],
+      [
+        "AmBev",
+        0
+      ],
+      [
+        "AmBev",
+        2
+      ],
+      [
+        "Presidente (beer)",
+        0
+      ]
+    ],
+    "num_hops": 3,
+    "evidence_annotation_id": [
+      0
+    ],
+    "evidence_id": [
+      "Cervecería Nacional Dominicana::sentence::0",
+      "AmBev::sentence::0",
+      "AmBev::sentence::2",
+      "Presidente (beer)::sentence::0"
+    ],
+    "evidence_wiki_url": [
+      "https://en.wikipedia.org/wiki/Cervecer%C3%ADa_Nacional_Dominicana",
+      "https://en.wikipedia.org/wiki/AmBev",
+      "https://en.wikipedia.org/wiki/Presidente_%28beer%29"
+    ],
+    "evidence_sentence_id": [
+      "Cervecería Nacional Dominicana::sentence::0",
+      "AmBev::sentence::0",
+      "AmBev::sentence::2",
+      "Presidente (beer)::sentence::0"
+    ]
+  },
+  "grafo_claim": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "5662b144-b29d-5cd2-83cb-1a3b695d14a2",
+        "text": "This chunk is about:\n- Companies: Presidente owner and producer company, Ambev\n- Products: Presidente, beer\n\nFacts:\n- Presidente is owned and produced by a company.\n- The company that owns and produces Presidente produces beer.\n- Ambev produces beer.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "f73dacad-aec0-53ab-98d4-057debe4b2b4",
+        "text": "Presidente is owned and produced by a company. Both that company and Ambev produce beer.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "0b36cdb0-70ab-5535-ae6c-9b4d27d69a21",
+        "text": "text_eba020f79f5001a66339a42cb2ca9d3f",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "6548cff6-f414-5d62-97c3-32e0c7c26146",
+        "text": "presidente",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "f76d57aa-4740-5218-9539-0e0978cbf183",
+        "text": "product",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "2d2fe318-05e5-520a-912a-af33bbc8d1f3",
+        "text": "unnamed company",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "82bfc922-4fcd-56b0-b353-7b550b51389d",
+        "text": "company",
+        "type": "EntityType"
+      },
+      {
+        "id": 7,
+        "original_id": "9a14f0a1-3653-5864-83eb-533dd237e618",
+        "text": "beer",
+        "type": "Entity"
+      },
+      {
+        "id": 8,
+        "original_id": "03f49cc2-47e5-57ab-b4ca-cbb427a8dd72",
+        "text": "ambev",
+        "type": "Entity"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 3,
+        "type": "owns"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 7,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 8,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 5,
+        "target": 7,
+        "type": "produces"
+      },
+      {
+        "source": 8,
+        "target": 7,
+        "type": "produces"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      },
+      {
+        "source": 1,
+        "target": 8,
+        "type": "contains"
+      }
+    ]
+  },
+  "grafo_evidencia": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "fae41e00-d7c0-5b4e-a849-665cbb8a12a5",
+        "text": "This chunk is about:\n- Companies: Cervecería Nacional Dominicana, Ambev\n- Products: Presidente\n- Places: Dominican Republic, Brazil\n- Events: Brahma–Antarctica merger\n\nFacts:\n- On July 1, 1999, Ambev was created through the merger of the breweries Brahma and Antarctica.\n- Ambev, formally Companhia de Bebidas das Américas, is a Brazilian brewing company.\n- Cervecería Nacional Dominicana is the primary beer producer in the Dominican Republic.\n- Cervecería Nacional Dominicana is owned by Ambev and Grupo León Jimenes.\n- Presidente is a Pilsner beer brand owned and produced by Cervecería Nacional Dominicana.\n- Cervecería Nacional Dominicana produces Presidente at several breweries in the Dominican Republic.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "0e0820e3-5585-54e0-b175-fd098ab1494a",
+        "text": "Page: Cervecería Nacional Dominicana. Sentence: Cerveceria Nacional Dominicana (CND), is the primary beer producer in the Dominican Republic, the company is owned by AmBev and Grupo León Jimenes.\nPage: AmBev. Sentence: Ambev, formally Companhia de Bebidas das Américas (official English translation: \"Americas' Beverage Company\", hence the name \"Ambev\", formerly styled as \"AmBev\") is a Brazilian brewing company.\nPage: AmBev. Sentence: It was created on July 1, 1999, with the merger of two breweries, Brahma and Antarctica.\nPage: Presidente (beer). Sentence: Presidente is a brand of Pilsner beer that is owned and produced by Cervecería Nacional Dominicana (CND) at several breweries in the Dominican Republic.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "556f4816-0190-5e55-b854-2ae9a63116d0",
+        "text": "text_3d08fc559a8811a8ecc1ddb05f8c6f0b",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "5b51ece8-a2be-5c0f-a7d3-1ed03ff19a49",
+        "text": "cervecería nacional dominicana",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "388f60fb-220d-55e8-ae9c-3ac93cead308",
+        "text": "organization",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "b0d0b4f7-a40c-5762-92b1-eb8c61f23569",
+        "text": "dominican republic",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "5f394058-b2a0-5ba8-8466-ba2a18cfcf4e",
+        "text": "place",
+        "type": "EntityType"
+      },
+      {
+        "id": 7,
+        "original_id": "6548cff6-f414-5d62-97c3-32e0c7c26146",
+        "text": "presidente",
+        "type": "Entity"
+      },
+      {
+        "id": 8,
+        "original_id": "f76d57aa-4740-5218-9539-0e0978cbf183",
+        "text": "product",
+        "type": "EntityType"
+      },
+      {
+        "id": 9,
+        "original_id": "ce6c9701-b90a-5298-8418-417e0f9afbff",
+        "text": "pilsner beer",
+        "type": "Entity"
+      },
+      {
+        "id": 10,
+        "original_id": "03f49cc2-47e5-57ab-b4ca-cbb427a8dd72",
+        "text": "ambev",
+        "type": "Entity"
+      },
+      {
+        "id": 11,
+        "original_id": "b5c36c88-c0ca-5eef-844a-d16722651101",
+        "text": "companhia de bebidas das américas",
+        "type": "Entity"
+      },
+      {
+        "id": 12,
+        "original_id": "1b8d0830-8d98-5d0f-887d-d593ee280998",
+        "text": "brazil",
+        "type": "Entity"
+      },
+      {
+        "id": 13,
+        "original_id": "cefa1e8d-0a08-578b-8785-0899519de0fb",
+        "text": "1999-07-01",
+        "type": "Entity"
+      },
+      {
+        "id": 14,
+        "original_id": "b19433ae-558c-5aaf-95ac-6231f2a4be0e",
+        "text": "date",
+        "type": "EntityType"
+      },
+      {
+        "id": 15,
+        "original_id": "f76b917d-bfd9-5e94-8538-5838d1dba6ff",
+        "text": "brahma",
+        "type": "Entity"
+      },
+      {
+        "id": 16,
+        "original_id": "0a7a0523-e9ef-5883-a5a8-65641baa0332",
+        "text": "antarctica",
+        "type": "Entity"
+      },
+      {
+        "id": 17,
+        "original_id": "72e74d5e-7584-529f-932f-fdad3ea869c9",
+        "text": "grupo león jimenes",
+        "type": "Entity"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 10,
+        "target": 3,
+        "type": "owns"
+      },
+      {
+        "source": 17,
+        "target": 3,
+        "type": "owns"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 10,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 11,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 15,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 16,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 17,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "primary_beer_producer_in"
+      },
+      {
+        "source": 7,
+        "target": 5,
+        "type": "produced_in"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 12,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 7,
+        "type": "owns"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      },
+      {
+        "source": 7,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 9,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 7,
+        "target": 9,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 9,
+        "type": "contains"
+      },
+      {
+        "source": 1,
+        "target": 10,
+        "type": "contains"
+      },
+      {
+        "source": 10,
+        "target": 11,
+        "type": "formally_named"
+      },
+      {
+        "source": 1,
+        "target": 11,
+        "type": "contains"
+      },
+      {
+        "source": 10,
+        "target": 12,
+        "type": "is_brewing_company_in"
+      },
+      {
+        "source": 1,
+        "target": 12,
+        "type": "contains"
+      },
+      {
+        "source": 10,
+        "target": 13,
+        "type": "created_on"
+      },
+      {
+        "source": 1,
+        "target": 13,
+        "type": "contains"
+      },
+      {
+        "source": 13,
+        "target": 14,
+        "type": "is_a"
+      },
+      {
+        "source": 10,
+        "target": 15,
+        "type": "created_from_merger_of"
+      },
+      {
+        "source": 1,
+        "target": 15,
+        "type": "contains"
+      },
+      {
+        "source": 10,
+        "target": 16,
+        "type": "created_from_merger_of"
+      },
+      {
+        "source": 1,
+        "target": 16,
+        "type": "contains"
+      },
+      {
+        "source": 1,
+        "target": 17,
+        "type": "contains"
+      }
+    ]
+  }
+}

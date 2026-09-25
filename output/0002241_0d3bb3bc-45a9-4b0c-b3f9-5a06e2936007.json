@@ -1,0 +1,444 @@
+{
+  "dataset": "hover",
+  "id": "0d3bb3bc-45a9-4b0c-b3f9-5a06e2936007",
+  "split": "train",
+  "claim": "\"She's a Woman\" is a song on the B-side of a single whose A-side has one of the first uses of guitar solo.",
+  "evidencia": "Page: She's a Woman. Sentence: \"She's a Woman\" is a song by the Beatles, written mainly by Paul McCartney and credited to Lennon–McCartney.\nPage: She's a Woman. Sentence: It was released as the B-side to \"I Feel Fine\" in 1964, their last single release that year.\nPage: I Feel Fine. Sentence: \"I Feel Fine\" is a song written by John Lennon (credited to Lennon–McCartney) and released in 1964 by the Beatles as the A-side of their eighth British single.\nPage: I Feel Fine. Sentence: The song has one of the first uses of guitar feedback in popular music.",
+  "evidence_text": "Page: She's a Woman. Sentence: \"She's a Woman\" is a song by the Beatles, written mainly by Paul McCartney and credited to Lennon–McCartney.\nPage: She's a Woman. Sentence: It was released as the B-side to \"I Feel Fine\" in 1964, their last single release that year.\nPage: I Feel Fine. Sentence: \"I Feel Fine\" is a song written by John Lennon (credited to Lennon–McCartney) and released in 1964 by the Beatles as the A-side of their eighth British single.\nPage: I Feel Fine. Sentence: The song has one of the first uses of guitar feedback in popular music.",
+  "label": "NOT_SUPPORTED",
+  "num_hops": 2,
+  "hover_metadata": {
+    "supporting_facts": [
+      [
+        "She's a Woman",
+        0
+      ],
+      [
+        "She's a Woman",
+        3
+      ],
+      [
+        "I Feel Fine",
+        0
+      ],
+      [
+        "I Feel Fine",
+        1
+      ]
+    ],
+    "num_hops": 2,
+    "evidence_annotation_id": [
+      0
+    ],
+    "evidence_id": [
+      "She's a Woman::sentence::0",
+      "She's a Woman::sentence::3",
+      "I Feel Fine::sentence::0",
+      "I Feel Fine::sentence::1"
+    ],
+    "evidence_wiki_url": [
+      "https://en.wikipedia.org/wiki/She%27s_a_Woman",
+      "https://en.wikipedia.org/wiki/I_Feel_Fine"
+    ],
+    "evidence_sentence_id": [
+      "She's a Woman::sentence::0",
+      "She's a Woman::sentence::3",
+      "I Feel Fine::sentence::0",
+      "I Feel Fine::sentence::1"
+    ]
+  },
+  "grafo_claim": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "c24a1657-ade2-5b78-921f-5563dd6280a7",
+        "text": "This chunk is about:\n- Songs: \"She's a Woman\"\n- Singles: the single with A-side \"I Feel Fine\"\n- Concepts: B-side, early guitar feedback use\n\nFacts:\n- \"She's a Woman\" is the B-side of the Beatles single whose A-side is \"I Feel Fine\".\n- \"I Feel Fine\" is noted for one of the first uses of guitar feedback in a popular recording.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "afe7814a-5737-5a3b-a5a8-951196e9958b",
+        "text": "\"She's a Woman\" is a song on the B-side of a single whose A-side has one of the first uses of guitar solo.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "6da81359-a599-5b80-a552-6ac3f542b043",
+        "text": "text_671134cbb6c79061d1695e04288e4041",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "6ac9b25a-6177-5f97-80b5-d63006852e5a",
+        "text": "shes a woman",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "27b53d4b-a4e1-50ff-92c8-313b30679bd5",
+        "text": "single with a-side i feel fine and b-side shes a woman",
+        "type": "Entity"
+      },
+      {
+        "id": 5,
+        "original_id": "5263a535-1b4b-5925-be3e-310d03cd303b",
+        "text": "work",
+        "type": "EntityType"
+      },
+      {
+        "id": 6,
+        "original_id": "6056b392-f12e-5150-8c0b-ac7545dc2fdf",
+        "text": "song",
+        "type": "EntityType"
+      },
+      {
+        "id": 7,
+        "original_id": "b42f9621-f25d-5b45-b78f-bd49bc802877",
+        "text": "i feel fine",
+        "type": "Entity"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "b_side_of"
+      },
+      {
+        "source": 7,
+        "target": 4,
+        "type": "a_side_of"
+      },
+      {
+        "source": 1,
+        "target": 4,
+        "type": "contains"
+      },
+      {
+        "source": 4,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 7,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      }
+    ]
+  },
+  "grafo_evidencia": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "8a606d7c-493b-5580-89aa-13982d57336d",
+        "text": "This chunk is about:\n- People: Paul McCartney, John Lennon, Lennon–McCartney\n- Organizations: the Beatles\n- Products: \"She's a Woman\", \"I Feel Fine\"\n- Concepts: guitar feedback in popular music\n\nFacts:\n- In 1964, the Beatles released \"I Feel Fine\" as the A-side of their eighth British single.\n- In 1964, the Beatles released \"She's a Woman\" as the B-side to \"I Feel Fine\", their last single release of that year.\n- \"She's a Woman\" is a song by the Beatles that was written mainly by Paul McCartney and credited to Lennon–McCartney.\n- \"I Feel Fine\" is a song by the Beatles that was written by John Lennon and credited to Lennon–McCartney.\n- \"I Feel Fine\" features one of the first uses of guitar feedback in popular music.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "d0634118-20e5-57c5-a8ba-e58302e640a7",
+        "text": "Page: She's a Woman. Sentence: \"She's a Woman\" is a song by the Beatles, written mainly by Paul McCartney and credited to Lennon–McCartney.\nPage: She's a Woman. Sentence: It was released as the B-side to \"I Feel Fine\" in 1964, their last single release that year.\nPage: I Feel Fine. Sentence: \"I Feel Fine\" is a song written by John Lennon (credited to Lennon–McCartney) and released in 1964 by the Beatles as the A-side of their eighth British single.\nPage: I Feel Fine. Sentence: The song has one of the first uses of guitar feedback in popular music.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "15cb9247-6ff1-53e3-b476-563477d6e613",
+        "text": "text_aec48ec9bd3357c3f7facec756f99e74",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "6ac9b25a-6177-5f97-80b5-d63006852e5a",
+        "text": "shes a woman",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "6c315338-5c08-562f-ac19-b8e74790ea4e",
+        "text": "the beatles",
+        "type": "Entity"
+      },
+      {
+        "id": 5,
+        "original_id": "388f60fb-220d-55e8-ae9c-3ac93cead308",
+        "text": "organization",
+        "type": "EntityType"
+      },
+      {
+        "id": 6,
+        "original_id": "a963619c-4872-5ee5-909d-43ba5c02861e",
+        "text": "paul mccartney",
+        "type": "Entity"
+      },
+      {
+        "id": 7,
+        "original_id": "99a82eec-bb35-5bb5-9ed2-e73fc7a756de",
+        "text": "person",
+        "type": "EntityType"
+      },
+      {
+        "id": 8,
+        "original_id": "a2470f1b-83f6-54d8-b9ce-d8c09a93b5c1",
+        "text": "lennon–mccartney",
+        "type": "Entity"
+      },
+      {
+        "id": 9,
+        "original_id": "b42f9621-f25d-5b45-b78f-bd49bc802877",
+        "text": "i feel fine",
+        "type": "Entity"
+      },
+      {
+        "id": 10,
+        "original_id": "83f8bbd8-8f38-5df0-b539-3c26b4a3ef14",
+        "text": "john lennon",
+        "type": "Entity"
+      },
+      {
+        "id": 11,
+        "original_id": "f84b53f0-d68a-5f9c-b437-b5b836eed4d3",
+        "text": "1964",
+        "type": "Entity"
+      },
+      {
+        "id": 12,
+        "original_id": "b19433ae-558c-5aaf-95ac-6231f2a4be0e",
+        "text": "date",
+        "type": "EntityType"
+      },
+      {
+        "id": 13,
+        "original_id": "6781e3b8-28a7-5e82-94dd-3d9289d96afa",
+        "text": "their eighth british single",
+        "type": "Entity"
+      },
+      {
+        "id": 14,
+        "original_id": "5263a535-1b4b-5925-be3e-310d03cd303b",
+        "text": "work",
+        "type": "EntityType"
+      },
+      {
+        "id": 15,
+        "original_id": "15c877eb-5b61-542f-a037-e16f34b135da",
+        "text": "guitar feedback",
+        "type": "Entity"
+      },
+      {
+        "id": 16,
+        "original_id": "cfc3475b-5bdb-59e1-89bb-7016c5010634",
+        "text": "popular music",
+        "type": "Entity"
+      },
+      {
+        "id": 17,
+        "original_id": "d2a381fa-3658-5ca6-ada9-2109cfc9331d",
+        "text": "concept",
+        "type": "EntityType"
+      },
+      {
+        "id": 18,
+        "original_id": "6056b392-f12e-5150-8c0b-ac7545dc2fdf",
+        "text": "song",
+        "type": "EntityType"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "performed_by"
+      },
+      {
+        "source": 9,
+        "target": 4,
+        "type": "released_by"
+      },
+      {
+        "source": 1,
+        "target": 4,
+        "type": "contains"
+      },
+      {
+        "source": 4,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 6,
+        "type": "written_mainly_by"
+      },
+      {
+        "source": 1,
+        "target": 6,
+        "type": "contains"
+      },
+      {
+        "source": 6,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 8,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 10,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 8,
+        "type": "credited_to"
+      },
+      {
+        "source": 9,
+        "target": 8,
+        "type": "credited_to"
+      },
+      {
+        "source": 1,
+        "target": 8,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 9,
+        "type": "b_side_to"
+      },
+      {
+        "source": 1,
+        "target": 9,
+        "type": "contains"
+      },
+      {
+        "source": 9,
+        "target": 10,
+        "type": "written_by"
+      },
+      {
+        "source": 1,
+        "target": 10,
+        "type": "contains"
+      },
+      {
+        "source": 9,
+        "target": 11,
+        "type": "released_in"
+      },
+      {
+        "source": 3,
+        "target": 11,
+        "type": "released_in"
+      },
+      {
+        "source": 1,
+        "target": 11,
+        "type": "contains"
+      },
+      {
+        "source": 11,
+        "target": 12,
+        "type": "is_a"
+      },
+      {
+        "source": 9,
+        "target": 13,
+        "type": "a_side_of"
+      },
+      {
+        "source": 1,
+        "target": 13,
+        "type": "contains"
+      },
+      {
+        "source": 13,
+        "target": 14,
+        "type": "is_a"
+      },
+      {
+        "source": 9,
+        "target": 15,
+        "type": "uses"
+      },
+      {
+        "source": 1,
+        "target": 15,
+        "type": "contains"
+      },
+      {
+        "source": 15,
+        "target": 16,
+        "type": "used_in"
+      },
+      {
+        "source": 1,
+        "target": 16,
+        "type": "contains"
+      },
+      {
+        "source": 16,
+        "target": 17,
+        "type": "is_a"
+      },
+      {
+        "source": 15,
+        "target": 17,
+        "type": "is_a"
+      },
+      {
+        "source": 9,
+        "target": 18,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 18,
+        "type": "is_a"
+      }
+    ]
+  }
+}

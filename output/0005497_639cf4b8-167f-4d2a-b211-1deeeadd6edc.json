@@ -1,0 +1,390 @@
+{
+  "dataset": "hover",
+  "id": "639cf4b8-167f-4d2a-b211-1deeeadd6edc",
+  "split": "train",
+  "claim": "The murderer, by whom the character Keyser Soze was inspired, committed his murders in Westfield, New Jersey.",
+  "evidencia": "Page: Keyser Söze. Sentence: The character was inspired by real life murderer John List and the spy thriller \"No Way Out\", which featured a shadowy KGB mole.\nPage: John List. Sentence: On November 9, 1971, he killed his wife, mother, and three children in their home in Westfield, New Jersey, then disappeared.",
+  "evidence_text": "Page: Keyser Söze. Sentence: The character was inspired by real life murderer John List and the spy thriller \"No Way Out\", which featured a shadowy KGB mole.\nPage: John List. Sentence: On November 9, 1971, he killed his wife, mother, and three children in their home in Westfield, New Jersey, then disappeared.",
+  "label": "SUPPORTED",
+  "num_hops": 2,
+  "hover_metadata": {
+    "supporting_facts": [
+      [
+        "Keyser Söze",
+        3
+      ],
+      [
+        "John List",
+        1
+      ]
+    ],
+    "num_hops": 2,
+    "evidence_annotation_id": [
+      0
+    ],
+    "evidence_id": [
+      "Keyser Söze::sentence::3",
+      "John List::sentence::1"
+    ],
+    "evidence_wiki_url": [
+      "https://en.wikipedia.org/wiki/Keyser_S%C3%B6ze",
+      "https://en.wikipedia.org/wiki/John_List"
+    ],
+    "evidence_sentence_id": [
+      "Keyser Söze::sentence::3",
+      "John List::sentence::1"
+    ]
+  },
+  "grafo_claim": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "1fd505ae-b2d5-541b-9de3-d0ae90656d30",
+        "text": "This chunk is about:\n- People: Keyser Soze\n- Places: Westfield, New Jersey\n- Topics: murder inspiration\n\nFacts:\n- The character Keyser Soze was inspired by a murderer.\n- That murderer committed the murders in Westfield, New Jersey.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "207c7062-7f0c-5ed0-82c2-6a220e23cc2b",
+        "text": "The murderer, by whom the character Keyser Soze was inspired, committed his murders in Westfield, New Jersey.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "90e94478-3235-58c2-8afb-cfa0c03d6dfb",
+        "text": "text_aa5577f9bc0f2f489a7fd317bf8c04b2",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "aa382953-9403-56eb-9e4f-23c5d2fb4b38",
+        "text": "keyser soze",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "99a82eec-bb35-5bb5-9ed2-e73fc7a756de",
+        "text": "person",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "41774498-2255-5904-9afa-4b4145cb55fc",
+        "text": "westfield, new jersey",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "5f394058-b2a0-5ba8-8466-ba2a18cfcf4e",
+        "text": "place",
+        "type": "EntityType"
+      },
+      {
+        "id": 7,
+        "original_id": "3ca44d0b-b2c7-587f-820a-ecb7e52fdcaa",
+        "text": "murderer",
+        "type": "Entity"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 7,
+        "target": 3,
+        "type": "inspired"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 7,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 7,
+        "target": 5,
+        "type": "committed_murders_in"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      }
+    ]
+  },
+  "grafo_evidencia": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "c615c683-7138-5d42-b50c-6240430275b5",
+        "text": "This chunk is about:\n- People: Keyser Söze, John List\n- Works: No Way Out\n- Places: Westfield, New Jersey\n- Concepts: character inspiration, murders, disappearance\n\nFacts:\n- On November 9, 1971, John List killed his wife, mother, and three children in their home in Westfield, New Jersey, and then disappeared.\n- The character Keyser Söze was inspired by the real-life murderer John List.\n- The character Keyser Söze was also inspired by the spy thriller No Way Out, which featured a shadowy KGB mole.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "ae172c29-3b2c-5814-991a-d4fd4d608130",
+        "text": "Page: Keyser Söze. Sentence: The character was inspired by real life murderer John List and the spy thriller \"No Way Out\", which featured a shadowy KGB mole.\nPage: John List. Sentence: On November 9, 1971, he killed his wife, mother, and three children in their home in Westfield, New Jersey, then disappeared.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "4c13ad2b-b846-5dde-864e-48405a24c445",
+        "text": "text_8484a2ca102789f90243edbd0d386915",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "919b1ca9-c1fb-577e-9df0-0e76cd6ea3e4",
+        "text": "keyser söze",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "bf8a02e6-7ee6-5665-a527-96faec4a7f28",
+        "text": "john list",
+        "type": "Entity"
+      },
+      {
+        "id": 5,
+        "original_id": "0d007e9c-6df4-58f5-b343-3e81eee615d2",
+        "text": "1971-11-09",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "b19433ae-558c-5aaf-95ac-6231f2a4be0e",
+        "text": "date",
+        "type": "EntityType"
+      },
+      {
+        "id": 7,
+        "original_id": "41774498-2255-5904-9afa-4b4145cb55fc",
+        "text": "westfield, new jersey",
+        "type": "Entity"
+      },
+      {
+        "id": 8,
+        "original_id": "5f394058-b2a0-5ba8-8466-ba2a18cfcf4e",
+        "text": "place",
+        "type": "EntityType"
+      },
+      {
+        "id": 9,
+        "original_id": "49fe2d77-84bf-5dfa-846e-f20fe0471b0d",
+        "text": "john lists wife",
+        "type": "Entity"
+      },
+      {
+        "id": 10,
+        "original_id": "99a82eec-bb35-5bb5-9ed2-e73fc7a756de",
+        "text": "person",
+        "type": "EntityType"
+      },
+      {
+        "id": 11,
+        "original_id": "a4411298-8b47-5e79-8a31-79b23de8dab4",
+        "text": "john lists mother",
+        "type": "Entity"
+      },
+      {
+        "id": 12,
+        "original_id": "bc21de49-8497-59fa-bd03-e1658252526a",
+        "text": "john lists three children",
+        "type": "Entity"
+      },
+      {
+        "id": 13,
+        "original_id": "3ce67901-65c0-56a9-a608-577da034b9f0",
+        "text": "no way out",
+        "type": "Entity"
+      },
+      {
+        "id": 14,
+        "original_id": "acf95c9a-dcdb-55bd-b427-13ff378b247c",
+        "text": "shadowy kgb mole",
+        "type": "Entity"
+      },
+      {
+        "id": 15,
+        "original_id": "d3db161f-3fd9-5366-919b-ad9f9a1ba392",
+        "text": "character",
+        "type": "EntityType"
+      },
+      {
+        "id": 16,
+        "original_id": "5263a535-1b4b-5925-be3e-310d03cd303b",
+        "text": "work",
+        "type": "EntityType"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "inspired_by"
+      },
+      {
+        "source": 1,
+        "target": 4,
+        "type": "contains"
+      },
+      {
+        "source": 4,
+        "target": 5,
+        "type": "acted_on_date"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 4,
+        "target": 7,
+        "type": "killed_family_in"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      },
+      {
+        "source": 7,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 4,
+        "target": 9,
+        "type": "killed"
+      },
+      {
+        "source": 1,
+        "target": 9,
+        "type": "contains"
+      },
+      {
+        "source": 9,
+        "target": 10,
+        "type": "is_a"
+      },
+      {
+        "source": 11,
+        "target": 10,
+        "type": "is_a"
+      },
+      {
+        "source": 12,
+        "target": 10,
+        "type": "is_a"
+      },
+      {
+        "source": 4,
+        "target": 10,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 10,
+        "type": "is_a"
+      },
+      {
+        "source": 4,
+        "target": 11,
+        "type": "killed"
+      },
+      {
+        "source": 1,
+        "target": 11,
+        "type": "contains"
+      },
+      {
+        "source": 4,
+        "target": 12,
+        "type": "killed"
+      },
+      {
+        "source": 1,
+        "target": 12,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 13,
+        "type": "inspired_by"
+      },
+      {
+        "source": 1,
+        "target": 13,
+        "type": "contains"
+      },
+      {
+        "source": 13,
+        "target": 14,
+        "type": "features"
+      },
+      {
+        "source": 1,
+        "target": 14,
+        "type": "contains"
+      },
+      {
+        "source": 14,
+        "target": 15,
+        "type": "is_a"
+      },
+      {
+        "source": 13,
+        "target": 16,
+        "type": "is_a"
+      }
+    ]
+  }
+}

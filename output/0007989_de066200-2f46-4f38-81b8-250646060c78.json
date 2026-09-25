@@ -1,0 +1,392 @@
+{
+  "dataset": "hover",
+  "id": "de066200-2f46-4f38-81b8-250646060c78",
+  "split": "train",
+  "claim": "The band She Wants Revenge and the band that released the album Speakeasy (Freeze the Atlantic album) play music in the genre of rock. Both bands come from different countries.",
+  "evidencia": "Page: Freeze the Atlantic. Sentence: Freeze the Atlantic are an English alternative rock band based in Farnborough, Hampshire.\nPage: She Wants Revenge. Sentence: She Wants Revenge is an American rock band, based in San Fernando Valley, California and formed in 2004.\nPage: Speakeasy (Freeze the Atlantic album). Sentence: Speakeasy is the debut studio album from Farnborough based rock band Freeze the Atlantic.",
+  "evidence_text": "Page: Freeze the Atlantic. Sentence: Freeze the Atlantic are an English alternative rock band based in Farnborough, Hampshire.\nPage: She Wants Revenge. Sentence: She Wants Revenge is an American rock band, based in San Fernando Valley, California and formed in 2004.\nPage: Speakeasy (Freeze the Atlantic album). Sentence: Speakeasy is the debut studio album from Farnborough based rock band Freeze the Atlantic.",
+  "label": "SUPPORTED",
+  "num_hops": 3,
+  "hover_metadata": {
+    "supporting_facts": [
+      [
+        "Freeze the Atlantic",
+        0
+      ],
+      [
+        "She Wants Revenge",
+        0
+      ],
+      [
+        "Speakeasy (Freeze the Atlantic album)",
+        0
+      ]
+    ],
+    "num_hops": 3,
+    "evidence_annotation_id": [
+      0
+    ],
+    "evidence_id": [
+      "Freeze the Atlantic::sentence::0",
+      "She Wants Revenge::sentence::0",
+      "Speakeasy (Freeze the Atlantic album)::sentence::0"
+    ],
+    "evidence_wiki_url": [
+      "https://en.wikipedia.org/wiki/Freeze_the_Atlantic",
+      "https://en.wikipedia.org/wiki/She_Wants_Revenge",
+      "https://en.wikipedia.org/wiki/Speakeasy_%28Freeze_the_Atlantic_album%29"
+    ],
+    "evidence_sentence_id": [
+      "Freeze the Atlantic::sentence::0",
+      "She Wants Revenge::sentence::0",
+      "Speakeasy (Freeze the Atlantic album)::sentence::0"
+    ]
+  },
+  "grafo_claim": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "fba4599b-af0d-54e3-8e92-eeba6cc595af",
+        "text": "This chunk is about:\n- Organizations: She Wants Revenge, Freeze the Atlantic\n- Products: Speakeasy\n- Concepts: Rock music, country of origin\n\nFacts:\n- She Wants Revenge is a band that plays rock music.\n- Freeze the Atlantic is a band that released the album Speakeasy.\n- Freeze the Atlantic plays rock music.\n- She Wants Revenge and Freeze the Atlantic come from different countries.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "da329001-669d-52fc-aae3-44f4cb191588",
+        "text": "The band She Wants Revenge and the band that released the album Speakeasy (Freeze the Atlantic album) play music in the genre of rock. Both bands come from different countries.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "efca3bf8-53ad-564a-82ee-157b23ea3df7",
+        "text": "text_16b203cb5179ecc24fc0d35a01b4aab1",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "cc75b7b1-a627-57c1-8ffa-65531adcb722",
+        "text": "she wants revenge",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "a69bcce0-8153-57d6-96fd-6d36e286fb20",
+        "text": "band",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "65e97ac8-fdf2-567a-a50f-919d0463a4e0",
+        "text": "rock",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "d8d36cdc-ccf4-5249-921a-ab373f0fb82a",
+        "text": "genre",
+        "type": "EntityType"
+      },
+      {
+        "id": 7,
+        "original_id": "75ce013a-50e4-5040-a8ff-13dfabd76099",
+        "text": "freeze the atlantic",
+        "type": "Entity"
+      },
+      {
+        "id": 8,
+        "original_id": "01278649-a4a6-5561-b33c-437641026243",
+        "text": "speakeasy",
+        "type": "Entity"
+      },
+      {
+        "id": 9,
+        "original_id": "213321b1-cf32-59df-847a-8b293b41cf9c",
+        "text": "album",
+        "type": "EntityType"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 7,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "plays_genre"
+      },
+      {
+        "source": 7,
+        "target": 5,
+        "type": "plays_genre"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      },
+      {
+        "source": 7,
+        "target": 8,
+        "type": "released"
+      },
+      {
+        "source": 1,
+        "target": 8,
+        "type": "contains"
+      },
+      {
+        "source": 8,
+        "target": 9,
+        "type": "is_a"
+      }
+    ]
+  },
+  "grafo_evidencia": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "988d5268-642f-52e4-beea-6fd8bd700539",
+        "text": "This chunk is about:\n- Bands: Freeze the Atlantic, She Wants Revenge\n- Albums: Speakeasy\n- Places: Farnborough, Hampshire, San Fernando Valley, California\n- Topics: alternative rock, rock, debut studio albums\n\nFacts:\n- Freeze the Atlantic are an English alternative rock band based in Farnborough, Hampshire.\n- She Wants Revenge is an American rock band based in San Fernando Valley, California, and the band was formed in 2004.\n- Speakeasy is the debut studio album by Freeze the Atlantic.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "749a35e5-839a-5b56-a67a-aa4c98c87096",
+        "text": "Page: Freeze the Atlantic. Sentence: Freeze the Atlantic are an English alternative rock band based in Farnborough, Hampshire.\nPage: She Wants Revenge. Sentence: She Wants Revenge is an American rock band, based in San Fernando Valley, California and formed in 2004.\nPage: Speakeasy (Freeze the Atlantic album). Sentence: Speakeasy is the debut studio album from Farnborough based rock band Freeze the Atlantic.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "f17e0a14-9122-5f27-8619-6771cce11850",
+        "text": "text_d6ff6a053a9f69bee368376eb9f8eb09",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "75ce013a-50e4-5040-a8ff-13dfabd76099",
+        "text": "freeze the atlantic",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "388f60fb-220d-55e8-ae9c-3ac93cead308",
+        "text": "organization",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "8d67bc6e-034a-5a18-bea7-7e3b0f2e9ee2",
+        "text": "farnborough",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "5f394058-b2a0-5ba8-8466-ba2a18cfcf4e",
+        "text": "place",
+        "type": "EntityType"
+      },
+      {
+        "id": 7,
+        "original_id": "a8bb6cac-3f50-5123-8ba6-004bf9e18141",
+        "text": "hampshire",
+        "type": "Entity"
+      },
+      {
+        "id": 8,
+        "original_id": "cc75b7b1-a627-57c1-8ffa-65531adcb722",
+        "text": "she wants revenge",
+        "type": "Entity"
+      },
+      {
+        "id": 9,
+        "original_id": "a2431e1c-89c7-50e6-9b7a-03444c935882",
+        "text": "san fernando valley",
+        "type": "Entity"
+      },
+      {
+        "id": 10,
+        "original_id": "8294cd6a-6968-5d3a-b0c8-57e08c745c8d",
+        "text": "california",
+        "type": "Entity"
+      },
+      {
+        "id": 11,
+        "original_id": "559b7176-da84-5102-a855-b896617a9c3b",
+        "text": "2004",
+        "type": "Entity"
+      },
+      {
+        "id": 12,
+        "original_id": "b19433ae-558c-5aaf-95ac-6231f2a4be0e",
+        "text": "date",
+        "type": "EntityType"
+      },
+      {
+        "id": 13,
+        "original_id": "01278649-a4a6-5561-b33c-437641026243",
+        "text": "speakeasy",
+        "type": "Entity"
+      },
+      {
+        "id": 14,
+        "original_id": "213321b1-cf32-59df-847a-8b293b41cf9c",
+        "text": "album",
+        "type": "EntityType"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 13,
+        "target": 3,
+        "type": "debut_studio_album_of"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 8,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "based_in"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 7,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 9,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 10,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 5,
+        "target": 7,
+        "type": "located_in"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      },
+      {
+        "source": 1,
+        "target": 8,
+        "type": "contains"
+      },
+      {
+        "source": 8,
+        "target": 9,
+        "type": "based_in"
+      },
+      {
+        "source": 1,
+        "target": 9,
+        "type": "contains"
+      },
+      {
+        "source": 9,
+        "target": 10,
+        "type": "located_in"
+      },
+      {
+        "source": 1,
+        "target": 10,
+        "type": "contains"
+      },
+      {
+        "source": 8,
+        "target": 11,
+        "type": "formed_in"
+      },
+      {
+        "source": 1,
+        "target": 11,
+        "type": "contains"
+      },
+      {
+        "source": 11,
+        "target": 12,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 13,
+        "type": "contains"
+      },
+      {
+        "source": 13,
+        "target": 14,
+        "type": "is_a"
+      }
+    ]
+  }
+}

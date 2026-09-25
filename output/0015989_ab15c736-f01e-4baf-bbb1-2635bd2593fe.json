@@ -1,0 +1,384 @@
+{
+  "dataset": "hover",
+  "id": "ab15c736-f01e-4baf-bbb1-2635bd2593fe",
+  "split": "train",
+  "claim": "The Group that The 43d Aeromedical Evacuation Squadron is part of is stationed at Fort Bragg.",
+  "evidencia": "Page: 43d Air Mobility Operations Group. Sentence: The 43d Air Mobility Operations Group is an active duty air mobility unit at Pope Field, Fort Bragg, North Carolina (formerly Pope AFB), and is part of the Air Mobility Command (AMC) USAF Expeditionary Center.\nPage: Fort Bragg. Sentence: Fort Bragg, North Carolina, is a military installation of the United States Army and is the largest military installation in the world (by population) with more than 50,000 active duty personnel.\nPage: 43d Aeromedical Evacuation Squadron. Sentence: It is part of the 43d Air Mobility Operations Group at Pope Army Air Field, North Carolina.",
+  "evidence_text": "Page: 43d Air Mobility Operations Group. Sentence: The 43d Air Mobility Operations Group is an active duty air mobility unit at Pope Field, Fort Bragg, North Carolina (formerly Pope AFB), and is part of the Air Mobility Command (AMC) USAF Expeditionary Center.\nPage: Fort Bragg. Sentence: Fort Bragg, North Carolina, is a military installation of the United States Army and is the largest military installation in the world (by population) with more than 50,000 active duty personnel.\nPage: 43d Aeromedical Evacuation Squadron. Sentence: It is part of the 43d Air Mobility Operations Group at Pope Army Air Field, North Carolina.",
+  "label": "SUPPORTED",
+  "num_hops": 3,
+  "hover_metadata": {
+    "supporting_facts": [
+      [
+        "43d Air Mobility Operations Group",
+        0
+      ],
+      [
+        "Fort Bragg",
+        0
+      ],
+      [
+        "43d Aeromedical Evacuation Squadron",
+        1
+      ]
+    ],
+    "num_hops": 3,
+    "evidence_annotation_id": [
+      0
+    ],
+    "evidence_id": [
+      "43d Air Mobility Operations Group::sentence::0",
+      "Fort Bragg::sentence::0",
+      "43d Aeromedical Evacuation Squadron::sentence::1"
+    ],
+    "evidence_wiki_url": [
+      "https://en.wikipedia.org/wiki/43d_Air_Mobility_Operations_Group",
+      "https://en.wikipedia.org/wiki/Fort_Bragg",
+      "https://en.wikipedia.org/wiki/43d_Aeromedical_Evacuation_Squadron"
+    ],
+    "evidence_sentence_id": [
+      "43d Air Mobility Operations Group::sentence::0",
+      "Fort Bragg::sentence::0",
+      "43d Aeromedical Evacuation Squadron::sentence::1"
+    ]
+  },
+  "grafo_claim": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "e90ff554-fedb-59dd-a1a3-154c717497dd",
+        "text": "This chunk is about:\n- Organizations: 43d Aeromedical Evacuation Squadron\n- Places: Fort Bragg\n- Roles: Group affiliation, stationing\n\nFacts:\n- The 43d Aeromedical Evacuation Squadron is part of a Group.\n- That Group is stationed at Fort Bragg.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "a805d17d-d748-5f59-be9c-94e3109f446d",
+        "text": "The Group that The 43d Aeromedical Evacuation Squadron is part of is stationed at Fort Bragg.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "7175b89e-048f-57d0-977f-6cfa4730efb9",
+        "text": "text_11e16f1f88432502312f8ced3d9b252d",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "8f008882-7b4d-594b-ae5d-f80d015550c1",
+        "text": "43d aeromedical evacuation squadron",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "388f60fb-220d-55e8-ae9c-3ac93cead308",
+        "text": "organization",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "324232dc-f1ae-5617-8c5f-e793e1602667",
+        "text": "unnamed group of the 43d aeromedical evacuation squadron",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "7a23dcd6-6960-5ba7-9468-7ea60daf2c75",
+        "text": "fort bragg",
+        "type": "Entity"
+      },
+      {
+        "id": 7,
+        "original_id": "5f394058-b2a0-5ba8-8466-ba2a18cfcf4e",
+        "text": "place",
+        "type": "EntityType"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 5,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "part_of"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "stationed_at"
+      },
+      {
+        "source": 1,
+        "target": 6,
+        "type": "contains"
+      },
+      {
+        "source": 6,
+        "target": 7,
+        "type": "is_a"
+      }
+    ]
+  },
+  "grafo_evidencia": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "6617ad8b-98bf-50fa-b46e-f0da5c6e2735",
+        "text": "This chunk is about:\n- Organizations: 43d Air Mobility Operations Group, Air Mobility Command, USAF Expeditionary Center, 43d Aeromedical Evacuation Squadron, United States Army\n- Places: Pope Field, Fort Bragg, North Carolina, Pope Army Air Field, Pope AFB\n\nFacts:\n- Fort Bragg in North Carolina is a United States Army military installation and is the world's largest military installation by population, with more than 50,000 active duty personnel.\n- The 43d Air Mobility Operations Group is an active duty air mobility unit at Pope Field, Fort Bragg, North Carolina.\n- The 43d Air Mobility Operations Group is part of the Air Mobility Command USAF Expeditionary Center.\n- Pope Field at Fort Bragg was formerly called Pope AFB.\n- The 43d Aeromedical Evacuation Squadron is part of the 43d Air Mobility Operations Group at Pope Army Air Field, North Carolina.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "a8ab52ca-4128-50ed-bafe-8819859645e6",
+        "text": "Page: 43d Air Mobility Operations Group. Sentence: The 43d Air Mobility Operations Group is an active duty air mobility unit at Pope Field, Fort Bragg, North Carolina (formerly Pope AFB), and is part of the Air Mobility Command (AMC) USAF Expeditionary Center.\nPage: Fort Bragg. Sentence: Fort Bragg, North Carolina, is a military installation of the United States Army and is the largest military installation in the world (by population) with more than 50,000 active duty personnel.\nPage: 43d Aeromedical Evacuation Squadron. Sentence: It is part of the 43d Air Mobility Operations Group at Pope Army Air Field, North Carolina.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "52c06e55-cf2f-59e7-9de3-9264ce3633a3",
+        "text": "text_c8cc995dd99056362e58c20e20c11041",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "44025e1b-b3f7-5e15-85d0-a47d9721e47d",
+        "text": "43d air mobility operations group",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "388f60fb-220d-55e8-ae9c-3ac93cead308",
+        "text": "organization",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "81cd8979-e825-5c67-a964-61087a0a67b3",
+        "text": "pope field",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "5f394058-b2a0-5ba8-8466-ba2a18cfcf4e",
+        "text": "place",
+        "type": "EntityType"
+      },
+      {
+        "id": 7,
+        "original_id": "7a23dcd6-6960-5ba7-9468-7ea60daf2c75",
+        "text": "fort bragg",
+        "type": "Entity"
+      },
+      {
+        "id": 8,
+        "original_id": "a38e042f-04bb-511e-8e56-2f365eeb7c39",
+        "text": "north carolina",
+        "type": "Entity"
+      },
+      {
+        "id": 9,
+        "original_id": "8e1a69ef-8a4a-5980-9422-b280c8053dfe",
+        "text": "united states army",
+        "type": "Entity"
+      },
+      {
+        "id": 10,
+        "original_id": "71744242-4bbf-55bc-b826-f78a5de2959e",
+        "text": "usaf expeditionary center",
+        "type": "Entity"
+      },
+      {
+        "id": 11,
+        "original_id": "9d73796b-5af7-5065-8364-db91031387be",
+        "text": "air mobility command",
+        "type": "Entity"
+      },
+      {
+        "id": 12,
+        "original_id": "8f008882-7b4d-594b-ae5d-f80d015550c1",
+        "text": "43d aeromedical evacuation squadron",
+        "type": "Entity"
+      },
+      {
+        "id": 13,
+        "original_id": "08046f0f-9321-5a78-9e01-46ad0dd098fa",
+        "text": "pope army air field",
+        "type": "Entity"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 12,
+        "target": 3,
+        "type": "part_of"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 9,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 10,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 11,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 12,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "located_at"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 7,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 8,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 13,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 5,
+        "target": 7,
+        "type": "located_at"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      },
+      {
+        "source": 7,
+        "target": 8,
+        "type": "located_in"
+      },
+      {
+        "source": 1,
+        "target": 8,
+        "type": "contains"
+      },
+      {
+        "source": 13,
+        "target": 8,
+        "type": "located_in"
+      },
+      {
+        "source": 7,
+        "target": 9,
+        "type": "military_installation_of"
+      },
+      {
+        "source": 1,
+        "target": 9,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 10,
+        "type": "part_of"
+      },
+      {
+        "source": 11,
+        "target": 10,
+        "type": "associated_with"
+      },
+      {
+        "source": 1,
+        "target": 10,
+        "type": "contains"
+      },
+      {
+        "source": 1,
+        "target": 11,
+        "type": "contains"
+      },
+      {
+        "source": 1,
+        "target": 12,
+        "type": "contains"
+      },
+      {
+        "source": 12,
+        "target": 13,
+        "type": "located_at"
+      },
+      {
+        "source": 1,
+        "target": 13,
+        "type": "contains"
+      }
+    ]
+  }
+}

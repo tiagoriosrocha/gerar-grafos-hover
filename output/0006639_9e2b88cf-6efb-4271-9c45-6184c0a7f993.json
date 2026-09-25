@@ -1,0 +1,348 @@
+{
+  "dataset": "hover",
+  "id": "9e2b88cf-6efb-4271-9c45-6184c0a7f993",
+  "split": "train",
+  "claim": "Army General Arthur Noss won a Military Cross as the gunner of a soldier born in 1892.",
+  "evidencia": "Page: Arthur Noss. Sentence: He won a Military Cross as Keith Park's gunner, and was killed in a flying accident shortly thereafter.\nPage: Keith Park. Sentence: Air Chief Marshal Sir Keith Rodney Park, (15 June 1892 – 6 February 1975) was a New Zealand soldier, First World War flying ace and Second World War Royal Air Force commander.",
+  "evidence_text": "Page: Arthur Noss. Sentence: He won a Military Cross as Keith Park's gunner, and was killed in a flying accident shortly thereafter.\nPage: Keith Park. Sentence: Air Chief Marshal Sir Keith Rodney Park, (15 June 1892 – 6 February 1975) was a New Zealand soldier, First World War flying ace and Second World War Royal Air Force commander.",
+  "label": "NOT_SUPPORTED",
+  "num_hops": 2,
+  "hover_metadata": {
+    "supporting_facts": [
+      [
+        "Arthur Noss",
+        1
+      ],
+      [
+        "Keith Park",
+        0
+      ]
+    ],
+    "num_hops": 2,
+    "evidence_annotation_id": [
+      0
+    ],
+    "evidence_id": [
+      "Arthur Noss::sentence::1",
+      "Keith Park::sentence::0"
+    ],
+    "evidence_wiki_url": [
+      "https://en.wikipedia.org/wiki/Arthur_Noss",
+      "https://en.wikipedia.org/wiki/Keith_Park"
+    ],
+    "evidence_sentence_id": [
+      "Arthur Noss::sentence::1",
+      "Keith Park::sentence::0"
+    ]
+  },
+  "grafo_claim": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "2c7c7234-bfb4-594a-8fca-0c9a8eb13608",
+        "text": "This chunk is about:\n- People: Arthur Noss, unnamed soldier born in 1892\n- Awards: Military Cross\n- Roles: Army General, gunner\n\nFacts:\n- Arthur Noss won a Military Cross.\n- Arthur Noss was an Army General.\n- Arthur Noss served as the gunner of a soldier who was born in 1892.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "6f7a86e7-5f5f-529f-982a-0b11c75326fe",
+        "text": "Army General Arthur Noss won a Military Cross as the gunner of a soldier born in 1892.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "624f9803-c4d6-5408-a343-7367ace93216",
+        "text": "text_65a28be8eb18807b29f6f38a5537b962",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "05a3c102-6740-555f-81c5-e770f7449d6a",
+        "text": "arthur noss",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "57ea09a2-48c5-5a18-9e6b-9efaf1d371a4",
+        "text": "military cross",
+        "type": "Entity"
+      },
+      {
+        "id": 5,
+        "original_id": "38e42125-31f4-5cd6-993c-dbbc06a88910",
+        "text": "award",
+        "type": "EntityType"
+      },
+      {
+        "id": 6,
+        "original_id": "633cc2b4-0ce4-5267-a7cc-f2357980ffd1",
+        "text": "unknown soldier born in 1892",
+        "type": "Entity"
+      },
+      {
+        "id": 7,
+        "original_id": "99a82eec-bb35-5bb5-9ed2-e73fc7a756de",
+        "text": "person",
+        "type": "EntityType"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "won"
+      },
+      {
+        "source": 1,
+        "target": 4,
+        "type": "contains"
+      },
+      {
+        "source": 4,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 6,
+        "type": "was_gunner_of"
+      },
+      {
+        "source": 1,
+        "target": 6,
+        "type": "contains"
+      },
+      {
+        "source": 6,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 7,
+        "type": "is_a"
+      }
+    ]
+  },
+  "grafo_evidencia": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "2c08bd55-9903-5264-86e4-8d37a13aaca9",
+        "text": "This chunk is about:\n- People: Arthur Noss, Keith Park\n- Roles: gunner, Air Chief Marshal, soldier, flying ace, Royal Air Force commander\n- Awards: Military Cross\n- Events: First World War, Second World War, flying accident\n\nFacts:\n- Keith Park was born on 15 June 1892 and died on 6 February 1975.\n- Keith Park was a New Zealand soldier, a First World War flying ace, and a Second World War Royal Air Force commander.\n- Arthur Noss won the Military Cross while serving as Keith Park's gunner.\n- Arthur Noss was killed in a flying accident shortly after winning the Military Cross.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "87327bad-48cf-5856-b20b-f91cad27f679",
+        "text": "Page: Arthur Noss. Sentence: He won a Military Cross as Keith Park's gunner, and was killed in a flying accident shortly thereafter.\nPage: Keith Park. Sentence: Air Chief Marshal Sir Keith Rodney Park, (15 June 1892 – 6 February 1975) was a New Zealand soldier, First World War flying ace and Second World War Royal Air Force commander.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "8af49488-e362-53ee-b07b-6e33e3603862",
+        "text": "text_1afbd98cdd196c80a16ac463e09a6cf9",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "05a3c102-6740-555f-81c5-e770f7449d6a",
+        "text": "arthur noss",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "57ea09a2-48c5-5a18-9e6b-9efaf1d371a4",
+        "text": "military cross",
+        "type": "Entity"
+      },
+      {
+        "id": 5,
+        "original_id": "38e42125-31f4-5cd6-993c-dbbc06a88910",
+        "text": "award",
+        "type": "EntityType"
+      },
+      {
+        "id": 6,
+        "original_id": "bb5017ee-e2a4-509f-9a06-a2038b1312dd",
+        "text": "air chief marshal sir keith rodney park",
+        "type": "Entity"
+      },
+      {
+        "id": 7,
+        "original_id": "45b3c857-e848-54f6-9177-f8e704eab162",
+        "text": "1892-06-15",
+        "type": "Entity"
+      },
+      {
+        "id": 8,
+        "original_id": "b19433ae-558c-5aaf-95ac-6231f2a4be0e",
+        "text": "date",
+        "type": "EntityType"
+      },
+      {
+        "id": 9,
+        "original_id": "eb6b396d-773d-5712-8416-201a54257b47",
+        "text": "1975-02-06",
+        "type": "Entity"
+      },
+      {
+        "id": 10,
+        "original_id": "b9e6f04b-3af0-5fd3-8eac-4b641d227752",
+        "text": "new zealand",
+        "type": "Entity"
+      },
+      {
+        "id": 11,
+        "original_id": "5f394058-b2a0-5ba8-8466-ba2a18cfcf4e",
+        "text": "place",
+        "type": "EntityType"
+      },
+      {
+        "id": 12,
+        "original_id": "99a82eec-bb35-5bb5-9ed2-e73fc7a756de",
+        "text": "person",
+        "type": "EntityType"
+      },
+      {
+        "id": 13,
+        "original_id": "04b5db19-730f-5733-9e8b-889bd3cceaf4",
+        "text": "flying accident",
+        "type": "Entity"
+      },
+      {
+        "id": 14,
+        "original_id": "214abcd9-9adf-5c8a-bb35-1e729f2d68c3",
+        "text": "event",
+        "type": "EntityType"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "won"
+      },
+      {
+        "source": 1,
+        "target": 4,
+        "type": "contains"
+      },
+      {
+        "source": 4,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 6,
+        "type": "served_as_gunner_for"
+      },
+      {
+        "source": 1,
+        "target": 6,
+        "type": "contains"
+      },
+      {
+        "source": 6,
+        "target": 7,
+        "type": "born_on"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      },
+      {
+        "source": 7,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 9,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 6,
+        "target": 9,
+        "type": "died_on"
+      },
+      {
+        "source": 1,
+        "target": 9,
+        "type": "contains"
+      },
+      {
+        "source": 6,
+        "target": 10,
+        "type": "associated_with"
+      },
+      {
+        "source": 1,
+        "target": 10,
+        "type": "contains"
+      },
+      {
+        "source": 10,
+        "target": 11,
+        "type": "is_a"
+      },
+      {
+        "source": 6,
+        "target": 12,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 12,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 13,
+        "type": "killed_in"
+      },
+      {
+        "source": 1,
+        "target": 13,
+        "type": "contains"
+      },
+      {
+        "source": 13,
+        "target": 14,
+        "type": "is_a"
+      }
+    ]
+  }
+}

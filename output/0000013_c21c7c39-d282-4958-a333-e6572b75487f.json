@@ -1,0 +1,328 @@
+{
+  "dataset": "hover",
+  "id": "c21c7c39-d282-4958-a333-e6572b75487f",
+  "split": "train",
+  "claim": "Red, White & Crüe and this athlete both fight. The fighter was trained by Bobby Stewart.",
+  "evidencia": "Page: Red, White &amp; Crüe. Sentence: Bassist Nikki Sixx commented on the band's reunion, comparing it to \"seeing Mike Tyson fight.\nPage: Mike Tyson. Sentence: Tyson won his first 19 professional fights by knockout, 12 of them in the first round.\nPage: Bobby Stewart. Sentence: Bobby Stewart won the National Golden Gloves Tournament in 1974 as a light heavyweight, but he will be best remembered as the first trainer for Mike Tyson.",
+  "evidence_text": "Page: Red, White &amp; Crüe. Sentence: Bassist Nikki Sixx commented on the band's reunion, comparing it to \"seeing Mike Tyson fight.\nPage: Mike Tyson. Sentence: Tyson won his first 19 professional fights by knockout, 12 of them in the first round.\nPage: Bobby Stewart. Sentence: Bobby Stewart won the National Golden Gloves Tournament in 1974 as a light heavyweight, but he will be best remembered as the first trainer for Mike Tyson.",
+  "label": "SUPPORTED",
+  "num_hops": 3,
+  "hover_metadata": {
+    "supporting_facts": [
+      [
+        "Red, White &amp; Crüe",
+        2
+      ],
+      [
+        "Mike Tyson",
+        2
+      ],
+      [
+        "Bobby Stewart",
+        0
+      ]
+    ],
+    "num_hops": 3,
+    "evidence_annotation_id": [
+      0
+    ],
+    "evidence_id": [
+      "Red, White &amp; Crüe::sentence::2",
+      "Mike Tyson::sentence::2",
+      "Bobby Stewart::sentence::0"
+    ],
+    "evidence_wiki_url": [
+      "https://en.wikipedia.org/wiki/Red%2C_White_%26amp%3B_Cr%C3%BCe",
+      "https://en.wikipedia.org/wiki/Mike_Tyson",
+      "https://en.wikipedia.org/wiki/Bobby_Stewart"
+    ],
+    "evidence_sentence_id": [
+      "Red, White &amp; Crüe::sentence::2",
+      "Mike Tyson::sentence::2",
+      "Bobby Stewart::sentence::0"
+    ]
+  },
+  "grafo_claim": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "f33fc90b-db52-5b0f-b963-cda6bcd1e58f",
+        "text": "This chunk is about:\n- Events: Red, White & Crüe\n- People: Bobby Stewart, the athlete fighter\n- Topics: fighting, athletic training\n\nFacts:\n- Red, White & Crüe is an event associated with fighting in the chunk’s comparison.\n- The athlete mentioned in the chunk is also a fighter.\n- Bobby Stewart trained the fighter mentioned in the chunk.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "e264edc6-a1f2-52e7-b237-40f4c8c145ec",
+        "text": "Red, White & Crüe and this athlete both fight. The fighter was trained by Bobby Stewart.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "c2d9334a-da43-535d-8c83-a5bb51ac706f",
+        "text": "red, white & crüe",
+        "type": "Entity"
+      },
+      {
+        "id": 3,
+        "original_id": "f96e6e67-2b4d-5632-bd8a-d07cd07310ac",
+        "text": "the fighter",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "03e14441-4a55-5fdb-9d46-9276ad702db1",
+        "text": "bobby stewart",
+        "type": "Entity"
+      },
+      {
+        "id": 5,
+        "original_id": "99a82eec-bb35-5bb5-9ed2-e73fc7a756de",
+        "text": "person",
+        "type": "EntityType"
+      },
+      {
+        "id": 6,
+        "original_id": "5263a535-1b4b-5925-be3e-310d03cd303b",
+        "text": "work",
+        "type": "EntityType"
+      },
+      {
+        "id": 7,
+        "original_id": "1cb516a0-68b3-53f2-9f23-d6f44604755a",
+        "text": "text_29be1b262e9ec00933a5cf319034c511",
+        "type": "TextDocument"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "contains"
+      },
+      {
+        "source": 2,
+        "target": 3,
+        "type": "both_fight"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "trained_by"
+      },
+      {
+        "source": 1,
+        "target": 4,
+        "type": "contains"
+      },
+      {
+        "source": 4,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 2,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "is_part_of"
+      }
+    ]
+  },
+  "grafo_evidencia": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "e6bf37ad-be8c-5e3f-af70-06c765ee04e3",
+        "text": "This chunk is about:\n- People: Nikki Sixx, Mike Tyson, Bobby Stewart\n- Bands: Mötley Crüe\n- Topics: band reunion, boxing career, training\n\nFacts:\n- In 1974, Bobby Stewart won the National Golden Gloves Tournament as a light heavyweight.\n- Bobby Stewart is best remembered as Mike Tyson's first trainer.\n- Mike Tyson won his first 19 professional fights by knockout.\n- Mike Tyson won 12 of his first 19 professional fights by knockout in the first round.\n- Nikki Sixx, bassist of Mötley Crüe, compared the band's reunion to seeing Mike Tyson fight.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "0c18f85d-83ef-5580-a54a-1cbb1a833895",
+        "text": "Page: Red, White &amp; Crüe. Sentence: Bassist Nikki Sixx commented on the band's reunion, comparing it to \"seeing Mike Tyson fight.\nPage: Mike Tyson. Sentence: Tyson won his first 19 professional fights by knockout, 12 of them in the first round.\nPage: Bobby Stewart. Sentence: Bobby Stewart won the National Golden Gloves Tournament in 1974 as a light heavyweight, but he will be best remembered as the first trainer for Mike Tyson.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "86ef802b-305f-504d-8a1a-7b8cf41a8b9e",
+        "text": "nikki sixx",
+        "type": "Entity"
+      },
+      {
+        "id": 3,
+        "original_id": "c2d9334a-da43-535d-8c83-a5bb51ac706f",
+        "text": "red, white & crüe",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "5263a535-1b4b-5925-be3e-310d03cd303b",
+        "text": "work",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "dcab87cd-c608-560e-b6fa-045534a33a98",
+        "text": "mike tyson",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "03e14441-4a55-5fdb-9d46-9276ad702db1",
+        "text": "bobby stewart",
+        "type": "Entity"
+      },
+      {
+        "id": 7,
+        "original_id": "3aa63a73-486e-5d22-8bda-c4bfe9ede5e0",
+        "text": "national golden gloves tournament",
+        "type": "Entity"
+      },
+      {
+        "id": 8,
+        "original_id": "214abcd9-9adf-5c8a-bb35-1e729f2d68c3",
+        "text": "event",
+        "type": "EntityType"
+      },
+      {
+        "id": 9,
+        "original_id": "681376de-d401-54ac-8198-569c27eed3e6",
+        "text": "1974",
+        "type": "Entity"
+      },
+      {
+        "id": 10,
+        "original_id": "b19433ae-558c-5aaf-95ac-6231f2a4be0e",
+        "text": "date",
+        "type": "EntityType"
+      },
+      {
+        "id": 11,
+        "original_id": "99a82eec-bb35-5bb5-9ed2-e73fc7a756de",
+        "text": "person",
+        "type": "EntityType"
+      },
+      {
+        "id": 12,
+        "original_id": "aa7c213c-ac54-56fe-bb20-a00a8ff4f1e7",
+        "text": "text_a3706dc48f683f5c42f49da258b985df",
+        "type": "TextDocument"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "contains"
+      },
+      {
+        "source": 2,
+        "target": 3,
+        "type": "commented_on"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 2,
+        "target": 5,
+        "type": "compared_to"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "first_trained_by"
+      },
+      {
+        "source": 1,
+        "target": 6,
+        "type": "contains"
+      },
+      {
+        "source": 6,
+        "target": 7,
+        "type": "won"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      },
+      {
+        "source": 7,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 6,
+        "target": 9,
+        "type": "won_in"
+      },
+      {
+        "source": 1,
+        "target": 9,
+        "type": "contains"
+      },
+      {
+        "source": 9,
+        "target": 10,
+        "type": "is_a"
+      },
+      {
+        "source": 6,
+        "target": 11,
+        "type": "is_a"
+      },
+      {
+        "source": 5,
+        "target": 11,
+        "type": "is_a"
+      },
+      {
+        "source": 2,
+        "target": 11,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 12,
+        "type": "is_part_of"
+      }
+    ]
+  }
+}

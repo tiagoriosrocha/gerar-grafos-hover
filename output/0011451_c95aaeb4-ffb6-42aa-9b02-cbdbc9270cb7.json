@@ -1,0 +1,556 @@
+{
+  "dataset": "hover",
+  "id": "c95aaeb4-ffb6-42aa-9b02-cbdbc9270cb7",
+  "split": "train",
+  "claim": "A sea touches the island that Bradenton Beach is on. It also touches Anna Maria the city.  Redfish Pass is a strait that connects West Sound with the sea.",
+  "evidencia": "Page: Anna Maria, Florida. Sentence: Anna Maria, is a city in Manatee County, Florida, United States.\nPage: Anna Maria, Florida. Sentence: The city occupies the northern part of Anna Maria Island and is one of three municipalities on the island.\nPage: Anna Maria Island. Sentence: It is bounded on the west by the Gulf of Mexico, on the south by Longboat Pass (which separates it from Longboat Key), on the east by Anna Maria Sound, and on the north by Tampa Bay.\nPage: Bradenton Beach, Florida. Sentence: Bradenton Beach is a city on Anna Maria Island in Manatee County, Florida, United States.\nPage: Redfish Pass. Sentence: Redfish Pass is a strait in Florida that connects Pine Island Sound with the Gulf of Mexico.",
+  "evidence_text": "Page: Anna Maria, Florida. Sentence: Anna Maria, is a city in Manatee County, Florida, United States.\nPage: Anna Maria, Florida. Sentence: The city occupies the northern part of Anna Maria Island and is one of three municipalities on the island.\nPage: Anna Maria Island. Sentence: It is bounded on the west by the Gulf of Mexico, on the south by Longboat Pass (which separates it from Longboat Key), on the east by Anna Maria Sound, and on the north by Tampa Bay.\nPage: Bradenton Beach, Florida. Sentence: Bradenton Beach is a city on Anna Maria Island in Manatee County, Florida, United States.\nPage: Redfish Pass. Sentence: Redfish Pass is a strait in Florida that connects Pine Island Sound with the Gulf of Mexico.",
+  "label": "NOT_SUPPORTED",
+  "num_hops": 4,
+  "hover_metadata": {
+    "supporting_facts": [
+      [
+        "Anna Maria, Florida",
+        0
+      ],
+      [
+        "Anna Maria, Florida",
+        3
+      ],
+      [
+        "Anna Maria Island",
+        2
+      ],
+      [
+        "Bradenton Beach, Florida",
+        0
+      ],
+      [
+        "Redfish Pass",
+        0
+      ]
+    ],
+    "num_hops": 4,
+    "evidence_annotation_id": [
+      0
+    ],
+    "evidence_id": [
+      "Anna Maria, Florida::sentence::0",
+      "Anna Maria, Florida::sentence::3",
+      "Anna Maria Island::sentence::2",
+      "Bradenton Beach, Florida::sentence::0",
+      "Redfish Pass::sentence::0"
+    ],
+    "evidence_wiki_url": [
+      "https://en.wikipedia.org/wiki/Anna_Maria%2C_Florida",
+      "https://en.wikipedia.org/wiki/Anna_Maria_Island",
+      "https://en.wikipedia.org/wiki/Bradenton_Beach%2C_Florida",
+      "https://en.wikipedia.org/wiki/Redfish_Pass"
+    ],
+    "evidence_sentence_id": [
+      "Anna Maria, Florida::sentence::0",
+      "Anna Maria, Florida::sentence::3",
+      "Anna Maria Island::sentence::2",
+      "Bradenton Beach, Florida::sentence::0",
+      "Redfish Pass::sentence::0"
+    ]
+  },
+  "grafo_claim": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "66697b9b-57c7-51f4-9e1c-495e4ec329e0",
+        "text": "This chunk is about:\n- Places: Bradenton Beach, Anna Maria, Redfish Pass, West Sound\n- Water bodies: a sea, a strait\n\nFacts:\n- Bradenton Beach is on an island that is touched by a sea.\n- Anna Maria is a city that is also touched by the same sea.\n- Redfish Pass is a strait that connects West Sound with the sea.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "3d347e84-cb3e-53fd-bc9b-e7697e8d18bd",
+        "text": "A sea touches the island that Bradenton Beach is on. It also touches Anna Maria the city.  Redfish Pass is a strait that connects West Sound with the sea.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "ed649eaf-4d17-54b4-937b-5ee4a5017166",
+        "text": "text_4f5b2349651ddb0ea2750cce71fcaa3f",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "7bf6017c-faf1-5419-9d6a-2e7008243873",
+        "text": "bradenton beach",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "5f394058-b2a0-5ba8-8466-ba2a18cfcf4e",
+        "text": "place",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "67cc725e-e83c-578a-8498-68ebac91cda2",
+        "text": "anna maria",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "35867ad9-0dac-542a-a31a-93b130b6b03b",
+        "text": "sea",
+        "type": "Entity"
+      },
+      {
+        "id": 7,
+        "original_id": "2fb2ae39-7540-510a-ad97-6f480f6ee97d",
+        "text": "sea",
+        "type": "EntityType"
+      },
+      {
+        "id": 8,
+        "original_id": "775834ed-7bc1-5487-a978-6ac790d5cf3d",
+        "text": "redfish pass",
+        "type": "Entity"
+      },
+      {
+        "id": 9,
+        "original_id": "4cbb5e88-2d11-5069-a3da-e5f8a4d9b7c6",
+        "text": "west sound",
+        "type": "Entity"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 6,
+        "target": 3,
+        "type": "touches"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 5,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 8,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 9,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 6,
+        "target": 5,
+        "type": "touches"
+      },
+      {
+        "source": 1,
+        "target": 6,
+        "type": "contains"
+      },
+      {
+        "source": 8,
+        "target": 6,
+        "type": "connects"
+      },
+      {
+        "source": 6,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 8,
+        "type": "contains"
+      },
+      {
+        "source": 8,
+        "target": 9,
+        "type": "connects"
+      },
+      {
+        "source": 1,
+        "target": 9,
+        "type": "contains"
+      }
+    ]
+  },
+  "grafo_evidencia": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "45cadef3-905c-51c3-9d12-c3e24c48ebee",
+        "text": "This chunk is about:\n- Places: Anna Maria, Florida; Anna Maria Island; Bradenton Beach, Florida; Redfish Pass\n- Organizations: Manatee County\n- Water bodies: Gulf of Mexico; Longboat Pass; Longboat Key; Anna Maria Sound; Tampa Bay; Pine Island Sound\n\nFacts:\n- Anna Maria, Florida, is a city in Manatee County, Florida, United States.\n- Anna Maria, Florida, occupies the northern part of Anna Maria Island and is one of three municipalities on the island.\n- Anna Maria Island is bounded on the west by the Gulf of Mexico, on the south by Longboat Pass, on the east by Anna Maria Sound, and on the north by Tampa Bay.\n- Longboat Pass separates Anna Maria Island from Longboat Key.\n- Bradenton Beach, Florida, is a city on Anna Maria Island in Manatee County, Florida, United States.\n- Redfish Pass is a strait in Florida that connects Pine Island Sound with the Gulf of Mexico.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "db337e20-d1c4-5715-8f1c-23ab6a4a9991",
+        "text": "Page: Anna Maria, Florida. Sentence: Anna Maria, is a city in Manatee County, Florida, United States.\nPage: Anna Maria, Florida. Sentence: The city occupies the northern part of Anna Maria Island and is one of three municipalities on the island.\nPage: Anna Maria Island. Sentence: It is bounded on the west by the Gulf of Mexico, on the south by Longboat Pass (which separates it from Longboat Key), on the east by Anna Maria Sound, and on the north by Tampa Bay.\nPage: Bradenton Beach, Florida. Sentence: Bradenton Beach is a city on Anna Maria Island in Manatee County, Florida, United States.\nPage: Redfish Pass. Sentence: Redfish Pass is a strait in Florida that connects Pine Island Sound with the Gulf of Mexico.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "0a233656-b328-5f41-9129-fc4d7d94cbf7",
+        "text": "text_80bdb703a5234fab7720d47516ffcb47",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "67cc725e-e83c-578a-8498-68ebac91cda2",
+        "text": "anna maria",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "4f155b46-e814-58f6-97cf-55d2ac3a572d",
+        "text": "city",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "7c86ac90-dcb9-5eca-820f-ca410f433c8e",
+        "text": "manatee county",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "5f394058-b2a0-5ba8-8466-ba2a18cfcf4e",
+        "text": "place",
+        "type": "EntityType"
+      },
+      {
+        "id": 7,
+        "original_id": "cc742fd7-ba65-509e-bb61-ba57c283d7d0",
+        "text": "florida",
+        "type": "Entity"
+      },
+      {
+        "id": 8,
+        "original_id": "874a51da-34ea-5037-be47-d87785d43c37",
+        "text": "united states",
+        "type": "Entity"
+      },
+      {
+        "id": 9,
+        "original_id": "35e29ad1-17b7-507a-a205-d7851a5e7102",
+        "text": "country",
+        "type": "EntityType"
+      },
+      {
+        "id": 10,
+        "original_id": "cfcd4874-c5ce-55c5-9667-69862cc22082",
+        "text": "anna maria island",
+        "type": "Entity"
+      },
+      {
+        "id": 11,
+        "original_id": "80d9208c-7834-5e86-a525-4dd194db608e",
+        "text": "island",
+        "type": "EntityType"
+      },
+      {
+        "id": 12,
+        "original_id": "81de2f83-326b-560d-8645-534a7347c1de",
+        "text": "gulf of mexico",
+        "type": "Entity"
+      },
+      {
+        "id": 13,
+        "original_id": "646c3627-7467-5f76-9cee-4df1a7f1fb87",
+        "text": "longboat pass",
+        "type": "Entity"
+      },
+      {
+        "id": 14,
+        "original_id": "5ccd2cc5-71a4-5f85-aefd-7f4afb0995d9",
+        "text": "strait",
+        "type": "EntityType"
+      },
+      {
+        "id": 15,
+        "original_id": "fb2fed9e-85f1-534d-bbfb-e8e7c2be7fab",
+        "text": "longboat key",
+        "type": "Entity"
+      },
+      {
+        "id": 16,
+        "original_id": "9c3c7872-f583-51f8-86a8-999c78bf70e0",
+        "text": "anna maria sound",
+        "type": "Entity"
+      },
+      {
+        "id": 17,
+        "original_id": "4a6584a2-101b-5ac3-b431-e057d8c46f37",
+        "text": "tampa bay",
+        "type": "Entity"
+      },
+      {
+        "id": 18,
+        "original_id": "7bf6017c-faf1-5419-9d6a-2e7008243873",
+        "text": "bradenton beach",
+        "type": "Entity"
+      },
+      {
+        "id": 19,
+        "original_id": "775834ed-7bc1-5487-a978-6ac790d5cf3d",
+        "text": "redfish pass",
+        "type": "Entity"
+      },
+      {
+        "id": 20,
+        "original_id": "0e786b92-b447-5444-9d65-1ad79b1e2995",
+        "text": "pine island sound",
+        "type": "Entity"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 18,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "located_in"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 18,
+        "target": 5,
+        "type": "located_in"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 7,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 12,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 16,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 17,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 20,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 5,
+        "target": 7,
+        "type": "located_in"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      },
+      {
+        "source": 18,
+        "target": 7,
+        "type": "located_in"
+      },
+      {
+        "source": 19,
+        "target": 7,
+        "type": "located_in"
+      },
+      {
+        "source": 7,
+        "target": 8,
+        "type": "located_in"
+      },
+      {
+        "source": 1,
+        "target": 8,
+        "type": "contains"
+      },
+      {
+        "source": 18,
+        "target": 8,
+        "type": "located_in"
+      },
+      {
+        "source": 8,
+        "target": 9,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 10,
+        "type": "occupies_part_of"
+      },
+      {
+        "source": 1,
+        "target": 10,
+        "type": "contains"
+      },
+      {
+        "source": 18,
+        "target": 10,
+        "type": "located_on"
+      },
+      {
+        "source": 10,
+        "target": 11,
+        "type": "is_a"
+      },
+      {
+        "source": 15,
+        "target": 11,
+        "type": "is_a"
+      },
+      {
+        "source": 10,
+        "target": 12,
+        "type": "bounded_on_west_by"
+      },
+      {
+        "source": 1,
+        "target": 12,
+        "type": "contains"
+      },
+      {
+        "source": 19,
+        "target": 12,
+        "type": "connects_with"
+      },
+      {
+        "source": 10,
+        "target": 13,
+        "type": "bounded_on_south_by"
+      },
+      {
+        "source": 1,
+        "target": 13,
+        "type": "contains"
+      },
+      {
+        "source": 13,
+        "target": 14,
+        "type": "is_a"
+      },
+      {
+        "source": 19,
+        "target": 14,
+        "type": "is_a"
+      },
+      {
+        "source": 13,
+        "target": 15,
+        "type": "separates_from"
+      },
+      {
+        "source": 1,
+        "target": 15,
+        "type": "contains"
+      },
+      {
+        "source": 10,
+        "target": 16,
+        "type": "bounded_on_east_by"
+      },
+      {
+        "source": 1,
+        "target": 16,
+        "type": "contains"
+      },
+      {
+        "source": 10,
+        "target": 17,
+        "type": "bounded_on_north_by"
+      },
+      {
+        "source": 1,
+        "target": 17,
+        "type": "contains"
+      },
+      {
+        "source": 1,
+        "target": 18,
+        "type": "contains"
+      },
+      {
+        "source": 1,
+        "target": 19,
+        "type": "contains"
+      },
+      {
+        "source": 19,
+        "target": 20,
+        "type": "connects_with"
+      },
+      {
+        "source": 1,
+        "target": 20,
+        "type": "contains"
+      }
+    ]
+  }
+}

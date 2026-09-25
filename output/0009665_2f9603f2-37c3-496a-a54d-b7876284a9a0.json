@@ -1,0 +1,343 @@
+{
+  "dataset": "hover",
+  "id": "2f9603f2-37c3-496a-a54d-b7876284a9a0",
+  "split": "train",
+  "claim": "Karl Dönitz was part of a ruling body and succeeded Adolf Hitler. The dissolution of the ruling body was shortly followed by the suicide of  Hans-Georg von Friedeburg.",
+  "evidencia": "Page: Flensburg Government. Sentence: It was headed by Grand Admiral Karl Dönitz as the Reichspräsident and Lutz Graf Schwerin von Krosigk as the Leading Minister.\nPage: Karl Dönitz. Sentence: Dönitz briefly succeeded Adolf Hitler as the head of state of Germany.\nPage: Hans-Georg von Friedeburg. Sentence: Generaladmiral\" von Friedeburg committed suicide shortly afterwards, upon the dissolution of the Flensburg Government.",
+  "evidence_text": "Page: Flensburg Government. Sentence: It was headed by Grand Admiral Karl Dönitz as the Reichspräsident and Lutz Graf Schwerin von Krosigk as the Leading Minister.\nPage: Karl Dönitz. Sentence: Dönitz briefly succeeded Adolf Hitler as the head of state of Germany.\nPage: Hans-Georg von Friedeburg. Sentence: Generaladmiral\" von Friedeburg committed suicide shortly afterwards, upon the dissolution of the Flensburg Government.",
+  "label": "SUPPORTED",
+  "num_hops": 3,
+  "hover_metadata": {
+    "supporting_facts": [
+      [
+        "Flensburg Government",
+        2
+      ],
+      [
+        "Karl Dönitz",
+        1
+      ],
+      [
+        "Hans-Georg von Friedeburg",
+        2
+      ]
+    ],
+    "num_hops": 3,
+    "evidence_annotation_id": [
+      0
+    ],
+    "evidence_id": [
+      "Flensburg Government::sentence::2",
+      "Karl Dönitz::sentence::1",
+      "Hans-Georg von Friedeburg::sentence::2"
+    ],
+    "evidence_wiki_url": [
+      "https://en.wikipedia.org/wiki/Flensburg_Government",
+      "https://en.wikipedia.org/wiki/Karl_D%C3%B6nitz",
+      "https://en.wikipedia.org/wiki/Hans-Georg_von_Friedeburg"
+    ],
+    "evidence_sentence_id": [
+      "Flensburg Government::sentence::2",
+      "Karl Dönitz::sentence::1",
+      "Hans-Georg von Friedeburg::sentence::2"
+    ]
+  },
+  "grafo_claim": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "60b28342-8e40-531b-83f3-46336287a0e5",
+        "text": "This chunk is about:\n- People: Karl Dönitz, Adolf Hitler, Hans-Georg von Friedeburg\n- Organizations: ruling body\n- Events: succession, dissolution, suicide\n\nFacts:\n- Karl Dönitz was part of a ruling body.\n- Karl Dönitz succeeded Adolf Hitler.\n- The ruling body was dissolved.\n- Hans-Georg von Friedeburg died by suicide shortly after the dissolution of the ruling body.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "f50fb875-74fa-5c71-b92a-04eb385201f6",
+        "text": "Karl Dönitz was part of a ruling body and succeeded Adolf Hitler. The dissolution of the ruling body was shortly followed by the suicide of  Hans-Georg von Friedeburg.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "107ec2f7-ed7e-5901-9a78-6b6b303e208b",
+        "text": "text_c2074ad8873838d4b7983eb8bf79f4b9",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "811b09a0-c51d-5af9-b8bb-d5813d1f94f5",
+        "text": "karl dönitz",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "99a82eec-bb35-5bb5-9ed2-e73fc7a756de",
+        "text": "person",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "23f9a60e-d0c9-5228-b18e-4ae7e7409ab6",
+        "text": "ruling body",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "388f60fb-220d-55e8-ae9c-3ac93cead308",
+        "text": "organization",
+        "type": "EntityType"
+      },
+      {
+        "id": 7,
+        "original_id": "9b3a9dcd-41f7-569a-ad9a-2077201bfca2",
+        "text": "adolf hitler",
+        "type": "Entity"
+      },
+      {
+        "id": 8,
+        "original_id": "d911e1a3-4d46-507c-b9ee-2337d19d0750",
+        "text": "hans-georg von friedeburg",
+        "type": "Entity"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 7,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 8,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "member_of"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 8,
+        "target": 5,
+        "type": "died_by_suicide_shortly_after_dissolution_of"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 7,
+        "type": "succeeded"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      },
+      {
+        "source": 1,
+        "target": 8,
+        "type": "contains"
+      }
+    ]
+  },
+  "grafo_evidencia": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "c39d54a4-9e2b-57cf-bcc3-4eb6ed515b5e",
+        "text": "This chunk is about:\n- People: Karl Dönitz, Lutz Graf Schwerin von Krosigk, Adolf Hitler, Hans-Georg von Friedeburg\n- Organizations: Flensburg Government\n- Roles: Reichspräsident, Leading Minister, head of state of Germany, Generaladmiral\n\nFacts:\n- Karl Dönitz briefly succeeded Adolf Hitler as the head of state of Germany.\n- The Flensburg Government was headed by Karl Dönitz as Reichspräsident and by Lutz Graf Schwerin von Krosigk as Leading Minister.\n- Hans-Georg von Friedeburg held the rank of Generaladmiral.\n- Hans-Georg von Friedeburg committed suicide shortly after the Flensburg Government was dissolved.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "56892122-f067-5c36-8cb9-6e869870349a",
+        "text": "Page: Flensburg Government. Sentence: It was headed by Grand Admiral Karl Dönitz as the Reichspräsident and Lutz Graf Schwerin von Krosigk as the Leading Minister.\nPage: Karl Dönitz. Sentence: Dönitz briefly succeeded Adolf Hitler as the head of state of Germany.\nPage: Hans-Georg von Friedeburg. Sentence: Generaladmiral\" von Friedeburg committed suicide shortly afterwards, upon the dissolution of the Flensburg Government.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "b56fa603-c3f0-5177-9f20-3d4d021aaf99",
+        "text": "text_48a2bcf622b80267db8bc325d3239c45",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "99b87a68-4b89-5a8b-a644-05a8384de630",
+        "text": "flensburg government",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "388f60fb-220d-55e8-ae9c-3ac93cead308",
+        "text": "organization",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "811b09a0-c51d-5af9-b8bb-d5813d1f94f5",
+        "text": "karl dönitz",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "99a82eec-bb35-5bb5-9ed2-e73fc7a756de",
+        "text": "person",
+        "type": "EntityType"
+      },
+      {
+        "id": 7,
+        "original_id": "9b3a9dcd-41f7-569a-ad9a-2077201bfca2",
+        "text": "adolf hitler",
+        "type": "Entity"
+      },
+      {
+        "id": 8,
+        "original_id": "f30f124b-1bc0-595d-b0c0-aa20029c2bb4",
+        "text": "germany",
+        "type": "Entity"
+      },
+      {
+        "id": 9,
+        "original_id": "5f394058-b2a0-5ba8-8466-ba2a18cfcf4e",
+        "text": "place",
+        "type": "EntityType"
+      },
+      {
+        "id": 10,
+        "original_id": "b3ddde34-fd6f-5809-8344-aea025a2a623",
+        "text": "lutz graf schwerin von krosigk",
+        "type": "Entity"
+      },
+      {
+        "id": 11,
+        "original_id": "d911e1a3-4d46-507c-b9ee-2337d19d0750",
+        "text": "hans-georg von friedeburg",
+        "type": "Entity"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 11,
+        "target": 3,
+        "type": "died_after_dissolution_of"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "headed_by"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 7,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 10,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 11,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 5,
+        "target": 7,
+        "type": "succeeded"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 8,
+        "type": "head_of_state_of"
+      },
+      {
+        "source": 1,
+        "target": 8,
+        "type": "contains"
+      },
+      {
+        "source": 8,
+        "target": 9,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 10,
+        "type": "led_by"
+      },
+      {
+        "source": 1,
+        "target": 10,
+        "type": "contains"
+      },
+      {
+        "source": 1,
+        "target": 11,
+        "type": "contains"
+      }
+    ]
+  }
+}

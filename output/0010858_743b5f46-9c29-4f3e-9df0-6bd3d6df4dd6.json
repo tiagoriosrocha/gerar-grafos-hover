@@ -1,0 +1,443 @@
+{
+  "dataset": "hover",
+  "id": "743b5f46-9c29-4f3e-9df0-6bd3d6df4dd6",
+  "split": "train",
+  "claim": "The genus that includes Disporum viridescens has more species than Boltonia.",
+  "evidencia": "Page: Disporum. Sentence: Disporum (commonly known as fairy bells) is a genus of about 20 species of perennial flowering plants, found in Asia from northern India to Japan, south to Indonesia and north into the Russian Far East.\nPage: Boltonia. Sentence: Boltonia is a genus of plants in the sunflower family native primarily to North America with one species in eastern Asia.\nPage: Disporum viridescens. Sentence: Disporum viridescens is a species of flowering plant in the genus \"Disporum\".",
+  "evidence_text": "Page: Disporum. Sentence: Disporum (commonly known as fairy bells) is a genus of about 20 species of perennial flowering plants, found in Asia from northern India to Japan, south to Indonesia and north into the Russian Far East.\nPage: Boltonia. Sentence: Boltonia is a genus of plants in the sunflower family native primarily to North America with one species in eastern Asia.\nPage: Disporum viridescens. Sentence: Disporum viridescens is a species of flowering plant in the genus \"Disporum\".",
+  "label": "SUPPORTED",
+  "num_hops": 3,
+  "hover_metadata": {
+    "supporting_facts": [
+      [
+        "Disporum",
+        0
+      ],
+      [
+        "Boltonia",
+        0
+      ],
+      [
+        "Disporum viridescens",
+        0
+      ]
+    ],
+    "num_hops": 3,
+    "evidence_annotation_id": [
+      0
+    ],
+    "evidence_id": [
+      "Disporum::sentence::0",
+      "Boltonia::sentence::0",
+      "Disporum viridescens::sentence::0"
+    ],
+    "evidence_wiki_url": [
+      "https://en.wikipedia.org/wiki/Disporum",
+      "https://en.wikipedia.org/wiki/Boltonia",
+      "https://en.wikipedia.org/wiki/Disporum_viridescens"
+    ],
+    "evidence_sentence_id": [
+      "Disporum::sentence::0",
+      "Boltonia::sentence::0",
+      "Disporum viridescens::sentence::0"
+    ]
+  },
+  "grafo_claim": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "145861c5-8a54-5c73-a55a-1b5d5b9b83ce",
+        "text": "This chunk is about:\n- Plants: Disporum viridescens, Boltonia\n- Taxa: genus\n\nFacts:\n- Disporum viridescens belongs to the genus Disporum.\n- The genus Disporum has more species than Boltonia.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "50b900fb-6c93-59b4-b2f6-d574bb9c9719",
+        "text": "The genus that includes Disporum viridescens has more species than Boltonia.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "f3dae1f5-af37-588b-b56f-dc4068038ce1",
+        "text": "text_592a26e5f87e4e6a1789d147711bbe34",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "35cbaddd-add5-5b0d-8ef2-bcb296a22fd7",
+        "text": "disporum",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "58ce8914-8a9e-5302-9b2d-0d97006e12d3",
+        "text": "genus",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "35418f0b-9b30-5667-ace9-b28a2adccef1",
+        "text": "boltonia",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "cc203e56-8930-5efa-9aad-d4bc145619bf",
+        "text": "disporum viridescens",
+        "type": "Entity"
+      },
+      {
+        "id": 7,
+        "original_id": "f23a15ce-c0de-5c57-9205-8c9d01026b05",
+        "text": "species",
+        "type": "EntityType"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 6,
+        "target": 3,
+        "type": "included_in_genus"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 5,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "has_more_species_than"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 1,
+        "target": 6,
+        "type": "contains"
+      },
+      {
+        "source": 6,
+        "target": 7,
+        "type": "is_a"
+      }
+    ]
+  },
+  "grafo_evidencia": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "5d18445f-2143-5f76-af9a-34a476eacbc9",
+        "text": "This chunk is about:\n- Plants: Disporum, Boltonia, Disporum viridescens\n- Concepts: plant genera, species, geographic distribution, sunflower family\n\nFacts:\n- Disporum is a genus of about 20 species of perennial flowering plants.\n- Disporum is commonly known as fairy bells.\n- Disporum is found in Asia from northern India to Japan, south to Indonesia, and north into the Russian Far East.\n- Boltonia is a genus of plants in the sunflower family.\n- Boltonia is native primarily to North America and has one species in eastern Asia.\n- Disporum viridescens is a species of flowering plant in the genus Disporum.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "22171273-975c-5f6c-ac02-1cceb4adc745",
+        "text": "Page: Disporum. Sentence: Disporum (commonly known as fairy bells) is a genus of about 20 species of perennial flowering plants, found in Asia from northern India to Japan, south to Indonesia and north into the Russian Far East.\nPage: Boltonia. Sentence: Boltonia is a genus of plants in the sunflower family native primarily to North America with one species in eastern Asia.\nPage: Disporum viridescens. Sentence: Disporum viridescens is a species of flowering plant in the genus \"Disporum\".",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "e5511ddc-8138-5de3-9679-98c9ea07e399",
+        "text": "text_09f4c714355adba534a7a510bc6fdb10",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "35cbaddd-add5-5b0d-8ef2-bcb296a22fd7",
+        "text": "disporum",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "f7b4540f-d32c-51b3-8970-f282fffab519",
+        "text": "taxon",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "79946c05-4a0b-54fd-ae68-6b525125895e",
+        "text": "fairy bells",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "e3b38143-5dd6-5555-b76b-e8224ae7e330",
+        "text": "commonname",
+        "type": "EntityType"
+      },
+      {
+        "id": 7,
+        "original_id": "21d096f4-373a-585b-85d5-3b4b9dfc4785",
+        "text": "asia",
+        "type": "Entity"
+      },
+      {
+        "id": 8,
+        "original_id": "5f394058-b2a0-5ba8-8466-ba2a18cfcf4e",
+        "text": "place",
+        "type": "EntityType"
+      },
+      {
+        "id": 9,
+        "original_id": "03500b54-9af3-59c5-bfe9-67178a2cbb21",
+        "text": "northern india",
+        "type": "Entity"
+      },
+      {
+        "id": 10,
+        "original_id": "9caba307-62ec-5f06-80d1-6a87c220306a",
+        "text": "japan",
+        "type": "Entity"
+      },
+      {
+        "id": 11,
+        "original_id": "b277b8aa-28f2-544e-b8d8-0ff88649281d",
+        "text": "indonesia",
+        "type": "Entity"
+      },
+      {
+        "id": 12,
+        "original_id": "69e19fc5-9980-5e27-bba7-c0ef7fce1bb1",
+        "text": "russian far east",
+        "type": "Entity"
+      },
+      {
+        "id": 13,
+        "original_id": "35418f0b-9b30-5667-ace9-b28a2adccef1",
+        "text": "boltonia",
+        "type": "Entity"
+      },
+      {
+        "id": 14,
+        "original_id": "5aa4cff8-9faf-53ed-a45e-0793a298983c",
+        "text": "sunflower family",
+        "type": "Entity"
+      },
+      {
+        "id": 15,
+        "original_id": "7bfd7320-7015-5d33-be1e-fbdc9c0b5b79",
+        "text": "north america",
+        "type": "Entity"
+      },
+      {
+        "id": 16,
+        "original_id": "af4a39d9-29b9-5270-aa5d-1d1a163d639e",
+        "text": "eastern asia",
+        "type": "Entity"
+      },
+      {
+        "id": 17,
+        "original_id": "cc203e56-8930-5efa-9aad-d4bc145619bf",
+        "text": "disporum viridescens",
+        "type": "Entity"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 17,
+        "target": 3,
+        "type": "in_genus"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 13,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 14,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 17,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "commonly_known_as"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 7,
+        "type": "found_in"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      },
+      {
+        "source": 7,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 9,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 10,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 11,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 12,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 15,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 16,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 9,
+        "type": "found_in"
+      },
+      {
+        "source": 1,
+        "target": 9,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 10,
+        "type": "found_in"
+      },
+      {
+        "source": 1,
+        "target": 10,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 11,
+        "type": "found_in"
+      },
+      {
+        "source": 1,
+        "target": 11,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 12,
+        "type": "found_in"
+      },
+      {
+        "source": 1,
+        "target": 12,
+        "type": "contains"
+      },
+      {
+        "source": 1,
+        "target": 13,
+        "type": "contains"
+      },
+      {
+        "source": 13,
+        "target": 14,
+        "type": "in_family"
+      },
+      {
+        "source": 1,
+        "target": 14,
+        "type": "contains"
+      },
+      {
+        "source": 13,
+        "target": 15,
+        "type": "native_to"
+      },
+      {
+        "source": 1,
+        "target": 15,
+        "type": "contains"
+      },
+      {
+        "source": 13,
+        "target": 16,
+        "type": "has_species_in"
+      },
+      {
+        "source": 1,
+        "target": 16,
+        "type": "contains"
+      },
+      {
+        "source": 1,
+        "target": 17,
+        "type": "contains"
+      }
+    ]
+  }
+}

@@ -1,0 +1,450 @@
+{
+  "dataset": "hover",
+  "id": "759844e6-16e4-44a3-9911-e06ec7667171",
+  "split": "train",
+  "claim": "The director of The Red Night was born 4 years before the filmmaker of a movie. This movie is Marilyn Times Five.",
+  "evidencia": "Page: Bruce Conner. Sentence: Bruce Conner (November 18, 1933 – July 7, 2008) was an American artist renowned for his work in assemblage, film, drawing, sculpture, painting, collage, and photography, among other disciplines.\nPage: Jaap Speyer. Sentence: Jaap Speyer (1891–1952) was a Dutch film director.\nPage: Marilyn Times Five. Sentence: Marilyn Times Five is a 1973 experimental film by American filmmaker Bruce Conner.\nPage: The Red Night. Sentence: The Red Night (German:Die rote Nacht) is a 1921 German silent film directed by Jaap Speyer.",
+  "evidence_text": "Page: Bruce Conner. Sentence: Bruce Conner (November 18, 1933 – July 7, 2008) was an American artist renowned for his work in assemblage, film, drawing, sculpture, painting, collage, and photography, among other disciplines.\nPage: Jaap Speyer. Sentence: Jaap Speyer (1891–1952) was a Dutch film director.\nPage: Marilyn Times Five. Sentence: Marilyn Times Five is a 1973 experimental film by American filmmaker Bruce Conner.\nPage: The Red Night. Sentence: The Red Night (German:Die rote Nacht) is a 1921 German silent film directed by Jaap Speyer.",
+  "label": "NOT_SUPPORTED",
+  "num_hops": 4,
+  "hover_metadata": {
+    "supporting_facts": [
+      [
+        "Bruce Conner",
+        0
+      ],
+      [
+        "Jaap Speyer",
+        0
+      ],
+      [
+        "Marilyn Times Five",
+        0
+      ],
+      [
+        "The Red Night",
+        0
+      ]
+    ],
+    "num_hops": 4,
+    "evidence_annotation_id": [
+      0
+    ],
+    "evidence_id": [
+      "Bruce Conner::sentence::0",
+      "Jaap Speyer::sentence::0",
+      "Marilyn Times Five::sentence::0",
+      "The Red Night::sentence::0"
+    ],
+    "evidence_wiki_url": [
+      "https://en.wikipedia.org/wiki/Bruce_Conner",
+      "https://en.wikipedia.org/wiki/Jaap_Speyer",
+      "https://en.wikipedia.org/wiki/Marilyn_Times_Five",
+      "https://en.wikipedia.org/wiki/The_Red_Night"
+    ],
+    "evidence_sentence_id": [
+      "Bruce Conner::sentence::0",
+      "Jaap Speyer::sentence::0",
+      "Marilyn Times Five::sentence::0",
+      "The Red Night::sentence::0"
+    ]
+  },
+  "grafo_claim": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "cc294e24-4779-5ea4-9604-86dab4d2df38",
+        "text": "This chunk is about:\n- People: director of The Red Night, filmmaker of Marilyn Times Five\n- Works: The Red Night, Marilyn Times Five\n\nFacts:\n- The filmmaker of Marilyn Times Five was born 4 years after the director of The Red Night.\n- The director of The Red Night was born 4 years before the filmmaker of Marilyn Times Five.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "8086ce62-80e3-5603-96f5-85185ee988fc",
+        "text": "The director of The Red Night was born 4 years before the filmmaker of a movie. This movie is Marilyn Times Five.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "382c6844-16e9-537b-9cc6-a4a2220a39ee",
+        "text": "text_d193296ba2a5508a7f90f20f6890a775",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "4b3fc708-3e5c-5ae4-b011-425f824f2421",
+        "text": "the red night",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "1155038a-04d1-5d6a-9c60-e4f499a6913c",
+        "text": "movie",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "705d9f14-1095-505e-b7f7-5c6693b1ad14",
+        "text": "director of the red night",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "99a82eec-bb35-5bb5-9ed2-e73fc7a756de",
+        "text": "person",
+        "type": "EntityType"
+      },
+      {
+        "id": 7,
+        "original_id": "91868328-339b-5afb-980a-77439b5d88b2",
+        "text": "filmmaker of marilyn times five",
+        "type": "Entity"
+      },
+      {
+        "id": 8,
+        "original_id": "204b7c8a-45fe-5c83-88ab-31ddde0e32db",
+        "text": "marilyn times five",
+        "type": "Entity"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 3,
+        "type": "directed"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 8,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 7,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 5,
+        "target": 7,
+        "type": "born_4_years_before"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      },
+      {
+        "source": 7,
+        "target": 8,
+        "type": "made"
+      },
+      {
+        "source": 1,
+        "target": 8,
+        "type": "contains"
+      }
+    ]
+  },
+  "grafo_evidencia": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "5fddaeea-2274-5be0-98e8-f9aad8d1ccf4",
+        "text": "This chunk is about:\n- People: Bruce Conner, Jaap Speyer\n- Works: Marilyn Times Five, The Red Night\n- Roles: American artist, filmmaker, Dutch film director\n- Topics: Experimental film, German silent film\n\nFacts:\n- Jaap Speyer was a Dutch film director who lived from 1891 to 1952.\n- The Red Night is a 1921 German silent film directed by Jaap Speyer.\n- Bruce Conner was an American artist who lived from November 18, 1933 to July 7, 2008.\n- Bruce Conner was renowned for assemblage, film, drawing, sculpture, painting, collage, and photography.\n- Marilyn Times Five is a 1973 experimental film by American filmmaker Bruce Conner.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "9aab9b1e-532d-5b81-8aea-01c6b3ef1f01",
+        "text": "Page: Bruce Conner. Sentence: Bruce Conner (November 18, 1933 – July 7, 2008) was an American artist renowned for his work in assemblage, film, drawing, sculpture, painting, collage, and photography, among other disciplines.\nPage: Jaap Speyer. Sentence: Jaap Speyer (1891–1952) was a Dutch film director.\nPage: Marilyn Times Five. Sentence: Marilyn Times Five is a 1973 experimental film by American filmmaker Bruce Conner.\nPage: The Red Night. Sentence: The Red Night (German:Die rote Nacht) is a 1921 German silent film directed by Jaap Speyer.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "e67eede9-9acd-5847-a343-e5727d26a79a",
+        "text": "text_e956a5ef5e369f89e4a656eb29d01846",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "2571398a-98e2-5d07-b6db-816909a69372",
+        "text": "bruce conner",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "99a82eec-bb35-5bb5-9ed2-e73fc7a756de",
+        "text": "person",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "2f59ee1c-5fdf-5ef4-ac3a-b52db626a710",
+        "text": "1933-11-18",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "b19433ae-558c-5aaf-95ac-6231f2a4be0e",
+        "text": "date",
+        "type": "EntityType"
+      },
+      {
+        "id": 7,
+        "original_id": "d270e95e-b9b0-502f-98a6-f84f4e4b40d2",
+        "text": "2008-07-07",
+        "type": "Entity"
+      },
+      {
+        "id": 8,
+        "original_id": "c6d776be-0c86-5b1d-bfd0-0d9e5fdaaa99",
+        "text": "jaap speyer",
+        "type": "Entity"
+      },
+      {
+        "id": 9,
+        "original_id": "b3048c0b-71db-5524-8e6f-e6b105cbe27c",
+        "text": "1891",
+        "type": "Entity"
+      },
+      {
+        "id": 10,
+        "original_id": "0a17f198-ed1b-5846-9ddc-10d6cda0c73e",
+        "text": "1952",
+        "type": "Entity"
+      },
+      {
+        "id": 11,
+        "original_id": "204b7c8a-45fe-5c83-88ab-31ddde0e32db",
+        "text": "marilyn times five",
+        "type": "Entity"
+      },
+      {
+        "id": 12,
+        "original_id": "5263a535-1b4b-5925-be3e-310d03cd303b",
+        "text": "work",
+        "type": "EntityType"
+      },
+      {
+        "id": 13,
+        "original_id": "39e9a75c-18e0-5c79-94c6-266b4a369596",
+        "text": "1973",
+        "type": "Entity"
+      },
+      {
+        "id": 14,
+        "original_id": "4b3fc708-3e5c-5ae4-b011-425f824f2421",
+        "text": "the red night",
+        "type": "Entity"
+      },
+      {
+        "id": 15,
+        "original_id": "2038a789-a767-58a6-9103-fc3319a6cdd3",
+        "text": "1921",
+        "type": "Entity"
+      },
+      {
+        "id": 16,
+        "original_id": "fdf2ef54-3ef4-5a77-825d-bc80255b2f5b",
+        "text": "die rote nacht",
+        "type": "Entity"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 11,
+        "target": 3,
+        "type": "directed_by"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 8,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "born_on"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 7,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 9,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 10,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 13,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 15,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 7,
+        "type": "died_on"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      },
+      {
+        "source": 1,
+        "target": 8,
+        "type": "contains"
+      },
+      {
+        "source": 14,
+        "target": 8,
+        "type": "directed_by"
+      },
+      {
+        "source": 8,
+        "target": 9,
+        "type": "born_in"
+      },
+      {
+        "source": 1,
+        "target": 9,
+        "type": "contains"
+      },
+      {
+        "source": 8,
+        "target": 10,
+        "type": "died_in"
+      },
+      {
+        "source": 1,
+        "target": 10,
+        "type": "contains"
+      },
+      {
+        "source": 1,
+        "target": 11,
+        "type": "contains"
+      },
+      {
+        "source": 11,
+        "target": 12,
+        "type": "is_a"
+      },
+      {
+        "source": 14,
+        "target": 12,
+        "type": "is_a"
+      },
+      {
+        "source": 16,
+        "target": 12,
+        "type": "is_a"
+      },
+      {
+        "source": 11,
+        "target": 13,
+        "type": "released_in"
+      },
+      {
+        "source": 1,
+        "target": 13,
+        "type": "contains"
+      },
+      {
+        "source": 1,
+        "target": 14,
+        "type": "contains"
+      },
+      {
+        "source": 14,
+        "target": 15,
+        "type": "released_in"
+      },
+      {
+        "source": 1,
+        "target": 15,
+        "type": "contains"
+      },
+      {
+        "source": 14,
+        "target": 16,
+        "type": "has_german_title"
+      },
+      {
+        "source": 1,
+        "target": 16,
+        "type": "contains"
+      }
+    ]
+  }
+}

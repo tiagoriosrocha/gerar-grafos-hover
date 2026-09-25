@@ -1,0 +1,391 @@
+{
+  "dataset": "hover",
+  "id": "cdab1ee5-5864-4563-a3c8-f4ce80e9c1af",
+  "split": "train",
+  "claim": "I Get Off is the first single from the hard rock band. This band and \"Say Anything\" are from different states.",
+  "evidencia": "Page: Halestorm. Sentence: Halestorm is an American hard rock band from Red Lion, Pennsylvania, consisting of lead vocalist and guitarist Lzzy Hale, her brother drummer and percussionist Arejay Hale, guitarist Joe Hottinger, and bassist Josh Smith.\nPage: Say Anything (band). Sentence: Say Anything is an American rock band from Los Angeles, California.\nPage: I Get Off. Sentence: \"I Get Off\" is the first single released by the hard rock band, Halestorm.",
+  "evidence_text": "Page: Halestorm. Sentence: Halestorm is an American hard rock band from Red Lion, Pennsylvania, consisting of lead vocalist and guitarist Lzzy Hale, her brother drummer and percussionist Arejay Hale, guitarist Joe Hottinger, and bassist Josh Smith.\nPage: Say Anything (band). Sentence: Say Anything is an American rock band from Los Angeles, California.\nPage: I Get Off. Sentence: \"I Get Off\" is the first single released by the hard rock band, Halestorm.",
+  "label": "SUPPORTED",
+  "num_hops": 3,
+  "hover_metadata": {
+    "supporting_facts": [
+      [
+        "Halestorm",
+        0
+      ],
+      [
+        "Say Anything (band)",
+        0
+      ],
+      [
+        "I Get Off",
+        0
+      ]
+    ],
+    "num_hops": 3,
+    "evidence_annotation_id": [
+      0
+    ],
+    "evidence_id": [
+      "Halestorm::sentence::0",
+      "Say Anything (band)::sentence::0",
+      "I Get Off::sentence::0"
+    ],
+    "evidence_wiki_url": [
+      "https://en.wikipedia.org/wiki/Halestorm",
+      "https://en.wikipedia.org/wiki/Say_Anything_%28band%29",
+      "https://en.wikipedia.org/wiki/I_Get_Off"
+    ],
+    "evidence_sentence_id": [
+      "Halestorm::sentence::0",
+      "Say Anything (band)::sentence::0",
+      "I Get Off::sentence::0"
+    ]
+  },
+  "grafo_claim": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "51e907c1-1607-54c2-9e60-061ca24c03da",
+        "text": "This chunk is about:\n- Products: I Get Off, Say Anything\n- Organizations: hard rock band\n- Places: states\n\nFacts:\n- I Get Off is the first single from a hard rock band.\n- The hard rock band and Say Anything are from different states.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "13273483-845d-59a0-8031-3525cb413efa",
+        "text": "I Get Off is the first single from the hard rock band. This band and \"Say Anything\" are from different states.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "919a6bba-f872-5ac0-9846-bcce61efb2ad",
+        "text": "text_a49ed648e121667c1a792299f11b67cf",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "ff1b4129-d522-5a06-921a-370e3e13ecbc",
+        "text": "i get off",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "5263a535-1b4b-5925-be3e-310d03cd303b",
+        "text": "work",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "a8ccd2ba-5f00-5904-aaaf-904edee6f7ed",
+        "text": "hard rock band",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "388f60fb-220d-55e8-ae9c-3ac93cead308",
+        "text": "organization",
+        "type": "EntityType"
+      },
+      {
+        "id": 7,
+        "original_id": "018e3477-37e6-508d-bc61-fc55163d53c5",
+        "text": "say anything",
+        "type": "Entity"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "is_first_single_from"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 7,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 5,
+        "target": 7,
+        "type": "is_from_different_state_than"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      }
+    ]
+  },
+  "grafo_evidencia": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "a5203485-b473-5683-b897-8840ff5c04e0",
+        "text": "This chunk is about:\n- Organizations: Halestorm, Say Anything\n- People: Lzzy Hale, Arejay Hale, Joe Hottinger, Josh Smith\n- Places: Red Lion, Pennsylvania, Los Angeles, California\n- Products: \"I Get Off\"\n- Topics: American rock bands, hard rock\n\nFacts:\n- Halestorm is an American hard rock band from Red Lion, Pennsylvania.\n- Halestorm consists of lead vocalist and guitarist Lzzy Hale, drummer and percussionist Arejay Hale, guitarist Joe Hottinger, and bassist Josh Smith.\n- Say Anything is an American rock band from Los Angeles, California.\n- \"I Get Off\" is the first single released by Halestorm.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "1ca24162-63c6-5d5f-ba8b-f5757d54607a",
+        "text": "Page: Halestorm. Sentence: Halestorm is an American hard rock band from Red Lion, Pennsylvania, consisting of lead vocalist and guitarist Lzzy Hale, her brother drummer and percussionist Arejay Hale, guitarist Joe Hottinger, and bassist Josh Smith.\nPage: Say Anything (band). Sentence: Say Anything is an American rock band from Los Angeles, California.\nPage: I Get Off. Sentence: \"I Get Off\" is the first single released by the hard rock band, Halestorm.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "bf30d57e-3582-543f-8af5-c4347ca85590",
+        "text": "text_23ef316739392f20d82a5c02066eaa51",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "4218a5b5-f7b7-548c-8929-b39a5b53786d",
+        "text": "halestorm",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "a69bcce0-8153-57d6-96fd-6d36e286fb20",
+        "text": "band",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "92086c3b-2036-534c-b18a-d91b0ee343a5",
+        "text": "red lion, pennsylvania",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "5f394058-b2a0-5ba8-8466-ba2a18cfcf4e",
+        "text": "place",
+        "type": "EntityType"
+      },
+      {
+        "id": 7,
+        "original_id": "ec69b39f-9955-5f90-aa06-ebc17a4cb180",
+        "text": "lzzy hale",
+        "type": "Entity"
+      },
+      {
+        "id": 8,
+        "original_id": "99a82eec-bb35-5bb5-9ed2-e73fc7a756de",
+        "text": "person",
+        "type": "EntityType"
+      },
+      {
+        "id": 9,
+        "original_id": "3197a96a-4655-5001-a833-92ee5fd8c89e",
+        "text": "arejay hale",
+        "type": "Entity"
+      },
+      {
+        "id": 10,
+        "original_id": "622e380a-10a6-5f28-a92b-9e592a47e2a7",
+        "text": "joe hottinger",
+        "type": "Entity"
+      },
+      {
+        "id": 11,
+        "original_id": "2252b34b-591e-5f50-a0e8-37aa779829cf",
+        "text": "josh smith",
+        "type": "Entity"
+      },
+      {
+        "id": 12,
+        "original_id": "018e3477-37e6-508d-bc61-fc55163d53c5",
+        "text": "say anything",
+        "type": "Entity"
+      },
+      {
+        "id": 13,
+        "original_id": "18039c2b-f1bb-538d-9d11-cc26f23f658c",
+        "text": "los angeles, california",
+        "type": "Entity"
+      },
+      {
+        "id": 14,
+        "original_id": "ff1b4129-d522-5a06-921a-370e3e13ecbc",
+        "text": "i get off",
+        "type": "Entity"
+      },
+      {
+        "id": 15,
+        "original_id": "6056b392-f12e-5150-8c0b-ac7545dc2fdf",
+        "text": "song",
+        "type": "EntityType"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 14,
+        "target": 3,
+        "type": "released_by"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 12,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "originated_in"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 13,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 7,
+        "type": "has_member"
+      },
+      {
+        "source": 9,
+        "target": 7,
+        "type": "sibling_of"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      },
+      {
+        "source": 7,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 9,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 10,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 11,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 9,
+        "type": "has_member"
+      },
+      {
+        "source": 1,
+        "target": 9,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 10,
+        "type": "has_member"
+      },
+      {
+        "source": 1,
+        "target": 10,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 11,
+        "type": "has_member"
+      },
+      {
+        "source": 1,
+        "target": 11,
+        "type": "contains"
+      },
+      {
+        "source": 1,
+        "target": 12,
+        "type": "contains"
+      },
+      {
+        "source": 12,
+        "target": 13,
+        "type": "originated_in"
+      },
+      {
+        "source": 1,
+        "target": 13,
+        "type": "contains"
+      },
+      {
+        "source": 1,
+        "target": 14,
+        "type": "contains"
+      },
+      {
+        "source": 14,
+        "target": 15,
+        "type": "is_a"
+      }
+    ]
+  }
+}

@@ -1,0 +1,354 @@
+{
+  "dataset": "hover",
+  "id": "7b7e832a-8832-4367-9e71-5736e5922b3e",
+  "split": "train",
+  "claim": "The USS Tortuga was not named after the Dry Tortugas, a group of desert coral islets 60 miles west of the city Key West with the motto \"One Human Family\".",
+  "evidencia": "Page: USS Tortuga (LSD-46). Sentence: USS \"Tortuga\" (LSD-46) is a \"Whidbey Island\"-class dock landing ship of the United States Navy.\nPage: USS Tortuga (LSD-46). Sentence: She was the second Navy ship to be named for the Dry Tortugas, a group of desert coral islets 60 mi west of Key West, Florida.\nPage: Key West, Florida. Sentence: The official city motto is \"One Human Family.\"",
+  "evidence_text": "Page: USS Tortuga (LSD-46). Sentence: USS \"Tortuga\" (LSD-46) is a \"Whidbey Island\"-class dock landing ship of the United States Navy.\nPage: USS Tortuga (LSD-46). Sentence: She was the second Navy ship to be named for the Dry Tortugas, a group of desert coral islets 60 mi west of Key West, Florida.\nPage: Key West, Florida. Sentence: The official city motto is \"One Human Family.\"",
+  "label": "NOT_SUPPORTED",
+  "num_hops": 2,
+  "hover_metadata": {
+    "supporting_facts": [
+      [
+        "USS Tortuga (LSD-46)",
+        0
+      ],
+      [
+        "USS Tortuga (LSD-46)",
+        1
+      ],
+      [
+        "Key West, Florida",
+        6
+      ]
+    ],
+    "num_hops": 2,
+    "evidence_annotation_id": [
+      0
+    ],
+    "evidence_id": [
+      "USS Tortuga (LSD-46)::sentence::0",
+      "USS Tortuga (LSD-46)::sentence::1",
+      "Key West, Florida::sentence::6"
+    ],
+    "evidence_wiki_url": [
+      "https://en.wikipedia.org/wiki/USS_Tortuga_%28LSD-46%29",
+      "https://en.wikipedia.org/wiki/Key_West%2C_Florida"
+    ],
+    "evidence_sentence_id": [
+      "USS Tortuga (LSD-46)::sentence::0",
+      "USS Tortuga (LSD-46)::sentence::1",
+      "Key West, Florida::sentence::6"
+    ]
+  },
+  "grafo_claim": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "7f120f48-ec48-57ec-9cf9-d94b4bf7cd1f",
+        "text": "This chunk is about:\n- Products: USS Tortuga\n- Places: Dry Tortugas, Key West\n- Concepts: Naming origins, Mottoes\n\nFacts:\n- The USS Tortuga was not named after the Dry Tortugas.\n- The Dry Tortugas are a group of coral islets located 60 miles west of the city of Key West.\n- The Dry Tortugas are described as desert coral islets.\n- The city of Key West has the motto \"One Human Family\".",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "72be0263-03d7-5d85-8965-5d7d37b2898a",
+        "text": "The USS Tortuga was not named after the Dry Tortugas, a group of desert coral islets 60 miles west of the city Key West with the motto \"One Human Family\".",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "04f7caea-4235-5beb-9bf3-81a004c7fd20",
+        "text": "text_31e3e4458a6b04568126f9b94fb5c117",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "d34be8af-0409-5110-9992-2498b3a0b23f",
+        "text": "uss tortuga",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "1b7c3ad9-e154-56b4-908d-043ea548b500",
+        "text": "thing",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "cc3ce5ca-dbe1-5c57-b626-59ebce196bc2",
+        "text": "dry tortugas",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "5f394058-b2a0-5ba8-8466-ba2a18cfcf4e",
+        "text": "place",
+        "type": "EntityType"
+      },
+      {
+        "id": 7,
+        "original_id": "0cb7633e-e294-5f09-8bb9-08d4d624e6bb",
+        "text": "key west",
+        "type": "Entity"
+      },
+      {
+        "id": 8,
+        "original_id": "850b328c-d08f-5018-8f26-8e57c8cce4b0",
+        "text": "one human family",
+        "type": "Entity"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 8,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "not_named_after"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 7,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 5,
+        "target": 7,
+        "type": "located_west_of"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      },
+      {
+        "source": 7,
+        "target": 8,
+        "type": "has_motto"
+      },
+      {
+        "source": 1,
+        "target": 8,
+        "type": "contains"
+      }
+    ]
+  },
+  "grafo_evidencia": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "ef225661-253a-521e-b5d5-5ffb0e8b4a7f",
+        "text": "This chunk is about:\n- Ships: USS Tortuga (LSD-46)\n- Classes: Whidbey Island-class dock landing ships\n- Organizations: United States Navy\n- Places: Dry Tortugas, Key West, Florida\n- Topics: City mottos\n\nFacts:\n- USS Tortuga (LSD-46) is a Whidbey Island-class dock landing ship of the United States Navy.\n- USS Tortuga (LSD-46) was the second United States Navy ship named for the Dry Tortugas.\n- The Dry Tortugas are a group of desert coral islets 60 miles west of Key West, Florida.\n- Key West, Florida, has the official city motto \"One Human Family.\"",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "f974568a-00f7-52fc-bacb-ed06048f6f7d",
+        "text": "Page: USS Tortuga (LSD-46). Sentence: USS \"Tortuga\" (LSD-46) is a \"Whidbey Island\"-class dock landing ship of the United States Navy.\nPage: USS Tortuga (LSD-46). Sentence: She was the second Navy ship to be named for the Dry Tortugas, a group of desert coral islets 60 mi west of Key West, Florida.\nPage: Key West, Florida. Sentence: The official city motto is \"One Human Family.\"",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "552517ea-86ca-500d-afc6-8aa82608c4a5",
+        "text": "text_1581bbece2824c1bb7da516be19e3c3f",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "3ad4aa91-d11c-5521-9142-a010599e3833",
+        "text": "uss tortuga (lsd-46)",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "d7189c1f-62f9-5967-8266-f2fecf50d34d",
+        "text": "ship",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "5d4a7970-7ad8-51be-848d-32cc2671a7bd",
+        "text": "whidbey island-class",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "ac11902d-9541-5981-98cf-2a12b8f41f8c",
+        "text": "shipclass",
+        "type": "EntityType"
+      },
+      {
+        "id": 7,
+        "original_id": "bc28975a-7cb9-5d8c-8b27-3d5c8da36d7c",
+        "text": "united states navy",
+        "type": "Entity"
+      },
+      {
+        "id": 8,
+        "original_id": "388f60fb-220d-55e8-ae9c-3ac93cead308",
+        "text": "organization",
+        "type": "EntityType"
+      },
+      {
+        "id": 9,
+        "original_id": "cc3ce5ca-dbe1-5c57-b626-59ebce196bc2",
+        "text": "dry tortugas",
+        "type": "Entity"
+      },
+      {
+        "id": 10,
+        "original_id": "5f394058-b2a0-5ba8-8466-ba2a18cfcf4e",
+        "text": "place",
+        "type": "EntityType"
+      },
+      {
+        "id": 11,
+        "original_id": "81e03cf4-dbd5-5d5d-8915-3eb8491f4ea7",
+        "text": "key west, florida",
+        "type": "Entity"
+      },
+      {
+        "id": 12,
+        "original_id": "850b328c-d08f-5018-8f26-8e57c8cce4b0",
+        "text": "one human family",
+        "type": "Entity"
+      },
+      {
+        "id": 13,
+        "original_id": "685a83a1-9776-5bd3-91b8-af824b887613",
+        "text": "motto",
+        "type": "EntityType"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "instance_of"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 7,
+        "type": "operated_by"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      },
+      {
+        "source": 7,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 9,
+        "type": "named_for"
+      },
+      {
+        "source": 1,
+        "target": 9,
+        "type": "contains"
+      },
+      {
+        "source": 9,
+        "target": 10,
+        "type": "is_a"
+      },
+      {
+        "source": 11,
+        "target": 10,
+        "type": "is_a"
+      },
+      {
+        "source": 9,
+        "target": 11,
+        "type": "located_west_of"
+      },
+      {
+        "source": 1,
+        "target": 11,
+        "type": "contains"
+      },
+      {
+        "source": 11,
+        "target": 12,
+        "type": "has_official_city_motto"
+      },
+      {
+        "source": 1,
+        "target": 12,
+        "type": "contains"
+      },
+      {
+        "source": 12,
+        "target": 13,
+        "type": "is_a"
+      }
+    ]
+  }
+}

@@ -1,0 +1,409 @@
+{
+  "dataset": "hover",
+  "id": "9feac676-f2a8-43a9-97ee-4c9419d1f08d",
+  "split": "train",
+  "claim": "The university, in which the NFL player who has the father Jerry Marion, played college football, was founded in 1874.",
+  "evidencia": "Page: Brock Marion. Sentence: After playing college football for the University of Nevada, Reno, he was chosen in the seventh round of the 1993 NFL Draft by the Dallas Cowboys.\nPage: University of Nevada, Reno. Sentence: The University of Nevada, Reno (also referred to as Nevada, the University of Nevada or UNR) is a public research university located in Reno, Nevada.\nPage: University of Nevada, Reno. Sentence: Founded October 12, 1874, Nevada is the sole land grant institution for the state of Nevada.\nPage: Jerry Marion. Sentence: He is the father of NFL player Brock Marion.",
+  "evidence_text": "Page: Brock Marion. Sentence: After playing college football for the University of Nevada, Reno, he was chosen in the seventh round of the 1993 NFL Draft by the Dallas Cowboys.\nPage: University of Nevada, Reno. Sentence: The University of Nevada, Reno (also referred to as Nevada, the University of Nevada or UNR) is a public research university located in Reno, Nevada.\nPage: University of Nevada, Reno. Sentence: Founded October 12, 1874, Nevada is the sole land grant institution for the state of Nevada.\nPage: Jerry Marion. Sentence: He is the father of NFL player Brock Marion.",
+  "label": "SUPPORTED",
+  "num_hops": 3,
+  "hover_metadata": {
+    "supporting_facts": [
+      [
+        "Brock Marion",
+        1
+      ],
+      [
+        "University of Nevada, Reno",
+        0
+      ],
+      [
+        "University of Nevada, Reno",
+        1
+      ],
+      [
+        "Jerry Marion",
+        4
+      ]
+    ],
+    "num_hops": 3,
+    "evidence_annotation_id": [
+      0
+    ],
+    "evidence_id": [
+      "Brock Marion::sentence::1",
+      "University of Nevada, Reno::sentence::0",
+      "University of Nevada, Reno::sentence::1",
+      "Jerry Marion::sentence::4"
+    ],
+    "evidence_wiki_url": [
+      "https://en.wikipedia.org/wiki/Brock_Marion",
+      "https://en.wikipedia.org/wiki/University_of_Nevada%2C_Reno",
+      "https://en.wikipedia.org/wiki/Jerry_Marion"
+    ],
+    "evidence_sentence_id": [
+      "Brock Marion::sentence::1",
+      "University of Nevada, Reno::sentence::0",
+      "University of Nevada, Reno::sentence::1",
+      "Jerry Marion::sentence::4"
+    ]
+  },
+  "grafo_claim": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "3d977e13-502f-5026-abd5-54e26a7ed63a",
+        "text": "This chunk is about:\n- People: Jerry Marion, unnamed NFL player\n- Organizations: unnamed university\n- Roles: father, NFL player\n\nFacts:\n- Jerry Marion is the father of the unnamed NFL player.\n- The unnamed NFL player played college football at the unnamed university.\n- The unnamed university was founded in 1874.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "28e13223-6984-56dd-8336-d535e041c870",
+        "text": "The university, in which the NFL player who has the father Jerry Marion, played college football, was founded in 1874.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "129c0fd4-4dd0-5436-ab51-453c3e54a71a",
+        "text": "text_7c1cfe1ed6a6a72c25b1d222e06422ce",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "184ce2d1-c3c9-572d-8fe1-9501a5707004",
+        "text": "jerry marion",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "99a82eec-bb35-5bb5-9ed2-e73fc7a756de",
+        "text": "person",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "1cdf29af-c0cc-5ee5-9cdc-e7cd44e9d8b5",
+        "text": "marcus mariota",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "54f34e18-ad8a-51a3-8745-282eb897836e",
+        "text": "university of oregon",
+        "type": "Entity"
+      },
+      {
+        "id": 7,
+        "original_id": "388f60fb-220d-55e8-ae9c-3ac93cead308",
+        "text": "organization",
+        "type": "EntityType"
+      },
+      {
+        "id": 8,
+        "original_id": "a340a7e4-0280-5e6f-80b5-189a72ea0848",
+        "text": "1874",
+        "type": "Entity"
+      },
+      {
+        "id": 9,
+        "original_id": "b19433ae-558c-5aaf-95ac-6231f2a4be0e",
+        "text": "date",
+        "type": "EntityType"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 3,
+        "type": "has_father"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 5,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "played_college_football_at"
+      },
+      {
+        "source": 1,
+        "target": 6,
+        "type": "contains"
+      },
+      {
+        "source": 6,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 6,
+        "target": 8,
+        "type": "founded_in"
+      },
+      {
+        "source": 1,
+        "target": 8,
+        "type": "contains"
+      },
+      {
+        "source": 8,
+        "target": 9,
+        "type": "is_a"
+      }
+    ]
+  },
+  "grafo_evidencia": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "24cf60f2-26d3-5d71-b330-731449ede1b1",
+        "text": "This chunk is about:\n- People: Brock Marion, Jerry Marion\n- Organizations: University of Nevada, Reno, Dallas Cowboys\n- Places: Reno, Nevada\n- Events: 1993 NFL Draft\n\nFacts:\n- The University of Nevada, Reno was founded on October 12, 1874.\n- The University of Nevada, Reno is a public research university located in Reno, Nevada.\n- The University of Nevada, Reno is also referred to as Nevada, the University of Nevada, or UNR.\n- The University of Nevada, Reno is the sole land-grant institution for the state of Nevada.\n- Brock Marion played college football for the University of Nevada, Reno.\n- Brock Marion was selected by the Dallas Cowboys in the seventh round of the 1993 NFL Draft.\n- Jerry Marion is the father of NFL player Brock Marion.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "da82451c-e905-54ab-a87a-8269f2bfdb3f",
+        "text": "Page: Brock Marion. Sentence: After playing college football for the University of Nevada, Reno, he was chosen in the seventh round of the 1993 NFL Draft by the Dallas Cowboys.\nPage: University of Nevada, Reno. Sentence: The University of Nevada, Reno (also referred to as Nevada, the University of Nevada or UNR) is a public research university located in Reno, Nevada.\nPage: University of Nevada, Reno. Sentence: Founded October 12, 1874, Nevada is the sole land grant institution for the state of Nevada.\nPage: Jerry Marion. Sentence: He is the father of NFL player Brock Marion.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "6c12e641-8ac3-555e-a629-37507c90a2ab",
+        "text": "text_7cbe29342d3e146c53e6e8fdb1a90935",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "5dfc9752-cb7f-512c-9fbe-32c0d3c4db66",
+        "text": "brock marion",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "99a82eec-bb35-5bb5-9ed2-e73fc7a756de",
+        "text": "person",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "112fa966-77f2-5822-b9e1-8a00a7297ca1",
+        "text": "university of nevada, reno",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "388f60fb-220d-55e8-ae9c-3ac93cead308",
+        "text": "organization",
+        "type": "EntityType"
+      },
+      {
+        "id": 7,
+        "original_id": "b776e5ea-fe97-549f-9eb6-d55c6649c9d9",
+        "text": "reno, nevada",
+        "type": "Entity"
+      },
+      {
+        "id": 8,
+        "original_id": "5f394058-b2a0-5ba8-8466-ba2a18cfcf4e",
+        "text": "place",
+        "type": "EntityType"
+      },
+      {
+        "id": 9,
+        "original_id": "faa41e61-8e9b-5623-bf30-586f8f9558ec",
+        "text": "1874-10-12",
+        "type": "Entity"
+      },
+      {
+        "id": 10,
+        "original_id": "b19433ae-558c-5aaf-95ac-6231f2a4be0e",
+        "text": "date",
+        "type": "EntityType"
+      },
+      {
+        "id": 11,
+        "original_id": "cca9924d-3e69-59c5-be62-5ec26c26b0db",
+        "text": "nevada",
+        "type": "Entity"
+      },
+      {
+        "id": 12,
+        "original_id": "c0343a1b-fc89-50fb-aaa2-655d0760c4cb",
+        "text": "1993 nfl draft",
+        "type": "Entity"
+      },
+      {
+        "id": 13,
+        "original_id": "214abcd9-9adf-5c8a-bb35-1e729f2d68c3",
+        "text": "event",
+        "type": "EntityType"
+      },
+      {
+        "id": 14,
+        "original_id": "8831a383-4dde-5c0e-8f8c-68fb79a9a14c",
+        "text": "dallas cowboys",
+        "type": "Entity"
+      },
+      {
+        "id": 15,
+        "original_id": "184ce2d1-c3c9-572d-8fe1-9501a5707004",
+        "text": "jerry marion",
+        "type": "Entity"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 14,
+        "target": 3,
+        "type": "drafted"
+      },
+      {
+        "source": 15,
+        "target": 3,
+        "type": "father_of"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 15,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "played_college_football_for"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 14,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 5,
+        "target": 7,
+        "type": "located_in"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      },
+      {
+        "source": 7,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 11,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 5,
+        "target": 9,
+        "type": "founded_on"
+      },
+      {
+        "source": 1,
+        "target": 9,
+        "type": "contains"
+      },
+      {
+        "source": 9,
+        "target": 10,
+        "type": "is_a"
+      },
+      {
+        "source": 5,
+        "target": 11,
+        "type": "is_land_grant_institution_for"
+      },
+      {
+        "source": 1,
+        "target": 11,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 12,
+        "type": "was_chosen_in"
+      },
+      {
+        "source": 1,
+        "target": 12,
+        "type": "contains"
+      },
+      {
+        "source": 12,
+        "target": 13,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 14,
+        "type": "contains"
+      },
+      {
+        "source": 1,
+        "target": 15,
+        "type": "contains"
+      }
+    ]
+  }
+}

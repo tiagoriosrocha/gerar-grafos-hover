@@ -1,0 +1,423 @@
+{
+  "dataset": "hover",
+  "id": "fe62ed19-0f34-4987-a92b-0a4f0058c8ca",
+  "split": "train",
+  "claim": "Los Angeles Historic-Cultural Monument (No. 139) hosted an event by the IFBB professional bodybuilding organization on Oct 12, 1991.",
+  "evidencia": "Page: 1991 Ms. Olympia. Sentence: The 1991 Ms. Olympia contest was an IFBB professional bodybuilding competition was held on October 12 and 13, 1991 at the Shrine Auditorium in Los Angeles, California.\nPage: Shrine Auditorium. Sentence: It was designated a Los Angeles Historic-Cultural Monument (No. 139) in 1975.",
+  "evidence_text": "Page: 1991 Ms. Olympia. Sentence: The 1991 Ms. Olympia contest was an IFBB professional bodybuilding competition was held on October 12 and 13, 1991 at the Shrine Auditorium in Los Angeles, California.\nPage: Shrine Auditorium. Sentence: It was designated a Los Angeles Historic-Cultural Monument (No. 139) in 1975.",
+  "label": "SUPPORTED",
+  "num_hops": 2,
+  "hover_metadata": {
+    "supporting_facts": [
+      [
+        "1991 Ms. Olympia",
+        0
+      ],
+      [
+        "Shrine Auditorium",
+        2
+      ]
+    ],
+    "num_hops": 2,
+    "evidence_annotation_id": [
+      0
+    ],
+    "evidence_id": [
+      "1991 Ms. Olympia::sentence::0",
+      "Shrine Auditorium::sentence::2"
+    ],
+    "evidence_wiki_url": [
+      "https://en.wikipedia.org/wiki/1991_Ms._Olympia",
+      "https://en.wikipedia.org/wiki/Shrine_Auditorium"
+    ],
+    "evidence_sentence_id": [
+      "1991 Ms. Olympia::sentence::0",
+      "Shrine Auditorium::sentence::2"
+    ]
+  },
+  "grafo_claim": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "318f2c87-bab6-536e-a78c-96fa4c3e524d",
+        "text": "This chunk is about:\n- Places: Los Angeles Historic-Cultural Monument No. 139\n- Organizations: IFBB\n- Events: bodybuilding event\n\nFacts:\n- On October 12, 1991, Los Angeles Historic-Cultural Monument No. 139 hosted a bodybuilding event.\n- The IFBB professional bodybuilding organization held the October 12, 1991 event at Los Angeles Historic-Cultural Monument No. 139.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "bdd2da04-5772-595e-9041-42e87432a491",
+        "text": "Los Angeles Historic-Cultural Monument (No. 139) hosted an event by the IFBB professional bodybuilding organization on Oct 12, 1991.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "d36df46f-3178-5237-92bf-fa94e64485af",
+        "text": "text_107393e7e33d052fb8bde33f5098c4dc",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "5dc99ff5-7766-5775-94a9-ccbd0a551366",
+        "text": "los angeles historic-cultural monument (no. 139)",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "5f394058-b2a0-5ba8-8466-ba2a18cfcf4e",
+        "text": "place",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "0fdc74c0-c1af-551c-966c-0392a61aacec",
+        "text": "event",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "214abcd9-9adf-5c8a-bb35-1e729f2d68c3",
+        "text": "event",
+        "type": "EntityType"
+      },
+      {
+        "id": 7,
+        "original_id": "b65be977-92e0-5910-86c9-96564886620a",
+        "text": "1991-10-12",
+        "type": "Entity"
+      },
+      {
+        "id": 8,
+        "original_id": "b19433ae-558c-5aaf-95ac-6231f2a4be0e",
+        "text": "date",
+        "type": "EntityType"
+      },
+      {
+        "id": 9,
+        "original_id": "585e94e8-c892-5be1-913a-86aabbc01c48",
+        "text": "ifbb professional bodybuilding organization",
+        "type": "Entity"
+      },
+      {
+        "id": 10,
+        "original_id": "388f60fb-220d-55e8-ae9c-3ac93cead308",
+        "text": "organization",
+        "type": "EntityType"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "hosted"
+      },
+      {
+        "source": 9,
+        "target": 5,
+        "type": "organized"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 5,
+        "target": 7,
+        "type": "occurred_on"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      },
+      {
+        "source": 7,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 9,
+        "type": "contains"
+      },
+      {
+        "source": 9,
+        "target": 10,
+        "type": "is_a"
+      }
+    ]
+  },
+  "grafo_evidencia": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "90307f09-efe8-5345-88be-7d0eaffc334c",
+        "text": "This chunk is about:\n- Events: 1991 Ms. Olympia\n- Organizations: IFBB\n- Places: Shrine Auditorium, Los Angeles, California\n- Topics: Los Angeles Historic-Cultural Monuments\n\nFacts:\n- The Shrine Auditorium was designated Los Angeles Historic-Cultural Monument No. 139 in 1975.\n- The 1991 Ms. Olympia was an IFBB professional bodybuilding competition.\n- The 1991 Ms. Olympia was held on October 12 and 13, 1991, at the Shrine Auditorium in Los Angeles, California.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "3cc3853f-9a1a-5f56-b9fc-83859cf27a3b",
+        "text": "Page: 1991 Ms. Olympia. Sentence: The 1991 Ms. Olympia contest was an IFBB professional bodybuilding competition was held on October 12 and 13, 1991 at the Shrine Auditorium in Los Angeles, California.\nPage: Shrine Auditorium. Sentence: It was designated a Los Angeles Historic-Cultural Monument (No. 139) in 1975.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "d80cd3c4-e27a-56fc-ba45-b146574564b3",
+        "text": "text_84cfb8c7f53270e3f2ec276276be1291",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "5b7dd60c-6c81-5edf-bef9-1a994e9e403a",
+        "text": "1991 ms. olympia",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "214abcd9-9adf-5c8a-bb35-1e729f2d68c3",
+        "text": "event",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "f879d589-fba5-51f9-bd2c-79be89347684",
+        "text": "ifbb",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "388f60fb-220d-55e8-ae9c-3ac93cead308",
+        "text": "organization",
+        "type": "EntityType"
+      },
+      {
+        "id": 7,
+        "original_id": "b65be977-92e0-5910-86c9-96564886620a",
+        "text": "1991-10-12",
+        "type": "Entity"
+      },
+      {
+        "id": 8,
+        "original_id": "b19433ae-558c-5aaf-95ac-6231f2a4be0e",
+        "text": "date",
+        "type": "EntityType"
+      },
+      {
+        "id": 9,
+        "original_id": "d5af8caf-8a1c-5eda-bb38-e37f08b7a3ab",
+        "text": "1991-10-13",
+        "type": "Entity"
+      },
+      {
+        "id": 10,
+        "original_id": "3d3f5827-98bd-5245-ba7b-670eb2c066ad",
+        "text": "shrine auditorium",
+        "type": "Entity"
+      },
+      {
+        "id": 11,
+        "original_id": "5f394058-b2a0-5ba8-8466-ba2a18cfcf4e",
+        "text": "place",
+        "type": "EntityType"
+      },
+      {
+        "id": 12,
+        "original_id": "18797468-b5ea-533a-916c-47bc175733ad",
+        "text": "los angeles",
+        "type": "Entity"
+      },
+      {
+        "id": 13,
+        "original_id": "8294cd6a-6968-5d3a-b0c8-57e08c745c8d",
+        "text": "california",
+        "type": "Entity"
+      },
+      {
+        "id": 14,
+        "original_id": "3826bc94-b482-524a-8c5c-f51c78064188",
+        "text": "los angeles historic-cultural monument no. 139",
+        "type": "Entity"
+      },
+      {
+        "id": 15,
+        "original_id": "c96e19a4-6694-5004-9632-e572712d6450",
+        "text": "designation",
+        "type": "EntityType"
+      },
+      {
+        "id": 16,
+        "original_id": "a4195203-3de0-526e-9b3c-29c2a929ad16",
+        "text": "1975",
+        "type": "Entity"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "is_professional_competition_of"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 7,
+        "type": "held_on"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      },
+      {
+        "source": 7,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 9,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 16,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 9,
+        "type": "held_on"
+      },
+      {
+        "source": 1,
+        "target": 9,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 10,
+        "type": "held_at"
+      },
+      {
+        "source": 1,
+        "target": 10,
+        "type": "contains"
+      },
+      {
+        "source": 10,
+        "target": 11,
+        "type": "is_a"
+      },
+      {
+        "source": 12,
+        "target": 11,
+        "type": "is_a"
+      },
+      {
+        "source": 13,
+        "target": 11,
+        "type": "is_a"
+      },
+      {
+        "source": 10,
+        "target": 12,
+        "type": "located_in"
+      },
+      {
+        "source": 1,
+        "target": 12,
+        "type": "contains"
+      },
+      {
+        "source": 12,
+        "target": 13,
+        "type": "located_in"
+      },
+      {
+        "source": 1,
+        "target": 13,
+        "type": "contains"
+      },
+      {
+        "source": 10,
+        "target": 14,
+        "type": "designated_as"
+      },
+      {
+        "source": 1,
+        "target": 14,
+        "type": "contains"
+      },
+      {
+        "source": 14,
+        "target": 15,
+        "type": "is_a"
+      },
+      {
+        "source": 10,
+        "target": 16,
+        "type": "designated_in"
+      },
+      {
+        "source": 1,
+        "target": 16,
+        "type": "contains"
+      }
+    ]
+  }
+}

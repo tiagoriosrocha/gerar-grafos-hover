@@ -1,0 +1,518 @@
+{
+  "dataset": "hover",
+  "id": "af064478-3d3c-4dc8-bea0-183f76dc956d",
+  "split": "train",
+  "claim": "A minor type of wheat beer is brewed in Brussels. The brewery was founded in the year 1900.",
+  "evidencia": "Page: Lambic. Sentence: Lambic is a type of beer brewed in the Pajottenland region of Belgium southwest of Brussels and in Brussels itself at the Cantillon Brewery.\nPage: Cantillon Brewery. Sentence: Brasserie-Brouwerij Cantillon (or Cantillon Brewery) is a small Belgian traditional family brewery based in Anderlecht, Brussels and founded in 1900.\nPage: Wheat beer. Sentence: The two main varieties are Weissbier and Witbier; minor types include Lambic, Berliner Weisse and Gose.",
+  "evidence_text": "Page: Lambic. Sentence: Lambic is a type of beer brewed in the Pajottenland region of Belgium southwest of Brussels and in Brussels itself at the Cantillon Brewery.\nPage: Cantillon Brewery. Sentence: Brasserie-Brouwerij Cantillon (or Cantillon Brewery) is a small Belgian traditional family brewery based in Anderlecht, Brussels and founded in 1900.\nPage: Wheat beer. Sentence: The two main varieties are Weissbier and Witbier; minor types include Lambic, Berliner Weisse and Gose.",
+  "label": "SUPPORTED",
+  "num_hops": 3,
+  "hover_metadata": {
+    "supporting_facts": [
+      [
+        "Lambic",
+        0
+      ],
+      [
+        "Cantillon Brewery",
+        0
+      ],
+      [
+        "Wheat beer",
+        1
+      ]
+    ],
+    "num_hops": 3,
+    "evidence_annotation_id": [
+      0
+    ],
+    "evidence_id": [
+      "Lambic::sentence::0",
+      "Cantillon Brewery::sentence::0",
+      "Wheat beer::sentence::1"
+    ],
+    "evidence_wiki_url": [
+      "https://en.wikipedia.org/wiki/Lambic",
+      "https://en.wikipedia.org/wiki/Cantillon_Brewery",
+      "https://en.wikipedia.org/wiki/Wheat_beer"
+    ],
+    "evidence_sentence_id": [
+      "Lambic::sentence::0",
+      "Cantillon Brewery::sentence::0",
+      "Wheat beer::sentence::1"
+    ]
+  },
+  "grafo_claim": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "6ad00a6c-346b-5433-bc2b-7e8ae9a5a99a",
+        "text": "This chunk is about:\n- Products: wheat beer\n- Places: Brussels\n- Organizations: brewery\n\nFacts:\n- The brewery was founded in 1900.\n- A minor type of wheat beer is brewed in Brussels.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "0a6322d9-c0d4-5c0c-8356-b3e653de4b3b",
+        "text": "A minor type of wheat beer is brewed in Brussels. The brewery was founded in the year 1900.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "2434e709-4ed5-530f-809a-d65965917a68",
+        "text": "text_3d2627f53e0de77d1b6d08c366fec360",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "2e8d1f48-7fdd-5a75-bfe3-41af5a834228",
+        "text": "wheat beer",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "49460f6b-bb76-5fe5-a540-564c0b4fd229",
+        "text": "beverage",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "0609e5c1-843f-5f91-8b7c-febc6e42af93",
+        "text": "brussels wheat beer",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "4dbcc838-8a8a-54fc-b50a-18e95ed64672",
+        "text": "brussels",
+        "type": "Entity"
+      },
+      {
+        "id": 7,
+        "original_id": "5f394058-b2a0-5ba8-8466-ba2a18cfcf4e",
+        "text": "place",
+        "type": "EntityType"
+      },
+      {
+        "id": 8,
+        "original_id": "03c6f8bb-5dab-5ace-949d-c22c7cdeae54",
+        "text": "brewery",
+        "type": "Entity"
+      },
+      {
+        "id": 9,
+        "original_id": "388f60fb-220d-55e8-ae9c-3ac93cead308",
+        "text": "organization",
+        "type": "EntityType"
+      },
+      {
+        "id": 10,
+        "original_id": "343ed072-57b8-5cba-9e92-6078d5d692f2",
+        "text": "1900",
+        "type": "Entity"
+      },
+      {
+        "id": 11,
+        "original_id": "b19433ae-558c-5aaf-95ac-6231f2a4be0e",
+        "text": "date",
+        "type": "EntityType"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 3,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 5,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 8,
+        "target": 5,
+        "type": "brews"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "brewed_in"
+      },
+      {
+        "source": 1,
+        "target": 6,
+        "type": "contains"
+      },
+      {
+        "source": 6,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 8,
+        "type": "contains"
+      },
+      {
+        "source": 8,
+        "target": 9,
+        "type": "is_a"
+      },
+      {
+        "source": 8,
+        "target": 10,
+        "type": "founded_in"
+      },
+      {
+        "source": 1,
+        "target": 10,
+        "type": "contains"
+      },
+      {
+        "source": 10,
+        "target": 11,
+        "type": "is_a"
+      }
+    ]
+  },
+  "grafo_evidencia": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "f26e706f-2528-5dd4-b8a3-dc94acfff0b2",
+        "text": "This chunk is about:\n- Products: Lambic, wheat beer, Weissbier, Witbier, Berliner Weisse, Gose\n- Companies: Cantillon Brewery\n- Places: Pajottenland, Belgium, Brussels, Anderlecht\n\nFacts:\n- Cantillon Brewery was founded in 1900.\n- Cantillon Brewery is a small traditional Belgian family brewery based in Anderlecht, Brussels.\n- Lambic is a type of beer brewed in the Pajottenland region of Belgium southwest of Brussels.\n- Lambic is also brewed in Brussels at Cantillon Brewery.\n- Wheat beer has two main varieties: Weissbier and Witbier.\n- Wheat beer includes Lambic, Berliner Weisse, and Gose as minor types.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "d20a5078-6311-53cc-993c-79a3da05e442",
+        "text": "Page: Lambic. Sentence: Lambic is a type of beer brewed in the Pajottenland region of Belgium southwest of Brussels and in Brussels itself at the Cantillon Brewery.\nPage: Cantillon Brewery. Sentence: Brasserie-Brouwerij Cantillon (or Cantillon Brewery) is a small Belgian traditional family brewery based in Anderlecht, Brussels and founded in 1900.\nPage: Wheat beer. Sentence: The two main varieties are Weissbier and Witbier; minor types include Lambic, Berliner Weisse and Gose.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "03574cf2-b4db-5dbe-ab47-2a1961d5d922",
+        "text": "text_58558751e2aae4c6cdab0af669a211e0",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "3947fd26-1fdc-58b3-82bb-8a676876bb46",
+        "text": "lambic",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "f9c5113e-747a-5581-af56-c9d2e76bce9b",
+        "text": "food",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "608a33c9-a71a-5a54-8cad-bdc886c1c6f4",
+        "text": "pajottenland",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "5f394058-b2a0-5ba8-8466-ba2a18cfcf4e",
+        "text": "place",
+        "type": "EntityType"
+      },
+      {
+        "id": 7,
+        "original_id": "a90c6645-c993-58aa-850e-bfd55897a969",
+        "text": "belgium",
+        "type": "Entity"
+      },
+      {
+        "id": 8,
+        "original_id": "4dbcc838-8a8a-54fc-b50a-18e95ed64672",
+        "text": "brussels",
+        "type": "Entity"
+      },
+      {
+        "id": 9,
+        "original_id": "27acb665-a3e7-5d99-bd9c-da7b835f5dd6",
+        "text": "brasserie-brouwerij cantillon",
+        "type": "Entity"
+      },
+      {
+        "id": 10,
+        "original_id": "388f60fb-220d-55e8-ae9c-3ac93cead308",
+        "text": "organization",
+        "type": "EntityType"
+      },
+      {
+        "id": 11,
+        "original_id": "b2abe25d-f0b2-55f2-9139-3e392049862d",
+        "text": "anderlecht",
+        "type": "Entity"
+      },
+      {
+        "id": 12,
+        "original_id": "343ed072-57b8-5cba-9e92-6078d5d692f2",
+        "text": "1900",
+        "type": "Entity"
+      },
+      {
+        "id": 13,
+        "original_id": "b19433ae-558c-5aaf-95ac-6231f2a4be0e",
+        "text": "date",
+        "type": "EntityType"
+      },
+      {
+        "id": 14,
+        "original_id": "2e8d1f48-7fdd-5a75-bfe3-41af5a834228",
+        "text": "wheat beer",
+        "type": "Entity"
+      },
+      {
+        "id": 15,
+        "original_id": "a27e5b72-bda5-5e27-856b-c7221f7b3e0a",
+        "text": "weissbier",
+        "type": "Entity"
+      },
+      {
+        "id": 16,
+        "original_id": "abd2190f-027c-56c3-8430-45e8e9ef9ef3",
+        "text": "witbier",
+        "type": "Entity"
+      },
+      {
+        "id": 17,
+        "original_id": "053e9c13-48b1-51da-83ca-1799958f9261",
+        "text": "berliner weisse",
+        "type": "Entity"
+      },
+      {
+        "id": 18,
+        "original_id": "559d3cf7-4529-580a-b32c-436531f47fa5",
+        "text": "gose",
+        "type": "Entity"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 14,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 15,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 16,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 17,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 18,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "brewed_in"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 7,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 8,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 11,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 5,
+        "target": 7,
+        "type": "located_in"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 8,
+        "type": "southwest_of"
+      },
+      {
+        "source": 3,
+        "target": 8,
+        "type": "brewed_in"
+      },
+      {
+        "source": 11,
+        "target": 8,
+        "type": "located_in"
+      },
+      {
+        "source": 1,
+        "target": 8,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 9,
+        "type": "brewed_at"
+      },
+      {
+        "source": 1,
+        "target": 9,
+        "type": "contains"
+      },
+      {
+        "source": 9,
+        "target": 10,
+        "type": "is_a"
+      },
+      {
+        "source": 9,
+        "target": 11,
+        "type": "based_in"
+      },
+      {
+        "source": 1,
+        "target": 11,
+        "type": "contains"
+      },
+      {
+        "source": 9,
+        "target": 12,
+        "type": "founded_in"
+      },
+      {
+        "source": 1,
+        "target": 12,
+        "type": "contains"
+      },
+      {
+        "source": 12,
+        "target": 13,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 14,
+        "type": "minor_type_of"
+      },
+      {
+        "source": 1,
+        "target": 14,
+        "type": "contains"
+      },
+      {
+        "source": 15,
+        "target": 14,
+        "type": "main_variety_of"
+      },
+      {
+        "source": 16,
+        "target": 14,
+        "type": "main_variety_of"
+      },
+      {
+        "source": 17,
+        "target": 14,
+        "type": "minor_type_of"
+      },
+      {
+        "source": 18,
+        "target": 14,
+        "type": "minor_type_of"
+      },
+      {
+        "source": 1,
+        "target": 15,
+        "type": "contains"
+      },
+      {
+        "source": 1,
+        "target": 16,
+        "type": "contains"
+      },
+      {
+        "source": 1,
+        "target": 17,
+        "type": "contains"
+      },
+      {
+        "source": 1,
+        "target": 18,
+        "type": "contains"
+      }
+    ]
+  }
+}

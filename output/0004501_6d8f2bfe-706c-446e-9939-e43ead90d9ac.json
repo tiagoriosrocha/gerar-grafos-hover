@@ -1,0 +1,390 @@
+{
+  "dataset": "hover",
+  "id": "6d8f2bfe-706c-446e-9939-e43ead90d9ac",
+  "split": "train",
+  "claim": "David Lightfoot worked on the film Wolf Creek which was loosely based on the murders of tourists by Ivan Milat in the 1990's.",
+  "evidencia": "Page: David Lightfoot. Sentence: David Lightfoot worked on the horror films \"Wolf Creek\" and \"Rogue\".\nPage: Wolf Creek (film). Sentence: The film was ambiguously marketed as being \"based on true events\"; the plot bore elements reminiscent of the real-life murders of tourists by Ivan Milat in the 1990s and Bradley Murdoch in 2001.",
+  "evidence_text": "Page: David Lightfoot. Sentence: David Lightfoot worked on the horror films \"Wolf Creek\" and \"Rogue\".\nPage: Wolf Creek (film). Sentence: The film was ambiguously marketed as being \"based on true events\"; the plot bore elements reminiscent of the real-life murders of tourists by Ivan Milat in the 1990s and Bradley Murdoch in 2001.",
+  "label": "SUPPORTED",
+  "num_hops": 2,
+  "hover_metadata": {
+    "supporting_facts": [
+      [
+        "David Lightfoot",
+        0
+      ],
+      [
+        "Wolf Creek (film)",
+        2
+      ]
+    ],
+    "num_hops": 2,
+    "evidence_annotation_id": [
+      0
+    ],
+    "evidence_id": [
+      "David Lightfoot::sentence::0",
+      "Wolf Creek (film)::sentence::2"
+    ],
+    "evidence_wiki_url": [
+      "https://en.wikipedia.org/wiki/David_Lightfoot",
+      "https://en.wikipedia.org/wiki/Wolf_Creek_%28film%29"
+    ],
+    "evidence_sentence_id": [
+      "David Lightfoot::sentence::0",
+      "Wolf Creek (film)::sentence::2"
+    ]
+  },
+  "grafo_claim": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "b028ee0d-c3e6-5818-a7c1-1ec1d645bf32",
+        "text": "This chunk is about:\n- People: David Lightfoot, Ivan Milat\n- Works: Wolf Creek\n- Events: murders of tourists in the 1990s\n\nFacts:\n- In the 1990s, Ivan Milat murdered tourists.\n- The film Wolf Creek was loosely based on the murders of tourists by Ivan Milat.\n- David Lightfoot worked on the film Wolf Creek.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "c9698b4a-0e5c-53ae-93f9-837ec9d51c7d",
+        "text": "David Lightfoot worked on the film Wolf Creek which was loosely based on the murders of tourists by Ivan Milat in the 1990's.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "db8685a5-683d-50c8-b9af-0a4bfbedcbb4",
+        "text": "text_6f67c6ed790522f938452f9faf189e2f",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "9f4bbdfc-d7d7-54f5-aa02-17e9c1376d92",
+        "text": "david lightfoot",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "fb0e0536-83d2-5b6c-9b31-2744191fa3fb",
+        "text": "wolf creek",
+        "type": "Entity"
+      },
+      {
+        "id": 5,
+        "original_id": "c13ead7a-a754-5cb5-ad1f-e68b0c842c62",
+        "text": "murders of tourists by ivan milat",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "41a9a286-f7b7-577c-9733-660e5f2b2e01",
+        "text": "ivan milat",
+        "type": "Entity"
+      },
+      {
+        "id": 7,
+        "original_id": "99a82eec-bb35-5bb5-9ed2-e73fc7a756de",
+        "text": "person",
+        "type": "EntityType"
+      },
+      {
+        "id": 8,
+        "original_id": "58482f88-ca6a-5c02-9088-4dbb1598f8f4",
+        "text": "1990s",
+        "type": "Entity"
+      },
+      {
+        "id": 9,
+        "original_id": "b19433ae-558c-5aaf-95ac-6231f2a4be0e",
+        "text": "date",
+        "type": "EntityType"
+      },
+      {
+        "id": 10,
+        "original_id": "214abcd9-9adf-5c8a-bb35-1e729f2d68c3",
+        "text": "event",
+        "type": "EntityType"
+      },
+      {
+        "id": 11,
+        "original_id": "5263a535-1b4b-5925-be3e-310d03cd303b",
+        "text": "work",
+        "type": "EntityType"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "worked_on"
+      },
+      {
+        "source": 1,
+        "target": 4,
+        "type": "contains"
+      },
+      {
+        "source": 4,
+        "target": 5,
+        "type": "loosely_based_on"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "committed_by"
+      },
+      {
+        "source": 1,
+        "target": 6,
+        "type": "contains"
+      },
+      {
+        "source": 6,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 5,
+        "target": 8,
+        "type": "occurred_in"
+      },
+      {
+        "source": 1,
+        "target": 8,
+        "type": "contains"
+      },
+      {
+        "source": 8,
+        "target": 9,
+        "type": "is_a"
+      },
+      {
+        "source": 5,
+        "target": 10,
+        "type": "is_a"
+      },
+      {
+        "source": 4,
+        "target": 11,
+        "type": "is_a"
+      }
+    ]
+  },
+  "grafo_evidencia": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "545079fb-0433-50fb-ba6e-bdbb913e3ea0",
+        "text": "This chunk is about:\n- People: David Lightfoot, Ivan Milat, Bradley Murdoch\n- Works: Wolf Creek, Rogue\n- Topics: horror films, film marketing, true-events claims, real-life murder inspirations\n\nFacts:\n- In the 1990s, Ivan Milat murdered tourists in crimes that later echoed elements of the plot of Wolf Creek.\n- In 2001, Bradley Murdoch committed a real-life tourist murder that later echoed elements of the plot of Wolf Creek.\n- Wolf Creek was ambiguously marketed as being based on true events.\n- David Lightfoot worked on the horror films Wolf Creek and Rogue.\n- The plot of Wolf Creek bore elements reminiscent of the real-life murders associated with Ivan Milat and Bradley Murdoch.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "ee799996-5d73-51d0-9100-2d8d719b007e",
+        "text": "Page: David Lightfoot. Sentence: David Lightfoot worked on the horror films \"Wolf Creek\" and \"Rogue\".\nPage: Wolf Creek (film). Sentence: The film was ambiguously marketed as being \"based on true events\"; the plot bore elements reminiscent of the real-life murders of tourists by Ivan Milat in the 1990s and Bradley Murdoch in 2001.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "79abdf69-cbdd-55dc-84d3-7e46c9971350",
+        "text": "text_ce8f02be7b3c42d57df93b555f82fa06",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "9f4bbdfc-d7d7-54f5-aa02-17e9c1376d92",
+        "text": "david lightfoot",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "fb0e0536-83d2-5b6c-9b31-2744191fa3fb",
+        "text": "wolf creek",
+        "type": "Entity"
+      },
+      {
+        "id": 5,
+        "original_id": "41a9a286-f7b7-577c-9733-660e5f2b2e01",
+        "text": "ivan milat",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "58482f88-ca6a-5c02-9088-4dbb1598f8f4",
+        "text": "1990s",
+        "type": "Entity"
+      },
+      {
+        "id": 7,
+        "original_id": "b19433ae-558c-5aaf-95ac-6231f2a4be0e",
+        "text": "date",
+        "type": "EntityType"
+      },
+      {
+        "id": 8,
+        "original_id": "99a82eec-bb35-5bb5-9ed2-e73fc7a756de",
+        "text": "person",
+        "type": "EntityType"
+      },
+      {
+        "id": 9,
+        "original_id": "b086a834-edcd-5448-961b-0f2289514e5b",
+        "text": "bradley murdoch",
+        "type": "Entity"
+      },
+      {
+        "id": 10,
+        "original_id": "7bd3af1d-2fce-5267-8017-1300d5a6e9f4",
+        "text": "2001",
+        "type": "Entity"
+      },
+      {
+        "id": 11,
+        "original_id": "d320c8df-fd51-56e6-b577-e01a688fe6fc",
+        "text": "film",
+        "type": "EntityType"
+      },
+      {
+        "id": 12,
+        "original_id": "edf7ca2b-976d-5d41-b2c3-9d7c68c33817",
+        "text": "rogue",
+        "type": "Entity"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "worked_on"
+      },
+      {
+        "source": 1,
+        "target": 4,
+        "type": "contains"
+      },
+      {
+        "source": 4,
+        "target": 5,
+        "type": "plot_reminiscent_of"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "associated_with_time"
+      },
+      {
+        "source": 1,
+        "target": 6,
+        "type": "contains"
+      },
+      {
+        "source": 6,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 10,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 5,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 9,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 4,
+        "target": 9,
+        "type": "plot_reminiscent_of"
+      },
+      {
+        "source": 1,
+        "target": 9,
+        "type": "contains"
+      },
+      {
+        "source": 9,
+        "target": 10,
+        "type": "associated_with_time"
+      },
+      {
+        "source": 1,
+        "target": 10,
+        "type": "contains"
+      },
+      {
+        "source": 4,
+        "target": 11,
+        "type": "is_a"
+      },
+      {
+        "source": 12,
+        "target": 11,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 12,
+        "type": "worked_on"
+      },
+      {
+        "source": 1,
+        "target": 12,
+        "type": "contains"
+      }
+    ]
+  }
+}

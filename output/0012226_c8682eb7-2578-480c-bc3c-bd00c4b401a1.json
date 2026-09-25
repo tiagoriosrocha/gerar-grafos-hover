@@ -1,0 +1,357 @@
+{
+  "dataset": "hover",
+  "id": "c8682eb7-2578-480c-bc3c-bd00c4b401a1",
+  "split": "train",
+  "claim": "The genus and species of the bear in which the Florida black bear is a subspecies of is the Ursus americanus.",
+  "evidencia": "Page: Florida black bear. Sentence: The Florida black bear (\"Ursus americanus floridanus\") is a subspecies of the American black bear that has historically ranged throughout most of Florida and southern portions of Alabama, Georgia, and Mississippi.\nPage: American black bear. Sentence: The American black bear (\"Ursus americanus\") is a medium-sized bear native to North America.",
+  "evidence_text": "Page: Florida black bear. Sentence: The Florida black bear (\"Ursus americanus floridanus\") is a subspecies of the American black bear that has historically ranged throughout most of Florida and southern portions of Alabama, Georgia, and Mississippi.\nPage: American black bear. Sentence: The American black bear (\"Ursus americanus\") is a medium-sized bear native to North America.",
+  "label": "SUPPORTED",
+  "num_hops": 2,
+  "hover_metadata": {
+    "supporting_facts": [
+      [
+        "Florida black bear",
+        0
+      ],
+      [
+        "American black bear",
+        0
+      ]
+    ],
+    "num_hops": 2,
+    "evidence_annotation_id": [
+      0
+    ],
+    "evidence_id": [
+      "Florida black bear::sentence::0",
+      "American black bear::sentence::0"
+    ],
+    "evidence_wiki_url": [
+      "https://en.wikipedia.org/wiki/Florida_black_bear",
+      "https://en.wikipedia.org/wiki/American_black_bear"
+    ],
+    "evidence_sentence_id": [
+      "Florida black bear::sentence::0",
+      "American black bear::sentence::0"
+    ]
+  },
+  "grafo_claim": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "af36cc9e-73fa-5808-9973-ba3f1ac7c080",
+        "text": "This chunk is about:\n- Animals: Florida black bear, Ursus americanus\n- Concepts: genus and species, subspecies\n\nFacts:\n- The Florida black bear is a subspecies of Ursus americanus.\n- Ursus americanus is the genus and species of the bear that includes the Florida black bear as a subspecies.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "7704d929-3a04-5c99-8430-322521bf738a",
+        "text": "The genus and species of the bear in which the Florida black bear is a subspecies of is the Ursus americanus.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "2c85adf5-31db-5053-b8b9-0176afcf6501",
+        "text": "text_931386d5e1a3614c2002f3990ae34c47",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "da30ab6e-c27d-5663-b423-72b90dcde595",
+        "text": "florida black bear",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "5d76eb72-04ef-5580-b2ea-161f8429437a",
+        "text": "animal",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "0d03f026-290a-5187-908a-f30ec0ccf662",
+        "text": "ursus americanus",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "f23a15ce-c0de-5c57-9205-8c9d01026b05",
+        "text": "species",
+        "type": "EntityType"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "is_subspecies_of"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "is_a"
+      }
+    ]
+  },
+  "grafo_evidencia": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "2b96a4c7-767d-58dc-a7fb-1fa42008b79f",
+        "text": "This chunk is about:\n- Animals: Florida black bear, American black bear\n- Places: Florida, Alabama, Georgia, Mississippi, North America\n- Concepts: subspecies, geographic range\n\nFacts:\n- The American black bear is a medium-sized bear native to North America.\n- The Florida black bear is a subspecies of the American black bear.\n- The Florida black bear has historically ranged throughout most of Florida and the southern portions of Alabama, Georgia, and Mississippi.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "14f2e2be-4376-5cfe-9eab-8545db388602",
+        "text": "Page: Florida black bear. Sentence: The Florida black bear (\"Ursus americanus floridanus\") is a subspecies of the American black bear that has historically ranged throughout most of Florida and southern portions of Alabama, Georgia, and Mississippi.\nPage: American black bear. Sentence: The American black bear (\"Ursus americanus\") is a medium-sized bear native to North America.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "0174fa13-030a-5703-9f83-74dc4d229acd",
+        "text": "text_b027bc336d3ef4b3672ddb7b298401a9",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "da30ab6e-c27d-5663-b423-72b90dcde595",
+        "text": "florida black bear",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "5d76eb72-04ef-5580-b2ea-161f8429437a",
+        "text": "animal",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "794ed9bd-9298-5eb6-9866-dd8928c8fe41",
+        "text": "ursus americanus floridanus",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "f7b4540f-d32c-51b3-8970-f282fffab519",
+        "text": "taxon",
+        "type": "EntityType"
+      },
+      {
+        "id": 7,
+        "original_id": "955c538a-b1e7-5a04-b4a1-a0d92bfdf691",
+        "text": "american black bear",
+        "type": "Entity"
+      },
+      {
+        "id": 8,
+        "original_id": "0d03f026-290a-5187-908a-f30ec0ccf662",
+        "text": "ursus americanus",
+        "type": "Entity"
+      },
+      {
+        "id": 9,
+        "original_id": "7bfd7320-7015-5d33-be1e-fbdc9c0b5b79",
+        "text": "north america",
+        "type": "Entity"
+      },
+      {
+        "id": 10,
+        "original_id": "5f394058-b2a0-5ba8-8466-ba2a18cfcf4e",
+        "text": "place",
+        "type": "EntityType"
+      },
+      {
+        "id": 11,
+        "original_id": "cc742fd7-ba65-509e-bb61-ba57c283d7d0",
+        "text": "florida",
+        "type": "Entity"
+      },
+      {
+        "id": 12,
+        "original_id": "fb5caef1-6aab-52bf-90c2-1cf92cbcd8d3",
+        "text": "alabama",
+        "type": "Entity"
+      },
+      {
+        "id": 13,
+        "original_id": "1a8a1dae-ccdc-5bd1-a5aa-9c308020ebd6",
+        "text": "georgia",
+        "type": "Entity"
+      },
+      {
+        "id": 14,
+        "original_id": "467eee1a-bf94-5882-9c20-b817120311d5",
+        "text": "mississippi",
+        "type": "Entity"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 7,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "has_scientific_name"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 8,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 7,
+        "type": "is_subspecies_of"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      },
+      {
+        "source": 7,
+        "target": 8,
+        "type": "has_scientific_name"
+      },
+      {
+        "source": 1,
+        "target": 8,
+        "type": "contains"
+      },
+      {
+        "source": 7,
+        "target": 9,
+        "type": "is_native_to"
+      },
+      {
+        "source": 1,
+        "target": 9,
+        "type": "contains"
+      },
+      {
+        "source": 9,
+        "target": 10,
+        "type": "is_a"
+      },
+      {
+        "source": 11,
+        "target": 10,
+        "type": "is_a"
+      },
+      {
+        "source": 12,
+        "target": 10,
+        "type": "is_a"
+      },
+      {
+        "source": 13,
+        "target": 10,
+        "type": "is_a"
+      },
+      {
+        "source": 14,
+        "target": 10,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 11,
+        "type": "historically_ranged_throughout"
+      },
+      {
+        "source": 1,
+        "target": 11,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 12,
+        "type": "historically_ranged_in"
+      },
+      {
+        "source": 1,
+        "target": 12,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 13,
+        "type": "historically_ranged_in"
+      },
+      {
+        "source": 1,
+        "target": 13,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 14,
+        "type": "historically_ranged_in"
+      },
+      {
+        "source": 1,
+        "target": 14,
+        "type": "contains"
+      }
+    ]
+  }
+}

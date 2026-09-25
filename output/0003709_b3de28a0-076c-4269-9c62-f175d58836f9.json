@@ -1,0 +1,412 @@
+{
+  "dataset": "hover",
+  "id": "b3de28a0-076c-4269-9c62-f175d58836f9",
+  "split": "train",
+  "claim": "The genus Psychopsis has 5 known species. The genus that Leonotis artemisia is part of does not.",
+  "evidencia": "Page: Leonotis. Sentence: Leonotis is a genus of flowering plants in the family Lamiaceae.\nPage: Psychopsis. Sentence: Psychopsis, abbreviated Psychp in horticultural trade, is a genus of 5 known species of orchids native to northern South America, Central America and Trinidad.\nPage: Leonotis artemisia. Sentence: Leonotis artemisia, also known as motherwort, is a species of plant in the Leonotis genus and the Lamiaceae (mint) family.",
+  "evidence_text": "Page: Leonotis. Sentence: Leonotis is a genus of flowering plants in the family Lamiaceae.\nPage: Psychopsis. Sentence: Psychopsis, abbreviated Psychp in horticultural trade, is a genus of 5 known species of orchids native to northern South America, Central America and Trinidad.\nPage: Leonotis artemisia. Sentence: Leonotis artemisia, also known as motherwort, is a species of plant in the Leonotis genus and the Lamiaceae (mint) family.",
+  "label": "SUPPORTED",
+  "num_hops": 3,
+  "hover_metadata": {
+    "supporting_facts": [
+      [
+        "Leonotis",
+        0
+      ],
+      [
+        "Psychopsis",
+        0
+      ],
+      [
+        "Leonotis artemisia",
+        0
+      ]
+    ],
+    "num_hops": 3,
+    "evidence_annotation_id": [
+      0
+    ],
+    "evidence_id": [
+      "Leonotis::sentence::0",
+      "Psychopsis::sentence::0",
+      "Leonotis artemisia::sentence::0"
+    ],
+    "evidence_wiki_url": [
+      "https://en.wikipedia.org/wiki/Leonotis",
+      "https://en.wikipedia.org/wiki/Psychopsis",
+      "https://en.wikipedia.org/wiki/Leonotis_artemisia"
+    ],
+    "evidence_sentence_id": [
+      "Leonotis::sentence::0",
+      "Psychopsis::sentence::0",
+      "Leonotis artemisia::sentence::0"
+    ]
+  },
+  "grafo_claim": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "2cbe567d-175d-5389-b6c8-4c6f8334a1b2",
+        "text": "This chunk is about:\n- Taxonomy: Psychopsis, Leonotis, Leonotis artemisia\n- Concepts: species counts, genus membership\n\nFacts:\n- The genus Psychopsis has 5 known species.\n- Leonotis artemisia belongs to the genus Leonotis.\n- The genus Leonotis does not have 5 known species.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "6341f039-22a2-5295-913b-a5413e80987f",
+        "text": "The genus Psychopsis has 5 known species. The genus that Leonotis artemisia is part of does not.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "7befa706-199a-5df8-a439-c643c622e13d",
+        "text": "text_f88b1399f252f31c0f93783b535c62bc",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "8a344cf1-8515-554b-9f36-cdaeb06c195d",
+        "text": "psychopsis",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "159603f2-f3db-59f7-b000-47cb7de3c585",
+        "text": "5 known species",
+        "type": "Entity"
+      },
+      {
+        "id": 5,
+        "original_id": "7a7a0687-e490-5167-ad5a-0e39d9055dee",
+        "text": "quantity",
+        "type": "EntityType"
+      },
+      {
+        "id": 6,
+        "original_id": "58ce8914-8a9e-5302-9b2d-0d97006e12d3",
+        "text": "genus",
+        "type": "EntityType"
+      },
+      {
+        "id": 7,
+        "original_id": "6908ae40-61bf-5443-9506-cec6b12afda0",
+        "text": "leonotis",
+        "type": "Entity"
+      },
+      {
+        "id": 8,
+        "original_id": "b9ef75bc-def6-5e16-94b6-9885e1168fa6",
+        "text": "leonotis artemisia",
+        "type": "Entity"
+      },
+      {
+        "id": 9,
+        "original_id": "f23a15ce-c0de-5c57-9205-8c9d01026b05",
+        "text": "species",
+        "type": "EntityType"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "has_species_count"
+      },
+      {
+        "source": 1,
+        "target": 4,
+        "type": "contains"
+      },
+      {
+        "source": 7,
+        "target": 4,
+        "type": "does_not_have_species_count"
+      },
+      {
+        "source": 4,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 7,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      },
+      {
+        "source": 8,
+        "target": 7,
+        "type": "part_of_genus"
+      },
+      {
+        "source": 1,
+        "target": 8,
+        "type": "contains"
+      },
+      {
+        "source": 8,
+        "target": 9,
+        "type": "is_a"
+      }
+    ]
+  },
+  "grafo_evidencia": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "8ad7d976-5b9b-518b-b820-f85538e6ad8c",
+        "text": "This chunk is about:\n- Plants: Leonotis, Psychopsis, Leonotis artemisia\n- Plant families: Lamiaceae, orchids\n- Places: Northern South America, Central America, Trinidad\n\nFacts:\n- Leonotis is a genus of flowering plants in the family Lamiaceae.\n- Psychopsis is a genus of five known orchid species native to northern South America, Central America, and Trinidad.\n- Psychopsis is abbreviated as Psychp in the horticultural trade.\n- Leonotis artemisia is a plant species in the genus Leonotis and the family Lamiaceae.\n- Leonotis artemisia is also known as motherwort.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "477fe147-50a0-5b35-89db-0516d4e89c74",
+        "text": "Page: Leonotis. Sentence: Leonotis is a genus of flowering plants in the family Lamiaceae.\nPage: Psychopsis. Sentence: Psychopsis, abbreviated Psychp in horticultural trade, is a genus of 5 known species of orchids native to northern South America, Central America and Trinidad.\nPage: Leonotis artemisia. Sentence: Leonotis artemisia, also known as motherwort, is a species of plant in the Leonotis genus and the Lamiaceae (mint) family.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "2ab3f328-1052-5760-b688-43b957366c6f",
+        "text": "text_8c030f6cdca38dbab25d82041cc47c99",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "6908ae40-61bf-5443-9506-cec6b12afda0",
+        "text": "leonotis",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "b35de2ca-c5bf-5da5-953a-3a7cd2a80f58",
+        "text": "lamiaceae",
+        "type": "Entity"
+      },
+      {
+        "id": 5,
+        "original_id": "f7b4540f-d32c-51b3-8970-f282fffab519",
+        "text": "taxon",
+        "type": "EntityType"
+      },
+      {
+        "id": 6,
+        "original_id": "8a344cf1-8515-554b-9f36-cdaeb06c195d",
+        "text": "psychopsis",
+        "type": "Entity"
+      },
+      {
+        "id": 7,
+        "original_id": "4bd6b7d8-3c9b-502d-8458-3a39c0673297",
+        "text": "psychp",
+        "type": "Entity"
+      },
+      {
+        "id": 8,
+        "original_id": "39575085-0710-527d-bd54-019de7b00429",
+        "text": "name",
+        "type": "EntityType"
+      },
+      {
+        "id": 9,
+        "original_id": "ae80d213-8724-5d82-8da6-500ec9d4aac9",
+        "text": "northern south america",
+        "type": "Entity"
+      },
+      {
+        "id": 10,
+        "original_id": "5f394058-b2a0-5ba8-8466-ba2a18cfcf4e",
+        "text": "place",
+        "type": "EntityType"
+      },
+      {
+        "id": 11,
+        "original_id": "768386d6-3408-561d-8bb8-1f5f80e19ac5",
+        "text": "central america",
+        "type": "Entity"
+      },
+      {
+        "id": 12,
+        "original_id": "b4acf840-3306-5b5a-9026-6745eb2a6ea6",
+        "text": "trinidad",
+        "type": "Entity"
+      },
+      {
+        "id": 13,
+        "original_id": "b9ef75bc-def6-5e16-94b6-9885e1168fa6",
+        "text": "leonotis artemisia",
+        "type": "Entity"
+      },
+      {
+        "id": 14,
+        "original_id": "b979b47f-cbce-5894-b4b5-15e7201cbb73",
+        "text": "motherwort",
+        "type": "Entity"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 13,
+        "target": 3,
+        "type": "in_genus"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "in_family"
+      },
+      {
+        "source": 1,
+        "target": 4,
+        "type": "contains"
+      },
+      {
+        "source": 13,
+        "target": 4,
+        "type": "in_family"
+      },
+      {
+        "source": 4,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 6,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 13,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 6,
+        "type": "contains"
+      },
+      {
+        "source": 6,
+        "target": 7,
+        "type": "abbreviated_as"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      },
+      {
+        "source": 7,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 14,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 6,
+        "target": 9,
+        "type": "native_to"
+      },
+      {
+        "source": 1,
+        "target": 9,
+        "type": "contains"
+      },
+      {
+        "source": 9,
+        "target": 10,
+        "type": "is_a"
+      },
+      {
+        "source": 11,
+        "target": 10,
+        "type": "is_a"
+      },
+      {
+        "source": 12,
+        "target": 10,
+        "type": "is_a"
+      },
+      {
+        "source": 6,
+        "target": 11,
+        "type": "native_to"
+      },
+      {
+        "source": 1,
+        "target": 11,
+        "type": "contains"
+      },
+      {
+        "source": 6,
+        "target": 12,
+        "type": "native_to"
+      },
+      {
+        "source": 1,
+        "target": 12,
+        "type": "contains"
+      },
+      {
+        "source": 1,
+        "target": 13,
+        "type": "contains"
+      },
+      {
+        "source": 13,
+        "target": 14,
+        "type": "also_known_as"
+      },
+      {
+        "source": 1,
+        "target": 14,
+        "type": "contains"
+      }
+    ]
+  }
+}

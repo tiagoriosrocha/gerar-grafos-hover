@@ -1,0 +1,606 @@
+{
+  "dataset": "hover",
+  "id": "f0c8944a-d1f7-4ccd-90ae-767ac4ff02ae",
+  "split": "train",
+  "claim": "The train, which passes through the Amtrak Jacksonville station and shares the track with the Silver Meteor, runs 1522 miles.",
+  "evidencia": "Page: Jacksonville station. Sentence: It serves the \"Silver Meteor\" and \"Silver Star\" trains as well as the Thruway Motorcoach to Lakeland.\nPage: Silver Star (Amtrak train). Sentence: The Silver Star is a 1522 mi passenger train route in the \"Silver Service\" brand operated by Amtrak, running from New York City south to Miami, Florida via the Northeast Corridor to Washington, D.C., then via Richmond, Virginia; Raleigh, North Carolina; Columbia, South Carolina; Savannah, Georgia; Jacksonville, Florida; Orlando, Florida; and Tampa, Florida.",
+  "evidence_text": "Page: Jacksonville station. Sentence: It serves the \"Silver Meteor\" and \"Silver Star\" trains as well as the Thruway Motorcoach to Lakeland.\nPage: Silver Star (Amtrak train). Sentence: The Silver Star is a 1522 mi passenger train route in the \"Silver Service\" brand operated by Amtrak, running from New York City south to Miami, Florida via the Northeast Corridor to Washington, D.C., then via Richmond, Virginia; Raleigh, North Carolina; Columbia, South Carolina; Savannah, Georgia; Jacksonville, Florida; Orlando, Florida; and Tampa, Florida.",
+  "label": "SUPPORTED",
+  "num_hops": 2,
+  "hover_metadata": {
+    "supporting_facts": [
+      [
+        "Jacksonville station",
+        1
+      ],
+      [
+        "Silver Star (Amtrak train)",
+        0
+      ]
+    ],
+    "num_hops": 2,
+    "evidence_annotation_id": [
+      0
+    ],
+    "evidence_id": [
+      "Jacksonville station::sentence::1",
+      "Silver Star (Amtrak train)::sentence::0"
+    ],
+    "evidence_wiki_url": [
+      "https://en.wikipedia.org/wiki/Jacksonville_station",
+      "https://en.wikipedia.org/wiki/Silver_Star_%28Amtrak_train%29"
+    ],
+    "evidence_sentence_id": [
+      "Jacksonville station::sentence::1",
+      "Silver Star (Amtrak train)::sentence::0"
+    ]
+  },
+  "grafo_claim": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "48e01a0f-7326-5d68-a801-e0c8a6b4c664",
+        "text": "This chunk is about:\n- Products: train routes, Silver Meteor\n- Places: Amtrak Jacksonville station\n- Concepts: route length, shared tracks\n\nFacts:\n- A train passes through the Amtrak Jacksonville station.\n- The train shares track with the Silver Meteor.\n- The train's route length is 1,522 miles.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "d2345c00-5d02-54f1-812b-630d06f1fa14",
+        "text": "The train, which passes through the Amtrak Jacksonville station and shares the track with the Silver Meteor, runs 1522 miles.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "2b62358a-0530-5ea2-bd2f-0feea27a3b20",
+        "text": "text_c3057e9ab320a625e1f5936d440016df",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "d6572563-b623-527a-aba2-c3214859f836",
+        "text": "the train",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "0f5ec78d-c353-540c-b8bd-bce84eac0af4",
+        "text": "vehicle",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "2860f359-0915-539c-becf-7737c9997a46",
+        "text": "amtrak jacksonville station",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "5f394058-b2a0-5ba8-8466-ba2a18cfcf4e",
+        "text": "place",
+        "type": "EntityType"
+      },
+      {
+        "id": 7,
+        "original_id": "24a05433-5ed3-52a0-a957-cadb53d3f04e",
+        "text": "silver meteor",
+        "type": "Entity"
+      },
+      {
+        "id": 8,
+        "original_id": "c41d4d1e-574c-5ae7-b8ae-8c6930a04d0e",
+        "text": "1522 miles",
+        "type": "Entity"
+      },
+      {
+        "id": 9,
+        "original_id": "7a7a0687-e490-5167-ad5a-0e39d9055dee",
+        "text": "quantity",
+        "type": "EntityType"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 7,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "passes_through"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 7,
+        "type": "shares_track_with"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 8,
+        "type": "runs_distance"
+      },
+      {
+        "source": 1,
+        "target": 8,
+        "type": "contains"
+      },
+      {
+        "source": 8,
+        "target": 9,
+        "type": "is_a"
+      }
+    ]
+  },
+  "grafo_evidencia": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "4b77a34e-dd81-5133-9a9b-0d19fd69ac52",
+        "text": "This chunk is about:\n- Places: Jacksonville station, Lakeland, New York City, Miami, Washington, D.C., Richmond, Raleigh, Columbia, Savannah, Orlando, Tampa\n- Products: Silver Meteor, Silver Star, Thruway Motorcoach\n- Companies: Amtrak\n- Systems: Silver Service, Northeast Corridor\n\nFacts:\n- Jacksonville station serves Amtrak's Silver Meteor and Silver Star trains.\n- Jacksonville station also serves the Thruway Motorcoach to Lakeland.\n- Amtrak operates the Silver Star as a 1,522-mile passenger train route in its Silver Service brand.\n- The Silver Star runs from New York City to Miami, Florida.\n- The Silver Star travels via the Northeast Corridor to Washington, D.C., then via Richmond, Raleigh, Columbia, Savannah, Jacksonville, Orlando, and Tampa.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "8fab1e49-fae5-56d6-b122-6d767b7bfeaf",
+        "text": "Page: Jacksonville station. Sentence: It serves the \"Silver Meteor\" and \"Silver Star\" trains as well as the Thruway Motorcoach to Lakeland.\nPage: Silver Star (Amtrak train). Sentence: The Silver Star is a 1522 mi passenger train route in the \"Silver Service\" brand operated by Amtrak, running from New York City south to Miami, Florida via the Northeast Corridor to Washington, D.C., then via Richmond, Virginia; Raleigh, North Carolina; Columbia, South Carolina; Savannah, Georgia; Jacksonville, Florida; Orlando, Florida; and Tampa, Florida.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "0839a436-e40f-5afc-b948-f9af21bf3069",
+        "text": "text_ac7b926d114408a0270771cc325eb145",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "b6b7375c-c62f-5bd7-a507-fd3a7b0c2d77",
+        "text": "jacksonville station",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "5f394058-b2a0-5ba8-8466-ba2a18cfcf4e",
+        "text": "place",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "24a05433-5ed3-52a0-a957-cadb53d3f04e",
+        "text": "silver meteor",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "61b3d067-9058-5c2b-9f8c-9674d89e01c1",
+        "text": "train",
+        "type": "EntityType"
+      },
+      {
+        "id": 7,
+        "original_id": "1e534605-a485-52e2-9271-352bc24bd112",
+        "text": "silver star",
+        "type": "Entity"
+      },
+      {
+        "id": 8,
+        "original_id": "45a6dbb8-6619-5cab-9386-d1e85240404b",
+        "text": "silver service",
+        "type": "Entity"
+      },
+      {
+        "id": 9,
+        "original_id": "31d368fa-7630-5642-a1c1-e579050f9ac3",
+        "text": "brand",
+        "type": "EntityType"
+      },
+      {
+        "id": 10,
+        "original_id": "88b21b36-8add-59ff-8102-6ae9a6746177",
+        "text": "amtrak",
+        "type": "Entity"
+      },
+      {
+        "id": 11,
+        "original_id": "388f60fb-220d-55e8-ae9c-3ac93cead308",
+        "text": "organization",
+        "type": "EntityType"
+      },
+      {
+        "id": 12,
+        "original_id": "62912d92-4218-52f7-a1a6-776a04889442",
+        "text": "new york city",
+        "type": "Entity"
+      },
+      {
+        "id": 13,
+        "original_id": "20a53d1f-835d-5e40-a9a5-e0519780846e",
+        "text": "miami, florida",
+        "type": "Entity"
+      },
+      {
+        "id": 14,
+        "original_id": "8b6c90c1-aef0-559e-a4ad-362bac045661",
+        "text": "northeast corridor",
+        "type": "Entity"
+      },
+      {
+        "id": 15,
+        "original_id": "193a9885-0f59-521c-a4b2-e6d5a15561ed",
+        "text": "washington, d.c.",
+        "type": "Entity"
+      },
+      {
+        "id": 16,
+        "original_id": "a77fe6cd-308e-5543-87a5-4b0c5343a883",
+        "text": "richmond, virginia",
+        "type": "Entity"
+      },
+      {
+        "id": 17,
+        "original_id": "efad3489-c3bd-5f3f-93aa-855ca51c2ef8",
+        "text": "raleigh, north carolina",
+        "type": "Entity"
+      },
+      {
+        "id": 18,
+        "original_id": "c0c7c9eb-5a92-5842-8ec7-e59ec1b44a11",
+        "text": "columbia, south carolina",
+        "type": "Entity"
+      },
+      {
+        "id": 19,
+        "original_id": "9e149fa9-b79c-53e9-be96-a66e9a3c19a9",
+        "text": "savannah, georgia",
+        "type": "Entity"
+      },
+      {
+        "id": 20,
+        "original_id": "b4351cac-e2a2-5484-9350-c83fab85534e",
+        "text": "jacksonville, florida",
+        "type": "Entity"
+      },
+      {
+        "id": 21,
+        "original_id": "f158e7a8-3a71-51a3-8df8-180337655394",
+        "text": "orlando, florida",
+        "type": "Entity"
+      },
+      {
+        "id": 22,
+        "original_id": "93e9fcc4-17a6-5d1c-98a0-705af8003d5e",
+        "text": "tampa, florida",
+        "type": "Entity"
+      },
+      {
+        "id": 23,
+        "original_id": "79b9a933-4afc-5726-b4f1-b8af25e677b7",
+        "text": "thruway motorcoach",
+        "type": "Entity"
+      },
+      {
+        "id": 24,
+        "original_id": "0489d060-b40b-5675-bd0a-38a7397e865b",
+        "text": "transport service",
+        "type": "EntityType"
+      },
+      {
+        "id": 25,
+        "original_id": "1a17d62a-dacf-57cc-9ee3-1ed9ca7fcc03",
+        "text": "lakeland",
+        "type": "Entity"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 12,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 13,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 14,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 15,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 16,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 17,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 18,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 19,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 20,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 21,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 22,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 25,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "serves"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 7,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 7,
+        "type": "serves"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      },
+      {
+        "source": 7,
+        "target": 8,
+        "type": "in_brand"
+      },
+      {
+        "source": 1,
+        "target": 8,
+        "type": "contains"
+      },
+      {
+        "source": 8,
+        "target": 9,
+        "type": "is_a"
+      },
+      {
+        "source": 7,
+        "target": 10,
+        "type": "operated_by"
+      },
+      {
+        "source": 1,
+        "target": 10,
+        "type": "contains"
+      },
+      {
+        "source": 10,
+        "target": 11,
+        "type": "is_a"
+      },
+      {
+        "source": 7,
+        "target": 12,
+        "type": "runs_from"
+      },
+      {
+        "source": 1,
+        "target": 12,
+        "type": "contains"
+      },
+      {
+        "source": 7,
+        "target": 13,
+        "type": "runs_to"
+      },
+      {
+        "source": 1,
+        "target": 13,
+        "type": "contains"
+      },
+      {
+        "source": 7,
+        "target": 14,
+        "type": "via"
+      },
+      {
+        "source": 1,
+        "target": 14,
+        "type": "contains"
+      },
+      {
+        "source": 7,
+        "target": 15,
+        "type": "via"
+      },
+      {
+        "source": 1,
+        "target": 15,
+        "type": "contains"
+      },
+      {
+        "source": 7,
+        "target": 16,
+        "type": "via"
+      },
+      {
+        "source": 1,
+        "target": 16,
+        "type": "contains"
+      },
+      {
+        "source": 7,
+        "target": 17,
+        "type": "via"
+      },
+      {
+        "source": 1,
+        "target": 17,
+        "type": "contains"
+      },
+      {
+        "source": 7,
+        "target": 18,
+        "type": "via"
+      },
+      {
+        "source": 1,
+        "target": 18,
+        "type": "contains"
+      },
+      {
+        "source": 7,
+        "target": 19,
+        "type": "via"
+      },
+      {
+        "source": 1,
+        "target": 19,
+        "type": "contains"
+      },
+      {
+        "source": 7,
+        "target": 20,
+        "type": "via"
+      },
+      {
+        "source": 1,
+        "target": 20,
+        "type": "contains"
+      },
+      {
+        "source": 7,
+        "target": 21,
+        "type": "via"
+      },
+      {
+        "source": 1,
+        "target": 21,
+        "type": "contains"
+      },
+      {
+        "source": 7,
+        "target": 22,
+        "type": "via"
+      },
+      {
+        "source": 1,
+        "target": 22,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 23,
+        "type": "serves"
+      },
+      {
+        "source": 1,
+        "target": 23,
+        "type": "contains"
+      },
+      {
+        "source": 23,
+        "target": 24,
+        "type": "is_a"
+      },
+      {
+        "source": 23,
+        "target": 25,
+        "type": "goes_to"
+      },
+      {
+        "source": 1,
+        "target": 25,
+        "type": "contains"
+      }
+    ]
+  }
+}

@@ -1,0 +1,595 @@
+{
+  "dataset": "hover",
+  "id": "afe65c70-0e02-4d69-9668-d4c504a9d028",
+  "split": "train",
+  "claim": "The place where \"Shout! The Legend of The Wild One\" premiered is part of a performing arts centre located in the suburb of Southbank.",
+  "evidencia": "Page: State Theatre (Melbourne). Sentence: The State Theatre opened in 1984 and is part of the Arts Centre Melbourne located by the Yarra River and St Kilda Road.\nPage: Arts Centre Melbourne. Sentence: The Arts Centre Melbourne, originally known as the Victorian Arts Centre and briefly officially called the Arts Centre, is a performing arts centre consisting of a complex of theatres and concert halls in the Melbourne Arts Precinct, located in the central Melbourne suburb of Southbank in Victoria, Australia.\nPage: Shout! The Legend of The Wild One. Sentence: It premiered in Melbourne at the State Theatre in December 2000, before seasons in Sydney, Adelaide and Brisbane through 2001.",
+  "evidence_text": "Page: State Theatre (Melbourne). Sentence: The State Theatre opened in 1984 and is part of the Arts Centre Melbourne located by the Yarra River and St Kilda Road.\nPage: Arts Centre Melbourne. Sentence: The Arts Centre Melbourne, originally known as the Victorian Arts Centre and briefly officially called the Arts Centre, is a performing arts centre consisting of a complex of theatres and concert halls in the Melbourne Arts Precinct, located in the central Melbourne suburb of Southbank in Victoria, Australia.\nPage: Shout! The Legend of The Wild One. Sentence: It premiered in Melbourne at the State Theatre in December 2000, before seasons in Sydney, Adelaide and Brisbane through 2001.",
+  "label": "SUPPORTED",
+  "num_hops": 3,
+  "hover_metadata": {
+    "supporting_facts": [
+      [
+        "State Theatre (Melbourne)",
+        0
+      ],
+      [
+        "Arts Centre Melbourne",
+        0
+      ],
+      [
+        "Shout! The Legend of The Wild One",
+        2
+      ]
+    ],
+    "num_hops": 3,
+    "evidence_annotation_id": [
+      0
+    ],
+    "evidence_id": [
+      "State Theatre (Melbourne)::sentence::0",
+      "Arts Centre Melbourne::sentence::0",
+      "Shout! The Legend of The Wild One::sentence::2"
+    ],
+    "evidence_wiki_url": [
+      "https://en.wikipedia.org/wiki/State_Theatre_%28Melbourne%29",
+      "https://en.wikipedia.org/wiki/Arts_Centre_Melbourne",
+      "https://en.wikipedia.org/wiki/Shout%21_The_Legend_of_The_Wild_One"
+    ],
+    "evidence_sentence_id": [
+      "State Theatre (Melbourne)::sentence::0",
+      "Arts Centre Melbourne::sentence::0",
+      "Shout! The Legend of The Wild One::sentence::2"
+    ]
+  },
+  "grafo_claim": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "5b6e123b-695b-5922-9914-277d1a26e775",
+        "text": "This chunk is about:\n- Works: \"Shout! The Legend of The Wild One\"\n- Places: Southbank, a performing arts centre\n- Venues: the premiere venue\n\nFacts:\n- \"Shout! The Legend of The Wild One\" premiered at a venue that is part of a performing arts centre.\n- The performing arts centre that includes the premiere venue is located in the suburb of Southbank.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "a2c252ba-3663-5ce1-9190-d54836c7f29d",
+        "text": "The place where \"Shout! The Legend of The Wild One\" premiered is part of a performing arts centre located in the suburb of Southbank.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "2759c500-214e-59fd-b408-91ee25b7cbe7",
+        "text": "text_4b1f73549336616358c6a51f91861f3a",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "61065c29-0729-5a50-bd23-ab2530d9c209",
+        "text": "shout! the legend of the wild one",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "ebe2cf86-30c2-56b5-b915-9fde1af55086",
+        "text": "premiere venue of shout! the legend of the wild one",
+        "type": "Entity"
+      },
+      {
+        "id": 5,
+        "original_id": "66ac5dda-608f-5110-a9a2-ab5cbcc27268",
+        "text": "performing arts centre in southbank",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "e275d356-5bf3-52c3-a04c-051c57156f87",
+        "text": "southbank",
+        "type": "Entity"
+      },
+      {
+        "id": 7,
+        "original_id": "5f394058-b2a0-5ba8-8466-ba2a18cfcf4e",
+        "text": "place",
+        "type": "EntityType"
+      },
+      {
+        "id": 8,
+        "original_id": "5263a535-1b4b-5925-be3e-310d03cd303b",
+        "text": "work",
+        "type": "EntityType"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "premiered_at"
+      },
+      {
+        "source": 1,
+        "target": 4,
+        "type": "contains"
+      },
+      {
+        "source": 4,
+        "target": 5,
+        "type": "part_of"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "located_in"
+      },
+      {
+        "source": 1,
+        "target": 6,
+        "type": "contains"
+      },
+      {
+        "source": 6,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 5,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 4,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 8,
+        "type": "is_a"
+      }
+    ]
+  },
+  "grafo_evidencia": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "7793c1d1-d06c-51e0-aedf-336c9b85b76d",
+        "text": "This chunk is about:\n- Places: Melbourne, Southbank, Victoria, Australia, Yarra River, St Kilda Road, Melbourne Arts Precinct\n- Organizations: Arts Centre Melbourne, Victorian Arts Centre\n- Products: State Theatre\n- Events: Shout! The Legend of The Wild One\n\nFacts:\n- Arts Centre Melbourne was originally known as the Victorian Arts Centre and was briefly officially called the Arts Centre.\n- Arts Centre Melbourne is a performing arts centre in Southbank, Victoria, Australia, within the Melbourne Arts Precinct.\n- Arts Centre Melbourne consists of a complex of theatres and concert halls.\n- The State Theatre opened in 1984 as part of Arts Centre Melbourne.\n- The State Theatre is located by the Yarra River and St Kilda Road in Melbourne.\n- Shout! The Legend of The Wild One premiered at the State Theatre in Melbourne in December 2000.\n- Shout! The Legend of The Wild One later had seasons in Sydney, Adelaide, and Brisbane during 2001.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "fcfa1dd2-244a-5081-8d0a-faa346adcedf",
+        "text": "Page: State Theatre (Melbourne). Sentence: The State Theatre opened in 1984 and is part of the Arts Centre Melbourne located by the Yarra River and St Kilda Road.\nPage: Arts Centre Melbourne. Sentence: The Arts Centre Melbourne, originally known as the Victorian Arts Centre and briefly officially called the Arts Centre, is a performing arts centre consisting of a complex of theatres and concert halls in the Melbourne Arts Precinct, located in the central Melbourne suburb of Southbank in Victoria, Australia.\nPage: Shout! The Legend of The Wild One. Sentence: It premiered in Melbourne at the State Theatre in December 2000, before seasons in Sydney, Adelaide and Brisbane through 2001.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "bf960839-1658-5d52-8530-b04abad2a77f",
+        "text": "text_422b54f3b6b73f2c0da328b082225563",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "085df2b8-a54a-5765-89fe-64097ad2390f",
+        "text": "state theatre",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "36535bda-358d-582c-896d-8489e824d5db",
+        "text": "1984",
+        "type": "Entity"
+      },
+      {
+        "id": 5,
+        "original_id": "b19433ae-558c-5aaf-95ac-6231f2a4be0e",
+        "text": "date",
+        "type": "EntityType"
+      },
+      {
+        "id": 6,
+        "original_id": "37d92a59-8303-5b94-9267-0942ea913281",
+        "text": "arts centre melbourne",
+        "type": "Entity"
+      },
+      {
+        "id": 7,
+        "original_id": "e8f1d406-496f-58e9-bc16-542dd5e82b80",
+        "text": "yarra river",
+        "type": "Entity"
+      },
+      {
+        "id": 8,
+        "original_id": "5f394058-b2a0-5ba8-8466-ba2a18cfcf4e",
+        "text": "place",
+        "type": "EntityType"
+      },
+      {
+        "id": 9,
+        "original_id": "be58b111-1296-58de-aaf8-7e293747bb52",
+        "text": "st kilda road",
+        "type": "Entity"
+      },
+      {
+        "id": 10,
+        "original_id": "e92b94e2-c5d0-5134-838f-6ca3ab992c38",
+        "text": "victorian arts centre",
+        "type": "Entity"
+      },
+      {
+        "id": 11,
+        "original_id": "058a57a0-61df-5683-a671-e3bba0f1b38e",
+        "text": "arts centre",
+        "type": "Entity"
+      },
+      {
+        "id": 12,
+        "original_id": "26f1c8eb-92e4-515a-ae59-f31280c71f7a",
+        "text": "melbourne arts precinct",
+        "type": "Entity"
+      },
+      {
+        "id": 13,
+        "original_id": "e275d356-5bf3-52c3-a04c-051c57156f87",
+        "text": "southbank",
+        "type": "Entity"
+      },
+      {
+        "id": 14,
+        "original_id": "2598e04b-0aae-5c06-bb19-8c1fde00a84e",
+        "text": "victoria",
+        "type": "Entity"
+      },
+      {
+        "id": 15,
+        "original_id": "02448d73-884d-50c7-a919-b94177f1cf43",
+        "text": "australia",
+        "type": "Entity"
+      },
+      {
+        "id": 16,
+        "original_id": "61065c29-0729-5a50-bd23-ab2530d9c209",
+        "text": "shout! the legend of the wild one",
+        "type": "Entity"
+      },
+      {
+        "id": 17,
+        "original_id": "5e7f74bc-7b4b-5739-bce3-2bd85089399c",
+        "text": "melbourne",
+        "type": "Entity"
+      },
+      {
+        "id": 18,
+        "original_id": "63c739e9-4cfa-554c-8131-46a3c6839f41",
+        "text": "2000-12",
+        "type": "Entity"
+      },
+      {
+        "id": 19,
+        "original_id": "81a583ec-421d-5254-84c5-f291502c162d",
+        "text": "sydney",
+        "type": "Entity"
+      },
+      {
+        "id": 20,
+        "original_id": "833197bb-b272-57d6-8b2a-79ff83b4b5e2",
+        "text": "adelaide",
+        "type": "Entity"
+      },
+      {
+        "id": 21,
+        "original_id": "36602213-f50b-52f3-b637-f76d79f613fc",
+        "text": "brisbane",
+        "type": "Entity"
+      },
+      {
+        "id": 22,
+        "original_id": "7bd3af1d-2fce-5267-8017-1300d5a6e9f4",
+        "text": "2001",
+        "type": "Entity"
+      },
+      {
+        "id": 23,
+        "original_id": "5263a535-1b4b-5925-be3e-310d03cd303b",
+        "text": "work",
+        "type": "EntityType"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 16,
+        "target": 3,
+        "type": "premiered_at"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "opened_in"
+      },
+      {
+        "source": 1,
+        "target": 4,
+        "type": "contains"
+      },
+      {
+        "source": 4,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 18,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 22,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 6,
+        "type": "part_of"
+      },
+      {
+        "source": 1,
+        "target": 6,
+        "type": "contains"
+      },
+      {
+        "source": 6,
+        "target": 7,
+        "type": "located_by"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      },
+      {
+        "source": 7,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 9,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 10,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 11,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 12,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 15,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 14,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 13,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 6,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 17,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 19,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 20,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 21,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 6,
+        "target": 9,
+        "type": "located_by"
+      },
+      {
+        "source": 1,
+        "target": 9,
+        "type": "contains"
+      },
+      {
+        "source": 6,
+        "target": 10,
+        "type": "originally_known_as"
+      },
+      {
+        "source": 1,
+        "target": 10,
+        "type": "contains"
+      },
+      {
+        "source": 6,
+        "target": 11,
+        "type": "briefly_officially_called"
+      },
+      {
+        "source": 1,
+        "target": 11,
+        "type": "contains"
+      },
+      {
+        "source": 6,
+        "target": 12,
+        "type": "located_in"
+      },
+      {
+        "source": 1,
+        "target": 12,
+        "type": "contains"
+      },
+      {
+        "source": 6,
+        "target": 13,
+        "type": "located_in"
+      },
+      {
+        "source": 1,
+        "target": 13,
+        "type": "contains"
+      },
+      {
+        "source": 13,
+        "target": 14,
+        "type": "located_in"
+      },
+      {
+        "source": 1,
+        "target": 14,
+        "type": "contains"
+      },
+      {
+        "source": 14,
+        "target": 15,
+        "type": "located_in"
+      },
+      {
+        "source": 1,
+        "target": 15,
+        "type": "contains"
+      },
+      {
+        "source": 1,
+        "target": 16,
+        "type": "contains"
+      },
+      {
+        "source": 16,
+        "target": 17,
+        "type": "premiered_in"
+      },
+      {
+        "source": 1,
+        "target": 17,
+        "type": "contains"
+      },
+      {
+        "source": 16,
+        "target": 18,
+        "type": "premiered_in"
+      },
+      {
+        "source": 1,
+        "target": 18,
+        "type": "contains"
+      },
+      {
+        "source": 16,
+        "target": 19,
+        "type": "had_season_in"
+      },
+      {
+        "source": 1,
+        "target": 19,
+        "type": "contains"
+      },
+      {
+        "source": 16,
+        "target": 20,
+        "type": "had_season_in"
+      },
+      {
+        "source": 1,
+        "target": 20,
+        "type": "contains"
+      },
+      {
+        "source": 16,
+        "target": 21,
+        "type": "had_season_in"
+      },
+      {
+        "source": 1,
+        "target": 21,
+        "type": "contains"
+      },
+      {
+        "source": 16,
+        "target": 22,
+        "type": "had_seasons_through"
+      },
+      {
+        "source": 1,
+        "target": 22,
+        "type": "contains"
+      },
+      {
+        "source": 16,
+        "target": 23,
+        "type": "is_a"
+      }
+    ]
+  }
+}

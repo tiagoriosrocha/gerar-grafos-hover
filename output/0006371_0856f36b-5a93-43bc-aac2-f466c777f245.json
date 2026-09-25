@@ -1,0 +1,404 @@
+{
+  "dataset": "hover",
+  "id": "0856f36b-5a93-43bc-aac2-f466c777f245",
+  "split": "train",
+  "claim": "CityJet destinations has a wet-lease with a carrier with HQ located at Tokyo International Airport, north of Paris.",
+  "evidencia": "Page: CityJet destinations. Sentence: Additionally, it serves several more destinations on wet-lease agreements with Air France (which ends on 31 October 2017), KLM, Brussels Airlines and Scandinavian Airlines.\nPage: Air France. Sentence: Air France's corporate headquarters, previously in Montparnasse, Paris, are located on the grounds of Charles de Gaulle Airport, north of Paris.",
+  "evidence_text": "Page: CityJet destinations. Sentence: Additionally, it serves several more destinations on wet-lease agreements with Air France (which ends on 31 October 2017), KLM, Brussels Airlines and Scandinavian Airlines.\nPage: Air France. Sentence: Air France's corporate headquarters, previously in Montparnasse, Paris, are located on the grounds of Charles de Gaulle Airport, north of Paris.",
+  "label": "NOT_SUPPORTED",
+  "num_hops": 2,
+  "hover_metadata": {
+    "supporting_facts": [
+      [
+        "CityJet destinations",
+        1
+      ],
+      [
+        "Air France",
+        4
+      ]
+    ],
+    "num_hops": 2,
+    "evidence_annotation_id": [
+      0
+    ],
+    "evidence_id": [
+      "CityJet destinations::sentence::1",
+      "Air France::sentence::4"
+    ],
+    "evidence_wiki_url": [
+      "https://en.wikipedia.org/wiki/CityJet_destinations",
+      "https://en.wikipedia.org/wiki/Air_France"
+    ],
+    "evidence_sentence_id": [
+      "CityJet destinations::sentence::1",
+      "Air France::sentence::4"
+    ]
+  },
+  "grafo_claim": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "598ce58a-c1e9-5f8e-bbda-dd6424d957f9",
+        "text": "This chunk is about:\n- Companies: CityJet, Japan Airlines\n- Places: Tokyo International Airport, Paris\n- Concepts: Wet lease\n\nFacts:\n- CityJet destinations has a wet-lease with Japan Airlines.\n- Japan Airlines is headquartered at Tokyo International Airport.\n- Tokyo International Airport is north of Paris.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "77b77adf-a5f7-52d1-97c6-1d2a91a72cc5",
+        "text": "CityJet destinations has a wet-lease with a carrier with HQ located at Tokyo International Airport, north of Paris.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "1a02d573-8d73-5c11-8bdb-906e25eb80ed",
+        "text": "text_02cba29f6b76557a03e13325b86bcdfb",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "6aef46ff-dd51-568e-b82b-16d938c8456c",
+        "text": "cityjet destinations",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "7a0ecd53-b3eb-54f9-924e-5ad73284e2b8",
+        "text": "carrier",
+        "type": "Entity"
+      },
+      {
+        "id": 5,
+        "original_id": "bcd0afc7-28b0-5526-9d40-09885e10c64a",
+        "text": "tokyo international airport",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "27d985ea-055a-54fb-bcc4-f29d9d892867",
+        "text": "paris",
+        "type": "Entity"
+      },
+      {
+        "id": 7,
+        "original_id": "5f394058-b2a0-5ba8-8466-ba2a18cfcf4e",
+        "text": "place",
+        "type": "EntityType"
+      },
+      {
+        "id": 8,
+        "original_id": "388f60fb-220d-55e8-ae9c-3ac93cead308",
+        "text": "organization",
+        "type": "EntityType"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "has_wet_lease_with"
+      },
+      {
+        "source": 1,
+        "target": 4,
+        "type": "contains"
+      },
+      {
+        "source": 4,
+        "target": 5,
+        "type": "has_headquarters_at"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "is_north_of"
+      },
+      {
+        "source": 1,
+        "target": 6,
+        "type": "contains"
+      },
+      {
+        "source": 6,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 5,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 4,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 8,
+        "type": "is_a"
+      }
+    ]
+  },
+  "grafo_evidencia": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "e5b112e9-ad7e-5f0c-ba93-fe8e685a166c",
+        "text": "This chunk is about:\n- Companies: CityJet, Air France, KLM, Brussels Airlines, Scandinavian Airlines\n- Places: Charles de Gaulle Airport, Montparnasse, Paris\n- Topics: wet-lease agreements, corporate headquarters\n\nFacts:\n- CityJet serves several additional destinations through wet-lease agreements with Air France, KLM, Brussels Airlines, and Scandinavian Airlines.\n- CityJet's wet-lease agreement with Air France ends on 31 October 2017.\n- Air France's corporate headquarters were previously in Montparnasse, Paris.\n- Air France's corporate headquarters are located on the grounds of Charles de Gaulle Airport north of Paris.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "6a652d04-adef-5030-8ae9-f26f1ed9ef8d",
+        "text": "Page: CityJet destinations. Sentence: Additionally, it serves several more destinations on wet-lease agreements with Air France (which ends on 31 October 2017), KLM, Brussels Airlines and Scandinavian Airlines.\nPage: Air France. Sentence: Air France's corporate headquarters, previously in Montparnasse, Paris, are located on the grounds of Charles de Gaulle Airport, north of Paris.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "cec1ca79-039f-5201-b6be-c40fcc9e1cfb",
+        "text": "text_b15a878f0a1c8a0ed8dbb76bbc0bd5f4",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "d7ff690c-7e49-5fe6-9c50-a1cc9c1bf417",
+        "text": "cityjet",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "04d0de03-83ac-564e-9e7c-cafcd4cdb6a9",
+        "text": "air france",
+        "type": "Entity"
+      },
+      {
+        "id": 5,
+        "original_id": "6593f9fb-559d-575d-b632-4eec0722978f",
+        "text": "montparnasse, paris",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "27d985ea-055a-54fb-bcc4-f29d9d892867",
+        "text": "paris",
+        "type": "Entity"
+      },
+      {
+        "id": 7,
+        "original_id": "5f394058-b2a0-5ba8-8466-ba2a18cfcf4e",
+        "text": "place",
+        "type": "EntityType"
+      },
+      {
+        "id": 8,
+        "original_id": "cba936ce-19b8-59f9-97f2-92592f65d1f1",
+        "text": "charles de gaulle airport",
+        "type": "Entity"
+      },
+      {
+        "id": 9,
+        "original_id": "388f60fb-220d-55e8-ae9c-3ac93cead308",
+        "text": "organization",
+        "type": "EntityType"
+      },
+      {
+        "id": 10,
+        "original_id": "6d80e7a8-65b0-5193-b13f-ca8338a88256",
+        "text": "klm",
+        "type": "Entity"
+      },
+      {
+        "id": 11,
+        "original_id": "3ef631d6-771c-524b-8e09-8e01309acd89",
+        "text": "brussels airlines",
+        "type": "Entity"
+      },
+      {
+        "id": 12,
+        "original_id": "62c12a3c-a65a-57d0-bdba-69d47d0c5e15",
+        "text": "scandinavian airlines",
+        "type": "Entity"
+      },
+      {
+        "id": 13,
+        "original_id": "787e6a4c-29e3-5047-8223-6dd22efcfbe0",
+        "text": "2017-10-31",
+        "type": "Entity"
+      },
+      {
+        "id": 14,
+        "original_id": "b19433ae-558c-5aaf-95ac-6231f2a4be0e",
+        "text": "date",
+        "type": "EntityType"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "has_wet_lease_agreement_with"
+      },
+      {
+        "source": 1,
+        "target": 4,
+        "type": "contains"
+      },
+      {
+        "source": 4,
+        "target": 5,
+        "type": "previously_had_headquarters_in"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "located_in"
+      },
+      {
+        "source": 8,
+        "target": 6,
+        "type": "is_north_of"
+      },
+      {
+        "source": 1,
+        "target": 6,
+        "type": "contains"
+      },
+      {
+        "source": 6,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 5,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 8,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 4,
+        "target": 8,
+        "type": "has_headquarters_on_grounds_of"
+      },
+      {
+        "source": 1,
+        "target": 8,
+        "type": "contains"
+      },
+      {
+        "source": 4,
+        "target": 9,
+        "type": "is_a"
+      },
+      {
+        "source": 10,
+        "target": 9,
+        "type": "is_a"
+      },
+      {
+        "source": 11,
+        "target": 9,
+        "type": "is_a"
+      },
+      {
+        "source": 12,
+        "target": 9,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 9,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 10,
+        "type": "has_wet_lease_agreement_with"
+      },
+      {
+        "source": 1,
+        "target": 10,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 11,
+        "type": "has_wet_lease_agreement_with"
+      },
+      {
+        "source": 1,
+        "target": 11,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 12,
+        "type": "has_wet_lease_agreement_with"
+      },
+      {
+        "source": 1,
+        "target": 12,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 13,
+        "type": "wet_lease_agreement_ends_on"
+      },
+      {
+        "source": 1,
+        "target": 13,
+        "type": "contains"
+      },
+      {
+        "source": 13,
+        "target": 14,
+        "type": "is_a"
+      }
+    ]
+  }
+}

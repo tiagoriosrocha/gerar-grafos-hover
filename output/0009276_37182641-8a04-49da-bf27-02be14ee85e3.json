@@ -1,0 +1,472 @@
+{
+  "dataset": "hover",
+  "id": "37182641-8a04-49da-bf27-02be14ee85e3",
+  "split": "train",
+  "claim": "SeaTac is the name of the city that is home to the airport which is a terminus of the Central Link Line which includes Mount Baker station.",
+  "evidencia": "Page: Mount Baker station. Sentence: Mount Baker is a light rail station located in Seattle, Washington.\nPage: Mount Baker station. Sentence: It is situated between the Columbia City and Beacon Hill stations on the Central Link line, which runs from Seattle–Tacoma International Airport to Downtown Seattle and the University of Washington as part of the Link Light Rail system.\nPage: Seattle–Tacoma International Airport. Sentence: Seattle–Tacoma International Airport (IATA: SEA, ICAO: KSEA, FAA LID: SEA) , also referred to as Sea–Tac Airport or Sea–Tac ( ), is the primary commercial airport serving the Seattle metropolitan area in the U.S. state of Washington.\nPage: Seattle–Tacoma International Airport. Sentence: It is located in the city of SeaTac, approximately 13 mi south of Downtown Seattle.",
+  "evidence_text": "Page: Mount Baker station. Sentence: Mount Baker is a light rail station located in Seattle, Washington.\nPage: Mount Baker station. Sentence: It is situated between the Columbia City and Beacon Hill stations on the Central Link line, which runs from Seattle–Tacoma International Airport to Downtown Seattle and the University of Washington as part of the Link Light Rail system.\nPage: Seattle–Tacoma International Airport. Sentence: Seattle–Tacoma International Airport (IATA: SEA, ICAO: KSEA, FAA LID: SEA) , also referred to as Sea–Tac Airport or Sea–Tac ( ), is the primary commercial airport serving the Seattle metropolitan area in the U.S. state of Washington.\nPage: Seattle–Tacoma International Airport. Sentence: It is located in the city of SeaTac, approximately 13 mi south of Downtown Seattle.",
+  "label": "SUPPORTED",
+  "num_hops": 2,
+  "hover_metadata": {
+    "supporting_facts": [
+      [
+        "Mount Baker station",
+        0
+      ],
+      [
+        "Mount Baker station",
+        1
+      ],
+      [
+        "Seattle–Tacoma International Airport",
+        0
+      ],
+      [
+        "Seattle–Tacoma International Airport",
+        1
+      ]
+    ],
+    "num_hops": 2,
+    "evidence_annotation_id": [
+      0
+    ],
+    "evidence_id": [
+      "Mount Baker station::sentence::0",
+      "Mount Baker station::sentence::1",
+      "Seattle–Tacoma International Airport::sentence::0",
+      "Seattle–Tacoma International Airport::sentence::1"
+    ],
+    "evidence_wiki_url": [
+      "https://en.wikipedia.org/wiki/Mount_Baker_station",
+      "https://en.wikipedia.org/wiki/Seattle%E2%80%93Tacoma_International_Airport"
+    ],
+    "evidence_sentence_id": [
+      "Mount Baker station::sentence::0",
+      "Mount Baker station::sentence::1",
+      "Seattle–Tacoma International Airport::sentence::0",
+      "Seattle–Tacoma International Airport::sentence::1"
+    ]
+  },
+  "grafo_claim": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "5e53f71c-67ef-59be-ab7d-3fa6ec316007",
+        "text": "This chunk is about:\n- Places: SeaTac, Mount Baker station\n- Systems: Central Link Line\n- Topics: airport, city transit connections\n\nFacts:\n- Mount Baker station is included on the Central Link Line.\n- An airport is a terminus of the Central Link Line.\n- SeaTac is the name of the city that is home to that airport.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "7863e170-3d51-5929-a988-1bfb85af0391",
+        "text": "SeaTac is the name of the city that is home to the airport which is a terminus of the Central Link Line which includes Mount Baker station.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "5190e252-ef6e-555c-96b8-0f29681c6b8c",
+        "text": "text_eae0299182a853164c272bade2ff8c37",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "b14e3890-72d9-58fd-a1c0-d50284b0b5f4",
+        "text": "seatac",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "5f394058-b2a0-5ba8-8466-ba2a18cfcf4e",
+        "text": "place",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "9d39449d-2c6d-5028-a1fb-56786ae7cfdf",
+        "text": "the airport",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "bf4e4c3e-b564-5813-98fd-fbe90fd93d89",
+        "text": "central link line",
+        "type": "Entity"
+      },
+      {
+        "id": 7,
+        "original_id": "bd853a5c-84d5-541b-85d6-fa66ba1bd619",
+        "text": "mount baker station",
+        "type": "Entity"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 3,
+        "type": "located_in"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 5,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 6,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 7,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "is_terminus_of"
+      },
+      {
+        "source": 1,
+        "target": 6,
+        "type": "contains"
+      },
+      {
+        "source": 6,
+        "target": 7,
+        "type": "includes"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      }
+    ]
+  },
+  "grafo_evidencia": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "5e2ebafb-3356-5ec6-b62f-d6798e563bd1",
+        "text": "This chunk is about:\n- Places: Mount Baker station, Seattle–Tacoma International Airport, Seattle, SeaTac, Downtown Seattle, University of Washington\n- Systems: Link Light Rail system, Central Link line\n- Topics: station location, airport identifiers, regional service\n\nFacts:\n- Mount Baker station is a light rail station in Seattle, Washington.\n- Mount Baker station is between Columbia City station and Beacon Hill station on the Central Link line.\n- The Central Link line is part of the Link Light Rail system and runs from Seattle–Tacoma International Airport to Downtown Seattle and the University of Washington.\n- Seattle–Tacoma International Airport is the primary commercial airport serving the Seattle metropolitan area in Washington.\n- Seattle–Tacoma International Airport is also called Sea–Tac Airport or Sea–Tac.\n- Seattle–Tacoma International Airport has the identifiers IATA SEA, ICAO KSEA, and FAA LID SEA.\n- Seattle–Tacoma International Airport is in the city of SeaTac, about 13 miles south of Downtown Seattle.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "e5b2ee09-f996-5257-a82c-6e5f6b23ddb7",
+        "text": "Page: Mount Baker station. Sentence: Mount Baker is a light rail station located in Seattle, Washington.\nPage: Mount Baker station. Sentence: It is situated between the Columbia City and Beacon Hill stations on the Central Link line, which runs from Seattle–Tacoma International Airport to Downtown Seattle and the University of Washington as part of the Link Light Rail system.\nPage: Seattle–Tacoma International Airport. Sentence: Seattle–Tacoma International Airport (IATA: SEA, ICAO: KSEA, FAA LID: SEA) , also referred to as Sea–Tac Airport or Sea–Tac ( ), is the primary commercial airport serving the Seattle metropolitan area in the U.S. state of Washington.\nPage: Seattle–Tacoma International Airport. Sentence: It is located in the city of SeaTac, approximately 13 mi south of Downtown Seattle.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "404286e5-073c-5b12-b3e1-7e3127615235",
+        "text": "text_7bb73df6e3edab82ba16d7385fac01b4",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "bd853a5c-84d5-541b-85d6-fa66ba1bd619",
+        "text": "mount baker station",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "5f394058-b2a0-5ba8-8466-ba2a18cfcf4e",
+        "text": "place",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "1074faac-9f05-5db0-b358-82e027cc6dd5",
+        "text": "seattle",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "95142d38-e261-5f7d-8c2e-e06e59777e93",
+        "text": "washington",
+        "type": "Entity"
+      },
+      {
+        "id": 7,
+        "original_id": "291585c3-40de-5a49-8e45-8b0959941a78",
+        "text": "columbia city station",
+        "type": "Entity"
+      },
+      {
+        "id": 8,
+        "original_id": "b23c053f-a987-5e9b-b2fc-9e514a6e1625",
+        "text": "beacon hill station",
+        "type": "Entity"
+      },
+      {
+        "id": 9,
+        "original_id": "bf4e4c3e-b564-5813-98fd-fbe90fd93d89",
+        "text": "central link line",
+        "type": "Entity"
+      },
+      {
+        "id": 10,
+        "original_id": "10f473fa-2750-5c25-8e66-6c74578a3d94",
+        "text": "seattle–tacoma international airport",
+        "type": "Entity"
+      },
+      {
+        "id": 11,
+        "original_id": "884b6a09-f3b9-5bf4-94fd-ac5da10251a8",
+        "text": "seattle metropolitan area",
+        "type": "Entity"
+      },
+      {
+        "id": 12,
+        "original_id": "b14e3890-72d9-58fd-a1c0-d50284b0b5f4",
+        "text": "seatac",
+        "type": "Entity"
+      },
+      {
+        "id": 13,
+        "original_id": "9531bf07-7cd9-5fd1-a802-c2d2d295c25d",
+        "text": "downtown seattle",
+        "type": "Entity"
+      },
+      {
+        "id": 14,
+        "original_id": "af70959a-75d2-5200-b9b8-c2b6b6c0cdd4",
+        "text": "university of washington",
+        "type": "Entity"
+      },
+      {
+        "id": 15,
+        "original_id": "388f60fb-220d-55e8-ae9c-3ac93cead308",
+        "text": "organization",
+        "type": "EntityType"
+      },
+      {
+        "id": 16,
+        "original_id": "1a96b158-b274-5c43-8a2f-944772f8d11c",
+        "text": "link light rail system",
+        "type": "Entity"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 5,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 6,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 7,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 8,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 9,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 10,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 11,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 12,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 13,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 16,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "located_in"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "located_in"
+      },
+      {
+        "source": 10,
+        "target": 6,
+        "type": "located_in"
+      },
+      {
+        "source": 1,
+        "target": 6,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 7,
+        "type": "situated_between"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 8,
+        "type": "situated_between"
+      },
+      {
+        "source": 1,
+        "target": 8,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 9,
+        "type": "on_line"
+      },
+      {
+        "source": 1,
+        "target": 9,
+        "type": "contains"
+      },
+      {
+        "source": 9,
+        "target": 10,
+        "type": "runs_from"
+      },
+      {
+        "source": 1,
+        "target": 10,
+        "type": "contains"
+      },
+      {
+        "source": 10,
+        "target": 11,
+        "type": "serves"
+      },
+      {
+        "source": 1,
+        "target": 11,
+        "type": "contains"
+      },
+      {
+        "source": 10,
+        "target": 12,
+        "type": "located_in"
+      },
+      {
+        "source": 1,
+        "target": 12,
+        "type": "contains"
+      },
+      {
+        "source": 10,
+        "target": 13,
+        "type": "south_of"
+      },
+      {
+        "source": 9,
+        "target": 13,
+        "type": "runs_to"
+      },
+      {
+        "source": 1,
+        "target": 13,
+        "type": "contains"
+      },
+      {
+        "source": 9,
+        "target": 14,
+        "type": "runs_to"
+      },
+      {
+        "source": 1,
+        "target": 14,
+        "type": "contains"
+      },
+      {
+        "source": 14,
+        "target": 15,
+        "type": "is_a"
+      },
+      {
+        "source": 9,
+        "target": 16,
+        "type": "part_of"
+      },
+      {
+        "source": 1,
+        "target": 16,
+        "type": "contains"
+      }
+    ]
+  }
+}

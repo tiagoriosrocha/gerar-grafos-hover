@@ -1,0 +1,552 @@
+{
+  "dataset": "hover",
+  "id": "91034458-b7e8-4bf9-a4c8-1e6124887ccf",
+  "split": "train",
+  "claim": "Nick Grindé was born before the director of another movie. Hylda Baker appeared in this other movie.",
+  "evidencia": "Page: Nick Grinde. Sentence: Nick Grindé (January 12, 1893 – June 19, 1979) was an American film director and screenwriter.\nPage: Karel Reisz. Sentence: Karel Reisz (21 July 1926 – 25 November 2002) was a British filmmaker who was active in post–World War II Britain, and one of the pioneers of the new realist strain in British cinema during the 1950s and 1960s.\nPage: Saturday Night and Sunday Morning (film). Sentence: Saturday Night and Sunday Morning is a 1960 British drama film directed by Karel Reisz and produced by Tony Richardson.\nPage: Hylda Baker. Sentence: Born and brought up in Farnworth, Lancashire, she is perhaps most well known for her role as Nellie Pledge in the ITV sitcom \"Nearest and Dearest\" (1968–73) and for her role in the 1960 film \"Saturday Night and Sunday Morning\".",
+  "evidence_text": "Page: Nick Grinde. Sentence: Nick Grindé (January 12, 1893 – June 19, 1979) was an American film director and screenwriter.\nPage: Karel Reisz. Sentence: Karel Reisz (21 July 1926 – 25 November 2002) was a British filmmaker who was active in post–World War II Britain, and one of the pioneers of the new realist strain in British cinema during the 1950s and 1960s.\nPage: Saturday Night and Sunday Morning (film). Sentence: Saturday Night and Sunday Morning is a 1960 British drama film directed by Karel Reisz and produced by Tony Richardson.\nPage: Hylda Baker. Sentence: Born and brought up in Farnworth, Lancashire, she is perhaps most well known for her role as Nellie Pledge in the ITV sitcom \"Nearest and Dearest\" (1968–73) and for her role in the 1960 film \"Saturday Night and Sunday Morning\".",
+  "label": "SUPPORTED",
+  "num_hops": 4,
+  "hover_metadata": {
+    "supporting_facts": [
+      [
+        "Nick Grinde",
+        0
+      ],
+      [
+        "Karel Reisz",
+        0
+      ],
+      [
+        "Saturday Night and Sunday Morning (film)",
+        0
+      ],
+      [
+        "Hylda Baker",
+        1
+      ]
+    ],
+    "num_hops": 4,
+    "evidence_annotation_id": [
+      0
+    ],
+    "evidence_id": [
+      "Nick Grinde::sentence::0",
+      "Karel Reisz::sentence::0",
+      "Saturday Night and Sunday Morning (film)::sentence::0",
+      "Hylda Baker::sentence::1"
+    ],
+    "evidence_wiki_url": [
+      "https://en.wikipedia.org/wiki/Nick_Grinde",
+      "https://en.wikipedia.org/wiki/Karel_Reisz",
+      "https://en.wikipedia.org/wiki/Saturday_Night_and_Sunday_Morning_%28film%29",
+      "https://en.wikipedia.org/wiki/Hylda_Baker"
+    ],
+    "evidence_sentence_id": [
+      "Nick Grinde::sentence::0",
+      "Karel Reisz::sentence::0",
+      "Saturday Night and Sunday Morning (film)::sentence::0",
+      "Hylda Baker::sentence::1"
+    ]
+  },
+  "grafo_claim": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "99b985c6-bb74-5dac-adac-9905d12a3a53",
+        "text": "This chunk is about:\n- People: Nick Grindé, Hylda Baker\n- Roles: film director, actor\n- Topics: birth order, appearance in another movie\n\nFacts:\n- Nick Grindé was born before the director of another movie.\n- Hylda Baker appeared in that other movie.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "d9762464-701a-5d73-807c-641969deaed9",
+        "text": "Nick Grindé was born before the director of another movie. Hylda Baker appeared in this other movie.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "343a06a3-1e95-5845-b6fd-f1b947cb5041",
+        "text": "text_484525200e7993d562c66061f74d7cc1",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "9509fd1b-411a-5ca5-971d-875e46cf1eaf",
+        "text": "nick grindé",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "99a82eec-bb35-5bb5-9ed2-e73fc7a756de",
+        "text": "person",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "87622846-3b5b-5ad1-b791-1ba3800801bd",
+        "text": "director of the other movie",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "4620da16-5f47-5eae-9249-34bd281452b0",
+        "text": "other movie",
+        "type": "Entity"
+      },
+      {
+        "id": 7,
+        "original_id": "1155038a-04d1-5d6a-9c60-e4f499a6913c",
+        "text": "movie",
+        "type": "EntityType"
+      },
+      {
+        "id": 8,
+        "original_id": "193b39e7-a3a3-570b-99cf-d5060e57dbef",
+        "text": "hylda baker",
+        "type": "Entity"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 5,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 8,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "born_before"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "directed"
+      },
+      {
+        "source": 1,
+        "target": 6,
+        "type": "contains"
+      },
+      {
+        "source": 8,
+        "target": 6,
+        "type": "appeared_in"
+      },
+      {
+        "source": 6,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 8,
+        "type": "contains"
+      }
+    ]
+  },
+  "grafo_evidencia": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "4afc325b-cffc-55ce-8a88-63a7d0eee0e4",
+        "text": "This chunk is about:\n- People: Nick Grinde, Karel Reisz, Hylda Baker, Tony Richardson\n- Works: Saturday Night and Sunday Morning, Nearest and Dearest\n- Places: Britain, Farnworth, Lancashire\n- Topics: British cinema, realist film movement\n\nFacts:\n- Nick Grindé was an American film director and screenwriter who lived from January 12, 1893 to June 19, 1979.\n- Karel Reisz was a British filmmaker who lived from 21 July 1926 to 25 November 2002.\n- Karel Reisz was one of the pioneers of the new realist strain in British cinema during the 1950s and 1960s and was active in post–World War II Britain.\n- Saturday Night and Sunday Morning is a 1960 British drama film directed by Karel Reisz and produced by Tony Richardson.\n- Hylda Baker was born and brought up in Farnworth, Lancashire.\n- Hylda Baker is known for her role in the 1960 film Saturday Night and Sunday Morning.\n- Hylda Baker is perhaps best known for playing Nellie Pledge in the ITV sitcom Nearest and Dearest from 1968 to 1973.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "2aa3e22c-68b8-594f-adc0-d66d254e32b6",
+        "text": "Page: Nick Grinde. Sentence: Nick Grindé (January 12, 1893 – June 19, 1979) was an American film director and screenwriter.\nPage: Karel Reisz. Sentence: Karel Reisz (21 July 1926 – 25 November 2002) was a British filmmaker who was active in post–World War II Britain, and one of the pioneers of the new realist strain in British cinema during the 1950s and 1960s.\nPage: Saturday Night and Sunday Morning (film). Sentence: Saturday Night and Sunday Morning is a 1960 British drama film directed by Karel Reisz and produced by Tony Richardson.\nPage: Hylda Baker. Sentence: Born and brought up in Farnworth, Lancashire, she is perhaps most well known for her role as Nellie Pledge in the ITV sitcom \"Nearest and Dearest\" (1968–73) and for her role in the 1960 film \"Saturday Night and Sunday Morning\".",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "cd4f8deb-068e-5565-9eb5-1e709de3d15f",
+        "text": "text_29f7fd943bd0fee826476d9729a82655",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "9509fd1b-411a-5ca5-971d-875e46cf1eaf",
+        "text": "nick grindé",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "99a82eec-bb35-5bb5-9ed2-e73fc7a756de",
+        "text": "person",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "bcf20327-a0f6-564b-b865-76efaa8b7e65",
+        "text": "1893-01-12",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "b19433ae-558c-5aaf-95ac-6231f2a4be0e",
+        "text": "date",
+        "type": "EntityType"
+      },
+      {
+        "id": 7,
+        "original_id": "7c5fab35-6152-5e98-bb31-6c9527965e2e",
+        "text": "1979-06-19",
+        "type": "Entity"
+      },
+      {
+        "id": 8,
+        "original_id": "ebb4ee70-e011-5a41-8949-a134ad5b24f9",
+        "text": "karel reisz",
+        "type": "Entity"
+      },
+      {
+        "id": 9,
+        "original_id": "c83f5a31-82d1-562f-a88d-7848e57a007f",
+        "text": "1926-07-21",
+        "type": "Entity"
+      },
+      {
+        "id": 10,
+        "original_id": "36e16c8c-dad4-5b6b-9600-dd7be212395b",
+        "text": "2002-11-25",
+        "type": "Entity"
+      },
+      {
+        "id": 11,
+        "original_id": "2de5dda7-a01c-5dae-9f0e-bbd6a061ae79",
+        "text": "saturday night and sunday morning",
+        "type": "Entity"
+      },
+      {
+        "id": 12,
+        "original_id": "d320c8df-fd51-56e6-b577-e01a688fe6fc",
+        "text": "film",
+        "type": "EntityType"
+      },
+      {
+        "id": 13,
+        "original_id": "5b610230-b495-5c46-897d-5b4629ebbbb1",
+        "text": "1960",
+        "type": "Entity"
+      },
+      {
+        "id": 14,
+        "original_id": "01464528-f1a1-58e9-9116-c5616e3761ea",
+        "text": "tony richardson",
+        "type": "Entity"
+      },
+      {
+        "id": 15,
+        "original_id": "193b39e7-a3a3-570b-99cf-d5060e57dbef",
+        "text": "hylda baker",
+        "type": "Entity"
+      },
+      {
+        "id": 16,
+        "original_id": "16951106-58c4-5d22-9f5e-c443a9b16766",
+        "text": "farnworth, lancashire",
+        "type": "Entity"
+      },
+      {
+        "id": 17,
+        "original_id": "5f394058-b2a0-5ba8-8466-ba2a18cfcf4e",
+        "text": "place",
+        "type": "EntityType"
+      },
+      {
+        "id": 18,
+        "original_id": "1bc1c9d1-82cb-5414-a0b7-90c511a6aae1",
+        "text": "nellie pledge",
+        "type": "Entity"
+      },
+      {
+        "id": 19,
+        "original_id": "d3db161f-3fd9-5366-919b-ad9f9a1ba392",
+        "text": "character",
+        "type": "EntityType"
+      },
+      {
+        "id": 20,
+        "original_id": "6c638d63-f2c7-53ff-b5d2-666fe16cc4a1",
+        "text": "nearest and dearest",
+        "type": "Entity"
+      },
+      {
+        "id": 21,
+        "original_id": "ce2f0c86-331f-510d-8c16-2c9f70a95e72",
+        "text": "television series",
+        "type": "EntityType"
+      },
+      {
+        "id": 22,
+        "original_id": "909831ea-3dcb-5f8b-b7f8-ae1ea716f0fa",
+        "text": "1968",
+        "type": "Entity"
+      },
+      {
+        "id": 23,
+        "original_id": "39e9a75c-18e0-5c79-94c6-266b4a369596",
+        "text": "1973",
+        "type": "Entity"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 8,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 14,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 15,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "born_on"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 7,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 9,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 10,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 13,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 22,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 23,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 7,
+        "type": "died_on"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      },
+      {
+        "source": 1,
+        "target": 8,
+        "type": "contains"
+      },
+      {
+        "source": 11,
+        "target": 8,
+        "type": "directed_by"
+      },
+      {
+        "source": 8,
+        "target": 9,
+        "type": "born_on"
+      },
+      {
+        "source": 1,
+        "target": 9,
+        "type": "contains"
+      },
+      {
+        "source": 8,
+        "target": 10,
+        "type": "died_on"
+      },
+      {
+        "source": 1,
+        "target": 10,
+        "type": "contains"
+      },
+      {
+        "source": 1,
+        "target": 11,
+        "type": "contains"
+      },
+      {
+        "source": 15,
+        "target": 11,
+        "type": "appeared_in"
+      },
+      {
+        "source": 11,
+        "target": 12,
+        "type": "is_a"
+      },
+      {
+        "source": 11,
+        "target": 13,
+        "type": "released_in"
+      },
+      {
+        "source": 1,
+        "target": 13,
+        "type": "contains"
+      },
+      {
+        "source": 11,
+        "target": 14,
+        "type": "produced_by"
+      },
+      {
+        "source": 1,
+        "target": 14,
+        "type": "contains"
+      },
+      {
+        "source": 1,
+        "target": 15,
+        "type": "contains"
+      },
+      {
+        "source": 15,
+        "target": 16,
+        "type": "born_in"
+      },
+      {
+        "source": 1,
+        "target": 16,
+        "type": "contains"
+      },
+      {
+        "source": 16,
+        "target": 17,
+        "type": "is_a"
+      },
+      {
+        "source": 15,
+        "target": 18,
+        "type": "played_role"
+      },
+      {
+        "source": 1,
+        "target": 18,
+        "type": "contains"
+      },
+      {
+        "source": 18,
+        "target": 19,
+        "type": "is_a"
+      },
+      {
+        "source": 18,
+        "target": 20,
+        "type": "appears_in"
+      },
+      {
+        "source": 1,
+        "target": 20,
+        "type": "contains"
+      },
+      {
+        "source": 20,
+        "target": 21,
+        "type": "is_a"
+      },
+      {
+        "source": 20,
+        "target": 22,
+        "type": "started_in"
+      },
+      {
+        "source": 1,
+        "target": 22,
+        "type": "contains"
+      },
+      {
+        "source": 20,
+        "target": 23,
+        "type": "ended_in"
+      },
+      {
+        "source": 1,
+        "target": 23,
+        "type": "contains"
+      }
+    ]
+  }
+}

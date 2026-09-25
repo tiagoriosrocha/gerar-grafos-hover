@@ -1,0 +1,414 @@
+{
+  "dataset": "hover",
+  "id": "3a093e4e-cbad-4b68-9883-f487ff440387",
+  "split": "train",
+  "claim": "Fragaria is not edible. Neither is the plant genus that was named in honor of a british man. The man was the successor to Giovanni Targioni Tozzetti.",
+  "evidencia": "Page: Manettia. Sentence: Manettia is a genus of flowering plants in the family Rubiaceae.\nPage: Fragaria. Sentence: Fragaria is a genus of flowering plants in the rose family, Rosaceae, commonly known as strawberries for their edible fruits.\nPage: Saverio Manetti. Sentence: The plant genus \"Manettia\" was named in his honour by Carolus Linnaeus.\nPage: Giovanni Targioni Tozzetti. Sentence: He was supervisor of the Orto Botanico di Firenze in Florence succeeded by Saverio Manetti.",
+  "evidence_text": "Page: Manettia. Sentence: Manettia is a genus of flowering plants in the family Rubiaceae.\nPage: Fragaria. Sentence: Fragaria is a genus of flowering plants in the rose family, Rosaceae, commonly known as strawberries for their edible fruits.\nPage: Saverio Manetti. Sentence: The plant genus \"Manettia\" was named in his honour by Carolus Linnaeus.\nPage: Giovanni Targioni Tozzetti. Sentence: He was supervisor of the Orto Botanico di Firenze in Florence succeeded by Saverio Manetti.",
+  "label": "NOT_SUPPORTED",
+  "num_hops": 4,
+  "hover_metadata": {
+    "supporting_facts": [
+      [
+        "Manettia",
+        0
+      ],
+      [
+        "Fragaria",
+        0
+      ],
+      [
+        "Saverio Manetti",
+        2
+      ],
+      [
+        "Giovanni Targioni Tozzetti",
+        1
+      ]
+    ],
+    "num_hops": 4,
+    "evidence_annotation_id": [
+      0
+    ],
+    "evidence_id": [
+      "Manettia::sentence::0",
+      "Fragaria::sentence::0",
+      "Saverio Manetti::sentence::2",
+      "Giovanni Targioni Tozzetti::sentence::1"
+    ],
+    "evidence_wiki_url": [
+      "https://en.wikipedia.org/wiki/Manettia",
+      "https://en.wikipedia.org/wiki/Fragaria",
+      "https://en.wikipedia.org/wiki/Saverio_Manetti",
+      "https://en.wikipedia.org/wiki/Giovanni_Targioni_Tozzetti"
+    ],
+    "evidence_sentence_id": [
+      "Manettia::sentence::0",
+      "Fragaria::sentence::0",
+      "Saverio Manetti::sentence::2",
+      "Giovanni Targioni Tozzetti::sentence::1"
+    ]
+  },
+  "grafo_claim": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "482d358b-1b8f-5165-b1d1-4358a63e079b",
+        "text": "This chunk is about:\n- Plants: Fragaria\n- Plant genera: a genus named after a British man\n- People: Giovanni Targioni Tozzetti, a British man\n- Roles: successor\n\nFacts:\n- Fragaria is not edible.\n- A plant genus named in honor of a British man is not edible.\n- The British man was the successor to Giovanni Targioni Tozzetti.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "a10362e0-b7e9-5521-bd7d-3cac7c0b792d",
+        "text": "Fragaria is not edible. Neither is the plant genus that was named in honor of a british man. The man was the successor to Giovanni Targioni Tozzetti.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "521a6d1d-a2b7-50e3-82af-76e587ba4619",
+        "text": "text_e3a2c8213fa22681fa5ad294985a58a9",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "fc2149e8-2ae3-51cd-bb05-e36acf0b337c",
+        "text": "fragaria",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "2df43048-b175-54c2-b72b-0ff24f41e4f1",
+        "text": "plant",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "544892a6-02f6-59e7-95ee-f6b38a05ccac",
+        "text": "plant genus named in honor of a british man",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "e481f531-e0db-5799-a965-3d5cc9c8170b",
+        "text": "british man",
+        "type": "Entity"
+      },
+      {
+        "id": 7,
+        "original_id": "99a82eec-bb35-5bb5-9ed2-e73fc7a756de",
+        "text": "person",
+        "type": "EntityType"
+      },
+      {
+        "id": 8,
+        "original_id": "4258a8f4-696c-5f5a-8847-ef494d8b5185",
+        "text": "giovanni targioni tozzetti",
+        "type": "Entity"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 5,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "is_not"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "named_in_honor_of"
+      },
+      {
+        "source": 1,
+        "target": 6,
+        "type": "contains"
+      },
+      {
+        "source": 6,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 8,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 6,
+        "target": 8,
+        "type": "succeeded"
+      },
+      {
+        "source": 1,
+        "target": 8,
+        "type": "contains"
+      }
+    ]
+  },
+  "grafo_evidencia": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "6405488c-8c98-5f9b-8ad7-6e2ad9522a6a",
+        "text": "This chunk is about:\n- Plants: Manettia, Fragaria\n- People: Saverio Manetti, Giovanni Targioni Tozzetti, Carolus Linnaeus\n- Organizations: Orto Botanico di Firenze\n- Concepts: plant taxonomy, botanical naming\n\nFacts:\n- Giovanni Targioni Tozzetti was supervisor of the Orto Botanico di Firenze in Florence before Saverio Manetti succeeded him.\n- Carolus Linnaeus named the plant genus Manettia in honour of Saverio Manetti.\n- Manettia is a genus of flowering plants in the family Rubiaceae.\n- Fragaria is a genus of flowering plants in the family Rosaceae.\n- Fragaria plants are commonly known as strawberries for their edible fruits.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "7bb57b96-3031-5e4c-a163-a94486383d2e",
+        "text": "Page: Manettia. Sentence: Manettia is a genus of flowering plants in the family Rubiaceae.\nPage: Fragaria. Sentence: Fragaria is a genus of flowering plants in the rose family, Rosaceae, commonly known as strawberries for their edible fruits.\nPage: Saverio Manetti. Sentence: The plant genus \"Manettia\" was named in his honour by Carolus Linnaeus.\nPage: Giovanni Targioni Tozzetti. Sentence: He was supervisor of the Orto Botanico di Firenze in Florence succeeded by Saverio Manetti.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "14959d71-e6eb-5cdf-b199-192c36be2d99",
+        "text": "text_61da0be1d2966a65a31ee07d06f59fc6",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "3d54d926-3af8-5636-9607-3b7efe06e093",
+        "text": "manettia",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "f7b4540f-d32c-51b3-8970-f282fffab519",
+        "text": "taxon",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "babf75c3-1538-520c-b99d-b9865adf1644",
+        "text": "rubiaceae",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "990525b2-d06c-5608-b3f4-ea6ab4dbe534",
+        "text": "saverio manetti",
+        "type": "Entity"
+      },
+      {
+        "id": 7,
+        "original_id": "99a82eec-bb35-5bb5-9ed2-e73fc7a756de",
+        "text": "person",
+        "type": "EntityType"
+      },
+      {
+        "id": 8,
+        "original_id": "4258a8f4-696c-5f5a-8847-ef494d8b5185",
+        "text": "giovanni targioni tozzetti",
+        "type": "Entity"
+      },
+      {
+        "id": 9,
+        "original_id": "9f914567-c878-541d-bdda-6751b453c554",
+        "text": "orto botanico di firenze",
+        "type": "Entity"
+      },
+      {
+        "id": 10,
+        "original_id": "388f60fb-220d-55e8-ae9c-3ac93cead308",
+        "text": "organization",
+        "type": "EntityType"
+      },
+      {
+        "id": 11,
+        "original_id": "993ced52-6c81-5cd7-9277-f5ad27ce1bbf",
+        "text": "florence",
+        "type": "Entity"
+      },
+      {
+        "id": 12,
+        "original_id": "5f394058-b2a0-5ba8-8466-ba2a18cfcf4e",
+        "text": "place",
+        "type": "EntityType"
+      },
+      {
+        "id": 13,
+        "original_id": "fc2149e8-2ae3-51cd-bb05-e36acf0b337c",
+        "text": "fragaria",
+        "type": "Entity"
+      },
+      {
+        "id": 14,
+        "original_id": "1b8ef2c8-bcb3-5236-8e90-c9a1f7c6788d",
+        "text": "rosaceae",
+        "type": "Entity"
+      },
+      {
+        "id": 15,
+        "original_id": "05e1702a-ef47-5ede-a571-b92196818695",
+        "text": "carolus linnaeus",
+        "type": "Entity"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 15,
+        "target": 3,
+        "type": "named"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 5,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 13,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 14,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "in_family"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 6,
+        "type": "named_in_honour_of"
+      },
+      {
+        "source": 1,
+        "target": 6,
+        "type": "contains"
+      },
+      {
+        "source": 6,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 8,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 15,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 6,
+        "target": 8,
+        "type": "succeeded"
+      },
+      {
+        "source": 1,
+        "target": 8,
+        "type": "contains"
+      },
+      {
+        "source": 8,
+        "target": 9,
+        "type": "supervisor_of"
+      },
+      {
+        "source": 1,
+        "target": 9,
+        "type": "contains"
+      },
+      {
+        "source": 9,
+        "target": 10,
+        "type": "is_a"
+      },
+      {
+        "source": 9,
+        "target": 11,
+        "type": "located_in"
+      },
+      {
+        "source": 1,
+        "target": 11,
+        "type": "contains"
+      },
+      {
+        "source": 11,
+        "target": 12,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 13,
+        "type": "contains"
+      },
+      {
+        "source": 13,
+        "target": 14,
+        "type": "in_family"
+      },
+      {
+        "source": 1,
+        "target": 14,
+        "type": "contains"
+      },
+      {
+        "source": 1,
+        "target": 15,
+        "type": "contains"
+      }
+    ]
+  }
+}

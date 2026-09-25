@@ -1,0 +1,521 @@
+{
+  "dataset": "hover",
+  "id": "b1da075d-08ed-4588-8581-7375010f9d11",
+  "split": "train",
+  "claim": "The airport that is a 30-minute drive from Coldwaltham, is the busiest airport in the United Kingdom outside of London.",
+  "evidencia": "Page: Gatwick Airport. Sentence: Gatwick Airport (also known as London Gatwick) (IATA: LGW, ICAO: EGKK) is a major international airport in south-east England, 29.5 mi south of Central London and 2.7 NM north of Crawley.\nPage: Gatwick Airport. Sentence: It is the second-busiest airport by total passenger traffic in the United Kingdom, after London Heathrow.\nPage: Heathrow Airport. Sentence: Heathrow Airport (also known as London Heathrow) (IATA: LHR, ICAO: EGLL) is a major international airport in London, United Kingdom.\nPage: Coldwaltham. Sentence: It is around a 30-minute drive from Gatwick Airport.",
+  "evidence_text": "Page: Gatwick Airport. Sentence: Gatwick Airport (also known as London Gatwick) (IATA: LGW, ICAO: EGKK) is a major international airport in south-east England, 29.5 mi south of Central London and 2.7 NM north of Crawley.\nPage: Gatwick Airport. Sentence: It is the second-busiest airport by total passenger traffic in the United Kingdom, after London Heathrow.\nPage: Heathrow Airport. Sentence: Heathrow Airport (also known as London Heathrow) (IATA: LHR, ICAO: EGLL) is a major international airport in London, United Kingdom.\nPage: Coldwaltham. Sentence: It is around a 30-minute drive from Gatwick Airport.",
+  "label": "SUPPORTED",
+  "num_hops": 3,
+  "hover_metadata": {
+    "supporting_facts": [
+      [
+        "Gatwick Airport",
+        0
+      ],
+      [
+        "Gatwick Airport",
+        1
+      ],
+      [
+        "Heathrow Airport",
+        0
+      ],
+      [
+        "Coldwaltham",
+        2
+      ]
+    ],
+    "num_hops": 3,
+    "evidence_annotation_id": [
+      0
+    ],
+    "evidence_id": [
+      "Gatwick Airport::sentence::0",
+      "Gatwick Airport::sentence::1",
+      "Heathrow Airport::sentence::0",
+      "Coldwaltham::sentence::2"
+    ],
+    "evidence_wiki_url": [
+      "https://en.wikipedia.org/wiki/Gatwick_Airport",
+      "https://en.wikipedia.org/wiki/Heathrow_Airport",
+      "https://en.wikipedia.org/wiki/Coldwaltham"
+    ],
+    "evidence_sentence_id": [
+      "Gatwick Airport::sentence::0",
+      "Gatwick Airport::sentence::1",
+      "Heathrow Airport::sentence::0",
+      "Coldwaltham::sentence::2"
+    ]
+  },
+  "grafo_claim": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "964bdced-d45b-50c1-8e98-7a6c337003c2",
+        "text": "This chunk is about:\n- Places: Coldwaltham, London, United Kingdom\n- Transportation: airports\n\nFacts:\n- Coldwaltham is about a 30-minute drive from an airport.\n- That airport is the busiest airport in the United Kingdom outside of London.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "24181c0b-5551-5f97-92dc-e9b5d74a686d",
+        "text": "The airport that is a 30-minute drive from Coldwaltham, is the busiest airport in the United Kingdom outside of London.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "fdbf9178-fed5-5dad-890a-b1828da972ff",
+        "text": "text_30b4d9e5dbfc66a16cd09c6a7ff69156",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "b15c0d30-228b-53a1-8c10-5720c6a092ff",
+        "text": "coldwaltham",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "5f394058-b2a0-5ba8-8466-ba2a18cfcf4e",
+        "text": "place",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "dd77853b-e5d9-5809-bbd2-b3046921266f",
+        "text": "the busiest airport in the united kingdom outside of london",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "1941be33-5fbb-50eb-a9b1-fa2fc297d7dd",
+        "text": "united kingdom",
+        "type": "Entity"
+      },
+      {
+        "id": 7,
+        "original_id": "29402dc0-a0ae-5d8e-8034-e62d821db121",
+        "text": "london",
+        "type": "Entity"
+      },
+      {
+        "id": 8,
+        "original_id": "50596f1a-2d8a-5de7-96b5-ba7068791784",
+        "text": "airport",
+        "type": "EntityType"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 3,
+        "type": "is_30_minute_drive_from"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 6,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 7,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "is_busiest_airport_outside_london_in"
+      },
+      {
+        "source": 1,
+        "target": 6,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 7,
+        "type": "is_ranked_outside"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 8,
+        "type": "is_a"
+      }
+    ]
+  },
+  "grafo_evidencia": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "7c3c04e0-ef1e-50e9-ba22-67ac4400c5eb",
+        "text": "This chunk is about:\n- Places: Gatwick Airport, Heathrow Airport, Coldwaltham, Central London, Crawley, London, south-east England, United Kingdom\n- Products: IATA airport codes, ICAO airport codes\n- Topics: airport location, passenger traffic, travel distance\n\nFacts:\n- Gatwick Airport, also known as London Gatwick, has the IATA code LGW and the ICAO code EGKK.\n- Gatwick Airport is a major international airport in south-east England, 29.5 miles south of Central London and 2.7 nautical miles north of Crawley.\n- Gatwick Airport is the second-busiest airport in the United Kingdom by total passenger traffic after London Heathrow.\n- Heathrow Airport, also known as London Heathrow, has the IATA code LHR and the ICAO code EGLL.\n- Heathrow Airport is a major international airport in London, United Kingdom.\n- Coldwaltham is around a 30-minute drive from Gatwick Airport.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "aa1692ed-6830-51da-8239-bb3ba90ecae1",
+        "text": "Page: Gatwick Airport. Sentence: Gatwick Airport (also known as London Gatwick) (IATA: LGW, ICAO: EGKK) is a major international airport in south-east England, 29.5 mi south of Central London and 2.7 NM north of Crawley.\nPage: Gatwick Airport. Sentence: It is the second-busiest airport by total passenger traffic in the United Kingdom, after London Heathrow.\nPage: Heathrow Airport. Sentence: Heathrow Airport (also known as London Heathrow) (IATA: LHR, ICAO: EGLL) is a major international airport in London, United Kingdom.\nPage: Coldwaltham. Sentence: It is around a 30-minute drive from Gatwick Airport.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "d2e26be7-8d94-5908-a88b-5de200db15f5",
+        "text": "text_7d80405f80d3152faa44198714974ee0",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "03afde1c-5462-5f57-88ee-8e8223c9ee6f",
+        "text": "gatwick airport",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "d0aff54a-dd70-5b8d-b754-291bccd222b6",
+        "text": "london gatwick",
+        "type": "Entity"
+      },
+      {
+        "id": 5,
+        "original_id": "5f394058-b2a0-5ba8-8466-ba2a18cfcf4e",
+        "text": "place",
+        "type": "EntityType"
+      },
+      {
+        "id": 6,
+        "original_id": "9e70b997-97ce-5132-9293-fde797bd972d",
+        "text": "lgw",
+        "type": "Entity"
+      },
+      {
+        "id": 7,
+        "original_id": "2c23f4f7-2223-5c53-a5f6-1bd0114fcd6a",
+        "text": "code",
+        "type": "EntityType"
+      },
+      {
+        "id": 8,
+        "original_id": "abb0dd86-bcaf-59bd-9cdd-0e2f0023fc31",
+        "text": "egkk",
+        "type": "Entity"
+      },
+      {
+        "id": 9,
+        "original_id": "b2a50543-a843-5676-b88d-006da73b164b",
+        "text": "south-east england",
+        "type": "Entity"
+      },
+      {
+        "id": 10,
+        "original_id": "670d1a9e-83b3-587d-849c-698b387e0f9b",
+        "text": "central london",
+        "type": "Entity"
+      },
+      {
+        "id": 11,
+        "original_id": "7dbf4515-c7b3-5f97-a22f-595106093c54",
+        "text": "crawley",
+        "type": "Entity"
+      },
+      {
+        "id": 12,
+        "original_id": "1941be33-5fbb-50eb-a9b1-fa2fc297d7dd",
+        "text": "united kingdom",
+        "type": "Entity"
+      },
+      {
+        "id": 13,
+        "original_id": "0c914b4c-fc6e-598e-bd04-66175cfd9864",
+        "text": "heathrow airport",
+        "type": "Entity"
+      },
+      {
+        "id": 14,
+        "original_id": "36cb4a2a-3c68-5777-81b4-d1570f5060ae",
+        "text": "london heathrow",
+        "type": "Entity"
+      },
+      {
+        "id": 15,
+        "original_id": "98270e53-af9f-5a6d-a175-6e2bc1ee63f7",
+        "text": "lhr",
+        "type": "Entity"
+      },
+      {
+        "id": 16,
+        "original_id": "10ed64f8-ddb8-52c0-add7-e9d1ac86e655",
+        "text": "egll",
+        "type": "Entity"
+      },
+      {
+        "id": 17,
+        "original_id": "29402dc0-a0ae-5d8e-8034-e62d821db121",
+        "text": "london",
+        "type": "Entity"
+      },
+      {
+        "id": 18,
+        "original_id": "b15c0d30-228b-53a1-8c10-5720c6a092ff",
+        "text": "coldwaltham",
+        "type": "Entity"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 18,
+        "target": 3,
+        "type": "drive_time_from"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "also_known_as"
+      },
+      {
+        "source": 1,
+        "target": 4,
+        "type": "contains"
+      },
+      {
+        "source": 4,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 9,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 10,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 11,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 12,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 14,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 17,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 13,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 18,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 6,
+        "type": "has_iata_code"
+      },
+      {
+        "source": 1,
+        "target": 6,
+        "type": "contains"
+      },
+      {
+        "source": 6,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 8,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 15,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 16,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 8,
+        "type": "has_icao_code"
+      },
+      {
+        "source": 1,
+        "target": 8,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 9,
+        "type": "located_in"
+      },
+      {
+        "source": 1,
+        "target": 9,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 10,
+        "type": "south_of"
+      },
+      {
+        "source": 1,
+        "target": 10,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 11,
+        "type": "north_of"
+      },
+      {
+        "source": 1,
+        "target": 11,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 12,
+        "type": "ranked_by_passenger_traffic_in"
+      },
+      {
+        "source": 17,
+        "target": 12,
+        "type": "located_in"
+      },
+      {
+        "source": 13,
+        "target": 12,
+        "type": "located_in"
+      },
+      {
+        "source": 1,
+        "target": 12,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 13,
+        "type": "second_to_by_passenger_traffic"
+      },
+      {
+        "source": 1,
+        "target": 13,
+        "type": "contains"
+      },
+      {
+        "source": 13,
+        "target": 14,
+        "type": "also_known_as"
+      },
+      {
+        "source": 1,
+        "target": 14,
+        "type": "contains"
+      },
+      {
+        "source": 13,
+        "target": 15,
+        "type": "has_iata_code"
+      },
+      {
+        "source": 1,
+        "target": 15,
+        "type": "contains"
+      },
+      {
+        "source": 13,
+        "target": 16,
+        "type": "has_icao_code"
+      },
+      {
+        "source": 1,
+        "target": 16,
+        "type": "contains"
+      },
+      {
+        "source": 13,
+        "target": 17,
+        "type": "located_in"
+      },
+      {
+        "source": 1,
+        "target": 17,
+        "type": "contains"
+      },
+      {
+        "source": 1,
+        "target": 18,
+        "type": "contains"
+      }
+    ]
+  }
+}

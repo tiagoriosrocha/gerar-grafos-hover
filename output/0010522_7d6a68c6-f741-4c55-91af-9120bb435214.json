@@ -1,0 +1,433 @@
+{
+  "dataset": "hover",
+  "id": "7d6a68c6-f741-4c55-91af-9120bb435214",
+  "split": "train",
+  "claim": "The highway Interstate 39 replaces has a junction at Cairo Junction. It is 1286 miles long.",
+  "evidencia": "Page: Cairo Junction, Illinois. Sentence: Cairo Junction is located at the junction of U.S. Route 51, Illinois Route 3, and Illinois Route 37 north of Cairo.\nPage: U.S. Route 51. Sentence: U.S. Route 51 is a south-north United States highway that runs for 1286 mi from the western suburbs of New Orleans, Louisiana to within 100 ft of the Wisconsin–Michigan border.\nPage: Interstate 39. Sentence: I-39 was designed to replace U.S. Route 51 (US 51), which in the early 1980s was one of the busiest two-lane highways in the United States.",
+  "evidence_text": "Page: Cairo Junction, Illinois. Sentence: Cairo Junction is located at the junction of U.S. Route 51, Illinois Route 3, and Illinois Route 37 north of Cairo.\nPage: U.S. Route 51. Sentence: U.S. Route 51 is a south-north United States highway that runs for 1286 mi from the western suburbs of New Orleans, Louisiana to within 100 ft of the Wisconsin–Michigan border.\nPage: Interstate 39. Sentence: I-39 was designed to replace U.S. Route 51 (US 51), which in the early 1980s was one of the busiest two-lane highways in the United States.",
+  "label": "SUPPORTED",
+  "num_hops": 3,
+  "hover_metadata": {
+    "supporting_facts": [
+      [
+        "Cairo Junction, Illinois",
+        1
+      ],
+      [
+        "U.S. Route 51",
+        0
+      ],
+      [
+        "Interstate 39",
+        2
+      ]
+    ],
+    "num_hops": 3,
+    "evidence_annotation_id": [
+      0
+    ],
+    "evidence_id": [
+      "Cairo Junction, Illinois::sentence::1",
+      "U.S. Route 51::sentence::0",
+      "Interstate 39::sentence::2"
+    ],
+    "evidence_wiki_url": [
+      "https://en.wikipedia.org/wiki/Cairo_Junction%2C_Illinois",
+      "https://en.wikipedia.org/wiki/U.S._Route_51",
+      "https://en.wikipedia.org/wiki/Interstate_39"
+    ],
+    "evidence_sentence_id": [
+      "Cairo Junction, Illinois::sentence::1",
+      "U.S. Route 51::sentence::0",
+      "Interstate 39::sentence::2"
+    ]
+  },
+  "grafo_claim": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "b7a059ca-0c59-53a0-aa32-87f598e7fa90",
+        "text": "This chunk is about:\n- Places: Cairo Junction\n- Systems: Interstate 39\n- Topics: highways, route replacement, road length\n\nFacts:\n- Interstate 39 replaces a highway that has a junction at Cairo Junction.\n- The highway replaced by Interstate 39 is 1,286 miles long.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "b5ac261b-a32f-5271-8056-81d6b501635a",
+        "text": "The highway Interstate 39 replaces has a junction at Cairo Junction. It is 1286 miles long.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "489828de-4109-5b99-a5cd-f2fb5eaa8f38",
+        "text": "text_4216d6ae8126f2f475bf1bc14814cd22",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "9acf019d-a60b-5ab4-9861-14b45e29d6b8",
+        "text": "interstate 39",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "5e52d312-a248-534f-a58b-25c5426a89ad",
+        "text": "road",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "449c7648-1f90-50c3-abdf-9011250dbbe7",
+        "text": "cairo junction",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "5f394058-b2a0-5ba8-8466-ba2a18cfcf4e",
+        "text": "place",
+        "type": "EntityType"
+      },
+      {
+        "id": 7,
+        "original_id": "aa06a2d7-cd3c-5db1-a884-c9fcf33ec4d4",
+        "text": "1286 miles",
+        "type": "Entity"
+      },
+      {
+        "id": 8,
+        "original_id": "12d5521e-a878-542e-bebc-84ff79179d8e",
+        "text": "measurement",
+        "type": "EntityType"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "replaces_highway_has_junction_at"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 7,
+        "type": "replaces_highway_length"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      },
+      {
+        "source": 7,
+        "target": 8,
+        "type": "is_a"
+      }
+    ]
+  },
+  "grafo_evidencia": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "9b3a26d3-e2e3-5c86-9cfd-3b0ff8ee03ad",
+        "text": "This chunk is about:\n- Places: Cairo Junction, Cairo, Illinois\n- Roads: U.S. Route 51, Illinois Route 3, Illinois Route 37, Interstate 39\n- Topics: Highway location, highway route, highway replacement\n\nFacts:\n- U.S. Route 51 is a south-north United States highway that runs 1,286 miles from the western suburbs of New Orleans, Louisiana, to within 100 feet of the Wisconsin–Michigan border.\n- In the early 1980s, U.S. Route 51 was one of the busiest two-lane highways in the United States.\n- Interstate 39 was designed to replace U.S. Route 51.\n- Cairo Junction, Illinois, is located at the junction of U.S. Route 51, Illinois Route 3, and Illinois Route 37 north of Cairo.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "b7403ca6-3b2e-5b09-b4a4-0007fe271050",
+        "text": "Page: Cairo Junction, Illinois. Sentence: Cairo Junction is located at the junction of U.S. Route 51, Illinois Route 3, and Illinois Route 37 north of Cairo.\nPage: U.S. Route 51. Sentence: U.S. Route 51 is a south-north United States highway that runs for 1286 mi from the western suburbs of New Orleans, Louisiana to within 100 ft of the Wisconsin–Michigan border.\nPage: Interstate 39. Sentence: I-39 was designed to replace U.S. Route 51 (US 51), which in the early 1980s was one of the busiest two-lane highways in the United States.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "62dd78f9-dc87-5561-a67b-6cd30abf36b8",
+        "text": "text_0afc225b0ca3d8d164d3a971cdc09182",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "449c7648-1f90-50c3-abdf-9011250dbbe7",
+        "text": "cairo junction",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "5f394058-b2a0-5ba8-8466-ba2a18cfcf4e",
+        "text": "place",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "02e5e923-e975-5c9f-b0e7-3e3b4b37c531",
+        "text": "illinois",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "eeeaf84e-51f7-5494-8968-b93779999e72",
+        "text": "u.s. route 51",
+        "type": "Entity"
+      },
+      {
+        "id": 7,
+        "original_id": "5e52d312-a248-534f-a58b-25c5426a89ad",
+        "text": "road",
+        "type": "EntityType"
+      },
+      {
+        "id": 8,
+        "original_id": "874a51da-34ea-5037-be47-d87785d43c37",
+        "text": "united states",
+        "type": "Entity"
+      },
+      {
+        "id": 9,
+        "original_id": "34c3ae9c-6662-5005-993b-8dd036a24e42",
+        "text": "new orleans, louisiana",
+        "type": "Entity"
+      },
+      {
+        "id": 10,
+        "original_id": "5c165f4a-83b2-5049-850b-ab0fa941b623",
+        "text": "wisconsin–michigan border",
+        "type": "Entity"
+      },
+      {
+        "id": 11,
+        "original_id": "5d69e19b-2187-5724-8953-9b23022543ff",
+        "text": "early 1980s",
+        "type": "Entity"
+      },
+      {
+        "id": 12,
+        "original_id": "b19433ae-558c-5aaf-95ac-6231f2a4be0e",
+        "text": "date",
+        "type": "EntityType"
+      },
+      {
+        "id": 13,
+        "original_id": "c93a9be8-bf5a-5424-ad85-703068ab993b",
+        "text": "illinois route 3",
+        "type": "Entity"
+      },
+      {
+        "id": 14,
+        "original_id": "816f6132-0a5d-5a2d-8846-20447f0c86ec",
+        "text": "illinois route 37",
+        "type": "Entity"
+      },
+      {
+        "id": 15,
+        "original_id": "12f2bf5d-8c01-59ba-9ad0-c57112ee4b42",
+        "text": "cairo",
+        "type": "Entity"
+      },
+      {
+        "id": 16,
+        "original_id": "9acf019d-a60b-5ab4-9861-14b45e29d6b8",
+        "text": "interstate 39",
+        "type": "Entity"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 5,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 8,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 9,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 10,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 15,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "located_in"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 6,
+        "type": "located_at_junction_of"
+      },
+      {
+        "source": 1,
+        "target": 6,
+        "type": "contains"
+      },
+      {
+        "source": 16,
+        "target": 6,
+        "type": "was_designed_to_replace"
+      },
+      {
+        "source": 6,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 13,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 14,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 16,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 6,
+        "target": 8,
+        "type": "is_highway_in"
+      },
+      {
+        "source": 1,
+        "target": 8,
+        "type": "contains"
+      },
+      {
+        "source": 6,
+        "target": 9,
+        "type": "runs_from"
+      },
+      {
+        "source": 1,
+        "target": 9,
+        "type": "contains"
+      },
+      {
+        "source": 6,
+        "target": 10,
+        "type": "runs_to_near"
+      },
+      {
+        "source": 1,
+        "target": 10,
+        "type": "contains"
+      },
+      {
+        "source": 6,
+        "target": 11,
+        "type": "had_status_in_time"
+      },
+      {
+        "source": 1,
+        "target": 11,
+        "type": "contains"
+      },
+      {
+        "source": 11,
+        "target": 12,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 13,
+        "type": "located_at_junction_of"
+      },
+      {
+        "source": 1,
+        "target": 13,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 14,
+        "type": "located_at_junction_of"
+      },
+      {
+        "source": 1,
+        "target": 14,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 15,
+        "type": "north_of"
+      },
+      {
+        "source": 1,
+        "target": 15,
+        "type": "contains"
+      },
+      {
+        "source": 1,
+        "target": 16,
+        "type": "contains"
+      }
+    ]
+  }
+}
