@@ -1,0 +1,322 @@
+{
+  "dataset": "hover",
+  "id": "a6a0295b-2a24-4dd8-b175-5de09b2b88e0",
+  "split": "dev",
+  "claim": "An airline is a wholly owned subsidiary of an airline group that flies to 56 countries worldwide. This airline appears in the List of American Airlines accidents and incidents.",
+  "evidencia": "Page: Envoy Air. Sentence: It is a wholly owned subsidiary of American Airlines Group that, along with several carriers outside the group, feeds the American Airlines route network under the American Eagle brand.\nPage: American Airlines Group. Sentence: The airline groups together form the largest airline in the world, with more than 6,700 daily flights to 336 locations in 56 countries worldwide, about $40 billion in operating revenue, over 100,000 employees, and plans to take delivery of 607 new aircraft, including 517 narrowbody aircraft and 90 widebody international aircraft.\nPage: List of American Airlines accidents and incidents. Sentence: For lists of accidents and incidents on subsidiary carriers, see Envoy Air and American Connection",
+  "evidence_text": "Page: Envoy Air. Sentence: It is a wholly owned subsidiary of American Airlines Group that, along with several carriers outside the group, feeds the American Airlines route network under the American Eagle brand.\nPage: American Airlines Group. Sentence: The airline groups together form the largest airline in the world, with more than 6,700 daily flights to 336 locations in 56 countries worldwide, about $40 billion in operating revenue, over 100,000 employees, and plans to take delivery of 607 new aircraft, including 517 narrowbody aircraft and 90 widebody international aircraft.\nPage: List of American Airlines accidents and incidents. Sentence: For lists of accidents and incidents on subsidiary carriers, see Envoy Air and American Connection",
+  "label": "SUPPORTED",
+  "num_hops": 3,
+  "hover_metadata": {
+    "supporting_facts": [
+      [
+        "Envoy Air",
+        1
+      ],
+      [
+        "American Airlines Group",
+        2
+      ],
+      [
+        "List of American Airlines accidents and incidents",
+        1
+      ]
+    ],
+    "num_hops": 3,
+    "evidence_annotation_id": [
+      0
+    ],
+    "evidence_id": [
+      "Envoy Air::sentence::1",
+      "American Airlines Group::sentence::2",
+      "List of American Airlines accidents and incidents::sentence::1"
+    ],
+    "evidence_wiki_url": [
+      "https://en.wikipedia.org/wiki/Envoy_Air",
+      "https://en.wikipedia.org/wiki/American_Airlines_Group",
+      "https://en.wikipedia.org/wiki/List_of_American_Airlines_accidents_and_incidents"
+    ],
+    "evidence_sentence_id": [
+      "Envoy Air::sentence::1",
+      "American Airlines Group::sentence::2",
+      "List of American Airlines accidents and incidents::sentence::1"
+    ]
+  },
+  "grafo_claim": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "9dea367e-019a-5f3a-90b4-878c0510bc1b",
+        "text": "This chunk is about:\n- Companies: American Airlines Group, American Airlines\n- Topics: airline ownership, destinations, aviation accidents and incidents\n\nFacts:\n- American Airlines is a wholly owned subsidiary of American Airlines Group.\n- American Airlines Group flies to 56 countries worldwide.\n- American Airlines appears in the List of American Airlines accidents and incidents.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "ea5f1066-3789-52a3-81f0-da14f52a91b0",
+        "text": "An airline is a wholly owned subsidiary of an airline group that flies to 56 countries worldwide. This airline appears in the List of American Airlines accidents and incidents.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "a623147d-a51e-5eb5-986a-7c813689c619",
+        "text": "text_41de43234c472208bab60dc7dddb373c",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "96b16799-f99a-56a5-a25e-2f82a038d1b5",
+        "text": "american airlines",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "388f60fb-220d-55e8-ae9c-3ac93cead308",
+        "text": "organization",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "8b0197f7-07fd-595e-9c7d-11754b2634df",
+        "text": "american airlines group",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "41d1551d-7c63-5ac2-9b54-2586ef5a47f3",
+        "text": "56 countries",
+        "type": "Entity"
+      },
+      {
+        "id": 7,
+        "original_id": "5f394058-b2a0-5ba8-8466-ba2a18cfcf4e",
+        "text": "place",
+        "type": "EntityType"
+      },
+      {
+        "id": 8,
+        "original_id": "df6acd99-27a5-5ecc-b1da-8113139890e9",
+        "text": "list of american airlines accidents and incidents",
+        "type": "Entity"
+      },
+      {
+        "id": 9,
+        "original_id": "3d897781-1f4f-59f0-9622-97d2f17ed585",
+        "text": "document",
+        "type": "EntityType"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 5,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "subsidiary_of"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 6,
+        "type": "flies_to"
+      },
+      {
+        "source": 1,
+        "target": 6,
+        "type": "contains"
+      },
+      {
+        "source": 6,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 8,
+        "type": "appears_in"
+      },
+      {
+        "source": 1,
+        "target": 8,
+        "type": "contains"
+      },
+      {
+        "source": 8,
+        "target": 9,
+        "type": "is_a"
+      }
+    ]
+  },
+  "grafo_evidencia": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "eb24109c-8709-5d30-8e9c-7f9dbd1b31a3",
+        "text": "This chunk is about:\n- Companies: Envoy Air, American Airlines Group, American Airlines\n- Brands: American Eagle, American Connection\n- Topics: airline networks, airline scale, accidents and incidents\n\nFacts:\n- Envoy Air is a wholly owned subsidiary of American Airlines Group.\n- Envoy Air, along with several carriers outside American Airlines Group, feeds the American Airlines route network under the American Eagle brand.\n- American Airlines Group’s airline groups together form the largest airline in the world.\n- American Airlines Group operates more than 6,700 daily flights to 336 locations in 56 countries worldwide.\n- American Airlines Group has about $40 billion in operating revenue and over 100,000 employees.\n- American Airlines Group plans to take delivery of 607 new aircraft, including 517 narrowbody aircraft and 90 widebody international aircraft.\n- The list of American Airlines accidents and incidents directs readers to Envoy Air and American Connection for accidents and incidents on subsidiary carriers.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "cfb3d514-b37c-5104-bc58-2a91522aa0eb",
+        "text": "Page: Envoy Air. Sentence: It is a wholly owned subsidiary of American Airlines Group that, along with several carriers outside the group, feeds the American Airlines route network under the American Eagle brand.\nPage: American Airlines Group. Sentence: The airline groups together form the largest airline in the world, with more than 6,700 daily flights to 336 locations in 56 countries worldwide, about $40 billion in operating revenue, over 100,000 employees, and plans to take delivery of 607 new aircraft, including 517 narrowbody aircraft and 90 widebody international aircraft.\nPage: List of American Airlines accidents and incidents. Sentence: For lists of accidents and incidents on subsidiary carriers, see Envoy Air and American Connection",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "e5e78090-e8d2-5675-bbd2-dafc98d4860c",
+        "text": "text_f06323144a9908605bdc4d0b9792763d",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "c43be9f7-ad55-53b0-94dc-dd8ad56dbade",
+        "text": "envoy air",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "388f60fb-220d-55e8-ae9c-3ac93cead308",
+        "text": "organization",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "8b0197f7-07fd-595e-9c7d-11754b2634df",
+        "text": "american airlines group",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "96b16799-f99a-56a5-a25e-2f82a038d1b5",
+        "text": "american airlines",
+        "type": "Entity"
+      },
+      {
+        "id": 7,
+        "original_id": "ad26e7d0-4fb4-5aa0-8cbf-ae29ee24e5d2",
+        "text": "american eagle",
+        "type": "Entity"
+      },
+      {
+        "id": 8,
+        "original_id": "31d368fa-7630-5642-a1c1-e579050f9ac3",
+        "text": "brand",
+        "type": "EntityType"
+      },
+      {
+        "id": 9,
+        "original_id": "4d2af9cb-6b0f-5611-a6e9-e4330b9d55d9",
+        "text": "american connection",
+        "type": "Entity"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 3,
+        "type": "has_subsidiary"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 5,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 6,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 9,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "subsidiary_of"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 6,
+        "type": "feeds_route_network_of"
+      },
+      {
+        "source": 1,
+        "target": 6,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 7,
+        "type": "operates_under_brand"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      },
+      {
+        "source": 7,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 9,
+        "type": "contains"
+      }
+    ]
+  }
+}

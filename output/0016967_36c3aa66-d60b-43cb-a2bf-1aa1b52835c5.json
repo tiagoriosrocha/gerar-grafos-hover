@@ -1,0 +1,494 @@
+{
+  "dataset": "hover",
+  "id": "36c3aa66-d60b-43cb-a2bf-1aa1b52835c5",
+  "split": "train",
+  "claim": "Acela Express is a service for an Amtrak flagship that includes BWI Rail Station as one of its Amtrak intercity services.",
+  "evidencia": "Page: BWI Rail Station. Sentence: It is served by Amtrak intercity services (frequent \"Northeast Regional\" and \"Acela Express\" trains plus the daily \"Vermonter\" and \"Palmetto\") and MARC Penn Line regional rail service.\nPage: Acela Express. Sentence: The Acela Express ( ; colloquially abbreviated to Acela) is Amtrak's flagship service along the Northeast Corridor (NEC) in the Northeast United States between Washington, D.C. and Boston via 14 intermediate stops including Baltimore, Philadelphia, and New York City.",
+  "evidence_text": "Page: BWI Rail Station. Sentence: It is served by Amtrak intercity services (frequent \"Northeast Regional\" and \"Acela Express\" trains plus the daily \"Vermonter\" and \"Palmetto\") and MARC Penn Line regional rail service.\nPage: Acela Express. Sentence: The Acela Express ( ; colloquially abbreviated to Acela) is Amtrak's flagship service along the Northeast Corridor (NEC) in the Northeast United States between Washington, D.C. and Boston via 14 intermediate stops including Baltimore, Philadelphia, and New York City.",
+  "label": "SUPPORTED",
+  "num_hops": 2,
+  "hover_metadata": {
+    "supporting_facts": [
+      [
+        "BWI Rail Station",
+        1
+      ],
+      [
+        "Acela Express",
+        0
+      ]
+    ],
+    "num_hops": 2,
+    "evidence_annotation_id": [
+      0
+    ],
+    "evidence_id": [
+      "BWI Rail Station::sentence::1",
+      "Acela Express::sentence::0"
+    ],
+    "evidence_wiki_url": [
+      "https://en.wikipedia.org/wiki/BWI_Rail_Station",
+      "https://en.wikipedia.org/wiki/Acela_Express"
+    ],
+    "evidence_sentence_id": [
+      "BWI Rail Station::sentence::1",
+      "Acela Express::sentence::0"
+    ]
+  },
+  "grafo_claim": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "5960a5f3-6b56-5315-9b37-4cd76323ed64",
+        "text": "This chunk is about:\n- Companies: Amtrak\n- Products: Acela Express\n- Places: BWI Rail Station\n- Services: Amtrak intercity services\n\nFacts:\n- Acela Express is a flagship service of Amtrak.\n- BWI Rail Station is served by Acela Express as part of Amtrak intercity services.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "fa730880-f2dc-5d6b-8600-aa5e41aca768",
+        "text": "Acela Express is a service for an Amtrak flagship that includes BWI Rail Station as one of its Amtrak intercity services.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "0896ab09-1306-5487-bf56-602d0ad07a5a",
+        "text": "text_db4fc64da2e93bbb036ad0160e459e67",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "d9e095af-8d2a-54c5-b1f2-c659ace986c0",
+        "text": "acela express",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "cca61dbb-0e3d-5b0b-9098-fc254ce885e7",
+        "text": "service",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "88b21b36-8add-59ff-8102-6ae9a6746177",
+        "text": "amtrak",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "388f60fb-220d-55e8-ae9c-3ac93cead308",
+        "text": "organization",
+        "type": "EntityType"
+      },
+      {
+        "id": 7,
+        "original_id": "3bae1c7e-a19e-5cfc-96e6-c5a801506514",
+        "text": "bwi rail station",
+        "type": "Entity"
+      },
+      {
+        "id": 8,
+        "original_id": "5f394058-b2a0-5ba8-8466-ba2a18cfcf4e",
+        "text": "place",
+        "type": "EntityType"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 7,
+        "target": 3,
+        "type": "is_served_by"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "is_flagship_service_of"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      },
+      {
+        "source": 7,
+        "target": 8,
+        "type": "is_a"
+      }
+    ]
+  },
+  "grafo_evidencia": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "c625d610-17ba-5ba0-9e25-05d2f6478d9b",
+        "text": "This chunk is about:\n- Places: BWI Rail Station, Washington, D.C., Boston, Baltimore, Philadelphia, New York City\n- Companies: Amtrak\n- Services: Acela Express, Northeast Regional, Vermonter, Palmetto, MARC Penn Line\n- Systems: Northeast Corridor\n\nFacts:\n- BWI Rail Station is served by Amtrak intercity services, including frequent Northeast Regional and Acela Express trains and the daily Vermonter and Palmetto.\n- BWI Rail Station is also served by MARC Penn Line regional rail service.\n- Acela Express, colloquially abbreviated to Acela, is Amtrak's flagship service on the Northeast Corridor in the northeastern United States.\n- Acela Express operates between Washington, D.C. and Boston with 14 intermediate stops, including Baltimore, Philadelphia, and New York City.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "7f026866-0e83-5643-b27b-dc9def9ad9fc",
+        "text": "Page: BWI Rail Station. Sentence: It is served by Amtrak intercity services (frequent \"Northeast Regional\" and \"Acela Express\" trains plus the daily \"Vermonter\" and \"Palmetto\") and MARC Penn Line regional rail service.\nPage: Acela Express. Sentence: The Acela Express ( ; colloquially abbreviated to Acela) is Amtrak's flagship service along the Northeast Corridor (NEC) in the Northeast United States between Washington, D.C. and Boston via 14 intermediate stops including Baltimore, Philadelphia, and New York City.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "74fd95e8-84a2-5f14-9090-74c7905a0a7d",
+        "text": "text_832bf222d3304b51a3730edf583c331a",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "3bae1c7e-a19e-5cfc-96e6-c5a801506514",
+        "text": "bwi rail station",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "5f394058-b2a0-5ba8-8466-ba2a18cfcf4e",
+        "text": "place",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "88b21b36-8add-59ff-8102-6ae9a6746177",
+        "text": "amtrak",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "388f60fb-220d-55e8-ae9c-3ac93cead308",
+        "text": "organization",
+        "type": "EntityType"
+      },
+      {
+        "id": 7,
+        "original_id": "6c87107a-5ec3-51d7-9376-70d7343e921b",
+        "text": "northeast regional",
+        "type": "Entity"
+      },
+      {
+        "id": 8,
+        "original_id": "cca61dbb-0e3d-5b0b-9098-fc254ce885e7",
+        "text": "service",
+        "type": "EntityType"
+      },
+      {
+        "id": 9,
+        "original_id": "d9e095af-8d2a-54c5-b1f2-c659ace986c0",
+        "text": "acela express",
+        "type": "Entity"
+      },
+      {
+        "id": 10,
+        "original_id": "8b6c90c1-aef0-559e-a4ad-362bac045661",
+        "text": "northeast corridor",
+        "type": "Entity"
+      },
+      {
+        "id": 11,
+        "original_id": "0f1bca66-c96d-5228-8f92-744edd86780a",
+        "text": "northeast united states",
+        "type": "Entity"
+      },
+      {
+        "id": 12,
+        "original_id": "193a9885-0f59-521c-a4b2-e6d5a15561ed",
+        "text": "washington, d.c.",
+        "type": "Entity"
+      },
+      {
+        "id": 13,
+        "original_id": "943a5e16-1e4d-5ea8-bc79-d234d76ed06b",
+        "text": "boston",
+        "type": "Entity"
+      },
+      {
+        "id": 14,
+        "original_id": "9c2fcda0-3e05-5fb5-8623-d207a5f0aa89",
+        "text": "baltimore",
+        "type": "Entity"
+      },
+      {
+        "id": 15,
+        "original_id": "867dc04f-3136-5678-beed-fc7f0c292c2f",
+        "text": "philadelphia",
+        "type": "Entity"
+      },
+      {
+        "id": 16,
+        "original_id": "62912d92-4218-52f7-a1a6-776a04889442",
+        "text": "new york city",
+        "type": "Entity"
+      },
+      {
+        "id": 17,
+        "original_id": "34169c73-2f45-5cb5-a0d0-93925fae7e61",
+        "text": "vermonter",
+        "type": "Entity"
+      },
+      {
+        "id": 18,
+        "original_id": "4ccfb252-2a00-58e0-ae81-b301f9c662a7",
+        "text": "palmetto",
+        "type": "Entity"
+      },
+      {
+        "id": 19,
+        "original_id": "c4dfc947-4de9-5897-b5e2-4f75ab47048b",
+        "text": "marc penn line",
+        "type": "Entity"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 10,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 11,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 12,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 13,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 14,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 15,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 16,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "served_by"
+      },
+      {
+        "source": 9,
+        "target": 5,
+        "type": "operated_by"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 7,
+        "type": "served_by"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      },
+      {
+        "source": 7,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 9,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 17,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 18,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 19,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 9,
+        "type": "served_by"
+      },
+      {
+        "source": 1,
+        "target": 9,
+        "type": "contains"
+      },
+      {
+        "source": 9,
+        "target": 10,
+        "type": "operates_along"
+      },
+      {
+        "source": 1,
+        "target": 10,
+        "type": "contains"
+      },
+      {
+        "source": 10,
+        "target": 11,
+        "type": "located_in"
+      },
+      {
+        "source": 1,
+        "target": 11,
+        "type": "contains"
+      },
+      {
+        "source": 9,
+        "target": 12,
+        "type": "connects_to"
+      },
+      {
+        "source": 1,
+        "target": 12,
+        "type": "contains"
+      },
+      {
+        "source": 9,
+        "target": 13,
+        "type": "connects_to"
+      },
+      {
+        "source": 1,
+        "target": 13,
+        "type": "contains"
+      },
+      {
+        "source": 9,
+        "target": 14,
+        "type": "stops_at"
+      },
+      {
+        "source": 1,
+        "target": 14,
+        "type": "contains"
+      },
+      {
+        "source": 9,
+        "target": 15,
+        "type": "stops_at"
+      },
+      {
+        "source": 1,
+        "target": 15,
+        "type": "contains"
+      },
+      {
+        "source": 9,
+        "target": 16,
+        "type": "stops_at"
+      },
+      {
+        "source": 1,
+        "target": 16,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 17,
+        "type": "served_by"
+      },
+      {
+        "source": 1,
+        "target": 17,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 18,
+        "type": "served_by"
+      },
+      {
+        "source": 1,
+        "target": 18,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 19,
+        "type": "served_by"
+      },
+      {
+        "source": 1,
+        "target": 19,
+        "type": "contains"
+      }
+    ]
+  }
+}

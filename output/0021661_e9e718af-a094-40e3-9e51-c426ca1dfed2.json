@@ -1,0 +1,385 @@
+{
+  "dataset": "hover",
+  "id": "e9e718af-a094-40e3-9e51-c426ca1dfed2",
+  "split": "dev",
+  "claim": "This former hospital was razed to make way for the construction of the Square 54 Complex. That hospital and MedStar Washington Hospital Center are both located in Washington.",
+  "evidencia": "Page: George Washington University Hospital. Sentence: The George Washington University Hospital is located in Washington, D.C. in the United States.\nPage: MedStar Washington Hospital Center. Sentence: MedStar Washington Hospital Center is the largest private hospital in Washington, D.C. A member of MedStar Health, the not-for-profit Hospital Center is licensed for 926 beds.\nPage: Square 54 Redevelopment. Sentence: The complex will replace the former George Washington University Hospital building, which was razed to make way for the construction of the Square 54 Complex.",
+  "evidence_text": "Page: George Washington University Hospital. Sentence: The George Washington University Hospital is located in Washington, D.C. in the United States.\nPage: MedStar Washington Hospital Center. Sentence: MedStar Washington Hospital Center is the largest private hospital in Washington, D.C. A member of MedStar Health, the not-for-profit Hospital Center is licensed for 926 beds.\nPage: Square 54 Redevelopment. Sentence: The complex will replace the former George Washington University Hospital building, which was razed to make way for the construction of the Square 54 Complex.",
+  "label": "SUPPORTED",
+  "num_hops": 3,
+  "hover_metadata": {
+    "supporting_facts": [
+      [
+        "George Washington University Hospital",
+        0
+      ],
+      [
+        "MedStar Washington Hospital Center",
+        0
+      ],
+      [
+        "Square 54 Redevelopment",
+        8
+      ]
+    ],
+    "num_hops": 3,
+    "evidence_annotation_id": [
+      0
+    ],
+    "evidence_id": [
+      "George Washington University Hospital::sentence::0",
+      "MedStar Washington Hospital Center::sentence::0",
+      "Square 54 Redevelopment::sentence::8"
+    ],
+    "evidence_wiki_url": [
+      "https://en.wikipedia.org/wiki/George_Washington_University_Hospital",
+      "https://en.wikipedia.org/wiki/MedStar_Washington_Hospital_Center",
+      "https://en.wikipedia.org/wiki/Square_54_Redevelopment"
+    ],
+    "evidence_sentence_id": [
+      "George Washington University Hospital::sentence::0",
+      "MedStar Washington Hospital Center::sentence::0",
+      "Square 54 Redevelopment::sentence::8"
+    ]
+  },
+  "grafo_claim": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "250a8c49-e379-5f90-8a27-44b033e7a59a",
+        "text": "This chunk is about:\n- Places: Washington, D.C.\n- Organizations: MedStar Washington Hospital Center\n- Projects: Square 54 Complex\n- Buildings: a former hospital\n\nFacts:\n- A former hospital in Washington, D.C., was razed to make way for the construction of the Square 54 Complex.\n- MedStar Washington Hospital Center is located in Washington, D.C.\n- The former hospital was also located in Washington, D.C.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "267c829c-fd89-5f78-8cdc-fbc45d6166c1",
+        "text": "This former hospital was razed to make way for the construction of the Square 54 Complex. That hospital and MedStar Washington Hospital Center are both located in Washington.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "3b4d8971-fe93-5a3d-b45a-673bc476b6b9",
+        "text": "text_532db86d7c5ab0219129ebb7edfc341b",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "39962c47-9241-58e0-9f0a-d81aff1e17a1",
+        "text": "square 54 complex",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "5f394058-b2a0-5ba8-8466-ba2a18cfcf4e",
+        "text": "place",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "4c0d6f4d-ec80-516e-8ebb-f662a2b6c746",
+        "text": "former hospital",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "89a063c0-ce6a-51af-91f5-b6e960b80bb3",
+        "text": "hospital",
+        "type": "EntityType"
+      },
+      {
+        "id": 7,
+        "original_id": "95142d38-e261-5f7d-8c2e-e06e59777e93",
+        "text": "washington",
+        "type": "Entity"
+      },
+      {
+        "id": 8,
+        "original_id": "40cd9cb3-8a91-58ca-b3e1-37a3f1ff2426",
+        "text": "medstar washington hospital center",
+        "type": "Entity"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 3,
+        "type": "razed_for_construction_of"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 7,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 8,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 5,
+        "target": 7,
+        "type": "located_in"
+      },
+      {
+        "source": 8,
+        "target": 7,
+        "type": "located_in"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      },
+      {
+        "source": 1,
+        "target": 8,
+        "type": "contains"
+      }
+    ]
+  },
+  "grafo_evidencia": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "3286f2a0-8823-5d03-8f46-2c8a9a35f60b",
+        "text": "This chunk is about:\n- Organizations: George Washington University Hospital, MedStar Washington Hospital Center, MedStar Health\n- Places: Washington, D.C., United States, Square 54 Complex\n- Projects: Square 54 Redevelopment\n\nFacts:\n- George Washington University Hospital is located in Washington, D.C., in the United States.\n- MedStar Washington Hospital Center is the largest private hospital in Washington, D.C.\n- MedStar Washington Hospital Center is a member of MedStar Health.\n- MedStar Washington Hospital Center is a not-for-profit hospital licensed for 926 beds.\n- The Square 54 Complex will replace the former George Washington University Hospital building.\n- The former George Washington University Hospital building was razed to make way for construction of the Square 54 Complex.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "61e638cd-e0f9-5e2a-89d8-8a375259018b",
+        "text": "Page: George Washington University Hospital. Sentence: The George Washington University Hospital is located in Washington, D.C. in the United States.\nPage: MedStar Washington Hospital Center. Sentence: MedStar Washington Hospital Center is the largest private hospital in Washington, D.C. A member of MedStar Health, the not-for-profit Hospital Center is licensed for 926 beds.\nPage: Square 54 Redevelopment. Sentence: The complex will replace the former George Washington University Hospital building, which was razed to make way for the construction of the Square 54 Complex.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "48a78d4e-741a-52ac-83b8-62ce9673e704",
+        "text": "text_ff82da55aedc66d21b448832fc3e12b4",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "de768f5f-ddac-526f-8b85-9bbe169764ce",
+        "text": "george washington university hospital",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "388f60fb-220d-55e8-ae9c-3ac93cead308",
+        "text": "organization",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "193a9885-0f59-521c-a4b2-e6d5a15561ed",
+        "text": "washington, d.c.",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "5f394058-b2a0-5ba8-8466-ba2a18cfcf4e",
+        "text": "place",
+        "type": "EntityType"
+      },
+      {
+        "id": 7,
+        "original_id": "874a51da-34ea-5037-be47-d87785d43c37",
+        "text": "united states",
+        "type": "Entity"
+      },
+      {
+        "id": 8,
+        "original_id": "40cd9cb3-8a91-58ca-b3e1-37a3f1ff2426",
+        "text": "medstar washington hospital center",
+        "type": "Entity"
+      },
+      {
+        "id": 9,
+        "original_id": "95467b66-20c4-5773-bf96-2b16ff4db0ce",
+        "text": "medstar health",
+        "type": "Entity"
+      },
+      {
+        "id": 10,
+        "original_id": "6e5144bc-acca-5a82-81d5-e8dc7ef505c6",
+        "text": "926 beds",
+        "type": "Entity"
+      },
+      {
+        "id": 11,
+        "original_id": "d2a381fa-3658-5ca6-ada9-2109cfc9331d",
+        "text": "concept",
+        "type": "EntityType"
+      },
+      {
+        "id": 12,
+        "original_id": "e350dc05-2ff8-58b5-a4b7-0399c4d40130",
+        "text": "former george washington university hospital building",
+        "type": "Entity"
+      },
+      {
+        "id": 13,
+        "original_id": "39962c47-9241-58e0-9f0a-d81aff1e17a1",
+        "text": "square 54 complex",
+        "type": "Entity"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 12,
+        "target": 3,
+        "type": "former_building_of"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 8,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 9,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "located_in"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 8,
+        "target": 5,
+        "type": "located_in"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 7,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 12,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 13,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 5,
+        "target": 7,
+        "type": "located_in"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      },
+      {
+        "source": 1,
+        "target": 8,
+        "type": "contains"
+      },
+      {
+        "source": 8,
+        "target": 9,
+        "type": "member_of"
+      },
+      {
+        "source": 1,
+        "target": 9,
+        "type": "contains"
+      },
+      {
+        "source": 8,
+        "target": 10,
+        "type": "licensed_for"
+      },
+      {
+        "source": 1,
+        "target": 10,
+        "type": "contains"
+      },
+      {
+        "source": 10,
+        "target": 11,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 12,
+        "type": "contains"
+      },
+      {
+        "source": 12,
+        "target": 13,
+        "type": "replaced_by"
+      },
+      {
+        "source": 1,
+        "target": 13,
+        "type": "contains"
+      }
+    ]
+  }
+}

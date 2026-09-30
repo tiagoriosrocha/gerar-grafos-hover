@@ -1,0 +1,386 @@
+{
+  "dataset": "hover",
+  "id": "24458219-9dbe-452f-95d9-e3e3dae5e2e1",
+  "split": "dev",
+  "claim": "Bruce Chatwin was born before the female initiator of the James Tiptree Jr. Award.",
+  "evidencia": "Page: Karen Joy Fowler. Sentence: Karen Joy Fowler (born February 7, 1950) is an American author of science fiction, fantasy, and literary fiction.\nPage: Bruce Chatwin. Sentence: Charles Bruce Chatwin (13 May 194018 January 1989) was an English travel writer, novelist, and journalist.\nPage: James Tiptree Jr. Award. Sentence: It was initiated in February 1991 by science fiction authors Pat Murphy and Karen Joy Fowler, subsequent to a discussion at WisCon.",
+  "evidence_text": "Page: Karen Joy Fowler. Sentence: Karen Joy Fowler (born February 7, 1950) is an American author of science fiction, fantasy, and literary fiction.\nPage: Bruce Chatwin. Sentence: Charles Bruce Chatwin (13 May 194018 January 1989) was an English travel writer, novelist, and journalist.\nPage: James Tiptree Jr. Award. Sentence: It was initiated in February 1991 by science fiction authors Pat Murphy and Karen Joy Fowler, subsequent to a discussion at WisCon.",
+  "label": "SUPPORTED",
+  "num_hops": 3,
+  "hover_metadata": {
+    "supporting_facts": [
+      [
+        "Karen Joy Fowler",
+        0
+      ],
+      [
+        "Bruce Chatwin",
+        0
+      ],
+      [
+        "James Tiptree Jr. Award",
+        2
+      ]
+    ],
+    "num_hops": 3,
+    "evidence_annotation_id": [
+      0
+    ],
+    "evidence_id": [
+      "Karen Joy Fowler::sentence::0",
+      "Bruce Chatwin::sentence::0",
+      "James Tiptree Jr. Award::sentence::2"
+    ],
+    "evidence_wiki_url": [
+      "https://en.wikipedia.org/wiki/Karen_Joy_Fowler",
+      "https://en.wikipedia.org/wiki/Bruce_Chatwin",
+      "https://en.wikipedia.org/wiki/James_Tiptree_Jr._Award"
+    ],
+    "evidence_sentence_id": [
+      "Karen Joy Fowler::sentence::0",
+      "Bruce Chatwin::sentence::0",
+      "James Tiptree Jr. Award::sentence::2"
+    ]
+  },
+  "grafo_claim": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "00243011-6140-51d1-9beb-806430451d69",
+        "text": "This chunk is about:\n- People: Bruce Chatwin, Pat Murphy\n- Awards: James Tiptree Jr. Award\n\nFacts:\n- Bruce Chatwin was born in 1940.\n- Pat Murphy co-founded the James Tiptree Jr. Award.\n- Pat Murphy was born in 1955.\n- Bruce Chatwin was born before Pat Murphy, a female initiator of the James Tiptree Jr. Award.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "c098c8a2-5616-5359-9a44-6740f684c438",
+        "text": "Bruce Chatwin was born before the female initiator of the James Tiptree Jr. Award.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "2effbe85-f9ba-55ad-8700-25c86c817127",
+        "text": "text_0c871aea3732ceb6d2b467f4090692b0",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "29705840-37ca-5397-bd6f-7cd2cfbffa9a",
+        "text": "bruce chatwin",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "99a82eec-bb35-5bb5-9ed2-e73fc7a756de",
+        "text": "person",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "43e7748d-2617-5ece-9a0b-9f96dc6f581a",
+        "text": "female initiator of the james tiptree jr. award",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "95b1e0f1-99f5-5bba-96ef-7827f318db42",
+        "text": "james tiptree jr. award",
+        "type": "Entity"
+      },
+      {
+        "id": 7,
+        "original_id": "38e42125-31f4-5cd6-993c-dbbc06a88910",
+        "text": "award",
+        "type": "EntityType"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 5,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "born_before"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "initiated"
+      },
+      {
+        "source": 1,
+        "target": 6,
+        "type": "contains"
+      },
+      {
+        "source": 6,
+        "target": 7,
+        "type": "is_a"
+      }
+    ]
+  },
+  "grafo_evidencia": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "374faff9-1e2e-53a3-91d7-7d2403ff3dd2",
+        "text": "This chunk is about:\n- People: Karen Joy Fowler, Bruce Chatwin, Pat Murphy\n- Awards: James Tiptree Jr. Award\n- Events: WisCon\n- Roles: author, travel writer, novelist, journalist\n\nFacts:\n- Karen Joy Fowler was born on February 7, 1950, and she is an American author of science fiction, fantasy, and literary fiction.\n- Bruce Chatwin was born on May 13, 1940, and died on January 18, 1989, and he was an English travel writer, novelist, and journalist.\n- In February 1991, science fiction authors Pat Murphy and Karen Joy Fowler initiated the James Tiptree Jr. Award after a discussion at WisCon.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "7dd17fbc-d28d-53fd-ad67-ae8b4f5c6279",
+        "text": "Page: Karen Joy Fowler. Sentence: Karen Joy Fowler (born February 7, 1950) is an American author of science fiction, fantasy, and literary fiction.\nPage: Bruce Chatwin. Sentence: Charles Bruce Chatwin (13 May 194018 January 1989) was an English travel writer, novelist, and journalist.\nPage: James Tiptree Jr. Award. Sentence: It was initiated in February 1991 by science fiction authors Pat Murphy and Karen Joy Fowler, subsequent to a discussion at WisCon.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "f531fc38-1e69-5e69-80a7-1847fe250409",
+        "text": "text_88927bd3c9bd806f7c167e3a3954b24a",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "db2f4939-85d8-5892-9bd7-ffa7268f4e92",
+        "text": "karen joy fowler",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "99a82eec-bb35-5bb5-9ed2-e73fc7a756de",
+        "text": "person",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "5994a60d-f7be-58bb-b98b-8c145c3bf0cf",
+        "text": "1950-02-07",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "b19433ae-558c-5aaf-95ac-6231f2a4be0e",
+        "text": "date",
+        "type": "EntityType"
+      },
+      {
+        "id": 7,
+        "original_id": "95b1e0f1-99f5-5bba-96ef-7827f318db42",
+        "text": "james tiptree jr. award",
+        "type": "Entity"
+      },
+      {
+        "id": 8,
+        "original_id": "38e42125-31f4-5cd6-993c-dbbc06a88910",
+        "text": "award",
+        "type": "EntityType"
+      },
+      {
+        "id": 9,
+        "original_id": "fe2cdb4b-f260-59fd-ac29-181acfac2d2c",
+        "text": "1991-02",
+        "type": "Entity"
+      },
+      {
+        "id": 10,
+        "original_id": "293f0909-5462-55d3-8971-e2ad4000bdcd",
+        "text": "wiscon",
+        "type": "Entity"
+      },
+      {
+        "id": 11,
+        "original_id": "214abcd9-9adf-5c8a-bb35-1e729f2d68c3",
+        "text": "event",
+        "type": "EntityType"
+      },
+      {
+        "id": 12,
+        "original_id": "29705840-37ca-5397-bd6f-7cd2cfbffa9a",
+        "text": "charles bruce chatwin",
+        "type": "Entity"
+      },
+      {
+        "id": 13,
+        "original_id": "9c61ef21-5a5e-55df-bc95-8f24190a4e47",
+        "text": "1940-05-13",
+        "type": "Entity"
+      },
+      {
+        "id": 14,
+        "original_id": "efbf04a7-8a88-5139-b085-e7f8af3dc02e",
+        "text": "1989-01-18",
+        "type": "Entity"
+      },
+      {
+        "id": 15,
+        "original_id": "3b2edf3f-4e28-543c-9a1f-ce1768a50df8",
+        "text": "pat murphy",
+        "type": "Entity"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 12,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 15,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "born_on"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 9,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 13,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 14,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 7,
+        "type": "initiated"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      },
+      {
+        "source": 15,
+        "target": 7,
+        "type": "initiated"
+      },
+      {
+        "source": 7,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 7,
+        "target": 9,
+        "type": "initiated_in"
+      },
+      {
+        "source": 1,
+        "target": 9,
+        "type": "contains"
+      },
+      {
+        "source": 7,
+        "target": 10,
+        "type": "initiated_subsequent_to_discussion_at"
+      },
+      {
+        "source": 1,
+        "target": 10,
+        "type": "contains"
+      },
+      {
+        "source": 10,
+        "target": 11,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 12,
+        "type": "contains"
+      },
+      {
+        "source": 12,
+        "target": 13,
+        "type": "born_on"
+      },
+      {
+        "source": 1,
+        "target": 13,
+        "type": "contains"
+      },
+      {
+        "source": 12,
+        "target": 14,
+        "type": "died_on"
+      },
+      {
+        "source": 1,
+        "target": 14,
+        "type": "contains"
+      },
+      {
+        "source": 1,
+        "target": 15,
+        "type": "contains"
+      }
+    ]
+  }
+}

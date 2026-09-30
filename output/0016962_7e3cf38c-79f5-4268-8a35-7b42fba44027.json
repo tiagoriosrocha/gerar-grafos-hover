@@ -1,0 +1,425 @@
+{
+  "dataset": "hover",
+  "id": "7e3cf38c-79f5-4268-8a35-7b42fba44027",
+  "split": "train",
+  "claim": "The 2010 census population of the county where Wildcat Brook flows through Jackson was 47,818.",
+  "evidencia": "Page: Wildcat Brook. Sentence: It rises at Carter Notch in the township of Bean's Purchase in Coos County, and flows south through the town of Jackson in Carroll County to its confluence with the Ellis River near the town's southern boundary.\nPage: Carroll County, New Hampshire. Sentence: As of the 2010 census, the population was 47,818, making it the third-least populous county in New Hampshire.",
+  "evidence_text": "Page: Wildcat Brook. Sentence: It rises at Carter Notch in the township of Bean's Purchase in Coos County, and flows south through the town of Jackson in Carroll County to its confluence with the Ellis River near the town's southern boundary.\nPage: Carroll County, New Hampshire. Sentence: As of the 2010 census, the population was 47,818, making it the third-least populous county in New Hampshire.",
+  "label": "SUPPORTED",
+  "num_hops": 2,
+  "hover_metadata": {
+    "supporting_facts": [
+      [
+        "Wildcat Brook",
+        1
+      ],
+      [
+        "Carroll County, New Hampshire",
+        1
+      ]
+    ],
+    "num_hops": 2,
+    "evidence_annotation_id": [
+      0
+    ],
+    "evidence_id": [
+      "Wildcat Brook::sentence::1",
+      "Carroll County, New Hampshire::sentence::1"
+    ],
+    "evidence_wiki_url": [
+      "https://en.wikipedia.org/wiki/Wildcat_Brook",
+      "https://en.wikipedia.org/wiki/Carroll_County%2C_New_Hampshire"
+    ],
+    "evidence_sentence_id": [
+      "Wildcat Brook::sentence::1",
+      "Carroll County, New Hampshire::sentence::1"
+    ]
+  },
+  "grafo_claim": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "ce059641-7b28-5989-bd7c-17968026cf43",
+        "text": "This chunk is about:\n- Places: Jackson, county containing Jackson\n- Natural Features: Wildcat Brook\n- Demographics: 2010 census population\n\nFacts:\n- Wildcat Brook flows through Jackson.\n- The county containing Jackson had a population of 47,818 in the 2010 census.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "0dc7bdbb-45af-5e8f-bbc4-8a391db8903d",
+        "text": "The 2010 census population of the county where Wildcat Brook flows through Jackson was 47,818.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "8ff5f4e1-d374-58a4-9b35-6ad732dad432",
+        "text": "text_293f4eecda206937fe2d9d287f67d06a",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "461864ca-9038-53a2-80cc-5af9d7854442",
+        "text": "wildcat brook",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "5f394058-b2a0-5ba8-8466-ba2a18cfcf4e",
+        "text": "place",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "68ded757-1266-5e48-a8f3-7c8a1972931d",
+        "text": "jackson",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "8fa4b2bf-ec54-5714-8ede-fad695543098",
+        "text": "the county",
+        "type": "Entity"
+      },
+      {
+        "id": 7,
+        "original_id": "cb1dc1af-5253-5fa4-877e-246a7629f489",
+        "text": "2010",
+        "type": "Entity"
+      },
+      {
+        "id": 8,
+        "original_id": "b19433ae-558c-5aaf-95ac-6231f2a4be0e",
+        "text": "date",
+        "type": "EntityType"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 6,
+        "target": 3,
+        "type": "contains_watercourse"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 5,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 6,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "flows_through"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 6,
+        "target": 5,
+        "type": "contains_place"
+      },
+      {
+        "source": 1,
+        "target": 6,
+        "type": "contains"
+      },
+      {
+        "source": 6,
+        "target": 7,
+        "type": "had_population_in_census_year"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      },
+      {
+        "source": 7,
+        "target": 8,
+        "type": "is_a"
+      }
+    ]
+  },
+  "grafo_evidencia": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "fe5d0cdd-9297-5b33-b97a-4b691df8f43a",
+        "text": "This chunk is about:\n- Places: Wildcat Brook, Carter Notch, Bean's Purchase, Coos County, Jackson, Carroll County, Ellis River, New Hampshire\n- Topics: geography, population\n\nFacts:\n- Wildcat Brook rises at Carter Notch in Bean's Purchase in Coos County, New Hampshire.\n- Wildcat Brook flows south through Jackson in Carroll County, New Hampshire, to its confluence with the Ellis River near Jackson's southern boundary.\n- As of the 2010 census, Carroll County, New Hampshire, had a population of 47,818 and was the third-least populous county in New Hampshire.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "e4d5a8ee-860d-551a-8c1b-f11da3cd7568",
+        "text": "Page: Wildcat Brook. Sentence: It rises at Carter Notch in the township of Bean's Purchase in Coos County, and flows south through the town of Jackson in Carroll County to its confluence with the Ellis River near the town's southern boundary.\nPage: Carroll County, New Hampshire. Sentence: As of the 2010 census, the population was 47,818, making it the third-least populous county in New Hampshire.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "fee6a9f1-92cb-529c-89a2-9f4f142b54f2",
+        "text": "text_04f0c0bfa8973c4ac5f93cf3cba726a2",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "461864ca-9038-53a2-80cc-5af9d7854442",
+        "text": "wildcat brook",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "5f394058-b2a0-5ba8-8466-ba2a18cfcf4e",
+        "text": "place",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "78d43f12-8bf6-5c15-9977-27d6e32f2b52",
+        "text": "carter notch",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "f1a4cb3e-6602-5ffd-815c-97dd0a722fa8",
+        "text": "beans purchase",
+        "type": "Entity"
+      },
+      {
+        "id": 7,
+        "original_id": "a3151219-91d0-5972-bc42-1b5c5fe1aedf",
+        "text": "coos county",
+        "type": "Entity"
+      },
+      {
+        "id": 8,
+        "original_id": "68ded757-1266-5e48-a8f3-7c8a1972931d",
+        "text": "jackson",
+        "type": "Entity"
+      },
+      {
+        "id": 9,
+        "original_id": "ea9cb332-44c0-5346-ac17-ee5a75f44aba",
+        "text": "carroll county",
+        "type": "Entity"
+      },
+      {
+        "id": 10,
+        "original_id": "959ee710-8c33-5f11-8edd-11df04c0edba",
+        "text": "new hampshire",
+        "type": "Entity"
+      },
+      {
+        "id": 11,
+        "original_id": "6342e61b-58dc-5fee-aeaa-84a732c4fb3b",
+        "text": "47,818",
+        "type": "Entity"
+      },
+      {
+        "id": 12,
+        "original_id": "5c1097ca-fab8-54d5-b57f-5dca4b0e2507",
+        "text": "number",
+        "type": "EntityType"
+      },
+      {
+        "id": 13,
+        "original_id": "cb1dc1af-5253-5fa4-877e-246a7629f489",
+        "text": "2010",
+        "type": "Entity"
+      },
+      {
+        "id": 14,
+        "original_id": "b19433ae-558c-5aaf-95ac-6231f2a4be0e",
+        "text": "date",
+        "type": "EntityType"
+      },
+      {
+        "id": 15,
+        "original_id": "80d0b853-27dc-5688-9a66-45123d7a1bfc",
+        "text": "ellis river",
+        "type": "Entity"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 5,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 6,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 7,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 8,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 9,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 10,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 15,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "rises_at"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "located_in"
+      },
+      {
+        "source": 1,
+        "target": 6,
+        "type": "contains"
+      },
+      {
+        "source": 6,
+        "target": 7,
+        "type": "located_in"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 8,
+        "type": "flows_through"
+      },
+      {
+        "source": 1,
+        "target": 8,
+        "type": "contains"
+      },
+      {
+        "source": 8,
+        "target": 9,
+        "type": "located_in"
+      },
+      {
+        "source": 1,
+        "target": 9,
+        "type": "contains"
+      },
+      {
+        "source": 9,
+        "target": 10,
+        "type": "located_in"
+      },
+      {
+        "source": 1,
+        "target": 10,
+        "type": "contains"
+      },
+      {
+        "source": 9,
+        "target": 11,
+        "type": "has_population"
+      },
+      {
+        "source": 1,
+        "target": 11,
+        "type": "contains"
+      },
+      {
+        "source": 11,
+        "target": 12,
+        "type": "is_a"
+      },
+      {
+        "source": 9,
+        "target": 13,
+        "type": "population_as_of"
+      },
+      {
+        "source": 1,
+        "target": 13,
+        "type": "contains"
+      },
+      {
+        "source": 13,
+        "target": 14,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 15,
+        "type": "has_confluence_with"
+      },
+      {
+        "source": 1,
+        "target": 15,
+        "type": "contains"
+      }
+    ]
+  }
+}

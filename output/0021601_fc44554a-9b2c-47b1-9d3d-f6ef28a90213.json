@@ -1,0 +1,338 @@
+{
+  "dataset": "hover",
+  "id": "fc44554a-9b2c-47b1-9d3d-f6ef28a90213",
+  "split": "dev",
+  "claim": "The airport that Shannons Pond Seaplane Base is west of, and Rafael Hernández Airport both handle civilian (passenger) service.",
+  "evidencia": "Page: Dillingham Airport. Sentence: Scheduled passenger service is available at this airport.\nPage: Rafael Hernández Airport. Sentence: Rafael Hernández Airport (IATA: BQN, ICAO: TJBQ, FAA LID: BQN) is a joint civil-military airport located in Aguadilla, Puerto Rico.\nPage: Shannons Pond Seaplane Base. Sentence: It is 3 mi west of Dillingham Airport.",
+  "evidence_text": "Page: Dillingham Airport. Sentence: Scheduled passenger service is available at this airport.\nPage: Rafael Hernández Airport. Sentence: Rafael Hernández Airport (IATA: BQN, ICAO: TJBQ, FAA LID: BQN) is a joint civil-military airport located in Aguadilla, Puerto Rico.\nPage: Shannons Pond Seaplane Base. Sentence: It is 3 mi west of Dillingham Airport.",
+  "label": "SUPPORTED",
+  "num_hops": 3,
+  "hover_metadata": {
+    "supporting_facts": [
+      [
+        "Dillingham Airport",
+        1
+      ],
+      [
+        "Rafael Hernández Airport",
+        0
+      ],
+      [
+        "Shannons Pond Seaplane Base",
+        2
+      ]
+    ],
+    "num_hops": 3,
+    "evidence_annotation_id": [
+      0
+    ],
+    "evidence_id": [
+      "Dillingham Airport::sentence::1",
+      "Rafael Hernández Airport::sentence::0",
+      "Shannons Pond Seaplane Base::sentence::2"
+    ],
+    "evidence_wiki_url": [
+      "https://en.wikipedia.org/wiki/Dillingham_Airport",
+      "https://en.wikipedia.org/wiki/Rafael_Hern%C3%A1ndez_Airport",
+      "https://en.wikipedia.org/wiki/Shannons_Pond_Seaplane_Base"
+    ],
+    "evidence_sentence_id": [
+      "Dillingham Airport::sentence::1",
+      "Rafael Hernández Airport::sentence::0",
+      "Shannons Pond Seaplane Base::sentence::2"
+    ]
+  },
+  "grafo_claim": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "0965c86d-d102-5d34-be73-fc3a798e80cb",
+        "text": "This chunk is about:\n- Places: Shannons Pond Seaplane Base, Rafael Hernández Airport\n- Topics: civilian passenger air service, relative location\n\nFacts:\n- Shannons Pond Seaplane Base is west of an airport that handles civilian passenger service.\n- Rafael Hernández Airport handles civilian passenger service.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "b27e2821-4c96-5381-82ed-6a354bfdaa3e",
+        "text": "The airport that Shannons Pond Seaplane Base is west of, and Rafael Hernández Airport both handle civilian (passenger) service.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "114c0fa7-6760-5a1a-9af2-716880f5c39a",
+        "text": "text_2045cdbc8442cb07b85e6bb551c18077",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "2bc0b75d-775d-5405-b058-5c2c3092c775",
+        "text": "shannons pond seaplane base",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "5f394058-b2a0-5ba8-8466-ba2a18cfcf4e",
+        "text": "place",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "57ec0b73-5f93-5ca2-84f2-2f2222dbdff8",
+        "text": "rafael hernández airport",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "c7d77851-e3ad-5cb7-93b6-b1506bedf297",
+        "text": "civilian passenger service",
+        "type": "Entity"
+      },
+      {
+        "id": 7,
+        "original_id": "d2a381fa-3658-5ca6-ada9-2109cfc9331d",
+        "text": "concept",
+        "type": "EntityType"
+      },
+      {
+        "id": 8,
+        "original_id": "337b7c66-d7f7-56b2-a00e-ad23a76d093f",
+        "text": "the airport west of shannons pond seaplane base",
+        "type": "Entity"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 8,
+        "target": 3,
+        "type": "is_west_of"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 5,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 8,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "handles"
+      },
+      {
+        "source": 1,
+        "target": 6,
+        "type": "contains"
+      },
+      {
+        "source": 8,
+        "target": 6,
+        "type": "handles"
+      },
+      {
+        "source": 6,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 8,
+        "type": "contains"
+      }
+    ]
+  },
+  "grafo_evidencia": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "5e046f42-87d3-5430-b4ac-0e14eb364ef9",
+        "text": "This chunk is about:\n- Places: Dillingham Airport, Rafael Hernández Airport, Shannons Pond Seaplane Base, Aguadilla, Puerto Rico\n- Systems: IATA, ICAO, FAA LID\n- Concepts: scheduled passenger service, joint civil-military airports\n\nFacts:\n- Dillingham Airport has scheduled passenger service available.\n- Rafael Hernández Airport is a joint civil-military airport located in Aguadilla, Puerto Rico.\n- Rafael Hernández Airport has the codes IATA BQN, ICAO TJBQ, and FAA LID BQN.\n- Shannons Pond Seaplane Base is 3 miles west of Dillingham Airport.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "cf2048d5-32c8-5120-aa24-2458cb056a16",
+        "text": "Page: Dillingham Airport. Sentence: Scheduled passenger service is available at this airport.\nPage: Rafael Hernández Airport. Sentence: Rafael Hernández Airport (IATA: BQN, ICAO: TJBQ, FAA LID: BQN) is a joint civil-military airport located in Aguadilla, Puerto Rico.\nPage: Shannons Pond Seaplane Base. Sentence: It is 3 mi west of Dillingham Airport.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "e4719f20-e857-5450-82d6-03a9a9104180",
+        "text": "text_3cc0281b2f1c9d59aa886ef887fb1652",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "2b71ec2b-e544-581d-b63a-addef0705f3c",
+        "text": "dillingham airport",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "50596f1a-2d8a-5de7-96b5-ba7068791784",
+        "text": "airport",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "54acbb58-7d2e-5af5-a6cc-f46168b56f36",
+        "text": "scheduled passenger service",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "cca61dbb-0e3d-5b0b-9098-fc254ce885e7",
+        "text": "service",
+        "type": "EntityType"
+      },
+      {
+        "id": 7,
+        "original_id": "57ec0b73-5f93-5ca2-84f2-2f2222dbdff8",
+        "text": "rafael hernández airport",
+        "type": "Entity"
+      },
+      {
+        "id": 8,
+        "original_id": "9374a475-a92a-571e-a65d-86efc1d727b8",
+        "text": "aguadilla",
+        "type": "Entity"
+      },
+      {
+        "id": 9,
+        "original_id": "5f394058-b2a0-5ba8-8466-ba2a18cfcf4e",
+        "text": "place",
+        "type": "EntityType"
+      },
+      {
+        "id": 10,
+        "original_id": "3df5b702-b3aa-5ddc-9a1a-4bae6a65521e",
+        "text": "puerto rico",
+        "type": "Entity"
+      },
+      {
+        "id": 11,
+        "original_id": "2bc0b75d-775d-5405-b058-5c2c3092c775",
+        "text": "shannons pond seaplane base",
+        "type": "Entity"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 11,
+        "target": 3,
+        "type": "located_west_of"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 7,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 11,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "has_service"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      },
+      {
+        "source": 7,
+        "target": 8,
+        "type": "located_in"
+      },
+      {
+        "source": 1,
+        "target": 8,
+        "type": "contains"
+      },
+      {
+        "source": 8,
+        "target": 9,
+        "type": "is_a"
+      },
+      {
+        "source": 10,
+        "target": 9,
+        "type": "is_a"
+      },
+      {
+        "source": 8,
+        "target": 10,
+        "type": "located_in"
+      },
+      {
+        "source": 1,
+        "target": 10,
+        "type": "contains"
+      },
+      {
+        "source": 1,
+        "target": 11,
+        "type": "contains"
+      }
+    ]
+  }
+}

@@ -1,0 +1,703 @@
+{
+  "dataset": "hover",
+  "id": "ff7b3918-007d-4cff-a751-abd58ea1ec83",
+  "split": "train",
+  "claim": "Lime is an ingredient in one of the classic cocktails a bartender can generally mix and is also in this premium cocktail. Bacardi Superior is often used to make this premium cocktail.",
+  "evidencia": "Page: Cosmopolitan (cocktail). Sentence: A cosmopolitan, or informally a cosmo, is a cocktail made with vodka, triple sec, cranberry juice, and freshly squeezed or sweetened lime juice.\nPage: Cuba Libre. Sentence: The Cuba Libre ( ; ] , \"Free Cuba\") is a caffeinated alcoholic cocktail made of cola, lime, and dark or light rum.\nPage: Bartender. Sentence: A bartender can generally mix classic cocktails such as a Cosmopolitan, Manhattan, Old Fashioned, and Mojito.\nPage: Bacardi Superior. Sentence: This rum is mostly used to make cocktails calling for a white rum such as Cuba Libre, Daiquiri, Piña Colada, Mojito, and Bacardi cocktail.",
+  "evidence_text": "Page: Cosmopolitan (cocktail). Sentence: A cosmopolitan, or informally a cosmo, is a cocktail made with vodka, triple sec, cranberry juice, and freshly squeezed or sweetened lime juice.\nPage: Cuba Libre. Sentence: The Cuba Libre ( ; ] , \"Free Cuba\") is a caffeinated alcoholic cocktail made of cola, lime, and dark or light rum.\nPage: Bartender. Sentence: A bartender can generally mix classic cocktails such as a Cosmopolitan, Manhattan, Old Fashioned, and Mojito.\nPage: Bacardi Superior. Sentence: This rum is mostly used to make cocktails calling for a white rum such as Cuba Libre, Daiquiri, Piña Colada, Mojito, and Bacardi cocktail.",
+  "label": "SUPPORTED",
+  "num_hops": 4,
+  "hover_metadata": {
+    "supporting_facts": [
+      [
+        "Cosmopolitan (cocktail)",
+        0
+      ],
+      [
+        "Cuba Libre",
+        0
+      ],
+      [
+        "Bartender",
+        2
+      ],
+      [
+        "Bacardi Superior",
+        2
+      ]
+    ],
+    "num_hops": 4,
+    "evidence_annotation_id": [
+      0
+    ],
+    "evidence_id": [
+      "Cosmopolitan (cocktail)::sentence::0",
+      "Cuba Libre::sentence::0",
+      "Bartender::sentence::2",
+      "Bacardi Superior::sentence::2"
+    ],
+    "evidence_wiki_url": [
+      "https://en.wikipedia.org/wiki/Cosmopolitan_%28cocktail%29",
+      "https://en.wikipedia.org/wiki/Cuba_Libre",
+      "https://en.wikipedia.org/wiki/Bartender",
+      "https://en.wikipedia.org/wiki/Bacardi_Superior"
+    ],
+    "evidence_sentence_id": [
+      "Cosmopolitan (cocktail)::sentence::0",
+      "Cuba Libre::sentence::0",
+      "Bartender::sentence::2",
+      "Bacardi Superior::sentence::2"
+    ]
+  },
+  "grafo_claim": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "af914e76-58d4-5ced-8018-05e481746f69",
+        "text": "This chunk is about:\n- Products: Lime, Bacardi Superior\n- Topics: Classic cocktails, premium cocktails\n\nFacts:\n- Lime is an ingredient in one classic cocktail that a bartender can generally mix.\n- Lime is also an ingredient in a premium cocktail.\n- Bacardi Superior is often used to make the premium cocktail.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "95eadba8-55ef-53a8-96a5-1eda9401f2d1",
+        "text": "Lime is an ingredient in one of the classic cocktails a bartender can generally mix and is also in this premium cocktail. Bacardi Superior is often used to make this premium cocktail.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "4588cf3f-1e19-5949-a86c-3c9805d3fe8e",
+        "text": "text_d0fb24ef3f9d6ec0e6a321067fc9a00c",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "338e9726-383e-54da-94ac-904ba0f7dc0b",
+        "text": "lime",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "de04d8a8-1b78-5a88-bb18-5aa48f533be4",
+        "text": "ingredient",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "5cf1d05d-33e1-5fa2-8c3f-fdf15b8c747e",
+        "text": "classic cocktail",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "6db8ddc4-ae16-5cb9-99f4-b16b70503f38",
+        "text": "cocktail",
+        "type": "EntityType"
+      },
+      {
+        "id": 7,
+        "original_id": "4c350655-65e5-59c4-b3a3-bf07d8693bcd",
+        "text": "premium cocktail",
+        "type": "Entity"
+      },
+      {
+        "id": 8,
+        "original_id": "5f850deb-b60f-5658-b88f-664dfab216bd",
+        "text": "bacardi superior",
+        "type": "Entity"
+      },
+      {
+        "id": 9,
+        "original_id": "f76d57aa-4740-5218-9539-0e0978cbf183",
+        "text": "product",
+        "type": "EntityType"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "ingredient_in"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 7,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 7,
+        "type": "ingredient_in"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      },
+      {
+        "source": 8,
+        "target": 7,
+        "type": "used_to_make"
+      },
+      {
+        "source": 1,
+        "target": 8,
+        "type": "contains"
+      },
+      {
+        "source": 8,
+        "target": 9,
+        "type": "is_a"
+      }
+    ]
+  },
+  "grafo_evidencia": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "bdfa9e0f-570e-5f22-8f8f-06f71b55bb8d",
+        "text": "This chunk is about:\n- Products: Cosmopolitan, Cuba Libre, Bacardi Superior\n- Roles: Bartender\n- Concepts: Cocktails, cocktail ingredients\n\nFacts:\n- The Cosmopolitan, also called a cosmo, is a cocktail made with vodka, triple sec, cranberry juice, and freshly squeezed or sweetened lime juice.\n- The Cuba Libre, meaning \"Free Cuba,\" is a caffeinated alcoholic cocktail made with cola, lime, and dark or light rum.\n- A bartender can generally mix classic cocktails such as a Cosmopolitan, Manhattan, Old Fashioned, and Mojito.\n- Bacardi Superior is mostly used to make cocktails that call for white rum, including the Cuba Libre, Daiquiri, Piña Colada, Mojito, and Bacardi cocktail.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "ebd2f445-afa5-52d3-bcfc-904a2b4cc5f2",
+        "text": "Page: Cosmopolitan (cocktail). Sentence: A cosmopolitan, or informally a cosmo, is a cocktail made with vodka, triple sec, cranberry juice, and freshly squeezed or sweetened lime juice.\nPage: Cuba Libre. Sentence: The Cuba Libre ( ; ] , \"Free Cuba\") is a caffeinated alcoholic cocktail made of cola, lime, and dark or light rum.\nPage: Bartender. Sentence: A bartender can generally mix classic cocktails such as a Cosmopolitan, Manhattan, Old Fashioned, and Mojito.\nPage: Bacardi Superior. Sentence: This rum is mostly used to make cocktails calling for a white rum such as Cuba Libre, Daiquiri, Piña Colada, Mojito, and Bacardi cocktail.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "5111b1bd-82ec-5746-a488-2036e40fee27",
+        "text": "text_513d8c5150ee413eb2d18d900c471da7",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "dbc2280a-3365-5c6f-b54a-ab5a12eced4c",
+        "text": "cosmopolitan",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "6db8ddc4-ae16-5cb9-99f4-b16b70503f38",
+        "text": "cocktail",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "ee056da7-39c6-5e7c-854e-f5c695f2fe0d",
+        "text": "cosmo",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "39575085-0710-527d-bd54-019de7b00429",
+        "text": "name",
+        "type": "EntityType"
+      },
+      {
+        "id": 7,
+        "original_id": "f2b88082-7236-5f0c-a8cb-82a840f7c244",
+        "text": "vodka",
+        "type": "Entity"
+      },
+      {
+        "id": 8,
+        "original_id": "de04d8a8-1b78-5a88-bb18-5aa48f533be4",
+        "text": "ingredient",
+        "type": "EntityType"
+      },
+      {
+        "id": 9,
+        "original_id": "07210c52-a321-548d-87bd-e0113703f092",
+        "text": "triple sec",
+        "type": "Entity"
+      },
+      {
+        "id": 10,
+        "original_id": "e5062360-54a1-51f5-b7e1-67065f9f805c",
+        "text": "cranberry juice",
+        "type": "Entity"
+      },
+      {
+        "id": 11,
+        "original_id": "f446697f-ca4f-535f-8122-6f393254e6d2",
+        "text": "lime juice",
+        "type": "Entity"
+      },
+      {
+        "id": 12,
+        "original_id": "4192e4aa-c4f6-5750-9fbb-d4cf44a2de8d",
+        "text": "cuba libre",
+        "type": "Entity"
+      },
+      {
+        "id": 13,
+        "original_id": "b90a5e2c-c4c7-5286-ba04-f37ec4e45ec0",
+        "text": "free cuba",
+        "type": "Entity"
+      },
+      {
+        "id": 14,
+        "original_id": "eb32cb44-11c0-5d75-9a99-f9a04024bfe1",
+        "text": "cola",
+        "type": "Entity"
+      },
+      {
+        "id": 15,
+        "original_id": "338e9726-383e-54da-94ac-904ba0f7dc0b",
+        "text": "lime",
+        "type": "Entity"
+      },
+      {
+        "id": 16,
+        "original_id": "ac329cbe-b7a4-5622-a974-d1487488d4e2",
+        "text": "dark rum",
+        "type": "Entity"
+      },
+      {
+        "id": 17,
+        "original_id": "2000edea-0093-5bcf-a7db-6a4674304a9a",
+        "text": "light rum",
+        "type": "Entity"
+      },
+      {
+        "id": 18,
+        "original_id": "ea25fc29-9d26-5bef-a3fc-a98df6515663",
+        "text": "white rum",
+        "type": "Entity"
+      },
+      {
+        "id": 19,
+        "original_id": "5e06d55a-6d7d-5472-a072-d7c0a055afc1",
+        "text": "bartender",
+        "type": "Entity"
+      },
+      {
+        "id": 20,
+        "original_id": "99a82eec-bb35-5bb5-9ed2-e73fc7a756de",
+        "text": "person",
+        "type": "EntityType"
+      },
+      {
+        "id": 21,
+        "original_id": "c65245b2-435b-5786-be1c-050c01adb0a5",
+        "text": "manhattan",
+        "type": "Entity"
+      },
+      {
+        "id": 22,
+        "original_id": "1a3c2c06-6bd1-5786-88a7-ff6c96ca15da",
+        "text": "old fashioned",
+        "type": "Entity"
+      },
+      {
+        "id": 23,
+        "original_id": "0efe0ef7-4321-5add-8e92-b35d7a3de1a2",
+        "text": "mojito",
+        "type": "Entity"
+      },
+      {
+        "id": 24,
+        "original_id": "5f850deb-b60f-5658-b88f-664dfab216bd",
+        "text": "bacardi superior",
+        "type": "Entity"
+      },
+      {
+        "id": 25,
+        "original_id": "f76d57aa-4740-5218-9539-0e0978cbf183",
+        "text": "product",
+        "type": "EntityType"
+      },
+      {
+        "id": 26,
+        "original_id": "d763b2f6-fa95-53b9-9c0f-1cbff1fc3110",
+        "text": "daiquiri",
+        "type": "Entity"
+      },
+      {
+        "id": 27,
+        "original_id": "b06dfe62-fbb0-597b-ac28-4aab707b3bba",
+        "text": "piña colada",
+        "type": "Entity"
+      },
+      {
+        "id": 28,
+        "original_id": "bfde0fb1-8330-5050-be1f-86497bca3ad6",
+        "text": "bacardi cocktail",
+        "type": "Entity"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 19,
+        "target": 3,
+        "type": "can_mix"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 12,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 21,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 22,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 23,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 26,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 27,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 28,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "informally_called"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 13,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 7,
+        "type": "made_with"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      },
+      {
+        "source": 7,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 9,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 10,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 11,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 14,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 15,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 16,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 17,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 18,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 9,
+        "type": "made_with"
+      },
+      {
+        "source": 1,
+        "target": 9,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 10,
+        "type": "made_with"
+      },
+      {
+        "source": 1,
+        "target": 10,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 11,
+        "type": "made_with"
+      },
+      {
+        "source": 1,
+        "target": 11,
+        "type": "contains"
+      },
+      {
+        "source": 1,
+        "target": 12,
+        "type": "contains"
+      },
+      {
+        "source": 24,
+        "target": 12,
+        "type": "mostly_used_to_make"
+      },
+      {
+        "source": 12,
+        "target": 13,
+        "type": "translated_as"
+      },
+      {
+        "source": 1,
+        "target": 13,
+        "type": "contains"
+      },
+      {
+        "source": 12,
+        "target": 14,
+        "type": "made_with"
+      },
+      {
+        "source": 1,
+        "target": 14,
+        "type": "contains"
+      },
+      {
+        "source": 12,
+        "target": 15,
+        "type": "made_with"
+      },
+      {
+        "source": 1,
+        "target": 15,
+        "type": "contains"
+      },
+      {
+        "source": 12,
+        "target": 16,
+        "type": "made_with"
+      },
+      {
+        "source": 1,
+        "target": 16,
+        "type": "contains"
+      },
+      {
+        "source": 12,
+        "target": 17,
+        "type": "made_with"
+      },
+      {
+        "source": 1,
+        "target": 17,
+        "type": "contains"
+      },
+      {
+        "source": 12,
+        "target": 18,
+        "type": "calls_for"
+      },
+      {
+        "source": 23,
+        "target": 18,
+        "type": "calls_for"
+      },
+      {
+        "source": 26,
+        "target": 18,
+        "type": "calls_for"
+      },
+      {
+        "source": 27,
+        "target": 18,
+        "type": "calls_for"
+      },
+      {
+        "source": 28,
+        "target": 18,
+        "type": "calls_for"
+      },
+      {
+        "source": 1,
+        "target": 18,
+        "type": "contains"
+      },
+      {
+        "source": 1,
+        "target": 19,
+        "type": "contains"
+      },
+      {
+        "source": 19,
+        "target": 20,
+        "type": "is_a"
+      },
+      {
+        "source": 19,
+        "target": 21,
+        "type": "can_mix"
+      },
+      {
+        "source": 1,
+        "target": 21,
+        "type": "contains"
+      },
+      {
+        "source": 19,
+        "target": 22,
+        "type": "can_mix"
+      },
+      {
+        "source": 1,
+        "target": 22,
+        "type": "contains"
+      },
+      {
+        "source": 19,
+        "target": 23,
+        "type": "can_mix"
+      },
+      {
+        "source": 1,
+        "target": 23,
+        "type": "contains"
+      },
+      {
+        "source": 24,
+        "target": 23,
+        "type": "mostly_used_to_make"
+      },
+      {
+        "source": 1,
+        "target": 24,
+        "type": "contains"
+      },
+      {
+        "source": 24,
+        "target": 25,
+        "type": "is_a"
+      },
+      {
+        "source": 24,
+        "target": 26,
+        "type": "mostly_used_to_make"
+      },
+      {
+        "source": 1,
+        "target": 26,
+        "type": "contains"
+      },
+      {
+        "source": 24,
+        "target": 27,
+        "type": "mostly_used_to_make"
+      },
+      {
+        "source": 1,
+        "target": 27,
+        "type": "contains"
+      },
+      {
+        "source": 24,
+        "target": 28,
+        "type": "mostly_used_to_make"
+      },
+      {
+        "source": 1,
+        "target": 28,
+        "type": "contains"
+      }
+    ]
+  }
+}

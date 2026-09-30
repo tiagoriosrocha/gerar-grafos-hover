@@ -1,0 +1,524 @@
+{
+  "dataset": "hover",
+  "id": "abb341d0-1335-4e95-9615-32ad174a911c",
+  "split": "dev",
+  "claim": "The tidal estuary in which Branford is a shoreline town is 110 miles long.",
+  "evidencia": "Page: Branford, Connecticut. Sentence: Branford is a shoreline town located on Long Island Sound in New Haven County, Connecticut, 8 mi east of New Haven.\nPage: Long Island Sound. Sentence: Long Island Sound is a tidal estuary of the Atlantic Ocean, lying between the eastern shores of Bronx County, New York City, southern Westchester County, and Connecticut to the north, and the North Shore of Long Island, to the south.\nPage: Long Island Sound. Sentence: From east to west, the sound stretches 110 miles (177 km) from the East River in New York City, along the North Shore of Long Island, to Block Island Sound.",
+  "evidence_text": "Page: Branford, Connecticut. Sentence: Branford is a shoreline town located on Long Island Sound in New Haven County, Connecticut, 8 mi east of New Haven.\nPage: Long Island Sound. Sentence: Long Island Sound is a tidal estuary of the Atlantic Ocean, lying between the eastern shores of Bronx County, New York City, southern Westchester County, and Connecticut to the north, and the North Shore of Long Island, to the south.\nPage: Long Island Sound. Sentence: From east to west, the sound stretches 110 miles (177 km) from the East River in New York City, along the North Shore of Long Island, to Block Island Sound.",
+  "label": "SUPPORTED",
+  "num_hops": 2,
+  "hover_metadata": {
+    "supporting_facts": [
+      [
+        "Branford, Connecticut",
+        0
+      ],
+      [
+        "Long Island Sound",
+        0
+      ],
+      [
+        "Long Island Sound",
+        1
+      ]
+    ],
+    "num_hops": 2,
+    "evidence_annotation_id": [
+      0
+    ],
+    "evidence_id": [
+      "Branford, Connecticut::sentence::0",
+      "Long Island Sound::sentence::0",
+      "Long Island Sound::sentence::1"
+    ],
+    "evidence_wiki_url": [
+      "https://en.wikipedia.org/wiki/Branford%2C_Connecticut",
+      "https://en.wikipedia.org/wiki/Long_Island_Sound"
+    ],
+    "evidence_sentence_id": [
+      "Branford, Connecticut::sentence::0",
+      "Long Island Sound::sentence::0",
+      "Long Island Sound::sentence::1"
+    ]
+  },
+  "grafo_claim": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "1bb2c00c-5747-5b7e-896e-d60c429e93b4",
+        "text": "This chunk is about:\n- Places: Branford, tidal estuary\n- Topics: shoreline geography\n\nFacts:\n- Branford is a shoreline town on a tidal estuary.\n- The tidal estuary on which Branford is located is 110 miles long.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "a60f6b57-bb54-59c8-beed-563b16585d7d",
+        "text": "The tidal estuary in which Branford is a shoreline town is 110 miles long.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "d45ced10-4dbb-5c49-b6cb-adb7e6d184b2",
+        "text": "text_5b94fd779c32833a53886fcfdc459feb",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "01f98a68-9396-5eb0-b109-406d5d008b50",
+        "text": "branford",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "5f394058-b2a0-5ba8-8466-ba2a18cfcf4e",
+        "text": "place",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "43e3f3a4-64cc-5b2d-afef-1dd9106a2b6b",
+        "text": "tidal estuary",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "bbbf249a-5b67-56e9-b856-878618d26cae",
+        "text": "110 miles",
+        "type": "Entity"
+      },
+      {
+        "id": 7,
+        "original_id": "12d5521e-a878-542e-bebc-84ff79179d8e",
+        "text": "measurement",
+        "type": "EntityType"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 5,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "is_shoreline_town_in"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "has_length"
+      },
+      {
+        "source": 1,
+        "target": 6,
+        "type": "contains"
+      },
+      {
+        "source": 6,
+        "target": 7,
+        "type": "is_a"
+      }
+    ]
+  },
+  "grafo_evidencia": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "3c0cc7f1-0143-5c0f-b963-5fb882913f9c",
+        "text": "This chunk is about:\n- Places: Branford, Connecticut; Long Island Sound; New Haven County; New Haven; Bronx County; New York City; Westchester County; Connecticut; Long Island; Block Island Sound; East River\n- Concepts: shoreline towns; tidal estuaries; Atlantic Ocean\n\nFacts:\n- Long Island Sound is a tidal estuary of the Atlantic Ocean.\n- Long Island Sound lies between the eastern shores of Bronx County in New York City, southern Westchester County, and Connecticut to the north, and the North Shore of Long Island to the south.\n- Long Island Sound stretches 110 miles from the East River in New York City along the North Shore of Long Island to Block Island Sound.\n- Branford is a shoreline town in New Haven County, Connecticut, on Long Island Sound, 8 miles east of New Haven.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "75fd9cd5-4110-55f6-90e1-dc5448cdf4b2",
+        "text": "Page: Branford, Connecticut. Sentence: Branford is a shoreline town located on Long Island Sound in New Haven County, Connecticut, 8 mi east of New Haven.\nPage: Long Island Sound. Sentence: Long Island Sound is a tidal estuary of the Atlantic Ocean, lying between the eastern shores of Bronx County, New York City, southern Westchester County, and Connecticut to the north, and the North Shore of Long Island, to the south.\nPage: Long Island Sound. Sentence: From east to west, the sound stretches 110 miles (177 km) from the East River in New York City, along the North Shore of Long Island, to Block Island Sound.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "ceeaa6e6-7ead-505e-8ced-f534f8ba057d",
+        "text": "text_08b227efbd88ef35bb726544f2c3a299",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "01f98a68-9396-5eb0-b109-406d5d008b50",
+        "text": "branford",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "5f394058-b2a0-5ba8-8466-ba2a18cfcf4e",
+        "text": "place",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "3cd8c8e6-12da-5f27-9033-bd37e2ad8f9c",
+        "text": "long island sound",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "d7adefcc-e37d-52f0-ac54-f6c950f22bbf",
+        "text": "atlantic ocean",
+        "type": "Entity"
+      },
+      {
+        "id": 7,
+        "original_id": "5dbe4210-8a04-51e4-89eb-b62cdefd4dc7",
+        "text": "bronx county",
+        "type": "Entity"
+      },
+      {
+        "id": 8,
+        "original_id": "62912d92-4218-52f7-a1a6-776a04889442",
+        "text": "new york city",
+        "type": "Entity"
+      },
+      {
+        "id": 9,
+        "original_id": "6927cf8b-978f-5674-a1b8-3b3eba07f9cd",
+        "text": "westchester county",
+        "type": "Entity"
+      },
+      {
+        "id": 10,
+        "original_id": "41d83147-79b6-55d6-8298-0b7031edadde",
+        "text": "connecticut",
+        "type": "Entity"
+      },
+      {
+        "id": 11,
+        "original_id": "9c9dc575-f9ae-586b-9911-6f682de73a55",
+        "text": "north shore of long island",
+        "type": "Entity"
+      },
+      {
+        "id": 12,
+        "original_id": "51e48389-c5d4-51ed-b74b-d8ffe031a771",
+        "text": "east river",
+        "type": "Entity"
+      },
+      {
+        "id": 13,
+        "original_id": "ac92f32a-1f1c-5e57-8d93-d17025d2ac31",
+        "text": "block island sound",
+        "type": "Entity"
+      },
+      {
+        "id": 14,
+        "original_id": "bbbf249a-5b67-56e9-b856-878618d26cae",
+        "text": "110 miles",
+        "type": "Entity"
+      },
+      {
+        "id": 15,
+        "original_id": "7a7a0687-e490-5167-ad5a-0e39d9055dee",
+        "text": "quantity",
+        "type": "EntityType"
+      },
+      {
+        "id": 16,
+        "original_id": "b8a61e96-6b8d-5970-8bb3-8bcacea799e5",
+        "text": "177 km",
+        "type": "Entity"
+      },
+      {
+        "id": 17,
+        "original_id": "8821b0e1-cef5-5aa7-8e4b-96c4a4bfd242",
+        "text": "new haven county",
+        "type": "Entity"
+      },
+      {
+        "id": 18,
+        "original_id": "9a03e84a-010c-5f83-8423-106ebaecc018",
+        "text": "new haven",
+        "type": "Entity"
+      },
+      {
+        "id": 19,
+        "original_id": "197d1ed3-ae83-5a6f-b531-dda7fb9301b7",
+        "text": "8 mi",
+        "type": "Entity"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 5,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 6,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 7,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 8,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 9,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 10,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 11,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 12,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 13,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 17,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 18,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "located_on"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "estuary_of"
+      },
+      {
+        "source": 1,
+        "target": 6,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 7,
+        "type": "lies_between_north_of"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      },
+      {
+        "source": 7,
+        "target": 8,
+        "type": "located_in"
+      },
+      {
+        "source": 5,
+        "target": 8,
+        "type": "lies_between_north_of"
+      },
+      {
+        "source": 12,
+        "target": 8,
+        "type": "located_in"
+      },
+      {
+        "source": 1,
+        "target": 8,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 9,
+        "type": "lies_between_north_of"
+      },
+      {
+        "source": 1,
+        "target": 9,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 10,
+        "type": "lies_between_north_of"
+      },
+      {
+        "source": 17,
+        "target": 10,
+        "type": "located_in"
+      },
+      {
+        "source": 3,
+        "target": 10,
+        "type": "located_in"
+      },
+      {
+        "source": 1,
+        "target": 10,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 11,
+        "type": "lies_between_south_of"
+      },
+      {
+        "source": 1,
+        "target": 11,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 12,
+        "type": "stretches_from"
+      },
+      {
+        "source": 1,
+        "target": 12,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 13,
+        "type": "stretches_to"
+      },
+      {
+        "source": 1,
+        "target": 13,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 14,
+        "type": "has_length"
+      },
+      {
+        "source": 1,
+        "target": 14,
+        "type": "contains"
+      },
+      {
+        "source": 14,
+        "target": 15,
+        "type": "is_a"
+      },
+      {
+        "source": 16,
+        "target": 15,
+        "type": "is_a"
+      },
+      {
+        "source": 19,
+        "target": 15,
+        "type": "is_a"
+      },
+      {
+        "source": 5,
+        "target": 16,
+        "type": "has_length"
+      },
+      {
+        "source": 1,
+        "target": 16,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 17,
+        "type": "located_in"
+      },
+      {
+        "source": 1,
+        "target": 17,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 18,
+        "type": "east_of"
+      },
+      {
+        "source": 1,
+        "target": 18,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 19,
+        "type": "distance_east_of"
+      },
+      {
+        "source": 1,
+        "target": 19,
+        "type": "contains"
+      }
+    ]
+  }
+}

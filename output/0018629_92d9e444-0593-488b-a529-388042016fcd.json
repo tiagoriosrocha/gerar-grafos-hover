@@ -1,0 +1,486 @@
+{
+  "dataset": "hover",
+  "id": "92d9e444-0593-488b-a529-388042016fcd",
+  "split": "dev",
+  "claim": "The controversial documentary, which Hollywood Outlaw Movie is is the director's cut of, and The Future of Food are not both documentaries about food",
+  "evidencia": "Page: Bitter Jester. Sentence: It's a portrait of the comedy world that includes interviews with a multitude of stars including Richard Pryor, Richard Belzer and many others.\nPage: The Future of Food. Sentence: The Future of Food is a 2004 American documentary film written and directed by Deborah Koons Garcia to describe an investigation into unlabeled, patented, genetically engineered foods sold in grocery stores in the United States for the past decade.\nPage: Hollywood Outlaw Movie. Sentence: Hollywood Outlaw, The Unmaking of a Bitter Jester is the director’s cut of the controversial documentary \"Bitter Jester\" which was buried in 2004 amidst much scandal, never to be seen again.",
+  "evidence_text": "Page: Bitter Jester. Sentence: It's a portrait of the comedy world that includes interviews with a multitude of stars including Richard Pryor, Richard Belzer and many others.\nPage: The Future of Food. Sentence: The Future of Food is a 2004 American documentary film written and directed by Deborah Koons Garcia to describe an investigation into unlabeled, patented, genetically engineered foods sold in grocery stores in the United States for the past decade.\nPage: Hollywood Outlaw Movie. Sentence: Hollywood Outlaw, The Unmaking of a Bitter Jester is the director’s cut of the controversial documentary \"Bitter Jester\" which was buried in 2004 amidst much scandal, never to be seen again.",
+  "label": "SUPPORTED",
+  "num_hops": 3,
+  "hover_metadata": {
+    "supporting_facts": [
+      [
+        "Bitter Jester",
+        1
+      ],
+      [
+        "The Future of Food",
+        0
+      ],
+      [
+        "Hollywood Outlaw Movie",
+        0
+      ]
+    ],
+    "num_hops": 3,
+    "evidence_annotation_id": [
+      0
+    ],
+    "evidence_id": [
+      "Bitter Jester::sentence::1",
+      "The Future of Food::sentence::0",
+      "Hollywood Outlaw Movie::sentence::0"
+    ],
+    "evidence_wiki_url": [
+      "https://en.wikipedia.org/wiki/Bitter_Jester",
+      "https://en.wikipedia.org/wiki/The_Future_of_Food",
+      "https://en.wikipedia.org/wiki/Hollywood_Outlaw_Movie"
+    ],
+    "evidence_sentence_id": [
+      "Bitter Jester::sentence::1",
+      "The Future of Food::sentence::0",
+      "Hollywood Outlaw Movie::sentence::0"
+    ]
+  },
+  "grafo_claim": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "143d91ef-eecf-5c68-b064-7a9d6d18884e",
+        "text": "This chunk is about:\n- Works: The controversial documentary, Hollywood Outlaw Movie, The Future of Food\n- Concepts: documentary topics, director's cut, negation\n\nFacts:\n- Hollywood Outlaw Movie is the work of which “the controversial documentary” is the director's cut.\n- The Future of Food is a documentary about food.\n- The statement says that the controversial documentary and The Future of Food are not both documentaries about food.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "d408401f-f6bd-5f44-bf7f-7846f6dc216e",
+        "text": "The controversial documentary, which Hollywood Outlaw Movie is is the director's cut of, and The Future of Food are not both documentaries about food",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "fcff4402-d4d6-5d19-a74b-e09956b00c44",
+        "text": "text_b5083b7d7589aad727198dcf383d54bb",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "83300aa3-b39e-59f9-834d-ffea20b8a4c5",
+        "text": "hollywood outlaw movie",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "5263a535-1b4b-5925-be3e-310d03cd303b",
+        "text": "work",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "e9db3e2c-56c1-5f25-9af8-4ce3303671ee",
+        "text": "directors cut of hollywood outlaw movie",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "dba72a6d-afff-5d83-8229-c17e5de4ae9c",
+        "text": "food",
+        "type": "Entity"
+      },
+      {
+        "id": 7,
+        "original_id": "d2a381fa-3658-5ca6-ada9-2109cfc9331d",
+        "text": "concept",
+        "type": "EntityType"
+      },
+      {
+        "id": 8,
+        "original_id": "7098b315-335b-55ed-bdd0-8d5ce185fd82",
+        "text": "the future of food",
+        "type": "Entity"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 3,
+        "type": "is_directors_cut_of"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 5,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 8,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 8,
+        "target": 5,
+        "type": "not_both_documentaries_about"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "not_both_about"
+      },
+      {
+        "source": 8,
+        "target": 6,
+        "type": "is_about"
+      },
+      {
+        "source": 1,
+        "target": 6,
+        "type": "contains"
+      },
+      {
+        "source": 6,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 8,
+        "type": "contains"
+      }
+    ]
+  },
+  "grafo_evidencia": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "3933340a-5347-52bf-91f8-c8330e01f4f1",
+        "text": "This chunk is about:\n- Products: Bitter Jester, The Future of Food, Hollywood Outlaw: The Unmaking of a Bitter Jester\n- People: Richard Pryor, Richard Belzer, Deborah Koons Garcia\n- Topics: comedy world, genetically engineered foods, documentary films, scandal\n\nFacts:\n- The Future of Food is a 2004 American documentary film written and directed by Deborah Koons Garcia.\n- The Future of Food investigates unlabeled, patented, genetically engineered foods sold in United States grocery stores over the previous decade.\n- Bitter Jester is a portrait of the comedy world that includes interviews with stars such as Richard Pryor and Richard Belzer.\n- Hollywood Outlaw: The Unmaking of a Bitter Jester is the director’s cut of the documentary Bitter Jester.\n- Bitter Jester was buried in 2004 amid scandal and was then never seen again.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "e06eaae1-28f3-5680-bee8-10257d278c3e",
+        "text": "Page: Bitter Jester. Sentence: It's a portrait of the comedy world that includes interviews with a multitude of stars including Richard Pryor, Richard Belzer and many others.\nPage: The Future of Food. Sentence: The Future of Food is a 2004 American documentary film written and directed by Deborah Koons Garcia to describe an investigation into unlabeled, patented, genetically engineered foods sold in grocery stores in the United States for the past decade.\nPage: Hollywood Outlaw Movie. Sentence: Hollywood Outlaw, The Unmaking of a Bitter Jester is the director’s cut of the controversial documentary \"Bitter Jester\" which was buried in 2004 amidst much scandal, never to be seen again.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "a92e16cd-4dd9-56da-bde1-379fc4b55db3",
+        "text": "text_475e96510b5557aa6ffc1b352d2d5685",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "fc5037e0-a103-5400-8703-ed49631426fc",
+        "text": "bitter jester",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "5263a535-1b4b-5925-be3e-310d03cd303b",
+        "text": "work",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "8f4ab184-e0de-5e7f-a067-06f09c83a300",
+        "text": "comedy world",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "d2a381fa-3658-5ca6-ada9-2109cfc9331d",
+        "text": "concept",
+        "type": "EntityType"
+      },
+      {
+        "id": 7,
+        "original_id": "24b78498-efd8-5e54-88fe-1392a0aaba15",
+        "text": "richard pryor",
+        "type": "Entity"
+      },
+      {
+        "id": 8,
+        "original_id": "99a82eec-bb35-5bb5-9ed2-e73fc7a756de",
+        "text": "person",
+        "type": "EntityType"
+      },
+      {
+        "id": 9,
+        "original_id": "5008019c-4ea6-565b-9210-a228214353f5",
+        "text": "richard belzer",
+        "type": "Entity"
+      },
+      {
+        "id": 10,
+        "original_id": "559b7176-da84-5102-a855-b896617a9c3b",
+        "text": "2004",
+        "type": "Entity"
+      },
+      {
+        "id": 11,
+        "original_id": "b19433ae-558c-5aaf-95ac-6231f2a4be0e",
+        "text": "date",
+        "type": "EntityType"
+      },
+      {
+        "id": 12,
+        "original_id": "7098b315-335b-55ed-bdd0-8d5ce185fd82",
+        "text": "the future of food",
+        "type": "Entity"
+      },
+      {
+        "id": 13,
+        "original_id": "1e7be0bd-6292-51d5-8dfb-578478d11586",
+        "text": "deborah koons garcia",
+        "type": "Entity"
+      },
+      {
+        "id": 14,
+        "original_id": "2c7581cd-c7c3-5931-8124-42a26e6013f0",
+        "text": "investigation into unlabeled, patented, genetically engineered foods",
+        "type": "Entity"
+      },
+      {
+        "id": 15,
+        "original_id": "a5fcf4df-749d-5f08-b8ec-5fe0f3be6139",
+        "text": "grocery stores in the united states",
+        "type": "Entity"
+      },
+      {
+        "id": 16,
+        "original_id": "5f394058-b2a0-5ba8-8466-ba2a18cfcf4e",
+        "text": "place",
+        "type": "EntityType"
+      },
+      {
+        "id": 17,
+        "original_id": "874a51da-34ea-5037-be47-d87785d43c37",
+        "text": "united states",
+        "type": "Entity"
+      },
+      {
+        "id": 18,
+        "original_id": "7425ab5e-543d-53a9-b0aa-efc4a5073597",
+        "text": "hollywood outlaw, the unmaking of a bitter jester",
+        "type": "Entity"
+      },
+      {
+        "id": 19,
+        "original_id": "caf322b8-8dd7-5a48-863d-d8df0047d88f",
+        "text": "controversial documentary bitter jester",
+        "type": "Entity"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 18,
+        "target": 3,
+        "type": "is_directors_cut_of"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 12,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 18,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 19,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "portrays"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 14,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 7,
+        "type": "includes_interview_with"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      },
+      {
+        "source": 7,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 9,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 13,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 9,
+        "type": "includes_interview_with"
+      },
+      {
+        "source": 1,
+        "target": 9,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 10,
+        "type": "was_buried_in"
+      },
+      {
+        "source": 12,
+        "target": 10,
+        "type": "released_in"
+      },
+      {
+        "source": 1,
+        "target": 10,
+        "type": "contains"
+      },
+      {
+        "source": 10,
+        "target": 11,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 12,
+        "type": "contains"
+      },
+      {
+        "source": 12,
+        "target": 13,
+        "type": "written_by"
+      },
+      {
+        "source": 1,
+        "target": 13,
+        "type": "contains"
+      },
+      {
+        "source": 12,
+        "target": 14,
+        "type": "describes"
+      },
+      {
+        "source": 1,
+        "target": 14,
+        "type": "contains"
+      },
+      {
+        "source": 14,
+        "target": 15,
+        "type": "concerns_foods_sold_in"
+      },
+      {
+        "source": 1,
+        "target": 15,
+        "type": "contains"
+      },
+      {
+        "source": 15,
+        "target": 16,
+        "type": "is_a"
+      },
+      {
+        "source": 17,
+        "target": 16,
+        "type": "is_a"
+      },
+      {
+        "source": 15,
+        "target": 17,
+        "type": "located_in"
+      },
+      {
+        "source": 1,
+        "target": 17,
+        "type": "contains"
+      },
+      {
+        "source": 1,
+        "target": 18,
+        "type": "contains"
+      },
+      {
+        "source": 18,
+        "target": 19,
+        "type": "describes_as"
+      },
+      {
+        "source": 1,
+        "target": 19,
+        "type": "contains"
+      }
+    ]
+  }
+}

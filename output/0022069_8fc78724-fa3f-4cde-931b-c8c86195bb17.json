@@ -1,0 +1,428 @@
+{
+  "dataset": "hover",
+  "id": "8fc78724-fa3f-4cde-931b-c8c86195bb17",
+  "split": "dev",
+  "claim": "Stig Lennart Blomqvist drove an Audi, a car produced by German automobile manufacturer.",
+  "evidencia": "Page: Stig Blomqvist. Sentence: Stig Lennart Blomqvist (born 29 July 1946) is a Swedish rally driver.\nPage: Stig Blomqvist. Sentence: Driving an Audi Quattro for the Audi factory team, Blomqvist won the World Rally Championship drivers' title in 1984 and finished runner-up in 1985.\nPage: Audi Quattro. Sentence: The Audi Quattro is a road and rally car, produced by the German automobile manufacturer Audi, part of the Volkswagen Group.",
+  "evidence_text": "Page: Stig Blomqvist. Sentence: Stig Lennart Blomqvist (born 29 July 1946) is a Swedish rally driver.\nPage: Stig Blomqvist. Sentence: Driving an Audi Quattro for the Audi factory team, Blomqvist won the World Rally Championship drivers' title in 1984 and finished runner-up in 1985.\nPage: Audi Quattro. Sentence: The Audi Quattro is a road and rally car, produced by the German automobile manufacturer Audi, part of the Volkswagen Group.",
+  "label": "SUPPORTED",
+  "num_hops": 2,
+  "hover_metadata": {
+    "supporting_facts": [
+      [
+        "Stig Blomqvist",
+        0
+      ],
+      [
+        "Stig Blomqvist",
+        2
+      ],
+      [
+        "Audi Quattro",
+        0
+      ]
+    ],
+    "num_hops": 2,
+    "evidence_annotation_id": [
+      0
+    ],
+    "evidence_id": [
+      "Stig Blomqvist::sentence::0",
+      "Stig Blomqvist::sentence::2",
+      "Audi Quattro::sentence::0"
+    ],
+    "evidence_wiki_url": [
+      "https://en.wikipedia.org/wiki/Stig_Blomqvist",
+      "https://en.wikipedia.org/wiki/Audi_Quattro"
+    ],
+    "evidence_sentence_id": [
+      "Stig Blomqvist::sentence::0",
+      "Stig Blomqvist::sentence::2",
+      "Audi Quattro::sentence::0"
+    ]
+  },
+  "grafo_claim": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "754b3fdf-93ee-5c82-a6e0-76aa8d04d967",
+        "text": "This chunk is about:\n- People: Stig Lennart Blomqvist\n- Companies: Audi\n- Products: Audi cars\n- Places: Germany\n\nFacts:\n- Audi is a German automobile manufacturer.\n- Stig Lennart Blomqvist drove an Audi car.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "277730e7-ff0c-5d0e-b079-9dc9f985bfc4",
+        "text": "Stig Lennart Blomqvist drove an Audi, a car produced by German automobile manufacturer.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "ecead38b-b731-5e57-a4dd-64810cbf379f",
+        "text": "text_0455ed68d3799d53dc91e7fa08ef10b3",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "0078ad8f-b190-5cd8-b2a6-6d03e7c5102a",
+        "text": "stig lennart blomqvist",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "99a82eec-bb35-5bb5-9ed2-e73fc7a756de",
+        "text": "person",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "5b4598fe-f589-57a1-88a8-d72c48f4915b",
+        "text": "audi",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "388f60fb-220d-55e8-ae9c-3ac93cead308",
+        "text": "organization",
+        "type": "EntityType"
+      },
+      {
+        "id": 7,
+        "original_id": "c0f9c5c6-ff41-59fa-994b-0e06a70b93b5",
+        "text": "german automobile manufacturer",
+        "type": "Entity"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "drove"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 7,
+        "target": 5,
+        "type": "produced"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 7,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      }
+    ]
+  },
+  "grafo_evidencia": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "4edfad1b-a964-541f-8b04-74521b638a8d",
+        "text": "This chunk is about:\n- People: Stig Blomqvist\n- Companies: Audi, Volkswagen Group\n- Products: Audi Quattro\n- Organizations: Audi factory team, World Rally Championship\n- Roles: rally driver\n\nFacts:\n- Stig Blomqvist was born on 29 July 1946.\n- Stig Blomqvist is a Swedish rally driver.\n- The Audi Quattro is a road and rally car produced by Audi, which is part of the Volkswagen Group.\n- Driving an Audi Quattro for the Audi factory team, Stig Blomqvist won the World Rally Championship drivers' title in 1984.\n- Driving an Audi Quattro for the Audi factory team, Stig Blomqvist finished runner-up in the World Rally Championship drivers' standings in 1985.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "fe4daaf3-c7cd-55fe-8679-f1b3d84c322f",
+        "text": "Page: Stig Blomqvist. Sentence: Stig Lennart Blomqvist (born 29 July 1946) is a Swedish rally driver.\nPage: Stig Blomqvist. Sentence: Driving an Audi Quattro for the Audi factory team, Blomqvist won the World Rally Championship drivers' title in 1984 and finished runner-up in 1985.\nPage: Audi Quattro. Sentence: The Audi Quattro is a road and rally car, produced by the German automobile manufacturer Audi, part of the Volkswagen Group.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "49d8f575-1d90-5fb0-8de1-044163225040",
+        "text": "text_b2f035593dcbdd0c1869dade48027d35",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "0078ad8f-b190-5cd8-b2a6-6d03e7c5102a",
+        "text": "stig lennart blomqvist",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "99a82eec-bb35-5bb5-9ed2-e73fc7a756de",
+        "text": "person",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "9ee8bd2e-2ede-5568-b0e7-235c68b185bc",
+        "text": "1946-07-29",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "b19433ae-558c-5aaf-95ac-6231f2a4be0e",
+        "text": "date",
+        "type": "EntityType"
+      },
+      {
+        "id": 7,
+        "original_id": "5065dfb9-eb04-51d6-84e2-2f7e8398a96a",
+        "text": "sweden",
+        "type": "Entity"
+      },
+      {
+        "id": 8,
+        "original_id": "5f394058-b2a0-5ba8-8466-ba2a18cfcf4e",
+        "text": "place",
+        "type": "EntityType"
+      },
+      {
+        "id": 9,
+        "original_id": "886f105f-2a61-5905-bd63-f7ae4171ab6c",
+        "text": "audi quattro",
+        "type": "Entity"
+      },
+      {
+        "id": 10,
+        "original_id": "f76d57aa-4740-5218-9539-0e0978cbf183",
+        "text": "product",
+        "type": "EntityType"
+      },
+      {
+        "id": 11,
+        "original_id": "5b4598fe-f589-57a1-88a8-d72c48f4915b",
+        "text": "audi",
+        "type": "Entity"
+      },
+      {
+        "id": 12,
+        "original_id": "388f60fb-220d-55e8-ae9c-3ac93cead308",
+        "text": "organization",
+        "type": "EntityType"
+      },
+      {
+        "id": 13,
+        "original_id": "2c1ffc2d-18c9-5fd2-aaa8-f967b404c8cc",
+        "text": "volkswagen group",
+        "type": "Entity"
+      },
+      {
+        "id": 14,
+        "original_id": "744ecd94-2129-5f81-a59f-9009c8cae345",
+        "text": "audi factory team",
+        "type": "Entity"
+      },
+      {
+        "id": 15,
+        "original_id": "9105de76-9524-5eeb-b44a-417134c04ebb",
+        "text": "world rally championship drivers title",
+        "type": "Entity"
+      },
+      {
+        "id": 16,
+        "original_id": "38e42125-31f4-5cd6-993c-dbbc06a88910",
+        "text": "award",
+        "type": "EntityType"
+      },
+      {
+        "id": 17,
+        "original_id": "36535bda-358d-582c-896d-8489e824d5db",
+        "text": "1984",
+        "type": "Entity"
+      },
+      {
+        "id": 18,
+        "original_id": "6bd8ee84-df5b-547d-ad6e-de3a4c833f59",
+        "text": "1985",
+        "type": "Entity"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "born_on"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 17,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 18,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 7,
+        "type": "has_nationality"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      },
+      {
+        "source": 7,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 9,
+        "type": "drove"
+      },
+      {
+        "source": 1,
+        "target": 9,
+        "type": "contains"
+      },
+      {
+        "source": 9,
+        "target": 10,
+        "type": "is_a"
+      },
+      {
+        "source": 9,
+        "target": 11,
+        "type": "produced_by"
+      },
+      {
+        "source": 14,
+        "target": 11,
+        "type": "associated_with"
+      },
+      {
+        "source": 1,
+        "target": 11,
+        "type": "contains"
+      },
+      {
+        "source": 11,
+        "target": 12,
+        "type": "is_a"
+      },
+      {
+        "source": 13,
+        "target": 12,
+        "type": "is_a"
+      },
+      {
+        "source": 14,
+        "target": 12,
+        "type": "is_a"
+      },
+      {
+        "source": 11,
+        "target": 13,
+        "type": "part_of"
+      },
+      {
+        "source": 1,
+        "target": 13,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 14,
+        "type": "drove_for"
+      },
+      {
+        "source": 1,
+        "target": 14,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 15,
+        "type": "won"
+      },
+      {
+        "source": 1,
+        "target": 15,
+        "type": "contains"
+      },
+      {
+        "source": 15,
+        "target": 16,
+        "type": "is_a"
+      },
+      {
+        "source": 15,
+        "target": 17,
+        "type": "won_in"
+      },
+      {
+        "source": 1,
+        "target": 17,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 18,
+        "type": "finished_runner_up_in"
+      },
+      {
+        "source": 1,
+        "target": 18,
+        "type": "contains"
+      }
+    ]
+  }
+}

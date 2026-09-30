@@ -1,0 +1,336 @@
+{
+  "dataset": "hover",
+  "id": "201804fa-4427-4b79-aa4d-6d866c8d00eb",
+  "split": "train",
+  "claim": "Amazon.com owns the broadcasting building where Games Done Quick is broadcast.",
+  "evidencia": "Page: Games Done Quick. Sentence: Games Done Quick is a biannual video game speedrun charity marathon held in the United States, originally organized by the Speed Demos Archive and Speedruns Live communities.\nPage: Games Done Quick. Sentence: The events are broadcast live on Twitch.\nPage: Twitch.tv. Sentence: Twitch is a live streaming video platform owned by Twitch Interactive, a subsidiary of Amazon.com.",
+  "evidence_text": "Page: Games Done Quick. Sentence: Games Done Quick is a biannual video game speedrun charity marathon held in the United States, originally organized by the Speed Demos Archive and Speedruns Live communities.\nPage: Games Done Quick. Sentence: The events are broadcast live on Twitch.\nPage: Twitch.tv. Sentence: Twitch is a live streaming video platform owned by Twitch Interactive, a subsidiary of Amazon.com.",
+  "label": "NOT_SUPPORTED",
+  "num_hops": 2,
+  "hover_metadata": {
+    "supporting_facts": [
+      [
+        "Games Done Quick",
+        0
+      ],
+      [
+        "Games Done Quick",
+        3
+      ],
+      [
+        "Twitch.tv",
+        0
+      ]
+    ],
+    "num_hops": 2,
+    "evidence_annotation_id": [
+      0
+    ],
+    "evidence_id": [
+      "Games Done Quick::sentence::0",
+      "Games Done Quick::sentence::3",
+      "Twitch.tv::sentence::0"
+    ],
+    "evidence_wiki_url": [
+      "https://en.wikipedia.org/wiki/Games_Done_Quick",
+      "https://en.wikipedia.org/wiki/Twitch.tv"
+    ],
+    "evidence_sentence_id": [
+      "Games Done Quick::sentence::0",
+      "Games Done Quick::sentence::3",
+      "Twitch.tv::sentence::0"
+    ]
+  },
+  "grafo_claim": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "8ef3bc87-4483-5d76-9a68-96d2f4f3ab7b",
+        "text": "This chunk is about:\n- Companies: Amazon.com\n- Organizations: Games Done Quick\n- Places: broadcasting building\n\nFacts:\n- Amazon.com owns the broadcasting building where Games Done Quick is broadcast.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "29156a60-6046-54f3-b96d-ccf2bb171755",
+        "text": "Amazon.com owns the broadcasting building where Games Done Quick is broadcast.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "3c2e0089-044d-54b8-b1a1-be337a87dfa0",
+        "text": "text_3caf0363df6a8fbd513185e6d833bb8e",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "e1ee376c-83e0-5604-9f65-3aa5d5fe2b01",
+        "text": "amazon.com",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "388f60fb-220d-55e8-ae9c-3ac93cead308",
+        "text": "organization",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "05b3e07e-9b22-5fcf-bb35-2270257e01e9",
+        "text": "broadcasting building",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "5f394058-b2a0-5ba8-8466-ba2a18cfcf4e",
+        "text": "place",
+        "type": "EntityType"
+      },
+      {
+        "id": 7,
+        "original_id": "ac9b4211-9426-5011-a285-594ca81782ee",
+        "text": "games done quick",
+        "type": "Entity"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 7,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "owns"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 7,
+        "target": 5,
+        "type": "is_broadcast_from"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      }
+    ]
+  },
+  "grafo_evidencia": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "51d83d76-3903-554e-9513-9c64ef00b8c1",
+        "text": "This chunk is about:\n- Organizations: Games Done Quick, Speed Demos Archive, Speedruns Live, Twitch Interactive, Amazon.com\n- Topics: video game speedrun charity marathons, live streaming\n\nFacts:\n- Games Done Quick is a biannual video game speedrun charity marathon held in the United States.\n- Games Done Quick was originally organized by the Speed Demos Archive and Speedruns Live communities.\n- Games Done Quick events are broadcast live on Twitch.\n- Twitch is a live streaming video platform.\n- Twitch Interactive owns Twitch.\n- Twitch Interactive is a subsidiary of Amazon.com.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "956acc81-0499-5f0f-ad39-71ed05f2bde5",
+        "text": "Page: Games Done Quick. Sentence: Games Done Quick is a biannual video game speedrun charity marathon held in the United States, originally organized by the Speed Demos Archive and Speedruns Live communities.\nPage: Games Done Quick. Sentence: The events are broadcast live on Twitch.\nPage: Twitch.tv. Sentence: Twitch is a live streaming video platform owned by Twitch Interactive, a subsidiary of Amazon.com.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "aea26c4a-21b2-50d4-9f92-a9ec3df9d7ca",
+        "text": "text_dc721fcc005b763fe80fe1c0c6b05db5",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "ac9b4211-9426-5011-a285-594ca81782ee",
+        "text": "games done quick",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "388f60fb-220d-55e8-ae9c-3ac93cead308",
+        "text": "organization",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "874a51da-34ea-5037-be47-d87785d43c37",
+        "text": "united states",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "5f394058-b2a0-5ba8-8466-ba2a18cfcf4e",
+        "text": "place",
+        "type": "EntityType"
+      },
+      {
+        "id": 7,
+        "original_id": "5ac62c46-126d-5bd8-953b-5ba897061b19",
+        "text": "speed demos archive",
+        "type": "Entity"
+      },
+      {
+        "id": 8,
+        "original_id": "ffc8189d-d328-5f79-9e2e-22d8ef4aaeb5",
+        "text": "speedruns live",
+        "type": "Entity"
+      },
+      {
+        "id": 9,
+        "original_id": "f178896c-fc48-5cdd-a337-e0f8c248b998",
+        "text": "twitch",
+        "type": "Entity"
+      },
+      {
+        "id": 10,
+        "original_id": "5361b10b-f781-57a0-ada3-c93fa34472e4",
+        "text": "twitch interactive",
+        "type": "Entity"
+      },
+      {
+        "id": 11,
+        "original_id": "e1ee376c-83e0-5604-9f65-3aa5d5fe2b01",
+        "text": "amazon.com",
+        "type": "Entity"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 7,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 8,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 9,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 10,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 11,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "held_in"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 7,
+        "type": "originally_organized_by"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 8,
+        "type": "originally_organized_by"
+      },
+      {
+        "source": 1,
+        "target": 8,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 9,
+        "type": "broadcast_live_on"
+      },
+      {
+        "source": 1,
+        "target": 9,
+        "type": "contains"
+      },
+      {
+        "source": 9,
+        "target": 10,
+        "type": "owned_by"
+      },
+      {
+        "source": 1,
+        "target": 10,
+        "type": "contains"
+      },
+      {
+        "source": 10,
+        "target": 11,
+        "type": "subsidiary_of"
+      },
+      {
+        "source": 1,
+        "target": 11,
+        "type": "contains"
+      }
+    ]
+  }
+}

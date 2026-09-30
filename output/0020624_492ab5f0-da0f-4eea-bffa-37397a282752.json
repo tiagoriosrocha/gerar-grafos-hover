@@ -1,0 +1,375 @@
+{
+  "dataset": "hover",
+  "id": "492ab5f0-da0f-4eea-bffa-37397a282752",
+  "split": "dev",
+  "claim": "Edward Crowley created the soft drink that is older than  another drink. The other drink was formulated by Charles Elmer Hires.",
+  "evidencia": "Page: Hires Root Beer. Sentence: Only Vernors Ginger Ale , dating to 1866, is older.\nPage: Vernors. Sentence: It was created in 1866 by James Vernor, a Detroit pharmacist.\nPage: Charles Elmer Hires. Sentence: He was a Quaker pharmacist from Philadelphia, Pennsylvania, who formulated the eponymous Hires Root Beer beverage.",
+  "evidence_text": "Page: Hires Root Beer. Sentence: Only Vernors Ginger Ale , dating to 1866, is older.\nPage: Vernors. Sentence: It was created in 1866 by James Vernor, a Detroit pharmacist.\nPage: Charles Elmer Hires. Sentence: He was a Quaker pharmacist from Philadelphia, Pennsylvania, who formulated the eponymous Hires Root Beer beverage.",
+  "label": "NOT_SUPPORTED",
+  "num_hops": 3,
+  "hover_metadata": {
+    "supporting_facts": [
+      [
+        "Hires Root Beer",
+        2
+      ],
+      [
+        "Vernors",
+        1
+      ],
+      [
+        "Charles Elmer Hires",
+        1
+      ]
+    ],
+    "num_hops": 3,
+    "evidence_annotation_id": [
+      0
+    ],
+    "evidence_id": [
+      "Hires Root Beer::sentence::2",
+      "Vernors::sentence::1",
+      "Charles Elmer Hires::sentence::1"
+    ],
+    "evidence_wiki_url": [
+      "https://en.wikipedia.org/wiki/Hires_Root_Beer",
+      "https://en.wikipedia.org/wiki/Vernors",
+      "https://en.wikipedia.org/wiki/Charles_Elmer_Hires"
+    ],
+    "evidence_sentence_id": [
+      "Hires Root Beer::sentence::2",
+      "Vernors::sentence::1",
+      "Charles Elmer Hires::sentence::1"
+    ]
+  },
+  "grafo_claim": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "3691b3c6-b2fc-5829-b35c-8c7c2dd0fe3e",
+        "text": "This chunk is about:\n- People: Edward Crowley, Charles Elmer Hires\n- Products: soft drinks\n\nFacts:\n- Charles Elmer Hires formulated a soft drink.\n- Edward Crowley created a soft drink that is older than the soft drink formulated by Charles Elmer Hires.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "e985e131-3f97-50a7-9214-9ede48a50fa3",
+        "text": "Edward Crowley created the soft drink that is older than  another drink. The other drink was formulated by Charles Elmer Hires.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "eed71939-c9f2-5a14-87b3-b018826d15b5",
+        "text": "text_60da5e8ee49aabcb25fec2e1c5c99843",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "c336f4c8-6cea-5bbf-96ff-9302812885ac",
+        "text": "edward crowley",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "99a82eec-bb35-5bb5-9ed2-e73fc7a756de",
+        "text": "person",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "b04bdcdf-3671-52dd-b320-9766eb887a06",
+        "text": "edward crowleys soft drink",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "f76d57aa-4740-5218-9539-0e0978cbf183",
+        "text": "product",
+        "type": "EntityType"
+      },
+      {
+        "id": 7,
+        "original_id": "62efe77a-74fb-5894-b912-a2232b6208b4",
+        "text": "charles elmer hiress drink",
+        "type": "Entity"
+      },
+      {
+        "id": 8,
+        "original_id": "1406cffb-8093-5151-887f-e3b260f2a39a",
+        "text": "charles elmer hires",
+        "type": "Entity"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 8,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "created"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 7,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 5,
+        "target": 7,
+        "type": "older_than"
+      },
+      {
+        "source": 8,
+        "target": 7,
+        "type": "formulated"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      },
+      {
+        "source": 1,
+        "target": 8,
+        "type": "contains"
+      }
+    ]
+  },
+  "grafo_evidencia": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "65055dd5-ba79-5d21-8c0c-b02383e65551",
+        "text": "This chunk is about:\n- Products: Hires Root Beer, Vernors Ginger Ale\n- People: James Vernor, Charles Elmer Hires\n- Places: Detroit, Philadelphia, Pennsylvania\n- Roles: pharmacist, Quaker\n\nFacts:\n- In 1866, James Vernor created Vernors Ginger Ale in Detroit.\n- Vernors Ginger Ale dates to 1866.\n- Vernors Ginger Ale is older than Hires Root Beer.\n- Charles Elmer Hires was a Quaker pharmacist from Philadelphia, Pennsylvania.\n- Charles Elmer Hires formulated the beverage Hires Root Beer, which was named after him.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "e53f4967-cafe-5ef2-b4b1-85806fdeee36",
+        "text": "Page: Hires Root Beer. Sentence: Only Vernors Ginger Ale , dating to 1866, is older.\nPage: Vernors. Sentence: It was created in 1866 by James Vernor, a Detroit pharmacist.\nPage: Charles Elmer Hires. Sentence: He was a Quaker pharmacist from Philadelphia, Pennsylvania, who formulated the eponymous Hires Root Beer beverage.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "e657ab6f-8d28-524b-92ca-ea7f73fd62da",
+        "text": "text_231766fcaf42487c24587c2eeb0ce1d9",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "8061b324-a2d1-542b-a26d-00f302c484a8",
+        "text": "hires root beer",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "f76d57aa-4740-5218-9539-0e0978cbf183",
+        "text": "product",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "ba319d09-789e-5976-a20b-2d83804f9748",
+        "text": "vernors ginger ale",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "8bed9be4-39cc-5c96-869e-11ae43f69a78",
+        "text": "1866",
+        "type": "Entity"
+      },
+      {
+        "id": 7,
+        "original_id": "b19433ae-558c-5aaf-95ac-6231f2a4be0e",
+        "text": "date",
+        "type": "EntityType"
+      },
+      {
+        "id": 8,
+        "original_id": "0c6cbf2a-a735-5ce1-a87f-3377ff3b0054",
+        "text": "james vernor",
+        "type": "Entity"
+      },
+      {
+        "id": 9,
+        "original_id": "99a82eec-bb35-5bb5-9ed2-e73fc7a756de",
+        "text": "person",
+        "type": "EntityType"
+      },
+      {
+        "id": 10,
+        "original_id": "d1dc06f9-5da9-5e2d-932c-74d953497a09",
+        "text": "detroit",
+        "type": "Entity"
+      },
+      {
+        "id": 11,
+        "original_id": "5f394058-b2a0-5ba8-8466-ba2a18cfcf4e",
+        "text": "place",
+        "type": "EntityType"
+      },
+      {
+        "id": 12,
+        "original_id": "1406cffb-8093-5151-887f-e3b260f2a39a",
+        "text": "charles elmer hires",
+        "type": "Entity"
+      },
+      {
+        "id": 13,
+        "original_id": "6d21e335-0b1b-5843-830e-c90245205450",
+        "text": "philadelphia, pennsylvania",
+        "type": "Entity"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 3,
+        "type": "is_older_than"
+      },
+      {
+        "source": 12,
+        "target": 3,
+        "type": "formulated"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 5,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 8,
+        "target": 5,
+        "type": "created"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "dates_to"
+      },
+      {
+        "source": 1,
+        "target": 6,
+        "type": "contains"
+      },
+      {
+        "source": 8,
+        "target": 6,
+        "type": "created_in"
+      },
+      {
+        "source": 6,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 8,
+        "type": "contains"
+      },
+      {
+        "source": 8,
+        "target": 9,
+        "type": "is_a"
+      },
+      {
+        "source": 12,
+        "target": 9,
+        "type": "is_a"
+      },
+      {
+        "source": 8,
+        "target": 10,
+        "type": "worked_in"
+      },
+      {
+        "source": 1,
+        "target": 10,
+        "type": "contains"
+      },
+      {
+        "source": 10,
+        "target": 11,
+        "type": "is_a"
+      },
+      {
+        "source": 13,
+        "target": 11,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 12,
+        "type": "contains"
+      },
+      {
+        "source": 12,
+        "target": 13,
+        "type": "from"
+      },
+      {
+        "source": 1,
+        "target": 13,
+        "type": "contains"
+      }
+    ]
+  }
+}

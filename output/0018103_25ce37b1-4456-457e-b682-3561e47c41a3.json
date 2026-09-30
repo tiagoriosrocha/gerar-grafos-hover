@@ -1,0 +1,492 @@
+{
+  "dataset": "hover",
+  "id": "25ce37b1-4456-457e-b682-3561e47c41a3",
+  "split": "train",
+  "claim": "Steve Siegel and his partner won the Cedar Grove Open. The partner and Matt Lucena both play sport.",
+  "evidencia": "Page: Kim Warwick. Sentence: Kim Warwick (born 8 April 1952) is an Australian former professional male tennis player who competed on the ATP Tour from 1970–1987 reaching the final of the singles Australian Open in 1980.\nPage: Matt Lucena. Sentence: Matt Lucena (born August 4, 1969) is a former professional tennis player from the United States.\nPage: Cedar Grove Open. Sentence: Ilie Năstase won the singles title while Kim Warwick and Steve Siegel partnered to win the doubles title.",
+  "evidence_text": "Page: Kim Warwick. Sentence: Kim Warwick (born 8 April 1952) is an Australian former professional male tennis player who competed on the ATP Tour from 1970–1987 reaching the final of the singles Australian Open in 1980.\nPage: Matt Lucena. Sentence: Matt Lucena (born August 4, 1969) is a former professional tennis player from the United States.\nPage: Cedar Grove Open. Sentence: Ilie Năstase won the singles title while Kim Warwick and Steve Siegel partnered to win the doubles title.",
+  "label": "SUPPORTED",
+  "num_hops": 3,
+  "hover_metadata": {
+    "supporting_facts": [
+      [
+        "Kim Warwick",
+        0
+      ],
+      [
+        "Matt Lucena",
+        0
+      ],
+      [
+        "Cedar Grove Open",
+        2
+      ]
+    ],
+    "num_hops": 3,
+    "evidence_annotation_id": [
+      0
+    ],
+    "evidence_id": [
+      "Kim Warwick::sentence::0",
+      "Matt Lucena::sentence::0",
+      "Cedar Grove Open::sentence::2"
+    ],
+    "evidence_wiki_url": [
+      "https://en.wikipedia.org/wiki/Kim_Warwick",
+      "https://en.wikipedia.org/wiki/Matt_Lucena",
+      "https://en.wikipedia.org/wiki/Cedar_Grove_Open"
+    ],
+    "evidence_sentence_id": [
+      "Kim Warwick::sentence::0",
+      "Matt Lucena::sentence::0",
+      "Cedar Grove Open::sentence::2"
+    ]
+  },
+  "grafo_claim": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "46ba47e5-a1eb-551e-bed5-06e11321094a",
+        "text": "This chunk is about:\n- People: Steve Siegel, Matt Lucena\n- Events: Cedar Grove Open\n- Concepts: partners, sport\n\nFacts:\n- Steve Siegel and his partner won the Cedar Grove Open.\n- Steve Siegel had a partner in the Cedar Grove Open.\n- Steve Siegel's partner plays sport.\n- Matt Lucena plays sport.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "529af8af-f26b-596d-99c2-1e9c5ab7b88d",
+        "text": "Steve Siegel and his partner won the Cedar Grove Open. The partner and Matt Lucena both play sport.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "8cfcbca6-c7a3-56f3-a788-e35c2b07100f",
+        "text": "text_892a4e2b14e88649a63212754a51062c",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "fdee6dd7-8cc9-5779-9b57-e3c8d0a46d6d",
+        "text": "steve siegel",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "99a82eec-bb35-5bb5-9ed2-e73fc7a756de",
+        "text": "person",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "89b250cb-106d-5ba4-939a-986b7bd6cd6f",
+        "text": "steve siegels partner",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "7e522e64-0c6b-5965-9a50-fac1baec872a",
+        "text": "cedar grove open",
+        "type": "Entity"
+      },
+      {
+        "id": 7,
+        "original_id": "214abcd9-9adf-5c8a-bb35-1e729f2d68c3",
+        "text": "event",
+        "type": "EntityType"
+      },
+      {
+        "id": 8,
+        "original_id": "829ab3f0-744c-54c7-9955-3ca2d7feed01",
+        "text": "sport",
+        "type": "Entity"
+      },
+      {
+        "id": 9,
+        "original_id": "d2a381fa-3658-5ca6-ada9-2109cfc9331d",
+        "text": "concept",
+        "type": "EntityType"
+      },
+      {
+        "id": 10,
+        "original_id": "7a2d72c3-0ff4-5cd6-ae6a-dbd7220b872e",
+        "text": "matt lucena",
+        "type": "Entity"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 5,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 10,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "partner_of"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "won"
+      },
+      {
+        "source": 3,
+        "target": 6,
+        "type": "won"
+      },
+      {
+        "source": 1,
+        "target": 6,
+        "type": "contains"
+      },
+      {
+        "source": 6,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 5,
+        "target": 8,
+        "type": "plays"
+      },
+      {
+        "source": 10,
+        "target": 8,
+        "type": "plays"
+      },
+      {
+        "source": 1,
+        "target": 8,
+        "type": "contains"
+      },
+      {
+        "source": 8,
+        "target": 9,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 10,
+        "type": "contains"
+      }
+    ]
+  },
+  "grafo_evidencia": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "088bb613-9c51-5f0a-b043-66d7efe45004",
+        "text": "This chunk is about:\n- People: Kim Warwick, Matt Lucena, Ilie Năstase, Steve Siegel\n- Events: Cedar Grove Open\n- Roles: professional tennis players, doubles partners\n\nFacts:\n- Kim Warwick was born on 8 April 1952 and is an Australian former professional male tennis player.\n- Kim Warwick competed on the ATP Tour from 1970 to 1987 and reached the singles final of the Australian Open in 1980.\n- Matt Lucena was born on August 4, 1969 and is a former professional tennis player from the United States.\n- At the Cedar Grove Open, Ilie Năstase won the singles title.\n- At the Cedar Grove Open, Kim Warwick and Steve Siegel won the doubles title as partners.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "fca08f85-b8b1-5e77-a70a-7aea13d1c932",
+        "text": "Page: Kim Warwick. Sentence: Kim Warwick (born 8 April 1952) is an Australian former professional male tennis player who competed on the ATP Tour from 1970–1987 reaching the final of the singles Australian Open in 1980.\nPage: Matt Lucena. Sentence: Matt Lucena (born August 4, 1969) is a former professional tennis player from the United States.\nPage: Cedar Grove Open. Sentence: Ilie Năstase won the singles title while Kim Warwick and Steve Siegel partnered to win the doubles title.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "e39822d9-98f1-5f57-ae23-d505dc368d09",
+        "text": "text_f36f16d7492e805ef575d5420ecc698e",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "63d26885-6b40-5e9c-9000-5dd5a954c5c5",
+        "text": "kim warwick",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "99a82eec-bb35-5bb5-9ed2-e73fc7a756de",
+        "text": "person",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "0c070f40-3dd0-5962-8b45-e217c99f64fd",
+        "text": "1952-04-08",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "b19433ae-558c-5aaf-95ac-6231f2a4be0e",
+        "text": "date",
+        "type": "EntityType"
+      },
+      {
+        "id": 7,
+        "original_id": "02448d73-884d-50c7-a919-b94177f1cf43",
+        "text": "australia",
+        "type": "Entity"
+      },
+      {
+        "id": 8,
+        "original_id": "5f394058-b2a0-5ba8-8466-ba2a18cfcf4e",
+        "text": "place",
+        "type": "EntityType"
+      },
+      {
+        "id": 9,
+        "original_id": "c5d98286-e606-572c-8f4b-f68a30b67f36",
+        "text": "atp tour",
+        "type": "Entity"
+      },
+      {
+        "id": 10,
+        "original_id": "388f60fb-220d-55e8-ae9c-3ac93cead308",
+        "text": "organization",
+        "type": "EntityType"
+      },
+      {
+        "id": 11,
+        "original_id": "6594d9e4-dbd7-5a00-9045-1b2eb8b14a89",
+        "text": "1980 australian open",
+        "type": "Entity"
+      },
+      {
+        "id": 12,
+        "original_id": "214abcd9-9adf-5c8a-bb35-1e729f2d68c3",
+        "text": "event",
+        "type": "EntityType"
+      },
+      {
+        "id": 13,
+        "original_id": "7e522e64-0c6b-5965-9a50-fac1baec872a",
+        "text": "cedar grove open",
+        "type": "Entity"
+      },
+      {
+        "id": 14,
+        "original_id": "fdee6dd7-8cc9-5779-9b57-e3c8d0a46d6d",
+        "text": "steve siegel",
+        "type": "Entity"
+      },
+      {
+        "id": 15,
+        "original_id": "7a2d72c3-0ff4-5cd6-ae6a-dbd7220b872e",
+        "text": "matt lucena",
+        "type": "Entity"
+      },
+      {
+        "id": 16,
+        "original_id": "877d8687-d9d9-5370-856f-e7181b8e382d",
+        "text": "1969-08-04",
+        "type": "Entity"
+      },
+      {
+        "id": 17,
+        "original_id": "874a51da-34ea-5037-be47-d87785d43c37",
+        "text": "united states",
+        "type": "Entity"
+      },
+      {
+        "id": 18,
+        "original_id": "54ae5524-6b62-5e4c-b2d6-17cfc340b159",
+        "text": "ilie năstase",
+        "type": "Entity"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 14,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 15,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 18,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "born_on"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 16,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 7,
+        "type": "from"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      },
+      {
+        "source": 7,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 17,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 9,
+        "type": "competed_on"
+      },
+      {
+        "source": 1,
+        "target": 9,
+        "type": "contains"
+      },
+      {
+        "source": 9,
+        "target": 10,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 11,
+        "type": "reached_final_of"
+      },
+      {
+        "source": 1,
+        "target": 11,
+        "type": "contains"
+      },
+      {
+        "source": 11,
+        "target": 12,
+        "type": "is_a"
+      },
+      {
+        "source": 13,
+        "target": 12,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 13,
+        "type": "won_doubles_title_at"
+      },
+      {
+        "source": 14,
+        "target": 13,
+        "type": "won_doubles_title_at"
+      },
+      {
+        "source": 1,
+        "target": 13,
+        "type": "contains"
+      },
+      {
+        "source": 18,
+        "target": 13,
+        "type": "won_singles_title_at"
+      },
+      {
+        "source": 3,
+        "target": 14,
+        "type": "partnered_with"
+      },
+      {
+        "source": 1,
+        "target": 14,
+        "type": "contains"
+      },
+      {
+        "source": 1,
+        "target": 15,
+        "type": "contains"
+      },
+      {
+        "source": 15,
+        "target": 16,
+        "type": "born_on"
+      },
+      {
+        "source": 1,
+        "target": 16,
+        "type": "contains"
+      },
+      {
+        "source": 15,
+        "target": 17,
+        "type": "from"
+      },
+      {
+        "source": 1,
+        "target": 17,
+        "type": "contains"
+      },
+      {
+        "source": 1,
+        "target": 18,
+        "type": "contains"
+      }
+    ]
+  }
+}

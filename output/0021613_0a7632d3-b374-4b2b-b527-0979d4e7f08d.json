@@ -1,0 +1,318 @@
+{
+  "dataset": "hover",
+  "id": "0a7632d3-b374-4b2b-b527-0979d4e7f08d",
+  "split": "dev",
+  "claim": "A species that Albugo ipomoeae-panduratae infects is a genus of plants. Sorbus is also a genus of plants.",
+  "evidencia": "Page: Morning glory. Sentence: Morning glory (also written as morning-glory) is the common name for over 1,000 species of flowering plants in the family Convolvulaceae, whose current taxonomy and systematics are in flux.\nPage: Sorbus. Sentence: Sorbus is a genus of about 100–200 species of trees and shrubs in the rose family Rosaceae.\nPage: Albugo ipomoeae-panduratae. Sentence: It causes leaf and stem lesions on various \"Ipomoea\" species, including cultivated morning glories and their relatives.",
+  "evidence_text": "Page: Morning glory. Sentence: Morning glory (also written as morning-glory) is the common name for over 1,000 species of flowering plants in the family Convolvulaceae, whose current taxonomy and systematics are in flux.\nPage: Sorbus. Sentence: Sorbus is a genus of about 100–200 species of trees and shrubs in the rose family Rosaceae.\nPage: Albugo ipomoeae-panduratae. Sentence: It causes leaf and stem lesions on various \"Ipomoea\" species, including cultivated morning glories and their relatives.",
+  "label": "SUPPORTED",
+  "num_hops": 3,
+  "hover_metadata": {
+    "supporting_facts": [
+      [
+        "Morning glory",
+        0
+      ],
+      [
+        "Sorbus",
+        0
+      ],
+      [
+        "Albugo ipomoeae-panduratae",
+        1
+      ]
+    ],
+    "num_hops": 3,
+    "evidence_annotation_id": [
+      0
+    ],
+    "evidence_id": [
+      "Morning glory::sentence::0",
+      "Sorbus::sentence::0",
+      "Albugo ipomoeae-panduratae::sentence::1"
+    ],
+    "evidence_wiki_url": [
+      "https://en.wikipedia.org/wiki/Morning_glory",
+      "https://en.wikipedia.org/wiki/Sorbus",
+      "https://en.wikipedia.org/wiki/Albugo_ipomoeae-panduratae"
+    ],
+    "evidence_sentence_id": [
+      "Morning glory::sentence::0",
+      "Sorbus::sentence::0",
+      "Albugo ipomoeae-panduratae::sentence::1"
+    ]
+  },
+  "grafo_claim": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "c807f0d7-6d82-5217-a607-530a4d70c727",
+        "text": "This chunk is about:\n- Species: Albugo ipomoeae-panduratae\n- Plants: Sorbus\n- Concepts: plant genera, host infection\n\nFacts:\n- Albugo ipomoeae-panduratae infects at least one species that belongs to a genus of plants.\n- Sorbus is a genus of plants.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "f77acf17-72f0-57b1-b6d5-6ad31758be5a",
+        "text": "A species that Albugo ipomoeae-panduratae infects is a genus of plants. Sorbus is also a genus of plants.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "61136cc1-733d-59aa-b9ff-9e70f4fc4b9b",
+        "text": "text_9bd20808763a8d9bc320e42b63bbb6af",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "b002fcdd-222e-5b20-936f-44ea5902848b",
+        "text": "albugo ipomoeae-panduratae",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "f23a15ce-c0de-5c57-9205-8c9d01026b05",
+        "text": "species",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "06620f54-d076-57f9-b84a-70e1d21ab486",
+        "text": "genus of plants infected by albugo ipomoeae-panduratae",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "58ce8914-8a9e-5302-9b2d-0d97006e12d3",
+        "text": "genus",
+        "type": "EntityType"
+      },
+      {
+        "id": 7,
+        "original_id": "3b95d98a-fe3e-58dd-bc4c-fe0e2ccdc88a",
+        "text": "sorbus",
+        "type": "Entity"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "infects"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 7,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      }
+    ]
+  },
+  "grafo_evidencia": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "ae9c6421-daa9-55c5-a801-74737e142247",
+        "text": "This chunk is about:\n- Products: Morning glory\n- Systems: Convolvulaceae taxonomy and systematics\n- Products: Sorbus\n- Systems: Rosaceae\n- Products: Albugo ipomoeae-panduratae\n- Topics: Ipomoea species\n\nFacts:\n- Morning glory is the common name for more than 1,000 species of flowering plants in the family Convolvulaceae.\n- Convolvulaceae taxonomy and systematics are currently in flux for the plants called morning glory.\n- Sorbus is a genus of about 100 to 200 species of trees and shrubs in the rose family Rosaceae.\n- Albugo ipomoeae-panduratae causes leaf and stem lesions on various Ipomoea species, including cultivated morning glories and related plants.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "afc83e25-e7b1-58a4-91d8-13793af80a49",
+        "text": "Page: Morning glory. Sentence: Morning glory (also written as morning-glory) is the common name for over 1,000 species of flowering plants in the family Convolvulaceae, whose current taxonomy and systematics are in flux.\nPage: Sorbus. Sentence: Sorbus is a genus of about 100–200 species of trees and shrubs in the rose family Rosaceae.\nPage: Albugo ipomoeae-panduratae. Sentence: It causes leaf and stem lesions on various \"Ipomoea\" species, including cultivated morning glories and their relatives.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "5de6fd5b-9463-5ffc-889c-203d5b3c3bd8",
+        "text": "text_3b55387d3f1a982bdc3dc723f89df4e1",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "96da61ba-1790-5d93-9677-ae4aa59b7ac9",
+        "text": "morning glory",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "667d097a-b7b9-5a66-a896-3efc9fe171e2",
+        "text": "plant group",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "db7844bf-2805-5166-9938-a80aace5a02c",
+        "text": "convolvulaceae",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "030da7f2-9df8-5253-8cfc-609957d4e333",
+        "text": "family",
+        "type": "EntityType"
+      },
+      {
+        "id": 7,
+        "original_id": "656bf579-14b0-598d-8ddd-ec046c2d7c40",
+        "text": "ipomoea",
+        "type": "Entity"
+      },
+      {
+        "id": 8,
+        "original_id": "58ce8914-8a9e-5302-9b2d-0d97006e12d3",
+        "text": "genus",
+        "type": "EntityType"
+      },
+      {
+        "id": 9,
+        "original_id": "3b95d98a-fe3e-58dd-bc4c-fe0e2ccdc88a",
+        "text": "sorbus",
+        "type": "Entity"
+      },
+      {
+        "id": 10,
+        "original_id": "1b8ef2c8-bcb3-5236-8e90-c9a1f7c6788d",
+        "text": "rosaceae",
+        "type": "Entity"
+      },
+      {
+        "id": 11,
+        "original_id": "b002fcdd-222e-5b20-936f-44ea5902848b",
+        "text": "albugo ipomoeae-panduratae",
+        "type": "Entity"
+      },
+      {
+        "id": 12,
+        "original_id": "b434e0db-57b6-5306-9fa5-f3b1702f6b03",
+        "text": "organism",
+        "type": "EntityType"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "belongs_to_family"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 10,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 7,
+        "type": "includes_cultivated_members_in"
+      },
+      {
+        "source": 11,
+        "target": 7,
+        "type": "causes_lesions_on"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      },
+      {
+        "source": 7,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 9,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 9,
+        "type": "contains"
+      },
+      {
+        "source": 9,
+        "target": 10,
+        "type": "belongs_to_family"
+      },
+      {
+        "source": 1,
+        "target": 10,
+        "type": "contains"
+      },
+      {
+        "source": 1,
+        "target": 11,
+        "type": "contains"
+      },
+      {
+        "source": 11,
+        "target": 12,
+        "type": "is_a"
+      }
+    ]
+  }
+}

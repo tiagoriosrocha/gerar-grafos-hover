@@ -1,0 +1,434 @@
+{
+  "dataset": "hover",
+  "id": "9dbad5ac-f9bc-466a-aae9-3ab79f5de861",
+  "split": "dev",
+  "claim": "Ilya Naishuller and an actress are not both Russian. This actress starred in \"Creep 2\".",
+  "evidencia": "Page: Desiree Akhavan. Sentence: Desiree Akhavan (1984) is an Iranian-American film director, producer, screenwriter and actress based in New York.\nPage: Ilya Naishuller. Sentence: Ilya Viktorovich Naishuller (\"Russian\": Илья Викторович Найшуллер; born 1983, Moscow, USSR) is a Russian musician, film director, and screenwriter.\nPage: Creep 2. Sentence: It stars Mark Duplass, Desiree Akhavan and Karan Soni.",
+  "evidence_text": "Page: Desiree Akhavan. Sentence: Desiree Akhavan (1984) is an Iranian-American film director, producer, screenwriter and actress based in New York.\nPage: Ilya Naishuller. Sentence: Ilya Viktorovich Naishuller (\"Russian\": Илья Викторович Найшуллер; born 1983, Moscow, USSR) is a Russian musician, film director, and screenwriter.\nPage: Creep 2. Sentence: It stars Mark Duplass, Desiree Akhavan and Karan Soni.",
+  "label": "SUPPORTED",
+  "num_hops": 3,
+  "hover_metadata": {
+    "supporting_facts": [
+      [
+        "Desiree Akhavan",
+        0
+      ],
+      [
+        "Ilya Naishuller",
+        0
+      ],
+      [
+        "Creep 2",
+        1
+      ]
+    ],
+    "num_hops": 3,
+    "evidence_annotation_id": [
+      0
+    ],
+    "evidence_id": [
+      "Desiree Akhavan::sentence::0",
+      "Ilya Naishuller::sentence::0",
+      "Creep 2::sentence::1"
+    ],
+    "evidence_wiki_url": [
+      "https://en.wikipedia.org/wiki/Desiree_Akhavan",
+      "https://en.wikipedia.org/wiki/Ilya_Naishuller",
+      "https://en.wikipedia.org/wiki/Creep_2"
+    ],
+    "evidence_sentence_id": [
+      "Desiree Akhavan::sentence::0",
+      "Ilya Naishuller::sentence::0",
+      "Creep 2::sentence::1"
+    ]
+  },
+  "grafo_claim": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "9d069663-68d2-5483-a0d8-7f5a97ffe83e",
+        "text": "This chunk is about:\n- People: Ilya Naishuller, an actress from \"Creep 2\"\n- Topics: nationality, film casting\n\nFacts:\n- Ilya Naishuller is a person whose nationality is Russian.\n- The actress referenced in this chunk starred in \"Creep 2\".\n- Ilya Naishuller and the actress from \"Creep 2\" are not both Russian.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "4ae95c45-8f8c-5652-8a16-7a931672aa2e",
+        "text": "Ilya Naishuller and an actress are not both Russian. This actress starred in \"Creep 2\".",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "7d4118a0-c72c-5b54-97aa-ecfd5c46780e",
+        "text": "text_6fdbb3ae2c105d15089f4b8a6a71e9f3",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "1e53467e-1150-5879-abbc-3e60b6362541",
+        "text": "ilya naishuller",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "99a82eec-bb35-5bb5-9ed2-e73fc7a756de",
+        "text": "person",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "2b06e052-3291-5080-8162-bb736fef5605",
+        "text": "russian",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "7d08f409-7e55-5a66-935f-7c5c06f9111f",
+        "text": "nationality",
+        "type": "EntityType"
+      },
+      {
+        "id": 7,
+        "original_id": "e9fdd887-0a8e-59ce-9255-d256ed820094",
+        "text": "unnamed actress",
+        "type": "Entity"
+      },
+      {
+        "id": 8,
+        "original_id": "b6c47759-f902-593d-a3a0-326604f18cb3",
+        "text": "creep 2",
+        "type": "Entity"
+      },
+      {
+        "id": 9,
+        "original_id": "5263a535-1b4b-5925-be3e-310d03cd303b",
+        "text": "work",
+        "type": "EntityType"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 7,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "not_both_russian_with"
+      },
+      {
+        "source": 7,
+        "target": 5,
+        "type": "not_both_russian_with"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      },
+      {
+        "source": 7,
+        "target": 8,
+        "type": "starred_in"
+      },
+      {
+        "source": 1,
+        "target": 8,
+        "type": "contains"
+      },
+      {
+        "source": 8,
+        "target": 9,
+        "type": "is_a"
+      }
+    ]
+  },
+  "grafo_evidencia": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "8a7bfa5d-f097-5fc8-a5cb-27c528c14260",
+        "text": "This chunk is about:\n- People: Desiree Akhavan, Ilya Naishuller, Mark Duplass, Karan Soni\n- Roles: film director, producer, screenwriter, actress, musician\n- Places: New York, Moscow, USSR\n- Products: Creep 2\n\nFacts:\n- Desiree Akhavan was born in 1984 and is an Iranian-American film director, producer, screenwriter, and actress based in New York.\n- Ilya Viktorovich Naishuller was born in 1983 in Moscow, USSR, and is a Russian musician, film director, and screenwriter.\n- Creep 2 stars Mark Duplass, Desiree Akhavan, and Karan Soni.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "69eb2ce3-d369-5ae8-8422-033579d3abef",
+        "text": "Page: Desiree Akhavan. Sentence: Desiree Akhavan (1984) is an Iranian-American film director, producer, screenwriter and actress based in New York.\nPage: Ilya Naishuller. Sentence: Ilya Viktorovich Naishuller (\"Russian\": Илья Викторович Найшуллер; born 1983, Moscow, USSR) is a Russian musician, film director, and screenwriter.\nPage: Creep 2. Sentence: It stars Mark Duplass, Desiree Akhavan and Karan Soni.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "e1507987-c0e0-5c0e-9eb8-e669f1f390ea",
+        "text": "text_563fb80805d015ab204722654d660658",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "0617a36d-38df-53f8-97c4-078a754b2abc",
+        "text": "desiree akhavan",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "99a82eec-bb35-5bb5-9ed2-e73fc7a756de",
+        "text": "person",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "36535bda-358d-582c-896d-8489e824d5db",
+        "text": "1984",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "b19433ae-558c-5aaf-95ac-6231f2a4be0e",
+        "text": "date",
+        "type": "EntityType"
+      },
+      {
+        "id": 7,
+        "original_id": "a7852d00-db75-55e2-bd9a-468ada762d39",
+        "text": "new york",
+        "type": "Entity"
+      },
+      {
+        "id": 8,
+        "original_id": "5f394058-b2a0-5ba8-8466-ba2a18cfcf4e",
+        "text": "place",
+        "type": "EntityType"
+      },
+      {
+        "id": 9,
+        "original_id": "ea556f47-f608-5217-a162-881d606779d9",
+        "text": "ilya viktorovich naishuller",
+        "type": "Entity"
+      },
+      {
+        "id": 10,
+        "original_id": "3c0215ee-b605-50ca-9446-679776fa6623",
+        "text": "1983",
+        "type": "Entity"
+      },
+      {
+        "id": 11,
+        "original_id": "d1c470ed-446b-51e7-b51c-512d7b518f20",
+        "text": "moscow",
+        "type": "Entity"
+      },
+      {
+        "id": 12,
+        "original_id": "565900aa-e778-5281-ae6d-f4f655d8c6d9",
+        "text": "ussr",
+        "type": "Entity"
+      },
+      {
+        "id": 13,
+        "original_id": "b6c47759-f902-593d-a3a0-326604f18cb3",
+        "text": "creep 2",
+        "type": "Entity"
+      },
+      {
+        "id": 14,
+        "original_id": "5263a535-1b4b-5925-be3e-310d03cd303b",
+        "text": "work",
+        "type": "EntityType"
+      },
+      {
+        "id": 15,
+        "original_id": "294f762e-96e5-5b7b-b328-c759eb1d1227",
+        "text": "mark duplass",
+        "type": "Entity"
+      },
+      {
+        "id": 16,
+        "original_id": "e2a37325-051c-50a4-a553-8ec7bbe89c7b",
+        "text": "karan soni",
+        "type": "Entity"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 13,
+        "target": 3,
+        "type": "stars"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 9,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 15,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 16,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "born_in"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 10,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 7,
+        "type": "based_in"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      },
+      {
+        "source": 7,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 11,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 12,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 9,
+        "type": "contains"
+      },
+      {
+        "source": 9,
+        "target": 10,
+        "type": "born_in"
+      },
+      {
+        "source": 1,
+        "target": 10,
+        "type": "contains"
+      },
+      {
+        "source": 9,
+        "target": 11,
+        "type": "born_in_place"
+      },
+      {
+        "source": 1,
+        "target": 11,
+        "type": "contains"
+      },
+      {
+        "source": 11,
+        "target": 12,
+        "type": "located_in"
+      },
+      {
+        "source": 1,
+        "target": 12,
+        "type": "contains"
+      },
+      {
+        "source": 1,
+        "target": 13,
+        "type": "contains"
+      },
+      {
+        "source": 13,
+        "target": 14,
+        "type": "is_a"
+      },
+      {
+        "source": 13,
+        "target": 15,
+        "type": "stars"
+      },
+      {
+        "source": 1,
+        "target": 15,
+        "type": "contains"
+      },
+      {
+        "source": 13,
+        "target": 16,
+        "type": "stars"
+      },
+      {
+        "source": 1,
+        "target": 16,
+        "type": "contains"
+      }
+    ]
+  }
+}

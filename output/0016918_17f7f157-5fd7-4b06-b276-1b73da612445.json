@@ -1,0 +1,454 @@
+{
+  "dataset": "hover",
+  "id": "17f7f157-5fd7-4b06-b276-1b73da612445",
+  "split": "train",
+  "claim": "David Nixon and another man are both directors. The other director directed the film \"Rhinestone\".",
+  "evidencia": "Page: Phil Alden Robinson. Sentence: Phil Alden Robinson (born March 1, 1950) is an American film director and screenwriter whose films include \"Field of Dreams\", \"Sneakers\", and \"The Sum of All Fears\".\nPage: David Nixon (director). Sentence: David Nixon is an American film director and film producer.\nPage: Rhinestone (film). Sentence: Rhinestone is a 1984 American musical comedy film directed by Bob Clark from a screenplay by Sylvester Stallone and Phil Alden Robinson and starring Stallone and Dolly Parton.",
+  "evidence_text": "Page: Phil Alden Robinson. Sentence: Phil Alden Robinson (born March 1, 1950) is an American film director and screenwriter whose films include \"Field of Dreams\", \"Sneakers\", and \"The Sum of All Fears\".\nPage: David Nixon (director). Sentence: David Nixon is an American film director and film producer.\nPage: Rhinestone (film). Sentence: Rhinestone is a 1984 American musical comedy film directed by Bob Clark from a screenplay by Sylvester Stallone and Phil Alden Robinson and starring Stallone and Dolly Parton.",
+  "label": "SUPPORTED",
+  "num_hops": 3,
+  "hover_metadata": {
+    "supporting_facts": [
+      [
+        "Phil Alden Robinson",
+        0
+      ],
+      [
+        "David Nixon (director)",
+        0
+      ],
+      [
+        "Rhinestone (film)",
+        0
+      ]
+    ],
+    "num_hops": 3,
+    "evidence_annotation_id": [
+      0
+    ],
+    "evidence_id": [
+      "Phil Alden Robinson::sentence::0",
+      "David Nixon (director)::sentence::0",
+      "Rhinestone (film)::sentence::0"
+    ],
+    "evidence_wiki_url": [
+      "https://en.wikipedia.org/wiki/Phil_Alden_Robinson",
+      "https://en.wikipedia.org/wiki/David_Nixon_%28director%29",
+      "https://en.wikipedia.org/wiki/Rhinestone_%28film%29"
+    ],
+    "evidence_sentence_id": [
+      "Phil Alden Robinson::sentence::0",
+      "David Nixon (director)::sentence::0",
+      "Rhinestone (film)::sentence::0"
+    ]
+  },
+  "grafo_claim": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "d328ccbc-fc4c-5661-86f2-b1306f8bc409",
+        "text": "This chunk is about:\n- People: David Nixon, Bob Clark\n- Roles: Film directors\n- Works: Rhinestone\n\nFacts:\n- David Nixon is a film director.\n- Bob Clark is a film director.\n- Bob Clark directed the film \"Rhinestone\".",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "247e0dde-5688-5d0f-b63e-dc044813f25b",
+        "text": "David Nixon and another man are both directors. The other director directed the film \"Rhinestone\".",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "fda2c860-0700-5f6f-8beb-6d088da397c1",
+        "text": "text_f7a7b37a4a0b972348d544c132497af4",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "d2be5394-d702-5472-afbe-76f307e99931",
+        "text": "david nixon",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "99a82eec-bb35-5bb5-9ed2-e73fc7a756de",
+        "text": "person",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "4f624050-eb80-540a-b5c3-4ad67482ebad",
+        "text": "director",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "d2a381fa-3658-5ca6-ada9-2109cfc9331d",
+        "text": "concept",
+        "type": "EntityType"
+      },
+      {
+        "id": 7,
+        "original_id": "63e2ddf0-bea3-595d-8031-fa4d971c0167",
+        "text": "another man",
+        "type": "Entity"
+      },
+      {
+        "id": 8,
+        "original_id": "9e8a96ed-ff4c-554c-a566-6da757b1acc2",
+        "text": "rhinestone",
+        "type": "Entity"
+      },
+      {
+        "id": 9,
+        "original_id": "5263a535-1b4b-5925-be3e-310d03cd303b",
+        "text": "work",
+        "type": "EntityType"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 7,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "has_role"
+      },
+      {
+        "source": 7,
+        "target": 5,
+        "type": "has_role"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      },
+      {
+        "source": 7,
+        "target": 8,
+        "type": "directed"
+      },
+      {
+        "source": 1,
+        "target": 8,
+        "type": "contains"
+      },
+      {
+        "source": 8,
+        "target": 9,
+        "type": "is_a"
+      }
+    ]
+  },
+  "grafo_evidencia": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "60a98683-4eb5-54c3-807c-c6a265df0713",
+        "text": "This chunk is about:\n- People: Phil Alden Robinson, David Nixon, Bob Clark, Sylvester Stallone, Dolly Parton\n- Roles: film directors, screenwriters, film producers\n- Works: Field of Dreams, Sneakers, The Sum of All Fears, Rhinestone\n\nFacts:\n- Phil Alden Robinson was born on March 1, 1950.\n- Phil Alden Robinson is an American film director and screenwriter.\n- Phil Alden Robinson's films include Field of Dreams, Sneakers, and The Sum of All Fears.\n- Rhinestone is a 1984 American musical comedy film.\n- Bob Clark directed Rhinestone from a screenplay by Sylvester Stallone and Phil Alden Robinson.\n- Sylvester Stallone and Dolly Parton starred in Rhinestone.\n- David Nixon is an American film director and film producer.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "bc985bec-d401-5252-bb97-a4405a59465a",
+        "text": "Page: Phil Alden Robinson. Sentence: Phil Alden Robinson (born March 1, 1950) is an American film director and screenwriter whose films include \"Field of Dreams\", \"Sneakers\", and \"The Sum of All Fears\".\nPage: David Nixon (director). Sentence: David Nixon is an American film director and film producer.\nPage: Rhinestone (film). Sentence: Rhinestone is a 1984 American musical comedy film directed by Bob Clark from a screenplay by Sylvester Stallone and Phil Alden Robinson and starring Stallone and Dolly Parton.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "c0b46d9d-fe97-5d9d-8b3f-825f9f531760",
+        "text": "text_89a3983c9606f41b7d174c71b1bd3ab9",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "7ce2379b-adb8-56d1-8af6-e24833f9b7a4",
+        "text": "phil alden robinson",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "99a82eec-bb35-5bb5-9ed2-e73fc7a756de",
+        "text": "person",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "306f75f5-d196-5008-bb3a-807a0cc008de",
+        "text": "1950-03-01",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "b19433ae-558c-5aaf-95ac-6231f2a4be0e",
+        "text": "date",
+        "type": "EntityType"
+      },
+      {
+        "id": 7,
+        "original_id": "189902a7-6064-5ca0-9a20-e22d5910c384",
+        "text": "field of dreams",
+        "type": "Entity"
+      },
+      {
+        "id": 8,
+        "original_id": "d320c8df-fd51-56e6-b577-e01a688fe6fc",
+        "text": "film",
+        "type": "EntityType"
+      },
+      {
+        "id": 9,
+        "original_id": "cdb5296d-b717-5e2e-9cd3-f0a31ba7bec1",
+        "text": "sneakers",
+        "type": "Entity"
+      },
+      {
+        "id": 10,
+        "original_id": "8e2d2f48-005c-51bc-b7fc-41abc33c87c9",
+        "text": "the sum of all fears",
+        "type": "Entity"
+      },
+      {
+        "id": 11,
+        "original_id": "9e8a96ed-ff4c-554c-a566-6da757b1acc2",
+        "text": "rhinestone",
+        "type": "Entity"
+      },
+      {
+        "id": 12,
+        "original_id": "36535bda-358d-582c-896d-8489e824d5db",
+        "text": "1984",
+        "type": "Entity"
+      },
+      {
+        "id": 13,
+        "original_id": "d2be5394-d702-5472-afbe-76f307e99931",
+        "text": "david nixon",
+        "type": "Entity"
+      },
+      {
+        "id": 14,
+        "original_id": "fcac41b5-783d-56b6-8ac2-109d3677ba16",
+        "text": "bob clark",
+        "type": "Entity"
+      },
+      {
+        "id": 15,
+        "original_id": "1cae306e-343a-584a-9e9f-14d4d45e40df",
+        "text": "sylvester stallone",
+        "type": "Entity"
+      },
+      {
+        "id": 16,
+        "original_id": "3cbe59fa-ba61-5ce8-a5a2-38c3bb4c723c",
+        "text": "dolly parton",
+        "type": "Entity"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 13,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 14,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 15,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 16,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "born_on"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 12,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 7,
+        "type": "associated_with_film"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      },
+      {
+        "source": 7,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 9,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 10,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 11,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 9,
+        "type": "associated_with_film"
+      },
+      {
+        "source": 1,
+        "target": 9,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 10,
+        "type": "associated_with_film"
+      },
+      {
+        "source": 1,
+        "target": 10,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 11,
+        "type": "wrote_screenplay_for"
+      },
+      {
+        "source": 13,
+        "target": 11,
+        "type": "unrelated_to"
+      },
+      {
+        "source": 1,
+        "target": 11,
+        "type": "contains"
+      },
+      {
+        "source": 14,
+        "target": 11,
+        "type": "directed"
+      },
+      {
+        "source": 15,
+        "target": 11,
+        "type": "wrote_screenplay_for"
+      },
+      {
+        "source": 16,
+        "target": 11,
+        "type": "starred_in"
+      },
+      {
+        "source": 11,
+        "target": 12,
+        "type": "released_in"
+      },
+      {
+        "source": 1,
+        "target": 12,
+        "type": "contains"
+      },
+      {
+        "source": 1,
+        "target": 13,
+        "type": "contains"
+      },
+      {
+        "source": 1,
+        "target": 14,
+        "type": "contains"
+      },
+      {
+        "source": 1,
+        "target": 15,
+        "type": "contains"
+      },
+      {
+        "source": 1,
+        "target": 16,
+        "type": "contains"
+      }
+    ]
+  }
+}

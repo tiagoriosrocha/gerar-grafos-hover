@@ -1,0 +1,363 @@
+{
+  "dataset": "hover",
+  "id": "5ceb1e64-57c8-498c-9bf1-056286a0019f",
+  "split": "train",
+  "claim": "Wikimedia Foundation runs the website surpassed by both Baidu Baike and Hudong.com.",
+  "evidencia": "Page: Baidu Baike. Sentence: Its test version was released on 20 April 2006, and within three weeks the encyclopedia had grown to more than 90,000 articles surpassing the number in Chinese Wikipedia.\nPage: Chinese Wikipedia. Sentence: The Chinese Wikipedia () is the (Standard) Chinese language edition of Wikipedia.\nPage: Chinese Wikipedia. Sentence: It is run by the Wikimedia Foundation.",
+  "evidence_text": "Page: Baidu Baike. Sentence: Its test version was released on 20 April 2006, and within three weeks the encyclopedia had grown to more than 90,000 articles surpassing the number in Chinese Wikipedia.\nPage: Chinese Wikipedia. Sentence: The Chinese Wikipedia () is the (Standard) Chinese language edition of Wikipedia.\nPage: Chinese Wikipedia. Sentence: It is run by the Wikimedia Foundation.",
+  "label": "SUPPORTED",
+  "num_hops": 2,
+  "hover_metadata": {
+    "supporting_facts": [
+      [
+        "Baidu Baike",
+        1
+      ],
+      [
+        "Chinese Wikipedia",
+        0
+      ],
+      [
+        "Chinese Wikipedia",
+        1
+      ]
+    ],
+    "num_hops": 2,
+    "evidence_annotation_id": [
+      0
+    ],
+    "evidence_id": [
+      "Baidu Baike::sentence::1",
+      "Chinese Wikipedia::sentence::0",
+      "Chinese Wikipedia::sentence::1"
+    ],
+    "evidence_wiki_url": [
+      "https://en.wikipedia.org/wiki/Baidu_Baike",
+      "https://en.wikipedia.org/wiki/Chinese_Wikipedia"
+    ],
+    "evidence_sentence_id": [
+      "Baidu Baike::sentence::1",
+      "Chinese Wikipedia::sentence::0",
+      "Chinese Wikipedia::sentence::1"
+    ]
+  },
+  "grafo_claim": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "9ba34fbb-4780-5118-97a6-e56738e475ef",
+        "text": "This chunk is about:\n- Organizations: Wikimedia Foundation\n- Websites: Baidu Baike, Hudong.com\n- Topics: website ranking or comparison\n\nFacts:\n- Baidu Baike and Hudong.com both surpassed a website run by the Wikimedia Foundation.\n- The Wikimedia Foundation operates the surpassed website.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "c71152f2-7437-556f-af5a-10f91fc7f7bb",
+        "text": "Wikimedia Foundation runs the website surpassed by both Baidu Baike and Hudong.com.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "59227c47-8348-54d5-83fb-ec9d3f7e51b6",
+        "text": "text_40cfc51c8202622375e4e0d76bd77e2c",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "e89205a9-d31e-5766-a29e-02b2cc553302",
+        "text": "wikimedia foundation",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "388f60fb-220d-55e8-ae9c-3ac93cead308",
+        "text": "organization",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "f3fcdaea-2fea-5aeb-8f50-b0ce9ee0d94c",
+        "text": "website run by wikimedia foundation",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "b12ba152-62c4-534e-9aff-f1a376a4c4fb",
+        "text": "website",
+        "type": "EntityType"
+      },
+      {
+        "id": 7,
+        "original_id": "71b499d8-b396-5ea1-89df-1ca880e593bf",
+        "text": "baidu baike",
+        "type": "Entity"
+      },
+      {
+        "id": 8,
+        "original_id": "1c2e53c1-8470-52b4-a017-18962ee67f58",
+        "text": "hudong.com",
+        "type": "Entity"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "runs"
+      },
+      {
+        "source": 7,
+        "target": 5,
+        "type": "surpasses"
+      },
+      {
+        "source": 8,
+        "target": 5,
+        "type": "surpasses"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 7,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 8,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      },
+      {
+        "source": 1,
+        "target": 8,
+        "type": "contains"
+      }
+    ]
+  },
+  "grafo_evidencia": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "c58fdd9b-0938-55c4-b45e-a863f6e4e6a1",
+        "text": "This chunk is about:\n- Products: Baidu Baike, Chinese Wikipedia\n- Organizations: Wikimedia Foundation\n- Topics: Chinese-language online encyclopedias\n\nFacts:\n- On 20 April 2006, Baidu Baike released its test version.\n- Within three weeks of its test release, Baidu Baike grew to more than 90,000 articles and surpassed Chinese Wikipedia in article count.\n- Chinese Wikipedia is the Standard Chinese-language edition of Wikipedia.\n- Chinese Wikipedia is run by the Wikimedia Foundation.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "c9a36d7e-2739-5e6c-8914-f9c1df642715",
+        "text": "Page: Baidu Baike. Sentence: Its test version was released on 20 April 2006, and within three weeks the encyclopedia had grown to more than 90,000 articles surpassing the number in Chinese Wikipedia.\nPage: Chinese Wikipedia. Sentence: The Chinese Wikipedia () is the (Standard) Chinese language edition of Wikipedia.\nPage: Chinese Wikipedia. Sentence: It is run by the Wikimedia Foundation.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "7a336a4a-dd06-5f9d-814c-90dbfaef17db",
+        "text": "text_a16706e6df6135245fd84e08d8444431",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "71b499d8-b396-5ea1-89df-1ca880e593bf",
+        "text": "baidu baike",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "388f60fb-220d-55e8-ae9c-3ac93cead308",
+        "text": "organization",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "2ae966ea-8fde-5c48-b091-79af40d71012",
+        "text": "2006-04-20",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "b19433ae-558c-5aaf-95ac-6231f2a4be0e",
+        "text": "date",
+        "type": "EntityType"
+      },
+      {
+        "id": 7,
+        "original_id": "0fa1ad07-349a-5510-8b20-24aaa474f254",
+        "text": "90,000 articles",
+        "type": "Entity"
+      },
+      {
+        "id": 8,
+        "original_id": "d2a381fa-3658-5ca6-ada9-2109cfc9331d",
+        "text": "concept",
+        "type": "EntityType"
+      },
+      {
+        "id": 9,
+        "original_id": "e3b0a9af-435b-5c5b-902b-363787efb3fa",
+        "text": "three weeks",
+        "type": "Entity"
+      },
+      {
+        "id": 10,
+        "original_id": "da11544b-a700-5a50-9d2e-30cf08c3b199",
+        "text": "chinese wikipedia",
+        "type": "Entity"
+      },
+      {
+        "id": 11,
+        "original_id": "f9ba2c1d-2a21-59c9-a42a-05fc63df48a5",
+        "text": "wikipedia",
+        "type": "Entity"
+      },
+      {
+        "id": 12,
+        "original_id": "e89205a9-d31e-5766-a29e-02b2cc553302",
+        "text": "wikimedia foundation",
+        "type": "Entity"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 10,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 11,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 12,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "test_version_released_on"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 7,
+        "type": "grew_to_more_than"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      },
+      {
+        "source": 7,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 9,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 9,
+        "type": "grew_within"
+      },
+      {
+        "source": 1,
+        "target": 9,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 10,
+        "type": "surpassed_article_count_of"
+      },
+      {
+        "source": 1,
+        "target": 10,
+        "type": "contains"
+      },
+      {
+        "source": 10,
+        "target": 11,
+        "type": "is_language_edition_of"
+      },
+      {
+        "source": 1,
+        "target": 11,
+        "type": "contains"
+      },
+      {
+        "source": 10,
+        "target": 12,
+        "type": "is_run_by"
+      },
+      {
+        "source": 1,
+        "target": 12,
+        "type": "contains"
+      }
+    ]
+  }
+}

@@ -1,0 +1,444 @@
+{
+  "dataset": "hover",
+  "id": "55192f7b-778c-433e-9473-900bcc13cfbe",
+  "split": "train",
+  "claim": "250 species of Hawaiian hibiscus do not have white flowers.",
+  "evidencia": "Page: Hibiscus waimeae. Sentence: \"H. arnottianus\" of Oʻ ahu and Molokaʻ i and \"H. waimeae\" are the only Hawaiian hibiscuses that have white flowers.\nPage: Hibiscus waimeae. Sentence: \"H. waimeae\" inhabits coastal mesic, mixed mesic, and wet forests at elevations of 250 – .\nPage: Hawaiian hibiscus. Sentence: Hawaiian hibiscus are seven species of hibiscus regarded as native to Hawaii.",
+  "evidence_text": "Page: Hibiscus waimeae. Sentence: \"H. arnottianus\" of Oʻ ahu and Molokaʻ i and \"H. waimeae\" are the only Hawaiian hibiscuses that have white flowers.\nPage: Hibiscus waimeae. Sentence: \"H. waimeae\" inhabits coastal mesic, mixed mesic, and wet forests at elevations of 250 – .\nPage: Hawaiian hibiscus. Sentence: Hawaiian hibiscus are seven species of hibiscus regarded as native to Hawaii.",
+  "label": "SUPPORTED",
+  "num_hops": 2,
+  "hover_metadata": {
+    "supporting_facts": [
+      [
+        "Hibiscus waimeae",
+        3
+      ],
+      [
+        "Hibiscus waimeae",
+        4
+      ],
+      [
+        "Hawaiian hibiscus",
+        0
+      ]
+    ],
+    "num_hops": 2,
+    "evidence_annotation_id": [
+      0
+    ],
+    "evidence_id": [
+      "Hibiscus waimeae::sentence::3",
+      "Hibiscus waimeae::sentence::4",
+      "Hawaiian hibiscus::sentence::0"
+    ],
+    "evidence_wiki_url": [
+      "https://en.wikipedia.org/wiki/Hibiscus_waimeae",
+      "https://en.wikipedia.org/wiki/Hawaiian_hibiscus"
+    ],
+    "evidence_sentence_id": [
+      "Hibiscus waimeae::sentence::3",
+      "Hibiscus waimeae::sentence::4",
+      "Hawaiian hibiscus::sentence::0"
+    ]
+  },
+  "grafo_claim": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "7278443b-e638-5cdd-a849-0074067b2d70",
+        "text": "This chunk is about:\n- Plants: Hawaiian hibiscus\n- Concepts: flower color, species count\n\nFacts:\n- Hawaiian hibiscus includes 250 species.\n- Hawaiian hibiscus species do not have white flowers.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "6f28a762-d84c-5401-b7da-cc1f1591aebe",
+        "text": "250 species of Hawaiian hibiscus do not have white flowers.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "dddd1d1a-7362-5a91-810b-971bece42449",
+        "text": "text_c0ef8aa1a04cea7af430c85f812c9f16",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "0843bc06-69e9-520d-9ed5-e9c61797779f",
+        "text": "hawaiian hibiscus",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "2df43048-b175-54c2-b72b-0ff24f41e4f1",
+        "text": "plant",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "c887c08b-d355-5fca-837f-767b415e6ef8",
+        "text": "250",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "5c1097ca-fab8-54d5-b57f-5dca4b0e2507",
+        "text": "number",
+        "type": "EntityType"
+      },
+      {
+        "id": 7,
+        "original_id": "4f6b2601-2af1-5c7d-a0d5-cf70f3e08c39",
+        "text": "white flowers",
+        "type": "Entity"
+      },
+      {
+        "id": 8,
+        "original_id": "d2a381fa-3658-5ca6-ada9-2109cfc9331d",
+        "text": "concept",
+        "type": "EntityType"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "has_species_count"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 7,
+        "type": "does_not_have"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      },
+      {
+        "source": 7,
+        "target": 8,
+        "type": "is_a"
+      }
+    ]
+  },
+  "grafo_evidencia": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "bf6f0347-3d2a-555d-967f-eb2e67cd20d8",
+        "text": "This chunk is about:\n- Plants: Hibiscus waimeae, H. arnottianus, Hawaiian hibiscus\n- Places: Hawaii, Oʻahu, Molokaʻi\n- Topics: Native species, flower color, habitat\n\nFacts:\n- Hawaiian hibiscus are seven species of hibiscus regarded as native to Hawaii.\n- H. arnottianus of Oʻahu and Molokaʻi and H. waimeae are the only Hawaiian hibiscuses that have white flowers.\n- H. waimeae inhabits coastal mesic, mixed mesic, and wet forests at elevations of 250 meters and higher.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "4579b1dd-7ee5-5fcd-8fff-86502631a1b1",
+        "text": "Page: Hibiscus waimeae. Sentence: \"H. arnottianus\" of Oʻ ahu and Molokaʻ i and \"H. waimeae\" are the only Hawaiian hibiscuses that have white flowers.\nPage: Hibiscus waimeae. Sentence: \"H. waimeae\" inhabits coastal mesic, mixed mesic, and wet forests at elevations of 250 – .\nPage: Hawaiian hibiscus. Sentence: Hawaiian hibiscus are seven species of hibiscus regarded as native to Hawaii.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "27871c65-72ba-5c02-b5fa-2f6b1b570185",
+        "text": "text_d38a80f687fb4de9aee686fbedba97bb",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "f9b8181b-efe9-5969-8c15-115e092f4b81",
+        "text": "hibiscus waimeae",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "2df43048-b175-54c2-b72b-0ff24f41e4f1",
+        "text": "plant",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "4f6b2601-2af1-5c7d-a0d5-cf70f3e08c39",
+        "text": "white flowers",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "530c6377-3f1e-5bb4-9ec9-1803a0b8de2a",
+        "text": "trait",
+        "type": "EntityType"
+      },
+      {
+        "id": 7,
+        "original_id": "975842b4-679c-5c3c-b6ef-23d9312c776c",
+        "text": "coastal mesic forests",
+        "type": "Entity"
+      },
+      {
+        "id": 8,
+        "original_id": "4fabdc0b-8e9a-5e7a-970d-db700b89bbbe",
+        "text": "habitat",
+        "type": "EntityType"
+      },
+      {
+        "id": 9,
+        "original_id": "e4e0fb83-a536-5663-8d21-8bf383919194",
+        "text": "mixed mesic forests",
+        "type": "Entity"
+      },
+      {
+        "id": 10,
+        "original_id": "a2715675-3405-5bed-83bc-7b297aa4db3b",
+        "text": "wet forests",
+        "type": "Entity"
+      },
+      {
+        "id": 11,
+        "original_id": "0843bc06-69e9-520d-9ed5-e9c61797779f",
+        "text": "hawaiian hibiscus",
+        "type": "Entity"
+      },
+      {
+        "id": 12,
+        "original_id": "98ed3a15-eaa2-57c6-8de5-e1dabaf57f77",
+        "text": "group",
+        "type": "EntityType"
+      },
+      {
+        "id": 13,
+        "original_id": "a5df02be-cac7-5df1-9f07-e29ca15a56f2",
+        "text": "seven species of hibiscus",
+        "type": "Entity"
+      },
+      {
+        "id": 14,
+        "original_id": "d12c5efc-8251-5176-b43f-3b32b5ba9ec7",
+        "text": "hawaii",
+        "type": "Entity"
+      },
+      {
+        "id": 15,
+        "original_id": "5f394058-b2a0-5ba8-8466-ba2a18cfcf4e",
+        "text": "place",
+        "type": "EntityType"
+      },
+      {
+        "id": 16,
+        "original_id": "5559a196-571a-54a0-9aee-100bce5d9399",
+        "text": "h. arnottianus",
+        "type": "Entity"
+      },
+      {
+        "id": 17,
+        "original_id": "e2ac8b8c-24c6-561f-a139-12f97a16235c",
+        "text": "oʻahu",
+        "type": "Entity"
+      },
+      {
+        "id": 18,
+        "original_id": "c1681a73-3ed9-521f-b7af-f2b45473b289",
+        "text": "molokaʻi",
+        "type": "Entity"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 16,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "has_trait"
+      },
+      {
+        "source": 16,
+        "target": 5,
+        "type": "has_trait"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 7,
+        "type": "inhabits"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      },
+      {
+        "source": 7,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 9,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 10,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 9,
+        "type": "inhabits"
+      },
+      {
+        "source": 1,
+        "target": 9,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 10,
+        "type": "inhabits"
+      },
+      {
+        "source": 1,
+        "target": 10,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 11,
+        "type": "member_of"
+      },
+      {
+        "source": 1,
+        "target": 11,
+        "type": "contains"
+      },
+      {
+        "source": 11,
+        "target": 12,
+        "type": "is_a"
+      },
+      {
+        "source": 13,
+        "target": 12,
+        "type": "is_a"
+      },
+      {
+        "source": 11,
+        "target": 13,
+        "type": "consists_of"
+      },
+      {
+        "source": 1,
+        "target": 13,
+        "type": "contains"
+      },
+      {
+        "source": 11,
+        "target": 14,
+        "type": "native_to"
+      },
+      {
+        "source": 1,
+        "target": 14,
+        "type": "contains"
+      },
+      {
+        "source": 14,
+        "target": 15,
+        "type": "is_a"
+      },
+      {
+        "source": 17,
+        "target": 15,
+        "type": "is_a"
+      },
+      {
+        "source": 18,
+        "target": 15,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 16,
+        "type": "contains"
+      },
+      {
+        "source": 16,
+        "target": 17,
+        "type": "is_of"
+      },
+      {
+        "source": 1,
+        "target": 17,
+        "type": "contains"
+      },
+      {
+        "source": 16,
+        "target": 18,
+        "type": "is_of"
+      },
+      {
+        "source": 1,
+        "target": 18,
+        "type": "contains"
+      }
+    ]
+  }
+}

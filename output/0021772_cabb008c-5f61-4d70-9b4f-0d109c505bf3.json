@@ -1,0 +1,482 @@
+{
+  "dataset": "hover",
+  "id": "cabb008c-5f61-4d70-9b4f-0d109c505bf3",
+  "split": "dev",
+  "claim": "Grover Jones was born in Rosedale, Indiana, the director of Northcote (So Hungover) was not.",
+  "evidencia": "Page: Craig Melville. Sentence: Craig James Melville is an Australian television comedy director.\nPage: Grover Jones. Sentence: Jones was born in Rosedale, Indiana, grew up in West Terre Haute, Indiana, and died in Hollywood, California.\nPage: Northcote (So Hungover). Sentence: It was a notable radio hit on national broadcaster Triple J and its film clip, directed by Craig Melville and produced by David Curry, received over 500,000 views on YouTube.",
+  "evidence_text": "Page: Craig Melville. Sentence: Craig James Melville is an Australian television comedy director.\nPage: Grover Jones. Sentence: Jones was born in Rosedale, Indiana, grew up in West Terre Haute, Indiana, and died in Hollywood, California.\nPage: Northcote (So Hungover). Sentence: It was a notable radio hit on national broadcaster Triple J and its film clip, directed by Craig Melville and produced by David Curry, received over 500,000 views on YouTube.",
+  "label": "SUPPORTED",
+  "num_hops": 3,
+  "hover_metadata": {
+    "supporting_facts": [
+      [
+        "Craig Melville",
+        0
+      ],
+      [
+        "Grover Jones",
+        3
+      ],
+      [
+        "Northcote (So Hungover)",
+        1
+      ]
+    ],
+    "num_hops": 3,
+    "evidence_annotation_id": [
+      0
+    ],
+    "evidence_id": [
+      "Craig Melville::sentence::0",
+      "Grover Jones::sentence::3",
+      "Northcote (So Hungover)::sentence::1"
+    ],
+    "evidence_wiki_url": [
+      "https://en.wikipedia.org/wiki/Craig_Melville",
+      "https://en.wikipedia.org/wiki/Grover_Jones",
+      "https://en.wikipedia.org/wiki/Northcote_%28So_Hungover%29"
+    ],
+    "evidence_sentence_id": [
+      "Craig Melville::sentence::0",
+      "Grover Jones::sentence::3",
+      "Northcote (So Hungover)::sentence::1"
+    ]
+  },
+  "grafo_claim": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "39a35930-f7e9-57b5-9f2d-9d212b6f930c",
+        "text": "This chunk is about:\n- People: Grover Jones\n- Places: Rosedale, Indiana\n- Films: Northcote (So Hungover)\n\nFacts:\n- Grover Jones was born in Rosedale, Indiana.\n- The director of Northcote (So Hungover) was not born in Rosedale, Indiana.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "0ef77093-fbea-52a3-a747-3390dd18edab",
+        "text": "Grover Jones was born in Rosedale, Indiana, the director of Northcote (So Hungover) was not.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "c3f899a0-86c2-55f2-867f-04448d10836c",
+        "text": "text_82ee5b6eba30ba3e8765c4de7be325f3",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "82ebc44f-3c04-5af5-b37c-c9adbacc4df9",
+        "text": "grover jones",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "99a82eec-bb35-5bb5-9ed2-e73fc7a756de",
+        "text": "person",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "c9b49fd1-b8e6-504e-8edc-35f775d12fdb",
+        "text": "rosedale, indiana",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "5f394058-b2a0-5ba8-8466-ba2a18cfcf4e",
+        "text": "place",
+        "type": "EntityType"
+      },
+      {
+        "id": 7,
+        "original_id": "2fbce647-f12b-53b5-b779-5c755c19a6a9",
+        "text": "northcote (so hungover)",
+        "type": "Entity"
+      },
+      {
+        "id": 8,
+        "original_id": "5263a535-1b4b-5925-be3e-310d03cd303b",
+        "text": "work",
+        "type": "EntityType"
+      },
+      {
+        "id": 9,
+        "original_id": "a007d89e-68be-5fca-9499-5d098539955b",
+        "text": "director of northcote (so hungover)",
+        "type": "Entity"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 9,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "born_in"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 9,
+        "target": 5,
+        "type": "not_born_in"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      },
+      {
+        "source": 9,
+        "target": 7,
+        "type": "directed"
+      },
+      {
+        "source": 7,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 9,
+        "type": "contains"
+      }
+    ]
+  },
+  "grafo_evidencia": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "d8abe457-407a-5958-9828-fe4ce444e3d0",
+        "text": "This chunk is about:\n- People: Craig Melville, Grover Jones, David Curry\n- Places: Rosedale, Indiana; West Terre Haute, Indiana; Hollywood, California\n- Works: “Northcote (So Hungover)”\n- Organizations: Triple J, YouTube\n- Roles: television comedy director, film clip director, producer\n\nFacts:\n- Grover Jones was born in Rosedale, Indiana, grew up in West Terre Haute, Indiana, and died in Hollywood, California.\n- Craig James Melville is an Australian television comedy director.\n- “Northcote (So Hungover)” was a notable radio hit on the national broadcaster Triple J.\n- The film clip for “Northcote (So Hungover)” was directed by Craig Melville and produced by David Curry.\n- The film clip for “Northcote (So Hungover)” received over 500,000 views on YouTube.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "bef6719d-a7be-5a9a-9d19-0ca4ac51c7ad",
+        "text": "Page: Craig Melville. Sentence: Craig James Melville is an Australian television comedy director.\nPage: Grover Jones. Sentence: Jones was born in Rosedale, Indiana, grew up in West Terre Haute, Indiana, and died in Hollywood, California.\nPage: Northcote (So Hungover). Sentence: It was a notable radio hit on national broadcaster Triple J and its film clip, directed by Craig Melville and produced by David Curry, received over 500,000 views on YouTube.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "767cbef0-358e-5766-8071-6f8cf24b8627",
+        "text": "text_35651e10dddeca285bd7155a816f076b",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "2699a86a-ec18-529b-84af-b5252af7eb57",
+        "text": "craig james melville",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "99a82eec-bb35-5bb5-9ed2-e73fc7a756de",
+        "text": "person",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "02448d73-884d-50c7-a919-b94177f1cf43",
+        "text": "australia",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "5f394058-b2a0-5ba8-8466-ba2a18cfcf4e",
+        "text": "place",
+        "type": "EntityType"
+      },
+      {
+        "id": 7,
+        "original_id": "9d77e1ee-49b7-54c9-9b14-b2440157674a",
+        "text": "television comedy director",
+        "type": "Entity"
+      },
+      {
+        "id": 8,
+        "original_id": "d2a381fa-3658-5ca6-ada9-2109cfc9331d",
+        "text": "concept",
+        "type": "EntityType"
+      },
+      {
+        "id": 9,
+        "original_id": "82ebc44f-3c04-5af5-b37c-c9adbacc4df9",
+        "text": "grover jones",
+        "type": "Entity"
+      },
+      {
+        "id": 10,
+        "original_id": "c9b49fd1-b8e6-504e-8edc-35f775d12fdb",
+        "text": "rosedale, indiana",
+        "type": "Entity"
+      },
+      {
+        "id": 11,
+        "original_id": "3429fd61-d86f-577f-a735-093a591ebcba",
+        "text": "west terre haute, indiana",
+        "type": "Entity"
+      },
+      {
+        "id": 12,
+        "original_id": "a2ed81c7-dfa8-5eef-af30-04d73a36efcb",
+        "text": "hollywood, california",
+        "type": "Entity"
+      },
+      {
+        "id": 13,
+        "original_id": "2fbce647-f12b-53b5-b779-5c755c19a6a9",
+        "text": "northcote (so hungover)",
+        "type": "Entity"
+      },
+      {
+        "id": 14,
+        "original_id": "5263a535-1b4b-5925-be3e-310d03cd303b",
+        "text": "work",
+        "type": "EntityType"
+      },
+      {
+        "id": 15,
+        "original_id": "88e75841-3d8e-5c3c-8d4a-0693b4136f1d",
+        "text": "triple j",
+        "type": "Entity"
+      },
+      {
+        "id": 16,
+        "original_id": "388f60fb-220d-55e8-ae9c-3ac93cead308",
+        "text": "organization",
+        "type": "EntityType"
+      },
+      {
+        "id": 17,
+        "original_id": "4ff1f029-276f-50af-a8ea-70eab5d8757f",
+        "text": "film clip of northcote (so hungover)",
+        "type": "Entity"
+      },
+      {
+        "id": 18,
+        "original_id": "1d0418cf-0aa9-5e78-9e2e-4e535367e257",
+        "text": "david curry",
+        "type": "Entity"
+      },
+      {
+        "id": 19,
+        "original_id": "8499cb8e-41d5-5ea0-8bbf-959b999d68b5",
+        "text": "youtube",
+        "type": "Entity"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 17,
+        "target": 3,
+        "type": "directed_by"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 9,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 18,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "associated_with_nationality"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 10,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 11,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 12,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 7,
+        "type": "has_profession"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      },
+      {
+        "source": 7,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 9,
+        "type": "contains"
+      },
+      {
+        "source": 9,
+        "target": 10,
+        "type": "born_in"
+      },
+      {
+        "source": 1,
+        "target": 10,
+        "type": "contains"
+      },
+      {
+        "source": 9,
+        "target": 11,
+        "type": "grew_up_in"
+      },
+      {
+        "source": 1,
+        "target": 11,
+        "type": "contains"
+      },
+      {
+        "source": 9,
+        "target": 12,
+        "type": "died_in"
+      },
+      {
+        "source": 1,
+        "target": 12,
+        "type": "contains"
+      },
+      {
+        "source": 1,
+        "target": 13,
+        "type": "contains"
+      },
+      {
+        "source": 17,
+        "target": 13,
+        "type": "is_film_clip_of"
+      },
+      {
+        "source": 13,
+        "target": 14,
+        "type": "is_a"
+      },
+      {
+        "source": 17,
+        "target": 14,
+        "type": "is_a"
+      },
+      {
+        "source": 13,
+        "target": 15,
+        "type": "was_radio_hit_on"
+      },
+      {
+        "source": 1,
+        "target": 15,
+        "type": "contains"
+      },
+      {
+        "source": 15,
+        "target": 16,
+        "type": "is_a"
+      },
+      {
+        "source": 19,
+        "target": 16,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 17,
+        "type": "contains"
+      },
+      {
+        "source": 17,
+        "target": 18,
+        "type": "produced_by"
+      },
+      {
+        "source": 1,
+        "target": 18,
+        "type": "contains"
+      },
+      {
+        "source": 17,
+        "target": 19,
+        "type": "received_views_on"
+      },
+      {
+        "source": 1,
+        "target": 19,
+        "type": "contains"
+      }
+    ]
+  }
+}

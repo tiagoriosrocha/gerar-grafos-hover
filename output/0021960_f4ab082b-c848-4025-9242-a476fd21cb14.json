@@ -1,0 +1,368 @@
+{
+  "dataset": "hover",
+  "id": "f4ab082b-c848-4025-9242-a476fd21cb14",
+  "split": "dev",
+  "claim": "The LA Galaxy is the Cason, CA soccer team that features the son of Roy Lassiter.",
+  "evidencia": "Page: Roy Lassiter. Sentence: He is the father of LA Galaxy player Ariel Lassiter.\nPage: LA Galaxy. Sentence: The LA Galaxy, also known as the Los Angeles Galaxy, is an American professional soccer franchise based in the Los Angeles suburb of Carson, California, that competes in Major League Soccer (MLS), as a member of the Western Conference of the league.",
+  "evidence_text": "Page: Roy Lassiter. Sentence: He is the father of LA Galaxy player Ariel Lassiter.\nPage: LA Galaxy. Sentence: The LA Galaxy, also known as the Los Angeles Galaxy, is an American professional soccer franchise based in the Los Angeles suburb of Carson, California, that competes in Major League Soccer (MLS), as a member of the Western Conference of the league.",
+  "label": "SUPPORTED",
+  "num_hops": 2,
+  "hover_metadata": {
+    "supporting_facts": [
+      [
+        "Roy Lassiter",
+        1
+      ],
+      [
+        "LA Galaxy",
+        0
+      ]
+    ],
+    "num_hops": 2,
+    "evidence_annotation_id": [
+      0
+    ],
+    "evidence_id": [
+      "Roy Lassiter::sentence::1",
+      "LA Galaxy::sentence::0"
+    ],
+    "evidence_wiki_url": [
+      "https://en.wikipedia.org/wiki/Roy_Lassiter",
+      "https://en.wikipedia.org/wiki/LA_Galaxy"
+    ],
+    "evidence_sentence_id": [
+      "Roy Lassiter::sentence::1",
+      "LA Galaxy::sentence::0"
+    ]
+  },
+  "grafo_claim": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "b7451952-d4a7-506c-946e-7437f9050a50",
+        "text": "This chunk is about:\n- Organizations: LA Galaxy\n- Places: Carson, California\n- People: Roy Lassiter, Roy Lassiter's son\n- Topics: soccer\n\nFacts:\n- LA Galaxy is a soccer team based in Carson, California.\n- LA Galaxy features the son of Roy Lassiter.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "1d7bbf8b-90df-507f-8c73-397e6d290ca1",
+        "text": "The LA Galaxy is the Cason, CA soccer team that features the son of Roy Lassiter.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "2c92a366-4348-5ec9-b3ff-305e19b810a8",
+        "text": "text_4999c05aa76faf3bf0c1bf0221f46e4f",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "b7c53dc2-75e9-5c91-bf3f-e4c04ac09562",
+        "text": "la galaxy",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "388f60fb-220d-55e8-ae9c-3ac93cead308",
+        "text": "organization",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "74141d98-9120-5296-abac-ccbf4052fe0a",
+        "text": "cason, ca",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "5f394058-b2a0-5ba8-8466-ba2a18cfcf4e",
+        "text": "place",
+        "type": "EntityType"
+      },
+      {
+        "id": 7,
+        "original_id": "47927611-e0c4-5078-8379-6363bcb51b5b",
+        "text": "roy lassiters son",
+        "type": "Entity"
+      },
+      {
+        "id": 8,
+        "original_id": "99a82eec-bb35-5bb5-9ed2-e73fc7a756de",
+        "text": "person",
+        "type": "EntityType"
+      },
+      {
+        "id": 9,
+        "original_id": "ef54a665-522d-5b1f-822e-09346164e4cd",
+        "text": "roy lassiter",
+        "type": "Entity"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "is_from"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 7,
+        "type": "features"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      },
+      {
+        "source": 7,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 9,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 7,
+        "target": 9,
+        "type": "child_of"
+      },
+      {
+        "source": 1,
+        "target": 9,
+        "type": "contains"
+      }
+    ]
+  },
+  "grafo_evidencia": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "4a611909-6f04-59f2-b782-411f3567c273",
+        "text": "This chunk is about:\n- People: Roy Lassiter, Ariel Lassiter\n- Organizations: LA Galaxy, Major League Soccer\n- Places: Carson, California, Los Angeles\n- Topics: family relationships, professional soccer\n\nFacts:\n- Roy Lassiter is the father of Ariel Lassiter.\n- Ariel Lassiter is a player for LA Galaxy.\n- LA Galaxy is also known as the Los Angeles Galaxy.\n- LA Galaxy is an American professional soccer franchise based in Carson, California, a suburb of Los Angeles.\n- LA Galaxy competes in Major League Soccer as a member of the league's Western Conference.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "4335a96d-8410-53c7-b3b4-62acda0574a8",
+        "text": "Page: Roy Lassiter. Sentence: He is the father of LA Galaxy player Ariel Lassiter.\nPage: LA Galaxy. Sentence: The LA Galaxy, also known as the Los Angeles Galaxy, is an American professional soccer franchise based in the Los Angeles suburb of Carson, California, that competes in Major League Soccer (MLS), as a member of the Western Conference of the league.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "4cbb7214-7883-59ab-acb0-46883ed97fb6",
+        "text": "text_f7ea1538718156e10d1809f95098bc85",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "ef54a665-522d-5b1f-822e-09346164e4cd",
+        "text": "roy lassiter",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "99a82eec-bb35-5bb5-9ed2-e73fc7a756de",
+        "text": "person",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "b5f21f35-96ec-5bd4-99da-cf15a217dfea",
+        "text": "ariel lassiter",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "b7c53dc2-75e9-5c91-bf3f-e4c04ac09562",
+        "text": "la galaxy",
+        "type": "Entity"
+      },
+      {
+        "id": 7,
+        "original_id": "388f60fb-220d-55e8-ae9c-3ac93cead308",
+        "text": "organization",
+        "type": "EntityType"
+      },
+      {
+        "id": 8,
+        "original_id": "311c15e2-d3a2-5b49-a1ca-21517d5fe0b8",
+        "text": "los angeles galaxy",
+        "type": "Entity"
+      },
+      {
+        "id": 9,
+        "original_id": "93aaa6f1-b303-5095-9b73-eaf73fbfd46b",
+        "text": "carson, california",
+        "type": "Entity"
+      },
+      {
+        "id": 10,
+        "original_id": "5f394058-b2a0-5ba8-8466-ba2a18cfcf4e",
+        "text": "place",
+        "type": "EntityType"
+      },
+      {
+        "id": 11,
+        "original_id": "88cd27b2-3e30-59ce-ac8f-0879b65f86e2",
+        "text": "major league soccer",
+        "type": "Entity"
+      },
+      {
+        "id": 12,
+        "original_id": "541485ad-6ad1-5778-8c42-4865d32f47e9",
+        "text": "western conference",
+        "type": "Entity"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 5,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "father_of"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "plays_for"
+      },
+      {
+        "source": 1,
+        "target": 6,
+        "type": "contains"
+      },
+      {
+        "source": 6,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 8,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 11,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 12,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 6,
+        "target": 8,
+        "type": "also_known_as"
+      },
+      {
+        "source": 1,
+        "target": 8,
+        "type": "contains"
+      },
+      {
+        "source": 6,
+        "target": 9,
+        "type": "based_in"
+      },
+      {
+        "source": 1,
+        "target": 9,
+        "type": "contains"
+      },
+      {
+        "source": 9,
+        "target": 10,
+        "type": "is_a"
+      },
+      {
+        "source": 6,
+        "target": 11,
+        "type": "competes_in"
+      },
+      {
+        "source": 12,
+        "target": 11,
+        "type": "part_of"
+      },
+      {
+        "source": 1,
+        "target": 11,
+        "type": "contains"
+      },
+      {
+        "source": 6,
+        "target": 12,
+        "type": "member_of"
+      },
+      {
+        "source": 1,
+        "target": 12,
+        "type": "contains"
+      }
+    ]
+  }
+}

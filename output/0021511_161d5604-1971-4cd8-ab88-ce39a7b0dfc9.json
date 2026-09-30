@@ -1,0 +1,486 @@
+{
+  "dataset": "hover",
+  "id": "161d5604-1971-4cd8-ab88-ce39a7b0dfc9",
+  "split": "dev",
+  "claim": "This dog breed is of a similar type to the Icelandic Sheepdog. It has more traits than the English Foxhound.",
+  "evidencia": "Page: Norwegian Buhund. Sentence: The Norwegian Buhund is a breed of dog of the spitz type.\nPage: Norwegian Buhund. Sentence: The Buhund is used as an all purpose farm and herding dog, as well as watch dog and a nanny dog.\nPage: English Foxhound. Sentence: They are scent hounds, bred to hunt foxes by scent.\nPage: Icelandic Sheepdog. Sentence: It is of similar type to the Norwegian Buhund, the Shetland Sheepdog, and the Welsh Corgi.",
+  "evidence_text": "Page: Norwegian Buhund. Sentence: The Norwegian Buhund is a breed of dog of the spitz type.\nPage: Norwegian Buhund. Sentence: The Buhund is used as an all purpose farm and herding dog, as well as watch dog and a nanny dog.\nPage: English Foxhound. Sentence: They are scent hounds, bred to hunt foxes by scent.\nPage: Icelandic Sheepdog. Sentence: It is of similar type to the Norwegian Buhund, the Shetland Sheepdog, and the Welsh Corgi.",
+  "label": "SUPPORTED",
+  "num_hops": 3,
+  "hover_metadata": {
+    "supporting_facts": [
+      [
+        "Norwegian Buhund",
+        0
+      ],
+      [
+        "Norwegian Buhund",
+        2
+      ],
+      [
+        "English Foxhound",
+        2
+      ],
+      [
+        "Icelandic Sheepdog",
+        1
+      ]
+    ],
+    "num_hops": 3,
+    "evidence_annotation_id": [
+      0
+    ],
+    "evidence_id": [
+      "Norwegian Buhund::sentence::0",
+      "Norwegian Buhund::sentence::2",
+      "English Foxhound::sentence::2",
+      "Icelandic Sheepdog::sentence::1"
+    ],
+    "evidence_wiki_url": [
+      "https://en.wikipedia.org/wiki/Norwegian_Buhund",
+      "https://en.wikipedia.org/wiki/English_Foxhound",
+      "https://en.wikipedia.org/wiki/Icelandic_Sheepdog"
+    ],
+    "evidence_sentence_id": [
+      "Norwegian Buhund::sentence::0",
+      "Norwegian Buhund::sentence::2",
+      "English Foxhound::sentence::2",
+      "Icelandic Sheepdog::sentence::1"
+    ]
+  },
+  "grafo_claim": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "e011960e-637b-53ae-bb1d-61e68db5a630",
+        "text": "This chunk is about:\n- Animals: dog breed\n- Comparisons: similarity to the Icelandic Sheepdog, trait comparison with the English Foxhound\n\nFacts:\n- The dog breed is described as being of a similar type to the Icelandic Sheepdog.\n- The dog breed is described as having more traits than the English Foxhound.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "2f50ae20-b1cb-5e54-967b-827bd5e0c310",
+        "text": "This dog breed is of a similar type to the Icelandic Sheepdog. It has more traits than the English Foxhound.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "cdc60d36-d403-51f9-a830-0f4415c0d4ef",
+        "text": "text_b0a555de9ed115f635f1ee997682e895",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "fd1a3576-5084-5329-b7f3-f84d628dc26e",
+        "text": "this dog breed",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "29eda40d-66d5-59be-b17c-7c4969f51367",
+        "text": "dog breed",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "1ebae3fe-06c1-5dce-9ea9-94b884d1a304",
+        "text": "icelandic sheepdog",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "76f9ee0d-bbe6-5928-98f1-3f1ae3224f48",
+        "text": "english foxhound",
+        "type": "Entity"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 5,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 6,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "similar_type_to"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 6,
+        "type": "has_more_traits_than"
+      },
+      {
+        "source": 1,
+        "target": 6,
+        "type": "contains"
+      }
+    ]
+  },
+  "grafo_evidencia": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "08852e2a-d5c8-572f-8c9e-53357e448217",
+        "text": "This chunk is about:\n- Products: Norwegian Buhund, English Foxhound, Icelandic Sheepdog\n- Concepts: dog breeds, spitz type, scent hounds, herding dogs\n\nFacts:\n- The Norwegian Buhund is a dog breed of the spitz type.\n- The Norwegian Buhund is used as an all-purpose farm dog, herding dog, watchdog, and nanny dog.\n- The English Foxhound is a scent hound bred to hunt foxes by scent.\n- The Icelandic Sheepdog is similar in type to the Norwegian Buhund, the Shetland Sheepdog, and the Welsh Corgi.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "f46b1cbd-a050-5e6a-b225-c9b7bd9ff960",
+        "text": "Page: Norwegian Buhund. Sentence: The Norwegian Buhund is a breed of dog of the spitz type.\nPage: Norwegian Buhund. Sentence: The Buhund is used as an all purpose farm and herding dog, as well as watch dog and a nanny dog.\nPage: English Foxhound. Sentence: They are scent hounds, bred to hunt foxes by scent.\nPage: Icelandic Sheepdog. Sentence: It is of similar type to the Norwegian Buhund, the Shetland Sheepdog, and the Welsh Corgi.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "c908d4ea-de6b-5492-b9e2-99930927fd19",
+        "text": "text_e5725c2e5045844ada33dcca691fd347",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "d30060c2-fed4-529e-8c6e-a3d0a0328302",
+        "text": "norwegian buhund",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "67a184b0-2450-5b72-9617-e9811ef6244d",
+        "text": "animal breed",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "74492b45-99c5-5836-a75a-c912b8f91afb",
+        "text": "dog",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "5d76eb72-04ef-5580-b2ea-161f8429437a",
+        "text": "animal",
+        "type": "EntityType"
+      },
+      {
+        "id": 7,
+        "original_id": "044aafd8-6007-5524-9f31-5bda08048165",
+        "text": "spitz type",
+        "type": "Entity"
+      },
+      {
+        "id": 8,
+        "original_id": "e0031b08-4538-5737-8647-192ddaff489e",
+        "text": "category",
+        "type": "EntityType"
+      },
+      {
+        "id": 9,
+        "original_id": "a3cf87b5-9ad6-5c93-8826-b64cb411ba6a",
+        "text": "buhund",
+        "type": "Entity"
+      },
+      {
+        "id": 10,
+        "original_id": "3e592a28-14b4-5191-be0c-0b2bdab200ad",
+        "text": "all purpose farm dog",
+        "type": "Entity"
+      },
+      {
+        "id": 11,
+        "original_id": "c37fc488-fc9a-5b35-8e54-a50ae1721557",
+        "text": "role",
+        "type": "EntityType"
+      },
+      {
+        "id": 12,
+        "original_id": "50921d08-43e3-5091-b34e-667337f78ab5",
+        "text": "herding dog",
+        "type": "Entity"
+      },
+      {
+        "id": 13,
+        "original_id": "294adb42-7022-5de4-9a8e-3b70483576cc",
+        "text": "watch dog",
+        "type": "Entity"
+      },
+      {
+        "id": 14,
+        "original_id": "cb400f48-1677-5a49-8ddb-e5914bf150ea",
+        "text": "nanny dog",
+        "type": "Entity"
+      },
+      {
+        "id": 15,
+        "original_id": "76f9ee0d-bbe6-5928-98f1-3f1ae3224f48",
+        "text": "english foxhound",
+        "type": "Entity"
+      },
+      {
+        "id": 16,
+        "original_id": "3ac13135-e72f-5c43-a5ee-cfaf450bbb73",
+        "text": "scent hound",
+        "type": "Entity"
+      },
+      {
+        "id": 17,
+        "original_id": "da45e959-2df8-5474-9d4a-1bfd672a96fb",
+        "text": "foxes",
+        "type": "Entity"
+      },
+      {
+        "id": 18,
+        "original_id": "1ebae3fe-06c1-5dce-9ea9-94b884d1a304",
+        "text": "icelandic sheepdog",
+        "type": "Entity"
+      },
+      {
+        "id": 19,
+        "original_id": "c870343a-587a-5043-8388-d8e19f08afea",
+        "text": "shetland sheepdog",
+        "type": "Entity"
+      },
+      {
+        "id": 20,
+        "original_id": "d3cf80a7-c0c2-5719-8242-0d2c504b8178",
+        "text": "welsh corgi",
+        "type": "Entity"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 18,
+        "target": 3,
+        "type": "similar_type_to"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 9,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 15,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 18,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 19,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 20,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 17,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 7,
+        "type": "is_of_type"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      },
+      {
+        "source": 7,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 16,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 9,
+        "type": "contains"
+      },
+      {
+        "source": 9,
+        "target": 10,
+        "type": "used_as"
+      },
+      {
+        "source": 1,
+        "target": 10,
+        "type": "contains"
+      },
+      {
+        "source": 10,
+        "target": 11,
+        "type": "is_a"
+      },
+      {
+        "source": 12,
+        "target": 11,
+        "type": "is_a"
+      },
+      {
+        "source": 13,
+        "target": 11,
+        "type": "is_a"
+      },
+      {
+        "source": 14,
+        "target": 11,
+        "type": "is_a"
+      },
+      {
+        "source": 9,
+        "target": 12,
+        "type": "used_as"
+      },
+      {
+        "source": 1,
+        "target": 12,
+        "type": "contains"
+      },
+      {
+        "source": 9,
+        "target": 13,
+        "type": "used_as"
+      },
+      {
+        "source": 1,
+        "target": 13,
+        "type": "contains"
+      },
+      {
+        "source": 9,
+        "target": 14,
+        "type": "used_as"
+      },
+      {
+        "source": 1,
+        "target": 14,
+        "type": "contains"
+      },
+      {
+        "source": 1,
+        "target": 15,
+        "type": "contains"
+      },
+      {
+        "source": 15,
+        "target": 16,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 16,
+        "type": "contains"
+      },
+      {
+        "source": 15,
+        "target": 17,
+        "type": "bred_to_hunt"
+      },
+      {
+        "source": 1,
+        "target": 17,
+        "type": "contains"
+      },
+      {
+        "source": 1,
+        "target": 18,
+        "type": "contains"
+      },
+      {
+        "source": 18,
+        "target": 19,
+        "type": "similar_type_to"
+      },
+      {
+        "source": 1,
+        "target": 19,
+        "type": "contains"
+      },
+      {
+        "source": 18,
+        "target": 20,
+        "type": "similar_type_to"
+      },
+      {
+        "source": 1,
+        "target": 20,
+        "type": "contains"
+      }
+    ]
+  }
+}

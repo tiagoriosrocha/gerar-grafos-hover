@@ -1,0 +1,369 @@
+{
+  "dataset": "hover",
+  "id": "4d321f2e-4293-4181-a3c2-e4b8d130e1b0",
+  "split": "train",
+  "claim": "The Irish National Caucus was founded during a meeting of an organisation that was founded in 1936.",
+  "evidencia": "Page: Irish National Caucus. Sentence: It was founded by Father Sean Gabriel Mc Manus on February 6, 1974, at a meeting of the Ancient Order of Hibernians.\nPage: Ancient Order of Hibernians. Sentence: Its largest membership is now in the United States, where it was founded in New York City in 1836.",
+  "evidence_text": "Page: Irish National Caucus. Sentence: It was founded by Father Sean Gabriel Mc Manus on February 6, 1974, at a meeting of the Ancient Order of Hibernians.\nPage: Ancient Order of Hibernians. Sentence: Its largest membership is now in the United States, where it was founded in New York City in 1836.",
+  "label": "SUPPORTED",
+  "num_hops": 2,
+  "hover_metadata": {
+    "supporting_facts": [
+      [
+        "Irish National Caucus",
+        1
+      ],
+      [
+        "Ancient Order of Hibernians",
+        2
+      ]
+    ],
+    "num_hops": 2,
+    "evidence_annotation_id": [
+      0
+    ],
+    "evidence_id": [
+      "Irish National Caucus::sentence::1",
+      "Ancient Order of Hibernians::sentence::2"
+    ],
+    "evidence_wiki_url": [
+      "https://en.wikipedia.org/wiki/Irish_National_Caucus",
+      "https://en.wikipedia.org/wiki/Ancient_Order_of_Hibernians"
+    ],
+    "evidence_sentence_id": [
+      "Irish National Caucus::sentence::1",
+      "Ancient Order of Hibernians::sentence::2"
+    ]
+  },
+  "grafo_claim": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "62cd0759-5351-540a-be19-4cf3277b6333",
+        "text": "This chunk is about:\n- Organizations: Irish National Caucus\n- Organizations: Ancient Order of Hibernians\n\nFacts:\n- The Ancient Order of Hibernians was founded in 1936.\n- The Irish National Caucus was founded during a meeting of the Ancient Order of Hibernians.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "17cdaa84-d3d9-5eb9-b75e-ee9fb0686127",
+        "text": "The Irish National Caucus was founded during a meeting of an organisation that was founded in 1936.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "fbf218ea-6a25-56c5-8edc-58139a5dcd87",
+        "text": "text_7a7f2480bf262b6bba3e3f8e84cad581",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "5c275e3c-3860-5ed7-82a4-f22727422f0e",
+        "text": "irish national caucus",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "388f60fb-220d-55e8-ae9c-3ac93cead308",
+        "text": "organization",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "203f18de-1134-53ca-abde-08079b376403",
+        "text": "meeting",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "214abcd9-9adf-5c8a-bb35-1e729f2d68c3",
+        "text": "event",
+        "type": "EntityType"
+      },
+      {
+        "id": 7,
+        "original_id": "49726568-8cef-55b8-adea-e9338bc003ac",
+        "text": "organisation founded in 1936",
+        "type": "Entity"
+      },
+      {
+        "id": 8,
+        "original_id": "0ee0e31c-cb08-5100-85ec-f5ceb8edcf6f",
+        "text": "1936",
+        "type": "Entity"
+      },
+      {
+        "id": 9,
+        "original_id": "b19433ae-558c-5aaf-95ac-6231f2a4be0e",
+        "text": "date",
+        "type": "EntityType"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 7,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "founded_during"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 5,
+        "target": 7,
+        "type": "of_organization"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      },
+      {
+        "source": 7,
+        "target": 8,
+        "type": "founded_in"
+      },
+      {
+        "source": 1,
+        "target": 8,
+        "type": "contains"
+      },
+      {
+        "source": 8,
+        "target": 9,
+        "type": "is_a"
+      }
+    ]
+  },
+  "grafo_evidencia": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "b6d776ca-c15f-5e1d-9ddd-8c261197f0c1",
+        "text": "This chunk is about:\n- Organizations: Irish National Caucus, Ancient Order of Hibernians\n- People: Father Sean Gabriel Mc Manus\n- Places: New York City, United States\n\nFacts:\n- The Ancient Order of Hibernians was founded in New York City in 1836.\n- The Ancient Order of Hibernians now has its largest membership in the United States.\n- Father Sean Gabriel Mc Manus founded the Irish National Caucus on February 6, 1974.\n- Father Sean Gabriel Mc Manus founded the Irish National Caucus at a meeting of the Ancient Order of Hibernians.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "635a47e6-48d2-52f5-9c03-0893292a1de7",
+        "text": "Page: Irish National Caucus. Sentence: It was founded by Father Sean Gabriel Mc Manus on February 6, 1974, at a meeting of the Ancient Order of Hibernians.\nPage: Ancient Order of Hibernians. Sentence: Its largest membership is now in the United States, where it was founded in New York City in 1836.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "6687ce6e-d264-5b41-a798-cdcfebef3004",
+        "text": "text_b42786ce071ad654ec22f8680eb727c7",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "5c275e3c-3860-5ed7-82a4-f22727422f0e",
+        "text": "irish national caucus",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "388f60fb-220d-55e8-ae9c-3ac93cead308",
+        "text": "organization",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "58bb2536-3214-5d2f-8f17-e9058df1cd69",
+        "text": "1974-02-06",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "b19433ae-558c-5aaf-95ac-6231f2a4be0e",
+        "text": "date",
+        "type": "EntityType"
+      },
+      {
+        "id": 7,
+        "original_id": "2a455c86-6096-571a-92bc-d5c284af836d",
+        "text": "ancient order of hibernians",
+        "type": "Entity"
+      },
+      {
+        "id": 8,
+        "original_id": "874a51da-34ea-5037-be47-d87785d43c37",
+        "text": "united states",
+        "type": "Entity"
+      },
+      {
+        "id": 9,
+        "original_id": "5f394058-b2a0-5ba8-8466-ba2a18cfcf4e",
+        "text": "place",
+        "type": "EntityType"
+      },
+      {
+        "id": 10,
+        "original_id": "62912d92-4218-52f7-a1a6-776a04889442",
+        "text": "new york city",
+        "type": "Entity"
+      },
+      {
+        "id": 11,
+        "original_id": "ec3b9085-3826-5c4c-b3e8-c145678549f7",
+        "text": "1836",
+        "type": "Entity"
+      },
+      {
+        "id": 12,
+        "original_id": "711d1e66-81f4-5196-9885-ada256b58233",
+        "text": "father sean gabriel mc manus",
+        "type": "Entity"
+      },
+      {
+        "id": 13,
+        "original_id": "99a82eec-bb35-5bb5-9ed2-e73fc7a756de",
+        "text": "person",
+        "type": "EntityType"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 12,
+        "target": 3,
+        "type": "founded"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 7,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "founded_on"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 11,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 7,
+        "type": "founded_at_meeting_of"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      },
+      {
+        "source": 7,
+        "target": 8,
+        "type": "has_largest_membership_in"
+      },
+      {
+        "source": 1,
+        "target": 8,
+        "type": "contains"
+      },
+      {
+        "source": 8,
+        "target": 9,
+        "type": "is_a"
+      },
+      {
+        "source": 10,
+        "target": 9,
+        "type": "is_a"
+      },
+      {
+        "source": 7,
+        "target": 10,
+        "type": "founded_in"
+      },
+      {
+        "source": 1,
+        "target": 10,
+        "type": "contains"
+      },
+      {
+        "source": 7,
+        "target": 11,
+        "type": "founded_in_year"
+      },
+      {
+        "source": 1,
+        "target": 11,
+        "type": "contains"
+      },
+      {
+        "source": 1,
+        "target": 12,
+        "type": "contains"
+      },
+      {
+        "source": 12,
+        "target": 13,
+        "type": "is_a"
+      }
+    ]
+  }
+}

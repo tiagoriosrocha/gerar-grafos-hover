@@ -1,0 +1,559 @@
+{
+  "dataset": "hover",
+  "id": "58600178-33ae-436c-bd13-cb67e4ea93e2",
+  "split": "dev",
+  "claim": "The musician, who has played with Joe Cohn, was born in Nassau County.",
+  "evidencia": "Page: Duffy Jackson. Sentence: Duff Clark \"Duffy\" Jackson (born July 3, 1953, Freeport, New York) is an American jazz drummer.\nPage: Freeport, New York. Sentence: Freeport (officially The Incorporated Village of Freeport) is a village in the town of Hempstead, Nassau County, New York, USA, on the South Shore of Long Island.\nPage: Joe Cohn. Sentence: Joe studied at Berklee College of Music, and has played with Bob Mover, Nick Brignola, Freddy Cole, Buddy DeFranco, Dick Johnson, Al Grey, Carmen Leggio, and Duffy Jackson.",
+  "evidence_text": "Page: Duffy Jackson. Sentence: Duff Clark \"Duffy\" Jackson (born July 3, 1953, Freeport, New York) is an American jazz drummer.\nPage: Freeport, New York. Sentence: Freeport (officially The Incorporated Village of Freeport) is a village in the town of Hempstead, Nassau County, New York, USA, on the South Shore of Long Island.\nPage: Joe Cohn. Sentence: Joe studied at Berklee College of Music, and has played with Bob Mover, Nick Brignola, Freddy Cole, Buddy DeFranco, Dick Johnson, Al Grey, Carmen Leggio, and Duffy Jackson.",
+  "label": "SUPPORTED",
+  "num_hops": 3,
+  "hover_metadata": {
+    "supporting_facts": [
+      [
+        "Duffy Jackson",
+        0
+      ],
+      [
+        "Freeport, New York",
+        0
+      ],
+      [
+        "Joe Cohn",
+        4
+      ]
+    ],
+    "num_hops": 3,
+    "evidence_annotation_id": [
+      0
+    ],
+    "evidence_id": [
+      "Duffy Jackson::sentence::0",
+      "Freeport, New York::sentence::0",
+      "Joe Cohn::sentence::4"
+    ],
+    "evidence_wiki_url": [
+      "https://en.wikipedia.org/wiki/Duffy_Jackson",
+      "https://en.wikipedia.org/wiki/Freeport%2C_New_York",
+      "https://en.wikipedia.org/wiki/Joe_Cohn"
+    ],
+    "evidence_sentence_id": [
+      "Duffy Jackson::sentence::0",
+      "Freeport, New York::sentence::0",
+      "Joe Cohn::sentence::4"
+    ]
+  },
+  "grafo_claim": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "4b903c1a-7a7c-5aef-8a99-e997f3bed464",
+        "text": "This chunk is about:\n- People: Joe Cohn, an unnamed musician\n- Places: Nassau County\n\nFacts:\n- An unnamed musician has played with Joe Cohn.\n- The unnamed musician was born in Nassau County.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "59068797-ba3f-5fe5-8539-7913ee052370",
+        "text": "The musician, who has played with Joe Cohn, was born in Nassau County.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "e55f73c6-a20b-5519-9a65-bedf4e7153c0",
+        "text": "text_b43487dee5c2cf494cad2d40d20f3af2",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "2dc8820f-db92-56b8-92e3-2cd1d30acf61",
+        "text": "joe cohn",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "99a82eec-bb35-5bb5-9ed2-e73fc7a756de",
+        "text": "person",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "edb8d982-92df-5842-bf66-464f887d9e6f",
+        "text": "unknown musician",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "1c886082-59cc-5ac3-a711-c0a2ce085f94",
+        "text": "nassau county",
+        "type": "Entity"
+      },
+      {
+        "id": 7,
+        "original_id": "5f394058-b2a0-5ba8-8466-ba2a18cfcf4e",
+        "text": "place",
+        "type": "EntityType"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 3,
+        "type": "played_with"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 5,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "born_in"
+      },
+      {
+        "source": 1,
+        "target": 6,
+        "type": "contains"
+      },
+      {
+        "source": 6,
+        "target": 7,
+        "type": "is_a"
+      }
+    ]
+  },
+  "grafo_evidencia": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "acafe91c-bd96-5027-ab0f-122e9eae5b06",
+        "text": "This chunk is about:\n- People: Duffy Jackson, Joe Cohn, Bob Mover, Nick Brignola, Freddy Cole, Buddy DeFranco, Dick Johnson, Al Grey, Carmen Leggio\n- Places: Freeport, Hempstead, Nassau County, New York, Long Island\n- Organizations: Berklee College of Music\n- Roles: American jazz drummer\n\nFacts:\n- Duffy Jackson was born on July 3, 1953, in Freeport, New York.\n- Duffy Jackson is an American jazz drummer.\n- Freeport is officially The Incorporated Village of Freeport.\n- Freeport is a village in the town of Hempstead in Nassau County, New York, on the South Shore of Long Island, USA.\n- Joe Cohn studied at Berklee College of Music.\n- Joe Cohn has played with Bob Mover, Nick Brignola, Freddy Cole, Buddy DeFranco, Dick Johnson, Al Grey, Carmen Leggio, and Duffy Jackson.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "8df93e6c-0e1a-512b-849c-3ae3c0a969bf",
+        "text": "Page: Duffy Jackson. Sentence: Duff Clark \"Duffy\" Jackson (born July 3, 1953, Freeport, New York) is an American jazz drummer.\nPage: Freeport, New York. Sentence: Freeport (officially The Incorporated Village of Freeport) is a village in the town of Hempstead, Nassau County, New York, USA, on the South Shore of Long Island.\nPage: Joe Cohn. Sentence: Joe studied at Berklee College of Music, and has played with Bob Mover, Nick Brignola, Freddy Cole, Buddy DeFranco, Dick Johnson, Al Grey, Carmen Leggio, and Duffy Jackson.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "5d96a303-7af4-56d7-8206-7fd4461347d0",
+        "text": "text_06878a370ccc2379c2eff960a1958c3f",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "75c21442-47db-59c4-9a76-becef5676fdb",
+        "text": "duffy jackson",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "99a82eec-bb35-5bb5-9ed2-e73fc7a756de",
+        "text": "person",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "2caa717b-911a-5fdd-ad29-1f3715a17a8c",
+        "text": "1953-07-03",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "b19433ae-558c-5aaf-95ac-6231f2a4be0e",
+        "text": "date",
+        "type": "EntityType"
+      },
+      {
+        "id": 7,
+        "original_id": "f0a13bdc-13e2-55fd-b79d-cf5cf1a79128",
+        "text": "freeport, new york",
+        "type": "Entity"
+      },
+      {
+        "id": 8,
+        "original_id": "5f394058-b2a0-5ba8-8466-ba2a18cfcf4e",
+        "text": "place",
+        "type": "EntityType"
+      },
+      {
+        "id": 9,
+        "original_id": "333fc026-8212-5d0f-a104-af7d03295d06",
+        "text": "hempstead",
+        "type": "Entity"
+      },
+      {
+        "id": 10,
+        "original_id": "1c886082-59cc-5ac3-a711-c0a2ce085f94",
+        "text": "nassau county",
+        "type": "Entity"
+      },
+      {
+        "id": 11,
+        "original_id": "a7852d00-db75-55e2-bd9a-468ada762d39",
+        "text": "new york",
+        "type": "Entity"
+      },
+      {
+        "id": 12,
+        "original_id": "70094841-3ebb-5880-ad59-eced71406010",
+        "text": "usa",
+        "type": "Entity"
+      },
+      {
+        "id": 13,
+        "original_id": "48eaf726-ad0d-5fe5-956f-c9a7e675606e",
+        "text": "long island",
+        "type": "Entity"
+      },
+      {
+        "id": 14,
+        "original_id": "2dc8820f-db92-56b8-92e3-2cd1d30acf61",
+        "text": "joe cohn",
+        "type": "Entity"
+      },
+      {
+        "id": 15,
+        "original_id": "80a6105b-714e-5799-be80-d01efa87aad1",
+        "text": "berklee college of music",
+        "type": "Entity"
+      },
+      {
+        "id": 16,
+        "original_id": "388f60fb-220d-55e8-ae9c-3ac93cead308",
+        "text": "organization",
+        "type": "EntityType"
+      },
+      {
+        "id": 17,
+        "original_id": "86f69946-a6ff-53a4-80fe-e8bcc1e3830d",
+        "text": "bob mover",
+        "type": "Entity"
+      },
+      {
+        "id": 18,
+        "original_id": "68d5ce60-42d5-5242-9ea6-e89753ec2850",
+        "text": "nick brignola",
+        "type": "Entity"
+      },
+      {
+        "id": 19,
+        "original_id": "792ffd31-e5a2-54d9-9d92-ffd1ca36c420",
+        "text": "freddy cole",
+        "type": "Entity"
+      },
+      {
+        "id": 20,
+        "original_id": "77905492-6c8b-5599-bfd4-854c488505b3",
+        "text": "buddy defranco",
+        "type": "Entity"
+      },
+      {
+        "id": 21,
+        "original_id": "82f93b7d-6a4e-5e36-b97d-be97a36216ce",
+        "text": "dick johnson",
+        "type": "Entity"
+      },
+      {
+        "id": 22,
+        "original_id": "26b0073c-3d2d-5bdb-8b22-17aefe6862a6",
+        "text": "al grey",
+        "type": "Entity"
+      },
+      {
+        "id": 23,
+        "original_id": "c528ea69-467f-55c3-8416-45f07a723bbd",
+        "text": "carmen leggio",
+        "type": "Entity"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 14,
+        "target": 3,
+        "type": "played_with"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 14,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 17,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 18,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 19,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 20,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 21,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 22,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 23,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "born_on"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 7,
+        "type": "born_in"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      },
+      {
+        "source": 7,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 9,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 10,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 11,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 12,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 13,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 7,
+        "target": 9,
+        "type": "located_in"
+      },
+      {
+        "source": 1,
+        "target": 9,
+        "type": "contains"
+      },
+      {
+        "source": 7,
+        "target": 10,
+        "type": "located_in"
+      },
+      {
+        "source": 1,
+        "target": 10,
+        "type": "contains"
+      },
+      {
+        "source": 7,
+        "target": 11,
+        "type": "located_in"
+      },
+      {
+        "source": 1,
+        "target": 11,
+        "type": "contains"
+      },
+      {
+        "source": 7,
+        "target": 12,
+        "type": "located_in"
+      },
+      {
+        "source": 1,
+        "target": 12,
+        "type": "contains"
+      },
+      {
+        "source": 7,
+        "target": 13,
+        "type": "located_on"
+      },
+      {
+        "source": 1,
+        "target": 13,
+        "type": "contains"
+      },
+      {
+        "source": 1,
+        "target": 14,
+        "type": "contains"
+      },
+      {
+        "source": 14,
+        "target": 15,
+        "type": "studied_at"
+      },
+      {
+        "source": 1,
+        "target": 15,
+        "type": "contains"
+      },
+      {
+        "source": 15,
+        "target": 16,
+        "type": "is_a"
+      },
+      {
+        "source": 14,
+        "target": 17,
+        "type": "played_with"
+      },
+      {
+        "source": 1,
+        "target": 17,
+        "type": "contains"
+      },
+      {
+        "source": 14,
+        "target": 18,
+        "type": "played_with"
+      },
+      {
+        "source": 1,
+        "target": 18,
+        "type": "contains"
+      },
+      {
+        "source": 14,
+        "target": 19,
+        "type": "played_with"
+      },
+      {
+        "source": 1,
+        "target": 19,
+        "type": "contains"
+      },
+      {
+        "source": 14,
+        "target": 20,
+        "type": "played_with"
+      },
+      {
+        "source": 1,
+        "target": 20,
+        "type": "contains"
+      },
+      {
+        "source": 14,
+        "target": 21,
+        "type": "played_with"
+      },
+      {
+        "source": 1,
+        "target": 21,
+        "type": "contains"
+      },
+      {
+        "source": 14,
+        "target": 22,
+        "type": "played_with"
+      },
+      {
+        "source": 1,
+        "target": 22,
+        "type": "contains"
+      },
+      {
+        "source": 14,
+        "target": 23,
+        "type": "played_with"
+      },
+      {
+        "source": 1,
+        "target": 23,
+        "type": "contains"
+      }
+    ]
+  }
+}

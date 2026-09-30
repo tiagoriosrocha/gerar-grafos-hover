@@ -1,0 +1,364 @@
+{
+  "dataset": "hover",
+  "id": "cbffdc92-59d3-4ffd-8ddd-59732d8c50ae",
+  "split": "train",
+  "claim": "Aloinopsis is a plant. The close relative of another genus is also a plant. Aruncus dioicus is a species in this genus.",
+  "evidencia": "Page: Filipendula. Sentence: Filipendula is a genus of 12 species of perennial herbaceous flowering plants in the family Rosaceae, native to the temperate regions of the Northern Hemisphere.\nPage: Aloinopsis. Sentence: Aloinopsis is a genus of ice plants from South Africa.\nPage: Aruncus. Sentence: They are closely related to the genera \"Filipendula\" and \"Spiraea\", and are native to mountainous damp woodland in temperate regions of the Northern Hemisphere.\nPage: Aruncus dioicus. Sentence: (known as goat's beard, buck's-beard or bride's feathers) is a flowering herbaceous perennial plant in the family Rosaceae, and is the type species of the genus \"Aruncus\".",
+  "evidence_text": "Page: Filipendula. Sentence: Filipendula is a genus of 12 species of perennial herbaceous flowering plants in the family Rosaceae, native to the temperate regions of the Northern Hemisphere.\nPage: Aloinopsis. Sentence: Aloinopsis is a genus of ice plants from South Africa.\nPage: Aruncus. Sentence: They are closely related to the genera \"Filipendula\" and \"Spiraea\", and are native to mountainous damp woodland in temperate regions of the Northern Hemisphere.\nPage: Aruncus dioicus. Sentence: (known as goat's beard, buck's-beard or bride's feathers) is a flowering herbaceous perennial plant in the family Rosaceae, and is the type species of the genus \"Aruncus\".",
+  "label": "SUPPORTED",
+  "num_hops": 4,
+  "hover_metadata": {
+    "supporting_facts": [
+      [
+        "Filipendula",
+        0
+      ],
+      [
+        "Aloinopsis",
+        0
+      ],
+      [
+        "Aruncus",
+        2
+      ],
+      [
+        "Aruncus dioicus",
+        1
+      ]
+    ],
+    "num_hops": 4,
+    "evidence_annotation_id": [
+      0
+    ],
+    "evidence_id": [
+      "Filipendula::sentence::0",
+      "Aloinopsis::sentence::0",
+      "Aruncus::sentence::2",
+      "Aruncus dioicus::sentence::1"
+    ],
+    "evidence_wiki_url": [
+      "https://en.wikipedia.org/wiki/Filipendula",
+      "https://en.wikipedia.org/wiki/Aloinopsis",
+      "https://en.wikipedia.org/wiki/Aruncus",
+      "https://en.wikipedia.org/wiki/Aruncus_dioicus"
+    ],
+    "evidence_sentence_id": [
+      "Filipendula::sentence::0",
+      "Aloinopsis::sentence::0",
+      "Aruncus::sentence::2",
+      "Aruncus dioicus::sentence::1"
+    ]
+  },
+  "grafo_claim": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "53de412e-aee3-54e3-8a66-ad2cbac14f8f",
+        "text": "This chunk is about:\n- Plants: Aloinopsis\n- Plants: Aruncus, Aruncus dioicus\n\nFacts:\n- Aloinopsis is a plant.\n- Aruncus is a genus that is a close relative of another genus.\n- Aruncus dioicus is a species in the genus Aruncus.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "99210b98-a48e-5f71-9be5-e32f47108037",
+        "text": "Aloinopsis is a plant. The close relative of another genus is also a plant. Aruncus dioicus is a species in this genus.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "741664f6-8bb7-5bdf-a3f1-ab02dd0b9cfe",
+        "text": "text_77befb0c5b133d55695bba9c6d98f106",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "0291175e-19e0-5f73-8ba3-482f87bc1107",
+        "text": "aloinopsis",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "2df43048-b175-54c2-b72b-0ff24f41e4f1",
+        "text": "plant",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "b34a7eb3-22b9-5379-9085-116d4d17f8d5",
+        "text": "another genus",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "828aa1ec-5572-579f-8a8f-a556c0c9123f",
+        "text": "aruncus dioicus",
+        "type": "Entity"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 5,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 6,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "close_relative_of"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 6,
+        "target": 5,
+        "type": "species_in"
+      },
+      {
+        "source": 1,
+        "target": 6,
+        "type": "contains"
+      }
+    ]
+  },
+  "grafo_evidencia": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "0d451a00-1b71-557e-a7f6-2dde289508d6",
+        "text": "This chunk is about:\n- Plants: Filipendula, Aloinopsis, Aruncus, Aruncus dioicus\n- Concepts: plant taxonomy, native ranges, family relationships\n\nFacts:\n- Filipendula is a genus of 12 species of perennial herbaceous flowering plants in the family Rosaceae.\n- Filipendula is native to temperate regions of the Northern Hemisphere.\n- Aloinopsis is a genus of ice plants from South Africa.\n- Aruncus is closely related to the genera Filipendula and Spiraea.\n- Aruncus is native to mountainous damp woodland in temperate regions of the Northern Hemisphere.\n- Aruncus dioicus is a flowering herbaceous perennial plant in the family Rosaceae.\n- Aruncus dioicus is the type species of the genus Aruncus.\n- Aruncus dioicus is also known as goat's beard, buck's-beard, or bride's feathers.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "0aec17d6-8a47-5577-ab9e-18ec5c7f614a",
+        "text": "Page: Filipendula. Sentence: Filipendula is a genus of 12 species of perennial herbaceous flowering plants in the family Rosaceae, native to the temperate regions of the Northern Hemisphere.\nPage: Aloinopsis. Sentence: Aloinopsis is a genus of ice plants from South Africa.\nPage: Aruncus. Sentence: They are closely related to the genera \"Filipendula\" and \"Spiraea\", and are native to mountainous damp woodland in temperate regions of the Northern Hemisphere.\nPage: Aruncus dioicus. Sentence: (known as goat's beard, buck's-beard or bride's feathers) is a flowering herbaceous perennial plant in the family Rosaceae, and is the type species of the genus \"Aruncus\".",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "18624c3d-ac6f-57d6-b9f4-28e3482efd90",
+        "text": "text_e7c6292073c7f4dc53f6011a3f3e66dd",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "b5440ba3-8b29-50b7-bc76-2b3e6734b719",
+        "text": "filipendula",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "f7b4540f-d32c-51b3-8970-f282fffab519",
+        "text": "taxon",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "1b8ef2c8-bcb3-5236-8e90-c9a1f7c6788d",
+        "text": "rosaceae",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "92a578ab-7f37-5f2b-b28b-395fbdf3d885",
+        "text": "northern hemisphere",
+        "type": "Entity"
+      },
+      {
+        "id": 7,
+        "original_id": "5f394058-b2a0-5ba8-8466-ba2a18cfcf4e",
+        "text": "place",
+        "type": "EntityType"
+      },
+      {
+        "id": 8,
+        "original_id": "0291175e-19e0-5f73-8ba3-482f87bc1107",
+        "text": "aloinopsis",
+        "type": "Entity"
+      },
+      {
+        "id": 9,
+        "original_id": "c0e3c705-bfd9-53eb-a62c-38a7737b4e93",
+        "text": "south africa",
+        "type": "Entity"
+      },
+      {
+        "id": 10,
+        "original_id": "dfa95e75-7574-5795-ac14-2e6292fbfed7",
+        "text": "aruncus",
+        "type": "Entity"
+      },
+      {
+        "id": 11,
+        "original_id": "5f3dad83-19cb-586c-a58b-878755979f3e",
+        "text": "spiraea",
+        "type": "Entity"
+      },
+      {
+        "id": 12,
+        "original_id": "828aa1ec-5572-579f-8a8f-a556c0c9123f",
+        "text": "aruncus dioicus",
+        "type": "Entity"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 10,
+        "target": 3,
+        "type": "closely_related_to"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 5,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 8,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 10,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 11,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 12,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "in_family"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 12,
+        "target": 5,
+        "type": "in_family"
+      },
+      {
+        "source": 3,
+        "target": 6,
+        "type": "native_to"
+      },
+      {
+        "source": 1,
+        "target": 6,
+        "type": "contains"
+      },
+      {
+        "source": 10,
+        "target": 6,
+        "type": "native_to"
+      },
+      {
+        "source": 6,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 9,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 8,
+        "type": "contains"
+      },
+      {
+        "source": 8,
+        "target": 9,
+        "type": "from"
+      },
+      {
+        "source": 1,
+        "target": 9,
+        "type": "contains"
+      },
+      {
+        "source": 1,
+        "target": 10,
+        "type": "contains"
+      },
+      {
+        "source": 12,
+        "target": 10,
+        "type": "type_species_of"
+      },
+      {
+        "source": 10,
+        "target": 11,
+        "type": "closely_related_to"
+      },
+      {
+        "source": 1,
+        "target": 11,
+        "type": "contains"
+      },
+      {
+        "source": 1,
+        "target": 12,
+        "type": "contains"
+      }
+    ]
+  }
+}

@@ -1,0 +1,431 @@
+{
+  "dataset": "hover",
+  "id": "fff9d1d4-68e6-4ba3-a76e-cb43ac43fca0",
+  "split": "train",
+  "claim": "Doñana National Park was the nature reserve that was established in 1969 and not Monfragüe.",
+  "evidencia": "Page: Monfragüe. Sentence: Monfragüe (Spanish: \"Parque Nacional Monfragüe\") is a Spanish national park noted for its bird-life.\nPage: Doñana National Park. Sentence: Doñana National Park is a natural reserve in Andalusia, southern Spain, in the provinces of Huelva (most of its territory) and Seville.\nPage: Doñana National Park. Sentence: It was established as a nature reserve in 1969 when the World Wildlife Fund joined with the Spanish government and purchased a section of marshes to protect it.",
+  "evidence_text": "Page: Monfragüe. Sentence: Monfragüe (Spanish: \"Parque Nacional Monfragüe\") is a Spanish national park noted for its bird-life.\nPage: Doñana National Park. Sentence: Doñana National Park is a natural reserve in Andalusia, southern Spain, in the provinces of Huelva (most of its territory) and Seville.\nPage: Doñana National Park. Sentence: It was established as a nature reserve in 1969 when the World Wildlife Fund joined with the Spanish government and purchased a section of marshes to protect it.",
+  "label": "SUPPORTED",
+  "num_hops": 2,
+  "hover_metadata": {
+    "supporting_facts": [
+      [
+        "Monfragüe",
+        0
+      ],
+      [
+        "Doñana National Park",
+        0
+      ],
+      [
+        "Doñana National Park",
+        3
+      ]
+    ],
+    "num_hops": 2,
+    "evidence_annotation_id": [
+      0
+    ],
+    "evidence_id": [
+      "Monfragüe::sentence::0",
+      "Doñana National Park::sentence::0",
+      "Doñana National Park::sentence::3"
+    ],
+    "evidence_wiki_url": [
+      "https://en.wikipedia.org/wiki/Monfrag%C3%BCe",
+      "https://en.wikipedia.org/wiki/Do%C3%B1ana_National_Park"
+    ],
+    "evidence_sentence_id": [
+      "Monfragüe::sentence::0",
+      "Doñana National Park::sentence::0",
+      "Doñana National Park::sentence::3"
+    ]
+  },
+  "grafo_claim": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "a2efa62e-d112-50d5-9f9b-c1c8078d0699",
+        "text": "This chunk is about:\n- Places: Doñana National Park, Monfragüe\n- Topics: nature reserve establishment\n\nFacts:\n- Doñana National Park was established in 1969 as the nature reserve.\n- Monfragüe was not the nature reserve that was established in 1969.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "c0140925-5b2c-534f-8a1b-e5a7bbfdee50",
+        "text": "Doñana National Park was the nature reserve that was established in 1969 and not Monfragüe.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "c50154a6-623c-5141-a4b6-960cc4516cc4",
+        "text": "text_0c1bf397139c1f1ffa590ea7d1fed64a",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "2700eefd-b924-51b8-9ba5-fba72c4f2140",
+        "text": "doñana national park",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "5f394058-b2a0-5ba8-8466-ba2a18cfcf4e",
+        "text": "place",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "5debc034-fa71-585e-97a1-ef8f6cf6fa47",
+        "text": "1969",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "b19433ae-558c-5aaf-95ac-6231f2a4be0e",
+        "text": "date",
+        "type": "EntityType"
+      },
+      {
+        "id": 7,
+        "original_id": "ef6ff366-57af-5fea-9cfb-55e541acf7d5",
+        "text": "monfragüe",
+        "type": "Entity"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 7,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "established_in"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 7,
+        "type": "not_same_as"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      }
+    ]
+  },
+  "grafo_evidencia": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "9740e6fb-4683-56be-b54c-a8b12b739e26",
+        "text": "This chunk is about:\n- Places: Monfragüe, Doñana National Park, Andalusia, Spain, Huelva, Seville\n- Organizations: World Wildlife Fund, Spanish government\n- Topics: national parks, nature reserves, bird-life, marsh conservation\n\nFacts:\n- In 1969, Doñana National Park was established as a nature reserve when the World Wildlife Fund joined with the Spanish government and purchased a section of marshes to protect it.\n- Monfragüe, also called Parque Nacional Monfragüe in Spanish, is a Spanish national park noted for its bird-life.\n- Doñana National Park is a natural reserve in Andalusia in southern Spain, and most of its territory is in Huelva province while the rest is in Seville province.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "18f1052e-78ba-50e6-bdb1-1f93d0419d03",
+        "text": "Page: Monfragüe. Sentence: Monfragüe (Spanish: \"Parque Nacional Monfragüe\") is a Spanish national park noted for its bird-life.\nPage: Doñana National Park. Sentence: Doñana National Park is a natural reserve in Andalusia, southern Spain, in the provinces of Huelva (most of its territory) and Seville.\nPage: Doñana National Park. Sentence: It was established as a nature reserve in 1969 when the World Wildlife Fund joined with the Spanish government and purchased a section of marshes to protect it.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "0c3bd6af-a997-5144-9e86-99d464eb06ef",
+        "text": "text_4af3808076c2d209c28b9fd215d13bdf",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "ef6ff366-57af-5fea-9cfb-55e541acf7d5",
+        "text": "monfragüe",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "5f394058-b2a0-5ba8-8466-ba2a18cfcf4e",
+        "text": "place",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "5f10195b-9b85-5175-8209-aa19c7ee5db3",
+        "text": "parque nacional monfragüe",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "f2ae3fab-b1f6-5e66-b573-047fb78e1603",
+        "text": "spain",
+        "type": "Entity"
+      },
+      {
+        "id": 7,
+        "original_id": "2700eefd-b924-51b8-9ba5-fba72c4f2140",
+        "text": "doñana national park",
+        "type": "Entity"
+      },
+      {
+        "id": 8,
+        "original_id": "3830f7aa-4f4d-5cd6-8b0f-ebd4d8398530",
+        "text": "andalusia",
+        "type": "Entity"
+      },
+      {
+        "id": 9,
+        "original_id": "74471366-cd58-5a44-9ca9-fabb10db90f8",
+        "text": "huelva",
+        "type": "Entity"
+      },
+      {
+        "id": 10,
+        "original_id": "758cfe11-ca33-53c8-97d8-20aab9133ca9",
+        "text": "seville",
+        "type": "Entity"
+      },
+      {
+        "id": 11,
+        "original_id": "5debc034-fa71-585e-97a1-ef8f6cf6fa47",
+        "text": "1969",
+        "type": "Entity"
+      },
+      {
+        "id": 12,
+        "original_id": "b19433ae-558c-5aaf-95ac-6231f2a4be0e",
+        "text": "date",
+        "type": "EntityType"
+      },
+      {
+        "id": 13,
+        "original_id": "3980e371-6a33-58ab-94b5-638c93d3d89a",
+        "text": "world wildlife fund",
+        "type": "Entity"
+      },
+      {
+        "id": 14,
+        "original_id": "388f60fb-220d-55e8-ae9c-3ac93cead308",
+        "text": "organization",
+        "type": "EntityType"
+      },
+      {
+        "id": 15,
+        "original_id": "77618a0d-d583-582d-9019-5d79852282f7",
+        "text": "spanish government",
+        "type": "Entity"
+      },
+      {
+        "id": 16,
+        "original_id": "e1acdfa2-9f27-52f0-9f5a-160a8f9c8188",
+        "text": "section of marshes",
+        "type": "Entity"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 5,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 6,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 7,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 8,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 9,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 10,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 16,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "has_spanish_name"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 6,
+        "type": "located_in"
+      },
+      {
+        "source": 1,
+        "target": 6,
+        "type": "contains"
+      },
+      {
+        "source": 8,
+        "target": 6,
+        "type": "located_in"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      },
+      {
+        "source": 16,
+        "target": 7,
+        "type": "purchased_to_protect"
+      },
+      {
+        "source": 7,
+        "target": 8,
+        "type": "located_in"
+      },
+      {
+        "source": 1,
+        "target": 8,
+        "type": "contains"
+      },
+      {
+        "source": 7,
+        "target": 9,
+        "type": "located_in"
+      },
+      {
+        "source": 1,
+        "target": 9,
+        "type": "contains"
+      },
+      {
+        "source": 7,
+        "target": 10,
+        "type": "located_in"
+      },
+      {
+        "source": 1,
+        "target": 10,
+        "type": "contains"
+      },
+      {
+        "source": 7,
+        "target": 11,
+        "type": "established_in"
+      },
+      {
+        "source": 1,
+        "target": 11,
+        "type": "contains"
+      },
+      {
+        "source": 11,
+        "target": 12,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 13,
+        "type": "contains"
+      },
+      {
+        "source": 13,
+        "target": 14,
+        "type": "is_a"
+      },
+      {
+        "source": 15,
+        "target": 14,
+        "type": "is_a"
+      },
+      {
+        "source": 13,
+        "target": 15,
+        "type": "joined_with"
+      },
+      {
+        "source": 1,
+        "target": 15,
+        "type": "contains"
+      },
+      {
+        "source": 15,
+        "target": 16,
+        "type": "purchased"
+      },
+      {
+        "source": 13,
+        "target": 16,
+        "type": "purchased"
+      },
+      {
+        "source": 1,
+        "target": 16,
+        "type": "contains"
+      }
+    ]
+  }
+}

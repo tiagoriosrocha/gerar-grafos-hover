@@ -1,0 +1,428 @@
+{
+  "dataset": "hover",
+  "id": "63c43044-06db-419d-96be-6a2108fa1954",
+  "split": "dev",
+  "claim": "The skyscraper,  888 7th Avenue, is tied with another building  for the 65th tallest building in New York City. That other building is a condominium building, whereas the World Trade Center isn't.",
+  "evidencia": "Page: Central Park Place. Sentence: Central Park Place is a 56-story condominium building in New York City.\nPage: World Trade Center (1973–2001). Sentence: The original World Trade Center was a large complex of seven buildings in Lower Manhattan, New York City, United States.\nPage: 888 7th Avenue. Sentence: Emery Roth & Sons designed the building, which is tied with Central Park Place for the 65th tallest building in New York City.",
+  "evidence_text": "Page: Central Park Place. Sentence: Central Park Place is a 56-story condominium building in New York City.\nPage: World Trade Center (1973–2001). Sentence: The original World Trade Center was a large complex of seven buildings in Lower Manhattan, New York City, United States.\nPage: 888 7th Avenue. Sentence: Emery Roth & Sons designed the building, which is tied with Central Park Place for the 65th tallest building in New York City.",
+  "label": "SUPPORTED",
+  "num_hops": 3,
+  "hover_metadata": {
+    "supporting_facts": [
+      [
+        "Central Park Place",
+        0
+      ],
+      [
+        "World Trade Center (1973–2001)",
+        0
+      ],
+      [
+        "888 7th Avenue",
+        1
+      ]
+    ],
+    "num_hops": 3,
+    "evidence_annotation_id": [
+      0
+    ],
+    "evidence_id": [
+      "Central Park Place::sentence::0",
+      "World Trade Center (1973–2001)::sentence::0",
+      "888 7th Avenue::sentence::1"
+    ],
+    "evidence_wiki_url": [
+      "https://en.wikipedia.org/wiki/Central_Park_Place",
+      "https://en.wikipedia.org/wiki/World_Trade_Center_%281973%E2%80%932001%29",
+      "https://en.wikipedia.org/wiki/888_7th_Avenue"
+    ],
+    "evidence_sentence_id": [
+      "Central Park Place::sentence::0",
+      "World Trade Center (1973–2001)::sentence::0",
+      "888 7th Avenue::sentence::1"
+    ]
+  },
+  "grafo_claim": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "4f3148b0-e17f-5b51-b8f5-7a2958be3af5",
+        "text": "This chunk is about:\n- Places: 888 7th Avenue, New York City\n- Buildings: the other tied building, World Trade Center\n- Topics: height ranking, condominium status\n\nFacts:\n- 888 7th Avenue is tied with another building for 65th place among the tallest buildings in New York City.\n- The other building tied with 888 7th Avenue is a condominium building.\n- The World Trade Center is not a condominium building.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "abdcc039-27da-590a-b421-e6ced6a44944",
+        "text": "The skyscraper,  888 7th Avenue, is tied with another building  for the 65th tallest building in New York City. That other building is a condominium building, whereas the World Trade Center isn't.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "df329485-802c-5f09-8496-4f96fb4b379e",
+        "text": "text_4a22d335187b628c3d4d9276c03d96c8",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "916665b3-2893-5b72-8df0-e434f96f41bd",
+        "text": "888 7th avenue",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "b011d686-ca3a-5398-b03c-f44518808ad9",
+        "text": "building",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "9c67d161-4783-5c3d-9f5a-f18245dba4d0",
+        "text": "65th tallest building in new york city",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "d2a381fa-3658-5ca6-ada9-2109cfc9331d",
+        "text": "concept",
+        "type": "EntityType"
+      },
+      {
+        "id": 7,
+        "original_id": "62912d92-4218-52f7-a1a6-776a04889442",
+        "text": "new york city",
+        "type": "Entity"
+      },
+      {
+        "id": 8,
+        "original_id": "5f394058-b2a0-5ba8-8466-ba2a18cfcf4e",
+        "text": "place",
+        "type": "EntityType"
+      },
+      {
+        "id": 9,
+        "original_id": "c38cf14c-4b7f-5599-8375-817aa5742bf9",
+        "text": "another building",
+        "type": "Entity"
+      },
+      {
+        "id": 10,
+        "original_id": "b5669f66-5b97-542a-b847-53f9c4a9ebd9",
+        "text": "world trade center",
+        "type": "Entity"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 9,
+        "target": 3,
+        "type": "is_tied_with"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 9,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 10,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "is_tied_for"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 9,
+        "target": 5,
+        "type": "is_tied_for"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 5,
+        "target": 7,
+        "type": "is_in"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      },
+      {
+        "source": 7,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 9,
+        "type": "contains"
+      },
+      {
+        "source": 9,
+        "target": 10,
+        "type": "is_contrasted_with"
+      },
+      {
+        "source": 1,
+        "target": 10,
+        "type": "contains"
+      }
+    ]
+  },
+  "grafo_evidencia": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "3d38ad9d-1b83-5bc2-b1b4-daa1a25a4203",
+        "text": "This chunk is about:\n- Places: New York City, Lower Manhattan\n- Buildings: Central Park Place, World Trade Center, 888 7th Avenue\n- Companies: Emery Roth & Sons\n- Concepts: Building height rankings\n\nFacts:\n- Central Park Place is a 56-story condominium building in New York City.\n- The original World Trade Center was a complex of seven buildings in Lower Manhattan in New York City, United States.\n- Emery Roth & Sons designed 888 7th Avenue.\n- 888 7th Avenue is tied with Central Park Place as the 65th tallest building in New York City.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "f03197ba-cdc5-57ae-9681-80719d6d6d4a",
+        "text": "Page: Central Park Place. Sentence: Central Park Place is a 56-story condominium building in New York City.\nPage: World Trade Center (1973–2001). Sentence: The original World Trade Center was a large complex of seven buildings in Lower Manhattan, New York City, United States.\nPage: 888 7th Avenue. Sentence: Emery Roth & Sons designed the building, which is tied with Central Park Place for the 65th tallest building in New York City.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "fe202677-aaed-57fb-bcd6-03f5e85efd81",
+        "text": "text_a0ed5ee271fa3f8d26347ac262c22f13",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "eda4e991-ac06-594d-9d2f-619676e69313",
+        "text": "central park place",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "b011d686-ca3a-5398-b03c-f44518808ad9",
+        "text": "building",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "62912d92-4218-52f7-a1a6-776a04889442",
+        "text": "new york city",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "5f394058-b2a0-5ba8-8466-ba2a18cfcf4e",
+        "text": "place",
+        "type": "EntityType"
+      },
+      {
+        "id": 7,
+        "original_id": "874a51da-34ea-5037-be47-d87785d43c37",
+        "text": "united states",
+        "type": "Entity"
+      },
+      {
+        "id": 8,
+        "original_id": "9c67d161-4783-5c3d-9f5a-f18245dba4d0",
+        "text": "65th tallest building in new york city",
+        "type": "Entity"
+      },
+      {
+        "id": 9,
+        "original_id": "d2a381fa-3658-5ca6-ada9-2109cfc9331d",
+        "text": "concept",
+        "type": "EntityType"
+      },
+      {
+        "id": 10,
+        "original_id": "58101323-deb9-5f38-b40f-7a8e5d0ee50e",
+        "text": "world trade center (1973–2001)",
+        "type": "Entity"
+      },
+      {
+        "id": 11,
+        "original_id": "1e4179ab-86da-53ff-8e4d-098224a41af5",
+        "text": "lower manhattan",
+        "type": "Entity"
+      },
+      {
+        "id": 12,
+        "original_id": "916665b3-2893-5b72-8df0-e434f96f41bd",
+        "text": "888 7th avenue",
+        "type": "Entity"
+      },
+      {
+        "id": 13,
+        "original_id": "48ac6070-1dcc-5feb-8c66-fbd8014270b4",
+        "text": "emery roth & sons",
+        "type": "Entity"
+      },
+      {
+        "id": 14,
+        "original_id": "388f60fb-220d-55e8-ae9c-3ac93cead308",
+        "text": "organization",
+        "type": "EntityType"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 12,
+        "target": 3,
+        "type": "tied_with"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 10,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 12,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "located_in"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 11,
+        "target": 5,
+        "type": "located_in"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 7,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 11,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 5,
+        "target": 7,
+        "type": "located_in"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 8,
+        "type": "has_ranking"
+      },
+      {
+        "source": 12,
+        "target": 8,
+        "type": "has_ranking"
+      },
+      {
+        "source": 1,
+        "target": 8,
+        "type": "contains"
+      },
+      {
+        "source": 8,
+        "target": 9,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 10,
+        "type": "contains"
+      },
+      {
+        "source": 10,
+        "target": 11,
+        "type": "located_in"
+      },
+      {
+        "source": 1,
+        "target": 11,
+        "type": "contains"
+      },
+      {
+        "source": 1,
+        "target": 12,
+        "type": "contains"
+      },
+      {
+        "source": 12,
+        "target": 13,
+        "type": "designed_by"
+      },
+      {
+        "source": 1,
+        "target": 13,
+        "type": "contains"
+      },
+      {
+        "source": 13,
+        "target": 14,
+        "type": "is_a"
+      }
+    ]
+  }
+}

@@ -1,0 +1,363 @@
+{
+  "dataset": "hover",
+  "id": "4ad1941e-c728-4216-82fd-aca2c60559a2",
+  "split": "dev",
+  "claim": "Spam is canned cooked meat by Hormel Foods Corporation and is never used to make a popular snack and lunch food in Hawaii.",
+  "evidencia": "Page: Spam musubi. Sentence: Spam musubi is a popular snack and lunch food in Hawaii composed of a slice of grilled Spam on top of a block of rice, wrapped together with nori in the tradition of Japanese \"omusubi\".\nPage: Spam (food). Sentence: Spam (stylized SPAM) is a brand of canned cooked meat made by Hormel Foods Corporation.",
+  "evidence_text": "Page: Spam musubi. Sentence: Spam musubi is a popular snack and lunch food in Hawaii composed of a slice of grilled Spam on top of a block of rice, wrapped together with nori in the tradition of Japanese \"omusubi\".\nPage: Spam (food). Sentence: Spam (stylized SPAM) is a brand of canned cooked meat made by Hormel Foods Corporation.",
+  "label": "NOT_SUPPORTED",
+  "num_hops": 2,
+  "hover_metadata": {
+    "supporting_facts": [
+      [
+        "Spam musubi",
+        0
+      ],
+      [
+        "Spam (food)",
+        0
+      ]
+    ],
+    "num_hops": 2,
+    "evidence_annotation_id": [
+      0
+    ],
+    "evidence_id": [
+      "Spam musubi::sentence::0",
+      "Spam (food)::sentence::0"
+    ],
+    "evidence_wiki_url": [
+      "https://en.wikipedia.org/wiki/Spam_musubi",
+      "https://en.wikipedia.org/wiki/Spam_%28food%29"
+    ],
+    "evidence_sentence_id": [
+      "Spam musubi::sentence::0",
+      "Spam (food)::sentence::0"
+    ]
+  },
+  "grafo_claim": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "bb530035-a42c-520e-a6e0-b5372b86da90",
+        "text": "This chunk is about:\n- Products: Spam\n- Companies: Hormel Foods Corporation\n- Places: Hawaii\n- Foods: snack and lunch food\n\nFacts:\n- Spam is a canned cooked meat product made by Hormel Foods Corporation.\n- The chunk states that Spam is never used to make a popular snack and lunch food in Hawaii.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "918000f1-684d-5f2a-86cc-5664166c4074",
+        "text": "Spam is canned cooked meat by Hormel Foods Corporation and is never used to make a popular snack and lunch food in Hawaii.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "18beeb11-4592-59e7-b5eb-a4c69c3fe706",
+        "text": "text_0be6c63d72af6b95dca481eb01e60cdd",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "09bc0e35-a8f8-50d0-8662-aa44a7a8a586",
+        "text": "spam",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "f9c5113e-747a-5581-af56-c9d2e76bce9b",
+        "text": "food",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "45ced8c8-1a92-54bb-afe4-d87db31d0c40",
+        "text": "hormel foods corporation",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "388f60fb-220d-55e8-ae9c-3ac93cead308",
+        "text": "organization",
+        "type": "EntityType"
+      },
+      {
+        "id": 7,
+        "original_id": "ef7c58e7-1fd4-5dc9-804a-42a005f670e1",
+        "text": "popular snack and lunch food in hawaii",
+        "type": "Entity"
+      },
+      {
+        "id": 8,
+        "original_id": "d12c5efc-8251-5176-b43f-3b32b5ba9ec7",
+        "text": "hawaii",
+        "type": "Entity"
+      },
+      {
+        "id": 9,
+        "original_id": "5f394058-b2a0-5ba8-8466-ba2a18cfcf4e",
+        "text": "place",
+        "type": "EntityType"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 7,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "produced_by"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 7,
+        "type": "not_used_to_make"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      },
+      {
+        "source": 7,
+        "target": 8,
+        "type": "popular_in"
+      },
+      {
+        "source": 1,
+        "target": 8,
+        "type": "contains"
+      },
+      {
+        "source": 8,
+        "target": 9,
+        "type": "is_a"
+      }
+    ]
+  },
+  "grafo_evidencia": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "43acc95c-eede-5a3d-b810-03a097477013",
+        "text": "This chunk is about:\n- Products: Spam musubi, Spam\n- Companies: Hormel Foods Corporation\n- Places: Hawaii\n- Concepts: omusubi, nori\n\nFacts:\n- Spam is a brand of canned cooked meat made by Hormel Foods Corporation.\n- Spam musubi is a popular snack and lunch food in Hawaii.\n- Spam musubi is composed of a slice of grilled Spam on top of a block of rice.\n- Spam musubi is wrapped together with nori in the tradition of Japanese omusubi.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "b1bacc73-ecc4-5510-a3fb-d3527b73ae2c",
+        "text": "Page: Spam musubi. Sentence: Spam musubi is a popular snack and lunch food in Hawaii composed of a slice of grilled Spam on top of a block of rice, wrapped together with nori in the tradition of Japanese \"omusubi\".\nPage: Spam (food). Sentence: Spam (stylized SPAM) is a brand of canned cooked meat made by Hormel Foods Corporation.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "2416b8f7-f88f-5ed7-bb4a-10ff08148080",
+        "text": "text_33cff6a8fae413cad1c6492b20c35485",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "f9bd36b6-cba1-5f92-8bed-365548d697fe",
+        "text": "spam musubi",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "f9c5113e-747a-5581-af56-c9d2e76bce9b",
+        "text": "food",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "d12c5efc-8251-5176-b43f-3b32b5ba9ec7",
+        "text": "hawaii",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "5f394058-b2a0-5ba8-8466-ba2a18cfcf4e",
+        "text": "place",
+        "type": "EntityType"
+      },
+      {
+        "id": 7,
+        "original_id": "09bc0e35-a8f8-50d0-8662-aa44a7a8a586",
+        "text": "spam",
+        "type": "Entity"
+      },
+      {
+        "id": 8,
+        "original_id": "45ced8c8-1a92-54bb-afe4-d87db31d0c40",
+        "text": "hormel foods corporation",
+        "type": "Entity"
+      },
+      {
+        "id": 9,
+        "original_id": "388f60fb-220d-55e8-ae9c-3ac93cead308",
+        "text": "organization",
+        "type": "EntityType"
+      },
+      {
+        "id": 10,
+        "original_id": "9acaac22-2842-5d5b-83c7-fa2f29ec399b",
+        "text": "rice",
+        "type": "Entity"
+      },
+      {
+        "id": 11,
+        "original_id": "9d29d83d-0cf8-5a40-838e-e9b170dab777",
+        "text": "nori",
+        "type": "Entity"
+      },
+      {
+        "id": 12,
+        "original_id": "e7932c3a-082e-552e-952f-e6ef168f749b",
+        "text": "japanese omusubi",
+        "type": "Entity"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 7,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 10,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 11,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 12,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "popular_in"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 7,
+        "type": "composed_of"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      },
+      {
+        "source": 7,
+        "target": 8,
+        "type": "made_by"
+      },
+      {
+        "source": 1,
+        "target": 8,
+        "type": "contains"
+      },
+      {
+        "source": 8,
+        "target": 9,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 10,
+        "type": "composed_of"
+      },
+      {
+        "source": 1,
+        "target": 10,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 11,
+        "type": "wrapped_with"
+      },
+      {
+        "source": 1,
+        "target": 11,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 12,
+        "type": "in_the_tradition_of"
+      },
+      {
+        "source": 1,
+        "target": 12,
+        "type": "contains"
+      }
+    ]
+  }
+}

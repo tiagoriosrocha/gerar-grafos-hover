@@ -1,0 +1,662 @@
+{
+  "dataset": "hover",
+  "id": "8ddb1d83-bdb0-47d2-8539-dcce55017376",
+  "split": "train",
+  "claim": "The genus that is closely related to Rapanea has twenty more species than another genus. The other genus is where Benzoin (resin) belongs.",
+  "evidencia": "Page: Myrsine. Sentence: It contains about 200 species, including several notable radiations, such as the matipo of New Zealand and the kōlea of Hawaiʻ i (the New Zealand \"black matipo\", \"Pittosporum tenuifolium\", is not related to \"Myrsine\").\nPage: Styrax. Sentence: Storax or snowbell is the common names of Styrax, a genus of about 130 species of large shrubs or small trees in the family Styracaceae, mostly native to warm temperate to tropical regions of the Northern Hemisphere, with the majority in eastern and southeastern Asia, but also crossing the equator in South America.\nPage: Rapanea. Sentence: It has often been placed in synonymy with \"Myrsine\", and many species have been moved to \"Myrsine\".\nPage: Benzoin (resin). Sentence: Benzoin or benjamin is a balsamic resin obtained from the bark of several species of trees in the genus \"Styrax\".",
+  "evidence_text": "Page: Myrsine. Sentence: It contains about 200 species, including several notable radiations, such as the matipo of New Zealand and the kōlea of Hawaiʻ i (the New Zealand \"black matipo\", \"Pittosporum tenuifolium\", is not related to \"Myrsine\").\nPage: Styrax. Sentence: Storax or snowbell is the common names of Styrax, a genus of about 130 species of large shrubs or small trees in the family Styracaceae, mostly native to warm temperate to tropical regions of the Northern Hemisphere, with the majority in eastern and southeastern Asia, but also crossing the equator in South America.\nPage: Rapanea. Sentence: It has often been placed in synonymy with \"Myrsine\", and many species have been moved to \"Myrsine\".\nPage: Benzoin (resin). Sentence: Benzoin or benjamin is a balsamic resin obtained from the bark of several species of trees in the genus \"Styrax\".",
+  "label": "NOT_SUPPORTED",
+  "num_hops": 4,
+  "hover_metadata": {
+    "supporting_facts": [
+      [
+        "Myrsine",
+        3
+      ],
+      [
+        "Styrax",
+        0
+      ],
+      [
+        "Rapanea",
+        1
+      ],
+      [
+        "Benzoin (resin)",
+        0
+      ]
+    ],
+    "num_hops": 4,
+    "evidence_annotation_id": [
+      0
+    ],
+    "evidence_id": [
+      "Myrsine::sentence::3",
+      "Styrax::sentence::0",
+      "Rapanea::sentence::1",
+      "Benzoin (resin)::sentence::0"
+    ],
+    "evidence_wiki_url": [
+      "https://en.wikipedia.org/wiki/Myrsine",
+      "https://en.wikipedia.org/wiki/Styrax",
+      "https://en.wikipedia.org/wiki/Rapanea",
+      "https://en.wikipedia.org/wiki/Benzoin_%28resin%29"
+    ],
+    "evidence_sentence_id": [
+      "Myrsine::sentence::3",
+      "Styrax::sentence::0",
+      "Rapanea::sentence::1",
+      "Benzoin (resin)::sentence::0"
+    ]
+  },
+  "grafo_claim": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "00dbe688-0663-5b41-a044-ebbd065d026b",
+        "text": "This chunk is about:\n- Genera: Rapanea, Styrax\n- Products: Benzoin (resin)\n- Concepts: taxonomic relationship, species counts\n\nFacts:\n- Styrax is the genus to which Benzoin resin belongs.\n- The genus closely related to Rapanea has twenty more species than Styrax.\n- Therefore, the genus closely related to Rapanea has a species count equal to Styrax plus twenty.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "8b80d205-5687-5e29-b5e3-3c5f53b6a0d3",
+        "text": "The genus that is closely related to Rapanea has twenty more species than another genus. The other genus is where Benzoin (resin) belongs.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "914f8b37-0d79-5af0-9efe-b90e62021da3",
+        "text": "text_46f26dc248ed58ebff3f2347bc1510b4",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "99649af8-455f-5b12-89ac-caf780e3dc73",
+        "text": "rapanea",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "58ce8914-8a9e-5302-9b2d-0d97006e12d3",
+        "text": "genus",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "1461ff81-a317-5a13-83e2-c9563f53bbb1",
+        "text": "styrax",
+        "type": "Entity"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 5,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "is_closely_related_to"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      }
+    ]
+  },
+  "grafo_evidencia": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "ab466a71-635e-5d21-b45d-e8b99a237394",
+        "text": "This chunk is about:\n- Plants: Myrsine, Styrax, Rapanea\n- Products: benzoin, storax, snowbell\n- Places: New Zealand, Hawaiʻi, Asia, South America\n- Concepts: taxonomy, synonymy, species counts\n\nFacts:\n- Myrsine is a plant genus containing about 200 species, including notable radiations such as the matipo of New Zealand and the kōlea of Hawaiʻi.\n- Pittosporum tenuifolium, called the New Zealand black matipo, is not related to Myrsine.\n- Styrax, commonly called storax or snowbell, is a plant genus of about 130 species of large shrubs or small trees in the family Styracaceae.\n- Styrax is mostly native to warm temperate to tropical regions of the Northern Hemisphere, with most species in eastern and southeastern Asia, and it also extends into South America across the equator.\n- Rapanea has often been treated as a synonym of Myrsine, and many Rapanea species have been moved to Myrsine.\n- Benzoin, also called benjamin, is a balsamic resin obtained from the bark of several tree species in the genus Styrax.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "5c17fa1c-fd8e-5f70-8c60-b58b5e53a482",
+        "text": "Page: Myrsine. Sentence: It contains about 200 species, including several notable radiations, such as the matipo of New Zealand and the kōlea of Hawaiʻ i (the New Zealand \"black matipo\", \"Pittosporum tenuifolium\", is not related to \"Myrsine\").\nPage: Styrax. Sentence: Storax or snowbell is the common names of Styrax, a genus of about 130 species of large shrubs or small trees in the family Styracaceae, mostly native to warm temperate to tropical regions of the Northern Hemisphere, with the majority in eastern and southeastern Asia, but also crossing the equator in South America.\nPage: Rapanea. Sentence: It has often been placed in synonymy with \"Myrsine\", and many species have been moved to \"Myrsine\".\nPage: Benzoin (resin). Sentence: Benzoin or benjamin is a balsamic resin obtained from the bark of several species of trees in the genus \"Styrax\".",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "df454fff-4b05-5969-bf22-6b3ae155c6e6",
+        "text": "text_e55e483871e08a0fbba0e500c4ef4b7f",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "e5e170be-0846-5a7b-a109-9438432fce3c",
+        "text": "myrsine",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "f7b4540f-d32c-51b3-8970-f282fffab519",
+        "text": "taxon",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "e9e0b7d5-f158-52d3-9f89-eca0da61fe50",
+        "text": "200 species",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "7a7a0687-e490-5167-ad5a-0e39d9055dee",
+        "text": "quantity",
+        "type": "EntityType"
+      },
+      {
+        "id": 7,
+        "original_id": "d6312a02-b174-5860-bd7f-8098ffb78da9",
+        "text": "matipo",
+        "type": "Entity"
+      },
+      {
+        "id": 8,
+        "original_id": "b9e6f04b-3af0-5fd3-8eac-4b641d227752",
+        "text": "new zealand",
+        "type": "Entity"
+      },
+      {
+        "id": 9,
+        "original_id": "5f394058-b2a0-5ba8-8466-ba2a18cfcf4e",
+        "text": "place",
+        "type": "EntityType"
+      },
+      {
+        "id": 10,
+        "original_id": "4e26ab35-1e89-51cd-ba27-f13407ca0cd2",
+        "text": "kōlea",
+        "type": "Entity"
+      },
+      {
+        "id": 11,
+        "original_id": "ace6c2e1-acf1-54f1-b2f0-b963c7b31620",
+        "text": "hawaiʻi",
+        "type": "Entity"
+      },
+      {
+        "id": 12,
+        "original_id": "649be64c-4cf7-5b82-b4b6-5cc297e96dd4",
+        "text": "pittosporum tenuifolium",
+        "type": "Entity"
+      },
+      {
+        "id": 13,
+        "original_id": "1461ff81-a317-5a13-83e2-c9563f53bbb1",
+        "text": "styrax",
+        "type": "Entity"
+      },
+      {
+        "id": 14,
+        "original_id": "6e82315c-d426-506b-8449-08e393d1138c",
+        "text": "storax",
+        "type": "Entity"
+      },
+      {
+        "id": 15,
+        "original_id": "39575085-0710-527d-bd54-019de7b00429",
+        "text": "name",
+        "type": "EntityType"
+      },
+      {
+        "id": 16,
+        "original_id": "b464a805-0a8d-5f9a-a9ca-e5882f209359",
+        "text": "snowbell",
+        "type": "Entity"
+      },
+      {
+        "id": 17,
+        "original_id": "82cafd0e-9d0c-5f7e-861d-97bb8aafe91a",
+        "text": "130 species",
+        "type": "Entity"
+      },
+      {
+        "id": 18,
+        "original_id": "f27483e4-9a03-58f2-b66b-add8cf4eae00",
+        "text": "large shrubs",
+        "type": "Entity"
+      },
+      {
+        "id": 19,
+        "original_id": "dd1dbe5e-cdac-53d6-8c89-b0a2b42084bc",
+        "text": "plant form",
+        "type": "EntityType"
+      },
+      {
+        "id": 20,
+        "original_id": "4eab1620-d3d0-59ef-98cb-3fa6443d708a",
+        "text": "small trees",
+        "type": "Entity"
+      },
+      {
+        "id": 21,
+        "original_id": "9a11be0f-e008-5c8e-833a-5734e126d5d9",
+        "text": "styracaceae",
+        "type": "Entity"
+      },
+      {
+        "id": 22,
+        "original_id": "92a578ab-7f37-5f2b-b28b-395fbdf3d885",
+        "text": "northern hemisphere",
+        "type": "Entity"
+      },
+      {
+        "id": 23,
+        "original_id": "3e39b730-3c73-5ba3-a5bd-91dff480da13",
+        "text": "eastern and southeastern asia",
+        "type": "Entity"
+      },
+      {
+        "id": 24,
+        "original_id": "3e507ae8-a14b-53d0-bc7a-70df9fd4b560",
+        "text": "south america",
+        "type": "Entity"
+      },
+      {
+        "id": 25,
+        "original_id": "99649af8-455f-5b12-89ac-caf780e3dc73",
+        "text": "rapanea",
+        "type": "Entity"
+      },
+      {
+        "id": 26,
+        "original_id": "e74e8a50-97ef-5da4-83cf-c304744c7fcc",
+        "text": "benzoin (resin)",
+        "type": "Entity"
+      },
+      {
+        "id": 27,
+        "original_id": "acff4eca-0ee1-57dd-b95b-d4aff6aa3b61",
+        "text": "substance",
+        "type": "EntityType"
+      },
+      {
+        "id": 28,
+        "original_id": "5c52a442-4a7c-5d3d-87c4-966ba3a1840f",
+        "text": "benjamin",
+        "type": "Entity"
+      },
+      {
+        "id": 29,
+        "original_id": "063629cb-31f2-5306-949b-b8f8fec95a3a",
+        "text": "balsamic resin",
+        "type": "Entity"
+      },
+      {
+        "id": 30,
+        "original_id": "6d8e516d-b6e9-5a42-aead-13508efb17e4",
+        "text": "bark",
+        "type": "Entity"
+      },
+      {
+        "id": 31,
+        "original_id": "017f8c7e-085a-553f-b03d-06a32886b9b0",
+        "text": "plant part",
+        "type": "EntityType"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 12,
+        "target": 3,
+        "type": "not_related_to"
+      },
+      {
+        "source": 25,
+        "target": 3,
+        "type": "often_placed_in_synonymy_with"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 7,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 10,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 12,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 13,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 21,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 25,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "contains_about"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 17,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 7,
+        "type": "includes_radiation"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      },
+      {
+        "source": 7,
+        "target": 8,
+        "type": "associated_with_place"
+      },
+      {
+        "source": 1,
+        "target": 8,
+        "type": "contains"
+      },
+      {
+        "source": 12,
+        "target": 8,
+        "type": "associated_with_place"
+      },
+      {
+        "source": 8,
+        "target": 9,
+        "type": "is_a"
+      },
+      {
+        "source": 11,
+        "target": 9,
+        "type": "is_a"
+      },
+      {
+        "source": 22,
+        "target": 9,
+        "type": "is_a"
+      },
+      {
+        "source": 23,
+        "target": 9,
+        "type": "is_a"
+      },
+      {
+        "source": 24,
+        "target": 9,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 10,
+        "type": "includes_radiation"
+      },
+      {
+        "source": 1,
+        "target": 10,
+        "type": "contains"
+      },
+      {
+        "source": 10,
+        "target": 11,
+        "type": "associated_with_place"
+      },
+      {
+        "source": 1,
+        "target": 11,
+        "type": "contains"
+      },
+      {
+        "source": 1,
+        "target": 12,
+        "type": "contains"
+      },
+      {
+        "source": 1,
+        "target": 13,
+        "type": "contains"
+      },
+      {
+        "source": 26,
+        "target": 13,
+        "type": "obtained_from_species_in_genus"
+      },
+      {
+        "source": 13,
+        "target": 14,
+        "type": "has_common_name"
+      },
+      {
+        "source": 1,
+        "target": 14,
+        "type": "contains"
+      },
+      {
+        "source": 14,
+        "target": 15,
+        "type": "is_a"
+      },
+      {
+        "source": 16,
+        "target": 15,
+        "type": "is_a"
+      },
+      {
+        "source": 28,
+        "target": 15,
+        "type": "is_a"
+      },
+      {
+        "source": 13,
+        "target": 16,
+        "type": "has_common_name"
+      },
+      {
+        "source": 1,
+        "target": 16,
+        "type": "contains"
+      },
+      {
+        "source": 13,
+        "target": 17,
+        "type": "contains_about"
+      },
+      {
+        "source": 1,
+        "target": 17,
+        "type": "contains"
+      },
+      {
+        "source": 13,
+        "target": 18,
+        "type": "includes_growth_form"
+      },
+      {
+        "source": 1,
+        "target": 18,
+        "type": "contains"
+      },
+      {
+        "source": 18,
+        "target": 19,
+        "type": "is_a"
+      },
+      {
+        "source": 20,
+        "target": 19,
+        "type": "is_a"
+      },
+      {
+        "source": 13,
+        "target": 20,
+        "type": "includes_growth_form"
+      },
+      {
+        "source": 1,
+        "target": 20,
+        "type": "contains"
+      },
+      {
+        "source": 13,
+        "target": 21,
+        "type": "in_family"
+      },
+      {
+        "source": 1,
+        "target": 21,
+        "type": "contains"
+      },
+      {
+        "source": 13,
+        "target": 22,
+        "type": "mostly_native_to"
+      },
+      {
+        "source": 1,
+        "target": 22,
+        "type": "contains"
+      },
+      {
+        "source": 13,
+        "target": 23,
+        "type": "majority_in"
+      },
+      {
+        "source": 1,
+        "target": 23,
+        "type": "contains"
+      },
+      {
+        "source": 13,
+        "target": 24,
+        "type": "also_occurs_in"
+      },
+      {
+        "source": 1,
+        "target": 24,
+        "type": "contains"
+      },
+      {
+        "source": 1,
+        "target": 25,
+        "type": "contains"
+      },
+      {
+        "source": 1,
+        "target": 26,
+        "type": "contains"
+      },
+      {
+        "source": 26,
+        "target": 27,
+        "type": "is_a"
+      },
+      {
+        "source": 29,
+        "target": 27,
+        "type": "is_a"
+      },
+      {
+        "source": 26,
+        "target": 28,
+        "type": "also_called"
+      },
+      {
+        "source": 1,
+        "target": 28,
+        "type": "contains"
+      },
+      {
+        "source": 26,
+        "target": 29,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 29,
+        "type": "contains"
+      },
+      {
+        "source": 26,
+        "target": 30,
+        "type": "obtained_from"
+      },
+      {
+        "source": 1,
+        "target": 30,
+        "type": "contains"
+      },
+      {
+        "source": 30,
+        "target": 31,
+        "type": "is_a"
+      }
+    ]
+  }
+}

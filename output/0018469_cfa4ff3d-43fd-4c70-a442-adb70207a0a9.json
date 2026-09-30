@@ -1,0 +1,501 @@
+{
+  "dataset": "hover",
+  "id": "cfa4ff3d-43fd-4c70-a442-adb70207a0a9",
+  "split": "dev",
+  "claim": "Hakea is a form of plant only found in Australia. But not the fern Banksia blechnifolia is reminiscent of.",
+  "evidencia": "Page: Blechnum. Sentence: By far the greatest species diversity is in tropical regions of the Southern Hemisphere, with only a few species reaching cool temperate latitudes in the Southern Hemisphere (notably \"B. penna-marina\", south to Cape Horn, Chile, the southernmost fern in the world) and Northern Hemisphere (notably \"B. spicant\", north to Iceland and northern Norway).\nPage: Hakea. Sentence: Hakea (pincushion tree) is a genus of 149 species of shrubs and small trees in the Proteaceae, native to Australia.\nPage: Banksia blechnifolia. Sentence: It gained its specific name as its leaves are reminiscent of fern (\"Blechnum\") leaves.",
+  "evidence_text": "Page: Blechnum. Sentence: By far the greatest species diversity is in tropical regions of the Southern Hemisphere, with only a few species reaching cool temperate latitudes in the Southern Hemisphere (notably \"B. penna-marina\", south to Cape Horn, Chile, the southernmost fern in the world) and Northern Hemisphere (notably \"B. spicant\", north to Iceland and northern Norway).\nPage: Hakea. Sentence: Hakea (pincushion tree) is a genus of 149 species of shrubs and small trees in the Proteaceae, native to Australia.\nPage: Banksia blechnifolia. Sentence: It gained its specific name as its leaves are reminiscent of fern (\"Blechnum\") leaves.",
+  "label": "SUPPORTED",
+  "num_hops": 3,
+  "hover_metadata": {
+    "supporting_facts": [
+      [
+        "Blechnum",
+        1
+      ],
+      [
+        "Hakea",
+        0
+      ],
+      [
+        "Banksia blechnifolia",
+        2
+      ]
+    ],
+    "num_hops": 3,
+    "evidence_annotation_id": [
+      0
+    ],
+    "evidence_id": [
+      "Blechnum::sentence::1",
+      "Hakea::sentence::0",
+      "Banksia blechnifolia::sentence::2"
+    ],
+    "evidence_wiki_url": [
+      "https://en.wikipedia.org/wiki/Blechnum",
+      "https://en.wikipedia.org/wiki/Hakea",
+      "https://en.wikipedia.org/wiki/Banksia_blechnifolia"
+    ],
+    "evidence_sentence_id": [
+      "Blechnum::sentence::1",
+      "Hakea::sentence::0",
+      "Banksia blechnifolia::sentence::2"
+    ]
+  },
+  "grafo_claim": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "0176c603-df5a-5e1a-9edf-abee4c78c3ac",
+        "text": "This chunk is about:\n- Plants: Hakea, Banksia blechnifolia\n- Places: Australia\n- Concepts: Endemism, resemblance\n\nFacts:\n- Hakea is a plant form found only in Australia.\n- Banksia blechnifolia is not a fern.\n- Banksia blechnifolia is reminiscent of a fern.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "2de8bcec-ca73-5097-baf8-0d3ee53a8685",
+        "text": "Hakea is a form of plant only found in Australia. But not the fern Banksia blechnifolia is reminiscent of.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "3de37d97-a106-514a-ab08-903391a6c181",
+        "text": "text_3f28492fd1e1c7284389becad4a91a47",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "d2a89018-d7a6-5a62-a360-6d4b3444cde5",
+        "text": "hakea",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "2df43048-b175-54c2-b72b-0ff24f41e4f1",
+        "text": "plant",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "02448d73-884d-50c7-a919-b94177f1cf43",
+        "text": "australia",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "5f394058-b2a0-5ba8-8466-ba2a18cfcf4e",
+        "text": "place",
+        "type": "EntityType"
+      },
+      {
+        "id": 7,
+        "original_id": "2629bafc-7bbe-5f18-98f9-ee582577c896",
+        "text": "banksia blechnifolia",
+        "type": "Entity"
+      },
+      {
+        "id": 8,
+        "original_id": "1d104220-b705-5084-9440-1e703274c7da",
+        "text": "fern",
+        "type": "Entity"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 7,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 8,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "only_found_in"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      },
+      {
+        "source": 7,
+        "target": 8,
+        "type": "is_reminiscent_of"
+      },
+      {
+        "source": 1,
+        "target": 8,
+        "type": "contains"
+      }
+    ]
+  },
+  "grafo_evidencia": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "9c165539-5621-521a-a323-5e799ec03b36",
+        "text": "This chunk is about:\n- Plants: Blechnum, Hakea, Banksia blechnifolia\n- Places: Southern Hemisphere, Northern Hemisphere, Cape Horn, Chile, Iceland, northern Norway, Australia\n- Concepts: species diversity, etymology, native range\n\nFacts:\n- Blechnum has its greatest species diversity in tropical regions of the Southern Hemisphere.\n- Only a few Blechnum species reach cool temperate latitudes in the Southern Hemisphere and the Northern Hemisphere.\n- Blechnum penna-marina occurs south to Cape Horn, Chile, and is described as the southernmost fern in the world.\n- Blechnum spicant occurs north to Iceland and northern Norway.\n- Hakea, also called pincushion tree, is a genus of 149 species of shrubs and small trees in the family Proteaceae and is native to Australia.\n- Banksia blechnifolia received its specific name because its leaves resemble the leaves of the fern genus Blechnum.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "767988b5-6941-58b4-96ba-9fa236a0d9f3",
+        "text": "Page: Blechnum. Sentence: By far the greatest species diversity is in tropical regions of the Southern Hemisphere, with only a few species reaching cool temperate latitudes in the Southern Hemisphere (notably \"B. penna-marina\", south to Cape Horn, Chile, the southernmost fern in the world) and Northern Hemisphere (notably \"B. spicant\", north to Iceland and northern Norway).\nPage: Hakea. Sentence: Hakea (pincushion tree) is a genus of 149 species of shrubs and small trees in the Proteaceae, native to Australia.\nPage: Banksia blechnifolia. Sentence: It gained its specific name as its leaves are reminiscent of fern (\"Blechnum\") leaves.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "a077533f-3757-563b-8e3f-5fde5ff7d58f",
+        "text": "text_4a81a4b3031c8fe61f2d513f4be8fcc3",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "ccc79f30-1106-5833-ac48-71ea694d0523",
+        "text": "blechnum",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "f7b4540f-d32c-51b3-8970-f282fffab519",
+        "text": "taxon",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "b79a7586-1d9f-5427-9b89-d9f60a73d96b",
+        "text": "tropical regions of the southern hemisphere",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "5f394058-b2a0-5ba8-8466-ba2a18cfcf4e",
+        "text": "place",
+        "type": "EntityType"
+      },
+      {
+        "id": 7,
+        "original_id": "0e0ce469-db45-503b-b0ed-671e9abd3db9",
+        "text": "cool temperate latitudes in the southern hemisphere",
+        "type": "Entity"
+      },
+      {
+        "id": 8,
+        "original_id": "3b36d2b3-4463-5259-851c-e6f0836fd60b",
+        "text": "blechnum penna-marina",
+        "type": "Entity"
+      },
+      {
+        "id": 9,
+        "original_id": "51bedfc2-2bde-5c0b-991f-0ea94c2a5e1d",
+        "text": "cape horn, chile",
+        "type": "Entity"
+      },
+      {
+        "id": 10,
+        "original_id": "38369cd2-a382-5190-93c6-b6a8cbc014f8",
+        "text": "cool temperate latitudes in the northern hemisphere",
+        "type": "Entity"
+      },
+      {
+        "id": 11,
+        "original_id": "7e996e66-ad70-5e51-93cb-0ca8c76e118c",
+        "text": "blechnum spicant",
+        "type": "Entity"
+      },
+      {
+        "id": 12,
+        "original_id": "792d9c4a-c4ea-548b-99db-e6a97010dd16",
+        "text": "iceland",
+        "type": "Entity"
+      },
+      {
+        "id": 13,
+        "original_id": "b08d1a25-024e-5771-ad58-72640f5b7806",
+        "text": "northern norway",
+        "type": "Entity"
+      },
+      {
+        "id": 14,
+        "original_id": "d2a89018-d7a6-5a62-a360-6d4b3444cde5",
+        "text": "hakea",
+        "type": "Entity"
+      },
+      {
+        "id": 15,
+        "original_id": "5cd13124-864a-560f-9b51-7ae0d84bfb72",
+        "text": "149",
+        "type": "Entity"
+      },
+      {
+        "id": 16,
+        "original_id": "5c1097ca-fab8-54d5-b57f-5dca4b0e2507",
+        "text": "number",
+        "type": "EntityType"
+      },
+      {
+        "id": 17,
+        "original_id": "dca70335-0b7b-5c35-9d21-2e574153713f",
+        "text": "proteaceae",
+        "type": "Entity"
+      },
+      {
+        "id": 18,
+        "original_id": "02448d73-884d-50c7-a919-b94177f1cf43",
+        "text": "australia",
+        "type": "Entity"
+      },
+      {
+        "id": 19,
+        "original_id": "2629bafc-7bbe-5f18-98f9-ee582577c896",
+        "text": "banksia blechnifolia",
+        "type": "Entity"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 8,
+        "target": 3,
+        "type": "is_species_of"
+      },
+      {
+        "source": 11,
+        "target": 3,
+        "type": "is_species_of"
+      },
+      {
+        "source": 19,
+        "target": 3,
+        "type": "has_specific_name_referencing"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 8,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 11,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 14,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 17,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 19,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "has_greatest_species_diversity_in"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 7,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 9,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 10,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 12,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 13,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 18,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      },
+      {
+        "source": 8,
+        "target": 7,
+        "type": "reaches"
+      },
+      {
+        "source": 1,
+        "target": 8,
+        "type": "contains"
+      },
+      {
+        "source": 8,
+        "target": 9,
+        "type": "reaches_south_to"
+      },
+      {
+        "source": 1,
+        "target": 9,
+        "type": "contains"
+      },
+      {
+        "source": 1,
+        "target": 10,
+        "type": "contains"
+      },
+      {
+        "source": 11,
+        "target": 10,
+        "type": "reaches"
+      },
+      {
+        "source": 1,
+        "target": 11,
+        "type": "contains"
+      },
+      {
+        "source": 11,
+        "target": 12,
+        "type": "reaches_north_to"
+      },
+      {
+        "source": 1,
+        "target": 12,
+        "type": "contains"
+      },
+      {
+        "source": 11,
+        "target": 13,
+        "type": "reaches_north_to"
+      },
+      {
+        "source": 1,
+        "target": 13,
+        "type": "contains"
+      },
+      {
+        "source": 1,
+        "target": 14,
+        "type": "contains"
+      },
+      {
+        "source": 14,
+        "target": 15,
+        "type": "has_species_count"
+      },
+      {
+        "source": 1,
+        "target": 15,
+        "type": "contains"
+      },
+      {
+        "source": 15,
+        "target": 16,
+        "type": "is_a"
+      },
+      {
+        "source": 14,
+        "target": 17,
+        "type": "belongs_to"
+      },
+      {
+        "source": 1,
+        "target": 17,
+        "type": "contains"
+      },
+      {
+        "source": 14,
+        "target": 18,
+        "type": "is_native_to"
+      },
+      {
+        "source": 1,
+        "target": 18,
+        "type": "contains"
+      },
+      {
+        "source": 1,
+        "target": 19,
+        "type": "contains"
+      }
+    ]
+  }
+}

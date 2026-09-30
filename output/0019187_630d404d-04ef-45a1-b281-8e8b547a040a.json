@@ -1,0 +1,459 @@
+{
+  "dataset": "hover",
+  "id": "630d404d-04ef-45a1-b281-8e8b547a040a",
+  "split": "dev",
+  "claim": "Cecily Neville was the mother of the man who was King of England from 1483 to 1485, she died in 1479 before his reign.",
+  "evidencia": "Page: Raby Castle. Sentence: Cecily Neville, the mother of the Kings Edward IV and Richard III, was born here.\nPage: Richard III of England. Sentence: Richard III (2 October 1452 – 22 August 1485) was King of England from 1483 until his death in 1485, at the age of 32, in the Battle of Bosworth Field.",
+  "evidence_text": "Page: Raby Castle. Sentence: Cecily Neville, the mother of the Kings Edward IV and Richard III, was born here.\nPage: Richard III of England. Sentence: Richard III (2 October 1452 – 22 August 1485) was King of England from 1483 until his death in 1485, at the age of 32, in the Battle of Bosworth Field.",
+  "label": "NOT_SUPPORTED",
+  "num_hops": 2,
+  "hover_metadata": {
+    "supporting_facts": [
+      [
+        "Raby Castle",
+        2
+      ],
+      [
+        "Richard III of England",
+        0
+      ]
+    ],
+    "num_hops": 2,
+    "evidence_annotation_id": [
+      0
+    ],
+    "evidence_id": [
+      "Raby Castle::sentence::2",
+      "Richard III of England::sentence::0"
+    ],
+    "evidence_wiki_url": [
+      "https://en.wikipedia.org/wiki/Raby_Castle",
+      "https://en.wikipedia.org/wiki/Richard_III_of_England"
+    ],
+    "evidence_sentence_id": [
+      "Raby Castle::sentence::2",
+      "Richard III of England::sentence::0"
+    ]
+  },
+  "grafo_claim": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "321c89e7-7c26-5ee9-96cf-0031702d161f",
+        "text": "This chunk is about:\n- People: Cecily Neville, Richard III\n- Roles: mother, King of England\n\nFacts:\n- Cecily Neville was the mother of Richard III.\n- Cecily Neville died in 1479.\n- Richard III was King of England from 1483 to 1485.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "6306b7bb-19db-5333-8dfc-eb056cab14d3",
+        "text": "Cecily Neville was the mother of the man who was King of England from 1483 to 1485, she died in 1479 before his reign.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "b3b46551-eee7-5e19-9084-922b330a6e69",
+        "text": "text_c5ca2d8464e88b7d73cc10577ae7cd1e",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "4e5f7078-232d-55c0-8b2f-7ca81128b76f",
+        "text": "cecily neville",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "99a82eec-bb35-5bb5-9ed2-e73fc7a756de",
+        "text": "person",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "d6e8adaf-025f-5720-ac08-9e1e422a1cfb",
+        "text": "king of england from 1483 to 1485",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "27f0656f-762c-54f0-8ed5-c4b27557219f",
+        "text": "england",
+        "type": "Entity"
+      },
+      {
+        "id": 7,
+        "original_id": "5f394058-b2a0-5ba8-8466-ba2a18cfcf4e",
+        "text": "place",
+        "type": "EntityType"
+      },
+      {
+        "id": 8,
+        "original_id": "dfbbaef0-1f5e-5374-8a77-76d1a1a098d9",
+        "text": "1485",
+        "type": "Entity"
+      },
+      {
+        "id": 9,
+        "original_id": "b19433ae-558c-5aaf-95ac-6231f2a4be0e",
+        "text": "date",
+        "type": "EntityType"
+      },
+      {
+        "id": 10,
+        "original_id": "e31fa5f7-56c1-508f-80d0-f499240fc54e",
+        "text": "1479",
+        "type": "Entity"
+      },
+      {
+        "id": 11,
+        "original_id": "1fb34106-ef07-517a-b78d-42da137e7b9d",
+        "text": "1483",
+        "type": "Entity"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 5,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "mother_of"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "king_of"
+      },
+      {
+        "source": 1,
+        "target": 6,
+        "type": "contains"
+      },
+      {
+        "source": 6,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 5,
+        "target": 8,
+        "type": "reign_ended_in"
+      },
+      {
+        "source": 1,
+        "target": 8,
+        "type": "contains"
+      },
+      {
+        "source": 8,
+        "target": 9,
+        "type": "is_a"
+      },
+      {
+        "source": 10,
+        "target": 9,
+        "type": "is_a"
+      },
+      {
+        "source": 11,
+        "target": 9,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 10,
+        "type": "died_in"
+      },
+      {
+        "source": 1,
+        "target": 10,
+        "type": "contains"
+      },
+      {
+        "source": 10,
+        "target": 11,
+        "type": "before"
+      },
+      {
+        "source": 1,
+        "target": 11,
+        "type": "contains"
+      }
+    ]
+  },
+  "grafo_evidencia": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "937045bd-f1e3-5a77-8bf7-f37648d1255b",
+        "text": "This chunk is about:\n- People: Cecily Neville, Edward IV, Richard III\n- Places: Raby Castle, England, Bosworth Field\n- Roles: King of England\n\nFacts:\n- Cecily Neville was born at Raby Castle.\n- Cecily Neville was the mother of King Edward IV and King Richard III.\n- Richard III was born on 2 October 1452.\n- Richard III was King of England from 1483 until 1485.\n- Richard III died on 22 August 1485 at age 32 in the Battle of Bosworth Field.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "c6a86182-7c29-50e5-bca2-52c3570c7c71",
+        "text": "Page: Raby Castle. Sentence: Cecily Neville, the mother of the Kings Edward IV and Richard III, was born here.\nPage: Richard III of England. Sentence: Richard III (2 October 1452 – 22 August 1485) was King of England from 1483 until his death in 1485, at the age of 32, in the Battle of Bosworth Field.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "c9696d02-23c2-51e6-99e5-4c32cb87293e",
+        "text": "text_0992731e4d1333c85b0083c0fe3bfdd5",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "21c1dc21-c27f-5e77-9255-ca5a58feec0a",
+        "text": "raby castle",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "5f394058-b2a0-5ba8-8466-ba2a18cfcf4e",
+        "text": "place",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "4e5f7078-232d-55c0-8b2f-7ca81128b76f",
+        "text": "cecily neville",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "99a82eec-bb35-5bb5-9ed2-e73fc7a756de",
+        "text": "person",
+        "type": "EntityType"
+      },
+      {
+        "id": 7,
+        "original_id": "75fc2421-24dc-5110-9d95-455b65db934c",
+        "text": "edward iv",
+        "type": "Entity"
+      },
+      {
+        "id": 8,
+        "original_id": "c41cf18a-f1ea-52ca-885f-12bdf6559de9",
+        "text": "richard iii",
+        "type": "Entity"
+      },
+      {
+        "id": 9,
+        "original_id": "3e780bf3-8974-5a88-83aa-30b15b4b90c0",
+        "text": "1452-10-02",
+        "type": "Entity"
+      },
+      {
+        "id": 10,
+        "original_id": "b19433ae-558c-5aaf-95ac-6231f2a4be0e",
+        "text": "date",
+        "type": "EntityType"
+      },
+      {
+        "id": 11,
+        "original_id": "174747c5-7141-517d-ab85-7a8174962003",
+        "text": "king of england",
+        "type": "Entity"
+      },
+      {
+        "id": 12,
+        "original_id": "4fb639a0-083a-5b92-8c23-a04b01bc6b29",
+        "text": "title",
+        "type": "EntityType"
+      },
+      {
+        "id": 13,
+        "original_id": "1fb34106-ef07-517a-b78d-42da137e7b9d",
+        "text": "1483",
+        "type": "Entity"
+      },
+      {
+        "id": 14,
+        "original_id": "dfbbaef0-1f5e-5374-8a77-76d1a1a098d9",
+        "text": "1485",
+        "type": "Entity"
+      },
+      {
+        "id": 15,
+        "original_id": "5a13a47b-fb8c-5da9-a75d-be33f96b7057",
+        "text": "battle of bosworth field",
+        "type": "Entity"
+      },
+      {
+        "id": 16,
+        "original_id": "214abcd9-9adf-5c8a-bb35-1e729f2d68c3",
+        "text": "event",
+        "type": "EntityType"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 3,
+        "type": "born_in"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 7,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 8,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 5,
+        "target": 7,
+        "type": "mother_of"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 8,
+        "type": "mother_of"
+      },
+      {
+        "source": 1,
+        "target": 8,
+        "type": "contains"
+      },
+      {
+        "source": 8,
+        "target": 9,
+        "type": "born_on"
+      },
+      {
+        "source": 1,
+        "target": 9,
+        "type": "contains"
+      },
+      {
+        "source": 9,
+        "target": 10,
+        "type": "is_a"
+      },
+      {
+        "source": 13,
+        "target": 10,
+        "type": "is_a"
+      },
+      {
+        "source": 14,
+        "target": 10,
+        "type": "is_a"
+      },
+      {
+        "source": 8,
+        "target": 11,
+        "type": "held_title"
+      },
+      {
+        "source": 1,
+        "target": 11,
+        "type": "contains"
+      },
+      {
+        "source": 11,
+        "target": 12,
+        "type": "is_a"
+      },
+      {
+        "source": 8,
+        "target": 13,
+        "type": "became"
+      },
+      {
+        "source": 1,
+        "target": 13,
+        "type": "contains"
+      },
+      {
+        "source": 8,
+        "target": 14,
+        "type": "died_in"
+      },
+      {
+        "source": 1,
+        "target": 14,
+        "type": "contains"
+      },
+      {
+        "source": 8,
+        "target": 15,
+        "type": "died_in"
+      },
+      {
+        "source": 1,
+        "target": 15,
+        "type": "contains"
+      },
+      {
+        "source": 15,
+        "target": 16,
+        "type": "is_a"
+      }
+    ]
+  }
+}

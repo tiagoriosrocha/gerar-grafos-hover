@@ -1,0 +1,288 @@
+{
+  "dataset": "hover",
+  "id": "c006e02b-3fa4-428f-8301-d79bcb620fcd",
+  "split": "train",
+  "claim": "Bally's & Paris station is on the monorail that is 3.9 mi.",
+  "evidencia": "Page: Bally's &amp; Paris station. Sentence: Bally's & Paris station is a station on the Las Vegas Monorail.\nPage: Las Vegas Monorail. Sentence: The Las Vegas Monorail is a 3.9 mi monorail mass transit system located adjacent to the Las Vegas Strip, in Clark County, Nevada, United States.",
+  "evidence_text": "Page: Bally's &amp; Paris station. Sentence: Bally's & Paris station is a station on the Las Vegas Monorail.\nPage: Las Vegas Monorail. Sentence: The Las Vegas Monorail is a 3.9 mi monorail mass transit system located adjacent to the Las Vegas Strip, in Clark County, Nevada, United States.",
+  "label": "SUPPORTED",
+  "num_hops": 2,
+  "hover_metadata": {
+    "supporting_facts": [
+      [
+        "Bally's &amp; Paris station",
+        0
+      ],
+      [
+        "Las Vegas Monorail",
+        0
+      ]
+    ],
+    "num_hops": 2,
+    "evidence_annotation_id": [
+      0
+    ],
+    "evidence_id": [
+      "Bally's &amp; Paris station::sentence::0",
+      "Las Vegas Monorail::sentence::0"
+    ],
+    "evidence_wiki_url": [
+      "https://en.wikipedia.org/wiki/Bally%27s_%26amp%3B_Paris_station",
+      "https://en.wikipedia.org/wiki/Las_Vegas_Monorail"
+    ],
+    "evidence_sentence_id": [
+      "Bally's &amp; Paris station::sentence::0",
+      "Las Vegas Monorail::sentence::0"
+    ]
+  },
+  "grafo_claim": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "687efa96-f73a-55f6-bf5e-4220fa6e6e38",
+        "text": "This chunk is about:\n- Places: Bally's & Paris station\n- Systems: Las Vegas Monorail\n\nFacts:\n- Bally's & Paris station is a station on the Las Vegas Monorail.\n- The Las Vegas Monorail is 3.9 miles long.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "665de303-b948-5934-b04f-fdc2093b71b3",
+        "text": "Bally's & Paris station is on the monorail that is 3.9 mi.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "35f31989-2b2f-5362-8a25-5ec876f7d94f",
+        "text": "text_f78d2a1424793cb4c0e8cd272e43fb46",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "3ea86727-7056-56fe-a2ad-f084f0006301",
+        "text": "ballys & paris station",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "5f394058-b2a0-5ba8-8466-ba2a18cfcf4e",
+        "text": "place",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "dc2aa91d-c3dc-5404-be51-13346b855898",
+        "text": "monorail",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "1db4f772-1fef-560d-aa49-775cbd931ad0",
+        "text": "transportation",
+        "type": "EntityType"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "is_on"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "is_a"
+      }
+    ]
+  },
+  "grafo_evidencia": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "749c671a-9fc2-5a9c-b3c5-3380d60bbe55",
+        "text": "This chunk is about:\n- Places: Bally's & Paris station, Las Vegas Strip, Clark County, Nevada, United States\n- Systems: Las Vegas Monorail\n\nFacts:\n- The Las Vegas Monorail is a 3.9-mile monorail mass transit system located adjacent to the Las Vegas Strip in Clark County, Nevada, United States.\n- Bally's & Paris station is a station on the Las Vegas Monorail.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "d342a551-e8af-5016-be34-8640a9597b98",
+        "text": "Page: Bally's &amp; Paris station. Sentence: Bally's & Paris station is a station on the Las Vegas Monorail.\nPage: Las Vegas Monorail. Sentence: The Las Vegas Monorail is a 3.9 mi monorail mass transit system located adjacent to the Las Vegas Strip, in Clark County, Nevada, United States.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "c0ad03b3-6eeb-5aa7-8421-cac38aaf651e",
+        "text": "text_ea1d06c14246a28f491cae887b2a021e",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "3ea86727-7056-56fe-a2ad-f084f0006301",
+        "text": "ballys & paris station",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "5f394058-b2a0-5ba8-8466-ba2a18cfcf4e",
+        "text": "place",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "5d396720-232a-50b7-a818-aa3c83537d4b",
+        "text": "las vegas monorail",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "4e89aa08-0ee9-520d-9c60-edd59e5b4fe1",
+        "text": "transit system",
+        "type": "EntityType"
+      },
+      {
+        "id": 7,
+        "original_id": "60152a3c-19f4-5b80-8305-51c3a57f8052",
+        "text": "las vegas strip",
+        "type": "Entity"
+      },
+      {
+        "id": 8,
+        "original_id": "580e6cf9-d47d-5408-bf2a-8d8acda3314c",
+        "text": "clark county",
+        "type": "Entity"
+      },
+      {
+        "id": 9,
+        "original_id": "cca9924d-3e69-59c5-be62-5ec26c26b0db",
+        "text": "nevada",
+        "type": "Entity"
+      },
+      {
+        "id": 10,
+        "original_id": "874a51da-34ea-5037-be47-d87785d43c37",
+        "text": "united states",
+        "type": "Entity"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 7,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 8,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 9,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 10,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "station_on"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 5,
+        "target": 7,
+        "type": "located_adjacent_to"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 8,
+        "type": "located_in"
+      },
+      {
+        "source": 1,
+        "target": 8,
+        "type": "contains"
+      },
+      {
+        "source": 8,
+        "target": 9,
+        "type": "located_in"
+      },
+      {
+        "source": 1,
+        "target": 9,
+        "type": "contains"
+      },
+      {
+        "source": 9,
+        "target": 10,
+        "type": "located_in"
+      },
+      {
+        "source": 1,
+        "target": 10,
+        "type": "contains"
+      }
+    ]
+  }
+}

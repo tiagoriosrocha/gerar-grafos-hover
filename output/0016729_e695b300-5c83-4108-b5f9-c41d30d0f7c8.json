@@ -1,0 +1,354 @@
+{
+  "dataset": "hover",
+  "id": "e695b300-5c83-4108-b5f9-c41d30d0f7c8",
+  "split": "train",
+  "claim": "Ben Stokes, not Jamie Atkinson, is the current vice captain of the English Test team.",
+  "evidencia": "Page: Jamie Atkinson. Sentence: James John Atkinson (born 24 August 1990 in Hong Kong) is an international cricketer who plays cricket for Hong Kong.\nPage: Jamie Atkinson. Sentence: where he became Facebook friends with Ben Stokes He was the first player born in the 1990s to play in a One Day International.\nPage: Ben Stokes. Sentence: Benjamin Andrew \"Ben\" Stokes (born 4 June 1991) is an English international cricketer who is the current vice captain of the English Test team.",
+  "evidence_text": "Page: Jamie Atkinson. Sentence: James John Atkinson (born 24 August 1990 in Hong Kong) is an international cricketer who plays cricket for Hong Kong.\nPage: Jamie Atkinson. Sentence: where he became Facebook friends with Ben Stokes He was the first player born in the 1990s to play in a One Day International.\nPage: Ben Stokes. Sentence: Benjamin Andrew \"Ben\" Stokes (born 4 June 1991) is an English international cricketer who is the current vice captain of the English Test team.",
+  "label": "SUPPORTED",
+  "num_hops": 2,
+  "hover_metadata": {
+    "supporting_facts": [
+      [
+        "Jamie Atkinson",
+        0
+      ],
+      [
+        "Jamie Atkinson",
+        3
+      ],
+      [
+        "Ben Stokes",
+        0
+      ]
+    ],
+    "num_hops": 2,
+    "evidence_annotation_id": [
+      0
+    ],
+    "evidence_id": [
+      "Jamie Atkinson::sentence::0",
+      "Jamie Atkinson::sentence::3",
+      "Ben Stokes::sentence::0"
+    ],
+    "evidence_wiki_url": [
+      "https://en.wikipedia.org/wiki/Jamie_Atkinson",
+      "https://en.wikipedia.org/wiki/Ben_Stokes"
+    ],
+    "evidence_sentence_id": [
+      "Jamie Atkinson::sentence::0",
+      "Jamie Atkinson::sentence::3",
+      "Ben Stokes::sentence::0"
+    ]
+  },
+  "grafo_claim": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "16e552f9-e3ba-589d-bf81-853bf0cc93f4",
+        "text": "This chunk is about:\n- People: Ben Stokes, Jamie Atkinson\n- Roles: vice captain of the English Test team\n\nFacts:\n- Ben Stokes is the current vice captain of the English Test team.\n- Jamie Atkinson is not the current vice captain of the English Test team.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "d468caa0-dd45-5153-9138-b2ac0868df08",
+        "text": "Ben Stokes, not Jamie Atkinson, is the current vice captain of the English Test team.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "1ccdd2c8-e98d-5149-80d5-9d51dba02304",
+        "text": "text_f8b6863062b3a225ecf5a6aa6a2f2ef9",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "89eef505-44b7-5e1b-af57-3b4860c6c0b1",
+        "text": "ben stokes",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "99a82eec-bb35-5bb5-9ed2-e73fc7a756de",
+        "text": "person",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "d458e561-2925-56b8-aeb7-f5f793d2a17d",
+        "text": "english test team",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "388f60fb-220d-55e8-ae9c-3ac93cead308",
+        "text": "organization",
+        "type": "EntityType"
+      },
+      {
+        "id": 7,
+        "original_id": "7f8cd49b-a7f0-5bc7-9ad6-dbe19ce6ffb0",
+        "text": "jamie atkinson",
+        "type": "Entity"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 7,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "is_vice_captain_of"
+      },
+      {
+        "source": 7,
+        "target": 5,
+        "type": "is_not_vice_captain_of"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      }
+    ]
+  },
+  "grafo_evidencia": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "48c2dea3-0114-58ab-a064-0f8bbfaa3927",
+        "text": "This chunk is about:\n- People: Jamie Atkinson, Ben Stokes\n- Roles: international cricketers, vice captain\n- Organizations: Hong Kong cricket team, English Test team\n- Places: Hong Kong\n- Topics: One Day International cricket, Facebook friendship\n\nFacts:\n- James John Atkinson was born on 24 August 1990 in Hong Kong.\n- Benjamin Andrew Stokes was born on 4 June 1991.\n- Jamie Atkinson is an international cricketer who plays for Hong Kong.\n- Ben Stokes is an English international cricketer and the current vice captain of the English Test team.\n- Jamie Atkinson became Facebook friends with Ben Stokes.\n- Jamie Atkinson was the first player born in the 1990s to play in a One Day International.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "798124e6-e6a3-5993-9a5c-ab4bf5efaaad",
+        "text": "Page: Jamie Atkinson. Sentence: James John Atkinson (born 24 August 1990 in Hong Kong) is an international cricketer who plays cricket for Hong Kong.\nPage: Jamie Atkinson. Sentence: where he became Facebook friends with Ben Stokes He was the first player born in the 1990s to play in a One Day International.\nPage: Ben Stokes. Sentence: Benjamin Andrew \"Ben\" Stokes (born 4 June 1991) is an English international cricketer who is the current vice captain of the English Test team.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "78cbe52b-d8f3-570b-bb55-c876012753ca",
+        "text": "text_d7dd31871e337312cedae1ba77cd54ec",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "207cabaf-84bf-5bf0-8f25-15229a92ea42",
+        "text": "james john atkinson",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "99a82eec-bb35-5bb5-9ed2-e73fc7a756de",
+        "text": "person",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "aca68bb3-e8b4-53be-8746-9bd362d3a9c7",
+        "text": "1990-08-24",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "b19433ae-558c-5aaf-95ac-6231f2a4be0e",
+        "text": "date",
+        "type": "EntityType"
+      },
+      {
+        "id": 7,
+        "original_id": "2f1ebd4c-24ba-5453-92b3-7c21bf3f65a8",
+        "text": "hong kong",
+        "type": "Entity"
+      },
+      {
+        "id": 8,
+        "original_id": "5f394058-b2a0-5ba8-8466-ba2a18cfcf4e",
+        "text": "place",
+        "type": "EntityType"
+      },
+      {
+        "id": 9,
+        "original_id": "89eef505-44b7-5e1b-af57-3b4860c6c0b1",
+        "text": "ben stokes",
+        "type": "Entity"
+      },
+      {
+        "id": 10,
+        "original_id": "f204cfa9-e6ba-5135-8ba0-c56b6a14a6d7",
+        "text": "1991-06-04",
+        "type": "Entity"
+      },
+      {
+        "id": 11,
+        "original_id": "d458e561-2925-56b8-aeb7-f5f793d2a17d",
+        "text": "english test team",
+        "type": "Entity"
+      },
+      {
+        "id": 12,
+        "original_id": "388f60fb-220d-55e8-ae9c-3ac93cead308",
+        "text": "organization",
+        "type": "EntityType"
+      },
+      {
+        "id": 13,
+        "original_id": "96360eaa-6da7-55e0-8cfd-2ad3bd5a1a53",
+        "text": "one day international",
+        "type": "Entity"
+      },
+      {
+        "id": 14,
+        "original_id": "b8ca42ef-0c9b-5bb4-af4b-cae4c0d61c6c",
+        "text": "competition",
+        "type": "EntityType"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 9,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "born_on"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 10,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 7,
+        "type": "born_in"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      },
+      {
+        "source": 7,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 9,
+        "type": "facebook_friends_with"
+      },
+      {
+        "source": 1,
+        "target": 9,
+        "type": "contains"
+      },
+      {
+        "source": 9,
+        "target": 10,
+        "type": "born_on"
+      },
+      {
+        "source": 1,
+        "target": 10,
+        "type": "contains"
+      },
+      {
+        "source": 9,
+        "target": 11,
+        "type": "vice_captain_of"
+      },
+      {
+        "source": 1,
+        "target": 11,
+        "type": "contains"
+      },
+      {
+        "source": 11,
+        "target": 12,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 13,
+        "type": "first_1990s_born_player_in"
+      },
+      {
+        "source": 1,
+        "target": 13,
+        "type": "contains"
+      },
+      {
+        "source": 13,
+        "target": 14,
+        "type": "is_a"
+      }
+    ]
+  }
+}

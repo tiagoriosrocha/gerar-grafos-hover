@@ -1,0 +1,400 @@
+{
+  "dataset": "hover",
+  "id": "67713514-8a0c-479d-828a-b9ec37007bf9",
+  "split": "dev",
+  "claim": "Changchun is more populous than other cities. For example, it is more populous than the city that Yuan Baojing was from.",
+  "evidencia": "Page: Liaoyang. Sentence: Liaoyang () is a prefecture-level city of east-central Liaoning province, People's Republic of China, situated on the T'ai-tzu River and, together with Anshan, forms a metro area of 2,057,200 inhabitants in 2010.\nPage: Changchun. Sentence: According to the 2010 census of China, Changchun had a total population of 7,674,439 under its jurisdiction.\nPage: Yuan Baojing. Sentence: Yuan Baojing (; 16 February 1966 – 17 March 2006) was a Chinese billionaire from Liaoyang, Liaoning province.",
+  "evidence_text": "Page: Liaoyang. Sentence: Liaoyang () is a prefecture-level city of east-central Liaoning province, People's Republic of China, situated on the T'ai-tzu River and, together with Anshan, forms a metro area of 2,057,200 inhabitants in 2010.\nPage: Changchun. Sentence: According to the 2010 census of China, Changchun had a total population of 7,674,439 under its jurisdiction.\nPage: Yuan Baojing. Sentence: Yuan Baojing (; 16 February 1966 – 17 March 2006) was a Chinese billionaire from Liaoyang, Liaoning province.",
+  "label": "NOT_SUPPORTED",
+  "num_hops": 3,
+  "hover_metadata": {
+    "supporting_facts": [
+      [
+        "Liaoyang",
+        0
+      ],
+      [
+        "Changchun",
+        2
+      ],
+      [
+        "Yuan Baojing",
+        0
+      ]
+    ],
+    "num_hops": 3,
+    "evidence_annotation_id": [
+      0
+    ],
+    "evidence_id": [
+      "Liaoyang::sentence::0",
+      "Changchun::sentence::2",
+      "Yuan Baojing::sentence::0"
+    ],
+    "evidence_wiki_url": [
+      "https://en.wikipedia.org/wiki/Liaoyang",
+      "https://en.wikipedia.org/wiki/Changchun",
+      "https://en.wikipedia.org/wiki/Yuan_Baojing"
+    ],
+    "evidence_sentence_id": [
+      "Liaoyang::sentence::0",
+      "Changchun::sentence::2",
+      "Yuan Baojing::sentence::0"
+    ]
+  },
+  "grafo_claim": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "801cc97a-bb6d-5a9d-a21b-de330b76c1f9",
+        "text": "This chunk is about:\n- Places: Changchun\n- People: Yuan Baojing\n\nFacts:\n- Changchun is more populous than other cities.\n- Changchun is more populous than the city that Yuan Baojing was from.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "56a05d7e-6b26-5992-87f9-6c9d136420b2",
+        "text": "Changchun is more populous than other cities. For example, it is more populous than the city that Yuan Baojing was from.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "ccfe6d17-b743-50d0-908d-2b87de031475",
+        "text": "text_a8f33887762bc54a973764e4c1f14006",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "5f7fc188-d3f7-5f1b-812c-448b67eefaa6",
+        "text": "changchun",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "5f394058-b2a0-5ba8-8466-ba2a18cfcf4e",
+        "text": "place",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "2e527c35-1702-514a-a89d-c5776fa1e45b",
+        "text": "yuan baojing",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "99a82eec-bb35-5bb5-9ed2-e73fc7a756de",
+        "text": "person",
+        "type": "EntityType"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 3,
+        "type": "is_from_less_populous_city_than"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "is_a"
+      }
+    ]
+  },
+  "grafo_evidencia": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "e1e14da8-63dd-5431-abb1-36dfbadbd1e4",
+        "text": "This chunk is about:\n- Places: Liaoyang, Changchun, Liaoning province, T'ai-tzu River\n- People: Yuan Baojing\n- Topics: Population, metropolitan areas\n\nFacts:\n- In 2010, Liaoyang and Anshan together formed a metropolitan area with 2,057,200 inhabitants.\n- In 2010, Changchun had a total population of 7,674,439 under its jurisdiction, according to the China census.\n- Liaoyang is a prefecture-level city in east-central Liaoning province in the People's Republic of China.\n- Liaoyang is situated on the T'ai-tzu River.\n- Yuan Baojing was born on 16 February 1966.\n- Yuan Baojing was a Chinese billionaire from Liaoyang, Liaoning province.\n- Yuan Baojing died on 17 March 2006.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "bbe67ad2-f123-5b59-a2e0-5a061ae6b711",
+        "text": "Page: Liaoyang. Sentence: Liaoyang () is a prefecture-level city of east-central Liaoning province, People's Republic of China, situated on the T'ai-tzu River and, together with Anshan, forms a metro area of 2,057,200 inhabitants in 2010.\nPage: Changchun. Sentence: According to the 2010 census of China, Changchun had a total population of 7,674,439 under its jurisdiction.\nPage: Yuan Baojing. Sentence: Yuan Baojing (; 16 February 1966 – 17 March 2006) was a Chinese billionaire from Liaoyang, Liaoning province.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "5c0ac95a-e9b6-5225-b5a7-802d4144561e",
+        "text": "text_88505c6d00e4ba699724493d4eafcfcd",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "cfde7cfa-196a-5710-89fd-74e437a4ea0a",
+        "text": "liaoyang",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "5f394058-b2a0-5ba8-8466-ba2a18cfcf4e",
+        "text": "place",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "db004250-6274-5322-b93a-15b1470e954f",
+        "text": "liaoning province",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "cc237b73-b957-56f0-9cff-82357be15d0b",
+        "text": "peoples republic of china",
+        "type": "Entity"
+      },
+      {
+        "id": 7,
+        "original_id": "4523d7c2-b371-5e19-bd6a-005489d73006",
+        "text": "tai-tzu river",
+        "type": "Entity"
+      },
+      {
+        "id": 8,
+        "original_id": "f5bd269f-bff2-56ef-a0f2-e45e0becad6c",
+        "text": "anshan",
+        "type": "Entity"
+      },
+      {
+        "id": 9,
+        "original_id": "cb1dc1af-5253-5fa4-877e-246a7629f489",
+        "text": "2010",
+        "type": "Entity"
+      },
+      {
+        "id": 10,
+        "original_id": "b19433ae-558c-5aaf-95ac-6231f2a4be0e",
+        "text": "date",
+        "type": "EntityType"
+      },
+      {
+        "id": 11,
+        "original_id": "5f7fc188-d3f7-5f1b-812c-448b67eefaa6",
+        "text": "changchun",
+        "type": "Entity"
+      },
+      {
+        "id": 12,
+        "original_id": "2e527c35-1702-514a-a89d-c5776fa1e45b",
+        "text": "yuan baojing",
+        "type": "Entity"
+      },
+      {
+        "id": 13,
+        "original_id": "99a82eec-bb35-5bb5-9ed2-e73fc7a756de",
+        "text": "person",
+        "type": "EntityType"
+      },
+      {
+        "id": 14,
+        "original_id": "c6d95ba9-25ba-5e29-b1d0-9a715a1b70f5",
+        "text": "1966-02-16",
+        "type": "Entity"
+      },
+      {
+        "id": 15,
+        "original_id": "5247bf32-74f2-5ad1-916c-489a28d5aaf9",
+        "text": "2006-03-17",
+        "type": "Entity"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 12,
+        "target": 3,
+        "type": "from"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 5,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 6,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 7,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 8,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 11,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "located_in"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 12,
+        "target": 5,
+        "type": "from"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "located_in"
+      },
+      {
+        "source": 1,
+        "target": 6,
+        "type": "contains"
+      },
+      {
+        "source": 12,
+        "target": 6,
+        "type": "nationality"
+      },
+      {
+        "source": 3,
+        "target": 7,
+        "type": "situated_on"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 8,
+        "type": "forms_metro_area_with"
+      },
+      {
+        "source": 1,
+        "target": 8,
+        "type": "contains"
+      },
+      {
+        "source": 8,
+        "target": 9,
+        "type": "has_population_reference_year"
+      },
+      {
+        "source": 3,
+        "target": 9,
+        "type": "has_population_reference_year"
+      },
+      {
+        "source": 1,
+        "target": 9,
+        "type": "contains"
+      },
+      {
+        "source": 11,
+        "target": 9,
+        "type": "has_census_year"
+      },
+      {
+        "source": 9,
+        "target": 10,
+        "type": "is_a"
+      },
+      {
+        "source": 14,
+        "target": 10,
+        "type": "is_a"
+      },
+      {
+        "source": 15,
+        "target": 10,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 11,
+        "type": "contains"
+      },
+      {
+        "source": 1,
+        "target": 12,
+        "type": "contains"
+      },
+      {
+        "source": 12,
+        "target": 13,
+        "type": "is_a"
+      },
+      {
+        "source": 12,
+        "target": 14,
+        "type": "born_on"
+      },
+      {
+        "source": 1,
+        "target": 14,
+        "type": "contains"
+      },
+      {
+        "source": 12,
+        "target": 15,
+        "type": "died_on"
+      },
+      {
+        "source": 1,
+        "target": 15,
+        "type": "contains"
+      }
+    ]
+  }
+}

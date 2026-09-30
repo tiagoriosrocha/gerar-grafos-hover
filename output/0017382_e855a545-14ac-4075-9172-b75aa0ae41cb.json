@@ -1,0 +1,400 @@
+{
+  "dataset": "hover",
+  "id": "e855a545-14ac-4075-9172-b75aa0ae41cb",
+  "split": "train",
+  "claim": "The opera Parsifal has more acts than Manon by Massenet.",
+  "evidencia": "Page: Parsifal. Sentence: Parsifal (WWV 111) is an opera in three acts by German composer Richard Wagner.\nPage: Manon. Sentence: Manon (] ) is an \"opéra comique\" in five acts by Jules Massenet to a French libretto by Henri Meilhac and Philippe Gille, based on the 1731 novel \"L’histoire du chevalier des Grieux et de Manon Lescaut\" by the Abbé Prévost.",
+  "evidence_text": "Page: Parsifal. Sentence: Parsifal (WWV 111) is an opera in three acts by German composer Richard Wagner.\nPage: Manon. Sentence: Manon (] ) is an \"opéra comique\" in five acts by Jules Massenet to a French libretto by Henri Meilhac and Philippe Gille, based on the 1731 novel \"L’histoire du chevalier des Grieux et de Manon Lescaut\" by the Abbé Prévost.",
+  "label": "SUPPORTED",
+  "num_hops": 2,
+  "hover_metadata": {
+    "supporting_facts": [
+      [
+        "Parsifal",
+        0
+      ],
+      [
+        "Manon",
+        0
+      ]
+    ],
+    "num_hops": 2,
+    "evidence_annotation_id": [
+      0
+    ],
+    "evidence_id": [
+      "Parsifal::sentence::0",
+      "Manon::sentence::0"
+    ],
+    "evidence_wiki_url": [
+      "https://en.wikipedia.org/wiki/Parsifal",
+      "https://en.wikipedia.org/wiki/Manon"
+    ],
+    "evidence_sentence_id": [
+      "Parsifal::sentence::0",
+      "Manon::sentence::0"
+    ]
+  },
+  "grafo_claim": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "738210e3-d211-5529-9445-f14e8040d9db",
+        "text": "This chunk is about:\n- Products: Parsifal, Manon\n- People: Jules Massenet\n- Concepts: Opera acts\n\nFacts:\n- Parsifal is an opera.\n- Manon is an opera by Jules Massenet.\n- Parsifal has more acts than Manon.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "8cfa1bbb-8f3e-5669-93f5-afa1b70623bb",
+        "text": "The opera Parsifal has more acts than Manon by Massenet.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "92a4d243-d1cb-5b02-a99f-22c6c2990bef",
+        "text": "text_f2d023d8dd7abf93b2c30481f6b8876f",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "03f58f21-bd5d-53a5-b8da-490c78774242",
+        "text": "parsifal",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "4eb9afeb-98f0-51bd-8563-a75a23e8d4f0",
+        "text": "opera",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "cf7cd712-4a17-5501-8959-df547dc1f7e0",
+        "text": "manon",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "b8f5a8e5-f78f-5558-b075-f41ff37bde1d",
+        "text": "massenet",
+        "type": "Entity"
+      },
+      {
+        "id": 7,
+        "original_id": "99a82eec-bb35-5bb5-9ed2-e73fc7a756de",
+        "text": "person",
+        "type": "EntityType"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 5,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "has_more_acts_than"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "by"
+      },
+      {
+        "source": 1,
+        "target": 6,
+        "type": "contains"
+      },
+      {
+        "source": 6,
+        "target": 7,
+        "type": "is_a"
+      }
+    ]
+  },
+  "grafo_evidencia": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "abc167e3-16f3-5836-8b42-5d3ccc8566fa",
+        "text": "This chunk is about:\n- Works: Parsifal, Manon\n- People: Richard Wagner, Jules Massenet, Henri Meilhac, Philippe Gille, Abbé Prévost\n- Topics: Opera, opéra comique, libretti, source novels\n\nFacts:\n- In 1731, Abbé Prévost published the novel \"L’histoire du chevalier des Grieux et de Manon Lescaut.\"\n- Parsifal is an opera in three acts by German composer Richard Wagner.\n- Manon is an opéra comique in five acts by Jules Massenet.\n- Manon has a French libretto by Henri Meilhac and Philippe Gille.\n- Manon is based on Abbé Prévost’s 1731 novel \"L’histoire du chevalier des Grieux et de Manon Lescaut.\"",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "c1ff73e8-6a51-5f73-b8de-6eeecce3fffe",
+        "text": "Page: Parsifal. Sentence: Parsifal (WWV 111) is an opera in three acts by German composer Richard Wagner.\nPage: Manon. Sentence: Manon (] ) is an \"opéra comique\" in five acts by Jules Massenet to a French libretto by Henri Meilhac and Philippe Gille, based on the 1731 novel \"L’histoire du chevalier des Grieux et de Manon Lescaut\" by the Abbé Prévost.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "d1340819-9bfb-5832-8174-91520e264e66",
+        "text": "text_0fa1c8d5d5213cb63b09dc5e3245bc3c",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "03f58f21-bd5d-53a5-b8da-490c78774242",
+        "text": "parsifal",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "5263a535-1b4b-5925-be3e-310d03cd303b",
+        "text": "work",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "3bd5df61-91c8-5c7c-bd10-f10c49fa697a",
+        "text": "wwv 111",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "e0c95d53-4c29-574b-ba38-8a34fc5856e6",
+        "text": "identifier",
+        "type": "EntityType"
+      },
+      {
+        "id": 7,
+        "original_id": "8a1b5773-085b-5d63-9400-450fda6ad0d2",
+        "text": "richard wagner",
+        "type": "Entity"
+      },
+      {
+        "id": 8,
+        "original_id": "99a82eec-bb35-5bb5-9ed2-e73fc7a756de",
+        "text": "person",
+        "type": "EntityType"
+      },
+      {
+        "id": 9,
+        "original_id": "cf7cd712-4a17-5501-8959-df547dc1f7e0",
+        "text": "manon",
+        "type": "Entity"
+      },
+      {
+        "id": 10,
+        "original_id": "1fd51028-460b-5a21-be9a-a406f18d8bf9",
+        "text": "jules massenet",
+        "type": "Entity"
+      },
+      {
+        "id": 11,
+        "original_id": "d27ad5b7-3abc-515b-b0f9-3e10871a0979",
+        "text": "henri meilhac",
+        "type": "Entity"
+      },
+      {
+        "id": 12,
+        "original_id": "57523506-f3e7-5dd0-8f0b-5f276f0d5903",
+        "text": "philippe gille",
+        "type": "Entity"
+      },
+      {
+        "id": 13,
+        "original_id": "81d1eb80-f082-548c-a88a-051c3a32fc97",
+        "text": "l’histoire du chevalier des grieux et de manon lescaut",
+        "type": "Entity"
+      },
+      {
+        "id": 14,
+        "original_id": "33803937-d7f1-5f39-897d-afcafe2c960c",
+        "text": "1731",
+        "type": "Entity"
+      },
+      {
+        "id": 15,
+        "original_id": "b19433ae-558c-5aaf-95ac-6231f2a4be0e",
+        "text": "date",
+        "type": "EntityType"
+      },
+      {
+        "id": 16,
+        "original_id": "0a052e93-5fcd-5703-8660-73a3e420815d",
+        "text": "abbé prévost",
+        "type": "Entity"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 9,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 13,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "has_identifier"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 7,
+        "type": "created_by"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      },
+      {
+        "source": 7,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 10,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 11,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 12,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 16,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 9,
+        "type": "contains"
+      },
+      {
+        "source": 9,
+        "target": 10,
+        "type": "created_by"
+      },
+      {
+        "source": 1,
+        "target": 10,
+        "type": "contains"
+      },
+      {
+        "source": 9,
+        "target": 11,
+        "type": "has_libretto_by"
+      },
+      {
+        "source": 1,
+        "target": 11,
+        "type": "contains"
+      },
+      {
+        "source": 9,
+        "target": 12,
+        "type": "has_libretto_by"
+      },
+      {
+        "source": 1,
+        "target": 12,
+        "type": "contains"
+      },
+      {
+        "source": 9,
+        "target": 13,
+        "type": "based_on"
+      },
+      {
+        "source": 1,
+        "target": 13,
+        "type": "contains"
+      },
+      {
+        "source": 13,
+        "target": 14,
+        "type": "published_in"
+      },
+      {
+        "source": 1,
+        "target": 14,
+        "type": "contains"
+      },
+      {
+        "source": 14,
+        "target": 15,
+        "type": "is_a"
+      },
+      {
+        "source": 13,
+        "target": 16,
+        "type": "created_by"
+      },
+      {
+        "source": 1,
+        "target": 16,
+        "type": "contains"
+      }
+    ]
+  }
+}

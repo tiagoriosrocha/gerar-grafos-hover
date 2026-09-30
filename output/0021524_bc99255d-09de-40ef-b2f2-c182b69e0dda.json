@@ -1,0 +1,395 @@
+{
+  "dataset": "hover",
+  "id": "bc99255d-09de-40ef-b2f2-c182b69e0dda",
+  "split": "dev",
+  "claim": "Catopsis sessiliflora is a species whose genus does not belong to the same family as the genus Crataegus.",
+  "evidencia": "Page: Catopsis. Sentence: Catopsis is a genus in the botanical family Bromeliaceae, subfamily Tillandsioideae.\nPage: Crataegus. Sentence: Crataegus ( ; from the Greek \"kratos\" \"strength\" and \"akis\" \"sharp\", referring to the thorns of some species) commonly called hawthorn, thornapple, May-tree, whitethorn, or hawberry, is a large genus of shrubs and trees in the family Rosaceae, native to temperate regions of the Northern Hemisphere in Europe, Asia and North America.\nPage: Catopsis sessiliflora. Sentence: Catopsis sessiliflora is a species in the genus \"Catopsis\".",
+  "evidence_text": "Page: Catopsis. Sentence: Catopsis is a genus in the botanical family Bromeliaceae, subfamily Tillandsioideae.\nPage: Crataegus. Sentence: Crataegus ( ; from the Greek \"kratos\" \"strength\" and \"akis\" \"sharp\", referring to the thorns of some species) commonly called hawthorn, thornapple, May-tree, whitethorn, or hawberry, is a large genus of shrubs and trees in the family Rosaceae, native to temperate regions of the Northern Hemisphere in Europe, Asia and North America.\nPage: Catopsis sessiliflora. Sentence: Catopsis sessiliflora is a species in the genus \"Catopsis\".",
+  "label": "SUPPORTED",
+  "num_hops": 3,
+  "hover_metadata": {
+    "supporting_facts": [
+      [
+        "Catopsis",
+        0
+      ],
+      [
+        "Crataegus",
+        0
+      ],
+      [
+        "Catopsis sessiliflora",
+        0
+      ]
+    ],
+    "num_hops": 3,
+    "evidence_annotation_id": [
+      0
+    ],
+    "evidence_id": [
+      "Catopsis::sentence::0",
+      "Crataegus::sentence::0",
+      "Catopsis sessiliflora::sentence::0"
+    ],
+    "evidence_wiki_url": [
+      "https://en.wikipedia.org/wiki/Catopsis",
+      "https://en.wikipedia.org/wiki/Crataegus",
+      "https://en.wikipedia.org/wiki/Catopsis_sessiliflora"
+    ],
+    "evidence_sentence_id": [
+      "Catopsis::sentence::0",
+      "Crataegus::sentence::0",
+      "Catopsis sessiliflora::sentence::0"
+    ]
+  },
+  "grafo_claim": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "549f5212-9314-5c9c-ba02-0d057643d538",
+        "text": "This chunk is about:\n- Plants: Catopsis sessiliflora, Crataegus\n- Taxonomy: genera, families\n\nFacts:\n- Catopsis sessiliflora is a species in the genus Catopsis.\n- Crataegus is a genus.\n- The genus Catopsis does not belong to the same family as the genus Crataegus.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "1d68aca3-200b-5c02-a4ed-51025b096dcc",
+        "text": "Catopsis sessiliflora is a species whose genus does not belong to the same family as the genus Crataegus.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "551fe710-df6d-5267-962d-04345a82bcb9",
+        "text": "text_f9b50f75775a878de4768e7dce806491",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "3fcaa4b2-e805-5520-88f9-5e51297f4c30",
+        "text": "catopsis sessiliflora",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "f23a15ce-c0de-5c57-9205-8c9d01026b05",
+        "text": "species",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "8614b9ab-5bf3-5a59-8f88-ce4644305f3d",
+        "text": "catopsis",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "58ce8914-8a9e-5302-9b2d-0d97006e12d3",
+        "text": "genus",
+        "type": "EntityType"
+      },
+      {
+        "id": 7,
+        "original_id": "786c0540-8e8b-5151-80e7-7e51c28ab9c2",
+        "text": "crataegus",
+        "type": "Entity"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "has_genus"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 7,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 5,
+        "target": 7,
+        "type": "does_not_belong_to_same_family_as"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      }
+    ]
+  },
+  "grafo_evidencia": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "625dc17e-949e-5f57-8288-d6fffbe32920",
+        "text": "This chunk is about:\n- Plants: Catopsis, Crataegus, Catopsis sessiliflora\n- Taxonomy: Bromeliaceae, Tillandsioideae, Rosaceae\n- Places: Europe, Asia, North America, Northern Hemisphere\n- Topics: botanical classification, plant common names, name etymology\n\nFacts:\n- Catopsis is a genus in the botanical family Bromeliaceae and the subfamily Tillandsioideae.\n- Crataegus is a large genus of shrubs and trees in the family Rosaceae.\n- Crataegus is commonly called hawthorn, thornapple, May-tree, whitethorn, or hawberry.\n- Crataegus is native to temperate regions of the Northern Hemisphere in Europe, Asia, and North America.\n- The name Crataegus comes from the Greek words \"kratos\" meaning \"strength\" and \"akis\" meaning \"sharp,\" referring to the thorns of some species.\n- Catopsis sessiliflora is a species in the genus Catopsis.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "805fef35-14bf-5dd1-8b72-4a80c38ba501",
+        "text": "Page: Catopsis. Sentence: Catopsis is a genus in the botanical family Bromeliaceae, subfamily Tillandsioideae.\nPage: Crataegus. Sentence: Crataegus ( ; from the Greek \"kratos\" \"strength\" and \"akis\" \"sharp\", referring to the thorns of some species) commonly called hawthorn, thornapple, May-tree, whitethorn, or hawberry, is a large genus of shrubs and trees in the family Rosaceae, native to temperate regions of the Northern Hemisphere in Europe, Asia and North America.\nPage: Catopsis sessiliflora. Sentence: Catopsis sessiliflora is a species in the genus \"Catopsis\".",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "3e3f11a6-0d95-59a8-b778-061f35d4ee6a",
+        "text": "text_9a3e2e47ae20861772167fb4d4e324db",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "8614b9ab-5bf3-5a59-8f88-ce4644305f3d",
+        "text": "catopsis",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "f7b4540f-d32c-51b3-8970-f282fffab519",
+        "text": "taxon",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "fc72cba1-77d8-5fed-9239-b1f0b0c0e6ad",
+        "text": "bromeliaceae",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "a43bf1c1-bc37-5a46-bb80-9fb41ffe0d18",
+        "text": "tillandsioideae",
+        "type": "Entity"
+      },
+      {
+        "id": 7,
+        "original_id": "786c0540-8e8b-5151-80e7-7e51c28ab9c2",
+        "text": "crataegus",
+        "type": "Entity"
+      },
+      {
+        "id": 8,
+        "original_id": "1b8ef2c8-bcb3-5236-8e90-c9a1f7c6788d",
+        "text": "rosaceae",
+        "type": "Entity"
+      },
+      {
+        "id": 9,
+        "original_id": "92a578ab-7f37-5f2b-b28b-395fbdf3d885",
+        "text": "northern hemisphere",
+        "type": "Entity"
+      },
+      {
+        "id": 10,
+        "original_id": "5f394058-b2a0-5ba8-8466-ba2a18cfcf4e",
+        "text": "place",
+        "type": "EntityType"
+      },
+      {
+        "id": 11,
+        "original_id": "d62d98fd-7636-5918-880e-390a00283ca8",
+        "text": "europe",
+        "type": "Entity"
+      },
+      {
+        "id": 12,
+        "original_id": "21d096f4-373a-585b-85d5-3b4b9dfc4785",
+        "text": "asia",
+        "type": "Entity"
+      },
+      {
+        "id": 13,
+        "original_id": "7bfd7320-7015-5d33-be1e-fbdc9c0b5b79",
+        "text": "north america",
+        "type": "Entity"
+      },
+      {
+        "id": 14,
+        "original_id": "3fcaa4b2-e805-5520-88f9-5e51297f4c30",
+        "text": "catopsis sessiliflora",
+        "type": "Entity"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 14,
+        "target": 3,
+        "type": "in_genus"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 5,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 6,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 7,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 8,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 14,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "in_family"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 6,
+        "type": "in_subfamily"
+      },
+      {
+        "source": 1,
+        "target": 6,
+        "type": "contains"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      },
+      {
+        "source": 7,
+        "target": 8,
+        "type": "in_family"
+      },
+      {
+        "source": 1,
+        "target": 8,
+        "type": "contains"
+      },
+      {
+        "source": 7,
+        "target": 9,
+        "type": "native_to"
+      },
+      {
+        "source": 1,
+        "target": 9,
+        "type": "contains"
+      },
+      {
+        "source": 9,
+        "target": 10,
+        "type": "is_a"
+      },
+      {
+        "source": 11,
+        "target": 10,
+        "type": "is_a"
+      },
+      {
+        "source": 12,
+        "target": 10,
+        "type": "is_a"
+      },
+      {
+        "source": 13,
+        "target": 10,
+        "type": "is_a"
+      },
+      {
+        "source": 7,
+        "target": 11,
+        "type": "native_to"
+      },
+      {
+        "source": 1,
+        "target": 11,
+        "type": "contains"
+      },
+      {
+        "source": 7,
+        "target": 12,
+        "type": "native_to"
+      },
+      {
+        "source": 1,
+        "target": 12,
+        "type": "contains"
+      },
+      {
+        "source": 7,
+        "target": 13,
+        "type": "native_to"
+      },
+      {
+        "source": 1,
+        "target": 13,
+        "type": "contains"
+      },
+      {
+        "source": 1,
+        "target": 14,
+        "type": "contains"
+      }
+    ]
+  }
+}

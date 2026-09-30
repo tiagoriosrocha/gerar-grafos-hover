@@ -1,0 +1,378 @@
+{
+  "dataset": "hover",
+  "id": "48aa20dc-f059-49a5-b9c0-4e23172c0a08",
+  "split": "train",
+  "claim": "KSCW-DT is part of a duopoly with virtual channel 12 KWCH-DT in Wichita.",
+  "evidencia": "Page: KSCW-DT. Sentence: The station is owned by Gray Television, as part of a duopoly with CBS affiliate KWCH-DT (channel 12); Gray also operates Univision affiliate KDCU-DT (channel 31) under a joint sales agreement with owner Entravision Communications Corporation.\nPage: KWCH-DT. Sentence: KWCH-DT, virtual channel 12 (UHF digital channel 19), is a CBS-affiliated television station serving Wichita, Kansas, United States that is licensed to Hutchinson.",
+  "evidence_text": "Page: KSCW-DT. Sentence: The station is owned by Gray Television, as part of a duopoly with CBS affiliate KWCH-DT (channel 12); Gray also operates Univision affiliate KDCU-DT (channel 31) under a joint sales agreement with owner Entravision Communications Corporation.\nPage: KWCH-DT. Sentence: KWCH-DT, virtual channel 12 (UHF digital channel 19), is a CBS-affiliated television station serving Wichita, Kansas, United States that is licensed to Hutchinson.",
+  "label": "SUPPORTED",
+  "num_hops": 2,
+  "hover_metadata": {
+    "supporting_facts": [
+      [
+        "KSCW-DT",
+        1
+      ],
+      [
+        "KWCH-DT",
+        0
+      ]
+    ],
+    "num_hops": 2,
+    "evidence_annotation_id": [
+      0
+    ],
+    "evidence_id": [
+      "KSCW-DT::sentence::1",
+      "KWCH-DT::sentence::0"
+    ],
+    "evidence_wiki_url": [
+      "https://en.wikipedia.org/wiki/KSCW-DT",
+      "https://en.wikipedia.org/wiki/KWCH-DT"
+    ],
+    "evidence_sentence_id": [
+      "KSCW-DT::sentence::1",
+      "KWCH-DT::sentence::0"
+    ]
+  },
+  "grafo_claim": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "8e18eb5d-dc2b-59de-a8c9-f434cfddc3ed",
+        "text": "This chunk is about:\n- Companies: KSCW-DT, KWCH-DT\n- Places: Wichita\n- Concepts: duopoly, virtual channel\n\nFacts:\n- KSCW-DT is part of a duopoly with KWCH-DT.\n- KWCH-DT uses virtual channel 12 in Wichita.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "df7e6628-9ecc-5885-b899-7be3679c38d0",
+        "text": "KSCW-DT is part of a duopoly with virtual channel 12 KWCH-DT in Wichita.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "c1840e5a-d58f-563c-80f4-ee275c60ea59",
+        "text": "text_e2b6f5131ce4b21054e495ab30f97340",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "58bc60ae-bea9-55cf-b203-b5e8928c5d76",
+        "text": "kscw-dt",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "388f60fb-220d-55e8-ae9c-3ac93cead308",
+        "text": "organization",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "5442025a-dd0c-5ad3-93bc-6305a6230e01",
+        "text": "kwch-dt",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "c2cad03e-4977-5684-9308-f574427d6a15",
+        "text": "wichita",
+        "type": "Entity"
+      },
+      {
+        "id": 7,
+        "original_id": "5f394058-b2a0-5ba8-8466-ba2a18cfcf4e",
+        "text": "place",
+        "type": "EntityType"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 5,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "is_in_duopoly_with"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "is_in"
+      },
+      {
+        "source": 1,
+        "target": 6,
+        "type": "contains"
+      },
+      {
+        "source": 6,
+        "target": 7,
+        "type": "is_a"
+      }
+    ]
+  },
+  "grafo_evidencia": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "ad6e9a3c-a9c0-566d-b390-82622a0285a9",
+        "text": "This chunk is about:\n- Companies: Gray Television, Entravision Communications Corporation\n- TV Stations: KSCW-DT, KWCH-DT, KDCU-DT\n- Networks: CBS, Univision\n- Places: Wichita, Kansas, Hutchinson, Kansas\n- Concepts: duopoly, joint sales agreement\n\nFacts:\n- KWCH-DT is a CBS-affiliated television station serving Wichita, Kansas, and it is licensed to Hutchinson, Kansas.\n- KWCH-DT broadcasts on virtual channel 12 and UHF digital channel 19.\n- Gray Television owns KSCW-DT as part of a duopoly with CBS affiliate KWCH-DT.\n- Gray Television also operates Univision affiliate KDCU-DT on channel 31 under a joint sales agreement with owner Entravision Communications Corporation.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "56060ce4-6c88-5810-9404-ced0f35eff4f",
+        "text": "Page: KSCW-DT. Sentence: The station is owned by Gray Television, as part of a duopoly with CBS affiliate KWCH-DT (channel 12); Gray also operates Univision affiliate KDCU-DT (channel 31) under a joint sales agreement with owner Entravision Communications Corporation.\nPage: KWCH-DT. Sentence: KWCH-DT, virtual channel 12 (UHF digital channel 19), is a CBS-affiliated television station serving Wichita, Kansas, United States that is licensed to Hutchinson.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "e79220c3-3fd3-563e-9ee3-804dfa8d761d",
+        "text": "text_8cb6a63df0d27fedc0594998da463404",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "58bc60ae-bea9-55cf-b203-b5e8928c5d76",
+        "text": "kscw-dt",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "388f60fb-220d-55e8-ae9c-3ac93cead308",
+        "text": "organization",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "9b706a5a-630c-5250-830d-7f7ea7b6beab",
+        "text": "gray television",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "426f7793-2072-56fb-aaf9-badd088ceefc",
+        "text": "kdcu-dt",
+        "type": "Entity"
+      },
+      {
+        "id": 7,
+        "original_id": "51dffbb3-bc9d-56a0-b96a-6bb057697f07",
+        "text": "entravision communications corporation",
+        "type": "Entity"
+      },
+      {
+        "id": 8,
+        "original_id": "43051c15-3134-54d8-856b-58f669754720",
+        "text": "wichita, kansas, united states",
+        "type": "Entity"
+      },
+      {
+        "id": 9,
+        "original_id": "5f394058-b2a0-5ba8-8466-ba2a18cfcf4e",
+        "text": "place",
+        "type": "EntityType"
+      },
+      {
+        "id": 10,
+        "original_id": "6a2f9821-d97f-5be3-a2fc-f50142fd80d0",
+        "text": "joint sales agreement",
+        "type": "Entity"
+      },
+      {
+        "id": 11,
+        "original_id": "d2a381fa-3658-5ca6-ada9-2109cfc9331d",
+        "text": "concept",
+        "type": "EntityType"
+      },
+      {
+        "id": 12,
+        "original_id": "5442025a-dd0c-5ad3-93bc-6305a6230e01",
+        "text": "kwch-dt",
+        "type": "Entity"
+      },
+      {
+        "id": 13,
+        "original_id": "1f0c3132-0bae-58f9-9f00-fc3f2e574b25",
+        "text": "cbs",
+        "type": "Entity"
+      },
+      {
+        "id": 14,
+        "original_id": "630a88f9-df1e-5cc0-a8e6-79f74d0b78ae",
+        "text": "hutchinson",
+        "type": "Entity"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 5,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 6,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 7,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 12,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 13,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "owned_by"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "operates"
+      },
+      {
+        "source": 1,
+        "target": 6,
+        "type": "contains"
+      },
+      {
+        "source": 6,
+        "target": 7,
+        "type": "owned_by"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      },
+      {
+        "source": 6,
+        "target": 8,
+        "type": "serves"
+      },
+      {
+        "source": 1,
+        "target": 8,
+        "type": "contains"
+      },
+      {
+        "source": 8,
+        "target": 9,
+        "type": "is_a"
+      },
+      {
+        "source": 14,
+        "target": 9,
+        "type": "is_a"
+      },
+      {
+        "source": 5,
+        "target": 10,
+        "type": "operates_under"
+      },
+      {
+        "source": 1,
+        "target": 10,
+        "type": "contains"
+      },
+      {
+        "source": 10,
+        "target": 11,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 12,
+        "type": "in_duopoly_with"
+      },
+      {
+        "source": 1,
+        "target": 12,
+        "type": "contains"
+      },
+      {
+        "source": 12,
+        "target": 13,
+        "type": "affiliated_with"
+      },
+      {
+        "source": 1,
+        "target": 13,
+        "type": "contains"
+      },
+      {
+        "source": 12,
+        "target": 14,
+        "type": "licensed_to"
+      },
+      {
+        "source": 1,
+        "target": 14,
+        "type": "contains"
+      }
+    ]
+  }
+}

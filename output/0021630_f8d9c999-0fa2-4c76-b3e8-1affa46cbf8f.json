@@ -1,0 +1,603 @@
+{
+  "dataset": "hover",
+  "id": "f8d9c999-0fa2-4c76-b3e8-1affa46cbf8f",
+  "split": "dev",
+  "claim": "VIacom subsidary, the company that produced the movie I Loved a Soldier, made the silent film Through the Glass Window in 1922.",
+  "evidencia": "Page: Through a Glass Window. Sentence: Through a Glass Window is a 1922 American drama silent film directed by Maurice Campbell and written by Olga Printzlau.\nPage: Paramount Pictures. Sentence: Paramount Pictures Corporation (also known simply as Paramount) is an American film studio based in Hollywood, California, that has been a subsidiary of the American media conglomerate Viacom since 1994.\nPage: I Loved a Soldier. Sentence: I Loved a Soldier (also known as Invitation to Happiness) is an unfinished 1936 American romantic-comedy-drama film directed by Henry Hathaway and produced by Paramount Pictures.",
+  "evidence_text": "Page: Through a Glass Window. Sentence: Through a Glass Window is a 1922 American drama silent film directed by Maurice Campbell and written by Olga Printzlau.\nPage: Paramount Pictures. Sentence: Paramount Pictures Corporation (also known simply as Paramount) is an American film studio based in Hollywood, California, that has been a subsidiary of the American media conglomerate Viacom since 1994.\nPage: I Loved a Soldier. Sentence: I Loved a Soldier (also known as Invitation to Happiness) is an unfinished 1936 American romantic-comedy-drama film directed by Henry Hathaway and produced by Paramount Pictures.",
+  "label": "SUPPORTED",
+  "num_hops": 3,
+  "hover_metadata": {
+    "supporting_facts": [
+      [
+        "Through a Glass Window",
+        0
+      ],
+      [
+        "Paramount Pictures",
+        0
+      ],
+      [
+        "I Loved a Soldier",
+        0
+      ]
+    ],
+    "num_hops": 3,
+    "evidence_annotation_id": [
+      0
+    ],
+    "evidence_id": [
+      "Through a Glass Window::sentence::0",
+      "Paramount Pictures::sentence::0",
+      "I Loved a Soldier::sentence::0"
+    ],
+    "evidence_wiki_url": [
+      "https://en.wikipedia.org/wiki/Through_a_Glass_Window",
+      "https://en.wikipedia.org/wiki/Paramount_Pictures",
+      "https://en.wikipedia.org/wiki/I_Loved_a_Soldier"
+    ],
+    "evidence_sentence_id": [
+      "Through a Glass Window::sentence::0",
+      "Paramount Pictures::sentence::0",
+      "I Loved a Soldier::sentence::0"
+    ]
+  },
+  "grafo_claim": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "d8e97fcd-0d3b-547a-af0f-acc082b1e611",
+        "text": "This chunk is about:\n- Companies: Viacom\n- Films: I Loved a Soldier, Through the Glass Window\n\nFacts:\n- Through the Glass Window is a silent film that was released in 1922.\n- The company that produced I Loved a Soldier was a subsidiary of Viacom.\n- The same Viacom subsidiary that produced I Loved a Soldier made Through the Glass Window.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "b5d08528-77a2-5947-8321-7b552eeb576b",
+        "text": "VIacom subsidary, the company that produced the movie I Loved a Soldier, made the silent film Through the Glass Window in 1922.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "63f44c02-c3f5-5d98-bcbd-8317d711693d",
+        "text": "text_f1b28968ae6ac2cc6c6484fd368cbd8d",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "d5270f4f-3627-578e-a351-a9ba4bfd6379",
+        "text": "viacom subsidiary",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "388f60fb-220d-55e8-ae9c-3ac93cead308",
+        "text": "organization",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "cdceee2f-a990-5fd9-ae4e-6e5d91860743",
+        "text": "i loved a soldier",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "1155038a-04d1-5d6a-9c60-e4f499a6913c",
+        "text": "movie",
+        "type": "EntityType"
+      },
+      {
+        "id": 7,
+        "original_id": "415a63cf-b51e-5878-8196-6d89ef72ab71",
+        "text": "through the glass window",
+        "type": "Entity"
+      },
+      {
+        "id": 8,
+        "original_id": "5a4417f7-418a-55d6-bba2-981d57395a78",
+        "text": "1922",
+        "type": "Entity"
+      },
+      {
+        "id": 9,
+        "original_id": "b19433ae-558c-5aaf-95ac-6231f2a4be0e",
+        "text": "date",
+        "type": "EntityType"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "produced"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 7,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 7,
+        "type": "made"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      },
+      {
+        "source": 7,
+        "target": 8,
+        "type": "made_in"
+      },
+      {
+        "source": 1,
+        "target": 8,
+        "type": "contains"
+      },
+      {
+        "source": 8,
+        "target": 9,
+        "type": "is_a"
+      }
+    ]
+  },
+  "grafo_evidencia": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "d3fcb04a-6d82-5228-ae4c-fb967fbaa36d",
+        "text": "This chunk is about:\n- Films: Through a Glass Window, I Loved a Soldier\n- People: Maurice Campbell, Olga Printzlau, Henry Hathaway\n- Companies: Paramount Pictures, Viacom\n- Places: Hollywood, California\n\nFacts:\n- Through a Glass Window is a 1922 American drama silent film.\n- Through a Glass Window was directed by Maurice Campbell and written by Olga Printzlau.\n- Paramount Pictures Corporation is an American film studio based in Hollywood, California.\n- Paramount Pictures has been a subsidiary of Viacom since 1994.\n- I Loved a Soldier, also known as Invitation to Happiness, is an unfinished 1936 American romantic-comedy-drama film.\n- I Loved a Soldier was directed by Henry Hathaway and produced by Paramount Pictures.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "8a0db112-cf71-57ff-8b91-c96035c52461",
+        "text": "Page: Through a Glass Window. Sentence: Through a Glass Window is a 1922 American drama silent film directed by Maurice Campbell and written by Olga Printzlau.\nPage: Paramount Pictures. Sentence: Paramount Pictures Corporation (also known simply as Paramount) is an American film studio based in Hollywood, California, that has been a subsidiary of the American media conglomerate Viacom since 1994.\nPage: I Loved a Soldier. Sentence: I Loved a Soldier (also known as Invitation to Happiness) is an unfinished 1936 American romantic-comedy-drama film directed by Henry Hathaway and produced by Paramount Pictures.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "ecd9c9a4-226b-5ed9-9cd4-977e937a60cf",
+        "text": "text_fb531d008dcd371330cf635b38514e59",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "044bf6c0-55b7-531d-984a-38b5609cfd44",
+        "text": "through a glass window",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "d320c8df-fd51-56e6-b577-e01a688fe6fc",
+        "text": "film",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "5a4417f7-418a-55d6-bba2-981d57395a78",
+        "text": "1922",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "b19433ae-558c-5aaf-95ac-6231f2a4be0e",
+        "text": "date",
+        "type": "EntityType"
+      },
+      {
+        "id": 7,
+        "original_id": "874a51da-34ea-5037-be47-d87785d43c37",
+        "text": "united states",
+        "type": "Entity"
+      },
+      {
+        "id": 8,
+        "original_id": "5f394058-b2a0-5ba8-8466-ba2a18cfcf4e",
+        "text": "place",
+        "type": "EntityType"
+      },
+      {
+        "id": 9,
+        "original_id": "1b0af9ea-193f-52d1-ad33-d8b049c5d2c0",
+        "text": "drama film",
+        "type": "Entity"
+      },
+      {
+        "id": 10,
+        "original_id": "d2a381fa-3658-5ca6-ada9-2109cfc9331d",
+        "text": "concept",
+        "type": "EntityType"
+      },
+      {
+        "id": 11,
+        "original_id": "10bf2c05-fa0b-5a1c-b551-aac11b01e3a5",
+        "text": "silent film",
+        "type": "Entity"
+      },
+      {
+        "id": 12,
+        "original_id": "a05714b7-522d-5504-8d2a-dcb806e8619f",
+        "text": "maurice campbell",
+        "type": "Entity"
+      },
+      {
+        "id": 13,
+        "original_id": "99a82eec-bb35-5bb5-9ed2-e73fc7a756de",
+        "text": "person",
+        "type": "EntityType"
+      },
+      {
+        "id": 14,
+        "original_id": "7bafb36a-27f5-58f4-81a0-47b96fa68a77",
+        "text": "olga printzlau",
+        "type": "Entity"
+      },
+      {
+        "id": 15,
+        "original_id": "05794e84-96d7-57cb-aedc-f6b66108cb8a",
+        "text": "paramount pictures",
+        "type": "Entity"
+      },
+      {
+        "id": 16,
+        "original_id": "388f60fb-220d-55e8-ae9c-3ac93cead308",
+        "text": "organization",
+        "type": "EntityType"
+      },
+      {
+        "id": 17,
+        "original_id": "86f21361-7cfa-54ac-9a7f-bb27327ef1d8",
+        "text": "paramount pictures corporation",
+        "type": "Entity"
+      },
+      {
+        "id": 18,
+        "original_id": "a2ed81c7-dfa8-5eef-af30-04d73a36efcb",
+        "text": "hollywood, california",
+        "type": "Entity"
+      },
+      {
+        "id": 19,
+        "original_id": "afb4335d-5618-5925-8959-9cfcca568f0d",
+        "text": "viacom",
+        "type": "Entity"
+      },
+      {
+        "id": 20,
+        "original_id": "47298c7b-06d6-557a-9b42-14bc432a9f43",
+        "text": "1994",
+        "type": "Entity"
+      },
+      {
+        "id": 21,
+        "original_id": "cdceee2f-a990-5fd9-ae4e-6e5d91860743",
+        "text": "i loved a soldier",
+        "type": "Entity"
+      },
+      {
+        "id": 22,
+        "original_id": "04836f77-be64-5818-9e0b-bc697b8b1279",
+        "text": "invitation to happiness",
+        "type": "Entity"
+      },
+      {
+        "id": 23,
+        "original_id": "0ee0e31c-cb08-5100-85ec-f5ceb8edcf6f",
+        "text": "1936",
+        "type": "Entity"
+      },
+      {
+        "id": 24,
+        "original_id": "3cc688a2-57ae-58fb-b73a-3bdce6221afa",
+        "text": "romantic-comedy-drama film",
+        "type": "Entity"
+      },
+      {
+        "id": 25,
+        "original_id": "48f1cfe9-428a-55c2-934b-4fdfc296515e",
+        "text": "henry hathaway",
+        "type": "Entity"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 21,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 22,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "released_in"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 20,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 23,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 7,
+        "type": "has_country_of_origin"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      },
+      {
+        "source": 17,
+        "target": 7,
+        "type": "located_in_country"
+      },
+      {
+        "source": 21,
+        "target": 7,
+        "type": "has_country_of_origin"
+      },
+      {
+        "source": 7,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 18,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 9,
+        "type": "has_genre"
+      },
+      {
+        "source": 1,
+        "target": 9,
+        "type": "contains"
+      },
+      {
+        "source": 9,
+        "target": 10,
+        "type": "is_a"
+      },
+      {
+        "source": 11,
+        "target": 10,
+        "type": "is_a"
+      },
+      {
+        "source": 24,
+        "target": 10,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 11,
+        "type": "has_form"
+      },
+      {
+        "source": 1,
+        "target": 11,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 12,
+        "type": "directed_by"
+      },
+      {
+        "source": 1,
+        "target": 12,
+        "type": "contains"
+      },
+      {
+        "source": 12,
+        "target": 13,
+        "type": "is_a"
+      },
+      {
+        "source": 14,
+        "target": 13,
+        "type": "is_a"
+      },
+      {
+        "source": 25,
+        "target": 13,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 14,
+        "type": "written_by"
+      },
+      {
+        "source": 1,
+        "target": 14,
+        "type": "contains"
+      },
+      {
+        "source": 1,
+        "target": 15,
+        "type": "contains"
+      },
+      {
+        "source": 17,
+        "target": 15,
+        "type": "also_known_as"
+      },
+      {
+        "source": 21,
+        "target": 15,
+        "type": "produced_by"
+      },
+      {
+        "source": 15,
+        "target": 16,
+        "type": "is_a"
+      },
+      {
+        "source": 17,
+        "target": 16,
+        "type": "is_a"
+      },
+      {
+        "source": 19,
+        "target": 16,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 17,
+        "type": "contains"
+      },
+      {
+        "source": 17,
+        "target": 18,
+        "type": "based_in"
+      },
+      {
+        "source": 1,
+        "target": 18,
+        "type": "contains"
+      },
+      {
+        "source": 17,
+        "target": 19,
+        "type": "subsidiary_of"
+      },
+      {
+        "source": 1,
+        "target": 19,
+        "type": "contains"
+      },
+      {
+        "source": 17,
+        "target": 20,
+        "type": "became_subsidiary_in"
+      },
+      {
+        "source": 1,
+        "target": 20,
+        "type": "contains"
+      },
+      {
+        "source": 1,
+        "target": 21,
+        "type": "contains"
+      },
+      {
+        "source": 21,
+        "target": 22,
+        "type": "also_known_as"
+      },
+      {
+        "source": 1,
+        "target": 22,
+        "type": "contains"
+      },
+      {
+        "source": 21,
+        "target": 23,
+        "type": "released_in"
+      },
+      {
+        "source": 1,
+        "target": 23,
+        "type": "contains"
+      },
+      {
+        "source": 21,
+        "target": 24,
+        "type": "has_genre"
+      },
+      {
+        "source": 1,
+        "target": 24,
+        "type": "contains"
+      },
+      {
+        "source": 21,
+        "target": 25,
+        "type": "directed_by"
+      },
+      {
+        "source": 1,
+        "target": 25,
+        "type": "contains"
+      }
+    ]
+  }
+}

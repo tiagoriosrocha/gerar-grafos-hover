@@ -1,0 +1,633 @@
+{
+  "dataset": "hover",
+  "id": "22a842bc-ea05-435c-8c9f-11a61c34faa2",
+  "split": "dev",
+  "claim": "A genus has more species than the  genus containing the Fouquieria formosa species. This genus formerly included the species Dittrichia.",
+  "evidencia": "Page: Inula. Sentence: Inula is a large genus of about 90 species of flowering plants in the family Asteraceae, native to Europe, Asia and Africa.\nPage: Fouquieria. Sentence: Fouquieria is a genus of 11 species of desert plants, the sole genus in the family Fouquieriaceae.\nPage: Dittrichia. Sentence: Its species were formerly included in the genus Inula.\nPage: Fouquieria formosa. Sentence: Fouquieria formosa is a species of \"Fouquieria\" in the ocotillo family, native to central and southern Mexico (Chiapas, Oaxaca, Guerrero, Puebla, Morelos, Michoacán, México State, Distrito Federal, Jalisco).",
+  "evidence_text": "Page: Inula. Sentence: Inula is a large genus of about 90 species of flowering plants in the family Asteraceae, native to Europe, Asia and Africa.\nPage: Fouquieria. Sentence: Fouquieria is a genus of 11 species of desert plants, the sole genus in the family Fouquieriaceae.\nPage: Dittrichia. Sentence: Its species were formerly included in the genus Inula.\nPage: Fouquieria formosa. Sentence: Fouquieria formosa is a species of \"Fouquieria\" in the ocotillo family, native to central and southern Mexico (Chiapas, Oaxaca, Guerrero, Puebla, Morelos, Michoacán, México State, Distrito Federal, Jalisco).",
+  "label": "SUPPORTED",
+  "num_hops": 4,
+  "hover_metadata": {
+    "supporting_facts": [
+      [
+        "Inula",
+        0
+      ],
+      [
+        "Fouquieria",
+        0
+      ],
+      [
+        "Dittrichia",
+        1
+      ],
+      [
+        "Fouquieria formosa",
+        0
+      ]
+    ],
+    "num_hops": 4,
+    "evidence_annotation_id": [
+      0
+    ],
+    "evidence_id": [
+      "Inula::sentence::0",
+      "Fouquieria::sentence::0",
+      "Dittrichia::sentence::1",
+      "Fouquieria formosa::sentence::0"
+    ],
+    "evidence_wiki_url": [
+      "https://en.wikipedia.org/wiki/Inula",
+      "https://en.wikipedia.org/wiki/Fouquieria",
+      "https://en.wikipedia.org/wiki/Dittrichia",
+      "https://en.wikipedia.org/wiki/Fouquieria_formosa"
+    ],
+    "evidence_sentence_id": [
+      "Inula::sentence::0",
+      "Fouquieria::sentence::0",
+      "Dittrichia::sentence::1",
+      "Fouquieria formosa::sentence::0"
+    ]
+  },
+  "grafo_claim": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "846fe4b0-4c9a-5a6d-bda0-efafb6d2a0fc",
+        "text": "This chunk is about:\n- Concepts: genus, species count\n- Taxa: Fouquieria, Fouquieria formosa, Dittrichia\n\nFacts:\n- Fouquieria formosa belongs to the genus Fouquieria.\n- One genus has more species than the genus Fouquieria.\n- The genus with more species formerly included the species Dittrichia.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "f869406c-4556-5fab-87fd-f092276023f8",
+        "text": "A genus has more species than the  genus containing the Fouquieria formosa species. This genus formerly included the species Dittrichia.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "56946873-827d-522e-bea3-f6ee92504ced",
+        "text": "text_bdfda4c7e09516c10cd15da06c042c3d",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "e57b60ee-c124-5f82-ab6a-8b4c2427fdb3",
+        "text": "fouquieria",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "58ce8914-8a9e-5302-9b2d-0d97006e12d3",
+        "text": "genus",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "8577d08b-4ba1-5d7e-8c69-00fc6ddd58f1",
+        "text": "fouquieria formosa",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "f23a15ce-c0de-5c57-9205-8c9d01026b05",
+        "text": "species",
+        "type": "EntityType"
+      },
+      {
+        "id": 7,
+        "original_id": "38ca0c2a-9f09-57bc-b016-272861aa642c",
+        "text": "dittrichia",
+        "type": "Entity"
+      },
+      {
+        "id": 8,
+        "original_id": "7c316df6-6490-5df0-8bfb-104ab73c3867",
+        "text": "unknown genus",
+        "type": "Entity"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 3,
+        "type": "is_in_genus"
+      },
+      {
+        "source": 8,
+        "target": 3,
+        "type": "has_more_species_than"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 8,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 7,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      },
+      {
+        "source": 8,
+        "target": 7,
+        "type": "formerly_included"
+      },
+      {
+        "source": 1,
+        "target": 8,
+        "type": "contains"
+      }
+    ]
+  },
+  "grafo_evidencia": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "29e5a976-44d6-5b1d-a6c9-b0d122998db6",
+        "text": "This chunk is about:\n- Plants: Inula, Fouquieria, Dittrichia, Fouquieria formosa\n- Taxonomy: Asteraceae, Fouquieriaceae, genera, species\n- Places: Europe, Asia, Africa, central and southern Mexico\n\nFacts:\n- Inula is a large genus of about 90 species of flowering plants in the family Asteraceae that is native to Europe, Asia, and Africa.\n- Fouquieria is a genus of 11 species of desert plants and is the sole genus in the family Fouquieriaceae.\n- Dittrichia species were formerly included in the genus Inula.\n- Fouquieria formosa is a species of Fouquieria in the ocotillo family that is native to central and southern Mexico, including Chiapas, Oaxaca, Guerrero, Puebla, Morelos, Michoacán, México State, Distrito Federal, and Jalisco.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "33741617-df35-5fb0-be53-1a254ed84a5d",
+        "text": "Page: Inula. Sentence: Inula is a large genus of about 90 species of flowering plants in the family Asteraceae, native to Europe, Asia and Africa.\nPage: Fouquieria. Sentence: Fouquieria is a genus of 11 species of desert plants, the sole genus in the family Fouquieriaceae.\nPage: Dittrichia. Sentence: Its species were formerly included in the genus Inula.\nPage: Fouquieria formosa. Sentence: Fouquieria formosa is a species of \"Fouquieria\" in the ocotillo family, native to central and southern Mexico (Chiapas, Oaxaca, Guerrero, Puebla, Morelos, Michoacán, México State, Distrito Federal, Jalisco).",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "d022c8ad-7992-51b9-86b8-281e79a9f3fb",
+        "text": "text_32d8f7c4cac431ac57c6b0e9289bbca1",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "5fc4fef6-4ce6-5806-91a0-112cee63685b",
+        "text": "inula",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "f7b4540f-d32c-51b3-8970-f282fffab519",
+        "text": "taxon",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "4fe42319-5e66-5637-90ae-d1f515fccb4b",
+        "text": "asteraceae",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "d62d98fd-7636-5918-880e-390a00283ca8",
+        "text": "europe",
+        "type": "Entity"
+      },
+      {
+        "id": 7,
+        "original_id": "5f394058-b2a0-5ba8-8466-ba2a18cfcf4e",
+        "text": "place",
+        "type": "EntityType"
+      },
+      {
+        "id": 8,
+        "original_id": "21d096f4-373a-585b-85d5-3b4b9dfc4785",
+        "text": "asia",
+        "type": "Entity"
+      },
+      {
+        "id": 9,
+        "original_id": "7d1e549d-73ae-5049-8eac-cda15179fc48",
+        "text": "africa",
+        "type": "Entity"
+      },
+      {
+        "id": 10,
+        "original_id": "e57b60ee-c124-5f82-ab6a-8b4c2427fdb3",
+        "text": "fouquieria",
+        "type": "Entity"
+      },
+      {
+        "id": 11,
+        "original_id": "36939cbf-39b4-5933-af37-d67bb3b3b58e",
+        "text": "fouquieriaceae",
+        "type": "Entity"
+      },
+      {
+        "id": 12,
+        "original_id": "38ca0c2a-9f09-57bc-b016-272861aa642c",
+        "text": "dittrichia",
+        "type": "Entity"
+      },
+      {
+        "id": 13,
+        "original_id": "8577d08b-4ba1-5d7e-8c69-00fc6ddd58f1",
+        "text": "fouquieria formosa",
+        "type": "Entity"
+      },
+      {
+        "id": 14,
+        "original_id": "168bf925-9ed6-521b-b835-2a384d6f53a1",
+        "text": "ocotillo family",
+        "type": "Entity"
+      },
+      {
+        "id": 15,
+        "original_id": "cf7d42b5-76f2-568d-9972-0d0264af1b93",
+        "text": "mexico",
+        "type": "Entity"
+      },
+      {
+        "id": 16,
+        "original_id": "4f3a035f-5c36-53cd-9af6-90ceea8b27c8",
+        "text": "chiapas",
+        "type": "Entity"
+      },
+      {
+        "id": 17,
+        "original_id": "85b8773f-a8d6-5339-80cf-7eaa270c0891",
+        "text": "oaxaca",
+        "type": "Entity"
+      },
+      {
+        "id": 18,
+        "original_id": "246bb889-f81b-5ede-85c4-6f895660c211",
+        "text": "guerrero",
+        "type": "Entity"
+      },
+      {
+        "id": 19,
+        "original_id": "cc8e4422-1d8e-5b26-85d2-42e5ca4796db",
+        "text": "puebla",
+        "type": "Entity"
+      },
+      {
+        "id": 20,
+        "original_id": "3ce25456-0ba5-57ff-8b3c-aac877c4b279",
+        "text": "morelos",
+        "type": "Entity"
+      },
+      {
+        "id": 21,
+        "original_id": "0915a217-5d2c-5e79-9855-6ca00b04425c",
+        "text": "michoacán",
+        "type": "Entity"
+      },
+      {
+        "id": 22,
+        "original_id": "7292402d-c0c8-53bc-ab40-eb66fab24684",
+        "text": "méxico state",
+        "type": "Entity"
+      },
+      {
+        "id": 23,
+        "original_id": "12abb304-c844-56cc-81ab-5b622e86b666",
+        "text": "distrito federal",
+        "type": "Entity"
+      },
+      {
+        "id": 24,
+        "original_id": "1b3d774c-0812-543e-b66f-3ab1a44d75f5",
+        "text": "jalisco",
+        "type": "Entity"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 12,
+        "target": 3,
+        "type": "species_formerly_included_in"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 5,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 10,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 11,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 12,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 13,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 14,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "in_family"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 6,
+        "type": "native_to"
+      },
+      {
+        "source": 1,
+        "target": 6,
+        "type": "contains"
+      },
+      {
+        "source": 6,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 8,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 9,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 15,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 16,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 17,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 18,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 19,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 20,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 21,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 22,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 23,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 24,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 8,
+        "type": "native_to"
+      },
+      {
+        "source": 1,
+        "target": 8,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 9,
+        "type": "native_to"
+      },
+      {
+        "source": 1,
+        "target": 9,
+        "type": "contains"
+      },
+      {
+        "source": 1,
+        "target": 10,
+        "type": "contains"
+      },
+      {
+        "source": 13,
+        "target": 10,
+        "type": "in_genus"
+      },
+      {
+        "source": 10,
+        "target": 11,
+        "type": "in_family"
+      },
+      {
+        "source": 1,
+        "target": 11,
+        "type": "contains"
+      },
+      {
+        "source": 1,
+        "target": 12,
+        "type": "contains"
+      },
+      {
+        "source": 1,
+        "target": 13,
+        "type": "contains"
+      },
+      {
+        "source": 13,
+        "target": 14,
+        "type": "in_family"
+      },
+      {
+        "source": 1,
+        "target": 14,
+        "type": "contains"
+      },
+      {
+        "source": 13,
+        "target": 15,
+        "type": "native_to"
+      },
+      {
+        "source": 1,
+        "target": 15,
+        "type": "contains"
+      },
+      {
+        "source": 13,
+        "target": 16,
+        "type": "native_to"
+      },
+      {
+        "source": 1,
+        "target": 16,
+        "type": "contains"
+      },
+      {
+        "source": 13,
+        "target": 17,
+        "type": "native_to"
+      },
+      {
+        "source": 1,
+        "target": 17,
+        "type": "contains"
+      },
+      {
+        "source": 13,
+        "target": 18,
+        "type": "native_to"
+      },
+      {
+        "source": 1,
+        "target": 18,
+        "type": "contains"
+      },
+      {
+        "source": 13,
+        "target": 19,
+        "type": "native_to"
+      },
+      {
+        "source": 1,
+        "target": 19,
+        "type": "contains"
+      },
+      {
+        "source": 13,
+        "target": 20,
+        "type": "native_to"
+      },
+      {
+        "source": 1,
+        "target": 20,
+        "type": "contains"
+      },
+      {
+        "source": 13,
+        "target": 21,
+        "type": "native_to"
+      },
+      {
+        "source": 1,
+        "target": 21,
+        "type": "contains"
+      },
+      {
+        "source": 13,
+        "target": 22,
+        "type": "native_to"
+      },
+      {
+        "source": 1,
+        "target": 22,
+        "type": "contains"
+      },
+      {
+        "source": 13,
+        "target": 23,
+        "type": "native_to"
+      },
+      {
+        "source": 1,
+        "target": 23,
+        "type": "contains"
+      },
+      {
+        "source": 13,
+        "target": 24,
+        "type": "native_to"
+      },
+      {
+        "source": 1,
+        "target": 24,
+        "type": "contains"
+      }
+    ]
+  }
+}

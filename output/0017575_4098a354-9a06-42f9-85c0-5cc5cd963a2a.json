@@ -1,0 +1,677 @@
+{
+  "dataset": "hover",
+  "id": "4098a354-9a06-42f9-85c0-5cc5cd963a2a",
+  "split": "train",
+  "claim": "The building that Lyceum Theatre (Park Avenue South) was torn down for was planned by the firm of Napoleon LeBrun & Sons and not the 15 Hudson Yards building.",
+  "evidencia": "Page: Metropolitan Life Insurance Company Tower. Sentence: The Metropolitan Life Insurance Company Tower, colloquially known as the Met Life Tower, is a landmark skyscraper located on Madison Avenue near the intersection with East 23rd Street, across from Madison Square Park in Manhattan, New York City.\nPage: Metropolitan Life Insurance Company Tower. Sentence: Designed by the architectural firm of Napoleon LeBrun & Sons and built by the Hedden Construction Company, the tower is modeled after the Campanile in Venice, Italy.\nPage: 15 Hudson Yards. Sentence: Located in Chelsea near Hell's Kitchen Penn Station area, the building is a part of the Hudson Yards project, a plan to redevelop the Metropolitan Transportation Authority's West Side Yards.\nPage: Lyceum Theatre (Park Avenue South). Sentence: It was built in 1885 and operated until 1902, when it was torn down to make way for the Metropolitan Life Insurance Company Tower.",
+  "evidence_text": "Page: Metropolitan Life Insurance Company Tower. Sentence: The Metropolitan Life Insurance Company Tower, colloquially known as the Met Life Tower, is a landmark skyscraper located on Madison Avenue near the intersection with East 23rd Street, across from Madison Square Park in Manhattan, New York City.\nPage: Metropolitan Life Insurance Company Tower. Sentence: Designed by the architectural firm of Napoleon LeBrun & Sons and built by the Hedden Construction Company, the tower is modeled after the Campanile in Venice, Italy.\nPage: 15 Hudson Yards. Sentence: Located in Chelsea near Hell's Kitchen Penn Station area, the building is a part of the Hudson Yards project, a plan to redevelop the Metropolitan Transportation Authority's West Side Yards.\nPage: Lyceum Theatre (Park Avenue South). Sentence: It was built in 1885 and operated until 1902, when it was torn down to make way for the Metropolitan Life Insurance Company Tower.",
+  "label": "SUPPORTED",
+  "num_hops": 3,
+  "hover_metadata": {
+    "supporting_facts": [
+      [
+        "Metropolitan Life Insurance Company Tower",
+        0
+      ],
+      [
+        "Metropolitan Life Insurance Company Tower",
+        1
+      ],
+      [
+        "15 Hudson Yards",
+        1
+      ],
+      [
+        "Lyceum Theatre (Park Avenue South)",
+        1
+      ]
+    ],
+    "num_hops": 3,
+    "evidence_annotation_id": [
+      0
+    ],
+    "evidence_id": [
+      "Metropolitan Life Insurance Company Tower::sentence::0",
+      "Metropolitan Life Insurance Company Tower::sentence::1",
+      "15 Hudson Yards::sentence::1",
+      "Lyceum Theatre (Park Avenue South)::sentence::1"
+    ],
+    "evidence_wiki_url": [
+      "https://en.wikipedia.org/wiki/Metropolitan_Life_Insurance_Company_Tower",
+      "https://en.wikipedia.org/wiki/15_Hudson_Yards",
+      "https://en.wikipedia.org/wiki/Lyceum_Theatre_%28Park_Avenue_South%29"
+    ],
+    "evidence_sentence_id": [
+      "Metropolitan Life Insurance Company Tower::sentence::0",
+      "Metropolitan Life Insurance Company Tower::sentence::1",
+      "15 Hudson Yards::sentence::1",
+      "Lyceum Theatre (Park Avenue South)::sentence::1"
+    ]
+  },
+  "grafo_claim": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "81e5e9ea-a825-5ba2-9600-3fbfab2b1903",
+        "text": "This chunk is about:\n- Places: Lyceum Theatre (Park Avenue South), Park Avenue South\n- Companies: Napoleon LeBrun & Sons\n- Topics: demolition, replacement building attribution\n\nFacts:\n- Lyceum Theatre on Park Avenue South was torn down for a building planned by Napoleon LeBrun & Sons.\n- The replacement building for Lyceum Theatre on Park Avenue South was not 15 Hudson Yards.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "3235f2a6-d917-583f-b43b-480eb37cf26b",
+        "text": "The building that Lyceum Theatre (Park Avenue South) was torn down for was planned by the firm of Napoleon LeBrun & Sons and not the 15 Hudson Yards building.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "5e869d23-c934-5113-b4eb-b970078717e8",
+        "text": "text_db53256ba6358f2718335b2a6efd90a4",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "c910f5d1-7b38-5365-9be1-458382411322",
+        "text": "lyceum theatre (park avenue south)",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "b011d686-ca3a-5398-b03c-f44518808ad9",
+        "text": "building",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "2d53c7ad-1cb0-554b-b4a6-7005bdfb2866",
+        "text": "building torn down for lyceum theatre (park avenue south)",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "c6b03b72-cdd1-522d-ac56-e31663ccfb14",
+        "text": "napoleon lebrun & sons",
+        "type": "Entity"
+      },
+      {
+        "id": 7,
+        "original_id": "388f60fb-220d-55e8-ae9c-3ac93cead308",
+        "text": "organization",
+        "type": "EntityType"
+      },
+      {
+        "id": 8,
+        "original_id": "9bbd552c-07c2-56bd-a44e-af2510237e68",
+        "text": "15 hudson yards",
+        "type": "Entity"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 5,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 8,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "was_torn_down_for"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "planned_by"
+      },
+      {
+        "source": 1,
+        "target": 6,
+        "type": "contains"
+      },
+      {
+        "source": 6,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 5,
+        "target": 8,
+        "type": "is_not"
+      },
+      {
+        "source": 1,
+        "target": 8,
+        "type": "contains"
+      }
+    ]
+  },
+  "grafo_evidencia": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "b92eafdc-5782-5ae3-b709-18b4e838771f",
+        "text": "This chunk is about:\n- Places: Manhattan, New York City, Madison Avenue, East 23rd Street, Madison Square Park, Chelsea, Hell's Kitchen, Penn Station area, West Side Yards, Venice\n- Buildings: Metropolitan Life Insurance Company Tower, Met Life Tower, 15 Hudson Yards, Lyceum Theatre\n- Companies: Metropolitan Life Insurance Company, Hedden Construction Company\n- Organizations: Metropolitan Transportation Authority\n- Projects: Hudson Yards project\n- People: Napoleon LeBrun & Sons\n- Concepts: landmark skyscrapers, architectural modeling, urban redevelopment\n\nFacts:\n- The Lyceum Theatre on Park Avenue South was built in 1885.\n- The Lyceum Theatre operated until 1902, when it was torn down to make way for the Metropolitan Life Insurance Company Tower.\n- The Metropolitan Life Insurance Company Tower is a landmark skyscraper on Madison Avenue near East 23rd Street, across from Madison Square Park in Manhattan, New York City.\n- Napoleon LeBrun & Sons designed the Metropolitan Life Insurance Company Tower, and Hedden Construction Company built it.\n- The Metropolitan Life Insurance Company Tower was modeled after the Campanile in Venice, Italy.\n- 15 Hudson Yards is located in Chelsea near the Hell's Kitchen Penn Station area.\n- 15 Hudson Yards is part of the Hudson Yards project to redevelop the Metropolitan Transportation Authority's West Side Yards.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "3fe9d370-bcfb-5a0a-8189-316332e178fb",
+        "text": "Page: Metropolitan Life Insurance Company Tower. Sentence: The Metropolitan Life Insurance Company Tower, colloquially known as the Met Life Tower, is a landmark skyscraper located on Madison Avenue near the intersection with East 23rd Street, across from Madison Square Park in Manhattan, New York City.\nPage: Metropolitan Life Insurance Company Tower. Sentence: Designed by the architectural firm of Napoleon LeBrun & Sons and built by the Hedden Construction Company, the tower is modeled after the Campanile in Venice, Italy.\nPage: 15 Hudson Yards. Sentence: Located in Chelsea near Hell's Kitchen Penn Station area, the building is a part of the Hudson Yards project, a plan to redevelop the Metropolitan Transportation Authority's West Side Yards.\nPage: Lyceum Theatre (Park Avenue South). Sentence: It was built in 1885 and operated until 1902, when it was torn down to make way for the Metropolitan Life Insurance Company Tower.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "a336de75-b8b1-5591-936d-c47f9a68edfe",
+        "text": "text_d7f8e62d0af3e0a53f77179fb1d8543f",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "d36a5cad-610d-5dc3-9759-48e8e0b019cc",
+        "text": "metropolitan life insurance company tower",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "b011d686-ca3a-5398-b03c-f44518808ad9",
+        "text": "building",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "875b1664-149e-5f60-aa50-0eb2ece0e618",
+        "text": "madison avenue",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "5023586d-88a2-53f9-ad15-7e2ebd75eb4c",
+        "text": "location",
+        "type": "EntityType"
+      },
+      {
+        "id": 7,
+        "original_id": "fb833905-65b3-5041-b7c0-cf1a4cc362af",
+        "text": "east 23rd street",
+        "type": "Entity"
+      },
+      {
+        "id": 8,
+        "original_id": "28a1487a-0df2-5806-8b1d-a2c3746172a0",
+        "text": "madison square park",
+        "type": "Entity"
+      },
+      {
+        "id": 9,
+        "original_id": "5f394058-b2a0-5ba8-8466-ba2a18cfcf4e",
+        "text": "place",
+        "type": "EntityType"
+      },
+      {
+        "id": 10,
+        "original_id": "c65245b2-435b-5786-be1c-050c01adb0a5",
+        "text": "manhattan",
+        "type": "Entity"
+      },
+      {
+        "id": 11,
+        "original_id": "62912d92-4218-52f7-a1a6-776a04889442",
+        "text": "new york city",
+        "type": "Entity"
+      },
+      {
+        "id": 12,
+        "original_id": "4c368df4-bb9a-534a-b775-81802960ca09",
+        "text": "campanile",
+        "type": "Entity"
+      },
+      {
+        "id": 13,
+        "original_id": "25eab197-f492-5a8d-b962-120632d68d14",
+        "text": "venice",
+        "type": "Entity"
+      },
+      {
+        "id": 14,
+        "original_id": "72368fd8-1be4-54f1-a9ee-3368fdbd9d40",
+        "text": "italy",
+        "type": "Entity"
+      },
+      {
+        "id": 15,
+        "original_id": "77fe3671-5d0a-5c33-93bf-107b45adde14",
+        "text": "met life tower",
+        "type": "Entity"
+      },
+      {
+        "id": 16,
+        "original_id": "c6b03b72-cdd1-522d-ac56-e31663ccfb14",
+        "text": "napoleon lebrun & sons",
+        "type": "Entity"
+      },
+      {
+        "id": 17,
+        "original_id": "388f60fb-220d-55e8-ae9c-3ac93cead308",
+        "text": "organization",
+        "type": "EntityType"
+      },
+      {
+        "id": 18,
+        "original_id": "2a4df1ac-38ba-5477-9dda-fad4f1154e27",
+        "text": "hedden construction company",
+        "type": "Entity"
+      },
+      {
+        "id": 19,
+        "original_id": "9bbd552c-07c2-56bd-a44e-af2510237e68",
+        "text": "15 hudson yards",
+        "type": "Entity"
+      },
+      {
+        "id": 20,
+        "original_id": "3420aede-e5ee-5bb8-bde9-639ea3cba567",
+        "text": "chelsea",
+        "type": "Entity"
+      },
+      {
+        "id": 21,
+        "original_id": "6be26d3f-8082-5490-abb3-b23edb1ec606",
+        "text": "hells kitchen penn station area",
+        "type": "Entity"
+      },
+      {
+        "id": 22,
+        "original_id": "4c83a658-98d8-5ae3-ac4a-123d43639826",
+        "text": "hudson yards project",
+        "type": "Entity"
+      },
+      {
+        "id": 23,
+        "original_id": "ed098e70-7598-5ee9-a836-d175d95aae72",
+        "text": "project",
+        "type": "EntityType"
+      },
+      {
+        "id": 24,
+        "original_id": "c170276f-9717-53ad-aba2-192a88b858d6",
+        "text": "west side yards",
+        "type": "Entity"
+      },
+      {
+        "id": 25,
+        "original_id": "53d102e5-ac15-5c51-b656-dceea2d5306b",
+        "text": "metropolitan transportation authority",
+        "type": "Entity"
+      },
+      {
+        "id": 26,
+        "original_id": "c910f5d1-7b38-5365-9be1-458382411322",
+        "text": "lyceum theatre (park avenue south)",
+        "type": "Entity"
+      },
+      {
+        "id": 27,
+        "original_id": "e3ae9e1e-d607-5fd4-96ce-84d0224a7724",
+        "text": "1885",
+        "type": "Entity"
+      },
+      {
+        "id": 28,
+        "original_id": "b19433ae-558c-5aaf-95ac-6231f2a4be0e",
+        "text": "date",
+        "type": "EntityType"
+      },
+      {
+        "id": 29,
+        "original_id": "64c29bee-5313-53aa-a651-01a5e31c6af0",
+        "text": "1902",
+        "type": "Entity"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 15,
+        "target": 3,
+        "type": "is_colloquial_name_for"
+      },
+      {
+        "source": 16,
+        "target": 3,
+        "type": "designed"
+      },
+      {
+        "source": 18,
+        "target": 3,
+        "type": "built"
+      },
+      {
+        "source": 26,
+        "target": 3,
+        "type": "torn_down_to_make_way_for"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 12,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 15,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 19,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 26,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "located_on"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 7,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 10,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 11,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 13,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 14,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 20,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 21,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 24,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 7,
+        "type": "near_intersection_with"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 8,
+        "type": "across_from"
+      },
+      {
+        "source": 1,
+        "target": 8,
+        "type": "contains"
+      },
+      {
+        "source": 8,
+        "target": 9,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 10,
+        "type": "located_in"
+      },
+      {
+        "source": 1,
+        "target": 10,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 11,
+        "type": "located_in"
+      },
+      {
+        "source": 1,
+        "target": 11,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 12,
+        "type": "modeled_after"
+      },
+      {
+        "source": 1,
+        "target": 12,
+        "type": "contains"
+      },
+      {
+        "source": 12,
+        "target": 13,
+        "type": "located_in"
+      },
+      {
+        "source": 1,
+        "target": 13,
+        "type": "contains"
+      },
+      {
+        "source": 13,
+        "target": 14,
+        "type": "located_in"
+      },
+      {
+        "source": 1,
+        "target": 14,
+        "type": "contains"
+      },
+      {
+        "source": 1,
+        "target": 15,
+        "type": "contains"
+      },
+      {
+        "source": 1,
+        "target": 16,
+        "type": "contains"
+      },
+      {
+        "source": 16,
+        "target": 17,
+        "type": "is_a"
+      },
+      {
+        "source": 18,
+        "target": 17,
+        "type": "is_a"
+      },
+      {
+        "source": 25,
+        "target": 17,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 18,
+        "type": "contains"
+      },
+      {
+        "source": 1,
+        "target": 19,
+        "type": "contains"
+      },
+      {
+        "source": 19,
+        "target": 20,
+        "type": "located_in"
+      },
+      {
+        "source": 1,
+        "target": 20,
+        "type": "contains"
+      },
+      {
+        "source": 19,
+        "target": 21,
+        "type": "near"
+      },
+      {
+        "source": 1,
+        "target": 21,
+        "type": "contains"
+      },
+      {
+        "source": 19,
+        "target": 22,
+        "type": "part_of"
+      },
+      {
+        "source": 1,
+        "target": 22,
+        "type": "contains"
+      },
+      {
+        "source": 22,
+        "target": 23,
+        "type": "is_a"
+      },
+      {
+        "source": 22,
+        "target": 24,
+        "type": "redevelops"
+      },
+      {
+        "source": 1,
+        "target": 24,
+        "type": "contains"
+      },
+      {
+        "source": 24,
+        "target": 25,
+        "type": "owned_by"
+      },
+      {
+        "source": 1,
+        "target": 25,
+        "type": "contains"
+      },
+      {
+        "source": 1,
+        "target": 26,
+        "type": "contains"
+      },
+      {
+        "source": 26,
+        "target": 27,
+        "type": "built_in"
+      },
+      {
+        "source": 1,
+        "target": 27,
+        "type": "contains"
+      },
+      {
+        "source": 27,
+        "target": 28,
+        "type": "is_a"
+      },
+      {
+        "source": 29,
+        "target": 28,
+        "type": "is_a"
+      },
+      {
+        "source": 26,
+        "target": 29,
+        "type": "operated_until"
+      },
+      {
+        "source": 1,
+        "target": 29,
+        "type": "contains"
+      }
+    ]
+  }
+}

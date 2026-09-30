@@ -1,0 +1,676 @@
+{
+  "dataset": "hover",
+  "id": "68e992db-a59d-4d8d-ae39-118d86643a48",
+  "split": "train",
+  "claim": "The 247 Cherry building is adjacent to the building that is higher than Time Warner Center.",
+  "evidencia": "Page: One Manhattan Square. Sentence: One Manhattan Square (also known as 227 Cherry Street or 250 South Street) is a residential skyscraper project being developed by Extell Development Company in Two Bridges, Manhattan, New York City.\nPage: One Manhattan Square. Sentence: The building will stand 80 stories or 850 feet (259 m) above the street, and will possibly have a new supermarket in the tower's base.\nPage: Time Warner Center. Sentence: Developed by The Related Companies and AREA Property Partners (formerly known as Apollo Real Estate Advisors), its design by David Childs and Mustafa Kemal Abadan of Skidmore, Owings & Merrill, consists of two 750 ft twin towers bridged by a multi-story atrium containing upscale retail shops.\nPage: 247 Cherry. Sentence: The building will be adjacent One Manhattan Square.",
+  "evidence_text": "Page: One Manhattan Square. Sentence: One Manhattan Square (also known as 227 Cherry Street or 250 South Street) is a residential skyscraper project being developed by Extell Development Company in Two Bridges, Manhattan, New York City.\nPage: One Manhattan Square. Sentence: The building will stand 80 stories or 850 feet (259 m) above the street, and will possibly have a new supermarket in the tower's base.\nPage: Time Warner Center. Sentence: Developed by The Related Companies and AREA Property Partners (formerly known as Apollo Real Estate Advisors), its design by David Childs and Mustafa Kemal Abadan of Skidmore, Owings & Merrill, consists of two 750 ft twin towers bridged by a multi-story atrium containing upscale retail shops.\nPage: 247 Cherry. Sentence: The building will be adjacent One Manhattan Square.",
+  "label": "SUPPORTED",
+  "num_hops": 3,
+  "hover_metadata": {
+    "supporting_facts": [
+      [
+        "One Manhattan Square",
+        0
+      ],
+      [
+        "One Manhattan Square",
+        2
+      ],
+      [
+        "Time Warner Center",
+        1
+      ],
+      [
+        "247 Cherry",
+        3
+      ]
+    ],
+    "num_hops": 3,
+    "evidence_annotation_id": [
+      0
+    ],
+    "evidence_id": [
+      "One Manhattan Square::sentence::0",
+      "One Manhattan Square::sentence::2",
+      "Time Warner Center::sentence::1",
+      "247 Cherry::sentence::3"
+    ],
+    "evidence_wiki_url": [
+      "https://en.wikipedia.org/wiki/One_Manhattan_Square",
+      "https://en.wikipedia.org/wiki/Time_Warner_Center",
+      "https://en.wikipedia.org/wiki/247_Cherry"
+    ],
+    "evidence_sentence_id": [
+      "One Manhattan Square::sentence::0",
+      "One Manhattan Square::sentence::2",
+      "Time Warner Center::sentence::1",
+      "247 Cherry::sentence::3"
+    ]
+  },
+  "grafo_claim": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "fd131716-2fa7-5c4d-9cb5-5fa6d5c68c49",
+        "text": "This chunk is about:\n- Places: 247 Cherry building, Time Warner Center\n- Concepts: adjacency, relative building height\n\nFacts:\n- The 247 Cherry building is adjacent to a building.\n- The adjacent building is taller than Time Warner Center.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "7e96d697-12e5-50f8-afbe-c64bd96198a8",
+        "text": "The 247 Cherry building is adjacent to the building that is higher than Time Warner Center.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "b450d7c7-f495-57d0-a6e3-71b6f755ad95",
+        "text": "text_06310c6a3d6e759ae11f2f03c6469a40",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "644a1713-8aed-5efb-923f-1c892070aec2",
+        "text": "247 cherry building",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "b011d686-ca3a-5398-b03c-f44518808ad9",
+        "text": "building",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "b12d87e5-c9fe-5deb-8aeb-cc21da49c00e",
+        "text": "building higher than time warner center",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "e44ec5bd-ebd1-5639-8e04-5b662eaf0e3d",
+        "text": "time warner center",
+        "type": "Entity"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 5,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 6,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "adjacent_to"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "higher_than"
+      },
+      {
+        "source": 1,
+        "target": 6,
+        "type": "contains"
+      }
+    ]
+  },
+  "grafo_evidencia": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "32fdf824-7c9a-501c-8ed9-f8570268ffb8",
+        "text": "This chunk is about:\n- Projects: One Manhattan Square, Time Warner Center, 247 Cherry\n- Companies: Extell Development Company, The Related Companies, AREA Property Partners, Apollo Real Estate Advisors, Skidmore, Owings & Merrill\n- People: David Childs, Mustafa Kemal Abadan\n- Places: Two Bridges, Manhattan, New York City\n\nFacts:\n- One Manhattan Square, also known as 227 Cherry Street or 250 South Street, is a residential skyscraper project being developed by Extell Development Company in Two Bridges, Manhattan, New York City.\n- One Manhattan Square is planned to rise 80 stories and 850 feet (259 m) above the street and may include a new supermarket at its base.\n- Time Warner Center was developed by The Related Companies and AREA Property Partners, formerly known as Apollo Real Estate Advisors.\n- Time Warner Center was designed by David Childs and Mustafa Kemal Abadan of Skidmore, Owings & Merrill.\n- Time Warner Center consists of two 750-foot twin towers connected by a multi-story atrium containing upscale retail shops.\n- 247 Cherry will be adjacent to One Manhattan Square.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "59b21faa-3574-52ed-92f7-7a297b4cb0ca",
+        "text": "Page: One Manhattan Square. Sentence: One Manhattan Square (also known as 227 Cherry Street or 250 South Street) is a residential skyscraper project being developed by Extell Development Company in Two Bridges, Manhattan, New York City.\nPage: One Manhattan Square. Sentence: The building will stand 80 stories or 850 feet (259 m) above the street, and will possibly have a new supermarket in the tower's base.\nPage: Time Warner Center. Sentence: Developed by The Related Companies and AREA Property Partners (formerly known as Apollo Real Estate Advisors), its design by David Childs and Mustafa Kemal Abadan of Skidmore, Owings & Merrill, consists of two 750 ft twin towers bridged by a multi-story atrium containing upscale retail shops.\nPage: 247 Cherry. Sentence: The building will be adjacent One Manhattan Square.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "5073d600-d29f-5de3-9db9-976f070f1f72",
+        "text": "text_15bb3e4f2d62bd950ddd42e6e0039abb",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "54dd4cd2-0986-547c-984a-4739a1efacaa",
+        "text": "one manhattan square",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "b011d686-ca3a-5398-b03c-f44518808ad9",
+        "text": "building",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "3889175a-433b-5cea-8ff4-4951ff311df9",
+        "text": "227 cherry street",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "5f394058-b2a0-5ba8-8466-ba2a18cfcf4e",
+        "text": "place",
+        "type": "EntityType"
+      },
+      {
+        "id": 7,
+        "original_id": "8b278068-fe36-594f-ba8b-3bd9bda9f073",
+        "text": "250 south street",
+        "type": "Entity"
+      },
+      {
+        "id": 8,
+        "original_id": "a272b6c4-e4d3-5fd8-b8bd-f0773d501ba2",
+        "text": "extell development company",
+        "type": "Entity"
+      },
+      {
+        "id": 9,
+        "original_id": "388f60fb-220d-55e8-ae9c-3ac93cead308",
+        "text": "organization",
+        "type": "EntityType"
+      },
+      {
+        "id": 10,
+        "original_id": "ba735f47-e4ad-57fc-aaed-3f5883a81eb6",
+        "text": "two bridges",
+        "type": "Entity"
+      },
+      {
+        "id": 11,
+        "original_id": "c65245b2-435b-5786-be1c-050c01adb0a5",
+        "text": "manhattan",
+        "type": "Entity"
+      },
+      {
+        "id": 12,
+        "original_id": "62912d92-4218-52f7-a1a6-776a04889442",
+        "text": "new york city",
+        "type": "Entity"
+      },
+      {
+        "id": 13,
+        "original_id": "66235708-e280-573a-a15d-e0be21361be8",
+        "text": "80 stories",
+        "type": "Entity"
+      },
+      {
+        "id": 14,
+        "original_id": "7a7a0687-e490-5167-ad5a-0e39d9055dee",
+        "text": "quantity",
+        "type": "EntityType"
+      },
+      {
+        "id": 15,
+        "original_id": "cbd14e84-1e3e-58b5-8982-1a9f2649878f",
+        "text": "850 feet",
+        "type": "Entity"
+      },
+      {
+        "id": 16,
+        "original_id": "915f6a4d-e598-500b-83a2-d2dde5dae5b6",
+        "text": "259 m",
+        "type": "Entity"
+      },
+      {
+        "id": 17,
+        "original_id": "6c86a05a-9475-59fc-8ea3-160ba8801ee1",
+        "text": "supermarket",
+        "type": "Entity"
+      },
+      {
+        "id": 18,
+        "original_id": "e44ec5bd-ebd1-5639-8e04-5b662eaf0e3d",
+        "text": "time warner center",
+        "type": "Entity"
+      },
+      {
+        "id": 19,
+        "original_id": "e578a507-40b3-5047-92f6-f085c76f798c",
+        "text": "the related companies",
+        "type": "Entity"
+      },
+      {
+        "id": 20,
+        "original_id": "9f76f4cc-11d6-53b8-9b73-32c00e947d9a",
+        "text": "area property partners",
+        "type": "Entity"
+      },
+      {
+        "id": 21,
+        "original_id": "ce7af534-9ed9-5bd1-9e20-87df3fd3bc48",
+        "text": "apollo real estate advisors",
+        "type": "Entity"
+      },
+      {
+        "id": 22,
+        "original_id": "a8eeefe9-2473-5877-93dd-508f1d0a7dbc",
+        "text": "david childs",
+        "type": "Entity"
+      },
+      {
+        "id": 23,
+        "original_id": "99a82eec-bb35-5bb5-9ed2-e73fc7a756de",
+        "text": "person",
+        "type": "EntityType"
+      },
+      {
+        "id": 24,
+        "original_id": "fd8353c1-f9b8-592b-b48e-85c31e55f387",
+        "text": "skidmore, owings & merrill",
+        "type": "Entity"
+      },
+      {
+        "id": 25,
+        "original_id": "8f84c1bb-2caf-5b0f-9f4e-2a68b94fd8ed",
+        "text": "mustafa kemal abadan",
+        "type": "Entity"
+      },
+      {
+        "id": 26,
+        "original_id": "a69dbc1e-6396-50d7-9f56-ca53db0501c9",
+        "text": "two 750 ft twin towers",
+        "type": "Entity"
+      },
+      {
+        "id": 27,
+        "original_id": "f52a988d-e6a2-51a0-8c2a-890426be6230",
+        "text": "structure",
+        "type": "EntityType"
+      },
+      {
+        "id": 28,
+        "original_id": "3cff9f1f-2306-52d0-be66-13b2623dca74",
+        "text": "multi-story atrium",
+        "type": "Entity"
+      },
+      {
+        "id": 29,
+        "original_id": "abb6200d-944a-53cb-9bca-8345aaea204b",
+        "text": "upscale retail shops",
+        "type": "Entity"
+      },
+      {
+        "id": 30,
+        "original_id": "53e8dd3d-0ad6-5fa8-8af9-fd2b8d58e6fe",
+        "text": "247 cherry",
+        "type": "Entity"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 30,
+        "target": 3,
+        "type": "adjacent_to"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 18,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 30,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "also_known_as"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 7,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 10,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 11,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 12,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 17,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 29,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 7,
+        "type": "also_known_as"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 8,
+        "type": "developed_by"
+      },
+      {
+        "source": 1,
+        "target": 8,
+        "type": "contains"
+      },
+      {
+        "source": 8,
+        "target": 9,
+        "type": "is_a"
+      },
+      {
+        "source": 19,
+        "target": 9,
+        "type": "is_a"
+      },
+      {
+        "source": 20,
+        "target": 9,
+        "type": "is_a"
+      },
+      {
+        "source": 21,
+        "target": 9,
+        "type": "is_a"
+      },
+      {
+        "source": 24,
+        "target": 9,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 10,
+        "type": "located_in"
+      },
+      {
+        "source": 1,
+        "target": 10,
+        "type": "contains"
+      },
+      {
+        "source": 10,
+        "target": 11,
+        "type": "located_in"
+      },
+      {
+        "source": 1,
+        "target": 11,
+        "type": "contains"
+      },
+      {
+        "source": 11,
+        "target": 12,
+        "type": "located_in"
+      },
+      {
+        "source": 1,
+        "target": 12,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 13,
+        "type": "has_planned_height"
+      },
+      {
+        "source": 1,
+        "target": 13,
+        "type": "contains"
+      },
+      {
+        "source": 13,
+        "target": 14,
+        "type": "is_a"
+      },
+      {
+        "source": 15,
+        "target": 14,
+        "type": "is_a"
+      },
+      {
+        "source": 16,
+        "target": 14,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 15,
+        "type": "has_planned_height"
+      },
+      {
+        "source": 1,
+        "target": 15,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 16,
+        "type": "has_planned_height"
+      },
+      {
+        "source": 1,
+        "target": 16,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 17,
+        "type": "may_have"
+      },
+      {
+        "source": 1,
+        "target": 17,
+        "type": "contains"
+      },
+      {
+        "source": 1,
+        "target": 18,
+        "type": "contains"
+      },
+      {
+        "source": 18,
+        "target": 19,
+        "type": "developed_by"
+      },
+      {
+        "source": 1,
+        "target": 19,
+        "type": "contains"
+      },
+      {
+        "source": 18,
+        "target": 20,
+        "type": "developed_by"
+      },
+      {
+        "source": 1,
+        "target": 20,
+        "type": "contains"
+      },
+      {
+        "source": 20,
+        "target": 21,
+        "type": "formerly_known_as"
+      },
+      {
+        "source": 1,
+        "target": 21,
+        "type": "contains"
+      },
+      {
+        "source": 18,
+        "target": 22,
+        "type": "designed_by"
+      },
+      {
+        "source": 1,
+        "target": 22,
+        "type": "contains"
+      },
+      {
+        "source": 22,
+        "target": 23,
+        "type": "is_a"
+      },
+      {
+        "source": 25,
+        "target": 23,
+        "type": "is_a"
+      },
+      {
+        "source": 22,
+        "target": 24,
+        "type": "affiliated_with"
+      },
+      {
+        "source": 25,
+        "target": 24,
+        "type": "affiliated_with"
+      },
+      {
+        "source": 1,
+        "target": 24,
+        "type": "contains"
+      },
+      {
+        "source": 18,
+        "target": 25,
+        "type": "designed_by"
+      },
+      {
+        "source": 1,
+        "target": 25,
+        "type": "contains"
+      },
+      {
+        "source": 18,
+        "target": 26,
+        "type": "consists_of"
+      },
+      {
+        "source": 1,
+        "target": 26,
+        "type": "contains"
+      },
+      {
+        "source": 26,
+        "target": 27,
+        "type": "is_a"
+      },
+      {
+        "source": 28,
+        "target": 27,
+        "type": "is_a"
+      },
+      {
+        "source": 26,
+        "target": 28,
+        "type": "bridged_by"
+      },
+      {
+        "source": 1,
+        "target": 28,
+        "type": "contains"
+      },
+      {
+        "source": 28,
+        "target": 29,
+        "type": "contains"
+      },
+      {
+        "source": 1,
+        "target": 29,
+        "type": "contains"
+      },
+      {
+        "source": 1,
+        "target": 30,
+        "type": "contains"
+      }
+    ]
+  }
+}

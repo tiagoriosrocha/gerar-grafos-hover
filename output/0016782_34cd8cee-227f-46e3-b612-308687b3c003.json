@@ -1,0 +1,512 @@
+{
+  "dataset": "hover",
+  "id": "34cd8cee-227f-46e3-b612-308687b3c003",
+  "split": "train",
+  "claim": "Lime is an ingredient in one of the classic vodka based cocktails a bartender can generally mix and is also in Cuba Libres.",
+  "evidencia": "Page: Cosmopolitan (cocktail). Sentence: A cosmopolitan, or informally a cosmo, is a cocktail made with vodka, triple sec, cranberry juice, and freshly squeezed or sweetened lime juice.\nPage: Cuba Libre. Sentence: The Cuba Libre ( ; ] , \"Free Cuba\") is a caffeinated alcoholic cocktail made of cola, lime, and dark or light rum.\nPage: Bartender. Sentence: A bartender can generally mix classic cocktails such as a Cosmopolitan, Manhattan, Old Fashioned, and Mojito.",
+  "evidence_text": "Page: Cosmopolitan (cocktail). Sentence: A cosmopolitan, or informally a cosmo, is a cocktail made with vodka, triple sec, cranberry juice, and freshly squeezed or sweetened lime juice.\nPage: Cuba Libre. Sentence: The Cuba Libre ( ; ] , \"Free Cuba\") is a caffeinated alcoholic cocktail made of cola, lime, and dark or light rum.\nPage: Bartender. Sentence: A bartender can generally mix classic cocktails such as a Cosmopolitan, Manhattan, Old Fashioned, and Mojito.",
+  "label": "SUPPORTED",
+  "num_hops": 3,
+  "hover_metadata": {
+    "supporting_facts": [
+      [
+        "Cosmopolitan (cocktail)",
+        0
+      ],
+      [
+        "Cuba Libre",
+        0
+      ],
+      [
+        "Bartender",
+        2
+      ]
+    ],
+    "num_hops": 3,
+    "evidence_annotation_id": [
+      0
+    ],
+    "evidence_id": [
+      "Cosmopolitan (cocktail)::sentence::0",
+      "Cuba Libre::sentence::0",
+      "Bartender::sentence::2"
+    ],
+    "evidence_wiki_url": [
+      "https://en.wikipedia.org/wiki/Cosmopolitan_%28cocktail%29",
+      "https://en.wikipedia.org/wiki/Cuba_Libre",
+      "https://en.wikipedia.org/wiki/Bartender"
+    ],
+    "evidence_sentence_id": [
+      "Cosmopolitan (cocktail)::sentence::0",
+      "Cuba Libre::sentence::0",
+      "Bartender::sentence::2"
+    ]
+  },
+  "grafo_claim": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "0af87bac-1d00-5ac3-b5fe-48746001c9b8",
+        "text": "This chunk is about:\n- Ingredients: lime\n- Drinks: classic vodka-based cocktails, Cuba Libre\n\nFacts:\n- Lime is an ingredient in one classic vodka-based cocktail that a bartender can generally mix.\n- Lime is also an ingredient in Cuba Libres.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "b10674b3-60b7-5685-9142-813d2153d28e",
+        "text": "Lime is an ingredient in one of the classic vodka based cocktails a bartender can generally mix and is also in Cuba Libres.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "55d8514c-0e73-5296-896e-2a20bc1a12ef",
+        "text": "text_fb76015188e9ac5fdaf1ca17e368b312",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "338e9726-383e-54da-94ac-904ba0f7dc0b",
+        "text": "lime",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "de04d8a8-1b78-5a88-bb18-5aa48f533be4",
+        "text": "ingredient",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "39d1c9a3-ca69-5a70-aa07-f5698d69354f",
+        "text": "classic vodka based cocktail",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "6db8ddc4-ae16-5cb9-99f4-b16b70503f38",
+        "text": "cocktail",
+        "type": "EntityType"
+      },
+      {
+        "id": 7,
+        "original_id": "4192e4aa-c4f6-5750-9fbb-d4cf44a2de8d",
+        "text": "cuba libre",
+        "type": "Entity"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "is_ingredient_in"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 7,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 7,
+        "type": "is_ingredient_in"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      }
+    ]
+  },
+  "grafo_evidencia": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "acc3e1e8-ff33-5471-8654-61b4ddb0a4fb",
+        "text": "This chunk is about:\n- Products: Cosmopolitan, Cuba Libre, Manhattan, Old Fashioned, Mojito\n- Roles: Bartender\n- Concepts: Cocktails, cocktail ingredients\n\nFacts:\n- The Cosmopolitan, also called a cosmo, is a cocktail made with vodka, triple sec, cranberry juice, and freshly squeezed or sweetened lime juice.\n- The Cuba Libre, meaning \"Free Cuba,\" is a caffeinated alcoholic cocktail made with cola, lime, and dark or light rum.\n- A bartender can generally mix classic cocktails such as the Cosmopolitan, Manhattan, Old Fashioned, and Mojito.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "90f6a486-81ce-5abe-8812-32b75b4cc9e8",
+        "text": "Page: Cosmopolitan (cocktail). Sentence: A cosmopolitan, or informally a cosmo, is a cocktail made with vodka, triple sec, cranberry juice, and freshly squeezed or sweetened lime juice.\nPage: Cuba Libre. Sentence: The Cuba Libre ( ; ] , \"Free Cuba\") is a caffeinated alcoholic cocktail made of cola, lime, and dark or light rum.\nPage: Bartender. Sentence: A bartender can generally mix classic cocktails such as a Cosmopolitan, Manhattan, Old Fashioned, and Mojito.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "2d4ac396-8ede-52c2-92b4-615f668e6081",
+        "text": "text_c4ea184f42e814f536b7b229923d978d",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "dbc2280a-3365-5c6f-b54a-ab5a12eced4c",
+        "text": "cosmopolitan",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "6db8ddc4-ae16-5cb9-99f4-b16b70503f38",
+        "text": "cocktail",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "ee056da7-39c6-5e7c-854e-f5c695f2fe0d",
+        "text": "cosmo",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "39575085-0710-527d-bd54-019de7b00429",
+        "text": "name",
+        "type": "EntityType"
+      },
+      {
+        "id": 7,
+        "original_id": "f2b88082-7236-5f0c-a8cb-82a840f7c244",
+        "text": "vodka",
+        "type": "Entity"
+      },
+      {
+        "id": 8,
+        "original_id": "de04d8a8-1b78-5a88-bb18-5aa48f533be4",
+        "text": "ingredient",
+        "type": "EntityType"
+      },
+      {
+        "id": 9,
+        "original_id": "07210c52-a321-548d-87bd-e0113703f092",
+        "text": "triple sec",
+        "type": "Entity"
+      },
+      {
+        "id": 10,
+        "original_id": "e5062360-54a1-51f5-b7e1-67065f9f805c",
+        "text": "cranberry juice",
+        "type": "Entity"
+      },
+      {
+        "id": 11,
+        "original_id": "f446697f-ca4f-535f-8122-6f393254e6d2",
+        "text": "lime juice",
+        "type": "Entity"
+      },
+      {
+        "id": 12,
+        "original_id": "4192e4aa-c4f6-5750-9fbb-d4cf44a2de8d",
+        "text": "cuba libre",
+        "type": "Entity"
+      },
+      {
+        "id": 13,
+        "original_id": "b90a5e2c-c4c7-5286-ba04-f37ec4e45ec0",
+        "text": "free cuba",
+        "type": "Entity"
+      },
+      {
+        "id": 14,
+        "original_id": "eb32cb44-11c0-5d75-9a99-f9a04024bfe1",
+        "text": "cola",
+        "type": "Entity"
+      },
+      {
+        "id": 15,
+        "original_id": "338e9726-383e-54da-94ac-904ba0f7dc0b",
+        "text": "lime",
+        "type": "Entity"
+      },
+      {
+        "id": 16,
+        "original_id": "6e00c8eb-da45-5f08-a238-a0def5ff0af3",
+        "text": "rum",
+        "type": "Entity"
+      },
+      {
+        "id": 17,
+        "original_id": "5e06d55a-6d7d-5472-a072-d7c0a055afc1",
+        "text": "bartender",
+        "type": "Entity"
+      },
+      {
+        "id": 18,
+        "original_id": "9d80eb43-32fa-561c-9371-91f180ebcb6c",
+        "text": "profession",
+        "type": "EntityType"
+      },
+      {
+        "id": 19,
+        "original_id": "c65245b2-435b-5786-be1c-050c01adb0a5",
+        "text": "manhattan",
+        "type": "Entity"
+      },
+      {
+        "id": 20,
+        "original_id": "1a3c2c06-6bd1-5786-88a7-ff6c96ca15da",
+        "text": "old fashioned",
+        "type": "Entity"
+      },
+      {
+        "id": 21,
+        "original_id": "0efe0ef7-4321-5add-8e92-b35d7a3de1a2",
+        "text": "mojito",
+        "type": "Entity"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 17,
+        "target": 3,
+        "type": "can_mix"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 12,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 19,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 20,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 21,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "informally_called"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 13,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 7,
+        "type": "made_with"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      },
+      {
+        "source": 7,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 9,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 10,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 11,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 14,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 15,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 16,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 9,
+        "type": "made_with"
+      },
+      {
+        "source": 1,
+        "target": 9,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 10,
+        "type": "made_with"
+      },
+      {
+        "source": 1,
+        "target": 10,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 11,
+        "type": "made_with"
+      },
+      {
+        "source": 1,
+        "target": 11,
+        "type": "contains"
+      },
+      {
+        "source": 1,
+        "target": 12,
+        "type": "contains"
+      },
+      {
+        "source": 12,
+        "target": 13,
+        "type": "means"
+      },
+      {
+        "source": 1,
+        "target": 13,
+        "type": "contains"
+      },
+      {
+        "source": 12,
+        "target": 14,
+        "type": "made_with"
+      },
+      {
+        "source": 1,
+        "target": 14,
+        "type": "contains"
+      },
+      {
+        "source": 12,
+        "target": 15,
+        "type": "made_with"
+      },
+      {
+        "source": 1,
+        "target": 15,
+        "type": "contains"
+      },
+      {
+        "source": 12,
+        "target": 16,
+        "type": "made_with"
+      },
+      {
+        "source": 1,
+        "target": 16,
+        "type": "contains"
+      },
+      {
+        "source": 1,
+        "target": 17,
+        "type": "contains"
+      },
+      {
+        "source": 17,
+        "target": 18,
+        "type": "is_a"
+      },
+      {
+        "source": 17,
+        "target": 19,
+        "type": "can_mix"
+      },
+      {
+        "source": 1,
+        "target": 19,
+        "type": "contains"
+      },
+      {
+        "source": 17,
+        "target": 20,
+        "type": "can_mix"
+      },
+      {
+        "source": 1,
+        "target": 20,
+        "type": "contains"
+      },
+      {
+        "source": 17,
+        "target": 21,
+        "type": "can_mix"
+      },
+      {
+        "source": 1,
+        "target": 21,
+        "type": "contains"
+      }
+    ]
+  }
+}

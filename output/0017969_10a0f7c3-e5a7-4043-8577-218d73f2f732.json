@@ -1,0 +1,353 @@
+{
+  "dataset": "hover",
+  "id": "10a0f7c3-e5a7-4043-8577-218d73f2f732",
+  "split": "train",
+  "claim": "A genus has more species than the Fouquieria genus. This genus formerly included the species  Dittrichia.",
+  "evidencia": "Page: Inula. Sentence: Inula is a large genus of about 90 species of flowering plants in the family Asteraceae, native to Europe, Asia and Africa.\nPage: Fouquieria. Sentence: Fouquieria is a genus of 11 species of desert plants, the sole genus in the family Fouquieriaceae.\nPage: Dittrichia. Sentence: Its species were formerly included in the genus Inula.",
+  "evidence_text": "Page: Inula. Sentence: Inula is a large genus of about 90 species of flowering plants in the family Asteraceae, native to Europe, Asia and Africa.\nPage: Fouquieria. Sentence: Fouquieria is a genus of 11 species of desert plants, the sole genus in the family Fouquieriaceae.\nPage: Dittrichia. Sentence: Its species were formerly included in the genus Inula.",
+  "label": "SUPPORTED",
+  "num_hops": 3,
+  "hover_metadata": {
+    "supporting_facts": [
+      [
+        "Inula",
+        0
+      ],
+      [
+        "Fouquieria",
+        0
+      ],
+      [
+        "Dittrichia",
+        1
+      ]
+    ],
+    "num_hops": 3,
+    "evidence_annotation_id": [
+      0
+    ],
+    "evidence_id": [
+      "Inula::sentence::0",
+      "Fouquieria::sentence::0",
+      "Dittrichia::sentence::1"
+    ],
+    "evidence_wiki_url": [
+      "https://en.wikipedia.org/wiki/Inula",
+      "https://en.wikipedia.org/wiki/Fouquieria",
+      "https://en.wikipedia.org/wiki/Dittrichia"
+    ],
+    "evidence_sentence_id": [
+      "Inula::sentence::0",
+      "Fouquieria::sentence::0",
+      "Dittrichia::sentence::1"
+    ]
+  },
+  "grafo_claim": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "8a87b02a-4dd4-57e1-ab89-81cbcb756a77",
+        "text": "This chunk is about:\n- Concepts: species counts in genera, former taxonomic classification\n- Taxa: Fouquieria, Dittrichia\n\nFacts:\n- Fouquieria is a genus used as a reference point for comparing species counts.\n- Another genus has more species than Fouquieria.\n- That other genus formerly included the species Dittrichia.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "990ace31-1705-5da1-af78-f08f94ee5c27",
+        "text": "A genus has more species than the Fouquieria genus. This genus formerly included the species  Dittrichia.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "a8af7559-a174-5fa7-b73e-e3b067f55019",
+        "text": "text_3b20232b29e4c14c488e9348b9fdcc8a",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "e57b60ee-c124-5f82-ab6a-8b4c2427fdb3",
+        "text": "fouquieria",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "58ce8914-8a9e-5302-9b2d-0d97006e12d3",
+        "text": "genus",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "38ca0c2a-9f09-57bc-b016-272861aa642c",
+        "text": "dittrichia",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "f23a15ce-c0de-5c57-9205-8c9d01026b05",
+        "text": "species",
+        "type": "EntityType"
+      },
+      {
+        "id": 7,
+        "original_id": "4824421e-314f-57bc-a01b-f5b351fc4a95",
+        "text": "unnamed genus",
+        "type": "Entity"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 7,
+        "target": 3,
+        "type": "has_more_species_than"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 7,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 7,
+        "target": 5,
+        "type": "formerly_included"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      }
+    ]
+  },
+  "grafo_evidencia": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "c5d4079e-0d10-55d2-807d-9556e71b2685",
+        "text": "This chunk is about:\n- Plants: Inula, Fouquieria, Dittrichia\n- Taxonomy: genera, species counts, plant families, former classification\n\nFacts:\n- Inula is a large genus of about 90 species of flowering plants in the family Asteraceae.\n- Inula is native to Europe, Asia, and Africa.\n- Fouquieria is a genus of 11 species of desert plants.\n- Fouquieria is the sole genus in the family Fouquieriaceae.\n- Dittrichia species were formerly included in the genus Inula.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "5fd19497-3000-52b8-9c89-b4ac446ef8ed",
+        "text": "Page: Inula. Sentence: Inula is a large genus of about 90 species of flowering plants in the family Asteraceae, native to Europe, Asia and Africa.\nPage: Fouquieria. Sentence: Fouquieria is a genus of 11 species of desert plants, the sole genus in the family Fouquieriaceae.\nPage: Dittrichia. Sentence: Its species were formerly included in the genus Inula.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "76b4f35f-259f-5d84-9c91-c41f95667492",
+        "text": "text_a9845f22aabb77fbac3bc87a5cf974f2",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "5fc4fef6-4ce6-5806-91a0-112cee63685b",
+        "text": "inula",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "f7b4540f-d32c-51b3-8970-f282fffab519",
+        "text": "taxon",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "4fe42319-5e66-5637-90ae-d1f515fccb4b",
+        "text": "asteraceae",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "d62d98fd-7636-5918-880e-390a00283ca8",
+        "text": "europe",
+        "type": "Entity"
+      },
+      {
+        "id": 7,
+        "original_id": "5f394058-b2a0-5ba8-8466-ba2a18cfcf4e",
+        "text": "place",
+        "type": "EntityType"
+      },
+      {
+        "id": 8,
+        "original_id": "21d096f4-373a-585b-85d5-3b4b9dfc4785",
+        "text": "asia",
+        "type": "Entity"
+      },
+      {
+        "id": 9,
+        "original_id": "7d1e549d-73ae-5049-8eac-cda15179fc48",
+        "text": "africa",
+        "type": "Entity"
+      },
+      {
+        "id": 10,
+        "original_id": "e57b60ee-c124-5f82-ab6a-8b4c2427fdb3",
+        "text": "fouquieria",
+        "type": "Entity"
+      },
+      {
+        "id": 11,
+        "original_id": "36939cbf-39b4-5933-af37-d67bb3b3b58e",
+        "text": "fouquieriaceae",
+        "type": "Entity"
+      },
+      {
+        "id": 12,
+        "original_id": "38ca0c2a-9f09-57bc-b016-272861aa642c",
+        "text": "dittrichia",
+        "type": "Entity"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 12,
+        "target": 3,
+        "type": "species_formerly_included_in"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 5,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 10,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 11,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 12,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "in_family"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 6,
+        "type": "native_to"
+      },
+      {
+        "source": 1,
+        "target": 6,
+        "type": "contains"
+      },
+      {
+        "source": 6,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 8,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 9,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 8,
+        "type": "native_to"
+      },
+      {
+        "source": 1,
+        "target": 8,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 9,
+        "type": "native_to"
+      },
+      {
+        "source": 1,
+        "target": 9,
+        "type": "contains"
+      },
+      {
+        "source": 1,
+        "target": 10,
+        "type": "contains"
+      },
+      {
+        "source": 10,
+        "target": 11,
+        "type": "sole_genus_in_family"
+      },
+      {
+        "source": 1,
+        "target": 11,
+        "type": "contains"
+      },
+      {
+        "source": 1,
+        "target": 12,
+        "type": "contains"
+      }
+    ]
+  }
+}

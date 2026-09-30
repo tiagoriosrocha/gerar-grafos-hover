@@ -1,0 +1,551 @@
+{
+  "dataset": "hover",
+  "id": "7aa6ab77-451d-4a00-80a4-50e91eba83f7",
+  "split": "train",
+  "claim": "The board game that is similar to Be a Broadway Star accommodates up to 10 players while the game the History of the World does not.",
+  "evidencia": "Page: The Game of Life. Sentence: The Game of Life, also known simply as Life, is a board game originally created in 1860 by Milton Bradley, as The Checkered Game of Life.\nPage: The Game of Life. Sentence: Variations of the game accommodate eight to ten players.\nPage: History of the World (board game). Sentence: History of the World (often abbreviated HotW) is a board game designed by Ragnar Brothers and originally published in 1991.\nPage: History of the World (board game). Sentence: It is played by up to six different players in seven different epochs; each player playing a different empire in each epoch.\nPage: Be a Broadway Star. Sentence: Players move around a game board similar to The Game of Life, with movement determined by two rolled dice.",
+  "evidence_text": "Page: The Game of Life. Sentence: The Game of Life, also known simply as Life, is a board game originally created in 1860 by Milton Bradley, as The Checkered Game of Life.\nPage: The Game of Life. Sentence: Variations of the game accommodate eight to ten players.\nPage: History of the World (board game). Sentence: History of the World (often abbreviated HotW) is a board game designed by Ragnar Brothers and originally published in 1991.\nPage: History of the World (board game). Sentence: It is played by up to six different players in seven different epochs; each player playing a different empire in each epoch.\nPage: Be a Broadway Star. Sentence: Players move around a game board similar to The Game of Life, with movement determined by two rolled dice.",
+  "label": "SUPPORTED",
+  "num_hops": 3,
+  "hover_metadata": {
+    "supporting_facts": [
+      [
+        "The Game of Life",
+        0
+      ],
+      [
+        "The Game of Life",
+        4
+      ],
+      [
+        "History of the World (board game)",
+        0
+      ],
+      [
+        "History of the World (board game)",
+        1
+      ],
+      [
+        "Be a Broadway Star",
+        2
+      ]
+    ],
+    "num_hops": 3,
+    "evidence_annotation_id": [
+      0
+    ],
+    "evidence_id": [
+      "The Game of Life::sentence::0",
+      "The Game of Life::sentence::4",
+      "History of the World (board game)::sentence::0",
+      "History of the World (board game)::sentence::1",
+      "Be a Broadway Star::sentence::2"
+    ],
+    "evidence_wiki_url": [
+      "https://en.wikipedia.org/wiki/The_Game_of_Life",
+      "https://en.wikipedia.org/wiki/History_of_the_World_%28board_game%29",
+      "https://en.wikipedia.org/wiki/Be_a_Broadway_Star"
+    ],
+    "evidence_sentence_id": [
+      "The Game of Life::sentence::0",
+      "The Game of Life::sentence::4",
+      "History of the World (board game)::sentence::0",
+      "History of the World (board game)::sentence::1",
+      "Be a Broadway Star::sentence::2"
+    ]
+  },
+  "grafo_claim": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "fbfb8a5c-cc5c-5ad9-b74c-3db3f2ae692f",
+        "text": "This chunk is about:\n- Products: Be a Broadway Star, History of the World\n- Concepts: board game similarity, player capacity\n\nFacts:\n- Be a Broadway Star is a board game.\n- A board game similar to Be a Broadway Star accommodates up to 10 players.\n- History of the World is a game.\n- History of the World does not accommodate up to 10 players.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "fdb5b215-2e5f-5b73-b193-f70682e43001",
+        "text": "The board game that is similar to Be a Broadway Star accommodates up to 10 players while the game the History of the World does not.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "94547dc6-6929-5c12-b585-e3114b6d913d",
+        "text": "text_802b553d28e734a3542290e2981ef564",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "d500ca59-4257-534c-864b-375ecff169df",
+        "text": "be a broadway star",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "c375b518-f008-5e29-a0bf-27ed32d043f5",
+        "text": "board game",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "6e7cd955-f96f-556b-84f1-18be14e067f4",
+        "text": "the board game similar to be a broadway star",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "fee839b9-b5b2-5d48-95ea-adabd80746d3",
+        "text": "10 players",
+        "type": "Entity"
+      },
+      {
+        "id": 7,
+        "original_id": "5c1097ca-fab8-54d5-b57f-5dca4b0e2507",
+        "text": "number",
+        "type": "EntityType"
+      },
+      {
+        "id": 8,
+        "original_id": "84092ede-47dd-5e64-b5c2-61e9057956c2",
+        "text": "history of the world",
+        "type": "Entity"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 3,
+        "type": "is_similar_to"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 5,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 8,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "accommodates_up_to"
+      },
+      {
+        "source": 1,
+        "target": 6,
+        "type": "contains"
+      },
+      {
+        "source": 8,
+        "target": 6,
+        "type": "does_not_accommodate_up_to"
+      },
+      {
+        "source": 6,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 8,
+        "type": "contains"
+      }
+    ]
+  },
+  "grafo_evidencia": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "64983851-f0b9-51df-8929-a33b90b9cbad",
+        "text": "This chunk is about:\n- Products: The Game of Life, The Checkered Game of Life, History of the World, Be a Broadway Star\n- People: Milton Bradley, Ragnar Brothers\n- Concepts: Board games, player counts, gameplay mechanics, epochs, empires\n\nFacts:\n- Milton Bradley originally created The Checkered Game of Life in 1860, and the game later became known as The Game of Life or simply Life.\n- The Game of Life has variations that accommodate eight to ten players.\n- Ragnar Brothers designed the board game History of the World, which was originally published in 1991.\n- History of the World is played by up to six players across seven epochs, and each player controls a different empire in each epoch.\n- Be a Broadway Star uses a game board similar to The Game of Life, and players move based on two rolled dice.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "ef10bbe7-0b07-57ba-a613-c2328bd16a5b",
+        "text": "Page: The Game of Life. Sentence: The Game of Life, also known simply as Life, is a board game originally created in 1860 by Milton Bradley, as The Checkered Game of Life.\nPage: The Game of Life. Sentence: Variations of the game accommodate eight to ten players.\nPage: History of the World (board game). Sentence: History of the World (often abbreviated HotW) is a board game designed by Ragnar Brothers and originally published in 1991.\nPage: History of the World (board game). Sentence: It is played by up to six different players in seven different epochs; each player playing a different empire in each epoch.\nPage: Be a Broadway Star. Sentence: Players move around a game board similar to The Game of Life, with movement determined by two rolled dice.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "198f7da2-612d-5897-91a8-c0781e9ea163",
+        "text": "text_7ca5c6a9a4d66d19be4a08e335053997",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "8661d2fa-eddf-54be-a6c4-7f33beb29a33",
+        "text": "the game of life",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "d6db4a23-792c-5f83-bb61-5aa4dfaf893c",
+        "text": "game",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "45a43568-6034-52ea-9498-bc79d1bd35c8",
+        "text": "life",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "359a1d86-1e51-52e6-85b7-b8c0f0328edc",
+        "text": "milton bradley",
+        "type": "Entity"
+      },
+      {
+        "id": 7,
+        "original_id": "99a82eec-bb35-5bb5-9ed2-e73fc7a756de",
+        "text": "person",
+        "type": "EntityType"
+      },
+      {
+        "id": 8,
+        "original_id": "0138d774-8be0-53ed-a5b4-7bbc8ae3da0d",
+        "text": "1860",
+        "type": "Entity"
+      },
+      {
+        "id": 9,
+        "original_id": "b19433ae-558c-5aaf-95ac-6231f2a4be0e",
+        "text": "date",
+        "type": "EntityType"
+      },
+      {
+        "id": 10,
+        "original_id": "1fa777f8-97c8-5330-a067-7ccf81adbc25",
+        "text": "the checkered game of life",
+        "type": "Entity"
+      },
+      {
+        "id": 11,
+        "original_id": "ec880122-a57e-5130-ad27-39388efb7cac",
+        "text": "eight to ten players",
+        "type": "Entity"
+      },
+      {
+        "id": 12,
+        "original_id": "d2a381fa-3658-5ca6-ada9-2109cfc9331d",
+        "text": "concept",
+        "type": "EntityType"
+      },
+      {
+        "id": 13,
+        "original_id": "84092ede-47dd-5e64-b5c2-61e9057956c2",
+        "text": "history of the world",
+        "type": "Entity"
+      },
+      {
+        "id": 14,
+        "original_id": "5a137dfa-e8ef-57aa-841a-c4388616e801",
+        "text": "hotw",
+        "type": "Entity"
+      },
+      {
+        "id": 15,
+        "original_id": "222b46a8-7c06-562f-b3cb-57dfef1ad0fb",
+        "text": "ragnar brothers",
+        "type": "Entity"
+      },
+      {
+        "id": 16,
+        "original_id": "388f60fb-220d-55e8-ae9c-3ac93cead308",
+        "text": "organization",
+        "type": "EntityType"
+      },
+      {
+        "id": 17,
+        "original_id": "720e3f07-c737-5d52-9990-eb6ce06a3479",
+        "text": "1991",
+        "type": "Entity"
+      },
+      {
+        "id": 18,
+        "original_id": "c6268e93-3659-52d1-9684-ad434e26f1bc",
+        "text": "up to six different players",
+        "type": "Entity"
+      },
+      {
+        "id": 19,
+        "original_id": "81d84303-d92a-54d8-920a-95d7bee7aa3d",
+        "text": "seven different epochs",
+        "type": "Entity"
+      },
+      {
+        "id": 20,
+        "original_id": "f758b68e-cbf8-5d54-93af-8005be4dab9f",
+        "text": "different empire in each epoch",
+        "type": "Entity"
+      },
+      {
+        "id": 21,
+        "original_id": "d500ca59-4257-534c-864b-375ecff169df",
+        "text": "be a broadway star",
+        "type": "Entity"
+      },
+      {
+        "id": 22,
+        "original_id": "79b128c7-bf10-5136-b833-055412630cf7",
+        "text": "two rolled dice",
+        "type": "Entity"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 21,
+        "target": 3,
+        "type": "has_similar_game_board_to"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 5,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 10,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 13,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 14,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 21,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "also_known_as"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 6,
+        "type": "created_by"
+      },
+      {
+        "source": 1,
+        "target": 6,
+        "type": "contains"
+      },
+      {
+        "source": 6,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 8,
+        "type": "originally_created_in"
+      },
+      {
+        "source": 1,
+        "target": 8,
+        "type": "contains"
+      },
+      {
+        "source": 8,
+        "target": 9,
+        "type": "is_a"
+      },
+      {
+        "source": 17,
+        "target": 9,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 10,
+        "type": "originally_titled"
+      },
+      {
+        "source": 1,
+        "target": 10,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 11,
+        "type": "variations_accommodate"
+      },
+      {
+        "source": 1,
+        "target": 11,
+        "type": "contains"
+      },
+      {
+        "source": 11,
+        "target": 12,
+        "type": "is_a"
+      },
+      {
+        "source": 18,
+        "target": 12,
+        "type": "is_a"
+      },
+      {
+        "source": 19,
+        "target": 12,
+        "type": "is_a"
+      },
+      {
+        "source": 20,
+        "target": 12,
+        "type": "is_a"
+      },
+      {
+        "source": 22,
+        "target": 12,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 13,
+        "type": "contains"
+      },
+      {
+        "source": 13,
+        "target": 14,
+        "type": "abbreviated_as"
+      },
+      {
+        "source": 1,
+        "target": 14,
+        "type": "contains"
+      },
+      {
+        "source": 13,
+        "target": 15,
+        "type": "designed_by"
+      },
+      {
+        "source": 1,
+        "target": 15,
+        "type": "contains"
+      },
+      {
+        "source": 15,
+        "target": 16,
+        "type": "is_a"
+      },
+      {
+        "source": 13,
+        "target": 17,
+        "type": "originally_published_in"
+      },
+      {
+        "source": 1,
+        "target": 17,
+        "type": "contains"
+      },
+      {
+        "source": 13,
+        "target": 18,
+        "type": "played_by"
+      },
+      {
+        "source": 1,
+        "target": 18,
+        "type": "contains"
+      },
+      {
+        "source": 13,
+        "target": 19,
+        "type": "played_in"
+      },
+      {
+        "source": 1,
+        "target": 19,
+        "type": "contains"
+      },
+      {
+        "source": 13,
+        "target": 20,
+        "type": "has_gameplay_feature"
+      },
+      {
+        "source": 1,
+        "target": 20,
+        "type": "contains"
+      },
+      {
+        "source": 1,
+        "target": 21,
+        "type": "contains"
+      },
+      {
+        "source": 21,
+        "target": 22,
+        "type": "movement_determined_by"
+      },
+      {
+        "source": 1,
+        "target": 22,
+        "type": "contains"
+      }
+    ]
+  }
+}

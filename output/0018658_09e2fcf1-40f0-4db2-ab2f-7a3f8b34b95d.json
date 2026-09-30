@@ -1,0 +1,475 @@
+{
+  "dataset": "hover",
+  "id": "09e2fcf1-40f0-4db2-ab2f-7a3f8b34b95d",
+  "split": "dev",
+  "claim": "The waterway that receives water from the Glens Falls Feeder Canal at its highest point is located farther east than Warren County Canal.",
+  "evidencia": "Page: Champlain Canal. Sentence: The Champlain Canal is a 60 mi canal that connects the south end of Lake Champlain to the Hudson River in New York.\nPage: Warren County Canal. Sentence: The Warren County Canal was a branch of the Miami and Erie Canal in southwestern Ohio about 20 mi in length that connected the Warren County seat of Lebanon to the main canal at Middletown in the mid-19th century.\nPage: Glens Falls Feeder Canal. Sentence: It is 7 mi long and delivers water from above Glen's Falls on the Hudson River to the highest point of the Champlain Canal.",
+  "evidence_text": "Page: Champlain Canal. Sentence: The Champlain Canal is a 60 mi canal that connects the south end of Lake Champlain to the Hudson River in New York.\nPage: Warren County Canal. Sentence: The Warren County Canal was a branch of the Miami and Erie Canal in southwestern Ohio about 20 mi in length that connected the Warren County seat of Lebanon to the main canal at Middletown in the mid-19th century.\nPage: Glens Falls Feeder Canal. Sentence: It is 7 mi long and delivers water from above Glen's Falls on the Hudson River to the highest point of the Champlain Canal.",
+  "label": "SUPPORTED",
+  "num_hops": 3,
+  "hover_metadata": {
+    "supporting_facts": [
+      [
+        "Champlain Canal",
+        0
+      ],
+      [
+        "Warren County Canal",
+        0
+      ],
+      [
+        "Glens Falls Feeder Canal",
+        1
+      ]
+    ],
+    "num_hops": 3,
+    "evidence_annotation_id": [
+      0
+    ],
+    "evidence_id": [
+      "Champlain Canal::sentence::0",
+      "Warren County Canal::sentence::0",
+      "Glens Falls Feeder Canal::sentence::1"
+    ],
+    "evidence_wiki_url": [
+      "https://en.wikipedia.org/wiki/Champlain_Canal",
+      "https://en.wikipedia.org/wiki/Warren_County_Canal",
+      "https://en.wikipedia.org/wiki/Glens_Falls_Feeder_Canal"
+    ],
+    "evidence_sentence_id": [
+      "Champlain Canal::sentence::0",
+      "Warren County Canal::sentence::0",
+      "Glens Falls Feeder Canal::sentence::1"
+    ]
+  },
+  "grafo_claim": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "e2709ee0-261b-5597-b49e-899068f74662",
+        "text": "This chunk is about:\n- Places: Glens Falls Feeder Canal, Warren County Canal\n- Concepts: waterways, relative location\n\nFacts:\n- The waterway that receives water from the Glens Falls Feeder Canal at its highest point is located farther east than Warren County Canal.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "a8f2a135-7472-5248-9ae8-28f4b5621f41",
+        "text": "The waterway that receives water from the Glens Falls Feeder Canal at its highest point is located farther east than Warren County Canal.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "5d178a51-c0f9-5b62-98b7-2c90250c32a4",
+        "text": "text_e2b01320ecf3f6b56c0233659c330b88",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "3a788101-0e97-5ed1-86a3-f49f71ecc0e1",
+        "text": "glens falls feeder canal",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "5f394058-b2a0-5ba8-8466-ba2a18cfcf4e",
+        "text": "place",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "1b1e22dc-ccb4-5c66-b5e3-c918f7b31784",
+        "text": "waterway that receives water from the glens falls feeder canal at its highest point",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "9c67fcc5-43e2-53c2-9d37-2b38504450f2",
+        "text": "warren county canal",
+        "type": "Entity"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 3,
+        "type": "receives_water_from"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 5,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 6,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "is_farther_east_than"
+      },
+      {
+        "source": 1,
+        "target": 6,
+        "type": "contains"
+      }
+    ]
+  },
+  "grafo_evidencia": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "c9f45b28-79bf-511c-b231-8af766ebd40c",
+        "text": "This chunk is about:\n- Places: New York, Lake Champlain, Hudson River, southwestern Ohio, Warren County, Lebanon, Middletown, Glens Falls\n- Systems: Champlain Canal, Warren County Canal, Miami and Erie Canal, Glens Falls Feeder Canal\n\nFacts:\n- The Champlain Canal is a 60 mi canal in New York that connects the south end of Lake Champlain to the Hudson River.\n- In the mid-19th century, the Warren County Canal was a branch of the Miami and Erie Canal in southwestern Ohio.\n- The Warren County Canal was about 20 mi long and connected Lebanon, the Warren County seat, to the main canal at Middletown.\n- The Glens Falls Feeder Canal is 7 mi long.\n- The Glens Falls Feeder Canal delivers water from above Glens Falls on the Hudson River to the highest point of the Champlain Canal.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "22693b0d-a747-58cf-af9b-ea46a2da366d",
+        "text": "Page: Champlain Canal. Sentence: The Champlain Canal is a 60 mi canal that connects the south end of Lake Champlain to the Hudson River in New York.\nPage: Warren County Canal. Sentence: The Warren County Canal was a branch of the Miami and Erie Canal in southwestern Ohio about 20 mi in length that connected the Warren County seat of Lebanon to the main canal at Middletown in the mid-19th century.\nPage: Glens Falls Feeder Canal. Sentence: It is 7 mi long and delivers water from above Glen's Falls on the Hudson River to the highest point of the Champlain Canal.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "fb11e9dd-5c3f-5ed0-a90d-6133588d5157",
+        "text": "text_d144a136d4cf6efa99ee33de20caf84d",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "7801b0fc-0de6-56a5-ab89-70841ed7c3e4",
+        "text": "champlain canal",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "c6210b29-7e64-5fda-938f-e2350afbeb1d",
+        "text": "canal",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "499dd89a-5024-5486-8be6-f653a32fc8a4",
+        "text": "lake champlain",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "33219a57-2295-52f5-8e3b-219a1adeea45",
+        "text": "lake",
+        "type": "EntityType"
+      },
+      {
+        "id": 7,
+        "original_id": "6adcc572-8423-5804-8b1c-440c2a8b5638",
+        "text": "hudson river",
+        "type": "Entity"
+      },
+      {
+        "id": 8,
+        "original_id": "68afbccf-cae9-529b-9142-2a538b8ed79d",
+        "text": "river",
+        "type": "EntityType"
+      },
+      {
+        "id": 9,
+        "original_id": "a7852d00-db75-55e2-bd9a-468ada762d39",
+        "text": "new york",
+        "type": "Entity"
+      },
+      {
+        "id": 10,
+        "original_id": "5f394058-b2a0-5ba8-8466-ba2a18cfcf4e",
+        "text": "place",
+        "type": "EntityType"
+      },
+      {
+        "id": 11,
+        "original_id": "9c67fcc5-43e2-53c2-9d37-2b38504450f2",
+        "text": "warren county canal",
+        "type": "Entity"
+      },
+      {
+        "id": 12,
+        "original_id": "4cdbe12c-0e21-5558-a100-aa220fb10399",
+        "text": "miami and erie canal",
+        "type": "Entity"
+      },
+      {
+        "id": 13,
+        "original_id": "ea69125a-eea4-5129-9166-c91231906fe5",
+        "text": "southwestern ohio",
+        "type": "Entity"
+      },
+      {
+        "id": 14,
+        "original_id": "dfa54034-a5c9-57b1-8f42-11e310bcb7be",
+        "text": "lebanon",
+        "type": "Entity"
+      },
+      {
+        "id": 15,
+        "original_id": "cf7a134f-5fea-5632-b3a1-245a737e4b2c",
+        "text": "middletown",
+        "type": "Entity"
+      },
+      {
+        "id": 16,
+        "original_id": "d7142d36-0387-5f00-abba-28728134bd41",
+        "text": "mid-19th century",
+        "type": "Entity"
+      },
+      {
+        "id": 17,
+        "original_id": "b19433ae-558c-5aaf-95ac-6231f2a4be0e",
+        "text": "date",
+        "type": "EntityType"
+      },
+      {
+        "id": 18,
+        "original_id": "3a788101-0e97-5ed1-86a3-f49f71ecc0e1",
+        "text": "glens falls feeder canal",
+        "type": "Entity"
+      },
+      {
+        "id": 19,
+        "original_id": "01e3734d-fc94-5863-8816-3962e3abae31",
+        "text": "glens falls",
+        "type": "Entity"
+      },
+      {
+        "id": 20,
+        "original_id": "d127fe7b-96b5-5e4a-8b56-a589036b5c87",
+        "text": "highest point of the champlain canal",
+        "type": "Entity"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 20,
+        "target": 3,
+        "type": "part_of"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 11,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 12,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 18,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "connects_to"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 7,
+        "type": "connects_to"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      },
+      {
+        "source": 18,
+        "target": 7,
+        "type": "draws_water_from"
+      },
+      {
+        "source": 7,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 9,
+        "type": "located_in"
+      },
+      {
+        "source": 1,
+        "target": 9,
+        "type": "contains"
+      },
+      {
+        "source": 9,
+        "target": 10,
+        "type": "is_a"
+      },
+      {
+        "source": 13,
+        "target": 10,
+        "type": "is_a"
+      },
+      {
+        "source": 14,
+        "target": 10,
+        "type": "is_a"
+      },
+      {
+        "source": 15,
+        "target": 10,
+        "type": "is_a"
+      },
+      {
+        "source": 19,
+        "target": 10,
+        "type": "is_a"
+      },
+      {
+        "source": 20,
+        "target": 10,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 11,
+        "type": "contains"
+      },
+      {
+        "source": 11,
+        "target": 12,
+        "type": "branch_of"
+      },
+      {
+        "source": 1,
+        "target": 12,
+        "type": "contains"
+      },
+      {
+        "source": 11,
+        "target": 13,
+        "type": "located_in"
+      },
+      {
+        "source": 1,
+        "target": 13,
+        "type": "contains"
+      },
+      {
+        "source": 11,
+        "target": 14,
+        "type": "connects_to"
+      },
+      {
+        "source": 1,
+        "target": 14,
+        "type": "contains"
+      },
+      {
+        "source": 11,
+        "target": 15,
+        "type": "connects_to"
+      },
+      {
+        "source": 1,
+        "target": 15,
+        "type": "contains"
+      },
+      {
+        "source": 11,
+        "target": 16,
+        "type": "occurred_in"
+      },
+      {
+        "source": 1,
+        "target": 16,
+        "type": "contains"
+      },
+      {
+        "source": 16,
+        "target": 17,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 18,
+        "type": "contains"
+      },
+      {
+        "source": 18,
+        "target": 19,
+        "type": "draws_water_from_above"
+      },
+      {
+        "source": 1,
+        "target": 19,
+        "type": "contains"
+      },
+      {
+        "source": 18,
+        "target": 20,
+        "type": "delivers_water_to"
+      },
+      {
+        "source": 1,
+        "target": 20,
+        "type": "contains"
+      }
+    ]
+  }
+}

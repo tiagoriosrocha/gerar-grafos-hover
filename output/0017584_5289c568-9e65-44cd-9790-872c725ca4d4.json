@@ -1,0 +1,742 @@
+{
+  "dataset": "hover",
+  "id": "5289c568-9e65-44cd-9790-872c725ca4d4",
+  "split": "train",
+  "claim": "Keurig Green Mountain specializes in coffee, not Microchip Technology.",
+  "evidencia": "Page: Microchip Technology. Sentence: Microchip Technology is an American manufacturer of microcontroller, memory and analog semiconductors.\nPage: Microchip Technology. Sentence: Its products include microcontrollers (PICmicro, dsPIC / PIC24, PIC32, AVR, AVR32 and SAM), Serial EEPROM devices, Serial SRAM devices, KEELOQ devices, radio frequency (RF) devices, thermal, power and battery management analog devices, as well as linear, interface and mixed signal devices.\nPage: Keurig Green Mountain. Sentence: Keurig Green Mountain, formerly Green Mountain Coffee Roasters, is a specialty coffee and coffeemaker company founded in 1981 and headquartered in the U.S.",
+  "evidence_text": "Page: Microchip Technology. Sentence: Microchip Technology is an American manufacturer of microcontroller, memory and analog semiconductors.\nPage: Microchip Technology. Sentence: Its products include microcontrollers (PICmicro, dsPIC / PIC24, PIC32, AVR, AVR32 and SAM), Serial EEPROM devices, Serial SRAM devices, KEELOQ devices, radio frequency (RF) devices, thermal, power and battery management analog devices, as well as linear, interface and mixed signal devices.\nPage: Keurig Green Mountain. Sentence: Keurig Green Mountain, formerly Green Mountain Coffee Roasters, is a specialty coffee and coffeemaker company founded in 1981 and headquartered in the U.S.",
+  "label": "SUPPORTED",
+  "num_hops": 2,
+  "hover_metadata": {
+    "supporting_facts": [
+      [
+        "Microchip Technology",
+        0
+      ],
+      [
+        "Microchip Technology",
+        1
+      ],
+      [
+        "Keurig Green Mountain",
+        0
+      ]
+    ],
+    "num_hops": 2,
+    "evidence_annotation_id": [
+      0
+    ],
+    "evidence_id": [
+      "Microchip Technology::sentence::0",
+      "Microchip Technology::sentence::1",
+      "Keurig Green Mountain::sentence::0"
+    ],
+    "evidence_wiki_url": [
+      "https://en.wikipedia.org/wiki/Microchip_Technology",
+      "https://en.wikipedia.org/wiki/Keurig_Green_Mountain"
+    ],
+    "evidence_sentence_id": [
+      "Microchip Technology::sentence::0",
+      "Microchip Technology::sentence::1",
+      "Keurig Green Mountain::sentence::0"
+    ]
+  },
+  "grafo_claim": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "15e86d5c-4384-536c-a7bb-0b344230e965",
+        "text": "This chunk is about:\n- Companies: Keurig Green Mountain, Microchip Technology\n- Topics: company specialization, industry distinction\n\nFacts:\n- Keurig Green Mountain specializes in coffee.\n- Microchip Technology is distinct from Keurig Green Mountain in this statement and is not identified as the company that specializes in coffee.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "d8635af7-982f-5256-9439-a27748fd15c9",
+        "text": "Keurig Green Mountain specializes in coffee, not Microchip Technology.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "3ddccfaf-158d-5dfa-b09a-b79839be72c7",
+        "text": "text_25964f21063769fef5fbfabe17d2bf81",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "5db84143-9561-57ef-8867-069e8f813a44",
+        "text": "keurig green mountain",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "388f60fb-220d-55e8-ae9c-3ac93cead308",
+        "text": "organization",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "33b5d1b7-36cf-5e21-a11c-b86aaf08c39f",
+        "text": "coffee",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "f76d57aa-4740-5218-9539-0e0978cbf183",
+        "text": "product",
+        "type": "EntityType"
+      },
+      {
+        "id": 7,
+        "original_id": "e9077d84-4c91-5553-81d1-05742ee86da5",
+        "text": "microchip technology",
+        "type": "Entity"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 7,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "specializes_in"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 7,
+        "type": "not_specializes_in"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      }
+    ]
+  },
+  "grafo_evidencia": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "11083eff-89ac-5e32-b4eb-5b5e183b5cf4",
+        "text": "This chunk is about:\n- Companies: Microchip Technology, Keurig Green Mountain\n- Products: microcontrollers, semiconductors, coffeemakers\n- Topics: specialty coffee, analog semiconductors\n\nFacts:\n- Keurig Green Mountain was founded in 1981 and was formerly named Green Mountain Coffee Roasters.\n- Keurig Green Mountain is a specialty coffee and coffeemaker company headquartered in the United States.\n- Microchip Technology is an American manufacturer of microcontroller, memory, and analog semiconductors.\n- Microchip Technology products include microcontrollers such as PICmicro, dsPIC/PIC24, PIC32, AVR, AVR32, and SAM.\n- Microchip Technology products also include Serial EEPROM devices, Serial SRAM devices, KEELOQ devices, radio frequency devices, thermal devices, power and battery management analog devices, and linear, interface, and mixed signal devices.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "d8e3d77c-4650-55b0-b8dd-652c783a4bc1",
+        "text": "Page: Microchip Technology. Sentence: Microchip Technology is an American manufacturer of microcontroller, memory and analog semiconductors.\nPage: Microchip Technology. Sentence: Its products include microcontrollers (PICmicro, dsPIC / PIC24, PIC32, AVR, AVR32 and SAM), Serial EEPROM devices, Serial SRAM devices, KEELOQ devices, radio frequency (RF) devices, thermal, power and battery management analog devices, as well as linear, interface and mixed signal devices.\nPage: Keurig Green Mountain. Sentence: Keurig Green Mountain, formerly Green Mountain Coffee Roasters, is a specialty coffee and coffeemaker company founded in 1981 and headquartered in the U.S.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "cd905260-0b2f-5455-b81b-730733c80dca",
+        "text": "text_83bc7da78cdb22e1ff479e1ebded86d8",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "e9077d84-4c91-5553-81d1-05742ee86da5",
+        "text": "microchip technology",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "388f60fb-220d-55e8-ae9c-3ac93cead308",
+        "text": "organization",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "32e5ea46-cca9-5920-8b2d-77357f10ce8d",
+        "text": "american",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "5023586d-88a2-53f9-ad15-7e2ebd75eb4c",
+        "text": "location",
+        "type": "EntityType"
+      },
+      {
+        "id": 7,
+        "original_id": "974518eb-b5d1-5047-b826-ba7d198164d4",
+        "text": "microcontroller",
+        "type": "Entity"
+      },
+      {
+        "id": 8,
+        "original_id": "f76d57aa-4740-5218-9539-0e0978cbf183",
+        "text": "product",
+        "type": "EntityType"
+      },
+      {
+        "id": 9,
+        "original_id": "6e53e0f4-a723-579d-9d42-4a4a77db624b",
+        "text": "memory semiconductor",
+        "type": "Entity"
+      },
+      {
+        "id": 10,
+        "original_id": "ce1abbeb-e436-5aa4-82a9-3f1ae68558f0",
+        "text": "analog semiconductor",
+        "type": "Entity"
+      },
+      {
+        "id": 11,
+        "original_id": "f5f86b7a-3f9e-5710-ae54-9bdf874cc825",
+        "text": "picmicro",
+        "type": "Entity"
+      },
+      {
+        "id": 12,
+        "original_id": "1f0133fe-294b-5554-b025-4420ae98236c",
+        "text": "dspic / pic24",
+        "type": "Entity"
+      },
+      {
+        "id": 13,
+        "original_id": "c6e94836-e768-57af-8f2a-d91fb2979e48",
+        "text": "pic32",
+        "type": "Entity"
+      },
+      {
+        "id": 14,
+        "original_id": "c8fe817f-0131-5fde-90ca-f5b36611bee3",
+        "text": "avr",
+        "type": "Entity"
+      },
+      {
+        "id": 15,
+        "original_id": "0bad4c5c-e084-5e64-a5cb-74d801ca9706",
+        "text": "avr32",
+        "type": "Entity"
+      },
+      {
+        "id": 16,
+        "original_id": "d656aaa9-f48e-5b8d-bd2d-32a368595aa2",
+        "text": "sam",
+        "type": "Entity"
+      },
+      {
+        "id": 17,
+        "original_id": "5f1b271e-d6bb-582c-84eb-b7d6ee0aeaf2",
+        "text": "serial eeprom devices",
+        "type": "Entity"
+      },
+      {
+        "id": 18,
+        "original_id": "7a02afe5-d919-52cd-861d-cc68e7027b3f",
+        "text": "serial sram devices",
+        "type": "Entity"
+      },
+      {
+        "id": 19,
+        "original_id": "d7bfb4a7-737b-5ccd-892c-15c4bfc3c0fb",
+        "text": "keeloq devices",
+        "type": "Entity"
+      },
+      {
+        "id": 20,
+        "original_id": "c9336998-650b-5c45-8a3e-baeccca124bf",
+        "text": "radio frequency devices",
+        "type": "Entity"
+      },
+      {
+        "id": 21,
+        "original_id": "44caec3d-9ea0-590b-b609-9a28a2a9c9ca",
+        "text": "thermal analog devices",
+        "type": "Entity"
+      },
+      {
+        "id": 22,
+        "original_id": "6bf1c186-1990-5b0f-a854-0aea645b4e5a",
+        "text": "power and battery management analog devices",
+        "type": "Entity"
+      },
+      {
+        "id": 23,
+        "original_id": "5243d2c8-0559-58f4-bd10-cf1f7fd8189d",
+        "text": "linear devices",
+        "type": "Entity"
+      },
+      {
+        "id": 24,
+        "original_id": "ab79b2b9-ce5d-5eef-bce0-ccedf4db8aec",
+        "text": "interface devices",
+        "type": "Entity"
+      },
+      {
+        "id": 25,
+        "original_id": "4790ee53-f55c-5f2e-86d2-847acca4e86d",
+        "text": "mixed signal devices",
+        "type": "Entity"
+      },
+      {
+        "id": 26,
+        "original_id": "5db84143-9561-57ef-8867-069e8f813a44",
+        "text": "keurig green mountain",
+        "type": "Entity"
+      },
+      {
+        "id": 27,
+        "original_id": "9249e9f1-6575-5cdb-8672-4308a731f080",
+        "text": "green mountain coffee roasters",
+        "type": "Entity"
+      },
+      {
+        "id": 28,
+        "original_id": "7097af42-a80d-5062-a3b9-0392cd57ba1a",
+        "text": "specialty coffee",
+        "type": "Entity"
+      },
+      {
+        "id": 29,
+        "original_id": "d6973049-5ce4-5c1e-bfeb-933d3cdfee6c",
+        "text": "coffeemaker",
+        "type": "Entity"
+      },
+      {
+        "id": 30,
+        "original_id": "c8168101-3248-5fef-a74b-eb93b29b066e",
+        "text": "1981",
+        "type": "Entity"
+      },
+      {
+        "id": 31,
+        "original_id": "b19433ae-558c-5aaf-95ac-6231f2a4be0e",
+        "text": "date",
+        "type": "EntityType"
+      },
+      {
+        "id": 32,
+        "original_id": "c39eada4-22e0-5745-b5a6-877d70e5d782",
+        "text": "u.s.",
+        "type": "Entity"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 26,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 27,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "has_national_affiliation"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 32,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 7,
+        "type": "manufactures"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      },
+      {
+        "source": 7,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 9,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 10,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 11,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 12,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 13,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 14,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 15,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 16,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 17,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 18,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 19,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 20,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 21,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 22,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 23,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 24,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 25,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 28,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 29,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 9,
+        "type": "manufactures"
+      },
+      {
+        "source": 1,
+        "target": 9,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 10,
+        "type": "manufactures"
+      },
+      {
+        "source": 1,
+        "target": 10,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 11,
+        "type": "includes_product"
+      },
+      {
+        "source": 1,
+        "target": 11,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 12,
+        "type": "includes_product"
+      },
+      {
+        "source": 1,
+        "target": 12,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 13,
+        "type": "includes_product"
+      },
+      {
+        "source": 1,
+        "target": 13,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 14,
+        "type": "includes_product"
+      },
+      {
+        "source": 1,
+        "target": 14,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 15,
+        "type": "includes_product"
+      },
+      {
+        "source": 1,
+        "target": 15,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 16,
+        "type": "includes_product"
+      },
+      {
+        "source": 1,
+        "target": 16,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 17,
+        "type": "includes_product"
+      },
+      {
+        "source": 1,
+        "target": 17,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 18,
+        "type": "includes_product"
+      },
+      {
+        "source": 1,
+        "target": 18,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 19,
+        "type": "includes_product"
+      },
+      {
+        "source": 1,
+        "target": 19,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 20,
+        "type": "includes_product"
+      },
+      {
+        "source": 1,
+        "target": 20,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 21,
+        "type": "includes_product"
+      },
+      {
+        "source": 1,
+        "target": 21,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 22,
+        "type": "includes_product"
+      },
+      {
+        "source": 1,
+        "target": 22,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 23,
+        "type": "includes_product"
+      },
+      {
+        "source": 1,
+        "target": 23,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 24,
+        "type": "includes_product"
+      },
+      {
+        "source": 1,
+        "target": 24,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 25,
+        "type": "includes_product"
+      },
+      {
+        "source": 1,
+        "target": 25,
+        "type": "contains"
+      },
+      {
+        "source": 1,
+        "target": 26,
+        "type": "contains"
+      },
+      {
+        "source": 26,
+        "target": 27,
+        "type": "formerly_known_as"
+      },
+      {
+        "source": 1,
+        "target": 27,
+        "type": "contains"
+      },
+      {
+        "source": 26,
+        "target": 28,
+        "type": "company_type"
+      },
+      {
+        "source": 1,
+        "target": 28,
+        "type": "contains"
+      },
+      {
+        "source": 26,
+        "target": 29,
+        "type": "company_type"
+      },
+      {
+        "source": 1,
+        "target": 29,
+        "type": "contains"
+      },
+      {
+        "source": 26,
+        "target": 30,
+        "type": "founded_in"
+      },
+      {
+        "source": 1,
+        "target": 30,
+        "type": "contains"
+      },
+      {
+        "source": 30,
+        "target": 31,
+        "type": "is_a"
+      },
+      {
+        "source": 26,
+        "target": 32,
+        "type": "headquartered_in"
+      },
+      {
+        "source": 1,
+        "target": 32,
+        "type": "contains"
+      }
+    ]
+  }
+}

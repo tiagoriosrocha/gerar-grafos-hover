@@ -1,0 +1,470 @@
+{
+  "dataset": "hover",
+  "id": "d1680114-f0b6-4302-a2ed-774711809841",
+  "split": "dev",
+  "claim": "Vic & Anthony's Steakhouse is located at the casino that was combined with the California Club. The casino is owned by Landry's, Inc.",
+  "evidencia": "Page: Vic &amp; Anthony's Steakhouse. Sentence: Vic & Anthony’s is an American steakhouse restaurant chain with locations in Downtown Houston, ]and inside the Golden Nugget Casinos in Las Vegas and Atlantic City.\nPage: Golden Nugget Las Vegas. Sentence: The Golden Nugget Las Vegas is a luxury hotel and casino located in Las Vegas, Nevada on the Fremont Street Experience.\nPage: Golden Nugget Las Vegas. Sentence: The property is owned and operated by Landry's, Inc.\nPage: California Club (casino). Sentence: The California Club was combined into the Golden Nugget shortly after the purchase by Wynn.",
+  "evidence_text": "Page: Vic &amp; Anthony's Steakhouse. Sentence: Vic & Anthony’s is an American steakhouse restaurant chain with locations in Downtown Houston, ]and inside the Golden Nugget Casinos in Las Vegas and Atlantic City.\nPage: Golden Nugget Las Vegas. Sentence: The Golden Nugget Las Vegas is a luxury hotel and casino located in Las Vegas, Nevada on the Fremont Street Experience.\nPage: Golden Nugget Las Vegas. Sentence: The property is owned and operated by Landry's, Inc.\nPage: California Club (casino). Sentence: The California Club was combined into the Golden Nugget shortly after the purchase by Wynn.",
+  "label": "SUPPORTED",
+  "num_hops": 3,
+  "hover_metadata": {
+    "supporting_facts": [
+      [
+        "Vic &amp; Anthony's Steakhouse",
+        0
+      ],
+      [
+        "Golden Nugget Las Vegas",
+        0
+      ],
+      [
+        "Golden Nugget Las Vegas",
+        1
+      ],
+      [
+        "California Club (casino)",
+        5
+      ]
+    ],
+    "num_hops": 3,
+    "evidence_annotation_id": [
+      0
+    ],
+    "evidence_id": [
+      "Vic &amp; Anthony's Steakhouse::sentence::0",
+      "Golden Nugget Las Vegas::sentence::0",
+      "Golden Nugget Las Vegas::sentence::1",
+      "California Club (casino)::sentence::5"
+    ],
+    "evidence_wiki_url": [
+      "https://en.wikipedia.org/wiki/Vic_%26amp%3B_Anthony%27s_Steakhouse",
+      "https://en.wikipedia.org/wiki/Golden_Nugget_Las_Vegas",
+      "https://en.wikipedia.org/wiki/California_Club_%28casino%29"
+    ],
+    "evidence_sentence_id": [
+      "Vic &amp; Anthony's Steakhouse::sentence::0",
+      "Golden Nugget Las Vegas::sentence::0",
+      "Golden Nugget Las Vegas::sentence::1",
+      "California Club (casino)::sentence::5"
+    ]
+  },
+  "grafo_claim": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "81466a28-adf8-5ff7-89e8-dd36d351abb4",
+        "text": "This chunk is about:\n- Places: Vic & Anthony's Steakhouse, California Club\n- Companies: Landry's, Inc.\n- Topics: casino ownership, casino combination\n\nFacts:\n- Vic & Anthony's Steakhouse is located at the casino that was combined with the California Club.\n- Landry's, Inc. owns the casino where Vic & Anthony's Steakhouse is located.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "3e26ce09-d285-5b24-ad78-dd6bef62ea11",
+        "text": "Vic & Anthony's Steakhouse is located at the casino that was combined with the California Club. The casino is owned by Landry's, Inc.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "75f0056d-ab2d-576b-92b8-5d4fbf0d729c",
+        "text": "text_9be4cd89af5a45c184e2d78d5adfdf7d",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "be303aa5-c88d-59ba-b8cf-be12c2321002",
+        "text": "vic & anthonys steakhouse",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "5f394058-b2a0-5ba8-8466-ba2a18cfcf4e",
+        "text": "place",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "e3a12a10-bc0f-5108-9f35-6991a45dd98a",
+        "text": "the casino",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "9ea27e42-bf54-5257-82b8-c2452b4f7eab",
+        "text": "california club",
+        "type": "Entity"
+      },
+      {
+        "id": 7,
+        "original_id": "99a84324-83d4-58c4-ba0a-bb63f636506c",
+        "text": "landrys, inc.",
+        "type": "Entity"
+      },
+      {
+        "id": 8,
+        "original_id": "388f60fb-220d-55e8-ae9c-3ac93cead308",
+        "text": "organization",
+        "type": "EntityType"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 5,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 6,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "located_at"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "combined_with"
+      },
+      {
+        "source": 1,
+        "target": 6,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 7,
+        "type": "owned_by"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      },
+      {
+        "source": 7,
+        "target": 8,
+        "type": "is_a"
+      }
+    ]
+  },
+  "grafo_evidencia": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "eaaad813-cf7a-5d66-912f-448376724de0",
+        "text": "This chunk is about:\n- Companies: Landry's, Inc.\n- Places: Downtown Houston, Las Vegas, Atlantic City, Fremont Street Experience\n- Products: Vic & Anthony's Steakhouse, Golden Nugget Las Vegas, California Club\n- Topics: restaurant chains, hotels and casinos, property ownership, casino acquisitions\n\nFacts:\n- Vic & Anthony's is an American steakhouse restaurant chain with locations in Downtown Houston and inside Golden Nugget casinos in Las Vegas and Atlantic City.\n- Golden Nugget Las Vegas is a luxury hotel and casino in Las Vegas, Nevada, on the Fremont Street Experience.\n- Landry's, Inc. owns and operates Golden Nugget Las Vegas.\n- The California Club was combined into the Golden Nugget shortly after Wynn purchased it.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "2d126077-eec9-527d-8e21-46534842c799",
+        "text": "Page: Vic &amp; Anthony's Steakhouse. Sentence: Vic & Anthony’s is an American steakhouse restaurant chain with locations in Downtown Houston, ]and inside the Golden Nugget Casinos in Las Vegas and Atlantic City.\nPage: Golden Nugget Las Vegas. Sentence: The Golden Nugget Las Vegas is a luxury hotel and casino located in Las Vegas, Nevada on the Fremont Street Experience.\nPage: Golden Nugget Las Vegas. Sentence: The property is owned and operated by Landry's, Inc.\nPage: California Club (casino). Sentence: The California Club was combined into the Golden Nugget shortly after the purchase by Wynn.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "ee8453f6-cd4a-5899-b864-63e4d05e1bbf",
+        "text": "text_50d8d86f063624509eccdd1a085f89d8",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "be303aa5-c88d-59ba-b8cf-be12c2321002",
+        "text": "vic & anthonys steakhouse",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "388f60fb-220d-55e8-ae9c-3ac93cead308",
+        "text": "organization",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "3c411699-a82c-5bf2-bc5a-66c502b477b1",
+        "text": "downtown houston",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "5f394058-b2a0-5ba8-8466-ba2a18cfcf4e",
+        "text": "place",
+        "type": "EntityType"
+      },
+      {
+        "id": 7,
+        "original_id": "bf3f626a-af21-5fd4-88bc-503c37067b77",
+        "text": "golden nugget casinos",
+        "type": "Entity"
+      },
+      {
+        "id": 8,
+        "original_id": "2768ffee-4734-5551-9369-d2097b287276",
+        "text": "las vegas",
+        "type": "Entity"
+      },
+      {
+        "id": 9,
+        "original_id": "cca9924d-3e69-59c5-be62-5ec26c26b0db",
+        "text": "nevada",
+        "type": "Entity"
+      },
+      {
+        "id": 10,
+        "original_id": "866f5443-94f4-5a51-a7eb-6193fddcdebe",
+        "text": "atlantic city",
+        "type": "Entity"
+      },
+      {
+        "id": 11,
+        "original_id": "9e48ee78-5219-5a47-abd3-13c8728fcbcc",
+        "text": "golden nugget las vegas",
+        "type": "Entity"
+      },
+      {
+        "id": 12,
+        "original_id": "8976ed06-6b85-5c53-b8b6-3028c0c7a592",
+        "text": "fremont street experience",
+        "type": "Entity"
+      },
+      {
+        "id": 13,
+        "original_id": "99a84324-83d4-58c4-ba0a-bb63f636506c",
+        "text": "landrys, inc.",
+        "type": "Entity"
+      },
+      {
+        "id": 14,
+        "original_id": "9ea27e42-bf54-5257-82b8-c2452b4f7eab",
+        "text": "california club",
+        "type": "Entity"
+      },
+      {
+        "id": 15,
+        "original_id": "b0372f9c-0e3c-5ec9-abd6-be5b45d15d8f",
+        "text": "golden nugget",
+        "type": "Entity"
+      },
+      {
+        "id": 16,
+        "original_id": "b60829b2-3b0c-5d39-ab0d-578f2337bae4",
+        "text": "wynn",
+        "type": "Entity"
+      },
+      {
+        "id": 17,
+        "original_id": "99a82eec-bb35-5bb5-9ed2-e73fc7a756de",
+        "text": "person",
+        "type": "EntityType"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 7,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 13,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 14,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 15,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "has_location"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 8,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 9,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 10,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 11,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 12,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 7,
+        "type": "has_location_inside"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      },
+      {
+        "source": 7,
+        "target": 8,
+        "type": "has_location"
+      },
+      {
+        "source": 1,
+        "target": 8,
+        "type": "contains"
+      },
+      {
+        "source": 11,
+        "target": 8,
+        "type": "located_in"
+      },
+      {
+        "source": 8,
+        "target": 9,
+        "type": "located_in"
+      },
+      {
+        "source": 1,
+        "target": 9,
+        "type": "contains"
+      },
+      {
+        "source": 7,
+        "target": 10,
+        "type": "has_location"
+      },
+      {
+        "source": 1,
+        "target": 10,
+        "type": "contains"
+      },
+      {
+        "source": 1,
+        "target": 11,
+        "type": "contains"
+      },
+      {
+        "source": 13,
+        "target": 11,
+        "type": "owns"
+      },
+      {
+        "source": 11,
+        "target": 12,
+        "type": "located_on"
+      },
+      {
+        "source": 1,
+        "target": 12,
+        "type": "contains"
+      },
+      {
+        "source": 1,
+        "target": 13,
+        "type": "contains"
+      },
+      {
+        "source": 1,
+        "target": 14,
+        "type": "contains"
+      },
+      {
+        "source": 16,
+        "target": 14,
+        "type": "purchased"
+      },
+      {
+        "source": 14,
+        "target": 15,
+        "type": "combined_into"
+      },
+      {
+        "source": 1,
+        "target": 15,
+        "type": "contains"
+      },
+      {
+        "source": 1,
+        "target": 16,
+        "type": "contains"
+      },
+      {
+        "source": 16,
+        "target": 17,
+        "type": "is_a"
+      }
+    ]
+  }
+}

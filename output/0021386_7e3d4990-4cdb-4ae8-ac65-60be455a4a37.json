@@ -1,0 +1,362 @@
+{
+  "dataset": "hover",
+  "id": "7e3d4990-4cdb-4ae8-ac65-60be455a4a37",
+  "split": "dev",
+  "claim": "The Leonberger is not a large dog breed. Neither is the dog often pictured in Doge (meme).",
+  "evidencia": "Page: Shiba Inu. Sentence: The Shiba Inu (柴犬 ) is the smallest of the six original and distinct spitz breeds of dog from Japan.\nPage: Leonberger. Sentence: The Leonberger is a giant dog breed.\nPage: Doge (meme). Sentence: The meme typically consists of a picture of a Shiba Inu accompanied by multicolored text in Comic Sans font in the foreground.",
+  "evidence_text": "Page: Shiba Inu. Sentence: The Shiba Inu (柴犬 ) is the smallest of the six original and distinct spitz breeds of dog from Japan.\nPage: Leonberger. Sentence: The Leonberger is a giant dog breed.\nPage: Doge (meme). Sentence: The meme typically consists of a picture of a Shiba Inu accompanied by multicolored text in Comic Sans font in the foreground.",
+  "label": "SUPPORTED",
+  "num_hops": 3,
+  "hover_metadata": {
+    "supporting_facts": [
+      [
+        "Shiba Inu",
+        0
+      ],
+      [
+        "Leonberger",
+        0
+      ],
+      [
+        "Doge (meme)",
+        1
+      ]
+    ],
+    "num_hops": 3,
+    "evidence_annotation_id": [
+      0
+    ],
+    "evidence_id": [
+      "Shiba Inu::sentence::0",
+      "Leonberger::sentence::0",
+      "Doge (meme)::sentence::1"
+    ],
+    "evidence_wiki_url": [
+      "https://en.wikipedia.org/wiki/Shiba_Inu",
+      "https://en.wikipedia.org/wiki/Leonberger",
+      "https://en.wikipedia.org/wiki/Doge_%28meme%29"
+    ],
+    "evidence_sentence_id": [
+      "Shiba Inu::sentence::0",
+      "Leonberger::sentence::0",
+      "Doge (meme)::sentence::1"
+    ]
+  },
+  "grafo_claim": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "d0487511-0d59-5264-8939-57a7779916bf",
+        "text": "This chunk is about:\n- Products: Leonberger, Doge (meme)\n- Concepts: Dog breed size\n\nFacts:\n- The Leonberger is not a large dog breed.\n- The dog often pictured in Doge (meme) is not a large dog breed.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "cd0e7e3c-0876-5ebf-9376-3d9a72856206",
+        "text": "The Leonberger is not a large dog breed. Neither is the dog often pictured in Doge (meme).",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "306e2f31-611b-58f1-b612-118911e2e230",
+        "text": "text_5d03897519abb6a3135e9375e78552a2",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "6101f882-95a6-5b97-9bc4-30015cf2ed52",
+        "text": "leonberger",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "29eda40d-66d5-59be-b17c-7c4969f51367",
+        "text": "dog breed",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "5e47062f-7d02-559f-975f-816b6ca8c2f9",
+        "text": "large dog breed",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "d2a381fa-3658-5ca6-ada9-2109cfc9331d",
+        "text": "concept",
+        "type": "EntityType"
+      },
+      {
+        "id": 7,
+        "original_id": "fbf734f2-cb43-5e8f-9533-c627c76678af",
+        "text": "doge (meme)",
+        "type": "Entity"
+      },
+      {
+        "id": 8,
+        "original_id": "58c3e110-b3f5-568b-a41f-b40ae874826f",
+        "text": "meme",
+        "type": "EntityType"
+      },
+      {
+        "id": 9,
+        "original_id": "5a0841b6-1d37-5690-834c-abc4650ccc28",
+        "text": "dog often pictured in doge (meme)",
+        "type": "Entity"
+      },
+      {
+        "id": 10,
+        "original_id": "3007ef01-39ec-5999-8c1c-d768bf1ba8e6",
+        "text": "dog",
+        "type": "EntityType"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "is_not_a"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 9,
+        "target": 5,
+        "type": "is_not_a"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      },
+      {
+        "source": 9,
+        "target": 7,
+        "type": "is_often_pictured_in"
+      },
+      {
+        "source": 7,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 9,
+        "type": "contains"
+      },
+      {
+        "source": 9,
+        "target": 10,
+        "type": "is_a"
+      }
+    ]
+  },
+  "grafo_evidencia": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "2ea2a906-c64e-56ca-b100-44413632e239",
+        "text": "This chunk is about:\n- Products: Shiba Inu, Leonberger\n- Topics: Doge (meme)\n- Concepts: dog breeds, spitz breeds, internet memes\n\nFacts:\n- The Shiba Inu is the smallest of the six original and distinct spitz dog breeds from Japan.\n- The Leonberger is a giant dog breed.\n- The Doge meme typically uses a picture of a Shiba Inu with multicolored foreground text in Comic Sans font.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "39bed5bc-6dc4-5612-90ab-62b7b43c5472",
+        "text": "Page: Shiba Inu. Sentence: The Shiba Inu (柴犬 ) is the smallest of the six original and distinct spitz breeds of dog from Japan.\nPage: Leonberger. Sentence: The Leonberger is a giant dog breed.\nPage: Doge (meme). Sentence: The meme typically consists of a picture of a Shiba Inu accompanied by multicolored text in Comic Sans font in the foreground.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "8db5fe48-fc82-5dec-b9a5-116f025fd6bd",
+        "text": "text_cc22eeb2bede0db37da49becb5179fd3",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "7a04ecb6-58d9-5957-9403-83b997bf9166",
+        "text": "shiba inu",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "29eda40d-66d5-59be-b17c-7c4969f51367",
+        "text": "dog breed",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "03c2b7d0-7e6a-5507-a1a2-b1db42469ec2",
+        "text": "spitz breed",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "6fe8aeb7-7155-537e-88a2-99fb39874a71",
+        "text": "dog breed group",
+        "type": "EntityType"
+      },
+      {
+        "id": 7,
+        "original_id": "9caba307-62ec-5f06-80d1-6a87c220306a",
+        "text": "japan",
+        "type": "Entity"
+      },
+      {
+        "id": 8,
+        "original_id": "35e29ad1-17b7-507a-a205-d7851a5e7102",
+        "text": "country",
+        "type": "EntityType"
+      },
+      {
+        "id": 9,
+        "original_id": "6101f882-95a6-5b97-9bc4-30015cf2ed52",
+        "text": "leonberger",
+        "type": "Entity"
+      },
+      {
+        "id": 10,
+        "original_id": "e8b6b72a-1fba-588e-bf8d-21fed8879491",
+        "text": "doge",
+        "type": "Entity"
+      },
+      {
+        "id": 11,
+        "original_id": "58c3e110-b3f5-568b-a41f-b40ae874826f",
+        "text": "meme",
+        "type": "EntityType"
+      },
+      {
+        "id": 12,
+        "original_id": "ddfcf237-52f9-5921-aa66-60b64e795344",
+        "text": "comic sans",
+        "type": "Entity"
+      },
+      {
+        "id": 13,
+        "original_id": "5334dd2e-eb88-5423-be23-ddf763d5ace4",
+        "text": "font",
+        "type": "EntityType"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 10,
+        "target": 3,
+        "type": "typically_depicts"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 9,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 7,
+        "type": "originates_from"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      },
+      {
+        "source": 7,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 9,
+        "type": "contains"
+      },
+      {
+        "source": 1,
+        "target": 10,
+        "type": "contains"
+      },
+      {
+        "source": 10,
+        "target": 11,
+        "type": "is_a"
+      },
+      {
+        "source": 10,
+        "target": 12,
+        "type": "uses_font"
+      },
+      {
+        "source": 1,
+        "target": 12,
+        "type": "contains"
+      },
+      {
+        "source": 12,
+        "target": 13,
+        "type": "is_a"
+      }
+    ]
+  }
+}

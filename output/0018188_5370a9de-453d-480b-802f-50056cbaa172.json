@@ -1,0 +1,500 @@
+{
+  "dataset": "hover",
+  "id": "5370a9de-453d-480b-802f-50056cbaa172",
+  "split": "dev",
+  "claim": "Thomas Loren Friedman has won more Pulitzer Prizes than Colson Whitehead.",
+  "evidencia": "Page: Thomas Friedman. Sentence: Thomas Loren Friedman (born July 20, 1953) is an American journalist and author.\nPage: Thomas Friedman. Sentence: He is a three time Pulitzer Prize winner.\nPage: Colson Whitehead. Sentence: He is the author of six novels, including his debut work, the 1999 novel \"The Intuitionist\", and \"The Underground Railroad\" (2016), for which he won the 2016 National Book Award for Fiction and the 2017 Pulitzer Prize for Fiction.",
+  "evidence_text": "Page: Thomas Friedman. Sentence: Thomas Loren Friedman (born July 20, 1953) is an American journalist and author.\nPage: Thomas Friedman. Sentence: He is a three time Pulitzer Prize winner.\nPage: Colson Whitehead. Sentence: He is the author of six novels, including his debut work, the 1999 novel \"The Intuitionist\", and \"The Underground Railroad\" (2016), for which he won the 2016 National Book Award for Fiction and the 2017 Pulitzer Prize for Fiction.",
+  "label": "SUPPORTED",
+  "num_hops": 2,
+  "hover_metadata": {
+    "supporting_facts": [
+      [
+        "Thomas Friedman",
+        0
+      ],
+      [
+        "Thomas Friedman",
+        1
+      ],
+      [
+        "Colson Whitehead",
+        1
+      ]
+    ],
+    "num_hops": 2,
+    "evidence_annotation_id": [
+      0
+    ],
+    "evidence_id": [
+      "Thomas Friedman::sentence::0",
+      "Thomas Friedman::sentence::1",
+      "Colson Whitehead::sentence::1"
+    ],
+    "evidence_wiki_url": [
+      "https://en.wikipedia.org/wiki/Thomas_Friedman",
+      "https://en.wikipedia.org/wiki/Colson_Whitehead"
+    ],
+    "evidence_sentence_id": [
+      "Thomas Friedman::sentence::0",
+      "Thomas Friedman::sentence::1",
+      "Colson Whitehead::sentence::1"
+    ]
+  },
+  "grafo_claim": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "4d7f74e3-0a49-5a56-b4b9-a827ba69c829",
+        "text": "This chunk is about:\n- People: Thomas Loren Friedman, Colson Whitehead\n- Awards: Pulitzer Prize\n\nFacts:\n- Thomas Loren Friedman has won more Pulitzer Prizes than Colson Whitehead.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "17cb1a88-19a8-54d8-8543-7e2ce89c7169",
+        "text": "Thomas Loren Friedman has won more Pulitzer Prizes than Colson Whitehead.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "19a714b1-4e10-52da-b332-c0fc734ce398",
+        "text": "text_8285185bd1543078312b27b332a09c97",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "9b158ea6-0f38-519f-9028-c9d497148795",
+        "text": "thomas loren friedman",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "99a82eec-bb35-5bb5-9ed2-e73fc7a756de",
+        "text": "person",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "d8077f18-3825-5abc-816a-8e5a2224c00e",
+        "text": "pulitzer prize",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "38e42125-31f4-5cd6-993c-dbbc06a88910",
+        "text": "award",
+        "type": "EntityType"
+      },
+      {
+        "id": 7,
+        "original_id": "115995a0-e90f-5553-aada-1456dd0376fb",
+        "text": "colson whitehead",
+        "type": "Entity"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 7,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "has_won_more_than"
+      },
+      {
+        "source": 7,
+        "target": 5,
+        "type": "has_won"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 7,
+        "type": "has_won_more_pulitzer_prizes_than"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      }
+    ]
+  },
+  "grafo_evidencia": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "139c2a30-855c-52d0-b635-65606f1ab7fe",
+        "text": "This chunk is about:\n- People: Thomas Friedman, Colson Whitehead\n- Roles: journalist, author\n- Awards: Pulitzer Prize, National Book Award for Fiction\n- Works: The Intuitionist, The Underground Railroad\n\nFacts:\n- Thomas Friedman was born on July 20, 1953.\n- Thomas Friedman is an American journalist and author.\n- Thomas Friedman is a three-time Pulitzer Prize winner.\n- Colson Whitehead wrote the 1999 debut novel \"The Intuitionist.\"\n- Colson Whitehead wrote the 2016 novel \"The Underground Railroad.\"\n- Colson Whitehead won the 2016 National Book Award for Fiction for \"The Underground Railroad.\"\n- Colson Whitehead won the 2017 Pulitzer Prize for Fiction for \"The Underground Railroad.\"\n- Colson Whitehead is the author of six novels.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "e91bbd63-abe9-59c5-a148-2e3bf7f47dd9",
+        "text": "Page: Thomas Friedman. Sentence: Thomas Loren Friedman (born July 20, 1953) is an American journalist and author.\nPage: Thomas Friedman. Sentence: He is a three time Pulitzer Prize winner.\nPage: Colson Whitehead. Sentence: He is the author of six novels, including his debut work, the 1999 novel \"The Intuitionist\", and \"The Underground Railroad\" (2016), for which he won the 2016 National Book Award for Fiction and the 2017 Pulitzer Prize for Fiction.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "a2645dde-7951-5fbc-b124-46430fe0845d",
+        "text": "text_67846733a94b4c8e23708b6f7f2c44fd",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "9b158ea6-0f38-519f-9028-c9d497148795",
+        "text": "thomas loren friedman",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "99a82eec-bb35-5bb5-9ed2-e73fc7a756de",
+        "text": "person",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "3796d789-e9f6-5dce-ae05-3bdf01587200",
+        "text": "1953-07-20",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "b19433ae-558c-5aaf-95ac-6231f2a4be0e",
+        "text": "date",
+        "type": "EntityType"
+      },
+      {
+        "id": 7,
+        "original_id": "61e09d92-f1de-5bd4-b50a-ac80a749b70e",
+        "text": "journalist",
+        "type": "Entity"
+      },
+      {
+        "id": 8,
+        "original_id": "9d80eb43-32fa-561c-9371-91f180ebcb6c",
+        "text": "profession",
+        "type": "EntityType"
+      },
+      {
+        "id": 9,
+        "original_id": "a91c6b1d-a9af-51f5-be3a-ff03e1776cd0",
+        "text": "author",
+        "type": "Entity"
+      },
+      {
+        "id": 10,
+        "original_id": "d8077f18-3825-5abc-816a-8e5a2224c00e",
+        "text": "pulitzer prize",
+        "type": "Entity"
+      },
+      {
+        "id": 11,
+        "original_id": "38e42125-31f4-5cd6-993c-dbbc06a88910",
+        "text": "award",
+        "type": "EntityType"
+      },
+      {
+        "id": 12,
+        "original_id": "115995a0-e90f-5553-aada-1456dd0376fb",
+        "text": "colson whitehead",
+        "type": "Entity"
+      },
+      {
+        "id": 13,
+        "original_id": "cc0b4cfa-22d5-50e5-8e34-4dc52f1ee8d0",
+        "text": "the intuitionist",
+        "type": "Entity"
+      },
+      {
+        "id": 14,
+        "original_id": "3faed6ef-3d90-5ffd-9229-cfb62eb68140",
+        "text": "book",
+        "type": "EntityType"
+      },
+      {
+        "id": 15,
+        "original_id": "da34b31d-0543-5b2c-8d19-d73ef0cfe6ad",
+        "text": "1999",
+        "type": "Entity"
+      },
+      {
+        "id": 16,
+        "original_id": "fec25f97-b1b0-5327-8e4a-3e408903a8a2",
+        "text": "the underground railroad",
+        "type": "Entity"
+      },
+      {
+        "id": 17,
+        "original_id": "e4b4371b-a3be-58ef-8db1-07e189dc56ac",
+        "text": "2016",
+        "type": "Entity"
+      },
+      {
+        "id": 18,
+        "original_id": "3b94fdab-666e-5ec4-8dd1-6834eb5f5ccb",
+        "text": "national book award for fiction",
+        "type": "Entity"
+      },
+      {
+        "id": 19,
+        "original_id": "a07c8fe0-e77f-5a96-9f4f-2487578236dd",
+        "text": "pulitzer prize for fiction",
+        "type": "Entity"
+      },
+      {
+        "id": 20,
+        "original_id": "ece7ac70-0b5c-5fc0-a97a-413e5e8ed0f8",
+        "text": "2017",
+        "type": "Entity"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 12,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "born_on"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 15,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 17,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 20,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 7,
+        "type": "has_profession"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      },
+      {
+        "source": 7,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 9,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 9,
+        "type": "has_profession"
+      },
+      {
+        "source": 1,
+        "target": 9,
+        "type": "contains"
+      },
+      {
+        "source": 12,
+        "target": 9,
+        "type": "has_profession"
+      },
+      {
+        "source": 3,
+        "target": 10,
+        "type": "won"
+      },
+      {
+        "source": 1,
+        "target": 10,
+        "type": "contains"
+      },
+      {
+        "source": 10,
+        "target": 11,
+        "type": "is_a"
+      },
+      {
+        "source": 18,
+        "target": 11,
+        "type": "is_a"
+      },
+      {
+        "source": 19,
+        "target": 11,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 12,
+        "type": "contains"
+      },
+      {
+        "source": 12,
+        "target": 13,
+        "type": "wrote"
+      },
+      {
+        "source": 1,
+        "target": 13,
+        "type": "contains"
+      },
+      {
+        "source": 13,
+        "target": 14,
+        "type": "is_a"
+      },
+      {
+        "source": 16,
+        "target": 14,
+        "type": "is_a"
+      },
+      {
+        "source": 13,
+        "target": 15,
+        "type": "published_in"
+      },
+      {
+        "source": 1,
+        "target": 15,
+        "type": "contains"
+      },
+      {
+        "source": 12,
+        "target": 16,
+        "type": "wrote"
+      },
+      {
+        "source": 1,
+        "target": 16,
+        "type": "contains"
+      },
+      {
+        "source": 16,
+        "target": 17,
+        "type": "published_in"
+      },
+      {
+        "source": 18,
+        "target": 17,
+        "type": "awarded_in"
+      },
+      {
+        "source": 1,
+        "target": 17,
+        "type": "contains"
+      },
+      {
+        "source": 16,
+        "target": 18,
+        "type": "earned"
+      },
+      {
+        "source": 12,
+        "target": 18,
+        "type": "won"
+      },
+      {
+        "source": 1,
+        "target": 18,
+        "type": "contains"
+      },
+      {
+        "source": 16,
+        "target": 19,
+        "type": "earned"
+      },
+      {
+        "source": 12,
+        "target": 19,
+        "type": "won"
+      },
+      {
+        "source": 1,
+        "target": 19,
+        "type": "contains"
+      },
+      {
+        "source": 19,
+        "target": 20,
+        "type": "awarded_in"
+      },
+      {
+        "source": 1,
+        "target": 20,
+        "type": "contains"
+      }
+    ]
+  }
+}

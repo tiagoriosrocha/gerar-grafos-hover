@@ -1,0 +1,425 @@
+{
+  "dataset": "hover",
+  "id": "cfefb912-4f77-4d54-91e2-63567e33c068",
+  "split": "dev",
+  "claim": "McClellan–Palomar Airport is closer to its host city than Chicago Rockford International Airport.",
+  "evidencia": "Page: Chicago Rockford International Airport. Sentence: It is located four miles (6 km) south of the city center of Rockford and 85 miles northwest of Chicago.\nPage: McClellan–Palomar Airport. Sentence: McClellan–Palomar Airport (Palomar Airport) (IATA: CLD, ICAO: KCRQ, FAA LID: CRQ) is a public airport three miles (5 km) southeast of Carlsbad in San Diego County, California.",
+  "evidence_text": "Page: Chicago Rockford International Airport. Sentence: It is located four miles (6 km) south of the city center of Rockford and 85 miles northwest of Chicago.\nPage: McClellan–Palomar Airport. Sentence: McClellan–Palomar Airport (Palomar Airport) (IATA: CLD, ICAO: KCRQ, FAA LID: CRQ) is a public airport three miles (5 km) southeast of Carlsbad in San Diego County, California.",
+  "label": "NOT_SUPPORTED",
+  "num_hops": 2,
+  "hover_metadata": {
+    "supporting_facts": [
+      [
+        "Chicago Rockford International Airport",
+        1
+      ],
+      [
+        "McClellan–Palomar Airport",
+        0
+      ]
+    ],
+    "num_hops": 2,
+    "evidence_annotation_id": [
+      0
+    ],
+    "evidence_id": [
+      "Chicago Rockford International Airport::sentence::1",
+      "McClellan–Palomar Airport::sentence::0"
+    ],
+    "evidence_wiki_url": [
+      "https://en.wikipedia.org/wiki/Chicago_Rockford_International_Airport",
+      "https://en.wikipedia.org/wiki/McClellan%E2%80%93Palomar_Airport"
+    ],
+    "evidence_sentence_id": [
+      "Chicago Rockford International Airport::sentence::1",
+      "McClellan–Palomar Airport::sentence::0"
+    ]
+  },
+  "grafo_claim": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "b40648c5-db5c-56b5-908d-54672b070316",
+        "text": "This chunk is about:\n- Places: McClellan–Palomar Airport, Chicago Rockford International Airport\n- Concepts: Airport proximity to host city\n\nFacts:\n- McClellan–Palomar Airport is closer to its host city than Chicago Rockford International Airport is to its host city.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "df0f3b7b-96c5-58a7-81d4-9032087092c4",
+        "text": "McClellan–Palomar Airport is closer to its host city than Chicago Rockford International Airport.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "2b29bec9-33cc-5bd6-9376-17115ecc5bbd",
+        "text": "text_d808226d19ee49868dd80e0306559c1a",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "acc26fe7-c0a7-5ab9-9443-dbcc5cca2cea",
+        "text": "mcclellan–palomar airport",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "50596f1a-2d8a-5de7-96b5-ba7068791784",
+        "text": "airport",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "ad6d4944-6a2b-50c3-bd1c-28404a35a515",
+        "text": "host city",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "5f394058-b2a0-5ba8-8466-ba2a18cfcf4e",
+        "text": "place",
+        "type": "EntityType"
+      },
+      {
+        "id": 7,
+        "original_id": "03d36fca-480e-5d47-936c-364da1be671b",
+        "text": "chicago rockford international airport",
+        "type": "Entity"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 7,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "is_closer_to_than_comparison_point"
+      },
+      {
+        "source": 7,
+        "target": 5,
+        "type": "is_farther_from_than_comparison_point"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      }
+    ]
+  },
+  "grafo_evidencia": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "70839551-665b-5395-b0d2-7bb783c292b5",
+        "text": "This chunk is about:\n- Places: Rockford, Chicago, Carlsbad, San Diego County, California\n- Airports: Chicago Rockford International Airport, McClellan–Palomar Airport\n- Codes: IATA CLD, ICAO KCRQ, FAA LID CRQ\n\nFacts:\n- Chicago Rockford International Airport is located four miles south of the city center of Rockford and 85 miles northwest of Chicago.\n- McClellan–Palomar Airport is a public airport located three miles southeast of Carlsbad in San Diego County, California.\n- McClellan–Palomar Airport has the codes IATA CLD, ICAO KCRQ, and FAA LID CRQ.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "5bf45316-1a5b-5adb-a71d-6fa158344642",
+        "text": "Page: Chicago Rockford International Airport. Sentence: It is located four miles (6 km) south of the city center of Rockford and 85 miles northwest of Chicago.\nPage: McClellan–Palomar Airport. Sentence: McClellan–Palomar Airport (Palomar Airport) (IATA: CLD, ICAO: KCRQ, FAA LID: CRQ) is a public airport three miles (5 km) southeast of Carlsbad in San Diego County, California.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "3b11cd3a-d19a-5b05-af65-b6f92f7f044d",
+        "text": "text_d4469703e742351b686b511d909a5986",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "03d36fca-480e-5d47-936c-364da1be671b",
+        "text": "chicago rockford international airport",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "50596f1a-2d8a-5de7-96b5-ba7068791784",
+        "text": "airport",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "45edf23b-fe26-5428-9b87-5e27ed20af25",
+        "text": "rockford",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "5f394058-b2a0-5ba8-8466-ba2a18cfcf4e",
+        "text": "place",
+        "type": "EntityType"
+      },
+      {
+        "id": 7,
+        "original_id": "ec047af9-0db4-5349-a274-c803926fd58c",
+        "text": "chicago",
+        "type": "Entity"
+      },
+      {
+        "id": 8,
+        "original_id": "acc26fe7-c0a7-5ab9-9443-dbcc5cca2cea",
+        "text": "mcclellan–palomar airport",
+        "type": "Entity"
+      },
+      {
+        "id": 9,
+        "original_id": "97522ea9-648f-530c-a09d-1f4bacdc9d0d",
+        "text": "palomar airport",
+        "type": "Entity"
+      },
+      {
+        "id": 10,
+        "original_id": "691866e9-2c9f-554e-8d4b-a80cea329fcd",
+        "text": "cld",
+        "type": "Entity"
+      },
+      {
+        "id": 11,
+        "original_id": "2c23f4f7-2223-5c53-a5f6-1bd0114fcd6a",
+        "text": "code",
+        "type": "EntityType"
+      },
+      {
+        "id": 12,
+        "original_id": "40cfbee0-09f4-5cd2-9609-5a42e92ce526",
+        "text": "kcrq",
+        "type": "Entity"
+      },
+      {
+        "id": 13,
+        "original_id": "46ff1f28-126a-5a39-9e2b-8d95fcf980db",
+        "text": "crq",
+        "type": "Entity"
+      },
+      {
+        "id": 14,
+        "original_id": "ab00637c-31cd-556a-99a8-be689cb5a070",
+        "text": "carlsbad",
+        "type": "Entity"
+      },
+      {
+        "id": 15,
+        "original_id": "bb229a97-c8b1-51b8-bb85-33726a011f2d",
+        "text": "san diego county",
+        "type": "Entity"
+      },
+      {
+        "id": 16,
+        "original_id": "8294cd6a-6968-5d3a-b0c8-57e08c745c8d",
+        "text": "california",
+        "type": "Entity"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 8,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 9,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "located_south_of"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 7,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 14,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 15,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 16,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 7,
+        "type": "located_northwest_of"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      },
+      {
+        "source": 1,
+        "target": 8,
+        "type": "contains"
+      },
+      {
+        "source": 8,
+        "target": 9,
+        "type": "also_called"
+      },
+      {
+        "source": 1,
+        "target": 9,
+        "type": "contains"
+      },
+      {
+        "source": 8,
+        "target": 10,
+        "type": "has_iata_code"
+      },
+      {
+        "source": 1,
+        "target": 10,
+        "type": "contains"
+      },
+      {
+        "source": 10,
+        "target": 11,
+        "type": "is_a"
+      },
+      {
+        "source": 12,
+        "target": 11,
+        "type": "is_a"
+      },
+      {
+        "source": 13,
+        "target": 11,
+        "type": "is_a"
+      },
+      {
+        "source": 8,
+        "target": 12,
+        "type": "has_icao_code"
+      },
+      {
+        "source": 1,
+        "target": 12,
+        "type": "contains"
+      },
+      {
+        "source": 8,
+        "target": 13,
+        "type": "has_faa_lid_code"
+      },
+      {
+        "source": 1,
+        "target": 13,
+        "type": "contains"
+      },
+      {
+        "source": 8,
+        "target": 14,
+        "type": "located_southeast_of"
+      },
+      {
+        "source": 1,
+        "target": 14,
+        "type": "contains"
+      },
+      {
+        "source": 14,
+        "target": 15,
+        "type": "located_in"
+      },
+      {
+        "source": 8,
+        "target": 15,
+        "type": "located_in"
+      },
+      {
+        "source": 1,
+        "target": 15,
+        "type": "contains"
+      },
+      {
+        "source": 15,
+        "target": 16,
+        "type": "located_in"
+      },
+      {
+        "source": 8,
+        "target": 16,
+        "type": "located_in"
+      },
+      {
+        "source": 1,
+        "target": 16,
+        "type": "contains"
+      }
+    ]
+  }
+}

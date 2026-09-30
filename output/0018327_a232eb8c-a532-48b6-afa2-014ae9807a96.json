@@ -1,0 +1,416 @@
+{
+  "dataset": "hover",
+  "id": "a232eb8c-a532-48b6-afa2-014ae9807a96",
+  "split": "dev",
+  "claim": "The flight school in Atwater is about 115 miles (185 km) from Sacramento.",
+  "evidencia": "Page: Sierra Academy of Aeronautics. Sentence: The Sierra Academy of Aeronautics is an aviation flight school headquartered in Atwater, California.\nPage: Sierra Academy of Aeronautics. Sentence: It operates its training facility at the former Castle Air Force Base in Atwater, California.\nPage: Castle Air Force Base. Sentence: Castle Air Force Base (1941–1995) is a former United States Air Force Strategic Air Command base located northeast of Atwater, northwest of Merced and about 115 miles (185 km) south of Sacramento, California.",
+  "evidence_text": "Page: Sierra Academy of Aeronautics. Sentence: The Sierra Academy of Aeronautics is an aviation flight school headquartered in Atwater, California.\nPage: Sierra Academy of Aeronautics. Sentence: It operates its training facility at the former Castle Air Force Base in Atwater, California.\nPage: Castle Air Force Base. Sentence: Castle Air Force Base (1941–1995) is a former United States Air Force Strategic Air Command base located northeast of Atwater, northwest of Merced and about 115 miles (185 km) south of Sacramento, California.",
+  "label": "SUPPORTED",
+  "num_hops": 2,
+  "hover_metadata": {
+    "supporting_facts": [
+      [
+        "Sierra Academy of Aeronautics",
+        0
+      ],
+      [
+        "Sierra Academy of Aeronautics",
+        1
+      ],
+      [
+        "Castle Air Force Base",
+        0
+      ]
+    ],
+    "num_hops": 2,
+    "evidence_annotation_id": [
+      0
+    ],
+    "evidence_id": [
+      "Sierra Academy of Aeronautics::sentence::0",
+      "Sierra Academy of Aeronautics::sentence::1",
+      "Castle Air Force Base::sentence::0"
+    ],
+    "evidence_wiki_url": [
+      "https://en.wikipedia.org/wiki/Sierra_Academy_of_Aeronautics",
+      "https://en.wikipedia.org/wiki/Castle_Air_Force_Base"
+    ],
+    "evidence_sentence_id": [
+      "Sierra Academy of Aeronautics::sentence::0",
+      "Sierra Academy of Aeronautics::sentence::1",
+      "Castle Air Force Base::sentence::0"
+    ]
+  },
+  "grafo_claim": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "bcd546aa-4919-5876-8bbb-98c66aa7bc05",
+        "text": "This chunk is about:\n- Places: Atwater, Sacramento\n- Topics: Distance between locations\n\nFacts:\n- The flight school in Atwater is about 115 miles, or 185 kilometers, from Sacramento.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "7c61bba3-c25a-50c8-83d4-030825722c14",
+        "text": "The flight school in Atwater is about 115 miles (185 km) from Sacramento.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "853fe334-eec7-59e0-b4ba-c8f1660de5b1",
+        "text": "text_cc4bac7734a1e3482a051e666a0acb49",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "468f418a-63b2-5733-b5cc-5841452798b1",
+        "text": "flight school in atwater",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "388f60fb-220d-55e8-ae9c-3ac93cead308",
+        "text": "organization",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "a50e1a9c-b40c-5a2f-923f-64d495ab84cf",
+        "text": "atwater",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "5f394058-b2a0-5ba8-8466-ba2a18cfcf4e",
+        "text": "place",
+        "type": "EntityType"
+      },
+      {
+        "id": 7,
+        "original_id": "ab5308bb-c3f4-56ff-b79d-1fa0639687d4",
+        "text": "sacramento",
+        "type": "Entity"
+      },
+      {
+        "id": 8,
+        "original_id": "87867a4a-16c3-5bf3-ae35-7c918a6614d9",
+        "text": "115 miles",
+        "type": "Entity"
+      },
+      {
+        "id": 9,
+        "original_id": "7a7a0687-e490-5167-ad5a-0e39d9055dee",
+        "text": "quantity",
+        "type": "EntityType"
+      },
+      {
+        "id": 10,
+        "original_id": "2ce67ecf-943c-50cc-a054-6cf9d1a0b0df",
+        "text": "185 km",
+        "type": "Entity"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "located_in"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 7,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 7,
+        "type": "about_115_miles_from"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 8,
+        "type": "distance_to_sacramento"
+      },
+      {
+        "source": 1,
+        "target": 8,
+        "type": "contains"
+      },
+      {
+        "source": 8,
+        "target": 9,
+        "type": "is_a"
+      },
+      {
+        "source": 10,
+        "target": 9,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 10,
+        "type": "distance_to_sacramento"
+      },
+      {
+        "source": 1,
+        "target": 10,
+        "type": "contains"
+      }
+    ]
+  },
+  "grafo_evidencia": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "92625f4f-f3bd-5401-a698-5ba70a7ee67a",
+        "text": "This chunk is about:\n- Organizations: Sierra Academy of Aeronautics, United States Air Force Strategic Air Command\n- Places: Atwater, California, Castle Air Force Base, Merced, Sacramento, California\n- Topics: aviation flight schools, military bases\n\nFacts:\n- Castle Air Force Base operated from 1941 to 1995 as a United States Air Force Strategic Air Command base.\n- Castle Air Force Base is located northeast of Atwater, northwest of Merced, and about 115 miles south of Sacramento, California.\n- Sierra Academy of Aeronautics is an aviation flight school headquartered in Atwater, California.\n- Sierra Academy of Aeronautics operates its training facility at the former Castle Air Force Base in Atwater, California.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "7a192593-7af5-5cfb-9972-7a05229c5c34",
+        "text": "Page: Sierra Academy of Aeronautics. Sentence: The Sierra Academy of Aeronautics is an aviation flight school headquartered in Atwater, California.\nPage: Sierra Academy of Aeronautics. Sentence: It operates its training facility at the former Castle Air Force Base in Atwater, California.\nPage: Castle Air Force Base. Sentence: Castle Air Force Base (1941–1995) is a former United States Air Force Strategic Air Command base located northeast of Atwater, northwest of Merced and about 115 miles (185 km) south of Sacramento, California.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "38ff0cae-519d-5bf8-ae8f-fec154770d75",
+        "text": "text_834724dd4dafaeda71636ff13dd434ec",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "c7599a7a-ec2b-5967-b30f-5dd3be189b42",
+        "text": "sierra academy of aeronautics",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "388f60fb-220d-55e8-ae9c-3ac93cead308",
+        "text": "organization",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "3148b9b5-f142-5328-b5f6-fe22d40c8f0d",
+        "text": "atwater, california",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "5f394058-b2a0-5ba8-8466-ba2a18cfcf4e",
+        "text": "place",
+        "type": "EntityType"
+      },
+      {
+        "id": 7,
+        "original_id": "5e8bb6d6-2d36-58e8-b12f-5e4a944bb2e5",
+        "text": "castle air force base",
+        "type": "Entity"
+      },
+      {
+        "id": 8,
+        "original_id": "61ce0522-ae95-5bed-9bd9-5624203734f6",
+        "text": "united states air force strategic air command",
+        "type": "Entity"
+      },
+      {
+        "id": 9,
+        "original_id": "e6f6264c-d390-5e47-8344-792c44da9c4a",
+        "text": "merced",
+        "type": "Entity"
+      },
+      {
+        "id": 10,
+        "original_id": "d04c5979-caa6-5110-8c38-c00791edb0f4",
+        "text": "sacramento, california",
+        "type": "Entity"
+      },
+      {
+        "id": 11,
+        "original_id": "4605e7fb-6aea-5b3c-ab50-0b32ea09667a",
+        "text": "1941",
+        "type": "Entity"
+      },
+      {
+        "id": 12,
+        "original_id": "b19433ae-558c-5aaf-95ac-6231f2a4be0e",
+        "text": "date",
+        "type": "EntityType"
+      },
+      {
+        "id": 13,
+        "original_id": "ee5ab8c2-0240-5792-985d-a9d5064b1b91",
+        "text": "1995",
+        "type": "Entity"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 8,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "headquartered_in"
+      },
+      {
+        "source": 7,
+        "target": 5,
+        "type": "located_northeast_of"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 7,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 9,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 10,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 7,
+        "type": "operates_training_facility_at"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      },
+      {
+        "source": 7,
+        "target": 8,
+        "type": "was_base_of"
+      },
+      {
+        "source": 1,
+        "target": 8,
+        "type": "contains"
+      },
+      {
+        "source": 7,
+        "target": 9,
+        "type": "located_northwest_of"
+      },
+      {
+        "source": 1,
+        "target": 9,
+        "type": "contains"
+      },
+      {
+        "source": 7,
+        "target": 10,
+        "type": "located_south_of"
+      },
+      {
+        "source": 1,
+        "target": 10,
+        "type": "contains"
+      },
+      {
+        "source": 7,
+        "target": 11,
+        "type": "began_operation_in"
+      },
+      {
+        "source": 1,
+        "target": 11,
+        "type": "contains"
+      },
+      {
+        "source": 11,
+        "target": 12,
+        "type": "is_a"
+      },
+      {
+        "source": 13,
+        "target": 12,
+        "type": "is_a"
+      },
+      {
+        "source": 7,
+        "target": 13,
+        "type": "ceased_operation_in"
+      },
+      {
+        "source": 1,
+        "target": 13,
+        "type": "contains"
+      }
+    ]
+  }
+}

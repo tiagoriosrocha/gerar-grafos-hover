@@ -1,0 +1,404 @@
+{
+  "dataset": "hover",
+  "id": "83b237b7-2805-4051-90a5-d57da41c8cf3",
+  "split": "train",
+  "claim": "The Bellagio and The Mirage are the two casinos that border the hotel that hosted WrestleMania IX.",
+  "evidencia": "Page: WrestleMania XXIV. Sentence: WrestleMania XXIV was the second WrestleMania to be held outdoors, with the first being WrestleMania IX, held in Caesars Palace in Las Vegas, Nevada.\nPage: Caesars Palace. Sentence: The hotel is situated on the west side of the Las Vegas Strip between Bellagio and The Mirage.",
+  "evidence_text": "Page: WrestleMania XXIV. Sentence: WrestleMania XXIV was the second WrestleMania to be held outdoors, with the first being WrestleMania IX, held in Caesars Palace in Las Vegas, Nevada.\nPage: Caesars Palace. Sentence: The hotel is situated on the west side of the Las Vegas Strip between Bellagio and The Mirage.",
+  "label": "SUPPORTED",
+  "num_hops": 2,
+  "hover_metadata": {
+    "supporting_facts": [
+      [
+        "WrestleMania XXIV",
+        2
+      ],
+      [
+        "Caesars Palace",
+        1
+      ]
+    ],
+    "num_hops": 2,
+    "evidence_annotation_id": [
+      0
+    ],
+    "evidence_id": [
+      "WrestleMania XXIV::sentence::2",
+      "Caesars Palace::sentence::1"
+    ],
+    "evidence_wiki_url": [
+      "https://en.wikipedia.org/wiki/WrestleMania_XXIV",
+      "https://en.wikipedia.org/wiki/Caesars_Palace"
+    ],
+    "evidence_sentence_id": [
+      "WrestleMania XXIV::sentence::2",
+      "Caesars Palace::sentence::1"
+    ]
+  },
+  "grafo_claim": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "325ed878-3eda-5602-9a4c-deff290eaf92",
+        "text": "This chunk is about:\n- Places: Bellagio, The Mirage\n- Events: WrestleMania IX\n- Hotels: the hotel that hosted WrestleMania IX\n\nFacts:\n- WrestleMania IX was hosted at a hotel.\n- Bellagio and The Mirage are the two casinos that border the hotel that hosted WrestleMania IX.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "96b244d0-21e2-557a-8608-4ec251b159e6",
+        "text": "The Bellagio and The Mirage are the two casinos that border the hotel that hosted WrestleMania IX.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "555483b2-b5a3-517a-ac81-7bbb47ff9e66",
+        "text": "text_22b06173f9f0d8a2644570f85516eee5",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "f1f3eb1f-eac7-5796-a2d9-ff4668decde2",
+        "text": "bellagio",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "5f394058-b2a0-5ba8-8466-ba2a18cfcf4e",
+        "text": "place",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "9313e747-2a0b-526f-882a-07fa93364770",
+        "text": "the hotel that hosted wrestlemania ix",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "1986a8d4-f639-57f7-a18c-61d78583d9ad",
+        "text": "wrestlemania ix",
+        "type": "Entity"
+      },
+      {
+        "id": 7,
+        "original_id": "214abcd9-9adf-5c8a-bb35-1e729f2d68c3",
+        "text": "event",
+        "type": "EntityType"
+      },
+      {
+        "id": 8,
+        "original_id": "a498e910-d785-5ca8-a8b3-0ba8bf420e41",
+        "text": "the mirage",
+        "type": "Entity"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 5,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 8,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "borders"
+      },
+      {
+        "source": 8,
+        "target": 5,
+        "type": "borders"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "hosted"
+      },
+      {
+        "source": 1,
+        "target": 6,
+        "type": "contains"
+      },
+      {
+        "source": 6,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 8,
+        "type": "contains"
+      }
+    ]
+  },
+  "grafo_evidencia": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "6929f64b-27f7-54d5-8d00-a8ed3c0eed39",
+        "text": "This chunk is about:\n- Events: WrestleMania XXIV, WrestleMania IX\n- Places: Caesars Palace, Las Vegas, Nevada, Las Vegas Strip, Bellagio, The Mirage\n\nFacts:\n- WrestleMania IX was the first WrestleMania held outdoors, and it took place at Caesars Palace in Las Vegas, Nevada.\n- WrestleMania XXIV was the second WrestleMania held outdoors.\n- Caesars Palace is a hotel on the west side of the Las Vegas Strip between Bellagio and The Mirage.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "3988fe09-38bf-5cbe-ad22-90e2f11a549c",
+        "text": "Page: WrestleMania XXIV. Sentence: WrestleMania XXIV was the second WrestleMania to be held outdoors, with the first being WrestleMania IX, held in Caesars Palace in Las Vegas, Nevada.\nPage: Caesars Palace. Sentence: The hotel is situated on the west side of the Las Vegas Strip between Bellagio and The Mirage.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "7db3dd89-cbdc-570a-aa8c-7c33a89efcee",
+        "text": "text_ccb4e98af9f6084c620d6115eb977a62",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "e55edf04-d55b-503c-8a3b-ee514ecfd387",
+        "text": "wrestlemania xxiv",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "214abcd9-9adf-5c8a-bb35-1e729f2d68c3",
+        "text": "event",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "7c55a043-3cd5-58c6-a7ae-ce1d3180f15a",
+        "text": "wrestlemania",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "65af87e3-e837-5966-bc73-a4bed70f9074",
+        "text": "event series",
+        "type": "EntityType"
+      },
+      {
+        "id": 7,
+        "original_id": "1986a8d4-f639-57f7-a18c-61d78583d9ad",
+        "text": "wrestlemania ix",
+        "type": "Entity"
+      },
+      {
+        "id": 8,
+        "original_id": "ccae4680-e1aa-540f-b1c2-8bd3f6743f8a",
+        "text": "caesars palace",
+        "type": "Entity"
+      },
+      {
+        "id": 9,
+        "original_id": "5f394058-b2a0-5ba8-8466-ba2a18cfcf4e",
+        "text": "place",
+        "type": "EntityType"
+      },
+      {
+        "id": 10,
+        "original_id": "2768ffee-4734-5551-9369-d2097b287276",
+        "text": "las vegas",
+        "type": "Entity"
+      },
+      {
+        "id": 11,
+        "original_id": "cca9924d-3e69-59c5-be62-5ec26c26b0db",
+        "text": "nevada",
+        "type": "Entity"
+      },
+      {
+        "id": 12,
+        "original_id": "60152a3c-19f4-5b80-8305-51c3a57f8052",
+        "text": "las vegas strip",
+        "type": "Entity"
+      },
+      {
+        "id": 13,
+        "original_id": "f1f3eb1f-eac7-5796-a2d9-ff4668decde2",
+        "text": "bellagio",
+        "type": "Entity"
+      },
+      {
+        "id": 14,
+        "original_id": "a498e910-d785-5ca8-a8b3-0ba8bf420e41",
+        "text": "the mirage",
+        "type": "Entity"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 7,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "instance_of"
+      },
+      {
+        "source": 7,
+        "target": 5,
+        "type": "instance_of"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 7,
+        "type": "follows_outdoor_order"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      },
+      {
+        "source": 7,
+        "target": 8,
+        "type": "held_in"
+      },
+      {
+        "source": 1,
+        "target": 8,
+        "type": "contains"
+      },
+      {
+        "source": 8,
+        "target": 9,
+        "type": "is_a"
+      },
+      {
+        "source": 10,
+        "target": 9,
+        "type": "is_a"
+      },
+      {
+        "source": 11,
+        "target": 9,
+        "type": "is_a"
+      },
+      {
+        "source": 12,
+        "target": 9,
+        "type": "is_a"
+      },
+      {
+        "source": 13,
+        "target": 9,
+        "type": "is_a"
+      },
+      {
+        "source": 14,
+        "target": 9,
+        "type": "is_a"
+      },
+      {
+        "source": 8,
+        "target": 10,
+        "type": "located_in"
+      },
+      {
+        "source": 1,
+        "target": 10,
+        "type": "contains"
+      },
+      {
+        "source": 10,
+        "target": 11,
+        "type": "located_in"
+      },
+      {
+        "source": 1,
+        "target": 11,
+        "type": "contains"
+      },
+      {
+        "source": 8,
+        "target": 12,
+        "type": "situated_on_west_side_of"
+      },
+      {
+        "source": 1,
+        "target": 12,
+        "type": "contains"
+      },
+      {
+        "source": 8,
+        "target": 13,
+        "type": "between"
+      },
+      {
+        "source": 1,
+        "target": 13,
+        "type": "contains"
+      },
+      {
+        "source": 8,
+        "target": 14,
+        "type": "between"
+      },
+      {
+        "source": 1,
+        "target": 14,
+        "type": "contains"
+      }
+    ]
+  }
+}

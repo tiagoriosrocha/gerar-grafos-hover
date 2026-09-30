@@ -1,0 +1,645 @@
+{
+  "dataset": "hover",
+  "id": "fbc81c54-d7cc-47e6-a9f9-49c8a4e9ae8e",
+  "split": "dev",
+  "claim": "Frank, Viscount De Winne is older than this Cosmonaut. The Cosmonaut was on the Soyuz TM-29 spacecraft.",
+  "evidencia": "Page: Ivan Bella. Sentence: Ivan Bella (born 25 May 1964 in Brezno, Czechoslovakia (now Slovakia)) is a Slovak Air Force officer who became the first Slovak citizen to fly in space.\nPage: Frank De Winne. Sentence: Frank, Viscount De Winne (born 25 April 1961, in Ledeberg, Belgium) is a Belgian Air Component officer and an ESA astronaut.\nPage: Soyuz TM-29. Sentence: It docked with Mir on February 22 at 05:36 GMT with Cosmonauts Viktor Afanasyev of Russia, Jean-Pierre Haigneré of France, and Ivan Bella of Slovakia aboard.",
+  "evidence_text": "Page: Ivan Bella. Sentence: Ivan Bella (born 25 May 1964 in Brezno, Czechoslovakia (now Slovakia)) is a Slovak Air Force officer who became the first Slovak citizen to fly in space.\nPage: Frank De Winne. Sentence: Frank, Viscount De Winne (born 25 April 1961, in Ledeberg, Belgium) is a Belgian Air Component officer and an ESA astronaut.\nPage: Soyuz TM-29. Sentence: It docked with Mir on February 22 at 05:36 GMT with Cosmonauts Viktor Afanasyev of Russia, Jean-Pierre Haigneré of France, and Ivan Bella of Slovakia aboard.",
+  "label": "SUPPORTED",
+  "num_hops": 3,
+  "hover_metadata": {
+    "supporting_facts": [
+      [
+        "Ivan Bella",
+        0
+      ],
+      [
+        "Frank De Winne",
+        0
+      ],
+      [
+        "Soyuz TM-29",
+        1
+      ]
+    ],
+    "num_hops": 3,
+    "evidence_annotation_id": [
+      0
+    ],
+    "evidence_id": [
+      "Ivan Bella::sentence::0",
+      "Frank De Winne::sentence::0",
+      "Soyuz TM-29::sentence::1"
+    ],
+    "evidence_wiki_url": [
+      "https://en.wikipedia.org/wiki/Ivan_Bella",
+      "https://en.wikipedia.org/wiki/Frank_De_Winne",
+      "https://en.wikipedia.org/wiki/Soyuz_TM-29"
+    ],
+    "evidence_sentence_id": [
+      "Ivan Bella::sentence::0",
+      "Frank De Winne::sentence::0",
+      "Soyuz TM-29::sentence::1"
+    ]
+  },
+  "grafo_claim": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "914d32cc-c26d-56be-8a47-78baeb562a6a",
+        "text": "This chunk is about:\n- People: Frank, Viscount De Winne; the unidentified Cosmonaut\n- Spacecraft: Soyuz TM-29\n- Concepts: age comparison\n\nFacts:\n- The unidentified Cosmonaut was on the Soyuz TM-29 spacecraft.\n- Frank, Viscount De Winne is older than the unidentified Cosmonaut.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "47694e52-05ca-5061-9715-68937f1028d1",
+        "text": "Frank, Viscount De Winne is older than this Cosmonaut. The Cosmonaut was on the Soyuz TM-29 spacecraft.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "0f2cf69a-cfba-502c-ba93-5ba750a48a4c",
+        "text": "text_a80e366a48f9b38c86a5f3c91dfd53df",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "39dfbf32-e7b9-519b-8bc6-56fcb35e235c",
+        "text": "frank, viscount de winne",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "99a82eec-bb35-5bb5-9ed2-e73fc7a756de",
+        "text": "person",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "dd5c487a-4a8d-5f63-b309-aca74ae5d6c5",
+        "text": "the cosmonaut",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "749921ab-c2af-5e91-8b6a-17314edb9ff1",
+        "text": "soyuz tm-29",
+        "type": "Entity"
+      },
+      {
+        "id": 7,
+        "original_id": "757aa8a5-160e-54db-a5f4-43557a8330cf",
+        "text": "spacecraft",
+        "type": "EntityType"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 5,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "older_than"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "was_on"
+      },
+      {
+        "source": 1,
+        "target": 6,
+        "type": "contains"
+      },
+      {
+        "source": 6,
+        "target": 7,
+        "type": "is_a"
+      }
+    ]
+  },
+  "grafo_evidencia": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "b2898295-0f7f-57be-a14f-1cf65091515a",
+        "text": "This chunk is about:\n- People: Ivan Bella, Frank De Winne, Viktor Afanasyev, Jean-Pierre Haigneré\n- Organizations: Slovak Air Force, Belgian Air Component, ESA\n- Space Missions: Soyuz TM-29, Mir\n- Places: Brezno, Czechoslovakia, Slovakia, Ledeberg, Belgium\n\nFacts:\n- Frank De Winne was born on 25 April 1961 in Ledeberg, Belgium.\n- Ivan Bella was born on 25 May 1964 in Brezno, Czechoslovakia, now Slovakia.\n- Soyuz TM-29 docked with Mir on February 22 at 05:36 GMT carrying Viktor Afanasyev of Russia, Jean-Pierre Haigneré of France, and Ivan Bella of Slovakia.\n- Ivan Bella is a Slovak Air Force officer and became the first Slovak citizen to fly in space.\n- Frank De Winne is a Belgian Air Component officer and an ESA astronaut.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "bc2e1f8f-419a-5529-b458-46c6875289a4",
+        "text": "Page: Ivan Bella. Sentence: Ivan Bella (born 25 May 1964 in Brezno, Czechoslovakia (now Slovakia)) is a Slovak Air Force officer who became the first Slovak citizen to fly in space.\nPage: Frank De Winne. Sentence: Frank, Viscount De Winne (born 25 April 1961, in Ledeberg, Belgium) is a Belgian Air Component officer and an ESA astronaut.\nPage: Soyuz TM-29. Sentence: It docked with Mir on February 22 at 05:36 GMT with Cosmonauts Viktor Afanasyev of Russia, Jean-Pierre Haigneré of France, and Ivan Bella of Slovakia aboard.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "572c1110-638b-505b-8495-16f0699e162a",
+        "text": "text_8d01ad5b0d8c2044e5ffd3090af672e9",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "39574128-180f-57da-a5c2-f5ea8887d582",
+        "text": "ivan bella",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "99a82eec-bb35-5bb5-9ed2-e73fc7a756de",
+        "text": "person",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "bad77167-f8ac-5619-bb65-8e03380ae94f",
+        "text": "1964-05-25",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "b19433ae-558c-5aaf-95ac-6231f2a4be0e",
+        "text": "date",
+        "type": "EntityType"
+      },
+      {
+        "id": 7,
+        "original_id": "8594015a-4f4f-57c6-9f81-007ed06315b6",
+        "text": "brezno",
+        "type": "Entity"
+      },
+      {
+        "id": 8,
+        "original_id": "5f394058-b2a0-5ba8-8466-ba2a18cfcf4e",
+        "text": "place",
+        "type": "EntityType"
+      },
+      {
+        "id": 9,
+        "original_id": "434b94f4-820b-543f-86db-6bd4f1f41915",
+        "text": "czechoslovakia",
+        "type": "Entity"
+      },
+      {
+        "id": 10,
+        "original_id": "5c266db6-cf0b-58f2-833e-30e6e81a81a9",
+        "text": "slovakia",
+        "type": "Entity"
+      },
+      {
+        "id": 11,
+        "original_id": "afe13363-2c2c-5c60-85d2-1178f549f8c9",
+        "text": "slovak air force",
+        "type": "Entity"
+      },
+      {
+        "id": 12,
+        "original_id": "388f60fb-220d-55e8-ae9c-3ac93cead308",
+        "text": "organization",
+        "type": "EntityType"
+      },
+      {
+        "id": 13,
+        "original_id": "9ccbac7f-d1b4-5841-ab76-b4487537ff38",
+        "text": "frank de winne",
+        "type": "Entity"
+      },
+      {
+        "id": 14,
+        "original_id": "178c9a5b-19ba-5061-9995-7fdf45420bd8",
+        "text": "1961-04-25",
+        "type": "Entity"
+      },
+      {
+        "id": 15,
+        "original_id": "91e8d66a-9603-5528-bd90-b9e727b9f832",
+        "text": "ledeberg",
+        "type": "Entity"
+      },
+      {
+        "id": 16,
+        "original_id": "a90c6645-c993-58aa-850e-bfd55897a969",
+        "text": "belgium",
+        "type": "Entity"
+      },
+      {
+        "id": 17,
+        "original_id": "27016bbc-dd82-5292-9f2f-bc10c8a8e5d7",
+        "text": "belgian air component",
+        "type": "Entity"
+      },
+      {
+        "id": 18,
+        "original_id": "37b34c7c-c110-5f7f-8c79-0465570b408c",
+        "text": "esa",
+        "type": "Entity"
+      },
+      {
+        "id": 19,
+        "original_id": "749921ab-c2af-5e91-8b6a-17314edb9ff1",
+        "text": "soyuz tm-29",
+        "type": "Entity"
+      },
+      {
+        "id": 20,
+        "original_id": "757aa8a5-160e-54db-a5f4-43557a8330cf",
+        "text": "spacecraft",
+        "type": "EntityType"
+      },
+      {
+        "id": 21,
+        "original_id": "9b9566fc-7a0e-5af9-b054-a4dcf4245bee",
+        "text": "mir",
+        "type": "Entity"
+      },
+      {
+        "id": 22,
+        "original_id": "9ead1d9d-f7f9-5104-8574-3382c0e6ec15",
+        "text": "space station",
+        "type": "EntityType"
+      },
+      {
+        "id": 23,
+        "original_id": "b1495756-34b0-5e69-bc9c-a15446399716",
+        "text": "1999-02-22",
+        "type": "Entity"
+      },
+      {
+        "id": 24,
+        "original_id": "38bed285-c31c-53a6-a826-b0d6da2adf15",
+        "text": "05:36 gmt",
+        "type": "Entity"
+      },
+      {
+        "id": 25,
+        "original_id": "3d7380ad-3829-5912-9c69-a82919512983",
+        "text": "time",
+        "type": "EntityType"
+      },
+      {
+        "id": 26,
+        "original_id": "451535b3-5c02-5639-8446-c9313ee5f93a",
+        "text": "viktor afanasyev",
+        "type": "Entity"
+      },
+      {
+        "id": 27,
+        "original_id": "263944c9-8d65-580f-8914-02577489a213",
+        "text": "russia",
+        "type": "Entity"
+      },
+      {
+        "id": 28,
+        "original_id": "3fda75ca-7e07-5244-a850-093b1cbecb4c",
+        "text": "jean-pierre haigneré",
+        "type": "Entity"
+      },
+      {
+        "id": 29,
+        "original_id": "c529785c-647b-5d0f-88d0-151b1fff337c",
+        "text": "france",
+        "type": "Entity"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 19,
+        "target": 3,
+        "type": "had_aboard"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 13,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 26,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 28,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "born_on"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 14,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 23,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 7,
+        "type": "born_in"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      },
+      {
+        "source": 7,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 9,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 10,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 15,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 16,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 27,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 29,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 7,
+        "target": 9,
+        "type": "located_in"
+      },
+      {
+        "source": 1,
+        "target": 9,
+        "type": "contains"
+      },
+      {
+        "source": 7,
+        "target": 10,
+        "type": "now_in"
+      },
+      {
+        "source": 3,
+        "target": 10,
+        "type": "citizen_of"
+      },
+      {
+        "source": 1,
+        "target": 10,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 11,
+        "type": "officer_in"
+      },
+      {
+        "source": 1,
+        "target": 11,
+        "type": "contains"
+      },
+      {
+        "source": 11,
+        "target": 12,
+        "type": "is_a"
+      },
+      {
+        "source": 17,
+        "target": 12,
+        "type": "is_a"
+      },
+      {
+        "source": 18,
+        "target": 12,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 13,
+        "type": "contains"
+      },
+      {
+        "source": 13,
+        "target": 14,
+        "type": "born_on"
+      },
+      {
+        "source": 1,
+        "target": 14,
+        "type": "contains"
+      },
+      {
+        "source": 13,
+        "target": 15,
+        "type": "born_in"
+      },
+      {
+        "source": 1,
+        "target": 15,
+        "type": "contains"
+      },
+      {
+        "source": 15,
+        "target": 16,
+        "type": "located_in"
+      },
+      {
+        "source": 13,
+        "target": 16,
+        "type": "citizen_of"
+      },
+      {
+        "source": 1,
+        "target": 16,
+        "type": "contains"
+      },
+      {
+        "source": 13,
+        "target": 17,
+        "type": "officer_in"
+      },
+      {
+        "source": 1,
+        "target": 17,
+        "type": "contains"
+      },
+      {
+        "source": 13,
+        "target": 18,
+        "type": "astronaut_for"
+      },
+      {
+        "source": 1,
+        "target": 18,
+        "type": "contains"
+      },
+      {
+        "source": 1,
+        "target": 19,
+        "type": "contains"
+      },
+      {
+        "source": 19,
+        "target": 20,
+        "type": "is_a"
+      },
+      {
+        "source": 19,
+        "target": 21,
+        "type": "docked_with"
+      },
+      {
+        "source": 1,
+        "target": 21,
+        "type": "contains"
+      },
+      {
+        "source": 21,
+        "target": 22,
+        "type": "is_a"
+      },
+      {
+        "source": 19,
+        "target": 23,
+        "type": "docked_on"
+      },
+      {
+        "source": 1,
+        "target": 23,
+        "type": "contains"
+      },
+      {
+        "source": 19,
+        "target": 24,
+        "type": "docked_at"
+      },
+      {
+        "source": 1,
+        "target": 24,
+        "type": "contains"
+      },
+      {
+        "source": 24,
+        "target": 25,
+        "type": "is_a"
+      },
+      {
+        "source": 19,
+        "target": 26,
+        "type": "had_aboard"
+      },
+      {
+        "source": 1,
+        "target": 26,
+        "type": "contains"
+      },
+      {
+        "source": 26,
+        "target": 27,
+        "type": "of_country"
+      },
+      {
+        "source": 1,
+        "target": 27,
+        "type": "contains"
+      },
+      {
+        "source": 19,
+        "target": 28,
+        "type": "had_aboard"
+      },
+      {
+        "source": 1,
+        "target": 28,
+        "type": "contains"
+      },
+      {
+        "source": 28,
+        "target": 29,
+        "type": "of_country"
+      },
+      {
+        "source": 1,
+        "target": 29,
+        "type": "contains"
+      }
+    ]
+  }
+}

@@ -1,0 +1,539 @@
+{
+  "dataset": "hover",
+  "id": "ff55dbfb-c28a-43d1-85e1-096127c50577",
+  "split": "train",
+  "claim": "The younger brother, who became king, of Princess Mafalda of Savoy reigned for 34 days.",
+  "evidencia": "Page: Princess Mafalda of Savoy. Sentence: Princess Mafalda of Savoy (2 November 1902 – 27 August 1944) was the second daughter of King Victor Emmanuel III of Italy and his wife Elena of Montenegro.\nPage: Princess Mafalda of Savoy. Sentence: The future King Umberto II of Italy was her younger brother.\nPage: Umberto II of Italy. Sentence: Umberto II (Italian: \"Umberto Nicola Tommaso Giovanni Maria di Savoia\" ; 15 September 190418 March 1983), was the last King of Italy.\nPage: Umberto II of Italy. Sentence: He reigned for 34 days, from 9 May 1946 to 12 June 1946, although he had been \"de facto\" head of state since 1944, and was nicknamed the May King (Italian: Re di Maggio ).",
+  "evidence_text": "Page: Princess Mafalda of Savoy. Sentence: Princess Mafalda of Savoy (2 November 1902 – 27 August 1944) was the second daughter of King Victor Emmanuel III of Italy and his wife Elena of Montenegro.\nPage: Princess Mafalda of Savoy. Sentence: The future King Umberto II of Italy was her younger brother.\nPage: Umberto II of Italy. Sentence: Umberto II (Italian: \"Umberto Nicola Tommaso Giovanni Maria di Savoia\" ; 15 September 190418 March 1983), was the last King of Italy.\nPage: Umberto II of Italy. Sentence: He reigned for 34 days, from 9 May 1946 to 12 June 1946, although he had been \"de facto\" head of state since 1944, and was nicknamed the May King (Italian: Re di Maggio ).",
+  "label": "SUPPORTED",
+  "num_hops": 2,
+  "hover_metadata": {
+    "supporting_facts": [
+      [
+        "Princess Mafalda of Savoy",
+        0
+      ],
+      [
+        "Princess Mafalda of Savoy",
+        1
+      ],
+      [
+        "Umberto II of Italy",
+        0
+      ],
+      [
+        "Umberto II of Italy",
+        1
+      ]
+    ],
+    "num_hops": 2,
+    "evidence_annotation_id": [
+      0
+    ],
+    "evidence_id": [
+      "Princess Mafalda of Savoy::sentence::0",
+      "Princess Mafalda of Savoy::sentence::1",
+      "Umberto II of Italy::sentence::0",
+      "Umberto II of Italy::sentence::1"
+    ],
+    "evidence_wiki_url": [
+      "https://en.wikipedia.org/wiki/Princess_Mafalda_of_Savoy",
+      "https://en.wikipedia.org/wiki/Umberto_II_of_Italy"
+    ],
+    "evidence_sentence_id": [
+      "Princess Mafalda of Savoy::sentence::0",
+      "Princess Mafalda of Savoy::sentence::1",
+      "Umberto II of Italy::sentence::0",
+      "Umberto II of Italy::sentence::1"
+    ]
+  },
+  "grafo_claim": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "d0d4dc60-bc33-5233-9e59-1631f0aa159d",
+        "text": "This chunk is about:\n- People: Princess Mafalda of Savoy, Umberto II of Italy\n- Roles: king\n\nFacts:\n- Princess Mafalda of Savoy had a younger brother named Umberto II of Italy.\n- Umberto II of Italy became king.\n- Umberto II of Italy reigned for 34 days.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "37184df4-b955-57d5-a7f3-20f8b31fb5b7",
+        "text": "The younger brother, who became king, of Princess Mafalda of Savoy reigned for 34 days.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "f195d122-f84b-5e2c-82aa-513121f4e334",
+        "text": "text_1a32d98c56d0fe196102be81bbea8c13",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "2c739d57-1eee-527c-b44a-6c82bcc91a94",
+        "text": "princess mafalda of savoy",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "99a82eec-bb35-5bb5-9ed2-e73fc7a756de",
+        "text": "person",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "cb5d3557-2ddd-58dd-a146-2fd54e607ce2",
+        "text": "umberto ii of italy",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "ceac82cc-ee3b-5973-9e16-8403ccb75c39",
+        "text": "34 days",
+        "type": "Entity"
+      },
+      {
+        "id": 7,
+        "original_id": "48332387-4aec-5e6a-a549-a6b3d83ffb4b",
+        "text": "duration",
+        "type": "EntityType"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 3,
+        "type": "younger_brother_of"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 5,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "reigned_for"
+      },
+      {
+        "source": 1,
+        "target": 6,
+        "type": "contains"
+      },
+      {
+        "source": 6,
+        "target": 7,
+        "type": "is_a"
+      }
+    ]
+  },
+  "grafo_evidencia": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "de71e02a-6517-5fec-b3b8-b8cbe47ae1d7",
+        "text": "This chunk is about:\n- People: Princess Mafalda of Savoy, Umberto II of Italy, Victor Emmanuel III, Elena of Montenegro\n- Roles: King of Italy, head of state\n\nFacts:\n- Princess Mafalda of Savoy was born on 2 November 1902 and died on 27 August 1944.\n- Umberto II of Italy was born on 15 September 1904 and died on 18 March 1983.\n- Princess Mafalda of Savoy was the second daughter of King Victor Emmanuel III of Italy and his wife Elena of Montenegro.\n- Umberto II of Italy was the younger brother of Princess Mafalda of Savoy.\n- Umberto II of Italy was the last King of Italy.\n- Umberto II of Italy was the de facto head of state of Italy from 1944.\n- Umberto II of Italy reigned from 9 May 1946 to 12 June 1946 for 34 days.\n- Umberto II of Italy was nicknamed the May King.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "e992a8b9-e1ee-5d93-9efa-48e2d84247b2",
+        "text": "Page: Princess Mafalda of Savoy. Sentence: Princess Mafalda of Savoy (2 November 1902 – 27 August 1944) was the second daughter of King Victor Emmanuel III of Italy and his wife Elena of Montenegro.\nPage: Princess Mafalda of Savoy. Sentence: The future King Umberto II of Italy was her younger brother.\nPage: Umberto II of Italy. Sentence: Umberto II (Italian: \"Umberto Nicola Tommaso Giovanni Maria di Savoia\" ; 15 September 190418 March 1983), was the last King of Italy.\nPage: Umberto II of Italy. Sentence: He reigned for 34 days, from 9 May 1946 to 12 June 1946, although he had been \"de facto\" head of state since 1944, and was nicknamed the May King (Italian: Re di Maggio ).",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "e211bbd5-451a-59f2-873c-b1eeffb82635",
+        "text": "text_68313fe6fb044b5e89651947d1e6edd9",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "2c739d57-1eee-527c-b44a-6c82bcc91a94",
+        "text": "princess mafalda of savoy",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "99a82eec-bb35-5bb5-9ed2-e73fc7a756de",
+        "text": "person",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "03828acc-f315-5453-816e-6e78e99c363a",
+        "text": "1902-11-02",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "b19433ae-558c-5aaf-95ac-6231f2a4be0e",
+        "text": "date",
+        "type": "EntityType"
+      },
+      {
+        "id": 7,
+        "original_id": "7c3b140f-7bcd-5132-9b3c-99150f83f269",
+        "text": "1944-08-27",
+        "type": "Entity"
+      },
+      {
+        "id": 8,
+        "original_id": "a9bd3aa6-5293-5d9f-9050-e3c827e2a8c1",
+        "text": "victor emmanuel iii of italy",
+        "type": "Entity"
+      },
+      {
+        "id": 9,
+        "original_id": "74b99510-f127-57ba-b6fc-91a5e9e9fce0",
+        "text": "elena of montenegro",
+        "type": "Entity"
+      },
+      {
+        "id": 10,
+        "original_id": "cb5d3557-2ddd-58dd-a146-2fd54e607ce2",
+        "text": "umberto ii of italy",
+        "type": "Entity"
+      },
+      {
+        "id": 11,
+        "original_id": "8ed9cbc8-8f93-5aee-9209-74bae0d66db8",
+        "text": "1904-09-15",
+        "type": "Entity"
+      },
+      {
+        "id": 12,
+        "original_id": "7d5c3bf3-b024-5ef2-8721-28b8196f7ee9",
+        "text": "1983-03-18",
+        "type": "Entity"
+      },
+      {
+        "id": 13,
+        "original_id": "577ac3d5-5a05-5cfa-9361-dc82167f5c1e",
+        "text": "king of italy",
+        "type": "Entity"
+      },
+      {
+        "id": 14,
+        "original_id": "4fb639a0-083a-5b92-8c23-a04b01bc6b29",
+        "text": "title",
+        "type": "EntityType"
+      },
+      {
+        "id": 15,
+        "original_id": "72368fd8-1be4-54f1-a9ee-3368fdbd9d40",
+        "text": "italy",
+        "type": "Entity"
+      },
+      {
+        "id": 16,
+        "original_id": "5f394058-b2a0-5ba8-8466-ba2a18cfcf4e",
+        "text": "place",
+        "type": "EntityType"
+      },
+      {
+        "id": 17,
+        "original_id": "0a94039e-14c9-53e6-b7cd-53dc800d5b1e",
+        "text": "1946-05-09",
+        "type": "Entity"
+      },
+      {
+        "id": 18,
+        "original_id": "5a1f23dd-3764-5176-a02a-0c53017c7bcd",
+        "text": "1946-06-12",
+        "type": "Entity"
+      },
+      {
+        "id": 19,
+        "original_id": "ceac82cc-ee3b-5973-9e16-8403ccb75c39",
+        "text": "34 days",
+        "type": "Entity"
+      },
+      {
+        "id": 20,
+        "original_id": "48332387-4aec-5e6a-a549-a6b3d83ffb4b",
+        "text": "duration",
+        "type": "EntityType"
+      },
+      {
+        "id": 21,
+        "original_id": "8dd450b2-2b85-5890-951e-f365a36fcc37",
+        "text": "1944",
+        "type": "Entity"
+      },
+      {
+        "id": 22,
+        "original_id": "d29315e5-80bb-5c00-8138-511ba9e331d3",
+        "text": "may king",
+        "type": "Entity"
+      },
+      {
+        "id": 23,
+        "original_id": "2fe0e4f4-4b4c-5ba3-ac18-06ae20334045",
+        "text": "nickname",
+        "type": "EntityType"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 8,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 9,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 10,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "born_on"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 7,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 11,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 12,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 17,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 18,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 21,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 7,
+        "type": "died_on"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 8,
+        "type": "child_of"
+      },
+      {
+        "source": 1,
+        "target": 8,
+        "type": "contains"
+      },
+      {
+        "source": 8,
+        "target": 9,
+        "type": "spouse_of"
+      },
+      {
+        "source": 3,
+        "target": 9,
+        "type": "child_of"
+      },
+      {
+        "source": 1,
+        "target": 9,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 10,
+        "type": "sibling_of"
+      },
+      {
+        "source": 1,
+        "target": 10,
+        "type": "contains"
+      },
+      {
+        "source": 10,
+        "target": 11,
+        "type": "born_on"
+      },
+      {
+        "source": 1,
+        "target": 11,
+        "type": "contains"
+      },
+      {
+        "source": 10,
+        "target": 12,
+        "type": "died_on"
+      },
+      {
+        "source": 1,
+        "target": 12,
+        "type": "contains"
+      },
+      {
+        "source": 10,
+        "target": 13,
+        "type": "held_title"
+      },
+      {
+        "source": 1,
+        "target": 13,
+        "type": "contains"
+      },
+      {
+        "source": 13,
+        "target": 14,
+        "type": "is_a"
+      },
+      {
+        "source": 10,
+        "target": 15,
+        "type": "reigned_in"
+      },
+      {
+        "source": 1,
+        "target": 15,
+        "type": "contains"
+      },
+      {
+        "source": 15,
+        "target": 16,
+        "type": "is_a"
+      },
+      {
+        "source": 10,
+        "target": 17,
+        "type": "reign_started_on"
+      },
+      {
+        "source": 1,
+        "target": 17,
+        "type": "contains"
+      },
+      {
+        "source": 10,
+        "target": 18,
+        "type": "reign_ended_on"
+      },
+      {
+        "source": 1,
+        "target": 18,
+        "type": "contains"
+      },
+      {
+        "source": 10,
+        "target": 19,
+        "type": "reigned_for"
+      },
+      {
+        "source": 1,
+        "target": 19,
+        "type": "contains"
+      },
+      {
+        "source": 19,
+        "target": 20,
+        "type": "is_a"
+      },
+      {
+        "source": 10,
+        "target": 21,
+        "type": "de_facto_head_of_state_since"
+      },
+      {
+        "source": 1,
+        "target": 21,
+        "type": "contains"
+      },
+      {
+        "source": 10,
+        "target": 22,
+        "type": "nicknamed"
+      },
+      {
+        "source": 1,
+        "target": 22,
+        "type": "contains"
+      },
+      {
+        "source": 22,
+        "target": 23,
+        "type": "is_a"
+      }
+    ]
+  }
+}

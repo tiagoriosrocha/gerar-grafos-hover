@@ -1,0 +1,570 @@
+{
+  "dataset": "hover",
+  "id": "23fbba00-4dbf-4685-9863-0086d77f09f3",
+  "split": "train",
+  "claim": "Cheltenham is the base of one of the three main British intelligence agencies.",
+  "evidencia": "Page: British intelligence agencies. Sentence: The Government of the United Kingdom maintains intelligence agencies within several different government departments.\nPage: British intelligence agencies. Sentence: The three main agencies are the Secret Intelligence Service (MI6), the Security Service (MI5), and the Government Communications Headquarters (GCHQ).\nPage: Government Communications Headquarters. Sentence: The Government Communications Headquarters (GCHQ) is an intelligence and security organisation responsible for providing signals intelligence (SIGINT) and information assurance to the government and armed forces of the United Kingdom.\nPage: Government Communications Headquarters. Sentence: Based in \"The Doughnut\" in the suburbs of Cheltenham, GCHQ is the responsibility of the country's Secretary of State for Foreign and Commonwealth Affairs, but it is not a part of the Foreign Office and its director ranks as a Permanent Secretary.",
+  "evidence_text": "Page: British intelligence agencies. Sentence: The Government of the United Kingdom maintains intelligence agencies within several different government departments.\nPage: British intelligence agencies. Sentence: The three main agencies are the Secret Intelligence Service (MI6), the Security Service (MI5), and the Government Communications Headquarters (GCHQ).\nPage: Government Communications Headquarters. Sentence: The Government Communications Headquarters (GCHQ) is an intelligence and security organisation responsible for providing signals intelligence (SIGINT) and information assurance to the government and armed forces of the United Kingdom.\nPage: Government Communications Headquarters. Sentence: Based in \"The Doughnut\" in the suburbs of Cheltenham, GCHQ is the responsibility of the country's Secretary of State for Foreign and Commonwealth Affairs, but it is not a part of the Foreign Office and its director ranks as a Permanent Secretary.",
+  "label": "SUPPORTED",
+  "num_hops": 2,
+  "hover_metadata": {
+    "supporting_facts": [
+      [
+        "British intelligence agencies",
+        0
+      ],
+      [
+        "British intelligence agencies",
+        3
+      ],
+      [
+        "Government Communications Headquarters",
+        0
+      ],
+      [
+        "Government Communications Headquarters",
+        1
+      ]
+    ],
+    "num_hops": 2,
+    "evidence_annotation_id": [
+      0
+    ],
+    "evidence_id": [
+      "British intelligence agencies::sentence::0",
+      "British intelligence agencies::sentence::3",
+      "Government Communications Headquarters::sentence::0",
+      "Government Communications Headquarters::sentence::1"
+    ],
+    "evidence_wiki_url": [
+      "https://en.wikipedia.org/wiki/British_intelligence_agencies",
+      "https://en.wikipedia.org/wiki/Government_Communications_Headquarters"
+    ],
+    "evidence_sentence_id": [
+      "British intelligence agencies::sentence::0",
+      "British intelligence agencies::sentence::3",
+      "Government Communications Headquarters::sentence::0",
+      "Government Communications Headquarters::sentence::1"
+    ]
+  },
+  "grafo_claim": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "f6fa3518-c6f9-5b82-99f6-d32300467601",
+        "text": "This chunk is about:\n- Places: Cheltenham\n- Organizations: British intelligence agencies\n\nFacts:\n- Cheltenham is the base of one of the three main British intelligence agencies.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "1e28c993-12f7-5c59-b89c-5325899302a4",
+        "text": "Cheltenham is the base of one of the three main British intelligence agencies.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "b3685aae-a539-5c5e-b6a5-93bdb042fda4",
+        "text": "text_b131cf297645194098716bdd298920e1",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "b6eaf4e2-9381-5e33-acc9-520c9c7e884a",
+        "text": "cheltenham",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "5f394058-b2a0-5ba8-8466-ba2a18cfcf4e",
+        "text": "place",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "81f373ef-5cd0-53e1-8e67-a40a5c5cc344",
+        "text": "british intelligence agencies",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "388f60fb-220d-55e8-ae9c-3ac93cead308",
+        "text": "organization",
+        "type": "EntityType"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "is_base_of_one_of"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "is_a"
+      }
+    ]
+  },
+  "grafo_evidencia": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "7693a4ef-7713-5567-bd6b-4bde030427eb",
+        "text": "This chunk is about:\n- Organizations: British intelligence agencies, Secret Intelligence Service (MI6), Security Service (MI5), Government Communications Headquarters (GCHQ)\n- Places: United Kingdom, Cheltenham, The Doughnut\n- Roles: Secretary of State for Foreign and Commonwealth Affairs, Permanent Secretary\n- Concepts: signals intelligence (SIGINT), information assurance\n\nFacts:\n- The Government of the United Kingdom maintains intelligence agencies within several different government departments.\n- The three main British intelligence agencies are the Secret Intelligence Service (MI6), the Security Service (MI5), and the Government Communications Headquarters (GCHQ).\n- The Government Communications Headquarters (GCHQ) is a United Kingdom intelligence and security organisation responsible for providing signals intelligence and information assurance to the UK government and armed forces.\n- The Government Communications Headquarters (GCHQ) is based in The Doughnut in the suburbs of Cheltenham.\n- The Government Communications Headquarters (GCHQ) is under the responsibility of the Secretary of State for Foreign and Commonwealth Affairs, is not part of the Foreign Office, and its director ranks as a Permanent Secretary.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "495fa9a2-f5e5-5c69-879e-e9cd10a5944e",
+        "text": "Page: British intelligence agencies. Sentence: The Government of the United Kingdom maintains intelligence agencies within several different government departments.\nPage: British intelligence agencies. Sentence: The three main agencies are the Secret Intelligence Service (MI6), the Security Service (MI5), and the Government Communications Headquarters (GCHQ).\nPage: Government Communications Headquarters. Sentence: The Government Communications Headquarters (GCHQ) is an intelligence and security organisation responsible for providing signals intelligence (SIGINT) and information assurance to the government and armed forces of the United Kingdom.\nPage: Government Communications Headquarters. Sentence: Based in \"The Doughnut\" in the suburbs of Cheltenham, GCHQ is the responsibility of the country's Secretary of State for Foreign and Commonwealth Affairs, but it is not a part of the Foreign Office and its director ranks as a Permanent Secretary.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "900704da-23a0-5b4f-b828-1bb2495f7812",
+        "text": "text_727845cad00c52617249c7b059ceec54",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "d9124347-4510-5134-af18-a6881939183a",
+        "text": "government of the united kingdom",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "388f60fb-220d-55e8-ae9c-3ac93cead308",
+        "text": "organization",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "81f373ef-5cd0-53e1-8e67-a40a5c5cc344",
+        "text": "british intelligence agencies",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "d2a381fa-3658-5ca6-ada9-2109cfc9331d",
+        "text": "concept",
+        "type": "EntityType"
+      },
+      {
+        "id": 7,
+        "original_id": "08e51697-7085-55f7-92e2-d60a2907f9c5",
+        "text": "secret intelligence service",
+        "type": "Entity"
+      },
+      {
+        "id": 8,
+        "original_id": "224569b0-5d71-50e3-b42a-79395d0ead05",
+        "text": "mi6",
+        "type": "Entity"
+      },
+      {
+        "id": 9,
+        "original_id": "71f7386e-caca-5697-8d2e-fa9f9544c5b5",
+        "text": "security service",
+        "type": "Entity"
+      },
+      {
+        "id": 10,
+        "original_id": "ca796ff5-a47a-5eb6-b40d-f2e0e090b8e8",
+        "text": "mi5",
+        "type": "Entity"
+      },
+      {
+        "id": 11,
+        "original_id": "4d22361f-f113-5127-831e-3c351b01ecaf",
+        "text": "government communications headquarters",
+        "type": "Entity"
+      },
+      {
+        "id": 12,
+        "original_id": "8bc741d0-31d6-5bec-af8b-b379d26d98b3",
+        "text": "gchq",
+        "type": "Entity"
+      },
+      {
+        "id": 13,
+        "original_id": "8b49c59c-5eb8-5f43-84d3-6a761c213a2e",
+        "text": "signals intelligence",
+        "type": "Entity"
+      },
+      {
+        "id": 14,
+        "original_id": "c76b3776-92d3-5238-a88e-62a89cee5ba8",
+        "text": "sigint",
+        "type": "Entity"
+      },
+      {
+        "id": 15,
+        "original_id": "1187e4a6-90b6-5d39-b4f1-ed0213d9a147",
+        "text": "information assurance",
+        "type": "Entity"
+      },
+      {
+        "id": 16,
+        "original_id": "44eb319f-69bc-5def-8446-fd6e487325eb",
+        "text": "armed forces of the united kingdom",
+        "type": "Entity"
+      },
+      {
+        "id": 17,
+        "original_id": "6d331999-5b00-5304-b340-c0a0c08bd162",
+        "text": "the doughnut",
+        "type": "Entity"
+      },
+      {
+        "id": 18,
+        "original_id": "5f394058-b2a0-5ba8-8466-ba2a18cfcf4e",
+        "text": "place",
+        "type": "EntityType"
+      },
+      {
+        "id": 19,
+        "original_id": "b6eaf4e2-9381-5e33-acc9-520c9c7e884a",
+        "text": "cheltenham",
+        "type": "Entity"
+      },
+      {
+        "id": 20,
+        "original_id": "77f6eb2c-9669-574e-a379-bf574678cfa0",
+        "text": "secretary of state for foreign and commonwealth affairs",
+        "type": "Entity"
+      },
+      {
+        "id": 21,
+        "original_id": "99a82eec-bb35-5bb5-9ed2-e73fc7a756de",
+        "text": "person",
+        "type": "EntityType"
+      },
+      {
+        "id": 22,
+        "original_id": "20fb1b41-3be7-5794-8678-0f91f1862326",
+        "text": "foreign office",
+        "type": "Entity"
+      },
+      {
+        "id": 23,
+        "original_id": "e3412f60-018f-5359-9027-219067612c5b",
+        "text": "director of government communications headquarters",
+        "type": "Entity"
+      },
+      {
+        "id": 24,
+        "original_id": "2a39ae0b-7471-5497-8ec1-5951df675991",
+        "text": "permanent secretary",
+        "type": "Entity"
+      },
+      {
+        "id": 25,
+        "original_id": "c37fc488-fc9a-5b35-8e54-a50ae1721557",
+        "text": "role",
+        "type": "EntityType"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 11,
+        "target": 3,
+        "type": "provides_services_to"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 7,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 8,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 9,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 10,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 11,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 12,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 16,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 22,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "maintains"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 13,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 14,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 15,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 5,
+        "target": 7,
+        "type": "includes_main_agency"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      },
+      {
+        "source": 7,
+        "target": 8,
+        "type": "also_called"
+      },
+      {
+        "source": 1,
+        "target": 8,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 9,
+        "type": "includes_main_agency"
+      },
+      {
+        "source": 1,
+        "target": 9,
+        "type": "contains"
+      },
+      {
+        "source": 9,
+        "target": 10,
+        "type": "also_called"
+      },
+      {
+        "source": 1,
+        "target": 10,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 11,
+        "type": "includes_main_agency"
+      },
+      {
+        "source": 1,
+        "target": 11,
+        "type": "contains"
+      },
+      {
+        "source": 11,
+        "target": 12,
+        "type": "also_called"
+      },
+      {
+        "source": 1,
+        "target": 12,
+        "type": "contains"
+      },
+      {
+        "source": 11,
+        "target": 13,
+        "type": "provides"
+      },
+      {
+        "source": 1,
+        "target": 13,
+        "type": "contains"
+      },
+      {
+        "source": 13,
+        "target": 14,
+        "type": "abbreviated_as"
+      },
+      {
+        "source": 1,
+        "target": 14,
+        "type": "contains"
+      },
+      {
+        "source": 11,
+        "target": 15,
+        "type": "provides"
+      },
+      {
+        "source": 1,
+        "target": 15,
+        "type": "contains"
+      },
+      {
+        "source": 11,
+        "target": 16,
+        "type": "provides_services_to"
+      },
+      {
+        "source": 1,
+        "target": 16,
+        "type": "contains"
+      },
+      {
+        "source": 11,
+        "target": 17,
+        "type": "based_in"
+      },
+      {
+        "source": 1,
+        "target": 17,
+        "type": "contains"
+      },
+      {
+        "source": 17,
+        "target": 18,
+        "type": "is_a"
+      },
+      {
+        "source": 19,
+        "target": 18,
+        "type": "is_a"
+      },
+      {
+        "source": 17,
+        "target": 19,
+        "type": "located_in"
+      },
+      {
+        "source": 1,
+        "target": 19,
+        "type": "contains"
+      },
+      {
+        "source": 11,
+        "target": 20,
+        "type": "is_the_responsibility_of"
+      },
+      {
+        "source": 1,
+        "target": 20,
+        "type": "contains"
+      },
+      {
+        "source": 20,
+        "target": 21,
+        "type": "is_a"
+      },
+      {
+        "source": 23,
+        "target": 21,
+        "type": "is_a"
+      },
+      {
+        "source": 11,
+        "target": 22,
+        "type": "not_part_of"
+      },
+      {
+        "source": 1,
+        "target": 22,
+        "type": "contains"
+      },
+      {
+        "source": 1,
+        "target": 23,
+        "type": "contains"
+      },
+      {
+        "source": 23,
+        "target": 24,
+        "type": "ranks_as"
+      },
+      {
+        "source": 1,
+        "target": 24,
+        "type": "contains"
+      },
+      {
+        "source": 24,
+        "target": 25,
+        "type": "is_a"
+      }
+    ]
+  }
+}

@@ -1,0 +1,432 @@
+{
+  "dataset": "hover",
+  "id": "d277e502-454b-4886-8b89-357c9126eef4",
+  "split": "train",
+  "claim": "J. Walter Duncan sold the USFL team who played home games at Giants Stadium to Donald Trump in 1983.",
+  "evidencia": "Page: J. Walter Duncan. Sentence: In 1983, he became owner of the New Jersey Generals, he sold the team to Donald Trump after the 1983 USFL season.\nPage: New Jersey Generals. Sentence: Home games were played at Giants Stadium in East Rutherford, New Jersey, which was called The Meadowlands for Generals games.",
+  "evidence_text": "Page: J. Walter Duncan. Sentence: In 1983, he became owner of the New Jersey Generals, he sold the team to Donald Trump after the 1983 USFL season.\nPage: New Jersey Generals. Sentence: Home games were played at Giants Stadium in East Rutherford, New Jersey, which was called The Meadowlands for Generals games.",
+  "label": "SUPPORTED",
+  "num_hops": 2,
+  "hover_metadata": {
+    "supporting_facts": [
+      [
+        "J. Walter Duncan",
+        3
+      ],
+      [
+        "New Jersey Generals",
+        2
+      ]
+    ],
+    "num_hops": 2,
+    "evidence_annotation_id": [
+      0
+    ],
+    "evidence_id": [
+      "J. Walter Duncan::sentence::3",
+      "New Jersey Generals::sentence::2"
+    ],
+    "evidence_wiki_url": [
+      "https://en.wikipedia.org/wiki/J._Walter_Duncan",
+      "https://en.wikipedia.org/wiki/New_Jersey_Generals"
+    ],
+    "evidence_sentence_id": [
+      "J. Walter Duncan::sentence::3",
+      "New Jersey Generals::sentence::2"
+    ]
+  },
+  "grafo_claim": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "682fc08d-ce74-5cad-8e3f-b7f19ddf434b",
+        "text": "This chunk is about:\n- People: J. Walter Duncan, Donald Trump\n- Organizations: USFL\n- Places: Giants Stadium\n\nFacts:\n- In 1983, J. Walter Duncan sold a USFL team to Donald Trump.\n- The USFL team sold by J. Walter Duncan played its home games at Giants Stadium.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "998ef66b-505b-5ba0-be66-4f230af2c7ae",
+        "text": "J. Walter Duncan sold the USFL team who played home games at Giants Stadium to Donald Trump in 1983.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "5f91b87d-40c2-5725-91c8-1a3f65332c0e",
+        "text": "text_f2ced4210fe4814db929d0cdcb2a5698",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "c2694adb-3998-5cc7-9f2a-aff87e64ca2c",
+        "text": "j. walter duncan",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "99a82eec-bb35-5bb5-9ed2-e73fc7a756de",
+        "text": "person",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "69f4dddb-b5ea-519c-a4ce-27cb4a0a0335",
+        "text": "usfl team",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "388f60fb-220d-55e8-ae9c-3ac93cead308",
+        "text": "organization",
+        "type": "EntityType"
+      },
+      {
+        "id": 7,
+        "original_id": "c4ced552-6c1f-5cb4-abba-e169aa654454",
+        "text": "giants stadium",
+        "type": "Entity"
+      },
+      {
+        "id": 8,
+        "original_id": "5f394058-b2a0-5ba8-8466-ba2a18cfcf4e",
+        "text": "place",
+        "type": "EntityType"
+      },
+      {
+        "id": 9,
+        "original_id": "f72816ab-eeaf-50fa-b9ef-373208a1a0e5",
+        "text": "donald trump",
+        "type": "Entity"
+      },
+      {
+        "id": 10,
+        "original_id": "3c0215ee-b605-50ca-9446-679776fa6623",
+        "text": "1983",
+        "type": "Entity"
+      },
+      {
+        "id": 11,
+        "original_id": "b19433ae-558c-5aaf-95ac-6231f2a4be0e",
+        "text": "date",
+        "type": "EntityType"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 9,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "sold"
+      },
+      {
+        "source": 9,
+        "target": 5,
+        "type": "bought"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 5,
+        "target": 7,
+        "type": "played_home_games_at"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      },
+      {
+        "source": 7,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 9,
+        "type": "sold_to"
+      },
+      {
+        "source": 1,
+        "target": 9,
+        "type": "contains"
+      },
+      {
+        "source": 9,
+        "target": 10,
+        "type": "bought_in"
+      },
+      {
+        "source": 3,
+        "target": 10,
+        "type": "sold_in"
+      },
+      {
+        "source": 1,
+        "target": 10,
+        "type": "contains"
+      },
+      {
+        "source": 10,
+        "target": 11,
+        "type": "is_a"
+      }
+    ]
+  },
+  "grafo_evidencia": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "17d60350-c3d8-5686-882f-a9094337fe2f",
+        "text": "This chunk is about:\n- People: J. Walter Duncan, Donald Trump\n- Organizations: New Jersey Generals, USFL\n- Places: Giants Stadium, East Rutherford, New Jersey, The Meadowlands\n\nFacts:\n- In 1983, J. Walter Duncan became the owner of the New Jersey Generals.\n- During the 1983 USFL season, the New Jersey Generals played home games at Giants Stadium in East Rutherford, New Jersey, which was called The Meadowlands for Generals games.\n- After the 1983 USFL season, J. Walter Duncan sold the New Jersey Generals to Donald Trump.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "74247608-0fc3-5873-95fc-ab8fef2198fb",
+        "text": "Page: J. Walter Duncan. Sentence: In 1983, he became owner of the New Jersey Generals, he sold the team to Donald Trump after the 1983 USFL season.\nPage: New Jersey Generals. Sentence: Home games were played at Giants Stadium in East Rutherford, New Jersey, which was called The Meadowlands for Generals games.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "871aed2e-4edb-5c73-974f-c65c757499d6",
+        "text": "text_02fd72568c6bb4ca0bb81f8143bd4255",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "c2694adb-3998-5cc7-9f2a-aff87e64ca2c",
+        "text": "j. walter duncan",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "99a82eec-bb35-5bb5-9ed2-e73fc7a756de",
+        "text": "person",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "4ef44207-2a4d-5114-9d44-eb13f2d636b3",
+        "text": "new jersey generals",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "388f60fb-220d-55e8-ae9c-3ac93cead308",
+        "text": "organization",
+        "type": "EntityType"
+      },
+      {
+        "id": 7,
+        "original_id": "c4ced552-6c1f-5cb4-abba-e169aa654454",
+        "text": "giants stadium",
+        "type": "Entity"
+      },
+      {
+        "id": 8,
+        "original_id": "5f394058-b2a0-5ba8-8466-ba2a18cfcf4e",
+        "text": "place",
+        "type": "EntityType"
+      },
+      {
+        "id": 9,
+        "original_id": "10303240-161a-56c3-a61f-3808aa8ada1a",
+        "text": "east rutherford, new jersey",
+        "type": "Entity"
+      },
+      {
+        "id": 10,
+        "original_id": "8a5a8741-5995-50ad-a42a-89db4ca37324",
+        "text": "the meadowlands",
+        "type": "Entity"
+      },
+      {
+        "id": 11,
+        "original_id": "3c0215ee-b605-50ca-9446-679776fa6623",
+        "text": "1983",
+        "type": "Entity"
+      },
+      {
+        "id": 12,
+        "original_id": "b19433ae-558c-5aaf-95ac-6231f2a4be0e",
+        "text": "date",
+        "type": "EntityType"
+      },
+      {
+        "id": 13,
+        "original_id": "f72816ab-eeaf-50fa-b9ef-373208a1a0e5",
+        "text": "donald trump",
+        "type": "Entity"
+      },
+      {
+        "id": 14,
+        "original_id": "45527b75-3cf1-5a2a-8851-cf5408629918",
+        "text": "1983 usfl season",
+        "type": "Entity"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 13,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "became_owner_of"
+      },
+      {
+        "source": 13,
+        "target": 5,
+        "type": "bought"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 5,
+        "target": 7,
+        "type": "played_home_games_at"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      },
+      {
+        "source": 7,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 9,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 10,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 7,
+        "target": 9,
+        "type": "located_in"
+      },
+      {
+        "source": 1,
+        "target": 9,
+        "type": "contains"
+      },
+      {
+        "source": 7,
+        "target": 10,
+        "type": "was_called_for_games"
+      },
+      {
+        "source": 1,
+        "target": 10,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 11,
+        "type": "became_owner_in"
+      },
+      {
+        "source": 1,
+        "target": 11,
+        "type": "contains"
+      },
+      {
+        "source": 11,
+        "target": 12,
+        "type": "is_a"
+      },
+      {
+        "source": 14,
+        "target": 12,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 13,
+        "type": "sold_team_to"
+      },
+      {
+        "source": 1,
+        "target": 13,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 14,
+        "type": "sold_team_after"
+      },
+      {
+        "source": 1,
+        "target": 14,
+        "type": "contains"
+      }
+    ]
+  }
+}

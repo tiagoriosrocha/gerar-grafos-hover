@@ -1,0 +1,374 @@
+{
+  "dataset": "hover",
+  "id": "6b053d7b-34e7-4ce6-9248-68689d0a6c3f",
+  "split": "dev",
+  "claim": "The Nantahala National Forest and the forest which Broad Creek (Bogue Sound) runs through are both located in Carolina.",
+  "evidencia": "Page: Croatan National Forest. Sentence: The Croatan National Forest is a U.S. National Forest, was established on July 29, 1936, and is located on the Atlantic coast of North Carolina.\nPage: Nantahala National Forest. Sentence: The Nantahala National Forest, established in 1920, is a national forest located in the American state of North Carolina.\nPage: Broad Creek (Bogue Sound). Sentence: The creek also runs through the Croatan National Forest.",
+  "evidence_text": "Page: Croatan National Forest. Sentence: The Croatan National Forest is a U.S. National Forest, was established on July 29, 1936, and is located on the Atlantic coast of North Carolina.\nPage: Nantahala National Forest. Sentence: The Nantahala National Forest, established in 1920, is a national forest located in the American state of North Carolina.\nPage: Broad Creek (Bogue Sound). Sentence: The creek also runs through the Croatan National Forest.",
+  "label": "SUPPORTED",
+  "num_hops": 3,
+  "hover_metadata": {
+    "supporting_facts": [
+      [
+        "Croatan National Forest",
+        0
+      ],
+      [
+        "Nantahala National Forest",
+        0
+      ],
+      [
+        "Broad Creek (Bogue Sound)",
+        2
+      ]
+    ],
+    "num_hops": 3,
+    "evidence_annotation_id": [
+      0
+    ],
+    "evidence_id": [
+      "Croatan National Forest::sentence::0",
+      "Nantahala National Forest::sentence::0",
+      "Broad Creek (Bogue Sound)::sentence::2"
+    ],
+    "evidence_wiki_url": [
+      "https://en.wikipedia.org/wiki/Croatan_National_Forest",
+      "https://en.wikipedia.org/wiki/Nantahala_National_Forest",
+      "https://en.wikipedia.org/wiki/Broad_Creek_%28Bogue_Sound%29"
+    ],
+    "evidence_sentence_id": [
+      "Croatan National Forest::sentence::0",
+      "Nantahala National Forest::sentence::0",
+      "Broad Creek (Bogue Sound)::sentence::2"
+    ]
+  },
+  "grafo_claim": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "c397a876-3f65-5d29-80f1-a0499c6d2ca8",
+        "text": "This chunk is about:\n- Places: Nantahala National Forest, Broad Creek (Bogue Sound), Carolina\n- Topics: location comparison\n\nFacts:\n- Nantahala National Forest is located in Carolina.\n- Broad Creek (Bogue Sound) runs through a forest that is located in Carolina.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "93ecca10-e15d-50f3-9b99-ad9b195f4990",
+        "text": "The Nantahala National Forest and the forest which Broad Creek (Bogue Sound) runs through are both located in Carolina.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "e9a54286-444f-5313-be7a-173d2e271b98",
+        "text": "text_a874e6300407bc95fc7e124e7c58f2a4",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "7d98af9c-2a12-597b-b394-ea1925c80ea2",
+        "text": "nantahala national forest",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "5f394058-b2a0-5ba8-8466-ba2a18cfcf4e",
+        "text": "place",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "23baebbe-3d16-5c55-b63d-a164eb0528a8",
+        "text": "carolina",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "6ade87a9-a1d8-59d3-b7d7-92f852ad3aa5",
+        "text": "broad creek (bogue sound)",
+        "type": "Entity"
+      },
+      {
+        "id": 7,
+        "original_id": "76447cc8-3100-5569-bcf1-0157c10f2aec",
+        "text": "forest through which broad creek (bogue sound) runs",
+        "type": "Entity"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 5,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 6,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 7,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "located_in"
+      },
+      {
+        "source": 7,
+        "target": 5,
+        "type": "located_in"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 1,
+        "target": 6,
+        "type": "contains"
+      },
+      {
+        "source": 6,
+        "target": 7,
+        "type": "runs_through"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      }
+    ]
+  },
+  "grafo_evidencia": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "95adbda5-3dc5-55e5-97a8-9b0070cff8b0",
+        "text": "This chunk is about:\n- Places: Croatan National Forest, Nantahala National Forest, Broad Creek, Bogue Sound, North Carolina\n- Organizations: U.S. National Forest\n\nFacts:\n- Nantahala National Forest is a national forest in North Carolina and was established in 1920.\n- Croatan National Forest is a U.S. National Forest on the Atlantic coast of North Carolina and was established on July 29, 1936.\n- Broad Creek runs through Croatan National Forest.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "7c66ed4c-e7bd-5e35-8683-29ca95d632d7",
+        "text": "Page: Croatan National Forest. Sentence: The Croatan National Forest is a U.S. National Forest, was established on July 29, 1936, and is located on the Atlantic coast of North Carolina.\nPage: Nantahala National Forest. Sentence: The Nantahala National Forest, established in 1920, is a national forest located in the American state of North Carolina.\nPage: Broad Creek (Bogue Sound). Sentence: The creek also runs through the Croatan National Forest.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "7490c56e-577a-5d12-b5dd-ba88df468348",
+        "text": "text_8759a3e7664514a6172e8206a8da9ef8",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "eda801ec-2564-586a-a827-8edf6d1fe44e",
+        "text": "croatan national forest",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "5f394058-b2a0-5ba8-8466-ba2a18cfcf4e",
+        "text": "place",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "32ad0477-1332-53c5-b338-54d0a200d8bb",
+        "text": "u.s. national forest",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "d2a381fa-3658-5ca6-ada9-2109cfc9331d",
+        "text": "concept",
+        "type": "EntityType"
+      },
+      {
+        "id": 7,
+        "original_id": "9dbb7c08-0b4a-5fe6-8f5e-733fa99a5259",
+        "text": "1936-07-29",
+        "type": "Entity"
+      },
+      {
+        "id": 8,
+        "original_id": "b19433ae-558c-5aaf-95ac-6231f2a4be0e",
+        "text": "date",
+        "type": "EntityType"
+      },
+      {
+        "id": 9,
+        "original_id": "2f555294-ded9-5fc0-b1be-0db8fddd8c38",
+        "text": "atlantic coast of north carolina",
+        "type": "Entity"
+      },
+      {
+        "id": 10,
+        "original_id": "7d98af9c-2a12-597b-b394-ea1925c80ea2",
+        "text": "nantahala national forest",
+        "type": "Entity"
+      },
+      {
+        "id": 11,
+        "original_id": "e507e4a1-50fe-5624-ae48-295ff0f925de",
+        "text": "1920",
+        "type": "Entity"
+      },
+      {
+        "id": 12,
+        "original_id": "a38e042f-04bb-511e-8e56-2f365eeb7c39",
+        "text": "north carolina",
+        "type": "Entity"
+      },
+      {
+        "id": 13,
+        "original_id": "6ade87a9-a1d8-59d3-b7d7-92f852ad3aa5",
+        "text": "broad creek (bogue sound)",
+        "type": "Entity"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 13,
+        "target": 3,
+        "type": "runs_through"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 9,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 10,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 12,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 13,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 7,
+        "type": "established_on"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      },
+      {
+        "source": 7,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 11,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 9,
+        "type": "located_on"
+      },
+      {
+        "source": 1,
+        "target": 9,
+        "type": "contains"
+      },
+      {
+        "source": 1,
+        "target": 10,
+        "type": "contains"
+      },
+      {
+        "source": 10,
+        "target": 11,
+        "type": "established_in"
+      },
+      {
+        "source": 1,
+        "target": 11,
+        "type": "contains"
+      },
+      {
+        "source": 10,
+        "target": 12,
+        "type": "located_in"
+      },
+      {
+        "source": 1,
+        "target": 12,
+        "type": "contains"
+      },
+      {
+        "source": 1,
+        "target": 13,
+        "type": "contains"
+      }
+    ]
+  }
+}

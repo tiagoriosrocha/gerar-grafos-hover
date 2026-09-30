@@ -1,0 +1,423 @@
+{
+  "dataset": "hover",
+  "id": "9eff77ce-7e40-43bf-8421-6cc0059186ee",
+  "split": "train",
+  "claim": "The filmmaker who gave Lee Van Cleef a role in \"For a Few Dollars More\" was Italian not Jon Paul Puno.",
+  "evidencia": "Page: Sergio Leone. Sentence: Sergio Leone (] ; 3 January 1929 – 30 April 1989) was an Italian film director, producer and screenwriter, credited as the inventor of the \"Spaghetti Western\" genre.\nPage: Jon Paul Puno. Sentence: Jon Paul Puno (born 1985) is an American filmmaker and classical crossover singer.\nPage: Lee Van Cleef. Sentence: After suffering serious injuries in a car crash, Van Cleef began to lose interest in his apparently waning career by the time Sergio Leone gave him a major role in \"For a Few Dollars More\".",
+  "evidence_text": "Page: Sergio Leone. Sentence: Sergio Leone (] ; 3 January 1929 – 30 April 1989) was an Italian film director, producer and screenwriter, credited as the inventor of the \"Spaghetti Western\" genre.\nPage: Jon Paul Puno. Sentence: Jon Paul Puno (born 1985) is an American filmmaker and classical crossover singer.\nPage: Lee Van Cleef. Sentence: After suffering serious injuries in a car crash, Van Cleef began to lose interest in his apparently waning career by the time Sergio Leone gave him a major role in \"For a Few Dollars More\".",
+  "label": "SUPPORTED",
+  "num_hops": 3,
+  "hover_metadata": {
+    "supporting_facts": [
+      [
+        "Sergio Leone",
+        0
+      ],
+      [
+        "Jon Paul Puno",
+        0
+      ],
+      [
+        "Lee Van Cleef",
+        2
+      ]
+    ],
+    "num_hops": 3,
+    "evidence_annotation_id": [
+      0
+    ],
+    "evidence_id": [
+      "Sergio Leone::sentence::0",
+      "Jon Paul Puno::sentence::0",
+      "Lee Van Cleef::sentence::2"
+    ],
+    "evidence_wiki_url": [
+      "https://en.wikipedia.org/wiki/Sergio_Leone",
+      "https://en.wikipedia.org/wiki/Jon_Paul_Puno",
+      "https://en.wikipedia.org/wiki/Lee_Van_Cleef"
+    ],
+    "evidence_sentence_id": [
+      "Sergio Leone::sentence::0",
+      "Jon Paul Puno::sentence::0",
+      "Lee Van Cleef::sentence::2"
+    ]
+  },
+  "grafo_claim": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "3933649c-5d7c-5f49-85a5-47d5e576e068",
+        "text": "This chunk is about:\n- People: Lee Van Cleef, Jon Paul Puno\n- Works: For a Few Dollars More\n- Topics: casting, nationality correction\n\nFacts:\n- Lee Van Cleef had a role in For a Few Dollars More.\n- The filmmaker who gave Lee Van Cleef that role was Italian.\n- Jon Paul Puno was not the filmmaker who gave Lee Van Cleef the role in For a Few Dollars More.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "05acb1ba-e1dc-5409-966b-f300bcf1e4e9",
+        "text": "The filmmaker who gave Lee Van Cleef a role in \"For a Few Dollars More\" was Italian not Jon Paul Puno.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "75607a46-5173-5760-b062-606a4409838d",
+        "text": "text_a88f558125af414fb221804defa90523",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "08b6dd04-6fe0-5935-b52f-7fcf13e5befb",
+        "text": "lee van cleef",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "99a82eec-bb35-5bb5-9ed2-e73fc7a756de",
+        "text": "person",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "30aafda7-85b6-5be2-b368-7922af05b92d",
+        "text": "for a few dollars more",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "5263a535-1b4b-5925-be3e-310d03cd303b",
+        "text": "work",
+        "type": "EntityType"
+      },
+      {
+        "id": 7,
+        "original_id": "d8b0318f-8965-56d6-8c1a-c72b8d03c1f0",
+        "text": "italian filmmaker",
+        "type": "Entity"
+      },
+      {
+        "id": 8,
+        "original_id": "9ead4cbd-e08b-5e6f-8755-a483d22d12ee",
+        "text": "jon paul puno",
+        "type": "Entity"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 7,
+        "target": 3,
+        "type": "gave_role_to"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 7,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 8,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "appeared_in"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 7,
+        "target": 5,
+        "type": "associated_with"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      },
+      {
+        "source": 8,
+        "target": 7,
+        "type": "is_not"
+      },
+      {
+        "source": 1,
+        "target": 8,
+        "type": "contains"
+      }
+    ]
+  },
+  "grafo_evidencia": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "5c095860-1249-5c22-b001-05880fc17e82",
+        "text": "This chunk is about:\n- People: Sergio Leone, Jon Paul Puno, Lee Van Cleef\n- Roles: film director, producer, screenwriter, filmmaker, singer, actor\n- Concepts: Spaghetti Western\n- Works: For a Few Dollars More\n\nFacts:\n- Sergio Leone was born on 3 January 1929 and died on 30 April 1989.\n- Sergio Leone was an Italian film director, producer, and screenwriter.\n- Sergio Leone is credited as the inventor of the Spaghetti Western genre.\n- Jon Paul Puno was born in 1985.\n- Jon Paul Puno is an American filmmaker and classical crossover singer.\n- After Lee Van Cleef suffered serious injuries in a car crash, he began to lose interest in his apparently waning career.\n- Sergio Leone later gave Lee Van Cleef a major role in For a Few Dollars More.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "bf6a9e0a-d785-5ab7-b405-b8977cd06693",
+        "text": "Page: Sergio Leone. Sentence: Sergio Leone (] ; 3 January 1929 – 30 April 1989) was an Italian film director, producer and screenwriter, credited as the inventor of the \"Spaghetti Western\" genre.\nPage: Jon Paul Puno. Sentence: Jon Paul Puno (born 1985) is an American filmmaker and classical crossover singer.\nPage: Lee Van Cleef. Sentence: After suffering serious injuries in a car crash, Van Cleef began to lose interest in his apparently waning career by the time Sergio Leone gave him a major role in \"For a Few Dollars More\".",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "3ab09692-b17b-575b-9df1-c5014b554e0c",
+        "text": "text_543f59227486b8bdbd0d296d072fb9da",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "e65fcb81-9d7a-5707-8ada-1cbd16e22a28",
+        "text": "sergio leone",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "99a82eec-bb35-5bb5-9ed2-e73fc7a756de",
+        "text": "person",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "f7f7afd1-ecf2-57c8-8430-8b9ccbe10e2d",
+        "text": "1929-01-03",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "b19433ae-558c-5aaf-95ac-6231f2a4be0e",
+        "text": "date",
+        "type": "EntityType"
+      },
+      {
+        "id": 7,
+        "original_id": "b7064224-c23b-50c4-b782-21b9f98ee19d",
+        "text": "1989-04-30",
+        "type": "Entity"
+      },
+      {
+        "id": 8,
+        "original_id": "14ad6523-c534-5518-8e5d-e6e485084c38",
+        "text": "spaghetti western",
+        "type": "Entity"
+      },
+      {
+        "id": 9,
+        "original_id": "d8d36cdc-ccf4-5249-921a-ab373f0fb82a",
+        "text": "genre",
+        "type": "EntityType"
+      },
+      {
+        "id": 10,
+        "original_id": "08b6dd04-6fe0-5935-b52f-7fcf13e5befb",
+        "text": "lee van cleef",
+        "type": "Entity"
+      },
+      {
+        "id": 11,
+        "original_id": "fac2bfc8-4fa4-572d-8a0f-84a57181c4d9",
+        "text": "car crash",
+        "type": "Entity"
+      },
+      {
+        "id": 12,
+        "original_id": "214abcd9-9adf-5c8a-bb35-1e729f2d68c3",
+        "text": "event",
+        "type": "EntityType"
+      },
+      {
+        "id": 13,
+        "original_id": "30aafda7-85b6-5be2-b368-7922af05b92d",
+        "text": "for a few dollars more",
+        "type": "Entity"
+      },
+      {
+        "id": 14,
+        "original_id": "5263a535-1b4b-5925-be3e-310d03cd303b",
+        "text": "work",
+        "type": "EntityType"
+      },
+      {
+        "id": 15,
+        "original_id": "9ead4cbd-e08b-5e6f-8755-a483d22d12ee",
+        "text": "jon paul puno",
+        "type": "Entity"
+      },
+      {
+        "id": 16,
+        "original_id": "6bd8ee84-df5b-547d-ad6e-de3a4c833f59",
+        "text": "1985",
+        "type": "Entity"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 10,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 15,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "born_on"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 7,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 16,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 7,
+        "type": "died_on"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 8,
+        "type": "credited_as_inventor_of"
+      },
+      {
+        "source": 1,
+        "target": 8,
+        "type": "contains"
+      },
+      {
+        "source": 8,
+        "target": 9,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 10,
+        "type": "gave_major_role_to"
+      },
+      {
+        "source": 1,
+        "target": 10,
+        "type": "contains"
+      },
+      {
+        "source": 10,
+        "target": 11,
+        "type": "injured_in"
+      },
+      {
+        "source": 1,
+        "target": 11,
+        "type": "contains"
+      },
+      {
+        "source": 11,
+        "target": 12,
+        "type": "is_a"
+      },
+      {
+        "source": 10,
+        "target": 13,
+        "type": "had_major_role_in"
+      },
+      {
+        "source": 3,
+        "target": 13,
+        "type": "gave_major_role_in"
+      },
+      {
+        "source": 1,
+        "target": 13,
+        "type": "contains"
+      },
+      {
+        "source": 13,
+        "target": 14,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 15,
+        "type": "contains"
+      },
+      {
+        "source": 15,
+        "target": 16,
+        "type": "born_in"
+      },
+      {
+        "source": 1,
+        "target": 16,
+        "type": "contains"
+      }
+    ]
+  }
+}

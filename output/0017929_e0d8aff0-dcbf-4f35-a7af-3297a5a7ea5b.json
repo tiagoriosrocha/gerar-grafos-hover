@@ -1,0 +1,489 @@
+{
+  "dataset": "hover",
+  "id": "e0d8aff0-dcbf-4f35-a7af-3297a5a7ea5b",
+  "split": "train",
+  "claim": "Charles Guiteau assassinated the 20th President of the United States.",
+  "evidencia": "Page: Edward Anthony Spitzka. Sentence: (In 1881, his father Edward Charles Spitzka, a famous neurologist and medical specialist in mental diseases, testified to the insanity of Charles Guiteau, the assassin of President James A. Garfield, at Guiteau's murder trial.)\nPage: James A. Garfield. Sentence: James Abram Garfield (November 19, 1831 – September 19, 1881) was the 20th President of the United States, serving from March 4, 1881, until his assassination later that year.",
+  "evidence_text": "Page: Edward Anthony Spitzka. Sentence: (In 1881, his father Edward Charles Spitzka, a famous neurologist and medical specialist in mental diseases, testified to the insanity of Charles Guiteau, the assassin of President James A. Garfield, at Guiteau's murder trial.)\nPage: James A. Garfield. Sentence: James Abram Garfield (November 19, 1831 – September 19, 1881) was the 20th President of the United States, serving from March 4, 1881, until his assassination later that year.",
+  "label": "SUPPORTED",
+  "num_hops": 2,
+  "hover_metadata": {
+    "supporting_facts": [
+      [
+        "Edward Anthony Spitzka",
+        1
+      ],
+      [
+        "James A. Garfield",
+        0
+      ]
+    ],
+    "num_hops": 2,
+    "evidence_annotation_id": [
+      0
+    ],
+    "evidence_id": [
+      "Edward Anthony Spitzka::sentence::1",
+      "James A. Garfield::sentence::0"
+    ],
+    "evidence_wiki_url": [
+      "https://en.wikipedia.org/wiki/Edward_Anthony_Spitzka",
+      "https://en.wikipedia.org/wiki/James_A._Garfield"
+    ],
+    "evidence_sentence_id": [
+      "Edward Anthony Spitzka::sentence::1",
+      "James A. Garfield::sentence::0"
+    ]
+  },
+  "grafo_claim": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "00ceeddc-7553-545e-9563-db9631dcf810",
+        "text": "This chunk is about:\n- People: Charles Guiteau, James A. Garfield\n- Roles: 20th President of the United States\n\nFacts:\n- Charles Guiteau assassinated James A. Garfield.\n- James A. Garfield was the 20th President of the United States.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "49006de4-ac24-5d9a-b590-03eef763de32",
+        "text": "Charles Guiteau assassinated the 20th President of the United States.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "caeb75c9-7c4c-5550-babc-1eccd3d6b974",
+        "text": "text_b36a36feef6c0ec26a9049e913f16fe6",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "e54af0e1-02c7-5ae1-9d7d-1bc3d516297f",
+        "text": "charles guiteau",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "99a82eec-bb35-5bb5-9ed2-e73fc7a756de",
+        "text": "person",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "842eae5c-3f0e-558c-8a69-dfd4cdcd83b3",
+        "text": "20th president of the united states",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "874a51da-34ea-5037-be47-d87785d43c37",
+        "text": "united states",
+        "type": "Entity"
+      },
+      {
+        "id": 7,
+        "original_id": "5f394058-b2a0-5ba8-8466-ba2a18cfcf4e",
+        "text": "place",
+        "type": "EntityType"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 5,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "assassinated"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "president_of"
+      },
+      {
+        "source": 1,
+        "target": 6,
+        "type": "contains"
+      },
+      {
+        "source": 6,
+        "target": 7,
+        "type": "is_a"
+      }
+    ]
+  },
+  "grafo_evidencia": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "4332a15f-09bb-5078-a4b8-cea2717e23f5",
+        "text": "This chunk is about:\n- People: Edward Charles Spitzka, Charles Guiteau, James A. Garfield\n- Roles: neurologist, medical specialist in mental diseases, assassin, President of the United States\n- Events: Guiteau's murder trial, assassination of James A. Garfield\n\nFacts:\n- James A. Garfield was the 20th President of the United States and served from March 4, 1881, until his assassination later in 1881.\n- In 1881, Edward Charles Spitzka was a famous neurologist and medical specialist in mental diseases.\n- In 1881, Edward Charles Spitzka testified that Charles Guiteau was insane at Guiteau's murder trial.\n- Charles Guiteau was the assassin of President James A. Garfield.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "db1ce334-f921-5e93-9ee5-6c3b7efeb5aa",
+        "text": "Page: Edward Anthony Spitzka. Sentence: (In 1881, his father Edward Charles Spitzka, a famous neurologist and medical specialist in mental diseases, testified to the insanity of Charles Guiteau, the assassin of President James A. Garfield, at Guiteau's murder trial.)\nPage: James A. Garfield. Sentence: James Abram Garfield (November 19, 1831 – September 19, 1881) was the 20th President of the United States, serving from March 4, 1881, until his assassination later that year.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "a5bd5cac-5dc4-5440-9908-8f6f1a6845ee",
+        "text": "text_4f8c5a446b7f8a1a152de5317a03a9d8",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "67d12a90-11d2-5577-b25f-9bab81a0326f",
+        "text": "edward anthony spitzka",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "99a82eec-bb35-5bb5-9ed2-e73fc7a756de",
+        "text": "person",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "fbbcc1bd-906d-57c4-954d-3c699dc729ff",
+        "text": "1881",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "b19433ae-558c-5aaf-95ac-6231f2a4be0e",
+        "text": "date",
+        "type": "EntityType"
+      },
+      {
+        "id": 7,
+        "original_id": "a3482f6c-3d4c-5519-8f4f-7df74cae7bc1",
+        "text": "edward charles spitzka",
+        "type": "Entity"
+      },
+      {
+        "id": 8,
+        "original_id": "e54af0e1-02c7-5ae1-9d7d-1bc3d516297f",
+        "text": "charles guiteau",
+        "type": "Entity"
+      },
+      {
+        "id": 9,
+        "original_id": "21b7d6f8-b51f-5d29-9fe3-691cebb94494",
+        "text": "james a. garfield",
+        "type": "Entity"
+      },
+      {
+        "id": 10,
+        "original_id": "c952374e-5675-572c-894b-ee176bb07392",
+        "text": "james abram garfield",
+        "type": "Entity"
+      },
+      {
+        "id": 11,
+        "original_id": "62ddfe20-9879-5a68-bd52-570a251df91b",
+        "text": "1831-11-19",
+        "type": "Entity"
+      },
+      {
+        "id": 12,
+        "original_id": "78e320e5-c1a9-53ac-acb9-87da3c3fc02e",
+        "text": "1881-09-19",
+        "type": "Entity"
+      },
+      {
+        "id": 13,
+        "original_id": "842eae5c-3f0e-558c-8a69-dfd4cdcd83b3",
+        "text": "20th president of the united states",
+        "type": "Entity"
+      },
+      {
+        "id": 14,
+        "original_id": "8789768e-777e-505f-9788-4d23e6b11ee4",
+        "text": "position",
+        "type": "EntityType"
+      },
+      {
+        "id": 15,
+        "original_id": "874a51da-34ea-5037-be47-d87785d43c37",
+        "text": "united states",
+        "type": "Entity"
+      },
+      {
+        "id": 16,
+        "original_id": "5f394058-b2a0-5ba8-8466-ba2a18cfcf4e",
+        "text": "place",
+        "type": "EntityType"
+      },
+      {
+        "id": 17,
+        "original_id": "e60cc1e0-9fd4-582a-9030-10a5056f67e1",
+        "text": "1881-03-04",
+        "type": "Entity"
+      },
+      {
+        "id": 18,
+        "original_id": "cc51100b-40df-50e8-8bba-c3870d38255f",
+        "text": "assassination of james a. garfield",
+        "type": "Entity"
+      },
+      {
+        "id": 19,
+        "original_id": "214abcd9-9adf-5c8a-bb35-1e729f2d68c3",
+        "text": "event",
+        "type": "EntityType"
+      },
+      {
+        "id": 20,
+        "original_id": "8770caf3-305d-5b88-bf86-317af49b612f",
+        "text": "guiteaus murder trial",
+        "type": "Entity"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 7,
+        "target": 3,
+        "type": "is_father_of"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 7,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 8,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 9,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 10,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 18,
+        "target": 5,
+        "type": "occurred_in"
+      },
+      {
+        "source": 7,
+        "target": 5,
+        "type": "testified_in"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 11,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 12,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 17,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      },
+      {
+        "source": 7,
+        "target": 8,
+        "type": "testified_to_insanity_of"
+      },
+      {
+        "source": 20,
+        "target": 8,
+        "type": "involved_defendant"
+      },
+      {
+        "source": 1,
+        "target": 8,
+        "type": "contains"
+      },
+      {
+        "source": 8,
+        "target": 9,
+        "type": "assassinated"
+      },
+      {
+        "source": 1,
+        "target": 9,
+        "type": "contains"
+      },
+      {
+        "source": 9,
+        "target": 10,
+        "type": "has_full_name"
+      },
+      {
+        "source": 1,
+        "target": 10,
+        "type": "contains"
+      },
+      {
+        "source": 10,
+        "target": 11,
+        "type": "born_on"
+      },
+      {
+        "source": 1,
+        "target": 11,
+        "type": "contains"
+      },
+      {
+        "source": 10,
+        "target": 12,
+        "type": "died_on"
+      },
+      {
+        "source": 1,
+        "target": 12,
+        "type": "contains"
+      },
+      {
+        "source": 10,
+        "target": 13,
+        "type": "held_position"
+      },
+      {
+        "source": 1,
+        "target": 13,
+        "type": "contains"
+      },
+      {
+        "source": 13,
+        "target": 14,
+        "type": "is_a"
+      },
+      {
+        "source": 13,
+        "target": 15,
+        "type": "of_country"
+      },
+      {
+        "source": 1,
+        "target": 15,
+        "type": "contains"
+      },
+      {
+        "source": 15,
+        "target": 16,
+        "type": "is_a"
+      },
+      {
+        "source": 10,
+        "target": 17,
+        "type": "started_serving_on"
+      },
+      {
+        "source": 1,
+        "target": 17,
+        "type": "contains"
+      },
+      {
+        "source": 10,
+        "target": 18,
+        "type": "was_killed_in"
+      },
+      {
+        "source": 1,
+        "target": 18,
+        "type": "contains"
+      },
+      {
+        "source": 18,
+        "target": 19,
+        "type": "is_a"
+      },
+      {
+        "source": 20,
+        "target": 19,
+        "type": "is_a"
+      },
+      {
+        "source": 8,
+        "target": 20,
+        "type": "was_tried_in"
+      },
+      {
+        "source": 7,
+        "target": 20,
+        "type": "testified_at"
+      },
+      {
+        "source": 1,
+        "target": 20,
+        "type": "contains"
+      }
+    ]
+  }
+}

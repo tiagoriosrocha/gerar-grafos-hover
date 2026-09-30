@@ -1,0 +1,404 @@
+{
+  "dataset": "hover",
+  "id": "f852ee84-5cdf-4c22-b49c-3d136da9eab0",
+  "split": "train",
+  "claim": "The movie filmed in Clermont, Iowa and Frozen films are of the same genre.",
+  "evidencia": "Page: The Straight Story. Sentence: The Straight Story is a 1999 internationally co-produced biographical road drama film directed by David Lynch.\nPage: Frozen (2013 film). Sentence: Frozen is a 2013 American 3D computer-animated musical fantasy film produced by Walt Disney Animation Studios and released by Walt Disney Pictures.\nPage: Clermont, Iowa. Sentence: Scenes for the movie \"The Straight Story\" were filmed here.",
+  "evidence_text": "Page: The Straight Story. Sentence: The Straight Story is a 1999 internationally co-produced biographical road drama film directed by David Lynch.\nPage: Frozen (2013 film). Sentence: Frozen is a 2013 American 3D computer-animated musical fantasy film produced by Walt Disney Animation Studios and released by Walt Disney Pictures.\nPage: Clermont, Iowa. Sentence: Scenes for the movie \"The Straight Story\" were filmed here.",
+  "label": "NOT_SUPPORTED",
+  "num_hops": 3,
+  "hover_metadata": {
+    "supporting_facts": [
+      [
+        "The Straight Story",
+        0
+      ],
+      [
+        "Frozen (2013 film)",
+        0
+      ],
+      [
+        "Clermont, Iowa",
+        3
+      ]
+    ],
+    "num_hops": 3,
+    "evidence_annotation_id": [
+      0
+    ],
+    "evidence_id": [
+      "The Straight Story::sentence::0",
+      "Frozen (2013 film)::sentence::0",
+      "Clermont, Iowa::sentence::3"
+    ],
+    "evidence_wiki_url": [
+      "https://en.wikipedia.org/wiki/The_Straight_Story",
+      "https://en.wikipedia.org/wiki/Frozen_%282013_film%29",
+      "https://en.wikipedia.org/wiki/Clermont%2C_Iowa"
+    ],
+    "evidence_sentence_id": [
+      "The Straight Story::sentence::0",
+      "Frozen (2013 film)::sentence::0",
+      "Clermont, Iowa::sentence::3"
+    ]
+  },
+  "grafo_claim": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "c661816c-738c-5e7f-9843-0c7b43f3d317",
+        "text": "This chunk is about:\n- Places: Clermont, Iowa\n- Products: Frozen films\n- Concepts: film genre\n\nFacts:\n- A movie filmed in Clermont, Iowa and the Frozen films share the same genre.\n- The Frozen films are a film series.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "68810dee-e9b3-5148-ba7e-88995a66cbec",
+        "text": "The movie filmed in Clermont, Iowa and Frozen films are of the same genre.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "b333d6cf-fa24-5154-b0e0-edcf1fc773fe",
+        "text": "text_2510450c3a68b79c08d02162f97ca04c",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "6649d232-7259-5ac8-9101-b72cf4b5369c",
+        "text": "clermont, iowa",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "5f394058-b2a0-5ba8-8466-ba2a18cfcf4e",
+        "text": "place",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "f5518e7e-d077-50a7-8e40-2aebb7a53887",
+        "text": "frozen films",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "7cfe8b44-b28a-5568-9558-f06a2324b9f6",
+        "text": "film series",
+        "type": "EntityType"
+      },
+      {
+        "id": 7,
+        "original_id": "7225034f-78e6-59b3-9625-8ff9e690f926",
+        "text": "genre",
+        "type": "Entity"
+      },
+      {
+        "id": 8,
+        "original_id": "d2a381fa-3658-5ca6-ada9-2109cfc9331d",
+        "text": "concept",
+        "type": "EntityType"
+      },
+      {
+        "id": 9,
+        "original_id": "57c99ba2-faf0-5c7a-9c51-373f7d0e8710",
+        "text": "movie filmed in clermont, iowa",
+        "type": "Entity"
+      },
+      {
+        "id": 10,
+        "original_id": "1155038a-04d1-5d6a-9c60-e4f499a6913c",
+        "text": "movie",
+        "type": "EntityType"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 9,
+        "target": 3,
+        "type": "filmed_in"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 5,
+        "target": 7,
+        "type": "has_genre"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      },
+      {
+        "source": 9,
+        "target": 7,
+        "type": "has_same_genre_as"
+      },
+      {
+        "source": 7,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 9,
+        "type": "contains"
+      },
+      {
+        "source": 9,
+        "target": 10,
+        "type": "is_a"
+      }
+    ]
+  },
+  "grafo_evidencia": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "b6236361-2dd7-5873-b3d5-87ccec87cb08",
+        "text": "This chunk is about:\n- Products: The Straight Story, Frozen\n- People: David Lynch\n- Companies: Walt Disney Animation Studios, Walt Disney Pictures\n- Places: Clermont, Iowa\n\nFacts:\n- The Straight Story is a 1999 internationally co-produced biographical road drama film.\n- The Straight Story was directed by David Lynch.\n- Scenes for the movie The Straight Story were filmed in Clermont, Iowa.\n- Frozen is a 2013 American 3D computer-animated musical fantasy film.\n- Frozen was produced by Walt Disney Animation Studios and released by Walt Disney Pictures.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "fa118cb5-ab45-5288-8707-cdc7d549fecb",
+        "text": "Page: The Straight Story. Sentence: The Straight Story is a 1999 internationally co-produced biographical road drama film directed by David Lynch.\nPage: Frozen (2013 film). Sentence: Frozen is a 2013 American 3D computer-animated musical fantasy film produced by Walt Disney Animation Studios and released by Walt Disney Pictures.\nPage: Clermont, Iowa. Sentence: Scenes for the movie \"The Straight Story\" were filmed here.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "39977a4f-5bf7-59c1-b853-479509cae09d",
+        "text": "text_ed23a3c1c9b8279cd8401b9201ce8db6",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "97cc444d-f024-58f0-b959-1ebc0913fab9",
+        "text": "the straight story",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "5263a535-1b4b-5925-be3e-310d03cd303b",
+        "text": "work",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "da34b31d-0543-5b2c-8d19-d73ef0cfe6ad",
+        "text": "1999",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "b19433ae-558c-5aaf-95ac-6231f2a4be0e",
+        "text": "date",
+        "type": "EntityType"
+      },
+      {
+        "id": 7,
+        "original_id": "112df367-3d5c-5d79-ad10-64f10e90fa94",
+        "text": "david lynch",
+        "type": "Entity"
+      },
+      {
+        "id": 8,
+        "original_id": "99a82eec-bb35-5bb5-9ed2-e73fc7a756de",
+        "text": "person",
+        "type": "EntityType"
+      },
+      {
+        "id": 9,
+        "original_id": "dc2e297b-76ac-509e-96ad-c8e8a36a4f40",
+        "text": "frozen",
+        "type": "Entity"
+      },
+      {
+        "id": 10,
+        "original_id": "2915c6cb-90a5-58b8-aef6-9261d472b39a",
+        "text": "2013",
+        "type": "Entity"
+      },
+      {
+        "id": 11,
+        "original_id": "9c902d4c-2183-5f5f-a2cb-3760be3c9743",
+        "text": "walt disney animation studios",
+        "type": "Entity"
+      },
+      {
+        "id": 12,
+        "original_id": "388f60fb-220d-55e8-ae9c-3ac93cead308",
+        "text": "organization",
+        "type": "EntityType"
+      },
+      {
+        "id": 13,
+        "original_id": "d690cff4-f313-556d-b1c6-fb0b070cd921",
+        "text": "walt disney pictures",
+        "type": "Entity"
+      },
+      {
+        "id": 14,
+        "original_id": "6649d232-7259-5ac8-9101-b72cf4b5369c",
+        "text": "clermont, iowa",
+        "type": "Entity"
+      },
+      {
+        "id": 15,
+        "original_id": "5f394058-b2a0-5ba8-8466-ba2a18cfcf4e",
+        "text": "place",
+        "type": "EntityType"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 7,
+        "target": 3,
+        "type": "directed"
+      },
+      {
+        "source": 14,
+        "target": 3,
+        "type": "filming_location_for"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 9,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "released_in"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 10,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      },
+      {
+        "source": 7,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 9,
+        "type": "contains"
+      },
+      {
+        "source": 11,
+        "target": 9,
+        "type": "produced"
+      },
+      {
+        "source": 13,
+        "target": 9,
+        "type": "released"
+      },
+      {
+        "source": 9,
+        "target": 10,
+        "type": "released_in"
+      },
+      {
+        "source": 1,
+        "target": 10,
+        "type": "contains"
+      },
+      {
+        "source": 1,
+        "target": 11,
+        "type": "contains"
+      },
+      {
+        "source": 11,
+        "target": 12,
+        "type": "is_a"
+      },
+      {
+        "source": 13,
+        "target": 12,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 13,
+        "type": "contains"
+      },
+      {
+        "source": 1,
+        "target": 14,
+        "type": "contains"
+      },
+      {
+        "source": 14,
+        "target": 15,
+        "type": "is_a"
+      }
+    ]
+  }
+}

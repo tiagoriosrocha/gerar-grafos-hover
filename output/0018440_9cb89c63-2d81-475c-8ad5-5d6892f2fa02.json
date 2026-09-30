@@ -1,0 +1,539 @@
+{
+  "dataset": "hover",
+  "id": "9cb89c63-2d81-475c-8ad5-5d6892f2fa02",
+  "split": "dev",
+  "claim": "Jean-Loup Jacques Marie Chrétien was born before the astronaut who drank the first coffee in space on 3 May 2015.",
+  "evidencia": "Page: Samantha Cristoforetti. Sentence: Samantha Cristoforetti (] ; born 26 April 1977 in Milan) is an Italian European Space Agency astronaut, Italian Air Force pilot and engineer.\nPage: Jean-Loup Chrétien. Sentence: Jean-Loup Jacques Marie Chrétien (born 20 August 1938) is a French retired \"Général de Brigade\" (brigadier general) in the \"Armée de l'Air\" (French air force), and a former CNES spationaut.\nPage: ISSpresso. Sentence: The first espresso coffee was drunk in space by astronaut Samantha Cristoforetti on 3 May 2015.",
+  "evidence_text": "Page: Samantha Cristoforetti. Sentence: Samantha Cristoforetti (] ; born 26 April 1977 in Milan) is an Italian European Space Agency astronaut, Italian Air Force pilot and engineer.\nPage: Jean-Loup Chrétien. Sentence: Jean-Loup Jacques Marie Chrétien (born 20 August 1938) is a French retired \"Général de Brigade\" (brigadier general) in the \"Armée de l'Air\" (French air force), and a former CNES spationaut.\nPage: ISSpresso. Sentence: The first espresso coffee was drunk in space by astronaut Samantha Cristoforetti on 3 May 2015.",
+  "label": "SUPPORTED",
+  "num_hops": 3,
+  "hover_metadata": {
+    "supporting_facts": [
+      [
+        "Samantha Cristoforetti",
+        0
+      ],
+      [
+        "Jean-Loup Chrétien",
+        0
+      ],
+      [
+        "ISSpresso",
+        1
+      ]
+    ],
+    "num_hops": 3,
+    "evidence_annotation_id": [
+      0
+    ],
+    "evidence_id": [
+      "Samantha Cristoforetti::sentence::0",
+      "Jean-Loup Chrétien::sentence::0",
+      "ISSpresso::sentence::1"
+    ],
+    "evidence_wiki_url": [
+      "https://en.wikipedia.org/wiki/Samantha_Cristoforetti",
+      "https://en.wikipedia.org/wiki/Jean-Loup_Chr%C3%A9tien",
+      "https://en.wikipedia.org/wiki/ISSpresso"
+    ],
+    "evidence_sentence_id": [
+      "Samantha Cristoforetti::sentence::0",
+      "Jean-Loup Chrétien::sentence::0",
+      "ISSpresso::sentence::1"
+    ]
+  },
+  "grafo_claim": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "68804fa3-a409-5ab8-b1a5-92bf7238da00",
+        "text": "This chunk is about:\n- People: Jean-Loup Jacques Marie Chrétien, the astronaut who drank the first coffee in space\n- Topics: birth order, space milestones\n\nFacts:\n- Jean-Loup Jacques Marie Chrétien was born before the astronaut who drank the first coffee in space.\n- The astronaut referenced as drinking the first coffee in space did so on 3 May 2015.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "eefa21fb-9f5b-507e-bf45-189175a99646",
+        "text": "Jean-Loup Jacques Marie Chrétien was born before the astronaut who drank the first coffee in space on 3 May 2015.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "29d623ba-669c-5386-b7a3-c2db4ce0f6ea",
+        "text": "text_ba2ac549a3c9642908fe85169bfb3935",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "0c09a77d-bb16-580f-8f5b-33df4490badb",
+        "text": "jean-loup jacques marie chrétien",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "99a82eec-bb35-5bb5-9ed2-e73fc7a756de",
+        "text": "person",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "28cd0b62-4d78-5350-a6f4-0c3fa01c683c",
+        "text": "astronaut who drank the first coffee in space",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "88db7657-c026-50fa-8cd0-fb2695baf709",
+        "text": "2015-05-03",
+        "type": "Entity"
+      },
+      {
+        "id": 7,
+        "original_id": "b19433ae-558c-5aaf-95ac-6231f2a4be0e",
+        "text": "date",
+        "type": "EntityType"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 5,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "was_born_before"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "drank_first_coffee_in_space_on"
+      },
+      {
+        "source": 1,
+        "target": 6,
+        "type": "contains"
+      },
+      {
+        "source": 6,
+        "target": 7,
+        "type": "is_a"
+      }
+    ]
+  },
+  "grafo_evidencia": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "32d13ec2-18be-5673-9188-2ed3dce860fb",
+        "text": "This chunk is about:\n- People: Samantha Cristoforetti, Jean-Loup Chrétien\n- Organizations: European Space Agency, Italian Air Force, CNES, French Air Force\n- Products: ISSpresso\n- Topics: astronauts, military aviation, space coffee\n\nFacts:\n- Jean-Loup Chrétien was born on 20 August 1938.\n- Samantha Cristoforetti was born on 26 April 1977 in Milan.\n- Jean-Loup Chrétien is a French retired brigadier general in the French Air Force and a former CNES spationaut.\n- Samantha Cristoforetti is an Italian European Space Agency astronaut, Italian Air Force pilot, and engineer.\n- On 3 May 2015, astronaut Samantha Cristoforetti drank the first espresso coffee in space using ISSpresso.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "35e60591-2fb4-5721-a18b-442d70847496",
+        "text": "Page: Samantha Cristoforetti. Sentence: Samantha Cristoforetti (] ; born 26 April 1977 in Milan) is an Italian European Space Agency astronaut, Italian Air Force pilot and engineer.\nPage: Jean-Loup Chrétien. Sentence: Jean-Loup Jacques Marie Chrétien (born 20 August 1938) is a French retired \"Général de Brigade\" (brigadier general) in the \"Armée de l'Air\" (French air force), and a former CNES spationaut.\nPage: ISSpresso. Sentence: The first espresso coffee was drunk in space by astronaut Samantha Cristoforetti on 3 May 2015.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "3baa33fb-cddc-5fd1-a56c-2554ef31c33c",
+        "text": "text_7a89a3be90fd2c7b93a0c86bb965141e",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "69a70b2e-ad09-50ea-a82e-230a3f178526",
+        "text": "samantha cristoforetti",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "99a82eec-bb35-5bb5-9ed2-e73fc7a756de",
+        "text": "person",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "83788617-4d32-5577-bc8f-bb818c229cb8",
+        "text": "1977-04-26",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "b19433ae-558c-5aaf-95ac-6231f2a4be0e",
+        "text": "date",
+        "type": "EntityType"
+      },
+      {
+        "id": 7,
+        "original_id": "a78b1bb0-a711-5327-9857-dc50223f157b",
+        "text": "milan",
+        "type": "Entity"
+      },
+      {
+        "id": 8,
+        "original_id": "5f394058-b2a0-5ba8-8466-ba2a18cfcf4e",
+        "text": "place",
+        "type": "EntityType"
+      },
+      {
+        "id": 9,
+        "original_id": "5a1dda46-e2da-52c7-9461-b7c32f3b5211",
+        "text": "european space agency",
+        "type": "Entity"
+      },
+      {
+        "id": 10,
+        "original_id": "388f60fb-220d-55e8-ae9c-3ac93cead308",
+        "text": "organization",
+        "type": "EntityType"
+      },
+      {
+        "id": 11,
+        "original_id": "722a40e5-e023-5ab7-9985-bf6291e38cf0",
+        "text": "italian air force",
+        "type": "Entity"
+      },
+      {
+        "id": 12,
+        "original_id": "a43522d2-1039-591f-9302-0641f7c3249c",
+        "text": "engineer",
+        "type": "Entity"
+      },
+      {
+        "id": 13,
+        "original_id": "d2a381fa-3658-5ca6-ada9-2109cfc9331d",
+        "text": "concept",
+        "type": "EntityType"
+      },
+      {
+        "id": 14,
+        "original_id": "4be299b0-54e9-576d-9883-971f84741fbb",
+        "text": "italian",
+        "type": "Entity"
+      },
+      {
+        "id": 15,
+        "original_id": "0c09a77d-bb16-580f-8f5b-33df4490badb",
+        "text": "jean-loup jacques marie chrétien",
+        "type": "Entity"
+      },
+      {
+        "id": 16,
+        "original_id": "f8eb1dce-4d40-52f0-a473-a0e61b1f34db",
+        "text": "1938-08-20",
+        "type": "Entity"
+      },
+      {
+        "id": 17,
+        "original_id": "56384098-7c33-5379-b2d1-52741688445a",
+        "text": "french air force",
+        "type": "Entity"
+      },
+      {
+        "id": 18,
+        "original_id": "31c2979e-aa17-5186-be45-a3acc6b6358a",
+        "text": "cnes",
+        "type": "Entity"
+      },
+      {
+        "id": 19,
+        "original_id": "a7666211-08f1-578a-9249-6b286b9ff9f0",
+        "text": "brigadier general",
+        "type": "Entity"
+      },
+      {
+        "id": 20,
+        "original_id": "eb9d7b11-73cb-5d01-83e1-c53a66608ef3",
+        "text": "french",
+        "type": "Entity"
+      },
+      {
+        "id": 21,
+        "original_id": "bcee0273-8002-52b7-af32-ad1f8f13e144",
+        "text": "espresso coffee",
+        "type": "Entity"
+      },
+      {
+        "id": 22,
+        "original_id": "b490e070-b7c4-5dde-a681-fa2c0f349aeb",
+        "text": "space",
+        "type": "Entity"
+      },
+      {
+        "id": 23,
+        "original_id": "88db7657-c026-50fa-8cd0-fb2695baf709",
+        "text": "2015-05-03",
+        "type": "Entity"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 21,
+        "target": 3,
+        "type": "first_drunk_in_space_by"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 15,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "born_on"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 16,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 23,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 7,
+        "type": "born_in"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      },
+      {
+        "source": 7,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 22,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 9,
+        "type": "works_as_astronaut_for"
+      },
+      {
+        "source": 1,
+        "target": 9,
+        "type": "contains"
+      },
+      {
+        "source": 9,
+        "target": 10,
+        "type": "is_a"
+      },
+      {
+        "source": 11,
+        "target": 10,
+        "type": "is_a"
+      },
+      {
+        "source": 17,
+        "target": 10,
+        "type": "is_a"
+      },
+      {
+        "source": 18,
+        "target": 10,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 11,
+        "type": "works_as_pilot_for"
+      },
+      {
+        "source": 1,
+        "target": 11,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 12,
+        "type": "has_profession"
+      },
+      {
+        "source": 1,
+        "target": 12,
+        "type": "contains"
+      },
+      {
+        "source": 12,
+        "target": 13,
+        "type": "is_a"
+      },
+      {
+        "source": 14,
+        "target": 13,
+        "type": "is_a"
+      },
+      {
+        "source": 19,
+        "target": 13,
+        "type": "is_a"
+      },
+      {
+        "source": 20,
+        "target": 13,
+        "type": "is_a"
+      },
+      {
+        "source": 21,
+        "target": 13,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 14,
+        "type": "has_nationality"
+      },
+      {
+        "source": 1,
+        "target": 14,
+        "type": "contains"
+      },
+      {
+        "source": 1,
+        "target": 15,
+        "type": "contains"
+      },
+      {
+        "source": 15,
+        "target": 16,
+        "type": "born_on"
+      },
+      {
+        "source": 1,
+        "target": 16,
+        "type": "contains"
+      },
+      {
+        "source": 15,
+        "target": 17,
+        "type": "held_rank_in"
+      },
+      {
+        "source": 1,
+        "target": 17,
+        "type": "contains"
+      },
+      {
+        "source": 15,
+        "target": 18,
+        "type": "former_spationaut_for"
+      },
+      {
+        "source": 1,
+        "target": 18,
+        "type": "contains"
+      },
+      {
+        "source": 15,
+        "target": 19,
+        "type": "held_rank"
+      },
+      {
+        "source": 1,
+        "target": 19,
+        "type": "contains"
+      },
+      {
+        "source": 15,
+        "target": 20,
+        "type": "has_nationality"
+      },
+      {
+        "source": 1,
+        "target": 20,
+        "type": "contains"
+      },
+      {
+        "source": 1,
+        "target": 21,
+        "type": "contains"
+      },
+      {
+        "source": 21,
+        "target": 22,
+        "type": "first_drunk_in"
+      },
+      {
+        "source": 1,
+        "target": 22,
+        "type": "contains"
+      },
+      {
+        "source": 21,
+        "target": 23,
+        "type": "first_drunk_on"
+      },
+      {
+        "source": 1,
+        "target": 23,
+        "type": "contains"
+      }
+    ]
+  }
+}

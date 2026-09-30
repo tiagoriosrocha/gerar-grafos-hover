@@ -1,0 +1,549 @@
+{
+  "dataset": "hover",
+  "id": "af1d7f68-4143-442e-a123-0c6282a99ab1",
+  "split": "train",
+  "claim": "Hans Wilhelm Schlegel has been to space more times than Frank De Winne.",
+  "evidencia": "Page: Hans Schlegel. Sentence: Hans Wilhelm Schlegel (Überlingen, 3 August 1951) is a German physicist, an ESA astronaut, and a veteran of two NASA Space Shuttle missions.\nPage: Frank De Winne. Sentence: Frank, Viscount De Winne (born 25 April 1961, in Ledeberg, Belgium) is a Belgian Air Component officer and an ESA astronaut.\nPage: Frank De Winne. Sentence: He is Belgium's second person in space (after Dirk Frimout).\nPage: Frank De Winne. Sentence: He was the first ESA astronaut to command a space mission when he served as commander of ISS Expedition 21.",
+  "evidence_text": "Page: Hans Schlegel. Sentence: Hans Wilhelm Schlegel (Überlingen, 3 August 1951) is a German physicist, an ESA astronaut, and a veteran of two NASA Space Shuttle missions.\nPage: Frank De Winne. Sentence: Frank, Viscount De Winne (born 25 April 1961, in Ledeberg, Belgium) is a Belgian Air Component officer and an ESA astronaut.\nPage: Frank De Winne. Sentence: He is Belgium's second person in space (after Dirk Frimout).\nPage: Frank De Winne. Sentence: He was the first ESA astronaut to command a space mission when he served as commander of ISS Expedition 21.",
+  "label": "SUPPORTED",
+  "num_hops": 2,
+  "hover_metadata": {
+    "supporting_facts": [
+      [
+        "Hans Schlegel",
+        0
+      ],
+      [
+        "Frank De Winne",
+        0
+      ],
+      [
+        "Frank De Winne",
+        1
+      ],
+      [
+        "Frank De Winne",
+        2
+      ]
+    ],
+    "num_hops": 2,
+    "evidence_annotation_id": [
+      0
+    ],
+    "evidence_id": [
+      "Hans Schlegel::sentence::0",
+      "Frank De Winne::sentence::0",
+      "Frank De Winne::sentence::1",
+      "Frank De Winne::sentence::2"
+    ],
+    "evidence_wiki_url": [
+      "https://en.wikipedia.org/wiki/Hans_Schlegel",
+      "https://en.wikipedia.org/wiki/Frank_De_Winne"
+    ],
+    "evidence_sentence_id": [
+      "Hans Schlegel::sentence::0",
+      "Frank De Winne::sentence::0",
+      "Frank De Winne::sentence::1",
+      "Frank De Winne::sentence::2"
+    ]
+  },
+  "grafo_claim": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "e2154315-bd27-53f7-8ce8-0d3f06ce9c70",
+        "text": "This chunk is about:\n- People: Hans Wilhelm Schlegel, Frank De Winne\n- Topics: Spaceflight counts, comparison\n\nFacts:\n- Hans Wilhelm Schlegel has been to space more times than Frank De Winne.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "a8e59608-59fd-50bd-8818-b3d426674dbc",
+        "text": "Hans Wilhelm Schlegel has been to space more times than Frank De Winne.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "24b2e479-b84a-561d-91e5-910bd5fec925",
+        "text": "text_12ddfe0e0b25e5a196061492a08b3f59",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "cdaac1c5-8fa6-5898-83d5-707a7b9de5e9",
+        "text": "hans wilhelm schlegel",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "99a82eec-bb35-5bb5-9ed2-e73fc7a756de",
+        "text": "person",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "b490e070-b7c4-5dde-a681-fa2c0f349aeb",
+        "text": "space",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "5f394058-b2a0-5ba8-8466-ba2a18cfcf4e",
+        "text": "place",
+        "type": "EntityType"
+      },
+      {
+        "id": 7,
+        "original_id": "9ccbac7f-d1b4-5841-ab76-b4487537ff38",
+        "text": "frank de winne",
+        "type": "Entity"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 7,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "has_been_to"
+      },
+      {
+        "source": 7,
+        "target": 5,
+        "type": "has_been_to"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 7,
+        "type": "has_been_to_space_more_times_than"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      }
+    ]
+  },
+  "grafo_evidencia": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "78ece239-1534-5ab0-962a-95db01b8444e",
+        "text": "This chunk is about:\n- People: Hans Schlegel, Frank De Winne, Dirk Frimout\n- Organizations: ESA, NASA, ISS Expedition 21, Belgian Air Component\n- Roles: Physicist, astronaut, officer, commander\n\nFacts:\n- Hans Schlegel was born in Überlingen on 3 August 1951.\n- Hans Schlegel is a German physicist, an ESA astronaut, and a veteran of two NASA Space Shuttle missions.\n- Frank De Winne was born in Ledeberg, Belgium, on 25 April 1961.\n- Frank De Winne is a Belgian Air Component officer and an ESA astronaut.\n- Frank De Winne became Belgium's second person in space after Dirk Frimout.\n- Frank De Winne was the first ESA astronaut to command a space mission when he served as commander of ISS Expedition 21.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "82718eb0-ccf0-561d-b7f3-afa41270d8a4",
+        "text": "Page: Hans Schlegel. Sentence: Hans Wilhelm Schlegel (Überlingen, 3 August 1951) is a German physicist, an ESA astronaut, and a veteran of two NASA Space Shuttle missions.\nPage: Frank De Winne. Sentence: Frank, Viscount De Winne (born 25 April 1961, in Ledeberg, Belgium) is a Belgian Air Component officer and an ESA astronaut.\nPage: Frank De Winne. Sentence: He is Belgium's second person in space (after Dirk Frimout).\nPage: Frank De Winne. Sentence: He was the first ESA astronaut to command a space mission when he served as commander of ISS Expedition 21.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "bce270fc-85b8-5dc6-9192-4b32f06b5b44",
+        "text": "text_7d2b679fb7f1ccafebc95c80c2173352",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "cdaac1c5-8fa6-5898-83d5-707a7b9de5e9",
+        "text": "hans wilhelm schlegel",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "99a82eec-bb35-5bb5-9ed2-e73fc7a756de",
+        "text": "person",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "5b7a090a-c721-571a-a258-6bd3c257bd7a",
+        "text": "überlingen",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "5f394058-b2a0-5ba8-8466-ba2a18cfcf4e",
+        "text": "place",
+        "type": "EntityType"
+      },
+      {
+        "id": 7,
+        "original_id": "185795aa-b490-50a5-b499-a0cda90b58d3",
+        "text": "1951-08-03",
+        "type": "Entity"
+      },
+      {
+        "id": 8,
+        "original_id": "b19433ae-558c-5aaf-95ac-6231f2a4be0e",
+        "text": "date",
+        "type": "EntityType"
+      },
+      {
+        "id": 9,
+        "original_id": "f30f124b-1bc0-595d-b0c0-aa20029c2bb4",
+        "text": "germany",
+        "type": "Entity"
+      },
+      {
+        "id": 10,
+        "original_id": "1b1bb072-93bf-5daa-b100-560756d69f5f",
+        "text": "physicist",
+        "type": "Entity"
+      },
+      {
+        "id": 11,
+        "original_id": "d2a381fa-3658-5ca6-ada9-2109cfc9331d",
+        "text": "concept",
+        "type": "EntityType"
+      },
+      {
+        "id": 12,
+        "original_id": "5a1dda46-e2da-52c7-9461-b7c32f3b5211",
+        "text": "european space agency",
+        "type": "Entity"
+      },
+      {
+        "id": 13,
+        "original_id": "388f60fb-220d-55e8-ae9c-3ac93cead308",
+        "text": "organization",
+        "type": "EntityType"
+      },
+      {
+        "id": 14,
+        "original_id": "d30cd046-38fc-5000-8328-b772e3309294",
+        "text": "nasa space shuttle missions",
+        "type": "Entity"
+      },
+      {
+        "id": 15,
+        "original_id": "39dfbf32-e7b9-519b-8bc6-56fcb35e235c",
+        "text": "frank, viscount de winne",
+        "type": "Entity"
+      },
+      {
+        "id": 16,
+        "original_id": "178c9a5b-19ba-5061-9995-7fdf45420bd8",
+        "text": "1961-04-25",
+        "type": "Entity"
+      },
+      {
+        "id": 17,
+        "original_id": "91e8d66a-9603-5528-bd90-b9e727b9f832",
+        "text": "ledeberg",
+        "type": "Entity"
+      },
+      {
+        "id": 18,
+        "original_id": "a90c6645-c993-58aa-850e-bfd55897a969",
+        "text": "belgium",
+        "type": "Entity"
+      },
+      {
+        "id": 19,
+        "original_id": "27016bbc-dd82-5292-9f2f-bc10c8a8e5d7",
+        "text": "belgian air component",
+        "type": "Entity"
+      },
+      {
+        "id": 20,
+        "original_id": "b490e070-b7c4-5dde-a681-fa2c0f349aeb",
+        "text": "space",
+        "type": "Entity"
+      },
+      {
+        "id": 21,
+        "original_id": "685a0791-82ca-59aa-a727-d378bc56f8bb",
+        "text": "dirk frimout",
+        "type": "Entity"
+      },
+      {
+        "id": 22,
+        "original_id": "f62336bb-7bbd-5b6d-8b70-5bdc8fb7c91b",
+        "text": "iss expedition 21",
+        "type": "Entity"
+      },
+      {
+        "id": 23,
+        "original_id": "30815c1d-2727-54d0-a799-c6f2800ea588",
+        "text": "mission",
+        "type": "EntityType"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 15,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 21,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "born_in"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 9,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 17,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 18,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 20,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 7,
+        "type": "born_on"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      },
+      {
+        "source": 7,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 16,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 9,
+        "type": "has_nationality"
+      },
+      {
+        "source": 1,
+        "target": 9,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 10,
+        "type": "has_profession"
+      },
+      {
+        "source": 1,
+        "target": 10,
+        "type": "contains"
+      },
+      {
+        "source": 10,
+        "target": 11,
+        "type": "is_a"
+      },
+      {
+        "source": 14,
+        "target": 11,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 12,
+        "type": "member_of"
+      },
+      {
+        "source": 1,
+        "target": 12,
+        "type": "contains"
+      },
+      {
+        "source": 15,
+        "target": 12,
+        "type": "member_of"
+      },
+      {
+        "source": 12,
+        "target": 13,
+        "type": "is_a"
+      },
+      {
+        "source": 19,
+        "target": 13,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 14,
+        "type": "veteran_of"
+      },
+      {
+        "source": 1,
+        "target": 14,
+        "type": "contains"
+      },
+      {
+        "source": 1,
+        "target": 15,
+        "type": "contains"
+      },
+      {
+        "source": 15,
+        "target": 16,
+        "type": "born_on"
+      },
+      {
+        "source": 1,
+        "target": 16,
+        "type": "contains"
+      },
+      {
+        "source": 15,
+        "target": 17,
+        "type": "born_in"
+      },
+      {
+        "source": 1,
+        "target": 17,
+        "type": "contains"
+      },
+      {
+        "source": 17,
+        "target": 18,
+        "type": "located_in"
+      },
+      {
+        "source": 15,
+        "target": 18,
+        "type": "has_nationality"
+      },
+      {
+        "source": 1,
+        "target": 18,
+        "type": "contains"
+      },
+      {
+        "source": 15,
+        "target": 19,
+        "type": "officer_in"
+      },
+      {
+        "source": 1,
+        "target": 19,
+        "type": "contains"
+      },
+      {
+        "source": 15,
+        "target": 20,
+        "type": "second_person_from_to_reach"
+      },
+      {
+        "source": 21,
+        "target": 20,
+        "type": "first_person_from_to_reach"
+      },
+      {
+        "source": 1,
+        "target": 20,
+        "type": "contains"
+      },
+      {
+        "source": 15,
+        "target": 21,
+        "type": "went_to_space_after"
+      },
+      {
+        "source": 1,
+        "target": 21,
+        "type": "contains"
+      },
+      {
+        "source": 15,
+        "target": 22,
+        "type": "commanded"
+      },
+      {
+        "source": 1,
+        "target": 22,
+        "type": "contains"
+      },
+      {
+        "source": 22,
+        "target": 23,
+        "type": "is_a"
+      }
+    ]
+  }
+}

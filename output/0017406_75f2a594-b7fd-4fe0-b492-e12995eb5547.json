@@ -1,0 +1,455 @@
+{
+  "dataset": "hover",
+  "id": "75f2a594-b7fd-4fe0-b492-e12995eb5547",
+  "split": "train",
+  "claim": "The composer of the Piano Concerto for the Left Hand (Ravel) was born 10 years before William Walton.",
+  "evidencia": "Page: Maurice Ravel. Sentence: Joseph Maurice Ravel (] ; 7 March 1875 – 28 December 1937) was a French composer, pianist and conductor.\nPage: William Walton. Sentence: Sir William Turner Walton, OM (29 March 19028 March 1983) was an English composer.\nPage: Piano Concerto for the Left Hand (Ravel). Sentence: The Piano Concerto for the Left Hand in D major was composed by Maurice Ravel between 1929 and 1930, concurrently with his Piano Concerto in G.\nPage: Piano Concerto for the Left Hand (Ravel). Sentence: It was commissioned by the Austrian pianist Paul Wittgenstein, who lost his right arm during World War I.",
+  "evidence_text": "Page: Maurice Ravel. Sentence: Joseph Maurice Ravel (] ; 7 March 1875 – 28 December 1937) was a French composer, pianist and conductor.\nPage: William Walton. Sentence: Sir William Turner Walton, OM (29 March 19028 March 1983) was an English composer.\nPage: Piano Concerto for the Left Hand (Ravel). Sentence: The Piano Concerto for the Left Hand in D major was composed by Maurice Ravel between 1929 and 1930, concurrently with his Piano Concerto in G.\nPage: Piano Concerto for the Left Hand (Ravel). Sentence: It was commissioned by the Austrian pianist Paul Wittgenstein, who lost his right arm during World War I.",
+  "label": "NOT_SUPPORTED",
+  "num_hops": 3,
+  "hover_metadata": {
+    "supporting_facts": [
+      [
+        "Maurice Ravel",
+        0
+      ],
+      [
+        "William Walton",
+        0
+      ],
+      [
+        "Piano Concerto for the Left Hand (Ravel)",
+        0
+      ],
+      [
+        "Piano Concerto for the Left Hand (Ravel)",
+        1
+      ]
+    ],
+    "num_hops": 3,
+    "evidence_annotation_id": [
+      0
+    ],
+    "evidence_id": [
+      "Maurice Ravel::sentence::0",
+      "William Walton::sentence::0",
+      "Piano Concerto for the Left Hand (Ravel)::sentence::0",
+      "Piano Concerto for the Left Hand (Ravel)::sentence::1"
+    ],
+    "evidence_wiki_url": [
+      "https://en.wikipedia.org/wiki/Maurice_Ravel",
+      "https://en.wikipedia.org/wiki/William_Walton",
+      "https://en.wikipedia.org/wiki/Piano_Concerto_for_the_Left_Hand_%28Ravel%29"
+    ],
+    "evidence_sentence_id": [
+      "Maurice Ravel::sentence::0",
+      "William Walton::sentence::0",
+      "Piano Concerto for the Left Hand (Ravel)::sentence::0",
+      "Piano Concerto for the Left Hand (Ravel)::sentence::1"
+    ]
+  },
+  "grafo_claim": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "373f8c18-f657-5c45-8d55-fb3e0bdab95d",
+        "text": "This chunk is about:\n- People: Maurice Ravel, William Walton\n- Works: Piano Concerto for the Left Hand\n- Topics: birth-year comparison\n\nFacts:\n- Maurice Ravel composed the Piano Concerto for the Left Hand.\n- Maurice Ravel was born in 1875.\n- William Walton was born in 1902.\n- Maurice Ravel was not born 10 years before William Walton; he was born 27 years before William Walton.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "cd0eb9af-dda0-5cc7-89e0-f0a9c580dbcf",
+        "text": "The composer of the Piano Concerto for the Left Hand (Ravel) was born 10 years before William Walton.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "f18c20fa-6005-5430-a1aa-da3ebb3945a0",
+        "text": "text_21f43ccf03c679e0098746cf9e01a7b1",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "687572a4-9561-5a03-980f-5ecac1b5d043",
+        "text": "piano concerto for the left hand",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "5263a535-1b4b-5925-be3e-310d03cd303b",
+        "text": "work",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "eaf26a66-e7ba-5aad-9aaf-8939e2253836",
+        "text": "maurice ravel",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "99a82eec-bb35-5bb5-9ed2-e73fc7a756de",
+        "text": "person",
+        "type": "EntityType"
+      },
+      {
+        "id": 7,
+        "original_id": "04dd1496-baff-5b3a-9969-f098358baa05",
+        "text": "william walton",
+        "type": "Entity"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 3,
+        "type": "composed"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 7,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 5,
+        "target": 7,
+        "type": "born_10_years_before"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      }
+    ]
+  },
+  "grafo_evidencia": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "ee0e6925-dce7-5029-8b80-7809a744aadd",
+        "text": "This chunk is about:\n- People: Maurice Ravel, William Walton, Paul Wittgenstein\n- Works: Piano Concerto for the Left Hand, Piano Concerto in G\n- Topics: composition, commissioning, World War I\n\nFacts:\n- Maurice Ravel was born on 7 March 1875 and died on 28 December 1937.\n- Maurice Ravel was a French composer, pianist, and conductor.\n- William Walton was born on 29 March 1902 and died on 8 March 1983.\n- William Walton was an English composer.\n- Paul Wittgenstein lost his right arm during World War I.\n- Maurice Ravel composed the Piano Concerto for the Left Hand in D major between 1929 and 1930.\n- Maurice Ravel composed the Piano Concerto for the Left Hand concurrently with his Piano Concerto in G.\n- Paul Wittgenstein commissioned Maurice Ravel's Piano Concerto for the Left Hand.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "d618c7cc-570b-54bf-bdd9-40fc3e0036ca",
+        "text": "Page: Maurice Ravel. Sentence: Joseph Maurice Ravel (] ; 7 March 1875 – 28 December 1937) was a French composer, pianist and conductor.\nPage: William Walton. Sentence: Sir William Turner Walton, OM (29 March 19028 March 1983) was an English composer.\nPage: Piano Concerto for the Left Hand (Ravel). Sentence: The Piano Concerto for the Left Hand in D major was composed by Maurice Ravel between 1929 and 1930, concurrently with his Piano Concerto in G.\nPage: Piano Concerto for the Left Hand (Ravel). Sentence: It was commissioned by the Austrian pianist Paul Wittgenstein, who lost his right arm during World War I.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "c2480db8-3ac7-590a-aaeb-21509b706dd2",
+        "text": "text_e3ecfa36d866ec265417b2668d40d8ca",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "eaf26a66-e7ba-5aad-9aaf-8939e2253836",
+        "text": "maurice ravel",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "99a82eec-bb35-5bb5-9ed2-e73fc7a756de",
+        "text": "person",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "5daab644-328f-5535-823e-a0ff3d512a38",
+        "text": "1875-03-07",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "b19433ae-558c-5aaf-95ac-6231f2a4be0e",
+        "text": "date",
+        "type": "EntityType"
+      },
+      {
+        "id": 7,
+        "original_id": "d3e13159-ce0f-5536-8db9-21e3fb7ebb3b",
+        "text": "1937-12-28",
+        "type": "Entity"
+      },
+      {
+        "id": 8,
+        "original_id": "04dd1496-baff-5b3a-9969-f098358baa05",
+        "text": "william turner walton",
+        "type": "Entity"
+      },
+      {
+        "id": 9,
+        "original_id": "2677a8f6-71e0-517c-ba5a-307b8c47b73c",
+        "text": "1902-03-29",
+        "type": "Entity"
+      },
+      {
+        "id": 10,
+        "original_id": "ef5979fe-f2b5-59e5-a34f-853ad6291849",
+        "text": "1983-03-28",
+        "type": "Entity"
+      },
+      {
+        "id": 11,
+        "original_id": "bf13de0b-d961-5194-adee-66eff42f5841",
+        "text": "piano concerto for the left hand in d major",
+        "type": "Entity"
+      },
+      {
+        "id": 12,
+        "original_id": "5263a535-1b4b-5925-be3e-310d03cd303b",
+        "text": "work",
+        "type": "EntityType"
+      },
+      {
+        "id": 13,
+        "original_id": "fe7418e1-229c-588a-8671-ba8b76d14844",
+        "text": "1929",
+        "type": "Entity"
+      },
+      {
+        "id": 14,
+        "original_id": "a4e72600-6ee3-5941-a649-c6c9ce1a65cc",
+        "text": "1930",
+        "type": "Entity"
+      },
+      {
+        "id": 15,
+        "original_id": "b78456f9-f615-518a-a19e-ccc54531bc31",
+        "text": "piano concerto in g",
+        "type": "Entity"
+      },
+      {
+        "id": 16,
+        "original_id": "6411fc32-8ea2-521f-a021-2cb600eb4dbf",
+        "text": "paul wittgenstein",
+        "type": "Entity"
+      },
+      {
+        "id": 17,
+        "original_id": "c8ea1a4b-9014-5eb3-9791-88be38bfcf80",
+        "text": "world war i",
+        "type": "Entity"
+      },
+      {
+        "id": 18,
+        "original_id": "214abcd9-9adf-5c8a-bb35-1e729f2d68c3",
+        "text": "event",
+        "type": "EntityType"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 11,
+        "target": 3,
+        "type": "composed_by"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 8,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 16,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "born_on"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 7,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 9,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 10,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 13,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 14,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 7,
+        "type": "died_on"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      },
+      {
+        "source": 1,
+        "target": 8,
+        "type": "contains"
+      },
+      {
+        "source": 8,
+        "target": 9,
+        "type": "born_on"
+      },
+      {
+        "source": 1,
+        "target": 9,
+        "type": "contains"
+      },
+      {
+        "source": 8,
+        "target": 10,
+        "type": "died_on"
+      },
+      {
+        "source": 1,
+        "target": 10,
+        "type": "contains"
+      },
+      {
+        "source": 1,
+        "target": 11,
+        "type": "contains"
+      },
+      {
+        "source": 11,
+        "target": 12,
+        "type": "is_a"
+      },
+      {
+        "source": 15,
+        "target": 12,
+        "type": "is_a"
+      },
+      {
+        "source": 11,
+        "target": 13,
+        "type": "composition_started_in"
+      },
+      {
+        "source": 1,
+        "target": 13,
+        "type": "contains"
+      },
+      {
+        "source": 11,
+        "target": 14,
+        "type": "composition_ended_in"
+      },
+      {
+        "source": 1,
+        "target": 14,
+        "type": "contains"
+      },
+      {
+        "source": 11,
+        "target": 15,
+        "type": "composed_concurrently_with"
+      },
+      {
+        "source": 1,
+        "target": 15,
+        "type": "contains"
+      },
+      {
+        "source": 11,
+        "target": 16,
+        "type": "commissioned_by"
+      },
+      {
+        "source": 1,
+        "target": 16,
+        "type": "contains"
+      },
+      {
+        "source": 16,
+        "target": 17,
+        "type": "lost_right_arm_during"
+      },
+      {
+        "source": 1,
+        "target": 17,
+        "type": "contains"
+      },
+      {
+        "source": 17,
+        "target": 18,
+        "type": "is_a"
+      }
+    ]
+  }
+}

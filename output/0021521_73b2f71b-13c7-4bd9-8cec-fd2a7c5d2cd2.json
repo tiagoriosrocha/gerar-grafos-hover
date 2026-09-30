@@ -1,0 +1,517 @@
+{
+  "dataset": "hover",
+  "id": "73b2f71b-13c7-4bd9-8cec-fd2a7c5d2cd2",
+  "split": "dev",
+  "claim": "McClellan–Palomar Airport is closer to its nearest city than the airport that has non-stop flights from Fort Collins–Loveland Municipal Airport.",
+  "evidencia": "Page: Chicago Rockford International Airport. Sentence: It is located four miles (6 km) south of the city center of Rockford and 85 miles northwest of Chicago.\nPage: McClellan–Palomar Airport. Sentence: McClellan–Palomar Airport (Palomar Airport) (IATA: CLD, ICAO: KCRQ, FAA LID: CRQ) is a public airport three miles (5 km) southeast of Carlsbad in San Diego County, California.\nPage: Fort Collins–Loveland Municipal Airport. Sentence: The airport supports commercial flights non-stop to Chicago Rockford International Airport by Elite Airways.",
+  "evidence_text": "Page: Chicago Rockford International Airport. Sentence: It is located four miles (6 km) south of the city center of Rockford and 85 miles northwest of Chicago.\nPage: McClellan–Palomar Airport. Sentence: McClellan–Palomar Airport (Palomar Airport) (IATA: CLD, ICAO: KCRQ, FAA LID: CRQ) is a public airport three miles (5 km) southeast of Carlsbad in San Diego County, California.\nPage: Fort Collins–Loveland Municipal Airport. Sentence: The airport supports commercial flights non-stop to Chicago Rockford International Airport by Elite Airways.",
+  "label": "SUPPORTED",
+  "num_hops": 3,
+  "hover_metadata": {
+    "supporting_facts": [
+      [
+        "Chicago Rockford International Airport",
+        1
+      ],
+      [
+        "McClellan–Palomar Airport",
+        0
+      ],
+      [
+        "Fort Collins–Loveland Municipal Airport",
+        2
+      ]
+    ],
+    "num_hops": 3,
+    "evidence_annotation_id": [
+      0
+    ],
+    "evidence_id": [
+      "Chicago Rockford International Airport::sentence::1",
+      "McClellan–Palomar Airport::sentence::0",
+      "Fort Collins–Loveland Municipal Airport::sentence::2"
+    ],
+    "evidence_wiki_url": [
+      "https://en.wikipedia.org/wiki/Chicago_Rockford_International_Airport",
+      "https://en.wikipedia.org/wiki/McClellan%E2%80%93Palomar_Airport",
+      "https://en.wikipedia.org/wiki/Fort_Collins%E2%80%93Loveland_Municipal_Airport"
+    ],
+    "evidence_sentence_id": [
+      "Chicago Rockford International Airport::sentence::1",
+      "McClellan–Palomar Airport::sentence::0",
+      "Fort Collins–Loveland Municipal Airport::sentence::2"
+    ]
+  },
+  "grafo_claim": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "e6c22a75-56e6-59f0-9840-8f715ba808d5",
+        "text": "This chunk is about:\n- Places: McClellan–Palomar Airport, Fort Collins–Loveland Municipal Airport\n- Topics: airport proximity, non-stop flight destination comparison\n\nFacts:\n- Fort Collins–Loveland Municipal Airport has non-stop flights to an airport used as a comparison point in this statement.\n- McClellan–Palomar Airport is closer to its nearest city than that comparison airport is to its nearest city.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "6a8ed758-a683-5d09-865e-39eea7437bd6",
+        "text": "McClellan–Palomar Airport is closer to its nearest city than the airport that has non-stop flights from Fort Collins–Loveland Municipal Airport.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "483a0dec-fced-5b86-94dc-82ebd240c740",
+        "text": "text_95f8109632473cee92e1cb1efc2eecaf",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "acc26fe7-c0a7-5ab9-9443-dbcc5cca2cea",
+        "text": "mcclellan–palomar airport",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "50596f1a-2d8a-5de7-96b5-ba7068791784",
+        "text": "airport",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "75480a87-0dfc-5faf-8e2a-358be2f97729",
+        "text": "nearest city of mcclellan–palomar airport",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "4f155b46-e814-58f6-97cf-55d2ac3a572d",
+        "text": "city",
+        "type": "EntityType"
+      },
+      {
+        "id": 7,
+        "original_id": "48235781-84f4-50cd-9c38-35cb0774ada6",
+        "text": "airport with non-stop flights from fort collins–loveland municipal airport",
+        "type": "Entity"
+      },
+      {
+        "id": 8,
+        "original_id": "50da49cd-a81c-57b9-b82c-a362fdeec2fb",
+        "text": "nearest city of airport with non-stop flights from fort collins–loveland municipal airport",
+        "type": "Entity"
+      },
+      {
+        "id": 9,
+        "original_id": "64f633ea-6cfb-5685-a251-b386ecd38fd8",
+        "text": "fort collins–loveland municipal airport",
+        "type": "Entity"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 7,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 9,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "has_nearest_city"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 8,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 7,
+        "type": "is_closer_to_nearest_city_than"
+      },
+      {
+        "source": 9,
+        "target": 7,
+        "type": "has_non_stop_flights_to"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      },
+      {
+        "source": 7,
+        "target": 8,
+        "type": "has_nearest_city"
+      },
+      {
+        "source": 1,
+        "target": 8,
+        "type": "contains"
+      },
+      {
+        "source": 1,
+        "target": 9,
+        "type": "contains"
+      }
+    ]
+  },
+  "grafo_evidencia": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "a0fd97f8-cc8d-5805-bac2-349e235cde9f",
+        "text": "This chunk is about:\n- Places: Chicago Rockford International Airport, Rockford, Chicago, McClellan–Palomar Airport, Carlsbad, San Diego County, California, Fort Collins–Loveland Municipal Airport\n- Companies: Elite Airways\n- Topics: Airport locations, airport routes, airport identifiers\n\nFacts:\n- Chicago Rockford International Airport is located four miles (6 km) south of downtown Rockford and 85 miles northwest of Chicago.\n- McClellan–Palomar Airport, also called Palomar Airport, is a public airport three miles (5 km) southeast of Carlsbad in San Diego County, California.\n- McClellan–Palomar Airport has the identifiers IATA CLD, ICAO KCRQ, and FAA LID CRQ.\n- Fort Collins–Loveland Municipal Airport supports commercial nonstop flights to Chicago Rockford International Airport operated by Elite Airways.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "bc9f64e6-0fc9-5948-b98a-ff1abbca28ed",
+        "text": "Page: Chicago Rockford International Airport. Sentence: It is located four miles (6 km) south of the city center of Rockford and 85 miles northwest of Chicago.\nPage: McClellan–Palomar Airport. Sentence: McClellan–Palomar Airport (Palomar Airport) (IATA: CLD, ICAO: KCRQ, FAA LID: CRQ) is a public airport three miles (5 km) southeast of Carlsbad in San Diego County, California.\nPage: Fort Collins–Loveland Municipal Airport. Sentence: The airport supports commercial flights non-stop to Chicago Rockford International Airport by Elite Airways.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "b91daafc-a922-5832-85de-c3f93d98c305",
+        "text": "text_c9fad3eb896d45feec9bf2ddfed1dd51",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "03d36fca-480e-5d47-936c-364da1be671b",
+        "text": "chicago rockford international airport",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "50596f1a-2d8a-5de7-96b5-ba7068791784",
+        "text": "airport",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "45edf23b-fe26-5428-9b87-5e27ed20af25",
+        "text": "rockford",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "5f394058-b2a0-5ba8-8466-ba2a18cfcf4e",
+        "text": "place",
+        "type": "EntityType"
+      },
+      {
+        "id": 7,
+        "original_id": "ec047af9-0db4-5349-a274-c803926fd58c",
+        "text": "chicago",
+        "type": "Entity"
+      },
+      {
+        "id": 8,
+        "original_id": "acc26fe7-c0a7-5ab9-9443-dbcc5cca2cea",
+        "text": "mcclellan–palomar airport",
+        "type": "Entity"
+      },
+      {
+        "id": 9,
+        "original_id": "97522ea9-648f-530c-a09d-1f4bacdc9d0d",
+        "text": "palomar airport",
+        "type": "Entity"
+      },
+      {
+        "id": 10,
+        "original_id": "691866e9-2c9f-554e-8d4b-a80cea329fcd",
+        "text": "cld",
+        "type": "Entity"
+      },
+      {
+        "id": 11,
+        "original_id": "2c23f4f7-2223-5c53-a5f6-1bd0114fcd6a",
+        "text": "code",
+        "type": "EntityType"
+      },
+      {
+        "id": 12,
+        "original_id": "40cfbee0-09f4-5cd2-9609-5a42e92ce526",
+        "text": "kcrq",
+        "type": "Entity"
+      },
+      {
+        "id": 13,
+        "original_id": "46ff1f28-126a-5a39-9e2b-8d95fcf980db",
+        "text": "crq",
+        "type": "Entity"
+      },
+      {
+        "id": 14,
+        "original_id": "ab00637c-31cd-556a-99a8-be689cb5a070",
+        "text": "carlsbad",
+        "type": "Entity"
+      },
+      {
+        "id": 15,
+        "original_id": "bb229a97-c8b1-51b8-bb85-33726a011f2d",
+        "text": "san diego county",
+        "type": "Entity"
+      },
+      {
+        "id": 16,
+        "original_id": "8294cd6a-6968-5d3a-b0c8-57e08c745c8d",
+        "text": "california",
+        "type": "Entity"
+      },
+      {
+        "id": 17,
+        "original_id": "64f633ea-6cfb-5685-a251-b386ecd38fd8",
+        "text": "fort collins–loveland municipal airport",
+        "type": "Entity"
+      },
+      {
+        "id": 18,
+        "original_id": "cb5a4a1e-5c27-571e-9829-edfe65a09d3d",
+        "text": "elite airways",
+        "type": "Entity"
+      },
+      {
+        "id": 19,
+        "original_id": "388f60fb-220d-55e8-ae9c-3ac93cead308",
+        "text": "organization",
+        "type": "EntityType"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 17,
+        "target": 3,
+        "type": "supports_non_stop_commercial_flights_to"
+      },
+      {
+        "source": 18,
+        "target": 3,
+        "type": "operates_non_stop_flights_to"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 8,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 9,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 17,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "located_south_of_city_center_of"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 7,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 14,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 15,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 16,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 7,
+        "type": "located_northwest_of"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      },
+      {
+        "source": 1,
+        "target": 8,
+        "type": "contains"
+      },
+      {
+        "source": 8,
+        "target": 9,
+        "type": "also_known_as"
+      },
+      {
+        "source": 1,
+        "target": 9,
+        "type": "contains"
+      },
+      {
+        "source": 8,
+        "target": 10,
+        "type": "has_iata_code"
+      },
+      {
+        "source": 1,
+        "target": 10,
+        "type": "contains"
+      },
+      {
+        "source": 10,
+        "target": 11,
+        "type": "is_a"
+      },
+      {
+        "source": 12,
+        "target": 11,
+        "type": "is_a"
+      },
+      {
+        "source": 13,
+        "target": 11,
+        "type": "is_a"
+      },
+      {
+        "source": 8,
+        "target": 12,
+        "type": "has_icao_code"
+      },
+      {
+        "source": 1,
+        "target": 12,
+        "type": "contains"
+      },
+      {
+        "source": 8,
+        "target": 13,
+        "type": "has_faa_lid"
+      },
+      {
+        "source": 1,
+        "target": 13,
+        "type": "contains"
+      },
+      {
+        "source": 8,
+        "target": 14,
+        "type": "located_southeast_of"
+      },
+      {
+        "source": 1,
+        "target": 14,
+        "type": "contains"
+      },
+      {
+        "source": 8,
+        "target": 15,
+        "type": "located_in"
+      },
+      {
+        "source": 1,
+        "target": 15,
+        "type": "contains"
+      },
+      {
+        "source": 15,
+        "target": 16,
+        "type": "located_in"
+      },
+      {
+        "source": 1,
+        "target": 16,
+        "type": "contains"
+      },
+      {
+        "source": 1,
+        "target": 17,
+        "type": "contains"
+      },
+      {
+        "source": 18,
+        "target": 17,
+        "type": "operates_from"
+      },
+      {
+        "source": 1,
+        "target": 18,
+        "type": "contains"
+      },
+      {
+        "source": 18,
+        "target": 19,
+        "type": "is_a"
+      }
+    ]
+  }
+}

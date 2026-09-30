@@ -1,0 +1,596 @@
+{
+  "dataset": "hover",
+  "id": "04887e25-8bec-4077-9b72-fbdc2283ebe6",
+  "split": "train",
+  "claim": "The genus Myrsine has more species than the genus Styrax.",
+  "evidencia": "Page: Myrsine. Sentence: It contains about 200 species, including several notable radiations, such as the matipo of New Zealand and the kōlea of Hawaiʻ i (the New Zealand \"black matipo\", \"Pittosporum tenuifolium\", is not related to \"Myrsine\").\nPage: Styrax. Sentence: Storax or snowbell is the common names of Styrax, a genus of about 130 species of large shrubs or small trees in the family Styracaceae, mostly native to warm temperate to tropical regions of the Northern Hemisphere, with the majority in eastern and southeastern Asia, but also crossing the equator in South America.",
+  "evidence_text": "Page: Myrsine. Sentence: It contains about 200 species, including several notable radiations, such as the matipo of New Zealand and the kōlea of Hawaiʻ i (the New Zealand \"black matipo\", \"Pittosporum tenuifolium\", is not related to \"Myrsine\").\nPage: Styrax. Sentence: Storax or snowbell is the common names of Styrax, a genus of about 130 species of large shrubs or small trees in the family Styracaceae, mostly native to warm temperate to tropical regions of the Northern Hemisphere, with the majority in eastern and southeastern Asia, but also crossing the equator in South America.",
+  "label": "SUPPORTED",
+  "num_hops": 2,
+  "hover_metadata": {
+    "supporting_facts": [
+      [
+        "Myrsine",
+        3
+      ],
+      [
+        "Styrax",
+        0
+      ]
+    ],
+    "num_hops": 2,
+    "evidence_annotation_id": [
+      0
+    ],
+    "evidence_id": [
+      "Myrsine::sentence::3",
+      "Styrax::sentence::0"
+    ],
+    "evidence_wiki_url": [
+      "https://en.wikipedia.org/wiki/Myrsine",
+      "https://en.wikipedia.org/wiki/Styrax"
+    ],
+    "evidence_sentence_id": [
+      "Myrsine::sentence::3",
+      "Styrax::sentence::0"
+    ]
+  },
+  "grafo_claim": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "3ac5add9-aac7-554c-902d-4ad6f78f8670",
+        "text": "This chunk is about:\n- Concepts: genus comparison, species richness\n- Taxa: Myrsine, Styrax\n\nFacts:\n- The genus Myrsine has more species than the genus Styrax.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "091623a4-f6ab-55ef-9176-000e770d1687",
+        "text": "The genus Myrsine has more species than the genus Styrax.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "f6cfaee9-537c-541b-a0c1-ad9ac97012b7",
+        "text": "text_9f8ac781279542ad289b5d8a1ce84dc6",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "e5e170be-0846-5a7b-a109-9438432fce3c",
+        "text": "myrsine",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "f7b4540f-d32c-51b3-8970-f282fffab519",
+        "text": "taxon",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "1461ff81-a317-5a13-83e2-c9563f53bbb1",
+        "text": "styrax",
+        "type": "Entity"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 5,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "has_more_species_than"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      }
+    ]
+  },
+  "grafo_evidencia": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "84b30fa0-adc8-5713-8e87-d4b3f788e8c8",
+        "text": "This chunk is about:\n- Plants: Myrsine, Styrax\n- Common names: matipo, kōlea, storax, snowbell\n- Places: New Zealand, Hawaiʻi, Asia, South America, Northern Hemisphere\n\nFacts:\n- Myrsine contains about 200 species.\n- Myrsine includes notable radiations such as the matipo of New Zealand and the kōlea of Hawaiʻi.\n- The New Zealand plant called black matipo, Pittosporum tenuifolium, is not related to Myrsine.\n- Styrax is commonly called storax or snowbell.\n- Styrax is a genus of about 130 species of large shrubs or small trees in the family Styracaceae.\n- Styrax is mostly native to warm temperate to tropical regions of the Northern Hemisphere.\n- Most Styrax species occur in eastern and southeastern Asia, and the genus also extends across the equator into South America.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "0b8ec5cd-8994-53c2-8a80-4c340ff2ab0b",
+        "text": "Page: Myrsine. Sentence: It contains about 200 species, including several notable radiations, such as the matipo of New Zealand and the kōlea of Hawaiʻ i (the New Zealand \"black matipo\", \"Pittosporum tenuifolium\", is not related to \"Myrsine\").\nPage: Styrax. Sentence: Storax or snowbell is the common names of Styrax, a genus of about 130 species of large shrubs or small trees in the family Styracaceae, mostly native to warm temperate to tropical regions of the Northern Hemisphere, with the majority in eastern and southeastern Asia, but also crossing the equator in South America.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "b1f56d22-2c50-5f12-ab79-5fc27f5c5910",
+        "text": "text_5940d08267d013d0f88b498b4c8af356",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "e5e170be-0846-5a7b-a109-9438432fce3c",
+        "text": "myrsine",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "58ce8914-8a9e-5302-9b2d-0d97006e12d3",
+        "text": "genus",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "e9e0b7d5-f158-52d3-9f89-eca0da61fe50",
+        "text": "200 species",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "d2a381fa-3658-5ca6-ada9-2109cfc9331d",
+        "text": "concept",
+        "type": "EntityType"
+      },
+      {
+        "id": 7,
+        "original_id": "d6312a02-b174-5860-bd7f-8098ffb78da9",
+        "text": "matipo",
+        "type": "Entity"
+      },
+      {
+        "id": 8,
+        "original_id": "98ed3a15-eaa2-57c6-8de5-e1dabaf57f77",
+        "text": "group",
+        "type": "EntityType"
+      },
+      {
+        "id": 9,
+        "original_id": "b9e6f04b-3af0-5fd3-8eac-4b641d227752",
+        "text": "new zealand",
+        "type": "Entity"
+      },
+      {
+        "id": 10,
+        "original_id": "5f394058-b2a0-5ba8-8466-ba2a18cfcf4e",
+        "text": "place",
+        "type": "EntityType"
+      },
+      {
+        "id": 11,
+        "original_id": "4e26ab35-1e89-51cd-ba27-f13407ca0cd2",
+        "text": "kōlea",
+        "type": "Entity"
+      },
+      {
+        "id": 12,
+        "original_id": "ace6c2e1-acf1-54f1-b2f0-b963c7b31620",
+        "text": "hawaiʻi",
+        "type": "Entity"
+      },
+      {
+        "id": 13,
+        "original_id": "9dc2dc21-0c4a-5401-9184-7b88dea80324",
+        "text": "black matipo",
+        "type": "Entity"
+      },
+      {
+        "id": 14,
+        "original_id": "2df43048-b175-54c2-b72b-0ff24f41e4f1",
+        "text": "plant",
+        "type": "EntityType"
+      },
+      {
+        "id": 15,
+        "original_id": "649be64c-4cf7-5b82-b4b6-5cc297e96dd4",
+        "text": "pittosporum tenuifolium",
+        "type": "Entity"
+      },
+      {
+        "id": 16,
+        "original_id": "1461ff81-a317-5a13-83e2-c9563f53bbb1",
+        "text": "styrax",
+        "type": "Entity"
+      },
+      {
+        "id": 17,
+        "original_id": "6e82315c-d426-506b-8449-08e393d1138c",
+        "text": "storax",
+        "type": "Entity"
+      },
+      {
+        "id": 18,
+        "original_id": "39575085-0710-527d-bd54-019de7b00429",
+        "text": "name",
+        "type": "EntityType"
+      },
+      {
+        "id": 19,
+        "original_id": "b464a805-0a8d-5f9a-a9ca-e5882f209359",
+        "text": "snowbell",
+        "type": "Entity"
+      },
+      {
+        "id": 20,
+        "original_id": "82cafd0e-9d0c-5f7e-861d-97bb8aafe91a",
+        "text": "130 species",
+        "type": "Entity"
+      },
+      {
+        "id": 21,
+        "original_id": "f27483e4-9a03-58f2-b66b-add8cf4eae00",
+        "text": "large shrubs",
+        "type": "Entity"
+      },
+      {
+        "id": 22,
+        "original_id": "dd1dbe5e-cdac-53d6-8c89-b0a2b42084bc",
+        "text": "plant form",
+        "type": "EntityType"
+      },
+      {
+        "id": 23,
+        "original_id": "4eab1620-d3d0-59ef-98cb-3fa6443d708a",
+        "text": "small trees",
+        "type": "Entity"
+      },
+      {
+        "id": 24,
+        "original_id": "9a11be0f-e008-5c8e-833a-5734e126d5d9",
+        "text": "styracaceae",
+        "type": "Entity"
+      },
+      {
+        "id": 25,
+        "original_id": "030da7f2-9df8-5253-8cfc-609957d4e333",
+        "text": "family",
+        "type": "EntityType"
+      },
+      {
+        "id": 26,
+        "original_id": "92a578ab-7f37-5f2b-b28b-395fbdf3d885",
+        "text": "northern hemisphere",
+        "type": "Entity"
+      },
+      {
+        "id": 27,
+        "original_id": "bf1f4999-4107-5b7d-97d4-1a240cb18be2",
+        "text": "warm temperate to tropical regions",
+        "type": "Entity"
+      },
+      {
+        "id": 28,
+        "original_id": "3e39b730-3c73-5ba3-a5bd-91dff480da13",
+        "text": "eastern and southeastern asia",
+        "type": "Entity"
+      },
+      {
+        "id": 29,
+        "original_id": "3e507ae8-a14b-53d0-bc7a-70df9fd4b560",
+        "text": "south america",
+        "type": "Entity"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 15,
+        "target": 3,
+        "type": "not_related_to"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 16,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "contains_about"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 20,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 7,
+        "type": "includes_notable_radiation"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      },
+      {
+        "source": 7,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 11,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 7,
+        "target": 9,
+        "type": "associated_with"
+      },
+      {
+        "source": 1,
+        "target": 9,
+        "type": "contains"
+      },
+      {
+        "source": 13,
+        "target": 9,
+        "type": "associated_with"
+      },
+      {
+        "source": 9,
+        "target": 10,
+        "type": "is_a"
+      },
+      {
+        "source": 12,
+        "target": 10,
+        "type": "is_a"
+      },
+      {
+        "source": 26,
+        "target": 10,
+        "type": "is_a"
+      },
+      {
+        "source": 27,
+        "target": 10,
+        "type": "is_a"
+      },
+      {
+        "source": 28,
+        "target": 10,
+        "type": "is_a"
+      },
+      {
+        "source": 29,
+        "target": 10,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 11,
+        "type": "includes_notable_radiation"
+      },
+      {
+        "source": 1,
+        "target": 11,
+        "type": "contains"
+      },
+      {
+        "source": 11,
+        "target": 12,
+        "type": "associated_with"
+      },
+      {
+        "source": 1,
+        "target": 12,
+        "type": "contains"
+      },
+      {
+        "source": 1,
+        "target": 13,
+        "type": "contains"
+      },
+      {
+        "source": 13,
+        "target": 14,
+        "type": "is_a"
+      },
+      {
+        "source": 15,
+        "target": 14,
+        "type": "is_a"
+      },
+      {
+        "source": 13,
+        "target": 15,
+        "type": "is"
+      },
+      {
+        "source": 1,
+        "target": 15,
+        "type": "contains"
+      },
+      {
+        "source": 1,
+        "target": 16,
+        "type": "contains"
+      },
+      {
+        "source": 16,
+        "target": 17,
+        "type": "has_common_name"
+      },
+      {
+        "source": 1,
+        "target": 17,
+        "type": "contains"
+      },
+      {
+        "source": 17,
+        "target": 18,
+        "type": "is_a"
+      },
+      {
+        "source": 19,
+        "target": 18,
+        "type": "is_a"
+      },
+      {
+        "source": 16,
+        "target": 19,
+        "type": "has_common_name"
+      },
+      {
+        "source": 1,
+        "target": 19,
+        "type": "contains"
+      },
+      {
+        "source": 16,
+        "target": 20,
+        "type": "has_about"
+      },
+      {
+        "source": 1,
+        "target": 20,
+        "type": "contains"
+      },
+      {
+        "source": 16,
+        "target": 21,
+        "type": "includes_growth_form"
+      },
+      {
+        "source": 1,
+        "target": 21,
+        "type": "contains"
+      },
+      {
+        "source": 21,
+        "target": 22,
+        "type": "is_a"
+      },
+      {
+        "source": 23,
+        "target": 22,
+        "type": "is_a"
+      },
+      {
+        "source": 16,
+        "target": 23,
+        "type": "includes_growth_form"
+      },
+      {
+        "source": 1,
+        "target": 23,
+        "type": "contains"
+      },
+      {
+        "source": 16,
+        "target": 24,
+        "type": "in_family"
+      },
+      {
+        "source": 1,
+        "target": 24,
+        "type": "contains"
+      },
+      {
+        "source": 24,
+        "target": 25,
+        "type": "is_a"
+      },
+      {
+        "source": 16,
+        "target": 26,
+        "type": "mostly_native_to"
+      },
+      {
+        "source": 27,
+        "target": 26,
+        "type": "within"
+      },
+      {
+        "source": 1,
+        "target": 26,
+        "type": "contains"
+      },
+      {
+        "source": 16,
+        "target": 27,
+        "type": "mostly_native_to"
+      },
+      {
+        "source": 1,
+        "target": 27,
+        "type": "contains"
+      },
+      {
+        "source": 16,
+        "target": 28,
+        "type": "has_majority_in"
+      },
+      {
+        "source": 1,
+        "target": 28,
+        "type": "contains"
+      },
+      {
+        "source": 16,
+        "target": 29,
+        "type": "also_occurs_in"
+      },
+      {
+        "source": 1,
+        "target": 29,
+        "type": "contains"
+      }
+    ]
+  }
+}

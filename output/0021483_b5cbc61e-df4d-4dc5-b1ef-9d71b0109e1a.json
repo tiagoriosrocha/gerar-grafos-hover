@@ -1,0 +1,417 @@
+{
+  "dataset": "hover",
+  "id": "b5cbc61e-df4d-4dc5-b1ef-9d71b0109e1a",
+  "split": "dev",
+  "claim": "The soda that Jazz (soft drink) is a named variant of, is not a carbonated drink. Diet Pepsi is not a carbonated drink, either.",
+  "evidencia": "Page: Diet Pepsi. Sentence: Diet Pepsi and Diet Pepsi Classic Formula Blend (stylized as diet PEPSI CLASSIC SWEETENER BLEND) are no-calorie carbonated cola soft drinks produced by PepsiCo, introduced in 1964 as a variant of Pepsi-Cola with no sugar.\nPage: Volvic (mineral water). Sentence: Volvic is a brand of mineral water.\nPage: Jazz (soft drink). Sentence: It was a specifically named variant of Pepsi's popular Diet Pepsi product, combining several different flavors.",
+  "evidence_text": "Page: Diet Pepsi. Sentence: Diet Pepsi and Diet Pepsi Classic Formula Blend (stylized as diet PEPSI CLASSIC SWEETENER BLEND) are no-calorie carbonated cola soft drinks produced by PepsiCo, introduced in 1964 as a variant of Pepsi-Cola with no sugar.\nPage: Volvic (mineral water). Sentence: Volvic is a brand of mineral water.\nPage: Jazz (soft drink). Sentence: It was a specifically named variant of Pepsi's popular Diet Pepsi product, combining several different flavors.",
+  "label": "SUPPORTED",
+  "num_hops": 3,
+  "hover_metadata": {
+    "supporting_facts": [
+      [
+        "Diet Pepsi",
+        0
+      ],
+      [
+        "Volvic (mineral water)",
+        0
+      ],
+      [
+        "Jazz (soft drink)",
+        1
+      ]
+    ],
+    "num_hops": 3,
+    "evidence_annotation_id": [
+      0
+    ],
+    "evidence_id": [
+      "Diet Pepsi::sentence::0",
+      "Volvic (mineral water)::sentence::0",
+      "Jazz (soft drink)::sentence::1"
+    ],
+    "evidence_wiki_url": [
+      "https://en.wikipedia.org/wiki/Diet_Pepsi",
+      "https://en.wikipedia.org/wiki/Volvic_%28mineral_water%29",
+      "https://en.wikipedia.org/wiki/Jazz_%28soft_drink%29"
+    ],
+    "evidence_sentence_id": [
+      "Diet Pepsi::sentence::0",
+      "Volvic (mineral water)::sentence::0",
+      "Jazz (soft drink)::sentence::1"
+    ]
+  },
+  "grafo_claim": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "74bb68e9-745f-5f2a-9197-8d9575739e38",
+        "text": "This chunk is about:\n- Products: Jazz (soft drink), soda, Diet Pepsi\n- Concepts: named variants, carbonated drinks\n\nFacts:\n- Jazz (soft drink) is a named variant of soda.\n- Soda is not a carbonated drink.\n- Diet Pepsi is not a carbonated drink.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "0266d7b8-6f76-551d-89f7-5361beea3926",
+        "text": "The soda that Jazz (soft drink) is a named variant of, is not a carbonated drink. Diet Pepsi is not a carbonated drink, either.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "2c87f613-0873-5529-bcdc-49ef3efee8b1",
+        "text": "text_b8407557170fbd4b2932ccedd5012d4c",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "105bde1c-3b8a-585e-95b1-ae34c759e045",
+        "text": "jazz (soft drink)",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "f76d57aa-4740-5218-9539-0e0978cbf183",
+        "text": "product",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "d1e4792c-01b4-503d-b83c-6f8ceda12053",
+        "text": "soda",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "d2a381fa-3658-5ca6-ada9-2109cfc9331d",
+        "text": "concept",
+        "type": "EntityType"
+      },
+      {
+        "id": 7,
+        "original_id": "35f89b68-0e87-578e-b26c-2636a96d578b",
+        "text": "carbonated drink",
+        "type": "Entity"
+      },
+      {
+        "id": 8,
+        "original_id": "d1198f67-b333-50a9-bea3-5bf6b8c40b87",
+        "text": "soft drink",
+        "type": "Entity"
+      },
+      {
+        "id": 9,
+        "original_id": "db5d25cd-a960-52c7-82d9-5904504827ea",
+        "text": "diet pepsi",
+        "type": "Entity"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 9,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "named_variant_of"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 7,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 8,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 5,
+        "target": 7,
+        "type": "is_not_a"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      },
+      {
+        "source": 9,
+        "target": 7,
+        "type": "is_not_a"
+      },
+      {
+        "source": 3,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 8,
+        "type": "contains"
+      },
+      {
+        "source": 1,
+        "target": 9,
+        "type": "contains"
+      }
+    ]
+  },
+  "grafo_evidencia": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "d060d5be-4d5f-5466-86aa-982cf8856281",
+        "text": "This chunk is about:\n- Products: Diet Pepsi, Diet Pepsi Classic Formula Blend, Volvic, Jazz\n- Companies: PepsiCo, Pepsi\n- Concepts: no-calorie soft drinks, mineral water, flavored variants\n\nFacts:\n- Diet Pepsi and Diet Pepsi Classic Formula Blend are no-calorie carbonated cola soft drinks that PepsiCo introduced in 1964 as sugar-free variants of Pepsi-Cola.\n- Volvic is a brand of mineral water.\n- Jazz was a specifically named variant of Pepsi's Diet Pepsi product that combined several different flavors.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "cc8f6363-ab7a-55e4-87cb-03881cc578a5",
+        "text": "Page: Diet Pepsi. Sentence: Diet Pepsi and Diet Pepsi Classic Formula Blend (stylized as diet PEPSI CLASSIC SWEETENER BLEND) are no-calorie carbonated cola soft drinks produced by PepsiCo, introduced in 1964 as a variant of Pepsi-Cola with no sugar.\nPage: Volvic (mineral water). Sentence: Volvic is a brand of mineral water.\nPage: Jazz (soft drink). Sentence: It was a specifically named variant of Pepsi's popular Diet Pepsi product, combining several different flavors.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "d51cb214-da9e-5bda-86c8-00675ef3001d",
+        "text": "text_c77e627378de1058f3953bb010fe8345",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "db5d25cd-a960-52c7-82d9-5904504827ea",
+        "text": "diet pepsi",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "f76d57aa-4740-5218-9539-0e0978cbf183",
+        "text": "product",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "ba727ee2-a1b1-5476-8969-bb4e5777a495",
+        "text": "pepsico",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "388f60fb-220d-55e8-ae9c-3ac93cead308",
+        "text": "organization",
+        "type": "EntityType"
+      },
+      {
+        "id": 7,
+        "original_id": "f84b53f0-d68a-5f9c-b437-b5b836eed4d3",
+        "text": "1964",
+        "type": "Entity"
+      },
+      {
+        "id": 8,
+        "original_id": "b19433ae-558c-5aaf-95ac-6231f2a4be0e",
+        "text": "date",
+        "type": "EntityType"
+      },
+      {
+        "id": 9,
+        "original_id": "5d5e479e-5ab3-57fc-a880-3dc7a02ccbbe",
+        "text": "pepsi-cola",
+        "type": "Entity"
+      },
+      {
+        "id": 10,
+        "original_id": "05391e38-65ee-5ecd-8a3f-f62f29607afb",
+        "text": "diet pepsi classic formula blend",
+        "type": "Entity"
+      },
+      {
+        "id": 11,
+        "original_id": "f2085f0b-d393-53e6-9a44-25ba649c6784",
+        "text": "volvic",
+        "type": "Entity"
+      },
+      {
+        "id": 12,
+        "original_id": "ed7002cb-dfd2-51ba-bcbe-d61d656ab3b5",
+        "text": "mineral water",
+        "type": "Entity"
+      },
+      {
+        "id": 13,
+        "original_id": "d2a381fa-3658-5ca6-ada9-2109cfc9331d",
+        "text": "concept",
+        "type": "EntityType"
+      },
+      {
+        "id": 14,
+        "original_id": "ee8368d0-29bc-5567-87f0-bbaa41a8c8c9",
+        "text": "jazz",
+        "type": "Entity"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 14,
+        "target": 3,
+        "type": "variant_of"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 9,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 10,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 11,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 14,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "produced_by"
+      },
+      {
+        "source": 10,
+        "target": 5,
+        "type": "produced_by"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 7,
+        "type": "introduced_in"
+      },
+      {
+        "source": 10,
+        "target": 7,
+        "type": "introduced_in"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      },
+      {
+        "source": 7,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 9,
+        "type": "variant_of"
+      },
+      {
+        "source": 10,
+        "target": 9,
+        "type": "variant_of"
+      },
+      {
+        "source": 1,
+        "target": 9,
+        "type": "contains"
+      },
+      {
+        "source": 1,
+        "target": 10,
+        "type": "contains"
+      },
+      {
+        "source": 1,
+        "target": 11,
+        "type": "contains"
+      },
+      {
+        "source": 11,
+        "target": 12,
+        "type": "is_a_brand_of"
+      },
+      {
+        "source": 1,
+        "target": 12,
+        "type": "contains"
+      },
+      {
+        "source": 12,
+        "target": 13,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 14,
+        "type": "contains"
+      }
+    ]
+  }
+}

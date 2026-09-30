@@ -1,0 +1,411 @@
+{
+  "dataset": "hover",
+  "id": "20dabcd8-d85d-44a6-bab9-6f2c8240d3d3",
+  "split": "dev",
+  "claim": "Yanzhou is a city is under Jining, the city Du Zheheng was born in, or Yanzhou District.",
+  "evidencia": "Page: Kaiyuan, Liaoning. Sentence: Kaiyuan () is a county-level city in the northeast of Liaoning, People's Republic of China, bordering Jilin for a small section to the north.\nPage: Yanzhou District. Sentence: Yanzhou (postal: Yenchow; ) is a district and former county-level city under the administration of Jining, in the southwest of Shandong province, People's Republic of China.\nPage: Du Zheheng. Sentence: He was born in Kaiyuan, Liaoning.",
+  "evidence_text": "Page: Kaiyuan, Liaoning. Sentence: Kaiyuan () is a county-level city in the northeast of Liaoning, People's Republic of China, bordering Jilin for a small section to the north.\nPage: Yanzhou District. Sentence: Yanzhou (postal: Yenchow; ) is a district and former county-level city under the administration of Jining, in the southwest of Shandong province, People's Republic of China.\nPage: Du Zheheng. Sentence: He was born in Kaiyuan, Liaoning.",
+  "label": "SUPPORTED",
+  "num_hops": 3,
+  "hover_metadata": {
+    "supporting_facts": [
+      [
+        "Kaiyuan, Liaoning",
+        0
+      ],
+      [
+        "Yanzhou District",
+        0
+      ],
+      [
+        "Du Zheheng",
+        1
+      ]
+    ],
+    "num_hops": 3,
+    "evidence_annotation_id": [
+      0
+    ],
+    "evidence_id": [
+      "Kaiyuan, Liaoning::sentence::0",
+      "Yanzhou District::sentence::0",
+      "Du Zheheng::sentence::1"
+    ],
+    "evidence_wiki_url": [
+      "https://en.wikipedia.org/wiki/Kaiyuan%2C_Liaoning",
+      "https://en.wikipedia.org/wiki/Yanzhou_District",
+      "https://en.wikipedia.org/wiki/Du_Zheheng"
+    ],
+    "evidence_sentence_id": [
+      "Kaiyuan, Liaoning::sentence::0",
+      "Yanzhou District::sentence::0",
+      "Du Zheheng::sentence::1"
+    ]
+  },
+  "grafo_claim": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "666942b2-2e14-5be1-908f-99e85e0a57d9",
+        "text": "This chunk is about:\n- Places: Yanzhou, Jining, Yanzhou District\n- People: Du Zheheng\n\nFacts:\n- Yanzhou is a city under Jining.\n- Du Zheheng was born in Jining.\n- Yanzhou can also refer to Yanzhou District.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "b91d21ce-8cd5-53ee-afef-61603017d620",
+        "text": "Yanzhou is a city is under Jining, the city Du Zheheng was born in, or Yanzhou District.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "384371ce-1d67-5eb6-94cd-178fe11fd112",
+        "text": "text_754ccfae98d0bf4a8d0732558a32e136",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "77ab860e-29e6-576f-8394-c565b1e4cd65",
+        "text": "yanzhou",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "5f394058-b2a0-5ba8-8466-ba2a18cfcf4e",
+        "text": "place",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "6364dac4-68ba-533a-b8ca-3f5b7f76b1ee",
+        "text": "jining",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "90ad9f03-9752-5160-ad0d-8e27d56af37c",
+        "text": "yanzhou district",
+        "type": "Entity"
+      },
+      {
+        "id": 7,
+        "original_id": "f8ddcb67-e317-5f6a-93e9-123906803f5d",
+        "text": "du zheheng",
+        "type": "Entity"
+      },
+      {
+        "id": 8,
+        "original_id": "99a82eec-bb35-5bb5-9ed2-e73fc7a756de",
+        "text": "person",
+        "type": "EntityType"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 5,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 6,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "under_administration_of"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 7,
+        "target": 5,
+        "type": "born_in"
+      },
+      {
+        "source": 3,
+        "target": 6,
+        "type": "possibly_same_as"
+      },
+      {
+        "source": 7,
+        "target": 6,
+        "type": "possibly_born_in"
+      },
+      {
+        "source": 1,
+        "target": 6,
+        "type": "contains"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      },
+      {
+        "source": 7,
+        "target": 8,
+        "type": "is_a"
+      }
+    ]
+  },
+  "grafo_evidencia": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "c073e19f-c759-571e-a555-c5df1b73a8a9",
+        "text": "This chunk is about:\n- Places: Kaiyuan, Liaoning; Yanzhou District; Jilin; Jining; Shandong; Liaoning; China\n- People: Du Zheheng\n\nFacts:\n- Kaiyuan is a county-level city in northeastern Liaoning, People's Republic of China.\n- Kaiyuan borders Jilin along a small section to the north.\n- Yanzhou, also known by the postal name Yenchow, is a district under the administration of Jining in southwestern Shandong, People's Republic of China.\n- Yanzhou was formerly a county-level city.\n- Du Zheheng was born in Kaiyuan, Liaoning.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "86b52b2f-6d0d-593d-bb17-76ab193dfe80",
+        "text": "Page: Kaiyuan, Liaoning. Sentence: Kaiyuan () is a county-level city in the northeast of Liaoning, People's Republic of China, bordering Jilin for a small section to the north.\nPage: Yanzhou District. Sentence: Yanzhou (postal: Yenchow; ) is a district and former county-level city under the administration of Jining, in the southwest of Shandong province, People's Republic of China.\nPage: Du Zheheng. Sentence: He was born in Kaiyuan, Liaoning.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "e4842c9a-332b-5fcb-ab27-623515969998",
+        "text": "text_b935f381a5cfc868118455031d139048",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "1044f945-95ff-5bf5-b103-dcbeb071d269",
+        "text": "kaiyuan, liaoning",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "5f394058-b2a0-5ba8-8466-ba2a18cfcf4e",
+        "text": "place",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "c7b423eb-ef73-54eb-b658-716ee6e13a41",
+        "text": "liaoning",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "cc237b73-b957-56f0-9cff-82357be15d0b",
+        "text": "peoples republic of china",
+        "type": "Entity"
+      },
+      {
+        "id": 7,
+        "original_id": "636f0e88-3142-50d9-a815-e0b912b41cf1",
+        "text": "jilin",
+        "type": "Entity"
+      },
+      {
+        "id": 8,
+        "original_id": "90ad9f03-9752-5160-ad0d-8e27d56af37c",
+        "text": "yanzhou district",
+        "type": "Entity"
+      },
+      {
+        "id": 9,
+        "original_id": "8f0d2a36-ce3d-5e72-a91d-3adb2bfcf652",
+        "text": "yenchow",
+        "type": "Entity"
+      },
+      {
+        "id": 10,
+        "original_id": "39575085-0710-527d-bd54-019de7b00429",
+        "text": "name",
+        "type": "EntityType"
+      },
+      {
+        "id": 11,
+        "original_id": "6364dac4-68ba-533a-b8ca-3f5b7f76b1ee",
+        "text": "jining",
+        "type": "Entity"
+      },
+      {
+        "id": 12,
+        "original_id": "3976af65-81cf-519d-b907-7a63c79d9873",
+        "text": "shandong",
+        "type": "Entity"
+      },
+      {
+        "id": 13,
+        "original_id": "f8ddcb67-e317-5f6a-93e9-123906803f5d",
+        "text": "du zheheng",
+        "type": "Entity"
+      },
+      {
+        "id": 14,
+        "original_id": "99a82eec-bb35-5bb5-9ed2-e73fc7a756de",
+        "text": "person",
+        "type": "EntityType"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 13,
+        "target": 3,
+        "type": "born_in"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 5,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 6,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 7,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 8,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 11,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 12,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "located_in"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "located_in"
+      },
+      {
+        "source": 1,
+        "target": 6,
+        "type": "contains"
+      },
+      {
+        "source": 12,
+        "target": 6,
+        "type": "located_in"
+      },
+      {
+        "source": 3,
+        "target": 7,
+        "type": "borders"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      },
+      {
+        "source": 1,
+        "target": 8,
+        "type": "contains"
+      },
+      {
+        "source": 8,
+        "target": 9,
+        "type": "has_postal_name"
+      },
+      {
+        "source": 1,
+        "target": 9,
+        "type": "contains"
+      },
+      {
+        "source": 9,
+        "target": 10,
+        "type": "is_a"
+      },
+      {
+        "source": 8,
+        "target": 11,
+        "type": "administered_by"
+      },
+      {
+        "source": 1,
+        "target": 11,
+        "type": "contains"
+      },
+      {
+        "source": 8,
+        "target": 12,
+        "type": "located_in"
+      },
+      {
+        "source": 1,
+        "target": 12,
+        "type": "contains"
+      },
+      {
+        "source": 1,
+        "target": 13,
+        "type": "contains"
+      },
+      {
+        "source": 13,
+        "target": 14,
+        "type": "is_a"
+      }
+    ]
+  }
+}

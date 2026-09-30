@@ -1,0 +1,625 @@
+{
+  "dataset": "hover",
+  "id": "2bd37131-367b-4265-942c-fc6e68b31f53",
+  "split": "train",
+  "claim": "The 247 Cherry building is adjacent to the building that is higher than this building, artist and mechanic Stephen M. Ross lives and works there.",
+  "evidencia": "Page: One Manhattan Square. Sentence: One Manhattan Square (also known as 227 Cherry Street or 250 South Street) is a residential skyscraper project being developed by Extell Development Company in Two Bridges, Manhattan, New York City.\nPage: One Manhattan Square. Sentence: The building will stand 80 stories or 850 feet (259 m) above the street, and will possibly have a new supermarket in the tower's base.\nPage: Time Warner Center. Sentence: Developed by The Related Companies and AREA Property Partners (formerly known as Apollo Real Estate Advisors), its design by David Childs and Mustafa Kemal Abadan of Skidmore, Owings & Merrill, consists of two 750 ft twin towers bridged by a multi-story atrium containing upscale retail shops.\nPage: 247 Cherry. Sentence: The building will be adjacent One Manhattan Square.\nPage: Stephen M. Ross. Sentence: Related is best known for developing the Time Warner Center, where Ross lives and works, as well as the Hudson Yards Redevelopment Project.",
+  "evidence_text": "Page: One Manhattan Square. Sentence: One Manhattan Square (also known as 227 Cherry Street or 250 South Street) is a residential skyscraper project being developed by Extell Development Company in Two Bridges, Manhattan, New York City.\nPage: One Manhattan Square. Sentence: The building will stand 80 stories or 850 feet (259 m) above the street, and will possibly have a new supermarket in the tower's base.\nPage: Time Warner Center. Sentence: Developed by The Related Companies and AREA Property Partners (formerly known as Apollo Real Estate Advisors), its design by David Childs and Mustafa Kemal Abadan of Skidmore, Owings & Merrill, consists of two 750 ft twin towers bridged by a multi-story atrium containing upscale retail shops.\nPage: 247 Cherry. Sentence: The building will be adjacent One Manhattan Square.\nPage: Stephen M. Ross. Sentence: Related is best known for developing the Time Warner Center, where Ross lives and works, as well as the Hudson Yards Redevelopment Project.",
+  "label": "NOT_SUPPORTED",
+  "num_hops": 4,
+  "hover_metadata": {
+    "supporting_facts": [
+      [
+        "One Manhattan Square",
+        0
+      ],
+      [
+        "One Manhattan Square",
+        2
+      ],
+      [
+        "Time Warner Center",
+        1
+      ],
+      [
+        "247 Cherry",
+        3
+      ],
+      [
+        "Stephen M. Ross",
+        2
+      ]
+    ],
+    "num_hops": 4,
+    "evidence_annotation_id": [
+      0
+    ],
+    "evidence_id": [
+      "One Manhattan Square::sentence::0",
+      "One Manhattan Square::sentence::2",
+      "Time Warner Center::sentence::1",
+      "247 Cherry::sentence::3",
+      "Stephen M. Ross::sentence::2"
+    ],
+    "evidence_wiki_url": [
+      "https://en.wikipedia.org/wiki/One_Manhattan_Square",
+      "https://en.wikipedia.org/wiki/Time_Warner_Center",
+      "https://en.wikipedia.org/wiki/247_Cherry",
+      "https://en.wikipedia.org/wiki/Stephen_M._Ross"
+    ],
+    "evidence_sentence_id": [
+      "One Manhattan Square::sentence::0",
+      "One Manhattan Square::sentence::2",
+      "Time Warner Center::sentence::1",
+      "247 Cherry::sentence::3",
+      "Stephen M. Ross::sentence::2"
+    ]
+  },
+  "grafo_claim": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "db1cfc91-8a15-5073-bee6-5815425a4733",
+        "text": "This chunk is about:\n- Places: 247 Cherry building\n- People: Stephen M. Ross\n- Topics: adjacent buildings, residence and workplace\n\nFacts:\n- The 247 Cherry building is adjacent to another building that is taller than the 247 Cherry building.\n- Stephen M. Ross is an artist and mechanic.\n- Stephen M. Ross lives and works in the 247 Cherry building.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "e8e56871-d934-58f2-9431-9c23fc3637fa",
+        "text": "The 247 Cherry building is adjacent to the building that is higher than this building, artist and mechanic Stephen M. Ross lives and works there.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "272adbb3-7511-58e9-9b1f-d8c7f7237a2d",
+        "text": "text_8edb62c7510c121d56c5feada29031fd",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "644a1713-8aed-5efb-923f-1c892070aec2",
+        "text": "247 cherry building",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "b011d686-ca3a-5398-b03c-f44518808ad9",
+        "text": "building",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "d9a587f2-25ee-571c-aaf2-d82d72654922",
+        "text": "higher adjacent building",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "93b4eb42-d15b-551d-b128-5f051d51d31c",
+        "text": "stephen m. ross",
+        "type": "Entity"
+      },
+      {
+        "id": 7,
+        "original_id": "99a82eec-bb35-5bb5-9ed2-e73fc7a756de",
+        "text": "person",
+        "type": "EntityType"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 3,
+        "type": "is_higher_than"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 5,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "is_adjacent_to"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 6,
+        "target": 5,
+        "type": "lives_in"
+      },
+      {
+        "source": 1,
+        "target": 6,
+        "type": "contains"
+      },
+      {
+        "source": 6,
+        "target": 7,
+        "type": "is_a"
+      }
+    ]
+  },
+  "grafo_evidencia": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "6a5f443b-7d7a-5f2d-849e-5b392c42a852",
+        "text": "This chunk is about:\n- Projects: One Manhattan Square, Time Warner Center, Hudson Yards Redevelopment Project, 247 Cherry\n- Companies: Extell Development Company, The Related Companies, AREA Property Partners, Apollo Real Estate Advisors, Skidmore, Owings & Merrill\n- People: Stephen M. Ross, David Childs, Mustafa Kemal Abadan\n- Places: Two Bridges, Manhattan, New York City\n\nFacts:\n- One Manhattan Square, also known as 227 Cherry Street or 250 South Street, is a residential skyscraper project being developed by Extell Development Company in Two Bridges, Manhattan, New York City.\n- One Manhattan Square is planned to rise 80 stories or 850 feet above the street and may include a new supermarket at its base.\n- 247 Cherry will be adjacent to One Manhattan Square.\n- Time Warner Center was developed by The Related Companies and AREA Property Partners, formerly known as Apollo Real Estate Advisors.\n- Time Warner Center was designed by David Childs and Mustafa Kemal Abadan of Skidmore, Owings & Merrill as two 750-foot twin towers connected by a multi-story atrium with upscale retail shops.\n- The Related Companies is best known for developing the Time Warner Center and the Hudson Yards Redevelopment Project.\n- Stephen M. Ross lives and works at the Time Warner Center.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "a2b4b80a-97bb-551e-98d6-8e135aa6d7a5",
+        "text": "Page: One Manhattan Square. Sentence: One Manhattan Square (also known as 227 Cherry Street or 250 South Street) is a residential skyscraper project being developed by Extell Development Company in Two Bridges, Manhattan, New York City.\nPage: One Manhattan Square. Sentence: The building will stand 80 stories or 850 feet (259 m) above the street, and will possibly have a new supermarket in the tower's base.\nPage: Time Warner Center. Sentence: Developed by The Related Companies and AREA Property Partners (formerly known as Apollo Real Estate Advisors), its design by David Childs and Mustafa Kemal Abadan of Skidmore, Owings & Merrill, consists of two 750 ft twin towers bridged by a multi-story atrium containing upscale retail shops.\nPage: 247 Cherry. Sentence: The building will be adjacent One Manhattan Square.\nPage: Stephen M. Ross. Sentence: Related is best known for developing the Time Warner Center, where Ross lives and works, as well as the Hudson Yards Redevelopment Project.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "9f7c1e2c-be6b-59ad-bb8b-dc6fd042dc8f",
+        "text": "text_85d2e9dea65ede6c17b2e13de4382819",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "54dd4cd2-0986-547c-984a-4739a1efacaa",
+        "text": "one manhattan square",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "b011d686-ca3a-5398-b03c-f44518808ad9",
+        "text": "building",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "3889175a-433b-5cea-8ff4-4951ff311df9",
+        "text": "227 cherry street",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "5f394058-b2a0-5ba8-8466-ba2a18cfcf4e",
+        "text": "place",
+        "type": "EntityType"
+      },
+      {
+        "id": 7,
+        "original_id": "8b278068-fe36-594f-ba8b-3bd9bda9f073",
+        "text": "250 south street",
+        "type": "Entity"
+      },
+      {
+        "id": 8,
+        "original_id": "ba735f47-e4ad-57fc-aaed-3f5883a81eb6",
+        "text": "two bridges",
+        "type": "Entity"
+      },
+      {
+        "id": 9,
+        "original_id": "c65245b2-435b-5786-be1c-050c01adb0a5",
+        "text": "manhattan",
+        "type": "Entity"
+      },
+      {
+        "id": 10,
+        "original_id": "62912d92-4218-52f7-a1a6-776a04889442",
+        "text": "new york city",
+        "type": "Entity"
+      },
+      {
+        "id": 11,
+        "original_id": "6c86a05a-9475-59fc-8ea3-160ba8801ee1",
+        "text": "supermarket",
+        "type": "Entity"
+      },
+      {
+        "id": 12,
+        "original_id": "a272b6c4-e4d3-5fd8-b8bd-f0773d501ba2",
+        "text": "extell development company",
+        "type": "Entity"
+      },
+      {
+        "id": 13,
+        "original_id": "388f60fb-220d-55e8-ae9c-3ac93cead308",
+        "text": "organization",
+        "type": "EntityType"
+      },
+      {
+        "id": 14,
+        "original_id": "e44ec5bd-ebd1-5639-8e04-5b662eaf0e3d",
+        "text": "time warner center",
+        "type": "Entity"
+      },
+      {
+        "id": 15,
+        "original_id": "e578a507-40b3-5047-92f6-f085c76f798c",
+        "text": "the related companies",
+        "type": "Entity"
+      },
+      {
+        "id": 16,
+        "original_id": "9f76f4cc-11d6-53b8-9b73-32c00e947d9a",
+        "text": "area property partners",
+        "type": "Entity"
+      },
+      {
+        "id": 17,
+        "original_id": "ce7af534-9ed9-5bd1-9e20-87df3fd3bc48",
+        "text": "apollo real estate advisors",
+        "type": "Entity"
+      },
+      {
+        "id": 18,
+        "original_id": "a8eeefe9-2473-5877-93dd-508f1d0a7dbc",
+        "text": "david childs",
+        "type": "Entity"
+      },
+      {
+        "id": 19,
+        "original_id": "99a82eec-bb35-5bb5-9ed2-e73fc7a756de",
+        "text": "person",
+        "type": "EntityType"
+      },
+      {
+        "id": 20,
+        "original_id": "fd8353c1-f9b8-592b-b48e-85c31e55f387",
+        "text": "skidmore, owings & merrill",
+        "type": "Entity"
+      },
+      {
+        "id": 21,
+        "original_id": "8f84c1bb-2caf-5b0f-9f4e-2a68b94fd8ed",
+        "text": "mustafa kemal abadan",
+        "type": "Entity"
+      },
+      {
+        "id": 22,
+        "original_id": "53e8dd3d-0ad6-5fa8-8af9-fd2b8d58e6fe",
+        "text": "247 cherry",
+        "type": "Entity"
+      },
+      {
+        "id": 23,
+        "original_id": "f988ed40-43dc-509f-9e5f-c1ccad01e2a0",
+        "text": "related",
+        "type": "Entity"
+      },
+      {
+        "id": 24,
+        "original_id": "78d72957-93a6-5eab-b344-88c127dcdec9",
+        "text": "hudson yards redevelopment project",
+        "type": "Entity"
+      },
+      {
+        "id": 25,
+        "original_id": "ed098e70-7598-5ee9-a836-d175d95aae72",
+        "text": "project",
+        "type": "EntityType"
+      },
+      {
+        "id": 26,
+        "original_id": "93b4eb42-d15b-551d-b128-5f051d51d31c",
+        "text": "stephen m. ross",
+        "type": "Entity"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 12,
+        "target": 3,
+        "type": "develops"
+      },
+      {
+        "source": 22,
+        "target": 3,
+        "type": "adjacent_to"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 14,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 22,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "also_known_as"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 7,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 8,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 9,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 10,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 11,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 7,
+        "type": "also_known_as"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 8,
+        "type": "located_in"
+      },
+      {
+        "source": 1,
+        "target": 8,
+        "type": "contains"
+      },
+      {
+        "source": 8,
+        "target": 9,
+        "type": "located_in"
+      },
+      {
+        "source": 1,
+        "target": 9,
+        "type": "contains"
+      },
+      {
+        "source": 9,
+        "target": 10,
+        "type": "located_in"
+      },
+      {
+        "source": 1,
+        "target": 10,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 11,
+        "type": "may_have_in_base"
+      },
+      {
+        "source": 1,
+        "target": 11,
+        "type": "contains"
+      },
+      {
+        "source": 1,
+        "target": 12,
+        "type": "contains"
+      },
+      {
+        "source": 12,
+        "target": 13,
+        "type": "is_a"
+      },
+      {
+        "source": 15,
+        "target": 13,
+        "type": "is_a"
+      },
+      {
+        "source": 16,
+        "target": 13,
+        "type": "is_a"
+      },
+      {
+        "source": 17,
+        "target": 13,
+        "type": "is_a"
+      },
+      {
+        "source": 20,
+        "target": 13,
+        "type": "is_a"
+      },
+      {
+        "source": 23,
+        "target": 13,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 14,
+        "type": "contains"
+      },
+      {
+        "source": 15,
+        "target": 14,
+        "type": "developed"
+      },
+      {
+        "source": 16,
+        "target": 14,
+        "type": "developed"
+      },
+      {
+        "source": 18,
+        "target": 14,
+        "type": "designed"
+      },
+      {
+        "source": 21,
+        "target": 14,
+        "type": "designed"
+      },
+      {
+        "source": 23,
+        "target": 14,
+        "type": "developed"
+      },
+      {
+        "source": 26,
+        "target": 14,
+        "type": "lives_in"
+      },
+      {
+        "source": 1,
+        "target": 15,
+        "type": "contains"
+      },
+      {
+        "source": 1,
+        "target": 16,
+        "type": "contains"
+      },
+      {
+        "source": 16,
+        "target": 17,
+        "type": "formerly_known_as"
+      },
+      {
+        "source": 1,
+        "target": 17,
+        "type": "contains"
+      },
+      {
+        "source": 1,
+        "target": 18,
+        "type": "contains"
+      },
+      {
+        "source": 18,
+        "target": 19,
+        "type": "is_a"
+      },
+      {
+        "source": 21,
+        "target": 19,
+        "type": "is_a"
+      },
+      {
+        "source": 26,
+        "target": 19,
+        "type": "is_a"
+      },
+      {
+        "source": 18,
+        "target": 20,
+        "type": "of"
+      },
+      {
+        "source": 21,
+        "target": 20,
+        "type": "of"
+      },
+      {
+        "source": 1,
+        "target": 20,
+        "type": "contains"
+      },
+      {
+        "source": 1,
+        "target": 21,
+        "type": "contains"
+      },
+      {
+        "source": 1,
+        "target": 22,
+        "type": "contains"
+      },
+      {
+        "source": 1,
+        "target": 23,
+        "type": "contains"
+      },
+      {
+        "source": 23,
+        "target": 24,
+        "type": "developed"
+      },
+      {
+        "source": 1,
+        "target": 24,
+        "type": "contains"
+      },
+      {
+        "source": 24,
+        "target": 25,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 26,
+        "type": "contains"
+      }
+    ]
+  }
+}

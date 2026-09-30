@@ -1,0 +1,371 @@
+{
+  "dataset": "hover",
+  "id": "b304fc98-6ec1-494d-bda5-4bf8f7f7dc9f",
+  "split": "dev",
+  "claim": "The novelist Paul Thomas Mann was American, not the author of Snow Falling on Cedars.",
+  "evidencia": "Page: David Guterson. Sentence: David Guterson ( ; born May 4, 1956) is an American novelist, short story writer, poet, journalist, and essayist.\nPage: Thomas Mann. Sentence: Paul Thomas Mann (] ; 6 June 1875 – 12 August 1955) was a German novelist, short story writer, social critic, philanthropist, essayist, and the 1929 Nobel Prize in Literature laureate.\nPage: Snow Falling on Cedars (film). Sentence: It is based on David Guterson's award-winning novel of the same title.",
+  "evidence_text": "Page: David Guterson. Sentence: David Guterson ( ; born May 4, 1956) is an American novelist, short story writer, poet, journalist, and essayist.\nPage: Thomas Mann. Sentence: Paul Thomas Mann (] ; 6 June 1875 – 12 August 1955) was a German novelist, short story writer, social critic, philanthropist, essayist, and the 1929 Nobel Prize in Literature laureate.\nPage: Snow Falling on Cedars (film). Sentence: It is based on David Guterson's award-winning novel of the same title.",
+  "label": "NOT_SUPPORTED",
+  "num_hops": 3,
+  "hover_metadata": {
+    "supporting_facts": [
+      [
+        "David Guterson",
+        0
+      ],
+      [
+        "Thomas Mann",
+        0
+      ],
+      [
+        "Snow Falling on Cedars (film)",
+        1
+      ]
+    ],
+    "num_hops": 3,
+    "evidence_annotation_id": [
+      0
+    ],
+    "evidence_id": [
+      "David Guterson::sentence::0",
+      "Thomas Mann::sentence::0",
+      "Snow Falling on Cedars (film)::sentence::1"
+    ],
+    "evidence_wiki_url": [
+      "https://en.wikipedia.org/wiki/David_Guterson",
+      "https://en.wikipedia.org/wiki/Thomas_Mann",
+      "https://en.wikipedia.org/wiki/Snow_Falling_on_Cedars_%28film%29"
+    ],
+    "evidence_sentence_id": [
+      "David Guterson::sentence::0",
+      "Thomas Mann::sentence::0",
+      "Snow Falling on Cedars (film)::sentence::1"
+    ]
+  },
+  "grafo_claim": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "a7bb7cb2-541e-530f-8f40-0518e7ce3267",
+        "text": "This chunk is about:\n- People: Paul Thomas Mann\n- Works: Snow Falling on Cedars\n- Topics: nationality, authorship\n\nFacts:\n- Paul Thomas Mann was American.\n- Paul Thomas Mann was not the author of Snow Falling on Cedars.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "fcdd0879-0c6a-5b54-8e6f-54cd97a484be",
+        "text": "The novelist Paul Thomas Mann was American, not the author of Snow Falling on Cedars.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "abdef36d-15fa-5b22-9b9f-e8701d9cff95",
+        "text": "text_68a1da86cb7301739df18e4b102bca12",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "15563e3a-833b-5f68-871f-8d39a5adc664",
+        "text": "paul thomas mann",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "99a82eec-bb35-5bb5-9ed2-e73fc7a756de",
+        "text": "person",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "32e5ea46-cca9-5920-8b2d-77357f10ce8d",
+        "text": "american",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "7d08f409-7e55-5a66-935f-7c5c06f9111f",
+        "text": "nationality",
+        "type": "EntityType"
+      },
+      {
+        "id": 7,
+        "original_id": "07207509-7cbf-5035-9472-3c34d4d219f7",
+        "text": "snow falling on cedars",
+        "type": "Entity"
+      },
+      {
+        "id": 8,
+        "original_id": "5263a535-1b4b-5925-be3e-310d03cd303b",
+        "text": "work",
+        "type": "EntityType"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "has_nationality"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 7,
+        "type": "not_author_of"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      },
+      {
+        "source": 7,
+        "target": 8,
+        "type": "is_a"
+      }
+    ]
+  },
+  "grafo_evidencia": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "6e46dd9b-a2c9-5673-9680-84e9f7cb0e4b",
+        "text": "This chunk is about:\n- People: David Guterson, Thomas Mann\n- Works: Snow Falling on Cedars\n- Topics: Literary occupations, Nobel Prize in Literature, Film adaptation\n\nFacts:\n- Thomas Mann was born on 6 June 1875 and died on 12 August 1955.\n- Thomas Mann was a German novelist, short story writer, social critic, philanthropist, and essayist.\n- Thomas Mann received the 1929 Nobel Prize in Literature.\n- David Guterson was born on May 4, 1956.\n- David Guterson is an American novelist, short story writer, poet, journalist, and essayist.\n- The film Snow Falling on Cedars is based on David Guterson's award-winning novel of the same title.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "6b19d18e-dc12-5505-8d40-0af662d61665",
+        "text": "Page: David Guterson. Sentence: David Guterson ( ; born May 4, 1956) is an American novelist, short story writer, poet, journalist, and essayist.\nPage: Thomas Mann. Sentence: Paul Thomas Mann (] ; 6 June 1875 – 12 August 1955) was a German novelist, short story writer, social critic, philanthropist, essayist, and the 1929 Nobel Prize in Literature laureate.\nPage: Snow Falling on Cedars (film). Sentence: It is based on David Guterson's award-winning novel of the same title.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "3961873a-108d-5f1b-b973-202f76338bea",
+        "text": "text_d7ac6d2bd2f486c72115b83976a099d8",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "4e70cc39-ea89-50cf-a41f-a941f8874563",
+        "text": "david guterson",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "99a82eec-bb35-5bb5-9ed2-e73fc7a756de",
+        "text": "person",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "11dca6cc-6189-5da6-a52c-79718148f986",
+        "text": "1956-05-04",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "b19433ae-558c-5aaf-95ac-6231f2a4be0e",
+        "text": "date",
+        "type": "EntityType"
+      },
+      {
+        "id": 7,
+        "original_id": "07207509-7cbf-5035-9472-3c34d4d219f7",
+        "text": "snow falling on cedars",
+        "type": "Entity"
+      },
+      {
+        "id": 8,
+        "original_id": "5263a535-1b4b-5925-be3e-310d03cd303b",
+        "text": "work",
+        "type": "EntityType"
+      },
+      {
+        "id": 9,
+        "original_id": "7e49e0bd-c5d4-5428-a37e-826c5b134dad",
+        "text": "thomas mann",
+        "type": "Entity"
+      },
+      {
+        "id": 10,
+        "original_id": "3cb26afa-145c-56fc-b54b-06a3fb8129fe",
+        "text": "1875-06-06",
+        "type": "Entity"
+      },
+      {
+        "id": 11,
+        "original_id": "d26012b1-4076-583b-808c-65c4bb0cf2ed",
+        "text": "1955-08-12",
+        "type": "Entity"
+      },
+      {
+        "id": 12,
+        "original_id": "4eb1941a-aa07-5601-aa59-70a3d21e48eb",
+        "text": "1929 nobel prize in literature",
+        "type": "Entity"
+      },
+      {
+        "id": 13,
+        "original_id": "38e42125-31f4-5cd6-993c-dbbc06a88910",
+        "text": "award",
+        "type": "EntityType"
+      },
+      {
+        "id": 14,
+        "original_id": "5b5c2661-0211-5475-a49d-94d49966efad",
+        "text": "snow falling on cedars (film)",
+        "type": "Entity"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 9,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "born_on"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 10,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 11,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 7,
+        "type": "wrote"
+      },
+      {
+        "source": 14,
+        "target": 7,
+        "type": "based_on"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      },
+      {
+        "source": 7,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 14,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 9,
+        "type": "contains"
+      },
+      {
+        "source": 9,
+        "target": 10,
+        "type": "born_on"
+      },
+      {
+        "source": 1,
+        "target": 10,
+        "type": "contains"
+      },
+      {
+        "source": 9,
+        "target": 11,
+        "type": "died_on"
+      },
+      {
+        "source": 1,
+        "target": 11,
+        "type": "contains"
+      },
+      {
+        "source": 9,
+        "target": 12,
+        "type": "received"
+      },
+      {
+        "source": 1,
+        "target": 12,
+        "type": "contains"
+      },
+      {
+        "source": 12,
+        "target": 13,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 14,
+        "type": "contains"
+      }
+    ]
+  }
+}

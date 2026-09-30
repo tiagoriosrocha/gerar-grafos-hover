@@ -1,0 +1,427 @@
+{
+  "dataset": "hover",
+  "id": "90100e99-c106-4795-bfa1-13e7ac3541cb",
+  "split": "dev",
+  "claim": "Carnegie Mellon University, not the institution which is home to the Lyme Academy of Fine Arts, is a university in Pennsylvania.",
+  "evidencia": "Page: University of New Haven. Sentence: The University of New Haven (UNH) is a private, nonsectarian, coeducational university located in West Haven, Connecticut, which borders the larger city of New Haven and Long Island Sound.\nPage: Carnegie Mellon University. Sentence: Carnegie Mellon University (Carnegie Mellon or CMU or ) is a private research university in Pittsburgh, Pennsylvania.\nPage: Lyme Academy College of Fine Arts. Sentence: The Lyme Academy College of Fine Arts is an art college in Old Lyme, Connecticut and, since 2014, a constituent college of the University of New Haven.",
+  "evidence_text": "Page: University of New Haven. Sentence: The University of New Haven (UNH) is a private, nonsectarian, coeducational university located in West Haven, Connecticut, which borders the larger city of New Haven and Long Island Sound.\nPage: Carnegie Mellon University. Sentence: Carnegie Mellon University (Carnegie Mellon or CMU or ) is a private research university in Pittsburgh, Pennsylvania.\nPage: Lyme Academy College of Fine Arts. Sentence: The Lyme Academy College of Fine Arts is an art college in Old Lyme, Connecticut and, since 2014, a constituent college of the University of New Haven.",
+  "label": "SUPPORTED",
+  "num_hops": 3,
+  "hover_metadata": {
+    "supporting_facts": [
+      [
+        "University of New Haven",
+        0
+      ],
+      [
+        "Carnegie Mellon University",
+        0
+      ],
+      [
+        "Lyme Academy College of Fine Arts",
+        0
+      ]
+    ],
+    "num_hops": 3,
+    "evidence_annotation_id": [
+      0
+    ],
+    "evidence_id": [
+      "University of New Haven::sentence::0",
+      "Carnegie Mellon University::sentence::0",
+      "Lyme Academy College of Fine Arts::sentence::0"
+    ],
+    "evidence_wiki_url": [
+      "https://en.wikipedia.org/wiki/University_of_New_Haven",
+      "https://en.wikipedia.org/wiki/Carnegie_Mellon_University",
+      "https://en.wikipedia.org/wiki/Lyme_Academy_College_of_Fine_Arts"
+    ],
+    "evidence_sentence_id": [
+      "University of New Haven::sentence::0",
+      "Carnegie Mellon University::sentence::0",
+      "Lyme Academy College of Fine Arts::sentence::0"
+    ]
+  },
+  "grafo_claim": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "88a605ed-a5d4-5c93-9e95-5437db094b38",
+        "text": "This chunk is about:\n- Organizations: Carnegie Mellon University, Lyme Academy of Fine Arts\n- Places: Pennsylvania\n\nFacts:\n- Carnegie Mellon University is a university in Pennsylvania.\n- Lyme Academy of Fine Arts is not part of Carnegie Mellon University.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "6350e19a-d436-5f2c-b1ed-7b65021a2559",
+        "text": "Carnegie Mellon University, not the institution which is home to the Lyme Academy of Fine Arts, is a university in Pennsylvania.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "25e701af-2053-5120-aba5-bb2953f5219e",
+        "text": "text_a9dc5e303e3b86bd71d3cafba3132cd3",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "2895b8b8-0494-5785-ac01-c85b235fb7e7",
+        "text": "carnegie mellon university",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "388f60fb-220d-55e8-ae9c-3ac93cead308",
+        "text": "organization",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "6fa14bac-67c5-524c-8d9d-ef87a3f08dd1",
+        "text": "pennsylvania",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "5f394058-b2a0-5ba8-8466-ba2a18cfcf4e",
+        "text": "place",
+        "type": "EntityType"
+      },
+      {
+        "id": 7,
+        "original_id": "d899f788-88e4-55a4-815c-90d1598a44e3",
+        "text": "lyme academy of fine arts",
+        "type": "Entity"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 7,
+        "target": 3,
+        "type": "not_home_institution"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 7,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "located_in"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      }
+    ]
+  },
+  "grafo_evidencia": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "a922683d-e964-5945-86f4-e9307533780c",
+        "text": "This chunk is about:\n- Organizations: University of New Haven, Carnegie Mellon University, Lyme Academy College of Fine Arts\n- Places: West Haven, New Haven, Connecticut, Pittsburgh, Pennsylvania, Old Lyme, Long Island Sound\n- Topics: private universities, research universities, art colleges, constituent colleges\n\nFacts:\n- The University of New Haven is a private, nonsectarian, coeducational university located in West Haven, Connecticut, near New Haven and Long Island Sound.\n- Carnegie Mellon University is a private research university located in Pittsburgh, Pennsylvania.\n- Since 2014, Lyme Academy College of Fine Arts in Old Lyme, Connecticut, has been a constituent college of the University of New Haven.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "e0c0b346-be9a-54f7-9009-8d26b5ad6de1",
+        "text": "Page: University of New Haven. Sentence: The University of New Haven (UNH) is a private, nonsectarian, coeducational university located in West Haven, Connecticut, which borders the larger city of New Haven and Long Island Sound.\nPage: Carnegie Mellon University. Sentence: Carnegie Mellon University (Carnegie Mellon or CMU or ) is a private research university in Pittsburgh, Pennsylvania.\nPage: Lyme Academy College of Fine Arts. Sentence: The Lyme Academy College of Fine Arts is an art college in Old Lyme, Connecticut and, since 2014, a constituent college of the University of New Haven.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "057d7b6d-10e6-5e90-b555-9322f40225c8",
+        "text": "text_dedb1fe2e4852e89b4a99057c0b91d46",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "2827f07c-e585-5c9d-a1e1-eb88f4cec701",
+        "text": "university of new haven",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "388f60fb-220d-55e8-ae9c-3ac93cead308",
+        "text": "organization",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "103f53d7-074f-56df-a365-c3dd5915077d",
+        "text": "west haven",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "5f394058-b2a0-5ba8-8466-ba2a18cfcf4e",
+        "text": "place",
+        "type": "EntityType"
+      },
+      {
+        "id": 7,
+        "original_id": "41d83147-79b6-55d6-8298-0b7031edadde",
+        "text": "connecticut",
+        "type": "Entity"
+      },
+      {
+        "id": 8,
+        "original_id": "9a03e84a-010c-5f83-8423-106ebaecc018",
+        "text": "new haven",
+        "type": "Entity"
+      },
+      {
+        "id": 9,
+        "original_id": "3cd8c8e6-12da-5f27-9033-bd37e2ad8f9c",
+        "text": "long island sound",
+        "type": "Entity"
+      },
+      {
+        "id": 10,
+        "original_id": "2895b8b8-0494-5785-ac01-c85b235fb7e7",
+        "text": "carnegie mellon university",
+        "type": "Entity"
+      },
+      {
+        "id": 11,
+        "original_id": "4b4b8008-5dd3-5968-8a0f-1b827c8e7a5c",
+        "text": "pittsburgh",
+        "type": "Entity"
+      },
+      {
+        "id": 12,
+        "original_id": "6fa14bac-67c5-524c-8d9d-ef87a3f08dd1",
+        "text": "pennsylvania",
+        "type": "Entity"
+      },
+      {
+        "id": 13,
+        "original_id": "ec519d63-34e8-51d0-a670-6974de9b1df3",
+        "text": "lyme academy college of fine arts",
+        "type": "Entity"
+      },
+      {
+        "id": 14,
+        "original_id": "79c5b66a-0811-53e9-a15e-751f686f6b02",
+        "text": "old lyme",
+        "type": "Entity"
+      },
+      {
+        "id": 15,
+        "original_id": "8b81e666-937e-557b-9b2d-fbabf5175591",
+        "text": "2014",
+        "type": "Entity"
+      },
+      {
+        "id": 16,
+        "original_id": "b19433ae-558c-5aaf-95ac-6231f2a4be0e",
+        "text": "date",
+        "type": "EntityType"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 13,
+        "target": 3,
+        "type": "constituent_college_of"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 10,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 13,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "located_in"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 7,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 8,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 9,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 11,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 12,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 14,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 5,
+        "target": 7,
+        "type": "located_in"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      },
+      {
+        "source": 14,
+        "target": 7,
+        "type": "located_in"
+      },
+      {
+        "source": 5,
+        "target": 8,
+        "type": "borders"
+      },
+      {
+        "source": 1,
+        "target": 8,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 9,
+        "type": "borders"
+      },
+      {
+        "source": 1,
+        "target": 9,
+        "type": "contains"
+      },
+      {
+        "source": 1,
+        "target": 10,
+        "type": "contains"
+      },
+      {
+        "source": 10,
+        "target": 11,
+        "type": "located_in"
+      },
+      {
+        "source": 1,
+        "target": 11,
+        "type": "contains"
+      },
+      {
+        "source": 11,
+        "target": 12,
+        "type": "located_in"
+      },
+      {
+        "source": 1,
+        "target": 12,
+        "type": "contains"
+      },
+      {
+        "source": 1,
+        "target": 13,
+        "type": "contains"
+      },
+      {
+        "source": 13,
+        "target": 14,
+        "type": "located_in"
+      },
+      {
+        "source": 1,
+        "target": 14,
+        "type": "contains"
+      },
+      {
+        "source": 13,
+        "target": 15,
+        "type": "became_constituent_in"
+      },
+      {
+        "source": 1,
+        "target": 15,
+        "type": "contains"
+      },
+      {
+        "source": 15,
+        "target": 16,
+        "type": "is_a"
+      }
+    ]
+  }
+}

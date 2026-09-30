@@ -1,0 +1,509 @@
+{
+  "dataset": "hover",
+  "id": "cfafcb53-b8c5-488d-9b9d-1ac8c64bb37c",
+  "split": "train",
+  "claim": "Mikhail Glinka is not the same nationality as another composer. This composer wrote the opera \"I puritani\"",
+  "evidencia": "Page: Vincenzo Bellini. Sentence: Vincenzo Salvatore Carmelo Francesco Bellini (] ; 3 November 1801 – 23 September 1835) was an Italian opera composer, who was known for his long-flowing melodic lines for which he was named \"the Swan of Catania\".\nPage: Mikhail Glinka. Sentence: Mikhail Ivanovich Glinka (Russian: Михаи́л Ива́нович Гли́нка ; 1 June [O.S. 20 May] 1804 15 February [O.S. 3 February] 1857 ) was the first Russian composer to gain wide recognition within his own country, and is often regarded as the fountainhead of Russian classical music.\nPage: I puritani. Sentence: I puritani (\"The Puritans\") is an opera in by Vincenzo Bellini.",
+  "evidence_text": "Page: Vincenzo Bellini. Sentence: Vincenzo Salvatore Carmelo Francesco Bellini (] ; 3 November 1801 – 23 September 1835) was an Italian opera composer, who was known for his long-flowing melodic lines for which he was named \"the Swan of Catania\".\nPage: Mikhail Glinka. Sentence: Mikhail Ivanovich Glinka (Russian: Михаи́л Ива́нович Гли́нка ; 1 June [O.S. 20 May] 1804 15 February [O.S. 3 February] 1857 ) was the first Russian composer to gain wide recognition within his own country, and is often regarded as the fountainhead of Russian classical music.\nPage: I puritani. Sentence: I puritani (\"The Puritans\") is an opera in by Vincenzo Bellini.",
+  "label": "SUPPORTED",
+  "num_hops": 3,
+  "hover_metadata": {
+    "supporting_facts": [
+      [
+        "Vincenzo Bellini",
+        0
+      ],
+      [
+        "Mikhail Glinka",
+        0
+      ],
+      [
+        "I puritani",
+        0
+      ]
+    ],
+    "num_hops": 3,
+    "evidence_annotation_id": [
+      0
+    ],
+    "evidence_id": [
+      "Vincenzo Bellini::sentence::0",
+      "Mikhail Glinka::sentence::0",
+      "I puritani::sentence::0"
+    ],
+    "evidence_wiki_url": [
+      "https://en.wikipedia.org/wiki/Vincenzo_Bellini",
+      "https://en.wikipedia.org/wiki/Mikhail_Glinka",
+      "https://en.wikipedia.org/wiki/I_puritani"
+    ],
+    "evidence_sentence_id": [
+      "Vincenzo Bellini::sentence::0",
+      "Mikhail Glinka::sentence::0",
+      "I puritani::sentence::0"
+    ]
+  },
+  "grafo_claim": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "84bc144c-b070-5cda-ae1d-4ee01bca2192",
+        "text": "This chunk is about:\n- People: Mikhail Glinka, Vincenzo Bellini\n- Topics: Nationality, Opera\n\nFacts:\n- Vincenzo Bellini wrote the opera \"I puritani.\"\n- Mikhail Glinka is not the same nationality as Vincenzo Bellini.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "7bc3491d-5219-566a-a51f-68fe5e0950f7",
+        "text": "Mikhail Glinka is not the same nationality as another composer. This composer wrote the opera \"I puritani\"",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "161483ea-bf57-53fe-8f02-8d4172d70725",
+        "text": "text_1e6b80f03ccde5ed155ecf8e9273ce05",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "713169a5-a2c8-511f-a37d-f36c56e8846e",
+        "text": "mikhail glinka",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "99a82eec-bb35-5bb5-9ed2-e73fc7a756de",
+        "text": "person",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "aa9cd4df-8bb0-59d2-a0f2-d3bc5809fa2f",
+        "text": "another composer",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "d24aea91-729e-5100-a5ea-e0060bd8f08e",
+        "text": "i puritani",
+        "type": "Entity"
+      },
+      {
+        "id": 7,
+        "original_id": "5263a535-1b4b-5925-be3e-310d03cd303b",
+        "text": "work",
+        "type": "EntityType"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 5,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "has_different_nationality_from"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "wrote"
+      },
+      {
+        "source": 1,
+        "target": 6,
+        "type": "contains"
+      },
+      {
+        "source": 6,
+        "target": 7,
+        "type": "is_a"
+      }
+    ]
+  },
+  "grafo_evidencia": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "187a6e0a-b887-5461-970f-134fcebc052d",
+        "text": "This chunk is about:\n- People: Vincenzo Bellini, Mikhail Glinka\n- Works: I puritani\n- Topics: Opera, classical music\n\nFacts:\n- Vincenzo Bellini was born on 3 November 1801 and died on 23 September 1835.\n- Mikhail Glinka was born on 1 June 1804 (20 May O.S.) and died on 15 February 1857 (3 February O.S.).\n- Vincenzo Bellini was an Italian opera composer known for his long-flowing melodic lines and was called \"the Swan of Catania.\"\n- Mikhail Glinka was the first Russian composer to gain wide recognition within Russia and is often regarded as the fountainhead of Russian classical music.\n- I puritani (\"The Puritans\") is an opera by Vincenzo Bellini.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "fc2fa5be-a387-53e2-94b5-61d81903e87e",
+        "text": "Page: Vincenzo Bellini. Sentence: Vincenzo Salvatore Carmelo Francesco Bellini (] ; 3 November 1801 – 23 September 1835) was an Italian opera composer, who was known for his long-flowing melodic lines for which he was named \"the Swan of Catania\".\nPage: Mikhail Glinka. Sentence: Mikhail Ivanovich Glinka (Russian: Михаи́л Ива́нович Гли́нка ; 1 June [O.S. 20 May] 1804 15 February [O.S. 3 February] 1857 ) was the first Russian composer to gain wide recognition within his own country, and is often regarded as the fountainhead of Russian classical music.\nPage: I puritani. Sentence: I puritani (\"The Puritans\") is an opera in by Vincenzo Bellini.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "049a8960-47e5-5529-8a4d-e7897349e39e",
+        "text": "text_a5a12507d9e71aed4d134d0bdb063a38",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "44cf0bd4-9a3e-5553-94b1-23238b6b9371",
+        "text": "vincenzo bellini",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "99a82eec-bb35-5bb5-9ed2-e73fc7a756de",
+        "text": "person",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "c34d8ee9-e542-5588-ba6c-8316ec3bb966",
+        "text": "1801-11-03",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "b19433ae-558c-5aaf-95ac-6231f2a4be0e",
+        "text": "date",
+        "type": "EntityType"
+      },
+      {
+        "id": 7,
+        "original_id": "7da83782-6c96-5085-99ae-e324acb64360",
+        "text": "1835-09-23",
+        "type": "Entity"
+      },
+      {
+        "id": 8,
+        "original_id": "4be299b0-54e9-576d-9883-971f84741fbb",
+        "text": "italian",
+        "type": "Entity"
+      },
+      {
+        "id": 9,
+        "original_id": "7d08f409-7e55-5a66-935f-7c5c06f9111f",
+        "text": "nationality",
+        "type": "EntityType"
+      },
+      {
+        "id": 10,
+        "original_id": "a9e67500-c635-523a-8479-9a2683ab77f7",
+        "text": "opera composer",
+        "type": "Entity"
+      },
+      {
+        "id": 11,
+        "original_id": "9d80eb43-32fa-561c-9371-91f180ebcb6c",
+        "text": "profession",
+        "type": "EntityType"
+      },
+      {
+        "id": 12,
+        "original_id": "3f8c508e-f3dc-573d-b423-f0a66b844ab1",
+        "text": "the swan of catania",
+        "type": "Entity"
+      },
+      {
+        "id": 13,
+        "original_id": "4fb639a0-083a-5b92-8c23-a04b01bc6b29",
+        "text": "title",
+        "type": "EntityType"
+      },
+      {
+        "id": 14,
+        "original_id": "713169a5-a2c8-511f-a37d-f36c56e8846e",
+        "text": "mikhail glinka",
+        "type": "Entity"
+      },
+      {
+        "id": 15,
+        "original_id": "c130acd4-2028-52e4-bb2a-94a6d7ff1bde",
+        "text": "1804-06-01",
+        "type": "Entity"
+      },
+      {
+        "id": 16,
+        "original_id": "3898b89a-d987-5cbf-b491-323168dee26c",
+        "text": "1857-02-15",
+        "type": "Entity"
+      },
+      {
+        "id": 17,
+        "original_id": "2b06e052-3291-5080-8162-bb736fef5605",
+        "text": "russian",
+        "type": "Entity"
+      },
+      {
+        "id": 18,
+        "original_id": "01148e41-b28b-5b7b-8db5-0784ff5a61d1",
+        "text": "composer",
+        "type": "Entity"
+      },
+      {
+        "id": 19,
+        "original_id": "a2fd3656-f416-5e76-a0c7-3380e8912bc8",
+        "text": "russian classical music",
+        "type": "Entity"
+      },
+      {
+        "id": 20,
+        "original_id": "054b211b-7f6a-57e2-b885-189c9432f1c4",
+        "text": "music genre",
+        "type": "EntityType"
+      },
+      {
+        "id": 21,
+        "original_id": "d24aea91-729e-5100-a5ea-e0060bd8f08e",
+        "text": "i puritani",
+        "type": "Entity"
+      },
+      {
+        "id": 22,
+        "original_id": "5263a535-1b4b-5925-be3e-310d03cd303b",
+        "text": "work",
+        "type": "EntityType"
+      },
+      {
+        "id": 23,
+        "original_id": "5e9fc844-139c-5ece-8a01-f169cb6babd8",
+        "text": "the puritans",
+        "type": "Entity"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 21,
+        "target": 3,
+        "type": "composed_by"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 14,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "born_on"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 7,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 15,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 16,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 7,
+        "type": "died_on"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 8,
+        "type": "has_nationality"
+      },
+      {
+        "source": 1,
+        "target": 8,
+        "type": "contains"
+      },
+      {
+        "source": 8,
+        "target": 9,
+        "type": "is_a"
+      },
+      {
+        "source": 17,
+        "target": 9,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 10,
+        "type": "has_profession"
+      },
+      {
+        "source": 1,
+        "target": 10,
+        "type": "contains"
+      },
+      {
+        "source": 10,
+        "target": 11,
+        "type": "is_a"
+      },
+      {
+        "source": 18,
+        "target": 11,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 12,
+        "type": "has_title"
+      },
+      {
+        "source": 1,
+        "target": 12,
+        "type": "contains"
+      },
+      {
+        "source": 12,
+        "target": 13,
+        "type": "is_a"
+      },
+      {
+        "source": 23,
+        "target": 13,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 14,
+        "type": "contains"
+      },
+      {
+        "source": 14,
+        "target": 15,
+        "type": "born_on"
+      },
+      {
+        "source": 1,
+        "target": 15,
+        "type": "contains"
+      },
+      {
+        "source": 14,
+        "target": 16,
+        "type": "died_on"
+      },
+      {
+        "source": 1,
+        "target": 16,
+        "type": "contains"
+      },
+      {
+        "source": 14,
+        "target": 17,
+        "type": "has_nationality"
+      },
+      {
+        "source": 1,
+        "target": 17,
+        "type": "contains"
+      },
+      {
+        "source": 14,
+        "target": 18,
+        "type": "has_profession"
+      },
+      {
+        "source": 1,
+        "target": 18,
+        "type": "contains"
+      },
+      {
+        "source": 14,
+        "target": 19,
+        "type": "is_regarded_as_fountainhead_of"
+      },
+      {
+        "source": 1,
+        "target": 19,
+        "type": "contains"
+      },
+      {
+        "source": 19,
+        "target": 20,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 21,
+        "type": "contains"
+      },
+      {
+        "source": 21,
+        "target": 22,
+        "type": "is_a"
+      },
+      {
+        "source": 21,
+        "target": 23,
+        "type": "translated_as"
+      },
+      {
+        "source": 1,
+        "target": 23,
+        "type": "contains"
+      }
+    ]
+  }
+}

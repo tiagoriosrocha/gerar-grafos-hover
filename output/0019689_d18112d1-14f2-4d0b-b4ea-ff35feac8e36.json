@@ -1,0 +1,502 @@
+{
+  "dataset": "hover",
+  "id": "d18112d1-14f2-4d0b-b4ea-ff35feac8e36",
+  "split": "dev",
+  "claim": "Mazda is not the manufacturer of the car used as design inspiration for the platform, the underpinnings of which are shared by both the Ford Escape and Tribute.",
+  "evidencia": "Page: Ford CD2 platform. Sentence: The design is based on Mazda's GF platform, used by the Mazda Capella/626.\nPage: Mazda Capella. Sentence: The Mazda Capella is a mid-size car that was manufactured by Mazda from 1970 to 2002.\nPage: Ford Escape. Sentence: Although the Escape and Tribute share the same underpinnings constructed from the Ford CD2 platform (based on Mazda GF underpinnings), the only panels common to the two vehicles are the roof and floor pressings.",
+  "evidence_text": "Page: Ford CD2 platform. Sentence: The design is based on Mazda's GF platform, used by the Mazda Capella/626.\nPage: Mazda Capella. Sentence: The Mazda Capella is a mid-size car that was manufactured by Mazda from 1970 to 2002.\nPage: Ford Escape. Sentence: Although the Escape and Tribute share the same underpinnings constructed from the Ford CD2 platform (based on Mazda GF underpinnings), the only panels common to the two vehicles are the roof and floor pressings.",
+  "label": "NOT_SUPPORTED",
+  "num_hops": 3,
+  "hover_metadata": {
+    "supporting_facts": [
+      [
+        "Ford CD2 platform",
+        2
+      ],
+      [
+        "Mazda Capella",
+        0
+      ],
+      [
+        "Ford Escape",
+        2
+      ]
+    ],
+    "num_hops": 3,
+    "evidence_annotation_id": [
+      0
+    ],
+    "evidence_id": [
+      "Ford CD2 platform::sentence::2",
+      "Mazda Capella::sentence::0",
+      "Ford Escape::sentence::2"
+    ],
+    "evidence_wiki_url": [
+      "https://en.wikipedia.org/wiki/Ford_CD2_platform",
+      "https://en.wikipedia.org/wiki/Mazda_Capella",
+      "https://en.wikipedia.org/wiki/Ford_Escape"
+    ],
+    "evidence_sentence_id": [
+      "Ford CD2 platform::sentence::2",
+      "Mazda Capella::sentence::0",
+      "Ford Escape::sentence::2"
+    ]
+  },
+  "grafo_claim": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "aaf4157a-3ce7-5e7f-9e6d-d81dc222ca32",
+        "text": "This chunk is about:\n- Companies: Mazda, Ford\n- Products: Ford Escape, Mazda Tribute\n- Systems: vehicle platform\n- Concepts: design inspiration, shared underpinnings\n\nFacts:\n- Ford manufactures the Ford Escape.\n- Mazda manufactures the Mazda Tribute.\n- The Ford Escape and Mazda Tribute share the same vehicle platform underpinnings.\n- Mazda is not the manufacturer of the car that was used as the design inspiration for that shared platform.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "1e557e58-5845-5d9e-bd22-5a8637efa127",
+        "text": "Mazda is not the manufacturer of the car used as design inspiration for the platform, the underpinnings of which are shared by both the Ford Escape and Tribute.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "0b4ec558-a9b8-5091-9c03-609014e3b211",
+        "text": "text_6722f95a54d8ca6a26cfba7fc030b21b",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "b02901d8-d525-5df9-a0d2-5b08bb564534",
+        "text": "mazda",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "388f60fb-220d-55e8-ae9c-3ac93cead308",
+        "text": "organization",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "3be0f341-6f08-56d6-a7ab-7682d79695be",
+        "text": "car used as design inspiration",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "f76d57aa-4740-5218-9539-0e0978cbf183",
+        "text": "product",
+        "type": "EntityType"
+      },
+      {
+        "id": 7,
+        "original_id": "8fad9ebf-03e7-5557-a327-243fe5518fb7",
+        "text": "platform",
+        "type": "Entity"
+      },
+      {
+        "id": 8,
+        "original_id": "d2a381fa-3658-5ca6-ada9-2109cfc9331d",
+        "text": "concept",
+        "type": "EntityType"
+      },
+      {
+        "id": 9,
+        "original_id": "51e011ce-fbeb-5f0d-8718-a2f0938163b7",
+        "text": "ford escape",
+        "type": "Entity"
+      },
+      {
+        "id": 10,
+        "original_id": "77eead57-cfe2-53b4-8fd8-67cf0535c48c",
+        "text": "mazda tribute",
+        "type": "Entity"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "is_not_manufacturer_of"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 9,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 10,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 5,
+        "target": 7,
+        "type": "inspired_design_of"
+      },
+      {
+        "source": 9,
+        "target": 7,
+        "type": "shares_underpinnings_with"
+      },
+      {
+        "source": 10,
+        "target": 7,
+        "type": "shares_underpinnings_with"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      },
+      {
+        "source": 7,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 9,
+        "type": "contains"
+      },
+      {
+        "source": 1,
+        "target": 10,
+        "type": "contains"
+      }
+    ]
+  },
+  "grafo_evidencia": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "e71353c4-d76b-52b6-97de-4fea6b5ea6e0",
+        "text": "This chunk is about:\n- Platforms: Ford CD2 platform, Mazda GF platform\n- Products: Mazda Capella/626, Mazda Capella, Ford Escape, Mazda Tribute\n- Companies: Ford, Mazda\n\nFacts:\n- Mazda manufactured the Mazda Capella, a mid-size car, from 1970 to 2002.\n- The Ford CD2 platform design is based on Mazda's GF platform.\n- Mazda used the GF platform for the Mazda Capella/626.\n- The Ford Escape and Mazda Tribute share underpinnings constructed from the Ford CD2 platform.\n- The Ford CD2 platform is based on Mazda GF underpinnings in the Ford Escape and Mazda Tribute.\n- The Ford Escape and Mazda Tribute share only the roof and floor pressings as common body panels.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "ca96c7ce-543f-56b3-95e5-e8e8efdac37d",
+        "text": "Page: Ford CD2 platform. Sentence: The design is based on Mazda's GF platform, used by the Mazda Capella/626.\nPage: Mazda Capella. Sentence: The Mazda Capella is a mid-size car that was manufactured by Mazda from 1970 to 2002.\nPage: Ford Escape. Sentence: Although the Escape and Tribute share the same underpinnings constructed from the Ford CD2 platform (based on Mazda GF underpinnings), the only panels common to the two vehicles are the roof and floor pressings.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "bcd04838-635e-5312-849b-b2fbcf06b4b1",
+        "text": "text_43d4094ea3e4fe7f46a6f46cf10cafcd",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "9471197a-9a75-5f9f-aa7e-d3e0d88cb1c7",
+        "text": "ford cd2 platform",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "295ffe32-51cd-5bbd-b775-06bbb0cca1ed",
+        "text": "platform",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "4103d45b-34fa-537b-8e12-73f3d62c505e",
+        "text": "mazda gf platform",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "a75b8709-4570-5cad-a378-be38e8386eab",
+        "text": "mazda capella",
+        "type": "Entity"
+      },
+      {
+        "id": 7,
+        "original_id": "e4bbd678-157f-5349-ad0d-b822c3021210",
+        "text": "car",
+        "type": "EntityType"
+      },
+      {
+        "id": 8,
+        "original_id": "b02901d8-d525-5df9-a0d2-5b08bb564534",
+        "text": "mazda",
+        "type": "Entity"
+      },
+      {
+        "id": 9,
+        "original_id": "388f60fb-220d-55e8-ae9c-3ac93cead308",
+        "text": "organization",
+        "type": "EntityType"
+      },
+      {
+        "id": 10,
+        "original_id": "355cf8f5-d714-5717-85b1-e6823bb908b0",
+        "text": "1970",
+        "type": "Entity"
+      },
+      {
+        "id": 11,
+        "original_id": "b19433ae-558c-5aaf-95ac-6231f2a4be0e",
+        "text": "date",
+        "type": "EntityType"
+      },
+      {
+        "id": 12,
+        "original_id": "d4028376-9599-5def-be60-886e367316ac",
+        "text": "2002",
+        "type": "Entity"
+      },
+      {
+        "id": 13,
+        "original_id": "bbad658f-d508-5bab-8406-9baac8f23c64",
+        "text": "mazda 626",
+        "type": "Entity"
+      },
+      {
+        "id": 14,
+        "original_id": "51e011ce-fbeb-5f0d-8718-a2f0938163b7",
+        "text": "ford escape",
+        "type": "Entity"
+      },
+      {
+        "id": 15,
+        "original_id": "77eead57-cfe2-53b4-8fd8-67cf0535c48c",
+        "text": "mazda tribute",
+        "type": "Entity"
+      },
+      {
+        "id": 16,
+        "original_id": "fff32457-5e2f-5a51-a06c-85c09e9155d5",
+        "text": "roof",
+        "type": "Entity"
+      },
+      {
+        "id": 17,
+        "original_id": "c5191647-d005-525e-b04f-d31af4eccd3d",
+        "text": "car part",
+        "type": "EntityType"
+      },
+      {
+        "id": 18,
+        "original_id": "1e89d775-6611-5376-bca3-443981d25ddf",
+        "text": "floor pressings",
+        "type": "Entity"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 15,
+        "target": 3,
+        "type": "has_underpinnings_constructed_from"
+      },
+      {
+        "source": 14,
+        "target": 3,
+        "type": "has_underpinnings_constructed_from"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 5,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "is_based_on"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "used_by"
+      },
+      {
+        "source": 1,
+        "target": 6,
+        "type": "contains"
+      },
+      {
+        "source": 6,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 13,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 14,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 15,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 6,
+        "target": 8,
+        "type": "manufactured_by"
+      },
+      {
+        "source": 1,
+        "target": 8,
+        "type": "contains"
+      },
+      {
+        "source": 8,
+        "target": 9,
+        "type": "is_a"
+      },
+      {
+        "source": 6,
+        "target": 10,
+        "type": "manufacturing_started_in"
+      },
+      {
+        "source": 1,
+        "target": 10,
+        "type": "contains"
+      },
+      {
+        "source": 10,
+        "target": 11,
+        "type": "is_a"
+      },
+      {
+        "source": 12,
+        "target": 11,
+        "type": "is_a"
+      },
+      {
+        "source": 6,
+        "target": 12,
+        "type": "manufacturing_ended_in"
+      },
+      {
+        "source": 1,
+        "target": 12,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 13,
+        "type": "used_by"
+      },
+      {
+        "source": 1,
+        "target": 13,
+        "type": "contains"
+      },
+      {
+        "source": 1,
+        "target": 14,
+        "type": "contains"
+      },
+      {
+        "source": 14,
+        "target": 15,
+        "type": "shares_underpinnings_with"
+      },
+      {
+        "source": 1,
+        "target": 15,
+        "type": "contains"
+      },
+      {
+        "source": 15,
+        "target": 16,
+        "type": "has_panel_in_common_with_ford_escape"
+      },
+      {
+        "source": 14,
+        "target": 16,
+        "type": "has_panel_in_common_with_mazda_tribute"
+      },
+      {
+        "source": 1,
+        "target": 16,
+        "type": "contains"
+      },
+      {
+        "source": 16,
+        "target": 17,
+        "type": "is_a"
+      },
+      {
+        "source": 18,
+        "target": 17,
+        "type": "is_a"
+      },
+      {
+        "source": 15,
+        "target": 18,
+        "type": "has_panel_in_common_with_ford_escape"
+      },
+      {
+        "source": 14,
+        "target": 18,
+        "type": "has_panel_in_common_with_mazda_tribute"
+      },
+      {
+        "source": 1,
+        "target": 18,
+        "type": "contains"
+      }
+    ]
+  }
+}

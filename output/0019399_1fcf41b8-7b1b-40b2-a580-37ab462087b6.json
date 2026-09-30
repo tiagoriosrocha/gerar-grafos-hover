@@ -1,0 +1,400 @@
+{
+  "dataset": "hover",
+  "id": "1fcf41b8-7b1b-40b2-a580-37ab462087b6",
+  "split": "dev",
+  "claim": "The genus for Monstera acuminata does not have more species than Cercis.",
+  "evidencia": "Page: Monstera. Sentence: Monstera is a genus of about 50 species of flowering plants in the arum family, Araceae, native to tropical regions of the Americas.\nPage: Cercis. Sentence: Cercis , is a genus of about 10 species in the subfamily Cercidoideae of the pea family Fabaceae, native to warm temperate regions.\nPage: Monstera acuminata. Sentence: It is abundant in central Petén and extends north to San Luis Potosí, making it the northernmost of the species of \"Monstera.\"",
+  "evidence_text": "Page: Monstera. Sentence: Monstera is a genus of about 50 species of flowering plants in the arum family, Araceae, native to tropical regions of the Americas.\nPage: Cercis. Sentence: Cercis , is a genus of about 10 species in the subfamily Cercidoideae of the pea family Fabaceae, native to warm temperate regions.\nPage: Monstera acuminata. Sentence: It is abundant in central Petén and extends north to San Luis Potosí, making it the northernmost of the species of \"Monstera.\"",
+  "label": "NOT_SUPPORTED",
+  "num_hops": 3,
+  "hover_metadata": {
+    "supporting_facts": [
+      [
+        "Monstera",
+        0
+      ],
+      [
+        "Cercis",
+        0
+      ],
+      [
+        "Monstera acuminata",
+        1
+      ]
+    ],
+    "num_hops": 3,
+    "evidence_annotation_id": [
+      0
+    ],
+    "evidence_id": [
+      "Monstera::sentence::0",
+      "Cercis::sentence::0",
+      "Monstera acuminata::sentence::1"
+    ],
+    "evidence_wiki_url": [
+      "https://en.wikipedia.org/wiki/Monstera",
+      "https://en.wikipedia.org/wiki/Cercis",
+      "https://en.wikipedia.org/wiki/Monstera_acuminata"
+    ],
+    "evidence_sentence_id": [
+      "Monstera::sentence::0",
+      "Cercis::sentence::0",
+      "Monstera acuminata::sentence::1"
+    ]
+  },
+  "grafo_claim": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "07ca6f28-5e9d-5276-b7a5-f5a345a78242",
+        "text": "This chunk is about:\n- Concepts: comparative taxonomy, species-count comparison, negation\n- Taxa: Monstera acuminata, Monstera, Cercis\n\nFacts:\n- Monstera acuminata belongs to the genus Monstera.\n- The genus Monstera does not have more species than the genus Cercis.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "19e76b42-20e3-5c79-be70-7262e46c94cc",
+        "text": "The genus for Monstera acuminata does not have more species than Cercis.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "bdb56652-9aee-5ac2-8721-686ac5bc2f96",
+        "text": "text_d80eeb880d01e335e72167636085cad5",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "7abf8ddc-c83a-5e36-834e-0caf2489cb1b",
+        "text": "monstera acuminata",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "2df43048-b175-54c2-b72b-0ff24f41e4f1",
+        "text": "plant",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "7cbeae89-743e-5d4b-a4c2-db4919e94628",
+        "text": "monstera",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "58ce8914-8a9e-5302-9b2d-0d97006e12d3",
+        "text": "genus",
+        "type": "EntityType"
+      },
+      {
+        "id": 7,
+        "original_id": "0906fd8a-56ee-55bc-a529-ead70643efff",
+        "text": "cercis",
+        "type": "Entity"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "has_genus"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 7,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 5,
+        "target": 7,
+        "type": "does_not_have_more_species_than"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      }
+    ]
+  },
+  "grafo_evidencia": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "e4c49b66-f6d1-5ef2-a447-a0124b32a94e",
+        "text": "This chunk is about:\n- Plants: Monstera, Cercis, Monstera acuminata\n- Taxonomy: Araceae, Fabaceae, Cercidoideae\n- Places: the Americas, tropical regions, warm temperate regions, central Petén, San Luis Potosí\n\nFacts:\n- Monstera is a genus of about 50 species of flowering plants in the arum family Araceae and is native to tropical regions of the Americas.\n- Cercis is a genus of about 10 species in the subfamily Cercidoideae of the pea family Fabaceae and is native to warm temperate regions.\n- Monstera acuminata is abundant in central Petén and extends north to San Luis Potosí, making it the northernmost Monstera species.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "057185d5-8cea-5050-96ca-8d3eebd89e6e",
+        "text": "Page: Monstera. Sentence: Monstera is a genus of about 50 species of flowering plants in the arum family, Araceae, native to tropical regions of the Americas.\nPage: Cercis. Sentence: Cercis , is a genus of about 10 species in the subfamily Cercidoideae of the pea family Fabaceae, native to warm temperate regions.\nPage: Monstera acuminata. Sentence: It is abundant in central Petén and extends north to San Luis Potosí, making it the northernmost of the species of \"Monstera.\"",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "70bf8520-163c-5d50-acfd-da7488370637",
+        "text": "text_1c7c43c4f82027c402655628fd84c6fb",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "7cbeae89-743e-5d4b-a4c2-db4919e94628",
+        "text": "monstera",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "f7b4540f-d32c-51b3-8970-f282fffab519",
+        "text": "taxon",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "493c3a74-6bed-5c70-af14-b1c4f2dfab2e",
+        "text": "araceae",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "da67ef85-7233-5416-94bb-daa1fe362a4e",
+        "text": "tropical regions of the americas",
+        "type": "Entity"
+      },
+      {
+        "id": 7,
+        "original_id": "5f394058-b2a0-5ba8-8466-ba2a18cfcf4e",
+        "text": "place",
+        "type": "EntityType"
+      },
+      {
+        "id": 8,
+        "original_id": "0906fd8a-56ee-55bc-a529-ead70643efff",
+        "text": "cercis",
+        "type": "Entity"
+      },
+      {
+        "id": 9,
+        "original_id": "c5ee5cbc-038d-5d2b-9b30-382a8694c66d",
+        "text": "cercidoideae",
+        "type": "Entity"
+      },
+      {
+        "id": 10,
+        "original_id": "2d070a21-aa4a-5489-8609-cc8b32359405",
+        "text": "fabaceae",
+        "type": "Entity"
+      },
+      {
+        "id": 11,
+        "original_id": "683c5b47-78e8-5d8a-ae68-ea2e0d476cda",
+        "text": "warm temperate regions",
+        "type": "Entity"
+      },
+      {
+        "id": 12,
+        "original_id": "7abf8ddc-c83a-5e36-834e-0caf2489cb1b",
+        "text": "monstera acuminata",
+        "type": "Entity"
+      },
+      {
+        "id": 13,
+        "original_id": "0b725ec8-3cdf-5a48-afdb-23ae4cf30bd5",
+        "text": "central petén",
+        "type": "Entity"
+      },
+      {
+        "id": 14,
+        "original_id": "71e60a41-e9a7-5999-baab-9356734a4ea8",
+        "text": "san luis potosí",
+        "type": "Entity"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 12,
+        "target": 3,
+        "type": "in_genus"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 5,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 8,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 9,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 10,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 12,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "in_family"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 6,
+        "type": "native_to"
+      },
+      {
+        "source": 1,
+        "target": 6,
+        "type": "contains"
+      },
+      {
+        "source": 6,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 11,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 13,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 14,
+        "target": 7,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 8,
+        "type": "contains"
+      },
+      {
+        "source": 8,
+        "target": 9,
+        "type": "in_subfamily"
+      },
+      {
+        "source": 1,
+        "target": 9,
+        "type": "contains"
+      },
+      {
+        "source": 9,
+        "target": 10,
+        "type": "in_family"
+      },
+      {
+        "source": 8,
+        "target": 10,
+        "type": "in_family"
+      },
+      {
+        "source": 1,
+        "target": 10,
+        "type": "contains"
+      },
+      {
+        "source": 8,
+        "target": 11,
+        "type": "native_to"
+      },
+      {
+        "source": 1,
+        "target": 11,
+        "type": "contains"
+      },
+      {
+        "source": 1,
+        "target": 12,
+        "type": "contains"
+      },
+      {
+        "source": 12,
+        "target": 13,
+        "type": "abundant_in"
+      },
+      {
+        "source": 1,
+        "target": 13,
+        "type": "contains"
+      },
+      {
+        "source": 12,
+        "target": 14,
+        "type": "extends_north_to"
+      },
+      {
+        "source": 1,
+        "target": 14,
+        "type": "contains"
+      }
+    ]
+  }
+}

@@ -1,0 +1,246 @@
+{
+  "dataset": "hover",
+  "id": "5a657289-44bb-4aff-99e7-33bb0d440eab",
+  "split": "dev",
+  "claim": "Doloroso, Mississippi rests on the US highway that runs 1400 mi.",
+  "evidencia": "Page: Doloroso, Mississippi. Sentence: The community rests on U.S. Route 61.\nPage: U.S. Route 61. Sentence: U.S. Route 61 (US 61) is the official designation for a United States highway that runs 1400 mi between New Orleans, Louisiana, and the city of Wyoming, Minnesota.",
+  "evidence_text": "Page: Doloroso, Mississippi. Sentence: The community rests on U.S. Route 61.\nPage: U.S. Route 61. Sentence: U.S. Route 61 (US 61) is the official designation for a United States highway that runs 1400 mi between New Orleans, Louisiana, and the city of Wyoming, Minnesota.",
+  "label": "SUPPORTED",
+  "num_hops": 2,
+  "hover_metadata": {
+    "supporting_facts": [
+      [
+        "Doloroso, Mississippi",
+        1
+      ],
+      [
+        "U.S. Route 61",
+        0
+      ]
+    ],
+    "num_hops": 2,
+    "evidence_annotation_id": [
+      0
+    ],
+    "evidence_id": [
+      "Doloroso, Mississippi::sentence::1",
+      "U.S. Route 61::sentence::0"
+    ],
+    "evidence_wiki_url": [
+      "https://en.wikipedia.org/wiki/Doloroso%2C_Mississippi",
+      "https://en.wikipedia.org/wiki/U.S._Route_61"
+    ],
+    "evidence_sentence_id": [
+      "Doloroso, Mississippi::sentence::1",
+      "U.S. Route 61::sentence::0"
+    ]
+  },
+  "grafo_claim": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "aae1a682-ee2f-5b04-a504-a74d87aff8bf",
+        "text": "This chunk is about:\n- Places: Doloroso, Mississippi\n- Transportation: a U.S. highway\n\nFacts:\n- Doloroso is a place in Mississippi.\n- A U.S. highway runs through Doloroso, Mississippi.\n- The U.S. highway that runs through Doloroso, Mississippi is 1,400 miles long.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "1a10243a-164e-5011-9ba2-d0feee6a71a9",
+        "text": "Doloroso, Mississippi rests on the US highway that runs 1400 mi.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "08bc9443-6c51-5400-864d-b528c1cb76d8",
+        "text": "text_fe6d9f7faf7eb29166f5dede41d19460",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "81407c94-346b-5e90-998d-6e904723bc40",
+        "text": "doloroso, mississippi",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "5f394058-b2a0-5ba8-8466-ba2a18cfcf4e",
+        "text": "place",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "7b87ab93-6ae7-5ca0-9256-1cfd0accb815",
+        "text": "u.s. route 49",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "5e52d312-a248-534f-a58b-25c5426a89ad",
+        "text": "road",
+        "type": "EntityType"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "rests_on"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "is_a"
+      }
+    ]
+  },
+  "grafo_evidencia": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "993b753d-b0a0-58f2-9bd3-54510733bab6",
+        "text": "This chunk is about:\n- Places: Doloroso, Mississippi; New Orleans, Louisiana; Wyoming, Minnesota\n- Systems: U.S. Route 61; United States Numbered Highway System\n\nFacts:\n- U.S. Route 61 is the official designation for a United States highway that runs 1,400 miles between New Orleans, Louisiana, and Wyoming, Minnesota.\n- Doloroso, Mississippi, rests on U.S. Route 61.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "6e6b5b98-d450-543e-a597-c9b7d0e96621",
+        "text": "Page: Doloroso, Mississippi. Sentence: The community rests on U.S. Route 61.\nPage: U.S. Route 61. Sentence: U.S. Route 61 (US 61) is the official designation for a United States highway that runs 1400 mi between New Orleans, Louisiana, and the city of Wyoming, Minnesota.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "763515d0-ea28-52a3-bdc5-f531cf264d3b",
+        "text": "text_a6ae576972fce44a0ed257499af9e989",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "81407c94-346b-5e90-998d-6e904723bc40",
+        "text": "doloroso, mississippi",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "5f394058-b2a0-5ba8-8466-ba2a18cfcf4e",
+        "text": "place",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "63743dd7-a730-555c-b113-38f2985b918a",
+        "text": "u.s. route 61",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "5e52d312-a248-534f-a58b-25c5426a89ad",
+        "text": "road",
+        "type": "EntityType"
+      },
+      {
+        "id": 7,
+        "original_id": "34c3ae9c-6662-5005-993b-8dd036a24e42",
+        "text": "new orleans, louisiana",
+        "type": "Entity"
+      },
+      {
+        "id": 8,
+        "original_id": "acc5ff0f-e383-533f-9a3f-99e270dba6f2",
+        "text": "wyoming, minnesota",
+        "type": "Entity"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 7,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 8,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "rests_on"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 5,
+        "target": 7,
+        "type": "runs_between"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 8,
+        "type": "runs_between"
+      },
+      {
+        "source": 1,
+        "target": 8,
+        "type": "contains"
+      }
+    ]
+  }
+}

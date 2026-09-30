@@ -1,0 +1,599 @@
+{
+  "dataset": "hover",
+  "id": "4a7185f3-ebb2-4888-bacd-6e3da3007a05",
+  "split": "dev",
+  "claim": "University of Virginia was founded by a president and the university to which the Washington Huskies baseball team is home was not.",
+  "evidencia": "Page: University of Washington. Sentence: The University of Washington (commonly referred to as UW, simply Washington, or informally \"U-Dub\") is a large, public flagship research university in Seattle, Washington, established in 1861.\nPage: University of Virginia. Sentence: The University of Virginia (U.Va.\nPage: University of Virginia. Sentence: Founded in 1819 by Declaration of Independence author Thomas Jefferson, UVA is known for its historic foundations, student-run honor code, and secret societies.\nPage: Washington Huskies baseball. Sentence: The Washington Huskies baseball team is the varsity intercollegiate baseball team of the University of Washington, located in Seattle, Washington, United States.",
+  "evidence_text": "Page: University of Washington. Sentence: The University of Washington (commonly referred to as UW, simply Washington, or informally \"U-Dub\") is a large, public flagship research university in Seattle, Washington, established in 1861.\nPage: University of Virginia. Sentence: The University of Virginia (U.Va.\nPage: University of Virginia. Sentence: Founded in 1819 by Declaration of Independence author Thomas Jefferson, UVA is known for its historic foundations, student-run honor code, and secret societies.\nPage: Washington Huskies baseball. Sentence: The Washington Huskies baseball team is the varsity intercollegiate baseball team of the University of Washington, located in Seattle, Washington, United States.",
+  "label": "SUPPORTED",
+  "num_hops": 3,
+  "hover_metadata": {
+    "supporting_facts": [
+      [
+        "University of Washington",
+        0
+      ],
+      [
+        "University of Virginia",
+        0
+      ],
+      [
+        "University of Virginia",
+        2
+      ],
+      [
+        "Washington Huskies baseball",
+        0
+      ]
+    ],
+    "num_hops": 3,
+    "evidence_annotation_id": [
+      0
+    ],
+    "evidence_id": [
+      "University of Washington::sentence::0",
+      "University of Virginia::sentence::0",
+      "University of Virginia::sentence::2",
+      "Washington Huskies baseball::sentence::0"
+    ],
+    "evidence_wiki_url": [
+      "https://en.wikipedia.org/wiki/University_of_Washington",
+      "https://en.wikipedia.org/wiki/University_of_Virginia",
+      "https://en.wikipedia.org/wiki/Washington_Huskies_baseball"
+    ],
+    "evidence_sentence_id": [
+      "University of Washington::sentence::0",
+      "University of Virginia::sentence::0",
+      "University of Virginia::sentence::2",
+      "Washington Huskies baseball::sentence::0"
+    ]
+  },
+  "grafo_claim": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "c099763e-e68a-55e0-8e6f-13227fb77dd0",
+        "text": "This chunk is about:\n- Organizations: University of Virginia, University of Washington\n- People: Thomas Jefferson\n- Sports Teams: Washington Huskies baseball team\n\nFacts:\n- Thomas Jefferson founded the University of Virginia.\n- The Washington Huskies baseball team is home to the University of Washington.\n- The University of Washington was not founded by a president.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "3766aed8-fce7-5393-8644-50bed7c290c9",
+        "text": "University of Virginia was founded by a president and the university to which the Washington Huskies baseball team is home was not.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "db2a6a93-25aa-553d-93a8-0dbc81d4f7cb",
+        "text": "text_9af494c87a0f26902fc58ce604aa5fdb",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "1b7b774a-fdaf-5d3b-91ba-91ebff693eae",
+        "text": "university of virginia",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "388f60fb-220d-55e8-ae9c-3ac93cead308",
+        "text": "organization",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "55a86932-d6fe-5267-8d0b-9af75114163e",
+        "text": "president",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "99a82eec-bb35-5bb5-9ed2-e73fc7a756de",
+        "text": "person",
+        "type": "EntityType"
+      },
+      {
+        "id": 7,
+        "original_id": "f8752de0-4b8e-540a-a326-75a4dd195a7e",
+        "text": "washington huskies baseball team",
+        "type": "Entity"
+      },
+      {
+        "id": 8,
+        "original_id": "af70959a-75d2-5200-b9b8-c2b6b6c0cdd4",
+        "text": "university of washington",
+        "type": "Entity"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 3,
+        "type": "founded"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 7,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 8,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 8,
+        "target": 5,
+        "type": "was_not_founded_by"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      },
+      {
+        "source": 7,
+        "target": 8,
+        "type": "is_home_team_of"
+      },
+      {
+        "source": 1,
+        "target": 8,
+        "type": "contains"
+      }
+    ]
+  },
+  "grafo_evidencia": {
+    "nodes": [
+      {
+        "id": 0,
+        "original_id": "f37f9048-216f-5bbb-8984-97cf87387884",
+        "text": "This chunk is about:\n- Organizations: University of Washington, University of Virginia, Washington Huskies baseball\n- People: Thomas Jefferson\n- Places: Seattle, Washington\n- Topics: public flagship research universities, varsity intercollegiate baseball, student-run honor code, secret societies\n\nFacts:\n- The University of Washington was established in 1861 as a large public flagship research university in Seattle, Washington.\n- The University of Virginia was founded in 1819 by Thomas Jefferson, the author of the Declaration of Independence.\n- The University of Virginia is known for its historic foundations, student-run honor code, and secret societies.\n- The Washington Huskies baseball team is the varsity intercollegiate baseball team of the University of Washington in Seattle, Washington, United States.",
+        "type": "TextSummary"
+      },
+      {
+        "id": 1,
+        "original_id": "aad04613-0b4a-582a-be14-2057c142cd04",
+        "text": "Page: University of Washington. Sentence: The University of Washington (commonly referred to as UW, simply Washington, or informally \"U-Dub\") is a large, public flagship research university in Seattle, Washington, established in 1861.\nPage: University of Virginia. Sentence: The University of Virginia (U.Va.\nPage: University of Virginia. Sentence: Founded in 1819 by Declaration of Independence author Thomas Jefferson, UVA is known for its historic foundations, student-run honor code, and secret societies.\nPage: Washington Huskies baseball. Sentence: The Washington Huskies baseball team is the varsity intercollegiate baseball team of the University of Washington, located in Seattle, Washington, United States.",
+        "type": "DocumentChunk"
+      },
+      {
+        "id": 2,
+        "original_id": "610f50d2-4873-5f05-8198-e136c8a0e31f",
+        "text": "text_8fc527e30bde8752c0ad268fe42786b1",
+        "type": "TextDocument"
+      },
+      {
+        "id": 3,
+        "original_id": "af70959a-75d2-5200-b9b8-c2b6b6c0cdd4",
+        "text": "university of washington",
+        "type": "Entity"
+      },
+      {
+        "id": 4,
+        "original_id": "388f60fb-220d-55e8-ae9c-3ac93cead308",
+        "text": "organization",
+        "type": "EntityType"
+      },
+      {
+        "id": 5,
+        "original_id": "38cab2b2-1d17-546a-bab2-58e6580e7f95",
+        "text": "seattle, washington",
+        "type": "Entity"
+      },
+      {
+        "id": 6,
+        "original_id": "5f394058-b2a0-5ba8-8466-ba2a18cfcf4e",
+        "text": "place",
+        "type": "EntityType"
+      },
+      {
+        "id": 7,
+        "original_id": "69602bc5-f0ad-5133-84bc-fe712b6e60b4",
+        "text": "1861",
+        "type": "Entity"
+      },
+      {
+        "id": 8,
+        "original_id": "b19433ae-558c-5aaf-95ac-6231f2a4be0e",
+        "text": "date",
+        "type": "EntityType"
+      },
+      {
+        "id": 9,
+        "original_id": "f6627c98-a8ad-5929-9342-c00a70c467ea",
+        "text": "uw",
+        "type": "Entity"
+      },
+      {
+        "id": 10,
+        "original_id": "e2c15541-9836-5130-9acc-3c8e49caa20b",
+        "text": "alias",
+        "type": "EntityType"
+      },
+      {
+        "id": 11,
+        "original_id": "95142d38-e261-5f7d-8c2e-e06e59777e93",
+        "text": "washington",
+        "type": "Entity"
+      },
+      {
+        "id": 12,
+        "original_id": "3dd65bc8-4f94-5cfc-8aec-c2a070eaa1f5",
+        "text": "u-dub",
+        "type": "Entity"
+      },
+      {
+        "id": 13,
+        "original_id": "1b7b774a-fdaf-5d3b-91ba-91ebff693eae",
+        "text": "university of virginia",
+        "type": "Entity"
+      },
+      {
+        "id": 14,
+        "original_id": "8b5056ea-575a-5900-a4c7-e25da4812ded",
+        "text": "1819",
+        "type": "Entity"
+      },
+      {
+        "id": 15,
+        "original_id": "002c4457-8319-53be-92aa-e96dd263d81d",
+        "text": "historic foundations",
+        "type": "Entity"
+      },
+      {
+        "id": 16,
+        "original_id": "d2a381fa-3658-5ca6-ada9-2109cfc9331d",
+        "text": "concept",
+        "type": "EntityType"
+      },
+      {
+        "id": 17,
+        "original_id": "d835311f-611d-5421-8e27-9b01deed9485",
+        "text": "student-run honor code",
+        "type": "Entity"
+      },
+      {
+        "id": 18,
+        "original_id": "7297a1b3-1f6d-5ed4-8f18-d73571663ada",
+        "text": "secret societies",
+        "type": "Entity"
+      },
+      {
+        "id": 19,
+        "original_id": "e133e38c-cc93-5673-85ab-1653e719aa9a",
+        "text": "u.va.",
+        "type": "Entity"
+      },
+      {
+        "id": 20,
+        "original_id": "50936a3c-ffab-599b-900a-ac3b7a7c00fe",
+        "text": "uva",
+        "type": "Entity"
+      },
+      {
+        "id": 21,
+        "original_id": "ce8e6b1b-7064-5af8-8801-cbb31b29cbed",
+        "text": "thomas jefferson",
+        "type": "Entity"
+      },
+      {
+        "id": 22,
+        "original_id": "99a82eec-bb35-5bb5-9ed2-e73fc7a756de",
+        "text": "person",
+        "type": "EntityType"
+      },
+      {
+        "id": 23,
+        "original_id": "51160f4e-e848-5e33-baa0-c48caa4ce768",
+        "text": "declaration of independence",
+        "type": "Entity"
+      },
+      {
+        "id": 24,
+        "original_id": "5263a535-1b4b-5925-be3e-310d03cd303b",
+        "text": "work",
+        "type": "EntityType"
+      },
+      {
+        "id": 25,
+        "original_id": "f8752de0-4b8e-540a-a326-75a4dd195a7e",
+        "text": "washington huskies baseball team",
+        "type": "Entity"
+      },
+      {
+        "id": 26,
+        "original_id": "c523b1ee-e8b4-5250-8f18-39e8087c15c2",
+        "text": "seattle, washington, united states",
+        "type": "Entity"
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "made_from"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "is_part_of"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "contains"
+      },
+      {
+        "source": 9,
+        "target": 3,
+        "type": "alias_of"
+      },
+      {
+        "source": 11,
+        "target": 3,
+        "type": "alias_of"
+      },
+      {
+        "source": 12,
+        "target": 3,
+        "type": "alias_of"
+      },
+      {
+        "source": 25,
+        "target": 3,
+        "type": "varsity_team_of"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 13,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 25,
+        "target": 4,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "type": "located_in"
+      },
+      {
+        "source": 1,
+        "target": 5,
+        "type": "contains"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 26,
+        "target": 6,
+        "type": "is_a"
+      },
+      {
+        "source": 3,
+        "target": 7,
+        "type": "established_in"
+      },
+      {
+        "source": 1,
+        "target": 7,
+        "type": "contains"
+      },
+      {
+        "source": 7,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 14,
+        "target": 8,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 9,
+        "type": "contains"
+      },
+      {
+        "source": 9,
+        "target": 10,
+        "type": "is_a"
+      },
+      {
+        "source": 11,
+        "target": 10,
+        "type": "is_a"
+      },
+      {
+        "source": 12,
+        "target": 10,
+        "type": "is_a"
+      },
+      {
+        "source": 19,
+        "target": 10,
+        "type": "is_a"
+      },
+      {
+        "source": 20,
+        "target": 10,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 11,
+        "type": "contains"
+      },
+      {
+        "source": 1,
+        "target": 12,
+        "type": "contains"
+      },
+      {
+        "source": 1,
+        "target": 13,
+        "type": "contains"
+      },
+      {
+        "source": 19,
+        "target": 13,
+        "type": "alias_of"
+      },
+      {
+        "source": 20,
+        "target": 13,
+        "type": "alias_of"
+      },
+      {
+        "source": 21,
+        "target": 13,
+        "type": "founded"
+      },
+      {
+        "source": 13,
+        "target": 14,
+        "type": "founded_in"
+      },
+      {
+        "source": 1,
+        "target": 14,
+        "type": "contains"
+      },
+      {
+        "source": 13,
+        "target": 15,
+        "type": "known_for"
+      },
+      {
+        "source": 1,
+        "target": 15,
+        "type": "contains"
+      },
+      {
+        "source": 15,
+        "target": 16,
+        "type": "is_a"
+      },
+      {
+        "source": 17,
+        "target": 16,
+        "type": "is_a"
+      },
+      {
+        "source": 18,
+        "target": 16,
+        "type": "is_a"
+      },
+      {
+        "source": 13,
+        "target": 17,
+        "type": "known_for"
+      },
+      {
+        "source": 1,
+        "target": 17,
+        "type": "contains"
+      },
+      {
+        "source": 13,
+        "target": 18,
+        "type": "known_for"
+      },
+      {
+        "source": 1,
+        "target": 18,
+        "type": "contains"
+      },
+      {
+        "source": 1,
+        "target": 19,
+        "type": "contains"
+      },
+      {
+        "source": 1,
+        "target": 20,
+        "type": "contains"
+      },
+      {
+        "source": 1,
+        "target": 21,
+        "type": "contains"
+      },
+      {
+        "source": 21,
+        "target": 22,
+        "type": "is_a"
+      },
+      {
+        "source": 21,
+        "target": 23,
+        "type": "authored"
+      },
+      {
+        "source": 1,
+        "target": 23,
+        "type": "contains"
+      },
+      {
+        "source": 23,
+        "target": 24,
+        "type": "is_a"
+      },
+      {
+        "source": 1,
+        "target": 25,
+        "type": "contains"
+      },
+      {
+        "source": 25,
+        "target": 26,
+        "type": "located_in"
+      },
+      {
+        "source": 1,
+        "target": 26,
+        "type": "contains"
+      }
+    ]
+  }
+}
